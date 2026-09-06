@@ -1,0 +1,69 @@
+{
+  "schema": "routeb.p8.first_exit_bridge_lean.v1",
+  "status": "COMPILED_CONDITIONAL_DECOMPOSITION__CONCRETE_P8_OPEN",
+  "strict_compile": {
+    "command": "lake env lean -DwarningAsError=true .\\FirstExitBridge.lean",
+    "exit_code": 0,
+    "source_sha256": "dfd1c79c1e4c403c500261dffd22d73cb1a3b1d0b32106f9272f1acce4c42e68",
+    "log_sha256": "4748bc387afe415db9baf0507719dc947052dd816559e21aea50a0e958d5e7c6",
+    "sorry": false,
+    "admit": false,
+    "user_declared_axiom": false,
+    "reported_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "proved_interfaces": [
+    "a domain-local certificate may be applied on the whole horizon after an independent DomainSafeThrough proof",
+    "an attained first-exit witness is contradicted by a strict-prefix limit margin separated from the boundary",
+    "domain closure plus an explicit ContinuationCriterion yields solution availability through the horizon",
+    "the P8 assembly theorem composes, but does not manufacture, the first-exit, prefix-limit, local-certificate, and continuation premises",
+    "a receipt with coverageComplete=false cannot pass the ProbeMayDischarge gate"
+  ],
+  "unproved_concrete_premises": [
+    "exact full-12-state X0 and ramp-input inclusion for T=1",
+    "source-bound continuous or absolutely continuous maximal Route-B solution",
+    "attainment of a first exit for every source-domain face",
+    "same-prefix strict margins excluding every possible boundary face",
+    "local-Lipschitz and compact-containment continuation through T=1",
+    "complete flowpipe or partition coverage and terminal transfer"
+  ],
+  "probe_boundary": {
+    "p8_local_horizon": "0.001",
+    "p8_local_radius": "0.001",
+    "reachsets": 35,
+    "coverage_complete": false,
+    "used_as_proof": false
+  },
+  "provenance": [
+    {
+      "path": "../../docs/routeb-block45-proof-sketch.md",
+      "sha256": "955e3293ab9ee4ebf804fd6cf1b672b976f6ba2610480148e420186e54de2548"
+    },
+    {
+      "path": "../../docs/routeb-target-contract-extraction.md",
+      "sha256": "eb1cda2e20fb3dd3d1fc90b55c08dc0030074ffb86419cb5d6665510e8ce85cf"
+    },
+    {
+      "path": "../../artifacts/task_EV_flowpipe_continuation_gap_20260907/gap.json",
+      "sha256": "fde8e998b898a0b60e930d9bf755fd4e0115ff18b883ad5974ba7b619361ed8d"
+    },
+    {
+      "path": "../../artifacts/routeb_agent_entry_flowpipe_next_20260906T092401Z/REPORT.md",
+      "sha256": "1cec76331a835942e315eb629cf9211530cb25688e18a99d2558134d0a70c595"
+    }
+  ],
+  "protected_existing_files": {
+    "../../artifacts/routeb_6dof/state.json": "97fbba67d0facfb349bd41d9fc34c7229a440a263f19c4c211b97ef7ad7a4b7d",
+    "../../src/percolation_workflow/registry.py": "d2e89be8848153adb2fb0a041029b67b657416552d96e3119e5955210d8139ce"
+  },
+  "existing_files_modified_by_this_task": false,
+  "broad_regression_run": false,
+  "julia_run": false,
+  "solver_run": false,
+  "coverage": false,
+  "coverage_complete": false,
+  "formal_certificate_allowed": false
+}

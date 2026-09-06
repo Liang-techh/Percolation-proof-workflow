@@ -1,0 +1,12 @@
+command: lake env lean -DwarningAsError=true .\FirstExitBridge.lean
+exit_code: 0
+
+'RouteBFirstExitBridge.localCertificate_of_domainSafe' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFirstExitBridge.domainSafeThrough_of_firstExit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFirstExitBridge.existsThrough_of_domainSafe_and_continuation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBFirstExitBridge.p8_firstExit_domain_continuation_assembly' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBFirstExitBridge.coverageFalse_probe_cannot_discharge' depends on axioms: [propext]

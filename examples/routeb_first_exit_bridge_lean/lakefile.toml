@@ -1,0 +1,10 @@
+name = "routeb_first_exit_bridge_lean"
+version = "0.1.0"
+defaultTargets = ["FirstExitBridge"]
+
+[[require]]
+name = "mathlib"
+path = "../../artifacts/routeb_fd8_tensor_christoffel_enclosure_20260906/mathlib"
+
+[[lean_lib]]
+name = "FirstExitBridge"
