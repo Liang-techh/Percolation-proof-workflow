@@ -17,6 +17,7 @@ v125, which predate the WorkflowState metadata contract.
 from __future__ import annotations
 
 from collections.abc import Mapping
+from dataclasses import dataclass
 from enum import StrEnum
 import hashlib
 import json
@@ -124,18 +125,150 @@ _LANE_ORDER = {
     MathLane.OTHER: 3,
 }
 
-# This order is intentionally an audit/obstruction order, not a dispatch
-# permission.  It mirrors the current Route-B mathematical critical path:
-# coverage and physical matrix binding dominate local sign/FD diagnostics.
+# This order is intentionally an audit/obstruction order, not proof admission.
+# Every canonical bottleneck has a distinct value so the scheduler cannot let
+# an unrelated lane/closability tie silently decide between different kinds of
+# mathematical work.  Coverage remains first, source semantics precedes its
+# physical Schur consumer, and local sign/FD diagnostics remain downstream.
 _BOTTLENECK_ORDER = {
     "coverage": 0,
-    "physical_schur_binding": 1,
-    "schur_binding": 1,
-    "interval_sign": 2,
-    "central_fd": 3,
     "source_semantics": 1,
-    "other": 4,
+    "physical_schur_binding": 2,
+    "interval_sign": 3,
+    "central_fd": 4,
+    "other": 5,
 }
+
+_BOTTLENECK_ALIASES = {
+    "coverage": "coverage",
+    "flowpipe_coverage": "coverage",
+    "source": "source_semantics",
+    "source_semantics": "source_semantics",
+    "source_semantic": "source_semantics",
+    "source_binding": "source_semantics",
+    "physical_schur": "physical_schur_binding",
+    "physical_schur_binding": "physical_schur_binding",
+    "schur_binding": "physical_schur_binding",
+    "interval_sign": "interval_sign",
+    "sign": "interval_sign",
+    "central_fd": "central_fd",
+    "finite_difference": "central_fd",
+    "finite_diff": "central_fd",
+    "other": "other",
+}
+
+# Ambiguous compound names must use explicit metadata.  This deterministic
+# fallback order chooses the broader domain obstruction before a local
+# diagnostic and records the exact field/token used in the audit explanation.
+_BOTTLENECK_MARKERS = (
+    ("coverage", ("coverage", "flowpipe", "first_exit", "partition", "continuation")),
+    ("physical_schur_binding", (
+        "physical_schur_binding", "physical_schur", "schur_binding",
+        "schur", "krawczyk", "operator_binding",
+    )),
+    ("interval_sign", ("interval_sign", "h_src", "sign_normal", "sign_theorem")),
+    ("central_fd", ("central_fd", "central_difference", "finite_difference", "finite_diff")),
+    ("source_semantics", (
+        "source_semantics", "source_semantic", "source_comparator",
+        "source_soundness", "true_dh", "exact_dh", "deployed_source",
+    )),
+)
+
+
+@dataclass(frozen=True)
+class MathBottleneckDecision:
+    """Canonical, read-only classification used by audit and dispatch views."""
+
+    label: str
+    priority: int
+    source: str
+    reason: str
+
+
+def _metadata(item: Any) -> Mapping[str, Any]:
+    metadata = item.get("metadata", {}) if isinstance(item, Mapping) else getattr(item, "metadata", {})
+    return metadata if isinstance(metadata, Mapping) else {}
+
+
+def _bottleneck_fields(item: Any) -> list[tuple[str, str]]:
+    metadata = _metadata(item)
+    if isinstance(item, Mapping):
+        raw_dependencies = item.get("dependencies", [])
+        fields = [
+            ("id", item.get("id", "")),
+            ("name", item.get("name", "")),
+            ("statement", item.get("statement", "")),
+            ("status", item.get("status", "")),
+            ("dependencies", " ".join(map(str, raw_dependencies))
+             if isinstance(raw_dependencies, (list, tuple, set)) else raw_dependencies),
+            ("verification_domain", item.get("verification_domain", "")),
+        ]
+    else:
+        raw_dependencies = getattr(item, "dependencies", [])
+        fields = [
+            ("name", getattr(item, "name", "")),
+            ("statement", getattr(item, "statement", "")),
+            ("status", getattr(item, "status", "")),
+            ("dependencies", " ".join(map(str, raw_dependencies))
+             if isinstance(raw_dependencies, (list, tuple, set)) else raw_dependencies),
+            ("verified_artifact", getattr(item, "verified_artifact", "")),
+        ]
+    fields.extend((f"metadata.{key}", metadata.get(key, "")) for key in (
+        "verification_domain", "source_comparator", "source_comparator_status",
+    ))
+    return [(name, _token(value)) for name, value in fields if value is not None]
+
+
+def explain_math_bottleneck(item: Any) -> MathBottleneckDecision:
+    """Classify one item and retain a deterministic, auditable reason.
+
+    A present but unsupported explicit value is fail-closed to ``other``; it
+    is never silently replaced by a name heuristic.  This keeps typos visible
+    to receipt consumers instead of changing dispatch priority unexpectedly.
+    """
+    metadata = _metadata(item)
+    explicit_source = None
+    explicit_value: Any = None
+    if "math_bottleneck" in metadata:
+        explicit_source = "metadata.math_bottleneck"
+        explicit_value = metadata["math_bottleneck"]
+    elif isinstance(item, Mapping) and "math_bottleneck" in item:
+        explicit_source = "math_bottleneck"
+        explicit_value = item["math_bottleneck"]
+
+    if explicit_source is not None:
+        explicit_token = _token(explicit_value)
+        label = _BOTTLENECK_ALIASES.get(explicit_token)
+        if label is None:
+            return MathBottleneckDecision(
+                "other", _BOTTLENECK_ORDER["other"], explicit_source,
+                f"unsupported explicit bottleneck {explicit_token!r}; classified fail-closed as other",
+            )
+        return MathBottleneckDecision(
+            label, _BOTTLENECK_ORDER[label], explicit_source,
+            f"explicit {explicit_source}={explicit_token!r} canonicalizes to {label}",
+        )
+
+    fields = _bottleneck_fields(item)
+    for label, markers in _BOTTLENECK_MARKERS:
+        for field, value in fields:
+            for marker in markers:
+                if marker in value:
+                    return MathBottleneckDecision(
+                        label, _BOTTLENECK_ORDER[label], field,
+                        f"inferred {label} from token {marker!r} in {field}",
+                    )
+
+    lane = _explicit_lane(item)
+    if lane == MathLane.SOURCE_SEMANTICS:
+        return MathBottleneckDecision(
+            "source_semantics", _BOTTLENECK_ORDER["source_semantics"],
+            "math_lane", "explicit source_semantics lane with no more specific bottleneck token",
+        )
+    return MathBottleneckDecision(
+        "other", _BOTTLENECK_ORDER["other"], "fallback",
+        "no canonical mathematical bottleneck token or explicit classification",
+    )
 
 
 def math_bottleneck(item: Any) -> str:
@@ -144,29 +277,7 @@ def math_bottleneck(item: Any) -> str:
     Explicit ``metadata["math_bottleneck"]`` wins.  The fallback is only a
     naming aid for imported DAG rows and never changes proof eligibility.
     """
-    metadata = item.get("metadata", {}) if isinstance(item, Mapping) else getattr(item, "metadata", {})
-    value = metadata.get("math_bottleneck") if isinstance(metadata, Mapping) else None
-    if value is None and isinstance(item, Mapping):
-        value = item.get("math_bottleneck")
-    token = _token(value)
-    if token in _BOTTLENECK_ORDER:
-        return token
-    if isinstance(item, Mapping):
-        fields = [item.get("id", ""), item.get("name", ""), item.get("statement", ""), item.get("status", "")]
-    else:
-        fields = [getattr(item, "id", ""), getattr(item, "name", ""), getattr(item, "statement", ""), getattr(item, "status", "")]
-    haystack = " ".join(_token(field) for field in fields)
-    if "coverage" in haystack or "flowpipe" in haystack or "partition" in haystack:
-        return "coverage"
-    if "schur" in haystack or "krawczyk" in haystack or "operator_binding" in haystack:
-        return "physical_schur_binding"
-    if "interval_sign" in haystack or "h_src" in haystack or "sign_normal" in haystack:
-        return "interval_sign"
-    if "central_fd" in haystack or "finite_difference" in haystack:
-        return "central_fd"
-    if "source_semantics" in haystack or "true_dh" in haystack:
-        return "source_semantics"
-    return "other"
+    return explain_math_bottleneck(item).label
 
 
 def rank_math_obstruction_frontier(state: WorkflowState,
@@ -182,7 +293,7 @@ def rank_math_obstruction_frontier(state: WorkflowState,
     candidates = [node for node in state.frontier()
                   if job_ids is None or node.id in job_ids]
     candidates.sort(key=lambda node: (
-        _BOTTLENECK_ORDER[math_bottleneck(node)],
+        explain_math_bottleneck(node).priority,
         obstruction_rank(node),
         _LANE_ORDER[math_lane(node)],
         -state.frontier_closability(node.id),
@@ -231,15 +342,19 @@ def explain_math_frontier(state: WorkflowState, jobs: Mapping[str, Any] | None =
     rows = []
     for node in state.frontier():
         lane = math_lane(node)
+        bottleneck = explain_math_bottleneck(node)
+        rank = obstruction_rank(node)
         rows.append({
             "node_id": node.id,
             "name": node.name,
             "math_lane": lane.value,
             "lane_priority": _LANE_ORDER[lane],
-            "math_bottleneck": math_bottleneck(node),
-            "bottleneck_priority": _BOTTLENECK_ORDER[math_bottleneck(node)],
-            "obstruction_rank": obstruction_rank(node),
-            "eligible": obstruction_rank(node) == 0 and (job_ids is None or node.id in job_ids),
+            "math_bottleneck": bottleneck.label,
+            "bottleneck_priority": bottleneck.priority,
+            "math_bottleneck_source": bottleneck.source,
+            "math_bottleneck_reason": bottleneck.reason,
+            "obstruction_rank": rank,
+            "eligible": rank == 0 and (job_ids is None or node.id in job_ids),
         })
     return rows
 
@@ -265,6 +380,7 @@ def project_frontier_receipt(state: WorkflowState, jobs: Mapping[str, Any] | Non
     rows = []
     for node in state.frontier():
         lane = math_lane(node)
+        bottleneck = explain_math_bottleneck(node)
         rank = obstruction_rank(node)
         if rank == 2:
             blocker = "compile_obstruction"
@@ -277,6 +393,10 @@ def project_frontier_receipt(state: WorkflowState, jobs: Mapping[str, Any] | Non
         rows.append({
             "node_id": node.id,
             "lane": lane.value,
+            "math_bottleneck": bottleneck.label,
+            "bottleneck_priority": bottleneck.priority,
+            "math_bottleneck_source": bottleneck.source,
+            "math_bottleneck_reason": bottleneck.reason,
             "blocker": blocker,
             "evidence_hash": _evidence_hash(node),
             "priority": _LANE_ORDER[lane],

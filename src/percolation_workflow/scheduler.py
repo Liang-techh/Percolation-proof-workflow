@@ -144,17 +144,31 @@ def candidate_identity(node) -> str | None:
     return _candidate_value(metadata)
 
 
+def _math_bottleneck_decision(node):
+    """Load the optional math policy lazily to avoid a module import cycle."""
+    from .math_frontier import explain_math_bottleneck
+    return explain_math_bottleneck(node)
+
+
+def _math_bottleneck_sort_key(node) -> tuple[int, str]:
+    decision = _math_bottleneck_decision(node)
+    return decision.priority, decision.label
+
+
 def rank_frontier(state: WorkflowState, jobs: dict[str, FrontierJob]) -> list[str]:
     """Return eligible jobs in a deterministic, dependency-aware order.
 
-    ``frontier_closability`` is recomputed from the DAG.  Optional metadata only
-    breaks ties and expresses engineering cost; it cannot make an ineligible
+    The obstruction gate is applied before ordering.  Canonical mathematical
+    bottlenecks then provide the primary dispatch key; ``frontier_closability``
+    is recomputed from the DAG, and optional engineering cost metadata only
+    breaks later ties.  None of these advisory fields can make an ineligible
     theorem runnable or close a theorem edge.
     """
     frontier = {node.id: node for node in state.frontier()}
     selected = [node for node_id, node in frontier.items()
                 if node_id in jobs and obstruction_rank(node) == 0]
     selected.sort(key=lambda node: (
+        *_math_bottleneck_sort_key(node),
         -state.frontier_closability(node.id),
         -_numeric_metadata(node, "scheduler_priority", 1.0),
         _numeric_metadata(node, "resource_cost", 1.0),
@@ -192,6 +206,7 @@ def explain_frontier(state: WorkflowState, jobs: dict[str, FrontierJob] | None =
     rows: list[dict[str, Any]] = []
     for node in state.frontier():
         rank = obstruction_rank(node)
+        bottleneck = _math_bottleneck_decision(node)
         eligible = rank == 0 and (job_ids is None or node.id in job_ids)
         if rank == 2:
             reason = "compile_obstruction"
@@ -208,6 +223,10 @@ def explain_frontier(state: WorkflowState, jobs: dict[str, FrontierJob] | None =
             "closability": state.frontier_closability(node.id),
             "obstruction_rank": rank,
             "obstruction_reason": reason,
+            "math_bottleneck": bottleneck.label,
+            "math_bottleneck_priority": bottleneck.priority,
+            "math_bottleneck_source": bottleneck.source,
+            "math_bottleneck_reason": bottleneck.reason,
             "candidate_identity": candidate_identity(node),
             "dependencies": list(node.dependencies),
             "resource_cost": _numeric_metadata(node, "resource_cost", 1.0),
