@@ -1,0 +1,83 @@
+name: Workflow tests, Harris replay, and local-FKG verification
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: workflow-tests-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test-and-verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 360
+    defaults:
+      run:
+        shell: bash
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+      ELAN_VERSION: v4.2.3
+      ELAN_SHA256: df0b2b3a439961ffcbb3985214365ffe40f49bc871df04dff268c7d8e21ca8b2
+      COMPARATOR_COMMIT: 575674928e239f5bc452aab72d1dd7b0f1326494
+      NANODA_COMMIT: 68d5ca9db226849b41a6fff59d796ff19d0a8840
+      LANDRUN_COMMIT: 811cfff51ceaf3d9843708aa6d22e9b84ccac8b4
+    steps:
+      - name: Check out workflow sources
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      # test_workflow.py reads percolation/Challenge.lean before Harris is built.
+      - name: Check out the pinned formal-math fixture
+        uses: actions/checkout@v4
+        with:
+          repository: anthropics/formal-math
+          ref: 795efb86f191735c5481675763537cfb4ff37e55
+          path: upstream/formal-math
+          persist-credentials: false
+
+      # The current tests do not read upstream/prove2me_workspace.
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.24.0"
+          cache: false
+
+      - name: Prepare native comparator dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes build-essential curl git jq pkg-config libssl-dev
+          rustup toolchain install stable --profile minimal
+          rustup default stable
+          cargo --version
+
+      - name: Install checksum-verified elan
+        run: |
+          curl --fail --location --retry 3 --proto '=https' --tlsv1.2 \
+            --output "$RUNNER_TEMP/elan.tar.gz" \
+            "https://github.com/leanprover/elan/releases/download/${ELAN_VERSION}/elan-x86_64-unknown-linux-gnu.tar.gz"
+          printf '%s  %s\n' "$ELAN_SHA256" "$RUNNER_TEMP/elan.tar.gz" | sha256sum --check
+          mkdir -p "$RUNNER_TEMP/elan-installer"
+          tar -xzf "$RUNNER_TEMP/elan.tar.gz" -C "$RUNNER_TEMP/elan-installer"
+          "$RUNNER_TEMP/elan-installer/elan-init" -y --no-modify-path --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Run unittest, build Harris, and verify with both kernels
+        run: bash scripts/ci_harris.sh
+
+      - name: Preserve test, build, and comparator diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: workflow-tests-harris-logs
+          path: ${{ runner.temp }}/workflow-ci-logs/
+          if-no-files-found: ignore
+          retention-days: 14

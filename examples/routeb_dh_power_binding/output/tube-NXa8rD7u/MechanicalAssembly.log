@@ -1,0 +1,4 @@
+'RouteBMechanicalAssembly.mechanical_derivative_assembly' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBMechanicalAssembly.full_power_bound_from_mechanical_derivatives' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

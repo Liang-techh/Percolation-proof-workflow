@@ -1,0 +1,20 @@
+START_UTC=2026-09-06T01:04:59Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_single_body_contract_instantiation_lean/output/run-XSWyT6w1:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_contract_adapter_lean/output/run-RSGGTurS:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_slot_accessor_lean/output/run-4RJoHvpZ:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-0FvNkLzz:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_semantic_core_lean/output/run-6vhFP8Zp:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_prefix_index_lean/output/run-lVHyO9Lp:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_origin_axis_lean/output/run-H0sN55iL:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_real_dh_step_lean/output/run-nAZVlwhR:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-k87wlFSd:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+'RouteBSingleBodyContractInstantiation.link4_source_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSingleBodyContractInstantiation.link5_source_active' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSingleBodyContractInstantiation.link4_source_mass_eq_frame_mass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBSingleBodyContractInstantiation.link5_source_mass_eq_frame_mass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+SingleBodyContractInstantiation_COMPILE_EXIT_CODE=0
+SOURCE_RESTRICTION_CHECK=PASSED
+3d38adef4396a5db0b01c3b85102b29c2c4f2f1bf9e8b3cc2e12ea31877b7f95  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_single_body_contract_instantiation_lean/output/run-XSWyT6w1/SingleBodyContractInstantiation.lean
+e14eb735fa0bf9f9aef78928fe696bd2bcd08d0856468c801277fdd2c8dcb609  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_single_body_contract_instantiation_lean/output/run-XSWyT6w1/SingleBodyContractInstantiation.olean
+JULIA_FLOAT64_BINDING=OPEN
+FULL_MASS_BINDING=OPEN
+END_UTC=2026-09-06T01:07:57Z
+VERIFY_EXIT_CODE=0

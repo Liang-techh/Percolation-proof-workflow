@@ -1,0 +1,10 @@
+EVIDENCE=E1_NUMERICAL_SCREEN_ONLY
+steps=800 selected=9 Julia=1.12.6
+source=C:\Users\z5242\Desktop\重构版\6dof_sos_optimized\6dof_sos_optimized\routeB_dense_Mq\dhport_lib.jl
+source_sha256=aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936
+screen_sha256=a570d3318a9acc26656a5447749f0d3cdf0920f5d9fdfca324c769217e6fa032
+R uses RK4 quadrature of TOTAL reference force error; no error enclosure
+axis cases use +/-0.149; optional candidate retains all full12 initial entries
+candidate=[-0.008135022505202715, 0.14126605545004758, 0.03131558691081696, -0.0018278295001692227, -0.008435775794980649, 0.0005508260321050312, -0.01990605000016992, 0.025688248496756313, 0.007775309587673843, -0.0019297453853796176, 0.001468903833212501, -0.0008811056941805066, 1.7]
+candidate_sha256=99e2055414420a8b1cd319fb41b51bf173af592b6d0864a70c9d26d7c393d4ea
+reference masses=[0.11666766666666667, 0.05018475]; G0=[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]; DAMP=[1.3, 1.1, 0.95, 0.8, 0.65, 0.5]; INPUT=[1.0, 0.5, 0.3, 0.2, 0.1, 0.05]

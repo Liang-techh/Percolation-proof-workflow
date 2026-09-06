@@ -1,0 +1,37 @@
+UTC: 2026-09-05T17:09:55Z
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_residual_power/output/run-LstptWRG
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+646c1052c10c1d8606342010c4303c0c25e40e008664ce7f1c1b1649c51f6971  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_residual_power/../routeb_supply_core/RouteBSupplyCore.lean
+0f74bf60dbe7473f4b7f7d78c759a6fbff03ae984bb932f203a31c8c8de7de3d  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_residual_power/ResidualPower.lean
+5a46af8b0f05f8e84789719a7b2298e998d4a61751062d33d84eece0b6dbbeec  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_residual_power/verify.sh
+dae80fbdbb6439761a0ad1b7c081fc5a61ca1cdd7e2f70e23df31d9756637f26  /home/z5242/sos_lean/lake-manifest.json
+'RouteBSupplyCore.damping_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.centerRate_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.gamma_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.gamma_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.gamma_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unitMargin_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unitMargin_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.completion_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.vector_completion_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.completion_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.pointwise_supply_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unit_supply_gap_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unit_supply_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.supply_at_center' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.uniform_supply_coefficient_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.power_bound_with_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unit_supply_of_power_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unit_supply_of_margin_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.scalar_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.scalar_power_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.scalar_at_center' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.zero_input_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.scalar_required_budget_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.vector_power_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.perturbed_supply_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.perturbed_supply_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.split_square_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.supply_with_squared_force_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+LEAN_COMPILE_EXIT_CODE=0
+3301afdef1bf669f4cabc1d1be741854e745feaff54735df8a4d71d349f6af82  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_residual_power/output/run-LstptWRG/ResidualPower.olean

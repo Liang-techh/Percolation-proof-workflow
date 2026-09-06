@@ -1,0 +1,10 @@
+{
+  "source_snapshots": {
+    "audit.py": "e19ea4ed6d56b57d2bf78686d26acbd87d054b6a2badf3c6bf4669ef68dc72df",
+    "verify.py": "f373ed515aa83352fa6ade170ed974469b420bd977c404347fca28c818f226df",
+    "DERIVATION.md": "0f08f11cf26fd370bb05a1ef51016c892a73d6553b22787aaa9636ee9f30872a",
+    "ATTEMPT_HISTORY.md": "a24a73c7de1e2fea41e1a709f03c96d68c691ae28c12ad0fd4af14f6c46be80d",
+    "source_bounds.input.json": "742ef3479024126a968de273fb4f1932eea6ce5b40591fb3c530f58cea9f334e"
+  },
+  "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]"
+}

@@ -1,0 +1,12 @@
++ set -euo pipefail
++ trap 'code=$?; printf "VERIFY_EXIT_CODE=%s\\n" "$code"' EXIT
+++ date -u +%FT%TZ
++ printf 'START_UTC=%s\n' 2026-09-06T00:46:48Z
+START_UTC=2026-09-06T00:46:48Z
++ cp /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_contract_adapter_lean/SourceContractAdapter.lean /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_contract_adapter_lean/README.md /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_contract_adapter_lean/verify.sh /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_contract_adapter_lean/output/run-h1FRV7UN/
+++ git -C /home/z5242/sos_lean/.lake/packages/mathlib rev-parse HEAD
++ test 0df444a360eaa60ab8c11dca51a86af692955474 = 0df444a360eaa60ab8c11dca51a86af692955474
++ test -f /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_slot_accessor_lean/output/run-4RJoHvp/FrameSlotAccessor.olean
+++ code=1
+++ printf 'VERIFY_EXIT_CODE=%s\n' 1
+VERIFY_EXIT_CODE=1

@@ -1,0 +1,27 @@
+START_UTC=2026-09-05T23:33:00Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_instantiation_lean/output/run-os1dwi5g:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vB4nl7Rh:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_mass_functional_lean/output/run-pVaCVj2p:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_origin_axis_lean/output/run-H0sN55iL:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_real_dh_step_lean/output/run-nAZVlwhR:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-k87wlFSd:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_instantiation_lean/output/run-os1dwi5g/BodyInstantiation.lean:45:34: error(lean.unknownIdentifier): Unknown identifier `Mat`
+
+Note: It is not possible to treat `Mat` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_instantiation_lean/output/run-os1dwi5g/BodyInstantiation.lean:87:6: error(lean.unknownIdentifier): Unknown identifier `linkMass`
+
+Note: It is not possible to treat `linkMass` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_instantiation_lean/output/run-os1dwi5g/BodyInstantiation.lean:90:8: error: declaration uses `sorry`
+'RouteBBodyInstantiation.routeB_frame_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodyInstantiation.routeB_body_com_midpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodyInstantiation.routeB_body_jv_zero_of_inactive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodyInstantiation.routeB_body_jw_zero_of_inactive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodyInstantiation.routeB_body_jv_active_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodyInstantiation.routeB_body_jw_active_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodyInstantiation.routeB_body_mass_is_linkMass' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBBodyInstantiation.routeB_body_mass_entry_expanded' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+BodyInstantiation_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

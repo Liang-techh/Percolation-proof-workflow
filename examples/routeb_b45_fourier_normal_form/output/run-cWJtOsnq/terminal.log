@@ -1,0 +1,30 @@
+START_UTC=2026-09-05T22:24:48Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_fourier_normal_form/output/run-cWJtOsnq:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+PROSPECTIVE_SNAPSHOT_COMPLETE
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_fourier_normal_form/output/run-cWJtOsnq/FourierNormalForm.lean:152:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  z⁻¹
+in the target expression
+  fourierCos 1 z = ↑(Real.cos q) ∧
+    fourierCos Complex.I z = -↑(Real.sin q) ∧
+      fourierCos (-Complex.I) z = ↑(Real.sin q) ∧
+        fourierSin 1 z = ↑(Real.sin q) ∧
+          fourierSin Complex.I z = ↑(Real.cos q) ∧ fourierSin (-Complex.I) z = -↑(Real.cos q)
+
+q : ℝ
+z : ℂ := Complex.exp (Complex.I * ↑q)
+hz : z = ↑(Real.cos q) + ↑(Real.sin q) * Complex.I
+hnorm : ‖z‖ = 1
+hinv : z⁻¹ = (starRingEnd ℂ) z
+hconj : (starRingEnd ℂ) z = ↑(Real.cos q) - ↑(Real.sin q) * Complex.I
+⊢ fourierCos 1 z = ↑(Real.cos q) ∧
+    fourierCos Complex.I z = -↑(Real.sin q) ∧
+      fourierCos (-Complex.I) z = ↑(Real.sin q) ∧
+        fourierSin 1 z = ↑(Real.sin q) ∧
+          fourierSin Complex.I z = ↑(Real.cos q) ∧ fourierSin (-Complex.I) z = -↑(Real.cos q)
+'RouteBB45Fourier.fourierDHStep_normal_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45Fourier.routeB_exact_single_step_parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45Fourier.fourier_phase_bridge' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+FourierNormalForm_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

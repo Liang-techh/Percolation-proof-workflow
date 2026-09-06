@@ -1,0 +1,9 @@
+{
+  "kind": "tool_result_transcription",
+  "chunk_id": "1e1775",
+  "exit_code": 1,
+  "error": "AssertionError at the proposed readable q endpoint interval (1/10,1/5)",
+  "snapshot": "attempt-02-source.py",
+  "stage": "Exact target violation assertions had passed; guessed readable q interval had not",
+  "repair": "Replace the guessed readable interval with (0,1/10) and require the exact rational enclosure to pass again; do not alter dynamics or input."
+}

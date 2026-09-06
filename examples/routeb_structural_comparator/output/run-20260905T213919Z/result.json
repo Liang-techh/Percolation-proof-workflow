@@ -1,0 +1,111 @@
+{
+  "schema": "routeb-structural-statement-comparator-v1",
+  "accepted": true,
+  "comparator_strength": "pre_comparator_only",
+  "physical_source_binding": false,
+  "upstream_comparator": false,
+  "registry_promotion": false,
+  "timestamp_utc": "2026-09-05T21:39:19.162572+00:00",
+  "targets": [
+    {
+      "id": "origin-quadratic",
+      "source": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_origin_quadratic_lean\\OriginQuadratic.lean",
+      "source_sha256": "f7ff884197da4d21c0d45e639779948c794134b85d490314f012c1812c915ea0",
+      "snapshot": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_origin_quadratic_lean\\output\\run-TIbpu6FN\\OriginQuadratic.lean",
+      "snapshot_sha256": "f7ff884197da4d21c0d45e639779948c794134b85d490314f012c1812c915ea0",
+      "checks": [
+        {
+          "name": "RouteBOriginQuadratic.negSemidefinite_of_originQuadraticLittleO",
+          "current_equals_snapshot": true,
+          "statement_sha256": "cd9ccc0ff83cc4e063bfcb70eb66e7596d3c102aad007e9e0abfcf5e45dbe0f5",
+          "required_fragments": true,
+          "current_lines": [
+            45,
+            47
+          ]
+        },
+        {
+          "name": "RouteBOriginQuadratic.negSemidefinite_of_negatedQuadraticPlusQuartic",
+          "current_equals_snapshot": true,
+          "statement_sha256": "ae06564772ecb62c832c3f044833268e7672d65b3b5bee4f101a119117b750dd",
+          "required_fragments": true,
+          "current_lines": [
+            66,
+            69
+          ]
+        },
+        {
+          "name": "RouteBOriginQuadratic.neg_not_quadNonnegative_zero_diagonal_offdiag",
+          "current_equals_snapshot": true,
+          "statement_sha256": "94a67a3513c8c197634ab0c1daeaf8f0d0a32b1f5621da5f94ea4fba2844f402",
+          "required_fragments": true,
+          "current_lines": [
+            122,
+            125
+          ]
+        },
+        {
+          "name": "RouteBOriginQuadratic.neg_not_quadNonnegative_q6_v6_block",
+          "current_equals_snapshot": true,
+          "statement_sha256": "6021cf4384f17831f9e752ad7320748019b27c730ef71e28d04534e21373faca",
+          "required_fragments": true,
+          "current_lines": [
+            136,
+            138
+          ]
+        }
+      ],
+      "structural_match": true
+    },
+    {
+      "id": "terminal-gate",
+      "source": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_terminal_gate_lean\\TerminalGate.lean",
+      "source_sha256": "1029fb6aa8c374b46e0a75e7180df98d4d6aec4f1079c895f8ff242c5e49cb89",
+      "snapshot": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_terminal_gate_lean\\output\\run-WLanCOzI\\TerminalGate.lean",
+      "snapshot_sha256": "1029fb6aa8c374b46e0a75e7180df98d4d6aec4f1079c895f8ff242c5e49cb89",
+      "checks": [
+        {
+          "name": "RouteBTerminalGate.decayPolynomial_nonneg",
+          "current_equals_snapshot": true,
+          "statement_sha256": "71cf241378595a0c0fcee17bf1d50a7636de6b4431f40f3398257a1b3b6c70b3",
+          "required_fragments": true,
+          "current_lines": [
+            24,
+            26
+          ]
+        },
+        {
+          "name": "RouteBTerminalGate.gate_implies_terminal_lower_bound",
+          "current_equals_snapshot": true,
+          "statement_sha256": "e1afaa06b1fac1f3206956b03e753b852794c6f7d7b1a32f9eecb405db16a499",
+          "required_fragments": true,
+          "current_lines": [
+            64,
+            66
+          ]
+        },
+        {
+          "name": "RouteBTerminalGate.fixed_terminal_gate_failure",
+          "current_equals_snapshot": true,
+          "statement_sha256": "e08f5cb6168d600d94da8154e01b94d86c24e2a037b346255e74734e4cdcc545",
+          "required_fragments": true,
+          "current_lines": [
+            76,
+            86
+          ]
+        },
+        {
+          "name": "RouteBTerminalGate.no_uniform_bZero_gate_of_strict_residual",
+          "current_equals_snapshot": true,
+          "statement_sha256": "a0051866b12e4672748f12eb07bdae3ab2bce8adbc277ccfc7fe20023964c979",
+          "required_fragments": true,
+          "current_lines": [
+            103,
+            110
+          ]
+        }
+      ],
+      "structural_match": true
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_residual_power/ResidualPower.lean:13:2: error: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_residual_power/ResidualPower.lean:70:4: error: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_residual_power/ResidualPower.lean:88:76: error: unsolved goals
+v e : Fin 6 → ℝ
+w : ℝ
+h :
+  RouteBSupplyCore.supply v w + ∑ i, e i * v i ≤
+    budget RouteBSupplyCore.damping fun i => RouteBSupplyCore.disturbance i * w + e i
+hs :
+  (budget RouteBSupplyCore.damping fun i => RouteBSupplyCore.disturbance i * w + e i) ≤
+    ∑ i, (RouteBSupplyCore.disturbance i * w) ^ 2 / (2 * RouteBSupplyCore.damping i) +
+      ∑ i, e i ^ 2 / (2 * RouteBSupplyCore.damping i)
+⊢ w ^ 2 * (285 / 572) +
+            w ^ 2 * ![1, 1 / 2, 3 / 10, 1 / 5, 1 / 10, 1 / 20] 2 ^ 2 *
+                (![13 / 10, 11 / 10, 19 / 20, 4 / 5, 13 / 20, 1 / 2] 2)⁻¹ *
+              (1 / 2) +
+          w ^ 2 * ![1 / 2, 3 / 10, 1 / 5, 1 / 10, 1 / 20] 2 ^ 2 * (![11 / 10, 19 / 20, 4 / 5, 13 / 20, 1 / 2] 2)⁻¹ *
+            (1 / 2) +
+        w ^ 2 * ![3 / 10, 1 / 5, 1 / 10, 1 / 20] 2 ^ 2 * (![19 / 20, 4 / 5, 13 / 20, 1 / 2] 2)⁻¹ * (1 / 2) +
+      w ^ 2 * ![1 / 5, 1 / 10, 1 / 20] 2 ^ 2 * (![4 / 5, 13 / 20, 1 / 2] 2)⁻¹ * (1 / 2) =
+    w ^ 2 * (631227 / 1086800)
+'RouteBResidualPower.scalar_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.scalar_power_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.scalar_at_center' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.zero_input_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.scalar_required_budget_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.vector_power_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.perturbed_supply_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.perturbed_supply_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.split_square_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.supply_with_squared_force_error' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,11 @@
+COMMAND ["/usr/bin/python3", "-B", "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_storage_design/output/lp-20260905T210840Z-ac3429b0/lp_candidate.py"]
+Starting SECOND AND FINAL LP: 65 variables, 87 inequalities, 80 static source points.
+Raw candidate LP objective: 0.33438619760476646
+Rational candidate initial budget: 835965494010387/2500000000000000 0.3343861976041548
+Exact beta before / after: 2949897944533/200000000000 2949897944533/200000000000
+Maximum numerical constraint violation: 2.4613130393761614e-12
+Nonzero coefficients: {'p1_1': '17535437/125000000000', 'p1_2': '2543546915047/250000000000', 'p1_3': '2054718657/200000000000', 'p1_4': '208283/1000000000000', 'p1_5': '15279087/1000000000000', 'c4': '141378301/1000000000000', 'p5_2': '2497160242683/1000000000000', 'p6_2': '1039070909897/500000000000', 'a8': '6995146470641/1000000000000', 'p8_3': '304901221437/125000000000', 'beta': '2949897944533/200000000000'}
+Solver status (candidate only): 0 Optimization terminated successfully. (HiGHS Status 7: Optimal)
+Full T=1 actual J<=1: OPEN
+
+LP_SCREEN_EXIT_CODE=0

@@ -1,0 +1,39 @@
+UTC: 2026-09-05T18:16:34Z
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_potential/output/run-USHwfUCm
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+EXACT_FACTOR_AND_BLOCK_DERIVATIVES_MATCH_17_ROWS
+c = 20601/400000 L = 48069/800000 mu = 351931/800000 mu/2 = 351931/1600000
+negative witness upper = -18601/80000000
+nonnegative shift = 424401201/140772400000 quadratic shift = 424401201/70386200000
+CSV SHA256 = 4ebbb10e32639f54b18f259cbb762c04f2be842a856cae85e1fe94dad5478b6c
+b6839edf15bcbb224762f8b6974daa6a0f182613a19ba230ee952c596ee2f50b  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_potential/BlockPotential.lean
+d98c2b3ca45f1dd2b06e80d1c39bd23ce1b1326c0f1dad522d272d9ec94829b4  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_potential/audit.py
+a9594e312f66d21103503dab1d8069f1d56a4b5db56913f5e9b5382fed439579  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_potential/audit_results.json
+dae7defe28f83ec9107078ddc94f243123ede8787358d40d74ddc783b47a39b2  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_potential/../routeb_potential_slice/output/run-SuGxG04V/PotentialSlice.olean
+194552363c4a553af85ac267c70c63e3cd512cfe4cf8819ddd70eb778f7f675b  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_potential/../routeb_dh_power_binding/output/tube-RWfVZNvn/StorageObstruction.olean
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_potential/BlockPotential.lean:16:51: error: unsolved goals
+q : Fin 6 → ℝ
+⊢ 10791 / 4000 + Real.cos (q 1) * (762237 / 200000) + Real.cos (q 1) * Real.cos (q 2) * (242307 / 200000) +
+              Real.cos (q 1) * Real.cos (q 2) * Real.cos (q (Fin.succ 2).succ) * (20601 / 400000) +
+            Real.cos (q 1) * Real.cos (q (Fin.succ 2)) * Real.sin (q (Fin.succ 2).succ) * Real.sin (q 2) *
+              (-20601 / 400000) +
+          Real.cos (q 2) * Real.cos (q (Fin.succ 2)) * Real.sin (q (Fin.succ 2).succ) * Real.sin (q 1) *
+            (-20601 / 400000) +
+        Real.cos (q (Fin.succ 2).succ) * Real.sin (q 2) * Real.sin (q 1) * (-20601 / 400000) +
+      Real.sin (q 2) * Real.sin (q 1) * (-242307 / 200000) =
+    10791 / 4000 + Real.cos (q 1) * (762237 / 200000) + Real.cos (q 1) * Real.cos (q 2) * (242307 / 200000) +
+              Real.cos (q 1) * Real.cos (q 2) * Real.cos (q 4) * (20601 / 400000) +
+            Real.cos (q 1) * Real.sin (q 2) * Real.cos (q 3) * Real.sin (q 4) * (-20601 / 400000) +
+          Real.cos (q 2) * Real.sin (q 1) * Real.cos (q 3) * Real.sin (q 4) * (-20601 / 400000) +
+        Real.sin (q 2) * Real.sin (q 1) * (-242307 / 200000) +
+      Real.sin (q 2) * Real.sin (q 1) * Real.cos (q 4) * (-20601 / 400000)
+'RouteBBlockPotential.potential_factor' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBBlockPotential.centered_block_identity' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBBlockPotential.remote_pi_half_slice' depends on axioms: [propext, Classical.choice, Quot.sound]
+LEAN_COMPILE_EXIT_CODE=1

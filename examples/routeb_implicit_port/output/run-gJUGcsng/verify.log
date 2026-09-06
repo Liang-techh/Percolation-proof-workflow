@@ -1,0 +1,31 @@
+UTC: 2026-09-05T18:12:24Z
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-gJUGcsng
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+c59bd27f577cdb638d6946af5651efc4d9b4147da0a0707a58e18a7ce4d99c1e  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/verify.sh
+dae80fbdbb6439761a0ad1b7c081fc5a61ca1cdd7e2f70e23df31d9756637f26  /home/z5242/sos_lean/lake-manifest.json
+abdf4e7c48a56366fa55b916688fe3ce191e751bb106240219e140da0fefcbc4  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/ImplicitPort.lean
+'RouteBImplicitPort.first_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBImplicitPort.second_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBImplicitPort.channel_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBImplicitPort.diagonal_elimination' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBImplicitPort.absorption_of_reduced_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBImplicitPort.residual_link_channel' depends on axioms: [propext, Classical.choice, Quot.sound]
+ImplicitPort_COMPILE_EXIT_CODE=0
+d7a84153dcc41250fa169623c32d9f06691b13efa1fa50345b5eaf6f1361b858  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-gJUGcsng/ImplicitPort.olean
+e3fede1f22e4465f497c8e89adaa40e8267006e33d6a9a412353970c6b02a8e9  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/BlockTargets.lean
+'RouteBBlockTargets.target_sandwich' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBlockTargets.tube_alone_terminal_fourteen' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBlockTargets.tighter_p_implies_terminal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBlockTargets.tube_does_not_imply_terminal' depends on axioms: [propext, Classical.choice, Quot.sound]
+BlockTargets_COMPILE_EXIT_CODE=0
+df6c651a33328a40b2520209546855020a466691fb3ccb5de65bad250c26a6ad  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-gJUGcsng/BlockTargets.olean
+ec82d38331930473b0717b7a8acf740fb62e6a209f58239ea2af37fca46c9bde  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/GateBounds.lean
+'RouteBPortGates.g_times_h' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPortGates.positivity_gate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPortGates.actual_gate_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPortGates.source_placeholder_exceeds_gate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPortGates.nonzero_acceleration_charge_feasible' depends on axioms: [propext, Classical.choice, Quot.sound]
+GateBounds_COMPILE_EXIT_CODE=0
+49881a30302b40704cbbe4abd638cab9f250f865ef0986e0344c1f7bf3b81790  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-gJUGcsng/GateBounds.olean
+LEAN_COMPILE_EXIT_CODE=0
+VERIFY_EXIT_CODE=0

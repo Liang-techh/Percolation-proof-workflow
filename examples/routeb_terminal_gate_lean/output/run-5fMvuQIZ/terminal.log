@@ -1,0 +1,29 @@
+START_UTC=2026-09-05T21:33:15Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_gate_lean/output/run-5fMvuQIZ:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+PROSPECTIVE_SNAPSHOT_COMPLETE
+COMMAND=/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -DwarningAsError=true --root=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_gate_lean/output/run-5fMvuQIZ -o /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_gate_lean/output/run-5fMvuQIZ/TerminalGate.olean /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_gate_lean/output/run-5fMvuQIZ/TerminalGate.lean
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_gate_lean/output/run-5fMvuQIZ/TerminalGate.lean:95:6: error: linarith failed to find a contradiction
+case right.left
+a : Fin 8 → ℝ
+E W0 Vd tau rho c : ℝ
+_ha : NonnegativeCoefficients a
+_ha1 : FirstCoefficientZero a
+_htau : 0 ≤ tau
+_htau_one : tau ≤ 1
+hrho : 0 < rho
+hc : 0 < c
+hE_floor : c * rho ^ 4 ≤ E
+hgap : 0 < E - a 7 * (8 * tau ^ 7 * W0 + tau ^ 8 * Vd)
+hEpos : 0 < E
+hq : 0 ≤ -(E + -terminalCorrection (a 7) W0 Vd tau)
+⊢ False
+failed
+'RouteBTerminalGate.decayPolynomial_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_gate_lean/output/run-5fMvuQIZ/TerminalGate.lean:117:14: error(lean.unknownIdentifier): Unknown constant `decayPolynomial_terminal`
+'RouteBTerminalGate.gate_implies_terminal_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBTerminalGate.fixed_terminal_gate_failure' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBTerminalGate.no_uniform_bZero_gate_of_strict_residual' depends on axioms: [propext, Classical.choice, Quot.sound]
+TerminalGate_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

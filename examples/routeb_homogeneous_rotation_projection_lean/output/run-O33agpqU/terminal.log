@@ -1,0 +1,18 @@
+START_UTC=2026-09-06T02:04:17Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_rotation_projection_lean/output/run-O33agpqU:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+'RouteBHomogeneousRotationProjection.homogeneous_rotationBlock' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBHomogeneousRotationProjection.homogeneous_rotationBlock_mul' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+HomogeneousRotationProjection_COMPILE_EXIT_CODE=0
+SOURCE_RESTRICTION_CHECK=PASSED
+a3a6ead7d060729cbcb10ea89122c02fde4c6986474792e369708ff367e8fa8b  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_rotation_projection_lean/output/run-O33agpqU/HomogeneousRotationProjection.lean
+df79c634d37249485ed95efaef8d90b71a8119a5dd401f97efaabe00ffcf1b32  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_rotation_projection_lean/output/run-O33agpqU/HomogeneousRotationProjection.olean
+JULIA_FLOAT64_BINDING=OPEN
+FULL_MASS_BINDING=OPEN
+END_UTC=2026-09-06T02:05:06Z
+VERIFY_EXIT_CODE=0

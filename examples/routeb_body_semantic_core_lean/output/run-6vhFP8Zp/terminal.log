@@ -1,0 +1,21 @@
+START_UTC=2026-09-06T00:07:17Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_semantic_core_lean/output/run-6vhFP8Zp:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+'RouteBBodySemanticCore.bodyCom_midpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodySemanticCore.bodyJv_zero_of_inactive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodySemanticCore.bodyJw_zero_of_inactive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodySemanticCore.bodyJv_active_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodySemanticCore.bodyJw_active_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodySemanticCore.bodyMass_is_linkMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodySemanticCore.block45_link4_joint5_inactive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodySemanticCore.block45_link5_joint5_active' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodySemanticCore.block45_link5_angular_joint5_active' depends on axioms: [propext, Classical.choice, Quot.sound]
+BodySemanticCore_COMPILE_EXIT_CODE=0
+SOURCE_RESTRICTION_CHECK=PASSED
+fe15f6ca9993f55fc56e6d2c9cca5fa8c7f6e9530b9b900a6f111ed96715149c  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_semantic_core_lean/output/run-6vhFP8Zp/BodySemanticCore.lean
+b9e469fd3e40fe1f8ae09686c1cfee813743fe23fbe0979f9564ab4cc84938a3  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_semantic_core_lean/output/run-6vhFP8Zp/BodySemanticCore.olean
+JULIA_FLOAT64_BINDING=OPEN
+FULL_MASS_BINDING=OPEN
+END_UTC=2026-09-06T00:08:07Z
+VERIFY_EXIT_CODE=0

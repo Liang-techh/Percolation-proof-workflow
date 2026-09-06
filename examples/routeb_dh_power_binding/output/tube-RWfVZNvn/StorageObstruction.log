@@ -1,0 +1,5 @@
+'RouteBStorageObstruction.cos_upper_on_unit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBStorageObstruction.slice_energy_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBStorageObstruction.slice_energy_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBStorageObstruction.rational_configuration_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBStorageObstruction.no_nonnegative_storage_of_slice' depends on axioms: [propext, Classical.choice, Quot.sound]

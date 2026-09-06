@@ -1,0 +1,17 @@
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/output/tube-XpoV43eT
+UTC: 2026-09-05T17:28:39Z
+f73d9e17c5f4aba59ded50cbf90d8411b8db3f1590a35dd1d3bf18df14e68198  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/EnergyTube.lean
+15a8e8ceb17131c32ceb02f4982d71807681d812d22de9f0b2fa206be346db5d  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/output/run-5RHBCcg9/DHPowerBinding.olean
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/EnergyTube.lean:20:4: error: Type mismatch: After simplification, term
+  hh
+ has type
+  @HasDerivAt ℝ DenselyNormedField.toNontriviallyNormedField ℝ Real.normedAddCommGroup.toAddCommGroup
+    RCLike.toInnerProductSpaceReal.toModule PseudoMetricSpace.toUniformSpace.toTopologicalSpace ⋯
+    ((fun x => e0 + beta * x ^ 3) + fun y => defect * y) (beta * (t ^ 2 * 3) + defect) t
+but is expected to have type
+  @HasDerivAt ℝ DenselyNormedField.toNontriviallyNormedField ℝ Real.instAddCommGroup Semiring.toModule
+    PseudoMetricSpace.toUniformSpace.toTopologicalSpace ⋯ (fun t => e0 + beta * t ^ 3 + defect * t)
+    (beta * (t ^ 2 * 3) + defect) t
+'RouteBEnergyTube.cubic_tube' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBEnergyTube.ramp_force_error_tube' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBEnergyTube.ramp_terminal_budget' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

@@ -1,0 +1,6 @@
+C:\Users\z5242\Desktop\重构版\工作流\examples\routeb_agent_exact_dh_loop_lean\output\run-pinned\RouteBAgentExactDHLoop.lean:1:0: error: unknown module prefix 'Batteries'
+
+No directory 'Batteries' or file 'Batteries.olean' in the search path entries:
+C:\Users\z5242\Desktop\重构版\工作流\examples\routeb_agent_exact_dh_loop_lean\output\run-pinned
+C:\Users\z5242\Desktop\重构版\工作流\examples\local_fkg\.lake\packages\mathlib\.lake\build\lib\lean
+c:\Users\z5242\.elan\toolchains\leanprover--lean4---v4.32.0\lib\lean

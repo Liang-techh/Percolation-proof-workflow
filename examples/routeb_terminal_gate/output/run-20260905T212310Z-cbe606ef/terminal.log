@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "C:\Users\z5242\Desktop\重构版\工作流\examples\routeb_terminal_gate\output\run-20260905T212310Z-cbe606ef\audit.py", line 57, in <module>
+    if __name__=='__main__': main()
+                             ~~~~^^
+  File "C:\Users\z5242\Desktop\重构版\工作流\examples\routeb_terminal_gate\output\run-20260905T212310Z-cbe606ef\audit.py", line 15, in main
+    assert all(coef[f'p{j}_{i}']==0 for j in range(1,9) for i in range(1,7))
+           ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError
+COMMAND ["C:\\Users\\z5242\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe", "-B", "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_terminal_gate\\output\\run-20260905T212310Z-cbe606ef\\audit.py", "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_terminal_gate\\output\\run-20260905T212310Z-cbe606ef"]
+
+AUDIT_EXIT_CODE=1

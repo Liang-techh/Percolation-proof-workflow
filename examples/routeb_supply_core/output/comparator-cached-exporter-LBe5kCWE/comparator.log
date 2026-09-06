@@ -1,0 +1,8 @@
+Building Challenge
+✖ [3006/3007] Building Challenge (14ms)
+error: failed to remove output artifacts: permission denied (error code: 4294967283)
+  file: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_supply_core/output/comparator-cached-exporter-LBe5kCWE/project/.lake/build/lib/lean/Challenge.olean
+Some required targets logged failures:
+- Challenge
+error: build failed
+uncaught exception: Child exited with 1

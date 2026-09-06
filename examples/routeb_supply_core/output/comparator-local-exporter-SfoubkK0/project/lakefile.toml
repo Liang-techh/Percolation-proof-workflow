@@ -1,0 +1,23 @@
+name = "routeBSupplyComparison"
+version = "0.1.0"
+defaultTargets = ["Challenge", "Solution", "DependencyAudit"]
+
+[leanOptions]
+warningAsError = true
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.33.1"
+
+[[lean_lib]]
+name = "RouteBSupplyCore"
+
+[[lean_lib]]
+name = "Challenge"
+
+[[lean_lib]]
+name = "Solution"
+
+[[lean_lib]]
+name = "DependencyAudit"

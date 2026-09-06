@@ -1,0 +1,23 @@
+LEAN_TOOLCHAIN_COMMIT=819816b2e0a3bf405af45ae5c7af2491d8f5bee6
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_5_descriptor_terms_adapter_lean/output/run-XqI2UV9g:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_5_residual_decomposition_lean/output/run-AeO1JYiI:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+'RouteBB45DescriptorTermsAdapter.rhoKc_descriptor_term_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45DescriptorTermsAdapter.descriptorResidualTotal_with_explicit_kc' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBB45DescriptorTermsAdapter.blockResidual_eq_descriptorResidualTotal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBB45DescriptorTermsAdapter.blockResidual_eq_descriptorResidualTotal_of_source_comparator' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+DescriptorTermsAdapter_COMPILE_EXIT_CODE=0
+1455d987f899102e68346a7d8d074b8aa472d721151b6992d373f005a955750a  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_5_descriptor_terms_adapter_lean/output/run-XqI2UV9g/DescriptorTermsAdapter.lean
+4095e24335529b5bb9f8eebfe2f0b784c0ad4c60affe80af1378f2daa2ad61a1  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_5_descriptor_terms_adapter_lean/output/run-XqI2UV9g/DescriptorTermsAdapter.olean
+SOURCE_RESTRICTION_CHECK=PASSED
+RESIDUAL_BOUND=OPEN
+FLOAT64_BINDING=OPEN
+SOURCE_COMPARATOR=OPEN
+END_UTC=2026-09-06T04:34:53Z
+VERIFY_EXIT_CODE=0

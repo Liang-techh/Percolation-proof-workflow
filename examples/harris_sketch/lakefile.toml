@@ -1,0 +1,8 @@
+name = "harrisSketch"
+[[require]]
+name = "mathlib"
+path = "../../upstream/formal-math/percolation/.lake/packages/mathlib"
+[[lean_lib]]
+name = "Challenge"
+[[lean_lib]]
+name = "Reduction"

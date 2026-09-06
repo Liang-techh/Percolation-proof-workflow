@@ -1,0 +1,5 @@
+'RouteBPortGates.g_times_h' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPortGates.positivity_gate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPortGates.actual_gate_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPortGates.source_placeholder_exceeds_gate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPortGates.nonzero_acceleration_charge_feasible' depends on axioms: [propext, Classical.choice, Quot.sound]

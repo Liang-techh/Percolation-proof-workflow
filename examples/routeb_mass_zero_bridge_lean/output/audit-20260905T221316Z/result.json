@@ -1,0 +1,35 @@
+{
+  "status": "EXACT_CSV_Q0_PAYLOAD_AUDIT_PASSED",
+  "csv_path": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_source_binding_audit\\snapshots\\current_exact\\routeB_fourier_mass_full_rational.csv",
+  "csv_sha256": "a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8",
+  "csv_rows": 610,
+  "matrix_entries": 36,
+  "csv_matrix_pairs_present": 32,
+  "csv_omitted_pairs_are_zero": true,
+  "csv_omitted_pairs": [
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      4
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      5
+    ]
+  ],
+  "all_imaginary_aggregates_zero": true,
+  "frequency_support_cardinality": 141,
+  "q0_phase_rule": "exp(i * nu dot 0) = 1 for every integer frequency",
+  "frozen_payload_matches_csv": true,
+  "regularized_payload_matches_M0": true,
+  "lean_file_reading": false,
+  "physical_DH_binding": false,
+  "float64_bridge": false
+}

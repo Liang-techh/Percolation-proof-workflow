@@ -1,0 +1,79 @@
+"""Persist GAG-GAJ results, including the repaired explicit matrix candidate."""
+from __future__ import annotations
+
+import hashlib
+import json
+import shutil
+from pathlib import Path
+
+from record_routeb_port_progress import ROOT, ref
+from percolation_workflow.store import StateStore
+
+
+def sha(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def main() -> None:
+    store = StateStore(ROOT / "artifacts/routeb_6dof/state.json")
+    state = store.load()
+    assert state.revision == 229 and not state.registry
+    old = ROOT / "artifacts/routeb_6dof/block45-obligations-v183.json"
+    new = ROOT / "artifacts/routeb_6dof/block45-obligations-v184.json"
+    backup = ROOT / "artifacts/routeb_storage_checkpoint_20260907/state-before-revision230.json"
+    specs = [
+        ("task_GAG_physical_schur_ledger_20260907", ["REPORT.md", "ledger.json", "provenance.md"], "physical_schur_ledger", "OPEN_FAIL_CLOSED", "The per-cell physical Schur ledger is specified, but the required source-charge export artifact is absent."),
+        ("task_GAH_matrix_schur_repair2_20260907", ["MatrixSchur.lean", ".lake/build/lib/lean/MatrixSchur.olean", "compile_receipt.log", "compile_strict_final.log", "REPORT.md", "STATUS.md", "provenance.md"], "matrix_schur_repair2", "CURRENT_PIN_STRICT_COMPILE_PASS_CANDIDATE_ONLY", "Explicit 2+4 matrix Schur lower bound compiles under current pin; its cross-term premise is generic and physical DH binding remains open."),
+        ("task_GAI_terminal_attachment_validator_20260907", ["REPORT.md", "fixture.json", "validate.py", "provenance.md"], "terminal_attachment_validator", "CURRENT_PIN_VALIDATOR_PASS_NON_ADMISSION", "Parent/child identity, statement hash, proof artifact hashes, six open premises, and pending comparator/registry gates validate."),
+        ("task_GAJ_sparse_join_extractor_20260907", ["REPORT.md", "missing_fields.json", "checker.py", "provenance.md"], "sparse_join_extractor", "BLOCKED", "Deterministic rank-0 join reports six missing field groups and zero enumerated addresses; no coverage claim."),
+    ]
+    assert old.is_file() and not new.exists()
+    graph = json.loads(old.read_text(encoding="utf-8"))
+    audits = []
+    for dirname, names, node, status, reason in specs:
+        sidecar = ROOT / "artifacts" / dirname
+        files = [sidecar / name for name in names]
+        assert all(path.is_file() for path in files)
+        audit = {
+            "kind": f"routeb_{node}_audit", "status": status,
+            "evidence_level": "independent_sidecar_frontier_audit",
+            "semantic_boundary": reason, "sidecar": str(sidecar.resolve()),
+            "files": [ref(path) for path in files],
+            "registry_promoted": False, "formal_certificate_allowed": False,
+        }
+        audits.append(audit)
+        graph.setdefault("bottleneck_audits", []).append(audit)
+        graph.setdefault("external_intakes", []).append({
+            "kind": audit["kind"], "source": "local-routeb-gag-gah-gai-gaj",
+            "sidecar": audit["sidecar"], "files": audit["files"],
+            "registry_promoted": False, "formal_certificate_allowed": False,
+        })
+        graph.setdefault("open_frontier_updates", []).append({
+            "node": audit["kind"], "status": status.lower(), "reason": reason,
+        })
+    graph.update(schema="routeb-proposed-proof-dag-v184", supersedes=old.name)
+    new.write_text(json.dumps(graph, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    if not backup.exists():
+        backup.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(store.path, backup)
+    digest = sha(new)
+    state.graph_artifacts.append({
+        "schema_version": 1, "algorithm": "routeb_gag_gah_gai_gaj_frontier/v1",
+        "graph_sha256": digest, "roots": [], "selected_nodes": [],
+        "source": "independent-sidecars:GAG,GAH,GAI,GAJ",
+        "evidence_sha256": sha(ROOT / "artifacts/task_GAH_matrix_schur_repair2_20260907/compile_receipt.log"),
+        "registry_promoted": False, "formal_certificate_allowed": False,
+    })
+    state.event(
+        "routeb_gag_gah_gai_gaj_frontier_recorded", proposed_dag=ref(new),
+        proposed_dag_sha256=digest,
+        audits=[{"kind": x["kind"], "status": x["status"]} for x in audits],
+        registry_promoted=False, formal_certificate_allowed=False,
+        broad_regression_run=False,
+    )
+    store.save(state)
+    print({"revision": state.revision, "graph": new.name, "audits": len(audits), "registry": len(state.registry)})
+
+
+if __name__ == "__main__":
+    main()

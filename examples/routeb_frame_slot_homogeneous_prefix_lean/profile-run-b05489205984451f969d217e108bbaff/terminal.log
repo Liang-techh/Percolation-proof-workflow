@@ -1,0 +1,16 @@
+import took 1.2s
+cumulative profiling times:
+C:\Users\z5242\Desktop\重构版\工作流\examples\routeb_frame_slot_homogeneous_prefix_lean\profile-run-b05489205984451f969d217e108bbaff\FrameSlotHomogeneousPrefix.lean:1:0: error: unknown module prefix 'Mathlib'
+
+No directory 'Mathlib' or file 'Mathlib.olean' in the search path entries:
+	import 1.2s
+	initialization 38.6ms
+C:\Users\z5242\Desktop\重构版\工作流\examples\routeb_frame_slot_homogeneous_prefix_lean\profile-run-b05489205984451f969d217e108bbaff
+C:\Users\z5242\Desktop\重构版\工作流\examples\routeb_concrete_step_homogeneous_lean\output\run-ZBZY9WRv
+C:\Users\z5242\Desktop\重构版\工作流\examples\routeb_homogeneous_prefix_projection_lean\output\run-7hl40Fdl
+C:\Users\z5242\Desktop\重构版\工作流\examples\routeb_frame_slot_accessor_lean\output\run-4RJoHvpZ
+C:\Users\z5242\Desktop\重构版\工作流\examples\routeb_frame_prefix_index_lean\output\run-lVHyO9Lp
+C:\Users\z5242\Desktop\重构版\工作流\examples\routeb_real_dh_step_lean\output\run-nAZVlwhR
+C:\Users\z5242\Desktop\重构版\工作流\examples\routeb_b45_frame_recursion\output\run-k87wlFSd
+C:\Users\z5242\Desktop\重构版\工作流\examples\routeb_frame_origin_axis_lean\output\run-H0sN55iL
+c:\Users\z5242\.elan\toolchains\leanprover--lean4---v4.33.1\lib\lean

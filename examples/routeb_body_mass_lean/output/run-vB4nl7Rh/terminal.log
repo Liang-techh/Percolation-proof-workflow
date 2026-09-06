@@ -1,0 +1,21 @@
+START_UTC=2026-09-05T23:20:08Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vB4nl7Rh:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/../routeb_mass_functional_lean/output/run-pVaCVj2p:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+'RouteBBodyMass.prevOrigin_val' depends on axioms: [propext, Quot.sound]
+'RouteBBodyMass.nextOrigin_val' depends on axioms: [propext, Quot.sound]
+'RouteBBodyMass.bodyCom_midpoint' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodyMass.bodyJv_zero_of_inactive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodyMass.bodyJw_zero_of_inactive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodyMass.bodyJv_active_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodyMass.bodyJw_active_formula' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodyMass.bodyMass_is_linkMass' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodyMass.body_mass_entry_expanded' depends on axioms: [propext, Classical.choice, Quot.sound]
+BodyMass_COMPILE_EXIT_CODE=0
+SOURCE_RESTRICTION_CHECK=PASSED
+65a9cacfc15eea1603ee364148e477b9a2978dd1144f785e705be87d2c201aff  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vB4nl7Rh/BodyMass.lean
+c437b10ceaaf7287e8caf2269fb7b621155e4607d61734b22991551777a1ca46  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vB4nl7Rh/BodyMass.olean
+PHYSICAL_FRAME_BINDING=OPEN
+FLOAT64_BINDING=OPEN
+END_UTC=2026-09-05T23:21:09Z
+VERIFY_EXIT_CODE=0

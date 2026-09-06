@@ -1,0 +1,50 @@
+UTC: 2026-09-05T18:09:28Z
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_port_absorption/output/run-ppYU1b6k
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+5229b00a1601bda2af63b4e75ee4e1c76faa553f39b2d6c6563d234fa3caea34  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_port_absorption/PortAbsorption.lean
+dc3dbf06e74c2c41ae1acc1e344d83ad41a315c19a427911805dcc85cdce649a  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_port_absorption/verify.sh
+dae80fbdbb6439761a0ad1b7c081fc5a61ca1cdd7e2f70e23df31d9756637f26  /home/z5242/sos_lean/lake-manifest.json
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_port_absorption/output/run-ppYU1b6k/PortAbsorption.lean:53:13: error: unsolved goals
+ι : Type u_1
+inst✝ : Fintype ι
+a : ℝ
+ha : a ≠ 0
+h r : ι → ℝ
+coordinate : ∀ (x y : ℝ), a * x ^ 2 + y * x = -y ^ 2 / (4 * a) + a * (x + y / (2 * a)) ^ 2
+⊢ ∑ x, -h x ^ 2 * (4 * a)⁻¹ + ∑ x, a * (r x + h x * (2 * a)⁻¹) ^ 2 =
+    (-∑ i, h i ^ 2) * (4 * a)⁻¹ + ∑ i, a * (r i + h i * (2 * a)⁻¹) ^ 2
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_port_absorption/output/run-ppYU1b6k/PortAbsorption.lean:54:65: error: This simp argument is unused:
+  Finset.sum_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [sqNorm, Finset.sum_add_distrib, div_eq_mul_inv, Finset.sum_neg_distrib, Finset.mul_sum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_port_absorption/output/run-ppYU1b6k/PortAbsorption.lean:55:8: error: This simp argument is unused:
+  Finset.sum_neg_distrib
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [sqNorm, Finset.sum_add_distrib, div_eq_mul_inv, Finset.sum_mul, Finset.mul_sum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_port_absorption/output/run-ppYU1b6k/PortAbsorption.lean:124:2: error: Type mismatch
+  hphi
+has type
+  0 ≤ Dbase - rhoSq * AB - sqNorm h / 24
+but is expected to have type
+  sqNorm h / 24 ≤ Dbase - rhoSq * AB
+'RouteBPortAbsorption.sqNorm_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.quadratic_completion' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.quadratic_lower_bound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.quadratic_minimizer' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.port_completion' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.fixed_nu_certificate_iff' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.conditional_absorption_bound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.conditional_absorption' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.conditional_absorption_nu1_sres5' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+LEAN_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

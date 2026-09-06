@@ -1,0 +1,20 @@
+name = "localFKGReplay"
+[[require]]
+name = "PercolationContinuity"
+path = "../../upstream/formal-math/percolation"
+[[lean_lib]]
+name = "LocalFKGChallenge"
+[[lean_lib]]
+name = "LocalFKGDefinitions"
+[[lean_lib]]
+name = "LocalFKGObligations"
+[[lean_lib]]
+name = "LocalFKGReduction"
+[[lean_lib]]
+name = "LocalFKGFinite"
+[[lean_lib]]
+name = "LocalFKGMarginal"
+[[lean_lib]]
+name = "LocalFKGSolution"
+[[lean_lib]]
+name = "LocalFKGSolutionAgent"

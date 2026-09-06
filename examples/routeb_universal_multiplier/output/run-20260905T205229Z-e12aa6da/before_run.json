@@ -1,0 +1,14 @@
+{
+  "snapshots": {
+    "audit.py": "5ef3f4bbdc2afd0ff67672ca2d3b9c3d403a9cdff12e8e0bd0d449010734632a",
+    "verify.py": "6371220c1e3caf8f5f3319e18c26b3272e864b2e4d9f81623f855cf56d74c15b",
+    "inputs/reference.json": "26ca4f2d80e1237e3d3e87a6a9f11c62abe9304cfe006409ef225a682dff5dc9",
+    "inputs/affine_derivation.md": "ac559b034d2bf4a4909c6470e87a190ce698c28ec3ff96dc11bfa5f8df74c339"
+  },
+  "originals": {
+    "audit.py": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_universal_multiplier\\audit.py",
+    "verify.py": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_universal_multiplier\\verify.py",
+    "inputs/reference.json": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_coupled_linear_reference\\output\\run-20260905T192654Z-3dbe159f\\reference.json",
+    "inputs/affine_derivation.md": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_affine_multiplier\\DERIVATION.md"
+  }
+}

@@ -1,0 +1,16 @@
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_potential/BlockPotential.lean:20:2: error: Tactic `simp` failed with a nested error:
+Tactic `simp` failed with a nested error:
+(deterministic) timeout at `isDefEq`, maximum number of heartbeats (200000) has been reached
+
+Note: Use `set_option maxHeartbeats <num>` to set the limit.
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_potential/BlockPotential.lean:31:34: error: unsolved goals
+r a b x y z : ℝ
+⊢ 20601 / 400000 * (Real.cos (a + b) * Real.cos y - Real.sin (a + b) * Real.cos x * Real.sin y) -
+      20601 / 400000 * Real.cos (a + b) =
+    20601 / 400000 * (Real.cos (a + b) * (Real.cos y - 1) - Real.sin (a + b) * Real.cos x * Real.sin y)
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_potential/BlockPotential.lean:39:2: error: No goals to be solved
+'RouteBBlockPotential.potential_factor' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBBlockPotential.centered_block_identity' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBBlockPotential.remote_pi_half_slice' depends on axioms: [propext, Classical.choice, Quot.sound]

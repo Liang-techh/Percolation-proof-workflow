@@ -1,0 +1,21 @@
+LEAN_TOOLCHAIN_COMMIT=819816b2e0a3bf405af45ae5c7af2491d8f5bee6
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+'RouteBPositiveSupplyFrontier.terminalDen_pos_of_eta_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPositiveSupplyFrontier.terminalDen_pos_of_relative_eta' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBPositiveSupplyFrontier.terminalDen_nonpos_at_threshold' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBPositiveSupplyFrontier.b45_terminalDen_pos_of_relative_eta' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBPositiveSupplyFrontier.equilibrium_floor_le_beta0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPositiveSupplyFrontier.equilibrium_floor_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+Frontier_COMPILE_EXIT_CODE=0
+bd35a95bceb38363c9322370d9b056d8dee3a363bee384bef4ca2f34d5bda7f0  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_positive_supply_frontier_lean/output/run-1dUPvw7e/Frontier.lean
+48130daa1e367dbdc64b1bb19fb38c15a156a3c246eb87502726e43fe058f579  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_positive_supply_frontier_lean/output/run-1dUPvw7e/Frontier.olean
+SOURCE_RESTRICTION_CHECK=PASSED
+END_UTC=2026-09-06T05:34:10Z
+VERIFY_EXIT_CODE=0

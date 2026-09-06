@@ -1,0 +1,64 @@
+{
+  "status": "RATIONAL_TAYLOR_ENCLOSED_RELAXED_FILTER_COUNTEREXAMPLE",
+  "actual_DH_trajectory": false,
+  "Lean_verified": false,
+  "original_theorem_refuted": false,
+  "model": "qdot=(p-sigma)/m; pdot=-k*q-(d/m)*p+(d/m)*sigma; axis5; w=h=0",
+  "m": "200739/4000000",
+  "k": "1/2",
+  "d": "13/20",
+  "sigma_cap": "59/500",
+  "source_conditional_sigma_cap": "2361653/20000000",
+  "initial_q_p_sigma": [
+    "0",
+    "0",
+    "0"
+  ],
+  "initial_v": "0",
+  "sigma_continuous": true,
+  "sigma_description": "Linear 0 to -S on [0,.01], constant -S on [.01,.99], linear -S to +S on [.99,1]",
+  "terminal_q_enclosure": [
+    "0",
+    "1/10"
+  ],
+  "terminal_v_enclosure": [
+    "-5",
+    "-4"
+  ],
+  "terminal_quantity_lower": "32",
+  "domain_quantity_lower": "64/5",
+  "exact_terminal_lower": "45057252044750336302216925099190558393544632178063835618132005050527568694890698156449081966487008565297768154411728674139827635893967850503349897792462465915441013357031479769636760974064925457408535290239017992932280950975188437041754189999576537107/1119337392250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "exact_domain_lower": "36049026574659825464089459066726126808693964088763735574568135139510978108942222293330317388614090546386426493644486943497947449783960388058907059694596714865045334192304709488969112647222345962412794503697134915808331222387519578635472743599576537107/2238674784500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "segment_receipts": [
+    {
+      "degree": 24,
+      "scaling_squarings": 0,
+      "scaled_norm": "80000/200739",
+      "matrix_error_upper": "33097/2500000000000000000000000000000000000000",
+      "duration": "1/100",
+      "sigma_slope": "-59/5",
+      "state_error_radius": "33097/2500000000000000000000000000000000000000"
+    },
+    {
+      "degree": 24,
+      "scaling_squarings": 7,
+      "scaled_norm": "8750/28677",
+      "matrix_error_upper": "1700301/2000000000000000000000000000000000000000",
+      "duration": "49/50",
+      "sigma_slope": "0",
+      "state_error_radius": "8773593/10000000000000000000000000000000000000000"
+    },
+    {
+      "degree": 24,
+      "scaling_squarings": 0,
+      "scaled_norm": "80000/200739",
+      "matrix_error_upper": "33097/2500000000000000000000000000000000000000",
+      "duration": "1/100",
+      "sigma_slope": "118/5",
+      "state_error_radius": "12378451/10000000000000000000000000000000000000000"
+    }
+  ],
+  "missing_physical_constraint": "sigma must equal the DH inertial coupling along the same full-six-axis trajectory; the artificial ramp need not satisfy that identity or the candidate velocity box",
+  "tail_argument": "For ||B||<=1/2, omitted exponential series <=2||B||^(n+1)/(n+1)!; propagate induced-infinity-norm errors under squaring and matrix-vector multiplication; explicitly charge matrix rounding on 10^-40 rational grid and round scalar error bounds upward",
+  "script_sha256": "599d87359a12c1a90fc58a6d37adc07fd889ea128a1e5d9d9cc49ec704be134b"
+}

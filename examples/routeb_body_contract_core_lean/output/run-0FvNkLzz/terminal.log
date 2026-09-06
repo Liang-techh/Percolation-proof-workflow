@@ -1,0 +1,17 @@
+START_UTC=2026-09-06T00:42:43Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-0FvNkLzz:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_semantic_core_lean/output/run-6vhFP8Zp:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+'RouteBBodyContractCore.contractJv_congruent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodyContractCore.contractJw_congruent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodyContractCore.contractMass_congruent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodyContractCore.block45_contract_link4_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodyContractCore.block45_contract_link5_active' depends on axioms: [propext, Classical.choice, Quot.sound]
+BodyContractCore_COMPILE_EXIT_CODE=0
+SOURCE_RESTRICTION_CHECK=PASSED
+525e564bdbb57976f0c8a119a6e4bf9294d979dbfcc35ca705bf12a7ad95a4db  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-0FvNkLzz/BodyContractCore.lean
+eab31f6595659adeae9a743a9ace57ee2e388334a41f90e7cbc49cf0996e65f7  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-0FvNkLzz/BodyContractCore.olean
+JULIA_FLOAT64_BINDING=OPEN
+FULL_MASS_BINDING=OPEN
+END_UTC=2026-09-06T00:43:05Z
+VERIFY_EXIT_CODE=0

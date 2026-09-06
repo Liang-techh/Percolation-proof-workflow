@@ -1,0 +1,136 @@
+{
+  "status": "EXACT_PARAMETERS_AND_DUAL_METRIC_IDENTITY",
+  "source": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\dhport_lib.jl",
+  "source_sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936",
+  "weights": [
+    "1/3",
+    "1/5",
+    "7/60",
+    "1/15",
+    "1/30",
+    "1/60"
+  ],
+  "DH_alpha": [
+    "-pi/2",
+    "0.0",
+    "pi/2",
+    "-pi/2",
+    "pi/2",
+    "0.0"
+  ],
+  "adjacent_axis_dot": [
+    "0",
+    "1",
+    "0",
+    "0",
+    "0"
+  ],
+  "inverse_upper_Q": [
+    [
+      "3",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "8",
+      "-5",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "-5",
+      "95/7",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "165/7",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "45",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "90"
+    ]
+  ],
+  "mass_lower_L": [
+    [
+      "1/3",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "19/117",
+      "7/117",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "7/117",
+      "56/585",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "7/165",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "1/45",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1/90"
+    ]
+  ],
+  "exact_QL_identity": true,
+  "unregularized_scalar_lower": "1/90",
+  "regularized_scalar_lower": "100009/9000000",
+  "prior_scalar_lower": "9401/1000000",
+  "mass_mismatch_cost_factor": "101871/204800000000",
+  "full_physical_FK_Lean_binding": false,
+  "float64_axis_and_rotation_error_enclosed": false,
+  "total_residual_budget_proved": false
+}

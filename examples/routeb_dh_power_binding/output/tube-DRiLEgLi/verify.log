@@ -1,0 +1,17 @@
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/output/tube-DRiLEgLi
+UTC: 2026-09-05T17:59:12Z
+15a8e8ceb17131c32ceb02f4982d71807681d812d22de9f0b2fa206be346db5d  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/output/run-5RHBCcg9/DHPowerBinding.olean
+438b27034753470dfdda0f3125a6e3d952f7b97466971a5039679435188272fc  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/../routeb_christoffel_power/output/run-YC2fOLUR/ChristoffelPower.olean
+194552363c4a553af85ac267c70c63e3cd512cfe4cf8819ddd70eb778f7f675b  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/output/tube-RWfVZNvn/StorageObstruction.olean
+bd6975d3379800ad99d5ec01ab18e1373cbe507d14ee2d21aea25b6a8ba7db64  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/ShiftBudgetObstruction.lean
+'RouteBShiftBudgetObstruction.shift_lower_of_slice_nonnegative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBShiftBudgetObstruction.shift_lower_of_storage_nonnegative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBShiftBudgetObstruction.coarse_budget_exceeds_target' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBShiftBudgetObstruction.no_coarse_terminal_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+ShiftBudgetObstruction_COMPILE_EXIT_CODE=0
+bc8237ffe517650bb48f02ecd7142274363f711db70c178cdf2bfafd46af4fdb  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/output/tube-DRiLEgLi/ShiftBudgetObstruction.olean
+LEAN_COMPILE_EXIT_CODE=0

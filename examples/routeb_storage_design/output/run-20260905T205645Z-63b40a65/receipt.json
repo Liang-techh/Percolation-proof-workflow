@@ -1,0 +1,26 @@
+{
+  "exit_code": 0,
+  "snapshots_unchanged": true,
+  "originals_unchanged": {
+    "candidate.py": true,
+    "verify.py": true,
+    "PLAN.md": true,
+    "inputs/state_revision46.json": true,
+    "inputs/signed_gap_lean_README.md": true,
+    "inputs/affine_DERIVATION.md": true,
+    "inputs/source_REPORT.md": true,
+    "inputs/source_RESULTS.md": true,
+    "inputs/source_receipt.json": true,
+    "inputs/audit_results.json": true,
+    "inputs/reference.json": true,
+    "inputs/functionals.json": true,
+    "inputs/nominal_J_functional_bounds.json": true,
+    "inputs/mass.csv": true,
+    "inputs/potential.csv": true
+  },
+  "outputs": {
+    "candidate_evidence.json": "e2596c47b823e80684c26d2b0f01e689bfce7cd6f3abe2fd08afd10c49ed6466",
+    "terminal.log": "17b679a1107848d7e52070227d5fb15b11dfff8888e4d187648a6f402d866203"
+  },
+  "formal_certificate_allowed": false
+}

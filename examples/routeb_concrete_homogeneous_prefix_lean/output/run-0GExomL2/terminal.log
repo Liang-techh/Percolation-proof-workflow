@@ -1,0 +1,378 @@
+START_UTC=2026-09-06T02:34:35Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_homogeneous_prefix_lean/output/run-0GExomL2:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_slot_accessor_lean/output/run-4RJoHvpZ:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_prefix_index_lean/output/run-lVHyO9Lp:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_origin_axis_lean/output/run-H0sN55iL:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_real_dh_step_lean/output/run-nAZVlwhR:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-k87wlFSd:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_prefix_projection_lean/output/run-7hl40Fdl:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_rotation_projection_lean/output/run-O33agpqU:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_rotation_prefix_orthogonality_lean/output/run-EZZSgIdS:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_matrix_orthogonality_closure_lean/output/run-w9gDKPMw:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_homogeneous_prefix_lean/output/run-0GExomL2/ConcreteHomogeneousPrefix.lean:29:62: error: unsolved goals
+case «0».«0»
+q : Fin 6 → ℝ
+k : Fin 6
+⊢ routeBRealCos k (q k) =
+    match ↑(embed3 0), ↑(embed3 0) with
+    | 0, 0 => routeBRealCos k (q k)
+    | 0, 1 => -(routeBRealSin k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re)
+    | 0, 2 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re
+    | 0, 3 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 1, 0 => routeBRealSin k (q k)
+    | 1, 1 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re
+    | 1, 2 => -(routeBRealCos k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re)
+    | 1, 3 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 2, 0 => 0
+    | 2, 1 => (RouteBB45Fourier.routeBSinAlpha k).re
+    | 2, 2 => (RouteBB45Fourier.routeBCosAlpha k).re
+    | 2, 3 => (RouteBB45Fourier.routeBD k).re
+    | 3, 0 => 0
+    | 3, 1 => 0
+    | 3, 2 => 0
+    | 3, 3 => 1
+    | x, x_1 => 0
+
+case «0».«1»
+q : Fin 6 → ℝ
+k : Fin 6
+⊢ -(routeBRealSin k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re) =
+    match ↑(embed3 0), ↑(embed3 1) with
+    | 0, 0 => routeBRealCos k (q k)
+    | 0, 1 => -(routeBRealSin k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re)
+    | 0, 2 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re
+    | 0, 3 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 1, 0 => routeBRealSin k (q k)
+    | 1, 1 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re
+    | 1, 2 => -(routeBRealCos k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re)
+    | 1, 3 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 2, 0 => 0
+    | 2, 1 => (RouteBB45Fourier.routeBSinAlpha k).re
+    | 2, 2 => (RouteBB45Fourier.routeBCosAlpha k).re
+    | 2, 3 => (RouteBB45Fourier.routeBD k).re
+    | 3, 0 => 0
+    | 3, 1 => 0
+    | 3, 2 => 0
+    | 3, 3 => 1
+    | x, x_1 => 0
+
+case «0».«2»
+q : Fin 6 → ℝ
+k : Fin 6
+⊢ routeBRealSin k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re =
+    match ↑(embed3 0), ↑(embed3 2) with
+    | 0, 0 => routeBRealCos k (q k)
+    | 0, 1 => -(routeBRealSin k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re)
+    | 0, 2 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re
+    | 0, 3 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 1, 0 => routeBRealSin k (q k)
+    | 1, 1 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re
+    | 1, 2 => -(routeBRealCos k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re)
+    | 1, 3 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 2, 0 => 0
+    | 2, 1 => (RouteBB45Fourier.routeBSinAlpha k).re
+    | 2, 2 => (RouteBB45Fourier.routeBCosAlpha k).re
+    | 2, 3 => (RouteBB45Fourier.routeBD k).re
+    | 3, 0 => 0
+    | 3, 1 => 0
+    | 3, 2 => 0
+    | 3, 3 => 1
+    | x, x_1 => 0
+
+case «0».«3»
+q : Fin 6 → ℝ
+k : Fin 6
+⊢ routeBRealCos k (q k) * (RouteBB45Fourier.routeBA k).re =
+    match ↑(embed3 0), 3 with
+    | 0, 0 => routeBRealCos k (q k)
+    | 0, 1 => -(routeBRealSin k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re)
+    | 0, 2 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re
+    | 0, 3 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 1, 0 => routeBRealSin k (q k)
+    | 1, 1 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re
+    | 1, 2 => -(routeBRealCos k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re)
+    | 1, 3 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 2, 0 => 0
+    | 2, 1 => (RouteBB45Fourier.routeBSinAlpha k).re
+    | 2, 2 => (RouteBB45Fourier.routeBCosAlpha k).re
+    | 2, 3 => (RouteBB45Fourier.routeBD k).re
+    | 3, 0 => 0
+    | 3, 1 => 0
+    | 3, 2 => 0
+    | 3, 3 => 1
+    | x, x_1 => 0
+
+case «1».«0»
+q : Fin 6 → ℝ
+k : Fin 6
+⊢ routeBRealSin k (q k) =
+    match ↑(embed3 1), ↑(embed3 0) with
+    | 0, 0 => routeBRealCos k (q k)
+    | 0, 1 => -(routeBRealSin k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re)
+    | 0, 2 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re
+    | 0, 3 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 1, 0 => routeBRealSin k (q k)
+    | 1, 1 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re
+    | 1, 2 => -(routeBRealCos k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re)
+    | 1, 3 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 2, 0 => 0
+    | 2, 1 => (RouteBB45Fourier.routeBSinAlpha k).re
+    | 2, 2 => (RouteBB45Fourier.routeBCosAlpha k).re
+    | 2, 3 => (RouteBB45Fourier.routeBD k).re
+    | 3, 0 => 0
+    | 3, 1 => 0
+    | 3, 2 => 0
+    | 3, 3 => 1
+    | x, x_1 => 0
+
+case «1».«1»
+q : Fin 6 → ℝ
+k : Fin 6
+⊢ routeBRealCos k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re =
+    match ↑(embed3 1), ↑(embed3 1) with
+    | 0, 0 => routeBRealCos k (q k)
+    | 0, 1 => -(routeBRealSin k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re)
+    | 0, 2 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re
+    | 0, 3 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 1, 0 => routeBRealSin k (q k)
+    | 1, 1 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re
+    | 1, 2 => -(routeBRealCos k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re)
+    | 1, 3 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 2, 0 => 0
+    | 2, 1 => (RouteBB45Fourier.routeBSinAlpha k).re
+    | 2, 2 => (RouteBB45Fourier.routeBCosAlpha k).re
+    | 2, 3 => (RouteBB45Fourier.routeBD k).re
+    | 3, 0 => 0
+    | 3, 1 => 0
+    | 3, 2 => 0
+    | 3, 3 => 1
+    | x, x_1 => 0
+
+case «1».«2»
+q : Fin 6 → ℝ
+k : Fin 6
+⊢ -(routeBRealCos k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re) =
+    match ↑(embed3 1), ↑(embed3 2) with
+    | 0, 0 => routeBRealCos k (q k)
+    | 0, 1 => -(routeBRealSin k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re)
+    | 0, 2 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re
+    | 0, 3 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 1, 0 => routeBRealSin k (q k)
+    | 1, 1 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re
+    | 1, 2 => -(routeBRealCos k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re)
+    | 1, 3 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 2, 0 => 0
+    | 2, 1 => (RouteBB45Fourier.routeBSinAlpha k).re
+    | 2, 2 => (RouteBB45Fourier.routeBCosAlpha k).re
+    | 2, 3 => (RouteBB45Fourier.routeBD k).re
+    | 3, 0 => 0
+    | 3, 1 => 0
+    | 3, 2 => 0
+    | 3, 3 => 1
+    | x, x_1 => 0
+
+case «1».«3»
+q : Fin 6 → ℝ
+k : Fin 6
+⊢ routeBRealSin k (q k) * (RouteBB45Fourier.routeBA k).re =
+    match ↑(embed3 1), 3 with
+    | 0, 0 => routeBRealCos k (q k)
+    | 0, 1 => -(routeBRealSin k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re)
+    | 0, 2 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re
+    | 0, 3 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 1, 0 => routeBRealSin k (q k)
+    | 1, 1 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re
+    | 1, 2 => -(routeBRealCos k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re)
+    | 1, 3 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 2, 0 => 0
+    | 2, 1 => (RouteBB45Fourier.routeBSinAlpha k).re
+    | 2, 2 => (RouteBB45Fourier.routeBCosAlpha k).re
+    | 2, 3 => (RouteBB45Fourier.routeBD k).re
+    | 3, 0 => 0
+    | 3, 1 => 0
+    | 3, 2 => 0
+    | 3, 3 => 1
+    | x, x_1 => 0
+
+case «2».«0»
+q : Fin 6 → ℝ
+k : Fin 6
+⊢ 0 =
+    match ↑(embed3 2), ↑(embed3 0) with
+    | 0, 0 => routeBRealCos k (q k)
+    | 0, 1 => -(routeBRealSin k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re)
+    | 0, 2 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re
+    | 0, 3 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 1, 0 => routeBRealSin k (q k)
+    | 1, 1 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re
+    | 1, 2 => -(routeBRealCos k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re)
+    | 1, 3 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 2, 0 => 0
+    | 2, 1 => (RouteBB45Fourier.routeBSinAlpha k).re
+    | 2, 2 => (RouteBB45Fourier.routeBCosAlpha k).re
+    | 2, 3 => (RouteBB45Fourier.routeBD k).re
+    | 3, 0 => 0
+    | 3, 1 => 0
+    | 3, 2 => 0
+    | 3, 3 => 1
+    | x, x_1 => 0
+
+case «2».«1»
+q : Fin 6 → ℝ
+k : Fin 6
+⊢ (RouteBB45Fourier.routeBSinAlpha k).re =
+    match ↑(embed3 2), ↑(embed3 1) with
+    | 0, 0 => routeBRealCos k (q k)
+    | 0, 1 => -(routeBRealSin k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re)
+    | 0, 2 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re
+    | 0, 3 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 1, 0 => routeBRealSin k (q k)
+    | 1, 1 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re
+    | 1, 2 => -(routeBRealCos k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re)
+    | 1, 3 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 2, 0 => 0
+    | 2, 1 => (RouteBB45Fourier.routeBSinAlpha k).re
+    | 2, 2 => (RouteBB45Fourier.routeBCosAlpha k).re
+    | 2, 3 => (RouteBB45Fourier.routeBD k).re
+    | 3, 0 => 0
+    | 3, 1 => 0
+    | 3, 2 => 0
+    | 3, 3 => 1
+    | x, x_1 => 0
+
+case «2».«2»
+q : Fin 6 → ℝ
+k : Fin 6
+⊢ (RouteBB45Fourier.routeBCosAlpha k).re =
+    match ↑(embed3 2), ↑(embed3 2) with
+    | 0, 0 => routeBRealCos k (q k)
+    | 0, 1 => -(routeBRealSin k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re)
+    | 0, 2 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re
+    | 0, 3 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 1, 0 => routeBRealSin k (q k)
+    | 1, 1 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re
+    | 1, 2 => -(routeBRealCos k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re)
+    | 1, 3 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 2, 0 => 0
+    | 2, 1 => (RouteBB45Fourier.routeBSinAlpha k).re
+    | 2, 2 => (RouteBB45Fourier.routeBCosAlpha k).re
+    | 2, 3 => (RouteBB45Fourier.routeBD k).re
+    | 3, 0 => 0
+    | 3, 1 => 0
+    | 3, 2 => 0
+    | 3, 3 => 1
+    | x, x_1 => 0
+
+case «2».«3»
+q : Fin 6 → ℝ
+k : Fin 6
+⊢ (RouteBB45Fourier.routeBD k).re =
+    match ↑(embed3 2), 3 with
+    | 0, 0 => routeBRealCos k (q k)
+    | 0, 1 => -(routeBRealSin k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re)
+    | 0, 2 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re
+    | 0, 3 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 1, 0 => routeBRealSin k (q k)
+    | 1, 1 => routeBRealCos k (q k) * (RouteBB45Fourier.routeBCosAlpha k).re
+    | 1, 2 => -(routeBRealCos k (q k) * (RouteBB45Fourier.routeBSinAlpha k).re)
+    | 1, 3 => routeBRealSin k (q k) * (RouteBB45Fourier.routeBA k).re
+    | 2, 0 => 0
+    | 2, 1 => (RouteBB45Fourier.routeBSinAlpha k).re
+    | 2, 2 => (RouteBB45Fourier.routeBCosAlpha k).re
+    | 2, 3 => (RouteBB45Fourier.routeBD k).re
+    | 3, 0 => 0
+    | 3, 1 => 0
+    | 3, 2 => 0
+    | 3, 3 => 1
+    | x, x_1 => 0
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_homogeneous_prefix_lean/output/run-0GExomL2/ConcreteHomogeneousPrefix.lean:42:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  routeBRealStepMatrix ?k (?q ?k)
+in the target expression
+  1 * routeBStepFunction q 0 = homogeneous (stepRotation q 0) (stepTranslation q 0)
+
+case «1»
+q : Fin 6 → ℝ
+⊢ 1 * routeBStepFunction q 0 = homogeneous (stepRotation q 0) (stepTranslation q 0)
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_homogeneous_prefix_lean/output/run-0GExomL2/ConcreteHomogeneousPrefix.lean:44:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  routeBRealStepMatrix ?k (?q ?k)
+in the target expression
+  1 * routeBStepFunction q 0 * routeBStepFunction q 1 =
+    homogeneous (stepRotation q 0) (stepTranslation q 0) * homogeneous (stepRotation q 1) (stepTranslation q 1)
+
+case «2»
+q : Fin 6 → ℝ
+⊢ 1 * routeBStepFunction q 0 * routeBStepFunction q 1 =
+    homogeneous (stepRotation q 0) (stepTranslation q 0) * homogeneous (stepRotation q 1) (stepTranslation q 1)
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_homogeneous_prefix_lean/output/run-0GExomL2/ConcreteHomogeneousPrefix.lean:46:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  routeBRealStepMatrix ?k (?q ?k)
+in the target expression
+  1 * routeBStepFunction q 0 * routeBStepFunction q 1 * routeBStepFunction q 2 =
+    homogeneous (stepRotation q 0) (stepTranslation q 0) * homogeneous (stepRotation q 1) (stepTranslation q 1) *
+      homogeneous (stepRotation q 2) (stepTranslation q 2)
+
+case «3»
+q : Fin 6 → ℝ
+⊢ 1 * routeBStepFunction q 0 * routeBStepFunction q 1 * routeBStepFunction q 2 =
+    homogeneous (stepRotation q 0) (stepTranslation q 0) * homogeneous (stepRotation q 1) (stepTranslation q 1) *
+      homogeneous (stepRotation q 2) (stepTranslation q 2)
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_homogeneous_prefix_lean/output/run-0GExomL2/ConcreteHomogeneousPrefix.lean:49:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  routeBRealStepMatrix ?k (?q ?k)
+in the target expression
+  1 * routeBStepFunction q 0 * routeBStepFunction q 1 * routeBStepFunction q 2 * routeBStepFunction q 3 =
+    homogeneous (stepRotation q 0) (stepTranslation q 0) * homogeneous (stepRotation q 1) (stepTranslation q 1) *
+        homogeneous (stepRotation q 2) (stepTranslation q 2) *
+      homogeneous (stepRotation q 3) (stepTranslation q 3)
+
+case «4»
+q : Fin 6 → ℝ
+⊢ 1 * routeBStepFunction q 0 * routeBStepFunction q 1 * routeBStepFunction q 2 * routeBStepFunction q 3 =
+    homogeneous (stepRotation q 0) (stepTranslation q 0) * homogeneous (stepRotation q 1) (stepTranslation q 1) *
+        homogeneous (stepRotation q 2) (stepTranslation q 2) *
+      homogeneous (stepRotation q 3) (stepTranslation q 3)
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_homogeneous_prefix_lean/output/run-0GExomL2/ConcreteHomogeneousPrefix.lean:52:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  routeBRealStepMatrix ?k (?q ?k)
+in the target expression
+  1 * routeBStepFunction q 0 * routeBStepFunction q 1 * routeBStepFunction q 2 * routeBStepFunction q 3 *
+      routeBStepFunction q 4 =
+    homogeneous (stepRotation q 0) (stepTranslation q 0) * homogeneous (stepRotation q 1) (stepTranslation q 1) *
+          homogeneous (stepRotation q 2) (stepTranslation q 2) *
+        homogeneous (stepRotation q 3) (stepTranslation q 3) *
+      homogeneous (stepRotation q 4) (stepTranslation q 4)
+
+case «5»
+q : Fin 6 → ℝ
+⊢ 1 * routeBStepFunction q 0 * routeBStepFunction q 1 * routeBStepFunction q 2 * routeBStepFunction q 3 *
+      routeBStepFunction q 4 =
+    homogeneous (stepRotation q 0) (stepTranslation q 0) * homogeneous (stepRotation q 1) (stepTranslation q 1) *
+          homogeneous (stepRotation q 2) (stepTranslation q 2) *
+        homogeneous (stepRotation q 3) (stepTranslation q 3) *
+      homogeneous (stepRotation q 4) (stepTranslation q 4)
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_homogeneous_prefix_lean/output/run-0GExomL2/ConcreteHomogeneousPrefix.lean:56:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  routeBRealStepMatrix ?k (?q ?k)
+in the target expression
+  1 * routeBStepFunction q 0 * routeBStepFunction q 1 * routeBStepFunction q 2 * routeBStepFunction q 3 *
+        routeBStepFunction q 4 *
+      routeBStepFunction q 5 =
+    homogeneous (stepRotation q 0) (stepTranslation q 0) * homogeneous (stepRotation q 1) (stepTranslation q 1) *
+            homogeneous (stepRotation q 2) (stepTranslation q 2) *
+          homogeneous (stepRotation q 3) (stepTranslation q 3) *
+        homogeneous (stepRotation q 4) (stepTranslation q 4) *
+      homogeneous (stepRotation q 5) (stepTranslation q 5)
+
+case «6»
+q : Fin 6 → ℝ
+⊢ 1 * routeBStepFunction q 0 * routeBStepFunction q 1 * routeBStepFunction q 2 * routeBStepFunction q 3 *
+        routeBStepFunction q 4 *
+      routeBStepFunction q 5 =
+    homogeneous (stepRotation q 0) (stepTranslation q 0) * homogeneous (stepRotation q 1) (stepTranslation q 1) *
+            homogeneous (stepRotation q 2) (stepTranslation q 2) *
+          homogeneous (stepRotation q 3) (stepTranslation q 3) *
+        homogeneous (stepRotation q 4) (stepTranslation q 4) *
+      homogeneous (stepRotation q 5) (stepTranslation q 5)
+'RouteBConcreteHomogeneousPrefix.routeB_step_is_homogeneous' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBConcreteHomogeneousPrefix.routeB_frame_slot_eq_homogeneousPrefix' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBConcreteHomogeneousPrefix.routeB_frame_slot_rotationBlock_eq_rotationPrefix' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+ConcreteHomogeneousPrefix_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

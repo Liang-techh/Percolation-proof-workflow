@@ -1,0 +1,16 @@
+START_UTC=2026-09-06T10:12:36Z
+RUN=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_cap_ae/output/run-tKh1agaS
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+019d58bc8f179789745981b8160119ab1491e9ead7285a529f0f328aceecb9e6  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_cap_ae/output/run-tKh1agaS/TerminalCapAE.lean
+'RouteBTerminalCapAE.qpoly_le_five_halves_p' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBTerminalCapAE.p_cap_24_over_5_implies_qpoly_cap_12' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBTerminalCapAE.direct_storage_comparison_implies_qpoly_cap_12' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBTerminalCapAE.p_cap_28_over_5_only_gives_14' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBTerminalCapAE.p_cap_28_over_5_does_not_imply_qpoly_cap_12' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+LEAN_COMPILE_EXIT_CODE=0
+55d5c1d7a15ad614bf9c1f3200a156ea19d642311b747a469d6d19f36f53fc5f  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_cap_ae/output/run-tKh1agaS/TerminalCapAE.olean
+VERIFY_EXIT_CODE=0

@@ -1,0 +1,43 @@
+START_UTC=2026-09-05T22:37:10Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-ZcaasovF:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+PROSPECTIVE_SNAPSHOT_COMPLETE
+'RouteBB45Fourier.fourierDHStep_normal_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45Fourier.routeB_exact_single_step_parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45Fourier.fourier_phase_bridge' depends on axioms: [propext, Classical.choice, Quot.sound]
+FourierNormalForm_COMPILE_EXIT_CODE=0
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-ZcaasovF/FrameRecursion.lean:46:6: error: Type mismatch
+  ih (parent * current)
+has type
+  (prefixFrames (parent * current) tail).getLast? = some (parent * current * frameProduct tail)
+but is expected to have type
+  some ((prefixFrames (parent * current) tail).getLast?.getD parent) = some (parent * frameProduct (current :: tail))
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-ZcaasovF/FrameRecursion.lean:77:41: error: unsolved goals
+case cons
+head✝ : Fin 6 × ℝ
+tail✝ : List (Fin 6 × ℝ)
+tail_ih✝ :
+  ∀ (parent : Frame),
+    (routeBFrameChain parent tail✝).getLast? =
+      some (parent * frameProduct (List.map (fun kq => routeBStepMatrix kq.1 kq.2) tail✝))
+parent : Frame
+⊢ (routeBFrameChain parent (head✝ :: tail✝)).getLast? =
+    some (parent * frameProduct (List.map (fun kq => routeBStepMatrix kq.1 kq.2) (head✝ :: tail✝)))
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-ZcaasovF/FrameRecursion.lean:80:9: error: unexpected token '('; expected command
+'RouteBB45FrameRecursion.frameProduct_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45FrameRecursion.prefixFrames_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45FrameRecursion.prefixFrames_next_frame' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45FrameRecursion.prefixFrames_final_product' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBB45FrameRecursion.routeBFrameChain_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45FrameRecursion.routeB_parent_axis_before_current_step' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBB45FrameRecursion.routeB_chain_final_product' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+FrameRecursion_COMPILE_EXIT_CODE=1
+56ec2f2d29a22942bcb83a3ba98197ae1ce4d607340072b81c013b8d358d3218  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-ZcaasovF/FourierNormalForm.lean
+49d9dfaf04dae88f70301d697c26548ef65b5dcb3cd750b7a79eb2a7715917f1  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-ZcaasovF/FourierNormalForm.olean
+38765f6964364e4db3212ade6a71ac3525bc1d1c981bad24468d6d25af698df2  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-ZcaasovF/FrameRecursion.lean
+sha256sum: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-ZcaasovF/FrameRecursion.olean: No such file or directory
+END_UTC=2026-09-05T22:38:06Z
+VERIFY_EXIT_CODE=0

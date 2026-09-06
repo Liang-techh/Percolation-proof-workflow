@@ -1,0 +1,20 @@
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_local_energy_budget/output/run-R2XPgS0V/LocalEnergyBudget.lean:95:2: error: linarith failed to find a contradiction
+x : Fin 12 → ℝ
+hx : ∑ i, x i ^ 2 ≤ 9 / 400
+hs : ∑ i ∈ {3, 4, 9, 10}, x i ^ 2 ≤ ∑ i, x i ^ 2
+a✝ : 9 / 400 < x 3 ^ 2 + x 4 ^ 2 + x 9 ^ 2 + x 10 ^ 2
+⊢ False
+failed
+'RouteBLocalEnergyBudget.derivative_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.half_damping_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.derivative_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.full12Ball_block_bound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.VB_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.VB_le_blockNormSq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.initial_VB_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.full12Ball_initial_VB' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.p_le_VB' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.qterminal_le_VB' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.cap_arithmetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.outputs_of_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.cap_of_energy_ledger' depends on axioms: [propext, Classical.choice, Quot.sound]

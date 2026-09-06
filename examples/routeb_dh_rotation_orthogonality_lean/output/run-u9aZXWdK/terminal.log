@@ -1,0 +1,13 @@
+START_UTC=2026-09-06T01:40:15Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_rotation_orthogonality_lean/output/run-u9aZXWdK:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+'RouteBDHRotationOrthogonality.dh_rotation_rows_orthogonal' depends on axioms: [propext, Classical.choice, Quot.sound]
+DHRotationOrthogonality_COMPILE_EXIT_CODE=0
+SOURCE_RESTRICTION_CHECK=PASSED
+2c02c6e139dc7353335a4e2aae6b88582465c7073bfab820dc78dd52cf4f0155  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_rotation_orthogonality_lean/output/run-u9aZXWdK/DHRotationOrthogonality.lean
+8658e553683a9afef09e7c9039805d8f66c13bd6ff1231f29f06ac64f4eeb01d  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_rotation_orthogonality_lean/output/run-u9aZXWdK/DHRotationOrthogonality.olean
+JULIA_FLOAT64_BINDING=OPEN
+FULL_MASS_BINDING=OPEN
+END_UTC=2026-09-06T01:41:10Z
+VERIFY_EXIT_CODE=0

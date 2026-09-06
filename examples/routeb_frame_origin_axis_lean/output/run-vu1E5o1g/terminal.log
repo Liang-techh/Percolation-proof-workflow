@@ -1,0 +1,32 @@
+START_UTC=2026-09-05T23:27:50Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_origin_axis_lean/output/run-vu1E5o1g:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_real_dh_step_lean/output/run-nAZVlwhR:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-k87wlFSd:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_origin_axis_lean/output/run-vu1E5o1g/FrameOriginAxis.lean:98:6: error: No goals to be solved
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_origin_axis_lean/output/run-vu1E5o1g/FrameOriginAxis.lean:132:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (sourceFrames ?parent ?steps).length
+in the target expression
+  (routeBSourceFrames q).length = 7
+
+q : Fin 6 → ℝ
+⊢ (routeBSourceFrames q).length = 7
+'RouteBFrameOriginAxis.sourceFrames_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFrameOriginAxis.sourceOrigins_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFrameOriginAxis.sourceAxes_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFrameOriginAxis.sourceOriginArray_eq_sourceOrigins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFrameOriginAxis.sourceAxisArray_eq_sourceAxes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFrameOriginAxis.parent_axis_recorded_before_current' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFrameOriginAxis.parent_origin_recorded_before_current' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFrameOriginAxis.current_step_changes_parent_before_recursion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBFrameOriginAxis.routeB_source_origins_semantics' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFrameOriginAxis.routeB_source_axes_semantics' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFrameOriginAxis.routeB_first_axis_is_world_z' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFrameOriginAxis.routeB_first_origin_is_world_origin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFrameOriginAxis.routeB_six_steps_have_seven_frames' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+FrameOriginAxis_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

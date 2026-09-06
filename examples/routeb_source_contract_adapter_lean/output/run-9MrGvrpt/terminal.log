@@ -1,0 +1,54 @@
+START_UTC=2026-09-06T00:49:55Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_contract_adapter_lean/output/run-9MrGvrpt:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_slot_accessor_lean/output/run-4RJoHvpZ:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-0FvNkLzz:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_semantic_core_lean/output/run-6vhFP8Zp:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_prefix_index_lean/output/run-lVHyO9Lp:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_origin_axis_lean/output/run-H0sN55iL:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_real_dh_step_lean/output/run-nAZVlwhR:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-k87wlFSd:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_contract_adapter_lean/output/run-9MrGvrpt/SourceContractAdapter.lean:25:44: error: Application type mismatch: The argument
+  i
+has type
+  Fin 6
+but is expected to have type
+  Fin 7
+in the application
+  routeBFrameSlot q i
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_contract_adapter_lean/output/run-9MrGvrpt/SourceContractAdapter.lean:35:34: error: Application type mismatch: The argument
+  i
+has type
+  Fin 6
+but is expected to have type
+  Fin 7
+in the application
+  routeB_source_axis_slot q i
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_contract_adapter_lean/output/run-9MrGvrpt/SourceContractAdapter.lean:41:2: error: `simp` made no progress
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_contract_adapter_lean/output/run-9MrGvrpt/SourceContractAdapter.lean:41:29: error: declaration uses `sorry`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_contract_adapter_lean/output/run-9MrGvrpt/SourceContractAdapter.lean:55:10: error: Function expected at
+  congrFun (source_origin_function_eq_frame_contract q) i
+but this term has type
+  (sourceContract q).origins i = (frameContract q).origins i
+
+Note: Expected a function because this term is being applied to the argument
+  a
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_contract_adapter_lean/output/run-9MrGvrpt/SourceContractAdapter.lean:57:10: error: Function expected at
+  congrFun (source_axis_function_eq_frame_contract q) j
+but this term has type
+  (sourceContract q).axes j = (frameContract q).axes j
+
+Note: Expected a function because this term is being applied to the argument
+  a
+'RouteBSourceContractAdapter.source_origin_function_eq_frame_contract' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBSourceContractAdapter.source_axis_function_eq_frame_contract' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBSourceContractAdapter.source_contract_eq_frame_contract' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBSourceContractAdapter.source_contract_body_mass_eq_frame_contract_body_mass' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+SourceContractAdapter_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

@@ -1,0 +1,39 @@
+START_UTC=2026-09-05T21:47:54Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_positive_supply_gate/output/run-LUEjDlAd:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+PROSPECTIVE_SNAPSHOT_COMPLETE
+EXACT_A1_POSITIVE_SUPPLY_AUDIT_PASS
+COST_PLUS_VDOT=2386342385699110329785000649509191909464301133134499872925056247113924844981685325115257/641908105754787018071125247399173323886509889168806038907229258440000000000000000000000000000000000 DISPLAY=3.717576338895319e-12
+A1_TERMINAL_FLOOR=190913514733716601510807399409170976619905924733040523544000000/10710391872310845470046091941456661709266356740671411220626522757475523 DISPLAY=1.782507279003281e-08
+NO_FEASIBILITY_OR_J1_CLAIM
+COMMAND=/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -DwarningAsError=true --root=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_positive_supply_gate/output/run-LUEjDlAd -o /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_positive_supply_gate/output/run-LUEjDlAd/PositiveSupplyGate.olean /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_positive_supply_gate/output/run-LUEjDlAd/PositiveSupplyGate.lean
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_positive_supply_gate/output/run-LUEjDlAd/PositiveSupplyGate.lean:26:5: error: Variable name `hfloor` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hfloor
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_positive_supply_gate/output/run-LUEjDlAd/PositiveSupplyGate.lean:45:33: error: Application type mismatch: The argument
+  hbound
+has type
+  (E - 0) / (W + tau * (D * rho ^ 2 - rho * eta)) ≤ a1
+but is expected to have type
+  E / (W + tau * (D * rho ^ 2 - rho * eta)) ≤ a1
+in the application
+  lt_of_lt_of_le hpositive hbound
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_positive_supply_gate/output/run-LUEjDlAd/PositiveSupplyGate.lean:50:34: error: Variable name `betaUpper` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _betaUpper
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'RouteBPositiveSupplyGate.first_order_supply_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPositiveSupplyGate.zero_supply_requires_positive_first_order' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBPositiveSupplyGate.finite_coefficient_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPositiveSupplyGate.polynomialSupply_nonnegative' depends on axioms: [propext, Classical.choice, Quot.sound]
+PositiveSupplyGate_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

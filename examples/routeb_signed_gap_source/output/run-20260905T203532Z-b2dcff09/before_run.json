@@ -1,0 +1,83 @@
+{
+  "created_utc": "2026-09-05T20:35:32.391555+00:00",
+  "snapshots": {
+    "audit.py": {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_signed_gap_source\\audit.py",
+      "sha256": "0767cb094162f0b35a70dee9994066372dad7561fd10fb57ccf02bf7be8bc7f0"
+    },
+    "REPORT.md": {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_signed_gap_source\\REPORT.md",
+      "sha256": "31c803473ec11967c1183df731b91db106cc42d589562838e0f6365d33ebbcda"
+    },
+    "verify.py": {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_signed_gap_source\\verify.py",
+      "sha256": "fcd443fac42631757943a6e66695e7b8f270716bfe6a57ddf93056c2f81c6b3a"
+    },
+    "inputs/inertial_audit.py": {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_inertial_structure\\audit.py",
+      "sha256": "904af69d303d6db2630ce528e1eabfb1f217412983bffb7c1e43e50998257e58"
+    },
+    "inputs/gain_audit.py": {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_coupled_finite_gain\\audit.py",
+      "sha256": "0855a248726df03579c8cd3fb648e8b131a44653dccceb0e939c710097681e7e"
+    },
+    "inputs/coupled_audit.py": {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_coupled_linear_reference\\audit.py",
+      "sha256": "b8a3dfd31f1270013c499f5e219e686dbfed87e420ad94c1fc576b65200dcd4c"
+    },
+    "inputs/coupled_DERIVATION.md": {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_coupled_linear_reference\\DERIVATION.md",
+      "sha256": "3d674665ed692dda750d091377e86341acfa9b3663f3250afef8fbceb329048e"
+    },
+    "inputs/reference.json": {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_coupled_linear_reference\\output\\run-20260905T192654Z-3dbe159f\\reference.json",
+      "sha256": "26ca4f2d80e1237e3d3e87a6a9f11c62abe9304cfe006409ef225a682dff5dc9"
+    },
+    "inputs/prefix_audit.py": {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_prefix_budget\\audit.py",
+      "sha256": "5b4ae94b075d179661eb4f0a637116eef6fda313dbd0c92b1c294339fb72beb4"
+    },
+    "inputs/prefix_DERIVATION.md": {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_prefix_budget\\DERIVATION.md",
+      "sha256": "5597b67879457144e78e8450a859d451d8cf5bbfc335fc2309d6f3642ed816af"
+    },
+    "inputs/prefix_results.json": {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_prefix_budget\\output\\run-20260905T200854Z-88e7c74d\\field_name_correction\\results.json",
+      "sha256": "4639c7614b7d012e323dba32dc9a9ccc63915ececc61378039a9460809de2b34"
+    },
+    "inputs/SIGNED_WORK.md": {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_J_strategy\\SIGNED_WORK.md",
+      "sha256": "a2d3d70c0f78c7db1e55eef400b6eee7fa08a96af0f0175191a54663af785b4f"
+    },
+    "inputs/strategy_REPORT.md": {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_J_strategy\\REPORT.md",
+      "sha256": "9f43cf60135b618a505b06330d20432b9d6084733d1bcb350cd28cb9c98c2120"
+    },
+    "inputs/routeB_fourier_mass_full_rational.csv": {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_fourier_mass_full_rational.csv",
+      "sha256": "a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8"
+    },
+    "inputs/routeB_fourier_coriolis_rational.csv": {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_fourier_coriolis_rational.csv",
+      "sha256": "2a3004c1459c28a5e93a243d47d22ab4f18c115aeaf72cf436336a7b6c0abdd3"
+    },
+    "inputs/routeB_fourier_potential_rational.csv": {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_fourier_potential_rational.csv",
+      "sha256": "4ebbb10e32639f54b18f259cbb762c04f2be842a856cae85e1fe94dad5478b6c"
+    },
+    "inputs/dhport_lib.jl": {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\dhport_lib.jl",
+      "sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936"
+    },
+    "inputs/routeB_fourier_rational_probe.py": {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_fourier_rational_probe.py",
+      "sha256": "9460181770e47be0ecbde43a8a29ef285da1168c3121fab18d5378c671401a7b"
+    }
+  },
+  "execution": [
+    "C:\\Users\\z5242\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+    "-B",
+    "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_signed_gap_source\\output\\run-20260905T203532Z-b2dcff09\\audit.py"
+  ],
+  "policy": "All audit reads use snapshots. All writes stay in this attempt. Failed attempts retained."
+}

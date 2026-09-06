@@ -1,0 +1,25 @@
+START_UTC=2026-09-05T22:38:20Z
+LEAN_TOOLCHAIN_COMMIT=819816b2e0a3bf405af45ae5c7af2491d8f5bee6
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_positive_supply_q_projection_lean/output/run-MoXdpt3f:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+COMMAND=/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -DwarningAsError=true --root=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_positive_supply_q_projection_lean/output/run-MoXdpt3f -o /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_positive_supply_q_projection_lean/output/run-MoXdpt3f/QProjection.olean /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_positive_supply_q_projection_lean/output/run-MoXdpt3f/QProjection.lean
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_positive_supply_q_projection_lean/output/run-MoXdpt3f/QProjection.lean:84:67: error: unsolved goals
+s : ℝ
+⊢ ![0, 0, 0, s * 21, s * 11, 0] 2 ^ 2 * (95 / 7) + ![0, 0, 0, s * 21, s * 11, 0] 3 ^ 2 * (165 / 7) +
+          ![0, 0, 0, s * 21, s * 11, 0] 4 ^ 2 * 45 +
+        ![0, 0, 0, s * 21, s * 11, 0] 5 ^ 2 * 90 =
+      s ^ 2 * 15840 ∧
+    ![0, 0, 0, s * 21, s * 11, 0] 3 + ![0, 0, 0, s * 21, s * 11, 0] 4 = s * 32 ∧
+      ![0, 0, 0, s * 21, s * 11, 0] 3 * ![0, 0, 0, s * 21, s * 11, 0] 4 * 2 + ![0, 0, 0, s * 21, s * 11, 0] 3 ^ 2 +
+          ![0, 0, 0, s * 21, s * 11, 0] 4 ^ 2 =
+        ![0, 0, 0, s * 21, s * 11, 0] 2 ^ 2 * (608 / 693) + ![0, 0, 0, s * 21, s * 11, 0] 3 ^ 2 * (32 / 21) +
+            ![0, 0, 0, s * 21, s * 11, 0] 4 ^ 2 * (32 / 11) +
+          ![0, 0, 0, s * 21, s * 11, 0] 5 ^ 2 * (64 / 11)
+'RouteBQProjection.qEnergy_dominates_selected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBQProjection.weighted_projection_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBQProjection.projection_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBQProjection.projection_abs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBQProjection.sharp_projection' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+QProjection_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

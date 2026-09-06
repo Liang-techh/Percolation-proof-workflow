@@ -1,0 +1,88 @@
+{
+  "request_id": "ff794d25321c4c4d912b78cdd56b3a09",
+  "target": "Percolation.Literature.harris_fkg_local",
+  "shared_module": "LocalFKGDefinitions",
+  "obligations_module": "LocalFKGObligations",
+  "reduction_module": "LocalFKGReduction",
+  "reduction_theorem": "Percolation.Literature.LocalFKG.harris_fkg_local_of_children",
+  "status": "conditional_reduction_compiled_children_unproved",
+  "children": [
+    {
+      "theorem": "Percolation.Literature.LocalFKG.finite_bernoulli_positive_correlation",
+      "depends_on_children": [],
+      "contract": "For every finite coordinate type and coordinate parameters in [0,1], any two nonnegative increasing real functions on its Bool cube have nonnegative covariance under the explicit product weights.",
+      "mathematical_sketch": "Induct on the finite coordinate set (or transport to Fin n). Split a coordinate into false/true slices. Apply induction within slices. The remaining covariance term is q*(1-q)*(E f_true-E f_false)*(E g_true-E g_false), nonnegative by monotonicity and nonnegative weights. The empty cube is a singleton. No division is needed, so endpoints are included. Prove the necessary weight normalization and finite-sum splitting internally."
+    },
+    {
+      "theorem": "Percolation.Literature.LocalFKG.local_event_cube_expectation",
+      "depends_on_children": [],
+      "contract": "For arbitrary V, graph G, p in [0,1], finite F in Sym2 V and any event determined by F, its bondPercolation real probability equals cubeExpectation of eventIndicator using constant p. No increasing-event hypothesis.",
+      "mathematical_sketch": "Use the finite-coordinate marginal of setBernoulli and partition into cylinder assignments on F intersect G.edgeSet. DeterminedBy identifies event membership with the representative cubeConfig. Each genuine-edge cylinder has the finite Bernoulli product mass. Sum these disjoint measurable cylinders and convert to real probabilities. Coordinates in F outside G.edgeSet are dummy bits: cubeConfig always closes them and summing their weights gives p+(1-p)=1. Use only finite-coordinate measurable events; do not assert that an arbitrary uncountable configuration singleton is measurable or has full-measure support as a global subset condition."
+    }
+  ],
+  "parent_sketch": "Take F=FA union FB. Enlarge each DeterminedBy witness and intersect them. The graph-masked cubeConfig preserves coordinatewise inclusion, hence upper-event indicators are increasing and nonnegative. Apply the finite child to the two indicators with constant parameter p. Rewrite their product as the intersection indicator and use the marginal child for A, B and A intersect B.",
+  "proof_boundary": {
+    "child_placeholders": "Exactly two sorry placeholders, confined to LocalFKGObligations.lean; children remain unproved.",
+    "reduction_imports": ["LocalFKGDefinitions"],
+    "shared_imports": ["Percolation.Literature.PercolationEvents"],
+    "reduction_uses_obligation_declarations": false,
+    "finite_or_countable_V_assumption": false,
+    "existing_target_proofs_read_or_called": false,
+    "reduction_axioms": ["propext", "Classical.choice", "Quot.sound"],
+    "transitive_import_and_elaborated_dependency_audit": "The compiled reduction's #print axioms contains no sorryAx or custom axiom. Full forbidden-module transitive-import and declaration-dependency audit remains with the coordinator."
+  },
+  "compilation": {
+    "status": "definitions_and_conditional_reduction_passed_obligations_have_expected_placeholders",
+    "working_directory": "C:/Users/z5242/Desktop/重构版/工作流/upstream/formal-math/percolation",
+    "lake_update_started": false,
+    "runs": [
+      {
+        "command": "lake env lean -o \"C:/Users/z5242/Desktop/重构版/工作流/examples/local_fkg/LocalFKGDefinitions.olean\" \"C:/Users/z5242/Desktop/重构版/工作流/examples/local_fkg/LocalFKGDefinitions.lean\"",
+        "exit_code": 1,
+        "output": "input file 'c:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\local_fkg\\LocalFKGDefinitions.lean' must be contained in root directory (C:\\Users\\z5242\\Desktop\\重构版\\工作流\\upstream\\formal-math\\percolation\\)\n"
+      },
+      {
+        "command": "lake env lean --root=\"C:/Users/z5242/Desktop/重构版/工作流/examples/local_fkg\" -o \"C:/Users/z5242/Desktop/重构版/工作流/examples/local_fkg/LocalFKGDefinitions.olean\" \"C:/Users/z5242/Desktop/重构版/工作流/examples/local_fkg/LocalFKGDefinitions.lean\"",
+        "exit_code": 0,
+        "output": ""
+      },
+      {
+        "command": "$env:LEAN_PATH = 'C:/Users/z5242/Desktop/重构版/工作流/examples/local_fkg' + [IO.Path]::PathSeparator + $env:LEAN_PATH\nlake env lean --root=\"C:/Users/z5242/Desktop/重构版/工作流/examples/local_fkg\" -o \"C:/Users/z5242/Desktop/重构版/工作流/examples/local_fkg/LocalFKGReduction.olean\" \"C:/Users/z5242/Desktop/重构版/工作流/examples/local_fkg/LocalFKGReduction.lean\"",
+        "exit_code": 0,
+        "output": ""
+      },
+      {
+        "command": "$env:LEAN_PATH = 'C:/Users/z5242/Desktop/重构版/工作流/examples/local_fkg' + [IO.Path]::PathSeparator + $env:LEAN_PATH\nlake env lean \"C:/Users/z5242/Desktop/重构版/工作流/examples/local_fkg/LocalFKGObligations.lean\"",
+        "exit_code": 0,
+        "output": "C:/Users/z5242/Desktop/重构版/工作流/examples/local_fkg/LocalFKGObligations.lean:12:8: warning: declaration uses `sorry`\nC:/Users/z5242/Desktop/重构版/工作流/examples/local_fkg/LocalFKGObligations.lean:24:8: warning: declaration uses `sorry`\n"
+      },
+      {
+        "command": "$env:LEAN_PATH = 'C:/Users/z5242/Desktop/重构版/工作流/examples/local_fkg' + [IO.Path]::PathSeparator + $env:LEAN_PATH\n@'\nimport LocalFKGReduction\n#print axioms Percolation.Literature.LocalFKG.harris_fkg_local_of_children\n'@ | lake env lean --stdin",
+        "exit_code": 0,
+        "output": "'Percolation.Literature.LocalFKG.harris_fkg_local_of_children' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n"
+      }
+    ],
+    "generated_build_artifacts": ["LocalFKGDefinitions.olean", "LocalFKGReduction.olean"],
+    "local_project_recheck": {
+      "working_directory": "C:/Users/z5242/Desktop/重构版/工作流/examples/local_fkg",
+      "context": "Coordinator reported lake update exited 0; all three files then checked in the ready local project. No lakefile change or module registration required.",
+      "runs": [
+        {
+          "command": "lake env lean LocalFKGDefinitions.lean",
+          "exit_code": 0,
+          "output": ""
+        },
+        {
+          "command": "$env:LEAN_PATH = (Get-Location).Path + [IO.Path]::PathSeparator + $env:LEAN_PATH\nlake env lean LocalFKGReduction.lean",
+          "exit_code": 0,
+          "output": ""
+        },
+        {
+          "command": "$env:LEAN_PATH = (Get-Location).Path + [IO.Path]::PathSeparator + $env:LEAN_PATH\nlake env lean LocalFKGObligations.lean",
+          "exit_code": 0,
+          "output": "LocalFKGObligations.lean:12:8: warning: declaration uses `sorry`\nLocalFKGObligations.lean:24:8: warning: declaration uses `sorry`\n"
+        }
+      ]
+    }
+  }
+}

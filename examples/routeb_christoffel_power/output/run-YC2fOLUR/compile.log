@@ -1,0 +1,5 @@
+'RouteBChristoffelPower.contraction_swap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBChristoffelPower.christoffel_power_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBChristoffelPower.christoffelMatrix_mul_velocity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBChristoffelPower.christoffel_power_identity_fin6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBChristoffelPower.mechanical_energy_hC' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,18 @@
+{
+  "evidence": "E1_STORED_PATH_ANALYTIC_FLOAT64_DIAGNOSTIC",
+  "no_new_trajectory_integrated": true,
+  "bitwise_Julia_FD": false,
+  "interval_or_Lean_verified": false,
+  "path": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_residual_budget_screen\\output\\run-20260905-124428-858595669005400\\linear_direction.csv",
+  "path_sha256": "965c7c7477550b13070d4489063bdf7b71d25f695d3a4f2fb7874ac1f96249a0",
+  "c": 1.7,
+  "samples": 101,
+  "sampled_trapezoid_integrals": {
+    "delta_L_delta": 0.060203764745368295,
+    "r_Q_r": 0.3612073948809164,
+    "actual_e_cost": 0.01002369618636091,
+    "same_state_e0_cost": 0.015079891401513588
+  },
+  "max_force_identity_roundoff": 1.1102230246251565e-15,
+  "warning": "Does not prove or refute any integral bound. Distinguishes the small actual correction energy from its potentially loose Q(r) upper estimate; same-state e0 is NOT the isolated nominal solution."
+}

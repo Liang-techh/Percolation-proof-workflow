@@ -1,0 +1,77 @@
+UTC: 2026-09-05T18:07:33Z
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-TdMTHBk0
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+7fa8925b22cecb37f44a59dbbc3611c34dd0995ced88f0e02fcfd857777d848f  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/ImplicitPort.lean
+637d575d96a2318f900ae0c078ab659c580644cbe35e92227c7960ba57cf3b1e  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/verify.sh
+dae80fbdbb6439761a0ad1b7c081fc5a61ca1cdd7e2f70e23df31d9756637f26  /home/z5242/sos_lean/lake-manifest.json
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-TdMTHBk0/ImplicitPort.lean:12:2: error: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-TdMTHBk0/ImplicitPort.lean:17:2: error: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-TdMTHBk0/ImplicitPort.lean:45:30: error: Invalid argument name `s` for function `Finset.sum_congr`
+
+Hint: Perhaps you meant one of the following parameter names:
+  • `ι`: s̵ι̲
+  • `M`: s̵M̲
+  • `s₁`: s₁̲
+  • `s₂`: s₂̲
+  • `f`: s̵f̲
+  • `g`: s̵g̲
+  • `h`: s̵h̲
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-TdMTHBk0/ImplicitPort.lean:42:68: error: unsolved goals
+ι : Type u_1
+inst✝ : Fintype ι
+i : ι
+D0 s nu : ℝ
+k b z r : ι → ℝ
+hh : ∀ (i : ι), 0 < H nu (k i)
+hg : ∀ (i : ι), 0 < G s nu (k i)
+hi :
+  ∀ (i : ι),
+    s * z i ^ 2 + b i * z i + nu * r i ^ 2 - k i * (z i + r i) ^ 2 =
+      -b i ^ 2 / (4 * (s - k i - k i ^ 2 / (nu - k i))) + (nu - k i) * (r i - k i * z i / (nu - k i)) ^ 2 +
+        (s - k i - k i ^ 2 / (nu - k i)) * (z i + b i / (2 * (s - k i - k i ^ 2 / (nu - k i)))) ^ 2
+⊢ D0 + (∑ i, s * z i ^ 2 + b i * z i + nu * r i ^ 2 - k i * (z i + r i) ^ 2) =
+    D0 - ∑ i, b i ^ 2 / (4 * G s nu (k i)) + ∑ i, H nu (k i) * (r i - k i * z i / H nu (k i)) ^ 2 +
+      ∑ i, G s nu (k i) * (z i + b i / (2 * G s nu (k i))) ^ 2
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-TdMTHBk0/ImplicitPort.lean:57:14: error: don't know how to synthesize implicit argument `i`
+  @diagonal_elimination ι inst✝ ?m.168 D0 s nu k b z r hh hg
+context:
+ι : Type u_1
+inst✝ : Fintype ι
+i : ι
+D D0 s nu portGap : ℝ
+k b z r : ι → ℝ
+hnu : 0 ≤ nu
+hport : 0 ≤ portGap
+hh : ∀ (i : ι), 0 < H nu (k i)
+hg : ∀ (i : ι), 0 < G s nu (k i)
+hlink : D - nu * portGap = D0 + ∑ i, s * z i ^ 2 + b i * z i + nu * r i ^ 2 - k i * (z i + r i) ^ 2
+hreduced : 0 ≤ D0 - ∑ i, b i ^ 2 / (4 * G s nu (k i))
+⊢ ι
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-TdMTHBk0/ImplicitPort.lean:57:7: error: failed to infer `have` declaration type
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-TdMTHBk0/ImplicitPort.lean:56:13: error: unsolved goals
+ι : Type u_1
+inst✝ : Fintype ι
+i : ι
+D D0 s nu portGap : ℝ
+k b z r : ι → ℝ
+hnu : 0 ≤ nu
+hport : 0 ≤ portGap
+hh : ∀ (i : ι), 0 < H nu (k i)
+hg : ∀ (i : ι), 0 < G s nu (k i)
+hlink : D - nu * portGap = D0 + ∑ i, s * z i ^ 2 + b i * z i + nu * r i ^ 2 - k i * (z i + r i) ^ 2
+hreduced : 0 ≤ D0 - ∑ i, b i ^ 2 / (4 * G s nu (k i))
+⊢ 0 ≤ D
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-TdMTHBk0/ImplicitPort.lean:76:2: error: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'RouteBImplicitPort.first_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBImplicitPort.second_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBImplicitPort.channel_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBImplicitPort.diagonal_elimination' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBImplicitPort.absorption_of_reduced_bound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBImplicitPort.residual_link_channel' depends on axioms: [propext, Classical.choice, Quot.sound]
+VERIFY_EXIT_CODE=1

@@ -1,0 +1,25 @@
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/output/tube-NXa8rD7u
+UTC: 2026-09-05T17:34:11Z
+15a8e8ceb17131c32ceb02f4982d71807681d812d22de9f0b2fa206be346db5d  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/output/run-5RHBCcg9/DHPowerBinding.olean
+438b27034753470dfdda0f3125a6e3d952f7b97466971a5039679435188272fc  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/../routeb_christoffel_power/output/run-YC2fOLUR/ChristoffelPower.olean
+341f1107c0b4be68ce450ca88814c10491e783871a443aec6491d26a6999b499  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/FDForceBudget.lean
+'RouteBFDForceBudget.exact_polynomial_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFDForceBudget.polynomial_budget_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFDForceBudget.fd_only_supply_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFDForceBudget.implemented_energy_fd_plus_runtime' depends on axioms: [propext, Classical.choice, Quot.sound]
+FDForceBudget_COMPILE_EXIT_CODE=0
+d459999bd5a2aaaba8d7f2275d868bef6c8fd0dadc051bbf429fc1f842d58d23  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/output/tube-NXa8rD7u/FDForceBudget.olean
+d6116a3f5de6367e36b8e093f4d26aba25fcfc218a6e5d21fc64fcc0055f2b41  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/MechanicalAssembly.lean
+'RouteBMechanicalAssembly.mechanical_derivative_assembly' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBMechanicalAssembly.full_power_bound_from_mechanical_derivatives' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+MechanicalAssembly_COMPILE_EXIT_CODE=0
+5f5c3df38a7efb18adb5cce7d64900f7632c806b166b324f2d3cdf3676511b1e  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/output/tube-NXa8rD7u/MechanicalAssembly.olean
+c5d4893fb4ca19641a27d2eb3afc09d76a503fa6215c132a9dba9cf4d5979d24  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/EnergyTube.lean
+'RouteBEnergyTube.cubic_tube' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBEnergyTube.ramp_force_error_tube' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBEnergyTube.ramp_terminal_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+EnergyTube_COMPILE_EXIT_CODE=0
+6539bab5381fee495508b37c43f1271fa5d779a67698532b2f12d4c284ea070c  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/output/tube-NXa8rD7u/EnergyTube.olean
+LEAN_COMPILE_EXIT_CODE=0

@@ -1,0 +1,4 @@
+'RouteBFDForceBudget.exact_polynomial_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFDForceBudget.polynomial_budget_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFDForceBudget.fd_only_supply_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFDForceBudget.implemented_energy_fd_plus_runtime' depends on axioms: [propext, Classical.choice, Quot.sound]

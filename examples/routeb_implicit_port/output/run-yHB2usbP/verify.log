@@ -1,0 +1,16 @@
+UTC: 2026-09-05T18:24:51Z
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-yHB2usbP
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+37d5c2ed270648d49dac81d1980797d70081a29032b49875b40a1c239a374c85  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/verify.sh
+dae80fbdbb6439761a0ad1b7c081fc5a61ca1cdd7e2f70e23df31d9756637f26  /home/z5242/sos_lean/lake-manifest.json
+d7a84153dcc41250fa169623c32d9f06691b13efa1fa50345b5eaf6f1361b858  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-gJUGcsng/ImplicitPort.olean
+4f07837b5f2439092d8fc68023fc358a35d9f08e96b732d3ca598c9ea4edca29  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-wvXLU1m4/VariableErrorTube.olean
+058fe6692deca45f4c66142cc63898c98b5d0bbe402dbedbf86885f85fdefe91  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/../routeb_local_energy_budget/output/run-37fVwazf/LocalEnergyBudget.olean
+6539bab5381fee495508b37c43f1271fa5d779a67698532b2f12d4c284ea070c  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/../routeb_dh_power_binding/output/tube-NXa8rD7u/EnergyTube.olean
+15a8e8ceb17131c32ceb02f4982d71807681d812d22de9f0b2fa206be346db5d  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/../routeb_dh_power_binding/output/run-5RHBCcg9/DHPowerBinding.olean
+17189a6716cf9199afcfb5fa7ea61413190e69cffa48f7118660e0a0aa409427  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/LocalTubeAssembly.lean
+'RouteBLocalTubeAssembly.conditional_original_block_outputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+LocalTubeAssembly_COMPILE_EXIT_CODE=0
+01fb2d272fb1f1a292530202c76cb521048dadfaf2ae9ab350cdd09d01d658cc  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-yHB2usbP/LocalTubeAssembly.olean
+LEAN_COMPILE_EXIT_CODE=0
+VERIFY_EXIT_CODE=0

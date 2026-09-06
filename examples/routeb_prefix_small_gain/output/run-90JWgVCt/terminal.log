@@ -1,0 +1,41 @@
+START_UTC=2026-09-05T20:16:43Z
+INPUT=examples/routeb_coupled_gain_bridge/DERIVATION.md
+INPUT=examples/routeb_coupled_gain_bridge/GainBridge.lean
+INPUT=examples/routeb_coupled_gain_bridge/verify.sh
+INPUT=artifacts/routeb_gain_checkpoint_20260905/REPORT.md
+INPUT=examples/routeb_coupled_resolvent/DERIVATION.md
+INPUT=examples/routeb_coupled_resolvent/CoupledResolvent.lean
+INPUT=examples/routeb_coupled_resolvent/source_bounds.py
+INPUT=examples/routeb_coupled_resolvent/output/bounds-20260905T193103Z-725e99c7/source_bounds.json
+INPUT=examples/routeb_coupled_finite_gain/DERIVATION.md
+INPUT=examples/routeb_coupled_finite_gain/output/run-20260905T194943Z-9ad8ada4/results.json
+INPUT=examples/routeb_prefix_budget/audit.py
+INPUT=examples/routeb_prefix_budget/output/run-20260905T200606Z-34dbb987/results.json
+INPUT=examples/routeb_prefix_budget/output/run-20260905T200606Z-34dbb987/terminal.log
+PRE_RUN_SNAPSHOTS_COMPLETE
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+COMMAND=lean -DwarningAsError=true --root=RUN -o RUN/PrefixSmallGain.olean RUN/PrefixSmallGain.lean
+'RouteBPrefixSmallGain.amplitude_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPrefixSmallGain.continuousOn_exists_first_hit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPrefixSmallGain.continuousOn_strict_prefix_bootstrap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPrefixSmallGain.continuousOn_prefix_bootstrap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPrefixSmallGain.continuousOn_small_gain_bootstrap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPrefixSmallGain.continuousOn_cell_bootstrap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPrefixSmallGain.strict_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPrefixSmallGain.prefix_scalar_gate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPrefixSmallGain.first_exit_value_excluded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPrefixSmallGain.sqrt_energy_gate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPrefixSmallGain.compose_source_state_loop' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPrefixSmallGain.forcing_amplitude_gate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPrefixSmallGain.forcing_energy_gate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPrefixSmallGain.cell_initial_strict_gate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPrefixSmallGain.cell_prefix_strict_gate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPrefixSmallGain.cell_integral_strict_gate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPrefixSmallGain.cell_first_exit_excluded' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPrefixSmallGain.supplied_last_cell_arithmetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPrefixSmallGain.original_output_envelopes' depends on axioms: [propext, Classical.choice, Quot.sound]
+LEAN_COMPILE_EXIT_CODE=0
+d75771999f1214a6fffbc4e97a928515d7963267e769ecb81b464ced7835282b  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_prefix_small_gain/output/run-90JWgVCt/PrefixSmallGain.olean
+END_UTC=2026-09-05T20:17:11Z
+VERIFY_EXIT_CODE=0

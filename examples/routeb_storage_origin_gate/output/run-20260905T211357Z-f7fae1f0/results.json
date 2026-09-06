@@ -1,0 +1,61 @@
+{
+  "status": "EXACT_SECOND_CANDIDATE_ZERO_SUPPLY_REJECTED_AT_ALLOWED_INITIAL_STATE",
+  "candidate_run": "lp-20260905T210840Z-ac3429b0",
+  "t": "0",
+  "c": "0",
+  "w": "0",
+  "eta": "0, analytic semantics only",
+  "q": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "1/100"
+  ],
+  "v": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "-1/400"
+  ],
+  "initial_norm_squared": "17/160000",
+  "original_initial_ball_squared": "9/400",
+  "original_block_P": "0",
+  "original_terminal_Q_at_test_state": "0",
+  "exact_restricted_mass66_constant": "50003/3000000",
+  "exact_restricted_potential_constant": "3108789/400000",
+  "restricted_remainder": "0",
+  "f": "6995146470641/1000000000000",
+  "fprime": "-6995146470641/125000000000",
+  "W0": "50003/960000000000",
+  "W0dot": "11/1600000",
+  "Vdot": "5421217529307363077/120000000000000000000000",
+  "Vdot_display": 4.517681274422803e-05,
+  "local_quadratic_block": [
+    [
+      "0",
+      "-6995146470641/5000000000000"
+    ],
+    [
+      "-6995146470641/5000000000000",
+      "-2972958235461836923/750000000000000000"
+    ]
+  ],
+  "local_quadratic_determinant": "-48932074145721238674950881/25000000000000000000000000",
+  "local_negative_semidefinite_impossible": true,
+  "derivation": "Vdot=fprime*W0+f*W0dot; other storage terms vanish at q6,v6,c0. W0dot uses the signed-gap actual-force identity and eta0. Since L>=0, energy_cost+Vdot>0.",
+  "uniform_zero_supply_candidate_rejected": true,
+  "entire_storage_family_rejected": false,
+  "physical_target_refuted": false,
+  "positive_supply_alternative_rejected": false,
+  "physical_source_binding": false,
+  "Lean_verified": false,
+  "J1_proved": false,
+  "formal_certificate_allowed": false,
+  "solver_calls": 0,
+  "trajectory_solves": 0,
+  "prospectively_fixed_test_points": 1
+}

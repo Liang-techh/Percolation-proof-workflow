@@ -1,0 +1,11 @@
+COMMAND ["/usr/bin/python3", "-B", "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_storage_design/output/run-20260905T205645Z-63b40a65/candidate.py"]
+Exact full reference/storage coefficient checks: PASS
+Initial upper: 1994532233803/160000000000000 0.01246582646126875
+One fixed endpoint, 97 supports: True minimum slack 85668273319/250000000000
+Normalized endpoint V interval (display): [-36.86806475943146, -36.86806475943146]
+Selected endpoint V interval (display): [-0.5760635118661166, -0.5760635118661166]
+Scale class rejected: sigma>=1/36
+Metric-matched g=-L*a0 skew witness: (0, 1, Fraction(71652585107986783990040000000, 6116145213293458385672593132597))
+Full T=1 actual J<=1: OPEN
+
+CANDIDATE_EXIT_CODE=0

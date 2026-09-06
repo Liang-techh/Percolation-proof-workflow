@@ -1,0 +1,24 @@
+ℹ [3006/3010] Built RouteBSupplyCore (4.7s)
+info: RouteBSupplyCore.lean:148:0: 'RouteBSupplyCore.damping_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RouteBSupplyCore.lean:149:0: 'RouteBSupplyCore.centerRate_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RouteBSupplyCore.lean:150:0: 'RouteBSupplyCore.gamma_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RouteBSupplyCore.lean:151:0: 'RouteBSupplyCore.gamma_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RouteBSupplyCore.lean:152:0: 'RouteBSupplyCore.gamma_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RouteBSupplyCore.lean:153:0: 'RouteBSupplyCore.unitMargin_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RouteBSupplyCore.lean:154:0: 'RouteBSupplyCore.unitMargin_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RouteBSupplyCore.lean:155:0: 'RouteBSupplyCore.completion_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RouteBSupplyCore.lean:156:0: 'RouteBSupplyCore.vector_completion_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RouteBSupplyCore.lean:157:0: 'RouteBSupplyCore.completion_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RouteBSupplyCore.lean:158:0: 'RouteBSupplyCore.pointwise_supply_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RouteBSupplyCore.lean:159:0: 'RouteBSupplyCore.unit_supply_gap_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RouteBSupplyCore.lean:160:0: 'RouteBSupplyCore.unit_supply_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RouteBSupplyCore.lean:161:0: 'RouteBSupplyCore.supply_at_center' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RouteBSupplyCore.lean:162:0: 'RouteBSupplyCore.uniform_supply_coefficient_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RouteBSupplyCore.lean:163:0: 'RouteBSupplyCore.power_bound_with_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RouteBSupplyCore.lean:164:0: 'RouteBSupplyCore.unit_supply_of_power_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+info: RouteBSupplyCore.lean:165:0: 'RouteBSupplyCore.unit_supply_of_margin_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3007/3010] Built Challenge (4.9s)
+info: Challenge.lean:25:0: 'RouteBSupplyComparison.explicit_supply_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+ℹ [3009/3010] Built Solution (5.6s)
+info: Solution.lean:19:0: 'RouteBSupplyComparison.explicit_supply_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3010 jobs).

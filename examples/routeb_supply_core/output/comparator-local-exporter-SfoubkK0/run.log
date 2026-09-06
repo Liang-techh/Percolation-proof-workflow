@@ -1,0 +1,53 @@
+UTC=2026-09-05T17:05:34Z
+RUN=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_supply_core/output/comparator-local-exporter-SfoubkK0
+MODE=local-exporter
+/usr/bin/python3
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+cc4c4b531b9ac42d0be8b7152ec7dfa85e7dcc89f7cc6ecbfa4d965375a6f09d  Challenge.lean
+43835aa7aaeb5cb6f18e53527097d4dcab2d2f8137ac9762a3c36a34cfe685ae  Solution.lean
+f774bc637296c6942bccbeca9161c7505536b02f6a5a515dc81875acb3560540  DependencyAudit.lean
+646c1052c10c1d8606342010c4303c0c25e40e008664ce7f1c1b1649c51f6971  RouteBSupplyCore.lean
+a16b29b152312bf3a094e1af62363e49bac56e3d98fd71c1e51c5de01ee134ea  comparator.json
+2d007e23b32403d9a87dd293b63637c5db0c2a9db4d0153f19ed92d0c49df3dd  lakefile.toml
+3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71  lean-toolchain
+f2a94b15ce3bc4895854ca11420e8fbae233accc4cbfe4032825efe1fab3feb3  verify_comparator.sh
+5d1e1290146311ac4c58c29b8f19e3144d5881681a3d0f590a3a7335abc73741  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_supply_core/output/comparator-local-exporter-SfoubkK0/project/lake-manifest.json
+dae80fbdbb6439761a0ad1b7c081fc5a61ca1cdd7e2f70e23df31d9756637f26  /home/z5242/sos_lean/lake-manifest.json
+DEPENDENCY mathlib 0df444a360eaa60ab8c11dca51a86af692955474
+DEPENDENCY plausible b7eb3304aeae834b12dda98993a37f6a41f6f0bb
+DEPENDENCY LeanSearchClient 5f4d51b81cbd3f6b32b156bfad9056621a040404
+DEPENDENCY importGraph 16f02aa7642864af59f1ff0e384a015994db9118
+DEPENDENCY proofwidgets 4be2e3d5087eeb272cf5a8853b8f9dd025ef5957
+DEPENDENCY aesop 3448c0bcc5ce01b2d1546e483ec3620e32df3d0e
+DEPENDENCY Qq 92c15be17b7caf78c2ad767ec40f89052d908d81
+DEPENDENCY batteries 4488d40d070b9700d4d5a6aa342f0d40c31b2a2d
+DEPENDENCY Cli 6130a47896ce867c6a4a55373441e59e565bad0f
+CLEAN_COMPILE=RouteBSupplyCore
+'RouteBSupplyCore.damping_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.centerRate_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.gamma_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.gamma_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.gamma_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unitMargin_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unitMargin_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.completion_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.vector_completion_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.completion_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.pointwise_supply_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unit_supply_gap_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unit_supply_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.supply_at_center' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.uniform_supply_coefficient_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.power_bound_with_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unit_supply_of_power_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unit_supply_of_margin_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+CLEAN_COMPILE=Challenge
+'RouteBSupplyComparison.explicit_supply_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+CLEAN_COMPILE=Solution
+'RouteBSupplyComparison.explicit_supply_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+CLEAN_COMPILE=DependencyAudit
+Dependency closure: 8699 declarations; opaque bodies: 12
+Reachable axioms: [propext, Quot.sound, Classical.choice]
+ROUTEB_DEPENDENCY_AUDIT_OK
+CLEAN_COMPILE_EXIT_CODE=0
+RUN_EXIT_CODE=0

@@ -1,0 +1,9 @@
+{
+  "kind": "coordinator_transcription_of_exec_tool_terminal_result",
+  "session_id": 30850,
+  "terminal_chunk_id": "20a47e",
+  "exit_code": 1,
+  "source_sha256": "f03d3ae930d6b9d715314029ce3e8bed278ef5906f196b318b8463610723ba16",
+  "observed_terminal_output": ["LEAN_COMPILE_EXIT_CODE=1", "VERIFY_EXIT_CODE=1"],
+  "note": "Tool poll returned exit_code=1 and these terminal lines. The original verify.log ends before them, consistent with asynchronous tee termination. This receipt is a retrospective transcription, not original compiler output. The original error log and source are unchanged. It cannot support a successful admission."
+}

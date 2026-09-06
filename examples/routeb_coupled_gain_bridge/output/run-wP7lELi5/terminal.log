@@ -1,0 +1,15 @@
+PRE_RUN_SNAPSHOTS_COMPLETE
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+1347523100099 / 6720000000000
+362665315089 / 4160000000000
+'RouteBCoupledGainBridge.rational_envelope_admission' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBCoupledGainBridge.residual_point_one_admission' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBCoupledGainBridge.feedback_amplitude_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBCoupledGainBridge.direct_channel_scalar_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBCoupledGainBridge.supplied_gain_arithmetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBCoupledGainBridge.actual_reference_cost_under_J_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBCoupledGainBridge.final_gain_arithmetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBCoupledGainBridge.final_reference_cost_under_J_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+LEAN_COMPILE_EXIT_CODE=0
+1d66c00fe8ad9b5ad47edccf6d68f6e651ecf9e498967ffe8ddb827dcca366de  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_coupled_gain_bridge/output/run-wP7lELi5/GainBridge.olean
+VERIFY_EXIT_CODE=0

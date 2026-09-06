@@ -1,0 +1,24 @@
+{
+  "exit_code": 0,
+  "snapshots_unchanged": true,
+  "originals_unchanged": {
+    "lp_candidate.py": true,
+    "verify_lp.py": true,
+    "LP_PLAN.md": true,
+    "inputs/state_revision46.json": true,
+    "inputs/reference.json": true,
+    "inputs/mass.csv": true,
+    "inputs/potential.csv": true,
+    "inputs/functionals.json": true,
+    "inputs/nominal_J_functional_bounds.json": true,
+    "inputs/audit_results.json": true,
+    "inputs/source_REPORT.md": true,
+    "inputs/source_RESULTS.md": true
+  },
+  "outputs": {
+    "terminal.log": "81c0871cdf1e01b2b85a49ddc77922fcf2419695b53063c6342594356d2775da",
+    "lp_problem.json": "cec8610eaf2970511c2e5f1e50f164724c0eff54d70925907767003d50781dae",
+    "lp_candidate_evidence.json": "6ef393c200f74e651041e8afe05fb16ec305b39b9b818fdaa37eceac18656c7b"
+  },
+  "formal_certificate_allowed": false
+}

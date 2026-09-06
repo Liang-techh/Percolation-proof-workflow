@@ -1,0 +1,56 @@
+UTC: 2026-09-05T18:15:57Z
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-U0yjABwe
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+dfc9da1b3d00d6f6bee2a9b5aec861fb24c3f790571142ff852f3b0c5c01155c  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/verify.sh
+dae80fbdbb6439761a0ad1b7c081fc5a61ca1cdd7e2f70e23df31d9756637f26  /home/z5242/sos_lean/lake-manifest.json
+d7a84153dcc41250fa169623c32d9f06691b13efa1fa50345b5eaf6f1361b858  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-gJUGcsng/ImplicitPort.olean
+83c0e105691e77cc9bce173149840494b7f1b6c829fe11daf0dcf295f4c3577a  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/PhysicalPortAssembly.lean
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-U0yjABwe/PhysicalPortAssembly.lean:49:4: error: linarith failed to find a contradiction
+case h1
+ι : Type u_1
+inst✝ : Fintype ι
+Dcore beta0 s nu lambda rho : ℝ
+I rt l a r m B : ι → ℝ
+hm : ∀ (i : ι), m i ≠ 0
+hforce : ∀ (i : ι), m i * a i = I i + r i - l i
+hs : 0 ≤ s
+hnu : 0 ≤ nu
+hport : ∑ i, r i ^ 2 ≤ rho * ∑ i, B i * a i ^ 2
+hresidual : ∑ i, l i ^ 2 ≤ beta0 + lambda * ∑ i, a i ^ 2
+hh : ∀ (i : ι), 0 < H nu (s * lambda / m i ^ 2 + nu * rho * B i / m i ^ 2)
+hg : ∀ (i : ι), 0 < G s nu (s * lambda / m i ^ 2 + nu * rho * B i / m i ^ 2)
+hreduced :
+  0 ≤
+    Dcore + ∑ i, (rt i * I i + s * I i ^ 2) - s * beta0 -
+      ∑ i, (-(rt i + 2 * s * I i)) ^ 2 / (4 * G s nu (s * lambda / m i ^ 2 + nu * rho * B i / m i ^ 2))
+z : ι → ℝ := fun i => I i - l i
+k : ι → ℝ := fun i => s * lambda / m i ^ 2 + nu * rho * B i / m i ^ 2
+b : ι → ℝ := fun i => -(rt i + 2 * s * I i)
+D0 : ℝ := Dcore + ∑ i, (rt i * I i + s * I i ^ 2) - s * beta0
+Daug : ℝ := Dcore + ∑ i, rt i * l i + s * ∑ i, l i ^ 2 - s * (beta0 + lambda * ∑ i, a i ^ 2)
+gap : ℝ := rho * ∑ i, B i * a i ^ 2 - ∑ i, r i ^ 2
+hi :
+  ∀ (i : ι),
+    rt i * l i + s * l i ^ 2 - s * lambda * a i ^ 2 - nu * (rho * B i * a i ^ 2 - r i ^ 2) =
+      rt i * I i + s * I i ^ 2 +
+        (s * z i ^ 2 + -(rt i + 2 * s * I i) * z i + nu * r i ^ 2 -
+          (s * lambda / m i ^ 2 + nu * rho * B i / m i ^ 2) * (z i + r i) ^ 2)
+hsum :
+  ∑ x, rt x * l x + s * ∑ i, l i ^ 2 - s * lambda * ∑ i, a i ^ 2 - nu * (∑ x, rho * B x * a x ^ 2 - ∑ x, r x ^ 2) =
+    ∑ x, rt x * I x + s * ∑ i, I i ^ 2 +
+      (s * ∑ i, z i ^ 2 + ∑ x, -(rt x + 2 * s * I x) * z x + nu * ∑ x, r x ^ 2 -
+        ∑ x, (s * lambda / m x ^ 2 + nu * rho * B x / m x ^ 2) * (z x + r x) ^ 2)
+a✝ :
+  Dcore + ∑ i, rt i * l i + s * ∑ i, l i ^ 2 - s * (beta0 + lambda * ∑ i, a i ^ 2) -
+      nu * (rho * ∑ i, B i * a i ^ 2 - ∑ i, r i ^ 2) <
+    Dcore + (∑ x, rt x * I x + s * ∑ i, I i ^ 2) - s * beta0 +
+      (s * ∑ i, z i ^ 2 + ∑ x, -(rt x + 2 * s * I x) * z x + nu * ∑ i, r i ^ 2 -
+        ∑ x, (s * lambda / m x ^ 2 + nu * rho * B x / m x ^ 2) * (z x + r x) ^ 2)
+⊢ False
+failed
+'RouteBPhysicalPortAssembly.linked_acceleration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPhysicalPortAssembly.physical_port_absorption' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+VERIFY_EXIT_CODE=1

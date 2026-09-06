@@ -1,0 +1,136 @@
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:35:6: error(lean.unknownIdentifier): Unknown constant `Finset.sum_comm`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:34:50: error: unsolved goals
+ι : Type u_1
+inst✝ : Fintype ι
+T : ι → ι → ι → ℝ
+v : ι → ℝ
+⊢ ∑ i, ∑ j, ∑ k, T j i k * v i * v j * v k = ∑ i, ∑ j, ∑ k, T i j k * v i * v j * v k
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:54:53: error(lean.unknownIdentifier): Unknown constant `Finset.mul_sum`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:56:6: error: Tactic `apply` failed: could not unify the conclusion of `Finset.sum_congr rfl`
+  Finset.sum ?m.244 ?m.241 = Finset.sum ?m.244 ?m.242
+with the goal
+  ∑ i, v i * ∑ j, ∑ k, (T k i j + T j i k - T i j k) / 2 * v j * v k =
+    1 / 2 *
+      ∑ x,
+        ∑ x_1,
+          ∑ x_2,
+            (T x_2 x x_1 * v x * v x_1 * v x_2 + T x_1 x x_2 * v x * v x_1 * v x_2 - T x x_1 x_2 * v x * v x_1 * v x_2)
+
+Note: The full type of `Finset.sum_congr rfl` is
+  (∀ x ∈ ?m.244, ?m.241 x = ?m.242 x) → Finset.sum ?m.244 ?m.241 = Finset.sum ?m.244 ?m.242
+
+ι : Type u_1
+inst✝ : Fintype ι
+T : ι → ι → ι → ℝ
+v : ι → ℝ
+⊢ ∑ i, v i * ∑ j, ∑ k, (T k i j + T j i k - T i j k) / 2 * v j * v k =
+    1 / 2 *
+      ∑ x,
+        ∑ x_1,
+          ∑ x_2,
+            (T x_2 x x_1 * v x * v x_1 * v x_2 + T x_1 x x_2 * v x * v x_1 * v x_2 - T x x_1 x_2 * v x * v x_1 * v x_2)
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:68:27: error(lean.unknownIdentifier): Unknown constant `Finset.mul_sum`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:68:43: error(lean.unknownIdentifier): Unknown constant `Finset.sum_mul`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:69:6: error: Tactic `apply` failed: could not unify the conclusion of `Finset.sum_congr rfl`
+  Finset.sum ?m.258 ?m.255 = Finset.sum ?m.258 ?m.256
+with the goal
+  1 / 2 * ∑ i, ∑ j, ∑ k, T k i j * v i * v j * v k = 1 / 2 * ∑ i, v i * ∑ j, (∑ k, T k i j * v k) * v j
+
+Note: The full type of `Finset.sum_congr rfl` is
+  (∀ x ∈ ?m.258, ?m.255 x = ?m.256 x) → Finset.sum ?m.258 ?m.255 = Finset.sum ?m.258 ?m.256
+
+ι : Type u_1
+inst✝ : Fintype ι
+T : ι → ι → ι → ℝ
+v : ι → ℝ
+⊢ 1 / 2 * ∑ i, ∑ j, ∑ k, T k i j * v i * v j * v k = 1 / 2 * ∑ i, v i * ∑ j, (∑ k, T k i j * v k) * v j
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:54:35: error: This simp argument is unused:
+  mul_sub
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [christoffelForce, mul_add, Finset.mul_sum, ← Finset.sum_add_distrib, ← Finset.sum_sub_distrib]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:54:44: error: This simp argument is unused:
+  mul_add
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [christoffelForce, mul_sub, Finset.mul_sum, ← Finset.sum_add_distrib, ← Finset.sum_sub_distrib]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:80:50: error(lean.unknownIdentifier): Unknown constant `Finset.sum_mul`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:83:2: error: Tactic `apply` failed: could not unify the conclusion of `Finset.sum_congr rfl`
+  Finset.sum ?m.40 ?m.37 = Finset.sum ?m.40 ?m.38
+with the goal
+  (∑ k, (T k i j + T j i k - T i j k) / 2 * v k) * v j = ∑ k, (T k i j + T j i k - T i j k) / 2 * v j * v k
+
+Note: The full type of `Finset.sum_congr rfl` is
+  (∀ x ∈ ?m.40, ?m.37 x = ?m.38 x) → Finset.sum ?m.40 ?m.37 = Finset.sum ?m.40 ?m.38
+
+ι : Type u_1
+inst✝ : Fintype ι
+T : ι → ι → ι → ℝ
+v : ι → ℝ
+i j : ι
+a✝ : j ∈ Finset.univ
+⊢ (∑ k, (T k i j + T j i k - T i j k) / 2 * v k) * v j = ∑ k, (T k i j + T j i k - T i j k) / 2 * v j * v k
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:90:7: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Fintype (Fin 6)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:90:19: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Fintype (Fin 6)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:90:24: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Fintype (Fin 6)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:92:22: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Fintype (Fin 6)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:92:34: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Fintype (Fin 6)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:92:40: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Fintype (Fin 6)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:93:2: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Fintype (Fin 6)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:98:36: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Fintype (Fin 6)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:98:21: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Fintype (Fin 6)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:98:33: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Fintype (Fin 6)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:99:23: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Fintype (Fin 6)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:99:8: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Fintype (Fin 6)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:99:20: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Fintype (Fin 6)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+'RouteBChristoffelPower.contraction_swap' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBChristoffelPower.christoffel_power_identity' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBChristoffelPower.christoffelMatrix_mul_velocity' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:108:14: error(lean.unknownIdentifier): Unknown constant `christoffel_power_identity_fin6`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-SHOXXDZl/ChristoffelPower.lean:109:14: error(lean.unknownIdentifier): Unknown constant `mechanical_energy_hC`

@@ -1,0 +1,14 @@
+START_UTC=2026-09-06T02:00:42Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_rotation_prefix_orthogonality_lean/output/run-EZZSgIdS:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_matrix_orthogonality_closure_lean/output/run-w9gDKPMw:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+'RouteBRotationPrefixOrthogonality.rowOrtho_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBRotationPrefixOrthogonality.prefixAt_rowOrtho' depends on axioms: [propext, Classical.choice, Quot.sound]
+RotationPrefixOrthogonality_COMPILE_EXIT_CODE=0
+SOURCE_RESTRICTION_CHECK=PASSED
+18ecc5f79191cfed6177ba285a20d4638f8f2546f86e3b17df3126a9370ffae0  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_rotation_prefix_orthogonality_lean/output/run-EZZSgIdS/RotationPrefixOrthogonality.lean
+0055c6bd381b632053e2634dccc656e43e823a45e4d157b2f6dd87c1cbccb9d7  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_rotation_prefix_orthogonality_lean/output/run-EZZSgIdS/RotationPrefixOrthogonality.olean
+JULIA_FLOAT64_BINDING=OPEN
+FULL_MASS_BINDING=OPEN
+END_UTC=2026-09-06T02:01:39Z
+VERIFY_EXIT_CODE=0

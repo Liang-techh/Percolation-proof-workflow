@@ -1,0 +1,9 @@
+COMMAND ["/usr/bin/python3", "-B", "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_storage_design/output/post-20260905T210708Z-19f7d8ba/postprocess_lp.py", "--child"]
+Repaired 70 saved rows: maximum numerical violation 2.9391644114648032e-33
+Initial budget 1708759570531011/5000000000000000 0.3417519141062022 remaining 0.6582480858937978
+EXACT initial-direction Vdot lower 11652476375725545296269/20000000000000000000000000 0.0005826238187862773
+EXACT ramp witness original Vdot 1.118122905320057e-05 actual source cost 3.2653461653766704e-15
+The returned coefficients cannot satisfy uniform ZERO-supply dissipation.
+Full T=1 actual J<=1 OPEN; positive supply or a redesigned coefficient vector still needed.
+
+POSTPROCESS_EXIT_CODE=0

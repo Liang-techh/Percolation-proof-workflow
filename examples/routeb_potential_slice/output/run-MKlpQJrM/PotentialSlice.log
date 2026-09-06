@@ -1,0 +1,18 @@
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_potential_slice/PotentialSlice.lean:67:2: error: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_potential_slice/PotentialSlice.lean:76:68: error: unsolved goals
+t : ℝ
+⊢ 1 / 2 * (4 / 5 * t ^ 2) = 2 / 5 * t ^ 2
+'RouteBPotentialSlice.row_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPotentialSlice.all_imaginary_parts_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPotentialSlice.all_denominators_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPotentialSlice.potential_on_slice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPotentialSlice.potential_at_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPotentialSlice.proportional_energy_on_slice' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBPotentialSlice.W_on_slice' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBPotentialSlice.no_global_nonnegative_W' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBPotentialSlice.rational_configuration_negative' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

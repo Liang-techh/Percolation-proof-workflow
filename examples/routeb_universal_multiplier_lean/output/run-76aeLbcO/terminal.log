@@ -1,0 +1,34 @@
+START_UTC=2026-09-05T21:00:25Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-76aeLbcO:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-76aeLbcO/upstream:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-76aeLbcO/upstream/cache:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+PRE_RUN_SNAPSHOTS_COMPLETE
+COMMAND=/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -DwarningAsError=true --root=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-76aeLbcO -o /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-76aeLbcO/UniversalMultiplier.olean /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-76aeLbcO/UniversalMultiplier.lean
+'RouteBUniversalMultiplier.bottom_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.D_dominates_L' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.D_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.finite_quadratic_coercivity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.global_coercivity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.quad_block_homogeneous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.optimal_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.finite_vector_congruence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.psd_iff_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.optimalZ_balance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.CONSTRUCTIVELOSSLESS' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.affine7x7_lossless' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.centered_dual_sos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.recenter_block' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.affine_center_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.frozen_center_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.frozen_center_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.centered_dual_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.fixed_identity_centered_dual_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBUniversalMultiplier.affine_centered_dual_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.frozen_affine_dual_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+UniversalMultiplier_COMPILE_EXIT_CODE=0
+001d38906138439bd733c7d49195e50f7cfdedd9017f6e3770d13d9e664ccce5  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-76aeLbcO/UniversalMultiplier.lean
+5cee29a13ccb9c3c41f1692dcf86f468e043d0b82bdebd241c6c3303d08e7c8e  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-76aeLbcO/UniversalMultiplier.olean
+END_UTC=2026-09-05T21:01:25Z
+VERIFY_EXIT_CODE=0

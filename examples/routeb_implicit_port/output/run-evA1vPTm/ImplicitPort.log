@@ -1,0 +1,65 @@
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-evA1vPTm/ImplicitPort.lean:40:31: error(lean.unknownIdentifier): Unknown identifier `i`
+
+Note: It is not possible to treat `i` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-evA1vPTm/ImplicitPort.lean:40:37: error(lean.unknownIdentifier): Unknown identifier `i`
+
+Note: It is not possible to treat `i` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-evA1vPTm/ImplicitPort.lean:40:48: error(lean.unknownIdentifier): Unknown identifier `i`
+
+Note: It is not possible to treat `i` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-evA1vPTm/ImplicitPort.lean:40:58: error(lean.unknownIdentifier): Unknown identifier `i`
+
+Note: It is not possible to treat `i` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-evA1vPTm/ImplicitPort.lean:40:65: error(lean.unknownIdentifier): Unknown identifier `i`
+
+Note: It is not possible to treat `i` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-evA1vPTm/ImplicitPort.lean:40:71: error(lean.unknownIdentifier): Unknown identifier `i`
+
+Note: It is not possible to treat `i` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-evA1vPTm/ImplicitPort.lean:49:2: error: linarith failed to find a contradiction
+case h1
+ι : Type u_1
+inst✝ : Fintype ι
+D0 s nu : ℝ
+k b z r : ι → ℝ
+hh : ∀ (i : ι), 0 < H nu (k i)
+hg : ∀ (i : ι), 0 < G s nu (k i)
+hi :
+  ∀ (i : ι),
+    s * z i ^ 2 + b i * z i + nu * r i ^ 2 - k i * (z i + r i) ^ 2 =
+      -b i ^ 2 / (4 * (s - k i - k i ^ 2 / (nu - k i))) + (nu - k i) * (r i - k i * z i / (nu - k i)) ^ 2 +
+        (s - k i - k i ^ 2 / (nu - k i)) * (z i + b i / (2 * (s - k i - k i ^ 2 / (nu - k i)))) ^ 2
+hs :
+  ∑ i, (s * z i ^ 2 + b i * z i + nu * r i ^ 2 - k i * (z i + r i) ^ 2) =
+    -∑ x, b x ^ 2 / (4 * (s - k x - k x ^ 2 / (nu - k x))) + ∑ x, (nu - k x) * (r x - k x * z x / (nu - k x)) ^ 2 +
+      ∑ x, (s - k x - k x ^ 2 / (nu - k x)) * (z x + b x / (2 * (s - k x - k x ^ 2 / (nu - k x)))) ^ 2
+a✝ :
+  D0 + (∑ i, s * z i ^ 2 + b sorry * z sorry + nu * r sorry ^ 2 - k sorry * (z sorry + r sorry) ^ 2) <
+    D0 - ∑ i, b i ^ 2 / (4 * (s - k i - k i ^ 2 / (nu - k i))) + ∑ i, (nu - k i) * (r i - k i * z i / (nu - k i)) ^ 2 +
+      ∑ i, (s - k i - k i ^ 2 / (nu - k i)) * (z i + b i / (2 * (s - k i - k i ^ 2 / (nu - k i)))) ^ 2
+⊢ False
+failed
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-evA1vPTm/ImplicitPort.lean:55:32: error(lean.unknownIdentifier): Unknown identifier `i`
+
+Note: It is not possible to treat `i` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-evA1vPTm/ImplicitPort.lean:55:38: error(lean.unknownIdentifier): Unknown identifier `i`
+
+Note: It is not possible to treat `i` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-evA1vPTm/ImplicitPort.lean:55:49: error(lean.unknownIdentifier): Unknown identifier `i`
+
+Note: It is not possible to treat `i` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-evA1vPTm/ImplicitPort.lean:55:59: error(lean.unknownIdentifier): Unknown identifier `i`
+
+Note: It is not possible to treat `i` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-evA1vPTm/ImplicitPort.lean:55:66: error(lean.unknownIdentifier): Unknown identifier `i`
+
+Note: It is not possible to treat `i` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-evA1vPTm/ImplicitPort.lean:55:72: error(lean.unknownIdentifier): Unknown identifier `i`
+
+Note: It is not possible to treat `i` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+'RouteBImplicitPort.first_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBImplicitPort.second_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBImplicitPort.channel_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBImplicitPort.diagonal_elimination' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBImplicitPort.absorption_of_reduced_bound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBImplicitPort.residual_link_channel' depends on axioms: [propext, Classical.choice, Quot.sound]

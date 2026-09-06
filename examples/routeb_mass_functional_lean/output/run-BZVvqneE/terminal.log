@@ -1,0 +1,33 @@
+START_UTC=2026-09-05T22:41:59Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_mass_functional_lean/output/run-BZVvqneE:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SNAPSHOT_COMPLETE=true
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_mass_functional_lean/output/run-BZVvqneE/MassFunctional.lean:61:4: error: Tactic `apply` failed: could not unify the conclusion of `Finset.sum_congr rfl`
+  Finset.sum ?m.76 ?m.73 = Finset.sum ?m.76 ?m.74
+with the goal
+  mass' * ∑ a, Jv a i * Jv a j = mass' * ∑ a, Jv' a i * Jv' a j
+
+Note: The full type of `Finset.sum_congr rfl` is
+  (∀ x ∈ ?m.76, ?m.73 x = ?m.74 x) → Finset.sum ?m.76 ?m.73 = Finset.sum ?m.76 ?m.74
+
+case e_a
+Jv Jv' Jw Jw' : Mat 3 6
+mass mass' : ℝ
+inertia inertia' : Mat 3 3
+hmass : mass = mass'
+hJv : ∀ (a : Fin 3) (i : Fin 6), Jv a i = Jv' a i
+hJw : ∀ (a : Fin 3) (i : Fin 6), Jw a i = Jw' a i
+hI : ∀ (a b : Fin 3), inertia a b = inertia' a b
+i j : Fin 6
+⊢ mass' * ∑ a, Jv a i * Jv a j = mass' * ∑ a, Jv' a i * Jv' a j
+'RouteBMassFunctional.weightedGram_congruent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBMassFunctional.linkMass_congruent' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBMassFunctional.massFromLinks_congruent' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBMassFunctional.ideal_mass_eq_fourier_of_linkwise' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBMassFunctional.regularized_mass_eq_fourier' depends on axioms: [propext, Classical.choice, Quot.sound]
+MassFunctional_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

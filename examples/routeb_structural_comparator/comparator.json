@@ -1,0 +1,30 @@
+{
+  "schema": "routeb-structural-statement-comparator-v1",
+  "status": "pre_comparator_only",
+  "targets": [
+    {
+      "id": "origin-quadratic",
+      "source": "../routeb_origin_quadratic_lean/OriginQuadratic.lean",
+      "successful_snapshot": "../routeb_origin_quadratic_lean/output/run-TIbpu6FN/OriginQuadratic.lean",
+      "declarations": [
+        "RouteBOriginQuadratic.negSemidefinite_of_originQuadraticLittleO",
+        "RouteBOriginQuadratic.negSemidefinite_of_negatedQuadraticPlusQuartic",
+        "RouteBOriginQuadratic.neg_not_quadNonnegative_zero_diagonal_offdiag",
+        "RouteBOriginQuadratic.neg_not_quadNonnegative_q6_v6_block"
+      ],
+      "required_statement_fragments": ["QuadNonpositive", "QuadNonnegative", "Symmetric"]
+    },
+    {
+      "id": "terminal-gate",
+      "source": "../routeb_terminal_gate_lean/TerminalGate.lean",
+      "successful_snapshot": "../routeb_terminal_gate_lean/output/run-WLanCOzI/TerminalGate.lean",
+      "declarations": [
+        "RouteBTerminalGate.decayPolynomial_nonneg",
+        "RouteBTerminalGate.gate_implies_terminal_lower_bound",
+        "RouteBTerminalGate.fixed_terminal_gate_failure",
+        "RouteBTerminalGate.no_uniform_bZero_gate_of_strict_residual"
+      ],
+      "required_statement_fragments": ["bZeroGate", "terminalResidual", "terminalSupply", "UniformBZeroGate"]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "workspace_root": "../..",
+  "state_path": "../../artifacts/local_fkg/state.json",
+  "target": {
+    "root": "Percolation.Literature.harris_fkg_local",
+    "contract": "research-contract.json"
+  },
+  "dependency": {
+    "name": "PercolationContinuity",
+    "profile": "formal-math@795efb86f191735c5481675763537cfb4ff37e55/percolation",
+    "toolchain": "leanprover/lean4:v4.32.0"
+  },
+  "verification": {
+    "bundle_root": "local-fkg-bundles",
+    "comparator_profile": "upstream-comparator",
+    "acceptance_line": "Your solution is okay!",
+    "permitted_axioms": [
+      "propext",
+      "Quot.sound",
+      "Classical.choice"
+    ],
+    "enable_nanoda": true,
+    "final_project": "."
+  },
+  "host_protocol": {
+    "name": "codex-agent-callback",
+    "version": 1
+  },
+  "nodes": {
+    "Percolation.Literature.LocalFKG.finite_bernoulli_positive_correlation": {
+      "challenge_module": "LocalFKGObligations",
+      "solution_module": "LocalFKGFinite",
+      "source_files": [
+        "LocalFKGDefinitions.lean",
+        "LocalFKGObligations.lean",
+        "LocalFKGFinite.lean"
+      ]
+    },
+    "Percolation.Literature.LocalFKG.local_event_cube_expectation": {
+      "challenge_module": "LocalFKGObligations",
+      "solution_module": "LocalFKGMarginal",
+      "source_files": [
+        "LocalFKGDefinitions.lean",
+        "LocalFKGObligations.lean",
+        "LocalFKGMarginal.lean"
+      ]
+    },
+    "Percolation.Literature.harris_fkg_local": {
+      "challenge_module": "LocalFKGChallenge",
+      "solution_module": "LocalFKGSolutionAgent",
+      "source_files": [
+        "LocalFKGChallenge.lean",
+        "LocalFKGDefinitions.lean",
+        "LocalFKGObligations.lean",
+        "LocalFKGReduction.lean",
+        "LocalFKGFinite.lean",
+        "LocalFKGMarginal.lean",
+        "LocalFKGSolutionAgent.lean"
+      ]
+    }
+  }
+}

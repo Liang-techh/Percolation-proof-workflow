@@ -1,0 +1,14 @@
+{
+  "gravity_square_completion_coefficient_match": true,
+  "gravity_square_completion_polynomial_terms": 4,
+  "exact_negative_R_rho_squared_constant": "18932319/197600000",
+  "one_tenth_margin": "827681/197600000",
+  "Psi_quarter_angle_polynomial_identity": true,
+  "Psi_quarter_angle_ratio": "1/32",
+  "independent_trigonometric_proof": "See REPORT: quarter-angle identities, sin(t)^2<=t^2, cosine absolute bounds, and sine addition. Polynomial gates do not alone prove trigonometric inequalities.",
+  "affine_multiplier_symbolic_terms": 323,
+  "affine_multiplier_coefficient_identity": true,
+  "inverse_congruence_symbolic_terms": 65,
+  "inverse_congruence_reduced_coefficient_identity": true,
+  "inverse_premises": "M symmetric invertible, N=M^-1 symmetric, L symmetric positive definite; M*N=N*M=I"
+}

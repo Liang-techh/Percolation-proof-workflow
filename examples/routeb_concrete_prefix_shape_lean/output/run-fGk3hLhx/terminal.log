@@ -1,0 +1,26 @@
+START_UTC=2026-09-06T03:02:32Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_prefix_shape_lean/output/run-fGk3hLhx:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_prefix_index_lean/output/run-lVHyO9Lp:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_origin_axis_lean/output/run-H0sN55iL:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_step_homogeneous_lean/output/run-ZBZY9WRv:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_prefix_projection_lean/output/run-7hl40Fdl:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_rotation_projection_lean/output/run-O33agpqU:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_rotation_prefix_orthogonality_lean/output/run-EZZSgIdS:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_matrix_orthogonality_closure_lean/output/run-w9gDKPMw:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_prefix_shape_lean/output/run-fGk3hLhx/ConcretePrefixShape.lean:1:0: error: unknown module prefix 'RealDHStep'
+
+No directory 'RealDHStep' or file 'RealDHStep.olean' in the search path entries:
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_prefix_shape_lean/output/run-fGk3hLhx
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_prefix_index_lean/output/run-lVHyO9Lp
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_origin_axis_lean/output/run-H0sN55iL
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_step_homogeneous_lean/output/run-ZBZY9WRv
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_prefix_projection_lean/output/run-7hl40Fdl
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_rotation_projection_lean/output/run-O33agpqU
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_rotation_prefix_orthogonality_lean/output/run-EZZSgIdS
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_matrix_orthogonality_closure_lean/output/run-w9gDKPMw
+/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean
+/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean
+/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean
+/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean
+/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean
+/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean
+/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean
+/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/lib/lean
+ConcretePrefixShape_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

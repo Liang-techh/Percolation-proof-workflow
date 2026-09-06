@@ -1,0 +1,62 @@
+START_UTC=2026-09-06T03:03:05Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_prefix_shape_lean/output/run-yOc4r8n2:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_prefix_index_lean/output/run-lVHyO9Lp:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_origin_axis_lean/output/run-H0sN55iL:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_real_dh_step_lean/output/run-nAZVlwhR:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-k87wlFSd:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_step_homogeneous_lean/output/run-ZBZY9WRv:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_prefix_projection_lean/output/run-7hl40Fdl:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_rotation_projection_lean/output/run-O33agpqU:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_rotation_prefix_orthogonality_lean/output/run-EZZSgIdS:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_matrix_orthogonality_closure_lean/output/run-w9gDKPMw:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_prefix_shape_lean/output/run-yOc4r8n2/ConcretePrefixShape.lean:47:6: error(lean.unknownIdentifier): Unknown identifier `homogeneous`
+
+Note: It is not possible to treat `homogeneous` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_prefix_shape_lean/output/run-yOc4r8n2/ConcretePrefixShape.lean:49:5: error(lean.unknownIdentifier): Unknown identifier `routeBConcreteStepHomogeneous.routeB_step_is_homogeneous`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_prefix_shape_lean/output/run-yOc4r8n2/ConcretePrefixShape.lean:57:2: error: unsolved goals
+case «1»
+q : Fin 6 → ℝ
+⊢ 1 * sorry = RouteBHomogeneousRotationProjection.homogeneous (concreteRotation q 0) (concreteTranslation q 0)
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_prefix_shape_lean/output/run-yOc4r8n2/ConcretePrefixShape.lean:59:2: error: unsolved goals
+case «2»
+q : Fin 6 → ℝ
+⊢ 1 * sorry * sorry =
+    RouteBHomogeneousRotationProjection.homogeneous (concreteRotation q 0) (concreteTranslation q 0) *
+      RouteBHomogeneousRotationProjection.homogeneous (concreteRotation q 1) (concreteTranslation q 1)
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_prefix_shape_lean/output/run-yOc4r8n2/ConcretePrefixShape.lean:61:2: error: unsolved goals
+case «3»
+q : Fin 6 → ℝ
+⊢ 1 * sorry * sorry * sorry =
+    RouteBHomogeneousRotationProjection.homogeneous (concreteRotation q 0) (concreteTranslation q 0) *
+        RouteBHomogeneousRotationProjection.homogeneous (concreteRotation q 1) (concreteTranslation q 1) *
+      RouteBHomogeneousRotationProjection.homogeneous (concreteRotation q 2) (concreteTranslation q 2)
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_prefix_shape_lean/output/run-yOc4r8n2/ConcretePrefixShape.lean:64:2: error: unsolved goals
+case «4»
+q : Fin 6 → ℝ
+⊢ 1 * sorry * sorry * sorry * sorry =
+    RouteBHomogeneousRotationProjection.homogeneous (concreteRotation q 0) (concreteTranslation q 0) *
+          RouteBHomogeneousRotationProjection.homogeneous (concreteRotation q 1) (concreteTranslation q 1) *
+        RouteBHomogeneousRotationProjection.homogeneous (concreteRotation q 2) (concreteTranslation q 2) *
+      RouteBHomogeneousRotationProjection.homogeneous (concreteRotation q 3) (concreteTranslation q 3)
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_prefix_shape_lean/output/run-yOc4r8n2/ConcretePrefixShape.lean:67:2: error: unsolved goals
+case «5»
+q : Fin 6 → ℝ
+⊢ 1 * sorry * sorry * sorry * sorry * sorry =
+    RouteBHomogeneousRotationProjection.homogeneous (concreteRotation q 0) (concreteTranslation q 0) *
+            RouteBHomogeneousRotationProjection.homogeneous (concreteRotation q 1) (concreteTranslation q 1) *
+          RouteBHomogeneousRotationProjection.homogeneous (concreteRotation q 2) (concreteTranslation q 2) *
+        RouteBHomogeneousRotationProjection.homogeneous (concreteRotation q 3) (concreteTranslation q 3) *
+      RouteBHomogeneousRotationProjection.homogeneous (concreteRotation q 4) (concreteTranslation q 4)
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_prefix_shape_lean/output/run-yOc4r8n2/ConcretePrefixShape.lean:71:2: error: unsolved goals
+case «6»
+q : Fin 6 → ℝ
+⊢ 1 * sorry * sorry * sorry * sorry * sorry * sorry =
+    RouteBHomogeneousRotationProjection.homogeneous (concreteRotation q 0) (concreteTranslation q 0) *
+              RouteBHomogeneousRotationProjection.homogeneous (concreteRotation q 1) (concreteTranslation q 1) *
+            RouteBHomogeneousRotationProjection.homogeneous (concreteRotation q 2) (concreteTranslation q 2) *
+          RouteBHomogeneousRotationProjection.homogeneous (concreteRotation q 3) (concreteTranslation q 3) *
+        RouteBHomogeneousRotationProjection.homogeneous (concreteRotation q 4) (concreteTranslation q 4) *
+      RouteBHomogeneousRotationProjection.homogeneous (concreteRotation q 5) (concreteTranslation q 5)
+'RouteBConcretePrefixShape.concrete_step_eq_homogeneous' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBConcretePrefixShape.concretePrefix_eq_homogeneousPrefix' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+ConcretePrefixShape_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

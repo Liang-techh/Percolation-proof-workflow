@@ -1,0 +1,6 @@
+'RouteBImplicitPort.first_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBImplicitPort.second_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBImplicitPort.channel_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBImplicitPort.diagonal_elimination' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBImplicitPort.absorption_of_reduced_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBImplicitPort.residual_link_channel' depends on axioms: [propext, Classical.choice, Quot.sound]

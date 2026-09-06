@@ -1,0 +1,15 @@
+START_UTC=2026-09-05T23:09:29Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_real_dh_step_lean/output/run-nAZVlwhR:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-k87wlFSd:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+'RouteBRealDHStep.routeB_real_phase_values' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBRealDHStep.routeB_step_complex_eq_ofReal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBRealDHStep.routeB_step_real_entries' depends on axioms: [propext, Classical.choice, Quot.sound]
+RealDHStep_COMPILE_EXIT_CODE=0
+SOURCE_RESTRICTION_CHECK=PASSED
+9c04da5b9627ee749c53009733006934f95b2d33265e46ca59d0725aa453786a  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_real_dh_step_lean/output/run-nAZVlwhR/RealDHStep.lean
+16c705c9907e302e4351d9ad47923d5c115b83bd9707bdd3b0c7fd3068a0411b  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_real_dh_step_lean/output/run-nAZVlwhR/RealDHStep.olean
+JULIA_FLOAT64_BINDING=OPEN
+FULL_MASS_BINDING=OPEN
+END_UTC=2026-09-05T23:10:36Z
+VERIFY_EXIT_CODE=0

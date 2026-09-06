@@ -1,0 +1,29 @@
+LEAN_TOOLCHAIN_COMMIT=819816b2e0a3bf405af45ae5c7af2491d8f5bee6
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_positive_supply_frontier_lean/output/run-fElK8my1/Frontier.lean:53:29: error: Application type mismatch: The argument
+  htau1'
+has type
+  ¬tau < 1
+but is expected to have type
+  ¬1 < tau
+in the application
+  le_of_not_gt htau1'
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_positive_supply_frontier_lean/output/run-fElK8my1/Frontier.lean:54:10: error: Type mismatch
+  htau1
+has type
+  tau ≤ 1
+but is expected to have type
+  1 ≤ tau
+'RouteBPositiveSupplyFrontier.terminalDen_pos_of_eta_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPositiveSupplyFrontier.terminalDen_pos_of_relative_eta' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBPositiveSupplyFrontier.b45_terminalDen_pos_of_relative_eta' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBPositiveSupplyFrontier.equilibrium_floor_le_beta0' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPositiveSupplyFrontier.equilibrium_floor_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+VERIFY_EXIT_CODE=1

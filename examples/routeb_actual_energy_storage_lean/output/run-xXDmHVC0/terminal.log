@@ -1,0 +1,74 @@
+START_UTC=2026-09-05T21:08:34Z
+REFERENCE_MASS_REUSED_FROM=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-EQMuJx15
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-xXDmHVC0:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-xXDmHVC0/cache:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+PRE_RUN_SNAPSHOTS_COMPLETE
+{
+  "status": "EXACT_SOURCE_LITERAL_AUDIT_PASSED",
+  "M0_row_abs_sums": [
+    "1887427/2000000",
+    "11224907/12000000",
+    "7144697/12000000",
+    "250001/1000000",
+    "615649/4000000",
+    "50001/1000000"
+  ],
+  "I_minus_M0_diagonal_slacks": [
+    "112573/2000000",
+    "775093/12000000",
+    "4855303/12000000",
+    "749999/1000000",
+    "3384351/4000000",
+    "949999/1000000"
+  ],
+  "mass_csv_rows": 610,
+  "potential_csv_rows": 17,
+  "mass_regularizer": "1/1000000 (explicit intended-real reference convention)",
+  "lean_M0_and_H0_equal_reference_and_CSV": true,
+  "initial_signed_gap_lower_bound": "-3/10000: EXPLICIT UNPROVED AUDIT PREMISE",
+  "physical_DH_Float64_source_identification": "UNPROVED",
+  "reference_sha256": "26ca4f2d80e1237e3d3e87a6a9f11c62abe9304cfe006409ef225a682dff5dc9"
+}
+COMMAND=/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -DwarningAsError=true --root=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-xXDmHVC0 -o /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-xXDmHVC0/ActualStorage.olean /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-xXDmHVC0/ActualStorage.lean
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-xXDmHVC0/ActualStorage.lean:76:45: error: unsolved goals
+f : ℝ
+p q : Vec 6
+⊢ ∑ x, q x ^ 2 * (p x + if x = 3 then f * (7 * 75⁻¹) else 0) = ∑ i, p i * q i ^ 2 + f * (7 * (75⁻¹ * q 3 ^ 2))
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-xXDmHVC0/ActualStorage.lean:77:24: error: This simp argument is unused:
+  add_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [positionWeight, Finset.sum_add_distrib, ite_mul, div_eq_mul_inv, mul_assoc, mul_left_comm, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-xXDmHVC0/ActualStorage.lean:77:33: error: This simp argument is unused:
+  Finset.sum_add_distrib
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [positionWeight, add_mul, ite_mul, div_eq_mul_inv, mul_assoc, mul_left_comm, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-xXDmHVC0/ActualStorage.lean:77:57: error: This simp argument is unused:
+  ite_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [positionWeight, add_mul, Finset.sum_add_distrib, div_eq_mul_inv, mul_assoc, mul_left_comm, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-xXDmHVC0/ActualStorage.lean:78:31: error: This simp argument is unused:
+  mul_left_comm
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [positionWeight, add_mul, Finset.sum_add_distrib, ite_mul, div_eq_mul_inv, mul_assoc, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'RouteBActualEnergyStorage.W0_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualEnergyStorage.W0_from_source_nominal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualEnergyStorage.W0_initial_upper' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBActualEnergyStorage.storageV_initial_upper' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBActualEnergyStorage.synthesisV_nonneg_on_P' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualEnergyStorage.synthesisV_terminal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualEnergyStorage.synthesisV_initial_upper' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+ActualStorage_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

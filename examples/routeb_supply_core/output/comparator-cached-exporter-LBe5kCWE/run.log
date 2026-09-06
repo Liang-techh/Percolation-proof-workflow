@@ -1,0 +1,80 @@
+UTC=2026-09-05T17:03:14Z
+RUN=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_supply_core/output/comparator-cached-exporter-LBe5kCWE
+MODE=cached-exporter
+/usr/bin/python3
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+cc4c4b531b9ac42d0be8b7152ec7dfa85e7dcc89f7cc6ecbfa4d965375a6f09d  Challenge.lean
+43835aa7aaeb5cb6f18e53527097d4dcab2d2f8137ac9762a3c36a34cfe685ae  Solution.lean
+f774bc637296c6942bccbeca9161c7505536b02f6a5a515dc81875acb3560540  DependencyAudit.lean
+646c1052c10c1d8606342010c4303c0c25e40e008664ce7f1c1b1649c51f6971  RouteBSupplyCore.lean
+a16b29b152312bf3a094e1af62363e49bac56e3d98fd71c1e51c5de01ee134ea  comparator.json
+2d007e23b32403d9a87dd293b63637c5db0c2a9db4d0153f19ed92d0c49df3dd  lakefile.toml
+3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71  lean-toolchain
+4c9ecebd20193ed6c8862941a37c0fd90caef0b28f53f6930c9966aff3541541  verify_comparator.sh
+5d1e1290146311ac4c58c29b8f19e3144d5881681a3d0f590a3a7335abc73741  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_supply_core/output/comparator-cached-exporter-LBe5kCWE/project/lake-manifest.json
+dae80fbdbb6439761a0ad1b7c081fc5a61ca1cdd7e2f70e23df31d9756637f26  /home/z5242/sos_lean/lake-manifest.json
+DEPENDENCY mathlib 0df444a360eaa60ab8c11dca51a86af692955474
+DEPENDENCY plausible b7eb3304aeae834b12dda98993a37f6a41f6f0bb
+DEPENDENCY LeanSearchClient 5f4d51b81cbd3f6b32b156bfad9056621a040404
+DEPENDENCY importGraph 16f02aa7642864af59f1ff0e384a015994db9118
+DEPENDENCY proofwidgets 4be2e3d5087eeb272cf5a8853b8f9dd025ef5957
+DEPENDENCY aesop 3448c0bcc5ce01b2d1546e483ec3620e32df3d0e
+DEPENDENCY Qq 92c15be17b7caf78c2ad767ec40f89052d908d81
+DEPENDENCY batteries 4488d40d070b9700d4d5a6aa342f0d40c31b2a2d
+DEPENDENCY Cli 6130a47896ce867c6a4a55373441e59e565bad0f
+CLEAN_COMPILE=RouteBSupplyCore
+'RouteBSupplyCore.damping_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.centerRate_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.gamma_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.gamma_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.gamma_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unitMargin_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unitMargin_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.completion_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.vector_completion_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.completion_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.pointwise_supply_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unit_supply_gap_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unit_supply_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.supply_at_center' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.uniform_supply_coefficient_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.power_bound_with_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unit_supply_of_power_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unit_supply_of_margin_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+CLEAN_COMPILE=Challenge
+'RouteBSupplyComparison.explicit_supply_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+CLEAN_COMPILE=Solution
+'RouteBSupplyComparison.explicit_supply_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+CLEAN_COMPILE=DependencyAudit
+Dependency closure: 8699 declarations; opaque bodies: 12
+Reachable axioms: [propext, Quot.sound, Classical.choice]
+ROUTEB_DEPENDENCY_AUDIT_OK
+CLEAN_COMPILE_EXIT_CODE=0
+f25185592ce22b0d12c5801553c7caa5a5f7731a30a14226de2be68b27382430  /home/z5242/.cache/lean-ci-tools/comparator/.lake/build/bin/comparator
+e57369980b0b81228580ce08066fb9bd738e717e002673a143f4956d217266b0  /home/z5242/.cache/lean-ci-tools/lean4export/.lake/build/bin/lean4export
+8790f3cbb6f105fcd5265b84d21eb9f734465e592db220ab8e6bd8528969fef7  /home/z5242/.cache/lean-ci-tools/nanoda/target/release/nanoda_bin
+6061225ade5648989e499022f0f915210e3c23cc60c4a34df0dba5bd47ccd69f  /home/z5242/.cache/lean-ci-tools/bin/landrun
+e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550  /home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean
+COMPARATOR_COMMAND=lake env /home/z5242/.cache/lean-ci-tools/comparator/.lake/build/bin/comparator comparator.json
+Building Challenge
+✖ [3006/3007] Building Challenge (14ms)
+error: failed to remove output artifacts: permission denied (error code: 4294967283)
+  file: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_supply_core/output/comparator-cached-exporter-LBe5kCWE/project/.lake/build/lib/lean/Challenge.olean
+Some required targets logged failures:
+- Challenge
+error: build failed
+uncaught exception: Child exited with 1
+COMPARATOR_EXIT_CODE=1
+Challenge.lean: OK
+Solution.lean: OK
+DependencyAudit.lean: OK
+RouteBSupplyCore.lean: OK
+comparator.json: OK
+lakefile.toml: OK
+lean-toolchain: OK
+verify_comparator.sh: OK
+f304644744c10b0bc2387d380443f0cae06a76c11b6208000ff5d79a2e5b1631  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_supply_core/output/comparator-cached-exporter-LBe5kCWE/project/.lake/build/lib/lean/RouteBSupplyCore.olean
+0cd1774e477d1f394810a51483e6be734741152408c69c93d2fdf0e9fc266183  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_supply_core/output/comparator-cached-exporter-LBe5kCWE/project/.lake/build/lib/lean/Challenge.olean
+8dea38ea6541b9234ef46290b6f4b90dbdfd4dd7f19bfa1204e1c1684ffc6f02  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_supply_core/output/comparator-cached-exporter-LBe5kCWE/project/.lake/build/lib/lean/Solution.olean
+49d128f2e8185da47aa553da41e1d2a2d72529105317352a3238ec8df7b691f5  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_supply_core/output/comparator-cached-exporter-LBe5kCWE/project/.lake/build/lib/lean/DependencyAudit.olean
+RUN_EXIT_CODE=1

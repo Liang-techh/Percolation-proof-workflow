@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-09-05T21:07:09.114437+00:00",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_storage_design/output/post-20260905T210708Z-19f7d8ba/postprocess_lp.py",
+    "--child"
+  ],
+  "snapshots": {
+    "postprocess_lp.py": {
+      "original": "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_storage_design/postprocess_lp.py",
+      "sha256": "eb98842ae24f4cf093744ed9f42c964bd336f3913a92c8f59fc0d9d178b60aab"
+    },
+    "lp_candidate_evidence.json": {
+      "original": "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_storage_design/output/lp-20260905T210233Z-e9203653/lp_candidate_evidence.json",
+      "sha256": "6ef393c200f74e651041e8afe05fb16ec305b39b9b818fdaa37eceac18656c7b"
+    },
+    "lp_problem.json": {
+      "original": "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_storage_design/output/lp-20260905T210233Z-e9203653/lp_problem.json",
+      "sha256": "cec8610eaf2970511c2e5f1e50f164724c0eff54d70925907767003d50781dae"
+    },
+    "reference.json": {
+      "original": "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_storage_design/output/lp-20260905T210233Z-e9203653/inputs/reference.json",
+      "sha256": "26ca4f2d80e1237e3d3e87a6a9f11c62abe9304cfe006409ef225a682dff5dc9"
+    },
+    "mass.csv": {
+      "original": "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_storage_design/output/lp-20260905T210233Z-e9203653/inputs/mass.csv",
+      "sha256": "a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8"
+    },
+    "potential.csv": {
+      "original": "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_storage_design/output/lp-20260905T210233Z-e9203653/inputs/potential.csv",
+      "sha256": "4ebbb10e32639f54b18f259cbb762c04f2be842a856cae85e1fe94dad5478b6c"
+    },
+    "source_line_check.json": {
+      "original": "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_storage_design/output/run-20260905T205645Z-63b40a65/candidate_evidence.json",
+      "sha256": "e2596c47b823e80684c26d2b0f01e689bfce7cd6f3abe2fd08afd10c49ed6466"
+    }
+  }
+}

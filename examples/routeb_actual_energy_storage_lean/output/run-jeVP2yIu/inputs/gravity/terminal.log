@@ -1,0 +1,19 @@
+START_UTC=2026-09-05T20:37:06Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_gravity_twist_floor/output/run-LIFMhESI:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+PRE_RUN_SNAPSHOTS_COMPLETE
+COMMAND=/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -DwarningAsError=true --root=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_gravity_twist_floor/output/run-LIFMhESI -o /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_gravity_twist_floor/output/run-LIFMhESI/GravityTwistFloor.olean /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_gravity_twist_floor/output/run-LIFMhESI/GravityTwistFloor.lean
+'RouteBGravityTwistFloor.psi_ge_sin_fourth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBGravityTwistFloor.gravity_floor_exact_rho' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBGravityTwistFloor.gravity_twist_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBGravityTwistFloor.signed_gap_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBGravityTwistFloor.potential_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBGravityTwistFloor.potential_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBGravityTwistFloor.fourier_remainder_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBGravityTwistFloor.fourier_remainder_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+COMPILE_EXIT_CODE=0
+SNAPSHOT_HASHES_UNCHANGED=true
+fe70bc1db090d719fc539cca1591f2084c0fab3f03a66cd5f031040bcb2e4b8e  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_gravity_twist_floor/output/run-LIFMhESI/GravityTwistFloor.olean
+END_UTC=2026-09-05T20:37:12Z
+VERIFY_EXIT_CODE=0

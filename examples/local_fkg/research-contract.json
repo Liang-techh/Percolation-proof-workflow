@@ -1,0 +1,30 @@
+{
+  "target": "Percolation.Literature.harris_fkg_local",
+  "source_commit": "795efb86f191735c5481675763537cfb4ff37e55",
+  "source_file": "Percolation/Literature/HarrisLocal.lean",
+  "source_statement_lines": [218, 221],
+  "challenge_module": "LocalFKGChallenge",
+  "status": "target_elaborated_in_pinned_upstream_environment_not_proved",
+  "forbidden_modules": [
+    "Percolation.Literature.HarrisLocal",
+    "Percolation.Literature.HarrisInequality",
+    "Percolation.Literature.InequalitiesProofs",
+    "Mathlib.Combinatorics.SetFamily.FourFunctions",
+    "Percolation", "Solution", "Challenge"
+  ],
+  "forbidden_existing_proofs": [
+    "harris_fkg_local", "harris_fkg_holds", "infinitePi_harris",
+    "infinitePi_harris_dependsOn", "real_eq_sum_of_determinedBy"
+  ],
+  "obligations_to_formalize": [
+    "finite Bernoulli product positive correlation for monotone nonnegative functions",
+    "local event real probability as a finite Boolean cube weighted indicator sum"
+  ],
+  "invariants": [
+    "no additional finite or countable vertex assumption",
+    "retain all p in unitInterval including endpoints",
+    "Challenge sorry is a target placeholder only and never an admissible proof dependency",
+    "check transitive imports and elaborated proof dependencies, not just source text",
+    "do not claim a one-shot agent cannot prove this target"
+  ]
+}

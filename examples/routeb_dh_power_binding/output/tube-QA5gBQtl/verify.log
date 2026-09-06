@@ -1,0 +1,13 @@
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/output/tube-QA5gBQtl
+UTC: 2026-09-05T17:31:26Z
+de01302721c07e54c869613a0c9ad86e1614d9925b4dcb054b07d01e86bad98e  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/EnergyTube.lean
+15a8e8ceb17131c32ceb02f4982d71807681d812d22de9f0b2fa206be346db5d  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/output/run-5RHBCcg9/DHPowerBinding.olean
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/EnergyTube.lean:22:9: error: Unused tactic linter: `funext x` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/EnergyTube.lean:22:19: error: Unused tactic linter: `simp [B, id]` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+'RouteBEnergyTube.cubic_tube' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBEnergyTube.ramp_force_error_tube' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBEnergyTube.ramp_terminal_budget' depends on axioms: [propext, Classical.choice, Quot.sound]

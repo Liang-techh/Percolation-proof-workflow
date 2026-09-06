@@ -1,0 +1,43 @@
+UTC: 2026-09-05T18:38:19Z
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_force_error_decomposition/output/run-HFK8Bl7w
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+EXACT_CONSTANTS_MASS_AND_GRAVITY_SUPPORT_CHECKED
+Mref diagonal: [Fraction(350003, 3000000), Fraction(200739, 4000000)] gravity c: 20601/400000 refined FD gravity error: 6867/8000000000000000
+TOTAL_INTEGRATED_BUDGET_PROVED=false
+9b808bae164c9a1ed0e2c10479df67f0262d4a0bd986c3d14b551c1cb0440a53  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_force_error_decomposition/ForceErrorDecomposition.lean
+e564b4719798f88ecd3ad9e20744f770f4d8f4683dbe1e727a145b06ea05b2fb  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_force_error_decomposition/audit.py
+93f7a8d0d6962cec41958a3e389e67816322b533ed6749b25cebee4e9758e83d  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_force_error_decomposition/verify.sh
+15a8e8ceb17131c32ceb02f4982d71807681d812d22de9f0b2fa206be346db5d  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_force_error_decomposition/../routeb_dh_power_binding/output/run-5RHBCcg9/DHPowerBinding.olean
+cf1d339b9a276fdbdc68b07d84fb1ad38c7af22dd4e1cf1708aac47430a9c951  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_force_error_decomposition/../routeb_block_potential/output/run-RDCanfXw/BlockPotential.olean
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_force_error_decomposition/ForceErrorDecomposition.lean:100:55: error: unsolved goals
+R : BlockMat
+kp q v a : Vec
+w : ℝ
+nominalForce port : Block → ℝ
+i : Block
+⊢ -(nominalOffset kp q v w nominalForce i * oldTotal R a nominalForce (nominalOffset kp q v w nominalForce) i * 4) +
+        nominalOffset kp q v w nominalForce i ^ 2 * 4 +
+      oldTotal R a nominalForce (nominalOffset kp q v w nominalForce) i ^ 2 =
+    nominalOffset kp q v w nominalForce i * port i * 2 -
+              nominalOffset kp q v w nominalForce i * oldTotal R a nominalForce port i * 2 +
+            nominalOffset kp q v w nominalForce i ^ 2 -
+          port i * oldTotal R a nominalForce port i * 2 +
+        port i ^ 2 +
+      oldTotal R a nominalForce port i ^ 2
+'RouteBForceErrorDecomposition.full_mass_block_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBForceErrorDecomposition.mass_mismatch_action' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBForceErrorDecomposition.reference_force_of_balance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBForceErrorDecomposition.implemented_reference_force' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBForceErrorDecomposition.new_error_from_old_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBForceErrorDecomposition.exact_squared_error_identity' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBForceErrorDecomposition.gravity_at_block_origin' depends on axioms: [propext, Classical.choice, Quot.sound]
+LEAN_COMPILE_EXIT_CODE=1

@@ -1,0 +1,46 @@
+START_UTC=2026-09-06T04:42:32Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_contract_index_adapter_lean/output/run-a7DRfXYo:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_contract_adapter_lean/output/run-RSGGTurS:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_slot_accessor_lean/output/run-4RJoHvpZ:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-0FvNkLzz:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_semantic_core_lean/output/run-6vhFP8Zp:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_prefix_index_lean/output/run-lVHyO9Lp:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_origin_axis_lean/output/run-H0sN55iL:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_real_dh_step_lean/output/run-nAZVlwhR:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-k87wlFSd:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+'RouteBSourceContractIndexAdapter.source_prev_origin_slot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSourceContractIndexAdapter.source_next_origin_slot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSourceContractIndexAdapter.source_parent_axis_slot' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSourceContractIndexAdapter.source_body4_com_uses_slots_3_4' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBSourceContractIndexAdapter.source_body4_joint4_Jv_uses_parent_slot_3' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBSourceContractIndexAdapter.source_body4_joint4_Jw_uses_parent_slot_3' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBSourceContractIndexAdapter.source_body4_joint5_Jv_inactive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBSourceContractIndexAdapter.source_body4_joint5_Jw_inactive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBSourceContractIndexAdapter.source_body5_com_uses_slots_4_5' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBSourceContractIndexAdapter.source_body5_joint5_Jv_uses_parent_slot_4' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBSourceContractIndexAdapter.source_body5_joint5_Jw_uses_parent_slot_4' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBSourceContractIndexAdapter.source_body5_joint6_Jv_inactive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBSourceContractIndexAdapter.source_body5_joint6_Jw_inactive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+SourceContractIndexAdapter_COMPILE_EXIT_CODE=0
+SOURCE_RESTRICTION_CHECK=PASSED
+2a18c7b6733af6245f3e5ba6dedd714a9ec7f28fd010122c0258611ce7aac452  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_contract_index_adapter_lean/output/run-a7DRfXYo/SourceContractIndexAdapter.lean
+50d88296516473e139828678507fda455467b052dd3330e5563f68f4aa41a9da  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_contract_index_adapter_lean/output/run-a7DRfXYo/SourceContractIndexAdapter.olean
+DH_NUMERIC_EXPANSION=AVOIDED
+JULIA_FLOAT64_BINDING=OPEN
+MAIN_DAG_STATE_UNCHANGED=true
+END_UTC=2026-09-06T04:45:17Z
+VERIFY_EXIT_CODE=0

@@ -1,0 +1,8 @@
+'RouteBActualShift.constant_row_phase' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualShift.potential_zero_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualShift.actual_W_eq_storage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualShift.actual_shift_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualShift.actualKp_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualShift.actual_shifted_storage_chain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualShift.actual_W_shifted_coercivity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualShift.actual_p45_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

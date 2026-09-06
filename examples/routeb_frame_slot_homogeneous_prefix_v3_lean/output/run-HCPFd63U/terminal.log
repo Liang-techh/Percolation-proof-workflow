@@ -1,0 +1,70 @@
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_slot_homogeneous_prefix_v3_lean/output/run-HCPFd63U/PrefixTransport.lean:21:20: error(lean.unknownIdentifier): Unknown identifier `homogeneous`
+
+Note: It is not possible to treat `homogeneous` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_slot_homogeneous_prefix_v3_lean/output/run-HCPFd63U/PrefixTransport.lean:25:2: error: unsolved goals
+case «1»
+s : V6 → Frame4
+r : V6 → Mat3
+p : V6 → Vec3
+h : ∀ (k : V6), s k = sorry
+⊢ sorry = RouteBHomogeneousRotationProjection.homogeneous (r 0) (p 0)
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_slot_homogeneous_prefix_v3_lean/output/run-HCPFd63U/PrefixTransport.lean:28:2: error: unsolved goals
+case «2»
+s : V6 → Frame4
+r : V6 → Mat3
+p : V6 → Vec3
+h : ∀ (k : V6), s k = sorry
+⊢ sorry * sorry =
+    RouteBHomogeneousRotationProjection.homogeneous (r 0) (p 0) *
+      RouteBHomogeneousRotationProjection.homogeneous (r 1) (p 1)
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_slot_homogeneous_prefix_v3_lean/output/run-HCPFd63U/PrefixTransport.lean:31:2: error: unsolved goals
+case «3»
+s : V6 → Frame4
+r : V6 → Mat3
+p : V6 → Vec3
+h : ∀ (k : V6), s k = sorry
+⊢ sorry * sorry * sorry =
+    RouteBHomogeneousRotationProjection.homogeneous (r 0) (p 0) *
+        RouteBHomogeneousRotationProjection.homogeneous (r 1) (p 1) *
+      RouteBHomogeneousRotationProjection.homogeneous (r 2) (p 2)
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_slot_homogeneous_prefix_v3_lean/output/run-HCPFd63U/PrefixTransport.lean:34:2: error: unsolved goals
+case «4»
+s : V6 → Frame4
+r : V6 → Mat3
+p : V6 → Vec3
+h : ∀ (k : V6), s k = sorry
+⊢ sorry * sorry * sorry * sorry =
+    RouteBHomogeneousRotationProjection.homogeneous (r 0) (p 0) *
+          RouteBHomogeneousRotationProjection.homogeneous (r 1) (p 1) *
+        RouteBHomogeneousRotationProjection.homogeneous (r 2) (p 2) *
+      RouteBHomogeneousRotationProjection.homogeneous (r 3) (p 3)
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_slot_homogeneous_prefix_v3_lean/output/run-HCPFd63U/PrefixTransport.lean:37:2: error: unsolved goals
+case «5»
+s : V6 → Frame4
+r : V6 → Mat3
+p : V6 → Vec3
+h : ∀ (k : V6), s k = sorry
+⊢ sorry * sorry * sorry * sorry * sorry =
+    RouteBHomogeneousRotationProjection.homogeneous (r 0) (p 0) *
+            RouteBHomogeneousRotationProjection.homogeneous (r 1) (p 1) *
+          RouteBHomogeneousRotationProjection.homogeneous (r 2) (p 2) *
+        RouteBHomogeneousRotationProjection.homogeneous (r 3) (p 3) *
+      RouteBHomogeneousRotationProjection.homogeneous (r 4) (p 4)
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_slot_homogeneous_prefix_v3_lean/output/run-HCPFd63U/PrefixTransport.lean:40:2: error: unsolved goals
+case «6»
+s : V6 → Frame4
+r : V6 → Mat3
+p : V6 → Vec3
+h : ∀ (k : V6), s k = sorry
+⊢ sorry * sorry * sorry * sorry * sorry * sorry =
+    RouteBHomogeneousRotationProjection.homogeneous (r 0) (p 0) *
+              RouteBHomogeneousRotationProjection.homogeneous (r 1) (p 1) *
+            RouteBHomogeneousRotationProjection.homogeneous (r 2) (p 2) *
+          RouteBHomogeneousRotationProjection.homogeneous (r 3) (p 3) *
+        RouteBHomogeneousRotationProjection.homogeneous (r 4) (p 4) *
+      RouteBHomogeneousRotationProjection.homogeneous (r 5) (p 5)
+'RouteBFrameSlotHomogeneousPrefixV3.prefixFrame_eq_homogeneousPrefix_of_step' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+PrefixTransport_COMPILE_EXIT_CODE=1

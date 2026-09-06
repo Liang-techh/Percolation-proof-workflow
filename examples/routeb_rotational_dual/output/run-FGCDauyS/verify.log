@@ -1,0 +1,456 @@
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_rotational_dual/output/run-FGCDauyS
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+f03d3ae930d6b9d715314029ce3e8bed278ef5906f196b318b8463610723ba16  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_rotational_dual/output/run-FGCDauyS/RotationalDual.lean
+ca9a49042c0f1dc8bc299970715bedaf482dbfaad6f66edf6099315eacc9278b  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_rotational_dual/verify.sh
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_rotational_dual/output/run-FGCDauyS/RotationalDual.lean:41:2: error: linarith failed to find a contradiction
+a u : V3
+w : ℝ
+hw : 0 < w
+h0 : 2 * a 0 * u 0 - w * u 0 ^ 2 ≤ a 0 ^ 2 / w
+h1 : 2 * a 1 * u 1 - w * u 1 ^ 2 ≤ a 1 ^ 2 / w
+h2 : 2 * a 2 * u 2 - w * u 2 ^ 2 ≤ a 2 ^ 2 / w
+a✝ :
+  a 0 * a 0 / w + a 1 * a 1 / w + a 2 * a 2 / w <
+    2 * (a 0 * u 0 + a 1 * u 1 + a 2 * u 2) - w * (u 0 * u 0 + u 1 * u 1 + u 2 * u 2)
+⊢ False
+failed
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_rotational_dual/output/run-FGCDauyS/RotationalDual.lean:69:28: error: unsolved goals
+f : Vec
+z : Fin 6 → V3
+unit : ∀ (i : Fin 6), sq3 (z i) = 1
+h01 : dot3 (z 0) (z 1) = 0
+h12 : dot3 (z 1) (z 2) = 1
+h23 : dot3 (z 2) (z 3) = 0
+h34 : dot3 (z 3) (z 4) = 0
+h45 : dot3 (z 4) (z 5) = 0
+⊢ ⋯ - ⋯ - ⋯ * 6 + f 0 ^ 2 * z 0 0 ^ 2 * 3 + f 0 ^ 2 * z 0 1 ^ 2 * 3 + f 0 ^ 2 * z 0 2 ^ 2 * 3 -
+                                                                                              f 1 * z 1 0 * f 2 *
+                                                                                                  z 2 0 *
+                                                                                                10 -
+                                                                                            f 1 * z 1 1 * f 2 * z 2 1 *
+                                                                                              10 -
+                                                                                          f 1 * z 1 2 * f 2 * z 2 2 *
+                                                                                            10 +
+                                                                                        f 1 ^ 2 * z 1 0 ^ 2 * 8 +
+                                                                                      f 1 ^ 2 * z 1 1 ^ 2 * 8 +
+                                                                                    f 1 ^ 2 * z 1 2 ^ 2 * 8 -
+                                                                                  f 2 * z 2 0 *
+                                                                                        Matrix.vecCons (f 1 * z 1 0)
+                                                                                          (fun i =>
+                                                                                            Matrix.vecCons (f 2 * z 2 0)
+                                                                                              (fun i =>
+                                                                                                Matrix.vecCons
+                                                                                                  (f 3 * z 3 0)
+                                                                                                  (fun i =>
+                                                                                                    Matrix.vecCons
+                                                                                                      (f 4 * z 4 0)
+                                                                                                      (fun i => ⋯) i)
+                                                                                                  i)
+                                                                                              i)
+                                                                                          2 *
+                                                                                      (![1 / 3, 1 / 5, 7 / 60, 1 / 15,
+                                                                                            1 / 30, 1 / 60]
+                                                                                          2)⁻¹ *
+                                                                                    2 -
+                                                                                f 2 * z 2 1 *
+                                                                                      Matrix.vecCons (f 1 * z 1 1)
+                                                                                        (fun i =>
+                                                                                          Matrix.vecCons (f 2 * z 2 1)
+                                                                                            (fun i =>
+                                                                                              Matrix.vecCons
+                                                                                                (f 3 * z 3 1)
+                                                                                                (fun i =>
+                                                                                                  Matrix.vecCons
+                                                                                                    (f 4 * z 4 1)
+                                                                                                    (fun i =>
+                                                                                                      Matrix.vecCons
+                                                                                                        (f 5 * z 5 1)
+                                                                                                        (fun i => 0) i)
+                                                                                                    i)
+                                                                                                i)
+                                                                                            i)
+                                                                                        2 *
+                                                                                    (![1 / 3, 1 / 5, 7 / 60, 1 / 15,
+                                                                                          1 / 30, 1 / 60]
+                                                                                        2)⁻¹ *
+                                                                                  2 -
+                                                                              f 2 * z 2 2 *
+                                                                                    Matrix.vecCons (f 1 * z 1 2)
+                                                                                      (fun i =>
+                                                                                        Matrix.vecCons (f 2 * z 2 2)
+                                                                                          (fun i =>
+                                                                                            Matrix.vecCons (f 3 * z 3 2)
+                                                                                              (fun i =>
+                                                                                                Matrix.vecCons
+                                                                                                  (f 4 * z 4 2)
+                                                                                                  (fun i =>
+                                                                                                    Matrix.vecCons
+                                                                                                      (f 5 * z 5 2)
+                                                                                                      (fun i => 0) i)
+                                                                                                  i)
+                                                                                              i)
+                                                                                          i)
+                                                                                      2 *
+                                                                                  (![1 / 3, 1 / 5, 7 / 60, 1 / 15,
+                                                                                        1 / 30, 1 / 60]
+                                                                                      2)⁻¹ *
+                                                                                2 +
+                                                                            f 2 ^ 2 * z 2 0 ^ 2 * 5 +
+                                                                          f 2 ^ 2 * z 2 0 ^ 2 *
+                                                                            (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30,
+                                                                                  1 / 60]
+                                                                                2)⁻¹ +
+                                                                        f 2 ^ 2 * z 2 1 ^ 2 * 5 +
+                                                                      f 2 ^ 2 * z 2 1 ^ 2 *
+                                                                        (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60]
+                                                                            2)⁻¹ +
+                                                                    f 2 ^ 2 * z 2 2 ^ 2 * 5 +
+                                                                  f 2 ^ 2 * z 2 2 ^ 2 *
+                                                                    (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60]
+                                                                        2)⁻¹ -
+                                                                f 3 * z 3 0 *
+                                                                      Matrix.vecCons (f 1 * z 1 0)
+                                                                        (fun i =>
+                                                                          Matrix.vecCons (f 2 * z 2 0)
+                                                                            (fun i =>
+                                                                              Matrix.vecCons (f 3 * z 3 0)
+                                                                                (fun i =>
+                                                                                  Matrix.vecCons (f 4 * z 4 0)
+                                                                                    (fun i =>
+                                                                                      Matrix.vecCons (f 5 * z 5 0)
+                                                                                        (fun i => 0) i)
+                                                                                    i)
+                                                                                i)
+                                                                            i)
+                                                                        3 *
+                                                                    (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60]
+                                                                        3)⁻¹ *
+                                                                  2 -
+                                                              f 3 * z 3 1 *
+                                                                    Matrix.vecCons (f 1 * z 1 1)
+                                                                      (fun i =>
+                                                                        Matrix.vecCons (f 2 * z 2 1)
+                                                                          (fun i =>
+                                                                            Matrix.vecCons (f 3 * z 3 1)
+                                                                              (fun i =>
+                                                                                Matrix.vecCons (f 4 * z 4 1)
+                                                                                  (fun i =>
+                                                                                    Matrix.vecCons (f 5 * z 5 1)
+                                                                                      (fun i => 0) i)
+                                                                                  i)
+                                                                              i)
+                                                                          i)
+                                                                      3 *
+                                                                  (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60]
+                                                                      3)⁻¹ *
+                                                                2 -
+                                                            f 3 * z 3 2 *
+                                                                  Matrix.vecCons (f 1 * z 1 2)
+                                                                    (fun i =>
+                                                                      Matrix.vecCons (f 2 * z 2 2)
+                                                                        (fun i =>
+                                                                          Matrix.vecCons (f 3 * z 3 2)
+                                                                            (fun i =>
+                                                                              Matrix.vecCons (f 4 * z 4 2)
+                                                                                (fun i =>
+                                                                                  Matrix.vecCons (f 5 * z 5 2)
+                                                                                    (fun i => 0) i)
+                                                                                i)
+                                                                            i)
+                                                                        i)
+                                                                    3 *
+                                                                (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 3)⁻¹ *
+                                                              2 +
+                                                          f 3 ^ 2 * z 3 0 ^ 2 *
+                                                            (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 3)⁻¹ +
+                                                        f 3 ^ 2 * z 3 1 ^ 2 *
+                                                          (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 3)⁻¹ +
+                                                      f 3 ^ 2 * z 3 2 ^ 2 *
+                                                        (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 3)⁻¹ -
+                                                    f 4 * z 4 0 *
+                                                          Matrix.vecCons (f 1 * z 1 0)
+                                                            (fun i =>
+                                                              Matrix.vecCons (f 2 * z 2 0)
+                                                                (fun i =>
+                                                                  Matrix.vecCons (f 3 * z 3 0)
+                                                                    (fun i =>
+                                                                      Matrix.vecCons (f 4 * z 4 0)
+                                                                        (fun i =>
+                                                                          Matrix.vecCons (f 5 * z 5 0) (fun i => 0) i)
+                                                                        i)
+                                                                    i)
+                                                                i)
+                                                            4 *
+                                                        (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 4)⁻¹ *
+                                                      2 -
+                                                  f 4 * z 4 1 *
+                                                        Matrix.vecCons (f 1 * z 1 1)
+                                                          (fun i =>
+                                                            Matrix.vecCons (f 2 * z 2 1)
+                                                              (fun i =>
+                                                                Matrix.vecCons (f 3 * z 3 1)
+                                                                  (fun i =>
+                                                                    Matrix.vecCons (f 4 * z 4 1)
+                                                                      (fun i =>
+                                                                        Matrix.vecCons (f 5 * z 5 1) (fun i => 0) i)
+                                                                      i)
+                                                                  i)
+                                                              i)
+                                                          4 *
+                                                      (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 4)⁻¹ *
+                                                    2 -
+                                                f 4 * z 4 2 *
+                                                      Matrix.vecCons (f 1 * z 1 2)
+                                                        (fun i =>
+                                                          Matrix.vecCons (f 2 * z 2 2)
+                                                            (fun i =>
+                                                              Matrix.vecCons (f 3 * z 3 2)
+                                                                (fun i =>
+                                                                  Matrix.vecCons (f 4 * z 4 2)
+                                                                    (fun i =>
+                                                                      Matrix.vecCons (f 5 * z 5 2) (fun i => 0) i)
+                                                                    i)
+                                                                i)
+                                                            i)
+                                                        4 *
+                                                    (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 4)⁻¹ *
+                                                  2 +
+                                              f 4 ^ 2 * z 4 0 ^ 2 *
+                                                (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 4)⁻¹ +
+                                            f 4 ^ 2 * z 4 1 ^ 2 *
+                                              (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 4)⁻¹ +
+                                          f 4 ^ 2 * z 4 2 ^ 2 * (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 4)⁻¹ -
+                                        f 5 * z 5 0 *
+                                              Matrix.vecCons (f 1 * z 1 0)
+                                                (fun i =>
+                                                  Matrix.vecCons (f 2 * z 2 0)
+                                                    (fun i =>
+                                                      Matrix.vecCons (f 3 * z 3 0)
+                                                        (fun i =>
+                                                          Matrix.vecCons (f 4 * z 4 0)
+                                                            (fun i => Matrix.vecCons (f 5 * z 5 0) (fun i => 0) i) i)
+                                                        i)
+                                                    i)
+                                                5 *
+                                            (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 5)⁻¹ *
+                                          2 -
+                                      f 5 * z 5 1 *
+                                            Matrix.vecCons (f 1 * z 1 1)
+                                              (fun i =>
+                                                Matrix.vecCons (f 2 * z 2 1)
+                                                  (fun i =>
+                                                    Matrix.vecCons (f 3 * z 3 1)
+                                                      (fun i =>
+                                                        Matrix.vecCons (f 4 * z 4 1)
+                                                          (fun i => Matrix.vecCons (f 5 * z 5 1) (fun i => 0) i) i)
+                                                      i)
+                                                  i)
+                                              5 *
+                                          (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 5)⁻¹ *
+                                        2 -
+                                    f 5 * z 5 2 *
+                                          Matrix.vecCons (f 1 * z 1 2)
+                                            (fun i =>
+                                              Matrix.vecCons (f 2 * z 2 2)
+                                                (fun i =>
+                                                  Matrix.vecCons (f 3 * z 3 2)
+                                                    (fun i =>
+                                                      Matrix.vecCons (f 4 * z 4 2)
+                                                        (fun i => Matrix.vecCons (f 5 * z 5 2) (fun i => 0) i) i)
+                                                    i)
+                                                i)
+                                            5 *
+                                        (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 5)⁻¹ *
+                                      2 +
+                                  f 5 ^ 2 * z 5 0 ^ 2 * (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 5)⁻¹ +
+                                f 5 ^ 2 * z 5 1 ^ 2 * (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 5)⁻¹ +
+                              f 5 ^ 2 * z 5 2 ^ 2 * (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 5)⁻¹ +
+                            Matrix.vecCons (f 1 * z 1 0)
+                                  (fun i =>
+                                    Matrix.vecCons (f 2 * z 2 0)
+                                      (fun i =>
+                                        Matrix.vecCons (f 3 * z 3 0)
+                                          (fun i =>
+                                            Matrix.vecCons (f 4 * z 4 0)
+                                              (fun i => Matrix.vecCons (f 5 * z 5 0) (fun i => 0) i) i)
+                                          i)
+                                      i)
+                                  2 ^
+                                2 *
+                              (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 2)⁻¹ +
+                          Matrix.vecCons (f 1 * z 1 1)
+                                (fun i =>
+                                  Matrix.vecCons (f 2 * z 2 1)
+                                    (fun i =>
+                                      Matrix.vecCons (f 3 * z 3 1)
+                                        (fun i =>
+                                          Matrix.vecCons (f 4 * z 4 1)
+                                            (fun i => Matrix.vecCons (f 5 * z 5 1) (fun i => 0) i) i)
+                                        i)
+                                    i)
+                                2 ^
+                              2 *
+                            (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 2)⁻¹ +
+                        Matrix.vecCons (f 1 * z 1 2)
+                              (fun i =>
+                                Matrix.vecCons (f 2 * z 2 2)
+                                  (fun i =>
+                                    Matrix.vecCons (f 3 * z 3 2)
+                                      (fun i =>
+                                        Matrix.vecCons (f 4 * z 4 2)
+                                          (fun i => Matrix.vecCons (f 5 * z 5 2) (fun i => 0) i) i)
+                                      i)
+                                  i)
+                              2 ^
+                            2 *
+                          (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 2)⁻¹ +
+                      Matrix.vecCons (f 1 * z 1 0)
+                            (fun i =>
+                              Matrix.vecCons (f 2 * z 2 0)
+                                (fun i =>
+                                  Matrix.vecCons (f 3 * z 3 0)
+                                    (fun i =>
+                                      Matrix.vecCons (f 4 * z 4 0)
+                                        (fun i => Matrix.vecCons (f 5 * z 5 0) (fun i => 0) i) i)
+                                    i)
+                                i)
+                            3 ^
+                          2 *
+                        (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 3)⁻¹ +
+                    Matrix.vecCons (f 1 * z 1 1)
+                          (fun i =>
+                            Matrix.vecCons (f 2 * z 2 1)
+                              (fun i =>
+                                Matrix.vecCons (f 3 * z 3 1)
+                                  (fun i =>
+                                    Matrix.vecCons (f 4 * z 4 1) (fun i => Matrix.vecCons (f 5 * z 5 1) (fun i => 0) i)
+                                      i)
+                                  i)
+                              i)
+                          3 ^
+                        2 *
+                      (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 3)⁻¹ +
+                  Matrix.vecCons (f 1 * z 1 2)
+                        (fun i =>
+                          Matrix.vecCons (f 2 * z 2 2)
+                            (fun i =>
+                              Matrix.vecCons (f 3 * z 3 2)
+                                (fun i =>
+                                  Matrix.vecCons (f 4 * z 4 2) (fun i => Matrix.vecCons (f 5 * z 5 2) (fun i => 0) i) i)
+                                i)
+                            i)
+                        3 ^
+                      2 *
+                    (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 3)⁻¹ +
+                Matrix.vecCons (f 1 * z 1 0)
+                      (fun i =>
+                        Matrix.vecCons (f 2 * z 2 0)
+                          (fun i =>
+                            Matrix.vecCons (f 3 * z 3 0)
+                              (fun i =>
+                                Matrix.vecCons (f 4 * z 4 0) (fun i => Matrix.vecCons (f 5 * z 5 0) (fun i => 0) i) i)
+                              i)
+                          i)
+                      4 ^
+                    2 *
+                  (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 4)⁻¹ +
+              Matrix.vecCons (f 1 * z 1 1)
+                    (fun i =>
+                      Matrix.vecCons (f 2 * z 2 1)
+                        (fun i =>
+                          Matrix.vecCons (f 3 * z 3 1)
+                            (fun i =>
+                              Matrix.vecCons (f 4 * z 4 1) (fun i => Matrix.vecCons (f 5 * z 5 1) (fun i => 0) i) i)
+                            i)
+                        i)
+                    4 ^
+                  2 *
+                (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 4)⁻¹ +
+            Matrix.vecCons (f 1 * z 1 2)
+                  (fun i =>
+                    Matrix.vecCons (f 2 * z 2 2)
+                      (fun i =>
+                        Matrix.vecCons (f 3 * z 3 2)
+                          (fun i =>
+                            Matrix.vecCons (f 4 * z 4 2) (fun i => Matrix.vecCons (f 5 * z 5 2) (fun i => 0) i) i)
+                          i)
+                      i)
+                  4 ^
+                2 *
+              (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 4)⁻¹ +
+          Matrix.vecCons (f 1 * z 1 0)
+                (fun i =>
+                  Matrix.vecCons (f 2 * z 2 0)
+                    (fun i =>
+                      Matrix.vecCons (f 3 * z 3 0)
+                        (fun i => Matrix.vecCons (f 4 * z 4 0) (fun i => Matrix.vecCons (f 5 * z 5 0) (fun i => 0) i) i)
+                        i)
+                    i)
+                5 ^
+              2 *
+            (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 5)⁻¹ +
+        Matrix.vecCons (f 1 * z 1 1)
+              (fun i =>
+                Matrix.vecCons (f 2 * z 2 1)
+                  (fun i =>
+                    Matrix.vecCons (f 3 * z 3 1)
+                      (fun i => Matrix.vecCons (f 4 * z 4 1) (fun i => Matrix.vecCons (f 5 * z 5 1) (fun i => 0) i) i)
+                      i)
+                  i)
+              5 ^
+            2 *
+          (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 5)⁻¹ +
+      Matrix.vecCons (f 1 * z 1 2)
+            (fun i =>
+              Matrix.vecCons (f 2 * z 2 2)
+                (fun i =>
+                  Matrix.vecCons (f 3 * z 3 2)
+                    (fun i => Matrix.vecCons (f 4 * z 4 2) (fun i => Matrix.vecCons (f 5 * z 5 2) (fun i => 0) i) i) i)
+                i)
+            5 ^
+          2 *
+        (![1 / 3, 1 / 5, 7 / 60, 1 / 15, 1 / 30, 1 / 60] 5)⁻¹ =
+    -(f 0 * z 0 0 * f 1 * z 1 0 * 6) - f 0 * f 1 * z 0 1 * z 1 1 * 6 - f 0 * f 1 * z 0 2 * z 1 2 * 6 +
+                                                                f 0 ^ 2 * z 0 0 ^ 2 * 3 +
+                                                              f 0 ^ 2 * z 0 1 ^ 2 * 3 +
+                                                            f 0 ^ 2 * z 0 2 ^ 2 * 3 -
+                                                          f 1 * z 1 0 * f 2 * z 2 0 * 10 -
+                                                        f 1 * z 1 1 * f 2 * z 2 1 * 10 -
+                                                      f 1 * z 1 2 * f 2 * z 2 2 * 10 +
+                                                    f 1 ^ 2 * z 1 0 ^ 2 * 8 +
+                                                  f 1 ^ 2 * z 1 1 ^ 2 * 8 +
+                                                f 1 ^ 2 * z 1 2 ^ 2 * 8 +
+                                              f 2 * z 2 0 * f 3 * z 3 0 * (-120 / 7) +
+                                            f 2 * z 2 1 * f 3 * z 3 1 * (-120 / 7) +
+                                          f 2 * z 2 2 * f 3 * z 3 2 * (-120 / 7) +
+                                        f 2 ^ 2 * z 2 0 ^ 2 * (95 / 7) +
+                                      f 2 ^ 2 * z 2 1 ^ 2 * (95 / 7) +
+                                    f 2 ^ 2 * z 2 2 ^ 2 * (95 / 7) -
+                                  f 3 * z 3 0 * f 4 * z 4 0 * 30 -
+                                f 3 * f 4 * z 3 1 * z 4 1 * 30 -
+                              f 3 * f 4 * z 3 2 * z 4 2 * 30 +
+                            f 3 ^ 2 * z 3 0 ^ 2 * (165 / 7) +
+                          f 3 ^ 2 * z 3 1 ^ 2 * (165 / 7) +
+                        f 3 ^ 2 * z 3 2 ^ 2 * (165 / 7) -
+                      f 4 * z 4 0 * f 5 * z 5 0 * 60 -
+                    f 4 * f 5 * z 4 1 * z 5 1 * 60 -
+                  f 4 * f 5 * z 4 2 * z 5 2 * 60 +
+                f 4 ^ 2 * z 4 0 ^ 2 * 45 +
+              f 4 ^ 2 * z 4 1 ^ 2 * 45 +
+            f 4 ^ 2 * z 4 2 ^ 2 * 45 +
+          f 5 ^ 2 * z 5 0 ^ 2 * 90 +
+        f 5 ^ 2 * z 5 1 ^ 2 * 90 +
+      f 5 ^ 2 * z 5 2 ^ 2 * 90
+'RouteBRotationalDual.work_telescopes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBRotationalDual.dual_cost_explicit' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBRotationalDual.fenchel_rotational' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBRotationalDual.metric_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBRotationalDual.coercivity_from_dual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBRotationalDual.regularized_coercivity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBRotationalDual.force_balance_bound' depends on axioms: [propext, Classical.choice, Quot.sound]

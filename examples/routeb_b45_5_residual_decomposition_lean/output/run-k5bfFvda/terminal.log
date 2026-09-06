@@ -1,0 +1,14 @@
+LEAN_TOOLCHAIN_COMMIT=819816b2e0a3bf405af45ae5c7af2491d8f5bee6
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_5_residual_decomposition_lean/output/run-k5bfFvda:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+'RouteBB45ResidualDecomposition.rhoKc_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45ResidualDecomposition.residual_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45ResidualDecomposition.residual_decomposition_with_explicit_kc' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_5_residual_decomposition_lean/output/run-k5bfFvda/ResidualDecomposition.lean:91:0: error: Unexpected name `RouteBB45ResidualDecomposition` after `end`: The current section is unnamed
+
+Hint: Delete the name `RouteBB45ResidualDecomposition` to end the current unnamed scope; outer named scopes can then be closed using additional `end` command(s):
+  end ̵R̵o̵u̵t̵e̵B̵B̵4̵5̵R̵e̵s̵i̵d̵u̵a̵l̵D̵e̵c̵o̵m̵p̵o̵s̵i̵t̵i̵o̵n̵
+VERIFY_EXIT_CODE=1

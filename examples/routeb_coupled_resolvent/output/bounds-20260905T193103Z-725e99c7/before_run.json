@@ -1,0 +1,17 @@
+{
+  "inputs": {
+    "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_coupled_resolvent\\source_bounds.py": "5b5b9eb1918c4fa5454c77bc99d04639786683f04836fe4e770fe58a999a1641",
+    "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_coupled_resolvent\\verify_bounds.py": "17552abe80cbe9bd2a41cd8bc626878ba8c50073291d05afbf3bc14ed42182d8",
+    "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_inertial_structure\\audit.py": "904af69d303d6db2630ce528e1eabfb1f217412983bffb7c1e43e50998257e58",
+    "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_coupled_linear_reference\\output\\run-20260905T192654Z-3dbe159f\\reference.json": "26ca4f2d80e1237e3d3e87a6a9f11c62abe9304cfe006409ef225a682dff5dc9",
+    "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_fourier_mass_full_rational.csv": "a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8",
+    "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_fourier_potential_rational.csv": "4ebbb10e32639f54b18f259cbb762c04f2be842a856cae85e1fe94dad5478b6c"
+  },
+  "command": [
+    "C:\\Users\\z5242\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+    "-B",
+    "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_coupled_resolvent\\source_bounds.py",
+    "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_coupled_resolvent\\output\\bounds-20260905T193103Z-725e99c7",
+    "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_coupled_resolvent\\output\\bounds-20260905T193103Z-725e99c7\\inputs\\reference.json"
+  ]
+}

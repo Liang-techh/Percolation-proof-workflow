@@ -1,0 +1,57 @@
+START_UTC=2026-09-05T20:58:33Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-fPFjFk7U:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-fPFjFk7U/upstream:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-fPFjFk7U/upstream/cache:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+PRE_RUN_SNAPSHOTS_COMPLETE
+COMMAND=/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -DwarningAsError=true --root=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-fPFjFk7U -o /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-fPFjFk7U/UniversalMultiplier.olean /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-fPFjFk7U/UniversalMultiplier.lean
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-fPFjFk7U/UniversalMultiplier.lean:317:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  mv M0 h i
+in the target expression
+  g i + r i - mv M z i - (fun i => 2 * mv M h i - mv L h i) i =
+    (fun i => 2 * mv M0 h i + mv M0 z i) i - (fun i => 2 * mv M h i + mv M z i) i
+
+n : ℕ
+M0 M L : Mat n
+g r z h : Vec n
+center_balance : ∀ (i : Fin n), mv M0 h i = r i
+frozen_z_balance : ∀ (i : Fin n), mv M0 z i = g i + mv L h i - r i
+he : ∀ (A : Mat n), (mv A fun i => 2 * h i + z i) = fun i => 2 * mv A h i + mv A z i
+i : Fin n
+⊢ g i + r i - mv M z i - (fun i => 2 * mv M h i - mv L h i) i =
+    (fun i => 2 * mv M0 h i + mv M0 z i) i - (fun i => 2 * mv M h i + mv M z i) i
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-fPFjFk7U/UniversalMultiplier.lean:327:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  mv M0 h i
+in the target expression
+  mv M h i - r i = -(fun i => mv M0 h i - mv M h i) i
+
+n : ℕ
+M0 M L : Mat n
+g r z h : Vec n
+b d : ℝ
+center_balance : ∀ (i : Fin n), mv M0 h i = r i
+i : Fin n
+⊢ mv M h i - r i = -(fun i => mv M0 h i - mv M h i) i
+'RouteBUniversalMultiplier.bottom_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.D_dominates_L' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.D_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.finite_quadratic_coercivity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.global_coercivity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.quad_block_homogeneous' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.optimal_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.finite_vector_congruence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.psd_iff_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.optimalZ_balance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.CONSTRUCTIVELOSSLESS' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.affine7x7_lossless' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.centered_dual_sos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.recenter_block' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.affine_center_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.frozen_center_error' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.frozen_center_margin' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.centered_dual_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.fixed_identity_centered_dual_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBUniversalMultiplier.affine_centered_dual_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+UniversalMultiplier_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

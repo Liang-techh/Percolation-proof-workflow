@@ -1,0 +1,41 @@
+START_UTC=2026-09-05T20:36:09Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-iH9FGdAL:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-iH9FGdAL/cache:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+PRE_RUN_SNAPSHOTS_COMPLETE
+COMMAND=/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -DwarningAsError=true --root=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-iH9FGdAL -o /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-iH9FGdAL/SignedGap.olean /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-iH9FGdAL/SignedGap.lean
+'RouteBSignedGap.hasDerivAt_bilinear' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.hasDerivAt_kinetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.hasDerivAt_signedGap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.implemented_actual_balance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.same_state_residual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.potential_chain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.mass_chain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.hasDerivAt_signedGap_from_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+SignedGap_COMPILE_EXIT_CODE=0
+498aed10c67f6988066d16fa510bcfde461be3be0b6cb546ed326b4a56c4300e  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-iH9FGdAL/SignedGap.olean
+COMMAND=/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -DwarningAsError=true --root=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-iH9FGdAL -o /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-iH9FGdAL/ResidualMultiplier.olean /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-iH9FGdAL/ResidualMultiplier.lean
+'RouteBSignedGap.quad_block' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.affine_quadratic_expansion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.affine_residual_cancellation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.affine_dissipation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.affine_dissipation_fin6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.homogeneous_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.affine_deriv_dissipation' depends on axioms: [propext, Classical.choice, Quot.sound]
+ResidualMultiplier_COMPILE_EXIT_CODE=0
+72d43da8ba07fbda9f27521a27dfca950e2ff2e72b386d9df7126da72860d5b3  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-iH9FGdAL/ResidualMultiplier.olean
+COMMAND=/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -DwarningAsError=true --root=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-iH9FGdAL -o /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-iH9FGdAL/IntegratedBudget.olean /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-iH9FGdAL/IntegratedBudget.lean
+'RouteBSignedGap.integrated_signed_work' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.hasDerivAt_weighted_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.integrated_weighted_work' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.hasDerivAt_signed_storage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.injection_work' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.hasDerivAt_augmented_storage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.augmented_affine_dissipation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.integrated_dissipation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.prefix_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.signed_budget_prefix_bootstrap' depends on axioms: [propext, Classical.choice, Quot.sound]
+IntegratedBudget_COMPILE_EXIT_CODE=0
+0e12f19e34e9c0d34ef17fd0d15cac1742f1add50eade83debe63a0881a84b1e  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-iH9FGdAL/IntegratedBudget.olean
+END_UTC=2026-09-05T20:37:50Z
+VERIFY_EXIT_CODE=0

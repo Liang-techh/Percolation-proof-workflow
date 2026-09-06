@@ -1,0 +1,21 @@
+START_UTC=2026-09-05T23:55:21Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_prefix_index_lean/output/run-3FCa6JgK:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_origin_axis_lean/output/run-H0sN55iL:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_real_dh_step_lean/output/run-nAZVlwhR:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-k87wlFSd:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+'RouteBFramePrefixIndex.source_frames_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFramePrefixIndex.source_frames_length_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFramePrefixIndex.source_frame_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFramePrefixIndex.source_frame_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFramePrefixIndex.source_frame_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFramePrefixIndex.source_frame_last' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFramePrefixIndex.explicit_frames_are_source_projections' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+FramePrefixIndex_COMPILE_EXIT_CODE=0
+SOURCE_RESTRICTION_CHECK=PASSED
+9a28b9b498986f75ffd4259d5c55392b2c41c02c4bcbe67db77d5da9e5b77753  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_prefix_index_lean/output/run-3FCa6JgK/FramePrefixIndex.lean
+9d4f2ee4e56b1ff569045c039feb204531366af6afe103f4cdc6b8253b5ffcb7  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_prefix_index_lean/output/run-3FCa6JgK/FramePrefixIndex.olean
+JULIA_FLOAT64_BINDING=OPEN
+FULL_MASS_BINDING=OPEN
+END_UTC=2026-09-05T23:56:34Z
+VERIFY_EXIT_CODE=0

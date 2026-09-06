@@ -1,0 +1,16 @@
+name = "harrisReplay"
+version = "0.1.0"
+defaultTargets = ["HarrisReplay"]
+
+[[require]]
+name = "mathlib"
+path = "../../upstream/formal-math/percolation/.lake/packages/mathlib"
+
+[[lean_lib]]
+name = "HarrisReplay"
+
+[[lean_lib]]
+name = "Challenge"
+
+[[lean_lib]]
+name = "Solution"

@@ -1,0 +1,34 @@
+START_UTC=2026-09-05T23:26:33Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_origin_axis_lean/output/run-XxSAxdwB:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_real_dh_step_lean/output/run-nAZVlwhR:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-k87wlFSd:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_origin_axis_lean/output/run-XxSAxdwB/FrameOriginAxis.lean:122:41: error: unsolved goals
+q : Fin 6 → ℝ
+⊢ (sourceFrames 1 (List.map (fun k => routeBRealStepMatrix k (q k)) (List.finRange 6))).length = 7
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_origin_axis_lean/output/run-XxSAxdwB/FrameOriginAxis.lean:123:45: error: This simp argument is unused:
+  sourceFrames
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [routeBSourceFrames, routeBRealSteps]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'RouteBFrameOriginAxis.sourceFrames_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFrameOriginAxis.sourceOrigins_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFrameOriginAxis.sourceAxes_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFrameOriginAxis.sourceOriginArray_eq_sourceOrigins' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFrameOriginAxis.sourceAxisArray_eq_sourceAxes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFrameOriginAxis.parent_axis_recorded_before_current' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFrameOriginAxis.parent_origin_recorded_before_current' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFrameOriginAxis.current_step_changes_parent_before_recursion' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBFrameOriginAxis.routeB_source_origins_semantics' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFrameOriginAxis.routeB_source_axes_semantics' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFrameOriginAxis.routeB_first_axis_is_world_z' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFrameOriginAxis.routeB_first_origin_is_world_origin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFrameOriginAxis.routeB_six_steps_have_seven_frames' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+FrameOriginAxis_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

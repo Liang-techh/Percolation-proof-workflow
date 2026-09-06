@@ -1,0 +1,9 @@
+warning: manifest out of date: source kind (git/path) of dependency 'mathlib' changed; use `lake update mathlib` to update it
+'RouteBB45SourceMassFourierBridge.sourceMass_to_regularized_fullSixBodyFourier' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBB45SourceMassFourierBridge.sourceMass_to_regularized_fullSixBodyFourier_offdiag' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+EXIT_CODE=
+EXIT_CODE=0

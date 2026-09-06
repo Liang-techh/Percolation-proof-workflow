@@ -1,0 +1,143 @@
+START_UTC=2026-09-05T20:26:22Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-PuV8q7I8:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-PuV8q7I8/cache:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+PRE_RUN_SNAPSHOTS_COMPLETE
+COMMAND=/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -DwarningAsError=true --root=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-PuV8q7I8 -o /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-PuV8q7I8/SignedGap.olean /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-PuV8q7I8/SignedGap.lean
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-PuV8q7I8/SignedGap.lean:46:4: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  Real.instAddCommGroup = Real.normedAddCommGroup.toAddCommGroup
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.66} {β : α → Sort ?u.65} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+case e'_4
+n : ℕ
+M : ℝ → Mat n
+x y : ℝ → Vec n
+Md : Mat n
+xd yd : Vec n
+t : ℝ
+hM : ∀ (i j : Fin n), HasDerivAt (fun s => M s i j) (Md i j) t
+hx : ∀ (i : Fin n), HasDerivAt (fun s => x s i) (xd i) t
+hy : ∀ (i : Fin n), HasDerivAt (fun s => y s i) (yd i) t
+h :
+  HasDerivAt (fun y_1 => ∑ i, ∑ i_1, ((fun s => x s i) * ((fun s => M s i i_1) * fun s => y s i_1)) y_1)
+    (∑ i,
+      ∑ i_1, (xd i * ((fun s => M s i i_1) * fun s => y s i_1) t + x t i * (Md i i_1 * y t i_1 + M t i i_1 * yd i_1)))
+    t
+⊢ Real.instAddCommGroup = Real.normedAddCommGroup.toAddCommGroup
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-PuV8q7I8/SignedGap.lean:48:4: error: `simp` made no progress
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-PuV8q7I8/SignedGap.lean:41:38: error: unsolved goals
+case e'_8
+n : ℕ
+M : ℝ → Mat n
+x y : ℝ → Vec n
+Md : Mat n
+xd yd : Vec n
+t : ℝ
+hM : ∀ (i j : Fin n), HasDerivAt (fun s => M s i j) (Md i j) t
+hx : ∀ (i : Fin n), HasDerivAt (fun s => x s i) (xd i) t
+hy : ∀ (i : Fin n), HasDerivAt (fun s => y s i) (yd i) t
+h :
+  HasDerivAt (fun y_1 => ∑ i, ∑ i_1, ((fun s => x s i) * ((fun s => M s i i_1) * fun s => y s i_1)) y_1)
+    (∑ i,
+      ∑ i_1, (xd i * ((fun s => M s i i_1) * fun s => y s i_1) t + x t i * (Md i i_1 * y t i_1 + M t i i_1 * yd i_1)))
+    t
+⊢ (fun s => dot (x s) (mv (M s) (y s))) = fun y_1 =>
+    ∑ i, ∑ i_1, ((fun s => x s i) * ((fun s => M s i i_1) * fun s => y s i_1)) y_1
+
+case e'_9
+n : ℕ
+M : ℝ → Mat n
+x y : ℝ → Vec n
+Md : Mat n
+xd yd : Vec n
+t : ℝ
+hM : ∀ (i j : Fin n), HasDerivAt (fun s => M s i j) (Md i j) t
+hx : ∀ (i : Fin n), HasDerivAt (fun s => x s i) (xd i) t
+hy : ∀ (i : Fin n), HasDerivAt (fun s => y s i) (yd i) t
+h :
+  HasDerivAt (fun y_1 => ∑ i, ∑ i_1, ((fun s => x s i) * ((fun s => M s i i_1) * fun s => y s i_1)) y_1)
+    (∑ i,
+      ∑ i_1, (xd i * ((fun s => M s i i_1) * fun s => y s i_1) t + x t i * (Md i i_1 * y t i_1 + M t i i_1 * yd i_1)))
+    t
+⊢ dot xd (mv (M t) (y t)) + dot (x t) (mv Md (y t)) + dot (x t) (mv (M t) yd) =
+    ∑ i, ∑ i_1, (xd i * ((fun s => M s i i_1) * fun s => y s i_1) t + x t i * (Md i i_1 * y t i_1 + M t i i_1 * yd i_1))
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-PuV8q7I8/SignedGap.lean:64:24: error: `dsimp` made no progress
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-PuV8q7I8/SignedGap.lean:64:24: error: `dsimp` made no progress
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-PuV8q7I8/SignedGap.lean:61:64: error: unsolved goals
+case e'_9
+n : ℕ
+M : ℝ → Mat n
+v : ℝ → Vec n
+Md : Mat n
+a : Vec n
+t : ℝ
+hM : ∀ (i j : Fin n), HasDerivAt (fun s => M s i j) (Md i j) t
+hv : ∀ (i : Fin n), HasDerivAt (fun s => v s i) (a i) t
+hsym : Symmetric (M t)
+h :
+  HasDerivAt (fun y => 1 / 2 * dot (v y) (mv (M y) (v y)))
+    (1 / 2 * (dot (v t) (mv (M t) a) + dot (v t) (mv Md (v t)) + dot (v t) (mv (M t) a))) t
+⊢ dot (v t) (mv (M t) a) + 1 / 2 * dot (v t) (mv Md (v t)) =
+    1 / 2 * (dot (v t) (mv (M t) a) + dot (v t) (mv Md (v t)) + dot (v t) (mv (M t) a))
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-PuV8q7I8/SignedGap.lean:117:4: error: linarith failed to find a contradiction
+case h1
+n : ℕ
+M0 H0 : Mat n
+M : ℝ → Mat n
+q v : ℝ → Vec n
+U : ℝ → ℝ
+Uzero t : ℝ
+T : Fin n → Fin n → Fin n → ℝ
+a a0 G drive eta : Vec n
+hM0 : Symmetric M0
+hH0 : Symmetric H0
+hMs : Symmetric (M t)
+hq : ∀ (i : Fin n), HasDerivAt (fun s => q s i) (v t i) t
+hv : ∀ (i : Fin n), HasDerivAt (fun s => v s i) (a i) t
+hM : ∀ (i j : Fin n), HasDerivAt (fun s => M s i j) (RouteBChristoffelPower.massRate T (v t) i j) t
+hU : HasDerivAt U (dot (v t) G) t
+actual : ∀ (i : Fin n), mv (M t) a i + RouteBChristoffelPower.christoffelForce T (v t) i + G i = drive i + eta i
+nominal : ∀ (i : Fin n), mv M0 a0 i + mv H0 (q t) i = drive i
+hn : HasDerivAt (fun s => kinetic M0 (v s)) (dot (v t) (mv M0 a)) t
+ha :
+  HasDerivAt (fun s => kinetic (M s) (v s))
+    (dot (v t) (mv (M t) a) + dot (v t) (RouteBChristoffelPower.christoffelForce T (v t))) t
+hp : HasDerivAt (fun s => kinetic H0 (q s)) (dot (v t) (mv H0 (q t))) t
+hc :
+  dot (v t) (RouteBChristoffelPower.christoffelForce T (v t)) =
+    1 / 2 * quad (RouteBChristoffelPower.massRate T (v t)) (v t)
+h :
+  HasDerivAt
+    (((fun s => kinetic M0 (v s)) - fun s => kinetic (M s) (v s)) -
+      ((fun x => U x - Uzero) - fun s => kinetic H0 (q s)))
+    (dot (v t) (mv M0 a) - (dot (v t) (mv (M t) a) + dot (v t) (RouteBChristoffelPower.christoffelForce T (v t))) -
+      (dot (v t) G - dot (v t) (mv H0 (q t))))
+    t
+i : Fin n
+a✝¹ : i ∈ Finset.univ
+hai : ∑ j, M t i j * a j + RouteBChristoffelPower.christoffelForce T (v t) i + G i = drive i + eta i
+hni : ∑ j, M0 i j * a0 j + ∑ j, H0 i j * q t j = drive i
+a✝ :
+  v t i * ∑ j, M0 i j * a j - (v t i * ∑ j, M t i j * a j + v t i * RouteBChristoffelPower.christoffelForce T (v t) i) -
+      (v t i * G i - v t i * ∑ j, H0 i j * q t j) <
+    v t i * ∑ x, (M0 i x * a x - M0 i x * a0 x) - v t i * eta i
+⊢ False
+failed
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_signed_gap_lean/output/run-PuV8q7I8/SignedGap.lean:110:33: error: This simp argument is unused:
+  Finset.sum_sub_distrib
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [dot, mv, mul_sub, ← Finset.sum_add_distrib, ← Finset.sum_sub_distrib]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'RouteBSignedGap.hasDerivAt_bilinear' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBSignedGap.hasDerivAt_kinetic' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBSignedGap.hasDerivAt_signedGap' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBSignedGap.implemented_actual_balance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSignedGap.same_state_residual' depends on axioms: [propext, Classical.choice, Quot.sound]
+SignedGap_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

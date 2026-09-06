@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "workspace_root": "../..",
+  "state_path": "../../artifacts/harris_manifest_intake/state.json",
+  "target": {"root": "HarrisReplay.harris"},
+  "dependency": {
+    "name": "mathlib",
+    "profile": "formal-math@795efb86f191735c5481675763537cfb4ff37e55/percolation",
+    "toolchain": "leanprover/lean4:v4.32.0"
+  },
+  "verification": {
+    "bundle_root": "../../artifacts/harris_manifest_intake/bundles",
+    "comparator_profile": "upstream-comparator",
+    "acceptance_line": "Your solution is okay!",
+    "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+    "enable_nanoda": true
+  },
+  "host_protocol": {"name": "codex-agent-callback", "version": 1},
+  "nodes": {
+    "HarrisReplay.harris": {
+      "challenge_module": "Challenge",
+      "solution_module": "Solution",
+      "source_files": ["Challenge.lean", "Solution.lean", "HarrisReplay/Positive.lean", "HarrisReplay/Expansion.lean"]
+    },
+    "HarrisReplay.iterated_nonneg": {
+      "challenge_module": "Challenge",
+      "solution_module": "Solution",
+      "source_files": ["Challenge.lean", "Solution.lean", "HarrisReplay/Positive.lean", "HarrisReplay/Expansion.lean"]
+    },
+    "HarrisReplay.inner_expansion": {
+      "challenge_module": "Challenge",
+      "solution_module": "Solution",
+      "source_files": ["Challenge.lean", "Solution.lean", "HarrisReplay/Positive.lean", "HarrisReplay/Expansion.lean"]
+    }
+  },
+  "research": {
+    "project": "harris-manifest-intake",
+    "root": "HarrisReplay.harris",
+    "nodes": [
+      {
+        "name": "HarrisReplay.harris",
+        "statement": "theorem harris {Y : Type*} [MeasurableSpace Y] [LinearOrder Y]\n    (ν : Measure Y) [IsProbabilityMeasure ν] {φ ψ : Y → ℝ}\n    (hφ : Monotone φ) (hψ : Monotone ψ)\n    (hφm : Measurable φ) (hψm : Measurable ψ) {C : ℝ}\n    (hφb : ∀ y, ‖φ y‖ ≤ C) (hψb : ∀ y, ‖ψ y‖ ≤ C) :\n    (∫ y, φ y ∂ν) * (∫ y, ψ y ∂ν) ≤ ∫ y, φ y * ψ y ∂ν",
+        "proof_sketch": "Reduce the Harris inequality to iterated nonnegativity and inner integral expansion."
+      },
+      {
+        "name": "HarrisReplay.iterated_nonneg",
+        "parent": "HarrisReplay.harris",
+        "statement": "theorem iterated_nonneg {Y : Type*} [LinearOrder Y] [MeasurableSpace Y]\n    {φ ψ : Y → ℝ} (hφ : Monotone φ) (hψ : Monotone ψ) (ν : Measure Y) :\n    0 ≤ ∫ y, (∫ x, (φ x - φ y) * (ψ x - ψ y) ∂ν) ∂ν",
+        "proof_sketch": "Use monotonicity and the sign of the two differences pointwise."
+      },
+      {
+        "name": "HarrisReplay.inner_expansion",
+        "parent": "HarrisReplay.harris",
+        "statement": "theorem inner_expansion {Y : Type*} [MeasurableSpace Y]\n    (ν : Measure Y) [IsProbabilityMeasure ν] {φ ψ : Y → ℝ}\n    (hf : Integrable φ ν) (hg : Integrable ψ ν)\n    (hfg : Integrable (fun x => φ x * ψ x) ν) (y : Y) :\n    (∫ x, (φ x - φ y) * (ψ x - ψ y) ∂ν) =\n      (∫ x, φ x * ψ x ∂ν) - φ y * (∫ x, ψ x ∂ν) -\n        ψ y * (∫ x, φ x ∂ν) + φ y * ψ y",
+        "proof_sketch": "Expand the integrand and use probability-measure integral identities."
+      }
+    ]
+  }
+}

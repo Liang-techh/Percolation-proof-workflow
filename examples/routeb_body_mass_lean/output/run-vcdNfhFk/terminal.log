@@ -1,0 +1,109 @@
+START_UTC=2026-09-05T23:17:23Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/../routeb_mass_functional_lean/output/run-pVaCVj2p:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:36:13: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Decidable (activeColumn body j)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:41:13: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Decidable (activeColumn body j)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:62:40: error: unsolved goals
+origins : Fin 7 → Vec3
+axes : Fin 6 → Vec3
+body j : Fin 6
+a : Fin 3
+h : ↑body < ↑j
+⊢ sorry () = 0
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:63:8: error: declaration uses `sorry`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:63:16: error: This simp argument is unused:
+  activeColumn
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [bodyJv, Nat.not_le_of_lt h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:63:30: error: This simp argument is unused:
+  Nat.not_le_of_lt h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [bodyJv, activeColumn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:68:32: error: unsolved goals
+axes : Fin 6 → Vec3
+body j : Fin 6
+a : Fin 3
+h : ↑body < ↑j
+⊢ sorry () = 0
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:69:8: error: declaration uses `sorry`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:69:16: error: This simp argument is unused:
+  activeColumn
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [bodyJw, Nat.not_le_of_lt h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:69:30: error: This simp argument is unused:
+  Nat.not_le_of_lt h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [bodyJw, activeColumn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:77:39: error: unsolved goals
+origins : Fin 7 → Vec3
+axes : Fin 6 → Vec3
+body j : Fin 6
+a : Fin 3
+h : ↑j ≤ ↑body
+⊢ sorry () = cross3 (axes j) (fun b => bodyCom origins body b - origins (prevOrigin j) b) a
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:78:8: error: declaration uses `sorry`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:78:16: error: This simp argument is unused:
+  activeColumn
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [bodyJv, h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:78:30: error: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [bodyJv, activeColumn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:83:39: error: unsolved goals
+axes : Fin 6 → Vec3
+body j : Fin 6
+a : Fin 3
+h : ↑j ≤ ↑body
+⊢ sorry () = axes j a
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:84:8: error: declaration uses `sorry`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:84:16: error: This simp argument is unused:
+  activeColumn
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [bodyJw, h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:84:30: error: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [bodyJw, activeColumn]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:106:14: error(lean.unknownIdentifier): Unknown constant `prevOrigin_val`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:107:14: error(lean.unknownIdentifier): Unknown constant `nextOrigin_val`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:108:14: error(lean.unknownIdentifier): Unknown constant `bodyCom_midpoint`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:109:14: error(lean.unknownIdentifier): Unknown constant `bodyJv_zero_of_inactive`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:110:14: error(lean.unknownIdentifier): Unknown constant `bodyJw_zero_of_inactive`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:111:14: error(lean.unknownIdentifier): Unknown constant `bodyJv_active_formula`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:112:14: error(lean.unknownIdentifier): Unknown constant `bodyJw_active_formula`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:113:14: error(lean.unknownIdentifier): Unknown constant `bodyMass_is_linkMass`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_mass_lean/output/run-vcdNfhFk/BodyMass.lean:114:14: error(lean.unknownIdentifier): Unknown constant `body_mass_entry_expanded`
+BodyMass_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

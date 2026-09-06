@@ -1,0 +1,45 @@
+LEAN_TOOLCHAIN_COMMIT=819816b2e0a3bf405af45ae5c7af2491d8f5bee6
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_5_residual_decomposition_lean/output/run-uqSFVpAd:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_5_residual_decomposition_lean/output/run-uqSFVpAd/ResidualDecomposition.lean:13:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_5_residual_decomposition_lean/output/run-uqSFVpAd/ResidualDecomposition.lean:21:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_5_residual_decomposition_lean/output/run-uqSFVpAd/ResidualDecomposition.lean:27:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'pmiForce', which is 'noncomputable'
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_5_residual_decomposition_lean/output/run-uqSFVpAd/ResidualDecomposition.lean:34:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_5_residual_decomposition_lean/output/run-uqSFVpAd/ResidualDecomposition.lean:37:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_5_residual_decomposition_lean/output/run-uqSFVpAd/ResidualDecomposition.lean:40:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_5_residual_decomposition_lean/output/run-uqSFVpAd/ResidualDecomposition.lean:47:40: error: unsolved goals
+q4 q5 : ℝ
+⊢ 100⁻¹ * q5 = q5 / 100 ∧ 200⁻¹ * q4 = q4 / 200
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_5_residual_decomposition_lean/output/run-uqSFVpAd/ResidualDecomposition.lean:69:2: error: Tactic `constructor` failed: no applicable constructor found
+
+w : ℝ
+massBB : Vec2 → Vec2
+q4 q5 v4 v5 c4 c5 g4 g5 g04 g05 a4 a5 r4 r5 : ℝ
+hdesc : sourceForce (q4, q5) (v4, v5) w (c4, c5) (g4, g5) (g04, g05) = vadd (massBB (a4, a5)) (r4, r5)
+m4 m5 : ℝ
+⊢ blockResidual (q4, q5) (v4, v5) w (a4, a5) =
+    vadd (rhoC (c4, c5))
+      (vadd (rhoG (g4, g5) (g04, g05))
+        (vadd (rhoMgl (q4, q5)) (vadd (rhoKc (q4, q5)) (vadd (rhoMass massBB (a4, a5)) (rhoRemote (r4, r5))))))
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_5_residual_decomposition_lean/output/run-uqSFVpAd/ResidualDecomposition.lean:84:2: error: Type mismatch: After simplification, term
+  residual_decomposition q v w c g g0 massBB aB remote hdesc
+ has type
+  blockResidual q v w aB =
+    vadd (rhoC c)
+      (vadd (rhoG g g0)
+        (vadd (rhoMgl q) (vadd (100⁻¹ * q.2, 200⁻¹ * q.1) (vadd (rhoMass massBB aB) (rhoRemote remote)))))
+but is expected to have type
+  blockResidual q v w aB =
+    vadd (rhoC c)
+      (vadd (rhoG g g0) (vadd (rhoMgl q) (vadd (q.2 / 100, q.1 / 200) (vadd (rhoMass massBB aB) (rhoRemote remote)))))
+'RouteBB45ResidualDecomposition.rhoKc_exact' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBB45ResidualDecomposition.residual_decomposition' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBB45ResidualDecomposition.residual_decomposition_with_explicit_kc' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+VERIFY_EXIT_CODE=1

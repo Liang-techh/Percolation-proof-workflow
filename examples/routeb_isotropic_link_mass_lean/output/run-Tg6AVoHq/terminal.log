@@ -1,0 +1,13 @@
+START_UTC=2026-09-06T03:23:02Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_isotropic_link_mass_lean/output/run-Tg6AVoHq:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_mass_functional_lean/output/run-pVaCVj2p:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_isotropic_inertia_lean/output/run-KWENke5I:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+'RouteBIsotropicLinkMass.weightedGram_scalarIdentity' depends on axioms: [propext, Classical.choice, Quot.sound]
+IsotropicLinkMass_COMPILE_EXIT_CODE=0
+SOURCE_RESTRICTION_CHECK=PASSED
+68dbc6a5bde2683cd8e986164e29fd805f3f9d0ec6893e4a6ed8418fa3ec4458  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_isotropic_link_mass_lean/output/run-Tg6AVoHq/IsotropicLinkMass.lean
+7c8c685d14bb5dcbbc7c3905f12fbfea7141d0edf31dc1e66f8190fbce4f5631  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_isotropic_link_mass_lean/output/run-Tg6AVoHq/IsotropicLinkMass.olean
+JULIA_FLOAT64_BINDING=OPEN
+FULL_MASS_BINDING=OPEN
+END_UTC=2026-09-06T03:24:55Z
+VERIFY_EXIT_CODE=0

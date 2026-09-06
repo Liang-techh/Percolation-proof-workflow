@@ -1,0 +1,16 @@
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_mass_table_minimal_lean/output/run-TrFQWCxh:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+HISTORICAL_OLEAN_IMPORTS=0
+'RouteBSourceMassTableMinimal.sourceMassTable_exact_entries' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSourceMassTableMinimal.sourceInertiaScalarTable_exact_entries' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBSourceMassTableMinimal.linkMass_entry_scalarIdentity' depends on axioms: [propext, Classical.choice, Quot.sound]
+SourceMassTableMinimal_COMPILE_EXIT_CODE=0
+SOURCE_RESTRICTION_CHECK=PASSED
+e63b9ba15e067b9dc8a65e8fa5f346874fc227af2ff61fd85a174ed5cc2ed0dd  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_mass_table_minimal_lean/output/run-TrFQWCxh/SourceMassTableMinimal.lean
+e55b0314cfa16b309f1710872fa904e9e7f0bd65543d7b0d6dc3ac0d46fd9eaa  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_mass_table_minimal_lean/output/run-TrFQWCxh/SourceMassTableMinimal.olean
+CSV_FLOAT64_ASSUMPTIONS=0
+END_UTC=2026-09-06T04:43:45Z
+VERIFY_EXIT_CODE=0

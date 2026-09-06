@@ -1,0 +1,18 @@
+{
+  "exit_code": 0,
+  "snapshots_unchanged": true,
+  "originals_unchanged": {
+    "postprocess_lp.py": true,
+    "lp_candidate_evidence.json": true,
+    "lp_problem.json": true,
+    "reference.json": true,
+    "mass.csv": true,
+    "potential.csv": true,
+    "source_line_check.json": true
+  },
+  "outputs": {
+    "selected_candidate.json": "7d350a73609ac80b8e4526c2484f47dd8a5582017199661f3ecf25cfc6044324",
+    "terminal.log": "40f62a89b0acb5486d0c61398a27fe56c943461f0e3b265f514a7244ac09f0fe"
+  },
+  "formal_certificate_allowed": false
+}

@@ -1,0 +1,14 @@
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/output/tube-bhUDuz6c
+UTC: 2026-09-05T17:29:45Z
+414f06aa53a1dd403147b97f21641fa71dbc565358c82450f83039029836b85f  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/EnergyTube.lean
+15a8e8ceb17131c32ceb02f4982d71807681d812d22de9f0b2fa206be346db5d  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/output/run-5RHBCcg9/DHPowerBinding.olean
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/EnergyTube.lean:23:15: error: This simp argument is unused:
+  B
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [id]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'RouteBEnergyTube.cubic_tube' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBEnergyTube.ramp_force_error_tube' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBEnergyTube.ramp_terminal_budget' depends on axioms: [propext, Classical.choice, Quot.sound]

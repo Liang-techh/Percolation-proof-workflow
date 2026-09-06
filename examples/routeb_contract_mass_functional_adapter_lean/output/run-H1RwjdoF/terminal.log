@@ -1,0 +1,21 @@
+START_UTC=2026-09-06T03:40:02Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_contract_mass_functional_adapter_lean/output/run-H1RwjdoF:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-0FvNkLzz:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_mass_functional_lean/output/run-pVaCVj2p:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_semantic_core_lean/output/run-6vhFP8Zp:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+'RouteBContractMassFunctionalAdapter.semantic_linkMass_eq_functional_linkMass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBContractMassFunctionalAdapter.contractMass_eq_functional_linkMass' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBContractMassFunctionalAdapter.contractMassSum_eq_massFromLinks' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ContractMassFunctionalAdapter_COMPILE_EXIT_CODE=0
+SOURCE_RESTRICTION_CHECK=PASSED
+51ae35bb16c75c2907e5123567d8eca55118d9c0b3bd9f2311636951a038b535  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_contract_mass_functional_adapter_lean/output/run-H1RwjdoF/ContractMassFunctionalAdapter.lean
+07c0c1dc7c3a0914ee2d309414563fc049937d78e4a665c1780f958f1a7ffef4  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_contract_mass_functional_adapter_lean/output/run-H1RwjdoF/ContractMassFunctionalAdapter.olean
+JULIA_FLOAT64_BINDING=OPEN
+FULL_MASS_BINDING=OPEN
+END_UTC=2026-09-06T03:42:01Z
+VERIFY_EXIT_CODE=0

@@ -1,0 +1,23 @@
+UTC: 2026-09-05T18:21:53Z
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_local_energy_budget/output/run-37fVwazf
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+6ed571661f816473120b69e1550627cf5f16ae0ef68df6ffd22dd77f00dac23f  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_local_energy_budget/LocalEnergyBudget.lean
+cbd98a957c7b9f7284e731b6053d3e0664b3733378f80b3ee3202d05113261cc  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_local_energy_budget/verify.sh
+dae80fbdbb6439761a0ad1b7c081fc5a61ca1cdd7e2f70e23df31d9756637f26  /home/z5242/sos_lean/lake-manifest.json
+'RouteBLocalEnergyBudget.derivative_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.half_damping_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.derivative_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.full12Ball_block_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.VB_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.VB_le_blockNormSq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.initial_VB_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.full12Ball_initial_VB' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.p_le_VB' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.qterminal_le_VB' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.cap_arithmetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.outputs_of_cap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBLocalEnergyBudget.cap_of_energy_ledger' depends on axioms: [propext, Classical.choice, Quot.sound]
+LEAN_COMPILE_EXIT_CODE=0
+058fe6692deca45f4c66142cc63898c98b5d0bbe402dbedbf86885f85fdefe91  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_local_energy_budget/output/run-37fVwazf/LocalEnergyBudget.olean
+VERIFY_EXIT_CODE=0

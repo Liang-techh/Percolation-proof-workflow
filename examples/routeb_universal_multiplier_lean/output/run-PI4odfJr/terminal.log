@@ -1,0 +1,58 @@
+START_UTC=2026-09-05T20:54:15Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-PI4odfJr:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-PI4odfJr/upstream:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-PI4odfJr/upstream/cache:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+PRE_RUN_SNAPSHOTS_COMPLETE
+COMMAND=/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -DwarningAsError=true --root=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-PI4odfJr -o /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-PI4odfJr/UniversalMultiplier.olean /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-PI4odfJr/UniversalMultiplier.lean
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-PI4odfJr/UniversalMultiplier.lean:112:55: error: unsolved goals
+n : ℕ
+top : ℝ
+off : Vec n
+bottom : Mat n
+s : ℝ
+v : Vec n
+hc : ∑ i, v i * (off i * s) = ∑ i, s * (off i * v i)
+⊢ s ^ 2 * top + (∑ x, s * off x * v x) * 2 + ∑ x, ∑ x_1, v x * bottom x x_1 * v x_1 =
+    s ^ 2 * top + ∑ x, ∑ x_1, v x * bottom x x_1 * v x_1 + ∑ x, s * off x * v x * 2
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-PI4odfJr/UniversalMultiplier.lean:114:53: error: This simp argument is unused:
+  Finset.sum_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [quad, dot, mv, block, Fin.sum_univ_succ, Fin.cons_zero, Fin.cons_succ, mul_add,
+    Finset.sum_add_distrib, Finset.mul_sum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-PI4odfJr/UniversalMultiplier.lean:140:26: error: This simp argument is unused:
+  sub_mul
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [dot, quad, mul_add, mul_sub, Finset.sum_add_distrib, Finset.sum_sub_distrib]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_universal_multiplier_lean/output/run-PI4odfJr/UniversalMultiplier.lean:201:69: error: unsolved goals
+n : ℕ
+M L R : Mat n
+g r delta : Vec n
+right_inverse : ∀ (x : Vec n), mv M (mv R x) = x
+balance : ∀ (i : Fin n), mv M delta i = r i
+i : Fin n
+⊢ g i - r i + mv L delta i = g i - r i + ∑ j, L i j * delta j
+'RouteBUniversalMultiplier.bottom_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.D_dominates_L' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.finite_quadratic_coercivity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.global_coercivity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.quad_block_homogeneous' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.optimal_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.finite_vector_congruence' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.psd_iff_margin' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.optimalZ_balance' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.CONSTRUCTIVELOSSLESS' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBUniversalMultiplier.affine7x7_lossless' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+UniversalMultiplier_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

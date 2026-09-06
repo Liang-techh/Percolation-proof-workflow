@@ -1,0 +1,37 @@
+UTC: 2026-09-05T18:19:32Z
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-4YlI5Squ
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+3ddc1a02aa1bae359c58e8bc1d4607a11f5aedb2804a0c9cad5a07529f814a5d  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/verify.sh
+dae80fbdbb6439761a0ad1b7c081fc5a61ca1cdd7e2f70e23df31d9756637f26  /home/z5242/sos_lean/lake-manifest.json
+d7a84153dcc41250fa169623c32d9f06691b13efa1fa50345b5eaf6f1361b858  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-gJUGcsng/ImplicitPort.olean
+6539bab5381fee495508b37c43f1271fa5d779a67698532b2f12d4c284ea070c  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/../routeb_dh_power_binding/output/tube-NXa8rD7u/EnergyTube.olean
+15a8e8ceb17131c32ceb02f4982d71807681d812d22de9f0b2fa206be346db5d  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/../routeb_dh_power_binding/output/run-5RHBCcg9/DHPowerBinding.olean
+5713e72da3923748443b6630db810110f018a0c6122aa81261de3f28a97af017  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/VariableErrorTube.lean
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-4YlI5Squ/VariableErrorTube.lean:30:2: error: linarith failed to find a contradiction
+E R ep rp : ℝ → ℝ
+e0 beta c : ℝ
+hE0 : E 0 ≤ e0
+hR0 : R 0 = 0
+hbeta : 0 ≤ beta
+hc : c ^ 2 ≤ 3
+hEc : ContinuousOn E (Set.Icc 0 1)
+hRc : ContinuousOn R (Set.Icc 0 1)
+hEd : ∀ t ∈ Set.Ico 0 1, HasDerivWithinAt E (ep t) (Set.Ici t) t
+hRd : ∀ t ∈ Set.Ico 0 1, HasDerivWithinAt R (rp t) (Set.Ici t) t
+hpower : ∀ t ∈ Set.Ico 0 1, ep t ≤ beta * (c * t) ^ 2 + rp t
+hstart : (fun t => E t - R t) 0 ≤ e0
+hderiv : ∀ t ∈ Set.Ico 0 1, HasDerivWithinAt (fun t => E t - R t) (ep t - rp t) (Set.Ici t) t
+hbound : ∀ t ∈ Set.Ico 0 1, ep t - rp t ≤ 3 * beta * t ^ 2 + 0
+htube : ∀ t ∈ Set.Icc 0 1, (E - R) t ≤ e0 + beta * t ^ 3 + 0 * t
+t : ℝ
+ht : t ∈ Set.Icc 0 1
+h : (E - R) t ≤ e0 + beta * t ^ 3
+a✝ : e0 + beta * t ^ 3 + R t < E t
+⊢ False
+failed
+'RouteBVariableErrorTube.cumulative_ramp_budget' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBVariableErrorTube.capped_cumulative_ramp_budget' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+VERIFY_EXIT_CODE=1

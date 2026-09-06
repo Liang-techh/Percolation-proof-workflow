@@ -1,0 +1,31 @@
+START_UTC=2026-09-05T23:05:37Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_fin6_index_adapter_lean/output/run-oJlXUADn:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE
+'RouteBFin6IndexAdapter.toJulia_offset' depends on axioms: [propext, Quot.sound]
+'RouteBFin6IndexAdapter.fromJulia_offset' depends on axioms: [propext, Quot.sound]
+'RouteBFin6IndexAdapter.fromJulia_toJulia' depends on axioms: [propext, Quot.sound]
+'RouteBFin6IndexAdapter.toJulia_fromJulia' depends on axioms: [propext, Quot.sound]
+'RouteBFin6IndexAdapter.fin6JuliaEquiv_bijective' depends on axioms: [propext, Quot.sound]
+'RouteBFin6IndexAdapter.sourceOrder0_exact' depends on axioms: [propext]
+'RouteBFin6IndexAdapter.sourceOrder1_exact' depends on axioms: [propext, Quot.sound]
+'RouteBFin6IndexAdapter.sourceOrder1_is_offset' depends on axioms: [propext, Quot.sound]
+'RouteBFin6IndexAdapter.blockBZero_exact' depends on axioms: [propext]
+'RouteBFin6IndexAdapter.blockDZero_exact' depends on axioms: [propext]
+'RouteBFin6IndexAdapter.blockBJulia_exact' depends on axioms: [propext, Quot.sound]
+'RouteBFin6IndexAdapter.blockDJulia_exact' depends on axioms: [propext, Quot.sound]
+'RouteBFin6IndexAdapter.blockBJulia_is_offset' depends on axioms: [propext, Quot.sound]
+'RouteBFin6IndexAdapter.blockDJulia_is_offset' depends on axioms: [propext, Quot.sound]
+'RouteBFin6IndexAdapter.source_order_contains_exactly_six' depends on axioms: [propext]
+'RouteBFin6IndexAdapter.blocks_cover_source_order' depends on axioms: [propext]
+'RouteBFin6IndexAdapter.blocks_are_disjoint' depends on axioms: [propext]
+Fin6IndexAdapter_COMPILE_EXIT_CODE=0
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_fin6_index_adapter_lean/verify.sh: line 43: rg: command not found
+SOURCE_RESTRICTION_CHECK=PASSED
+e795e93744a18d7c1be84890d4ab04ff41e8f9bf480f11acabe4a3b32684903d  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_fin6_index_adapter_lean/output/run-oJlXUADn/Fin6IndexAdapter.lean
+d04e17a05c56bb58944943d4eb49051840563d97557f427475c11e8bbab820c8  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_fin6_index_adapter_lean/output/run-oJlXUADn/Fin6IndexAdapter.olean
+FUNCTION_LEVEL_FRAME_BINDING=OPEN
+FUNCTION_LEVEL_MASS_BINDING=OPEN
+END_UTC=2026-09-05T23:05:48Z
+VERIFY_EXIT_CODE=0

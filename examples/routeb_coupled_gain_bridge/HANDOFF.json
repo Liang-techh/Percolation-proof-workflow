@@ -1,0 +1,23 @@
+{
+  "status": "SCALAR_GATES_COMPILED_CONDITIONAL",
+  "module": "GainBridge",
+  "import_directory": "output/run-HgoUb4qX",
+  "primary_theorem": "RouteBCoupledGainBridge.original_outputs_under_J_one",
+  "optional_residual_theorem": "RouteBCoupledGainBridge.final_reference_cost_under_J_cap",
+  "primary_J_cap": "1",
+  "primary_domain_target": "P < 28/5",
+  "primary_terminal_target": "Qterminal < 12",
+  "optional_residual_J_cap": "1/20",
+  "optional_residual_target": "R < 1/10",
+  "lean_version": "4.33.1",
+  "mathlib_commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "compile_exit_code": 0,
+  "wrapper_exit_code": 0,
+  "olean_sha256": "e81f3d2a74cd3f021ddcfc7b1ab6ef5d6d47aca17f21f892dd77181658336374",
+  "axioms": ["propext", "Classical.choice", "Quot.sound"],
+  "log": "output/run-HgoUb4qX/terminal.log",
+  "source_J_bound_proved": false,
+  "analytic_convolution_bridge_Lean_verified": false,
+  "matrix_gain_audit_repeated": false,
+  "original_goal_proved": false
+}

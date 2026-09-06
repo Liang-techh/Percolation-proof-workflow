@@ -1,0 +1,14 @@
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_rotational_dual/output/run-grfW892x
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+781117b7c58a000bae379246190ad240d8a9af811d6f933cb0d6f30ba0841de5  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_rotational_dual/output/run-grfW892x/RotationalDual.lean
+ca9a49042c0f1dc8bc299970715bedaf482dbfaad6f66edf6099315eacc9278b  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_rotational_dual/verify.sh
+'RouteBRotationalDual.work_telescopes' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBRotationalDual.dual_cost_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBRotationalDual.fenchel_rotational' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBRotationalDual.metric_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBRotationalDual.coercivity_from_dual' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBRotationalDual.regularized_coercivity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBRotationalDual.force_balance_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+LEAN_COMPILE_EXIT_CODE=0
+757dacee5d411d6dbea4a724f5136aa069841e8ca20b29e492c06c23491256dc  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_rotational_dual/output/run-grfW892x/RotationalDual.olean
+VERIFY_EXIT_CODE=0

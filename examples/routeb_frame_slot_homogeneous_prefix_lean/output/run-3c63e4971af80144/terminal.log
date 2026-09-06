@@ -1,0 +1,11 @@
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_slot_homogeneous_prefix_lean/output/run-3c63e4971af80144/FrameSlotHomogeneousPrefix.lean:1:0: error: unknown module prefix 'RealDHStep'
+
+No directory 'RealDHStep' or file 'RealDHStep.olean' in the search path entries:
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_slot_homogeneous_prefix_lean/output/run-3c63e4971af80144
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_concrete_step_homogeneous_lean/output/run-ZBZY9WRv
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_prefix_projection_lean/output/run-7hl40Fdl
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_slot_accessor_lean/output/run-4RJoHvpZ
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_prefix_index_lean/output/run-3FCa6JgK
+/home/z5242/sos_lean/.lake/packages/mathlib
+/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/lib/lean
+FrameSlotHomogeneousPrefix_COMPILE_EXIT_CODE=1

@@ -1,0 +1,13 @@
+UTC: 2026-09-05T18:17:57Z
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-8ebcP4q5
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+dfc9da1b3d00d6f6bee2a9b5aec861fb24c3f790571142ff852f3b0c5c01155c  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/verify.sh
+dae80fbdbb6439761a0ad1b7c081fc5a61ca1cdd7e2f70e23df31d9756637f26  /home/z5242/sos_lean/lake-manifest.json
+d7a84153dcc41250fa169623c32d9f06691b13efa1fa50345b5eaf6f1361b858  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-gJUGcsng/ImplicitPort.olean
+2aaeacff3e170c45011c745064f83bc98ee288c09ee9be6eb1fe9a33497bd1d6  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/PhysicalPortAssembly.lean
+'RouteBPhysicalPortAssembly.linked_acceleration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPhysicalPortAssembly.physical_port_absorption' depends on axioms: [propext, Classical.choice, Quot.sound]
+PhysicalPortAssembly_COMPILE_EXIT_CODE=0
+297ad417ace009377721edb4aaecf14efd7929bc52bc90c38d095eb6ba121616  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-8ebcP4q5/PhysicalPortAssembly.olean
+LEAN_COMPILE_EXIT_CODE=0
+VERIFY_EXIT_CODE=0

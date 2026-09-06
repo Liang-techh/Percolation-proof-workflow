@@ -1,0 +1,32 @@
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_agent_minimal_source_loop_lean/output/run-k3qHgNxh/RouteBMinimalSourceLoop.lean:9:0: error: unexpected identifier; expected command
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_agent_minimal_source_loop_lean/output/run-k3qHgNxh/RouteBMinimalSourceLoop.lean:22:2: error(lean.synthInstanceFailed): failed to synthesize instance of type class
+  Decidable (cutoffBody cutoff body)
+
+Hint: Type class instance resolution failures can be inspected with the `set_option trace.Meta.synthInstance true` command.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_agent_minimal_source_loop_lean/output/run-k3qHgNxh/RouteBMinimalSourceLoop.lean:91:72: error: unsolved goals
+cutoff : Fin 7
+body : Body
+h : ¬cutoffBody cutoff body
+x : ℝ
+⊢ sorry () = 0
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_agent_minimal_source_loop_lean/output/run-k3qHgNxh/RouteBMinimalSourceLoop.lean:92:8: error: declaration uses `sorry`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_agent_minimal_source_loop_lean/output/run-k3qHgNxh/RouteBMinimalSourceLoop.lean:92:15: error: This simp argument is unused:
+  h
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [gated]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'RouteBMinimalSourceLoop.julia_mass_matrix_is_finite_body_sum' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBMinimalSourceLoop.julia_mass_matrix_eq_generic_massFromLinks' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBMinimalSourceLoop.cutoff_is_zero_above_cutoff' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBMinimalSourceLoop.rotated_isotropic_is_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,3 @@
+Dependency closure: 8699 declarations; opaque bodies: 12
+Reachable axioms: [propext, Quot.sound, Classical.choice]
+ROUTEB_DEPENDENCY_AUDIT_OK

@@ -1,0 +1,17 @@
+START_UTC=2026-09-05T22:06:50Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_mass_regularizer_lean/output/run-8qHz1Tiv:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SNAPSHOT_COMPLETE=true
+COMMAND=/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -DwarningAsError=true --root=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_mass_regularizer_lean/output/run-8qHz1Tiv -o /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_mass_regularizer_lean/output/run-8qHz1Tiv/MassRegularizer.olean /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_mass_regularizer_lean/output/run-8qHz1Tiv/MassRegularizer.lean
+'RouteBMassRegularizer.addMassRegularizer_diag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBMassRegularizer.addMassRegularizer_offdiag' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBMassRegularizer.regularized_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBMassRegularizer.regularizer_is_constant' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBMassRegularizer.regularizer_offdiag_derivative' depends on axioms: [propext, Classical.choice, Quot.sound]
+MassRegularizer_COMPILE_EXIT_CODE=0
+cd8dafa426a77d867e541f6855b71e58157d383bbbfa214a2712235bf851528b  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_mass_regularizer_lean/output/run-8qHz1Tiv/MassRegularizer.lean
+f3b2566f78df4e9a4bbdbba7a7f58319c6c4b5315fe57e87a80cb343af18667a  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_mass_regularizer_lean/output/run-8qHz1Tiv/MassRegularizer.olean
+SNAPSHOT_HASHES_UNCHANGED=true
+END_UTC=2026-09-05T22:07:45Z
+VERIFY_EXIT_CODE=0

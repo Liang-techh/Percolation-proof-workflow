@@ -1,0 +1,35 @@
+{
+  "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]",
+  "inputs": {
+    "routeB_fourier_mass_full_rational.csv": {
+      "original_path": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_fourier_mass_full_rational.csv",
+      "sha256": "a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8"
+    },
+    "routeB_fourier_potential_rational.csv": {
+      "original_path": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_fourier_potential_rational.csv",
+      "sha256": "4ebbb10e32639f54b18f259cbb762c04f2be842a856cae85e1fe94dad5478b6c"
+    },
+    "dhport_lib.jl": {
+      "original_path": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\dhport_lib.jl",
+      "sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936"
+    },
+    "routeB_fourier_rational_probe.py": {
+      "original_path": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_fourier_rational_probe.py",
+      "sha256": "9460181770e47be0ecbde43a8a29ef285da1168c3121fab18d5378c671401a7b"
+    },
+    "linear_direction.py": {
+      "original_path": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_residual_budget_screen\\linear_direction.py",
+      "sha256": "df470f11923cb79ad66fa85fd535c7985695e32822ed2bf63835446272fef833"
+    },
+    "linear_result.json": {
+      "original_path": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_residual_budget_screen\\linear_output\\result.json",
+      "sha256": "3b11f5a1ca009470c732cffc4015d8c154768884dfcd676416e1fe7392a02b61"
+    }
+  },
+  "local_snapshots": {
+    "audit.py": "b8a3dfd31f1270013c499f5e219e686dbfed87e420ad94c1fc576b65200dcd4c",
+    "verify.py": "5b92802e3b8ec1b986d6ba3d0ea43958dcea9b6e1739cde84e5e8745ba1524d5",
+    "DERIVATION.md": "be568208d0fcdb66a3032e7d644b51b487208268bd03b9149d3b0a2732df6c79",
+    "ATTEMPT_HISTORY.md": "9e27faaed52e48b5bcfcc2fd96fab6164891f60647cd1e395efed9e12ba0909d"
+  }
+}

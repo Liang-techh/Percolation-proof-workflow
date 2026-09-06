@@ -1,0 +1,131 @@
+{
+  "evidence": "E1_LINEARIZED_FLOAT64_SCREEN_ONLY",
+  "original_nonlinear_budget_proved": false,
+  "mass_zero": [
+    [
+      "2355503/3000000",
+      "-1481/80000",
+      "-103/16000",
+      "7/60",
+      "-21/80000",
+      "1/60"
+    ],
+    [
+      "-1481/80000",
+      "6986497/12000000",
+      "677771/2400000",
+      "0",
+      "41827/800000",
+      "0"
+    ],
+    [
+      "-103/16000",
+      "677771/2400000",
+      "3064417/12000000",
+      "0",
+      "8189/160000",
+      "0"
+    ],
+    [
+      "7/60",
+      "0",
+      "0",
+      "350003/3000000",
+      "0",
+      "1/60"
+    ],
+    [
+      "-21/80000",
+      "41827/800000",
+      "8189/160000",
+      "0",
+      "200739/4000000",
+      "0"
+    ],
+    [
+      "1/60",
+      "0",
+      "0",
+      "1/60",
+      "0",
+      "50003/3000000"
+    ]
+  ],
+  "potential_hessian": [
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "-2029689/400000",
+      "-101043/80000",
+      "0",
+      "-20601/400000",
+      "0"
+    ],
+    [
+      "0",
+      "-101043/80000",
+      "-101043/80000",
+      "0",
+      "-20601/400000",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "-20601/400000",
+      "-20601/400000",
+      "0",
+      "-20601/400000",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "spectral_abscissa": 1.9346240094803686,
+  "gram_asymmetry": 3.903127820947816e-18,
+  "gram_min_eigenvalue": 3.783686128714541e-17,
+  "linear_predicted_R": 0.013679558967226408,
+  "linear_original_set_upper_screen": 0.01417222651432189,
+  "candidate_initial": [
+    -0.008135022505202715,
+    0.14126605545004758,
+    0.03131558691081696,
+    -0.0018278295001692227,
+    -0.008435775794980649,
+    0.0005508260321050312,
+    -0.01990605000016992,
+    0.025688248496756313,
+    0.007775309587673843,
+    -0.0019297453853796176,
+    0.001468903833212501,
+    -0.0008811056941805066
+  ],
+  "candidate_c": 1.7,
+  "candidate_norm_squared": 0.022201,
+  "source_sha256": {
+    "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_fourier_mass_full_rational.csv": "a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8",
+    "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_fourier_potential_rational.csv": "4ebbb10e32639f54b18f259cbb762c04f2be842a856cae85e1fe94dad5478b6c",
+    "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\dhport_lib.jl": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936"
+  },
+  "caveat": "Exact-real Fourier linearization, not original FD/Float64 Jacobian; matrix exponential and eigenvalues un-enclosed."
+}

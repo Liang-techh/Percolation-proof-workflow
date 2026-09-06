@@ -1,0 +1,20 @@
+UTC: 2026-09-05T17:49:42Z
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_shifted_storage/output/run-pKu0JIpS
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+d74f40bcb946c30a0f04b398595c8ba59864436f3db7aa9a6278ba93e16dc30d  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_shifted_storage/ShiftedStorage.lean
+78943871cab5699ab54b10cb9d91e0e9db65c4ac38cbab6552936622acb9dff9  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_shifted_storage/verify.sh
+dae80fbdbb6439761a0ad1b7c081fc5a61ca1cdd7e2f70e23df31d9756637f26  /home/z5242/sos_lean/lake-manifest.json
+'RouteBShiftedStorage.shifted_cos_term_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBShiftedStorage.shift_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBShiftedStorage.quadratic_le_shifted_storage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBShiftedStorage.quadratic_coercivity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBShiftedStorage.shifted_storage_chain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBShiftedStorage.shifted_storage_coercivity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBShiftedStorage.shifted_energy_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBShiftedStorage.block45_sq_le_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBShiftedStorage.p45_le_shifted_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBShiftedStorage.fourier_p45_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+LEAN_COMPILE_EXIT_CODE=0
+f14284fbc99090f834b6447d7634c854b3e0e460f6fbcb47f2075673002d07e7  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_shifted_storage/output/run-pKu0JIpS/ShiftedStorage.olean
+VERIFY_EXIT_CODE=0

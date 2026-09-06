@@ -1,0 +1,61 @@
+UTC: 2026-09-05T18:07:24Z
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_port_absorption/output/run-OC9mzFDq
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+bbbe87c62010c8facdb007cb7b4cffb26bedb905dc0487ce9e38d3f3240bac8e  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_port_absorption/PortAbsorption.lean
+f51dee71c9f54f2207665f56cc1026b809b616209f50d26f9091086c22d5f90c  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_port_absorption/verify.sh
+dae80fbdbb6439761a0ad1b7c081fc5a61ca1cdd7e2f70e23df31d9756637f26  /home/z5242/sos_lean/lake-manifest.json
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_port_absorption/output/run-OC9mzFDq/PortAbsorption.lean:35:2: error(lean.unknownIdentifier): Unknown constant `Finset.sum_nonneg`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_port_absorption/output/run-OC9mzFDq/PortAbsorption.lean:53:49: error(lean.unknownIdentifier): Unknown constant `Finset.sum_div`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_port_absorption/output/run-OC9mzFDq/PortAbsorption.lean:52:13: error: unsolved goals
+ι : Type u_1
+inst✝ : Fintype ι
+a : ℝ
+ha : a ≠ 0
+h r : ι → ℝ
+coordinate : ∀ (x y : ℝ), a * x ^ 2 + y * x = -y ^ 2 / (4 * a) + a * (x + y / (2 * a)) ^ 2
+⊢ ∑ x, -h x ^ 2 / (4 * a) + ∑ x, a * (r x + h x / (2 * a)) ^ 2 =
+    (-∑ i, h i ^ 2) / (4 * a) + ∑ i, a * (r i + h i / (2 * a)) ^ 2
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_port_absorption/output/run-OC9mzFDq/PortAbsorption.lean:54:8: error: This simp argument is unused:
+  Finset.sum_neg_distrib
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [sqNorm, Finset.sum_add_distrib, Finset.sum_div, Finset.mul_sum]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_port_absorption/output/run-OC9mzFDq/PortAbsorption.lean:76:2: error: linarith failed to find a contradiction
+case h1
+ι : Type u_1
+inst✝ : Fintype ι
+Dbase sRes nu rhoSq AB : ℝ
+h r : ι → ℝ
+ha : sRes + nu ≠ 0
+hc :
+  (sRes + nu) * sqNorm r + dot h r =
+    -sqNorm h / (4 * (sRes + nu)) + (sRes + nu) * sqNorm fun i => r i + h i / (2 * (sRes + nu))
+a✝ :
+  Dbase + sRes * sqNorm r + dot h r <
+    (Dbase - nu * rhoSq * AB - sqNorm h / (4 * (sRes + nu)) +
+        (sRes + nu) * sqNorm fun i => r i + h i / (2 * (sRes + nu))) +
+      nu * (rhoSq * AB - sqNorm r)
+⊢ False
+failed
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_port_absorption/output/run-OC9mzFDq/PortAbsorption.lean:121:2: error: Type mismatch: After simplification, term
+  hphi
+ has type
+  sqNorm h / 24 ≤ Dbase - rhoSq * AB
+but is expected to have type
+  sqNorm h / (4 * (5 + 1)) ≤ Dbase - rhoSq * AB
+'RouteBPortAbsorption.sqNorm_nonneg' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.quadratic_completion' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.quadratic_lower_bound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.quadratic_minimizer' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.port_completion' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.fixed_nu_certificate_iff' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.conditional_absorption_bound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.conditional_absorption' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.conditional_absorption_nu1_sres5' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+LEAN_COMPILE_EXIT_CODE=1

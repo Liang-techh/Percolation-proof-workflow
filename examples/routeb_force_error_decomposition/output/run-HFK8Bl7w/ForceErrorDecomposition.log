@@ -1,0 +1,31 @@
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_force_error_decomposition/ForceErrorDecomposition.lean:100:55: error: unsolved goals
+R : BlockMat
+kp q v a : Vec
+w : ℝ
+nominalForce port : Block → ℝ
+i : Block
+⊢ -(nominalOffset kp q v w nominalForce i * oldTotal R a nominalForce (nominalOffset kp q v w nominalForce) i * 4) +
+        nominalOffset kp q v w nominalForce i ^ 2 * 4 +
+      oldTotal R a nominalForce (nominalOffset kp q v w nominalForce) i ^ 2 =
+    nominalOffset kp q v w nominalForce i * port i * 2 -
+              nominalOffset kp q v w nominalForce i * oldTotal R a nominalForce port i * 2 +
+            nominalOffset kp q v w nominalForce i ^ 2 -
+          port i * oldTotal R a nominalForce port i * 2 +
+        port i ^ 2 +
+      oldTotal R a nominalForce port i ^ 2
+'RouteBForceErrorDecomposition.full_mass_block_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBForceErrorDecomposition.mass_mismatch_action' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBForceErrorDecomposition.reference_force_of_balance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBForceErrorDecomposition.implemented_reference_force' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBForceErrorDecomposition.new_error_from_old_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBForceErrorDecomposition.exact_squared_error_identity' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBForceErrorDecomposition.gravity_at_block_origin' depends on axioms: [propext, Classical.choice, Quot.sound]

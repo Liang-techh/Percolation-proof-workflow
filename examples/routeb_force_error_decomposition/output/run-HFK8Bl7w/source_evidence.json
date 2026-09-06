@@ -1,0 +1,58 @@
+{
+  "status": "EXACT_CONSTANTS_MASS_AND_GRAVITY_SUPPORT_CHECKED",
+  "block_one_based": [
+    4,
+    5
+  ],
+  "remote_one_based": [
+    1,
+    2,
+    3,
+    6
+  ],
+  "Kp_B": [
+    "3/5",
+    "1/2"
+  ],
+  "D_B": [
+    "4/5",
+    "13/20"
+  ],
+  "G_B": [
+    "1/5",
+    "1/10"
+  ],
+  "reference_mass_diagonal": [
+    "350003/3000000",
+    "200739/4000000"
+  ],
+  "structural_mass_mismatch": "(-(147/800000)*sin(q5)^2*a4, 0)",
+  "gravity_scale": "20601/400000",
+  "fd_step": "1/100000",
+  "gravity_fd_multiplier": "sin(h)/h",
+  "gravity4": "c*sin(q2+q3)*sin(q4)*sin(q5)",
+  "gravity5": "-c*(cos(q2+q3)*sin(q5)+sin(q2+q3)*cos(q4)*cos(q5))",
+  "both_gravity_absolute_bounds": "20601/400000",
+  "both_refined_fd_truncation_bounds": "6867/8000000000000000",
+  "old_DH_nominal_offset": [
+    "-(3/20)*q4+(1/100)*q5",
+    "(1/200)*q4-(2/25)*q5"
+  ],
+  "old_fourier_extra_velocity_offset": [
+    "-(1/2)*v4",
+    "0"
+  ],
+  "total_integrated_budget_proved": false,
+  "float64_errors_enclosed": false,
+  "sha256": {
+    "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/6dof_sos_optimized/6dof_sos_optimized/routeB_dense_Mq/dhport_lib.jl": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936",
+    "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/6dof_sos_optimized/6dof_sos_optimized/routeB_dense_Mq/routeB_fourier_mass_full_rational.csv": "a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8",
+    "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/6dof_sos_optimized/6dof_sos_optimized/routeB_dense_Mq/routeB_fourier_potential_rational.csv": "4ebbb10e32639f54b18f259cbb762c04f2be842a856cae85e1fe94dad5478b6c",
+    "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/6dof_sos_optimized/6dof_sos_optimized/routeB_dense_Mq/routeB_fourier_fd_error_bounds.csv": "58c706d5abc8565f61cf50c1958317d04174a5def93cb15a23232d9d9b082f63",
+    "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/6dof_sos_optimized/6dof_sos_optimized/routeB_dense_Mq/routeB_compact_direct_descriptor_structure.jl": "2c2f623f966425952cbbbd3c04bae84858147fe7fdd386f5bc5f4ff35e2fb98c",
+    "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/6dof_sos_optimized/6dof_sos_optimized/routeB_dense_Mq/routeB_compact_dh_nominal_distal_bridge_audit.jl": "0fdbbe1aca4514acfbf365ed1d530e377ca654af7c085d4b99aecbf88c25a6ff",
+    "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/6dof_sos_optimized/6dof_sos_optimized/routeB_dense_Mq/routeB_compact_port_implicit_accel_elimination.py": "cfbf5c1fec64cf023daa9ecacb36dc008dd7866f8be8a5340844dbb4a94d0a3c",
+    "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_dh_power_binding/DHPowerBinding.lean": "1da1530182f3713433c2423107f7efd6f1f6a1e9a616df783908688e41732d1a",
+    "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_block_potential/BlockPotential.lean": "1dd05d4623577d6c55b2a0cd6f86c640ddda78ae661cc2703383014fefc00bde"
+  }
+}

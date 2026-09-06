@@ -1,0 +1,39 @@
+START_UTC=2026-09-06T01:30:30Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_isotropic_inertia_lean/output/run-P3zB7CUQ:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_isotropic_inertia_lean/output/run-P3zB7CUQ/IsotropicInertia.lean:45:6: error: unsolved goals
+case h₀
+R : Mat3
+s : ℝ
+hR : ∀ (i k : V), ∑ a, R i a * R k a = if i = k then 1 else 0
+i k x : V
+hx : x ∈ Finset.univ
+y : V
+hy : y ∈ Finset.univ
+hxy : y ≠ x
+⊢ x = y → (R i x = 0 ∨ s = 0) ∨ R k y = 0
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_isotropic_inertia_lean/output/run-P3zB7CUQ/IsotropicInertia.lean:47:26: error: unsolved goals
+R : Mat3
+s : ℝ
+hR : ∀ (i k : V), ∑ a, R i a * R k a = if i = k then 1 else 0
+i k x : V
+hx : True
+⊢ False
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_isotropic_inertia_lean/output/run-P3zB7CUQ/IsotropicInertia.lean:44:14: error: This simp argument is unused:
+  mul_assoc
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [mul_left_comm, mul_comm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_isotropic_inertia_lean/output/run-P3zB7CUQ/IsotropicInertia.lean:46:14: error: This simp argument is unused:
+  hxy
+
+Hint: Omit it from the simp argument list.
+  [apply] simp
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+'RouteBIsotropicInertia.rotated_isotropic_eq' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+IsotropicInertia_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

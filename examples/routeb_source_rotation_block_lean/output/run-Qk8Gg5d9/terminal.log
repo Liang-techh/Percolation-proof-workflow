@@ -1,0 +1,18 @@
+START_UTC=2026-09-06T01:51:20Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_rotation_block_lean/output/run-Qk8Gg5d9:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_routeb_rotation_specialization_lean/output/run-Y4QnL9xF:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_rotation_orthogonality_lean/output/run-u9aZXWdK:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_real_dh_step_lean/output/run-nAZVlwhR:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-k87wlFSd:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+'RouteBSourceRotationBlock.source_rotation_block_eq_dhRotation' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBSourceRotationBlock.source_rotation_block_rows_orthogonal' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+SourceRotationBlock_COMPILE_EXIT_CODE=0
+SOURCE_RESTRICTION_CHECK=PASSED
+59ba41ff224b235423874ece002689367c9a61be1d78790eac1e753dd5e1f289  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_rotation_block_lean/output/run-Qk8Gg5d9/SourceRotationBlock.lean
+efcb3f55c391bac1d16594a35b61ed905063a4797baa10bc293572cba5c8745f  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_rotation_block_lean/output/run-Qk8Gg5d9/SourceRotationBlock.olean
+JULIA_FLOAT64_BINDING=OPEN
+FULL_MASS_BINDING=OPEN
+END_UTC=2026-09-06T01:54:09Z
+VERIFY_EXIT_CODE=0

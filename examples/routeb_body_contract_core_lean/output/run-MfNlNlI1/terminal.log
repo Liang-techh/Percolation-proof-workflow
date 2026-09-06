@@ -1,0 +1,82 @@
+START_UTC=2026-09-06T00:38:19Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-MfNlNlI1:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_semantic_core_lean/output/run-6vhFP8Zp:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-MfNlNlI1/BodyContractCore.lean:39:26: error: Ambiguous term
+  midpoint
+Possible interpretations:
+  _root_.midpoint : (R : Type ?u.41) →
+    {V : Type ?u.40} →
+      {P : Type ?u.39} →
+        [inst : Ring R] → [Invertible 2] → [inst_2 : AddCommGroup V] → [Module R V] → [AddTorsor V P] → P → P → P
+  
+  RouteBBodySemanticCore.midpoint : RouteBBodySemanticCore.Vec3 →
+    RouteBBodySemanticCore.Vec3 → RouteBBodySemanticCore.Vec3
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-MfNlNlI1/BodyContractCore.lean:40:10: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  c.origins (prevOrigin body) b
+in the target expression
+  RouteBBodySemanticCore.midpoint (c.origins (prevOrigin body)) (c.origins (nextOrigin body)) b =
+    RouteBBodySemanticCore.midpoint (c'.origins (prevOrigin body)) (c'.origins (nextOrigin body)) b
+
+c c' : KinematicContract
+body : Fin 6
+hOrigins : ∀ (i : Fin 7) (a : Fin 3), c.origins i a = c'.origins i a
+hAxes : ∀ (j : Fin 6) (a : Fin 3), c.axes j a = c'.axes j a
+a : Fin 3
+j : Fin 6
+h : ↑j ≤ ↑body
+hAxis : c.axes j = c'.axes j
+b : Fin 3
+⊢ RouteBBodySemanticCore.midpoint (c.origins (prevOrigin body)) (c.origins (nextOrigin body)) b =
+    RouteBBodySemanticCore.midpoint (c'.origins (prevOrigin body)) (c'.origins (nextOrigin body)) b
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-MfNlNlI1/BodyContractCore.lean:45:10: error: Function expected at
+  hCom
+but this term has type
+  bodyCom c.origins body = bodyCom c'.origins body
+
+Note: Expected a function because this term is being applied to the argument
+  b
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-MfNlNlI1/BodyContractCore.lean:48:2: error: unsolved goals
+case neg
+c c' : KinematicContract
+body : Fin 6
+hOrigins : ∀ (i : Fin 7) (a : Fin 3), c.origins i a = c'.origins i a
+hAxes : ∀ (j : Fin 6) (a : Fin 3), c.axes j a = c'.axes j a
+a : Fin 3
+j : Fin 6
+h : ¬↑j ≤ ↑body
+⊢ (if False then cross3 (c.axes j) (fun b => bodyCom c.origins body b - c.origins (prevOrigin j) b) a else 0) =
+    if False then cross3 (c'.axes j) (fun b => bodyCom c'.origins body b - c'.origins (prevOrigin j) b) a else 0
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-MfNlNlI1/BodyContractCore.lean:59:2: error: unsolved goals
+case neg
+c c' : KinematicContract
+body : Fin 6
+hAxes : ∀ (j : Fin 6) (a : Fin 3), c.axes j a = c'.axes j a
+a : Fin 3
+j : Fin 6
+h : ¬↑j ≤ ↑body
+⊢ (if False then c.axes j a else 0) = if False then c'.axes j a else 0
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-MfNlNlI1/BodyContractCore.lean:71:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  contractJv c body
+in the target expression
+  linkMass (bodyJv c.origins c.axes body) (bodyJw c.axes body) mass inertia i j =
+    linkMass (bodyJv c'.origins c'.axes body) (bodyJw c'.axes body) mass inertia i j
+
+c c' : KinematicContract
+body : Fin 6
+mass : ℝ
+inertia : IMat
+hOrigins : ∀ (i : Fin 7) (a : Fin 3), c.origins i a = c'.origins i a
+hAxes : ∀ (j : Fin 6) (a : Fin 3), c.axes j a = c'.axes j a
+i j : Fin 6
+hjv : contractJv c body = contractJv c' body
+hjw : contractJw c body = contractJw c' body
+⊢ linkMass (bodyJv c.origins c.axes body) (bodyJw c.axes body) mass inertia i j =
+    linkMass (bodyJv c'.origins c'.axes body) (bodyJw c'.axes body) mass inertia i j
+'RouteBBodyContractCore.contractJv_congruent' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBBodyContractCore.contractJw_congruent' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBBodyContractCore.contractMass_congruent' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBBodyContractCore.block45_contract_link4_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodyContractCore.block45_contract_link5_active' depends on axioms: [propext, Classical.choice, Quot.sound]
+BodyContractCore_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

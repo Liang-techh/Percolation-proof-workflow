@@ -1,0 +1,8 @@
+EVIDENCE=E1_NUMERICAL_SCREEN_ONLY
+steps=800 selected=2 Julia=1.12.6
+source=C:\Users\z5242\Desktop\重构版\6dof_sos_optimized\6dof_sos_optimized\routeB_dense_Mq\dhport_lib.jl
+source_sha256=aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936
+screen_sha256=15988fe5956066af5aeeaee408023506f9cd316f7773ff54df0d66fe94aca33d
+R uses RK4 quadrature of TOTAL reference force error; no error enclosure
+initial nonzero entry is +/-0.149; ramp c=1.7 or0; all full12 initial data retained
+reference masses=[0.11666766666666667, 0.05018475]; G0=[0.0, 0.0, 0.0, 0.0, 0.0, 0.0]; DAMP=[1.3, 1.1, 0.95, 0.8, 0.65, 0.5]; INPUT=[1.0, 0.5, 0.3, 0.2, 0.1, 0.05]

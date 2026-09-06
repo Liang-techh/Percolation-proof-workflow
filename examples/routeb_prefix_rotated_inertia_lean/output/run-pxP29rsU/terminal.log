@@ -1,0 +1,14 @@
+START_UTC=2026-09-06T03:15:52Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_prefix_rotated_inertia_lean/output/run-pxP29rsU:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_isotropic_inertia_lean/output/run-KWENke5I:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_rotation_prefix_orthogonality_lean/output/run-EZZSgIdS:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_matrix_orthogonality_closure_lean/output/run-w9gDKPMw:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+'RouteBPrefixRotatedInertia.prefix_rotated_isotropic_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPrefixRotatedInertia.prefix_rotated_isotropic_entry' depends on axioms: [propext, Classical.choice, Quot.sound]
+PrefixRotatedInertia_COMPILE_EXIT_CODE=0
+SOURCE_RESTRICTION_CHECK=PASSED
+64e1505038bb57c15380a0783983ac1cf1a4b16e6cbc32c846cc5b9d96f1c575  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_prefix_rotated_inertia_lean/output/run-pxP29rsU/PrefixRotatedInertia.lean
+2f3f9d8367d0e2d635a79fc9739546922a38835f8b193a992953cd27c7aeb6db  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_prefix_rotated_inertia_lean/output/run-pxP29rsU/PrefixRotatedInertia.olean
+JULIA_FLOAT64_BINDING=OPEN
+FULL_MASS_BINDING=OPEN
+END_UTC=2026-09-06T03:18:32Z
+VERIFY_EXIT_CODE=0

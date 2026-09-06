@@ -1,0 +1,39 @@
+START_UTC=2026-09-05T21:16:17Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-nYoX35XC:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-nYoX35XC/upstream:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-nYoX35XC/upstream/cache:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+PRE_RUN_SNAPSHOTS_COMPLETE
+COMMAND=/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -DwarningAsError=true --root=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-nYoX35XC -o /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-nYoX35XC/ActualStorageDerivative.olean /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-nYoX35XC/ActualStorageDerivative.lean
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-nYoX35XC/ActualStorageDerivative.lean:114:61: error: unsolved goals
+case e'_9
+p q : ℝ → Vec 6
+pd v : Vec 6
+t : ℝ
+hp : ∀ (i : Fin 6), HasDerivAt (fun s => p s i) (pd i) t
+hq : ∀ (i : Fin 6), HasDerivAt (fun s => q s i) (v i) t
+hh :
+  HasDerivAt (fun y => ∑ i, ((fun s => p s i) * (fun s => q s i) ^ 2) y)
+    (∑ i, (pd i * ((fun s => q s i) ^ 2) t + p t i * (↑2 * q t i ^ (2 - 1) * v i))) t
+i : Fin 6
+a✝ : i ∈ Finset.univ
+⊢ pd i * q t i ^ 2 + q t i * p t i * v i * 2 = pd i * ((fun s => q s i) ^ 2) t + q t i * p t i * v i * 2
+'RouteBActualStorageDerivative.delta_cancellation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualStorageDerivative.nominal_power' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualStorageDerivative.hasDerivAt_W0_of_signedGap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualStorageDerivative.hasDerivAt_W0_from_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualStorageDerivative.hasDerivAt_position_sum' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBActualStorageDerivative.hasDerivAt_storageV_from_source' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+ActualStorageDerivative_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

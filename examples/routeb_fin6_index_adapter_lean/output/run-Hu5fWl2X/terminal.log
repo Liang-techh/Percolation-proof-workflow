@@ -1,0 +1,27 @@
+START_UTC=2026-09-05T23:03:19Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_fin6_index_adapter_lean/output/run-Hu5fWl2X:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_fin6_index_adapter_lean/output/run-Hu5fWl2X/Fin6IndexAdapter.lean:42:2: error: No goals to be solved
+'RouteBFin6IndexAdapter.toJulia_offset' depends on axioms: [propext, Quot.sound]
+'RouteBFin6IndexAdapter.fromJulia_offset' depends on axioms: [propext, Quot.sound]
+'RouteBFin6IndexAdapter.fromJulia_toJulia' depends on axioms: [propext, Quot.sound]
+'RouteBFin6IndexAdapter.toJulia_fromJulia' depends on axioms: [propext, Quot.sound]
+'RouteBFin6IndexAdapter.fin6JuliaEquiv_bijective' depends on axioms: [propext, Quot.sound]
+'RouteBFin6IndexAdapter.sourceOrder0_exact' depends on axioms: [propext]
+'RouteBFin6IndexAdapter.sourceOrder1_exact' depends on axioms: [propext, Quot.sound]
+'RouteBFin6IndexAdapter.sourceOrder1_is_offset' depends on axioms: [propext, Quot.sound]
+'RouteBFin6IndexAdapter.blockBZero_exact' depends on axioms: [propext]
+'RouteBFin6IndexAdapter.blockDZero_exact' depends on axioms: [propext]
+'RouteBFin6IndexAdapter.blockBJulia_exact' depends on axioms: [propext, Quot.sound]
+'RouteBFin6IndexAdapter.blockDJulia_exact' depends on axioms: [propext, Quot.sound]
+'RouteBFin6IndexAdapter.blockBJulia_is_offset' depends on axioms: [propext, Quot.sound]
+'RouteBFin6IndexAdapter.blockDJulia_is_offset' depends on axioms: [propext, Quot.sound]
+'RouteBFin6IndexAdapter.source_order_contains_exactly_six' depends on axioms: [propext]
+'RouteBFin6IndexAdapter.blocks_cover_source_order' depends on axioms: [propext,
+ Quot.sound,
+ blocks_cover_source_order._native.native_decide.ax_1_1]
+'RouteBFin6IndexAdapter.blocks_are_disjoint' depends on axioms: [propext]
+Fin6IndexAdapter_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

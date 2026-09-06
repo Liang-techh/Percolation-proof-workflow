@@ -1,0 +1,17 @@
+START_UTC=2026-09-05T20:32:24Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_gravity_twist_floor/output/run-bUZVPiqE:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+PRE_RUN_SNAPSHOTS_COMPLETE
+COMMAND=/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -DwarningAsError=true --root=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_gravity_twist_floor/output/run-bUZVPiqE -o /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_gravity_twist_floor/output/run-bUZVPiqE/GravityTwistFloor.olean /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_gravity_twist_floor/output/run-bUZVPiqE/GravityTwistFloor.lean
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_gravity_twist_floor/output/run-bUZVPiqE/GravityTwistFloor.lean:12:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_gravity_twist_floor/output/run-bUZVPiqE/GravityTwistFloor.lean:13:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_gravity_twist_floor/output/run-bUZVPiqE/GravityTwistFloor.lean:14:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_gravity_twist_floor/output/run-bUZVPiqE/GravityTwistFloor.lean:15:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_gravity_twist_floor/output/run-bUZVPiqE/GravityTwistFloor.lean:16:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'A', which is 'noncomputable'
+'RouteBGravityTwistFloor.psi_ge_sin_fourth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBGravityTwistFloor.gravity_twist_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBGravityTwistFloor.signed_gap_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+COMPILE_EXIT_CODE=1
+SNAPSHOT_HASHES_UNCHANGED=true
+VERIFY_EXIT_CODE=1

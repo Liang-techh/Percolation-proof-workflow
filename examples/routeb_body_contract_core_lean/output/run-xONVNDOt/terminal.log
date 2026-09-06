@@ -1,0 +1,74 @@
+START_UTC=2026-09-06T00:36:36Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-xONVNDOt:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_semantic_core_lean/output/run-6vhFP8Zp:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-xONVNDOt/BodyContractCore.lean:36:2: error: unsolved goals
+case pos
+c c' : KinematicContract
+body : Fin 6
+hOrigins : ∀ (i : Fin 7) (a : Fin 3), c.origins i a = c'.origins i a
+hAxes : ∀ (j : Fin 6) (a : Fin 3), c.axes j a = c'.axes j a
+a : Fin 3
+j : Fin 6
+h : ↑j ≤ ↑body
+⊢ cross3 (c.axes j)
+      (fun b =>
+        RouteBBodySemanticCore.midpoint (c.origins (prevOrigin body)) (c.origins (nextOrigin body)) b -
+          c'.origins (prevOrigin j) b)
+      a =
+    cross3 (c'.axes j)
+      (fun b =>
+        RouteBBodySemanticCore.midpoint (c'.origins (prevOrigin body)) (c'.origins (nextOrigin body)) b -
+          c'.origins (prevOrigin j) b)
+      a
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-xONVNDOt/BodyContractCore.lean:36:52: error: This simp argument is unused:
+  hAxes
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [contractJv, bodyJv, h, bodyCom, hOrigins]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-xONVNDOt/BodyContractCore.lean:37:33: error: This simp argument is unused:
+  hOrigins
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [contractJv, bodyJv, h, hAxes]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-xONVNDOt/BodyContractCore.lean:37:43: error: This simp argument is unused:
+  hAxes
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [contractJv, bodyJv, h, hOrigins]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-xONVNDOt/BodyContractCore.lean:46:33: error: This simp argument is unused:
+  hAxes
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [contractJw, bodyJw, h]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-xONVNDOt/BodyContractCore.lean:56:45: error: Application type mismatch: The argument
+  body
+has type
+  Fin 6
+but is expected to have type
+  Fin 3
+in the application
+  x body
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-xONVNDOt/BodyContractCore.lean:58:45: error: Application type mismatch: The argument
+  body
+has type
+  Fin 6
+but is expected to have type
+  Fin 3
+in the application
+  x body
+'RouteBBodyContractCore.contractJv_congruent' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBBodyContractCore.contractJw_congruent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodyContractCore.contractMass_congruent' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBBodyContractCore.block45_contract_link4_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBodyContractCore.block45_contract_link5_active' depends on axioms: [propext, Classical.choice, Quot.sound]
+BodyContractCore_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

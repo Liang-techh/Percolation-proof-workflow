@@ -1,0 +1,7 @@
+{
+  "source_snapshots": {
+    "audit.py": "3cab5d3425f8f77b427ccdc5ae424de971ea3f335f21f14c0cf0304fb96709fb",
+    "verify.py": "a558e9c42f85906f4d01b8a95dcec027c74cceff6f21a6e9fc21c1f0ab9a0b2b"
+  },
+  "python": "3.13.14 (tags/v3.13.14:fd17997, Jun 10 2026, 13:03:48) [MSC v.1944 64 bit (AMD64)]"
+}

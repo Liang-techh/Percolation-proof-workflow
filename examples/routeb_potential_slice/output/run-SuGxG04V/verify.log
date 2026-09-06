@@ -1,0 +1,23 @@
+UTC: 2026-09-05T17:50:53Z
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_potential_slice/output/run-SuGxG04V
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+ALL_17_ROWS_AND_ACTUAL_KP_MATCH_EXACTLY
+4ebbb10e32639f54b18f259cbb762c04f2be842a856cae85e1fe94dad5478b6c /mnt/c/Users/z5242/Desktop/重构版/6dof_sos_optimized/6dof_sos_optimized/routeB_dense_Mq/routeB_fourier_potential_rational.csv
+aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936 /mnt/c/Users/z5242/Desktop/重构版/6dof_sos_optimized/6dof_sos_optimized/routeB_dense_Mq/dhport_lib.jl
+25e9ebe489b4f819f56e7334693d1d808e6ebd234139f659b14eb67125b846e7 /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_potential_slice/PotentialSlice.lean
+3704dbac2939b9a0fa9520f04204611424dec2ca5cd5897804e24786a2ee92c5 /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/output/tube-RWfVZNvn/StorageObstruction.lean
+194552363c4a553af85ac267c70c63e3cd512cfe4cf8819ddd70eb778f7f675b /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/output/tube-RWfVZNvn/StorageObstruction.olean
+34fdb0c6b2875fd359dc9b9d5b700234fddceeb401e0b196d834df6e876cd9bd  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_potential_slice/verify.sh
+b02e002f3c763ef05e37289bcf81c531e46495350a0cb0453e0e701b6a6b2706  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_potential_slice/audit_source.py
+'RouteBPotentialSlice.row_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPotentialSlice.all_imaginary_parts_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPotentialSlice.all_denominators_positive' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPotentialSlice.potential_on_slice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPotentialSlice.potential_at_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPotentialSlice.proportional_energy_on_slice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPotentialSlice.W_on_slice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPotentialSlice.no_global_nonnegative_W' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPotentialSlice.rational_configuration_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+LEAN_COMPILE_EXIT_CODE=0
+dae7defe28f83ec9107078ddc94f243123ede8787358d40d74ddc783b47a39b2  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_potential_slice/output/run-SuGxG04V/PotentialSlice.olean
+VERIFY_EXIT_CODE=0

@@ -1,0 +1,60 @@
+{
+  "recorded_at_utc": "2026-09-05T20:14:32.929760+00:00",
+  "command": [
+    "C:\\Users\\z5242\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe",
+    "-B",
+    "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_J_strategy\\output\\run-20260905T201432Z-5c2562b5\\inputs\\algebra_audit.py",
+    "--inputs",
+    "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_J_strategy\\output\\run-20260905T201432Z-5c2562b5\\inputs"
+  ],
+  "cwd": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_J_strategy",
+  "files": [
+    {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_J_strategy\\algebra_audit.py",
+      "snapshot": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_J_strategy\\output\\run-20260905T201432Z-5c2562b5\\inputs\\algebra_audit.py",
+      "sha256": "1e76047400e7c5853cc67a4024d99b335bc716b09f723f9ac87c763f77bba89c"
+    },
+    {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_J_strategy\\verify_snapshot.py",
+      "snapshot": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_J_strategy\\output\\run-20260905T201432Z-5c2562b5\\inputs\\verify_snapshot.py",
+      "sha256": "8b3e8a4991d05a7a06cffe07593043fa6a1c74154149814af2c157eae15bbd46"
+    },
+    {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_J_strategy\\REPORT.md",
+      "snapshot": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_J_strategy\\output\\run-20260905T201432Z-5c2562b5\\inputs\\REPORT.md",
+      "sha256": "9f43cf60135b618a505b06330d20432b9d6084733d1bcb350cd28cb9c98c2120"
+    },
+    {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_J_strategy\\SIGNED_WORK.md",
+      "snapshot": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_J_strategy\\output\\run-20260905T201432Z-5c2562b5\\inputs\\SIGNED_WORK.md",
+      "sha256": "5460edb9523319ee75f020e1292a14ca2aaaa00b1b782c5bb2aecf7b7208cad8"
+    },
+    {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_inertial_structure\\audit.py",
+      "snapshot": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_J_strategy\\output\\run-20260905T201432Z-5c2562b5\\inputs\\inertial_algebra.py",
+      "sha256": "904af69d303d6db2630ce528e1eabfb1f217412983bffb7c1e43e50998257e58"
+    },
+    {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_coupled_linear_reference\\output\\run-20260905T192654Z-3dbe159f\\reference.json",
+      "snapshot": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_J_strategy\\output\\run-20260905T201432Z-5c2562b5\\inputs\\reference.json",
+      "sha256": "26ca4f2d80e1237e3d3e87a6a9f11c62abe9304cfe006409ef225a682dff5dc9"
+    },
+    {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_fourier_mass_full_rational.csv",
+      "snapshot": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_J_strategy\\output\\run-20260905T201432Z-5c2562b5\\inputs\\routeB_fourier_mass_full_rational.csv",
+      "sha256": "a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8"
+    },
+    {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_fourier_potential_rational.csv",
+      "snapshot": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_J_strategy\\output\\run-20260905T201432Z-5c2562b5\\inputs\\routeB_fourier_potential_rational.csv",
+      "sha256": "4ebbb10e32639f54b18f259cbb762c04f2be842a856cae85e1fe94dad5478b6c"
+    },
+    {
+      "original": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_prefix_budget\\output\\run-20260905T200606Z-34dbb987\\results.json",
+      "snapshot": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_J_strategy\\output\\run-20260905T201432Z-5c2562b5\\inputs\\prefix_results.input.json",
+      "sha256": "544f01031eff02174b9d15a0316f1c5fb70b7f2c9296378b19b08a5dc4534e1d"
+    }
+  ],
+  "prior_execution_notice": "RETROSPECTIVE: development executions already occurred without immutable snapshots or terminal.log receipts. This file does not reconstruct or certify those executions. The following execution is a new prospective snapshot run.",
+  "scope": "Targeted exact algebra, not a trajectory run or J/M4 certificate."
+}

@@ -1,0 +1,39 @@
+{
+  "exit_code": 0,
+  "input_and_code_unchanged": {
+    "audit.py": true,
+    "REPORT.md": true,
+    "verify.py": true,
+    "inputs/inertial_audit.py": true,
+    "inputs/gain_audit.py": true,
+    "inputs/coupled_audit.py": true,
+    "inputs/coupled_DERIVATION.md": true,
+    "inputs/reference.json": true,
+    "inputs/prefix_audit.py": true,
+    "inputs/prefix_DERIVATION.md": true,
+    "inputs/prefix_results.json": true,
+    "inputs/SIGNED_WORK.md": true,
+    "inputs/strategy_REPORT.md": true,
+    "inputs/routeB_fourier_mass_full_rational.csv": true,
+    "inputs/routeB_fourier_coriolis_rational.csv": true,
+    "inputs/routeB_fourier_potential_rational.csv": true,
+    "inputs/dhport_lib.jl": true,
+    "inputs/routeB_fourier_rational_probe.py": true
+  },
+  "output_sha256": {
+    "audit_results.json": "a7970af8620545e830885de0f485710c5f6298e5b17887c93a04ac81c7049253",
+    "before_run.json": "a6a8729740dc61745f4e335ec2265df10e43e95c0aff787652db1c937cd82617",
+    "christoffel_full.csv": "2a3004c1459c28a5e93a243d47d22ab4f18c115aeaf72cf436336a7b6c0abdd3",
+    "endpoint_bounds.json": "10c7f7ab209acedd3d4506f5a3c06c0f6b5a88abb6141e936c71b3608eb4c4d3",
+    "functionals.json": "6f740cd6e218d06238f45f22986dc67d2fda20e3113060d9114c1323c66285e5",
+    "nominal_J_functional_bounds.json": "0ecfe3b13006d105ed1f67e0b24ffcfb26af26e7c305342ef1e21f94043e6d59",
+    "polynomial_gates.json": "cd0f056679ff2b85de4c8c17bff86615a03f3b8a6f995a1436b01096a7c808d6",
+    "power_coefficients.json": "19d02c8cb9625323b23039560cdd4d0c4df896291b2242b1188b59d08fdaa09a",
+    "r0_fourier_coefficients.json": "ae8b7138fab06569e4c45cc9075fbf4e3f30d68259ead14fc4700c04deb985be",
+    "RESULTS.md": "061dfdfe039914c07c0dde3d50ee057c57576ce87b6ebc60eca32488e89611cc",
+    "Sgap_fourier_coefficients.json": "e29af7010510233b1bceac618c99b7d25a50e81e2c9c593c297d41698af2f639",
+    "signed_square_decomposition.json": "a0b4b03315630e94ebf875a2b70f19cecd66d2b0467d710d23d49b9e2c0813db",
+    "terminal.log": "b7812ae66ee696f4fe85a822379faea2004956c2b865380fb5b094db1bd5a93f"
+  },
+  "finished_utc": "2026-09-05T20:35:37.638706+00:00"
+}

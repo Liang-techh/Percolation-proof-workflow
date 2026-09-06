@@ -1,0 +1,60 @@
+START_UTC=2026-09-05T21:13:05Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-CALIs6l2:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-CALIs6l2/upstream:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-CALIs6l2/upstream/cache:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+PRE_RUN_SNAPSHOTS_COMPLETE
+COMMAND=/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -DwarningAsError=true --root=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-CALIs6l2 -o /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-CALIs6l2/ActualStorageDerivative.olean /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-CALIs6l2/ActualStorageDerivative.lean
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-CALIs6l2/ActualStorageDerivative.lean:56:9: error: Tactic `unfold` failed to unfold `W0rate` in
+  Real.instAddCommGroup = Real.normedAddCommGroup.toAddCommGroup
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-CALIs6l2/ActualStorageDerivative.lean:114:37: error(lean.unknownIdentifier): Unknown identifier `i`
+
+Note: It is not possible to treat `i` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-CALIs6l2/ActualStorageDerivative.lean:114:45: error(lean.unknownIdentifier): Unknown identifier `i`
+
+Note: It is not possible to treat `i` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-CALIs6l2/ActualStorageDerivative.lean:114:51: error(lean.unknownIdentifier): Unknown identifier `i`
+
+Note: It is not possible to treat `i` as an implicitly bound variable here because the `autoImplicit` option is set to `false`.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-CALIs6l2/ActualStorageDerivative.lean:117:2: error: Tactic `apply` failed: could not unify the conclusion of `Finset.sum_congr rfl`
+  Finset.sum ?m.479 ?m.476 = Finset.sum ?m.479 ?m.477
+with the goal
+  Real.instAddCommGroup = Real.normedAddCommGroup.toAddCommGroup
+
+Note: The full type of `Finset.sum_congr rfl` is
+  (∀ x ∈ ?m.479, ?m.476 x = ?m.477 x) → Finset.sum ?m.479 ?m.476 = Finset.sum ?m.479 ?m.477
+
+case e'_4
+p q : ℝ → Vec 6
+pd v : Vec 6
+t : ℝ
+hp : ∀ (i : Fin 6), HasDerivAt (fun s => p s i) (pd i) t
+hq : ∀ (i : Fin 6), HasDerivAt (fun s => q s i) (v i) t
+hh :
+  HasDerivAt (fun y => ∑ i, ((fun s => p s i) * (fun s => q s i) ^ 2) y)
+    (∑ i, (pd i * ((fun s => q s i) ^ 2) t + p t i * (↑2 * q t i ^ (2 - 1) * v i))) t
+⊢ Real.instAddCommGroup = Real.normedAddCommGroup.toAddCommGroup
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-CALIs6l2/ActualStorageDerivative.lean:125:31: error(lean.unknownIdentifier): Unknown identifier `i`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-CALIs6l2/ActualStorageDerivative.lean:125:37: error(lean.unknownIdentifier): Unknown identifier `i`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-CALIs6l2/ActualStorageDerivative.lean:125:43: error(lean.unknownIdentifier): Unknown identifier `i`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-CALIs6l2/ActualStorageDerivative.lean:144:24: error: declaration uses `sorry`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-CALIs6l2/ActualStorageDerivative.lean:129:8: error: declaration uses `sorry`
+'RouteBActualStorageDerivative.delta_cancellation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualStorageDerivative.nominal_power' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualStorageDerivative.hasDerivAt_W0_of_signedGap' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBActualStorageDerivative.hasDerivAt_W0_from_source' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBActualStorageDerivative.hasDerivAt_position_sum' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBActualStorageDerivative.hasDerivAt_storageV_from_source' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+ActualStorageDerivative_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

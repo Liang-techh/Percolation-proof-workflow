@@ -1,0 +1,22 @@
+{
+  "snapshots": {
+    "audit.py": "ab1e92df9084e4d5cb8accce1850289bb877b0530147968a14805fc7b97fa549",
+    "verify.py": "7cd224132655a612059cfb2c4b4d84ae24fa1ca13c22ef170ef1e03ceaf6175f",
+    "PLAN.md": "d51b2860a4efc37ecb97edf5d29186f7d1a9b50baf7eb3470978903398363c0f",
+    "inputs/candidate.json": "139f4977bcdea68d42bf811e35412fd540a6d6b1d4c84cbe997298b82c8cf071",
+    "inputs/candidate_receipt.json": "16406e46c5666f4adf73a6f0c4c41d4ed993bd09e44031f8be0316c0d0fce07f",
+    "inputs/reference.json": "26ca4f2d80e1237e3d3e87a6a9f11c62abe9304cfe006409ef225a682dff5dc9",
+    "inputs/mass.csv": "a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8",
+    "inputs/derivation.md": "2cafaef8b66434791d418b2a22cdb83e8d2ee51d2c1cd4294a3c6532b3059a12"
+  },
+  "originals": {
+    "audit.py": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_terminal_gate\\audit.py",
+    "verify.py": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_terminal_gate\\verify.py",
+    "PLAN.md": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_terminal_gate\\PLAN.md",
+    "inputs/candidate.json": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_storage_design\\output\\lp-20260905T210840Z-ac3429b0\\lp_candidate_evidence.json",
+    "inputs/candidate_receipt.json": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_storage_design\\output\\lp-20260905T210840Z-ac3429b0\\receipt.json",
+    "inputs/reference.json": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_storage_design\\output\\lp-20260905T210840Z-ac3429b0\\inputs\\reference.json",
+    "inputs/mass.csv": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_storage_design\\output\\lp-20260905T210840Z-ac3429b0\\inputs\\mass.csv",
+    "inputs/derivation.md": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_storage_design\\DERIVATION.md"
+  }
+}

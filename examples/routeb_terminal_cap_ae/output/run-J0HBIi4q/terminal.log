@@ -1,0 +1,15 @@
+START_UTC=2026-09-06T10:11:33Z
+RUN=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_cap_ae/output/run-J0HBIi4q
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+d2879216de25f67a7e369ac59d019e6bbeed586db4a19a93533ccb530fb9a640  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_cap_ae/output/run-J0HBIi4q/TerminalCapAE.lean
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_cap_ae/output/run-J0HBIi4q/TerminalCapAE.lean:7:4: error(lean.dependsOnNoncomputable): failed to compile definition, consider marking it as 'noncomputable' because it depends on 'Real.instDivInvMonoid', which is 'noncomputable'
+'RouteBTerminalCapAE.qpoly_le_five_halves_p' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBTerminalCapAE.p_cap_24_over_5_implies_qpoly_cap_12' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBTerminalCapAE.direct_storage_comparison_implies_qpoly_cap_12' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBTerminalCapAE.p_cap_28_over_5_only_gives_14' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBTerminalCapAE.p_cap_28_over_5_does_not_imply_qpoly_cap_12' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+VERIFY_EXIT_CODE=1

@@ -1,0 +1,51 @@
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/ExistingEnergyCore.lean:370:6: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  Real.instAddCommGroup = Real.normedAddCommGroup.toAddCommGroup
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.173} {β : α → Sort ?u.172} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+case e'_4
+E : ℝ → ℝ
+e0 gamma defect : ℝ
+eprime : ℝ → ℝ
+he0 : E 0 ≤ e0
+_hgamma : 0 ≤ gamma
+_hdefect : 0 ≤ defect
+hcont : ContinuousOn E (Set.Icc 0 1)
+hderiv : ∀ t ∈ Set.Ico 0 1, HasDerivWithinAt E (eprime t) (Set.Ici t) t
+hbound : ∀ t ∈ Set.Ico 0 1, eprime t ≤ 3 * gamma * t ^ 2 + defect
+B : ℝ → ℝ := fun t => e0 + gamma * t ^ 3 + defect * t
+t : ℝ
+⊢ Real.instAddCommGroup = Real.normedAddCommGroup.toAddCommGroup
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/ExistingEnergyCore.lean:373:6: error: `simp` made no progress
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/ExistingEnergyCore.lean:364:64: error: unsolved goals
+case e'_8
+E : ℝ → ℝ
+e0 gamma defect : ℝ
+eprime : ℝ → ℝ
+he0 : E 0 ≤ e0
+_hgamma : 0 ≤ gamma
+_hdefect : 0 ≤ defect
+hcont : ContinuousOn E (Set.Icc 0 1)
+hderiv : ∀ t ∈ Set.Ico 0 1, HasDerivWithinAt E (eprime t) (Set.Ici t) t
+hbound : ∀ t ∈ Set.Ico 0 1, eprime t ≤ 3 * gamma * t ^ 2 + defect
+B : ℝ → ℝ := fun t => e0 + gamma * t ^ 3 + defect * t
+t : ℝ
+⊢ (fun t => e0 + gamma * t ^ 3 + defect * t) = (fun x => e0) + ((fun x => gamma) * id ^ 3 + (fun x => defect) * id)
+
+case e'_9
+E : ℝ → ℝ
+e0 gamma defect : ℝ
+eprime : ℝ → ℝ
+he0 : E 0 ≤ e0
+_hgamma : 0 ≤ gamma
+_hdefect : 0 ≤ defect
+hcont : ContinuousOn E (Set.Icc 0 1)
+hderiv : ∀ t ∈ Set.Ico 0 1, HasDerivWithinAt E (eprime t) (Set.Ici t) t
+hbound : ∀ t ∈ Set.Ico 0 1, eprime t ≤ 3 * gamma * t ^ 2 + defect
+B : ℝ → ℝ := fun t => e0 + gamma * t ^ 3 + defect * t
+t : ℝ
+⊢ 3 * gamma * t ^ 2 + defect = 0 + (0 * (id ^ 3) t + gamma * (↑3 * id t ^ (3 - 1) * 1) + (0 * id t + defect * 1))
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/ExistingEnergyCore.lean:429:36: error: `ring_nf` made no progress on the goal

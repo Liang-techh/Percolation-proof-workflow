@@ -1,0 +1,106 @@
+START_UTC=2026-09-05T21:27:38Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_gate_lean/output/run-FELXKx7A:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+PROSPECTIVE_SNAPSHOT_COMPLETE
+COMMAND=/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -DwarningAsError=true --root=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_gate_lean/output/run-FELXKx7A -o /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_gate_lean/output/run-FELXKx7A/TerminalGate.olean /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_gate_lean/output/run-FELXKx7A/TerminalGate.lean
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_gate_lean/output/run-FELXKx7A/TerminalGate.lean:46:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  ?a * ∑ i ∈ ?s, ?f i
+in the target expression
+  a (Fin.succ 0) * (1 - t) ^ (↑(Fin.succ 0) + 1) +
+      (a (Fin.succ 0).succ * (1 - t) ^ (↑(Fin.succ 0).succ + 1) +
+        (a (Fin.succ 0).succ.succ * (1 - t) ^ (↑(Fin.succ 0).succ.succ + 1) +
+          (a (Fin.succ 0).succ.succ.succ * (1 - t) ^ (↑(Fin.succ 0).succ.succ.succ + 1) +
+            (a (Fin.succ 0).succ.succ.succ.succ * (1 - t) ^ (↑(Fin.succ 0).succ.succ.succ.succ + 1) +
+              (a (Fin.succ 0).succ.succ.succ.succ.succ * (1 - t) ^ (↑(Fin.succ 0).succ.succ.succ.succ.succ + 1) +
+                (a (Fin.succ 0).succ.succ.succ.succ.succ.succ *
+                    (1 - t) ^ (↑(Fin.succ 0).succ.succ.succ.succ.succ.succ + 1) +
+                  ∑ i,
+                    a i.succ.succ.succ.succ.succ.succ.succ.succ *
+                      (1 - t) ^ (↑i.succ.succ.succ.succ.succ.succ.succ.succ + 1))))))) =
+    (1 - t) ^ 2 *
+      (a (Fin.succ 0) * (1 - t) ^ ↑0 +
+        (a (Fin.succ 0).succ * (1 - t) ^ ↑(Fin.succ 0) +
+          (a (Fin.succ 0).succ.succ * (1 - t) ^ ↑(Fin.succ 0).succ +
+            (a (Fin.succ 0).succ.succ.succ * (1 - t) ^ ↑(Fin.succ 0).succ.succ +
+              (a (Fin.succ 0).succ.succ.succ.succ * (1 - t) ^ ↑(Fin.succ 0).succ.succ.succ +
+                (a (Fin.succ 0).succ.succ.succ.succ.succ * (1 - t) ^ ↑(Fin.succ 0).succ.succ.succ.succ +
+                  (a (Fin.succ 0).succ.succ.succ.succ.succ.succ * (1 - t) ^ ↑(Fin.succ 0).succ.succ.succ.succ.succ +
+                    ∑ i,
+                      a i.succ.succ.succ.succ.succ.succ.succ.succ *
+                        (1 - t) ^ ↑i.succ.succ.succ.succ.succ.succ.succ)))))))
+
+a : Fin 8 → ℝ
+t : ℝ
+ha1 : a 0 = 0
+⊢ a (Fin.succ 0) * (1 - t) ^ (↑(Fin.succ 0) + 1) +
+      (a (Fin.succ 0).succ * (1 - t) ^ (↑(Fin.succ 0).succ + 1) +
+        (a (Fin.succ 0).succ.succ * (1 - t) ^ (↑(Fin.succ 0).succ.succ + 1) +
+          (a (Fin.succ 0).succ.succ.succ * (1 - t) ^ (↑(Fin.succ 0).succ.succ.succ + 1) +
+            (a (Fin.succ 0).succ.succ.succ.succ * (1 - t) ^ (↑(Fin.succ 0).succ.succ.succ.succ + 1) +
+              (a (Fin.succ 0).succ.succ.succ.succ.succ * (1 - t) ^ (↑(Fin.succ 0).succ.succ.succ.succ.succ + 1) +
+                (a (Fin.succ 0).succ.succ.succ.succ.succ.succ *
+                    (1 - t) ^ (↑(Fin.succ 0).succ.succ.succ.succ.succ.succ + 1) +
+                  ∑ i,
+                    a i.succ.succ.succ.succ.succ.succ.succ.succ *
+                      (1 - t) ^ (↑i.succ.succ.succ.succ.succ.succ.succ.succ + 1))))))) =
+    (1 - t) ^ 2 *
+      (a (Fin.succ 0) * (1 - t) ^ ↑0 +
+        (a (Fin.succ 0).succ * (1 - t) ^ ↑(Fin.succ 0) +
+          (a (Fin.succ 0).succ.succ * (1 - t) ^ ↑(Fin.succ 0).succ +
+            (a (Fin.succ 0).succ.succ.succ * (1 - t) ^ ↑(Fin.succ 0).succ.succ +
+              (a (Fin.succ 0).succ.succ.succ.succ * (1 - t) ^ ↑(Fin.succ 0).succ.succ.succ +
+                (a (Fin.succ 0).succ.succ.succ.succ.succ * (1 - t) ^ ↑(Fin.succ 0).succ.succ.succ.succ +
+                  (a (Fin.succ 0).succ.succ.succ.succ.succ.succ * (1 - t) ^ ↑(Fin.succ 0).succ.succ.succ.succ.succ +
+                    ∑ i,
+                      a i.succ.succ.succ.succ.succ.succ.succ.succ *
+                        (1 - t) ^ ↑i.succ.succ.succ.succ.succ.succ.succ)))))))
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_gate_lean/output/run-FELXKx7A/TerminalGate.lean:116:13: error: Tactic `unfold` failed to unfold `QuadNonnegative` in
+  0 < terminalResidual E (a 7) W0 Vd tau
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_gate_lean/output/run-FELXKx7A/TerminalGate.lean:135:5: error: Variable name `ha` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _ha
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_gate_lean/output/run-FELXKx7A/TerminalGate.lean:136:5: error: Variable name `ha1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _ha1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_gate_lean/output/run-FELXKx7A/TerminalGate.lean:137:5: error: Variable name `hrho` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hrho
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_gate_lean/output/run-FELXKx7A/TerminalGate.lean:137:22: error: Variable name `hc` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hc
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_gate_lean/output/run-FELXKx7A/TerminalGate.lean:157:5: error: Variable name `ha` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _ha
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_terminal_gate_lean/output/run-FELXKx7A/TerminalGate.lean:158:5: error: Variable name `ha1` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _ha1
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'RouteBTerminalGate.decayPolynomial_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBTerminalGate.decayPolynomial_terminal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBTerminalGate.decayPolynomial_factor' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBTerminalGate.gate_implies_terminal_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBTerminalGate.fixed_terminal_gate_failure' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBTerminalGate.no_uniform_bZero_gate_of_quartic_floor_and_seventh_order' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBTerminalGate.no_uniform_bZero_gate_of_strict_residual' depends on axioms: [propext, Classical.choice, Quot.sound]
+TerminalGate_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

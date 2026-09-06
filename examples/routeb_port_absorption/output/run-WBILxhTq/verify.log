@@ -1,0 +1,19 @@
+UTC: 2026-09-05T18:10:15Z
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_port_absorption/output/run-WBILxhTq
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+bd7d97ac8ad3c764e70cb69c94a0fc20d51a35c178ac509bebf5e43bf93800fb  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_port_absorption/PortAbsorption.lean
+dc3dbf06e74c2c41ae1acc1e344d83ad41a315c19a427911805dcc85cdce649a  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_port_absorption/verify.sh
+dae80fbdbb6439761a0ad1b7c081fc5a61ca1cdd7e2f70e23df31d9756637f26  /home/z5242/sos_lean/lake-manifest.json
+'RouteBPortAbsorption.sqNorm_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.quadratic_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.quadratic_lower_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.quadratic_minimizer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.port_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.fixed_nu_certificate_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.conditional_absorption_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.conditional_absorption' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBPortAbsorption.conditional_absorption_nu1_sres5' depends on axioms: [propext, Classical.choice, Quot.sound]
+LEAN_COMPILE_EXIT_CODE=0
+37e8e12957f4675af5f9c77e7daf5215c0c980af49df5d2da7bc7b560bec78db  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_port_absorption/output/run-WBILxhTq/PortAbsorption.olean
+VERIFY_EXIT_CODE=0

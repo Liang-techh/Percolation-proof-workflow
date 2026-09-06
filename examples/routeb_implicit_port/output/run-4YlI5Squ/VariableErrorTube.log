@@ -1,0 +1,27 @@
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_implicit_port/output/run-4YlI5Squ/VariableErrorTube.lean:30:2: error: linarith failed to find a contradiction
+E R ep rp : ℝ → ℝ
+e0 beta c : ℝ
+hE0 : E 0 ≤ e0
+hR0 : R 0 = 0
+hbeta : 0 ≤ beta
+hc : c ^ 2 ≤ 3
+hEc : ContinuousOn E (Set.Icc 0 1)
+hRc : ContinuousOn R (Set.Icc 0 1)
+hEd : ∀ t ∈ Set.Ico 0 1, HasDerivWithinAt E (ep t) (Set.Ici t) t
+hRd : ∀ t ∈ Set.Ico 0 1, HasDerivWithinAt R (rp t) (Set.Ici t) t
+hpower : ∀ t ∈ Set.Ico 0 1, ep t ≤ beta * (c * t) ^ 2 + rp t
+hstart : (fun t => E t - R t) 0 ≤ e0
+hderiv : ∀ t ∈ Set.Ico 0 1, HasDerivWithinAt (fun t => E t - R t) (ep t - rp t) (Set.Ici t) t
+hbound : ∀ t ∈ Set.Ico 0 1, ep t - rp t ≤ 3 * beta * t ^ 2 + 0
+htube : ∀ t ∈ Set.Icc 0 1, (E - R) t ≤ e0 + beta * t ^ 3 + 0 * t
+t : ℝ
+ht : t ∈ Set.Icc 0 1
+h : (E - R) t ≤ e0 + beta * t ^ 3
+a✝ : e0 + beta * t ^ 3 + R t < E t
+⊢ False
+failed
+'RouteBVariableErrorTube.cumulative_ramp_budget' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBVariableErrorTube.capped_cumulative_ramp_budget' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]

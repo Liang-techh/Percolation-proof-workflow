@@ -1,0 +1,13 @@
+'RouteBForceErrorDecomposition.full_mass_block_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBForceErrorDecomposition.mass_mismatch_action' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBForceErrorDecomposition.reference_force_of_balance' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBForceErrorDecomposition.implemented_reference_force' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBForceErrorDecomposition.new_error_from_old_total' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBForceErrorDecomposition.exact_squared_error_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBForceErrorDecomposition.gravity_at_block_origin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBForceErrorDecomposition.gravity_sos_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBForceErrorDecomposition.gravity_norm_squared_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBForceErrorDecomposition.gravity_weighted_cost_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBForceErrorDecomposition.gravity_weighted_cost_rational' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

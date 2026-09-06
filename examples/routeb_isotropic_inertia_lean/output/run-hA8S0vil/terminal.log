@@ -1,0 +1,22 @@
+START_UTC=2026-09-06T01:28:39Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_isotropic_inertia_lean/output/run-hA8S0vil:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_isotropic_inertia_lean/output/run-hA8S0vil/IsotropicInertia.lean:29:6: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  (∑ i ∈ ?s, ?f i) * ?a
+in the target expression
+  ∑ j, (∑ j_1, R i j_1 * if j_1 = j then s else 0) * R k j = if i = k then s else 0
+
+R : Mat3
+s : ℝ
+hR : ∀ (i k : V), ∑ a, R i a * R k a = if i = k then 1 else 0
+i k : V
+⊢ ∑ j, (∑ j_1, R i j_1 * if j_1 = j then s else 0) * R k j = if i = k then s else 0
+
+Note: The target expression is not type-correct under the `implicit` transparency level, which may have triggered the failure. This is usually caused by unfolding of semireducible definitions in prior tactic steps. Use `set_option linter.tacticCheckInstances true` to investigate the source of the issue.
+Full error:
+  function expected
+    R i
+'RouteBIsotropicInertia.rotated_isotropic_eq' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+IsotropicInertia_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

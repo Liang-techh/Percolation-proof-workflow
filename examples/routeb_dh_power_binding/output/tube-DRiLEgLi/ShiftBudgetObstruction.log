@@ -1,0 +1,8 @@
+'RouteBShiftBudgetObstruction.shift_lower_of_slice_nonnegative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBShiftBudgetObstruction.shift_lower_of_storage_nonnegative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBShiftBudgetObstruction.coarse_budget_exceeds_target' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBShiftBudgetObstruction.no_coarse_terminal_budget' depends on axioms: [propext, Classical.choice, Quot.sound]

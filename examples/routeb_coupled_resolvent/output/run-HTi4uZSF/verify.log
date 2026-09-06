@@ -1,0 +1,13 @@
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_coupled_resolvent/output/run-HTi4uZSF
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+baaf91c27727c9121f655591cc7a9742c0ea155ae44ef171e599caa774f16029  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_coupled_resolvent/output/run-HTi4uZSF/CoupledResolvent.lean
+3244f34a1cec4dca598fa9214cdd780787633a491c1506c371234283bff07fac  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_coupled_resolvent/output/run-HTi4uZSF/verify.sh
+'RouteBCoupledResolvent.acceleration_free_resolvent' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBCoupledResolvent.residual_energy_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBCoupledResolvent.correlated_acceleration_energy' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBCoupledResolvent.correction_cost_from_full_force' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBCoupledResolvent.full_state_error_split' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBCoupledResolvent.total_error_from_coupled_residual' depends on axioms: [propext, Classical.choice, Quot.sound]
+LEAN_COMPILE_EXIT_CODE=0
+4fb28f6c9328ca98bdc2bf2d4a6c0f41f3fa2b232b0cfc1835c429dcbf686a44  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_coupled_resolvent/output/run-HTi4uZSF/CoupledResolvent.olean
+VERIFY_EXIT_CODE=0

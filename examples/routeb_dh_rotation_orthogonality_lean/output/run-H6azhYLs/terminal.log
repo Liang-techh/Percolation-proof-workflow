@@ -1,0 +1,20 @@
+START_UTC=2026-09-06T01:38:56Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_rotation_orthogonality_lean/output/run-H6azhYLs:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_rotation_orthogonality_lean/output/run-H6azhYLs/DHRotationOrthogonality.lean:40:6: error: ring failed, ring expressions not equal
+ct st ca sa : ℝ
+hca : ca ^ 2 + sa ^ 2 = 1
+hct : ct ^ 2 + st ^ 2 = 1
+⊢ ct * st * 3 - ct * st * ca ^ 2 * 3 - ct * st * sa ^ 2 * 3 = 0
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_rotation_orthogonality_lean/output/run-H6azhYLs/DHRotationOrthogonality.lean:40:6: error: ring failed, ring expressions not equal
+ct st ca sa : ℝ
+hca : ca ^ 2 + sa ^ 2 = 1
+hct : st ^ 2 + ct ^ 2 = 1
+⊢ st * ct * 3 - st * ct * ca ^ 2 * 3 - st * ct * sa ^ 2 * 3 = 0
+'RouteBDHRotationOrthogonality.dh_rotation_rows_orthogonal' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+DHRotationOrthogonality_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

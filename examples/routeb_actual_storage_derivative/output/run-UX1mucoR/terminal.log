@@ -1,0 +1,20 @@
+START_UTC=2026-09-05T21:17:48Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-UX1mucoR:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-UX1mucoR/upstream:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-UX1mucoR/upstream/cache:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+PRE_RUN_SNAPSHOTS_COMPLETE
+COMMAND=/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -DwarningAsError=true --root=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-UX1mucoR -o /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-UX1mucoR/ActualStorageDerivative.olean /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-UX1mucoR/ActualStorageDerivative.lean
+'RouteBActualStorageDerivative.delta_cancellation' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualStorageDerivative.nominal_power' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualStorageDerivative.hasDerivAt_W0_of_signedGap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualStorageDerivative.hasDerivAt_W0_from_source' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualStorageDerivative.hasDerivAt_position_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualStorageDerivative.hasDerivAt_storageV_from_source' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+ActualStorageDerivative_COMPILE_EXIT_CODE=0
+SNAPSHOT_HASHES_UNCHANGED=true
+9f5f7019214f30960072c336f9aafd098d1747a05ed3d282f223744eb3e8fcbc  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-UX1mucoR/ActualStorageDerivative.lean
+c566b7d4d3e1e57236276e90cf309bd4e72409fc30f545377c7cc6ad1c95ec18  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_storage_derivative/output/run-UX1mucoR/ActualStorageDerivative.olean
+END_UTC=2026-09-05T21:18:58Z
+VERIFY_EXIT_CODE=0

@@ -1,0 +1,7 @@
+Building Challenge
+ℹ [3006/3007] Replayed Challenge
+info: Challenge.lean:25:0: 'RouteBSupplyComparison.explicit_supply_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+Build completed successfully (3007 jobs).
+uncaught exception: failed to read file '/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_supply_core/output/comparator-cached-exporter-ec0FOjSk/project/.lake/build/lib/lean/Challenge.olean', incompatible header
+Exporting #[Nat, String, String.mk, Char, Quot, Quot.mk, Quot.lift, Quot.ind, RouteBSupplyComparison.explicit_supply_bound, propext, Quot.sound, Classical.choice, Nat.add, Nat.sub, Nat.mul, Nat.pow, Nat.gcd, Nat.div, Nat.mod, Nat.beq, Nat.ble, Nat.land, Nat.lor, Nat.xor, Nat.shiftLeft, Nat.shiftRight, String.ofList, Char.ofNat, List, eagerReduce] from Challenge
+uncaught exception: Child exited with 1

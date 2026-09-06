@@ -1,0 +1,25 @@
+START_UTC=2026-09-05T22:38:48Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-k87wlFSd:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+PROSPECTIVE_SNAPSHOT_COMPLETE
+'RouteBB45Fourier.fourierDHStep_normal_form' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45Fourier.routeB_exact_single_step_parameters' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45Fourier.fourier_phase_bridge' depends on axioms: [propext, Classical.choice, Quot.sound]
+FourierNormalForm_COMPILE_EXIT_CODE=0
+'RouteBB45FrameRecursion.frameProduct_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45FrameRecursion.prefixFrames_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45FrameRecursion.prefixFrames_next_frame' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45FrameRecursion.terminalFrame_eq_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45FrameRecursion.routeBFrameChain_cons' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45FrameRecursion.routeB_parent_axis_before_current_step' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBB45FrameRecursion.routeB_terminal_product' depends on axioms: [propext, Classical.choice, Quot.sound]
+FrameRecursion_COMPILE_EXIT_CODE=0
+56ec2f2d29a22942bcb83a3ba98197ae1ce4d607340072b81c013b8d358d3218  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-k87wlFSd/FourierNormalForm.lean
+49d9dfaf04dae88f70301d697c26548ef65b5dcb3cd750b7a79eb2a7715917f1  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-k87wlFSd/FourierNormalForm.olean
+3361f2353b44052e6426e6b41e9f009cf4e5b3c6675a846ab856c1b82616cf10  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-k87wlFSd/FrameRecursion.lean
+abf9e99fce858a3cbf94b3bf20238a9f6dcc701370a296676ffc52e0dbd9814b  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_frame_recursion/output/run-k87wlFSd/FrameRecursion.olean
+END_UTC=2026-09-05T22:39:41Z
+VERIFY_EXIT_CODE=0

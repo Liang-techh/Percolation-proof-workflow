@@ -1,0 +1,15 @@
+UTC: 2026-09-05T17:26:30Z
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-YC2fOLUR
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+7546f38946f67bb3dfe6cca27c97b007c5320a9fbf4059d58742005f4f707c7c  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/ChristoffelPower.lean
+494294477186f2c695a58a40056319551140fae3d9ddc177b59f304e9277025e  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/verify.sh
+dae80fbdbb6439761a0ad1b7c081fc5a61ca1cdd7e2f70e23df31d9756637f26  /home/z5242/sos_lean/lake-manifest.json
+'RouteBChristoffelPower.contraction_swap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBChristoffelPower.christoffel_power_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBChristoffelPower.christoffelMatrix_mul_velocity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBChristoffelPower.christoffel_power_identity_fin6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBChristoffelPower.mechanical_energy_hC' depends on axioms: [propext, Classical.choice, Quot.sound]
+LEAN_COMPILE_EXIT_CODE=0
+438b27034753470dfdda0f3125a6e3d952f7b97466971a5039679435188272fc  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_christoffel_power/output/run-YC2fOLUR/ChristoffelPower.olean
+VERIFY_EXIT_CODE=0

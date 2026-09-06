@@ -1,0 +1,414 @@
+{
+  "status": "EXACT_ALL6_SIGNED_SOURCE_POWER_AND_CONDITIONAL_ENDPOINT_BOUNDS_PASS",
+  "arithmetic": "Fraction and integer outward enclosures; floats only for terminal displays",
+  "full_mass_rows": 610,
+  "full_coriolis_rows": 2852,
+  "potential_rows": 17,
+  "christoffel_entries": 216,
+  "christoffel_skew_velocity_coefficients": 216,
+  "cubic_velocity_monomials": 56,
+  "cubic_fourier_frequencies": 141,
+  "cubic_complex_coefficient_checks": 7896,
+  "cubic_nonzero_rows": 854,
+  "signed_modes": 70,
+  "signed_square_matrix_entry_checks": 5040,
+  "square_factors": 227,
+  "exact_functionals": 97,
+  "Sgap_coefficient_rows": 404,
+  "r0_coefficient_rows": 6896,
+  "source_reference_M0_H0_inverse_A14_checks": true,
+  "constant_regularizer_cancels_from_gap": true,
+  "gravity_constants": {
+    "A": "762237/200000",
+    "B": "242307/200000",
+    "Cg": "20601/400000",
+    "U_constant": "10791/4000",
+    "U0": "3108789/400000"
+  },
+  "global_gravity_and_affine_multiplier_gates": {
+    "gravity_square_completion_coefficient_match": true,
+    "gravity_square_completion_polynomial_terms": 4,
+    "exact_negative_R_rho_squared_constant": "18932319/197600000",
+    "one_tenth_margin": "827681/197600000",
+    "Psi_quarter_angle_polynomial_identity": true,
+    "Psi_quarter_angle_ratio": "1/32",
+    "independent_trigonometric_proof": "See REPORT: quarter-angle identities, sin(t)^2<=t^2, cosine absolute bounds, and sine addition. Polynomial gates do not alone prove trigonometric inequalities.",
+    "affine_multiplier_symbolic_terms": 323,
+    "affine_multiplier_coefficient_identity": true,
+    "inverse_congruence_symbolic_terms": 65,
+    "inverse_congruence_reduced_coefficient_identity": true,
+    "inverse_premises": "M symmetric invertible, N=M^-1 symmetric, L symmetric positive definite; M*N=N*M=I"
+  },
+  "signed_gap_witnesses": [
+    {
+      "name": "positive_gap",
+      "q": "t*d",
+      "v": "0",
+      "d": [
+        0,
+        0,
+        1,
+        2,
+        -1,
+        0
+      ],
+      "range": "0<abs(t)<=1/20",
+      "Sgap_t4_coefficient": "84039/1600000",
+      "remainder_abs_le_coefficient_times_t6": "1272139/16000000",
+      "Sgap_over_t4_lower": "334883861/6400000000",
+      "Sgap_over_t4_upper": "337428139/6400000000"
+    },
+    {
+      "name": "negative_gap",
+      "q": "t*d",
+      "v": "0",
+      "d": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "range": "0<abs(t)<=1/20",
+      "Sgap_t4_coefficient": "-676563/3200000",
+      "remainder_abs_le_coefficient_times_t6": "22781/3200000",
+      "Sgap_over_t4_lower": "-270647981/1280000000",
+      "Sgap_over_t4_upper": "-270602419/1280000000"
+    }
+  ],
+  "endpoint_summary": {
+    "nominal_J0": {
+      "horizon": "1",
+      "uniform_lower": "-274303480833/1000000000000",
+      "uniform_upper": "56353169949/1000000000000",
+      "final_cell_lower": "-274303480833/1000000000000",
+      "final_cell_upper": "56353169949/1000000000000"
+    },
+    "conditional_J1": {
+      "horizon": "1",
+      "uniform_lower": "-2041248700541/200000000000",
+      "uniform_upper": "1636234858921/1000000000000",
+      "final_cell_lower": "-2041248700541/200000000000",
+      "final_cell_upper": "1636234858921/1000000000000"
+    },
+    "existing_strict_prefix": {
+      "horizon": "9/16",
+      "uniform_lower": "-3667674977/62500000000",
+      "uniform_upper": "31093066123/1000000000000",
+      "final_cell_lower": "-3667674977/62500000000",
+      "final_cell_upper": "31093066123/1000000000000"
+    }
+  },
+  "initial_ball": {
+    "lower": "-149492741/500000000000",
+    "upper": "97661089/1000000000000",
+    "kinetic_lower": "-301277067/1000000000000",
+    "kinetic_upper": "53110201/200000000000",
+    "restoring_sector_upper": "192392877/1000000000000",
+    "twist_positive_upper": "2444357/250000000000",
+    "twist_negative_upper": "2444357/250000000000",
+    "negative_R_global_bound": "6063061/500000000000",
+    "gravity_gap_upper": "2444357/250000000000",
+    "mode_bounds": [
+      [
+        "-32959/15625000000",
+        "1370303/500000000000"
+      ],
+      [
+        "-2907/50000000000",
+        "2907/62500000000"
+      ],
+      [
+        "-8721/200000000000",
+        "8721/200000000000"
+      ],
+      [
+        "-36361/8000000000",
+        "461157/100000000000"
+      ],
+      [
+        "-297721/31250000000",
+        "297721/31250000000"
+      ],
+      [
+        "-461157/100000000000",
+        "36361/8000000000"
+      ],
+      [
+        "-8721/200000000000",
+        "8721/200000000000"
+      ],
+      [
+        "-2907/62500000000",
+        "2907/250000000000"
+      ],
+      [
+        "-2907/250000000000",
+        "2907/62500000000"
+      ],
+      [
+        "-2907/62500000000",
+        "2907/250000000000"
+      ],
+      [
+        "-575583/1000000000000",
+        "261629/1000000000000"
+      ],
+      [
+        "-261629/1000000000000",
+        "575583/1000000000000"
+      ],
+      [
+        "-209303/1000000000000",
+        "627909/1000000000000"
+      ],
+      [
+        "-4103/2500000000",
+        "2297679/200000000000"
+      ],
+      [
+        "-209303/1000000000000",
+        "627909/1000000000000"
+      ],
+      [
+        "-575583/1000000000000",
+        "261629/1000000000000"
+      ],
+      [
+        "-261629/1000000000000",
+        "575583/1000000000000"
+      ],
+      [
+        "-62791/200000000000",
+        "62791/200000000000"
+      ],
+      [
+        "-62791/200000000000",
+        "62791/200000000000"
+      ],
+      [
+        "-106423243/1000000000000",
+        "106423243/1000000000000"
+      ],
+      [
+        "-62791/200000000000",
+        "62791/200000000000"
+      ],
+      [
+        "-62791/200000000000",
+        "62791/200000000000"
+      ],
+      [
+        "-21803/1000000000000",
+        "21803/1000000000000"
+      ],
+      [
+        "-26163/1000000000000",
+        "26163/1000000000000"
+      ],
+      [
+        "-21803/1000000000000",
+        "21803/1000000000000"
+      ],
+      [
+        "-50873/1000000000000",
+        "50873/1000000000000"
+      ],
+      [
+        "-202711/62500000000",
+        "202711/62500000000"
+      ],
+      [
+        "-297721/31250000000",
+        "297721/31250000000"
+      ],
+      [
+        "-202711/62500000000",
+        "202711/62500000000"
+      ],
+      [
+        "-50873/1000000000000",
+        "50873/1000000000000"
+      ],
+      [
+        "-8721/250000000000",
+        "8721/250000000000"
+      ],
+      [
+        "-4516239/1000000000000",
+        "4516239/1000000000000"
+      ],
+      [
+        "-19764007/250000000000",
+        "19764007/250000000000"
+      ],
+      [
+        "-4516239/1000000000000",
+        "4516239/1000000000000"
+      ],
+      [
+        "-8721/250000000000",
+        "8721/250000000000"
+      ],
+      [
+        "-50873/1000000000000",
+        "50873/1000000000000"
+      ],
+      [
+        "-1638299/500000000000",
+        "1638299/500000000000"
+      ],
+      [
+        "-297721/31250000000",
+        "297721/31250000000"
+      ],
+      [
+        "-1638299/500000000000",
+        "1638299/500000000000"
+      ],
+      [
+        "-50873/1000000000000",
+        "50873/1000000000000"
+      ],
+      [
+        "-21803/1000000000000",
+        "21803/1000000000000"
+      ],
+      [
+        "-26163/1000000000000",
+        "26163/1000000000000"
+      ],
+      [
+        "-21803/1000000000000",
+        "21803/1000000000000"
+      ],
+      [
+        "-18418641/1000000000000",
+        "0"
+      ],
+      [
+        "0",
+        "244187/1000000000000"
+      ],
+      [
+        "-244187/1000000000000",
+        "0"
+      ],
+      [
+        "-209303/500000000000",
+        "0"
+      ],
+      [
+        "-16411993/1000000000000",
+        "0"
+      ],
+      [
+        "-209303/500000000000",
+        "0"
+      ],
+      [
+        "0",
+        "244187/1000000000000"
+      ],
+      [
+        "-244187/1000000000000",
+        "0"
+      ],
+      [
+        "-2907/250000000000",
+        "0"
+      ],
+      [
+        "0",
+        "8721/500000000000"
+      ],
+      [
+        "-2907/250000000000",
+        "0"
+      ],
+      [
+        "0",
+        "37791/1000000000000"
+      ],
+      [
+        "0",
+        "9863/31250000000"
+      ],
+      [
+        "-9863/31250000000",
+        "0"
+      ],
+      [
+        "-37791/1000000000000",
+        "0"
+      ],
+      [
+        "-26163/500000000000",
+        "0"
+      ],
+      [
+        "-142027/250000000000",
+        "0"
+      ],
+      [
+        "-201497/20000000000",
+        "0"
+      ],
+      [
+        "-142027/250000000000",
+        "0"
+      ],
+      [
+        "-26163/500000000000",
+        "0"
+      ],
+      [
+        "0",
+        "37791/1000000000000"
+      ],
+      [
+        "0",
+        "9863/31250000000"
+      ],
+      [
+        "-9863/31250000000",
+        "0"
+      ],
+      [
+        "-37791/1000000000000",
+        "0"
+      ],
+      [
+        "-2907/250000000000",
+        "0"
+      ],
+      [
+        "0",
+        "8721/500000000000"
+      ],
+      [
+        "-2907/250000000000",
+        "0"
+      ]
+    ],
+    "shared_ball_kinetic_lower": "-96815177/1000000000000",
+    "shared_ball_kinetic_upper": "87883661/1000000000000"
+  },
+  "endpoint_bounds_are_conditional": true,
+  "J1_proved": false,
+  "seven_by_seven_feasibility_proved": false,
+  "physical_DH_binding_proved": false,
+  "FD_Float64_binding_proved": false,
+  "Lean_verified": false,
+  "open_premises": [
+    "physical identification of Fourier mass/potential and analytic Christoffel force",
+    "regularity, existence, and continuation through every required prefix",
+    "same initial state/input and variation of constants with delta=a-a0",
+    "strict prefix transfer requires its original mass lower bound and eta=0 idealization",
+    "implementation/source defect eta enclosure counted exactly once",
+    "actual full-horizon J<=1 is conditional here",
+    "choose P,k,Z,b; certify assembled 7x7 matrix PSD on covered cells and storage/supply budget"
+  ],
+  "prohibited_actions_performed": false
+}

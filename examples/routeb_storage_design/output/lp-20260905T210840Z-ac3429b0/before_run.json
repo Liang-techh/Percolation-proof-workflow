@@ -1,0 +1,62 @@
+{
+  "created_utc": "2026-09-05T21:08:41.256982+00:00",
+  "command": [
+    "/usr/bin/python3",
+    "-B",
+    "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_storage_design/output/lp-20260905T210840Z-ac3429b0/lp_candidate.py"
+  ],
+  "snapshots": {
+    "lp_candidate.py": {
+      "original": "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_storage_design/lp_candidate.py",
+      "sha256": "451f1be2f854a407195b856b7be8762112b539c460764a04019bdd389098090d"
+    },
+    "verify_lp.py": {
+      "original": "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_storage_design/verify_lp.py",
+      "sha256": "188f58c3a9ea628787854353df38d55c33ae47eed7547a51f62cf76d95949555"
+    },
+    "LP_PLAN.md": {
+      "original": "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_storage_design/LP_PLAN.md",
+      "sha256": "02f53b1438648e07349cc11a3dadfeaeaf7d38a8b8f1986d9ade197882b85e94"
+    },
+    "inputs/state_revision46.json": {
+      "original": "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/artifacts/routeb_6dof/state.json",
+      "sha256": "029c50060bbe0e0cf4cb72163685b2de9b96af6122aa7201c1754d87113725da"
+    },
+    "inputs/reference.json": {
+      "original": "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_signed_gap_source/output/run-20260905T203532Z-b2dcff09/inputs/reference.json",
+      "sha256": "26ca4f2d80e1237e3d3e87a6a9f11c62abe9304cfe006409ef225a682dff5dc9"
+    },
+    "inputs/mass.csv": {
+      "original": "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_signed_gap_source/output/run-20260905T203532Z-b2dcff09/inputs/routeB_fourier_mass_full_rational.csv",
+      "sha256": "a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8"
+    },
+    "inputs/potential.csv": {
+      "original": "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_signed_gap_source/output/run-20260905T203532Z-b2dcff09/inputs/routeB_fourier_potential_rational.csv",
+      "sha256": "4ebbb10e32639f54b18f259cbb762c04f2be842a856cae85e1fe94dad5478b6c"
+    },
+    "inputs/functionals.json": {
+      "original": "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_signed_gap_source/output/run-20260905T203532Z-b2dcff09/functionals.json",
+      "sha256": "6f740cd6e218d06238f45f22986dc67d2fda20e3113060d9114c1323c66285e5"
+    },
+    "inputs/nominal_J_functional_bounds.json": {
+      "original": "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_signed_gap_source/output/run-20260905T203532Z-b2dcff09/nominal_J_functional_bounds.json",
+      "sha256": "0ecfe3b13006d105ed1f67e0b24ffcfb26af26e7c305342ef1e21f94043e6d59"
+    },
+    "inputs/audit_results.json": {
+      "original": "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_signed_gap_source/output/run-20260905T203532Z-b2dcff09/audit_results.json",
+      "sha256": "a7970af8620545e830885de0f485710c5f6298e5b17887c93a04ac81c7049253"
+    },
+    "inputs/source_REPORT.md": {
+      "original": "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_signed_gap_source/output/run-20260905T203532Z-b2dcff09/REPORT.md",
+      "sha256": "31c803473ec11967c1183df731b91db106cc42d589562838e0f6365d33ebbcda"
+    },
+    "inputs/source_RESULTS.md": {
+      "original": "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_signed_gap_source/output/run-20260905T203532Z-b2dcff09/RESULTS.md",
+      "sha256": "061dfdfe039914c07c0dde3d50ee057c57576ce87b6ebc60eca32488e89611cc"
+    },
+    "inputs/exact_witness.json": {
+      "original": "/mnt/c/Users/z5242/Desktop/\u91cd\u6784\u7248/\u5de5\u4f5c\u6d41/examples/routeb_storage_design/output/post-20260905T210708Z-19f7d8ba/selected_candidate.json",
+      "sha256": "7d350a73609ac80b8e4526c2484f47dd8a5582017199661f3ecf25cfc6044324"
+    }
+  }
+}

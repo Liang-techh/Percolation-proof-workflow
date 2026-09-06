@@ -1,0 +1,21 @@
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_origins_axes_bridge/output/run-ikNO46YM/OriginsAxesBridge.lean:1:0: error: unknown module prefix 'FrameRecursion'
+
+No directory 'FrameRecursion' or file 'FrameRecursion.olean' in the search path entries:
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_origins_axes_bridge/output/run-ikNO46YM
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_source_contract_adapter_lean/output/run-RSGGTurS
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_slot_accessor_lean/output/run-4RJoHvpZ
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_prefix_index_lean/output/run-lVHyO9Lp
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_real_dh_step_lean/output/run-nAZVlwhR
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_frame_origin_axis_lean/output/run-H0sN55iL
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_semantic_core_lean/output/run-6vhFP8Zp
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_body_contract_core_lean/output/run-0FvNkLzz
+/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean
+/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean
+/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean
+/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean
+/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean
+/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean
+/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean
+/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/lib/lean
+OriginsAxesBridge_COMPILE_EXIT_CODE=1

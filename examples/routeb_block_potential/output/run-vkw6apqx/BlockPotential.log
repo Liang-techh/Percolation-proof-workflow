@@ -1,0 +1,8 @@
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_potential/BlockPotential.lean:19:2: error: Tactic `simp` failed with a nested error:
+maximum recursion depth has been reached
+use `set_option maxRecDepth <num>` to increase limit
+use `set_option diagnostics true` to get diagnostic information
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_potential/BlockPotential.lean:39:2: error: No goals to be solved
+'RouteBBlockPotential.potential_factor' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBBlockPotential.centered_block_identity' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBBlockPotential.remote_pi_half_slice' depends on axioms: [propext, Classical.choice, Quot.sound]

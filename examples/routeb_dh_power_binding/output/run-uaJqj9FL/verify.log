@@ -1,0 +1,85 @@
+UTC: 2026-09-05T17:20:27Z
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/output/run-uaJqj9FL
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+646c1052c10c1d8606342010c4303c0c25e40e008664ce7f1c1b1649c51f6971  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/../routeb_supply_core/RouteBSupplyCore.lean
+'RouteBSupplyCore.damping_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.centerRate_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.gamma_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.gamma_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.gamma_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unitMargin_exact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unitMargin_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.completion_six' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.vector_completion_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.completion_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.pointwise_supply_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unit_supply_gap_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unit_supply_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.supply_at_center' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.uniform_supply_coefficient_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.power_bound_with_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unit_supply_of_power_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBSupplyCore.unit_supply_of_margin_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+0f74bf60dbe7473f4b7f7d78c759a6fbff03ae984bb932f203a31c8c8de7de3d  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/../routeb_residual_power/ResidualPower.lean
+'RouteBResidualPower.scalar_completion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.scalar_power_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.scalar_at_center' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.zero_input_obstruction' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.scalar_required_budget_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.vector_power_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.perturbed_supply_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.perturbed_supply_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.split_square_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBResidualPower.supply_with_squared_force_error' depends on axioms: [propext, Classical.choice, Quot.sound]
+56341d50f43e9fdca79ab3a947712ce63bdb7f61be2261a769e7030e3bc5da96  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/ExistingEnergyCore.lean
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/ExistingEnergyCore.lean:370:6: error: Tactic `apply` failed: could not unify the conclusion of `@funext`
+  ?f = ?g
+with the goal
+  Real.instAddCommGroup = Real.normedAddCommGroup.toAddCommGroup
+
+Note: The full type of `@funext` is
+  ∀ {α : Sort ?u.173} {β : α → Sort ?u.172} {f g : (x : α) → β x}, (∀ (x : α), f x = g x) → f = g
+
+case e'_4
+E : ℝ → ℝ
+e0 gamma defect : ℝ
+eprime : ℝ → ℝ
+he0 : E 0 ≤ e0
+_hgamma : 0 ≤ gamma
+_hdefect : 0 ≤ defect
+hcont : ContinuousOn E (Set.Icc 0 1)
+hderiv : ∀ t ∈ Set.Ico 0 1, HasDerivWithinAt E (eprime t) (Set.Ici t) t
+hbound : ∀ t ∈ Set.Ico 0 1, eprime t ≤ 3 * gamma * t ^ 2 + defect
+B : ℝ → ℝ := fun t => e0 + gamma * t ^ 3 + defect * t
+t : ℝ
+⊢ Real.instAddCommGroup = Real.normedAddCommGroup.toAddCommGroup
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/ExistingEnergyCore.lean:373:6: error: `simp` made no progress
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/ExistingEnergyCore.lean:364:64: error: unsolved goals
+case e'_8
+E : ℝ → ℝ
+e0 gamma defect : ℝ
+eprime : ℝ → ℝ
+he0 : E 0 ≤ e0
+_hgamma : 0 ≤ gamma
+_hdefect : 0 ≤ defect
+hcont : ContinuousOn E (Set.Icc 0 1)
+hderiv : ∀ t ∈ Set.Ico 0 1, HasDerivWithinAt E (eprime t) (Set.Ici t) t
+hbound : ∀ t ∈ Set.Ico 0 1, eprime t ≤ 3 * gamma * t ^ 2 + defect
+B : ℝ → ℝ := fun t => e0 + gamma * t ^ 3 + defect * t
+t : ℝ
+⊢ (fun t => e0 + gamma * t ^ 3 + defect * t) = (fun x => e0) + ((fun x => gamma) * id ^ 3 + (fun x => defect) * id)
+
+case e'_9
+E : ℝ → ℝ
+e0 gamma defect : ℝ
+eprime : ℝ → ℝ
+he0 : E 0 ≤ e0
+_hgamma : 0 ≤ gamma
+_hdefect : 0 ≤ defect
+hcont : ContinuousOn E (Set.Icc 0 1)
+hderiv : ∀ t ∈ Set.Ico 0 1, HasDerivWithinAt E (eprime t) (Set.Ici t) t
+hbound : ∀ t ∈ Set.Ico 0 1, eprime t ≤ 3 * gamma * t ^ 2 + defect
+B : ℝ → ℝ := fun t => e0 + gamma * t ^ 3 + defect * t
+t : ℝ
+⊢ 3 * gamma * t ^ 2 + defect = 0 + (0 * (id ^ 3) t + gamma * (↑3 * id t ^ (3 - 1) * 1) + (0 * id t + defect * 1))
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/ExistingEnergyCore.lean:429:36: error: `ring_nf` made no progress on the goal

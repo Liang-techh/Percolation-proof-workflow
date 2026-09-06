@@ -1,0 +1,24 @@
+{
+  "snapshots": {
+    "audit.py": "63170d78711f0f559c908c76be7f054a947744a416947b6117688ba09b52a890",
+    "verify.py": "0ec367a632b8da0f8beaf35c30526e3897b6be6e0a39b4bec54d45d5889ba7dc",
+    "PLAN.md": "25f84da7cbe853e885e820c52b97ffa38553327490bbdc0f75dcfa13a489aaca",
+    "inputs/candidate.json": "139f4977bcdea68d42bf811e35412fd540a6d6b1d4c84cbe997298b82c8cf071",
+    "inputs/candidate_receipt.json": "16406e46c5666f4adf73a6f0c4c41d4ed993bd09e44031f8be0316c0d0fce07f",
+    "inputs/reference.json": "26ca4f2d80e1237e3d3e87a6a9f11c62abe9304cfe006409ef225a682dff5dc9",
+    "inputs/mass.csv": "a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8",
+    "inputs/potential.csv": "4ebbb10e32639f54b18f259cbb762c04f2be842a856cae85e1fe94dad5478b6c",
+    "inputs/storage_derivation.md": "51a9fbccfdc5dc037470211cfaa01dc0f167e8b2e11b807b93d71f166013149f"
+  },
+  "originals": {
+    "audit.py": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_storage_origin_gate\\audit.py",
+    "verify.py": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_storage_origin_gate\\verify.py",
+    "PLAN.md": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_storage_origin_gate\\PLAN.md",
+    "inputs/candidate.json": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_storage_design\\output\\lp-20260905T210840Z-ac3429b0\\lp_candidate_evidence.json",
+    "inputs/candidate_receipt.json": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_storage_design\\output\\lp-20260905T210840Z-ac3429b0\\receipt.json",
+    "inputs/reference.json": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_storage_design\\output\\lp-20260905T210840Z-ac3429b0\\inputs\\reference.json",
+    "inputs/mass.csv": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_storage_design\\output\\lp-20260905T210840Z-ac3429b0\\inputs\\mass.csv",
+    "inputs/potential.csv": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_storage_design\\output\\lp-20260905T210840Z-ac3429b0\\inputs\\potential.csv",
+    "inputs/storage_derivation.md": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_universal_multiplier\\DERIVATION.md"
+  }
+}

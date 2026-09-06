@@ -1,0 +1,10 @@
+{
+  "kind": "tool_result_transcription",
+  "chunk_id": "593c0c",
+  "exit_code": 1,
+  "error": "ValueError: Exceeds the limit (4300 digits) for integer string conversion",
+  "stage": "serializing an exact rational matrix error bound",
+  "snapshot": "attempt-01-source.py",
+  "mathematical_result": "none; no endpoint inequality had been checked",
+  "repair": "Bound denominator growth by rational-grid rounding with explicitly charged operator error; no floating approximation or disabled safety limit."
+}

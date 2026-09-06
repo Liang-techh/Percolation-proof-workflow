@@ -1,0 +1,62 @@
+START_UTC=2026-09-05T22:53:38Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_fourier_gradient_lean/output/run-Mbe3PPF3:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SNAPSHOT_COMPLETE=true
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_fourier_gradient_lean/output/run-Mbe3PPF3/FourierGradient.lean:62:2: error: Type mismatch
+  h
+has type
+  HasDerivAt (fun t => ∑ k, ↑(frequency row k) * lineValue q j t k) (∑ k, if k = j then ↑(frequency row j) else 0) (q j)
+but is expected to have type
+  HasDerivAt (fun t => ∑ k, ↑(frequency row k) * lineValue q j t k) (↑(frequency row j)) (q j)
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_fourier_gradient_lean/output/run-Mbe3PPF3/FourierGradient.lean:78:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  phaseLine ?frequency ?row ?q ?j (?q ?j)
+in the target expression
+  Semiring.toModule = (NormedAlgebra.toNormedSpace ℝ).toModule
+
+case e'_5
+r n : ℕ
+coefficient : Fin r → ℝ
+frequency : Fin r → Fin n → ℤ
+row : Fin r
+q : Vec n
+j : Fin n
+hphase : HasDerivAt (phaseLine frequency row q j) (↑(frequency row j)) (q j)
+hrow :
+  HasDerivAt (fun x => Real.cos (phaseLine frequency row q j x))
+    (-Real.sin (phaseLine frequency row q j (q j)) * ↑(frequency row j)) (q j)
+hconst :
+  HasDerivAt (fun y => coefficient row * Real.cos (phaseLine frequency row q j y))
+    (coefficient row * (-Real.sin (phaseLine frequency row q j (q j)) * ↑(frequency row j))) (q j)
+e_4✝ : Real.instAddCommGroup = Real.normedCommRing.toAddCommGroup
+⊢ Semiring.toModule = (NormedAlgebra.toNormedSpace ℝ).toModule
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_fourier_gradient_lean/output/run-Mbe3PPF3/FourierGradient.lean:72:51: error: unsolved goals
+case e'_9
+r n : ℕ
+coefficient : Fin r → ℝ
+frequency : Fin r → Fin n → ℤ
+row : Fin r
+q : Vec n
+j : Fin n
+hphase : HasDerivAt (phaseLine frequency row q j) (↑(frequency row j)) (q j)
+hrow :
+  HasDerivAt (fun x => Real.cos (phaseLine frequency row q j x))
+    (-Real.sin (phaseLine frequency row q j (q j)) * ↑(frequency row j)) (q j)
+hconst :
+  HasDerivAt (fun y => coefficient row * Real.cos (phaseLine frequency row q j y))
+    (coefficient row * (-Real.sin (phaseLine frequency row q j (q j)) * ↑(frequency row j))) (q j)
+⊢ -coefficient row * ↑(frequency row j) * Real.sin (phase frequency row q) =
+    coefficient row * (-Real.sin (phaseLine frequency row q j (q j)) * ↑(frequency row j))
+'RouteBFourierGradient.phaseLine_at' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFourierGradient.hasDerivAt_phaseLine' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBFourierGradient.hasDerivAt_fourier_row' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBFourierGradient.hasDerivAt_fourierPotential_coordinate' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBFourierGradient.deployed_gradient_of_functional_identity' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+FourierGradient_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

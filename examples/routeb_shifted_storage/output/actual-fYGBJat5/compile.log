@@ -1,0 +1,275 @@
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_shifted_storage/output/actual-fYGBJat5/ActualShift.lean:19:63: error: unsolved goals
+q : Fin 6 → ℝ
+⊢ ↑((![{ frequency := ![0, -1, -1, -1, -1, 0], realNum := 20601, realDen := 3200000, imagNum := 0, imagDen := 1 },
+                  { frequency := ![0, -1, -1, -1, 1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                    imagDen := 1 },
+                  { frequency := ![0, -1, -1, 0, -1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                    imagDen := 1 },
+                  { frequency := ![0, -1, -1, 0, 0, 0], realNum := 242307, realDen := 400000, imagNum := 0,
+                    imagDen := 1 },
+                  { frequency := ![0, -1, -1, 0, 1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                    imagDen := 1 },
+                  { frequency := ![0, -1, -1, 1, -1, 0], realNum := 20601, realDen := 3200000, imagNum := 0,
+                    imagDen := 1 },
+                  { frequency := ![0, -1, -1, 1, 1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                    imagDen := 1 },
+                  { frequency := ![0, -1, 0, 0, 0, 0], realNum := 762237, realDen := 400000, imagNum := 0,
+                    imagDen := 1 },
+                  { frequency := ![0, 0, 0, 0, 0, 0], realNum := 10791, realDen := 4000, imagNum := 0, imagDen := 1 },
+                  { frequency := ![0, 1, 0, 0, 0, 0], realNum := 762237, realDen := 400000, imagNum := 0,
+                    imagDen := 1 },
+                  { frequency := ![0, 1, 1, -1, -1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                    imagDen := 1 },
+                  { frequency := ![0, 1, 1, -1, 1, 0], realNum := 20601, realDen := 3200000, imagNum := 0,
+                    imagDen := 1 },
+                  { frequency := ![0, 1, 1, 0, -1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                    imagDen := 1 },
+                  { frequency := ![0, 1, 1, 0, 0, 0], realNum := 242307, realDen := 400000, imagNum := 0,
+                    imagDen := 1 },
+                  { frequency := ![0, 1, 1, 0, 1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                    imagDen := 1 },
+                  { frequency := ![0, 1, 1, 1, -1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                    imagDen := 1 },
+                  { frequency := ![0, 1, 1, 1, 1, 0], realNum := 20601, realDen := 3200000, imagNum := 0,
+                    imagDen := 1 }]
+                8).frequency
+            0) *
+        q 0 +
+      (↑((![{ frequency := ![0, -1, -1, -1, -1, 0], realNum := 20601, realDen := 3200000, imagNum := 0, imagDen := 1 },
+                    { frequency := ![0, -1, -1, -1, 1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                      imagDen := 1 },
+                    { frequency := ![0, -1, -1, 0, -1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                      imagDen := 1 },
+                    { frequency := ![0, -1, -1, 0, 0, 0], realNum := 242307, realDen := 400000, imagNum := 0,
+                      imagDen := 1 },
+                    { frequency := ![0, -1, -1, 0, 1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                      imagDen := 1 },
+                    { frequency := ![0, -1, -1, 1, -1, 0], realNum := 20601, realDen := 3200000, imagNum := 0,
+                      imagDen := 1 },
+                    { frequency := ![0, -1, -1, 1, 1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                      imagDen := 1 },
+                    { frequency := ![0, -1, 0, 0, 0, 0], realNum := 762237, realDen := 400000, imagNum := 0,
+                      imagDen := 1 },
+                    { frequency := ![0, 0, 0, 0, 0, 0], realNum := 10791, realDen := 4000, imagNum := 0, imagDen := 1 },
+                    { frequency := ![0, 1, 0, 0, 0, 0], realNum := 762237, realDen := 400000, imagNum := 0,
+                      imagDen := 1 },
+                    { frequency := ![0, 1, 1, -1, -1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                      imagDen := 1 },
+                    { frequency := ![0, 1, 1, -1, 1, 0], realNum := 20601, realDen := 3200000, imagNum := 0,
+                      imagDen := 1 },
+                    { frequency := ![0, 1, 1, 0, -1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                      imagDen := 1 },
+                    { frequency := ![0, 1, 1, 0, 0, 0], realNum := 242307, realDen := 400000, imagNum := 0,
+                      imagDen := 1 },
+                    { frequency := ![0, 1, 1, 0, 1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                      imagDen := 1 },
+                    { frequency := ![0, 1, 1, 1, -1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                      imagDen := 1 },
+                    { frequency := ![0, 1, 1, 1, 1, 0], realNum := 20601, realDen := 3200000, imagNum := 0,
+                      imagDen := 1 }]
+                  8).frequency
+              1) *
+          q 1 +
+        (↑((![{ frequency := ![0, -1, -1, -1, -1, 0], realNum := 20601, realDen := 3200000, imagNum := 0,
+                        imagDen := 1 },
+                      { frequency := ![0, -1, -1, -1, 1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                        imagDen := 1 },
+                      { frequency := ![0, -1, -1, 0, -1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                        imagDen := 1 },
+                      { frequency := ![0, -1, -1, 0, 0, 0], realNum := 242307, realDen := 400000, imagNum := 0,
+                        imagDen := 1 },
+                      { frequency := ![0, -1, -1, 0, 1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                        imagDen := 1 },
+                      { frequency := ![0, -1, -1, 1, -1, 0], realNum := 20601, realDen := 3200000, imagNum := 0,
+                        imagDen := 1 },
+                      { frequency := ![0, -1, -1, 1, 1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                        imagDen := 1 },
+                      { frequency := ![0, -1, 0, 0, 0, 0], realNum := 762237, realDen := 400000, imagNum := 0,
+                        imagDen := 1 },
+                      { frequency := ![0, 0, 0, 0, 0, 0], realNum := 10791, realDen := 4000, imagNum := 0,
+                        imagDen := 1 },
+                      { frequency := ![0, 1, 0, 0, 0, 0], realNum := 762237, realDen := 400000, imagNum := 0,
+                        imagDen := 1 },
+                      { frequency := ![0, 1, 1, -1, -1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                        imagDen := 1 },
+                      { frequency := ![0, 1, 1, -1, 1, 0], realNum := 20601, realDen := 3200000, imagNum := 0,
+                        imagDen := 1 },
+                      { frequency := ![0, 1, 1, 0, -1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                        imagDen := 1 },
+                      { frequency := ![0, 1, 1, 0, 0, 0], realNum := 242307, realDen := 400000, imagNum := 0,
+                        imagDen := 1 },
+                      { frequency := ![0, 1, 1, 0, 1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                        imagDen := 1 },
+                      { frequency := ![0, 1, 1, 1, -1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                        imagDen := 1 },
+                      { frequency := ![0, 1, 1, 1, 1, 0], realNum := 20601, realDen := 3200000, imagNum := 0,
+                        imagDen := 1 }]
+                    8).frequency
+                2) *
+            q 2 +
+          (↑((![{ frequency := ![0, -1, -1, -1, -1, 0], realNum := 20601, realDen := 3200000, imagNum := 0,
+                          imagDen := 1 },
+                        { frequency := ![0, -1, -1, -1, 1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                          imagDen := 1 },
+                        { frequency := ![0, -1, -1, 0, -1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                          imagDen := 1 },
+                        { frequency := ![0, -1, -1, 0, 0, 0], realNum := 242307, realDen := 400000, imagNum := 0,
+                          imagDen := 1 },
+                        { frequency := ![0, -1, -1, 0, 1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                          imagDen := 1 },
+                        { frequency := ![0, -1, -1, 1, -1, 0], realNum := 20601, realDen := 3200000, imagNum := 0,
+                          imagDen := 1 },
+                        { frequency := ![0, -1, -1, 1, 1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                          imagDen := 1 },
+                        { frequency := ![0, -1, 0, 0, 0, 0], realNum := 762237, realDen := 400000, imagNum := 0,
+                          imagDen := 1 },
+                        { frequency := ![0, 0, 0, 0, 0, 0], realNum := 10791, realDen := 4000, imagNum := 0,
+                          imagDen := 1 },
+                        { frequency := ![0, 1, 0, 0, 0, 0], realNum := 762237, realDen := 400000, imagNum := 0,
+                          imagDen := 1 },
+                        { frequency := ![0, 1, 1, -1, -1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                          imagDen := 1 },
+                        { frequency := ![0, 1, 1, -1, 1, 0], realNum := 20601, realDen := 3200000, imagNum := 0,
+                          imagDen := 1 },
+                        { frequency := ![0, 1, 1, 0, -1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                          imagDen := 1 },
+                        { frequency := ![0, 1, 1, 0, 0, 0], realNum := 242307, realDen := 400000, imagNum := 0,
+                          imagDen := 1 },
+                        { frequency := ![0, 1, 1, 0, 1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                          imagDen := 1 },
+                        { frequency := ![0, 1, 1, 1, -1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                          imagDen := 1 },
+                        { frequency := ![0, 1, 1, 1, 1, 0], realNum := 20601, realDen := 3200000, imagNum := 0,
+                          imagDen := 1 }]
+                      8).frequency
+                  (Fin.succ 2)) *
+              q (Fin.succ 2) +
+            (↑((![{ frequency := ![0, -1, -1, -1, -1, 0], realNum := 20601, realDen := 3200000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, -1, -1, -1, 1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, -1, -1, 0, -1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, -1, -1, 0, 0, 0], realNum := 242307, realDen := 400000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, -1, -1, 0, 1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, -1, -1, 1, -1, 0], realNum := 20601, realDen := 3200000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, -1, -1, 1, 1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, -1, 0, 0, 0, 0], realNum := 762237, realDen := 400000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, 0, 0, 0, 0, 0], realNum := 10791, realDen := 4000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, 1, 0, 0, 0, 0], realNum := 762237, realDen := 400000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, 1, 1, -1, -1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, 1, 1, -1, 1, 0], realNum := 20601, realDen := 3200000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, 1, 1, 0, -1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, 1, 1, 0, 0, 0], realNum := 242307, realDen := 400000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, 1, 1, 0, 1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, 1, 1, 1, -1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, 1, 1, 1, 1, 0], realNum := 20601, realDen := 3200000, imagNum := 0,
+                            imagDen := 1 }]
+                        8).frequency
+                    (Fin.succ 2).succ) *
+                q (Fin.succ 2).succ +
+              ↑((![{ frequency := ![0, -1, -1, -1, -1, 0], realNum := 20601, realDen := 3200000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, -1, -1, -1, 1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, -1, -1, 0, -1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, -1, -1, 0, 0, 0], realNum := 242307, realDen := 400000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, -1, -1, 0, 1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, -1, -1, 1, -1, 0], realNum := 20601, realDen := 3200000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, -1, -1, 1, 1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, -1, 0, 0, 0, 0], realNum := 762237, realDen := 400000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, 0, 0, 0, 0, 0], realNum := 10791, realDen := 4000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, 1, 0, 0, 0, 0], realNum := 762237, realDen := 400000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, 1, 1, -1, -1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, 1, 1, -1, 1, 0], realNum := 20601, realDen := 3200000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, 1, 1, 0, -1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, 1, 1, 0, 0, 0], realNum := 242307, realDen := 400000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, 1, 1, 0, 1, 0], realNum := 20601, realDen := 1600000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, 1, 1, 1, -1, 0], realNum := -20601, realDen := 3200000, imagNum := 0,
+                            imagDen := 1 },
+                          { frequency := ![0, 1, 1, 1, 1, 0], realNum := 20601, realDen := 3200000, imagNum := 0,
+                            imagDen := 1 }]
+                        8).frequency
+                    (Fin.succ 2).succ.succ) *
+                q (Fin.succ 2).succ.succ)))) =
+    0
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_shifted_storage/output/actual-fYGBJat5/ActualShift.lean:55:65: error: unsolved goals
+⊢ 2 *
+      (max (if 0 = 8 then 0 else 20601 / 3200000) 0 +
+        (max (if 1 = 8 then 0 else -(20601 / 3200000)) 0 +
+          (max (if 2 = 8 then 0 else 20601 / 1600000) 0 +
+            (max (if Fin.succ 2 = 8 then 0 else 242307 / 400000) 0 +
+              (max (if (Fin.succ 2).succ = 8 then 0 else 20601 / 1600000) 0 +
+                (max (if (Fin.succ 2).succ.succ = 8 then 0 else 20601 / 3200000) 0 +
+                  (max (if (Fin.succ 2).succ.succ.succ = 8 then 0 else -(20601 / 3200000)) 0 +
+                    (max (if (Fin.succ 2).succ.succ.succ.succ = 8 then 0 else 762237 / 400000) 0 +
+                      (max (if (Fin.succ 2).succ.succ.succ.succ.succ = 8 then 0 else 10791 / 4000) 0 +
+                        (max (if (Fin.succ 2).succ.succ.succ.succ.succ.succ = 8 then 0 else 762237 / 400000) 0 +
+                          (max (if (Fin.succ 2).succ.succ.succ.succ.succ.succ.succ = 8 then 0 else -(20601 / 3200000))
+                              0 +
+                            (max
+                                (if (Fin.succ 2).succ.succ.succ.succ.succ.succ.succ.succ = 8 then 0
+                                else 20601 / 3200000)
+                                0 +
+                              (max
+                                  (if (Fin.succ 2).succ.succ.succ.succ.succ.succ.succ.succ.succ = 8 then 0
+                                  else 20601 / 1600000)
+                                  0 +
+                                (max
+                                    (if (Fin.succ 2).succ.succ.succ.succ.succ.succ.succ.succ.succ.succ = 8 then 0
+                                    else 242307 / 400000)
+                                    0 +
+                                  (max
+                                      (if (Fin.succ 2).succ.succ.succ.succ.succ.succ.succ.succ.succ.succ.succ = 8 then 0
+                                      else 20601 / 1600000)
+                                      0 +
+                                    (max
+                                        (if
+                                            (Fin.succ 2).succ.succ.succ.succ.succ.succ.succ.succ.succ.succ.succ.succ =
+                                              8 then
+                                          0
+                                        else -(20601 / 3200000))
+                                        0 +
+                                      max
+                                        (if
+                                            (Fin.succ
+                                                                          2).succ.succ.succ.succ.succ.succ.succ.succ.succ.succ.succ.succ.succ =
+                                              8 then
+                                          0
+                                        else 20601 / 3200000)
+                                        0)))))))))))))))) =
+    4079979 / 400000
+'RouteBActualShift.constant_row_phase' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBActualShift.potential_zero_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualShift.actual_W_eq_storage' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBActualShift.actual_shift_exact' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBActualShift.actualKp_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualShift.actual_shifted_storage_chain' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBActualShift.actual_W_shifted_coercivity' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBActualShift.actual_p45_bound' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]

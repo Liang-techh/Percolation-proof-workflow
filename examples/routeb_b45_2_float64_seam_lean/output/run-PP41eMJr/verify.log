@@ -1,0 +1,26 @@
+Output: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_2_float64_seam_lean/output/run-PP41eMJr
+UTC: 2026-09-06T06:57:43Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+Mathlib commit: 0df444a360eaa60ab8c11dca51a86af692955474
+Input SHA256:
+110b03541f571fadb38d878c6642996857bf1d0933724ae73fb8e25f2d5b4bd7  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_2_float64_seam_lean/Float64Seam.lean
+3aac669c7a910ec2389f4e4f921b605adf6ebf2d1e0c9b9cd0be4d33f3f5db71  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_2_float64_seam_lean/lean-toolchain
+6c4cf41f76be0f7a25f18dcc6fe30cc4f1a55aedb85a19bf1848af74b3b9256f  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_2_float64_seam_lean/verify.sh
+Command: /home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -DwarningAsError=true --root=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_2_float64_seam_lean -o /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_2_float64_seam_lean/output/run-PP41eMJr/Float64Seam.olean /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_2_float64_seam_lean/Float64Seam.lean
+'RouteBB45Float64Seam.h_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45Float64Seam.mu_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45Float64Seam.regularizer_value' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45Float64Seam.ieee64UnitRoundoff_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45Float64Seam.ieee64_round_abs_enclosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45Float64Seam.ieee64_step_abs_enclosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45Float64Seam.potential_value_enclosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45Float64Seam.gradient_float64_enclosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45Float64Seam.gradient_float64_step_enclosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45Float64Seam.gradient_ieee64_sample_enclosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45Float64Seam.c_contract_error_enclosure' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45Float64Seam.total_defect_decomposition' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45Float64Seam.weighted_force_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBB45Float64Seam.exact_plus_runtime_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+7b3cdcb041bd84f007e01d3bbb796d68c5fe5e5c47e8a811cb74851ea4d7ddcb  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_2_float64_seam_lean/output/run-PP41eMJr/Float64Seam.olean
+60ef3ac567484801863e7f3c45219b0f73a61546188e3618324764bfccb9bafd  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_b45_2_float64_seam_lean/output/run-PP41eMJr/compile.log
+PASS: targeted seam compilation; 14 reports; no proof holes; no comparator/state/registry input.

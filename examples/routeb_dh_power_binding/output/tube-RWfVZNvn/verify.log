@@ -1,0 +1,13 @@
+Run: /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/output/tube-RWfVZNvn
+UTC: 2026-09-05T17:42:41Z
+15a8e8ceb17131c32ceb02f4982d71807681d812d22de9f0b2fa206be346db5d  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/output/run-5RHBCcg9/DHPowerBinding.olean
+438b27034753470dfdda0f3125a6e3d952f7b97466971a5039679435188272fc  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/../routeb_christoffel_power/output/run-YC2fOLUR/ChristoffelPower.olean
+3704dbac2939b9a0fa9520f04204611424dec2ca5cd5897804e24786a2ee92c5  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/StorageObstruction.lean
+'RouteBStorageObstruction.cos_upper_on_unit' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBStorageObstruction.slice_energy_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBStorageObstruction.slice_energy_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBStorageObstruction.rational_configuration_negative' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBStorageObstruction.no_nonnegative_storage_of_slice' depends on axioms: [propext, Classical.choice, Quot.sound]
+StorageObstruction_COMPILE_EXIT_CODE=0
+194552363c4a553af85ac267c70c63e3cd512cfe4cf8819ddd70eb778f7f675b  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_dh_power_binding/output/tube-RWfVZNvn/StorageObstruction.olean
+LEAN_COMPILE_EXIT_CODE=0

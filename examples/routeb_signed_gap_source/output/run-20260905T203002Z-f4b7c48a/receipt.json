@@ -1,0 +1,36 @@
+{
+  "exit_code": 0,
+  "input_and_code_unchanged": {
+    "audit.py": true,
+    "verify.py": true,
+    "inputs/inertial_audit.py": true,
+    "inputs/gain_audit.py": true,
+    "inputs/coupled_audit.py": true,
+    "inputs/coupled_DERIVATION.md": true,
+    "inputs/reference.json": true,
+    "inputs/prefix_audit.py": true,
+    "inputs/prefix_DERIVATION.md": true,
+    "inputs/prefix_results.json": true,
+    "inputs/SIGNED_WORK.md": true,
+    "inputs/strategy_REPORT.md": true,
+    "inputs/routeB_fourier_mass_full_rational.csv": true,
+    "inputs/routeB_fourier_coriolis_rational.csv": true,
+    "inputs/routeB_fourier_potential_rational.csv": true,
+    "inputs/dhport_lib.jl": true,
+    "inputs/routeB_fourier_rational_probe.py": true
+  },
+  "output_sha256": {
+    "audit_results.json": "4d698be590246562d004481f06b4769b136bfce03df7ab309cb870eb4b6b6d47",
+    "before_run.json": "9a441908dd0d3c462c0bc06cd1ad11a749622b814d85b8c6d2a510d2f6537e71",
+    "christoffel_full.csv": "2a3004c1459c28a5e93a243d47d22ab4f18c115aeaf72cf436336a7b6c0abdd3",
+    "endpoint_bounds.json": "5980ddc29853c463293d7d6a067992c5368b39763f192aff9ff6cbdbba82f119",
+    "functionals.json": "6f740cd6e218d06238f45f22986dc67d2fda20e3113060d9114c1323c66285e5",
+    "nominal_J_functional_bounds.json": "0ecfe3b13006d105ed1f67e0b24ffcfb26af26e7c305342ef1e21f94043e6d59",
+    "power_coefficients.json": "19d02c8cb9625323b23039560cdd4d0c4df896291b2242b1188b59d08fdaa09a",
+    "r0_fourier_coefficients.json": "ae8b7138fab06569e4c45cc9075fbf4e3f30d68259ead14fc4700c04deb985be",
+    "Sgap_fourier_coefficients.json": "e29af7010510233b1bceac618c99b7d25a50e81e2c9c593c297d41698af2f639",
+    "signed_square_decomposition.json": "a0b4b03315630e94ebf875a2b70f19cecd66d2b0467d710d23d49b9e2c0813db",
+    "terminal.log": "3fb34d598348143bb1c04269869508d66783a10d183cc2b6e0aa1a552bc9c2e4"
+  },
+  "finished_utc": "2026-09-05T20:30:07.840021+00:00"
+}

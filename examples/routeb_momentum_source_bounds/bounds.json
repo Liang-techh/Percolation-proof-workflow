@@ -1,0 +1,278 @@
+{
+  "evidence": "EXACT_RATIONAL_CONDITIONAL_COEFFICIENT_BOUNDS",
+  "box_invariance_proved": false,
+  "full_initial_ball_contained": true,
+  "initial_containment_reason": "Every |qi|,|vi|<=3/20 and |v2+v3|<=3/10; candidate caps are larger. Remaining coordinate/joint domains are not proved.",
+  "block_position_caps": [
+    "2/5",
+    "2/5"
+  ],
+  "variables": [
+    "v1",
+    "v2",
+    "v2+v3",
+    "v4",
+    "v5",
+    "v6"
+  ],
+  "velocity_caps": [
+    "3/5",
+    "5/2",
+    "2",
+    "4/5",
+    "4/5",
+    "2/5"
+  ],
+  "remote_angles": "unrestricted in coefficient bound",
+  "sigma_caps": [
+    "11730139/150000000",
+    "2361653/20000000"
+  ],
+  "T_caps": [
+    "52039753/600000000",
+    "20197663/400000000"
+  ],
+  "analytic_h_caps_excluding_implementation": [
+    "56983993/600000000",
+    "40798663/400000000"
+  ],
+  "naive_T_caps": [
+    "527021987/2400000000",
+    "172514789/1200000000"
+  ],
+  "coefficient_ledger": {
+    "4": [
+      {
+        "variables": [
+          0,
+          0
+        ],
+        "coefficient_bound": "15939/8000000",
+        "contribution": "143451/200000000"
+      },
+      {
+        "variables": [
+          0,
+          1
+        ],
+        "coefficient_bound": "441/500000",
+        "contribution": "1323/1000000"
+      },
+      {
+        "variables": [
+          0,
+          2
+        ],
+        "coefficient_bound": "903/800000",
+        "contribution": "2709/2000000"
+      },
+      {
+        "variables": [
+          0,
+          3
+        ],
+        "coefficient_bound": "1701/800000",
+        "contribution": "5103/5000000"
+      },
+      {
+        "variables": [
+          0,
+          4
+        ],
+        "coefficient_bound": "42163/800000",
+        "contribution": "126489/5000000"
+      },
+      {
+        "variables": [
+          0,
+          5
+        ],
+        "coefficient_bound": "1/75",
+        "contribution": "2/625"
+      },
+      {
+        "variables": [
+          1,
+          2
+        ],
+        "coefficient_bound": "441/500000",
+        "contribution": "441/100000"
+      },
+      {
+        "variables": [
+          1,
+          3
+        ],
+        "coefficient_bound": "441/500000",
+        "contribution": "441/250000"
+      },
+      {
+        "variables": [
+          1,
+          4
+        ],
+        "coefficient_bound": "441/500000",
+        "contribution": "441/250000"
+      },
+      {
+        "variables": [
+          2,
+          2
+        ],
+        "coefficient_bound": "147/1600000",
+        "contribution": "147/400000"
+      },
+      {
+        "variables": [
+          2,
+          3
+        ],
+        "coefficient_bound": "3633/4000000",
+        "contribution": "3633/2500000"
+      },
+      {
+        "variables": [
+          2,
+          4
+        ],
+        "coefficient_bound": "41743/2000000",
+        "contribution": "41743/1250000"
+      },
+      {
+        "variables": [
+          2,
+          5
+        ],
+        "coefficient_bound": "1/75",
+        "contribution": "4/375"
+      }
+    ],
+    "5": [
+      {
+        "variables": [
+          0,
+          0
+        ],
+        "coefficient_bound": "16107/3200000",
+        "contribution": "144963/80000000"
+      },
+      {
+        "variables": [
+          0,
+          1
+        ],
+        "coefficient_bound": "441/500000",
+        "contribution": "1323/1000000"
+      },
+      {
+        "variables": [
+          0,
+          2
+        ],
+        "coefficient_bound": "1533/1000000",
+        "contribution": "4599/2500000"
+      },
+      {
+        "variables": [
+          0,
+          3
+        ],
+        "coefficient_bound": "231/80000",
+        "contribution": "693/500000"
+      },
+      {
+        "variables": [
+          0,
+          4
+        ],
+        "coefficient_bound": "4767/2000000",
+        "contribution": "14301/12500000"
+      },
+      {
+        "variables": [
+          0,
+          5
+        ],
+        "coefficient_bound": "1/30",
+        "contribution": "1/125"
+      },
+      {
+        "variables": [
+          1,
+          2
+        ],
+        "coefficient_bound": "441/200000",
+        "contribution": "441/40000"
+      },
+      {
+        "variables": [
+          1,
+          3
+        ],
+        "coefficient_bound": "441/500000",
+        "contribution": "441/250000"
+      },
+      {
+        "variables": [
+          1,
+          4
+        ],
+        "coefficient_bound": "441/200000",
+        "contribution": "441/100000"
+      },
+      {
+        "variables": [
+          2,
+          2
+        ],
+        "coefficient_bound": "2037/4000000",
+        "contribution": "2037/1000000"
+      },
+      {
+        "variables": [
+          2,
+          3
+        ],
+        "coefficient_bound": "2037/2000000",
+        "contribution": "2037/1250000"
+      },
+      {
+        "variables": [
+          2,
+          4
+        ],
+        "coefficient_bound": "399/500000",
+        "contribution": "399/312500"
+      },
+      {
+        "variables": [
+          2,
+          5
+        ],
+        "coefficient_bound": "1/75",
+        "contribution": "4/375"
+      },
+      {
+        "variables": [
+          3,
+          3
+        ],
+        "coefficient_bound": "147/2000000",
+        "contribution": "147/3125000"
+      },
+      {
+        "variables": [
+          3,
+          5
+        ],
+        "coefficient_bound": "1/150",
+        "contribution": "4/1875"
+      }
+    ]
+  },
+  "full_target_or_total_R_proved": false,
+  "Lean_verified": false,
+  "gravity_constant_g0": "zero for ideal encoded potential; computed G0 and all implementation errors remain separate",
+  "source_audit_sha256": "c5e41d568ee0dbf4d133cde36e94c8bf911fe09783a296b333fc19402c6d04a1",
+  "script_sha256": "9bad9fe5f79f011ffa81cf1cd878ddc74429fed54dceae3a8d35de41dc0c9b84"
+}

@@ -1,0 +1,46 @@
+START_UTC=2026-09-05T21:05:19Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-VnGuiXhy:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-VnGuiXhy/cache:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+PRE_RUN_SNAPSHOTS_COMPLETE
+{
+  "status": "EXACT_SOURCE_LITERAL_AUDIT_PASSED",
+  "M0_row_abs_sums": [
+    "1887427/2000000",
+    "11224907/12000000",
+    "7144697/12000000",
+    "250001/1000000",
+    "615649/4000000",
+    "50001/1000000"
+  ],
+  "I_minus_M0_diagonal_slacks": [
+    "112573/2000000",
+    "775093/12000000",
+    "4855303/12000000",
+    "749999/1000000",
+    "3384351/4000000",
+    "949999/1000000"
+  ],
+  "mass_csv_rows": 610,
+  "potential_csv_rows": 17,
+  "mass_regularizer": "1/1000000 (explicit intended-real reference convention)",
+  "lean_M0_and_H0_equal_reference_and_CSV": true,
+  "initial_signed_gap_lower_bound": "-3/10000: EXPLICIT UNPROVED AUDIT PREMISE",
+  "physical_DH_Float64_source_identification": "UNPROVED",
+  "reference_sha256": "26ca4f2d80e1237e3d3e87a6a9f11c62abe9304cfe006409ef225a682dff5dc9"
+}
+COMMAND=/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -DwarningAsError=true --root=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-VnGuiXhy -o /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-VnGuiXhy/ReferenceMass.olean /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-VnGuiXhy/ReferenceMass.lean
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-VnGuiXhy/ReferenceMass.lean:66:2: error: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-VnGuiXhy/ReferenceMass.lean:99:2: error: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+'RouteBActualEnergyStorage.rowAbs_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualEnergyStorage.M0_dsos_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualEnergyStorage.M0_le_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualEnergyStorage.kinetic_M0_upper' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualEnergyStorage.reference_remainder' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualEnergyStorage.referenceR_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+ReferenceMass_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

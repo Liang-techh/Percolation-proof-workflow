@@ -1,0 +1,12 @@
+PRE_RUN_SNAPSHOTS_COMPLETE
+EXACT_COUPLED_NOMINAL_REFERENCE_PASS
+rows mass/potential: 610 17
+inverse products: 72; nominal balance: 78; residual identity: 26 exact scalar checks
+LDL positive pivots: 2355503/3000000 8222188493683/14133018000000 486660216971315639/4111094246841500000 986412200017985629911/9931841162679911000000 428099586394814461633182597/10740932844640287970142000000 6116145213293458385672593132597/428099586394814461633182597000000
+H0: [['0', '0', '0', '0', '0', '0'], ['0', '-2029689/400000', '-101043/80000', '0', '-20601/400000', '0'], ['0', '-101043/80000', '-101043/80000', '0', '-20601/400000', '0'], ['0', '0', '0', '0', '0', '0'], ['0', '-20601/400000', '-20601/400000', '0', '-20601/400000', '0'], ['0', '0', '0', '0', '0', '0']]
+negative stiffness witness e2: -1709689/400000
+remote residual support: [['q1', 'q2', 'q3', 'q6', 'v1', 'v2', 'v3', 'v6'], ['q1', 'q2', 'q3', 'q6', 'v1', 'v2', 'v3', 'v6']]
+nonzero residual entries: [13, 13] ; cost cross terms: 78
+earlier saved coefficients: EXACT_M0_AND_H0_MATCH
+
+AUDIT_EXIT_CODE=0

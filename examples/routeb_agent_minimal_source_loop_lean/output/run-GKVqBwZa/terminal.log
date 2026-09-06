@@ -1,0 +1,8 @@
+'RouteBMinimalSourceLoop.julia_mass_matrix_is_finite_body_sum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBMinimalSourceLoop.julia_mass_matrix_eq_generic_massFromLinks' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBMinimalSourceLoop.cutoff_is_zero_above_cutoff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBMinimalSourceLoop.rotated_isotropic_is_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]

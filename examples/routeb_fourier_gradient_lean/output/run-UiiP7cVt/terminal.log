@@ -1,0 +1,29 @@
+START_UTC=2026-09-05T22:52:11Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_fourier_gradient_lean/output/run-UiiP7cVt:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SNAPSHOT_COMPLETE=true
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_fourier_gradient_lean/output/run-UiiP7cVt/FourierGradient.lean:58:2: error: Type mismatch: After simplification, term
+  h
+ has type
+  @HasDerivAt ℝ DenselyNormedField.toNontriviallyNormedField ℝ Real.instAddCommGroup Semiring.toModule
+    PseudoMetricSpace.toUniformSpace.toTopologicalSpace ⋯ (fun t => ∑ k, ↑(frequency row k) * lineValue q j t k)
+    (↑(frequency row j)) (q j)
+but is expected to have type
+  @HasDerivAt ℝ DenselyNormedField.toNontriviallyNormedField ℝ Real.instAddCommGroup Semiring.toModule
+    PseudoMetricSpace.toUniformSpace.toTopologicalSpace ⋯ (phaseLine frequency row q j) (↑(frequency row j)) (q j)
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_fourier_gradient_lean/output/run-UiiP7cVt/FourierGradient.lean:73:29: error: `ring_nf` made no progress on the goal
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_fourier_gradient_lean/output/run-UiiP7cVt/FourierGradient.lean:73:29: error: `ring_nf` made no progress on the goal
+'RouteBFourierGradient.phaseLine_at' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFourierGradient.hasDerivAt_phaseLine' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBFourierGradient.hasDerivAt_fourier_row' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBFourierGradient.hasDerivAt_fourierPotential_coordinate' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBFourierGradient.deployed_gradient_of_functional_identity' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+FourierGradient_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

@@ -1,0 +1,93 @@
+START_UTC=2026-09-06T02:08:18Z
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_prefix_projection_lean/output/run-qZ0JSuPZ:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_rotation_projection_lean/output/run-O33agpqU:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_rotation_prefix_orthogonality_lean/output/run-EZZSgIdS:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_matrix_orthogonality_closure_lean/output/run-w9gDKPMw:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+SOURCE_SNAPSHOT_COMPLETE=true
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_prefix_projection_lean/output/run-qZ0JSuPZ/HomogeneousPrefixProjection.lean:34:47: error: unsolved goals
+i j : RouteBHomogeneousRotationProjection.V3
+⊢ 1 (embed3 i) (embed3 j) = 1 i j
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_prefix_projection_lean/output/run-qZ0JSuPZ/HomogeneousPrefixProjection.lean:36:23: error: This simp argument is unused:
+  embed3
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [rotationBlock]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_prefix_projection_lean/output/run-qZ0JSuPZ/HomogeneousPrefixProjection.lean:42:4: error: Type mismatch: After simplification, term
+  rotationBlock_one
+ has type
+  @Eq RouteBHomogeneousRotationProjection.Mat3 (rotationBlock 1) 1
+but is expected to have type
+  @Eq RouteBHomogeneousRotationProjection.Mat3 (rotationBlock 1) (prefixAt r 0)
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_prefix_projection_lean/output/run-qZ0JSuPZ/HomogeneousPrefixProjection.lean:43:4: error: Type mismatch: After simplification, term
+  homogeneous_rotationBlock (r 0) (p 0)
+ has type
+  rotationBlock (homogeneous (r 0) (p 0)) = r 0
+but is expected to have type
+  rotationBlock (homogeneous (r 0) (p 0)) = prefixAt r 1
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_prefix_projection_lean/output/run-qZ0JSuPZ/HomogeneousPrefixProjection.lean:45:4: error: Type mismatch: After simplification, term
+  homogeneous_rotationBlock_mul (r 0) (r 1) (p 0) (p 1)
+ has type
+  rotationBlock (homogeneous (r 0) (p 0) * homogeneous (r 1) (p 1)) = r 0 * r 1
+but is expected to have type
+  rotationBlock (homogeneous (r 0) (p 0) * homogeneous (r 1) (p 1)) = prefixAt r 2
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_prefix_projection_lean/output/run-qZ0JSuPZ/HomogeneousPrefixProjection.lean:47:4: error: Type mismatch: After simplification, term
+  congrArg (fun F => rotationBlock F) rfl
+ has type
+  True
+but is expected to have type
+  rotationBlock (homogeneous (r 0) (p 0) * homogeneous (r 1) (p 1) * homogeneous (r 2) (p 2)) = prefixAt r 3
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_prefix_projection_lean/output/run-qZ0JSuPZ/HomogeneousPrefixProjection.lean:54:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  rotationBlock (homogeneous ?R ?p * homogeneous ?S ?q)
+in the target expression
+  rotationBlock
+      (homogeneous (r 0) (p 0) * homogeneous (r 1) (p 1) * homogeneous (r 2) (p 2) * homogeneous (r 3) (p 3)) =
+    prefixAt r ⟨4, ⋯⟩
+
+case «4»
+r : Fin 6 → Mat3
+p : Fin 6 → Vec3
+⊢ rotationBlock
+      (homogeneous (r 0) (p 0) * homogeneous (r 1) (p 1) * homogeneous (r 2) (p 2) * homogeneous (r 3) (p 3)) =
+    prefixAt r ⟨4, ⋯⟩
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_prefix_projection_lean/output/run-qZ0JSuPZ/HomogeneousPrefixProjection.lean:58:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  rotationBlock (homogeneous ?R ?p * homogeneous ?S ?q)
+in the target expression
+  rotationBlock
+      (homogeneous (r 0) (p 0) * homogeneous (r 1) (p 1) * homogeneous (r 2) (p 2) * homogeneous (r 3) (p 3) *
+        homogeneous (r 4) (p 4)) =
+    prefixAt r ⟨5, ⋯⟩
+
+case «5»
+r : Fin 6 → Mat3
+p : Fin 6 → Vec3
+⊢ rotationBlock
+      (homogeneous (r 0) (p 0) * homogeneous (r 1) (p 1) * homogeneous (r 2) (p 2) * homogeneous (r 3) (p 3) *
+        homogeneous (r 4) (p 4)) =
+    prefixAt r ⟨5, ⋯⟩
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_homogeneous_prefix_projection_lean/output/run-qZ0JSuPZ/HomogeneousPrefixProjection.lean:63:8: error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  rotationBlock (homogeneous ?R ?p * homogeneous ?S ?q)
+in the target expression
+  rotationBlock
+      (homogeneous (r 0) (p 0) * homogeneous (r 1) (p 1) * homogeneous (r 2) (p 2) * homogeneous (r 3) (p 3) *
+          homogeneous (r 4) (p 4) *
+        homogeneous (r 5) (p 5)) =
+    prefixAt r ⟨6, ⋯⟩
+
+case «6»
+r : Fin 6 → Mat3
+p : Fin 6 → Vec3
+⊢ rotationBlock
+      (homogeneous (r 0) (p 0) * homogeneous (r 1) (p 1) * homogeneous (r 2) (p 2) * homogeneous (r 3) (p 3) *
+          homogeneous (r 4) (p 4) *
+        homogeneous (r 5) (p 5)) =
+    prefixAt r ⟨6, ⋯⟩
+'RouteBHomogeneousPrefixProjection.rotationBlock_one' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+'RouteBHomogeneousPrefixProjection.homogeneousPrefix_rotationBlock_eq' depends on axioms: [propext,
+ sorryAx,
+ Classical.choice,
+ Quot.sound]
+HomogeneousPrefixProjection_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

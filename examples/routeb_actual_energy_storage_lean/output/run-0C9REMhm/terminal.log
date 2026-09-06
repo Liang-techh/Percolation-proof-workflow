@@ -1,0 +1,66 @@
+START_UTC=2026-09-05T21:04:04Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-0C9REMhm:/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-0C9REMhm/cache:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+PRE_RUN_SNAPSHOTS_COMPLETE
+COMMAND=/home/z5242/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean -DwarningAsError=true --root=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-0C9REMhm -o /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-0C9REMhm/ReferenceMass.olean /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-0C9REMhm/ReferenceMass.lean
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-0C9REMhm/ReferenceMass.lean:59:60: error: unsolved goals
+v : Vec 6
+⊢ v 0 * v 1 * (1481 / 40000) + v 0 * v 2 * (103 / 8000) + v 0 * v (Fin.succ 2) * (-7 / 30) +
+                            v 0 * v (Fin.succ 2).succ * (21 / 40000) +
+                          v 0 * v (Fin.succ 2).succ.succ * (-1 / 30) +
+                        v 0 ^ 2 * (644497 / 3000000) +
+                      v 1 * v 2 * (-677771 / 1200000) +
+                    v 1 * v (Fin.succ 2).succ * (-41827 / 400000) +
+                  v 1 ^ 2 * (5013503 / 12000000) +
+                v 2 * v (Fin.succ 2).succ * (-8189 / 80000) +
+              v 2 ^ 2 * (8935583 / 12000000) +
+            v (Fin.succ 2) * v (Fin.succ 2).succ.succ * (-1 / 30) +
+          v (Fin.succ 2) ^ 2 * (2649997 / 3000000) +
+        v (Fin.succ 2).succ ^ 2 * (3799261 / 4000000) +
+      v (Fin.succ 2).succ.succ ^ 2 * (2949997 / 3000000) =
+    v 0 * v 1 * (1481 / 40000) + v 0 * v 2 * (103 / 8000) + v 0 * v 3 * (-7 / 30) + v 0 * v 4 * (21 / 40000) +
+                                v 0 * v 5 * (-1 / 30) +
+                              v 0 ^ 2 * (644497 / 3000000) +
+                            v 1 * v 2 * (-677771 / 1200000) +
+                          v 1 * v 4 * (-41827 / 400000) +
+                        v 1 ^ 2 * (5013503 / 12000000) +
+                      v 2 * v 4 * (-8189 / 80000) +
+                    v 2 ^ 2 * (8935583 / 12000000) +
+                  v (Fin.succ 2) ^ 2 * (749999 / 1000000) +
+                v (Fin.succ 2).succ ^ 2 * (3384351 / 4000000) +
+              v (Fin.succ 2).succ.succ ^ 2 * (949999 / 1000000) +
+            v 3 * v 5 * (-1 / 30) +
+          v 3 ^ 2 * (2 / 15) +
+        v 4 ^ 2 * (41491 / 400000) +
+      v 5 ^ 2 * (1 / 30)
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_actual_energy_storage_lean/output/run-0C9REMhm/ReferenceMass.lean:91:58: error: unsolved goals
+q : Vec 6
+⊢ q 1 * q 2 * (-101043 / 80000) + q 1 * q (Fin.succ 2).succ * (-20601 / 400000) + q 1 ^ 2 * (-2029689 / 800000) +
+          q 2 * q (Fin.succ 2).succ * (-20601 / 400000) +
+        q 2 ^ 2 * (-101043 / 160000) +
+      q (Fin.succ 2).succ ^ 2 * (-20601 / 800000) =
+    q 1 * q 2 * (-101043 / 80000) + q 1 * q 4 * (-20601 / 400000) + q 1 ^ 2 * (-2029689 / 800000) +
+          q 2 * q 4 * (-20601 / 400000) +
+        q 2 ^ 2 * (-101043 / 160000) +
+      q 4 ^ 2 * (-20601 / 800000)
+'RouteBActualEnergyStorage.rowAbs_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBActualEnergyStorage.M0_dsos_identity' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBActualEnergyStorage.M0_le_identity' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBActualEnergyStorage.kinetic_M0_upper' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBActualEnergyStorage.reference_remainder' depends on axioms: [propext, sorryAx, Classical.choice, Quot.sound]
+'RouteBActualEnergyStorage.referenceR_floor' depends on axioms: [propext, Classical.choice, Quot.sound]
+ReferenceMass_COMPILE_EXIT_CODE=1
+VERIFY_EXIT_CODE=1

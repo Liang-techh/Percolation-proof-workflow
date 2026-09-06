@@ -1,0 +1,12 @@
+.lake/
+**/.lake/
+__pycache__/
+*.pyc
+.workflow/
+
+# Local vendored checkouts, caches, and generated checkpoints are not source.
+/upstream/
+/artifacts/
+/output/
+/.pytest_cache/
+**/.git/
