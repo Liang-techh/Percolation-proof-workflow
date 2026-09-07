@@ -1652,6 +1652,17 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - 下一条新增并行线由 Kant the 6th 处理固定 λ 有限 fold 的抽象 Lean 接口，写入
   `examples/routeb_fixed_lambda_fold/NEW_*`，不覆盖现有 checker/receipt。
 
+### 2026-09-07 — body-5 G3/G4 与 finite trace 收割
+
+- Averroes the 6th 新增两份 Lean proof skeleton，共 50 个具体 theorem body：
+  G3 对角惯量缩并、G4 标量 trig/Gram 叶、57 行 canonical permutation、任意 seed
+  fold、q3 16 行 source slice、共轭与转置多重集接线。
+- 数学修正保留：`G23=G32=G34=G43=0`，旧 `entry_2_3` prose 不被覆盖；q3
+  支持只出现在六个有向 entry。所有 source columns/isometry、CSV binding、Lean
+  compile、coverage 和 registry 仍是显式前提。
+- 已将两份 skeleton/review 接入 body-5 source-trace child 和 O1 candidate；状态
+  `OPEN_UNCOMPILED_PROOF_SKELETON`，state revision `600`。
+
 ### 2026-09-07 — 调度字段回填修正
 
 - 发现旧 decomposition child 缺少显式 `math_lane/math_bottleneck`，且

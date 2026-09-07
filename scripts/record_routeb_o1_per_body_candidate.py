@@ -41,6 +41,9 @@ BODY4_GRAM_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-body-4-source-
 BODY5_TRACE_TARGET = ROOT / "examples/routeb_b45_source_comparator_lean/RouteBO1Body5SourceTraceTargets.lean"
 BODY5_TRACE_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_5_SOURCE_TRACE_DECOMPOSITION_RECEIPT_20260907_44fcccf7bd1a.json"
 BODY5_TRACE_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-body-5-source-trace-decomposition-codex-20260907-a977fb4941f1.md"
+BODY5_NEW_GRAM = ROOT / "examples/routeb_b45_source_comparator_lean/NEW_BODY5_GramTraceSkeleton20260907.lean"
+BODY5_NEW_TRACE = ROOT / "examples/routeb_b45_source_comparator_lean/NEW_BODY5_FiniteTraceSkeleton20260907.lean"
+BODY5_NEW_REVIEW = ROOT / "examples/routeb_b45_source_comparator_lean/REVIEW_BODY5_G3_G4_FINITE_TRACE_20260907.md"
 O0_BODY3_RECEIPT = ROOT / "agent_review_inbox/receipt-T-P4-033-O0-P-NE-body3-geometry-targets-20260907.json"
 O0_BODY4_RECEIPT = ROOT / "agent_review_inbox/receipt-T-P4-033-O0-P-NE-body4-geometry-targets-20260907.json"
 O0_BODY5_RECEIPT = ROOT / "agent_review_inbox/receipt-T-P4-033-O0-P-NE-body5-geometry-source-20260907.json"
@@ -103,6 +106,7 @@ def main() -> None:
                  BODY4_FOLD_TARGET, BODY4_FOLD_RECEIPT, BODY4_FOLD_REVIEW,
                  BODY4_GRAM_TARGET, BODY4_GRAM_CHECK, BODY4_GRAM_RECEIPT, BODY4_GRAM_REVIEW,
                  BODY5_TRACE_TARGET, BODY5_TRACE_RECEIPT, BODY5_TRACE_REVIEW,
+                 BODY5_NEW_GRAM, BODY5_NEW_TRACE, BODY5_NEW_REVIEW,
                  O0_BODY3_RECEIPT, O0_BODY4_RECEIPT, O0_BODY5_RECEIPT, O0_BODY5_REVIEW,
                  HACC_REVIEW, HACC_REFINEMENT_REVIEW, HACC_CONTRACT, HACC_RECEIPT,
                  HACC_REFINEMENT_RECEIPT,
@@ -198,6 +202,11 @@ def main() -> None:
         "body_5_source_trace_review_sha256": digest(BODY5_TRACE_REVIEW),
         "body_5_source_trace_status": "OPEN_UNPROVEN_BODY5_SOURCE_TRACE_DECOMPOSITION",
         "body_5_source_trace_proven": False,
+        "body_5_g3_g4_skeleton_sha256": digest(BODY5_NEW_GRAM),
+        "body_5_finite_trace_skeleton_sha256": digest(BODY5_NEW_TRACE),
+        "body_5_g3_g4_finite_trace_review_sha256": digest(BODY5_NEW_REVIEW),
+        "body_5_g3_g4_finite_trace_status": "OPEN_UNCOMPILED_PROOF_SKELETON",
+        "body_5_g3_g4_finite_trace_proven": False,
         "o0_body_5_geometry_receipt_sha256": digest(O0_BODY5_RECEIPT),
         "o0_body_5_geometry_review_sha256": digest(O0_BODY5_REVIEW),
         "o0_body_5_geometry_status": "CONDITIONAL_BODY5_GEOMETRY_DERIVATION",
