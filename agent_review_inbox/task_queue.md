@@ -2917,3 +2917,7 @@ fixed-λ exact statement boundary 与 P4 residual margin consumer 已登记
 revision 687，继续保持 `OPEN_UNCOMPILED`。下一步优先检查 body-6 source
 Schur-margin 叶和真实 interval payload；任何缺少 source/coverage 的结果只
 登记为 open obligation。
+
+body-6 `SCHURMARGIN`：补配套 review 后再登记；P3：interval payload/receipt
+boundary，显式分离 source、rounding soundness、coverage 与 checker metadata。
+两项继续保持未编译、fail-closed。

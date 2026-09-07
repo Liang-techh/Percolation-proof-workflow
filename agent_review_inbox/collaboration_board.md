@@ -2178,6 +2178,10 @@ strict-slack 的 composed adapter；P3 family specialization 到 cap budget 的
 typed consumer。任务均保持独立、exact/conditional、未编译，不触碰 registry 或
 formal gate。
 
+当前收割后，body-6 `SCHURMARGIN` 暂因缺 review 留在工作区，已要求其补齐
+边界审阅；P3 继续处理 interval payload/receipt 与数学 enclosure 的分离。
+两项都不把 metadata、hash 或 checker 输出当成数学证明。
+
 ### 2026-09-07 — 梁智炜收割 statement/residual 两叶
 
 fixed-λ `EXACT_STATEMENT_BOUNDARY` 与 P4 `RESIDUAL_MARGIN_CONSUMER` 已登记
