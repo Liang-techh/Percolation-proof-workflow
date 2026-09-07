@@ -1794,6 +1794,19 @@ CHILDREN = [
             "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_CONTINUOUS_COVERAGE_REVIEW.md",
         ],
     },
+    {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter",
+        "statement": "A residual budget becomes a conditional scalar margin only when the same-domain residual cap, nonnegative effective scale/gain, Schur comparison, and target allocation are all explicit; missing qCap or sign evidence is blocking.",
+        "proof_sketch": "Convert the existing ResidualAllowance into CapEvidence, absorb a nonnegative residualScale into the effective gain, construct SchurPMIComparison and MarginAllocation, and retain exact missing-qCap and negative-scale witnesses without asserting source identity or PSD.",
+        "lane": "lean_adapter",
+        "bottleneck": "residual_absorption",
+        "status": "OPEN_UNCOMPILED_P4_RESIDUAL_BUDGET_ADAPTER",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_MinimalResidualBudgetAdapter.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_MinimalResidualBudgetAdapter.review.md",
+        ],
+    },
 ]
 
 
