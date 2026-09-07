@@ -122,7 +122,6 @@ theorem nonzero_cubic_ray_not_globally_quadratic_absorbable
   have ht_identity : |c| * t = |kappa| * a + |c| := by
     dsimp [t]
     field_simp [hcne]
-    <;> ring
   nlinarith
 
 #print axioms scaled_young_division_free
