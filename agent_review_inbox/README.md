@@ -6,6 +6,10 @@ collect agent results, and merge only evidence that passes the workflow gates.
 It is intentionally operated like a low-frequency research chat group rather
 than a synchronous debug console.
 
+The periodic worker pool is listed in [`agent_roster.md`](agent_roster.md).
+Those eight names are scheduling labels supplied by the user; task ownership
+and evidence remain durable only after an inbox result is recorded.
+
 Agents may add one self-contained `.md` or `.json` review result per finding.
 Planning files use the `task_plan` label and are not treated as evidence.
 Every `review_result` should include:

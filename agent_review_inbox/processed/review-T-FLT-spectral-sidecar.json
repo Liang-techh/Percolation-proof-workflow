@@ -1,0 +1,13 @@
+{
+  "review_file": "agent_review_inbox/review-T-FLT-spectral-sidecar.md",
+  "review_sha256": "7A770513C70BB367CA350030EFE748CC45F195208AFB868B58D09415BDB97DD1",
+  "task_id": "T-FLT-SPECTRAL-SIDECAR",
+  "source_agent": "Codex",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_spectral_sidecar",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef",
+  "integrated_at": "2026-09-07T03:18:55.552907+00:00"
+}

@@ -3,7 +3,7 @@
 This log records durable integrations from `agent_review_inbox/`. The original
 review files and their SHA-256 markers remain in that directory.
 
-## 2026-09-06 / Route-B checkpoint revision 344
+## 2026-09-06 / Route-B checkpoint revision 345
 
 Integrated as pending metadata only:
 
@@ -35,11 +35,12 @@ Integrated as pending metadata only:
 | T-FLT-SPECTRAL-LINEAR | external reuse catalog | `flt_spectral_linear_scan` | none |
 | T-FLT-INFRA-REGISTRY | external reuse catalog | `flt_registry_graph_scan` | none |
 | T-FLT-TRANSPORT-ADAPTER | external reuse catalog | `flt_transport_adapter_scan` | none |
+| T-FLT-SPECTRAL-SIDECAR | external reuse catalog | `flt_spectral_sidecar` | none |
 
 The authoritative `artifacts/routeb_6dof/state.json` was updated through
-`StateStore` from revision 328 to revision 344. Twenty-three Route-B
+`StateStore` from revision 328 to revision 345. Twenty-three Route-B
 `agent_review_integrated` events, twenty-three node provenance references, and
-five event-only external-catalog integrations were added. Node statuses remain
+six event-only external-catalog integrations were added. Node statuses remain
 open and the verified registry remains empty.
 
 No review was promoted to `VERIFIED`; P3 source semantics, P4 true-DH residual
@@ -91,3 +92,8 @@ below direct reuse until independently recompiled. The infrastructure scan
 confirms that challenge/solution comparison, permitted-axiom gates,
 route/stage/landmark metadata, and extract-graph-render-selfcheck are
 architecture or contract inputs only; none is proof evidence by itself.
+
+The spectral sidecar compiles with its focused harness, but it is an abstract
+self-contained bridge rather than a direct proof of the upstream FLT
+declaration. It remains advisory/pending and is not a Route-B spectral closure
+or verified-registry entry.

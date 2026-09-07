@@ -283,7 +283,8 @@ without an explicit scoped request.
 
 ### T-FLT-SPECTRAL-SIDECAR — highest-value spectral candidate
 
-- status: `queued` (梁智炜, focused current-pin sidecar)
+- status: `reviewed_pending` (integrated at Route-B revision 345; focused
+  compile passed, abstract sidecar only)
 - scope: test the smallest non-number-theory eigenspace/range bridge identified
   by the spectral scan, using a new isolated sidecar and the current local
   Lean/Mathlib pin if available;

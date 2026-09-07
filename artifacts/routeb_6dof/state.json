@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 344,
+  "revision": 345,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -29808,6 +29808,18 @@
       "formal_certificate_allowed": false,
       "catalog": "anthropic-fermats-last-theorem",
       "source_commit": "unknown"
+    },
+    {
+      "at": "2026-09-07T03:18:55.552907+00:00",
+      "kind": "external_reuse_review_integrated",
+      "review_file": "agent_review_inbox/review-T-FLT-spectral-sidecar.md",
+      "review_sha256": "7A770513C70BB367CA350030EFE748CC45F195208AFB868B58D09415BDB97DD1",
+      "task_id": "T-FLT-SPECTRAL-SIDECAR",
+      "classification": "flt_spectral_sidecar",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "catalog": "anthropic-fermats-last-theorem"
     }
   ],
   "agent_requests": {},
@@ -33293,5 +33305,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "36d348d3c9841ef6258739465dc71efea693ff053c2506b2cba1921240309edc"
+  "state_checksum": "cd5d7b793e42ea958d89671b2bef54baf5cf7f4591787aafb7e3b94978d1fa25"
 }
