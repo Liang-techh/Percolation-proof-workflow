@@ -67,6 +67,8 @@ def candidate_receipt() -> dict[str, object]:
                                  if result.rational_lower_bound is not None else None),
         "residual_l1": (str(result.residual_l1)
                         if result.residual_l1 is not None else None),
+        "residual_term_count": result.residual_term_count,
+        "residual_coefficients_sha256": result.residual_coefficients_sha256,
         "certified_original_scale_margin": (
             str(result.certified_original_scale_margin)
             if result.certified_original_scale_margin is not None else None),

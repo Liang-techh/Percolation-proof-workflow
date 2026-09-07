@@ -145,7 +145,10 @@ GitHub agents for the push channel.
   expands the rational payload and reports a positive candidate margin; the
   exact solver `opt` provenance and pinned Lean receipt remain open. The
   checker also records the solver-vs-derived constant gap; Lean adapters must
-  consume the derived safe lower bound, never the raw `OPTIMAL` decimal.
+  consume the derived safe lower bound, never the raw `OPTIMAL` decimal. The
+  current residual has 511 nonzero canonical coefficients with digest
+  `95042f6ea7c9989174d6045383138099686c2383649b3358611a63f374bcf7cf`;
+  this is a binding witness, not kernel evidence.
 
 ### T-P4-018 — reusable residual `l1` Lean seam
 
@@ -164,7 +167,9 @@ GitHub agents for the push channel.
   pinned source/artifact hashes, both theorem names, zero `sorry`/`admit`,
   exit code `0`, coefficient term count, `residual_l1`, safe rational lower
   bound, and positive scaled margin.  Missing coordinator-owned pins remain
-  `PENDING`; mismatches are `REJECTED`.
+  `PENDING`; mismatches are `REJECTED`. The receipt must also carry
+  `residual_coefficients_sha256` equal to the canonical 511-term digest
+  emitted by the current reconstruction checker.
 - forbidden: treating the generic seam as proof of the giant CSV identity,
   true-DH semantics, domain coverage, or Route-B closure.
 

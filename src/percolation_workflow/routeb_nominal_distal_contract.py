@@ -11,7 +11,9 @@ from __future__ import annotations
 
 import csv
 from dataclasses import dataclass
+import hashlib
 import io
+import json
 from collections import defaultdict
 from fractions import Fraction
 
@@ -129,6 +131,8 @@ class RouteBPhysicalRationalGramReconstructionAudit:
     solver_minus_derived_gap: Fraction | None
     rational_lower_bound: Fraction | None
     residual_l1: Fraction | None
+    residual_term_count: int
+    residual_coefficients_sha256: str | None
     certified_scaled_margin: Fraction | None
     certified_original_scale_margin: Fraction | None
     errors: tuple[str, ...] = ()
@@ -445,6 +449,17 @@ def _floor_common_denominator(value: Fraction, denominator_cap: int) -> Fraction
     return Fraction(quotient, denominator_cap)
 
 
+def _canonical_polynomial_sha256(polynomial: dict[tuple[int, ...], Fraction]) -> str:
+    """Hash a deterministic sparse exact-rational polynomial representation."""
+    payload = [
+        [list(monomial), str(polynomial[monomial])]
+        for monomial in sorted(polynomial)
+        if polynomial[monomial]
+    ]
+    encoded = json.dumps(payload, separators=(",", ":"), ensure_ascii=True).encode()
+    return hashlib.sha256(encoded).hexdigest()
+
+
 def _sparse_support_to_exp(text: str, dimension: int = 6) -> tuple[int, ...]:
     exponents = [0] * dimension
     if text:
@@ -627,6 +642,8 @@ def audit_routeb_physical_rational_gram_reconstruction(
         errors.append("reconstruction_equality_multiplier_group_mismatch")
 
     residual_l1 = None
+    residual_term_count = 0
+    residual_coefficients_sha256 = None
     scaled_margin = None
     original_margin = None
     derived_gap = (
@@ -651,6 +668,9 @@ def audit_routeb_physical_rational_gram_reconstruction(
                 - (safe_lower if monomial == zero else Fraction(0))
             )
         residual_l1 = sum((abs(value) for value in residual.values()), Fraction(0))
+        residual = {monomial: value for monomial, value in residual.items() if value}
+        residual_term_count = len(residual)
+        residual_coefficients_sha256 = _canonical_polynomial_sha256(residual)
         scaled_margin = safe_lower - residual_l1
         original_margin = scaled_margin / scale
         if scaled_margin <= 0:
@@ -672,6 +692,8 @@ def audit_routeb_physical_rational_gram_reconstruction(
         solver_minus_derived_gap=solver_minus_derived_gap,
         rational_lower_bound=safe_lower,
         residual_l1=residual_l1,
+        residual_term_count=residual_term_count,
+        residual_coefficients_sha256=residual_coefficients_sha256,
         certified_scaled_margin=scaled_margin,
         certified_original_scale_margin=original_margin,
         errors=tuple(errors),

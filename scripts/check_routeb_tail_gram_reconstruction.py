@@ -53,6 +53,8 @@ def main() -> int:
                                  if result.rational_lower_bound is not None else None),
         "residual_l1": (str(result.residual_l1)
                         if result.residual_l1 is not None else None),
+        "residual_term_count": result.residual_term_count,
+        "residual_coefficients_sha256": result.residual_coefficients_sha256,
         "certified_scaled_margin": (str(result.certified_scaled_margin)
                                      if result.certified_scaled_margin is not None else None),
         "certified_original_scale_margin": (

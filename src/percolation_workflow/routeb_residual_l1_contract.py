@@ -207,7 +207,7 @@ def audit_routeb_residual_l1_lean_receipt(
             errors.append(f"{field}_mismatch")
 
     for field in ("coefficient_term_count", "residual_l1", "rational_lower_bound",
-                  "scaled_margin"):
+                  "scaled_margin", "residual_coefficients_sha256"):
         value = receipt.get(field)
         if value is None:
             pending.append(f"missing_{field}")
@@ -215,6 +215,9 @@ def audit_routeb_residual_l1_lean_receipt(
         if field == "coefficient_term_count":
             if type(value) is not int or value <= 0:
                 errors.append("coefficient_term_count_malformed")
+        elif field == "residual_coefficients_sha256":
+            if not _sha(value):
+                errors.append("residual_coefficients_sha256_malformed")
         else:
             parsed = _fraction(value)
             if parsed is None:
@@ -232,7 +235,7 @@ def audit_routeb_residual_l1_lean_receipt(
         if coefficient is not None and candidate_receipt.get("artifact_sha256") != coefficient:
             errors.append("candidate_artifact_sha256_mismatch")
         for field in ("coefficient_term_count", "residual_l1", "rational_lower_bound",
-                      "scaled_margin"):
+                      "scaled_margin", "residual_coefficients_sha256"):
             candidate_field = {
                 "coefficient_term_count": "residual_term_count",
                 "scaled_margin": "certified_scaled_margin",
