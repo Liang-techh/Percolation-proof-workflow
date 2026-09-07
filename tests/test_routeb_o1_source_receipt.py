@@ -1,7 +1,9 @@
 from fractions import Fraction
+import hashlib
 
 from percolation_workflow.routeb_o1_source_receipt import (
     O1_SOURCE_RECEIPT_SCHEMA,
+    audit_routeb_o1_artifact_bindings,
     audit_routeb_o1_source_receipt,
 )
 
@@ -65,3 +67,42 @@ def test_typed_export_reports_missing_contract_fields():
     audit = audit_routeb_o1_source_receipt(receipt)
     assert audit.status == "PENDING_REQUIRED_FIELDS"
     assert set(audit.missing) == {"q_domain", "source_binding_theorem"}
+
+
+def test_artifact_binding_recomputes_declared_file_hash(tmp_path):
+    artifact = tmp_path / "source.lean"
+    artifact.write_text("theorem t : True := by trivial\n", encoding="utf-8")
+    digest = hashlib.sha256(artifact.read_bytes()).hexdigest()
+    receipt = valid_receipt()
+    receipt["artifacts"] = {
+        "lean_file": str(artifact),
+        "lean_sha256": digest,
+    }
+    audit = audit_routeb_o1_artifact_bindings(receipt)
+    assert audit.status == "ARTIFACT_BINDINGS_VERIFIED"
+    assert audit.verified == ("lean_file",)
+    assert audit.formal_certificate_allowed is False
+
+
+def test_artifact_binding_keeps_hash_only_metadata_pending(tmp_path):
+    receipt = valid_receipt()
+    receipt["artifacts"] = {
+        "lean_sha256": "a" * 64,
+        "mass_csv_sha256": "b" * 64,
+    }
+    audit = audit_routeb_o1_artifact_bindings(receipt)
+    assert audit.status == "PENDING_ARTIFACT_PATHS"
+    assert set(audit.missing) == {"artifacts.lean_file", "artifacts.mass_csv"}
+
+
+def test_artifact_binding_rejects_content_hash_mismatch(tmp_path):
+    artifact = tmp_path / "source.lean"
+    artifact.write_text("changed\n", encoding="utf-8")
+    receipt = valid_receipt()
+    receipt["artifacts"] = {
+        "lean_file": str(artifact),
+        "lean_sha256": "a" * 64,
+    }
+    audit = audit_routeb_o1_artifact_bindings(receipt)
+    assert audit.status == "REJECTED"
+    assert "content hash mismatch" in audit.errors[0]

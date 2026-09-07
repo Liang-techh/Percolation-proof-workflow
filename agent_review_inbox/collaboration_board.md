@@ -1316,3 +1316,12 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   `namespace.name=theta2`、`q2` anchor 为 `[-3/20,3/20]`，且 parent q2 区间
   必须落在该 namespace 内；否则拒绝，避免任意 13D geometry receipt 冒充 theta2。
 - focused tests 当前 `55 passed`；未运行本机 Lean/Julia，未同步 GitHub。
+
+### 2026-09-07 — 梁智炜：O1 artifact hash binding gate
+
+- O1 receipt intake 进一步增加文件内容绑定：声明 hash 但没有对应 path 时为
+  `PENDING_ARTIFACT_PATHS`，文件不存在或内容 hash 不一致时为 `REJECTED`；
+  只有实际重算成功才返回 `ARTIFACT_BINDINGS_VERIFIED`。
+- 该 gate 只验证 provenance 文件绑定，不证明 source theorem、Lean kernel 或
+  comparator；当前 v2 receipt 的 source binding 仍保持 conditional。
+- focused tests 当前 `58 passed`。

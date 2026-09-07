@@ -4,6 +4,8 @@ from __future__ import annotations
 from collections.abc import Mapping
 from dataclasses import dataclass
 from fractions import Fraction
+import hashlib
+from pathlib import Path
 from typing import Any
 
 
@@ -24,6 +26,16 @@ class RouteBO1SourceReceiptAudit:
     missing: tuple[str, ...] = ()
     errors: tuple[str, ...] = ()
     comparator_status: str = "pending"
+    formal_certificate_allowed: bool = False
+    registry_eligible: bool = False
+
+
+@dataclass(frozen=True)
+class RouteBO1ArtifactBindingAudit:
+    status: str
+    verified: tuple[str, ...] = ()
+    missing: tuple[str, ...] = ()
+    errors: tuple[str, ...] = ()
     formal_certificate_allowed: bool = False
     registry_eligible: bool = False
 
@@ -150,7 +162,85 @@ def audit_routeb_o1_source_receipt(
     )
 
 
+_O1_ARTIFACT_PAIRS = (
+    ("lean_file", "lean_sha256"),
+    ("state_json", "state_json_sha256"),
+    ("mass_csv", "mass_csv_sha256"),
+    ("deployed_dhport", "deployed_dhport_sha256"),
+    ("fourier_probe", "fourier_probe_sha256"),
+    ("analytic_probe", "analytic_probe_sha256"),
+    ("body_trace_source_result", "body_trace_source_result_sha256"),
+    ("body_trace_receipt", "body_trace_receipt_sha256"),
+)
+
+
+def audit_routeb_o1_artifact_bindings(
+    receipt: Mapping[str, Any] | None,
+) -> RouteBO1ArtifactBindingAudit:
+    """Recompute every declared O1 artifact hash whose path is supplied.
+
+    A receipt that declares hashes without corresponding paths remains pending;
+    the audit never treats hash-shaped metadata as provenance.  This is a
+    file-binding gate only and cannot prove source semantics or Lean validity.
+    """
+    if not isinstance(receipt, Mapping):
+        return RouteBO1ArtifactBindingAudit(
+            status="REJECTED", errors=("receipt_must_be_mapping",)
+        )
+    artifacts = receipt.get("artifacts")
+    if not isinstance(artifacts, Mapping):
+        return RouteBO1ArtifactBindingAudit(
+            status="PENDING_ARTIFACT_PATHS", missing=("artifacts",)
+        )
+    verified: list[str] = []
+    missing: list[str] = []
+    errors: list[str] = []
+    for path_key, hash_key in _O1_ARTIFACT_PAIRS:
+        expected = artifacts.get(hash_key)
+        if expected is None:
+            continue
+        try:
+            _hash(expected, f"artifacts.{hash_key}")
+        except ValueError as exc:
+            errors.append(str(exc))
+            continue
+        raw_path = artifacts.get(path_key)
+        if raw_path is None:
+            missing.append(f"artifacts.{path_key}")
+            continue
+        if not isinstance(raw_path, str) or not raw_path.strip():
+            errors.append(f"artifacts.{path_key}: file path required")
+            continue
+        path = Path(raw_path)
+        if not path.is_file():
+            missing.append(f"artifacts.{path_key}")
+            continue
+        actual = hashlib.sha256(path.read_bytes()).hexdigest()
+        if actual.lower() != expected.lower():
+            errors.append(f"artifacts.{hash_key}: content hash mismatch")
+            continue
+        verified.append(path_key)
+    if errors:
+        return RouteBO1ArtifactBindingAudit(
+            status="REJECTED", verified=tuple(verified),
+            missing=tuple(missing), errors=tuple(dict.fromkeys(errors)),
+        )
+    if missing:
+        return RouteBO1ArtifactBindingAudit(
+            status="PENDING_ARTIFACT_PATHS", verified=tuple(verified),
+            missing=tuple(dict.fromkeys(missing)),
+        )
+    if not verified:
+        return RouteBO1ArtifactBindingAudit(
+            status="PENDING_ARTIFACT_PATHS", missing=("artifacts.*",)
+        )
+    return RouteBO1ArtifactBindingAudit(
+        status="ARTIFACT_BINDINGS_VERIFIED", verified=tuple(verified)
+    )
+
+
 __all__ = [
     "O1_SOURCE_RECEIPT_SCHEMA", "O1_BLOCK_ORDER", "O1_DIDX", "O1_BIDX",
-    "RouteBO1SourceReceiptAudit", "audit_routeb_o1_source_receipt",
+    "RouteBO1SourceReceiptAudit", "RouteBO1ArtifactBindingAudit",
+    "audit_routeb_o1_source_receipt", "audit_routeb_o1_artifact_bindings",
 ]

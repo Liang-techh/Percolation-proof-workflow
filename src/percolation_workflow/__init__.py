@@ -99,7 +99,9 @@ from .routeb_o1_source_receipt import (
     O1_DIDX,
     O1_BIDX,
     RouteBO1SourceReceiptAudit,
+    RouteBO1ArtifactBindingAudit,
     audit_routeb_o1_source_receipt,
+    audit_routeb_o1_artifact_bindings,
 )
 from .disjoint import (audit_do, build_repair_do, canonical_do_schema,
                         classify_manual_review, do_sha256, normalize_do_path)
@@ -167,6 +169,7 @@ __all__ = [
     "RouteBO0R3CanonicalReceiptAudit", "audit_routeb_o0_r3_canonical_receipt",
     "O1_SOURCE_RECEIPT_SCHEMA", "O1_BLOCK_ORDER", "O1_DIDX", "O1_BIDX",
     "RouteBO1SourceReceiptAudit", "audit_routeb_o1_source_receipt",
+    "RouteBO1ArtifactBindingAudit", "audit_routeb_o1_artifact_bindings",
     "audit_do", "build_repair_do", "canonical_do_schema", "classify_manual_review", "do_sha256", "normalize_do_path",
     "AdvisoryReuseError", "SCHEMA_VERSION", "project_advisory_reuse",
     "project_plan", "export_plan_views", "plan_topo_order", "plan_levels",

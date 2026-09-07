@@ -45,6 +45,8 @@ def main() -> None:
         "receipt_path": str(O1_RECEIPT.resolve()),
         "receipt_sha256": sha256(O1_RECEIPT),
         "source_binding_proven": False,
+        "artifact_binding_validator": "src/percolation_workflow/routeb_o1_source_receipt.py",
+        "hash_only_metadata_pending": True,
     }
     o2_entry = {
         "status": "FAIL_CLOSED_THETA2_NAMESPACE_GATE",

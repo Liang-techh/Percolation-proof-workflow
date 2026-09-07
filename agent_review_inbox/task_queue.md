@@ -1963,6 +1963,8 @@ after integration; corrections should be a new result file.
 - 继续只接收同 key 的真实 `M_exact`、`h_MDD_def` 和
   `h_source_mass` 或 `h_aggregate+h_body`；abstract-only export 仍为
   `CONDITIONAL_TYPED_SOURCE_EXPORT`。
+- artifact 子门会重算已声明文件的 SHA-256；仅 hash 文本没有 provenance，缺 path
+  保持 pending，内容 mismatch 直接 rejected。
 
 ### T-P4-036.2 — theta2 namespace hardening (2026-09-07)
 
