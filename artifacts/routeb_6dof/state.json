@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 466,
+  "revision": 467,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13249,7 +13249,11 @@
       "parent_id": "6cebb66987f449f3b5ad8d0548dfdf83",
       "status": "open",
       "proof_sketch": "Compare source-defined force/residual coefficients in force coordinates against the typed port map, including the kc scale and regularizer; expose any unmatched coefficient as an obstruction rather than weakening the statement.",
-      "dependencies": [],
+      "dependencies": [
+        "43e3c1a23dc34d52a19b835a8a883cb7",
+        "120deab092c243b6a43356e63c8b56f4",
+        "0da99a7cef5e4f0b91c7cc06d9e7c010"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -13284,7 +13288,10 @@
           "statement_comparator_receipt",
           "exact_real_deployed_evaluator_enclosure",
           "float64_roundoff_inclusion_for_R_source",
-          "typed_R_port_aB_equals_rB_adapter"
+          "typed_R_port_aB_equals_rB_adapter",
+          "regularizer_semantics_bridge",
+          "exact_real_R_port_aB_equals_rB",
+          "float64_evaluator_box_enclosure"
         ],
         "source_formula_audit": {
           "schema_version": 1,
@@ -13437,6 +13444,168 @@
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_analytic_mass_full_cs_polynomial.csv",
             "sha256": "1A1DB0B737ABAC58AFAE06E95766D2DA91C12425FE1BE388364F1DCA7DB59451"
           }
+        ],
+        "decomposition_contract": {
+          "schema_version": 1,
+          "status": "open_O0_O1_O2_pending_pinned_receipts",
+          "children": [
+            "43e3c1a23dc34d52a19b835a8a883cb7",
+            "120deab092c243b6a43356e63c8b56f4",
+            "0da99a7cef5e4f0b91c7cc06d9e7c010"
+          ],
+          "child_order": [
+            "43e3c1a23dc34d52a19b835a8a883cb7",
+            "120deab092c243b6a43356e63c8b56f4",
+            "0da99a7cef5e4f0b91c7cc06d9e7c010"
+          ],
+          "closure_rule": "coefficient seam closes only after O0/O1/O2 are registry-verified and a typed parent receipt exists",
+          "closure_gate": {
+            "schema_version": 1,
+            "required_child_ids": [
+              "43e3c1a23dc34d52a19b835a8a883cb7",
+              "120deab092c243b6a43356e63c8b56f4",
+              "0da99a7cef5e4f0b91c7cc06d9e7c010"
+            ],
+            "required_parent_receipt": "typed_R_port_coefficient_binding",
+            "required_obligations": [
+              "regularizer_semantics_bridge",
+              "exact_real_R_port_aB_equals_rB",
+              "float64_evaluator_box_enclosure"
+            ],
+            "repair_route": {
+              "owner": "P4.true_dh_exact_real_coefficient_identity",
+              "action": "compile_conditional_exact_real_R_port_aB_equals_rB_adapter"
+            },
+            "promotion_boundary": "O0, O1, and O2 must each have pinned evidence and registry entries; O1 alone never implies deployed Float64 source equivalence"
+          },
+          "parallelism": "O0, O1, and O2 may be investigated independently; O1 is the smallest next algebraic target",
+          "promotion_boundary": "O1 is conditional exact-real only until O2 binds the deployed Float64 evaluator"
+        }
+      }
+    },
+    "43e3c1a23dc34d52a19b835a8a883cb7": {
+      "id": "43e3c1a23dc34d52a19b835a8a883cb7",
+      "name": "P4.true_dh_regularizer_semantics_bridge",
+      "statement": "Bind the deployed Float64 mass regularizer 1e-6 to the exact-real mu=1/1000000 model by an explicit rounding inclusion or an authoritative exact-real evaluation contract.",
+      "parent_id": "8337e024d8dc4463a3389b1e65a4a5e8",
+      "status": "open",
+      "proof_sketch": "Treat the IEEE-754 literal as a contained interval, not as exact equality; carry the same mu through M_mu, M_DD, and the port map.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "research_stage": "P4",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "evaluator_enclosure",
+        "statement_status": "formalization_target",
+        "claim_status": "true_dh_evaluator_child_open",
+        "evidence_level": "typed-source-binding-target",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "decomposition_role": "bridge",
+        "source_provenance": {
+          "origin": "coordinator-created O0/O1/O2 decomposition",
+          "upstream_inspiration": "Route-B exact-real/source evaluator audit",
+          "attribution_required": true
+        },
+        "frontier_repair_contract": {
+          "schema_version": 1,
+          "parent": "P4.true_dh_residual_map_coefficient_binding",
+          "next_agent_action": "Treat the IEEE-754 literal as a contained interval, not as exact equality; carry the same mu through M_mu, M_DD, and the port map.",
+          "preserve_semantic_boundary": "conditional exact-real algebra, Float64 enclosure, and global coverage must remain separate",
+          "success_callback": "return pinned Lean/source comparator evidence; child remains open until coordinator admission",
+          "formal_boundary": "no global residual absorption or flowpipe closure"
+        },
+        "unresolved": [
+          "pinned_lean_compile_receipt",
+          "zero_sorry_and_allowed_axioms_receipt",
+          "statement_comparator_receipt"
+        ]
+      }
+    },
+    "120deab092c243b6a43356e63c8b56f4": {
+      "id": "120deab092c243b6a43356e63c8b56f4",
+      "name": "P4.true_dh_exact_real_coefficient_identity",
+      "statement": "Under the common exact-real descriptor equations and det(M_DD) != 0, prove R_port*a_B=r_B for R_port=-M_BD*M_DD^(-1)*(M_DB-M0_DB).",
+      "parent_id": "8337e024d8dc4463a3389b1e65a4a5e8",
+      "status": "open",
+      "proof_sketch": "Use M_DD*v+DeltaM_DB*a_B=0 and r_B-M_BD*v=0; preserve the minus sign and retain the explicit remote block term. This is conditional exact-real algebra, not Float64 source equivalence.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "research_stage": "P4",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "source_binding",
+        "statement_status": "formalization_target",
+        "claim_status": "true_dh_evaluator_child_open",
+        "evidence_level": "typed-source-binding-target",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "decomposition_role": "identity",
+        "source_provenance": {
+          "origin": "coordinator-created O0/O1/O2 decomposition",
+          "upstream_inspiration": "Route-B exact-real/source evaluator audit",
+          "attribution_required": true
+        },
+        "frontier_repair_contract": {
+          "schema_version": 1,
+          "parent": "P4.true_dh_residual_map_coefficient_binding",
+          "next_agent_action": "Use M_DD*v+DeltaM_DB*a_B=0 and r_B-M_BD*v=0; preserve the minus sign and retain the explicit remote block term. This is conditional exact-real algebra, not Float64 source equivalence.",
+          "preserve_semantic_boundary": "conditional exact-real algebra, Float64 enclosure, and global coverage must remain separate",
+          "success_callback": "return pinned Lean/source comparator evidence; child remains open until coordinator admission",
+          "formal_boundary": "no global residual absorption or flowpipe closure"
+        },
+        "unresolved": [
+          "pinned_lean_compile_receipt",
+          "zero_sorry_and_allowed_axioms_receipt",
+          "statement_comparator_receipt"
+        ]
+      }
+    },
+    "0da99a7cef5e4f0b91c7cc06d9e7c010": {
+      "id": "0da99a7cef5e4f0b91c7cc06d9e7c010",
+      "name": "P4.true_dh_float64_evaluator_enclosure",
+      "statement": "On every certified input box, contain the deployed dhport_lib.jl Float64 evaluation of M, central-FD C/G, tau, and the backslash solve inside the exact-real outward interval evaluator.",
+      "parent_id": "8337e024d8dc4463a3389b1e65a4a5e8",
+      "status": "open",
+      "proof_sketch": "Decompose later into elementary-function/libm rounding, finite-DAG operation rounding, FD-shift semantics, regularizer conversion, and linear-solve conditioning; pointwise BigFloat agreement is insufficient.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "research_stage": "P4",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "evaluator_enclosure",
+        "statement_status": "formalization_target",
+        "claim_status": "true_dh_evaluator_child_open",
+        "evidence_level": "typed-source-binding-target",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "decomposition_role": "enclosure",
+        "source_provenance": {
+          "origin": "coordinator-created O0/O1/O2 decomposition",
+          "upstream_inspiration": "Route-B exact-real/source evaluator audit",
+          "attribution_required": true
+        },
+        "frontier_repair_contract": {
+          "schema_version": 1,
+          "parent": "P4.true_dh_residual_map_coefficient_binding",
+          "next_agent_action": "Decompose later into elementary-function/libm rounding, finite-DAG operation rounding, FD-shift semantics, regularizer conversion, and linear-solve conditioning; pointwise BigFloat agreement is insufficient.",
+          "preserve_semantic_boundary": "conditional exact-real algebra, Float64 enclosure, and global coverage must remain separate",
+          "success_callback": "return pinned Lean/source comparator evidence; child remains open until coordinator admission",
+          "formal_boundary": "no global residual absorption or flowpipe closure"
+        },
+        "unresolved": [
+          "pinned_lean_compile_receipt",
+          "zero_sorry_and_allowed_axioms_receipt",
+          "statement_comparator_receipt"
         ]
       }
     }
@@ -36839,6 +37008,40 @@
       ],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T11:02:57.835966+00:00",
+      "kind": "node_added",
+      "node_id": "43e3c1a23dc34d52a19b835a8a883cb7",
+      "parent_id": "8337e024d8dc4463a3389b1e65a4a5e8",
+      "name": "P4.true_dh_regularizer_semantics_bridge"
+    },
+    {
+      "at": "2026-09-07T11:02:57.835993+00:00",
+      "kind": "node_added",
+      "node_id": "120deab092c243b6a43356e63c8b56f4",
+      "parent_id": "8337e024d8dc4463a3389b1e65a4a5e8",
+      "name": "P4.true_dh_exact_real_coefficient_identity"
+    },
+    {
+      "at": "2026-09-07T11:02:57.836001+00:00",
+      "kind": "node_added",
+      "node_id": "0da99a7cef5e4f0b91c7cc06d9e7c010",
+      "parent_id": "8337e024d8dc4463a3389b1e65a4a5e8",
+      "name": "P4.true_dh_float64_evaluator_enclosure"
+    },
+    {
+      "at": "2026-09-07T11:02:57.836012+00:00",
+      "kind": "routeb_evaluator_enclosure_decomposition_recorded",
+      "parent_id": "8337e024d8dc4463a3389b1e65a4a5e8",
+      "children": [
+        "43e3c1a23dc34d52a19b835a8a883cb7",
+        "120deab092c243b6a43356e63c8b56f4",
+        "0da99a7cef5e4f0b91c7cc06d9e7c010"
+      ],
+      "next_algebraic_target": "P4.true_dh_exact_real_coefficient_identity",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -40495,5 +40698,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "87281c1d8be5bb2dc89bc28ed4aada24b176531cff666f403d496db93ce51503"
+  "state_checksum": "8eb573ccf7b245fdc046f1d47bb74cf7939a8bef67cb1ac0ea8d9c493fb48eef"
 }
