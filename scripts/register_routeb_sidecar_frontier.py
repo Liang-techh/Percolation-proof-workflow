@@ -1781,6 +1781,19 @@ CHILDREN = [
             "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_MARGINUNIFORM20260907.review.md",
         ],
     },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter",
+        "statement": "A finite interval-box family yields a whole-domain strict capMax bound only with an explicit same-point box mapping, box membership, region membership, rounding soundness, gap lower bound, and cap-load chain; finite samples alone do not establish coverage.",
+        "proof_sketch": "Consume ContinuousCoverageCertificate at the mapped box for each domain point, derive weightedLoad+gap≤capMax and weightedLoad<capMax, and retain an omitted-point Bool obstruction showing that listed samples/boxes do not imply continuous-domain coverage.",
+        "lane": "source_semantics",
+        "bottleneck": "coverage",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_CONTINUOUS_COVERAGE",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_CONTINUOUS_COVERAGE.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_CONTINUOUS_COVERAGE_REVIEW.md",
+        ],
+    },
 ]
 
 
