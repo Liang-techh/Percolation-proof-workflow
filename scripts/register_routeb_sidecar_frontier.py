@@ -1169,6 +1169,46 @@ CHILDREN = [
             "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_DefectConvention_REVIEW.md",
         ],
     },
+    {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source",
+        "statement": "The body-6 tail columns admit an exact mass/inertia weighted 2x2 self Gram with diagonal entries kappa+m*h^2*sin(q4)^2 and kappa+m*h^2 and zero cross term.",
+        "proof_sketch": "Reuse the existing tail self Gram and yaw-isometry interfaces, retain the h²(I-p pᵀ) correction, derive the three independent weighted entries, and bind source weights only through explicit CenterOffsetTarget and weight premises.",
+        "lane": "source_semantics",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_BODY6_MASS_WEIGHTED_TAIL_GRAM",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_MASSTAIL_Core20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_MASSTAIL_Source20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_MASSTAIL_20260907_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget",
+        "statement": "A same-point typed radius payload transports component radius, velocity, nonnegative weights, and an existing downstream weighted-load bound across all declared domain layers.",
+        "proof_sketch": "Package the four same-point domain memberships, opaque componentization equality, nonnegativity premises, and existing consumer inequality into a downstream load input without deriving new physical or interval bounds.",
+        "lane": "lean_adapter",
+        "bottleneck": "source_semantics",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_RADIUS_LOAD_BRIDGE",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_RADIUS_LOAD_BRIDGE.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_RADIUS_LOAD_BRIDGE_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.no_division_ratio_reserve",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility",
+        "statement": "A positive cell denominator converts fixed-lambda ratio and margin conditions to exact cross-multiplied forms, and an explicit reserve yields a positive margin without division.",
+        "proof_sketch": "Use only the typed cell denominator positivity and ratio equality for the initial equivalence; express non-strict and strict reserve-to-margin transfers by linear order, leaving source, digest, coverage, and registry facts external.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_NO_DIVISION_RATIO",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_NO_DIVISION_RATIO20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_NO_DIVISION_RATIO20260907_REVIEW.md",
+        ],
+    },
 ]
 
 

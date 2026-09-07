@@ -2674,3 +2674,10 @@ source-independent/open/uncompiled 候选。
   `schur_elimination.defect_convention_adapter`；ForceSideDefects/O1Defects 保持
   不同类型，reference 变量和左逆条件均显式保留。
 - 本小时批次已合并并推送；下一次远端收割不早于一小时，期间只做本地数学推进。
+
+### 2026-09-07 — 13:16 本地数学轮
+
+- 收割 body-6 tail weighted Gram、P3 radius-load payload、fixed-λ no-division
+  ratio/reserve 三个新叶，均已登记为 open/uncompiled，DAG revision 661。
+- K-path 正在 formalize P4 weighted-three-term；其他线继续处理下一批独立数学叶；
+  本轮不访问远端。
