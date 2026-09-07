@@ -119,7 +119,8 @@ theorem repair13_eq_source_at_iff_c_zero
     subst c
     funext i
     fin_cases i <;> try rfl
-    simpa [wSlot13] using hzero.symm
+    change repair13 S 0 x wSlot13 = S x wSlot13
+    rw [repair13_tail S 0 x, hzero]
 
 /-- If the literal source has zero tail everywhere, the whole repaired field
     equals it if and only if the ramp coefficient is zero. -/
