@@ -1383,6 +1383,10 @@ polynomial remains a separate frontier.
   is a no-`sorry`/no-`admit` candidate target, still explicitly uncompiled;
   remote Lean agents may compile and repair it, but file presence is not a
   kernel receipt.
+- coordinator repair snapshot (2026-09-07): the candidate now includes an
+  explicit `Mathlib.Tactic.Linarith` import and `Matrix.mul_assoc` in the
+  `hB_left` normalization. Current candidate hash is recorded in
+  `review-T-P4-032-repair-20260907.md`; remote compilation remains required.
 - forbidden: using `vecMul` in place of `mulVec`, hiding a backslash/solver call
   inside the inverse premise, or promoting an interface draft.
 
@@ -1397,6 +1401,11 @@ polynomial remains a separate frontier.
   M_DD, and R_port.
 - boundary: the decimal text match is not exact equality; this leaf cannot
   close O1/O2 or enter registry by itself.
+- coordinator implementation (2026-09-07):
+  `src/percolation_workflow/routeb_regularizer_semantics.py` and
+  `docs/routeb-p4-o0-regularizer-semantics-bridge.md` now expose the scalar,
+  common-base matrix/block, and conditional resolvent layers. The API rejects
+  implicit Python floats and remains non-registry evidence.
 - forbidden: replacing the Float64 literal with a rational silently or using
   BigFloat pointwise agreement as a rounding proof.
 
