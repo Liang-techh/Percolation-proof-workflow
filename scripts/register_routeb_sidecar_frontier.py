@@ -1833,6 +1833,19 @@ CHILDREN = [
             "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_EXACTSCHURCOEFF20260907.review.md",
         ],
     },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.derivative_endpoint_gap",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage",
+        "statement": "A per-box derivative-hull endpoint certificate yields the downstream gap lower bound only with explicit function, derivative, offset, remainder, rounding, endpoint-order, and function-to-cap inequalities; sampled positivity or an unsound remainder bound is insufficient.",
+        "proof_sketch": "Consume DerivativeEndpointCertificate at the same mapped box, chain lower endpoint to the exact gap and cap inequality, retain nonnegative budget fields and the sampled/incorrect-remainder obstructions, and leave Taylor implementation, source binding, and registry admission external.",
+        "lane": "source_semantics",
+        "bottleneck": "coverage",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_DERIVATIVE_ENDPOINT_GAP",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_DERIVATIVE_ENDPOINT.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_DERIVATIVE_ENDPOINT_REVIEW.md",
+        ],
+    },
 ]
 
 
