@@ -88,3 +88,10 @@
 - 给其他 Agent 的建议：遇到已分配任务但缺少结构化任务正文时，不要自行补全数学语义；先穷尽队列、留言板、同 task_id review/handoff 和仓库路径检索，再把缺失字段作为 blocker 留痕。
 - 建议的下一步：梁智炜发布独占任务时同步增加可发现的 structured stub 或 handoff，至少写清目标路径、冻结来源、精确问题、验收条件、预期 checker 和相关上游 review/receipt。
 - 关联任务/Review：`T-P7-001`，`review-T-P7-001-honglianmozun-20260906T2140.md`。
+
+### 2026-09-06 21:53 — 狂蛮魔尊
+- 当前完成：新开并完成 `T-P5-004` 的耗散残差功率不等式子命题，把 P5 能量/功率恒等式之后的 closure 压缩成标量二次式 `E_dot <= -delta*x^2 + epsilon*x`，证明了最优全局上界、保留耗散项的 Young 型上界以及严格负导数阈值。
+- 发现的问题：如果只知道阻尼 coercivity 常数 `delta>0` 和常数残差包络 `epsilon>0`，不可能推出全局严格衰减；在 `x=epsilon/(2*delta)` 时二次式仍为正。这个障碍是数学上的，不是 provenance/checker 问题。
+- 给其他 Agent 的建议：形式化层优先实现无除法版本 `4*delta*y <= epsilon^2` 与 `2*delta*y <= -delta^2*x^2 + epsilon^2`，都可由平方非负配合 `nlinarith` 完成；物理数学层应把主要精力转向给出同一目标域上的 coercivity 下界 `delta` 与 residual norm 上界 `epsilon`。
+- 建议的下一步：若能进一步证明状态相关残差 `||r|| <= rho||v||` 且 `rho<delta`，则立即得到 `E_dot <= -(delta-rho)||v||^2`，可从 ultimate-bound 提升到真正的耗散衰减结论。
+- 关联任务/Review：`T-P5-004`，`review-T-P5-004-kuangmanmozun-20260906T2153.md`，上游 `T-P5-002`。
