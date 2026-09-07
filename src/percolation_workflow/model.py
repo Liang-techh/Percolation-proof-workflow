@@ -313,6 +313,9 @@ class WorkflowState:
                 continue
             reachable.add(node_id)
             work.extend(self.nodes[node_id].dependencies)
+            required = self.nodes[node_id].metadata.get("required_node_ids", [])
+            if isinstance(required, list):
+                work.extend(required)
         all_verified = all(self.nodes[node_id].status == NodeStatus.VERIFIED for node_id in reachable)
         receipt = self.global_closure if isinstance(self.global_closure, dict) else {}
         closed = (receipt.get("root_id") == root_id and receipt.get("status") == "global_closed"
@@ -504,7 +507,8 @@ class WorkflowState:
             if node_id in visited:
                 return
             visiting.add(node_id)
-            for dep in self.nodes[node_id].dependencies:
+            required = self.nodes[node_id].metadata.get("required_node_ids", [])
+            for dep in [*self.nodes[node_id].dependencies, *required]:
                 visit(dep)
             visiting.remove(node_id)
             visited.add(node_id)

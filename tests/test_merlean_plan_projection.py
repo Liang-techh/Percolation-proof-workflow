@@ -29,6 +29,19 @@ class MerLeanProjectionTests(unittest.TestCase):
         self.assertEqual(forward_cone(state, "a"), ["b", "c"])
         self.assertEqual(cycles(state), [])
 
+    def test_cross_branch_requirements_are_in_projected_dag(self):
+        state = WorkflowState(project="cross")
+        source = state.add_node("source", "P")
+        consumer = state.add_node(
+            "consumer", "Q", metadata={"required_node_ids": [source]})
+        state.root_id = consumer
+        self.assertEqual(topo_order(state), [source, consumer])
+        self.assertEqual(levels(state), {source: 0, consumer: 1})
+        self.assertEqual(forward_cone(state, source), [consumer])
+        row = next(item for item in project(state)["statements"]
+                   if item["statement_id"] == consumer)
+        self.assertEqual(row["required_node_ids"], [source])
+
     def test_notes_are_excluded_and_candidate_cannot_be_verified(self):
         state = self.make_state()
         state.nodes["b"].metadata["required_node_ids"] = ["a"]

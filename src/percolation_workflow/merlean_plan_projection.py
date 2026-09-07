@@ -38,7 +38,11 @@ def _status(node: ProofNode, state: WorkflowState) -> tuple[str, str]:
 
 
 def _graph(state: WorkflowState) -> tuple[dict[str, set[str]], dict[str, set[str]]]:
-    nodes = {node_id: set(node.dependencies) for node_id, node in state.nodes.items()}
+    nodes = {
+        node_id: set(node.dependencies) |
+        set(node.metadata.get("required_node_ids", []))
+        for node_id, node in state.nodes.items()
+    }
     for node_id, deps in nodes.items():
         unknown = deps - nodes.keys()
         if unknown:

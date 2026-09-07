@@ -32,6 +32,14 @@ class CrossBranchRequirementTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "required_node_ids"):
             state.validate()
 
+    def test_global_closure_reaches_cross_branch_inputs(self):
+        state = WorkflowState()
+        root = state.add_node("root", "R")
+        input_node = state.add_node("input", "I")
+        state.nodes[root].metadata["required_node_ids"] = [input_node]
+        report = state.global_closure_report()
+        self.assertIn(input_node, report["reachable_nodes"])
+
 
 if __name__ == "__main__":
     unittest.main()
