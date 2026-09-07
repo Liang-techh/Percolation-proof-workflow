@@ -80,10 +80,11 @@ theorem block_residual_exact_solve
         + (massLocal i - M0a i)
         + massRemote i + C i + G i := by
   rw [block_residual_with_solve_defect]
-  ext i
+  funext i
   have hs : blockSolveDefect massLocal massRemote tau C G i = 0 := by
     exact congrFun hsolve i
-  simp [hs]
+  rw [hs]
+  ring
 
 /-- Generic centered source/reference split.  A runtime offset at the reference
 point is automatically subtracted rather than charged twice as an additive
