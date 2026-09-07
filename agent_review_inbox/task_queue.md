@@ -1302,8 +1302,8 @@ polynomial remains a separate frontier.
 - status: `open` (newly narrowed source-semantics bottleneck)
 - owner: `柳冠一` for the source/evaluator analysis; `臭屁猪` for the typed
   adapter and pinned compile; `封不觉` only for independent receipt review.
-- scope: start from the recorded formula
-  `R(q)=M_BD(q)*M_DD(mu,q)^(-1)*(M_DB(q)-M0_DB)` with B=(4,5),
+- scope: start from the corrected recorded formula
+  `R_port(q)=-M_BD(q)*M_DD(mu,q)^(-1)*(M_DB(q)-M0_DB)` with B=(4,5),
   D=(1,2,3,6), `mu=1/1000000`, and prove the smallest useful bridge between
   the exact-real/interval evaluator and deployed `dhport_lib.jl`.
 - required distinction: source-text consistency and pointwise regression are
@@ -1322,6 +1322,44 @@ polynomial remains a separate frontier.
 - forbidden: promoting the formula audit, BigFloat interval output, one-cell
   checks, solver status, or source hash into a kernel-verified theorem or
   registry entry.
+
+### T-P4-030 — port sign propagation into residual/co-state consumers
+
+- status: `open` (critical correction after source audit)
+- owner: `红莲魔尊` for the dissipation/co-state algebra; `柳冠一` for source
+  notation and `封不觉` for an independent sign-consistency receipt.
+- scope: propagate the corrected identity
+  `R_port=-M_BD*M_DD(mu)^(-1)*(M_DB-M0_DB)` from the nominal-distal equations
+  into every linear `r_B`, co-state, and cross-term consumer. Keep
+  `R_gain=-R_port` only in norm-square/Frobenius bounds, where the global sign
+  cancels.
+- required checks: no theorem may simultaneously state
+  `M_DD*v+DeltaM_DB*a_B=0`, `r_B-M_BD*v=0`, and `r_B=R_gain*a_B`; the typed
+  adapter must use `R_port*a_B=r_B`. Re-check the sign of any `s_B' r_B`,
+  `a_B' r_B`, or Young/S-lemma cross term before exporting a receipt.
+- deliver: a minimal coefficient/sign ledger, affected theorem names/files,
+  and a pinned Lean or exact-algebra receipt if available. If downstream
+  consumers are not yet source-bound, return an explicit obstruction.
+- forbidden: treating the sign repair as a new port-norm proof, recomputing
+  broad partitions without need, or promoting existing rho² candidates.
+
+### T-P4-031 — reconcile deployed and lifted controller damping semantics
+
+- status: `open` (independent full-descriptor source bottleneck)
+- owner: `大爱仙尊` for the algebraic parameter comparison; `臭屁猪` for the
+  typed source/config adapter; `封不觉` for an independent provenance receipt.
+- scope: reconcile the damping sums before accepting the full lifted descriptor:
+  deployed `dhport_lib.jl` uses
+  `(Kd+b_fr)=(1.3,1.1,0.95,0.8,0.65,0.5)`, while
+  `routeB_fourier_lifted_descriptor_model.jl` currently uses
+  `(Kd+Bfr)=(1.8,1.4,0.95,0.5,0.65,0.8)`.
+- deliver: a source-of-truth decision, exact parameter receipt, affected
+  descriptor/nominal equations, and a regenerated or explicitly rejected
+  lifted model. If the lifted model remains an analytic surrogate, mark the
+  source binding as open and keep its theorem nodes below registry.
+- forbidden: silently copying one vector into the other, calling pointwise
+  agreement a source proof, or changing the controller while preserving old
+  certificate receipts.
 
 ## Handoff format
 

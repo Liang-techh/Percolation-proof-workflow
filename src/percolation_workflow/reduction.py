@@ -45,6 +45,18 @@ def close_verified_reductions(store: StateStore) -> list[str]:
                or state.registry[child].get('statement') != state.nodes[child].statement
                for child in proposal.get('children', [])):
             continue
+        closure_gate = state.decomposition_closure_gate(
+            parent.id, children=list(proposal.get('children', [])))
+        if not closure_gate["satisfied"]:
+            state.event(
+                'reduction_closure_gate_blocked', node_id=parent.id,
+                proposal_id=proposal.get('proposal_id'),
+                reasons=closure_gate["reasons"],
+                repair_route=parent.metadata.get('decomposition_contract', {}).get(
+                    'closure_gate', {}).get('repair_route'),
+            )
+            store.save(state)
+            continue
         audit = Path(proposal.get('audit', ''))
         project = audit.parent
         if not audit.is_file() or not project.is_dir():

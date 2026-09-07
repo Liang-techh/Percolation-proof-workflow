@@ -65,6 +65,34 @@ class ReductionBatchTests(unittest.TestCase):
         state.nodes[parent].metadata["reduction_proposals"] = []
         self.assertIsNone(reduction_closure_batch(state, parent))
 
+    def test_machine_closure_gate_requires_parent_receipt_after_children(self):
+        state, parent, children = self.make_state()
+        obligations = ["typed_adapter", "same_semantics"]
+        state.nodes[parent].metadata["decomposition_contract"] = {
+            "closure_gate": {
+                "required_child_ids": children,
+                "required_parent_receipt": "typed_source_binding",
+                "required_obligations": obligations,
+            },
+        }
+        for child_id in children:
+            state.nodes[child_id].status = NodeStatus.VERIFIED
+            state.registry[child_id] = {
+                "statement": state.nodes[child_id].statement,
+            }
+        blocked = state.decomposition_closure_gate(parent)
+        self.assertFalse(blocked["satisfied"])
+        self.assertIn("missing parent receipt", " ".join(blocked["reasons"]))
+
+        state.nodes[parent].metadata["parent_receipts"] = {
+            "typed_source_binding": {
+                "status": "accepted",
+                "closed_obligations": obligations,
+                "registry_eligible": True,
+            },
+        }
+        self.assertTrue(state.decomposition_closure_gate(parent)["satisfied"])
+
 
 if __name__ == "__main__":
     unittest.main()

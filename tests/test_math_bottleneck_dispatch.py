@@ -43,6 +43,16 @@ class MathBottleneckDispatchTests(unittest.TestCase):
         self.assertEqual(math_bottleneck(invalid), "other")
         self.assertIn("unsupported explicit bottleneck", explain_math_bottleneck(invalid).reason)
 
+    def test_evaluator_enclosure_is_a_distinct_source_bottleneck(self):
+        decision = explain_math_bottleneck({
+            "metadata": {
+                "math_lane": "source_semantics",
+                "math_bottleneck": "float64-enclosure",
+            },
+        })
+        self.assertEqual(decision.label, "evaluator_enclosure")
+        self.assertEqual(decision.priority, 1)
+
     def test_scheduler_uses_stable_math_order_but_never_relaxes_obstruction(self):
         state = WorkflowState()
         central = state.add_node("central_fd", "FD")

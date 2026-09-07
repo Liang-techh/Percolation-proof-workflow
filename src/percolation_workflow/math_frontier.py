@@ -144,11 +144,12 @@ _LANE_ORDER = {
 # physical Schur consumer, and local sign/FD diagnostics remain downstream.
 _BOTTLENECK_ORDER = {
     "coverage": 0,
-    "source_semantics": 1,
-    "physical_schur_binding": 2,
-    "interval_sign": 3,
-    "central_fd": 4,
-    "other": 5,
+    "evaluator_enclosure": 1,
+    "source_semantics": 2,
+    "physical_schur_binding": 3,
+    "interval_sign": 4,
+    "central_fd": 5,
+    "other": 6,
 }
 
 _BOTTLENECK_ALIASES = {
@@ -158,6 +159,10 @@ _BOTTLENECK_ALIASES = {
     "source_semantics": "source_semantics",
     "source_semantic": "source_semantics",
     "source_binding": "source_semantics",
+    "evaluator_enclosure": "evaluator_enclosure",
+    "source_evaluator": "evaluator_enclosure",
+    "float64_enclosure": "evaluator_enclosure",
+    "roundoff_enclosure": "evaluator_enclosure",
     "physical_schur": "physical_schur_binding",
     "physical_schur_binding": "physical_schur_binding",
     "schur_binding": "physical_schur_binding",
@@ -177,6 +182,10 @@ _BOTTLENECK_MARKERS = (
     ("physical_schur_binding", (
         "physical_schur_binding", "physical_schur", "schur_binding",
         "schur", "krawczyk", "operator_binding",
+    )),
+    ("evaluator_enclosure", (
+        "evaluator_enclosure", "source_evaluator", "float64_enclosure",
+        "roundoff_enclosure", "evaluator", "roundoff",
     )),
     ("interval_sign", ("interval_sign", "h_src", "sign_normal", "sign_theorem")),
     ("central_fd", ("central_fd", "central_difference", "finite_difference", "finite_diff")),

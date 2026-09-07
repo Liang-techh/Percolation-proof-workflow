@@ -2,7 +2,7 @@
 
 The external Route-B artifacts already expose the residual map
 
-    R(q) = M_BD(q) M_DD(mu,q)^(-1) (M_DB(q) - M0_DB),
+    R_port(q) = -M_BD(q) M_DD(mu,q)^(-1) (M_DB(q) - M0_DB),
 
 and the nominal-distal bridge identifies ``r_B = M_BD v``.  This recorder
 checks that the relevant source/interface texts are present and records the
@@ -66,17 +66,22 @@ def main() -> int:
             and "const BIDX = [4, 5]" in text["interval_probe"]
         ),
         "interval_probe_forms_source_R": (
-            "R = [sum(M[BIDX[i], DIDX[k]] * Z[k, j]" in text["interval_probe"]
+            "R_gain = [sum(M[BIDX[i], DIDX[k]] * Z[k, j]" in text["interval_probe"]
+            and "R = [-R_gain[i, j]" in text["interval_probe"]
             and "Delta[i, j]" in text["interval_probe"]
         ),
         "interval_probe_preserves_remote_term": (
-            "r_B = R*a_B" in text["interval_probe"]
+            "r_B = R_port*a_B" in text["interval_probe"]
             and "M_BD" in text["interval_probe"]
         ),
         "analytic_model_uses_same_regularizer": (
             "load_matrix_cs" in text["analytic_model"]
             and "M[i, i] += Q(1, 1_000_000)" in text["analytic_model"]
             and "MDD = M0[D, D]" in text["analytic_model"]
+        ),
+        "analytic_model_controller_block_is_present": (
+            "Kd = Q[4, 5, 3, 1, 2, 3] ./ 5" in text["analytic_model"]
+            and "Bfr = Q[1, Q(2, 5), Q(7, 20), Q(3, 10), Q(1, 4), Q(1, 5)]" in text["analytic_model"]
         ),
         "nominal_bridge_equations_present": (
             "M_DD(q)*v + DeltaM_DB(q)*a_B = 0" in text["nominal_interface"]
@@ -96,18 +101,28 @@ def main() -> int:
 
     audit = {
         "schema_version": 1,
-        "status": "SOURCE_FORMULA_PRESENT_FLOAT64_ENCLOSURE_OPEN",
-        "formula": "R(q)=M_BD(q)*M_DD(mu,q)^(-1)*(M_DB(q)-M0_DB)",
+        "status": "SOURCE_FORMULA_PRESENT_CONTROLLER_MISMATCH_AND_FLOAT64_ENCLOSURE_OPEN",
+        "formula": "R_port(q)=-M_BD(q)*M_DD(mu,q)^(-1)*(M_DB(q)-M0_DB)",
         "block_order": {"B": [4, 5], "D": [1, 2, 3, 6]},
         "findings": [
-            "the interval probe solves M_DD(mu,q)^(-1)*DeltaM_DB(q)",
-            "the residual output is formed by left multiplication with M_BD(q)",
+            "the interval probe solves M_DD(mu,q)^(-1)*DeltaM_DB(q) and applies the descriptor minus sign",
+            "the residual output is R_port=-M_BD(q)*Z; positive R_gain is norm-equivalent only",
             "the nominal bridge retains r_B-M_BD(q)*v=0 and M_DD*v+DeltaM_DB*a_B=0",
             "the analytic c/s model includes the same explicit mu=1/1000000 diagonal regularizer",
             "the source semantics audit records matching DH parameters and h=1/100000 finite differences",
         ],
         "checks": checks,
+        "known_semantic_mismatches": [
+            {
+                "field": "controller_damping_sum",
+                "deployed_dhport": ["1.3", "1.1", "0.95", "0.8", "0.65", "0.5"],
+                "lifted_descriptor": ["1.8", "1.4", "0.95", "0.5", "0.65", "0.8"],
+                "effect": "full lifted descriptor is not yet the deployed controller source",
+                "repair": "select one authoritative parameter vector and regenerate/rebind the full descriptor",
+            },
+        ],
         "remaining_obligations": [
+            "resolve the controller damping-vector mismatch before full descriptor source binding",
             "prove the common exact-real domain identity between deployed source and analytic/interval evaluator",
             "prove a roundoff-aware Float64 enclosure for M,C_fd,G_fd,tau and the solved RHS, or make exact-real evaluation authoritative",
             "compile a typed Lean adapter for R*a_B=r_B with the same mu, force coordinates, and remote term",
@@ -133,6 +148,9 @@ def main() -> int:
         changed = True
     if leaf.metadata.get("source_binding_artifacts") != artifacts:
         leaf.metadata["source_binding_artifacts"] = artifacts
+        changed = True
+    if leaf.metadata.get("math_bottleneck") != "evaluator_enclosure":
+        leaf.metadata["math_bottleneck"] = "evaluator_enclosure"
         changed = True
     unresolved = list(leaf.metadata.get("unresolved", []))
     for item in (

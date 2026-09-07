@@ -385,6 +385,65 @@ class WorkflowState:
         return all(node_id in self.nodes and node_id in closed_ids and
                    node_id in self.registry for node_id in required)
 
+    def decomposition_closure_gate(self, node_id: str, *,
+                                   children: list[str] | None = None) -> dict[str, Any]:
+        """Evaluate an optional machine-readable parent-assembly gate.
+
+        A decomposition contract is descriptive unless it contains a
+        ``closure_gate`` mapping.  When present, the gate requires the exact
+        child set, a coordinator-owned parent receipt, and explicit closed
+        obligations.  This remains fail-closed and never mutates state; it is
+        used before reduction cascades and during registry admission.
+        """
+        node = self.nodes[node_id]
+        contract = node.metadata.get("decomposition_contract", {})
+        gate = contract.get("closure_gate") if isinstance(contract, dict) else None
+        if gate is None:
+            return {"active": False, "satisfied": True, "reasons": []}
+        if not isinstance(gate, dict):
+            return {"active": True, "satisfied": False,
+                    "reasons": ["closure_gate must be a mapping"]}
+
+        reasons: list[str] = []
+        required_children = gate.get("required_child_ids")
+        if (not isinstance(required_children, list) or not required_children or
+                any(not isinstance(child, str) or child not in self.nodes
+                    for child in required_children) or
+                len(set(required_children)) != len(required_children)):
+            reasons.append("closure_gate has invalid required_child_ids")
+            required_children = []
+        expected_children = list(children) if children is not None else list(node.dependencies)
+        if (set(expected_children) != set(required_children) or
+                len(expected_children) != len(required_children)):
+            reasons.append("closure_gate child set does not match parent assembly")
+        for child_id in required_children:
+            child = self.nodes[child_id]
+            if (child.status != NodeStatus.VERIFIED or child_id not in self.registry or
+                    self.registry[child_id].get("statement") != child.statement):
+                reasons.append(f"child {child_id} is not registry-verified")
+
+        receipt_name = gate.get("required_parent_receipt")
+        receipts = node.metadata.get("parent_receipts", {})
+        parent_receipt = receipts.get(receipt_name) if isinstance(receipts, dict) else None
+        if not isinstance(receipt_name, str) or not receipt_name.strip():
+            reasons.append("closure_gate has no required_parent_receipt")
+        elif not isinstance(parent_receipt, dict):
+            reasons.append(f"missing parent receipt {receipt_name}")
+        else:
+            if parent_receipt.get("status") not in {"accepted", "verified", "complete"}:
+                reasons.append(f"parent receipt {receipt_name} is not accepted")
+            required_obligations = gate.get("required_obligations", [])
+            closed_obligations = parent_receipt.get("closed_obligations", [])
+            if (not isinstance(required_obligations, list) or
+                    not isinstance(closed_obligations, list) or
+                    not set(required_obligations).issubset(set(closed_obligations))):
+                reasons.append("parent receipt does not close required obligations")
+            if parent_receipt.get("registry_eligible") is not True:
+                reasons.append("parent receipt is not registry-eligible")
+        return {"active": True, "satisfied": not reasons, "reasons": reasons,
+                "required_child_ids": list(required_children),
+                "required_parent_receipt": receipt_name}
+
     def frontier_closability(self, node_id: str) -> int:
         """Count open ancestors that would close after this leaf is verified.
 
@@ -562,6 +621,10 @@ class WorkflowState:
             raise ValueError('registry requires closed dependencies')
         if not self._required_inputs_closed(node):
             raise ValueError('registry requires closed cross-branch inputs')
+        closure_gate = self.decomposition_closure_gate(node_id)
+        if not closure_gate["satisfied"]:
+            raise ValueError("registry requires satisfied decomposition closure gate: " +
+                             "; ".join(closure_gate["reasons"]))
         required_ids = list(node.metadata.get('required_node_ids', []))
         if required_ids:
             if any(self.nodes[required_id].status != NodeStatus.VERIFIED or

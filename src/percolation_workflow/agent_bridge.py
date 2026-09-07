@@ -129,7 +129,17 @@ def prepare_requests(store: StateStore, *, limit: int = 4,
     for node in state.frontier():
         if node.metadata.get('repair_exhausted'):
             continue
-        if node.metadata.get('statement_status') != 'indexed':
+        statement_status = node.metadata.get('statement_status')
+        # Coordinator-created mathematical leaves may already have a typed
+        # statement and repair contract before the external statement index
+        # is refreshed. Admit only that narrow, explicit path; generic
+        # ``proposed`` children remain blocked until sketch admission.
+        formalization_target = (
+            statement_status == 'formalization_target'
+            and isinstance(node.metadata.get('frontier_repair_contract'), dict)
+            and node.metadata.get('math_lane') in {'lean_adapter', 'source_semantics'}
+        )
+        if statement_status != 'indexed' and not formalization_target:
             continue
         if node.metadata.get('proposed_by') and not any(
             proposal.get('status') == 'sketch_checked' and node.id in proposal['children']

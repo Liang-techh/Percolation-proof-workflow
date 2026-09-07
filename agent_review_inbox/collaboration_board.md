@@ -700,3 +700,20 @@
   `R*a_B=r_B` adapter 还未证明。该审计不关闭 theorem、registry 或 global gate。
 - state revision 推进到 449；当前主线应优先攻克 evaluator enclosure 与
   typed adapter，不再重复做同一端口范数审计。
+
+### 2026-09-07 — 梁智炜：修正端口消元符号并加执行式父级 closure gate
+
+- 数学审计发现并修正了关键符号：由
+  `M_DD v+DeltaM_DB a_B=0`、`r_B-M_BD v=0` 得到
+  `R_port=-M_BD M_DD^{-1}DeltaM_DB`；正的 `R_gain=-R_port` 只保留给范数平方，
+  不得用于线性 residual/co-state。已同步修正 BI partition/box、block456、
+  composed interval 与 exact orientation audit 的计算和说明。
+- orientation audit 重新运行通过；由于纯范数不受整体符号影响，已有 rho²
+  数值仍按 candidate 处理，但原先 `R*a_B=r_B` 的 typed 目标已改成
+  `R_port*a_B=r_B`，不再掩盖符号错误。
+- framework 新增 `WorkflowState.decomposition_closure_gate()`：父节点现在
+  必须同时看到精确 child registry、`typed_true_dh_port_source_binding` parent
+  receipt、required obligations 与 `registry_eligible=true`，才允许 reduction
+  cascade 或 registry promotion。当前 gate 有意保持 blocked。
+- true-DH parent decomposition 已写入该 gate；state revision 452，global gate、
+  registry 和 formal certificate 仍未改变。

@@ -33,6 +33,25 @@ class BridgeTests(unittest.TestCase):
             self.assertEqual(requests[0]['scheduler']['obstruction_rank'], 0)
             self.assertNotIn(blocked, [request['node_id'] for request in requests])
 
+    def test_prepare_requests_admits_explicit_formalization_target_leaf(self):
+        with tempfile.TemporaryDirectory() as directory:
+            store = StateStore(Path(directory) / 'state.json')
+            state = WorkflowState()
+            node_id = state.add_node(
+                'typed-source-leaf', 'theorem typed_source_leaf : True',
+                metadata={
+                    'statement_status': 'formalization_target',
+                    'math_lane': 'source_semantics',
+                    'frontier_repair_contract': {'next_agent_action': 'build adapter'},
+                })
+            store.save(state)
+
+            requests = prepare_requests(store, limit=1)
+
+            self.assertEqual([request['node_id'] for request in requests], [node_id])
+            self.assertEqual(requests[0]['frontier_repair_contract']['next_agent_action'],
+                             'build adapter')
+
     def test_prepare_requests_preserves_cross_branch_input_contract(self):
         with tempfile.TemporaryDirectory() as directory:
             store = StateStore(Path(directory) / 'state.json')

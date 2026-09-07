@@ -100,9 +100,25 @@ def main() -> int:
         "children": child_ids,
         "child_order": child_ids,
         "closure_rule": "true-DH port source binding closes only after all three semantic children are VERIFIED",
+        "closure_gate": {
+            "schema_version": 1,
+            "required_child_ids": child_ids,
+            "required_parent_receipt": "typed_true_dh_port_source_binding",
+            "required_obligations": [
+                "coefficient_level_R_aB_equals_rB_identity",
+                "typed_R_aB_equals_rB_adapter",
+                "same_regularizer_and_fd_semantics",
+            ],
+            "repair_route": {
+                "owner": "P4.true_dh_residual_map_coefficient_binding",
+                "action": "build_typed_R_aB_equals_rB_adapter",
+            },
+            "promotion_boundary": "children and parent receipt must be registry-eligible before parent assembly",
+        },
         "parallelism": "source semantics, block projection, and coefficient comparison may be investigated independently; no child is treated as proof of another",
         "promotion_boundary": "all children remain below registry until source, comparator, and global domain gates close",
     }
+    parent.metadata.setdefault("parent_receipts", {})
     if parent.metadata.get("decomposition_contract") != decomposition:
         parent.metadata["decomposition_contract"] = decomposition
         changed = True
