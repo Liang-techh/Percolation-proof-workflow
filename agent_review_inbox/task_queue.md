@@ -598,14 +598,16 @@ polynomial remains a separate frontier.
 
 ### T-P8-006 — ramp reconstruction and terminal transfer
 
-- status: `reviewed_pending` (math result from 古月方源; candidate sidecar
-  prepared; pinned Lean verification delegated to 臭屁猪/validation lane)
+- status: `compiled_candidate_recorded` (independent review retained)
 - scope: formalize the scalar tail equations `w'=c`, `c'=0`, `w(0)=0` and
   derive `c(t)=c0`, `w(t)=c0*t`, plus the `T=1` terminal transfer;
 - deliver: minimal Lean child or a precise interval-API blocker, with the
   first-12 explicit-time projection kept separate from source binding;
 - forbidden: claiming ODE existence, `[0,1]` flowpipe coverage, deployed
   13-state semantic binding, or P8/M4 admission from this child alone.
+- local progress: the independent GitHub compile/axiom review is now
+  represented as `P8.ramp_reconstruction_compiled_candidate`; it remains
+  below registry and physical first-12/source/flowpipe admission.
 
 ### T-P8-007 — pinned validation of ramp sidecar
 
@@ -635,7 +637,7 @@ polynomial remains a separate frontier.
 
 ### T-P8-010 — independent gate review for compiled P8 candidate
 
-- status: `open` (released for the unique validation lane)
+- status: `reviewed_pending` (review retained as compiled candidate)
 - owner: `封不觉`
 - source: `review-T-P8-007-choupizhu-20260906T2307.md`, GitHub Actions run
   `34085393805`, job `101628339820`, and the sidecar blob/receipt hashes;

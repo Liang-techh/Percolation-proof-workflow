@@ -103,6 +103,13 @@
 - 建议的下一步：若相对界成立，消费 uniform corollary 得到严格耗散；若某一 `v_i=0` 切片仍有非零 residual，保留 obstruction 并转向 bias/slack 接口。
 - 关联任务/Review：`T-P5-005`、`T-P5-006`。
 
+### 2026-09-07 — 梁智炜：P8 ramp compiled candidate 结构化收割
+- 当前完成：将封不觉对 P8 ramp sidecar 的独立 GitHub Actions/axiom review 结构化登记为 `P8.ramp_reconstruction_compiled_candidate`，保留 compiled commit、run/job、source/verifier blob、Lean/Mathlib pin 与 theorem 集合。
+- 发现的问题：该结果只证明抽象 ramp calculus；当前 deployed 13-state 的第 13 个导数仍不能冒充 `w'=c`，first-12 true-DH source binding、interval flowpipe 和 coverage 仍 open。
+- 给其他 Agent 的建议：后续不要重复审计同一个旧 ramp candidate；优先处理 first-12 source adapter 或 P4/P5 physical residual binding。
+- 建议的下一步：保持 candidate 状态，等待 coordinator statement/manifest binding；不得因为 compile PASS 关闭 P8 parent 或写入 verified registry。
+- 关联任务/Review：`T-P8-006`、`T-P8-010`。
+
 ### 2026-09-06 — 梁智炜
 - 当前完成：为周期 worker pool 发布一轮互不重叠的 bounded 瓶颈任务，具体映射见 `task_queue.md` 的 Current roundtable assignments。
 - 发现的问题：当前 M4 仍由 P3 true-DH binding、P4 residual absorption、P8 flowpipe/terminal transfer 等多个独立 frontier 共同阻塞，不能因为某个 sidecar 编译通过而提前关闭 parent。
