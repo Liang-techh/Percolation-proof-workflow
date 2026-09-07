@@ -25,6 +25,9 @@ BODY3_CHECK = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_3_TARGE
 BODY4_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_4_SOURCE_BRIDGE_RECEIPT.json"
 BODY4_CHECK = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_4_TARGET_CHECK.json"
 BODY4_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-body-4-source-bridge-codex-20260907.md"
+BODY5_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_5_SOURCE_BRIDGE_RECEIPT.json"
+BODY5_CHECK = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_5_TARGET_CHECK.json"
+BODY5_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-body-5-source-bridge-codex-20260907.md"
 O0_BODY3_RECEIPT = ROOT / "agent_review_inbox/receipt-T-P4-033-O0-P-NE-body3-geometry-targets-20260907.json"
 O0_BODY4_RECEIPT = ROOT / "agent_review_inbox/receipt-T-P4-033-O0-P-NE-body4-geometry-targets-20260907.json"
 KEYED_INTERFACE = ROOT / "artifacts/task_routeb_o1_keyed_regrouping_20260907/RouteBO1KeyedRegroupingInterface.lean"
@@ -49,6 +52,7 @@ def main() -> None:
     for path in (STATE, LEAN, TRACE, ADAPTER, GENERATOR, BODY_RECEIPT, BODY_CHECK,
                  BODY1_RECEIPT, BODY2_CHECK, BODY2_RECEIPT, BODY3_RECEIPT, BODY3_CHECK,
                  BODY4_RECEIPT, BODY4_CHECK, BODY4_REVIEW,
+                 BODY5_RECEIPT, BODY5_CHECK, BODY5_REVIEW,
                  O0_BODY3_RECEIPT, O0_BODY4_RECEIPT, KEYED_INTERFACE, KEYED_RECEIPT, KEYED_CHECK,
                  REVIEW, AGENT_REVIEW):
         if not path.is_file():
@@ -99,6 +103,13 @@ def main() -> None:
         "o0_body_4_geometry_receipt_sha256": digest(O0_BODY4_RECEIPT),
         "o0_body_4_geometry_status": "CONDITIONAL_BODY4_GEOMETRY_DERIVATION",
         "o0_body_4_geometry_proven": False,
+        "body_5_source_bridge_receipt_sha256": digest(BODY5_RECEIPT),
+        "body_5_source_bridge_status": "OPEN_BODY_5_SOURCE_AND_TRACE_PREMISES",
+        "body_5_source_bridge_proven": False,
+        "body_5_target_check_sha256": digest(BODY5_CHECK),
+        "body_5_target_check_status": "PASS_EXACT_BODY5_TARGET_COEFFICIENTS_FAIL_CLOSED",
+        "body_5_target_coefficients_proven": False,
+        "body_5_review_sha256": digest(BODY5_REVIEW),
         "o0_body_3_geometry_receipt_sha256": digest(O0_BODY3_RECEIPT),
         "o0_body_3_geometry_status": "CONDITIONAL_BODY3_GEOMETRY_DERIVATION",
         "o0_body_3_geometry_proven": False,

@@ -1,0 +1,67 @@
+{
+  "schema": "routeb.o1.true_dh_exact_typed_mdd_source.body_5_source_bridge.v1",
+  "status": "OPEN_BODY_5_SOURCE_AND_TRACE_PREMISES",
+  "body_label": 5,
+  "zero_based_body": 4,
+  "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+  "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+  "lean_adapter": {
+    "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean",
+    "sha256": "25F099EC5EB7F699C789AE29AA45DF0FBB24FF06547F498740968F5E1B3C9976",
+    "status": "TARGETS_ONLY_UNCOMPILED"
+  },
+  "trace_input": {
+    "path": "artifacts/task_routeb_body_trace_sink_current/outputs/routeB_fourier_mass_body_trace.csv",
+    "sha256": "AE1F9CD7978C4CF23626B5C097EAAF4A2C70DE9C8B86A31A61DB12997CF4C3B9",
+    "frequency_coordinates": ["q 1", "q 2", "q 3"]
+  },
+  "exact_piecewise_fourier_expression_zero_based": {
+    "entry_0_0": "1441/30000 + (63/6250)*sin(q 1) + (57/6250)*sin(q 1+q 2) - (1323/200000)*cos(2*q 1) + (1197/100000)*cos(q 2) - (1197/100000)*cos(2*q 1+q 2) - (1083/200000)*cos(2*q 1+2*q 2)",
+    "entry_0_1": "entry_1_0 = -(57/20000)*cos(q 1+q 2) - (63/20000)*cos(q 1)",
+    "entry_0_2": "entry_2_0 = -(57/20000)*cos(q 1+q 2)",
+    "entry_0_3": "entry_3_0 = (1/30)*cos(q 1+q 2)",
+    "entry_0_4": "entry_4_0 = (1/60)*(cos(q 1+q 2-q 3) - cos(q 1+q 2+q 3))",
+    "entry_1_1": "8609/150000 + (1197/50000)*cos(q 2)",
+    "entry_1_2": "entry_2_1 = 13249/300000 + (1197/100000)*cos(q 2)",
+    "entry_1_4": "entry_4_1 = (1/30)*cos(q 3)",
+    "entry_2_2": "13249/300000",
+    "entry_2_3": "entry_3_2 = entry_2_4 = entry_4_2 = (1/30)*cos(q 3)",
+    "entry_3_3": "1/30",
+    "entry_4_4": "1/30",
+    "all_other_entries": "0",
+    "coefficient_families": [
+      "(0,0): nu2=±2,nu3=±2 real=-1083/400000; nu2=±2,nu3=±1 real=-1197/200000; nu2=±2,nu3=0 real=-1323/400000; nu2=±1,nu3=±1 imag=∓57/12500; nu2=±1,nu3=0 imag=∓63/12500; nu2=0,nu3=±1 real=1197/200000; constant=1441/30000",
+      "(0,1),(1,0): (nu2,nu3)=(-1,-1),(-1,0),(1,0),(1,1) with real=-57/40000,-63/40000,-63/40000,-57/40000",
+      "(0,2),(2,0): nu2,nu3=(-1,-1),(1,1), real=-57/40000",
+      "(0,3),(3,0): nu2,nu3=(-1,-1),(1,1), real=1/60",
+      "(0,4),(4,0): (nu2,nu3,nu4)=(-1,-1,-1),(-1,-1,1),(1,1,-1),(1,1,1), real=-1/120,1/120,1/120,-1/120",
+      "(1,1): nu3=±1 real=1197/100000; constant=8609/150000",
+      "(1,2),(2,1): nu3=±1 real=1197/200000; constant=13249/300000",
+      "(1,4),(2,4) and transposes: nu4=±1 real=1/60",
+      "(2,2): constant=13249/300000; (3,3),(4,4): constant=1/30"
+    ]
+  },
+  "lean_targets": {
+    "piecewise_definition": "body_5_piecewise",
+    "source_expansion": "h_body_5_source_expanded_target",
+    "source_to_trace": "h_body_5_source_entry_target",
+    "source_expected_piecewise": "h_body_5_expected_entry_target",
+    "trace_fold": "h_body_5_trace_fold_target",
+    "conditional_composition": "h_body_5_of_entry_targets",
+    "premise_policy": "targets are Props only; no h_body_5 proof or premise field is supplied"
+  },
+  "fail_closed": {
+    "source_expansion": "OPEN_NO_PROOF",
+    "trace_fold": "OPEN_NO_PROOF",
+    "h_body_5": "OPEN_NO_PROOF",
+    "verified": false,
+    "registry_eligible": false,
+    "comparator_accepted": false,
+    "formal_certificate_allowed": false
+  },
+  "compile_probe": {
+    "status": "NOT_ATTEMPTED_BY_REQUEST",
+    "lean_or_lake_run": false
+  },
+  "next_exact_action": "Compile only the body-5 source Gram expansion and tagged trace-fold lemmas in the pinned environment, then apply h_body_5_of_entry_targets under the same source/state key."
+}

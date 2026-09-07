@@ -1496,3 +1496,11 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - 该结果仅为 `PASS_CONDITIONAL_EXACT_API_OPEN_SOURCE_BINDING`。仍缺 `H_acc`、
   `H_mu`、`H_mu_1e6` 三个 physical source binding，不消费 P-BUDGET、baseline
   或 strict Schur margin；`μ=1/10^6` 与 binary64 decode 的差异已保留。
+
+### 2026-09-08 — O1 body-5 target correction and exact gate
+
+- body-5（zero-based `4`）的 57 个 tagged atoms 已按冻结 CSV 建立 checker，
+  当前状态为 `PASS_EXACT_BODY5_TARGET_COEFFICIENTS_FAIL_CLOSED`。
+- 初版 agent target 错把 q(3) coupling 扩到 `(1,3)/(2,3)`；key-map checker
+  发现 CSV 实际只包含 `(1,4)/(2,4)` 及转置，已修正 adapter/review/receipt，
+  并重算 adapter provenance。source expansion、trace fold、`h_body_5` 仍 open。

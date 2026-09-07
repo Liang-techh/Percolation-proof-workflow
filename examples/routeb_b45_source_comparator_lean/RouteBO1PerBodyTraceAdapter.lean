@@ -357,20 +357,12 @@ def body_5_piecewise (q : Q6) (i j : Joint) : ℝ :=
   else if i = (2 : Joint) ∧ j = (1 : Joint) then
     (13249 / 300000 : ℝ) +
         (1197 / 100000 : ℝ) * Real.cos (q (2 : Joint))
-  else if i = (1 : Joint) ∧ j = (3 : Joint) then
-    (1 / 30 : ℝ) * Real.cos (q (3 : Joint))
-  else if i = (3 : Joint) ∧ j = (1 : Joint) then
-    (1 / 30 : ℝ) * Real.cos (q (3 : Joint))
   else if i = (1 : Joint) ∧ j = (4 : Joint) then
     (1 / 30 : ℝ) * Real.cos (q (3 : Joint))
   else if i = (4 : Joint) ∧ j = (1 : Joint) then
     (1 / 30 : ℝ) * Real.cos (q (3 : Joint))
   else if i = (2 : Joint) ∧ j = (2 : Joint) then
     (13249 / 300000 : ℝ)
-  else if i = (2 : Joint) ∧ j = (3 : Joint) then
-    (1 / 30 : ℝ) * Real.cos (q (3 : Joint))
-  else if i = (3 : Joint) ∧ j = (2 : Joint) then
-    (1 / 30 : ℝ) * Real.cos (q (3 : Joint))
   else if i = (2 : Joint) ∧ j = (4 : Joint) then
     (1 / 30 : ℝ) * Real.cos (q (3 : Joint))
   else if i = (4 : Joint) ∧ j = (2 : Joint) then

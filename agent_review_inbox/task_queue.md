@@ -2078,6 +2078,13 @@ after integration; corrections should be a new result file.
   orientation proof。
 - 当前 gate 只证明接口结构存在，不能关闭 aggregate function lift。
 
+### T-P4-033-O1 — body-5 exact target correction (2026-09-08)
+
+- body-5（zero-based `4`）57-row exact coefficient map 已通过 checker；目标已
+  修正为冻结 CSV 的实际 support，q(3) coupling 只保留 `(1,4)/(2,4)` 及转置。
+- 下一步攻 body-5 prefix-frame/source Gram 与 q(3) tagged fold；先以 checker
+  结果为 gate，任何 source theorem 必须在同一 source/state key 下重新绑定。
+
 ### T-P4-033-O1 — body-4 exact target (2026-09-08)
 
 - body-4（zero-based `3`）40-row exact Fourier target 已冻结并通过 checker，
