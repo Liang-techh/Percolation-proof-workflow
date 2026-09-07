@@ -2122,3 +2122,20 @@ after integration; corrections should be a new result file.
 - P5-025 继续 formalize finite orthant sign reduction，并把 `K_path` 保留为
   typed component matrix；不得以 scalar `ell2_path` 或缺少 path 的 checker
   关闭 P5/P8/M4。
+
+### Coordinator parallel mathematical round (2026-09-07)
+
+These four sidecar tasks are disjoint and are being executed in parallel. They
+are local mathematical decomposition work; none may modify the shared O1
+adapter or promote a theorem.
+
+| task | scope | required output | boundary |
+|---|---|---|---|
+| `T-P4-033-O1-body4-gram` | human body-4 source Gram reduction | exact child targets/review | OPEN, no Lean/Lake claim |
+| `T-P4-033-O1-body5-fold` | human body-5 source-to-Fourier and q3 fold | sidecar targets/receipt/review | OPEN, no source closure |
+| `T-P4-033-O0-Hacc-export` | Julia `H_acc` semantic export contract | evaluator/interval receipt or obstruction | no numerical-to-formal upgrade |
+| `T-P4-033-O1-body6-export` | canonical per-body-6 export contract | support receipt and downstream boundary | aggregate bucket is not body-6 proof |
+
+At the next 20-minute harvest, integrate only new immutable results, refresh
+the candidate/state provenance, and sync the integrated batch once. Do not
+fetch during the intervening local mathematical work.

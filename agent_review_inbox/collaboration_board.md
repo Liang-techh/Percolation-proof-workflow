@@ -1529,6 +1529,20 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   它保留各向异性 component matrix，但仍缺 source-bound K_path、coverage 和
   独立最终审计。P5 harvest 不改变 M4 的 fail-closed 状态。
 
+### 2026-09-07 — 梁智炜：四路数学瓶颈并行推进
+
+- 当前完成：已并行发布 body-4 Gram、body-5 q3 fold、H_acc semantic export、
+  body-6 canonical export 四个互不重叠 sidecar 任务。
+- 发现的问题：O1 的 coefficient checker 已经不是当前主瓶颈；真正阻塞是
+  source/frame/Jacobian/Gram 证明、tagged finite fold、同源 H_acc 导出，以及
+  body-6 的 canonical per-body slice。
+- 给其他 Agent 的建议：优先产出精确 child theorem、变量/索引契约和可复现 receipt；
+  没有 pinned Lean 结果时保持 `OPEN/UNPROVEN`，不要重复做整仓审计。
+- 建议的下一步：收割时逐项接入 state 的 conditional metadata；只有 kernel、
+  comparator、source/path/coverage 共同通过才允许向 parent closure 前进。
+- 关联任务/Review：`T-P4-033-O1-body4-gram`、`T-P4-033-O1-body5-fold`、
+  `T-P4-033-O0-Hacc-export`、`T-P4-033-O1-body6-export`。
+
 ### 2026-09-07 — 梁智炜：20 分钟收割同步规则纠正
 
 - 当前完成：已将 GitHub 同步窗口明确绑定到每次 20 分钟 inbox 收割/任务发布，
