@@ -15,6 +15,10 @@ from .routeb_mbd_obstruction import (
     RouteBProjectionObstruction,
     audit_routeb_mbd_projection,
 )
+from .routeb_remote_contract import (
+    RouteBRemoteBindingAudit,
+    audit_routeb_remote_binding,
+)
 from .disjoint import (audit_do, build_repair_do, canonical_do_schema,
                         classify_manual_review, do_sha256, normalize_do_path)
 from .advisory_reuse import (AdvisoryReuseError, SCHEMA_VERSION,
@@ -39,6 +43,7 @@ __all__ = [
     "RouteBP4SourceContract", "audit_routeb_p4_source_contract",
     "RouteBKcBudget", "derive_routeb_kc_budget",
     "RouteBProjectionObstruction", "audit_routeb_mbd_projection",
+    "RouteBRemoteBindingAudit", "audit_routeb_remote_binding",
     "audit_do", "build_repair_do", "canonical_do_schema", "classify_manual_review", "do_sha256", "normalize_do_path",
     "AdvisoryReuseError", "SCHEMA_VERSION", "project_advisory_reuse",
     "project_plan", "export_plan_views", "plan_topo_order", "plan_levels",

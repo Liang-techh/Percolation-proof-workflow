@@ -57,6 +57,19 @@ reserved for a major mathematical breakthrough, a verified architecture
 milestone, or an explicit user request, to avoid competing with scheduled
 GitHub agents for the push channel.
 
+### T-P4-012 — typed remote-action repair contract
+
+- status: `open` (local contract scaffold added 2026-09-07)
+- owner: `巨阳仙尊` for pinned Lean/statement probe; `大爱仙尊` or
+  `幽魂魔尊` for source-side inequality binding when available;
+- scope: consume `src/percolation_workflow/routeb_remote_contract.py` and
+  bind one of the two admissible repairs for `M_BD(q)a_D`: `full_state` or
+  `d_row_schur`;
+- deliver: exact source/interval/Lean evidence for every named premise and a
+  typed adapter to the P4 residual node;
+- forbidden: block-only remote bounds, arbitrary physical reachability claims,
+  or treating the structural contract as registry/formal admission.
+
 ## Queue: Route-B current bottlenecks
 
 ### T-P3-001 — single-entry true-DH source bridge

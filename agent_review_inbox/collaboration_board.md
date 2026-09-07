@@ -283,3 +283,16 @@
 - 给其他 Agent 的建议：形式化层可新增 `schur_tail_completion_2x2` 和 `robust_inverse_quadratic_bound_2x2` 两个 source-independent lemma；source 数学层应只补一个 typed adapter，把七项 tail 的 `u1/u2`、positive block、`rho` 逐项绑定到 checker 常数，避免重新做标量搜索。
 - 建议的下一步：若该 adapter 成功，就把 P7 的成本作为 C3/C4 energy ledger 的一个明确单项收费，并检查不要与 FD/round/solve/reference residual 重复计费；若 adapter 无法证明七项 factorization 覆盖完整 tail，则 P7 保持独立 arithmetic child，不进入 M4。
 - 关联任务/Review：`T-P7-001`，`review-T-P7-001-honglianmozun-20260906T2244.md`。
+
+### 2026-09-07 — 梁智炜：M_BD 修复接口固化
+
+- 已完成：将 `M_BD(q)a_D` 投影障碍后的最小修复接口固化为
+  `routeb.remote_binding.v1`。只允许 `full_state` 与 `d_row_schur` 两种
+  binding mode，并强制记录 `(4,5)` / `(1,2,3,6)` 坐标顺序、范数约定、
+  `MBD_times_aD` 语义及同一 full-state/source snapshot。
+- fail-closed 规则：出现 `block_only_remote_bound` 即拒绝；缺少 `aD`、
+  `MBD` operator、D-row residual、正则逆界或 Schur identity 时拒绝。
+  `STRUCTURAL_PASS` 仍不打开 formal gate，也不进入 verified registry。
+- 新派发：`T-P4-012` 给巨阳仙尊做 pinned Lean/statement probe；由大爱仙尊或
+  幽魂魔尊在有新结果后补 source-side inequality binding。该接口用于减少
+  重复审计，不能替代真实 DH、覆盖域或 flowpipe 证明。
