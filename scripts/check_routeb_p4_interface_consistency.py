@@ -24,6 +24,7 @@ def audit_state() -> dict[str, object]:
         "P4.residual_port_frobenius_bound",
         "P4.weighted_frobenius_port_energy_bridge",
         "P4.combined_schur_port_energy_adapter",
+        "P4.fixed_cell_lambda_admissibility",
         "P4.residual_schur_pmi",
     }
     errors: list[str] = []
@@ -37,11 +38,16 @@ def audit_state() -> dict[str, object]:
     port = by_name["P4.residual_port_frobenius_bound"]
     weighted = by_name["P4.weighted_frobenius_port_energy_bridge"]
     combined = by_name["P4.combined_schur_port_energy_adapter"]
+    fixed_lambda = by_name["P4.fixed_cell_lambda_admissibility"]
     pmi = by_name["P4.residual_schur_pmi"]
     weighted_contract = weighted.metadata.get("mathematical_contract", {})
     combined_contract = combined.metadata.get("mathematical_contract", {})
     consumer = port.metadata.get("consumer_interface", {})
     source_binding = port.metadata.get("source_binding_receipt", {})
+    lambda_receipt = fixed_lambda.metadata.get("mathematical_contract", {}).get(
+        "diagnostic_receipt", {}
+    )
+    lambda_witnesses = lambda_receipt.get("uniform_lambda_witnesses", {})
 
     checks = {
         "weighted_rho_is_squared": "rho_F^2" in weighted_contract.get("rho_semantics", ""),
@@ -71,6 +77,11 @@ def audit_state() -> dict[str, object]:
                 "mass_regularizer_is_parameterized": True,
                 "fd_step_is_parameterized": True,
             }
+        ),
+        "fixed_lambda_two_is_declared_row_witness": (
+            lambda_witnesses.get("eta=2.7,lambda=2.0", {}).get("all_admissible") is True
+            and lambda_witnesses.get("eta=5.6,lambda=2.0", {}).get("all_admissible") is True
+            and lambda_witnesses.get("eta=5.6,lambda=2.0", {}).get("distinct_boxes", 0) > 0
         ),
         "global_gate_closed_only_explicitly": state.global_closure_report()["formal_certificate_allowed"] is False,
     }

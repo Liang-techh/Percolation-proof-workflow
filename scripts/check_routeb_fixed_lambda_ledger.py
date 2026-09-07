@@ -90,6 +90,28 @@ def audit_ledger() -> dict[str, object]:
         if stats["min_lambda_upper"] is not None:
             stats["min_lambda_upper"] = str(stats["min_lambda_upper"])
 
+    # A useful repair candidate is a single fixed rational lambda reused for
+    # every row of one declared eta partition.  This is still only a ledger
+    # witness: it says nothing about cells absent from the artifact or about
+    # the true-DH/source and Lean gates.
+    uniform_lambda_witnesses: dict[str, dict[str, object]] = {}
+    for eta in sorted(by_eta):
+        eta_rows = [row for row in rows if row["eta"] == eta]
+        for lambda_text in ("2.0", "1.5", "1.25"):
+            selected = [row for row in eta_rows if row["lambda"] == lambda_text]
+            margins = [dec(row["candidate_margin"]) for row in selected]
+            key = f"eta={eta},lambda={lambda_text}"
+            uniform_lambda_witnesses[key] = {
+                "row_count": len(selected),
+                "distinct_boxes": len({row["box_id"] for row in selected}),
+                "all_admissible": bool(selected) and all(
+                    row["admissible_fixed_lambda"].strip().lower() == "true"
+                    for row in selected
+                ),
+                "min_candidate_margin": str(min(margins)) if margins else None,
+                "proof_boundary": "declared ledger rows only; not global coverage",
+            }
+
     result = {
         "ledger": str(LEDGER),
         "rows": len(rows),
@@ -100,6 +122,7 @@ def audit_ledger() -> dict[str, object]:
         "upper_tolerance": str(upper_tolerance),
         "margin_tolerance": str(margin_tolerance),
         "per_eta": dict(sorted(by_eta.items())),
+        "uniform_lambda_witnesses": uniform_lambda_witnesses,
         "status": "PASS" if not relation_errors and not admission_errors else "FAIL",
         "proof_boundary": "diagnostic scalar contract only; no Lean, source, coverage, or registry admission",
     }

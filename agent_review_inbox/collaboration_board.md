@@ -651,3 +651,18 @@
 - combined-Schur recorder 现具备幂等迁移修复：重复运行时会主动清除历史
   provider edge，避免旧 state 让 downstream consumer 重新污染 port provider
   的 closure 方向。
+
+### 2026-09-07 — 梁智炜：固定 lambda 见证与分区修复 frontier
+
+- fixed-lambda diagnostic 已按 eta 分解 2885 行：eta=2.7 的 1280 行全
+  admissible；eta=5.6 的 1605 行中 189 行因 `lambda=5`/`3` 等候选超出
+  cell 上界而 rejected。负 witness 保留为 obstruction，不再用统一
+  `lambda=5` 解释整个 eta=5.6 分区。
+- 同一 receipt 显示 `lambda=2`（即 `theta=1`）在两个已声明分区的所有
+  ledger row 上均 admissible：eta=2.7 的 256 个 box 最小 margin 为
+  `0.16040822007441496`，eta=5.6 的 321 个 box 最小 margin 为
+  `0.04301375542805658`。这只是量化文本 ledger 的有限-row candidate，
+  不是全域 coverage 或 true-DH 证明。
+- 新派发 `T-P4-028`：把该 fixed rational witness 形式化，并明确从有限
+  ledger row 到完整 coverage 仍需独立的 domain/interval theorem；禁止
+  state-dependent lambda 和 aggregate/per-cell metric 混用。

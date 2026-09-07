@@ -1272,6 +1272,31 @@ polynomial remains a separate frontier.
 - forbidden: upgrading a ledger row, Float64 computation, or one-cell witness
   into all-cell coverage, residual closure, or formal-certificate admission.
 
+### T-P4-028 — uniform fixed-lambda witness and partition repair
+
+- status: `open` (new frontier after the fixed-lambda ledger harvest)
+- owner: `大爱仙尊` for the exact scalar/partition witness; `狂蛮魔尊` for
+  the Schur-side interpretation; `巨阳仙尊` may provide the smallest pinned
+  Lean theorem for the fixed rational parameter.
+- scope: use the current `routeB_compact_combined_schur_partition_ledger.csv`
+  obstruction receipt to formalize the candidate `lambda=2` (`theta=1`) on
+  every declared row of both eta partitions. Preserve the negative witnesses
+  for `lambda=5` and `lambda=3` at eta=5.6; do not delete or overwrite them.
+  State the exact finite-row witness, the strict margin lower bounds, the
+  per-cell fixed-parameter semantics, and the remaining missing-domain
+  coverage premise.
+- current diagnostic evidence: eta=2.7 has 256 distinct boxes at
+  `lambda=2`, minimum recorded margin `0.16040822007441496`; eta=5.6 has
+  321 distinct boxes at `lambda=2`, minimum recorded margin
+  `0.04301375542805658`. These are quantized ledger candidates only.
+- deliver: a machine-readable witness receipt plus, if possible, a pinned
+  theorem stating `1 < lambda_k < lambda_upper_k` and the corresponding
+  Schur margin for the declared finite row set; separately identify the
+  theorem needed to lift the row witness to complete true-DH coverage.
+- forbidden: calling the finite ledger all-domain coverage, replacing the
+  fixed lambda by a state-dependent parameter, mixing aggregate and per-cell
+  metrics, or promoting this candidate to the registry/formal gate.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it

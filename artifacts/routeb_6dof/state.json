@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 436,
+  "revision": 438,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12229,9 +12229,9 @@
         ],
         "interface_consistency_receipt": {
           "checker": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\check_routeb_p4_interface_consistency.py",
-          "checker_sha256": "5e190e67500a6db3feea3fccd3c4c27e1b348b29167eef9f22bd898dc6ab2f6f",
+          "checker_sha256": "95ab7e002f2e3dfb8f82def93d496e1e1b58fc47414e5933aba6ea8208f35e70",
           "status": "diagnostic_pass",
-          "state_revision_checked": 434,
+          "state_revision_checked": 437,
           "checks": {
             "weighted_rho_is_squared": true,
             "combined_rho_is_squared": true,
@@ -12245,6 +12245,7 @@
             "source_binding_preserves_force_kc_scale": true,
             "source_binding_requires_actual_remote_term": true,
             "source_binding_pins_mass_and_fd_semantics": true,
+            "fixed_lambda_two_is_declared_row_witness": true,
             "global_gate_closed_only_explicitly": true
           },
           "registry": 0,
@@ -12363,10 +12364,11 @@
           "pmi_binding": "the same fixed lambda_k is used in the affine PMI and its Schur complement; changing lambda with state invalidates the affine certificate",
           "ledger_formula": "when gamma_cell_k > 0, lambda_upper_k = gamma_external_k / gamma_cell_k and candidate_margin_k = gamma_external_k - lambda_k*gamma_cell_k; strict admissibility is 1 < lambda_k < lambda_upper_k",
           "ledger_guard": "candidate rows with admissible_fixed_lambda=false are rejected even if another row has positive candidate_margin",
+          "repair_candidate": "lambda=2 (theta=1) is a fixed rational witness for every declared row in both eta partitions when the ledger marks those rows admissible; this remains a candidate over the declared artifact only",
           "ledger_reconciliation": "do not mix aggregate routeB_compact_port_frobenius_ledger lambda bounds with per-cell combined_schur_partition_ledger bounds until their metric and PMI semantics are proven equivalent",
           "diagnostic_receipt": {
             "checker": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\check_routeb_fixed_lambda_ledger.py",
-            "checker_sha256": "dbb0413b131815e8bc1ed901982200e69fec9c655c69531116a709d4939931ec",
+            "checker_sha256": "b284bc0fcc65068bf2d6e586e53b2d8cd1cb7cf0437dda9a990b00cfff902657",
             "status": "diagnostic_pass_decimal_quantized",
             "rows": 2885,
             "per_eta": {
@@ -12390,6 +12392,50 @@
                   "lambda_upper": "2.9327141044591722",
                   "candidate_margin": "-0.14098107227005408"
                 }
+              }
+            },
+            "uniform_lambda_witnesses": {
+              "eta=2.7,lambda=2.0": {
+                "row_count": 256,
+                "distinct_boxes": 256,
+                "all_admissible": true,
+                "min_candidate_margin": "0.16040822007441496",
+                "proof_boundary": "declared ledger rows only; not global coverage"
+              },
+              "eta=2.7,lambda=1.5": {
+                "row_count": 256,
+                "distinct_boxes": 256,
+                "all_admissible": true,
+                "min_candidate_margin": "0.17030616505581123",
+                "proof_boundary": "declared ledger rows only; not global coverage"
+              },
+              "eta=2.7,lambda=1.25": {
+                "row_count": 256,
+                "distinct_boxes": 256,
+                "all_admissible": true,
+                "min_candidate_margin": "0.17525513754650934",
+                "proof_boundary": "declared ledger rows only; not global coverage"
+              },
+              "eta=5.6,lambda=2.0": {
+                "row_count": 321,
+                "distinct_boxes": 321,
+                "all_admissible": true,
+                "min_candidate_margin": "0.04301375542805658",
+                "proof_boundary": "declared ledger rows only; not global coverage"
+              },
+              "eta=5.6,lambda=1.5": {
+                "row_count": 321,
+                "distinct_boxes": 321,
+                "all_admissible": true,
+                "min_candidate_margin": "0.08226031657104244",
+                "proof_boundary": "declared ledger rows only; not global coverage"
+              },
+              "eta=5.6,lambda=1.25": {
+                "row_count": 321,
+                "distinct_boxes": 321,
+                "all_admissible": true,
+                "min_candidate_margin": "0.10188359714253536",
+                "proof_boundary": "declared ledger rows only; not global coverage"
               }
             },
             "max_upper_abs_error": "3.380281759650464803982865167055332399810852034026785663178654894E-13",
@@ -35178,6 +35224,47 @@
       "parent_id": "35839e28b33e484f886081ddb6351c80",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T10:13:24.545371+00:00",
+      "kind": "routeb_fixed_cell_lambda_contract_refresh",
+      "node_id": "8cea6a84c5364384a723d88f00d9a516",
+      "parent_id": "35839e28b33e484f886081ddb6351c80",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T10:13:25.717171+00:00",
+      "kind": "routeb_p4_interface_consistency_recorded",
+      "node_id": "35839e28b33e484f886081ddb6351c80",
+      "receipt": {
+        "checker": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\check_routeb_p4_interface_consistency.py",
+        "checker_sha256": "95ab7e002f2e3dfb8f82def93d496e1e1b58fc47414e5933aba6ea8208f35e70",
+        "status": "diagnostic_pass",
+        "state_revision_checked": 437,
+        "checks": {
+          "weighted_rho_is_squared": true,
+          "combined_rho_is_squared": true,
+          "combined_energy_is_A_up": true,
+          "weighted_binds_B_up": true,
+          "port_provides_squared_raw_budget": true,
+          "port_uses_B_up_normalization": true,
+          "combined_is_consumed_by_residual_pmi": true,
+          "port_does_not_wait_for_combined": true,
+          "source_binding_receipt_is_fail_closed": true,
+          "source_binding_preserves_force_kc_scale": true,
+          "source_binding_requires_actual_remote_term": true,
+          "source_binding_pins_mass_and_fd_semantics": true,
+          "fixed_lambda_two_is_declared_row_witness": true,
+          "global_gate_closed_only_explicitly": true
+        },
+        "registry": 0,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_boundary": "workflow lint only; no Lean, source, coverage, or registry admission"
+      },
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -38834,5 +38921,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "6938926b0785363138646e65a42c4b07017bfe2a7000b817dca70a755236eb07"
+  "state_checksum": "0bf9c3110a3fb4a4016bf9640690730fead9680ca6c4a78daeca5d13fc5ea28f"
 }
