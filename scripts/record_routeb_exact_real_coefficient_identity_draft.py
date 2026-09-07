@@ -41,6 +41,32 @@ def main() -> int:
         "definition": receipt_data["definition"],
         "assumptions": receipt_data["assumptions"],
         "dimension_audit": receipt_data["dimension_audit"],
+        "decomposition": [
+            {
+                "id": "O1.1",
+                "name": "eliminate_D_velocity",
+                "status": "INTERFACE_DRAFT__UNCOMPILED",
+                "interface": "RouteB.O1.BlockEquations",
+            },
+            {
+                "id": "O1.2",
+                "name": "apply_explicit_left_inverse",
+                "status": "INTERFACE_DRAFT__UNCOMPILED",
+                "interface": "RouteB.O1.LeftInverseMulVec",
+            },
+            {
+                "id": "O1.3",
+                "name": "assemble_port_product",
+                "status": "INTERFACE_DRAFT__UNCOMPILED",
+                "interface": "RouteB.O1.PortCoefficientIdentity",
+            },
+            {
+                "id": "O1.4",
+                "name": "bind_true_dh_source_blocks",
+                "status": "OPEN",
+                "interface": "RouteB.O1.TrueDHBlockExtraction",
+            },
+        ],
         "report": ref(report),
         "receipt": ref(receipt),
         "compile_claim": False,

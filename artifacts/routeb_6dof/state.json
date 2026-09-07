@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 491,
+  "revision": 492,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13862,6 +13862,32 @@
             "product_order": "(B×D)(D×D)(D×B)=B×B",
             "column_action": "Matrix.mulVec"
           },
+          "decomposition": [
+            {
+              "id": "O1.1",
+              "name": "eliminate_D_velocity",
+              "status": "INTERFACE_DRAFT__UNCOMPILED",
+              "interface": "RouteB.O1.BlockEquations"
+            },
+            {
+              "id": "O1.2",
+              "name": "apply_explicit_left_inverse",
+              "status": "INTERFACE_DRAFT__UNCOMPILED",
+              "interface": "RouteB.O1.LeftInverseMulVec"
+            },
+            {
+              "id": "O1.3",
+              "name": "assemble_port_product",
+              "status": "INTERFACE_DRAFT__UNCOMPILED",
+              "interface": "RouteB.O1.PortCoefficientIdentity"
+            },
+            {
+              "id": "O1.4",
+              "name": "bind_true_dh_source_blocks",
+              "status": "OPEN",
+              "interface": "RouteB.O1.TrueDHBlockExtraction"
+            }
+          ],
           "report": {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_exact_real_coefficient_identity_20260907\\REPORT.md",
             "sha256": "367211FEB1ED031720C059BDBAFBD8495CF431E5D3C2F25AA2C5448CDAD3CB33"
@@ -38269,6 +38295,22 @@
       "analytic_exact_real_value": "1/1000000",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T12:03:21.639626+00:00",
+      "kind": "routeb_o1_exact_real_coefficient_identity_draft_recorded",
+      "node_id": "120deab092c243b6a43356e63c8b56f4",
+      "draft_status": "INTERFACE_DRAFT__UNCOMPILED",
+      "report": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_exact_real_coefficient_identity_20260907\\REPORT.md",
+        "sha256": "367211FEB1ED031720C059BDBAFBD8495CF431E5D3C2F25AA2C5448CDAD3CB33"
+      },
+      "receipt": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_exact_real_coefficient_identity_20260907\\RECEIPT.json",
+        "sha256": "79365BDC91C27E48D3A3A12D2E4CD632BBF03546966511D0037DB1F8FECBF6DA"
+      },
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -41925,5 +41967,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "a0bad6cd538852c46aea5a369ef49b6af75e735efbd6ef2dac969031fcc819fd"
+  "state_checksum": "fc7dcb448c2a4be6c2243ff103fffabc3f61e5a7a0fafa32e2754597dcc2f4a4"
 }

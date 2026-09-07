@@ -820,3 +820,10 @@ binding、O0.3 outward matrix inclusion、O0.4 inverse/port resolvent consumer�
 当前 `Float64(1e-6)` 与 `1/1000000` 的差值方向已固定，但只有在同一未正则化
 `M^0` 绑定后才能推出 `M_float=M_exact-δI`；`M_DD^{-1}` 的影响必须使用完整
 resolvent 恒等式，不能逐对角线近似。O0 保持 open，未进入 registry。
+
+### 2026-09-07 — 梁智炜：细化 O1 coefficient identity interface
+
+O1 已拆为 O1.1 eliminate-D-velocity、O1.2 explicit-left-inverse、O1.3
+port-product assembly、O1.4 true-DH block extraction。前 3 层仍是
+`INTERFACE_DRAFT__UNCOMPILED`，第 4 层保持 `OPEN`；`Matrix.mulVec` 的列向量
+方向、`(B×D)(D×D)(D×B)` 维度和 leading minus 均保留在接口，不自动注册。
