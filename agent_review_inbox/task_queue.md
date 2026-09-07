@@ -2388,6 +2388,14 @@ coverage, admission, registry promotion, or local Lean verification.
   coverage 仍未在 Lean 内证明。
 - 两个结果均为 `OPEN_UNCOMPILED_*`，未改变 registry/admission；state revision `621`。
 
+### 2026-09-07 — body-6 axis-seam follow-up
+
+- body-6 agent (`01a07ce7-9ea2-7c91-bbcb-1f203bf80e71`) 已转向
+  `SourceAxisDotTarget`：只处理六个 source axis 点积与 `sixthAxisDot q i`
+  的 Fin 6/Fin 3 索引接线，不再重复 610 行 Fourier 核对。
+- 该任务仍限定为 source-seam proof attempt；不得从 CSV 反推 source，不得
+  修改 state/registry/shared scripts，也不得声称本机 Lean 验证。
+
 ### 2026-09-07 — GitHub Lean harvest: P5-027 / P5-028
 
 - T-P5-027 的 `P5NearSharpCenteredGain.lean` 已有 GitHub CI 证据：Lean

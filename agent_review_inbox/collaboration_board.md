@@ -1799,6 +1799,12 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   不假设 `1..N` 稠密编号，并把外部 digest 绑定作为显式 premise。
 - 两者都保持未编译候选，已进入 DAG；state revision `621`，registry=0。
 
+### 2026-09-07 — body-6 axis seam dispatch
+
+- body-6 的下一局部瓶颈已明确为六个 `SourceAxisDotTarget` 轴点积，而非
+  数据行数或 aggregate 相似性；agent 正在连接已有 prefix rotation/axis
+  定义与 `sixthAxisDot`。
+
 ### 2026-09-07 — GitHub P5 Lean sidecars 收割
 
 - 巨阳仙尊的 T-P5-027 near-sharp scalar child 已在 GitHub Actions 的 pinned
