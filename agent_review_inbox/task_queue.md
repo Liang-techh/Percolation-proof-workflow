@@ -1125,6 +1125,24 @@ polynomial remains a separate frontier.
   replacing all-domain coverage with sampled points, hiding the true-DH/
   Float64 seam, claiming P4/M4 closure from one cell, or registry promotion.
 
+### T-P4-021 — resolved-cell Frobenius port-bound lift
+
+- status: `open` (candidate leaf recorded locally at Route-B revision 407)
+- owner: `大爱仙尊` for the interval/source semantic binding; `巨阳仙尊` for
+  the smallest typed Lean statement and axiom receipt;
+- scope: inspect `P4.residual_port_frobenius_bound` and its four hashed source
+  artifacts, replay the 5120 resolved cells and the exact rational Young
+  budgets for eta=2.7 and 5.6, and determine the minimal theorem interface
+  needed by the P4 residual PMI. Preserve the left-output metric orientation,
+  the upward seven-decimal rounding contract, and the declared source/cover
+  hashes;
+- deliver: a bounded source-bound/Lean candidate or a precise obstruction,
+  including whether the Frobenius norm bound can be consumed as the fixed
+  `E_k`/port factor without changing the residual semantics;
+- forbidden: treating `RESOLVED`, positive Young margin, or `implicit_HG_spd`
+  as kernel verification, inferring full DH/Float64 correctness, skipping
+  independent interval replay, or promoting this leaf to the registry.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it

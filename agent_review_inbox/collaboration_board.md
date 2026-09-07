@@ -514,3 +514,15 @@
   beta margin，或返回导致失败的精确预算，不接受再次复述结构审计。
 - 由 `狂蛮魔尊` 主攻不等式闭合，`红莲魔尊` 可并行绑定 energy-side
   beta；单元成果只进入 pending frontier，不得直接打开 P4/M4 gate。
+
+### 2026-09-07 — 梁智炜：接入 resolved-cell Frobenius port bound
+
+- 新增 `P4.residual_port_frobenius_bound` / `T-P4-021`。本地 importer
+  已核验 5120 个 cell（eta=2.7/5.6 各 2560）均为 `RESOLVED`，并把
+  `rho²_F` 与 `theta=1/4` 的 Young charge 化为 exact rational：
+  `4227/500000`、`34547/1000000`，最小记录 margin 为
+  `5453/200000 > 0`。
+- 该叶只代表 rigorous-numerical port-budget candidate；source/cover
+  hash、true-DH/Float64 语义、固定 `E_k` 消费、residual PMI、flowpipe
+  和 Lean comparator 仍独立开放。大爱仙尊攻 source binding，巨阳仙尊
+  攻最小 Lean lift，不得据此关闭 P4/M4。
