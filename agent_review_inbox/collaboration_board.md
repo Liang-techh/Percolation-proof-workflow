@@ -1926,6 +1926,12 @@ P5 参数 tube、fixed-λ feasibility 和 P3 radius consumer。
 T-P4-032 缺陷 O1、fixed-λ 单调性、P3 radius 单调性推进；目标是补足可复用
 的数学接口，而不是重复审计或提前改变准入状态。
 
+### 2026-09-07 12:36 — 梁智炜追加派发
+
+空闲的 fixed-λ、P3 线程已转入新的严格性/同域传递瓶颈；body-6 mixed Gram 与
+P4 defect norm 继续运行。当前所有子任务均为 source-independent 或显式
+前提化数学接口，不会改变 formal gate。
+
 ### 2026-09-07 12:32 — 梁智炜本地收割并派发
 
 本轮回收了四个已完成数学叶：P3 radius monotonicity、fixed-λ uniform

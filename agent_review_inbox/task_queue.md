@@ -2580,3 +2580,10 @@ source-independent/open/uncompiled 候选。
   norm propagation；fixed-λ `delta=gap*cellLower` 的逐行 lower-bound bridge；
   P3 scalar weighted-power budget seam。
 - 只做本地数学推进；等下一次 20 分钟远端收割窗口再同步 GitHub。
+
+### 2026-09-07 — 12:36 追加数学轮
+
+- body-6 与 T-P4-032 继续处理中；前者攻 mixed Gram，后者攻 defect norm
+  propagation。
+- fixed-λ 与 P3 已完成上一叶，立即转入 strict-margin bridge 与 common-domain
+  transport；保持四线程持续占用，避免空等回执。
