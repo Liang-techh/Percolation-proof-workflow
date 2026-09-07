@@ -2880,3 +2880,12 @@ fixed-λ rational-to-real finite-sum cast 已登记 revision 681。P3 uniform-ga
 
 P3 uniform-gap review 已到达并登记 revision 682，状态仍为 `OPEN_UNCOMPILED`；
 它把全域 uniformity 设为显式输入，保留 pointwise-only 的 exact obstruction。
+
+### 2026-09-07 — 当前四线派发
+
+- body-6：SELF3/Gram 到前三块 A 的 source binding；
+- P4：relative/additive 有效参数到 domain-uniform budget；
+- fixed-λ：ℚ→ℝ cast 后的 final strict consumer；
+- P3：有限 Finset positive gap 到 uniform lower bound，并记录不能外推连续域。
+
+所有产物必须以 proof-attempt + 定向 review 成对提交；仍保持 fail-closed。

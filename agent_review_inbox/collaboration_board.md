@@ -2185,6 +2185,14 @@ formal gate。
 反例保留 coverage 障碍，再用显式 uniform certificate 消费到 capMax 严格余量；
 未把有限采样或命名约定当作全域证明。
 
+### 2026-09-07 — 梁智炜继续推进主线闭合
+
+四线新任务：body-6 `SELF3` 到前三块 A 的 source/Gram 绑定边界；P4
+relative/additive 的 `rho_eff/B_eff` 到 uniform budget 参数桥；fixed-λ
+有理 cast 后的 real strict consumer；P3 有限 Finset gap 到 uniform lower
+bound 及 finite-grid/连续域边界。均要求显式前提和负条件，未编译、不改
+registry、不做宽回归。
+
 ### 2026-09-07 — 梁智炜收割 fixed-λ/P3 closure 组合叶
 
 fixed-λ `COMPOSED_REINDEX_SLACK` 与 P3 `FAMILY_SLACK` 已完成定向 review，
