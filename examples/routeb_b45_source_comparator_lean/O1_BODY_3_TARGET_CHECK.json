@@ -1,0 +1,21 @@
+{
+  "schema": "routeb.o1.body_3.target_check.v1",
+  "status": "PASS_EXACT_BODY3_TARGET_COEFFICIENTS_FAIL_CLOSED",
+  "body": 3,
+  "zero_based_body": 2,
+  "csv_row_count": 13,
+  "keyed_coefficient_map_matches": true,
+  "target_formula": {
+    "entry_00": "80467/600000 + (63/3125) sin(q1) - (1323/100000) cos(2*q1)",
+    "entry_01_entry_10": "-(63/20000) cos(q1)",
+    "entry_11": "21469/150000",
+    "entry_12_entry_21_entry_22": "7/60",
+    "other_entries": "0"
+  },
+  "source_expansion_proven": false,
+  "trace_fold_proven": false,
+  "h_body_3_proven": false,
+  "lean_compiled": false,
+  "formal_certificate_allowed": false,
+  "registry_promoted": false
+}

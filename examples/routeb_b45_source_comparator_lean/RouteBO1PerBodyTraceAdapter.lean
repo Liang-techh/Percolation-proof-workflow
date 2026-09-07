@@ -137,6 +137,110 @@ theorem h_body_2_of_entry_targets
         else 0) := h_source q i j
     _ = bodyTraceEvaluator 1 q i j := h_trace q i j
 
+/- Human body 3 is zero-based body 2.  Its trace depends only on the second
+   joint coordinate q 1.  Keep source expansion and trace reduction separate. -/
+def h_body_3_source_expanded_target : Prop :=
+  ∀ q i j,
+    (routeBMass 2) *
+        (∑ a : Axis,
+          bodyJv (sourceContract q).origins (sourceContract q).axes
+            (2 : Body) a i *
+          bodyJv (sourceContract q).origins (sourceContract q).axes
+            (2 : Body) a j) +
+      (∑ a : Axis, ∑ b : Axis,
+        bodyJw (sourceContract q).axes (2 : Body) a i *
+          routeBInertia 2 a b *
+        bodyJw (sourceContract q).axes (2 : Body) b j) =
+      if i = (0 : Joint) ∧ j = (0 : Joint) then
+        (80467 / 600000 : ℝ) +
+            (63 / 3125 : ℝ) * Real.sin (q (1 : Joint)) -
+            (1323 / 100000 : ℝ) * Real.cos (2 * q (1 : Joint))
+      else if i = (0 : Joint) ∧ j = (1 : Joint) then
+        (-63 / 20000 : ℝ) * Real.cos (q (1 : Joint))
+      else if i = (1 : Joint) ∧ j = (0 : Joint) then
+        (-63 / 20000 : ℝ) * Real.cos (q (1 : Joint))
+      else if i = (1 : Joint) ∧ j = (1 : Joint) then
+        (21469 / 150000 : ℝ)
+      else if i = (1 : Joint) ∧ j = (2 : Joint) then
+        (7 / 60 : ℝ)
+      else if i = (2 : Joint) ∧ j = (1 : Joint) then
+        (7 / 60 : ℝ)
+      else if i = (2 : Joint) ∧ j = (2 : Joint) then
+        (7 / 60 : ℝ)
+      else 0
+
+def h_body_3_source_entry_target : Prop :=
+  ∀ q i j,
+    sourceBodyMass q (2 : Body) i j =
+      bodyTraceEvaluator 2 q i j
+
+def h_body_3_expected_entry_target : Prop :=
+  ∀ q i j,
+    sourceBodyMass q (2 : Body) i j =
+      if i = (0 : Joint) ∧ j = (0 : Joint) then
+        (80467 / 600000 : ℝ) +
+            (63 / 3125 : ℝ) * Real.sin (q (1 : Joint)) -
+            (1323 / 100000 : ℝ) * Real.cos (2 * q (1 : Joint))
+      else if i = (0 : Joint) ∧ j = (1 : Joint) then
+        (-63 / 20000 : ℝ) * Real.cos (q (1 : Joint))
+      else if i = (1 : Joint) ∧ j = (0 : Joint) then
+        (-63 / 20000 : ℝ) * Real.cos (q (1 : Joint))
+      else if i = (1 : Joint) ∧ j = (1 : Joint) then
+        (21469 / 150000 : ℝ)
+      else if i = (1 : Joint) ∧ j = (2 : Joint) then
+        (7 / 60 : ℝ)
+      else if i = (2 : Joint) ∧ j = (1 : Joint) then
+        (7 / 60 : ℝ)
+      else if i = (2 : Joint) ∧ j = (2 : Joint) then
+        (7 / 60 : ℝ)
+      else 0
+
+def h_body_3_trace_fold_target : Prop :=
+  ∀ q i j,
+    (if i = (0 : Joint) ∧ j = (0 : Joint) then
+        (80467 / 600000 : ℝ) +
+            (63 / 3125 : ℝ) * Real.sin (q (1 : Joint)) -
+            (1323 / 100000 : ℝ) * Real.cos (2 * q (1 : Joint))
+      else if i = (0 : Joint) ∧ j = (1 : Joint) then
+        (-63 / 20000 : ℝ) * Real.cos (q (1 : Joint))
+      else if i = (1 : Joint) ∧ j = (0 : Joint) then
+        (-63 / 20000 : ℝ) * Real.cos (q (1 : Joint))
+      else if i = (1 : Joint) ∧ j = (1 : Joint) then
+        (21469 / 150000 : ℝ)
+      else if i = (1 : Joint) ∧ j = (2 : Joint) then
+        (7 / 60 : ℝ)
+      else if i = (2 : Joint) ∧ j = (1 : Joint) then
+        (7 / 60 : ℝ)
+      else if i = (2 : Joint) ∧ j = (2 : Joint) then
+        (7 / 60 : ℝ)
+      else 0) = bodyTraceEvaluator 2 q i j
+
+theorem h_body_3_of_entry_targets
+    (h_source : h_body_3_expected_entry_target)
+    (h_trace : h_body_3_trace_fold_target) : h_body_3 := by
+  intro q i j
+  change sourceBodyMass q (2 : Body) i j = bodyTraceEvaluator 2 q i j
+  calc
+    sourceBodyMass q (2 : Body) i j =
+        (if i = (0 : Joint) ∧ j = (0 : Joint) then
+          (80467 / 600000 : ℝ) +
+              (63 / 3125 : ℝ) * Real.sin (q (1 : Joint)) -
+              (1323 / 100000 : ℝ) * Real.cos (2 * q (1 : Joint))
+        else if i = (0 : Joint) ∧ j = (1 : Joint) then
+          (-63 / 20000 : ℝ) * Real.cos (q (1 : Joint))
+        else if i = (1 : Joint) ∧ j = (0 : Joint) then
+          (-63 / 20000 : ℝ) * Real.cos (q (1 : Joint))
+        else if i = (1 : Joint) ∧ j = (1 : Joint) then
+          (21469 / 150000 : ℝ)
+        else if i = (1 : Joint) ∧ j = (2 : Joint) then
+          (7 / 60 : ℝ)
+        else if i = (2 : Joint) ∧ j = (1 : Joint) then
+          (7 / 60 : ℝ)
+        else if i = (2 : Joint) ∧ j = (2 : Joint) then
+          (7 / 60 : ℝ)
+        else 0) := h_source q i j
+    _ = bodyTraceEvaluator 2 q i j := h_trace q i j
+
 /- Intended composition, still unproved:
    h_body_1_expected_entry_target ∧ h_body_1_trace_entry_target
    implies h_body_1.  The source proof needs explicit slot-0/slot-1 origin,

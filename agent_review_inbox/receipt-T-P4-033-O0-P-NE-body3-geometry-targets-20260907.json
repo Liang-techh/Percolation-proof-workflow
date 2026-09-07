@@ -1,0 +1,138 @@
+{
+  "schema": "routeb.o0.p_ne.body3_geometry_targets.v1",
+  "task": "T-P4-033",
+  "lane": "O0",
+  "scope": "P-NE human body-3 only",
+  "status": "CONDITIONAL_BODY3_GEOMETRY_DERIVATION",
+  "consumable_now": false,
+  "proof_level": "symbolic_exact_target_only",
+  "main_state_modified": false,
+  "registry_promoted": false,
+  "source_binding_proven": false,
+  "lean_lake_run": false,
+  "baseline_consumed": false,
+  "binding": {
+    "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+    "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+    "body_index": "2 zero-based = human body-3",
+    "q_scope": "all q : Fin 6 -> Real",
+    "exact_constants": {
+      "mass": "3/5",
+      "inertia_scalar": "7/60",
+      "D": "1/40",
+      "A": "2/25 + (21/100)*sin(q 1)",
+      "B": "(21/100)*sin(q 1)",
+      "C": "(21/100)*cos(q 1)"
+    }
+  },
+  "exact_jacobian_target": {
+    "Jv_columns": {
+      "0": "A*et - (1/40)*er",
+      "1": "C*er - B*e3",
+      "2": "0",
+      "j_ge_3": "0"
+    },
+    "Jw_columns": {
+      "0": "e3",
+      "1": "et",
+      "2": "et",
+      "j_ge_3": "0"
+    },
+    "vectors": {
+      "er": "(cos(q 0),sin(q 0),0)",
+      "et": "(-sin(q 0),cos(q 0),0)",
+      "e3": "(0,0,1)"
+    }
+  },
+  "exact_gram_target": {
+    "Gv00": "A^2 + (1/40)^2",
+    "Gv01_Gv10": "-(21/4000)*cos(q 1)",
+    "Gv11": "441/10000",
+    "Gv_other_active_entries": "0",
+    "Gw": "[[1,0,0],[0,1,1],[0,1,1]]"
+  },
+  "exact_fourier_target": {
+    "T2_00": "80467/600000 + (63/3125)*sin(q 1) - (1323/100000)*cos(2*(q 1))",
+    "T2_01_T2_10": "-(63/20000)*cos(q 1)",
+    "T2_11": "21469/150000",
+    "T2_12_T2_21_T2_22": "7/60",
+    "all_other_entries": "0"
+  },
+  "reusable_lemma_targets": [
+    "slot_2_3_origin_reduction",
+    "axis_0_1_2_reduction_with_z2_equals_z1",
+    "T0T1T2_endpoint_translation_independent_of_q2",
+    "body3_com_displacement_decomposition",
+    "cross_e3_r0_eq_A_et_minus_D_er",
+    "cross_et_r1_eq_C_er_minus_B_e3",
+    "cross_et_D_et_eq_zero",
+    "rotated_xy_norm_and_orthogonality_from_sin_sq_add_cos_sq",
+    "B_sq_add_C_sq_eq_441_over_10000",
+    "body3_diagonal_inertia_collapse",
+    "body3_trace_fold_reduction",
+    "body3_pm_frequency_atom_normalization",
+    "body3_source_trace_composition"
+  ],
+  "open_targets": [
+    "L3-SLOT-01",
+    "L3-SLOT-02",
+    "L3-SLOT-03",
+    "L3-AXIS-01",
+    "L3-JAC-01",
+    "L3-JAC-02",
+    "L3-GRAM-v",
+    "L3-GRAM-w",
+    "L3-MASS",
+    "L3-TRACE",
+    "h_body_3"
+  ],
+  "minimum_consumable_receipt": {
+    "kind": "exact_real_body3_source_trace_binding",
+    "required_statements": [
+      "forall q i j, sourceBodyMass q 2 i j = T2(q,i,j)",
+      "forall q i j, bodyTraceEvaluator 2 q i j = T2(q,i,j)",
+      "forall q i j, sourceBodyMass q 2 i j = bodyTraceEvaluator 2 q i j"
+    ],
+    "required_binding_fields": [
+      "source_key",
+      "state_key",
+      "body_index=2",
+      "exact q scope",
+      "compiled proof artifact",
+      "zero sorry/admit/axiom audit"
+    ]
+  },
+  "evidence": [
+    {
+      "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyExactSource.lean",
+      "sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+      "role": "exact sourceBodyMass and body constants"
+    },
+    {
+      "path": "examples/routeb_b45_source_comparator_lean/BodyTraceEvaluator.lean",
+      "sha256": "B9845D37B5DCD16E1F9E142CB2E4D0E5571452993E843C85AC8CD643F6BA5DEA",
+      "role": "generated body-3 trace evaluator"
+    },
+    {
+      "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean",
+      "sha256": "E16C7420996CEB395FCDE479C0A255748DEC1F6859FDD4E1B7F821D5784AF0CF",
+      "role": "existing per-body target adapter"
+    },
+    {
+      "path": "examples/routeb_real_dh_step_lean/RealDHStep.lean",
+      "sha256": "9C04DA5B9627EE749C53009733006934F95B2D33265E46CA59D0725AA453786A",
+      "role": "exact DH phase and step matrix"
+    },
+    {
+      "path": "examples/routeb_frame_slot_accessor_lean/FrameSlotAccessor.lean",
+      "sha256": "F497BD1F45FAE4DD385F4D0F46DF79252C92E5CD027B29D5DC55011F91525C31",
+      "role": "exact frame slot accessor"
+    },
+    {
+      "path": "examples/routeb_body_semantic_core_lean/BodySemanticCore.lean",
+      "sha256": "FE15F6CA9993F55FC56E6D2C9CCA5FA8C7F6E9530B9B900A6F111ED96715149C",
+      "role": "bodyCom/Jacobian/bodyMass definitions"
+    }
+  ],
+  "obstruction": "Exact body-3 formulas are derivable from the current definitions, but the slot expansion, Jacobian/Gram normalization, finite trace-fold reduction, and source-to-trace equality are not currently proved. This receipt is therefore fail-closed and cannot set P-NE source_binding_proven."
+}

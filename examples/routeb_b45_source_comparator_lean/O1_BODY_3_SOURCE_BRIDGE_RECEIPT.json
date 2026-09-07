@@ -1,0 +1,70 @@
+{
+  "schema": "routeb.o1.true_dh_exact_typed_mdd_source.body_3_source_bridge.v1",
+  "status": "OPEN_BODY_3_SOURCE_AND_TRACE_PREMISES",
+  "body_label": 3,
+  "zero_based_body": 2,
+  "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+  "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+  "lean_adapter": {
+    "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean",
+    "sha256": "E16C7420996CEB395FCDE479C0A255748DEC1F6859FDD4E1B7F821D5784AF0CF",
+    "status": "TARGETS_ONLY_UNCOMPILED"
+  },
+  "trace_input": {
+    "path": "artifacts/task_routeb_body_trace_sink_current/outputs/routeB_fourier_mass_body_trace.csv",
+    "sha256": "AE1F9CD7978C4CF23626B5C097EAAF4A2C70DE9C8B86A31A61DB12997CF4C3B9",
+    "frequency_coordinate": "q 1 only"
+  },
+  "exact_piecewise_fourier_expression": {
+    "entry_0_0": "80467/600000 + (63/3125)*sin(q 1) - (1323/100000)*cos(2*q 1)",
+    "entry_0_1": "(-63/20000)*cos(q 1)",
+    "entry_1_0": "(-63/20000)*cos(q 1)",
+    "entry_1_1": "21469/150000",
+    "entry_1_2": "7/60",
+    "entry_2_1": "7/60",
+    "entry_2_2": "7/60",
+    "all_other_entries": "0",
+    "coefficient_labels": [
+      "(nu2=-2, real=-1323/200000, imag=0)",
+      "(nu2=-1, real=0, imag=63/6250)",
+      "(nu=0, real=80467/600000, imag=0)",
+      "(nu2=1, real=0, imag=-63/6250)",
+      "(nu2=2, real=-1323/200000, imag=0)",
+      "(row=0,col=1, nu2=-1, real=-63/40000, imag=0)",
+      "(row=0,col=1, nu2=1, real=-63/40000, imag=0)",
+      "(row=1,col=0, nu2=-1, real=-63/40000, imag=0)",
+      "(row=1,col=0, nu2=1, real=-63/40000, imag=0)"
+    ]
+  },
+  "lean_targets": {
+    "source_expansion": "h_body_3_source_expanded_target",
+    "source_to_trace": "h_body_3_source_entry_target",
+    "source_expected_piecewise": "h_body_3_expected_entry_target",
+    "trace_fold": "h_body_3_trace_fold_target",
+    "conditional_composition": "h_body_3_of_entry_targets",
+    "premise_policy": "targets are Props only; no h_body_3 proof or premise field is supplied"
+  },
+  "reusable_geometry_lemmas": [
+    "origin slot 0 = 0",
+    "origin slot 1 = (2/25*cos(q 0), 2/25*sin(q 0), 1/10)",
+    "origin slot 2 - origin slot 1 = (21/100*sin(q 1)*cos(q 0), 21/100*sin(q 1)*sin(q 0), 21/100*cos(q 1))",
+    "origin slot 3 - origin slot 2 = (1/20)*axis 2, with axis 2 = axis 1",
+    "parent axes: z0=(0,0,1), z1=z2=(-sin(q 0),cos(q 0),0)",
+    "bodyJv body 2 has active columns 0,1,2; bodyJv column 2 = 0",
+    "bodyJw body 2 columns 1 and 2 coincide, while z0 is orthogonal to them",
+    "sin_sq_add_cos_sq for q 0 and q 1, plus cosine double-angle identity"
+  ],
+  "proof_status": {
+    "source_expansion": "OPEN_NO_PROOF",
+    "trace_fold": "OPEN_NO_PROOF",
+    "verified": false,
+    "registry_eligible": false,
+    "comparator_accepted": false,
+    "formal_certificate_allowed": false
+  },
+  "compile_probe": {
+    "status": "NOT_ATTEMPTED_BY_REQUEST",
+    "lean_or_lake_run": false
+  },
+  "next_exact_action": "Compile pointwise slot/origin/axis and bodyJv/bodyJw Gram lemmas for zero-based body 2, then reduce the body-3 tagged fold and apply the conditional composition theorem under the same source/state key."
+}

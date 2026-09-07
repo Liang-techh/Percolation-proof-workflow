@@ -20,6 +20,11 @@ BODY_CHECK = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_TRACE_EV
 BODY1_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_1_SOURCE_BRIDGE_RECEIPT.json"
 BODY2_CHECK = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_2_TARGET_CHECK.json"
 BODY2_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_2_SOURCE_BRIDGE_RECEIPT.json"
+BODY3_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_3_SOURCE_BRIDGE_RECEIPT.json"
+BODY3_CHECK = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_3_TARGET_CHECK.json"
+O0_BODY3_RECEIPT = ROOT / "agent_review_inbox/receipt-T-P4-033-O0-P-NE-body3-geometry-targets-20260907.json"
+KEYED_INTERFACE = ROOT / "artifacts/task_routeb_o1_keyed_regrouping_20260907/RouteBO1KeyedRegroupingInterface.lean"
+KEYED_RECEIPT = ROOT / "artifacts/task_routeb_o1_keyed_regrouping_20260907/interface_receipt.json"
 REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-per-body-candidate-codex-20260907.md"
 AGENT_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-per-body-source-definition-obstruction-codex-20260907.md"
 
@@ -37,7 +42,9 @@ def find(state, name: str):
 
 def main() -> None:
     for path in (STATE, LEAN, TRACE, ADAPTER, GENERATOR, BODY_RECEIPT, BODY_CHECK,
-                 BODY1_RECEIPT, BODY2_CHECK, BODY2_RECEIPT, REVIEW, AGENT_REVIEW):
+                 BODY1_RECEIPT, BODY2_CHECK, BODY2_RECEIPT, BODY3_RECEIPT, BODY3_CHECK,
+                 O0_BODY3_RECEIPT, KEYED_INTERFACE, KEYED_RECEIPT,
+                 REVIEW, AGENT_REVIEW):
         if not path.is_file():
             raise FileNotFoundError(path)
     store = StateStore(STATE)
@@ -70,6 +77,19 @@ def main() -> None:
         "body_2_source_bridge_receipt_sha256": digest(BODY2_RECEIPT),
         "body_2_source_bridge_status": "OPEN_BODY_2_SOURCE_AND_TRACE_PREMISES",
         "body_2_source_bridge_proven": False,
+        "body_3_source_bridge_receipt_sha256": digest(BODY3_RECEIPT),
+        "body_3_source_bridge_status": "OPEN_BODY_3_SOURCE_AND_TRACE_PREMISES",
+        "body_3_source_bridge_proven": False,
+        "body_3_target_check_sha256": digest(BODY3_CHECK),
+        "body_3_target_check_status": "PASS_EXACT_BODY3_TARGET_COEFFICIENTS_FAIL_CLOSED",
+        "body_3_target_coefficients_proven": False,
+        "o0_body_3_geometry_receipt_sha256": digest(O0_BODY3_RECEIPT),
+        "o0_body_3_geometry_status": "CONDITIONAL_BODY3_GEOMETRY_DERIVATION",
+        "o0_body_3_geometry_proven": False,
+        "keyed_regrouping_interface_sha256": digest(KEYED_INTERFACE),
+        "keyed_regrouping_receipt_sha256": digest(KEYED_RECEIPT),
+        "keyed_regrouping_status": "INTERFACE_ONLY_UNPROVED",
+        "keyed_regrouping_proven": False,
         "typed_body_evaluator_present": True,
         "body_trace_row_count": 727,
         "review_sha256": digest(REVIEW),

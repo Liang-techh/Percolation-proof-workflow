@@ -2013,6 +2013,14 @@ after integration; corrections should be a new result file.
 - 仓库内未发现真实 triple/membership/CoverageJoin2 authority receipt；P3 replay
   不可升级。保持 O2 `NO_REAL_AUTHORITY_SOURCE_FOUND`，等待真实 branch exporter。
 
+### T-FLT-ADVISORY-OVERLAY — current-pin reuse refresh (2026-09-08)
+
+- FLT current-pin spectral/quotient/pairing/calculus sidecars 已按最新 Route-B
+  state revision 刷新 advisory overlay；继续保持非权威、不可关闭 parent、不可进
+  registry 的边界。
+- shadow manifest comparator 仍需先处理 Mathlib checkout 的 O2 未跟踪生成文件；
+  任何“clean”结论必须等真实 clean checkout 和 exact source lineage 再接受。
+
 ### T-P4-036.2 — theta2 namespace hardening (2026-09-07)
 
 - canonical triple validator 现在要求 exact namespace anchor
@@ -2034,3 +2042,31 @@ after integration; corrections should be a new result file.
 - O2 bridge contract 已加入 external-premises intake，要求 source-bound Lean
   module/hash 和两个显式 proof symbol；下一步只接收真实 membership 与
   `CoverageJoin2` proof，不创建 synthetic proof。
+
+### T-P4-033-O1 — body-3 source/trace split (2026-09-08)
+
+- body-3 exact piecewise target、source geometry target 和 trace-fold target 已
+  落盘，当前为 `OPEN_BODY_3_SOURCE_AND_TRACE_PREMISES`。
+- 继续证明 slots 0--3、active Jacobian/Gram、body-3 finite fold，再组合
+  `h_body_3`；symbolic receipt 不关闭 P-NE。
+
+### T-P4-033-O1 — keyed regrouping interface (2026-09-08)
+
+- 610-row payload 与 727-row body trace 的最小共同 carrier 已明确为
+  `FourierKey + CoeffPair`，keywise equality 与 finite-sum orientation 仍 OPEN。
+- 下一步实现 source-bound payload/trace lift 和有限和换序 target，不接受单点或
+  hash equality 代替全 q function identity。
+
+### T-P4-033-O0 — P-MU exact-real binding (2026-09-08)
+
+- P-MU 已被隔离为 `mu_NE=mu_Fourier=1/1000000`、同 source/state key、
+  regularized-minus-unregularized diagonal identity及 B-block propagation。
+- 当前只有 target/review，没有 compiled receipt；不得消费 baseline、strict margin
+  或 P-NE。
+
+### T-P4-033-O1 — body-3 coefficient freeze (2026-09-08)
+
+- body-3 的 13 个 exact Fourier atoms 已由 checker 冻结并绑定 state；继续攻
+  source frame/Jacobian/Gram 展开和 finite trace fold。
+- `PASS_EXACT_BODY3_TARGET_COEFFICIENTS_FAIL_CLOSED` 只表示目标与 CSV 一致，
+  不能替代 source-bound Lean theorem。

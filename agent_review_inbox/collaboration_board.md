@@ -1438,3 +1438,36 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - 定向搜索未找到真实 theta2 canonical triple、source interval membership 或
   `CoverageJoin2` premise。现有 P3 replay 明确不是 authority source；未生成
   synthetic triple，O2 继续保持最小 blocker。
+
+### 2026-09-08 — Anthropic FLT current-pin reuse overlay refresh
+
+- 已收割 FLT scan、registry/graphdata、spectral、quotient、pairing 和 calculus
+  sidecars：catalog 共 16 项，分类为 `1:4 / 2:4 / 3:8`；当前保留 4 条 advisory
+  reuse edge，均不进入 authoritative dependencies。
+- current-pin overlay 已按 Route-B state revision 565 刷新并绑定当前 state hash；
+  adapter 数 4、reuse edge 数 4，`registry_promoted=false`、
+  `formal_certificate_allowed=false`。
+- quotient/pairing/spectral/calculus 证据继续按“直接复用 / 轻度改造 / 架构借鉴”
+  分层。shadow comparator 因 Mathlib checkout 中出现 O2 生成的未跟踪
+  `DownstreamTest/*` 而 fail-closed，不能报告为 comparator PASS。
+
+### 2026-09-08 — O1/O0 body-3 geometry harvest
+
+- body-3（zero-based `2`）已得到完整 exact target：`Jv` active columns、
+  `Jw` 重复轴、Gram 矩阵和频率组合；目标含
+  `80467/600000 + (63/3125) sin(q₁) - (1323/100000) cos(2q₁)` 等精确项。
+- O1 body-3 source/trace receipt 与 O0 P-NE geometry receipt 已绑定到当前候选
+  state；两者均明确 `OPEN_NO_PROOF` / `TARGETS_ONLY_UNCOMPILED`，没有关闭
+  `h_body_3` 或 P-NE。
+- aggregate 侧已固定最小 `KeyedCoeffRow/CoeffPair` 与 keyed regrouping target，
+  但 payload-to-trace equality 和有限和换序仍 OPEN。
+- P-MU 已被拆为独立 exact-real physical binding 原子；尚未有可消费 receipt，
+  不消费 `L_base` 或 strict Schur margin。
+
+### 2026-09-08 — O1 body-3 exact coefficient gate
+
+- body-3 的 13 个 tagged atoms 已通过精确 key-map checker：包括 `(0,0)` 的
+  `nu₂=±2,±1,0`、`(0,1)/(1,0)` 的 `nu₂=±1`，以及其余零频项。
+- checker 状态为 `PASS_EXACT_BODY3_TARGET_COEFFICIENTS_FAIL_CLOSED`；source
+  expansion、trace fold、`h_body_3` 和 Lean compile 仍为 false，receipt hash
+  已记录到 O1 candidate leaves。
