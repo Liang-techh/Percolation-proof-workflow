@@ -1,0 +1,10 @@
+import Fin2NormConversionCandidate
+
+open RouteBO0Fin2NormConversionCandidate
+
+#check RouteBO0Fin2NormConversionCandidate.norm2_le_two_normInf
+#check RouteBO0Fin2NormConversionCandidate.fin2_euclidean_weighted_adapter
+#print RouteBO0Fin2NormConversionCandidate.norm2_le_two_normInf
+#print RouteBO0Fin2NormConversionCandidate.fin2_euclidean_weighted_adapter
+#print axioms RouteBO0Fin2NormConversionCandidate.norm2_le_two_normInf
+#print axioms RouteBO0Fin2NormConversionCandidate.fin2_euclidean_weighted_adapter

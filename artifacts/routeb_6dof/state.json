@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 523,
+  "revision": 527,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13787,6 +13787,63 @@
           "general_state_source_binding": "OPEN",
           "formal_certificate_allowed": false,
           "registry_promoted": false
+        },
+        "force_execution_handoffs": [
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-KC-COORDINATE-ADAPTER",
+            "source_agent": "codex-inbox",
+            "review_status": "PENDING_JULIA_EXECUTION",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-fresh-export-execution-handoff-codex-20260907.md",
+              "sha256": "182FD1012DE9FE0CCBA4DF45968BF72259A9B623BDE91565FD4A3559ACEF5996"
+            },
+            "checker": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_5_descriptor_terms_adapter_lean\\verify_general_state_force_binding.py",
+              "sha256": "560105344B7727476D97CC77210EE1298A184BB2840F2DA636ED6D357A1151EF"
+            },
+            "exporter_sha256": "5351110E81327EBC059074A2E445A33E00859320BCE37B5B0220BB189F4E46A4",
+            "deployed_source_sha256": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936",
+            "required_outputs": [
+              "force_binding_states.csv",
+              "FORCE_BINDING_RECEIPT.md",
+              "worker.stdout.txt",
+              "worker.stderr.txt",
+              "worker.exit-code.txt"
+            ],
+            "runtime_gate": {
+              "process_exit_code": 0,
+              "rows": 16,
+              "max_E1": "<=1e-12",
+              "max_E2": "<=1e-12"
+            },
+            "deployed_tau_equivalence": "NOT_CLAIMED",
+            "formal_certificate_allowed": false,
+            "registry_promoted": false
+          }
+        ],
+        "force_execution_handoff": {
+          "status": "PENDING_JULIA_EXECUTION",
+          "review_sha256": "182FD1012DE9FE0CCBA4DF45968BF72259A9B623BDE91565FD4A3559ACEF5996",
+          "checker_sha256": "560105344B7727476D97CC77210EE1298A184BB2840F2DA636ED6D357A1151EF",
+          "exporter_sha256": "5351110E81327EBC059074A2E445A33E00859320BCE37B5B0220BB189F4E46A4",
+          "deployed_source_sha256": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936",
+          "required_outputs": [
+            "force_binding_states.csv",
+            "FORCE_BINDING_RECEIPT.md",
+            "worker.stdout.txt",
+            "worker.stderr.txt",
+            "worker.exit-code.txt"
+          ],
+          "runtime_gate": {
+            "process_exit_code": 0,
+            "rows": 16,
+            "max_E1": "<=1e-12",
+            "max_E2": "<=1e-12"
+          },
+          "runtime_receipt_present": false,
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
         }
       }
     },
@@ -14754,6 +14811,72 @@
           "schur_margin_consumed": false,
           "formal_certificate_allowed": false,
           "registry_promoted": false
+        },
+        "o0_fin2_norm_compile_receipts": [
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-033-O0-R2",
+            "source_agent": "codex-inbox",
+            "review_status": "COMPILED_CONDITIONAL_FIN2_OUTPUT_NORM_CONVERSION",
+            "receipt": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\receipt-Fin2NormConversionCandidate-pinned-20260907.json",
+              "sha256": "F5FDE1A154F32371332DB97C2CE3F0973D4000FA28F900317CB757E1A3822AC8"
+            },
+            "toolchain": {
+              "lean_toolchain_file": "examples/local_fkg/lean-toolchain",
+              "lean_pin": "leanprover/lean4:v4.32.0",
+              "lean_version": "Lean (version 4.32.0, x86_64-w64-windows-gnu, commit 8c9756b28d64dab099da31a4c09229a9e6a2ef35, Release)",
+              "mathlib_resolution": "pinned lake environment in examples/local_fkg"
+            },
+            "build": {
+              "source_command": "lake env lean Fin2NormConversionCandidate.lean",
+              "source_exit_code": 0,
+              "olean_command": "lake env lean -o .lake/build/lib/lean/Fin2NormConversionCandidate.olean Fin2NormConversionCandidate.lean",
+              "olean_exit_code": 0,
+              "print_command": "lake env lean Fin2NormConversionPrint.lean",
+              "print_exit_code": 0,
+              "warning": "unused variable name hs in fin2_euclidean_weighted_adapter; no theorem failure"
+            },
+            "artifact_hashes": {
+              "source": "4D55F56AFDF86FA259B5469BF3EBE3DE0782405F206417EA63437AFC95BB9DDD",
+              "print_harness": "C5DE5ED323C2A9748C089EEB33FB4B66E284F39D5F9EB60061D82B8FFB9C0E09",
+              "olean": "F7498863680F538DC6B0B0B5F22E995A9C9061B199DD5AE328B855B46CC4FB04"
+            },
+            "statement_comparator": "PASS",
+            "axiom_audit": {
+              "allowed": [
+                "Classical.choice",
+                "Quot.sound",
+                "propext"
+              ],
+              "sorryAx_present": false,
+              "admitAx_present": false
+            },
+            "scope": "Fin2 output norm only; exact factor 2; no Schur/source/global closure",
+            "formal_certificate_allowed": false,
+            "registry_promoted": false
+          }
+        ],
+        "o0_fin2_norm_conversion": {
+          "status": "COMPILED_CONDITIONAL_FIN2_OUTPUT_NORM_CONVERSION",
+          "receipt_sha256": "F5FDE1A154F32371332DB97C2CE3F0973D4000FA28F900317CB757E1A3822AC8",
+          "source_sha256": "4D55F56AFDF86FA259B5469BF3EBE3DE0782405F206417EA63437AFC95BB9DDD",
+          "print_harness_sha256": "C5DE5ED323C2A9748C089EEB33FB4B66E284F39D5F9EB60061D82B8FFB9C0E09",
+          "olean_sha256": "F7498863680F538DC6B0B0B5F22E995A9C9061B199DD5AE328B855B46CC4FB04",
+          "lean_pin": "leanprover/lean4:v4.32.0",
+          "statement_comparator": "PASS",
+          "axiom_audit": {
+            "allowed": [
+              "Classical.choice",
+              "Quot.sound",
+              "propext"
+            ],
+            "sorryAx_present": false,
+            "admitAx_present": false
+          },
+          "scope": "Fin2 output norm only; exact factor 2; no Schur/source/global closure",
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
         }
       }
     },
@@ -15286,6 +15409,71 @@
             ]
           },
           "remaining_obstruction": "missing same-key typed receipt for projected M_DD45 and inverse/left-inverse",
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
+        },
+        "source_binding_witness_generators": [
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-033-O1-source-binding-witness-generator",
+            "source_agent": "codex-inbox",
+            "review_status": "READY_FAIL_CLOSED_TYPED_WITNESS_GENERATOR",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-033-O1-source-binding-witness-generator-codex-20260907.md",
+              "sha256": "CBC405EE1E1331F312F0A0B1E4AE71781C85EDBA341159A09D313B0B1A575199"
+            },
+            "generator": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\generate_routeb_o1_mdd_binding_witness.py",
+              "sha256": "1DA1E5C0297E89F3CE2007EB6AF9C51F1E175E610CAA4CE43C7BFD81E77FFBDA"
+            },
+            "accepted_paths": {
+              "A": [
+                "h_MDD_def",
+                "h_inv_def",
+                "hdet"
+              ],
+              "B": [
+                "h_MDD_def",
+                "h_left"
+              ]
+            },
+            "required_equalities": [
+              "source_key",
+              "state_key",
+              "mu_ident",
+              "q_ident",
+              "block_order_one_based=[1,2,3,6]",
+              "didx_zero_based=[0,1,2,5]"
+            ],
+            "output_boundary": "READY_TYPED_TARGET_NOT_VERIFIED",
+            "source_receipt_present": false,
+            "formal_certificate_allowed": false,
+            "registry_promoted": false
+          }
+        ],
+        "source_binding_witness_generator": {
+          "status": "READY_FAIL_CLOSED_TYPED_WITNESS_GENERATOR",
+          "generator_sha256": "1DA1E5C0297E89F3CE2007EB6AF9C51F1E175E610CAA4CE43C7BFD81E77FFBDA",
+          "accepted_paths": {
+            "A": [
+              "h_MDD_def",
+              "h_inv_def",
+              "hdet"
+            ],
+            "B": [
+              "h_MDD_def",
+              "h_left"
+            ]
+          },
+          "required_equalities": [
+            "source_key",
+            "state_key",
+            "mu_ident",
+            "q_ident",
+            "block_order_one_based=[1,2,3,6]",
+            "didx_zero_based=[0,1,2,5]"
+          ],
+          "source_receipt_present": false,
           "formal_certificate_allowed": false,
           "registry_promoted": false
         }
@@ -16188,6 +16376,51 @@
           "compiler_exit_code": 0,
           "in_rectbox_actual_witness": "OPEN",
           "coverage_completeness": "OPEN",
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
+        },
+        "o2_endpoint_witness_handoffs": [
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-036.2",
+            "source_agent": "codex-inbox",
+            "review_status": "COMPILED_ENDPOINT_PROVENANCE_ONLY",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-036.2-authoritative-leaf-witness-handoff-codex-20260907.md",
+              "sha256": "780FE57A87C76D84F603F43EE6DC9E1B201965CEBBEFD3ED3F50213778F91A06"
+            },
+            "schema_sha256": "F5191ED71F3A369414803ACCBD4ABE07639F71A3BD1CB3C2BCE03E6C3A77DAB6",
+            "handoff_sha256": "9453049983A4F59D0438CE0F51EDD6BC6F6C0E6FDEA91522B524A5828C6709ED",
+            "source_receipt_sha256": "87CF832BF5D9D266A532EEA4DC54B9365FF9E4A5E709031907C8E9A97BDDC7D6",
+            "lean_source_sha256": "248DACF3BF0749574477EFAB6DFF71DA0DC4684BB05FC1B5210FF5F7C66D17CB",
+            "olean_sha256": "45D911A0AB09382793845DE801D21DA10ABBA668BB925ED1DE158F45031A325B",
+            "compile_exit_code": 0,
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "closed_child": "recorded endpoint -> exact ℚ -> RectBox13 -> lower-corner InRectBox",
+            "parent_lift": "conditional BoxSubset premise",
+            "coverage_join": "conditional CoverageJoin2 premise only",
+            "authority_status": "ENDPOINT_PROVENANCE_ONLY",
+            "source_bound_dynamic_leaf": false,
+            "trajectory_membership": false,
+            "global_coverage": false,
+            "formal_certificate_allowed": false,
+            "registry_promoted": false
+          }
+        ],
+        "o2_endpoint_witness_handoff": {
+          "status": "COMPILED_ENDPOINT_PROVENANCE_ONLY",
+          "handoff_sha256": "9453049983A4F59D0438CE0F51EDD6BC6F6C0E6FDEA91522B524A5828C6709ED",
+          "lean_source_sha256": "248DACF3BF0749574477EFAB6DFF71DA0DC4684BB05FC1B5210FF5F7C66D17CB",
+          "olean_sha256": "45D911A0AB09382793845DE801D21DA10ABBA668BB925ED1DE158F45031A325B",
+          "compile_exit_code": 0,
+          "authority_status": "ENDPOINT_PROVENANCE_ONLY",
+          "source_bound_dynamic_leaf": false,
+          "trajectory_membership": false,
+          "global_coverage": false,
           "formal_certificate_allowed": false,
           "registry_promoted": false
         }
@@ -40281,6 +40514,47 @@
       "source_receipt_required": true,
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T14:06:05.074714+00:00",
+      "kind": "routeb_o0_fin2_norm_compile_receipt_recorded",
+      "node_id": "43e3c1a23dc34d52a19b835a8a883cb7",
+      "review_status": "COMPILED_CONDITIONAL_FIN2_OUTPUT_NORM_CONVERSION",
+      "statement_comparator": "PASS",
+      "source_bound": false,
+      "schur_consumed": false,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T14:06:37.257040+00:00",
+      "kind": "routeb_o1_source_binding_witness_generator_recorded",
+      "node_id": "120deab092c243b6a43356e63c8b56f4",
+      "review_status": "READY_FAIL_CLOSED_TYPED_WITNESS_GENERATOR",
+      "source_receipt_present": false,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T14:07:29.122620+00:00",
+      "kind": "routeb_force_execution_handoff_recorded",
+      "node_id": "203c45aac1d84022b69267c0cc31db06",
+      "review_status": "PENDING_JULIA_EXECUTION",
+      "runtime_receipt_present": false,
+      "checker_hash_bound": true,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T14:10:24.203431+00:00",
+      "kind": "routeb_o2_endpoint_witness_handoff_recorded",
+      "node_id": "0da99a7cef5e4f0b91c7cc06d9e7c010",
+      "review_status": "COMPILED_ENDPOINT_PROVENANCE_ONLY",
+      "authority_status": "ENDPOINT_PROVENANCE_ONLY",
+      "source_bound_dynamic_leaf": false,
+      "global_coverage": false,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -43937,5 +44211,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "39c660a1c9c5a695dde8921871b923fa1710babb61f5dd35dc441a8d8f409c48"
+  "state_checksum": "ff175d8abdd43042a9027a343d569f064b54b793effadb4d07d6598f70ee87ec"
 }

@@ -65,16 +65,21 @@ theorem fin2_euclidean_weighted_adapter
   have ha_inf : normInf a ≤ norm2 a := normInf_le_norm2 a
   have hr2 : norm2 r ≤ 2 * normInf r := norm2_le_two_normInf r
   have hnonneg_a : 0 ≤ normInf a := normInf_nonneg a
-  have hright : 2 * normInf r ≤ 2 * epsilon * normInf a :=
+  have hright' : 2 * normInf r ≤ 2 * (epsilon * normInf a) :=
     mul_le_mul_of_nonneg_left h_output (show 0 ≤ (2 : ℝ) by norm_num)
+  have hright : 2 * normInf r ≤ 2 * epsilon * normInf a := by
+    simpa [mul_assoc] using hright'
   have hinput' : epsilon * normInf a ≤ epsilon * norm2 a :=
     mul_le_mul_of_nonneg_left ha_inf hε
   have hscale : epsilon * norm2 a ≤ epsilon * (weighted / s) :=
     mul_le_mul_of_nonneg_left h_input hε
+  have hweighted' : 2 * (epsilon * normInf a) ≤
+      2 * (epsilon * (weighted / s)) :=
+    mul_le_mul_of_nonneg_left (hinput'.trans hscale)
+      (show 0 ≤ (2 : ℝ) by norm_num)
   have hweighted : 2 * epsilon * normInf a ≤
       2 * epsilon * (weighted / s) := by
-    exact (mul_le_mul_of_nonneg_left (hinput'.trans hscale)
-      (show 0 ≤ (2 : ℝ) by norm_num))
+    simpa [mul_assoc] using hweighted'
   calc
     norm2 r ≤ 2 * normInf r := hr2
     _ ≤ 2 * epsilon * normInf a := hright

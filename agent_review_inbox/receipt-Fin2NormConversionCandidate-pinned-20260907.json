@@ -1,0 +1,77 @@
+{
+  "schema": "routeb-o0-fin2-norm-conversion-compiled-receipt-v1",
+  "status": "PASS_CONDITIONAL_LEAN_COMPILE",
+  "task": "T-P4-033-O0-R2",
+  "scope": "Fin2NormConversionCandidate only; no Schur consumer",
+  "main_state_modified": false,
+  "registry_registered": false,
+  "toolchain": {
+    "lean_toolchain_file": "examples/local_fkg/lean-toolchain",
+    "lean_pin": "leanprover/lean4:v4.32.0",
+    "lean_version": "Lean (version 4.32.0, x86_64-w64-windows-gnu, commit 8c9756b28d64dab099da31a4c09229a9e6a2ef35, Release)",
+    "mathlib_resolution": "pinned lake environment in examples/local_fkg"
+  },
+  "build": {
+    "source_command": "lake env lean Fin2NormConversionCandidate.lean",
+    "source_exit_code": 0,
+    "olean_command": "lake env lean -o .lake/build/lib/lean/Fin2NormConversionCandidate.olean Fin2NormConversionCandidate.lean",
+    "olean_exit_code": 0,
+    "print_command": "lake env lean Fin2NormConversionPrint.lean",
+    "print_exit_code": 0,
+    "warning": "unused variable name hs in fin2_euclidean_weighted_adapter; no theorem failure"
+  },
+  "artifacts": {
+    "source": {
+      "path": "examples/local_fkg/Fin2NormConversionCandidate.lean",
+      "sha256": "4D55F56AFDF86FA259B5469BF3EBE3DE0782405F206417EA63437AFC95BB9DDD"
+    },
+    "print_harness": {
+      "path": "examples/local_fkg/Fin2NormConversionPrint.lean",
+      "sha256": "C5DE5ED323C2A9748C089EEB33FB4B66E284F39D5F9EB60061D82B8FFB9C0E09"
+    },
+    "olean": {
+      "path": "examples/local_fkg/.lake/build/lib/lean/Fin2NormConversionCandidate.olean",
+      "sha256": "F7498863680F538DC6B0B0B5F22E995A9C9061B199DD5AE328B855B46CC4FB04",
+      "cwd_copy": {
+        "path": "examples/local_fkg/Fin2NormConversionCandidate.olean",
+        "sha256": "F7498863680F538DC6B0B0B5F22E995A9C9061B199DD5AE328B855B46CC4FB04"
+      },
+      "provenance": "generated in this review with the explicit olean command above; not an externally supplied artifact"
+    }
+  },
+  "statement_comparator": {
+    "method": "#check plus #print from Fin2NormConversionPrint.lean; source declaration compared after Lean parenthesization normalization",
+    "norm2_le_two_normInf": {
+      "source_statement": "(y : Vec2) -> norm2 y <= 2 * normInf y",
+      "observed_statement": "(y : Vec2) : norm2 y ≤ 2 * normInf y",
+      "match": true
+    },
+    "fin2_euclidean_weighted_adapter": {
+      "source_statement": "(a r : Vec2) (epsilon s weighted : ℝ) -> 0 ≤ epsilon -> 0 < s -> normInf r ≤ epsilon * normInf a -> norm2 a ≤ weighted / s -> norm2 r ≤ (2 * epsilon / s) * weighted",
+      "observed_statement": "(a r : Vec2) (epsilon s weighted : ℝ) (hε : 0 ≤ epsilon) (hs : 0 < s) (h_output : normInf r ≤ epsilon * normInf a) (h_input : norm2 a ≤ weighted / s) : norm2 r ≤ 2 * epsilon / s * weighted",
+      "match": true,
+      "normalization_note": "Lean pretty-printer flattens the final parenthesized product; it is the same parsed expression"
+    },
+    "overall_match": true
+  },
+  "axiom_audit": {
+    "norm2_le_two_normInf": ["propext", "Classical.choice", "Quot.sound"],
+    "fin2_euclidean_weighted_adapter": ["propext", "Classical.choice", "Quot.sound"],
+    "sorryAx_present": false,
+    "admitAx_present": false,
+    "source_token_scan": {
+      "command": "rg -n -i '\\b(sorry|admit)\\b' -- Fin2NormConversionCandidate.lean",
+      "matches": 0
+    },
+    "print_harness_token_scan": {
+      "command": "rg -n -i '\\b(sorry|admit)\\b' -- Fin2NormConversionPrint.lean",
+      "matches": 0
+    }
+  },
+  "boundary": {
+    "exact_fourier_or_physical_binding": false,
+    "schur_margin_consumed": false,
+    "registry_eligible": false,
+    "receipt_only": true
+  }
+}

@@ -1772,6 +1772,8 @@ after integration; corrections should be a new result file.
 - 当前不要再重复 determinant/静态审计；优先让 agent 生成 typed source
   receipt，或证明该 exact source surface 在 deployed evaluator 中不存在。
 
+### T-P4-KC-COORDINATE-ADAPTER — force exporter intake details (2026-09-07)
+
 - 已完成：把 general-state force exporter 的严格接收规范登记为
   `PENDING_JULIA_EXECUTION` gate。
 - 执行 agent 必须提交同一 exporter/deployed source hash、完整 16-row CSV、
@@ -1780,9 +1782,26 @@ after integration; corrections should be a new result file.
 - 禁止：旧 CSV、只含 residual 的缩减 schema、把 runtime consistency 升级为
   tau 等价/Lean theorem/coverage/registry。
 
+### T-P4-033-O0-R2 — Fin 2 norm conversion compile receipt (2026-09-07)
+
 - The O0 weighted child now has a corrected exact-rational output-2 norm factor
   and is accepted by the coordinator math API. Its one-cell/source-key scope,
   no-Schur-consumption boundary, and no-registry status remain mandatory.
 - The O2 generated adapter is a compiled single-leaf transport artifact. It
   still needs an authoritative `InRectBox` witness and coverage join; parsing a
   candidate JSON is not a proof of global partition membership.
+
+- pinned Lean 4.32.0 source/olean/print receipt 已通过 hash、statement
+  comparator 和 axiom/sorry/admit intake，登记为
+  `COMPILED_CONDITIONAL_FIN2_OUTPUT_NORM_CONVERSION`；它不关闭 source
+  binding、Schur margin、global coverage 或 registry。
+
+### T-P4-036.2 — authoritative endpoint witness (2026-09-07)
+
+- leaf-1 handoff 已有 schema、exact rational lower-corner witness、source
+  receipt hash、Lean source/olean hash 与 pinned compile exit 0，登记为
+  `COMPILED_ENDPOINT_PROVENANCE_ONLY`。
+- 可消费内容仅是 endpoint → `RectBox13` → `InRectBox`，以及带
+  `BoxSubset`/`CoverageJoin2` premise 的 typed transport；仍缺
+  source-bound dynamic leaf、trajectory membership、parent/sibling records
+  和全域 coverage，不得关闭 O2。
