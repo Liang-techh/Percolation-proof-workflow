@@ -48,6 +48,36 @@ def main() -> int:
         "difference_sign": "negative",
         "source_artifacts": [ref(DEPLOYED), ref(ANALYTIC)],
         "known_fact": "the Float64 literal and exact rational are distinct real numbers",
+        "decomposition": [
+            {
+                "id": "O0.1",
+                "name": "literal_representation",
+                "status": "FACT_RECORDED",
+                "interface": "RouteB.O0.Float64RegularizerLiteral",
+            },
+            {
+                "id": "O0.2",
+                "name": "common_base_binding",
+                "status": "OPEN",
+                "interface": "RouteB.O0.CommonUnregularizedMassBase",
+            },
+            {
+                "id": "O0.3",
+                "name": "outward_matrix_inclusion",
+                "status": "OPEN",
+                "interface": "RouteB.O0.RegularizerMatrixInclusion",
+            },
+            {
+                "id": "O0.4",
+                "name": "inverse_port_consumer",
+                "status": "OPEN",
+                "interface": "RouteB.O0.ResolventPortPerturbation",
+            },
+        ],
+        "exact_consequence": (
+            "under a common unregularized base, M_float = M_exact - delta I; "
+            "inverse perturbation is a full-matrix resolvent obligation"
+        ),
         "remaining_obligation": (
             "prove an outward inclusion for the deployed evaluation, or declare "
             "the exact-real evaluator authoritative and rebind all source claims"

@@ -812,3 +812,11 @@ interface draft。source-binding 回执进一步固定 deployed 角度公式
 这批回执只增加 provenance 和 frontier metadata，不新增 DAG child、不改变
 `required_node_ids`、不进入 registry；当前 state rev 489，O2/node status=open，
 `formal_certificate_allowed=false`。
+
+### 2026-09-07 — 梁智炜：细化 O0 regularizer semantics bridge
+
+O0 已按独立接口拆为 O0.1 literal representation（事实已记录）、O0.2 common-base
+binding、O0.3 outward matrix inclusion、O0.4 inverse/port resolvent consumer。
+当前 `Float64(1e-6)` 与 `1/1000000` 的差值方向已固定，但只有在同一未正则化
+`M^0` 绑定后才能推出 `M_float=M_exact-δI`；`M_DD^{-1}` 的影响必须使用完整
+resolvent 恒等式，不能逐对角线近似。O0 保持 open，未进入 registry。
