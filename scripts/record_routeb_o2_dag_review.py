@@ -11,6 +11,7 @@ ROUTE_B = ROOT.parent / "6dof_sos_optimized" / "6dof_sos_optimized"
 REVIEW = ROOT / "agent_review_inbox/review-T-P4-036.4-dag-01a07bb4-be84-20260907.md"
 SOURCE = ROUTE_B / "routeB_dense_Mq/dhport_lib.jl"
 STATE = ROOT / "artifacts/routeb_6dof/state.json"
+EXPECTED_SOURCE_SHA256 = "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936"
 sys.path.insert(0, str(ROOT / "src"))
 
 from percolation_workflow.store import StateStore  # noqa: E402
@@ -42,9 +43,12 @@ def main() -> int:
         "D3 `DHChainFloat64EvaluatorEnclosure",
         "mass_matrix` 与 `potential`",
         "formal_certificate_allowed=false",
+        EXPECTED_SOURCE_SHA256,
     ):
         if phrase not in text:
             raise ValueError(f"O2.4 review boundary missing: {phrase}")
+    if sha(SOURCE) != EXPECTED_SOURCE_SHA256:
+        raise ValueError("O2.4 source hash drifted; reject stale review")
     review = {
         "schema_version": 1,
         "task_id": "T-P4-036.4",

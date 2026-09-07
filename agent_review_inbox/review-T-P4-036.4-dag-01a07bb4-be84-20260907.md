@@ -10,6 +10,9 @@ integration_status: pending
 `T_prev -> A_i -> T_i -> (R_i,o_i,z_i) -> pcom/J -> M/P` 分层。`z_i` 必须在
 当前 link 的 `A_i` 之前从父变换提取，不能改用 `T_i` 的 z 轴。
 
+冻结 source SHA-256：
+`AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936`。
+
 最小接口：
 
 - D1 `DHLinkFiniteDAGEnclosure(i,T_prev_box,theta_box,alpha_box,trig_box,schedule)`

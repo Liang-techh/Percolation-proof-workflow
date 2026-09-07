@@ -852,4 +852,6 @@ O2.4 已记录 D1/D2/D3 三层 finite-DAG interface，并冻结 deployed source 
 contract：`fk_frames=31-44`、`mass_matrix=46-61`、`potential=63-70`、
 `arm_MCG=73-100`、`exact_ddq=102-110`。特别保留源码中 `mass_matrix` 与
 `potential` 分别重调用 `fk_frames` 的 runtime 事实；中心差分必须复制两侧
-shifted DAG。state rev 496，O2 仍 open，registry=0，formal gate 仍关闭。
+shifted DAG。source hash 漂移检查已加入，当前 canonical hash 必须为
+`AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936`；不匹配时
+review 拒绝接入。state rev 497，O2 仍 open，registry=0，formal gate 仍关闭。
