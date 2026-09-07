@@ -2285,6 +2285,15 @@ results: fixed-lambda `01a07ce7-a82f-7212-97af-6824f8b984be` and central-FD
 Spark usage-limit gate.  All four lanes remain forbidden from editing state/registry or
 claiming source, coverage, admission, or final closure.
 
+### T-P5-028 DAG decomposition (2026-09-07)
+
+The moving-frame transport child is now split into six independent leaves:
+`source_difference`, `common_parameter`, `ramp_fiber_segment`, `uniform_bound`,
+`k_eff_update`, and `fiber_obstruction`.  Each leaf inherits the same review
+and companion provenance but has its own proof sketch and closure edge.  The
+decomposition is advisory/pending until each leaf receives its own typed
+proof artifact; it does not make the parent verified or alter the P5 gates.
+
 ### T-P5-028 moving-frame transport harvest (2026-09-07)
 
 - The exact block-(4,5) moving-frame difference map is now a separate P5 child:

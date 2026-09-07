@@ -1728,6 +1728,16 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   coverage、P5 closure 与 registry 仍 open。
 - 本轮 state revision `611`，registry `0`，`formal_certificate_allowed=false`。
 
+### 2026-09-07 — T-P5-028 theorem decomposition
+
+- moving-frame transport 已从一个大 child 拆为六个实际 DAG leaves：
+  `source_difference`、`common_parameter`、`ramp_fiber_segment`、
+  `uniform_bound`、`k_eff_update`、`fiber_obstruction`。
+- 六个 leaves 共享原 review/companion provenance，但各自拥有独立
+  proof sketch 和 closure edge；当前均为 pending，不能仅凭父 review 关闭。
+- registrar 已幂等写入 state revision `612`；registry 仍为 `0`，formal gate
+  仍关闭。后续 agent 应优先逐叶形式化，避免重复整个 moving-frame review。
+
 ### 2026-09-07 — T-P5-028 moving-frame transport 收割
 
 - 柳冠一给出 block-(4,5) moving-frame 到 source 坐标的精确 affine difference
