@@ -1848,3 +1848,22 @@ after integration; corrections should be a new result file.
   `leftover=0` 会返回 `OPEN_SCHUR_MARGIN_NOT_STRICT`。
 - legacy `consume_routeb_schur_margin` 保留用于非严格算术记账，不得作为最终
   admission 的充分条件。新增聚焦测试后为 `28 passed`。
+
+### T-P4-036.2 — GCN candidate authority stop (2026-09-07)
+
+- GCN-F1/F2 的 hash-bound candidate pair 不能作为 O2 theta2 leaf-1 的
+  authoritative parent/sibling：namespace、维度和 q2 区间均不匹配，且
+  `source_interval_membership_proved=false`、`coverage=false`。
+- 保持 `BLOCKED_AUTHORITY_NOT_ADMISSIBLE` / `ENDPOINT_PROVENANCE_ONLY`；
+  不实例化 `CoverageJoin2`，不重复 leaf-1 Lean 编译。
+- 后续只寻找同一 O2 namespace 的 canonical 13D endpoints、child linkage、
+  interval membership 与 typed coverage-join receipt。
+
+### T-P4-033-O0-R3 — strict leftover obstruction (2026-09-07)
+
+- 已确认同键 exact-Fourier receipt 不含 `rho_r`、`m_r`、固定 `theta`，
+  仅有可组合的 weighted perturbation `epsilon`。
+- 严格消费条件为 `m_r > (1+1/theta)*((rho_r+epsilon)^2-rho_r^2)`；
+  当前无法判定正负，继续保持 `OPEN_FAIL_CLOSED_STRICT_LEFTOVER_REQUIRED`。
+- 派发目标：只寻找带 source/state/metric/orientation 绑定的 baseline、margin、
+  theta 三元组及 exact strict arithmetic；禁止重复已完成的 norm conversion。

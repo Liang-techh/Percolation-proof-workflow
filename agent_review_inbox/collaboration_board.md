@@ -1186,3 +1186,23 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   `OPEN_SCHUR_MARGIN_NOT_STRICT`，不会被误报为物理闭合。
 - 保留旧 helper 的非严格算术记账行为以兼容历史调用；物理/finite-horizon
   admission 必须走 strict wrapper。聚焦 regularizer tests 已为 `28 passed`。
+
+### 2026-09-07 — 梁智炜：O2 GCN parent/sibling candidate authority stop 收割
+
+- GCN-F1/F2 提供了 source/hash-bound candidate records 和共享 endpoint，
+  但它们是六维 GCN sidecar，`source_interval_membership_proved=false`、
+  `coverage=false`，且不属于 O2 theta2 leaf-1 的 canonical 13D namespace。
+- 已登记 `BLOCKED_AUTHORITY_NOT_ADMISSIBLE`；不实例化 `CoverageJoin2`，O2
+  继续保持 `ENDPOINT_PROVENANCE_ONLY`，global coverage 与 registry 不变。
+- 下一步只接受同一 O2 namespace 的 13D parent/sibling endpoint、显式 linkage、
+  interval membership 和 typed coverage-join premise。
+
+### 2026-09-07 — 梁智炜：O0-R3 strict-positive-leftover obstruction 收割
+
+- 新审查确认 exact-Fourier one-cell 当前只有 factor-2 weighted perturbation，
+  没有同键 `rho_r`、baseline remaining margin `m_r` 或固定 exact `theta`；
+  因而严格 leftover `m_f>0` 在数学上不可判定，已 fail-closed 记录。
+- 明确拒绝 unkeyed Frobenius/旧 ledger/算术根作为 baseline receipt；Schur
+  margin 未消费，registry 与 formal gate 均保持关闭。
+- 下一步只派发同键 baseline bound + positive margin + theta 的精确 receipt，
+  不重复 factor-2 或旧 CSV 审计。
