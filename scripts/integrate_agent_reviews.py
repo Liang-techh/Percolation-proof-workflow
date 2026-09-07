@@ -87,6 +87,7 @@ TASK_TARGETS = {
     "T-P4-021": ("P4.residual_port_frobenius_bound", "pending_resolved_cell_frobenius_port_lift"),
     "T-P4-022": ("P4.frobenius_operator_norm_bridge", "pending_frobenius_operator_bridge_compile"),
     "T-P4-023": ("P4.weighted_frobenius_port_energy_bridge", "pending_weighted_frobenius_port_energy_adapter"),
+    "T-P4-024": ("P4.combined_schur_port_energy_adapter", "pending_combined_schur_port_energy_adapter"),
     "T-M4-008": ("M4.energy_to_schur_budget_bridge", "pending_conditional_energy_schur_bridge"),
     "T-P8-005": ("P8.independent_reachability", "pending_terminal_transfer_interface"),
     "T-P8-006": ("P8.ramp_reconstruction_compiled_candidate", "pending_ramp_reconstruction_child"),

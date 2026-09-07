@@ -1183,6 +1183,25 @@ polynomial remains a separate frontier.
   equating it with robust-PMI `E_k`, using the positive ledger margin as a
   kernel result, or opening P4/M4 admission.
 
+### T-P4-024 — combined-Schur port-energy adapter
+
+- status: `open` (formalization target recorded locally at Route-B revision 413)
+- owner: `狂蛮魔尊` for the Young/Schur inequality proof; `柳冠一` for the
+  typed binding of `l_base` and `A_up`; `巨阳仙尊` may provide the pinned Lean
+  norm-square API;
+- scope: prove the exact finite-dimensional implication
+  `theta>0 ∧ ||r||₂²≤rho*A ∧ b≥(1+theta)||l||₂²+(1+1/theta)rho*A`
+  `⇒ ||l+r||₂²≤b`. Consume `T-P4-023` only as the port-energy premise and
+  bind `A=a_BᵀB_up a_B` in a separate Route-B adapter;
+- deliver: smallest pinned Lean theorem, exact statement identity, and a
+  source-binding receipt showing which declared base residual and `B_up`
+  energy are used;
+- explicitly distinguish this Young-budget adapter from robust-PMI `E_k`:
+  it closes only the algebraic port-energy consumption interface, not the
+  residual decomposition, all-cell coverage, flowpipe, or terminal transfer;
+- forbidden: treating a positive ledger margin, Float64 source, solver status,
+  or one-cell result as kernel verification or P4/M4 closure.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it

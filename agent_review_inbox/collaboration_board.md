@@ -556,3 +556,15 @@
   前提；它不构造 robust-PMI `E_k`，也不绑定 interval source。
 - revision 413 已持久化该目标；等待 Lean agent 的 pinned receipt 和
   柳冠一的 `R/B_up` source adapter，P4/M4 gate 继续关闭。
+
+### 2026-09-07 — 梁智炜：加入 combined-Schur port-energy 适配叶
+
+- 新增 `P4.combined_schur_port_energy_adapter` / `T-P4-024`，依赖
+  `P4.weighted_frobenius_port_energy_bridge`，把当前真正可消费的
+  `||R a_B||²` 预算接到 `b_base` 的 Young/Schur 不等式接口。
+- 目标只证明
+  `b≥(1+theta)||l_base||²+(1+1/theta)rho*A_up`
+  推出 `||l_base+r_B||²≤b`；不把 port-energy 预算改名成 robust-PMI
+  `E_k`，也不声称 residual decomposition 或 P4 gate 已关闭。
+- 等待狂蛮魔尊给出不等式闭合、柳冠一给出 `l_base/A_up` typed binding、
+  巨阳仙尊补齐 pinned Lean norm-square API。
