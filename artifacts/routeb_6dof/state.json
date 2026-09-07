@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 441,
+  "revision": 442,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12337,8 +12337,13 @@
       "statement": "For each Route-B cell, a fixed rational lambda_k must satisfy 1<lambda_k<lambda_upper_k and the exact Schur margin must be nonnegative before the affine PMI may consume it.",
       "parent_id": "35839e28b33e484f886081ddb6351c80",
       "status": "open",
-      "proof_sketch": "Formalize the strict parameter-domain side condition and keep the per-cell witness separate from all-cell coverage. Reject state-dependent lambda and any ledger row marked inadmissible.",
-      "dependencies": [],
+      "proof_sketch": "Decompose the fixed rational parameter contract into exact decimal-to-rational quantization, positive-denominator ratio identity, lambda=2 row admissibility, and a finite declared-row fold. Keep all source, true-DH, coverage, residual, Lean, and comparator obligations independent.",
+      "dependencies": [
+        "30778a1dfd4e43f4bf8372c0b63449c1",
+        "44d878413c584d81b8bd4b7d68966a14",
+        "b88c2ed6186d442f84b9b652de48a125",
+        "aae74d8831a94cd49d04612a2490eaa2"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -12486,7 +12491,149 @@
             "complete_domain_coverage",
             "pinned_lean_comparator_receipt"
           ]
+        },
+        "decomposition_contract": {
+          "schema_version": 1,
+          "status": "open_children_pending_pinned_receipts",
+          "children": [
+            "30778a1dfd4e43f4bf8372c0b63449c1",
+            "44d878413c584d81b8bd4b7d68966a14",
+            "b88c2ed6186d442f84b9b652de48a125",
+            "aae74d8831a94cd49d04612a2490eaa2"
+          ],
+          "child_order": [
+            "30778a1dfd4e43f4bf8372c0b63449c1",
+            "44d878413c584d81b8bd4b7d68966a14",
+            "b88c2ed6186d442f84b9b652de48a125",
+            "aae74d8831a94cd49d04612a2490eaa2"
+          ],
+          "closure_rule": "fixed_cell_lambda_admissibility closes only after every child is VERIFIED and comparator-accepted",
+          "finite_witness_boundary": "declared ledger rows only; no true-DH/domain coverage claim"
         }
+      }
+    },
+    "30778a1dfd4e43f4bf8372c0b63449c1": {
+      "id": "30778a1dfd4e43f4bf8372c0b63449c1",
+      "name": "P4.fixed_lambda_decimal_quantization",
+      "statement": "Treat every declared decimal ledger field as its exact quantized rational and prove the 1e-12 floor is no larger than the recorded candidate margin.",
+      "parent_id": "8cea6a84c5364384a723d88f00d9a516",
+      "status": "open",
+      "proof_sketch": "Parse positive decimal numerators and denominators, preserve their textual provenance, and prove the conservative floor inequality in exact rational arithmetic; do not infer an unrecorded real source value.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "statement_status": "formalization_target",
+        "claim_status": "fixed_lambda_decomposition_child_open",
+        "evidence_level": "typed-proof-obligation",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "source_provenance": {
+          "origin": "coordinator-created decomposition of the Route-B fixed-lambda contract",
+          "upstream_inspiration": "Route-B fixed-cell combined-Schur ledger",
+          "attribution_required": true
+        },
+        "decomposition_role": "fixed_lambda_witness",
+        "unresolved": [
+          "pinned_lean_compile_receipt",
+          "zero_sorry_and_allowed_axioms_receipt",
+          "statement_comparator_receipt"
+        ]
+      }
+    },
+    "44d878413c584d81b8bd4b7d68966a14": {
+      "id": "44d878413c584d81b8bd4b7d68966a14",
+      "name": "P4.fixed_lambda_upper_ratio_identity",
+      "statement": "For positive gamma_cell, prove lambda_upper=gamma_external/gamma_cell and candidate_margin=gamma_external-lambda*gamma_cell, with strict lambda admissibility equivalent to 1<lambda<lambda_upper.",
+      "parent_id": "8cea6a84c5364384a723d88f00d9a516",
+      "status": "open",
+      "proof_sketch": "Use field-level rational arithmetic and the positivity premise to cross-multiply only by a positive denominator; retain the aggregate/per-cell metric distinction.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "statement_status": "formalization_target",
+        "claim_status": "fixed_lambda_decomposition_child_open",
+        "evidence_level": "typed-proof-obligation",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "source_provenance": {
+          "origin": "coordinator-created decomposition of the Route-B fixed-lambda contract",
+          "upstream_inspiration": "Route-B fixed-cell combined-Schur ledger",
+          "attribution_required": true
+        },
+        "decomposition_role": "fixed_lambda_witness",
+        "unresolved": [
+          "pinned_lean_compile_receipt",
+          "zero_sorry_and_allowed_axioms_receipt",
+          "statement_comparator_receipt"
+        ]
+      }
+    },
+    "b88c2ed6186d442f84b9b652de48a125": {
+      "id": "b88c2ed6186d442f84b9b652de48a125",
+      "name": "P4.fixed_lambda_two_row_admissibility",
+      "statement": "For every declared row selected with fixed rational lambda=2 and theta=1, prove 1<lambda<lambda_upper and the recorded conservative Schur margin is positive.",
+      "parent_id": "8cea6a84c5364384a723d88f00d9a516",
+      "status": "open",
+      "proof_sketch": "Instantiate the scalar contract at lambda=2, replay the exact quantized row witness, and preserve negative lambda=5/3 rows as separate obstruction evidence.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "statement_status": "formalization_target",
+        "claim_status": "fixed_lambda_decomposition_child_open",
+        "evidence_level": "typed-proof-obligation",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "source_provenance": {
+          "origin": "coordinator-created decomposition of the Route-B fixed-lambda contract",
+          "upstream_inspiration": "Route-B fixed-cell combined-Schur ledger",
+          "attribution_required": true
+        },
+        "decomposition_role": "fixed_lambda_witness",
+        "unresolved": [
+          "pinned_lean_compile_receipt",
+          "zero_sorry_and_allowed_axioms_receipt",
+          "statement_comparator_receipt"
+        ]
+      }
+    },
+    "aae74d8831a94cd49d04612a2490eaa2": {
+      "id": "aae74d8831a94cd49d04612a2490eaa2",
+      "name": "P4.fixed_lambda_uniform_declared_row_fold",
+      "statement": "Fold the finite declared ledger rows for eta=2.7 and eta=5.6 into a uniform lambda=2 witness, without claiming coverage outside the ledger artifact.",
+      "parent_id": "8cea6a84c5364384a723d88f00d9a516",
+      "status": "open",
+      "proof_sketch": "Combine the row-level witnesses with finite-set membership and distinct-box accounting; expose the exact finite witness set and leave true-DH interval coverage as an independent premise.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "statement_status": "formalization_target",
+        "claim_status": "fixed_lambda_decomposition_child_open",
+        "evidence_level": "typed-proof-obligation",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "source_provenance": {
+          "origin": "coordinator-created decomposition of the Route-B fixed-lambda contract",
+          "upstream_inspiration": "Route-B fixed-cell combined-Schur ledger",
+          "attribution_required": true
+        },
+        "decomposition_role": "fixed_lambda_witness",
+        "unresolved": [
+          "pinned_lean_compile_receipt",
+          "zero_sorry_and_allowed_axioms_receipt",
+          "statement_comparator_receipt"
+        ]
       }
     }
   },
@@ -35347,6 +35494,48 @@
       "parent_id": "35839e28b33e484f886081ddb6351c80",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T10:19:28.701538+00:00",
+      "kind": "node_added",
+      "node_id": "30778a1dfd4e43f4bf8372c0b63449c1",
+      "parent_id": "8cea6a84c5364384a723d88f00d9a516",
+      "name": "P4.fixed_lambda_decimal_quantization"
+    },
+    {
+      "at": "2026-09-07T10:19:28.701573+00:00",
+      "kind": "node_added",
+      "node_id": "44d878413c584d81b8bd4b7d68966a14",
+      "parent_id": "8cea6a84c5364384a723d88f00d9a516",
+      "name": "P4.fixed_lambda_upper_ratio_identity"
+    },
+    {
+      "at": "2026-09-07T10:19:28.701582+00:00",
+      "kind": "node_added",
+      "node_id": "b88c2ed6186d442f84b9b652de48a125",
+      "parent_id": "8cea6a84c5364384a723d88f00d9a516",
+      "name": "P4.fixed_lambda_two_row_admissibility"
+    },
+    {
+      "at": "2026-09-07T10:19:28.701589+00:00",
+      "kind": "node_added",
+      "node_id": "aae74d8831a94cd49d04612a2490eaa2",
+      "parent_id": "8cea6a84c5364384a723d88f00d9a516",
+      "name": "P4.fixed_lambda_uniform_declared_row_fold"
+    },
+    {
+      "at": "2026-09-07T10:19:28.701594+00:00",
+      "kind": "routeb_fixed_lambda_decomposition_recorded",
+      "parent_id": "8cea6a84c5364384a723d88f00d9a516",
+      "children": [
+        "30778a1dfd4e43f4bf8372c0b63449c1",
+        "44d878413c584d81b8bd4b7d68966a14",
+        "b88c2ed6186d442f84b9b652de48a125",
+        "aae74d8831a94cd49d04612a2490eaa2"
+      ],
+      "closure_rule": "fixed_cell_lambda_admissibility closes only after every child is VERIFIED and comparator-accepted",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -39003,5 +39192,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "eab0ee92eeb51945a2125c1b8967d4b49d54554914cc63f88b08d238c6a31c36"
+  "state_checksum": "faa1165def40bd4a44698b50478ba4553d112b7b436e37b37ee247db2bfc5c18"
 }
