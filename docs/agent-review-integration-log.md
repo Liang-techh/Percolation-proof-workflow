@@ -3,7 +3,7 @@
 This log records durable integrations from `agent_review_inbox/`. The original
 review files and their SHA-256 markers remain in that directory.
 
-## 2026-09-06 / Route-B checkpoint revision 336
+## 2026-09-06 / Route-B checkpoint revision 338
 
 Integrated as pending metadata only:
 
@@ -22,10 +22,13 @@ Integrated as pending metadata only:
 | T-P3-003 | `P3.strict_true_dh_bounds` | `pending_source_manifest_binding` | none |
 | T-P4-003 | `P4.residual_schur_pmi` | `conditional_typed_normalization` | none |
 | T-P8-003 | `P8.independent_reachability` | `explicit_time_contract_recommended` | none |
+| T-P4-004 | `P4.residual_schur_pmi` | `conditional_typed_normalization_sidecar` | none |
+| T-P5-001 | `P5.sparse_disjunctive_sos` | `energy_syzygy_reuse_audit` | none |
+| T-P8-004 | `P8.independent_reachability` | `explicit_time_typed_sidecar` | none |
 
 The authoritative `artifacts/routeb_6dof/state.json` was updated through
-`StateStore` from revision 328 to revision 336. Fifteen
-`agent_review_integrated` events and fifteen node provenance references were
+`StateStore` from revision 328 to revision 338. Eighteen
+`agent_review_integrated` events and eighteen node provenance references were
 added. Node statuses remain open and the verified registry remains empty.
 
 No review was promoted to `VERIFIED`; P3 source semantics, P4 true-DH residual
@@ -42,3 +45,11 @@ of these results closes a physical parent or adds a verified registry entry.
 P3 and P4 were later revised under the same filenames by agents.  The inbox
 integrator retained both prior hashes and recorded the new hashes as explicit
 revisions; no review evidence was silently overwritten.
+
+P4-004 confirms a focused exact-real typed normalization sidecar, while P5-001
+finds reusable energy/power bridges but no dedicated source-authenticated
+Newton–Euler syzygy. Both remain below physical parent admission.
+
+P8-004 supplies a focused explicit-time 13-state interface sidecar with the
+`c` parameter external to the state vector. It remains conditional and does
+not establish source binding, flowpipe coverage, or terminal transfer.

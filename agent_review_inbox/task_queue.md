@@ -143,7 +143,8 @@ without an explicit scoped request.
 
 ### T-P5-001 — energy-syzygy admission audit
 
-- status: `claimed` (Lagrange the 6th, 2026-09-06)
+- status: `reviewed_pending` (integrated at Route-B revision 337; result:
+  `review-T-P5-001-energy-syzygy.md`)
 - scope: isolate the exact Newton–Euler energy identity from sparse SOS and
   true-DH source obligations, and identify the smallest reusable child;
 - deliver: review result with statement, dependencies, and evidence boundary;
@@ -151,7 +152,8 @@ without an explicit scoped request.
 
 ### T-P4-004 — typed normalization Lean sidecar
 
-- status: `claimed` (Codex, 2026-09-06T20:37:58-06:00)
+- status: `reviewed_pending` (integrated at Route-B revision 337; result:
+  `review-T-P4-004-normalization-sidecar.md`)
 - scope: keep force residual `l` and PMI residual `d` as distinct typed
   objects, connected only through an explicit interface premise;
 - deliver: focused Lean sidecar or review result, with no true-DH/coverage
@@ -160,7 +162,8 @@ without an explicit scoped request.
 
 ### T-P8-004 — explicit-time contract sidecar
 
-- status: `open`
+- status: `reviewed_pending` (integrated at Route-B revision 338; result:
+  `review-T-P8-004-explicit-time-sidecar.md`)
 - scope: formalize the smallest 13-state explicit-time interface with external
   parameter `c`, initial projection, and terminal-transfer assumptions;
 - deliver: focused Lean sidecar or review result; no broad regression;

@@ -25,7 +25,10 @@ TASK_TARGETS = {
     "T-DAG-002": ("M4.block45_full_certificate", "child_dag_refinement_proposal"),
     "T-P3-003": ("P3.strict_true_dh_bounds", "pending_source_manifest_binding"),
     "T-P4-003": ("P4.residual_schur_pmi", "conditional_typed_normalization"),
+    "T-P4-004": ("P4.residual_schur_pmi", "conditional_typed_normalization_sidecar"),
     "T-P8-003": ("P8.independent_reachability", "explicit_time_contract_recommended"),
+    "T-P8-004": ("P8.independent_reachability", "explicit_time_typed_sidecar"),
+    "T-P5-001": ("P5.sparse_disjunctive_sos", "energy_syzygy_reuse_audit"),
 }
 
 
@@ -35,17 +38,23 @@ def sha256(path: Path) -> str:
 
 def front_matter(path: Path) -> dict[str, str]:
     lines = path.read_text(encoding="utf-8").splitlines()
-    if len(lines) < 3 or lines[0].strip() != "---":
+    if len(lines) < 2:
         return {}
+    # Accept the legacy inbox shape without an opening delimiter, but expose
+    # the repair as metadata so malformed handoffs never look fully clean.
+    legacy = lines[0].strip() != "---"
+    start = 1 if not legacy else 0
     try:
-        end = lines.index("---", 1)
+        end = lines.index("---", start)
     except ValueError:
         return {}
     result: dict[str, str] = {}
-    for line in lines[1:end]:
+    for line in lines[start:end]:
         match = re.fullmatch(r"([A-Za-z_][A-Za-z0-9_-]*):\s*(.*)", line)
         if match:
             result[match.group(1)] = match.group(2).strip().strip("'\"")
+    if legacy:
+        result["_format_warning"] = "missing_opening_yaml_delimiter"
     return result
 
 
@@ -123,6 +132,8 @@ def main() -> int:
         if previous is not None:
             ref["correction_of_sha256"] = previous.get("review_sha256")
             ref["classification"] = f"{classification}_revision"
+        if header.get("_format_warning"):
+            ref["format_warning"] = header["_format_warning"]
         node.metadata.setdefault("agent_review_refs", []).append(ref)
         state.event(
             "agent_review_integrated",

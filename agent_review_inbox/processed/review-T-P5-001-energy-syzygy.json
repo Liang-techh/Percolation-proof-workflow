@@ -1,0 +1,12 @@
+{
+  "review_file": "agent_review_inbox/review-T-P5-001-energy-syzygy.md",
+  "review_sha256": "5C8CD7F3C13255AFFAC592BE22D5784ADCADE6D1E726A328CFE57912F13BB10D",
+  "task_id": "T-P5-001",
+  "source_agent": "Codex",
+  "created_at": "2026-09-06T20:39:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "energy_syzygy_reuse_audit",
+  "admission_effect": "none",
+  "format_warning": "missing_opening_yaml_delimiter",
+  "integrated_at": "2026-09-07T02:41:18.416447+00:00"
+}

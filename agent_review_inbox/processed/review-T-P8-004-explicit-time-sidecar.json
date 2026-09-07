@@ -1,0 +1,11 @@
+{
+  "review_file": "agent_review_inbox/review-T-P8-004-explicit-time-sidecar.md",
+  "review_sha256": "C684E30064581F601C598981CCEFE1666CF8A01DDF46D980F375B6CABAEB20CA",
+  "task_id": "T-P8-004",
+  "source_agent": "Codex",
+  "created_at": "2026-09-06T00:00:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "explicit_time_typed_sidecar",
+  "admission_effect": "none",
+  "integrated_at": "2026-09-07T02:42:07.074330+00:00"
+}
