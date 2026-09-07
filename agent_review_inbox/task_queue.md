@@ -2396,6 +2396,17 @@ coverage, admission, registry promotion, or local Lean verification.
 - 该任务仍限定为 source-seam proof attempt；不得从 CSV 反推 source，不得
   修改 state/registry/shared scripts，也不得声称本机 Lean 验证。
 
+### 2026-09-07 — K_path exact comparison harvest
+
+- K_path comparison checker 已完成并注册：对输入的 exact rational
+  `A/Hjac/Scoord/K_path/K_cert` 重算全部 8 项 `pathK`，再逐项检查
+  `K_path ≤ K_cert`，不接受 tolerance、float、范数替代或缺少公式输入。
+- 普通模式与 `python -O` 下各 12 组正/负控通过；Lean `RationalBinding` 仍是
+  未编译 typed seam，真实 source 表、`ComponentLE` entry equality、SPN/H gap
+  和 coverage 仍未提供。
+- 已登记为 `...k_path_interface.exact_comparison`，state revision `622`，
+  registry=0，formal gate 继续关闭。
+
 ### 2026-09-07 — GitHub Lean harvest: P5-027 / P5-028
 
 - T-P5-027 的 `P5NearSharpCenteredGain.lean` 已有 GitHub CI 证据：Lean

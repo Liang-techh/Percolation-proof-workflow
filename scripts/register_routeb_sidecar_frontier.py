@@ -377,6 +377,21 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P5.componentwise_relative_decay.feasible_cone_spn.k_path_interface.exact_comparison",
+        "parent": "P5.componentwise_relative_decay.feasible_cone_spn.k_path_interface",
+        "statement": "An exact rational checker recomputes all 8 pathK entries from A/Hjac/Scoord and verifies pathK ≤ K_cert without tolerance, while a typed cast seam exposes the comparison to the real-valued consumer.",
+        "proof_sketch": "Reject noncanonical rationals, malformed dimensions, stale formula pins and all identity/comparison countercontrols; separately retain exact real entry-equality premises for the Lean ComponentLE adapter.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "EXACT_UNBOUND_COMPARISON_CHECKED_LEAN_BINDING_OPEN",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_KPATH_INTERFACE_Comparison.py",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_KPATH_INTERFACE_Comparison_test.py",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_KPATH_INTERFACE_RationalBinding.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_KPATH_INTERFACE_Comparison_REVIEW.md",
+        ],
+    },
+    {
         "name": "P5.componentwise_relative_decay.near_sharp_scalar_fallback.compiled_candidate",
         "parent": "P5.componentwise_relative_decay.near_sharp_scalar_fallback",
         "statement": "The source-independent near-sharp scalar block-(4,5) consumer is compiled in the pinned GitHub Lean environment with an exact lower witness.",

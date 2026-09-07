@@ -1805,6 +1805,14 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   数据行数或 aggregate 相似性；agent 正在连接已有 prefix rotation/axis
   定义与 `sixthAxisDot`。
 
+### 2026-09-07 — K_path exact comparison 收割
+
+- K_path 线已经有了 fail-closed 的 8 项精确比较器：先从三层 path 数据重算
+  `pathK`，再检查每项不超过 `K_cert`；所有近似/标量范数/伪造字段负控均拒绝。
+- 这解决了“比较方向与输入完整性”的算术瓶颈，但仍没有把 supplied rational
+  表绑定到真实 DH/source，也没有产生 SPN witness 或 admission effect。
+- 结果已作为 K_path interface 的子叶注册，state revision `622`。
+
 ### 2026-09-07 — GitHub P5 Lean sidecars 收割
 
 - 巨阳仙尊的 T-P5-027 near-sharp scalar child 已在 GitHub Actions 的 pinned
