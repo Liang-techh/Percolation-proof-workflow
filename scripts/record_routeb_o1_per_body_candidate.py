@@ -59,6 +59,7 @@ HACC_NEW_LAYOUT = ROOT / "examples/routeb_o0_h_acc_source_refinement/NEW_LAYOUT_
 HACC_NEW_SOURCE_INTAKE = ROOT / "examples/routeb_o0_h_acc_source_refinement/NEW_source_intake.py"
 HACC_NEW_TEST = ROOT / "examples/routeb_o0_h_acc_source_refinement/NEW_test_source_intake.py"
 HACC_NEW_REVIEW = ROOT / "examples/routeb_o0_h_acc_source_refinement/NEW_REVIEW.md"
+HACC_NEW_RECEIPT = ROOT / "examples/routeb_o0_h_acc_source_refinement/NEW_RECEIPT.json"
 KEYED_INTERFACE = ROOT / "artifacts/task_routeb_o1_keyed_regrouping_20260907/RouteBO1KeyedRegroupingInterface.lean"
 KEYED_RECEIPT = ROOT / "artifacts/task_routeb_o1_keyed_regrouping_20260907/interface_receipt.json"
 KEYED_CHECK = ROOT / "artifacts/task_routeb_o1_keyed_regrouping_20260907/interface_check.json"
@@ -117,7 +118,7 @@ def main() -> None:
                  HACC_REVIEW, HACC_REFINEMENT_REVIEW, HACC_CONTRACT, HACC_RECEIPT,
                  HACC_REFINEMENT_RECEIPT, HACC_NEW_SCHEMA, HACC_NEW_INTAKE,
                  HACC_NEW_LAYOUT, HACC_NEW_SOURCE_INTAKE, HACC_NEW_TEST,
-                 HACC_NEW_REVIEW,
+                 HACC_NEW_REVIEW, HACC_NEW_RECEIPT,
                  KEYED_INTERFACE, KEYED_RECEIPT, KEYED_CHECK,
                  KEYED_ORIENTATION_REVIEW, BODY6_SUPPORT, BODY6_REVIEW,
                  BODY6_CANONICAL_TARGET, BODY6_CANONICAL_CONTRACT, BODY6_CANONICAL_RECEIPT,
@@ -232,6 +233,7 @@ def main() -> None:
         "h_acc_occurrence_intake_checker_sha256": digest(HACC_NEW_SOURCE_INTAKE),
         "h_acc_occurrence_intake_tests_sha256": digest(HACC_NEW_TEST),
         "h_acc_occurrence_intake_review_sha256": digest(HACC_NEW_REVIEW),
+        "h_acc_occurrence_intake_receipt_sha256": digest(HACC_NEW_RECEIPT),
         "h_acc_occurrence_intake_status": "PENDING_OPEN_H_ACC_NO_SOURCE_EXPORT",
         "h_acc_occurrence_intake_proven": False,
         "h_acc_refinement_status": "OPEN_H_ACC_SOURCE_REFINEMENT_AND_INTERVAL_SOUNDNESS",
