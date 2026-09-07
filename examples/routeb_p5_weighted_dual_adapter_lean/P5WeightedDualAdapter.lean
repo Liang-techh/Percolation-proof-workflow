@@ -141,18 +141,17 @@ theorem fixed_bias_not_uniformly_relative_scalar
     positivity
   have hr2 : 0 < r ^ 2 := sq_pos_of_ne_zero hr
   have hq : 0 < r ^ 2 / d := div_pos hr2 hd
+  have hgamma_lt : gamma < gamma + 1 := by linarith
+  have hdiv : gamma / (gamma + 1) < 1 :=
+    (div_lt_one hgp).2 hgamma_lt
   have hgt : gamma * t < 1 := by
-    dsimp [t]
-    rw [div_lt_iff₀ hgp]
-    nlinarith
+    simpa [t, div_eq_mul_inv] using hdiv
   have hvD : d * v ^ 2 = t ^ 2 * (r ^ 2 / d) := by
     dsimp [v]
     field_simp [ne_of_gt hd]
-    ring
   have hpraw : r * v = t * (r ^ 2 / d) := by
     dsimp [v]
     field_simp [ne_of_gt hd]
-    ring
   have hppos : 0 < r * v := by
     rw [hpraw]
     exact mul_pos ht hq
