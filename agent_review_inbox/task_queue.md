@@ -2944,3 +2944,7 @@ residual allowance 到 scalar margin 的显式预算 adapter；fixed-λ receipt 
 artifact/hash/statement provenance audit；P3 interval certificate 到连续域
 coverage 的 typed consumer。四项要求 proof-attempt + 定向 review，继续不跑
 本机 Lean/Lake、不做宽回归、不直接修改 registry。
+
+P3 continuous coverage 叶已完成成对 review 并登记 revision 692；它只在显式
+boxOf、box membership、region membership 和 per-box interval/gap/cap 证据下
+推出全域 strict slack，并保留 omitted-point 反例。

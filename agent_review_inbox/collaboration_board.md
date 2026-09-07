@@ -2299,3 +2299,7 @@ revision 691 后向四条本地并行线派发：BODY6 exact source-to-Schur 系
 P4 residual allowance→scalar margin、fixed-λ receipt provenance/hash audit、
 P3 interval→continuous coverage。四项均要求最小 typed contract、精确反例或
 缺口说明和定向 review；不执行本机 Lean，不改变 registry。
+
+P3 `CONTINUOUS_COVERAGE` 已收割并登记 revision 692。该叶完成 interval
+certificate 到抽象连续域的同点 coverage bridge；没有把 finite grid、sample
+receipt 或 box 列表升级成连续覆盖，也没有改变 formal gate。
