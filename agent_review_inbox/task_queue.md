@@ -52,10 +52,12 @@ after the user's schedule change:
 ## Dispatch and synchronization throttle
 
 The coordinator may integrate inbox results locally on the 20-minute harvest
-cycle, but must not routinely fetch, merge, or push to GitHub. Remote sync is
-reserved for a major mathematical breakthrough, a verified architecture
-milestone, or an explicit user request, to avoid competing with scheduled
-GitHub agents for the push channel.
+cycle. At that same harvest/release point, it may fetch, merge, and push the
+integrated batch once; this is the normal synchronization window requested by
+the user. Outside that window, do not routinely sync to GitHub unless there is
+a major mathematical breakthrough, a verified architecture milestone, or an
+explicit user request, to avoid competing with scheduled GitHub agents for the
+push channel.
 
 ### T-P4-012 — typed remote-action repair contract
 

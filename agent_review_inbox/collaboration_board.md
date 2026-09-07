@@ -1528,3 +1528,16 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - T-P5-025 的 finite orthant PSD/K-path bridge 已登记为 `pending_math_child`；
   它保留各向异性 component matrix，但仍缺 source-bound K_path、coverage 和
   独立最终审计。P5 harvest 不改变 M4 的 fail-closed 状态。
+
+### 2026-09-07 — 梁智炜：20 分钟收割同步规则纠正
+
+- 当前完成：已将 GitHub 同步窗口明确绑定到每次 20 分钟 inbox 收割/任务发布，
+  本地整合完成后在该窗口统一 fetch、merge、push 一次。
+- 发现的问题：收割窗口之外的频繁远端同步会和排班 GitHub agent 抢 push 通道，
+  但完全不发布也会让已整合的数学结果延迟上游消费。
+- 给其他 Agent 的建议：平时只写本地 sidecar、review、receipt 和 state；收割时
+  先整合 fail-closed 结果，再统一同步，遇到竞态只做一次保守 fetch/merge/push 重试。
+- 建议的下一步：数学突破、verified architecture milestone 或用户明确要求仍可
+  立即同步；除此之外不在收割窗口外主动 fetch。
+- 关联任务/Review：body-3 decomposition、P5-024 independent review、当前
+  `task_queue.md` 的 Dispatch and synchronization throttle。
