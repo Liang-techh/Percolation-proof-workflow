@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 390,
+  "revision": 391,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -10969,11 +10969,11 @@
         "source_artifacts": [
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_schur_completion_lean\\TailSchurCompletion.lean",
-            "sha256": "f78c40a2152a4d5107098cc8c3d38839fe6e8571799b5aca81330ff92d63613d"
+            "sha256": "386b9d3ef90b48d914f4e3e1b4de2ba5465b52fa9896f82e31732aa164aed320"
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_schur_completion_lean\\README.md",
-            "sha256": "93e5f7aea7e562d3a8a815179e8e90eada6180f3b4e8ca0842860fedaaa1205a"
+            "sha256": "b9118fddb28ad6c0aeef51c5191e1f0b5bf3ba06f39241bde9af258000738b25"
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_schur_completion_lean\\lean-toolchain",
@@ -10981,7 +10981,7 @@
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_schur_completion_lean\\verify.sh",
-            "sha256": "e6005da216e98d33fa18dc1bbe14763c6ed20771a050693379a532581f398541"
+            "sha256": "53e5b19e992e367fa60bcf1ed55d1e4421cf7a7b026df9b2b661a3c0d002a8bd"
           }
         ]
       }
@@ -32028,6 +32028,33 @@
       "status": "pending_pinned_lean_compile",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T07:56:46.392005+00:00",
+      "kind": "routeb_p7_tail_schur_provenance_refresh",
+      "node_id": "e5a79681d5374bd58c14938f5fa31d76",
+      "parent_id": "614d87b0f32d4f8c92eab9f5d63fbf30",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_schur_completion_lean\\TailSchurCompletion.lean",
+          "sha256": "386b9d3ef90b48d914f4e3e1b4de2ba5465b52fa9896f82e31732aa164aed320"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_schur_completion_lean\\README.md",
+          "sha256": "b9118fddb28ad6c0aeef51c5191e1f0b5bf3ba06f39241bde9af258000738b25"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_schur_completion_lean\\lean-toolchain",
+          "sha256": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_schur_completion_lean\\verify.sh",
+          "sha256": "53e5b19e992e367fa60bcf1ed55d1e4421cf7a7b026df9b2b661a3c0d002a8bd"
+        }
+      ],
+      "status": "pending_pinned_lean_compile",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -35684,5 +35711,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "c1089704ecb3798b083670222e7901e2bc4f9c67ccc4ae79f1381034fe5ca9e4"
+  "state_checksum": "74e676f53f805a6477ef1885803bf43dc86b511fe00dd4a553ffbc71fb42399f"
 }
