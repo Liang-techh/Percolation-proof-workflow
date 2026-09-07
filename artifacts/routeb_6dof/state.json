@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 680,
+  "revision": 681,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -40902,7 +40902,8 @@
       "status": "open",
       "proof_sketch": "Apply Finset.sum_bij to the explicit row map; keep the cardinality-only variant as a wrapper that does not substitute for map or pointwise premises, and retain exact counterexamples for each missing premise.",
       "dependencies": [
-        "68deac127af249c48e8fa5a018eb5ac6"
+        "68deac127af249c48e8fa5a018eb5ac6",
+        "4aa0a8deaacf4e1da5364b9ad0f10afb"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -40938,7 +40939,9 @@
       "parent_id": "e8804b8b7d1e41519b2cbd90c57f9bfb",
       "status": "open",
       "proof_sketch": "Prove the unconditional real rearrangement E≤B+rho*E iff (1-rho)E≤B, then use positivity of 1-rho to consume a caller-supplied cap budget; retain exact noncontractive and missing-sign controls without binding physical source data.",
-      "dependencies": [],
+      "dependencies": [
+        "93ebd8fc6e374451aa01999cb646d7de"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -41010,7 +41013,9 @@
       "parent_id": "0c17023d981c4c30baef00ee4cc1a2eb",
       "status": "open",
       "proof_sketch": "Keep A, X, and Y as arbitrary external blocks; expand the Fin-2 diagonal correction into the two explicit reciprocal channels, align solved columns with finite matrix action, and package the existing tail elimination adapter without asserting full Schur PSD or source binding of cross blocks.",
-      "dependencies": [],
+      "dependencies": [
+        "d05f06142f284bb4afc90b9e4059e5fb"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -41097,6 +41102,111 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_FAMILY_SLACK_REVIEW.md",
             "sha256": "883863721EA7451EE7AFE22B83692D254721F89535FC44A78B9D50E11BC6D911"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "d05f06142f284bb4afc90b9e4059e5fb": {
+      "id": "d05f06142f284bb4afc90b9e4059e5fb",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding",
+      "statement": "The body-6 Schur remainder can consume an explicit 3×3/3×2/2×3 source block binding for A/X/Y, while retaining missing candidate-A evidence as a separate obligation.",
+      "parent_id": "9d21b2840c41476596a3a169ad778509",
+      "status": "open",
+      "proof_sketch": "Bind front and tail indices to actual sourceBodyMass entries, use source symmetry for the reverse mixed block, and consume all three binding fields in the coefficient formula; do not infer arbitrary candidate arrays, complete PSD, or coverage.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "source_semantics",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_BODY6_SOURCE_BLOCK_BINDING",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_SOURCEBLOCKBIND20260907.lean",
+            "sha256": "417C632BF25AB97B14AF539E344A22720181D01DA1B0E905FB70143E93F119A3"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_SOURCEBLOCKBIND20260907.review.md",
+            "sha256": "CC526134307FAEADE857BF85661A654BF16A2844817E5183ACD0FCFF9C7B6F57"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "93ebd8fc6e374451aa01999cb646d7de": {
+      "id": "93ebd8fc6e374451aa01999cb646d7de",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform",
+      "statement": "A domain-uniform rhoBar<1, bias bound, and division-free cap allocation consume pointwise contraction closures into a single finite cap; pointwise strict rho alone is insufficient across an unbounded family.",
+      "parent_id": "c8f0fdf063d14aebb7c92f5aebda1d71",
+      "status": "open",
+      "proof_sketch": "Define explicit pointwise and uniform budget structures, replace rho(x) and bias(x) by uniform majorants, apply the division-free cap consumer, and preserve a dyadic exact-real family as a negative control for missing uniformity.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coverage",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_P4_DOMAIN_UNIFORM_CONTRACTION",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_DomainUniformContraction.lean",
+            "sha256": "90ADE9AD4812F04EB9AC62A8A0ABA3FC6898F385B59187D40C070C0E16E1A867"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_DomainUniformContraction.review.md",
+            "sha256": "2C462B2510213B0A518076F9DFCCC8465424DBAADFBD61321AAE2ACD9F86CE3D"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "4aa0a8deaacf4e1da5364b9ad0f10afb": {
+      "id": "4aa0a8deaacf4e1da5364b9ad0f10afb",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast",
+      "statement": "The finite rational reindex weighted-sum equality survives the canonical ℚ→ℝ coercion, with the cast commuting explicitly with finite sums.",
+      "parent_id": "0cf1b155a71c496b992d6fc532486488",
+      "status": "open",
+      "proof_sketch": "Prove the finite sum cast seam and apply it to both source and target sides of the existing rational reindex adapter, exposing a real-valued equality chain without repeating reindex or strict-slack logic.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "source_semantics",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_FIXED_LAMBDA_RAT_REAL_SUM_CAST",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_RAT_REAL_FINITE_SUM_CAST20260907.lean",
+            "sha256": "ACF9FE2050B3E92AA516995EB5C2C7B8EE66C18491661AA42152A795D6BED317"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_RAT_REAL_FINITE_SUM_CAST20260907_REVIEW.md",
+            "sha256": "681F31BAC48CFD04789DBA424C9D3CAECA4CC3D2DE034D06FB3E73ECF600E685"
           }
         ],
         "registry_eligible": false,
@@ -68742,6 +68852,39 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T19:53:13.275000+00:00",
+      "kind": "node_added",
+      "node_id": "d05f06142f284bb4afc90b9e4059e5fb",
+      "parent_id": "9d21b2840c41476596a3a169ad778509",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding"
+    },
+    {
+      "at": "2026-09-07T19:53:13.275572+00:00",
+      "kind": "node_added",
+      "node_id": "93ebd8fc6e374451aa01999cb646d7de",
+      "parent_id": "c8f0fdf063d14aebb7c92f5aebda1d71",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform"
+    },
+    {
+      "at": "2026-09-07T19:53:13.276136+00:00",
+      "kind": "node_added",
+      "node_id": "4aa0a8deaacf4e1da5364b9ad0f10afb",
+      "parent_id": "0cf1b155a71c496b992d6fc532486488",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast"
+    },
+    {
+      "at": "2026-09-07T19:53:13.276143+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding",
+        "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform",
+        "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -72398,5 +72541,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "b0142925630e5b9c60956b51ab58a29f8f6977611b49dc09dc955a38560f8a11"
+  "state_checksum": "5efb33bc0a1b7e43a2a707da30e8f7e1882841a2493a0e7fadd3eba05d7a746f"
 }

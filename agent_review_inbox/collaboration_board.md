@@ -2190,3 +2190,11 @@ fixed-λ 和 P3 完成后立即补派两条独立数学叶：有限有理加权�
 coercion/Finset 聚合适配；以及 family strict slack 缺少 uniform lower bound
 时的全域反例与 uniform-gap consumer。它们分别服务 typed interface 和
 coverage/uniformity frontier，不重做已登记的局部叶。
+
+### 2026-09-07 — 梁智炜收割三条 source/interface 叶
+
+body-6 `SOURCEBLOCKBIND`、P4 `DOMAIN_UNIFORM_CONTRACTION`、fixed-λ
+`RAT_REAL_FINITE_SUM_CAST` 均有成对 review，已登记 revision 681。它们分别
+补上 A/X/Y 的显式 source-binding 契约、全域 uniform rho 的消费与反例、以及
+有限有理聚合到实数的 cast seam；均保持 open/uncompiled，不改变 registry 或
+formal gate。

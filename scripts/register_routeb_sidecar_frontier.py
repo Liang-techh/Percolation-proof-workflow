@@ -1547,6 +1547,45 @@ CHILDREN = [
             "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_FAMILY_SLACK_REVIEW.md",
         ],
     },
+    {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder",
+        "statement": "The body-6 Schur remainder can consume an explicit 3×3/3×2/2×3 source block binding for A/X/Y, while retaining missing candidate-A evidence as a separate obligation.",
+        "proof_sketch": "Bind front and tail indices to actual sourceBodyMass entries, use source symmetry for the reverse mixed block, and consume all three binding fields in the coefficient formula; do not infer arbitrary candidate arrays, complete PSD, or coverage.",
+        "lane": "source_semantics",
+        "bottleneck": "source_semantics",
+        "status": "OPEN_UNCOMPILED_BODY6_SOURCE_BLOCK_BINDING",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_SOURCEBLOCKBIND20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_SOURCEBLOCKBIND20260907.review.md",
+        ],
+    },
+    {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction",
+        "statement": "A domain-uniform rhoBar<1, bias bound, and division-free cap allocation consume pointwise contraction closures into a single finite cap; pointwise strict rho alone is insufficient across an unbounded family.",
+        "proof_sketch": "Define explicit pointwise and uniform budget structures, replace rho(x) and bias(x) by uniform majorants, apply the division-free cap consumer, and preserve a dyadic exact-real family as a negative control for missing uniformity.",
+        "lane": "lean_adapter",
+        "bottleneck": "coverage",
+        "status": "OPEN_UNCOMPILED_P4_DOMAIN_UNIFORM_CONTRACTION",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_DomainUniformContraction.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_DomainUniformContraction.review.md",
+        ],
+    },
+    {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality",
+        "statement": "The finite rational reindex weighted-sum equality survives the canonical ℚ→ℝ coercion, with the cast commuting explicitly with finite sums.",
+        "proof_sketch": "Prove the finite sum cast seam and apply it to both source and target sides of the existing rational reindex adapter, exposing a real-valued equality chain without repeating reindex or strict-slack logic.",
+        "lane": "lean_adapter",
+        "bottleneck": "source_semantics",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_RAT_REAL_SUM_CAST",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_RAT_REAL_FINITE_SUM_CAST20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_RAT_REAL_FINITE_SUM_CAST20260907_REVIEW.md",
+        ],
+    },
 ]
 
 

@@ -23,6 +23,12 @@ and the strict consequence `weightedLoad < capMaxLoad`.
 `family_strict_slack_consumer6` then adds an existing consumer bound by
 transitivity.
 
+The arithmetic core intentionally consumes the already-produced quantitative
+gap lower bound rather than reproving the erased-coordinate decomposition.
+Thus `hOrder` and `hCommon` remain explicit interface guards for the upstream
+same-point specialization, while the local strict-slack step depends only on
+the supplied `hGapLower`, `hGapPositive`, and `hCapMax` premises.
+
 ## Same-point contract
 
 `FamilySlackContext6` carries `muBar`, component radius, cap vector, load,
@@ -41,4 +47,3 @@ physical fact is inserted.
 
 No source, numerical value, rounding evidence, coverage, admission, registry,
 or Lean compilation claim is made. No local Lean/Lake command was run.
-

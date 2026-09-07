@@ -2873,3 +2873,7 @@ uniform contraction；若只得到缺失字段，则记录 obstruction 而不填
   以及显式 uniform-gap consumer。
 
 两项均要求 proof-attempt + 定向 review，暂不运行大回归或进入 registry。
+
+三叶收割结果：body-6 source block binding、P4 domain-uniform contraction、
+fixed-λ rational-to-real finite-sum cast 已登记 revision 681。P3 uniform-gap
+叶仍等待独立 review；未配对的草稿继续留在工作区，不进入 DAG。
