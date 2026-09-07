@@ -48,7 +48,7 @@ theorem weighted_defect_pushforward_add
   have hTri : ‖u + b‖ ≤ tau * x + ‖b‖ := by
     calc
       ‖u + b‖ ≤ ‖u‖ + ‖b‖ := norm_add_le u b
-      _ ≤ tau * x + ‖b‖ := add_le_add_right hu ‖b‖
+      _ ≤ tau * x + ‖b‖ := add_le_add hu (le_refl ‖b‖)
   have hSum : 0 ≤ tau * x + ‖b‖ :=
     add_nonneg (mul_nonneg hTau hX) (norm_nonneg b)
   have hSq : ‖u + b‖^2 ≤ (tau * x + ‖b‖)^2 := by
@@ -126,7 +126,6 @@ must flip sign in order to represent the same quadratic source assumption. -/
 theorem joint_metric_sign_flip (a cross c d b : ℝ) :
     jointMetric a (-cross) c (-d) b = jointMetric a cross c d b := by
   simp [jointMetric]
-  ring
 
 /-- The same coordinate flip converts `+ tau*d + b` into `- tau*d + b`. -/
 theorem correction_sign_flip (tau d b : ℝ) :
@@ -138,7 +137,6 @@ sign-convention invariant. -/
 theorem block_diagonal_metric_sign_invariant (a c d b : ℝ) :
     jointMetric a 0 c (-d) b = jointMetric a 0 c d b := by
   simp [jointMetric]
-  ring
 
 #print axioms weighted_square_identity
 #print axioms scalar_weighted_square_le
