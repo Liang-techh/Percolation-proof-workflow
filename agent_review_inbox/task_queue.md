@@ -1525,3 +1525,14 @@ after integration; corrections should be a new result file.
 - boundary: no numerical sampling, pointwise Julia output, or Taylor-only
   central-FD leaf can discharge the deployed libm binding. Keep
   `formal_certificate_allowed=false` and `registry_promoted=false`.
+
+#### T-P4-036.4 remote DAG dispatch packet (2026-09-07)
+
+- canonical source hash:
+  `AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936`
+- operation-schedule hash:
+  `58209B231ED2BD1662B74B95CBBE5EE206AB1911BFDF03C8AED99C1BFF80C7C1`
+- required output: per-box outward propagation receipt for D1/D2/D3, including
+  runtime identity, operation schedule, finite/non-NaN/no-overflow assumptions,
+  repeated `fk_frames` calls, and coverage. A successful static or numerical
+  run is not a Lean/kernel receipt and cannot close O2.
