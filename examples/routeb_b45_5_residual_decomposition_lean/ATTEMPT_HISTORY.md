@@ -9,3 +9,7 @@ This sidecar is intentionally small and uses only exact real pair algebra.
   `noncomputable section` was closed with the wrong `end` form.
 - `run-AeO1JYiI`: repaired candidate; compile/verify passed with standard
   axioms only and no `sorry`/`admit`.
+- `local-20260907-kc-coordinate-budget`: added the normalized-to-force
+  coordinate theorem and the exact `7/18750` block-domain squared budget;
+  pinned Lean compilation and axiom receipt are pending on the GitHub Lean
+  worker, so this extension is not yet admitted.

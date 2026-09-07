@@ -21,7 +21,10 @@ remote terms become acceleration residuals by renaming.
 The sidecar now also contains a pure exact-real coordinate adapter theorem
 `forceScaleKc_eq_rhoKc`: normalized `(q5/20,q4/20)` is mapped to force
 `(q5/100,q4/200)` by `diag(1/5,1/10)`.  This theorem is still separate from
-source binding and admission.
+source binding and admission.  The sidecar also states the exact local budget
+`rhoKc_sq_le_of_block_energy`: under
+`(3/2)(q4^2+q5^2) <= 28/5`, the squared force residual is at most
+`7/18750`.
 
 The theorem proves only the identity
 

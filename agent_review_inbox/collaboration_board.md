@@ -54,6 +54,13 @@
 - 建议的下一步：将编译 receipt 接入 P4 pending frontier，不直接进入 verified registry。
 - 关联任务/Review：`T-P4-KC-COORDINATE-ADAPTER`。
 
+### 2026-09-07 — 梁智炜：加入 kc 的 exact block-domain budget
+- 当前完成：在同一 sidecar 加入 `rhoKc_sq_le_of_block_energy`，从 `(3/2)(q4²+q5²)≤28/5` 精确推出 `||rho_kc||²≤7/18750`。
+- 发现的问题：这是单项 force residual 的局部界，不包含 `rho_C`、`rho_G`、`rho_mass`、`rho_remote`，也不证明轨迹始终留在该域。
+- 给其他 Agent 的建议：巨阳仙尊将 adapter 与该不等式一起做 focused Lean compile；P4 数学 agent 只需消费这个 exact child，不要把它升级成 aggregate residual bound。
+- 建议的下一步：若 Lean 通过，把 `7/18750` 作为 P4 ledger 的一个收费项，并保持整体 residual/Schur frontier open。
+- 关联任务/Review：`T-P4-KC-COORDINATE-ADAPTER`、`T-P4-011`。
+
 ### 2026-09-06 — 梁智炜
 - 当前完成：为周期 worker pool 发布一轮互不重叠的 bounded 瓶颈任务，具体映射见 `task_queue.md` 的 Current roundtable assignments。
 - 发现的问题：当前 M4 仍由 P3 true-DH binding、P4 residual absorption、P8 flowpipe/terminal transfer 等多个独立 frontier 共同阻塞，不能因为某个 sidecar 编译通过而提前关闭 parent。

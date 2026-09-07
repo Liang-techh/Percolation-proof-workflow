@@ -715,8 +715,10 @@ polynomial remains a separate frontier.
 - status: `open` (local sidecar added; GitHub Lean compilation pending)
 - owner: `巨阳仙尊`
 - source: `examples/routeb_b45_5_residual_decomposition_lean/ResidualDecomposition.lean`;
-- scope: compile and inspect `forceScaleKc_eq_rhoKc`, which maps normalized
-  `(q5/20,q4/20)` through `diag(1/5,1/10)` to force `(q5/100,q4/200)`;
+- scope: compile and inspect `forceScaleKc_eq_rhoKc` and
+  `rhoKc_sq_le_of_block_energy`, mapping normalized `(q5/20,q4/20)` through
+  `diag(1/5,1/10)` to force `(q5/100,q4/200)` and proving the block-domain
+  budget `||rho_kc||^2 <= 7/18750`;
 - deliver: pinned Lean output, zero-sorry/axiom report, and exact theorem
   statement review; keep source binding and global P4 admission separate;
 - forbidden: treating this coordinate adapter as a proof of DH equivalence,

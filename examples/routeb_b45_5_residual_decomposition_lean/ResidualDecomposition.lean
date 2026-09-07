@@ -56,6 +56,17 @@ theorem forceScaleKc_eq_rhoKc (q : Vec2) :
     dsimp [forceScaleKc, rhoKcNormalized, rhoKc] <;>
     ring
 
+def rhoKcSq (q : Vec2) : ℝ :=
+  (rhoKc q).1 ^ 2 + (rhoKc q).2 ^ 2
+
+theorem rhoKc_sq_le_of_block_energy
+    (q : Vec2)
+    (hp : (3 / 2 : ℝ) * (q.1 ^ 2 + q.2 ^ 2) ≤ 28 / 5) :
+    rhoKcSq q ≤ 7 / 18750 := by
+  rcases q with ⟨q4, q5⟩
+  dsimp [rhoKcSq, rhoKc]
+  nlinarith [sq_nonneg q4, sq_nonneg q5]
+
 def rhoMass (massBB : Vec2 → Vec2) (aB : Vec2) : Vec2 :=
   ( (massBB aB).1 - (1 / 5 : ℝ) * aB.1,
     (massBB aB).2 - (1 / 10 : ℝ) * aB.2 )
@@ -103,6 +114,7 @@ theorem residual_decomposition_with_explicit_kc
 
 #print axioms rhoKc_exact
 #print axioms forceScaleKc_eq_rhoKc
+#print axioms rhoKc_sq_le_of_block_energy
 #print axioms residual_decomposition
 #print axioms residual_decomposition_with_explicit_kc
 
