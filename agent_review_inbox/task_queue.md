@@ -2925,3 +2925,7 @@ boundary，显式分离 source、rounding soundness、coverage 与 checker metad
 body-6 `SCHURMARGIN` review 已到达并登记 revision 688，状态保持
 `OPEN_UNCOMPILED`；正的 remainder margin、完整 cross-block source 与域覆盖
 仍是后续独立 frontier。
+
+P3 interval receipt boundary 已登记 revision 689，保持 `OPEN_UNCOMPILED`；
+后续若接入真实 payload，仍需独立 endpoint/rounding/source 证明，不能只凭
+receipt metadata 进入 registry。

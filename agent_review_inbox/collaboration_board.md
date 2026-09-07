@@ -2189,6 +2189,13 @@ formal gate。
 `RemainderMargin`；它明确不从 A/X/Y source binding 推导正 margin，也不声称
 完整 5×5/6DOF PSD。
 
+### 2026-09-07 — 梁智炜收割 P3 interval receipt boundary
+
+`INTERVAL_RECEIPT_BOUNDARY` 已登记 revision 689。它把 source、端点、rounding
+soundness、hash、checker output 与 coverage mapping 作为独立 metadata，并用
+伪造 receipt 反例证明“看似 accepted”不能替代 endpoint enclosure；保持
+provenance/coverage fail-closed。
+
 ### 2026-09-07 — 梁智炜收割 statement/residual 两叶
 
 fixed-λ `EXACT_STATEMENT_BOUNDARY` 与 P4 `RESIDUAL_MARGIN_CONSUMER` 已登记

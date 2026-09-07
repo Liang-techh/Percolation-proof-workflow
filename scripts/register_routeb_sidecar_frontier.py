@@ -1716,6 +1716,19 @@ CHILDREN = [
             "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_ResidualMarginConsumer.review.md",
         ],
     },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure",
+        "statement": "Interval payload provenance, rounding claims, checker receipts, and coverage mappings are fail-closed metadata contracts and cannot replace endpoint enclosure inequalities.",
+        "proof_sketch": "Require explicit per-box source/endpoints/rounding/hash/checker fields and point-to-box mapping, reject missing fields, and retain a forged accepted-looking receipt whose endpoints violate the mathematical order.",
+        "lane": "source_semantics",
+        "bottleneck": "provenance",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_INTERVAL_RECEIPT_BOUNDARY",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_INTERVAL_RECEIPT.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_INTERVAL_RECEIPT_REVIEW.md",
+        ],
+    },
 ]
 
 
