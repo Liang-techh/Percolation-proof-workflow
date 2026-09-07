@@ -34,6 +34,7 @@ def main() -> int:
         "checker_sha256": hashlib.sha256(diagnostic.read_bytes()).hexdigest(),
         "status": "diagnostic_pass_decimal_quantized",
         "rows": audit["rows"],
+        "per_eta": audit["per_eta"],
         "max_upper_abs_error": audit["max_upper_abs_error"],
         "max_margin_abs_error": audit["max_margin_abs_error"],
         "upper_tolerance": audit["upper_tolerance"],

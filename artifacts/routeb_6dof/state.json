@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 435,
+  "revision": 436,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12366,9 +12366,32 @@
           "ledger_reconciliation": "do not mix aggregate routeB_compact_port_frobenius_ledger lambda bounds with per-cell combined_schur_partition_ledger bounds until their metric and PMI semantics are proven equivalent",
           "diagnostic_receipt": {
             "checker": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\check_routeb_fixed_lambda_ledger.py",
-            "checker_sha256": "2a4810df5cda1032c82483c39cd63489ce54a22ba130a661c4439242a6e3f771",
+            "checker_sha256": "dbb0413b131815e8bc1ed901982200e69fec9c655c69531116a709d4939931ec",
             "status": "diagnostic_pass_decimal_quantized",
             "rows": 2885,
+            "per_eta": {
+              "2.7": {
+                "rows": 1280,
+                "admissible": 1280,
+                "rejected": 0,
+                "min_lambda_upper": "10.103107280143053",
+                "first_rejected": null
+              },
+              "5.6": {
+                "rows": 1605,
+                "admissible": 1416,
+                "rejected": 189,
+                "min_lambda_upper": "2.5479939410658914",
+                "first_rejected": {
+                  "row": 1292,
+                  "box_id": "4",
+                  "theta": "0.25",
+                  "lambda": "5.0",
+                  "lambda_upper": "2.9327141044591722",
+                  "candidate_margin": "-0.14098107227005408"
+                }
+              }
+            },
             "max_upper_abs_error": "3.380281759650464803982865167055332399810852034026785663178654894E-13",
             "max_margin_abs_error": "5E-17",
             "upper_tolerance": "1E-12",
@@ -35147,6 +35170,14 @@
       },
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T10:11:58.555876+00:00",
+      "kind": "routeb_fixed_cell_lambda_contract_refresh",
+      "node_id": "8cea6a84c5364384a723d88f00d9a516",
+      "parent_id": "35839e28b33e484f886081ddb6351c80",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -38803,5 +38834,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "3afae1deb7c7388b1f4aa57fdf1b082fcd3aa14262e2722a5207601470d349b0"
+  "state_checksum": "6938926b0785363138646e65a42c4b07017bfe2a7000b817dca70a755236eb07"
 }
