@@ -31,9 +31,9 @@ The script checks Lean 4.32.0 from `examples/local_fkg/lean-toolchain`, rejects
 proof-hole/unsafe escape tokens, requires zero `sorryAx`, and audits the four
 printed theorem axiom reports.
 
-Latest focused receipt (2026-09-06/07 local run):
+Latest focused receipt (2026-09-07 local run):
 
-- output: `output/run-36AKCyjA`
+- output: `output/run-VJHd35nB`
 - `MASS_ENTRY_BRIDGE_COMPILE_EXIT_CODE=0`
 - `FOCUSED_CHECK=PASS`
 - OLean SHA-256: `a11e7cfecd6668afb134e68b6dd208473ff9bddb47cd0379f0c78891cfb462e7`
