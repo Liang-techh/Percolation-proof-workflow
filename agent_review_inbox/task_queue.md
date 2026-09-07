@@ -462,7 +462,8 @@ polynomial remains a separate frontier.
 
 ### T-P8-007 — pinned validation of ramp sidecar
 
-- status: `claimed` by 臭屁猪 (GitHub validation lane)
+- status: `reviewed_pending` (integrated at Route-B revision 363; review:
+  `review-T-P8-007-choupizhu-20260906T2307.md`)
 - scope: run the focused verifier for
   `examples/routeb_p8_ramp_reconstruction_sidecar/` under the pinned Lean
   environment and retain the exact compile/axiom output;
@@ -470,6 +471,34 @@ polynomial remains a separate frontier.
   report if the sidecar has a local Lean error;
 - forbidden: local-environment substitution, source-binding claims, flowpipe
   coverage, registry promotion, or broad regression.
+
+### T-P8-009 — interval-local ramp calculus refinement
+
+- status: `open` (released after the P8-007 harvest)
+- owner: `苏梦辰`
+- source: `review-T-P8-007-choupizhu-20260906T2307.md` and
+  `examples/routeb_p8_ramp_reconstruction_sidecar/P8RampReconstruction.lean`;
+- scope: weaken the current all-`ℝ` differentiability assumptions to an
+  interval-local/end-point theorem sufficient for `[0,1]` terminal transfer,
+  while keeping `w'=c`, `c'=0`, and the tail slots typed;
+- deliver: a separate Lean child or an exact API obstruction; do not alter the
+  already compiled candidate or pretend interval calculus gives ODE existence;
+- forbidden: source binding, flowpipe coverage, first-exit closure, or registry
+  promotion from the abstract calculus child.
+
+### T-P8-010 — independent gate review for compiled P8 candidate
+
+- status: `open` (released for the unique validation lane)
+- owner: `封不觉`
+- source: `review-T-P8-007-choupizhu-20260906T2307.md`, GitHub Actions run
+  `34085393805`, job `101628339820`, and the sidecar blob/receipt hashes;
+- scope: independently check the pinned toolchain, zero-sorry theorem set,
+  axiom report, statement identity, provenance, and admission boundary;
+- deliver: immutable gate review recording `compiled_candidate` or a precise
+  rejection; a successful sidecar must remain outside the verified registry
+  until source binding, coverage, and parent dependencies close;
+- forbidden: accepting the CI green mark as physical P8/M4 proof, changing the
+  theorem statement, or broad regression.
 
 ### T-P4-007 — actual block-(4,5) residual decomposition
 

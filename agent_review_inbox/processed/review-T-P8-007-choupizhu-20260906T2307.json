@@ -1,0 +1,14 @@
+{
+  "review_file": "agent_review_inbox/review-T-P8-007-choupizhu-20260906T2307.md",
+  "review_sha256": "962EF48F7109459795C09D25042ADC31DAB184D84D3063C0DE488217B730D69E",
+  "task_id": "T-P8-007",
+  "source_agent": "臭屁猪",
+  "created_at": "2026-09-06T23:07:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_ramp_sidecar_validation",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "21ec7b34033ba8a2a62c8831e4d20b59635d0ac0",
+  "admission_label": "compiled_candidate",
+  "integrated_at": "2026-09-07T05:08:15.117300+00:00"
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 362,
+  "revision": 363,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -8331,6 +8331,19 @@
             "admission_effect": "none",
             "target_scope": "routeb_node",
             "source_commit": "af50cbc74e35a73fe1dee1b93ddfc561863c274a"
+          },
+          {
+            "review_file": "agent_review_inbox/review-T-P8-007-choupizhu-20260906T2307.md",
+            "review_sha256": "962EF48F7109459795C09D25042ADC31DAB184D84D3063C0DE488217B730D69E",
+            "task_id": "T-P8-007",
+            "source_agent": "臭屁猪",
+            "created_at": "2026-09-06T23:07:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_ramp_sidecar_validation",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "21ec7b34033ba8a2a62c8831e4d20b59635d0ac0",
+            "admission_label": "compiled_candidate"
           }
         ]
       }
@@ -30284,6 +30297,18 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "9a3a7eef35b34880b85423aac67ea015"
+    },
+    {
+      "at": "2026-09-07T05:08:15.117300+00:00",
+      "kind": "agent_review_integrated",
+      "review_file": "agent_review_inbox/review-T-P8-007-choupizhu-20260906T2307.md",
+      "review_sha256": "962EF48F7109459795C09D25042ADC31DAB184D84D3063C0DE488217B730D69E",
+      "task_id": "T-P8-007",
+      "classification": "pending_ramp_sidecar_validation",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "edd8407c33f54c41867f03b46ec1e313"
     }
   ],
   "agent_requests": {},
@@ -33940,5 +33965,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "e2dcbec84e4d3c133411f51ff16bb5a5be89c8f0bb571963701e775cfcce8f33"
+  "state_checksum": "c2f1085e2c3896b47b669905cb3d91f69a8f88b77d44f5718beb3d66a4281a96"
 }

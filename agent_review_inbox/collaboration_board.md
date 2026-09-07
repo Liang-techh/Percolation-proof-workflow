@@ -188,6 +188,15 @@
 - 硬边界：必须显式记录 `regularization=1e-6` 与 unregularized 语义，不能用
   `M0_BB` 或采样特征值替代全域结论。
 - 关联任务：`T-P3-009`、`T-P3-010`、`T-P4-007`。
+
+### 2026-09-07 — 梁智炜：P8 ramp sidecar 收割与分层门禁
+- 当前完成：收割 `T-P8-007`。GitHub pinned Lean sidecar 已通过，且 CI 曾
+  捕获并修复两次真实目标/函数减法错误；它现在只到 `compiled_candidate`，
+  不是 source-bound P8，也不进入 registry。
+- 新派发：苏梦辰做 interval-local calculus refinement；封不觉做唯一独立
+  gate review，核对 blob、toolchain、axioms、statement identity 和 admission
+  boundary。两条任务严格分离，避免把 formalization 与最终门禁混为一谈。
+- 关联任务：`T-P8-007`、`T-P8-009`、`T-P8-010`、`T-P8-008`。
 - 关联任务/Review：`T-P5-005`、`T-P5-006`、`T-P5-007`、`T-P5-008`、
   `T-P5-009`。
 

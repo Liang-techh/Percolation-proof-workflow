@@ -60,6 +60,8 @@ TASK_TARGETS = {
     "T-P8-005": ("P8.independent_reachability", "pending_terminal_transfer_interface"),
     "T-P8-006": ("P8.independent_reachability", "pending_ramp_reconstruction_child"),
     "T-P8-007": ("P8.independent_reachability", "pending_ramp_sidecar_validation"),
+    "T-P8-009": ("P8.independent_reachability", "pending_interval_local_ramp_calculus"),
+    "T-P8-010": ("P8.independent_reachability", "pending_compiled_candidate_gate_review"),
     "T-P8-008": ("P8.independent_reachability", "pending_first12_explicit_time_adapter"),
     "T-P0-002": ("P0.reproducibility_baseline", "pending_fresh_receipt_reaudit"),
     "T-M4-002": ("M4.block45_full_certificate", "pending_dependency_cone_reaudit"),
