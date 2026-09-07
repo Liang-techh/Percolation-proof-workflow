@@ -36,6 +36,7 @@ def main() -> int:
     source_artifacts = [ref(path) for path in (
         TARGET / "routeB_physical_rational_descriptor_bridge.csv",
         TARGET / "routeB_physical_rational_tail_cs_polynomial.csv",
+        TARGET / "routeB_Mq_M0.csv",
         TARGET / "routeB_physical_rational_tail_pmi_scalar.csv",
         TARGET / "routeB_physical_rational_tail_pmi_scalar_meta.csv",
         TARGET / "routeB_tail_pmi_scalar_gram_rational_audit.csv",

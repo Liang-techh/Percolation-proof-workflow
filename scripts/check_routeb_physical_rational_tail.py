@@ -26,11 +26,17 @@ def main() -> int:
         args.root / "routeB_physical_rational_tail_pmi_scalar_meta.csv",
         args.root / "routeB_physical_rational_tail_pmi_scalar.csv",
     ]
+    tail_polynomial = args.root / "routeB_physical_rational_tail_cs_polynomial.csv"
+    m0 = args.root / "routeB_Mq_M0.csv"
     source_path = args.root / "dhport_lib.jl"
     artifact_bytes = b"".join(path.read_bytes() for path in paths)
     result = audit_routeb_physical_rational_tail(
         *(path.read_text(encoding="utf-8") for path in paths),
-        artifact_sha256=hashlib.sha256(artifact_bytes).hexdigest(),
+        tail_cs_csv_text=tail_polynomial.read_text(encoding="utf-8"),
+        m0_csv_text=m0.read_text(encoding="utf-8"),
+        artifact_sha256=hashlib.sha256(
+            artifact_bytes + tail_polynomial.read_bytes() + m0.read_bytes()
+        ).hexdigest(),
         source_sha256=hashlib.sha256(source_path.read_bytes()).hexdigest(),
     )
     print(json.dumps({

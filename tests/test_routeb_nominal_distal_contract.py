@@ -171,3 +171,12 @@ def test_rational_gram_rejects_asymmetric_block_fail_closed():
     result = audit_routeb_physical_rational_gram(audit, gram, basis)
     assert result.status == "OPEN_FAIL_CLOSED"
     assert "gram_matrix_not_symmetric:('1', '1', '1')" in result.errors
+
+
+def test_tail_identity_check_requires_both_source_inputs():
+    result = audit_routeb_physical_rational_tail(
+        bridge_metadata_csv(), tail_meta_csv(), scalar_csv(),
+        tail_cs_csv_text="not-used",
+    )
+    assert result.status == "OPEN_FAIL_CLOSED"
+    assert "tail_identity_inputs_incomplete" in result.errors

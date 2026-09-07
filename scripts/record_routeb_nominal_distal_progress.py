@@ -40,11 +40,13 @@ def main() -> int:
     bridge_meta = TARGET / "routeB_physical_rational_descriptor_bridge.csv"
     tail_meta = TARGET / "routeB_physical_rational_tail_pmi_scalar_meta.csv"
     tail_scalar = TARGET / "routeB_physical_rational_tail_pmi_scalar.csv"
+    tail_polynomial = TARGET / "routeB_physical_rational_tail_cs_polynomial.csv"
+    m0 = TARGET / "routeB_Mq_M0.csv"
     reform = EXTERNAL / "PROJECT_REFORM_TARGET.md"
     contract = ROOT / "src/percolation_workflow/routeb_nominal_distal_contract.py"
     source_artifacts = [ref(path) for path in
                         (audit, interface, source, design, bridge_meta, tail_meta,
-                         tail_scalar, reform, contract)]
+                         tail_scalar, tail_polynomial, m0, reform, contract)]
 
     existing = next((n for n in state.nodes.values() if n.name == name), None)
     p4 = find(state, "P4.residual_schur_pmi")

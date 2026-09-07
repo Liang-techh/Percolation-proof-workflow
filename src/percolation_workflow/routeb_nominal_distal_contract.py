@@ -162,6 +162,60 @@ def _read_exact_scalar_polynomial(text: str) -> tuple[dict[tuple[int, ...], Frac
     return ({monomial: value for monomial, value in polynomial.items() if value}, errors)
 
 
+def _read_tail_polynomial(text: str):
+    rows = csv.DictReader(io.StringIO(text))
+    required = {"row", "col", "num", "den", *(f"e{k}" for k in range(1, 13))}
+    if not rows.fieldnames or not required.issubset(rows.fieldnames):
+        return {}, ["tail_polynomial_header_mismatch"]
+    polynomials: defaultdict[int, defaultdict[tuple[int, ...], Fraction]] = defaultdict(
+        lambda: defaultdict(Fraction)
+    )
+    errors: list[str] = []
+    for line_no, row in enumerate(rows, start=2):
+        try:
+            row_index, col_index = int(row["row"]), int(row["col"])
+            if col_index != 1 or row_index not in {1, 2}:
+                errors.append(f"tail_polynomial_coordinate_mismatch:{line_no}")
+            monomial = tuple(int(row[f"e{k}"]) for k in range(1, 13))
+            if any(power < 0 for power in monomial):
+                errors.append(f"tail_polynomial_negative_exponent:{line_no}")
+            denominator = int(row["den"])
+            if denominator <= 0:
+                errors.append(f"tail_polynomial_nonpositive_denominator:{line_no}")
+            polynomials[row_index][monomial] += Fraction(int(row["num"]), denominator)
+        except (KeyError, TypeError, ValueError, ZeroDivisionError):
+            errors.append(f"tail_polynomial_malformed_row:{line_no}")
+    return ({row: {monomial: value for monomial, value in polynomial.items() if value}
+             for row, polynomial in polynomials.items()}, errors)
+
+
+def _multiply_polynomials(left, right):
+    result: defaultdict[tuple[int, ...], Fraction] = defaultdict(Fraction)
+    for left_monomial, left_value in left.items():
+        for right_monomial, right_value in right.items():
+            monomial = tuple(a + b for a, b in zip(left_monomial, right_monomial))
+            result[monomial] += left_value * right_value
+    return {monomial: value for monomial, value in result.items() if value}
+
+
+def _add_polynomials(*terms):
+    result: defaultdict[tuple[int, ...], Fraction] = defaultdict(Fraction)
+    for polynomial, scale in terms:
+        for monomial, value in polynomial.items():
+            result[monomial] += scale * value
+    return {monomial: value for monomial, value in result.items() if value}
+
+
+def _read_decimal_matrix(text: str):
+    try:
+        rows = [[Fraction(value) for value in row] for row in csv.reader(io.StringIO(text))]
+    except (TypeError, ValueError, ZeroDivisionError):
+        return None
+    if len(rows) != 6 or any(len(row) != 6 for row in rows):
+        return None
+    return rows
+
+
 def audit_routeb_nominal_distal_bridge(
     audit_csv_text: str,
     interface_csv_text: str,
@@ -205,6 +259,8 @@ def audit_routeb_physical_rational_tail(
     tail_meta_csv_text: str,
     scalar_csv_text: str,
     *,
+    tail_cs_csv_text: str | None = None,
+    m0_csv_text: str | None = None,
     artifact_sha256: str | None = None,
     source_sha256: str | None = None,
 ) -> RouteBPhysicalRationalTailAudit:
@@ -232,6 +288,36 @@ def audit_routeb_physical_rational_tail(
     if any(any(power != 0 for power in monomial[:4] + monomial[10:])
            for monomial in polynomial):
         errors.append("scalar_polynomial_active_variable_mismatch")
+    if tail_cs_csv_text is not None or m0_csv_text is not None:
+        if tail_cs_csv_text is None or m0_csv_text is None:
+            errors.append("tail_identity_inputs_incomplete")
+        else:
+            tail, tail_errors = _read_tail_polynomial(tail_cs_csv_text)
+            errors.extend(tail_errors)
+            m0 = _read_decimal_matrix(m0_csv_text)
+            if m0 is None:
+                errors.append("m0_matrix_malformed")
+            elif not all(m0[i][j] == m0[j][i] for i in range(6) for j in range(6)):
+                errors.append("m0_matrix_not_symmetric")
+            if not tail_errors and m0 is not None and 1 in tail and 2 in tail:
+                block = (3, 4)
+                remote = (0, 1, 2, 5)
+                mbb = [[m0[i][j] for j in block] for i in block]
+                determinant = mbb[0][0] * mbb[1][1] - mbb[0][1] * mbb[1][0]
+                r_hat = (Fraction(0), Fraction(1), -Fraction(6377, 6250), Fraction(0))
+                rho = sum(r_hat[i] * m0[remote[i]][remote[j]] * r_hat[j]
+                          for i in range(4) for j in range(4))
+                if str(rho) != EXPECTED_TAIL_META["rho"]:
+                    errors.append("tail_rho_identity_mismatch")
+                zero = (0,) * 12
+                expected = _add_polynomials(
+                    ({zero: Fraction(1)}, Fraction(1, 160000) * rho * determinant),
+                    (_multiply_polynomials(tail[1], tail[1]), -mbb[1][1]),
+                    (_multiply_polynomials(tail[1], tail[2]), 2 * mbb[0][1]),
+                    (_multiply_polynomials(tail[2], tail[2]), -mbb[0][0]),
+                )
+                if expected != polynomial:
+                    errors.append("tail_scalar_schur_identity_mismatch")
     status = "EXACT_RATIONAL_TAIL_CANDIDATE" if not errors else "OPEN_FAIL_CLOSED"
     return RouteBPhysicalRationalTailAudit(
         status=status,
