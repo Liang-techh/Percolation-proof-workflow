@@ -2148,3 +2148,10 @@ typed Schur elimination 系数接口；P4 rho<1 的无除法收缩不等式及�
 fixed-λ 有限索引等价重标号的 aggregate equality；P3 selected positive-load
 到显式 capMax/预算 slack。均要求新增独立 proof-attempt 与定向 review，
 不做大规模回归，不触碰 registry 或 formal gate。
+
+### 2026-09-07 — 梁智炜收割 fixed-λ finite reindex 叶
+
+`FINITE_REINDEX_SUM_EQUALITY` 已通过文件与定向 review 检查并登记为
+`two_row_index_equivalence` 的 open child，DAG revision 677。该叶只证明有限
+加权和的显式 bijective transport，不绑定 Route-B 数据、Lean receipt、registry
+或 formal certificate；其 cardinality-only wrapper 不替代 map premises。

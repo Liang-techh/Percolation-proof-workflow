@@ -2834,3 +2834,9 @@ source-independent/open/uncompiled 候选。
 本批只推进数学结构和 proof-attempt；待定向 review 到达后再登记 DAG。GitHub
 发布仍按每小时一次的六人环执行，流川枫承接约三分之一独立任务；本地不做
 常规远端同步。
+
+### 2026-09-07 — 本地收割
+
+fixed-λ finite reindex weighted-sum equality 叶已登记 revision 677，保持
+`OPEN_UNCOMPILED`；它为 two-row index adapter 提供显式 Finset.sum_bij 接口。
+其余 body-6、P4 contraction、P3 slack 三项仍在本地并行处理中。

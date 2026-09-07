@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 676,
+  "revision": 677,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -40685,7 +40685,8 @@
       "status": "open",
       "proof_sketch": "Require supplied selected-row membership, injectivity, surjectivity onto the final tagged union, cell-value preservation, and exact load/margin totals; construct only the transported strict budget and leave physical coverage, digest, source, and registry external.",
       "dependencies": [
-        "7948f56e065748daae7ef6f21007fdd6"
+        "7948f56e065748daae7ef6f21007fdd6",
+        "0cf1b155a71c496b992d6fc532486488"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -40878,6 +40879,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_TAILSCHUR20260907_REVIEW.md",
             "sha256": "D08DD25BE5467CFF79C7B43C0ECC1606F35B15AA012502F11280831DD9FC9ACE"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "0cf1b155a71c496b992d6fc532486488": {
+      "id": "0cf1b155a71c496b992d6fc532486488",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality",
+      "statement": "A finite source-to-target reindexing map with membership, injectivity, surjectivity, and pointwise weight preservation transports the exact finite weighted sum.",
+      "parent_id": "e8b9933f26a54a40bc7282e5cd38d9e5",
+      "status": "open",
+      "proof_sketch": "Apply Finset.sum_bij to the explicit row map; keep the cardinality-only variant as a wrapper that does not substitute for map or pointwise premises, and retain exact counterexamples for each missing premise.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "source_semantics",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_FIXED_LAMBDA_FINITE_REINDEX_SUM_EQUALITY",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_FINITE_REINDEX_SUM_EQUALITY20260907.lean",
+            "sha256": "27C19E1BA375B889EF97809377FDF48A83022BC88F464CD5BC281ACB4093BD8B"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_FINITE_REINDEX_SUM_EQUALITY20260907.review.md",
+            "sha256": "C94747607AE5AEF56C2ED231F154DBFFC307A85A6B15DA6D7CD262DEB19AEA3B"
           }
         ],
         "registry_eligible": false,
@@ -68439,6 +68475,23 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T19:43:59.131175+00:00",
+      "kind": "node_added",
+      "node_id": "0cf1b155a71c496b992d6fc532486488",
+      "parent_id": "e8b9933f26a54a40bc7282e5cd38d9e5",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality"
+    },
+    {
+      "at": "2026-09-07T19:43:59.131194+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -72095,5 +72148,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "76942db4e00afc268203f15060f895ce851e019ae3db9f2daca09fb95f302bec"
+  "state_checksum": "76744a8a2d95a2bc77ce9ef1f6706a36cf59befb143c7df92218052cdebfa860"
 }
