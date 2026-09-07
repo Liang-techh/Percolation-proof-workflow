@@ -1,0 +1,44 @@
+{
+  "admission": {
+    "formal_certificate_allowed": false,
+    "p4_global_coverage": "OPEN",
+    "p4_source_binding": "PENDING",
+    "verified_registry_mutation": false
+  },
+  "checks": {
+    "decimal_spelling_equality": {
+      "csv_spelling": "0.116667666666667",
+      "exact_rational": "116667666666667/1000000000000000",
+      "expected_spelling": "0.116667666666667",
+      "status": "PASS"
+    },
+    "float64_value_equality": {
+      "csv_float": "0.116667666666667",
+      "csv_ieee754_bits": "3fbdddeea4d57eac",
+      "rational_ieee754_bits": "3fbdddeea4d57eac",
+      "rational_to_float": "0.116667666666667",
+      "status": "PASS"
+    },
+    "true_dh_mass_equality": {
+      "reason": "The CSV snapshot is not an executable proof of the Julia DH mass_matrix at q=0. A pinned Float64 execution trace, exact DH/trigonometric model, regularization semantics, and a real/Float64 bridge are missing.",
+      "source_contract_markers": {
+        "explicit_regularization": true,
+        "mass_matrix_definition": true,
+        "regularization_added": true
+      },
+      "status": "PENDING"
+    }
+  },
+  "provenance": {
+    "csv_path": "routeB_dense_Mq\\routeB_Mq_M0.csv",
+    "csv_sha256": "28d98ad71d1d6c2cbe830872cad9077f2f7b4e2d932794217eb68868fd2e2b40",
+    "export_role": "routeB_Mq_M0.csv is an exported Float64 snapshot",
+    "external_root": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\6dof_sos_optimized\\6dof_sos_optimized",
+    "julia_source_path": "routeB_dense_Mq\\dhport_lib.jl",
+    "julia_source_sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936",
+    "source_role": "canonical numerical DH implementation reference; not imported into Lean"
+  },
+  "schema": "routeb-p4-decimal-source-binding-audit/v1",
+  "status": "PENDING",
+  "target": "M0[4,4] (Julia 1-based indexing)"
+}
