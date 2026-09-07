@@ -6,7 +6,8 @@ three very different kinds of work:
 
 * a Lean adapter that can be compiled immediately;
 * a conditional bridge whose missing premise is source semantics; or
-* a numerical/coverage obstruction that should not consume a Lean slot.
+* a numerical/coverage obstruction or exact structural countermodel that
+  should not consume a Lean slot.
 
 Callers may provide ``metadata["math_lane"]`` (or the same top-level field on
 an imported DAG row) to make the classification authoritative.  The small
@@ -31,6 +32,7 @@ class MathLane(StrEnum):
     LEAN_ADAPTER = "lean_adapter"
     SOURCE_SEMANTICS = "source_semantics"
     NUMERICAL_BLOCKER = "numerical_blocker"
+    STRUCTURAL_OBSTRUCTION = "structural_obstruction"
     OTHER = "other"
 
 
@@ -46,6 +48,10 @@ _ALIASES = {
     "numerical": MathLane.NUMERICAL_BLOCKER,
     "numerical_blocker": MathLane.NUMERICAL_BLOCKER,
     "coverage": MathLane.NUMERICAL_BLOCKER,
+    "obstruction": MathLane.STRUCTURAL_OBSTRUCTION,
+    "countermodel": MathLane.STRUCTURAL_OBSTRUCTION,
+    "projection_obstruction": MathLane.STRUCTURAL_OBSTRUCTION,
+    "structural_obstruction": MathLane.STRUCTURAL_OBSTRUCTION,
     "other": MathLane.OTHER,
 }
 
@@ -105,6 +111,11 @@ def math_lane(item: Any) -> MathLane:
     if verification_domain in {"external_research", "source_semantics"}:
         return MathLane.SOURCE_SEMANTICS
 
+    if any(token in " ".join((name, status, statement))
+           for token in ("projection_obstruction", "countermodel",
+                         "structural_obstruction")):
+        return MathLane.STRUCTURAL_OBSTRUCTION
+
     # Proposed block45 rows use this status for already-produced Lean-shaped
     # candidates.  They are adapter-lane evidence, not a claim of theorem
     # closure; the ordinary scheduler still decides whether they are runnable.
@@ -122,7 +133,8 @@ _LANE_ORDER = {
     MathLane.LEAN_ADAPTER: 0,
     MathLane.SOURCE_SEMANTICS: 1,
     MathLane.NUMERICAL_BLOCKER: 2,
-    MathLane.OTHER: 3,
+    MathLane.STRUCTURAL_OBSTRUCTION: 3,
+    MathLane.OTHER: 4,
 }
 
 # This order is intentionally an audit/obstruction order, not proof admission.
@@ -322,17 +334,21 @@ def rank_math_frontier(state: WorkflowState, jobs: Mapping[str, Any] | None = No
 
 def rank_formalizable_frontier(state: WorkflowState,
                                jobs: Mapping[str, Any] | None = None) -> list[str]:
-    """Return an opt-in dispatch order that excludes known numerical dead ends.
+    """Return an opt-in dispatch order that excludes known dead ends.
 
     ``rank_math_frontier`` remains an audit ordering and keeps numerical
     blockers visible.  This adapter is for callers with a formal/bridge lane:
     it preserves the obstruction gate and deterministic ordering while
-    returning no numerical blocker when that is the only available work.
+    returning no numerical or structural obstruction when those are the only
+    available work items.
     Ordinary scheduler callers are unchanged.
     """
     ranked = rank_math_frontier(state, jobs)
     return [node_id for node_id in ranked
-            if math_lane(state.nodes[node_id]) != MathLane.NUMERICAL_BLOCKER]
+            if math_lane(state.nodes[node_id]) not in {
+                MathLane.NUMERICAL_BLOCKER,
+                MathLane.STRUCTURAL_OBSTRUCTION,
+            }]
 
 
 def explain_math_frontier(state: WorkflowState, jobs: Mapping[str, Any] | None = None) -> list[dict[str, Any]]:

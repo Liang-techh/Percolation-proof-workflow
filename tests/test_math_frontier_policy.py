@@ -40,6 +40,10 @@ class MathFrontierPolicyTests(unittest.TestCase):
             "status": "open",
             "statement": "global flowpipe interval coverage",
         }), MathLane.NUMERICAL_BLOCKER)
+        self.assertEqual(math_lane({
+            "id": "B45-MBD_projection_obstruction",
+            "status": "projection_obstruction_exact",
+        }), MathLane.STRUCTURAL_OBSTRUCTION)
 
     def test_explicit_verification_domain_fills_legacy_lane_gap(self):
         self.assertEqual(math_lane({
@@ -67,6 +71,19 @@ class MathFrontierPolicyTests(unittest.TestCase):
         only = numeric_only.add_node("coverage", "N",
                                     metadata={"math_lane": "numerical_blocker"})
         self.assertEqual(rank_formalizable_frontier(numeric_only, {only: object()}), [])
+
+    def test_formalizable_order_excludes_structural_obstruction(self):
+        state = WorkflowState()
+        obstruction = state.add_node(
+            "MBD_projection_obstruction", "O",
+            metadata={"math_lane": "structural_obstruction"})
+        source = state.add_node(
+            "source_repair", "S",
+            metadata={"math_lane": "source_semantics"})
+        self.assertEqual(rank_math_frontier(state, {
+            obstruction: object(), source: object()}), [source, obstruction])
+        self.assertEqual(rank_formalizable_frontier(state, {
+            obstruction: object(), source: object()}), [source])
 
     def test_explanation_is_read_only_and_keeps_obstruction_gate(self):
         state = WorkflowState()
