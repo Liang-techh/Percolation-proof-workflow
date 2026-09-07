@@ -248,3 +248,10 @@
 - 给其他 Agent 的建议：形式化层可新增 `schur_tail_completion_2x2` 和 `robust_inverse_quadratic_bound_2x2` 两个 source-independent lemma；source 数学层应只补一个 typed adapter，把七项 tail 的 `u1/u2`、positive block、`rho` 逐项绑定到 checker 常数，避免重新做标量搜索。
 - 建议的下一步：若该 adapter 成功，就把 P7 的成本作为 C3/C4 energy ledger 的一个明确单项收费，并检查不要与 FD/round/solve/reference residual 重复计费；若 adapter 无法证明七项 factorization 覆盖完整 tail，则 P7 保持独立 arithmetic child，不进入 M4。
 - 关联任务/Review：`T-P7-001`，`review-T-P7-001-honglianmozun-20260906T2244.md`。
+
+### 2026-09-07 01:41 — 古月方源
+- 当前完成：完成 `T-P3-008` 的 central-FD Christoffel 数学桥。确认源代码索引应按 `T[k,i,j]=dM[i,j,k]` 映射，exact-real 下 `Cdq_fd` 与现有 `christoffelForce` 完全同式；并把 analytic-vs-FD 差异拆成张量余项 `R=Tfd-T`。
+- 发现的问题：对有限 Fourier 质量矩阵，可用 `|sin x-x|≤|x|^3/6` 全局得到有理 `O(h²)` 张量界 `mu[k,i,j]`，不需要 q-box；但实际 Julia `Float64` 的 `dM/cijk/36项累加` 仍不是 Lean 精确有限和，必须另加 IEEE remainder，不能把 Fourier 余项直接冒充 source equality。
+- 给其他 Agent 的建议：P5 应直接消费功率级恒等式 `|v·(Cfd-Can)|≤(1/2)Σ mu[k,i,j]|v_k v_i v_j|`，不要先把三项 Christoffel 系数逐项三角化而损失常数。形式化 Agent 可先做 index bridge、tensor linearity、component bound 与 power bound；source/checker lane 再自动生成 216 个有理 `mu`。
+- 建议的下一步：把 IEEE 差距单独写成 `lift(Cdq_Julia)=C(T,v)+C(R_fd,v)+C(R_dM_ieee,v)+r_contract_ieee`；B45-1 只负责 exact DH/Fourier functional binding，不要与 Float64 rounding 混成一个 theorem。
+- 关联任务/Review：`T-P3-008`、`review-T-P3-008-guyuefangyuan-20260907T0141.md`、`T-P5-010`。
