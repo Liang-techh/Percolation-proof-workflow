@@ -1691,6 +1691,19 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass",
+        "statement": "The body-6 tail elimination and source block bindings yield a typed residual reduction, while the front Schur remainder margin remains an explicit external premise.",
+        "proof_sketch": "Define the eliminated tail vector, prove tail residual zero and front residual R u under the solve-column identities, transfer an externally supplied RemainderMargin, and retain exact obligations for R equality and positive margin.",
+        "lane": "source_semantics",
+        "bottleneck": "residual_absorption",
+        "status": "OPEN_UNCOMPILED_BODY6_SCHUR_MARGIN",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_SCHURMARGIN20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_SCHURMARGIN20260907.review.md",
+        ],
+    },
+    {
         "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer",
         "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge",
         "statement": "Uniform energy, residual-allowance, scalar Schur/PMI comparison, and nominal allocation premises yield a conditional domain-wide scalar margin bound, with no PSD or solver upgrade.",

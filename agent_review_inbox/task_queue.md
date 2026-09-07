@@ -2921,3 +2921,7 @@ Schur-margin 叶和真实 interval payload；任何缺少 source/coverage 的结
 body-6 `SCHURMARGIN`：补配套 review 后再登记；P3：interval payload/receipt
 boundary，显式分离 source、rounding soundness、coverage 与 checker metadata。
 两项继续保持未编译、fail-closed。
+
+body-6 `SCHURMARGIN` review 已到达并登记 revision 688，状态保持
+`OPEN_UNCOMPILED`；正的 remainder margin、完整 cross-block source 与域覆盖
+仍是后续独立 frontier。

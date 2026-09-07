@@ -2182,6 +2182,13 @@ formal gate。
 边界审阅；P3 继续处理 interval payload/receipt 与数学 enclosure 的分离。
 两项都不把 metadata、hash 或 checker 输出当成数学证明。
 
+### 2026-09-07 — 梁智炜收割 body-6 Schur margin
+
+`BODY6_SCHURMARGIN` 已完成定向审阅并登记 revision 688。该叶证明消去向量
+下 tail residual 为零、front residual 为 `R u`，并消费外部
+`RemainderMargin`；它明确不从 A/X/Y source binding 推导正 margin，也不声称
+完整 5×5/6DOF PSD。
+
 ### 2026-09-07 — 梁智炜收割 statement/residual 两叶
 
 fixed-λ `EXACT_STATEMENT_BOUNDARY` 与 P4 `RESIDUAL_MARGIN_CONSUMER` 已登记

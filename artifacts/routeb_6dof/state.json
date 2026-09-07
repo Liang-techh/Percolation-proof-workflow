@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 687,
+  "revision": 688,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -41344,7 +41344,9 @@
       "parent_id": "d05f06142f284bb4afc90b9e4059e5fb",
       "status": "open",
       "proof_sketch": "Consume center-offset and SourceWeightsTarget premises, combine the actual mass Gram law with SELF3 tables, expand all nine weighted entries including off-diagonal inertia contributions, and feed the resulting A binding into the mixed source contract without asserting unconditioned candidate validity.",
-      "dependencies": [],
+      "dependencies": [
+        "f333aa93b1224537b8e39797e06b91f5"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -41540,6 +41542,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_ResidualMarginConsumer.review.md",
             "sha256": "8D1926931D3B6A35382D3F12DB379AE22142EA61F8C43E9CEBBBD6FB4B5595E1"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "f333aa93b1224537b8e39797e06b91f5": {
+      "id": "f333aa93b1224537b8e39797e06b91f5",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin",
+      "statement": "The body-6 tail elimination and source block bindings yield a typed residual reduction, while the front Schur remainder margin remains an explicit external premise.",
+      "parent_id": "b9170319d9654c91a0ef4ab01e111b86",
+      "status": "open",
+      "proof_sketch": "Define the eliminated tail vector, prove tail residual zero and front residual R u under the solve-column identities, transfer an externally supplied RemainderMargin, and retain exact obligations for R equality and positive margin.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "residual_absorption",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_BODY6_SCHUR_MARGIN",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_SCHURMARGIN20260907.lean",
+            "sha256": "3E37EC54B791DD7266079D963D7C40A1FF9B2BC635E5564E6CFF3B131016FBA3"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_SCHURMARGIN20260907.review.md",
+            "sha256": "97F27D817DFFEA5B97A1649E1DB5E4A203BA9D23B3A50D9E2058BDCAAF7239E1"
           }
         ],
         "registry_eligible": false,
@@ -69344,6 +69381,23 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T20:08:35.757059+00:00",
+      "kind": "node_added",
+      "node_id": "f333aa93b1224537b8e39797e06b91f5",
+      "parent_id": "b9170319d9654c91a0ef4ab01e111b86",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin"
+    },
+    {
+      "at": "2026-09-07T20:08:35.757956+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -73000,5 +73054,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "1ed67e8cd932a5a9e4b87871a7eeb86e86f53872c183b20ac2c1c8b778883bda"
+  "state_checksum": "c7d81998111d7e81f76bbb67b8013ff22a256ed08bec28d91f520d333690982e"
 }
