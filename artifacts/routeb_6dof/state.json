@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 480,
+  "revision": 481,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13954,7 +13954,8 @@
           "pinned_lean_compile_receipt",
           "zero_sorry_and_allowed_axioms_receipt",
           "statement_comparator_receipt",
-          "o2_review_mathematical_obligations_open"
+          "o2_review_mathematical_obligations_open",
+          "Float64_fd_step_outward_inclusion"
         ],
         "independent_static_reviews": [
           {
@@ -14079,7 +14080,36 @@
             "registry_promoted": false,
             "admission_status": "pending_coordinator_admission"
           }
-        ]
+        ],
+        "fd_step_semantics": {
+          "schema_version": 1,
+          "status": "OPEN_FD_STEP_OUTWARD_INCLUSION_REQUIRED",
+          "deployed_literal": "1e-5",
+          "deployed_float64_bits_hex": "0x3ee4f8b588e368f1",
+          "deployed_float64_exact_value": "5902958103587057/590295810358705651712",
+          "analytic_exact_real_value": "1/100000",
+          "deployed_minus_analytic": "1509/1844674407370955161600000",
+          "ordering": "0 < exact_real_value < float64_value",
+          "outward_interval": [
+            "1/100000",
+            "5902958103587057/590295810358705651712"
+          ],
+          "source_literal_present": true,
+          "boundary_exact_value_present": true,
+          "source_artifacts": [
+            {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\robot_final\\dhport_lib.jl",
+              "sha256": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936"
+            },
+            {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_EXACT_REAL_MODEL_BOUNDARY.md",
+              "sha256": "33AF68226C691DAE568924FCD4501C01CB6C35571721AA2CF1CB85A9858B8313"
+            }
+          ],
+          "remaining_obligation": "bind the same h through every mass/potential endpoint and 2h division, then charge the resulting outward error in C/G enclosure",
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
+        }
       }
     }
   },
@@ -37731,6 +37761,15 @@
       },
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T11:41:39.641532+00:00",
+      "kind": "routeb_fd_step_semantics_recorded",
+      "node_id": "0da99a7cef5e4f0b91c7cc06d9e7c010",
+      "status": "OPEN_FD_STEP_OUTWARD_INCLUSION_REQUIRED",
+      "deployed_minus_analytic": "1509/1844674407370955161600000",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -41387,5 +41426,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "fed42a349216eb423cfa362abc77a8d8ec646de1d472dd6a530e24740416fc46"
+  "state_checksum": "425eea8faef02d3289280316993171f05466f7edbd32ee26d53a6deeef810ad4"
 }

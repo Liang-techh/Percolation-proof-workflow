@@ -1416,6 +1416,11 @@ polynomial remains a separate frontier.
   residual absorption or flowpipe closure.
 - forbidden: declaring O2 closed from existing interval candidates, sampled
   maxima, solver `OPTIMAL`, or a stale source hash.
+- coordinator finding (2026-09-07): the deployed `1e-5` step is exactly
+  `5902958103587057/590295810358705651712`, which is strictly above the exact
+  model `1/100000` by
+  `1509/1844674407370955161600000`. The scalar seam is recorded, but endpoint
+  propagation and the `2h` division error remain open.
 
 ### T-P4-035 — true-DH force-descriptor block projection seam
 

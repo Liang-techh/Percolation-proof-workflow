@@ -156,6 +156,7 @@ python scripts/check_routeb_o1_interface.py
 python scripts/record_routeb_o1_interface_check.py
 python scripts/record_routeb_child_reviews.py
 python scripts/record_routeb_force_scale_contract.py
+python scripts/record_routeb_fd_step_semantics.py
 ```
 
 These recorders preserve the deployment authority (`robot_final/dhport_lib.jl`),
@@ -178,6 +179,11 @@ compile.
 scanning the selected deployed/lifted sources for requested force-scale terms
 and recording an obstruction when they are absent. It does not infer a missing
 coefficient from a nearby nominal coupling.
+
+`record_routeb_fd_step_semantics.py` records the exact binary64 value of the
+deployed `1e-5` finite-difference step and its outward interval relative to
+the exact model `1/100000`; it does not claim that the complete `C/G` evaluator
+has been enclosed.
 
 The O1 API audit also emits
 `artifacts/task_routeb_o1_lean_api_audit_20260907/RouteBO1PortIdentity.lean`.

@@ -755,3 +755,12 @@
   deployed `tau` 使用 `-Kp*q-(Kd+b_fr)*dq+G0v+GwI*w`。因此 T-P4-035 将该
   差异标为 source-contract obstruction，禁止把 `1/20` 近似解释成请求系数。
 - 当前主状态仍为 rev 479、registry=0、`formal_certificate_allowed=false`。
+
+### 2026-09-07 — 梁智炜：固化 O2 有限差分步长语义
+
+- 新增 `record_routeb_fd_step_semantics.py`，把 deployed `1e-5` 精确解释为
+  `5902958103587057/590295810358705651712`，它严格大于 exact `1/100000`
+  约 `1509/1844674407370955161600000`。
+- 该结果只关闭了 scalar representation 事实，未关闭 endpoint、`2h` 除法、
+  central-FD `C/G` 或逐盒 evaluator enclosure；O2 仍保持 open。
+- 主状态推进到 rev 481，registry=0，formal gate 仍关闭。
