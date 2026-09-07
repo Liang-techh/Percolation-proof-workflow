@@ -39,6 +39,8 @@ def main() -> int:
         TARGET / "routeB_physical_rational_tail_pmi_scalar.csv",
         TARGET / "routeB_physical_rational_tail_pmi_scalar_meta.csv",
         TARGET / "routeB_tail_pmi_scalar_gram_rational_audit.csv",
+        TARGET / "routeB_tail_pmi_scalar_gram_rational.csv",
+        TARGET / "routeB_tail_pmi_scalar_gram_basis.csv",
         TARGET / "P4_PHYSICAL_RATIONAL_TAIL_PMI_SCALAR.md",
         ROOT / "src/percolation_workflow/routeb_nominal_distal_contract.py",
     )]

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 372,
+  "revision": 373,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -10729,6 +10729,14 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_tail_pmi_scalar_gram_rational_audit.csv",
             "sha256": "b07c7c65dbfbaf1cee321dff433bae4a9d786c2a383d1ad5b17c8f12d004c901"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_tail_pmi_scalar_gram_rational.csv",
+            "sha256": "f39f9fbfe6ce2fce725a9a14024f622fda901ce05cd0899d33529fca5fdeb4bb"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_tail_pmi_scalar_gram_basis.csv",
+            "sha256": "caa65197131d3ff5acffd9396fa980bac91292f3d8d6453642bbcae6daf2c89c"
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P4_PHYSICAL_RATIONAL_TAIL_PMI_SCALAR.md",
@@ -30879,6 +30887,53 @@
       "status": "pending_exact_tail_positivity_and_pinned_compile",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T06:47:33.305707+00:00",
+      "kind": "routeb_nominal_tail_pmi_provenance_refresh",
+      "node_id": "8976802ec6f946efac1182d2980b9790",
+      "parent_id": "1e7b1df1835f4deba06b11a8182f6719",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_descriptor_bridge.csv",
+          "sha256": "8313f4a7c6b580d480200b88ed7457e5a9acc3262925a5358f360be93fe6fccb"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_tail_cs_polynomial.csv",
+          "sha256": "c3bc64b1274982ef7556fb5258685e1985f695d601029842d94b6a7d92bfd4ba"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_tail_pmi_scalar.csv",
+          "sha256": "6b00542155ff41339ab466138cb5d1612f7385f8abd158feea4630e30933e93e"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_tail_pmi_scalar_meta.csv",
+          "sha256": "53efe6a1ffaa15b7a8eb8c08b220e5e9a0ee2f2166a0f6982de055b78bdec374"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_tail_pmi_scalar_gram_rational_audit.csv",
+          "sha256": "b07c7c65dbfbaf1cee321dff433bae4a9d786c2a383d1ad5b17c8f12d004c901"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_tail_pmi_scalar_gram_rational.csv",
+          "sha256": "f39f9fbfe6ce2fce725a9a14024f622fda901ce05cd0899d33529fca5fdeb4bb"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_tail_pmi_scalar_gram_basis.csv",
+          "sha256": "caa65197131d3ff5acffd9396fa980bac91292f3d8d6453642bbcae6daf2c89c"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P4_PHYSICAL_RATIONAL_TAIL_PMI_SCALAR.md",
+          "sha256": "4823fb763d6815f8e03115140f497d998ab5ec5fb48b560b5b5006f9a8555be5"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\src\\percolation_workflow\\routeb_nominal_distal_contract.py",
+          "sha256": "705332a5613499ce299ebd9689a3db157bd42af34432d53a8d4e5b6152bd4295"
+        }
+      ],
+      "status": "pending_exact_tail_positivity_and_pinned_compile",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -34535,5 +34590,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "eabb4d8623ccf1f4787bdc22e31920e1e5d65559c64318415700371912f7f284"
+  "state_checksum": "57296a48d7cd07bef167d675f0373393a222656bff9846621a4c87c836ce1355"
 }
