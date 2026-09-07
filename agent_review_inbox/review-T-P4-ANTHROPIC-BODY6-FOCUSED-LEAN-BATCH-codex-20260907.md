@@ -13,7 +13,7 @@ no GitHub job was run, no comparator was executed, and no verified registry or
 workflow state was modified.
 
 The batch contains three disjoint focused work packages.  The BODY6 package
-contains four separately receipted source files.  One of the three packages is
+contains five separately receipted source files.  One of the three packages is
 explicitly assigned to the independent GitHub lane for 流川枫.
 
 ## Batch allocation
@@ -46,12 +46,16 @@ explicitly assigned to the independent GitHub lane for 流川枫.
   `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_COMPILEDLEDGERBINDING20260907.lean`
 - Additional target:
   `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_20260907.lean`
+- Additional target:
+  `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_V0PARAMETERMAP20260907.lean`
 - Review context:
   `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_ACTIVEENERGYORIGIN20260907.review.md`
   and
   `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_STORAGEIDENTITY20260907.review.md`,
   and
-  `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_COMPILEDLEDGERBINDING20260907_REVIEW.md`
+  `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_COMPILEDLEDGERBINDING20260907_REVIEW.md`,
+  and
+  `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_V0PARAMETERMAP20260907.review.md`
   and the detailed field audit
   `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_COMPILEDLEDGERBINDING20260907.review.md`
 - Focused declarations:
@@ -79,6 +83,11 @@ explicitly assigned to the independent GitHub lane for 流川枫.
   `sixth_column_of_source_gram_attempt`, `source_sixth_column_attempt`,
   `sixth_slice_seam_attempt`, `source_binding_seam_attempt`,
   `source_zero_complement_attempt`, and `legacy_consumer_seam_attempt`.
+- V0 parameter-map declarations:
+  `v0_generator_identity_attempt`, `v0_base_plus_cross_budget_attempt`,
+  `scalar_match_only_attempt`, `targeted_gain_change_vanishes_on_block_initial_attempt`,
+  `same_candidate_requires_zero_cross_attempt`,
+  `envelope_delivers_v0_attempt`, and `candidate_v0_transfer_attempt`.
 - Boundary: normalized/raw/shifted energy candidates remain distinct;
   active-domain membership requires the explicit `V(0,0)` source identity.
   Storage transfer additionally requires same-domain identity, initial-set
@@ -92,6 +101,8 @@ explicitly assigned to the independent GitHub lane for 流川枫.
   `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_ActualRowMissingBase.lean`
 - Review:
   `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_ActualRowMissingBase.review.md`
+- Source-obstruction companion review:
+  `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_Line9SourceObstruction.review.md`
 - Focused declarations:
   `RouteBP4032ActualRowMissingBase.exact_decimal_external_slack`,
   `RouteBP4032ActualRowMissingBase.target_iff_base_allocation`,
@@ -104,7 +115,8 @@ explicitly assigned to the independent GitHub lane for 流川枫.
 - Boundary: printed decimal arithmetic and the missing base allocation remain
   explicit; this obstruction does not establish source/Float64 reification,
   physical descriptor feasibility, P4 closure, comparator acceptance, or
-  registry admission.
+  registry admission.  The line-9 companion remains a review-only
+  source-obstruction artifact and has no Lean receipt claim.
 
 ## Shared focused receipt contract
 
@@ -116,6 +128,8 @@ must bind:
 2. repository commit, `lean-toolchain`, Lean version, Lake manifest, and
    Mathlib revision;
 3. the exact focused command, stdout, stderr, and process exit code;
+   record the Lean commit/toolchain and the per-file `sorry`, `admit`, and
+   axiom counts explicitly;
 4. `#print axioms` output for only the listed declarations, with
    `sorryAx`/`admit`/unapproved nonstandard axioms classified explicitly;
 5. a declaration-position placeholder scan for `sorry`, `admit`, `axiom`,
@@ -123,6 +137,10 @@ must bind:
 6. for imported external material, source repository/commit/blob provenance;
 7. an explicit statement that the result remains a candidate receipt and does
    not change the verified registry.
+
+Review-only obstruction artifacts, such as the line-9 source review, receive a
+separate source/provenance/hash record and an explicit `NO_LEAN_TARGET` marker;
+they must not be represented as successful Lean receipts.
 
 The runner must use the pinned project owning the import closure.  If that
 environment is unavailable or source hashes drift, status is

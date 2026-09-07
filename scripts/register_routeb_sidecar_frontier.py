@@ -2321,6 +2321,20 @@ CHILDREN = [
         "artifacts": [
             "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_ActualRowMissingBase.lean",
             "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_ActualRowMissingBase.review.md",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_Line9SourceObstruction.review.md",
+        ],
+    },
+    {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer.compiled_ledger_binding.v0_parameter_map",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer.compiled_ledger_binding",
+        "statement": "The targeted-gain ledger V0 has an exact rational generator and base-plus-cross split, but scalar matching does not identify it with the compiled even-in-velocity storage; transfer requires a same-domain evaluator identity or one-sided initial-envelope contract.",
+        "proof_sketch": "Reify Mmax, block Hessian, epsilon, radius, and exact V0 arithmetic; prove the odd velocity-parity obstruction for qᵀM(q)v against ActualStorage/ActualShift; retain the minimal InitialEnvelopeBinding and CandidateInitialBinding needed for a sound initial transfer.",
+        "lane": "source_semantics",
+        "bottleneck": "normalization",
+        "status": "OPEN_UNCOMPILED_BODY6_V0_PARAMETER_MAP",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_V0PARAMETERMAP20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_V0PARAMETERMAP20260907.review.md",
         ],
     },
 ]

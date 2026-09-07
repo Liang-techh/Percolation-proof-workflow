@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 731,
+  "revision": 733,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -43227,6 +43227,10 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_ActualRowMissingBase.review.md",
             "sha256": "CB0913C0FB20BE3362E97354DB874CFB2B5F62B321B7FC5EA0975845EB6CD15C"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_Line9SourceObstruction.review.md",
+            "sha256": "022C474E6001FD10B87B2FE7B2B7B9AC1BA35E3E89B22B3C9BFF233E0DE2CA2B"
           }
         ],
         "registry_eligible": false,
@@ -43286,7 +43290,9 @@
       "parent_id": "e64f0bd1919f467cb995c355c6028c66",
       "status": "open",
       "proof_sketch": "Define typed storage and sample records, instantiate the compiled `storageV_initial_upper` theorem under its exact premises, transfer the result through `InitialLedgerBinding`, and prove a pathwise strict barrier through `PathLedgerBinding`. Retain the component-cap and shifted-baseline counterboundaries; leave dynamics, source semantics, coverage, and admission external.",
-      "dependencies": [],
+      "dependencies": [
+        "bdcd53d4826b412cb003f13a21b4f78c"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -43307,6 +43313,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_COMPILEDLEDGERBINDING20260907.review.md",
             "sha256": "113172C863D56DAFF077B0604477EE8A193F3948AEA532FD447163224616A455"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "bdcd53d4826b412cb003f13a21b4f78c": {
+      "id": "bdcd53d4826b412cb003f13a21b4f78c",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer.compiled_ledger_binding.v0_parameter_map",
+      "statement": "The targeted-gain ledger V0 has an exact rational generator and base-plus-cross split, but scalar matching does not identify it with the compiled even-in-velocity storage; transfer requires a same-domain evaluator identity or one-sided initial-envelope contract.",
+      "parent_id": "9809ea1d38ea4b8db4bceb459f5c5841",
+      "status": "open",
+      "proof_sketch": "Reify Mmax, block Hessian, epsilon, radius, and exact V0 arithmetic; prove the odd velocity-parity obstruction for qᵀM(q)v against ActualStorage/ActualShift; retain the minimal InitialEnvelopeBinding and CandidateInitialBinding needed for a sound initial transfer.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "normalization",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_BODY6_V0_PARAMETER_MAP",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_V0PARAMETERMAP20260907.lean",
+            "sha256": "7B0B3CCD87F2D2AE860A780F21905964F5FC97927BFC6AF5ED8543C708CD8668"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_V0PARAMETERMAP20260907.review.md",
+            "sha256": "7868BF61BF551B51BBDE9DF71B7F5E5DA473EE88F6CE149C3B0C62336CA1F4C5"
           }
         ],
         "registry_eligible": false,
@@ -72025,6 +72066,35 @@
       "artifact_hashes_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T21:41:27.155906+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [],
+      "metadata_updated": [
+        "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility.source_positive_target_binding.same_row_budget_audit.actual_row_missing_base"
+      ],
+      "artifact_hashes_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T21:42:02.919927+00:00",
+      "kind": "node_added",
+      "node_id": "bdcd53d4826b412cb003f13a21b4f78c",
+      "parent_id": "9809ea1d38ea4b8db4bceb459f5c5841",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer.compiled_ledger_binding.v0_parameter_map"
+    },
+    {
+      "at": "2026-09-07T21:42:02.919947+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer.compiled_ledger_binding.v0_parameter_map"
+      ],
+      "metadata_updated": [],
+      "artifact_hashes_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -75681,5 +75751,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "b6b0249326562ea6d41d1bcb453ecbc716f0623c0f19c7f529d432c2f22bb2b0"
+  "state_checksum": "eaeb11b43c9addd673f50dfaa6f8b25d4e5a6f917dfc871b8ae3fa0b828a44ce"
 }

@@ -2371,7 +2371,7 @@ P3 `TAYLOR_REMAINDER`、fixed-λ `PINNED_KERNEL_RECEIPT`、BODY6
 的无限域阻塞，fixed-λ 处理 registry entry invariant，P3 处理真实导数正则性
 到 Taylor remainder 的桥。继续只登记条件式 open leaves，不提前关闭 parent。
 
-automation cadence 已与当前长期目标对齐为每 20 分钟；保留“无新内容静默”和
+automation cadence 已与当前长期目标对齐为每小时；保留“无新内容静默”和
 “其他时间不碰远端”的限制。
 
 ### 2026-09-07 — 梁智炜收割 domain repair 与 split allocation
@@ -2494,6 +2494,14 @@ external row 虽有正的 `gamma−charge`，但真正的 consumer 还需要
 `target+2‖l_base‖²+charge·A_up≤b_base`。固定所有已显示系数、只改变未记录
 的 `b_base` 即可翻转 target feasibility；因此该叶只登记为 open obstruction，
 并交给流川枫做独立 focused Lean receipt。
+
+最新收割 revision 732–733：line-9 source-level review 已作为同一
+`ACTUAL_ROW_MISSING_BASE` 叶的 provenance 附件接入；BODY6 `V0PARAMETERMAP`
+则精确记录 `V0=A*r^2` 及 base/cross 分解，并给出 qᵀM(q)v 与
+ActualStorage/ActualShift 偶速度结构的身份障碍。两者均为 open/uncompiled，
+没有 registry promotion。下一批分别攻最小同源 consumer packet、V0 one-sided
+initial-envelope/identity contract，以及对应的独立 Lean receipts；流川枫继续
+获得约三分之一 GitHub lane。
 
 随后新增 `STORAGE_IDENTITY_TRANSFER` 叶：它要求 `V_eps=Vfull_DH` 在同一域
 上成立，且 barrier transfer 还需要整条 path 落在该域内；相同初始上界或相同

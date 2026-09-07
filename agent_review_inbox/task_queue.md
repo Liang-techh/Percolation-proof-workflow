@@ -3036,7 +3036,7 @@ allocation obstruction；fixed-λ VerifiedRegistryEntry invariant；P3 C2/C3
 Taylor remainder contract。四项互不重叠，均要求 proof-attempt + review，
 不运行本机 Lean/Lake。
 
-收割 automation 已按当前目标改为每 20 分钟；只在窗口内处理 inbox 和必要的
+收割 automation 已按当前目标改为每小时；只在窗口内处理 inbox 和必要的
 远端同步，其余时间持续本地数学推进。流川枫继续按每批约三分之一的 GitHub
 任务承接，所有结果仍须由梁智炜最终 integration。
 
@@ -3110,3 +3110,16 @@ revision 721 登记 P4 `DOMAIN_OBJECT_SEPARATION`。它证明 tube→V≤1 与
 V≤1→blockP 都需要独立正 localization；保存的 CSV 点只是条件绑定；full
 regularized six-body M、body-only unregularized remainder 和 Schur elimination
 不能通过加法或正则项重排互换。该叶用于阻断错误的域/矩阵替换，仍保持 open。
+
+revision 732–733 收割 P4 line-9 source obstruction 与 BODY6 V0 parameter map：
+前者确认 external row 缺少同源 branch/base/target/front 等 consumer 字段，
+后者闭合了 V0 的有理生成式与 base-plus-cross split，但证明了 scalar match
+不能识别 targeted-gain V0 与 ActualStorage/ActualShift 的偶速度存储。两项均
+保持 `OPEN_UNCOMPILED`，不改变 verified registry；V0 的下一步是同域 evaluator
+identity 或 one-sided initial-envelope contract。
+
+当前派发：BODY6 推进 V0 与实际 storage 的最小比较契约；P4 将 line-9 缺字段
+压缩为同源 consumer packet 与 target allocation contract；Lean lane 为每个
+source file 单独收 receipt；P3 推进 C2/C3 remainder 到真实 DH coefficient 的
+绑定。流川枫继续承接约三分之一 GitHub 任务，收割周期为每小时，其他时间只做
+本地数学推进，不与远端 agent 抢通道。
