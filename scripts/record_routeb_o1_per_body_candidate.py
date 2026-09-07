@@ -39,6 +39,8 @@ O0_BODY4_RECEIPT = ROOT / "agent_review_inbox/receipt-T-P4-033-O0-P-NE-body4-geo
 O0_BODY5_RECEIPT = ROOT / "agent_review_inbox/receipt-T-P4-033-O0-P-NE-body5-geometry-source-20260907.json"
 O0_BODY5_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O0-P-NE-body5-geometry-source-20260907.md"
 HACC_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O0-H-acc-source-semantic-export-20260907.md"
+HACC_REFINEMENT_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O0-H-acc-evaluator-interval-contract-codex-20260907.md"
+HACC_CONTRACT = ROOT / "examples/routeb_o0_h_acc_semantic_export/OPEN_CONTRACT.json"
 KEYED_INTERFACE = ROOT / "artifacts/task_routeb_o1_keyed_regrouping_20260907/RouteBO1KeyedRegroupingInterface.lean"
 KEYED_RECEIPT = ROOT / "artifacts/task_routeb_o1_keyed_regrouping_20260907/interface_receipt.json"
 KEYED_CHECK = ROOT / "artifacts/task_routeb_o1_keyed_regrouping_20260907/interface_check.json"
@@ -85,7 +87,8 @@ def main() -> None:
                  BODY5_RECEIPT, BODY5_CHECK, BODY5_REVIEW,
                  BODY4_FOLD_TARGET, BODY4_FOLD_RECEIPT, BODY4_FOLD_REVIEW,
                  O0_BODY3_RECEIPT, O0_BODY4_RECEIPT, O0_BODY5_RECEIPT, O0_BODY5_REVIEW,
-                 HACC_REVIEW, KEYED_INTERFACE, KEYED_RECEIPT, KEYED_CHECK,
+                 HACC_REVIEW, HACC_REFINEMENT_REVIEW, HACC_CONTRACT,
+                 KEYED_INTERFACE, KEYED_RECEIPT, KEYED_CHECK,
                  KEYED_ORIENTATION_REVIEW, BODY6_SUPPORT, BODY6_REVIEW, PBUDGET_REVIEW,
                  REVIEW, AGENT_REVIEW):
         if not path.is_file():
@@ -169,6 +172,10 @@ def main() -> None:
         "h_acc_review_sha256": digest(HACC_REVIEW),
         "h_acc_status": "OPEN_H_ACC_NO_DEPLOYED_SEMANTIC_EXPORT",
         "h_acc_proven": False,
+        "h_acc_refinement_review_sha256": digest(HACC_REFINEMENT_REVIEW),
+        "h_acc_contract_sha256": digest(HACC_CONTRACT),
+        "h_acc_refinement_status": "OPEN_H_ACC_SOURCE_REFINEMENT_AND_INTERVAL_SOUNDNESS",
+        "h_acc_refinement_proven": False,
         "o0_body_3_geometry_receipt_sha256": digest(O0_BODY3_RECEIPT),
         "o0_body_3_geometry_status": "CONDITIONAL_BODY3_GEOMETRY_DERIVATION",
         "o0_body_3_geometry_proven": False,
