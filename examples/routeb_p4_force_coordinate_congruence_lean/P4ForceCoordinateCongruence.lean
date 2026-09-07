@@ -97,7 +97,7 @@ theorem mixed_normalization_extremizer
   constructor
   · rw [abs_of_nonneg hF, abs_one, mul_one]
   · rw [abs_one, mul_one]
-    convert abs_of_nonneg hsum using 1 <;> ring
+    exact abs_of_nonneg hsum
 
 /-- Exact channel-4 force scaling of the literal `1/20` nominal coefficient. -/
 theorem channel4_kc_force :
