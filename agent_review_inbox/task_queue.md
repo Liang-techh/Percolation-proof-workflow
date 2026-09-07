@@ -2681,3 +2681,10 @@ source-independent/open/uncompiled 候选。
   ratio/reserve 三个新叶，均已登记为 open/uncompiled，DAG revision 661。
 - K-path 正在 formalize P4 weighted-three-term；其他线继续处理下一批独立数学叶；
   本轮不访问远端。
+
+### 2026-09-07 — 13:18 本地批量派发
+
+- body-6 tail weighted Gram、P3 radius-load、fixed-λ no-division 已入 DAG 后，
+  继续派发三条新数学线：P4 weighted-three-term、P3 component-radius 到 cap-load
+  单调性、fixed-λ finite reserve aggregation；均要求 conditional、fail-closed、
+  不重复旧叶。
