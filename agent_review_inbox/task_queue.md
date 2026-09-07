@@ -171,7 +171,7 @@ without an explicit scoped request.
 
 ### T-P3-004 — source-semantic adapter design
 
-- status: `open`
+- status: `claimed` (Schrodinger the 6th, 2026-09-06)
 - scope: design the smallest adapter from canonical Julia/DH source manifest to
   Lean/checker semantics using existing snapshots;
 - deliver: review or disjoint sidecar with explicit semantic premises and
