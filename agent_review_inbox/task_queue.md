@@ -200,6 +200,22 @@ polynomial remains a separate frontier.
 - forbidden: identifying the seven-term polynomial with deployed DH by hash,
   claiming P7 flowpipe coverage, or promoting P7/M4/registry.
 
+### T-P5-005 — relative residual strict-decay closure
+
+- status: `open` (released for the next mathematical round)
+- owner: `狂弓魔尊`
+- source: `examples/routeb_dh_power_binding/README.md`,
+  `examples/routeb_residual_power/README.md`, and the exact scalar child
+  `examples/routeb_p5_residual_power_lean/`;
+- scope: replace the non-closing constant residual budget by a same-domain
+  relative bound `‖r‖ ≤ ρ‖v‖` with `0 ≤ ρ < δ`, and derive the strict energy
+  supply `Ė ≤ -(δ-ρ)‖v‖²` with explicit weighted-norm assumptions;
+- deliver: a typed mathematical lemma identifying the precise component-wise
+  residual bounds needed from true-DH/FD/solve errors, or a counterexample if
+  the current residual decomposition cannot support relative scaling;
+- forbidden: inferring relative bounds from samples, mixing force and
+  acceleration units, or closing P5/M4 without same-domain coverage.
+
 ## Queue: next parallel leaves
 
 ### T-P3-003 — canonical source-manifest binding

@@ -138,6 +138,13 @@
 - 建议的下一步：若 B45-4 成功，再把它作为 P5 energy ledger 的 shared prerequisite；若失败，保留精确 mismatch 作为 P3/P5 结构修复依据。
 - 关联任务/Review：`T-P3-008`、`T-P4-007`、`T-P5-003`。
 
+### 2026-09-07 — 梁智炜：P5 相对残差 frontier 发布
+- 当前完成：依据 P5-004 的严格数学结论，新发布 `T-P5-005`，将“常数 residual 只给 ultimate bound”的障碍转化为相对残差 strict-decay 子问题。
+- 发现的问题：当前仍没有同一 covered domain 上的 `‖r‖≤ρ‖v‖`、`ρ<δ` 证明；不能用样本、solver margin 或单位不一致的 acceleration bound 代替。
+- 给其他 Agent 的建议：狂弓魔尊优先给出 weighted/component-wise closure 或最小反例；如果某一 residual 在 `v=0` 不消失，应直接记录结构性 obstruction。
+- 建议的下一步：将成功的相对残差 lemma 接入 P5 energy ledger，再与 P4 sharp Schur 和 P8 flowpipe 分别连接。
+- 关联任务/Review：`T-P5-005`、`T-P5-004`、`T-P4-006`。
+
 ### 2026-09-06 22:45 — 红莲魔尊
 - 当前完成：继续推进 `T-P7-001`，把已检查的 `eta<1/160000` 从“标量算术结论”解释成一个可复用的 Schur 尾项吸收定理：若物理 2×2 正定块、逆块、交叉系数和 `rho` 与 P7 checker 的量完成 typed binding，则可把双线性 tail 以成本 `rho*(1/160000)*s^2` 吸收到正定二次项中；这是严格且尖锐的 completion-of-square 门槛。
 - 发现的问题：当前 P7 Lean/receipt 只证明 exact rational arithmetic，仍没有证明七项物理 polynomial 的两个交叉系数、逆块和 `rho` 就是 deployed trajectory 上对应对象；因此它现在能接到 P4/P5 的数学 seam，但还不能直接算作 full residual absorption，更不能替代 P8 flowpipe/domain coverage。
