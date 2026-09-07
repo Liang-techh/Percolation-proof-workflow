@@ -1,11 +1,12 @@
 {
   "review_file": "agent_review_inbox/review-T-P4-003-residual-normalization.md",
-  "review_sha256": "4B8606C1BE98E9CB08E7FB51D0450B36F17FBB4AC1BA27EEF50E3CE7F7F576E9",
+  "review_sha256": "157252D36AD933632EA66C5668C4DB6FED62043B0B26D610E3D7046B4A0137CF",
   "task_id": "T-P4-003",
   "source_agent": "Codex",
-  "created_at": "2026-09-06T22:40:00-06:00",
+  "created_at": "2026-09-06T19:45:00-06:00",
   "integration_status": "integrated_as_pending_metadata",
-  "classification": "conditional_typed_normalization",
+  "classification": "conditional_typed_normalization_revision",
   "admission_effect": "none",
-  "integrated_at": "2026-09-07T02:32:52.197552+00:00"
+  "correction_of_sha256": "4B8606C1BE98E9CB08E7FB51D0450B36F17FBB4AC1BA27EEF50E3CE7F7F576E9",
+  "integrated_at": "2026-09-07T02:34:50.836889+00:00"
 }

@@ -80,6 +80,7 @@ def main() -> int:
             continue
         digest = sha256(path)
         marker = processed / path.with_suffix(".json").name
+        previous = None
         if marker.exists():
             try:
                 old = json.loads(marker.read_text(encoding="utf-8"))
@@ -87,8 +88,11 @@ def main() -> int:
                 raise ValueError(f"malformed processed marker: {marker}") from exc
             if old.get("review_sha256", "").upper() == digest:
                 continue
-            raise ValueError(f"review changed after processing: {path}")
-        candidates.append((path, header, digest, marker))
+            # A changed same-name file is a correction/revision, not an excuse
+            # to overwrite history.  Keep the old hash in the new provenance
+            # record and require a second, explicit integration event.
+            previous = old
+        candidates.append((path, header, digest, marker, previous))
 
     if not candidates:
         print(json.dumps({"integrated": [], "state_revision": StateStore(state_path).load().revision}))
@@ -102,7 +106,7 @@ def main() -> int:
         raise ValueError("refuse inbox integration while a node is in progress")
 
     integrated = []
-    for path, header, digest, marker in candidates:
+    for path, header, digest, marker, previous in candidates:
         task_id = header["task_id"]
         target_name, classification = TASK_TARGETS[task_id]
         node = node_by_name(state, target_name)
@@ -116,6 +120,9 @@ def main() -> int:
             "classification": classification,
             "admission_effect": "none",
         }
+        if previous is not None:
+            ref["correction_of_sha256"] = previous.get("review_sha256")
+            ref["classification"] = f"{classification}_revision"
         node.metadata.setdefault("agent_review_refs", []).append(ref)
         state.event(
             "agent_review_integrated",
@@ -123,20 +130,20 @@ def main() -> int:
             review_sha256=digest,
             task_id=task_id,
             node_id=node.id,
-            classification=classification,
+            classification=ref["classification"],
             admission_effect="none",
             registry_promoted=False,
             formal_certificate_allowed=False,
         )
-        integrated.append((path, marker, ref))
+        integrated.append((path, marker, ref, state.events[-1]["at"]))
 
     # StateStore performs the optimistic revision check and checksum update.
     store.save(state)
-    for path, marker, ref in integrated:
-        marker.write_text(json.dumps({**ref, "integrated_at": state.events[-1]["at"]},
+    for path, marker, ref, event_at in integrated:
+        marker.write_text(json.dumps({**ref, "integrated_at": event_at},
                                      ensure_ascii=False, indent=2) + "\n",
                           encoding="utf-8")
-    print(json.dumps({"integrated": [ref["task_id"] for _, _, ref in integrated],
+    print(json.dumps({"integrated": [ref["task_id"] for _, _, ref, _ in integrated],
                       "state_revision": state.revision,
                       "registry_size": len(state.registry),
                       "formal_certificate_allowed": False}, ensure_ascii=False))

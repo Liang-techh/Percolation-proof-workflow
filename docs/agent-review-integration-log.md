@@ -3,7 +3,7 @@
 This log records durable integrations from `agent_review_inbox/`. The original
 review files and their SHA-256 markers remain in that directory.
 
-## 2026-09-06 / Route-B checkpoint revision 334
+## 2026-09-06 / Route-B checkpoint revision 336
 
 Integrated as pending metadata only:
 
@@ -24,8 +24,8 @@ Integrated as pending metadata only:
 | T-P8-003 | `P8.independent_reachability` | `explicit_time_contract_recommended` | none |
 
 The authoritative `artifacts/routeb_6dof/state.json` was updated through
-`StateStore` from revision 328 to revision 334. Thirteen
-`agent_review_integrated` events and thirteen node provenance references were
+`StateStore` from revision 328 to revision 336. Fifteen
+`agent_review_integrated` events and fifteen node provenance references were
 added. Node statuses remain open and the verified registry remains empty.
 
 No review was promoted to `VERIFIED`; P3 source semantics, P4 true-DH residual
@@ -38,3 +38,7 @@ child-DAG proposal is retained as a projection only; it does not migrate the
 The P3 review leaves source semantics pending, P4 remains a conditional typed
 adapter, and P8 recommends freezing an explicit-time 13-state contract. None
 of these results closes a physical parent or adds a verified registry entry.
+
+P3 and P4 were later revised under the same filenames by agents.  The inbox
+integrator retained both prior hashes and recorded the new hashes as explicit
+revisions; no review evidence was silently overwritten.
