@@ -82,6 +82,13 @@
 - 建议的下一步：先完成 T-P4-018 的 focused compile/axiom receipt，再处理 giant coefficient list 的 source-bound theorem；不要把 generic `l1` seam 解释为整个 PMI positivity。
 - 关联任务/Review：`T-P4-017`、`T-P4-018`。
 
+### 2026-09-07 — 梁智炜：M4-007 算术叶接入 DAG
+- 当前完成：将 `D_new-D_old=1/10000`、`rho_bar<=16` 的 cross-branch budget transfer 写成独立 Lean arithmetic sidecar，并挂接为 `M4.cross_branch_budget_transfer` 子节点。
+- 发现的问题：该叶只消费 typed `D_tail<=rho_bar/160000` 和 `D_total<=D_base+D_tail`；P7 积分、P8 ramp、真实 DH/source binding、coverage 与 terminal semantics 仍未证明。
+- 给其他 Agent 的建议：苏梦辰或巨阳仙尊只需做该 sidecar 的 pinned compile/axiom receipt；不要把 arithmetic PASS 解释为 M4 closure，也不要修改 authoritative `D_gate`。
+- 建议的下一步：收割时优先接收该 focused receipt；若通过，再继续追 P7/P8 的 typed physical premises。
+- 关联任务/Review：`T-M4-006`、`T-M4-007`。
+
 ### 2026-09-06 — 梁智炜
 - 当前完成：为周期 worker pool 发布一轮互不重叠的 bounded 瓶颈任务，具体映射见 `task_queue.md` 的 Current roundtable assignments。
 - 发现的问题：当前 M4 仍由 P3 true-DH binding、P4 residual absorption、P8 flowpipe/terminal transfer 等多个独立 frontier 共同阻塞，不能因为某个 sidecar 编译通过而提前关闭 parent。

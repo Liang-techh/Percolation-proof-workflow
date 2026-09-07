@@ -781,7 +781,7 @@ polynomial remains a separate frontier.
 
 ### T-M4-007 — pure arithmetic budget-transfer sidecar
 
-- status: `open` (released from the M4-006 mathematical review)
+- status: `local_sidecar_prepared` (released from the M4-006 mathematical review)
 - owner: `苏梦辰`
 - source: `review-T-M4-006-daai-xianzun-20260906T2346.md`;
 - scope: formalize only the division-free arithmetic implications
@@ -791,6 +791,9 @@ polynomial remains a separate frontier.
   exact rational constants and no hidden source assumptions;
 - forbidden: changing `D_gate`, proving physical `rho_bar`, or closing
   residual absorption/flowpipe/M4 from arithmetic alone.
+- local progress: `examples/routeb_m4_cross_branch_budget_lean/` is now
+  attached as the independent M4 arithmetic child; its pinned Lean result and
+  P7/P8 source bindings remain open.
 
 ### T-P8-008 — first-12 explicit-time source adapter
 
