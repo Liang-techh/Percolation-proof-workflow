@@ -2554,3 +2554,10 @@ source-independent/open/uncompiled 候选。
 - 已运行 inbox integration；state revision `636`，registry `0`，正式 gate 关闭。
 
 本窗口合并并推送 GitHub；下一窗口前只继续本地数学叶和 agent 派发。
+### 2026-09-07 — 12:24 收割并重新派发
+
+- 本窗口远端无新 commit，inbox integration 无新增；本地与 GitHub 仍一致。
+- K_path 线程已复用到 T-P4-032 的 typed block projection / defect-aware O1
+  identity，目标是把 `B=(4,5), D=(1,2,3,6)` 的索引、有限求和分解和
+  `e_D/e_B` 缺陷项做成 Lean 数学叶。
+- body-6、P5、fixed-λ、P3 线程继续各自的当前独立任务；不重复旧审计。

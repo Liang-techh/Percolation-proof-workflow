@@ -1915,3 +1915,8 @@ fixed-λ 已从 selected-box 正性推进到整个 tagged sparse union 的统一
 T-P4-032 的真正瓶颈已明确：不是 O1 纯代数，而是 B/D 投影、source force
 和 defect 的 typed binding；T-P5-030 已有独立 Lean sidecar，但还缺独立 receipt
 review。两项都保持 pending，不能影响 registry。已合并本地数学成果并完成本窗口同步。
+### 2026-09-07 12:24 — 梁智炜继续本地数学推进
+
+远端本轮没有新成果，因此不制造空转同步。K_path agent 已转去 T-P4-032
+的 block projection 与 defect-aware O1 叶；其他三个线程继续 body-6 前三列、
+P5 参数 tube、fixed-λ feasibility 和 P3 radius consumer。
