@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "kind": "advisory_reuse_manifest",
+  "integration_status": "pending",
+  "classification": "direct_reuse",
+  "provenance": {
+    "repository": "upstream/anthropics-fermats-last-theorem",
+    "commit": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef",
+    "source_path": "Definitions/Def_Mathlib_Topology_Bases.lean",
+    "source_blob": "0a0f162c947cce45653a7762a500392803c0bb36",
+    "license": "Apache-2.0",
+    "imports": ["Mathlib"]
+  },
+  "theorem": {
+    "namespace": "TopologicalSpace",
+    "name": "secondCountableTopology_of_countable_cover'",
+    "assumptions": [
+      "[TopologicalSpace α]",
+      "ι : Sort* with [Countable ι]",
+      "U : ι → Type* with topologies and SecondCountableTopology",
+      "f i : U i → α is an open embedding",
+      "every a : α is hit by some f i u"
+    ],
+    "conclusion": "SecondCountableTopology α"
+  },
+  "target_adapter": {
+    "file": "AnthropicFLTCountableCoverAdapter.lean",
+    "namespace": "AnthropicFLTCountableCoverAdapter",
+    "status": "pending_api_candidate",
+    "routeB_or_pde_theorem": false,
+    "registry_promotion": false
+  },
+  "admission_boundary": {
+    "countable_cover_is_not_quantitative_enclosure": true,
+    "sample_membership_is_not_cover_witness": true,
+    "requires_target_side_typeclass_check": true,
+    "does_not_promote_verified_registry": true
+  }
+}

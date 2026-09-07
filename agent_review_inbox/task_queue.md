@@ -79,6 +79,18 @@ integration gates are satisfied.
 - 已将 P4 Schur/PMI absorption 作为其首个混合验证任务；数学与 Lean receipt
   仍必须保持分层，不能直接改变 registry。
 
+### 2026-09-07 — active-energy / topology frontier batch
+
+- `T-P4-ACTIVE-ENERGY-ORIGIN`: verify the source identity and additive
+  normalization needed to transport `V(0,0)≤1` into the BODY6 candidate-domain
+  obstruction. Owner: mathematics lane plus one independent 流川枫 share;
+  deliver an exact binding or a missing-obligation report, not a registry update.
+- `T-P0-COUNTABLE-COVER-API`: pinned Lean-side validation of
+  `examples/anthropic_flt_countable_cover_adapter/`; check theorem shape,
+  assumptions, axioms, and placeholder status. Owner: one Lean slot and one
+  independent 流川枫 share; countable topology must not be reported as physical
+  coverage or quantitative enclosure.
+
 ### T-P4-012 — typed remote-action repair contract
 
 - status: `open` (local contract scaffold added 2026-09-07)

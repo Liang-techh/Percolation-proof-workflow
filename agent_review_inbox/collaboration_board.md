@@ -2468,3 +2468,13 @@ revision 721 接入 `DOMAIN_OBJECT_SEPARATION`。新叶将 `V≤t²`、`V≤1`�
 `blockP≤28/5` 的 localization 义务分开，并以精确反例说明全六体正则化
 质量矩阵与单体 BODY6 Schur 余量不能互换，Schur 也不满足简单可加或先后
 正则化交换。该结果收紧了 P4 的对象身份边界，但没有宣称完整证书失败或成功。
+
+### 2026-09-07 — active-energy origin 与 countable-cover topology
+
+新增两个 pending/open 叶：`ACTIVE_ENERGY_ORIGIN_BINDING` 明确区分
+normalized、audited raw、shifted 三个能量候选；只有显式 `V(0,0)` source
+identity 才能给 active `V≤1` 域提供原点 witness，当前 raw/shifted 常数均
+排除该 witness。`COUNTABLE_COVER_TOPOLOGY_API` 复用 Anthropic FLT 的 generic
+countable open-embedding cover→second-countability API，附带 sampled-patch
+反例；它不产生 Route-B 的数值覆盖、flowpipe 或 admission。两者均保持
+未编译/pending，不改变 verified registry。

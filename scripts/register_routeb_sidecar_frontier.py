@@ -2212,6 +2212,33 @@ CHILDREN = [
             "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_DomainObjectSeparation.review.md",
         ],
     },
+    {
+        "name": "P0.reproducibility_baseline.anthropic_flt_registry_graph_adapter.countable_cover_topology_api",
+        "parent": "P0.reproducibility_baseline.anthropic_flt_registry_graph_adapter",
+        "statement": "A countable family of second-countable spaces that covers a target through open embeddings yields second countability of the target; this generic topology API does not provide quantitative enclosure, physical-state coverage, or theorem admission.",
+        "proof_sketch": "Record the pinned Anthropic FLT declaration and source blob, package its countable-cover contract as a local adapter, and retain the sampled-patch counterexample showing that finite samples cannot replace the universal hit witness. Keep topology reuse separate from interval, flowpipe, source binding, and registry gates.",
+        "lane": "workflow_infrastructure",
+        "bottleneck": "provenance",
+        "status": "PENDING_ADVISORY_DIRECT_REUSE_ANTHROPIC_FLT_COUNTABLE_COVER",
+        "artifacts": [
+            "examples/anthropic_flt_countable_cover_adapter/anthropic_flt_countable_cover_manifest.json",
+            "examples/anthropic_flt_countable_cover_adapter/AnthropicFLTCountableCoverAdapter.lean",
+            "examples/anthropic_flt_countable_cover_adapter/REVIEW.md",
+        ],
+    },
+    {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction",
+        "statement": "The BODY6 origin obstruction can be transported to the active V≤1 lifted domain only after an explicit binding of the actual candidate energy at the origin; normalized energy gives a conditional witness, while the audited raw and shifted energies reject the origin under the displayed constants.",
+        "proof_sketch": "Separate normalized, offset, raw, and shifted energy definitions; prove their exact origin values and conditional active-domain membership, then consume the existing center-offset/null-direction obstruction only under the explicit V(0,0) binding and domain inclusion. Leave source identity, full M/C/G, coverage, flowpipe, and pinned Lean evidence external.",
+        "lane": "source_semantics",
+        "bottleneck": "normalization",
+        "status": "OPEN_UNCOMPILED_BODY6_ACTIVE_ENERGY_ORIGIN_BINDING",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_ACTIVEENERGYORIGIN20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_ACTIVEENERGYORIGIN20260907_REVIEW.md",
+        ],
+    },
 ]
 
 

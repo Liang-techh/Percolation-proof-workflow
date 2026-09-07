@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 721,
+  "revision": 722,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -42856,7 +42856,8 @@
       "status": "open",
       "proof_sketch": "Record upstream repository commit, audited source paths, license, toolchain, graph node/edge types, snapshot hashes, registry states, and explicit promotion evidence in a typed advisory manifest; keep local DAG/frontier/comparator schemas separate and leave state/registry mutation disabled until independent proof and admission gates close.",
       "dependencies": [
-        "4927e27c5a08434e90753c2e4ed45e19"
+        "4927e27c5a08434e90753c2e4ed45e19",
+        "6e43d8cee805462e9f0719b07cf91eee"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -42896,7 +42897,9 @@
       "parent_id": "d98288209e3441f684338b4f285b7564",
       "status": "open",
       "proof_sketch": "Define exact-real O1, delivery, and active lifted predicates; prove their available origin witnesses, isolate the conditional active witness, and transport the BODY6 null-vector obstruction through the minimal zero-membership/source-binding interface. Record full M/C/G, body-only Schur, Float64/CSV, coverage, and active V identities as separate obligations.",
-      "dependencies": [],
+      "dependencies": [
+        "808bfcf45e914d19ae958a40ab809b08"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -42987,6 +42990,80 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_DomainObjectSeparation.review.md",
             "sha256": "59FA9303378621C854B9CC67968189E819FA953B175EB1712F0C705289BB763D"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "6e43d8cee805462e9f0719b07cf91eee": {
+      "id": "6e43d8cee805462e9f0719b07cf91eee",
+      "name": "P0.reproducibility_baseline.anthropic_flt_registry_graph_adapter.countable_cover_topology_api",
+      "statement": "A countable family of second-countable spaces that covers a target through open embeddings yields second countability of the target; this generic topology API does not provide quantitative enclosure, physical-state coverage, or theorem admission.",
+      "parent_id": "6e76d5f6e723409087fb68c4ac51a79b",
+      "status": "open",
+      "proof_sketch": "Record the pinned Anthropic FLT declaration and source blob, package its countable-cover contract as a local adapter, and retain the sampled-patch counterexample showing that finite samples cannot replace the universal hit witness. Keep topology reuse separate from interval, flowpipe, source binding, and registry gates.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "workflow_infrastructure",
+        "math_bottleneck": "provenance",
+        "statement_status": "indexed",
+        "evidence_status": "PENDING_ADVISORY_DIRECT_REUSE_ANTHROPIC_FLT_COUNTABLE_COVER",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\anthropic_flt_countable_cover_adapter\\anthropic_flt_countable_cover_manifest.json",
+            "sha256": "AB02043EEC1CFFD46EF93626059D3FB253B69516BA8313D32D520D8B75A42A48"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\anthropic_flt_countable_cover_adapter\\AnthropicFLTCountableCoverAdapter.lean",
+            "sha256": "BE4AA734BDDDF0F1983D8CF861AB5A47DFA9663B9840B92EA396A2A975A9F962"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\anthropic_flt_countable_cover_adapter\\REVIEW.md",
+            "sha256": "7365CD5679ECDE19A44C35A95E049E35049CBFA496DBB5994FAD70015C532317"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "808bfcf45e914d19ae958a40ab809b08": {
+      "id": "808bfcf45e914d19ae958a40ab809b08",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding",
+      "statement": "The BODY6 origin obstruction can be transported to the active V≤1 lifted domain only after an explicit binding of the actual candidate energy at the origin; normalized energy gives a conditional witness, while the audited raw and shifted energies reject the origin under the displayed constants.",
+      "parent_id": "ab9697d1445e41958eab00f4e3a03cab",
+      "status": "open",
+      "proof_sketch": "Separate normalized, offset, raw, and shifted energy definitions; prove their exact origin values and conditional active-domain membership, then consume the existing center-offset/null-direction obstruction only under the explicit V(0,0) binding and domain inclusion. Leave source identity, full M/C/G, coverage, flowpipe, and pinned Lean evidence external.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "normalization",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_BODY6_ACTIVE_ENERGY_ORIGIN_BINDING",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_ACTIVEENERGYORIGIN20260907.lean",
+            "sha256": "C8B1DABCD19491495EE5FF39BFF4337851C2224D6F938848988B279246A4F883"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_ACTIVEENERGYORIGIN20260907_REVIEW.md",
+            "sha256": "FDC4BF5172E09B719DC55DA83F57EF0F20C93BE46B4CEBF435ED0398D3B5205E"
           }
         ],
         "registry_eligible": false,
@@ -71527,6 +71604,32 @@
       "artifact_hashes_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T21:19:57.532756+00:00",
+      "kind": "node_added",
+      "node_id": "6e43d8cee805462e9f0719b07cf91eee",
+      "parent_id": "6e76d5f6e723409087fb68c4ac51a79b",
+      "name": "P0.reproducibility_baseline.anthropic_flt_registry_graph_adapter.countable_cover_topology_api"
+    },
+    {
+      "at": "2026-09-07T21:19:57.533630+00:00",
+      "kind": "node_added",
+      "node_id": "808bfcf45e914d19ae958a40ab809b08",
+      "parent_id": "ab9697d1445e41958eab00f4e3a03cab",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding"
+    },
+    {
+      "at": "2026-09-07T21:19:57.533638+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P0.reproducibility_baseline.anthropic_flt_registry_graph_adapter.countable_cover_topology_api",
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding"
+      ],
+      "metadata_updated": [],
+      "artifact_hashes_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -75183,5 +75286,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "e20b1a94ad8a345221199e862446c8c2c5fd6ae94ab54461797b45a99ce35df2"
+  "state_checksum": "4896af476cdf40fb0f24239377238db657853a99fbc3e7d226b50a2f6b8ade30"
 }
