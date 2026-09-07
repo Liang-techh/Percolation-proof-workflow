@@ -435,6 +435,13 @@ def _quantize_common_denominator(value: Fraction, denominator_cap: int) -> Fract
     return Fraction(quotient, denominator_cap)
 
 
+def _floor_common_denominator(value: Fraction, denominator_cap: int) -> Fraction:
+    """Choose a rational lower bound without rounding a positive value up."""
+    scaled = value * denominator_cap
+    quotient = scaled.numerator // scaled.denominator
+    return Fraction(quotient, denominator_cap)
+
+
 def _sparse_support_to_exp(text: str, dimension: int = 6) -> tuple[int, ...]:
     exponents = [0] * dimension
     if text:
@@ -527,7 +534,7 @@ def audit_routeb_physical_rational_gram_reconstruction(
     try:
         scale = _quantize_common_denominator(
             Fraction(probe["scale_factor"]), denominator_cap)
-        lower = _quantize_common_denominator(
+        lower = _floor_common_denominator(
             Fraction(probe["objective_lower_bound"]), denominator_cap)
         if scale <= 0 or lower <= 0:
             errors.append("probe_scale_or_lower_bound_not_positive")

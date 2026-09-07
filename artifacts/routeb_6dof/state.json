@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 381,
+  "revision": 382,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -10829,7 +10829,7 @@
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\src\\percolation_workflow\\routeb_nominal_distal_contract.py",
-            "sha256": "d925ef5874b340153582d0e3ae22377020f796d52223739b39a359811a6d2d1b"
+            "sha256": "989c1c93fcf87f08a9f548218f792e466276e69669dc45a5f021bc83bbc526a3"
           }
         ],
         "candidate_reconstruction_receipt": {
@@ -10837,7 +10837,7 @@
           "artifact_sha256": "3911710ac51f01a4a8fb1a47db67b45646cc1856bf33c2ff7b5fcff0a574735b",
           "gram_blocks": 14,
           "max_gram_dimension": 83,
-          "residual_l1": "7402349154251787797465326713035113060169702540855344662247590178381061581307190227799628999201/6250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+          "residual_l1": "7402342904251787797465326713035113060169702540855344662247590178381061581307190227799628999201/6250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
           "certified_original_scale_margin": "9339709933373607057723930222537474518425706204640911650254178686181981854210413943322485731952419/1049356407036765625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
           "errors": [],
           "formal_certificate_allowed": false,
@@ -31456,6 +31456,64 @@
       "status": "pending_exact_target_minus_opt_reconstruction",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T07:25:00.718780+00:00",
+      "kind": "routeb_tail_gram_reconstruction_provenance_refresh",
+      "node_id": "57e8ba91205a44fb91dcbbd509078b4a",
+      "parent_id": "1e7b1df1835f4deba06b11a8182f6719",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_tail_pmi_scalar.csv",
+          "sha256": "6b00542155ff41339ab466138cb5d1612f7385f8abd158feea4630e30933e93e"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_tail_pmi_scalar_gram_rational_audit.csv",
+          "sha256": "b07c7c65dbfbaf1cee321dff433bae4a9d786c2a383d1ad5b17c8f12d004c901"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_tail_pmi_scalar_gram_rational.csv",
+          "sha256": "f39f9fbfe6ce2fce725a9a14024f622fda901ce05cd0899d33529fca5fdeb4bb"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_tail_pmi_scalar_gram_basis.csv",
+          "sha256": "caa65197131d3ff5acffd9396fa980bac91292f3d8d6453642bbcae6daf2c89c"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_tail_pmi_scalar_gram_probe.jl",
+          "sha256": "99b1fcba34d50f87b4815fad937318e1121f15f25c19c53f9b844f59dfb16df3"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_tail_pmi_scalar_meta.csv",
+          "sha256": "53efe6a1ffaa15b7a8eb8c08b220e5e9a0ee2f2166a0f6982de055b78bdec374"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\check_routeb_rational_gram_payload.py",
+          "sha256": "c41321cd6f74031603ac726682b23bf78980d49733d93f2023e59d8ef216a9d5"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\check_routeb_tail_gram_reconstruction.py",
+          "sha256": "093daf0999e411c474dfe41c92e4922d572df2b9a7b323159f71d441fdb73261"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\src\\percolation_workflow\\routeb_nominal_distal_contract.py",
+          "sha256": "989c1c93fcf87f08a9f548218f792e466276e69669dc45a5f021bc83bbc526a3"
+        }
+      ],
+      "candidate_reconstruction_receipt": {
+        "status": "EXACT_RATIONAL_GRAM_RECONSTRUCTION_CANDIDATE",
+        "artifact_sha256": "3911710ac51f01a4a8fb1a47db67b45646cc1856bf33c2ff7b5fcff0a574735b",
+        "gram_blocks": 14,
+        "max_gram_dimension": 83,
+        "residual_l1": "7402342904251787797465326713035113060169702540855344662247590178381061581307190227799628999201/6250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "certified_original_scale_margin": "9339709933373607057723930222537474518425706204640911650254178686181981854210413943322485731952419/1049356407036765625000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "errors": [],
+        "formal_certificate_allowed": false,
+        "registry_eligible": false
+      },
+      "status": "pending_exact_target_minus_opt_reconstruction",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -35112,5 +35170,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "427f23c98b5f1b233cd013f7bb06c0ddd01bba6b08fa28f5f1267060d684e66a"
+  "state_checksum": "717b76d016b80f32383e384f5f7deff71fa25cd2538944d6e648d0d299694dba"
 }
