@@ -2388,3 +2388,18 @@ append-only registry 和真实 DH derivative binding。
 P4 positive-target 条件、fixed-λ append-only registry transition、P3 真实 DH
 coefficient 与 C2/C3 derivative binding。当前所有结果仍只允许进入 open frontier，
 不提前关闭 parent 或 registry。
+
+### 2026-09-07 — 梁智炜收割 DH bridge、正目标与 append-only transition
+
+revision 713 登记 P3 `DH_COEFFICIENT_BRIDGE`：同域、同箱、同函数绑定后才能
+把 C2/C3 Taylor consumer 接到真实 DH identity，并保留 arbitrary-function 与
+wrong-domain obstruction。revision 714 登记 P4 `POSITIVE_TARGET_FEASIBILITY`
+和 fixed-λ `APPEND_ONLY_REGISTRY_TRANSITION`：正 target 的精确条件是
+`0<target≤canonicalTarget`，registry 只允许显式 append，compiled-only、
+pending、rejected、overwrite、delete 均 fail-closed。所有节点仍为
+`OPEN_UNCOMPILED`，registry=0，formal certificate 继续禁止。
+
+BODY6 strict-feasibility 已产生 proof-attempt，等待 review 成对后接入；随后
+继续把 domain repair、positive margin、parent closure 和 source binding 串入
+同一条 frontier。automation 已纠正为 hourly，并保留流川枫承接约三分之一
+GitHub 任务的扩展 lane。

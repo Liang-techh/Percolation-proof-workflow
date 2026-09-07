@@ -2067,6 +2067,45 @@ CHILDREN = [
             "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_DOMAINREPAIR20260907.review.md",
         ],
     },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.finite_box_uniform_margin.strict_export.endpoint_uniform_margin.taylor_remainder.c2c3_regularity.dh_coefficient_bridge",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.finite_box_uniform_margin.strict_export.endpoint_uniform_margin.taylor_remainder.c2c3_regularity",
+        "statement": "A C2/C3 Taylor remainder consumer can be connected to the actual DH coefficient identity only through explicit same-domain, same-box, and same-function bindings; arbitrary functions or restricted-domain identities do not close the bridge.",
+        "proof_sketch": "Keep TaylorRemainderSide and DHCoefficientIdentitySide independent, prove the identity at a point covered by the same box after transporting domain and function bindings, and retain exact arbitrary-function and wrong-domain obstructions. Concrete DH definitions, source semantics, coverage, and compilation remain external.",
+        "lane": "source_semantics",
+        "bottleneck": "coverage",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_DH_COEFFICIENT_BRIDGE",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_DH_COEFFICIENT_BRIDGE.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_DH_COEFFICIENT_BRIDGE_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction",
+        "statement": "For fixed front floors and residual caps, a prescribed positive target is feasible exactly when 0<target≤canonicalTarget; some positive target exists exactly when residualLoss<frontCredit, while the remaining domain, normalization, nominal, and q-cap obligations stay independent.",
+        "proof_sketch": "Define front credit, residual loss, and PositiveTargetBudget; prove the exact target-budget equivalences and positive-target existence without division, then transport a positive allocation to an actual scalar margin only through the existing same-domain composition and nominal-realization premises. Retain exact negative-target and missing-qCap counterexamples.",
+        "lane": "lean_adapter",
+        "bottleneck": "normalization",
+        "status": "OPEN_UNCOMPILED_P4_POSITIVE_TARGET_FEASIBILITY",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_PositiveTargetFeasibility.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_PositiveTargetFeasibility.review.md",
+        ],
+    },
+    {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization.final_admission_contract.explicit_registry_promotion_gate.pinned_kernel_receipt.verified_registry_entry_invariant.append_only_registry_transition",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization.final_admission_contract.explicit_registry_promotion_gate.pinned_kernel_receipt.verified_registry_entry_invariant",
+        "statement": "A verified-registry transition is append-only and requires an explicit verified evidence bundle, identity/digest equality, parent closure, independent authorization, and fresh entry identity; compiled-only, pending, rejected, overwrite, and delete requests all fail closed.",
+        "proof_sketch": "Define the typed append event and transition relation as before++[entry], separate explicit append from non-admission requests, and prove each non-append branch returns none. Keep the real registry, external digest computation, Lean execution, VERIFIED status, and mutation outside this sidecar.",
+        "lane": "lean_adapter",
+        "bottleneck": "admission",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_APPEND_ONLY_REGISTRY_TRANSITION",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_APPEND_ONLY_REGISTRY_TRANSITION20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_APPEND_ONLY_REGISTRY_TRANSITION20260907_REVIEW.md",
+        ],
+    },
 ]
 
 

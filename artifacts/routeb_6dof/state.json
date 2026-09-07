@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 712,
+  "revision": 714,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -42450,7 +42450,9 @@
       "parent_id": "200398af22404753838644b9f3ecc25e",
       "status": "open",
       "proof_sketch": "Keep c2c3Regularity and regularity_sound separate, consume the Taylor lower enclosure and endpoint/cap chain to produce per-box margin, and retain underestimated-remainder and missing-regularity obstructions without claiming a concrete Taylor implementation.",
-      "dependencies": [],
+      "dependencies": [
+        "9ff3eda7b18e4708829a740491767356"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -42485,7 +42487,9 @@
       "parent_id": "4ec96661d19b4f21b7889469f401d573",
       "status": "open",
       "proof_sketch": "Define an explicit evidence bundle and typed RegistryAdmissionInput, make admitRegistryEntry return none for compiled-only/pending/rejected inputs, and preserve the separation between an admission invariant and an actual VERIFIED status or registry mutation.",
-      "dependencies": [],
+      "dependencies": [
+        "b63b86e742944ffc946c3b9bcdf584fe"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -42520,7 +42524,9 @@
       "parent_id": "6ae1c6ff93364c8f841308abd603c48c",
       "status": "open",
       "proof_sketch": "Assemble split FrontFloors/ResidualCaps/NominalRealization/TargetBudget into UniformData, reuse uniformized_scalar_margin, and retain exact infinite-domain cap and nominal-direction obstructions without claiming all scalar routes fail.",
-      "dependencies": [],
+      "dependencies": [
+        "3f80bed3d9384675bf9ab25ece75b34a"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -42572,6 +42578,111 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_DOMAINREPAIR20260907.review.md",
             "sha256": "D42F809BD7AF46B6578C5F19BB2265BBFFEC58685A2A2026E2F5474A78A07ABC"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "9ff3eda7b18e4708829a740491767356": {
+      "id": "9ff3eda7b18e4708829a740491767356",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.finite_box_uniform_margin.strict_export.endpoint_uniform_margin.taylor_remainder.c2c3_regularity.dh_coefficient_bridge",
+      "statement": "A C2/C3 Taylor remainder consumer can be connected to the actual DH coefficient identity only through explicit same-domain, same-box, and same-function bindings; arbitrary functions or restricted-domain identities do not close the bridge.",
+      "parent_id": "91b27034ae4446fd8f67063c2b8fb0d2",
+      "status": "open",
+      "proof_sketch": "Keep TaylorRemainderSide and DHCoefficientIdentitySide independent, prove the identity at a point covered by the same box after transporting domain and function bindings, and retain exact arbitrary-function and wrong-domain obstructions. Concrete DH definitions, source semantics, coverage, and compilation remain external.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "coverage",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_CENTRAL_FD_DH_COEFFICIENT_BRIDGE",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_DH_COEFFICIENT_BRIDGE.lean",
+            "sha256": "AC8C6CFF1CBB0D83047A71E5304B29F5D6A630399AE5ED004A98058B0D7D099E"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_DH_COEFFICIENT_BRIDGE_REVIEW.md",
+            "sha256": "F8244469F75BB7FDAAB606308071FA20CF90313A14BC191354724EF21F999241"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "3f80bed3d9384675bf9ab25ece75b34a": {
+      "id": "3f80bed3d9384675bf9ab25ece75b34a",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility",
+      "statement": "For fixed front floors and residual caps, a prescribed positive target is feasible exactly when 0<target≤canonicalTarget; some positive target exists exactly when residualLoss<frontCredit, while the remaining domain, normalization, nominal, and q-cap obligations stay independent.",
+      "parent_id": "c156b0a680484258b2ed4b988e5d6657",
+      "status": "open",
+      "proof_sketch": "Define front credit, residual loss, and PositiveTargetBudget; prove the exact target-budget equivalences and positive-target existence without division, then transport a positive allocation to an actual scalar margin only through the existing same-domain composition and nominal-realization premises. Retain exact negative-target and missing-qCap counterexamples.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "normalization",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_P4_POSITIVE_TARGET_FEASIBILITY",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_PositiveTargetFeasibility.lean",
+            "sha256": "AA9757A682D1F794345D04FA9B48399B308D095DB88C4C279FB1A96BE0F3EE84"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_PositiveTargetFeasibility.review.md",
+            "sha256": "2A5EFD7A81148AE66D692B638676219BB4034F450072F979341B0D5ACE5F0DCB"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "b63b86e742944ffc946c3b9bcdf584fe": {
+      "id": "b63b86e742944ffc946c3b9bcdf584fe",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization.final_admission_contract.explicit_registry_promotion_gate.pinned_kernel_receipt.verified_registry_entry_invariant.append_only_registry_transition",
+      "statement": "A verified-registry transition is append-only and requires an explicit verified evidence bundle, identity/digest equality, parent closure, independent authorization, and fresh entry identity; compiled-only, pending, rejected, overwrite, and delete requests all fail closed.",
+      "parent_id": "9bb6643d8b21498288100ef7923210cd",
+      "status": "open",
+      "proof_sketch": "Define the typed append event and transition relation as before++[entry], separate explicit append from non-admission requests, and prove each non-append branch returns none. Keep the real registry, external digest computation, Lean execution, VERIFIED status, and mutation outside this sidecar.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "admission",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_FIXED_LAMBDA_APPEND_ONLY_REGISTRY_TRANSITION",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_APPEND_ONLY_REGISTRY_TRANSITION20260907.lean",
+            "sha256": "FC7CF7608F2724BFB1C5767198F6BDA36E1236909809DBE1F64BA983D0CC5180"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_APPEND_ONLY_REGISTRY_TRANSITION20260907_REVIEW.md",
+            "sha256": "E4ADA7DCA79628AA5AFA32DFD47FB0173BC61C59DCCE34DD9D90942DF2F59298"
           }
         ],
         "registry_eligible": false,
@@ -70934,6 +71045,50 @@
       "artifact_hashes_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T20:53:38.528433+00:00",
+      "kind": "node_added",
+      "node_id": "9ff3eda7b18e4708829a740491767356",
+      "parent_id": "91b27034ae4446fd8f67063c2b8fb0d2",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.finite_box_uniform_margin.strict_export.endpoint_uniform_margin.taylor_remainder.c2c3_regularity.dh_coefficient_bridge"
+    },
+    {
+      "at": "2026-09-07T20:53:38.528455+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.finite_box_uniform_margin.strict_export.endpoint_uniform_margin.taylor_remainder.c2c3_regularity.dh_coefficient_bridge"
+      ],
+      "metadata_updated": [],
+      "artifact_hashes_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T20:55:30.636264+00:00",
+      "kind": "node_added",
+      "node_id": "3f80bed3d9384675bf9ab25ece75b34a",
+      "parent_id": "c156b0a680484258b2ed4b988e5d6657",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility"
+    },
+    {
+      "at": "2026-09-07T20:55:30.637056+00:00",
+      "kind": "node_added",
+      "node_id": "b63b86e742944ffc946c3b9bcdf584fe",
+      "parent_id": "9bb6643d8b21498288100ef7923210cd",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization.final_admission_contract.explicit_registry_promotion_gate.pinned_kernel_receipt.verified_registry_entry_invariant.append_only_registry_transition"
+    },
+    {
+      "at": "2026-09-07T20:55:30.637064+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility",
+        "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization.final_admission_contract.explicit_registry_promotion_gate.pinned_kernel_receipt.verified_registry_entry_invariant.append_only_registry_transition"
+      ],
+      "metadata_updated": [],
+      "artifact_hashes_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -74590,5 +74745,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "9eb026b5f83e278e923da627fb0a7ddc5dbb8e0bc4866ddfa6ecfcd08c8b15e6"
+  "state_checksum": "509d3cc9c008ae3d228d8109b28c70bd76276465d4c8f450c1b18955cadeb618"
 }

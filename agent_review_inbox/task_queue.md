@@ -3005,3 +3005,15 @@ registry transition、真实 DH coefficient 到 C2/C3 绑定。
 下一轮已派发：BODY6 排除零点后的正 margin feasibility；P4 positive-target
 feasibility；fixed-λ append-only registry transition；P3 C2/C3 到真实 DH
 coefficient binding。四项继续保持 `OPEN_UNCOMPILED`，等待 proof-attempt + review。
+
+revision 713 收割并登记 P3 DH coefficient→C2/C3 bridge；revision 714 收割
+P4 positive-target feasibility 与 fixed-λ append-only registry transition。
+三者都只关闭了 typed contract 的局部边界，没有关闭 source/coverage、实际
+正 margin、Lean kernel 或 registry admission。BODY6 strict-feasibility 结果
+已收到 proof-attempt，待补 review 后登记。
+
+下一轮继续派发：BODY6 补 review 并推进排除零点后的实际正 margin；fixed-λ
+推进 parent/child closure 到 append-only event 的 fail-closed contract；P4
+推进正 target 与 source/normalization 的同域绑定；P3 推进 DH coefficient
+bridge 到真实函数定义和箱覆盖。GitHub 批次约三分之一交给流川枫，收割节奏
+改为每小时一次；其他时间本地继续数学推演。
