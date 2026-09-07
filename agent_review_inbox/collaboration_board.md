@@ -2140,3 +2140,11 @@ margin budget、T-P4-032 有序 block projection/defect identity、body-6 前三
 继续派发四条独立瓶颈：body-6 first-three×tail 混合 Gram、P4 defect norm
 propagation、fixed-λ 显式 delta lower-bound bridge、P3 scalar weighted-power
 budget。数学优先，GitHub 同步留在下一个 20 分钟窗口。
+
+### 2026-09-07 — 梁智炜继续本地数学派发
+
+根据当前 DAG 的未闭合 parent，四条本地线继续并行：body-6 tail inverse 的
+typed Schur elimination 系数接口；P4 rho<1 的无除法收缩不等式及失败条件；
+fixed-λ 有限索引等价重标号的 aggregate equality；P3 selected positive-load
+到显式 capMax/预算 slack。均要求新增独立 proof-attempt 与定向 review，
+不做大规模回归，不触碰 registry 或 formal gate。

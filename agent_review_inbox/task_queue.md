@@ -2821,4 +2821,16 @@ source-independent/open/uncompiled 候选。
 - P3 `quantitative_gap` 已完成定向 review 并登记，revision 673；它把整体
   weighted cap-load gap 下界化为一个选中坐标的 `load[j]*(qCap[j]-q[j])`。
 - 该叶保留其余项非负与 selected gap 前提，未重复 strict order/obstruction，
-  也未进入 registry。
+也未进入 registry。
+
+### 2026-09-07 — 当前本地数学批次
+
+- body-6：tail inverse → typed Schur elimination 的逐项系数展开；
+- P4 true-DH/K-path：rho<1 的无除法收缩接口，并保留 rho≥1、B<0、缺少
+  E≥0 时的 obstruction；
+- fixed-λ：有限索引 bijection/equiv 与逐点权重保持推出 aggregate equality；
+- P3：positive selected load 与 cap-load gap 推出显式 strict capMax/预算 slack。
+
+本批只推进数学结构和 proof-attempt；待定向 review 到达后再登记 DAG。GitHub
+发布仍按每小时一次的六人环执行，流川枫承接约三分之一独立任务；本地不做
+常规远端同步。
