@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 391,
+  "revision": 392,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -7698,7 +7698,8 @@
       "status": "open",
       "proof_sketch": "Use the fixed Newton-Euler syzygy first, then a direct residual PMI; reject surrogate-only SOS claims.",
       "dependencies": [
-        "1e7b1df1835f4deba06b11a8182f6719"
+        "1e7b1df1835f4deba06b11a8182f6719",
+        "4a9af66cdc4f4607857a5cf360f19eb7"
       ],
       "verified_artifact": null,
       "attempts": [
@@ -10982,6 +10983,51 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_schur_completion_lean\\verify.sh",
             "sha256": "53e5b19e992e367fa60bcf1ed55d1e4421cf7a7b026df9b2b661a3c0d002a8bd"
+          }
+        ]
+      }
+    },
+    "4a9af66cdc4f4607857a5cf360f19eb7": {
+      "id": "4a9af66cdc4f4607857a5cf360f19eb7",
+      "name": "P5.componentwise_relative_decay",
+      "statement": "Coordinatewise relative force residual bounds strictly below coordinate damping imply retained dissipation.",
+      "parent_id": "9a3a7eef35b34880b85423aac67ea015",
+      "status": "open",
+      "proof_sketch": "Bound each r_i*v_i by rho_i*v_i^2 using absolute values, sum the inequalities, and optionally lower-bound d_i-rho_i by a uniform lambda. Keep relative-bound source semantics separate.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean-source-independent-real-analysis",
+        "statement_status": "pending_pinned_lean_compile",
+        "evidence_level": "generic_componentwise_decay_child",
+        "claim_status": "componentwise_relative_decay_open",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "preferred_route": true,
+        "unresolved": [
+          "pinned_lean_compile_receipt",
+          "zero_sorry_and_allowed_axioms_receipt",
+          "same_domain_force_error_relative_bound",
+          "true_DH_FD_solve_source_binding"
+        ],
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_componentwise_relative_decay_lean\\ComponentwiseRelativeDecay.lean",
+            "sha256": "c545d64fb3fbe707718e7c25d3c14d6292066c4ba13ea71d02031998d8dbf7c3"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_componentwise_relative_decay_lean\\README.md",
+            "sha256": "83a1a0d0ffc6feced6be14c46e0e950c80b612e69075409ca80068a4ca279ca5"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_componentwise_relative_decay_lean\\lean-toolchain",
+            "sha256": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_componentwise_relative_decay_lean\\verify.sh",
+            "sha256": "d7bf35f880d59dd029245badc761db16434e011d90776f4f9d30eeb279ac25a4"
           }
         ]
       }
@@ -32055,6 +32101,40 @@
       "status": "pending_pinned_lean_compile",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T07:59:47.324602+00:00",
+      "kind": "node_added",
+      "node_id": "4a9af66cdc4f4607857a5cf360f19eb7",
+      "parent_id": "9a3a7eef35b34880b85423aac67ea015",
+      "name": "P5.componentwise_relative_decay"
+    },
+    {
+      "at": "2026-09-07T07:59:47.324621+00:00",
+      "kind": "routeb_p5_componentwise_decay_frontier_created",
+      "node_id": "4a9af66cdc4f4607857a5cf360f19eb7",
+      "parent_id": "9a3a7eef35b34880b85423aac67ea015",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_componentwise_relative_decay_lean\\ComponentwiseRelativeDecay.lean",
+          "sha256": "c545d64fb3fbe707718e7c25d3c14d6292066c4ba13ea71d02031998d8dbf7c3"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_componentwise_relative_decay_lean\\README.md",
+          "sha256": "83a1a0d0ffc6feced6be14c46e0e950c80b612e69075409ca80068a4ca279ca5"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_componentwise_relative_decay_lean\\lean-toolchain",
+          "sha256": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_componentwise_relative_decay_lean\\verify.sh",
+          "sha256": "d7bf35f880d59dd029245badc761db16434e011d90776f4f9d30eeb279ac25a4"
+        }
+      ],
+      "status": "pending_pinned_lean_compile",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -35711,5 +35791,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "74e676f53f805a6477ef1885803bf43dc86b511fe00dd4a553ffbc71fb42399f"
+  "state_checksum": "bac5f4aea77174c47fab520cbbeb27ef382b22bc875ae2a8298fc636f61fd28d"
 }
