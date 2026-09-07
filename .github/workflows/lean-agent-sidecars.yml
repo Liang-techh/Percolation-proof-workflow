@@ -97,6 +97,8 @@ jobs:
         run: |
           {
             echo "elan: $(elan --version 2>&1 || true)"
+            cd examples/local_fkg
+            echo "toolchain: $(cat lean-toolchain)"
             echo "lake: $(lake --version 2>&1 || true)"
             echo "lean: $(lean --version 2>&1 || true)"
           } | tee "$RUNNER_TEMP/lean-agent-environment.txt"
