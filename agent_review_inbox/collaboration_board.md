@@ -2304,6 +2304,14 @@ P3 `CONTINUOUS_COVERAGE` 已收割并登记 revision 692。该叶完成 interval
 certificate 到抽象连续域的同点 coverage bridge；没有把 finite grid、sample
 receipt 或 box 列表升级成连续覆盖，也没有改变 formal gate。
 
+### 2026-09-07 — 梁智炜收割 dual-scale 与 finite-box margin
+
+P4 `DUAL_SCALE_COMPOSITION`、P3 `FINITE_BOX_MARGIN` 已分别登记 revision 697、
+698。前者阻止把 front quadratic scale 与 residual scalar scale 混用，并保留
+四类符号/识别反例；后者通过显式有限覆盖的 `Finset.inf'` 得到共同正 margin，
+同时保留空集、断覆盖和无限域 reciprocal-gap 阻塞。全部仍为
+`OPEN_UNCOMPILED`，registry=0。
+
 ### 2026-09-07 — 梁智炜收割三条数学边界
 
 P4 `MINIMAL_RESIDUAL_BUDGET_ADAPTER`、fixed-λ `TYPED_RECEIPT_AUDIT`、

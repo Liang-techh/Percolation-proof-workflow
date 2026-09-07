@@ -2958,3 +2958,7 @@ P3 derivative-endpoint/gap bridge 已登记 revision 696。下一批继续拆分
 tail inverse/solve 与分母条件；fixed-λ canonical statement digest/normalization；
 P3 finite-cover 到全域统一正 margin。三项仍需 proof-attempt + 定向 review，
 不做本机 Lean/Lake 和宽回归。
+
+P4 dual-scale composition 已登记 revision 697；P3 finite-box uniform margin
+已登记 revision 698。dual-scale 叶明确区分 front quadratic scale 与 residual
+scalar scale；finite-box 叶只在非空有限覆盖和 per-box gap 下给出 commonMu。
