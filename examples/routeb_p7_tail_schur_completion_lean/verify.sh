@@ -24,7 +24,8 @@ trap 'rm -f "$LOG"' EXIT
   "$LAKE" env lean -DwarningAsError=true "$ROOT/TailSchurCompletion.lean"
 ) 2>&1 | tee "$LOG"
 
-for DECL in schur_completion_identity robust_inverse_quadratic_bound_2x2 schur_tail_absorption; do
+for DECL in schur_completion_identity robust_inverse_quadratic_bound_2x2 \
+  schur_tail_absorption schur_tail_absorption_at_p7; do
   grep -q "$DECL" "$LOG"
 done
 if grep -Eiq 'sorryAx|declaration uses.*axiom|unknown module|error:' "$LOG"; then

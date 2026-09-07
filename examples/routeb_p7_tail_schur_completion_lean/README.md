@@ -10,6 +10,8 @@ in `review-T-P7-001-honglianmozun-20260906T2244.md`:
   bounds on the two cross coefficients;
 - an absorption theorem consuming a typed bound `inverse_quadratic <= eta`
   and `eta <= tau`.
+- a direct P7 specialization consuming `eta <= 1/160000`, matching the
+  existing exact-rational P7 target without importing solver or source claims.
 
 The symbols `a,b,d,u1,u2,s` are abstract. This does not prove that the
 deployed seven-term P7 polynomial, its inverse block, normalization scalar,

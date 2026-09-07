@@ -82,8 +82,21 @@ theorem schur_tail_absorption
   rw [hidentity]
   nlinarith
 
+theorem schur_tail_absorption_at_p7
+    (a b d u1 u2 x y s eta : ℝ)
+    (ha : 0 < a)
+    (hdet : 0 < a * d - b ^ 2)
+    (hbound : (d * u1 ^ 2 - 2 * b * u1 * u2 + a * u2 ^ 2) /
+        (a * d - b ^ 2) ≤ eta)
+    (heta : eta ≤ (1 / 160000 : ℝ)) :
+    0 ≤ a * x ^ 2 + 2 * b * x * y + d * y ^ 2 +
+      2 * s * (u1 * x + u2 * y) + (1 / 160000 : ℝ) * s ^ 2 := by
+  exact schur_tail_absorption a b d u1 u2 x y s
+    (1 / 160000 : ℝ) eta ha hdet hbound heta
+
 #print axioms schur_completion_identity
 #print axioms robust_inverse_quadratic_bound_2x2
 #print axioms schur_tail_absorption
+#print axioms schur_tail_absorption_at_p7
 
 end RouteBP7TailSchurCompletion
