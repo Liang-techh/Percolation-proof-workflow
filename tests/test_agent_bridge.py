@@ -9,7 +9,7 @@ from percolation_workflow.agent_bridge import (prepare_requests, bind_agent, rec
                                              retry_candidate,
                                              ingest_compile_log, renew_agent, reclaim_expired_agent,
                                              reclaim_dead_compile)
-from percolation_workflow.model import WorkflowState
+from percolation_workflow.model import NodeStatus, WorkflowState
 from percolation_workflow.store import StateStore
 from percolation_workflow.research import next_actions
 
@@ -32,6 +32,23 @@ class BridgeTests(unittest.TestCase):
             self.assertEqual([request['node_id'] for request in requests], [runnable])
             self.assertEqual(requests[0]['scheduler']['obstruction_rank'], 0)
             self.assertNotIn(blocked, [request['node_id'] for request in requests])
+
+    def test_prepare_requests_preserves_cross_branch_input_contract(self):
+        with tempfile.TemporaryDirectory() as directory:
+            store = StateStore(Path(directory) / 'state.json')
+            state = WorkflowState()
+            input_id = state.add_node('closed-input', 'theorem input : True')
+            state.nodes[input_id].status = NodeStatus.VERIFIED
+            consumer_id = state.add_node(
+                'consumer', 'theorem consumer : True',
+                metadata={'statement_status': 'indexed',
+                          'required_node_ids': [input_id]})
+            store.save(state)
+
+            requests = prepare_requests(store, limit=4)
+
+            self.assertEqual([request['node_id'] for request in requests], [consumer_id])
+            self.assertEqual(requests[0]['required_node_ids'], [input_id])
 
     def test_prepare_requests_can_opt_into_formalizable_math_lanes(self):
         with tempfile.TemporaryDirectory() as directory:

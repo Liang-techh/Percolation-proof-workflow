@@ -213,6 +213,7 @@ def prepare_requests(store: StateStore, *, limit: int = 4,
                        'admission': 'fail_closed_before_child_creation',
                    },
                    'dependencies': [state.registry[d] for d in node.dependencies],
+                   'required_node_ids': list(node.metadata.get('required_node_ids', [])),
                    'diagnostics': diagnostics, 'status': 'awaiting_dispatch', 'agent_id': None}
         request['scheduler'] = {
             'obstruction_rank': obstruction_rank(node),
