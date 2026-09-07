@@ -190,6 +190,30 @@ bound 都不能推出本 theorem。
 seam；但无论哪条路，domain、full-X0、ramp、T=1 和 residual normalization
 必须完全相同。当前 P3/flowpipe receipts 尚未提供这个全局量化结论。
 
+### C4b — `relative_bias_residual_split` (new obstruction)
+
+`T-P5-005` 的数学审查（见
+`agent_review_inbox/review-T-P5-005-kuangmanmozun-20260906T2307.md`）表明，
+不能从当前抽象 `forceError` 或 `FDForceBudget.envelope` 自动推出
+`|r_i| <= rho_i |v_i|`：generic interface 允许在 `v=0` 时存在独立的
+gravity/controller mismatch，而 FD envelope 的 channels 1--4 还有正的
+additive offset。这个结论是接口 obstruction，不是对实际 deployed trajectory
+的反例；实际 source 仍需额外的 equilibrium/state binding。
+
+因此 P5/M4 的 admissible 分解应显式写成：
+
+```text
+e = e_rel + e_bias;
+B(e_rel) <= kappa^2 A(v),  kappa < 1;
+E' <= -(1-kappa) A(v) + <e_bias,v> + input_supply.
+```
+
+只有在同一 covered domain 上证明 `e_bias=0`（或它也随状态消失）时，才可
+把该式收缩为 strict zero-input decay。否则 `e_bias` 必须进入 C4 的统一
+residual ledger，并继续使用 absolute/ultimate-bound 路线；不得通过调 Young
+常数伪造 relative closure。C4b 只改变 proof decomposition 和 frontier
+排序，不改变 `D_gate=4483/2000`、C5 target 或 admission gate。
+
 ### C5 — `terminal_kernel_and_m4_composition`
 
 最后一个 child 把 C4 的 `D` 送入 terminal comparator，同时保留 domain
