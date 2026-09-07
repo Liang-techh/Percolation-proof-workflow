@@ -67,3 +67,14 @@ def test_resolvent_can_produce_conditional_bound_with_exact_premises() -> None:
     assert result.status == "CONDITIONAL_RESOLVENT_PORT_BOUND"
     assert result.inverse_difference_bound == MU_DELTA / (1 - MU_DELTA)
     assert result.port_difference_bound == 6 * result.inverse_difference_bound
+
+
+def test_resolvent_rejects_couplings_without_matching_source_key() -> None:
+    result = derive_routeb_resolvent_port_propagation(
+        RouteBExactResolventPremise("mass:D", "induced_2", Fraction(1)),
+        mbd_norm_bound=Fraction(2),
+        delta_m_db_norm_bound=Fraction(3),
+    )
+    assert result.status == "OPEN_FAIL_CLOSED"
+    assert result.port_difference_bound is None
+    assert "coupling_source_key_missing" in result.errors

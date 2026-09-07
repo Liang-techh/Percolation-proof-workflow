@@ -61,7 +61,8 @@ conditional bounds
 ```
 
 A port bound additionally requires nonnegative `M_BD` and `DeltaM_DB` norm
-bounds and the same source/state key. The helper never infers invertibility,
+bounds and an explicitly supplied source/state key matching the inverse premise;
+omitting that key is fail-closed. The helper never infers invertibility,
 an inverse norm bound, or a coupling bound from the regularizer alone.
 
 The API and focused tests do not run Lean/Lake, Julia, SOS, trajectory checks,

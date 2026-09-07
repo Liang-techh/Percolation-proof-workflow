@@ -827,6 +827,10 @@ binding、O0.3 outward matrix inclusion、O0.4 inverse/port resolvent consumer�
 `M^0` 绑定后才能推出 `M_float=M_exact-δI`；`M_DD^{-1}` 的影响必须使用完整
 resolvent 恒等式，不能逐对角线近似。O0 保持 open，未进入 registry。
 
+O0 helper 的 fail-closed 边界已补强：只有在 `M_BD`/`DeltaM_DB` 范数同时带有
+与 exact inverse premise 相同的显式 source key 时，才允许返回 conditional port
+bound；省略或错配 source key 均拒绝。新增 focused test 覆盖该缺口。
+
 ### 2026-09-07 — 梁智炜：应用 O1 最小候选 repair
 
 根据 O1 API review，候选 `RouteBO1PortIdentity.lean` 已加入显式

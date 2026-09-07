@@ -326,8 +326,12 @@ def derive_routeb_resolvent_port_propagation(
         errors.append("mbd_norm_bound_negative")
     if db_bound is not None and db_bound < 0:
         errors.append("delta_m_db_norm_bound_negative")
-    if source_key is not None and source_key != premise.source_key:
-        errors.append("coupling_source_key_mismatch")
+    coupling_bounds_supplied = mbd_bound is not None or db_bound is not None
+    if coupling_bounds_supplied:
+        if not source_key:
+            errors.append("coupling_source_key_missing")
+        elif source_key != premise.source_key:
+            errors.append("coupling_source_key_mismatch")
     if ((mbd_bound is not None or db_bound is not None)
             and not source_key):
         errors.append("coupling_source_key_missing")
