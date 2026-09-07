@@ -1,46 +1,26 @@
-# Anthropic FLT spectral predicate sidecar
+# Anthropic FLT Spectral Predicate Sidecar
 
-Task: `T-FLT-SPECTRAL-PREDICATE`.
+This directory is a focused sidecar for `T-FLT-SPECTRAL-PREDICATE`.
 
-This corrective sidecar replaces the previous tautological `range = range`
-helper with a theorem whose statement contains the genuine eigenvector
-predicate
+Scope:
 
-```text
-T v = μ • v
-```
+- a concrete operator family over `Fin 2 → ℚ`
+- a scalar predicate `scalarPredicate : Unit → ℚ`
+- a genuine range-to-eigenspace equality
+- explicitly not an upstream FLT theorem proof
 
-and proves equality between `LinearMap.range f` and the set of all vectors
-satisfying that predicate, provided two explicit semantic premises hold:
+Provenance:
 
-1. every vector in the range is a `μ`-eigenvector of `T`;
-2. every `μ`-eigenvector of `T` has a preimage under `f`.
+- upstream candidate commit: `aa2d8b34692b16c70f699536de0d8e75b9a3e9ef`
+- candidate declaration:
+  `Submodule.exists_injective_linearMap_baseChange_torsionBySet_range_eq_eigenspace`
 
-A second theorem carries an explicit `Function.Injective f` premise to mirror
-the shape of the upstream FLT candidate.
+Files:
 
-## Provenance boundary
+- `AnthropicFLTSpectralPredicateSidecar.lean`
+- `lakefile.lean`
+- `lean-toolchain`
+- `verify.sh`
 
-Upstream candidate:
-
-- commit: `aa2d8b34692b16c70f699536de0d8e75b9a3e9ef`
-- path: `Theorems/Thm_Submodule_exists_injective_linearMap_baseChange_torsionBySet_range_eq_eigenspace.lean`
-- declaration: `Submodule.exists_injective_linearMap_baseChange_torsionBySet_range_eq_eigenspace`
-
-This directory does **not** import the upstream theorem or its FLT-specific
-`P2M.Sol...` proof surface. It is a self-contained abstraction of the spectral
-interface only. Therefore it is not evidence of direct upstream theorem reuse
-and does not justify Route-B/registry promotion.
-
-## Focused check
-
-Run:
-
-```bash
-./verify.sh
-```
-
-The Lean file includes `#print axioms` for both exported theorems. The scheduled
-agent that created this sidecar did not have a local Lean executable available,
-so compilation must remain pending until the focused verifier is run in a Lean
-4.33.1 / compatible Mathlib environment.
+The theorem is intentionally small and self-contained. It is meant to show the
+predicate/eigenspace interface directly, not to develop number theory.
