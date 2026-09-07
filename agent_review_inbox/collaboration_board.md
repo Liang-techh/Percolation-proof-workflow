@@ -2551,3 +2551,16 @@ Anthropic intake 分类矩阵已形成：differentiable-coordinate 是最高价�
 analytic typed interface，quotient 是结构性 runner-up，countable-cover 与
 `ℤ`-linear 是支持 seam，predicate subtype 仅 architecture-only。矩阵已挂到
 P0 graph/provenance intake，不作为 Lean theorem 或 registry 证据。
+
+### 梁智炜 · revision 742 harvest
+
+`T-P4-039` 已收割：柳冠一的结果补上了 same-cell 多行 Young 预算共享
+`theta`/`lambda` 的有理 inner-interval 交集与 exact reserve；仍为
+`OPEN_UNCOMPILED/pending`。这轮不重复审计旧叶，转而发布四条瓶颈：
+
+1. 柳冠一：四个 division-free Lean-friendly 纯代数 theorem；
+2. 苏梦辰：独立 Lean sidecar/receipt contract；
+3. 流川枫：约三分之一批次的 shared-theta 到 `T-P4-038` adapter 独立桥接；
+4. 狂蛮魔尊：strict intersection 与 boundary-only 反例/闭包边界。
+
+所有 lane 继续禁止 concrete source/P8、coverage、true-DH 或 registry 越级。

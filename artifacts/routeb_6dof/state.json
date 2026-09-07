@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 741,
+  "revision": 742,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -14028,6 +14028,34 @@
             "target_scope": "routeb_node",
             "source_commit": "e18fb7711d60716110c60a1e7b97580f2617a042",
             "review_file": "agent_review_inbox/review-T-P4-039-common-lambda-kuangmanmozun-20260907T1542.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/companion-T-P4-039-liuguanyi-20260907T1619.md",
+            "record_kind": "companion_log",
+            "review_sha256": "62AAD1B2FDF7DDB6F946B9DC24C3909C6379F1F835A514D1D599037001FECDB5",
+            "task_id": "T-P4-039",
+            "source_agent": "柳冠一",
+            "created_at": "2026-09-07T16:19:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_common_lambda_feasibility_formalization",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P4-039-liuguanyi-20260907T1616.md",
+            "record_kind": "review_result",
+            "review_sha256": "BCAFF6348DF999B97807779D9339B6D3D8D0DE21453FC67CB37A68FF47BE846A",
+            "task_id": "T-P4-039",
+            "source_agent": "柳冠一",
+            "created_at": "2026-09-07T16:16:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_common_lambda_feasibility_formalization",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "ee85de08d92bdac4492a5722989c954b8d4ac0f9",
+            "review_file": "agent_review_inbox/review-T-P4-039-liuguanyi-20260907T1616.md",
             "admission_label": "pending"
           }
         ]
@@ -75026,6 +75054,32 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "edd8407c33f54c41867f03b46ec1e313"
+    },
+    {
+      "at": "2026-09-07T23:20:31.872806+00:00",
+      "kind": "agent_companion_integrated",
+      "record_file": "agent_review_inbox/companion-T-P4-039-liuguanyi-20260907T1619.md",
+      "record_kind": "companion_log",
+      "review_sha256": "62AAD1B2FDF7DDB6F946B9DC24C3909C6379F1F835A514D1D599037001FECDB5",
+      "task_id": "T-P4-039",
+      "classification": "pending_common_lambda_feasibility_formalization",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "b88c2ed6186d442f84b9b652de48a125"
+    },
+    {
+      "at": "2026-09-07T23:20:31.873108+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-039-liuguanyi-20260907T1616.md",
+      "record_kind": "review_result",
+      "review_sha256": "BCAFF6348DF999B97807779D9339B6D3D8D0DE21453FC67CB37A68FF47BE846A",
+      "task_id": "T-P4-039",
+      "classification": "pending_common_lambda_feasibility_formalization",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "b88c2ed6186d442f84b9b652de48a125"
     }
   ],
   "agent_requests": {},
@@ -78682,5 +78736,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "95f02d707cf5a0ac220dbf025b5f50331a639917c61f8575a7b3c907fd566a87"
+  "state_checksum": "98960a5ea2b20b031b92c31fd28da41bbee51ff2e05cc6037dda5df471c638ce"
 }

@@ -3161,3 +3161,30 @@ revision 740–741 的定时收割修复了 review envelope 路由：当 agent �
 `TASK_TARGETS` 做最长边界前缀匹配，不读取数学正文。该轮补收 P3-009/P3-012、
 P4-030/031/033/036.2/037/038/039 与 P8-002 的 pending review metadata；
 所有结果仍不进入 verified registry。
+
+## revision 742 — T-P4-039 harvest and next independent lanes
+
+本轮收割 `柳冠一/T-P4-039` 的 review 与 companion：补齐同一 source cell 多行
+Young/combined-Schur 共享 `theta`/`lambda` 的有理半径交集构造，给出
+completed-square identity、严格 reserve 公式以及 rowwise PASS 不能推出
+shared-parameter PASS 的精确反例。该结果仍为 `pending` mathematical/interface
+child，不改变 verified registry 或 formal gate。
+
+下一批只发布互不重叠的瓶颈：
+
+- `T-P4-040`（柳冠一/数学）：把 `T-P4-039` 的四个纯代数 theorem 压缩成
+  Lean-friendly、division-free statement，并明确 `Rat`/`Real` 边界；禁止引入
+  concrete source/P8 假设。
+- `T-P4-041`（苏梦辰/Lean）：为 `T-P4-039` 四个小 theorem 设计独立
+  sidecar/receipt contract，检查 pinned toolchain、axioms、placeholder 与
+  编译入口；不得把候选直接写入 registry。
+- `T-P4-042`（流川枫/独立 lane，约本批三分之一）：审计并形式化
+  `T-P4-039` 与现有 `T-P4-038` scalar budget adapter 的最小 typed bridge，
+  特别检查 shared theta 是否被错误降级为 rowwise theta；只提交数学/接口与
+  独立 receipt 边界。
+- `T-P4-043`（狂蛮魔尊/数学）：构造 common-parameter boundary-only 与
+  strict-intersection 的反例/闭包条件，明确何时 midpoint 构造失效，供
+  comparator 与 admission gate 使用。
+
+所有新 lane 必须保留 `pending`、完整 provenance 和失败历史；不把纯数学结果、
+编译候选或单行 discriminant PASS 升级为 P4/M4 admission。
