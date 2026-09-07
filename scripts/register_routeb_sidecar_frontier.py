@@ -219,6 +219,27 @@ def main() -> None:
             if missing:
                 recorded.extend(missing)
                 updated.append(spec["name"])
+            # Older decomposition scripts predate the explicit math-policy
+            # fields.  Backfill only absent advisory/gate defaults so the
+            # scheduler sees the same bottleneck as a newly registered child;
+            # never overwrite a coordinator-owned positive evidence state.
+            defaults = {
+                "math_lane": spec["lane"],
+                "math_bottleneck": spec["bottleneck"],
+                "evidence_status": spec["status"],
+                "registry_eligible": False,
+                "comparator_accepted": False,
+                "registry_promoted": False,
+                "formal_certificate_allowed": False,
+                "proof_proven": False,
+                "source_binding_proven": False,
+                "lean_compiled": False,
+            }
+            for key, value in defaults.items():
+                if key not in existing.metadata:
+                    existing.metadata[key] = value
+                    if spec["name"] not in updated:
+                        updated.append(spec["name"])
             continue
         source_artifacts = [artifact(path) for path in spec["artifacts"]]
         metadata = {

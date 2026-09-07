@@ -1651,3 +1651,12 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   coverage 或 registry admission。
 - 下一条新增并行线由 Kant the 6th 处理固定 λ 有限 fold 的抽象 Lean 接口，写入
   `examples/routeb_fixed_lambda_fold/NEW_*`，不覆盖现有 checker/receipt。
+
+### 2026-09-07 — 调度字段回填修正
+
+- 发现旧 decomposition child 缺少显式 `math_lane/math_bottleneck`，且
+  “without claiming coverage” 被名称启发式误排为 coverage；注册器现在对既有
+  child 只补齐缺失的 advisory/gate 默认字段，不覆盖正证据状态。
+- fixed-λ fold 已恢复为 `lean_adapter/coefficient_identity`；排序结果显示
+  P5 SPN proof attempt 与 fixed-λ fold 位于 coefficient lane，H_acc 仍为
+  evaluator-enclosure，source 语义边界保持不变。state revision `597`。
