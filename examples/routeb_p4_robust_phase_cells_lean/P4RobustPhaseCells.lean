@@ -75,8 +75,8 @@ theorem base_trig_cell_of_abs_le
       1 - b^2 / 2 ≤ Real.cos r ∧ Real.cos r ≤ 1 := by
   have hSinAbs : |Real.sin r| ≤ b := Real.abs_sin_le_abs.trans hr
   have hSin := abs_le.mp hSinAbs
-  have hBounds := abs_le.mp hr
-  have hSq : r^2 ≤ b^2 := sq_le_sq' hBounds.1 hBounds.2
+  have hSqAbs : |r|^2 ≤ b^2 := (sq_le_sq₀ (abs_nonneg r) hb).2 hr
+  have hSq : r^2 ≤ b^2 := by simpa only [sq_abs] using hSqAbs
   have hCosBase : 1 - r^2 / 2 ≤ Real.cos r := Real.one_sub_sq_div_two_le_cos
   refine ⟨hSin.1, hSin.2, ?_, Real.cos_le_one r⟩
   linarith
@@ -91,7 +91,7 @@ theorem formed_angle_error_to_reduced_radius
   have hRewrite : xhat - center = (xhat - (q + center)) + q := by ring
   rw [hRewrite]
   calc
-    |xhat - (q + center) + q| ≤ |xhat - (q + center)| + |q| := abs_add _ _
+    |xhat - (q + center) + q| ≤ |xhat - (q + center)| + |q| := abs_add_le _ _
     _ ≤ eps + a := add_le_add hform hq
     _ = a + eps := by ring
 
