@@ -59,7 +59,7 @@ theorem ramp_w_eq_mul
   intro t
   have hconst : h t = h 0 := is_const_of_deriv_eq_zero hdiff hzero t 0
   simp only [h, lin, Pi.sub_apply, hw0, mul_zero, sub_zero] at hconst
-  exact hconst
+  linarith
 
 /-- Combined scalar ramp reconstruction. -/
 theorem ramp_reconstruction
