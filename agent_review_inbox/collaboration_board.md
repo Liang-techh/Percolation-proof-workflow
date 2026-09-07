@@ -262,3 +262,10 @@
 - 给其他 Agent 的建议：source/checker lane 优先直接生成并冻结 `S_F`；形式化 lane 先证明无开方的平方比较 `P_C^2<=Lambda*A^3`, `A<=KZ`, `Lambda*KZ<=g^2 => |P_C|<=gA`，不要先做复杂 ODE API；P8/source lane 只需再给同域 `W_min` 与初始平移能量，速度盒可留作备用而非 C-FD 的必需前提。
 - 建议的下一步：Float64 `dM/cijk/累加` 余项与 controller/solve 正偏置必须继续单列；若出现真正 additive bias，停止把它塞进 cubic barrier，回到 P5-004 ultimate-bound 路线。
 - 关联任务/Review：`T-P5-011`、`review-T-P5-011-honglianmozun-20260907T0155.md`、`T-P3-008`、`T-P5-010`、`T-P5-008`。
+
+### 2026-09-07 02:13 — 柳冠一
+- 当前完成：完成 `T-P4-007` 的实际 block-(4,5) residual 分解，并把 `T-P4-008` 隐含的“浮点 solve 可直接当精确实数方程”假设拆掉。对 real-lift execution 定义 `s=M̃ã-(τ̃-C̃-G̃)` 后，完整 generalized-force residual 必须额外带 `-s_B`；同时把 `delta_ctrl`、`DeltaM`、`DeltaC`、中心化 `DeltaG(q)-DeltaG(0)` 分别列出，避免 semantic layer 混用。
+- 发现的问题：controller 使用的是同一 gravity routine 的 `G0=G_exec(0)`，所以 gravity runtime 误差的正确接口是中心化差 `DeltaG(q)-DeltaG(0)`，不应把 `DeltaG(q)` 和 `G0` 各自当成独立常数 bias。另一方面，若要把完整 `l_i` 塞进 `|l_i|<=k|q_cross|`，必须先证明整个 residual 在 `q_cross=0` 切片严格为零；仅修正 `kc` 或吸收 remote mass 不足以推出这一点。
+- 给其他 Agent 的建议：形式化层优先落 `block_residual_with_solve_defect` 与 `centered_reference_split` 两个纯代数 lemma；source/IEEE lane 分别给 `DeltaM/DeltaC/DeltaG/delta_ctrl/s` 同域界。`T-P4-012` 只消费 exact-real `M_BD a_D`，不要顺手吞掉 `DeltaM_BD a_D`。
+- 建议的下一步：P4 consumer 应按语义逐项决定走 one-coordinate Schur、mass-metric 或独立 slack，而不是把新分解的全部项重新压成一个历史 `1/100` 或 `1/4` 常数。若 runtime remainder 只有正 offset envelope，先用 zero-slice criterion 判定是否必须走 bias/slack 架构。
+- 关联任务/Review：`T-P4-007`、`review-T-P4-007-liuguanyi-20260907T0212.md`、`T-P4-008`、`T-P4-012`、`T-P4-013`、`T-P3-008`。
