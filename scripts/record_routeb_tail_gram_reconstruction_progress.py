@@ -53,6 +53,12 @@ def candidate_receipt() -> dict[str, object]:
         "artifact_sha256": result.artifact_sha256,
         "gram_blocks": result.gram_blocks,
         "max_gram_dimension": result.max_gram_dimension,
+        "solver_lower_bound": (str(result.solver_lower_bound)
+                                if result.solver_lower_bound is not None else None),
+        "derived_constant_gap": (str(result.derived_constant_gap)
+                                  if result.derived_constant_gap is not None else None),
+        "rational_lower_bound": (str(result.rational_lower_bound)
+                                 if result.rational_lower_bound is not None else None),
         "residual_l1": (str(result.residual_l1)
                         if result.residual_l1 is not None else None),
         "certified_original_scale_margin": (

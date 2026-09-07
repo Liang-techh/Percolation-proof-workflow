@@ -43,6 +43,10 @@ def main() -> int:
         "max_gram_dimension": result.max_gram_dimension,
         "rational_scale": (str(result.rational_scale)
                             if result.rational_scale is not None else None),
+        "solver_lower_bound": (str(result.solver_lower_bound)
+                                if result.solver_lower_bound is not None else None),
+        "derived_constant_gap": (str(result.derived_constant_gap)
+                                  if result.derived_constant_gap is not None else None),
         "rational_lower_bound": (str(result.rational_lower_bound)
                                  if result.rational_lower_bound is not None else None),
         "residual_l1": (str(result.residual_l1)

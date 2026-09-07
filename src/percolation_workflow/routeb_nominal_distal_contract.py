@@ -124,6 +124,8 @@ class RouteBPhysicalRationalGramReconstructionAudit:
     gram_blocks: int
     max_gram_dimension: int
     rational_scale: Fraction | None
+    solver_lower_bound: Fraction | None
+    derived_constant_gap: Fraction | None
     rational_lower_bound: Fraction | None
     residual_l1: Fraction | None
     certified_scaled_margin: Fraction | None
@@ -534,12 +536,12 @@ def audit_routeb_physical_rational_gram_reconstruction(
     try:
         scale = _quantize_common_denominator(
             Fraction(probe["scale_factor"]), denominator_cap)
-        lower = _floor_common_denominator(
-            Fraction(probe["objective_lower_bound"]), denominator_cap)
+        solver_lower = Fraction(probe["objective_lower_bound"])
+        lower = _floor_common_denominator(solver_lower, denominator_cap)
         if scale <= 0 or lower <= 0:
             errors.append("probe_scale_or_lower_bound_not_positive")
     except (KeyError, TypeError, ValueError, ZeroDivisionError):
-        scale = lower = None
+        scale = solver_lower = lower = None
         errors.append("probe_scale_or_lower_bound_malformed")
 
     raw_target, target_errors = _read_exact_scalar_polynomial(scalar_csv_text)
@@ -626,15 +628,25 @@ def audit_routeb_physical_rational_gram_reconstruction(
     residual_l1 = None
     scaled_margin = None
     original_margin = None
-    if scale is not None and lower is not None and not errors:
+    derived_gap = (
+        target[zero] * scale - reconstruction[zero]
+        if scale is not None else None
+    )
+    safe_lower = (
+        _floor_common_denominator(derived_gap, denominator_cap)
+        if derived_gap is not None else None
+    )
+    if safe_lower is not None and safe_lower <= 0:
+        errors.append("reconstruction_derived_lower_bound_not_positive")
+    if scale is not None and safe_lower is not None and not errors:
         residual = defaultdict(Fraction)
         for monomial in set(target) | set(reconstruction):
             residual[monomial] = (
                 target[monomial] * scale - reconstruction[monomial]
-                - (lower if monomial == zero else Fraction(0))
+                - (safe_lower if monomial == zero else Fraction(0))
             )
         residual_l1 = sum((abs(value) for value in residual.values()), Fraction(0))
-        scaled_margin = lower - residual_l1
+        scaled_margin = safe_lower - residual_l1
         original_margin = scaled_margin / scale
         if scaled_margin <= 0:
             errors.append("reconstruction_nonpositive_margin")
@@ -650,7 +662,9 @@ def audit_routeb_physical_rational_gram_reconstruction(
         gram_blocks=len(gram),
         max_gram_dimension=max(dimensions, default=0),
         rational_scale=scale,
-        rational_lower_bound=lower,
+        solver_lower_bound=solver_lower,
+        derived_constant_gap=derived_gap,
+        rational_lower_bound=safe_lower,
         residual_l1=residual_l1,
         certified_scaled_margin=scaled_margin,
         certified_original_scale_margin=original_margin,
