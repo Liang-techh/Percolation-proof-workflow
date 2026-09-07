@@ -39,6 +39,23 @@ def rhoMgl (q : Vec2) : Vec2 :=
 def rhoKc (q : Vec2) : Vec2 :=
   ( q.2 / 100, q.1 / 200 )
 
+/- The canonical PMI source writes the cross term in normalized f coordinates
+   and restores force coordinates by multiplying the two block equations by
+   I4=1/5 and I5=1/10.  This is a coordinate adapter only. -/
+def rhoKcNormalized (q : Vec2) : Vec2 :=
+  (q.2 / 20, q.1 / 20)
+
+def forceScaleKc (q : Vec2) : Vec2 :=
+  ((1 / 5 : ℝ) * (rhoKcNormalized q).1,
+    (1 / 10 : ℝ) * (rhoKcNormalized q).2)
+
+theorem forceScaleKc_eq_rhoKc (q : Vec2) :
+    forceScaleKc q = rhoKc q := by
+  rcases q with ⟨q4, q5⟩
+  apply Prod.ext <;>
+    dsimp [forceScaleKc, rhoKcNormalized, rhoKc] <;>
+    ring
+
 def rhoMass (massBB : Vec2 → Vec2) (aB : Vec2) : Vec2 :=
   ( (massBB aB).1 - (1 / 5 : ℝ) * aB.1,
     (massBB aB).2 - (1 / 10 : ℝ) * aB.2 )
@@ -85,6 +102,7 @@ theorem residual_decomposition_with_explicit_kc
   simpa [rhoKc] using residual_decomposition q v w c g g0 massBB aB remote hdesc
 
 #print axioms rhoKc_exact
+#print axioms forceScaleKc_eq_rhoKc
 #print axioms residual_decomposition
 #print axioms residual_decomposition_with_explicit_kc
 

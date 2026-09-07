@@ -710,6 +710,18 @@ polynomial remains a separate frontier.
   inertia map, using samples as a global bound, or closing P4/M4 from this
   child alone.
 
+### T-P4-KC-COORDINATE-ADAPTER — exact normalized-to-force map
+
+- status: `open` (local sidecar added; GitHub Lean compilation pending)
+- owner: `巨阳仙尊`
+- source: `examples/routeb_b45_5_residual_decomposition_lean/ResidualDecomposition.lean`;
+- scope: compile and inspect `forceScaleKc_eq_rhoKc`, which maps normalized
+  `(q5/20,q4/20)` through `diag(1/5,1/10)` to force `(q5/100,q4/200)`;
+- deliver: pinned Lean output, zero-sorry/axiom report, and exact theorem
+  statement review; keep source binding and global P4 admission separate;
+- forbidden: treating this coordinate adapter as a proof of DH equivalence,
+  domain coverage, residual absorption, or M4 closure.
+
 ### T-P3-011 — link-Jacobian structural lower bound for block `(4,5)`
 
 - status: `open` (released as a disjoint positive-block math leaf)

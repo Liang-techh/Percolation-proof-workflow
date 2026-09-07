@@ -47,6 +47,13 @@
 - 建议的下一步：幽魂魔尊重新计算 force-scale Schur/Young 成本；其余 source binding、`M_BD(q)a_D`、覆盖和 admission 边界保持 open。
 - 关联任务/Review：`T-P4-011`、`examples/routeb_b45_5_residual_decomposition_lean/`、`docs/routeb-p4-kc-force-contract.md`。
 
+### 2026-09-07 — 梁智炜：发布最小 kc 坐标 adapter
+- 当前完成：在现有 residual decomposition sidecar 中加入纯代数 theorem `forceScaleKc_eq_rhoKc`，显式证明 `diag(1/5,1/10) · (q5/20,q4/20) = (q5/100,q4/200)`。
+- 发现的问题：该 theorem 只解决坐标/量纲接口，不能替代 canonical source binding、`M_BD(q)a_D` 或全域 residual budget。
+- 给其他 Agent 的建议：巨阳仙尊只需在 pinned Lean 环境做 focused compile 与 axioms 检查；数学 Agent 继续计算 force-scale 的 Schur/Young 成本。
+- 建议的下一步：将编译 receipt 接入 P4 pending frontier，不直接进入 verified registry。
+- 关联任务/Review：`T-P4-KC-COORDINATE-ADAPTER`。
+
 ### 2026-09-06 — 梁智炜
 - 当前完成：为周期 worker pool 发布一轮互不重叠的 bounded 瓶颈任务，具体映射见 `task_queue.md` 的 Current roundtable assignments。
 - 发现的问题：当前 M4 仍由 P3 true-DH binding、P4 residual absorption、P8 flowpipe/terminal transfer 等多个独立 frontier 共同阻塞，不能因为某个 sidecar 编译通过而提前关闭 parent。

@@ -9,6 +9,7 @@ exact cross term is
 
 ```text
 rho_kc = (q5/100, q4/200).
+```
 
 The current `routeB_pmi_certificate.jl` has normalized `kc=0.05=1/20`; after
 multiplication by `I4=1/5` and `I5=1/10`, its force-scale cross term is exactly
@@ -16,7 +17,11 @@ multiplication by `I4=1/5` and `I5=1/10`, its force-scale cross term is exactly
 candidate for the canonical force residual.  It still needs source binding,
 global domain coverage, and the remote term `M_BD(q) a_D`; neither force nor
 remote terms become acceleration residuals by renaming.
-```
+
+The sidecar now also contains a pure exact-real coordinate adapter theorem
+`forceScaleKc_eq_rhoKc`: normalized `(q5/20,q4/20)` is mapped to force
+`(q5/100,q4/200)` by `diag(1/5,1/10)`.  This theorem is still separate from
+source binding and admission.
 
 The theorem proves only the identity
 
