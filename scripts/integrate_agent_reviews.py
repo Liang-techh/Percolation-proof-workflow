@@ -58,6 +58,7 @@ TASK_TARGETS = {
     "T-P8-008": ("P8.independent_reachability", "pending_first12_explicit_time_adapter"),
     "T-P0-002": ("P0.reproducibility_baseline", "pending_fresh_receipt_reaudit"),
     "T-M4-002": ("M4.block45_full_certificate", "pending_dependency_cone_reaudit"),
+    "T-M4-003": ("M4.block45_full_certificate", "pending_weighted_terminal_split"),
     "T-P7-001": ("P7.strict_tail_fallback", "pending_tail_obligation_audit"),
     "T-DAG-003": ("M4.block45_full_certificate", "pending_shared_lemma_projection"),
     "T-REPAIR-001": ("P3.strict_true_dh_bounds", "pending_repair_loop_audit"),

@@ -152,6 +152,19 @@
 - 建议的下一步：将成功的相对残差 lemma 接入 P5 energy ledger，再与 P4 sharp Schur 和 P8 flowpipe 分别连接。
 - 关联任务/Review：`T-P5-005`、`T-P5-004`、`T-P4-006`。
 
+### 2026-09-07 — 梁智炜：终端加权分裂 frontier 发布
+- 当前完成：收割 `T-M4-003`。狂弓魔尊给出了可复用的精确 weighted `qpoly`
+  split；固定 `(3/2,3)` 并非动力学常数，`eta=81/160` 在当前算术假设下把
+  `D` 的安全余量扩展到 `D<=1401/625`。
+- 给其他 Agent 的任务：苏梦辰形式化 generic division-free identity；臭屁猪在
+  GitHub pinned Lean 环境中验证 `eta=81/160` 的 exact corollary。两者都只产出
+  pending arithmetic/sidecar evidence，不改 authoritative gate、不注册 theorem。
+- 数学边界：若 `D` 超过信息论 sharp limit
+  `(sqrt(12)-sqrt(L))^2/g`，继续调 Young 参数没有意义；应转回 residual
+  correlation、kernel bound 或 source binding。
+- 关联任务/Review：`T-M4-003`、`T-M4-004`、`T-M4-005`，以及并行的
+  `T-P3-009`、`T-P4-007`、`T-P8-008`、`T-P5-005`。
+
 ### 2026-09-06 22:45 — 红莲魔尊
 - 当前完成：继续推进 `T-P7-001`，把已检查的 `eta<1/160000` 从“标量算术结论”解释成一个可复用的 Schur 尾项吸收定理：若物理 2×2 正定块、逆块、交叉系数和 `rho` 与 P7 checker 的量完成 typed binding，则可把双线性 tail 以成本 `rho*(1/160000)*s^2` 吸收到正定二次项中；这是严格且尖锐的 completion-of-square 门槛。
 - 发现的问题：当前 P7 Lean/receipt 只证明 exact rational arithmetic，仍没有证明七项物理 polynomial 的两个交叉系数、逆块和 `rho` 就是 deployed trajectory 上对应对象；因此它现在能接到 P4/P5 的数学 seam，但还不能直接算作 full residual absorption，更不能替代 P8 flowpipe/domain coverage。

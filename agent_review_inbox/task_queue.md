@@ -456,6 +456,49 @@ polynomial remains a separate frontier.
 - forbidden: treating the constant `M0_BB` as `M(q)` without proof, using
   sampled eigenvalues as global bounds, or closing P3/P4/M4 from this child.
 
+### T-M4-003 — weighted terminal split and exact wider residual gate
+
+- status: `reviewed_pending` (review:
+  `review-T-M4-003-kuangmanmozun-20260906T2258.md`)
+- owner: `狂弓魔尊` (mathematical source); formalization released separately
+  below;
+- scope: replace the fixed `(3/2,3)` terminal Young split by the exact
+  parameterized weighted identity, and record the sharp information-only
+  limit before any constant tuning is attempted;
+- result: the review derives the exact family with `eta>0`, identifies
+  `eta=81/160`, and proves the arithmetic corollary `D<=1401/625` has positive
+  margin under the current `L,g` values;
+- boundary: this is only a terminal consumer. It does not create `L`, `g`,
+  residual coverage, flowpipe coverage, true-DH binding, or registry evidence.
+
+### T-M4-004 — generic weighted qpoly split sidecar
+
+- status: `open` (released after `T-M4-003` harvest)
+- owner: `苏梦辰`
+- source: `review-T-M4-003-kuangmanmozun-20260906T2258.md`,
+  `examples/routeb_terminal_qpoly_comparator_lean/F4DirectQpolyComparator.lean`;
+- scope: formalize the division-free identity-based weighted split for the
+  existing four-coordinate `qpoly`, with explicit `eta` and no repository
+  specific arithmetic assumptions;
+- deliver: a portable Lean sidecar and a source-independent theorem statement,
+  plus exact toolchain/receipt metadata if GitHub validation succeeds;
+- forbidden: changing the authoritative M4 gate, claiming terminal coverage,
+  or promoting the sidecar to the verified registry by compilation alone.
+
+### T-M4-005 — eta81 terminal arithmetic corollary
+
+- status: `open` (released after `T-M4-003` harvest)
+- owner: `臭屁猪`
+- source: `review-T-M4-003-kuangmanmozun-20260906T2258.md`,
+  `examples/routeb_terminal_qpoly_comparator_lean/`;
+- scope: consume the generic weighted split and formalize the exact rational
+  specialization `eta=81/160`, `D<=1401/625`, preserving the current `L,g`
+  premises as typed hypotheses;
+- deliver: a GitHub-pinned Lean validation sidecar or a precise compile
+  obstruction, with exact positive terminal margin and no hidden Float64 step;
+- forbidden: silently replacing `D_gate=4483/2000`, creating physical `L/g`
+  bounds, or closing M4/P8 from this arithmetic child alone.
+
 ### T-P8-008 — first-12 explicit-time source adapter
 
 - status: `open` (released for the next mathematical round)
