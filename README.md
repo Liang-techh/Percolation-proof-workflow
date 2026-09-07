@@ -411,3 +411,9 @@ The O0 regularizer bridge is implemented in
 integer/`Fraction` inputs, exposes conditional diagonal/block inclusion, and
 keeps inverse/port propagation pending until an exact-real resolvent premise
 and matching source key are supplied.
+
+O2 runtime evidence is intake-checked by
+`src/percolation_workflow/routeb_o2_receipt.py`: incomplete receipts remain
+pending, source/schedule or admission-boundary mismatches are rejected, and a
+complete receipt is only `READY_FOR_COORDINATOR_ADMISSION`, never a Lean or
+registry proof.

@@ -819,6 +819,11 @@ rotation/translation slice、cross subtraction、`JvᵀJv`、`Ri*Ii*Riᵀ`、`Jw
 coverage 与 finite/non-NaN receipt。该结构只为后续证明提供 source contract，
 不改变 O2 open 状态。
 
+新增 O2 runtime receipt intake：必须同时绑定 source hash、schedule hash、源码分段
+hash、runtime/libm、常量 bit、逐盒输入输出/coverage 和 finite flags。缺失证据为
+`PENDING_REQUIRED_FIELDS`，hash 或 admission 越权为 `REJECTED`，即使完整也只到
+`READY_FOR_COORDINATOR_ADMISSION`，不能进入 Lean registry。
+
 ### 2026-09-07 — 梁智炜：细化 O0 regularizer semantics bridge
 
 O0 已按独立接口拆为 O0.1 literal representation（事实已记录）、O0.2 common-base

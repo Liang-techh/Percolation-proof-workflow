@@ -58,6 +58,10 @@ from .routeb_regularizer_semantics import (
     propagate_routeb_regularizer_diagonal,
     routeb_regularizer_fact,
 )
+from .routeb_o2_receipt import (
+    RouteBO2RuntimeReceiptAudit,
+    audit_routeb_o2_runtime_receipt,
+)
 from .disjoint import (audit_do, build_repair_do, canonical_do_schema,
                         classify_manual_review, do_sha256, normalize_do_path)
 from .advisory_reuse import (AdvisoryReuseError, SCHEMA_VERSION,
@@ -99,6 +103,7 @@ __all__ = [
     "RouteBResolventPortPropagation", "audit_routeb_regularizer_inclusion",
     "derive_routeb_resolvent_port_propagation",
     "propagate_routeb_regularizer_diagonal", "routeb_regularizer_fact",
+    "RouteBO2RuntimeReceiptAudit", "audit_routeb_o2_runtime_receipt",
     "audit_do", "build_repair_do", "canonical_do_schema", "classify_manual_review", "do_sha256", "normalize_do_path",
     "AdvisoryReuseError", "SCHEMA_VERSION", "project_advisory_reuse",
     "project_plan", "export_plan_views", "plan_topo_order", "plan_levels",
