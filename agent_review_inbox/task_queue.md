@@ -2561,3 +2561,13 @@ source-independent/open/uncompiled 候选。
   identity，目标是把 `B=(4,5), D=(1,2,3,6)` 的索引、有限求和分解和
   `e_D/e_B` 缺陷项做成 Lean 数学叶。
 - body-6、P5、fixed-λ、P3 线程继续各自的当前独立任务；不重复旧审计。
+### 2026-09-07 — 12:26 本地数学轮
+
+- 远端本轮无新提交，未抢占 GitHub 通道；本地继续推进。
+- body-6：前三列 `b_i=z_i×(o5-o_i)` 的共同 yaw/local-vector 与真实 source seam。
+- P5/K_path：T-P4-032 的 B/D block projection、distal/port defect-aware O1 identity。
+- fixed-λ：统一 feasibility 后的 lambda monotonicity。
+- P3：unified radius 到 weighted-power budget 的非负单调性。
+
+四条均为互不重复的 typed mathematical leaves；state/registry 继续只由协调者
+收割更新，Lean/kernel/source/coverage 边界不放宽。
