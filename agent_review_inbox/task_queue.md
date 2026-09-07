@@ -1760,6 +1760,26 @@ after integration; corrections should be a new result file.
   independent.
 ### New harvest: factor-2 weighted receipt and O2 generated adapter (2026-09-07)
 
+### T-P4-KC-COORDINATE-ADAPTER — force exporter intake (2026-09-07)
+
+### T-P4-033-O1 — same-key exact M_DD source binding (2026-09-07)
+
+- 已固化为 `OPEN_TYPED_SOURCE_BINDING_PATH_A_OR_B`：只接受 Path A
+  (`h_MDD_def + h_inv_def + hdet`) 或 Path B (`h_MDD_def + h_left`)。
+- 必须由同一 `(mu,q,source,state)` 导出 exact
+  `M_DD45_at M mu q : Matrix (Fin 4) (Fin 4) ℝ`，并保留
+  `D=(1,2,3,6)` / zero-based `[0,1,2,5]`。
+- 当前不要再重复 determinant/静态审计；优先让 agent 生成 typed source
+  receipt，或证明该 exact source surface 在 deployed evaluator 中不存在。
+
+- 已完成：把 general-state force exporter 的严格接收规范登记为
+  `PENDING_JULIA_EXECUTION` gate。
+- 执行 agent 必须提交同一 exporter/deployed source hash、完整 16-row CSV、
+  receipt、stdout/stderr/exit code，并通过 E1/E2 `1e-12` residual gate。
+- 当前瓶颈：等待 Julia agent 运行 fresh exporter；本机不运行 Julia。
+- 禁止：旧 CSV、只含 residual 的缩减 schema、把 runtime consistency 升级为
+  tau 等价/Lean theorem/coverage/registry。
+
 - The O0 weighted child now has a corrected exact-rational output-2 norm factor
   and is accepted by the coordinator math API. Its one-cell/source-key scope,
   no-Schur-consumption boundary, and no-registry status remain mandatory.

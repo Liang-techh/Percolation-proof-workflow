@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 520,
+  "revision": 523,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13579,6 +13579,214 @@
           "deployed_tau_equivalence": "NOT_CLAIMED",
           "formal_certificate_allowed": false,
           "registry_promoted": false
+        },
+        "force_exporter_intake_gates": [
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-KC-COORDINATE-ADAPTER",
+            "source_agent": "codex-inbox",
+            "review_status": "PENDING_JULIA_EXECUTION",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-force-exporter-intake-gate-codex-20260907.md",
+              "sha256": "13BF1BC3E7E2C96428907A8FE576F698F57339BFD6DB6487F6FA2E9E28506CC8"
+            },
+            "exporter": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_5_descriptor_terms_adapter_lean\\general_state_force_binding_export.jl",
+              "sha256": "5351110E81327EBC059074A2E445A33E00859320BCE37B5B0220BB189F4E46A4"
+            },
+            "deployed_source": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\robot_final\\dhport_lib.jl",
+              "sha256": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936"
+            },
+            "expected_exporter_sha256": "5351110E81327EBB059074A2E445A33E00859320BCE37B5B0220BB189F4E46A4",
+            "expected_deployed_sha256": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936",
+            "input_hashes_match": {
+              "exporter": false,
+              "deployed_source": true
+            },
+            "required_csv_fields": [
+              "q4",
+              "q5",
+              "dq4",
+              "dq5",
+              "w",
+              "CdqB4",
+              "CdqB5",
+              "GqB4",
+              "GqB5",
+              "G0B4",
+              "G0B5",
+              "tauB4",
+              "tauB5",
+              "rhsB4",
+              "rhsB5",
+              "sourceBlockForce4",
+              "sourceBlockForce5",
+              "aB4",
+              "aB5",
+              "aD1",
+              "aD2",
+              "aD3",
+              "aD6",
+              "MqBB11",
+              "MqBB12",
+              "MqBB21",
+              "MqBB22",
+              "MqBD41",
+              "MqBD42",
+              "MqBD43",
+              "MqBD46",
+              "MqBD51",
+              "MqBD52",
+              "MqBD53",
+              "MqBD56",
+              "sourceDescriptorRhs4",
+              "sourceDescriptorRhs5",
+              "E1_4",
+              "E1_5",
+              "E2_4",
+              "E2_5"
+            ],
+            "seed": 20260907,
+            "sample_count": 16,
+            "B": [
+              4,
+              5
+            ],
+            "D": [
+              1,
+              2,
+              3,
+              6
+            ],
+            "mass_regularizer": "1e-6",
+            "fd_step": "1e-5",
+            "residual_threshold": "1e-12",
+            "runtime_receipt_required": true,
+            "runtime_csv_required": true,
+            "general_state_source_binding": "OPEN",
+            "deployed_tau_equivalence": "NOT_CLAIMED",
+            "float64_to_exact_real": "OPEN",
+            "coverage": "OPEN",
+            "formal_certificate_allowed": false,
+            "registry_promoted": false
+          },
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-KC-COORDINATE-ADAPTER",
+            "source_agent": "codex-inbox",
+            "review_status": "PENDING_JULIA_EXECUTION",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-force-exporter-intake-gate-codex-20260907.md",
+              "sha256": "13BF1BC3E7E2C96428907A8FE576F698F57339BFD6DB6487F6FA2E9E28506CC8"
+            },
+            "exporter": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_5_descriptor_terms_adapter_lean\\general_state_force_binding_export.jl",
+              "sha256": "5351110E81327EBC059074A2E445A33E00859320BCE37B5B0220BB189F4E46A4"
+            },
+            "deployed_source": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\robot_final\\dhport_lib.jl",
+              "sha256": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936"
+            },
+            "expected_exporter_sha256": "5351110E81327EBC059074A2E445A33E00859320BCE37B5B0220BB189F4E46A4",
+            "expected_deployed_sha256": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936",
+            "input_hashes_match": {
+              "exporter": true,
+              "deployed_source": true
+            },
+            "required_csv_fields": [
+              "q4",
+              "q5",
+              "dq4",
+              "dq5",
+              "w",
+              "CdqB4",
+              "CdqB5",
+              "GqB4",
+              "GqB5",
+              "G0B4",
+              "G0B5",
+              "tauB4",
+              "tauB5",
+              "rhsB4",
+              "rhsB5",
+              "sourceBlockForce4",
+              "sourceBlockForce5",
+              "aB4",
+              "aB5",
+              "aD1",
+              "aD2",
+              "aD3",
+              "aD6",
+              "MqBB11",
+              "MqBB12",
+              "MqBB21",
+              "MqBB22",
+              "MqBD41",
+              "MqBD42",
+              "MqBD43",
+              "MqBD46",
+              "MqBD51",
+              "MqBD52",
+              "MqBD53",
+              "MqBD56",
+              "sourceDescriptorRhs4",
+              "sourceDescriptorRhs5",
+              "E1_4",
+              "E1_5",
+              "E2_4",
+              "E2_5"
+            ],
+            "seed": 20260907,
+            "sample_count": 16,
+            "B": [
+              4,
+              5
+            ],
+            "D": [
+              1,
+              2,
+              3,
+              6
+            ],
+            "mass_regularizer": "1e-6",
+            "fd_step": "1e-5",
+            "residual_threshold": "1e-12",
+            "runtime_receipt_required": true,
+            "runtime_csv_required": true,
+            "general_state_source_binding": "OPEN",
+            "deployed_tau_equivalence": "NOT_CLAIMED",
+            "float64_to_exact_real": "OPEN",
+            "coverage": "OPEN",
+            "formal_certificate_allowed": false,
+            "registry_promoted": false
+          }
+        ],
+        "force_exporter_intake_gate": {
+          "status": "PENDING_JULIA_EXECUTION",
+          "review_sha256": "13BF1BC3E7E2C96428907A8FE576F698F57339BFD6DB6487F6FA2E9E28506CC8",
+          "exporter_sha256": "5351110E81327EBC059074A2E445A33E00859320BCE37B5B0220BB189F4E46A4",
+          "deployed_source_sha256": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936",
+          "input_hashes_match": {
+            "exporter": true,
+            "deployed_source": true
+          },
+          "sample_count": 16,
+          "B": [
+            4,
+            5
+          ],
+          "D": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "residual_threshold": "1e-12",
+          "runtime_receipt_required": true,
+          "general_state_source_binding": "OPEN",
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
         }
       }
     },
@@ -14998,6 +15206,86 @@
           "statement_comparator": "OPEN",
           "canonical_receipt": false,
           "same_key_source_binding": "OPEN",
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
+        },
+        "source_binding_followup3": [
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-033-O1-source-binding-followup-3",
+            "source_agent": "codex-inbox",
+            "review_status": "OPEN_TYPED_SOURCE_BINDING_PATH_A_OR_B",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-033-O1-source-binding-followup-3-codex-20260907.md",
+              "sha256": "2A91FAE71B1CFC68F20DBFD82F91B003FC339CB7EA4A750DBA8ACEE8B4439CBE"
+            },
+            "source_object": "M : Mu → Q → Matrix (Fin 6) (Fin 6) ℝ",
+            "projected_block": "M_DD45_at M mu q : Matrix (Fin 4) (Fin 4) ℝ",
+            "D_order": [
+              1,
+              2,
+              3,
+              6
+            ],
+            "D_zero_based_Fin_map": [
+              0,
+              1,
+              2,
+              5
+            ],
+            "consumable_paths": {
+              "A": [
+                "h_MDD_def",
+                "h_inv_def",
+                "hdet"
+              ],
+              "B": [
+                "h_MDD_def",
+                "h_left"
+              ]
+            },
+            "required_source_fields": [
+              "source_key",
+              "state_key",
+              "mu",
+              "q",
+              "block_order",
+              "matrix_shape",
+              "regularization"
+            ],
+            "remaining_obstruction": "missing same-key typed receipt for projected M_DD45 and inverse/left-inverse",
+            "formal_certificate_allowed": false,
+            "registry_promoted": false,
+            "admission_status": "pending_authoritative_exact_source_receipt"
+          }
+        ],
+        "source_binding_followup3_gate": {
+          "status": "OPEN_TYPED_SOURCE_BINDING_PATH_A_OR_B",
+          "projected_block": "M_DD45_at M mu q : Matrix (Fin 4) (Fin 4) ℝ",
+          "D_order": [
+            1,
+            2,
+            3,
+            6
+          ],
+          "D_zero_based_Fin_map": [
+            0,
+            1,
+            2,
+            5
+          ],
+          "consumable_paths": {
+            "A": [
+              "h_MDD_def",
+              "h_inv_def",
+              "hdet"
+            ],
+            "B": [
+              "h_MDD_def",
+              "h_left"
+            ]
+          },
+          "remaining_obstruction": "missing same-key typed receipt for projected M_DD45 and inverse/left-inverse",
           "formal_certificate_allowed": false,
           "registry_promoted": false
         }
@@ -39959,6 +40247,40 @@
       "coverage_completeness": "OPEN",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T14:00:29.979879+00:00",
+      "kind": "routeb_force_exporter_intake_gate_recorded",
+      "node_id": "203c45aac1d84022b69267c0cc31db06",
+      "review_status": "PENDING_JULIA_EXECUTION",
+      "exporter_hash_match": false,
+      "deployed_source_hash_match": true,
+      "runtime_receipt_required": true,
+      "general_source_binding": "OPEN",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T14:00:49.486287+00:00",
+      "kind": "routeb_force_exporter_intake_gate_recorded",
+      "node_id": "203c45aac1d84022b69267c0cc31db06",
+      "review_status": "PENDING_JULIA_EXECUTION",
+      "exporter_hash_match": true,
+      "deployed_source_hash_match": true,
+      "runtime_receipt_required": true,
+      "general_source_binding": "OPEN",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T14:04:11.648743+00:00",
+      "kind": "routeb_o1_source_binding_followup3_recorded",
+      "node_id": "120deab092c243b6a43356e63c8b56f4",
+      "review_status": "OPEN_TYPED_SOURCE_BINDING_PATH_A_OR_B",
+      "admission_status": "pending_authoritative_exact_source_receipt",
+      "source_receipt_required": true,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -43615,5 +43937,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "d637d5de767288327997cea02e5917713e0e5a9f98a7cea184134e2d23c4485b"
+  "state_checksum": "39c660a1c9c5a695dde8921871b923fa1710babb61f5dd35dc441a8d8f409c48"
 }

@@ -1118,3 +1118,23 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - O2 新回执已把真实 `cell_id=1` coverage candidate 的 hash、canonical 13-coordinate
   order、generated Lean source/olean、compile exit 0 与标准 axiom 集合绑定到 state；
   `InRectBox` 实例的实际 witness 仍未由 receipt 自动制造。
+
+### 2026-09-07 — 梁智炜：接入 general-state force exporter intake gate
+
+- `review-T-P4-force-exporter-intake-gate-codex-20260907.md` 已接入
+  `P4.true_dh_force_descriptor_semantics`，状态保持
+  `PENDING_JULIA_EXECUTION`；本次没有 Julia runtime、CSV 或 PASS。
+- gate 已固定 exporter/deployed source hash、seed `20260907`、16 个同态状态、
+  `B=[4,5]`、`D=[1,2,3,6]`、完整 CSV schema，以及 `max(abs(E1/E2))<=1e-12`
+  与 process exit 0 的双重门槛。
+- 两份当前输入 hash 均匹配；仍明确不声称 deployed `tau` 等价、Float64→ℝ
+  语义桥、全域覆盖、DH theorem 或 registry promotion。后续只接收 fresh
+  hash-bound receipt，旧 CSV/缩减 residual 输出必须拒绝。
+
+### 2026-09-07 — 梁智炜：O1 same-key source binding obstruction 固化
+
+- 新 follow-up 明确 O1 只有两条可消费路径：`h_MDD_def + h_inv_def + hdet`
+  或 `h_MDD_def + h_left`，并钉死 `D=(1,2,3,6)`、Fin 映射 `[0,1,2,5]`。
+- 当前缺的不是更多 determinant 计算，而是同一 `(mu,q,source,state)` 下的
+  typed `M_DD45_at M mu q` 导出及 inverse/left-inverse receipt；已登记为
+  `OPEN_TYPED_SOURCE_BINDING_PATH_A_OR_B`，不关闭 O1、不进入 registry。
