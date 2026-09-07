@@ -3,7 +3,7 @@
 This log records durable integrations from `agent_review_inbox/`. The original
 review files and their SHA-256 markers remain in that directory.
 
-## 2026-09-06 / Route-B checkpoint revision 345
+## 2026-09-06 / Route-B checkpoint revision 346
 
 Integrated as pending metadata only:
 
@@ -97,3 +97,9 @@ The spectral sidecar compiles with its focused harness, but it is an abstract
 self-contained bridge rather than a direct proof of the upstream FLT
 declaration. It remains advisory/pending and is not a Route-B spectral closure
 or verified-registry entry.
+
+An independent admission review further found that the sidecar's concrete
+statements are tautological range identities and contain no eigenspace
+predicate. Its compile result is retained as a negative/architecture-only
+finding. A corrective predicate-bearing sidecar is queued; the original is not
+treated as spectral theorem reuse.

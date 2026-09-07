@@ -43,6 +43,7 @@ TASK_TARGETS = {
     "T-FLT-TRANSPORT-ADAPTER": (None, "flt_transport_adapter_scan"),
     "T-FLT-INFRA-REGISTRY": (None, "flt_registry_graph_scan"),
     "T-FLT-SPECTRAL-SIDECAR": (None, "flt_spectral_sidecar"),
+    "T-FLT-SPECTRAL-PREDICATE": (None, "flt_spectral_predicate_sidecar"),
 }
 
 REVIEW_ID_ALIASES = {
@@ -160,6 +161,8 @@ def main() -> int:
             "target_scope": "routeb_node" if target_name else "external_reuse_catalog",
             "source_commit": source_commit(path, header),
         }
+        if header.get("admission_label"):
+            ref["admission_label"] = header["admission_label"]
         if previous is not None:
             ref["correction_of_sha256"] = previous.get("review_sha256")
             ref["classification"] = f"{classification}_revision"

@@ -1,0 +1,13 @@
+{
+  "review_file": "agent_review_inbox/review-T-FLT-SPECTRAL-SIDECAR-guyuefangyuan-20260906T2123.md",
+  "review_sha256": "06DB2278056EFFC85A3B2E2932EB910BA5A2315249D112B0B62FDD0729122A12",
+  "task_id": "T-FLT-SPECTRAL-SIDECAR",
+  "source_agent": "古月方源",
+  "created_at": "2026-09-06T21:23:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_spectral_sidecar",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "58f81a8142da74838e71d23ebdb6135c2eff9e7d",
+  "integrated_at": "2026-09-07T03:21:06.842548+00:00"
+}

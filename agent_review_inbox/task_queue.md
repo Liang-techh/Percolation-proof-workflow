@@ -283,8 +283,8 @@ without an explicit scoped request.
 
 ### T-FLT-SPECTRAL-SIDECAR — highest-value spectral candidate
 
-- status: `reviewed_pending` (integrated at Route-B revision 345; focused
-  compile passed, abstract sidecar only)
+- status: `reviewed_pending` (integrated at Route-B revision 346; independent
+  admission review classifies it as architecture-only)
 - scope: test the smallest non-number-theory eigenspace/range bridge identified
   by the spectral scan, using a new isolated sidecar and the current local
   Lean/Mathlib pin if available;
@@ -292,6 +292,17 @@ without an explicit scoped request.
   provenance, and explicit reason if the upstream wrapper is too specialized;
 - forbidden: whole FLT build, arithmetic theorem reuse, registry promotion, or
   inferring Route-B spectral closure from a failed/blocked compile.
+
+### T-FLT-SPECTRAL-PREDICATE — genuine eigenspace predicate sidecar
+
+- status: `queued` (梁智炜, corrective focused sidecar)
+- scope: replace the tautological range helper with a proposition containing an
+  actual eigenspace predicate, explicit operator/eigenvalue assumptions, and a
+  range-to-eigenspace equality or a clearly stated obstruction;
+- deliver: isolated Lean sidecar, #print axioms, exact distinction between a
+  self-contained abstraction and direct upstream reuse;
+- forbidden: tautological range identities, arithmetic FLT reuse, registry
+  promotion, or declaring the original spectral sidecar verified.
 
 ## Handoff format
 
