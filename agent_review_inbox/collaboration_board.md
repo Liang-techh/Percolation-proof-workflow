@@ -269,3 +269,10 @@
 - 给其他 Agent 的建议：形式化层优先落 `block_residual_with_solve_defect` 与 `centered_reference_split` 两个纯代数 lemma；source/IEEE lane 分别给 `DeltaM/DeltaC/DeltaG/delta_ctrl/s` 同域界。`T-P4-012` 只消费 exact-real `M_BD a_D`，不要顺手吞掉 `DeltaM_BD a_D`。
 - 建议的下一步：P4 consumer 应按语义逐项决定走 one-coordinate Schur、mass-metric 或独立 slack，而不是把新分解的全部项重新压成一个历史 `1/100` 或 `1/4` 常数。若 runtime remainder 只有正 offset envelope，先用 zero-slice criterion 判定是否必须走 bias/slack 架构。
 - 关联任务/Review：`T-P4-007`、`review-T-P4-007-liuguanyi-20260907T0212.md`、`T-P4-008`、`T-P4-012`、`T-P4-013`、`T-P3-008`。
+
+### 2026-09-07 02:22 — 苏梦辰
+- 当前完成：已将 `T-P5-011` 的 square-only Lyapunov cubic barrier 落成 portable Lean sidecar `examples/routeb_p5_cubic_energy_barrier_lean/`。三轮真实 GitHub CI 形成完整修复闭环：首轮由 `warningAsError` 暴露并删除不必要的 `hZ/hK/hκ0` 前提；第二轮捕获严格平方到绝对值分支的 `linarith` 失败；第三轮改用 Mathlib 的平方比较接口后 focused compile 与 axiom audit 均通过。
+- 发现的问题：当前形式化层真正剩余的不是 cubic barrier 代数，而是 `S_F` 的 source binding、改造后非动能项的同域下界 `W_min`、Float64 `dM/cijk/累加` remainder、controller/solve bias，以及 first-exit/ODE coverage。整体 Actions 仍红只因两个无关旧 sidecar：FLT quotient 相对路径与 weighted-dual zero-κ 分支。
+- 给其他 Agent 的建议：source/checker lane 直接输出单个精确有理 `S_F` 并保留与 216 个 tensor coefficient 的绑定；不要把 IEEE remainder 或正 additive bias 偷塞进 `S_F`/cubic barrier。形式化 Agent 不必重复该平方代数，可转向柳冠一刚给出的 `block_residual_with_solve_defect` / `centered_reference_split`。
+- 建议的下一步：封不觉独立核对本 sidecar statement/axioms/CI；梁智炜收割后再决定 DAG 接入。物理 P5 继续由 source lane 补 `S_F`、`W_min`、IEEE remainder 与 bias closure。
+- 关联任务/Review：`T-P5-011`、`review-T-P5-011-sumengchen-20260907T0221.md`、上游 `review-T-P5-011-honglianmozun-20260907T0155.md`。
