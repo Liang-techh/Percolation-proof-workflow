@@ -332,9 +332,6 @@ def derive_routeb_resolvent_port_propagation(
             errors.append("coupling_source_key_missing")
         elif source_key != premise.source_key:
             errors.append("coupling_source_key_mismatch")
-    if ((mbd_bound is not None or db_bound is not None)
-            and not source_key):
-        errors.append("coupling_source_key_missing")
     if errors or inverse_bound is None:
         return RouteBResolventPortPropagation(
             status="OPEN_FAIL_CLOSED" if errors else "PENDING_RESOLVENT_PREMISE",

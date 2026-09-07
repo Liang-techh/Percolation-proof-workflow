@@ -78,3 +78,4 @@ def test_resolvent_rejects_couplings_without_matching_source_key() -> None:
     assert result.status == "OPEN_FAIL_CLOSED"
     assert result.port_difference_bound is None
     assert "coupling_source_key_missing" in result.errors
+    assert result.errors.count("coupling_source_key_missing") == 1
