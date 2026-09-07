@@ -2041,6 +2041,32 @@ CHILDREN = [
             "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_VERIFIED_REGISTRY_ENTRY_INVARIANT20260907_REVIEW.md",
         ],
     },
+    {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization",
+        "statement": "Front floors, residual caps, nominal realization, and target budget are independent same-domain evidence packages; finite coverage supplies only conditional bounds, while infinite dyadic growth or the wrong nominal direction blocks the specified allocation path.",
+        "proof_sketch": "Assemble split FrontFloors/ResidualCaps/NominalRealization/TargetBudget into UniformData, reuse uniformized_scalar_margin, and retain exact infinite-domain cap and nominal-direction obstructions without claiming all scalar routes fail.",
+        "lane": "lean_adapter",
+        "bottleneck": "normalization",
+        "status": "OPEN_UNCOMPILED_P4_SPLIT_ALLOCATION_OBSTRUCTION",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SplitAllocationObstruction.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SplitAllocationObstruction.review.md",
+        ],
+    },
+    {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin",
+        "statement": "The BODY6 strict-margin request must branch explicitly: a domain containing the exact zero-direction configuration cannot request mu>0; excluding that configuration is necessary but not sufficient, while a non-strict mu=0 request still needs an independent PSD/margin certificate.",
+        "proof_sketch": "Define strict and non-strict domain margin requests, use the source zero-null obstruction to reject strict requests containing q=0, restrict margins only along an explicit punctured-domain inclusion, and retain an away-from-zero reciprocal-gap counterexample plus the failure of zero request to prove PSD.",
+        "lane": "source_semantics",
+        "bottleneck": "residual_absorption",
+        "status": "OPEN_UNCOMPILED_BODY6_DOMAIN_REPAIR",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_DOMAINREPAIR20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_DOMAINREPAIR20260907.review.md",
+        ],
+    },
 ]
 
 
