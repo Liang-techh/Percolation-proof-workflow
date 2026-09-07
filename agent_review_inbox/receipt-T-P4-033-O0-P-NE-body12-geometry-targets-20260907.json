@@ -1,0 +1,119 @@
+{
+  "schema": "routeb.o0.p_ne.body12_geometry_targets.v1",
+  "task": "T-P4-033",
+  "lane": "O0",
+  "scope": "P-NE body-1/2 only",
+  "status": "CONDITIONAL_BODY12_GEOMETRY_DERIVATION",
+  "consumable_now": false,
+  "proof_level": "symbolic_target_and_lemma_list_only",
+  "main_state_modified": false,
+  "registry_promoted": false,
+  "source_binding_proven": false,
+  "lean_lake_run": false,
+  "data_audit_repeated": false,
+  "binding": {
+    "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+    "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+    "q_scope": "all q : Fin 6 -> Real for the symbolic identities",
+    "body_indexing": "b0=0 is human body-1; b1=1 is human body-2",
+    "exact_constants": {
+      "mass_b0": "1",
+      "inertia_b0": "1/3",
+      "mass_b1": "4/5",
+      "inertia_b1": "1/5"
+    }
+  },
+  "derived_exact_targets": {
+    "body_1_zero_based_0": {
+      "Jv_column_0": "(1/25)*(-sin(q 0), cos(q 0), 0)",
+      "Jw_column_0": "(0,0,1)",
+      "mass_entry": "if i=0 and j=0 then 628/1875 else 0",
+      "trace_target": "bodyTraceEvaluator 0 q i j = if i=0 and j=0 then 628/1875 else 0"
+    },
+    "body_2_zero_based_1": {
+      "A": "2/25 + (21/200)*sin(q 1)",
+      "B": "(21/200)*sin(q 1)",
+      "C": "(21/200)*cos(q 1)",
+      "Jv_column_0": "A*(-sin(q 0), cos(q 0), 0)",
+      "Jv_column_1": "C*(cos(q 0), sin(q 0), 0) - B*(0,0,1)",
+      "Jw_column_0": "(0,0,1)",
+      "Jw_column_1": "(-sin(q 0), cos(q 0), 0)",
+      "mass_00": "20953/100000 + (21/3125)*sin(q 1) - (441/100000)*cos(2*(q 1))",
+      "mass_11": "10441/50000",
+      "mass_other_entries": "0",
+      "trace_target": "bodyTraceEvaluator 1 q i j equals the same T1 matrix"
+    }
+  },
+  "reusable_lemmas": [
+    "slot_0_1_2_origin_axis_reduction",
+    "routeB_T0_origin_exact",
+    "routeB_T0_z_axis_exact",
+    "routeB_T0T1_origin_exact",
+    "xy_rot_pair_norm_from_sin_sq_add_cos_sq",
+    "xy_rot_pair_orthogonality_from_sin_sq_add_cos_sq",
+    "cross_world_z_rot_pair",
+    "cross_rot_pair_world_z",
+    "diagonal_inertia_sum_collapse",
+    "body_trace_fold_slice_reduction",
+    "body_trace_atom_pm_frequency_normalization",
+    "body12_source_trace_composition"
+  ],
+  "critical_trig_uses": [
+    "sin(q 0)^2 + cos(q 0)^2 = 1 for er/et norms and orthogonality",
+    "sin(q 1)^2 + cos(q 1)^2 = 1 for B^2+C^2=441/40000",
+    "sin(q 1)^2=(1-cos(2*q 1))/2 for body-2 mass_00 Fourier form"
+  ],
+  "current_open_targets": [
+    "RouteBO1PerBodyTraceAdapter.h_body_1_source_entry_target",
+    "RouteBO1PerBodyTraceAdapter.h_body_1_trace_entry_target",
+    "RouteBO1PerBodyTraceAdapter.h_body_1",
+    "RouteBO1PerBodyTraceAdapter.h_body_2",
+    "finite fold reduction for bodyTraceEvaluator body 0 and body 1",
+    "exact frame-product expansion for slots 1 and 2"
+  ],
+  "minimum_new_receipt_to_consume": {
+    "kind": "exact_real_body12_source_trace_binding",
+    "required_statements": [
+      "forall q i j, sourceBodyMass q 0 i j = bodyTraceEvaluator 0 q i j",
+      "forall q i j, sourceBodyMass q 1 i j = bodyTraceEvaluator 1 q i j"
+    ],
+    "required_supporting_fields": [
+      "source_key",
+      "state_key",
+      "body_indexing",
+      "exact definitions of er/et/e3/A/B/C",
+      "compiled Lean theorem or authoritative exact proof artifact",
+      "zero sorry/admit/axiom audit"
+    ]
+  },
+  "evidence": [
+    {
+      "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyExactSource.lean",
+      "sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+      "role": "exact sourceBodyMass and source constants"
+    },
+    {
+      "path": "examples/routeb_b45_source_comparator_lean/BodyTraceEvaluator.lean",
+      "sha256": "B9845D37B5DCD16E1F9E142CB2E4D0E5571452993E843C85AC8CD643F6BA5DEA",
+      "role": "generated body-labelled trace evaluator"
+    },
+    {
+      "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean",
+      "sha256": "8D3AA7716897269F2885A471A225EA11995869944E7D623DE33978F442EE7EDB",
+      "role": "body-1/2 target propositions"
+    },
+    {
+      "path": "examples/routeb_real_dh_step_lean/RealDHStep.lean",
+      "role": "exact DH step and sin/cos phase definitions"
+    },
+    {
+      "path": "examples/routeb_frame_slot_accessor_lean/FrameSlotAccessor.lean",
+      "role": "exact slot reduction seam"
+    },
+    {
+      "path": "examples/routeb_body_semantic_core_lean/BodySemanticCore.lean",
+      "role": "bodyCom, bodyJv, bodyJw, bodyMass definitions"
+    }
+  ],
+  "obstruction": "The geometry reduces body-1/2 to explicit exact formulas, but no current compiled theorem proves either source formula equals the generated bodyTraceEvaluator. The fold reduction and the six-body source binding therefore remain open."
+}

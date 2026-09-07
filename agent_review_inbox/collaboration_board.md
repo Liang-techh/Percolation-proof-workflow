@@ -1413,3 +1413,28 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   equality 组合成 `h_body_1` 的纯逻辑桥。
 - 该桥不提供两侧前提；body-1 的 source 展开和 finite-fold reduction 仍分别
   OPEN，receipt 继续标记 `TARGETS_ONLY_UNCOMPILED`，不进入 source/formal/registry。
+
+### 2026-09-07 — O1 body-2 exact coefficient gate
+
+- 针对新加入的 body-2 target，增加精确有理系数 checker：冻结 CSV 的 6 个 body-2
+  atoms 与目标式逐 key 比较，确认 `(0,0)` 为
+  `20953/100000 + (42/3125) sin(q2) - (441/100000) cos(2*q2)`，`(1,1)` 为
+  `10441/50000`，其余项为零。
+- 结果为 `PASS_EXACT_BODY2_TARGET_COEFFICIENTS_FAIL_CLOSED`；这只确认目标式与
+  数据 sidecar 一致，source expansion、trace fold、`h_body_2` 和 Lean compile
+  仍为 false。
+
+### 2026-09-07 — O0 P-NE body-1/2 symbolic geometry
+
+- 数学 agent 将 P-NE 的前两个人体 body 精确化：body-1 为
+  `Jv₀=(1/25)(-sin q₀,cos q₀,0)`、`Jw₀=(0,0,1)`；body-2 用
+  `A=2/25+(21/200)sin q₁`、`B=(21/200)sin q₁`、`C=(21/200)cos q₁` 给出
+  两个 active Jacobian 列及正交/平方和消元。
+- 这解释了 body-1/2 的 exact target，但仍缺 source frame 展开与 tagged fold
+  的 Lean proof；receipt 状态为 conditional，不能消费 O0 baseline 或关闭 O1。
+
+### 2026-09-07 — O2 authority source search
+
+- 定向搜索未找到真实 theta2 canonical triple、source interval membership 或
+  `CoverageJoin2` premise。现有 P3 replay 明确不是 authority source；未生成
+  synthetic triple，O2 继续保持最小 blocker。

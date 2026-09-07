@@ -56,28 +56,36 @@ theorem h_aggregate_real_lift
   · simp [h]
 ```
 
+For exactness, define `payloadCoeff payload i j ν : ℚ × ℚ` as the finite sum
+over `n : Fin 610` of `(realCoeff, imagCoeff)` when the payload row/column and
+frequency equal `(i,j,ν)`, and `(0,0)` otherwise. Define
+`traceCoeff body i j ν : ℚ × ℚ` analogously by folding the tagged rows in
+`bodyTraceRows` with `r.body=body`, `r.row=i`, `r.col=j`, and
+`r.frequency=ν`; coefficient pairs use the tagged rational numerators and
+denominators. Thus both are explicit finite rational functions, not runtime
+samples.
+
 The O1 aggregate leaf consumed by the parent is the stronger keyed composition:
 
 ```lean
 theorem h_aggregate_function_lift
     (payload : Row → CsvMassRow)
-    (fourierBody : Fin 6 → Q6 → Fin 6 → Fin 6 → ℝ)
     (h_keywise :
       ∀ i j (ν : Fin 6 → ℤ),
         payloadCoeff payload i j ν =
           ∑ body : Fin 6, traceCoeff body i j ν) :
     ∀ q i j,
       csvAggregate payload q i j =
-        ∑ body : Fin 6, fourierBody body q i j := by
+        ∑ body : Fin 6, bodyTraceEvaluator body q i j := by
   -- finite-key regrouping, then h_aggregate_real_lift / atom additivity
   sorry
 ```
 
-Here `payloadCoeff` and `traceCoeff` are exact rational coefficient sums keyed
-by `(row,col,frequency)`; they must preserve the `Fin 6` row/column orientation
-and the 610-row cardinality. The `sorry` above is a target sketch only, not a
-proof claim. A final theorem should replace it with explicit finite sums and
-the existing `realFourierAtom_add`/atom lift, with no opaque premise field.
+The `sorry` above is a target sketch only, not a proof claim. A final theorem
+should replace it with the explicit finite sums and the existing
+`realFourierAtom_add`/atom lift, with no opaque premise field. The keywise
+premise must preserve the `Fin 6` row/column orientation and 610-row
+cardinality.
 
 ## Dependencies
 

@@ -1,0 +1,64 @@
+{
+  "schema": "routeb.o1.true_dh_exact_typed_mdd_source.body_2_source_bridge.v1",
+  "status": "OPEN_BODY_2_SOURCE_AND_TRACE_PREMISES",
+  "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+  "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+  "body": 2,
+  "lean_adapter": {
+    "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean",
+    "sha256": "8D3AA7716897269F2885A471A225EA11995869944E7D623DE33978F442EE7EDB",
+    "status": "TARGETS_ONLY_UNCOMPILED"
+  },
+  "exact_coefficients": {
+    "entry_1_1": {
+      "frequency_to_q": "nu=(0,0,0,0,0,0)",
+      "real": "10441/50000",
+      "imag": "0"
+    },
+    "entry_0_0": {
+      "terms": [
+        {"frequency_to_q": "nu2=-2", "real": "-441/200000", "imag": "0"},
+        {"frequency_to_q": "nu2=-1", "real": "0", "imag": "21/3125"},
+        {"frequency_to_q": "nu=0", "real": "20953/100000", "imag": "0"},
+        {"frequency_to_q": "nu2=1", "real": "0", "imag": "-21/3125"},
+        {"frequency_to_q": "nu2=2", "real": "-441/200000", "imag": "0"}
+      ],
+      "real_lift": "20953/100000 + (42/3125)*sin(q2) - (441/100000)*cos(2*q2)"
+    },
+    "all_other_entries": "0"
+  },
+  "source_expansion_target": {
+    "name": "h_body_2_source_expanded_target",
+    "statement": "forall q i j, routeBMass 1 * sum_a bodyJv(sourceContract q) 1 a i * bodyJv(sourceContract q) 1 a j + sum_a_b bodyJw(sourceContract q) 1 a i * routeBInertia 1 a b * bodyJw(sourceContract q) 1 b j = the piecewise body-2 real expression",
+    "source_definitional_bridge": "sourceBodyMass_eq_bodyMass plus bodyMass/bodyJv/bodyJw/linkMass unfolding",
+    "proof_status": "OPEN_NO_PROOF"
+  },
+  "trace_fold_target": {
+    "name": "h_body_2_trace_fold_target",
+    "statement": "the piecewise body-2 real expression equals bodyTraceEvaluator 1 q i j",
+    "required_reduction": [
+      "split bodyTraceRows into bodyTraceRows1 ++ bodyTraceRows2 ++ ... ++ bodyTraceRows6",
+      "discard non-body-2 rows by the body equality guards",
+      "reduce bodyTraceRows2 at (0,0) to five frequency terms",
+      "reduce bodyTraceRows2 at (1,1) to its constant term",
+      "show all other row/col guards fold to zero",
+      "use sin(-x)=-sin(x), cos(-x)=cos(x), and cos(2*x)=2*cos(x)^2-1 as needed"
+    ],
+    "proof_status": "OPEN_NO_PROOF"
+  },
+  "minimal_lean_path": [
+    "Prove explicit source slots: origin 0=0, origin 1=(2/25*cos q0,2/25*sin q0,1/10), axis 0=(0,0,1), axis 1=(-sin q0,cos q0,0).",
+    "Prove origin 2-origin 1=(21/100*sin q1*cos q0,21/100*sin q1*sin q0,21/100*cos q1).",
+    "Reduce body 1 Jacobian to active columns 0 and 1; prove inactive columns 2..5 are zero.",
+    "Use routeBMass 1=4/5, routeBInertia 1 diagonal scalar=1/5, orthogonality, and sin_sq_add_cos_sq.",
+    "Normalize the source entry by ring_nf to the stated 20953/100000, 42/3125, 441/100000 coefficients.",
+    "Reduce the tagged finite fold and compose h_body_2_of_entry_targets."
+  ],
+  "compile_probe": {
+    "status": "NOT_ATTEMPTED_BY_REQUEST",
+    "lean_verified": false
+  },
+  "registry_eligible": false,
+  "comparator_accepted": false,
+  "formal_certificate_allowed": false
+}

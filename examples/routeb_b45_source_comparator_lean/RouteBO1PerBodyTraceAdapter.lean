@@ -73,14 +73,79 @@ theorem h_body_1_of_entry_targets
         else 0) := h_source q i j
     _ = bodyTraceEvaluator 0 q i j := h_trace q i j
 
+/- Body 2 source expansion and trace-fold targets.  The index 1 is the second
+   body and q 1 is its only nonconstant frequency coordinate in the trace. -/
+def h_body_2_source_expanded_target : Prop :=
+  ∀ q i j,
+    (routeBMass 1) *
+        (∑ a : Axis,
+          bodyJv (sourceContract q).origins (sourceContract q).axes
+            (1 : Body) a i *
+          bodyJv (sourceContract q).origins (sourceContract q).axes
+            (1 : Body) a j) +
+      (∑ a : Axis, ∑ b : Axis,
+        bodyJw (sourceContract q).axes (1 : Body) a i *
+          routeBInertia 1 a b *
+        bodyJw (sourceContract q).axes (1 : Body) b j) =
+      if i = (0 : Joint) ∧ j = (0 : Joint) then
+        (20953 / 100000 : ℝ) +
+            (42 / 3125 : ℝ) * Real.sin (q (1 : Joint)) -
+            (441 / 100000 : ℝ) * Real.cos (2 * q (1 : Joint))
+      else if i = (1 : Joint) ∧ j = (1 : Joint) then
+        (10441 / 50000 : ℝ)
+      else 0
+
+def h_body_2_source_entry_target : Prop :=
+  ∀ q i j,
+    sourceBodyMass q (1 : Body) i j =
+      bodyTraceEvaluator 1 q i j
+
+def h_body_2_expected_entry_target : Prop :=
+  ∀ q i j,
+    sourceBodyMass q (1 : Body) i j =
+      if i = (0 : Joint) ∧ j = (0 : Joint) then
+        (20953 / 100000 : ℝ) +
+            (42 / 3125 : ℝ) * Real.sin (q (1 : Joint)) -
+            (441 / 100000 : ℝ) * Real.cos (2 * q (1 : Joint))
+      else if i = (1 : Joint) ∧ j = (1 : Joint) then
+        (10441 / 50000 : ℝ)
+      else 0
+
+def h_body_2_trace_fold_target : Prop :=
+  ∀ q i j,
+    (if i = (0 : Joint) ∧ j = (0 : Joint) then
+        (20953 / 100000 : ℝ) +
+            (42 / 3125 : ℝ) * Real.sin (q (1 : Joint)) -
+            (441 / 100000 : ℝ) * Real.cos (2 * q (1 : Joint))
+      else if i = (1 : Joint) ∧ j = (1 : Joint) then
+        (10441 / 50000 : ℝ)
+      else 0) = bodyTraceEvaluator 1 q i j
+
+theorem h_body_2_of_entry_targets
+    (h_source : h_body_2_expected_entry_target)
+    (h_trace : h_body_2_trace_fold_target) : h_body_2 := by
+  intro q i j
+  change sourceBodyMass q (1 : Body) i j = bodyTraceEvaluator 1 q i j
+  calc
+    sourceBodyMass q (1 : Body) i j =
+        (if i = (0 : Joint) ∧ j = (0 : Joint) then
+          (20953 / 100000 : ℝ) +
+              (42 / 3125 : ℝ) * Real.sin (q (1 : Joint)) -
+              (441 / 100000 : ℝ) * Real.cos (2 * q (1 : Joint))
+        else if i = (1 : Joint) ∧ j = (1 : Joint) then
+          (10441 / 50000 : ℝ)
+        else 0) := h_source q i j
+    _ = bodyTraceEvaluator 1 q i j := h_trace q i j
+
 /- Intended composition, still unproved:
    h_body_1_expected_entry_target ∧ h_body_1_trace_entry_target
    implies h_body_1.  The source proof needs explicit slot-0/slot-1 origin,
    world-z parent-axis, diagonal inertia, and sin_sq_add_cos_sq expansion;
    the trace proof needs a finite-fold reduction of the body-1 tagged slice. -/
 
-/- Compilation status: intentionally uncompiled.  No theorem below asserts any
-   h_body_i; each name is a concrete target for the next Lean agent. -/
+/- Compilation status: intentionally uncompiled.  The two *_of_entry_targets
+   theorems are only conditional compositions; no source or trace premise is
+   asserted here. -/
 
 end
 end RouteBO1PerBodyTraceAdapter

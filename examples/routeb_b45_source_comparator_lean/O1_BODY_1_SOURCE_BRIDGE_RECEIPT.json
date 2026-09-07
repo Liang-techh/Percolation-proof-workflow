@@ -6,7 +6,7 @@
   "body": 1,
   "lean_adapter": {
     "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean",
-      "sha256": "5B4B08AA7FE385AB7E13B26BAAEA081EA0D3F8225375C9B594049859F841E896",
+      "sha256": "8D3AA7716897269F2885A471A225EA11995869944E7D623DE33978F442EE7EDB",
       "status": "TARGETS_ONLY_UNCOMPILED"
   },
   "source_target": "forall q i j, bodyMass (sourceContract q).origins (sourceContract q).axes (0 : Fin 6) (routeBMass 0) (routeBInertia 0) i j = bodyTraceEvaluator 0 q i j",

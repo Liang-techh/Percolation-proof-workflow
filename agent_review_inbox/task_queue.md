@@ -1995,6 +1995,24 @@ after integration; corrections should be a new result file.
 - O1 receipt 已保存 generator/Lean/adapter/source CSV hashes；当前只接受远端
   pinned compile receipt 与六个 `h_body_i` proof，不能使用本机环境错误作为证明。
 
+### T-P4-033-O1 — body-2 source/trace split (2026-09-07)
+
+- body-2 已有精确目标和条件组合桥；CSV key checker 已确认目标系数无漂移。
+- 继续分别证明 source expansion 与 tagged finite-fold reduction，再组合为
+  `h_body_2`；当前 checker PASS 不是 source/Lean proof，不得关闭 leaf。
+
+### T-P4-033-O0 — body-1/2 geometry targets (2026-09-07)
+
+- 可复用的 exact geometry targets 已收割：active Jacobian columns、正交性、
+  `sin_sq_add_cos_sq`、对角惯量消元和 body-1/2 trace fold reduction。
+- 下一步仍需 pinned Lean agent 把这些 targets 变成 source-bound compiled lemmas；
+  symbolic derivation 本身不消费 P-NE 或 strict margin。
+
+### T-P4-036.2 — theta2 authority source gap (2026-09-07)
+
+- 仓库内未发现真实 triple/membership/CoverageJoin2 authority receipt；P3 replay
+  不可升级。保持 O2 `NO_REAL_AUTHORITY_SOURCE_FOUND`，等待真实 branch exporter。
+
 ### T-P4-036.2 — theta2 namespace hardening (2026-09-07)
 
 - canonical triple validator 现在要求 exact namespace anchor
