@@ -1362,3 +1362,12 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - O2 新 external-premises schema 与 `Theta2ExternalPremisesAdapter.lean` 已接入
   O2 节点：membership proof 和 `CoverageJoin2` proof 都必须由调用方显式提供；
   schema/hash 不能替代 theorem，real triple 仍不存在。
+
+### 2026-09-07 — 梁智炜：O0 exact baseline conditional child
+
+- 将 `L_base=120442959/280443400` 的 exact 推导物化为
+  `P4.O0.physical_baseline_factor`，挂在 residual-map parent 下，与 O1 source
+  leaves 平行；它仍依赖未绑定的 Fourier-to-DH、对称性、all-q enclosure、
+  physical energy identity 和 residual interface。
+- 该 child 只提供 conditional scalar derivation，不消费 Schur margin，不关闭
+  parent，也不进入 registry。

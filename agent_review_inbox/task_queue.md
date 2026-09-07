@@ -1980,6 +1980,8 @@ after integration; corrections should be a new result file.
 - O2 可直接复用的新接口是 external-premises schema + typed adapter；下一步只
   接受真实 triple 的 `source_interval_membership` 与 `CoverageJoin2` proof inputs，
   不接受 synthetic constructor 或仅 hash-shaped receipt。
+- O0 新增独立 child `P4.O0.physical_baseline_factor`；数学 agent 继续攻真实
+  source/energy binding，只有这些前提和 strict `m_f>0` receipt 齐备后才可关闭。
 
 ### T-P4-036.2 — theta2 namespace hardening (2026-09-07)
 
