@@ -552,6 +552,17 @@ class WorkflowState:
             raise ValueError('registry requires closed dependencies')
         if not self._required_inputs_closed(node):
             raise ValueError('registry requires closed cross-branch inputs')
+        required_ids = list(node.metadata.get('required_node_ids', []))
+        if required_ids:
+            if any(self.nodes[required_id].status != NodeStatus.VERIFIED or
+                   required_id not in self.registry for required_id in required_ids):
+                raise ValueError('registry requires verified cross-branch inputs')
+            required_receipts = receipt.get('required_input_registries')
+            if (not isinstance(required_receipts, dict) or
+                    set(required_receipts) != set(required_ids) or
+                    any(not isinstance(value, str) or not value
+                        for value in required_receipts.values())):
+                raise ValueError('registry requires cross-branch input evidence')
         stage = self.evidence_stage(node_id)
         if stage not in {EvidenceStage.LEAN_VERIFIED, EvidenceStage.GLOBAL_CLOSED}:
             raise ValueError('registry requires an explicit Lean-verified evidence stage')

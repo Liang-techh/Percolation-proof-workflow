@@ -1,4 +1,5 @@
 import unittest
+import hashlib
 
 from percolation_workflow.model import NodeStatus, WorkflowState
 
@@ -39,6 +40,37 @@ class CrossBranchRequirementTests(unittest.TestCase):
         state.nodes[root].metadata["required_node_ids"] = [input_node]
         report = state.global_closure_report()
         self.assertIn(input_node, report["reachable_nodes"])
+
+    def test_registry_requires_explicit_cross_branch_input_evidence(self):
+        state = WorkflowState()
+        input_id = state.add_node("input", "theorem input : True")
+        target_id = state.add_node(
+            "target", "theorem target : True",
+            metadata={"required_node_ids": [input_id],
+                      "evidence_stage": "lean_verified"})
+        self.close(state, input_id)
+        state.nodes[input_id].metadata["evidence_stage"] = "lean_verified"
+        state.registry[input_id] = {"node_id": input_id, "artifact": "input.lean"}
+        attempt_id = state.begin_attempt(target_id, "agent")
+        state.finish_attempt(attempt_id, status="passed", command=["lean"],
+                             stdout="", stderr="", exit_code=0)
+        receipt = {
+            "attempt_id": attempt_id,
+            "source_hashes": {"target.lean": "digest"},
+            "source_digest": "digest",
+            "statement_identity": {
+                "name": "target",
+                "statement_sha256": hashlib.sha256(
+                    state.nodes[target_id].statement.encode()).hexdigest()},
+            "comparator_command": ["comparator"],
+            "comparator_stdout": "Your solution is okay!\n",
+            "comparator_stderr": "",
+        }
+        with self.assertRaisesRegex(ValueError, "cross-branch input evidence"):
+            state._register_verified(target_id, "target.lean", receipt=receipt)
+        receipt["required_input_registries"] = {input_id: "input.lean"}
+        state._register_verified(target_id, "target.lean", receipt=receipt)
+        self.assertEqual(state.nodes[target_id].status, NodeStatus.VERIFIED)
 
 
 if __name__ == "__main__":
