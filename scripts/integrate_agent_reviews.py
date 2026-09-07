@@ -42,6 +42,7 @@ TASK_TARGETS = {
     "T-FLT-SPECTRAL-LINEAR": (None, "flt_spectral_linear_scan"),
     "T-FLT-TRANSPORT-ADAPTER": (None, "flt_transport_adapter_scan"),
     "T-FLT-INFRA-REGISTRY": (None, "flt_registry_graph_scan"),
+    "T-FLT-SPECTRAL-SIDECAR": (None, "flt_spectral_sidecar"),
 }
 
 REVIEW_ID_ALIASES = {

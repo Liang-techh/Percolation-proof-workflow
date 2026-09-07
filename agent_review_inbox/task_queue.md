@@ -281,6 +281,17 @@ without an explicit scoped request.
 - forbidden: treating HTML badges, graph nodes, or comparator fixtures as
   proof evidence.
 
+### T-FLT-SPECTRAL-SIDECAR — highest-value spectral candidate
+
+- status: `queued` (梁智炜, focused current-pin sidecar)
+- scope: test the smallest non-number-theory eigenspace/range bridge identified
+  by the spectral scan, using a new isolated sidecar and the current local
+  Lean/Mathlib pin if available;
+- deliver: exact theorem boundary, imports, compile output, #print axioms,
+  provenance, and explicit reason if the upstream wrapper is too specialized;
+- forbidden: whole FLT build, arithmetic theorem reuse, registry promotion, or
+  inferring Route-B spectral closure from a failed/blocked compile.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it
