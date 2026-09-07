@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 690,
+  "revision": 691,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -41566,7 +41566,9 @@
       "parent_id": "b9170319d9654c91a0ef4ab01e111b86",
       "status": "open",
       "proof_sketch": "Define the eliminated tail vector, prove tail residual zero and front residual R u under the solve-column identities, transfer an externally supplied RemainderMargin, and retain exact obligations for R equality and positive margin.",
-      "dependencies": [],
+      "dependencies": [
+        "f7bb30a531494081b72116b1c89de3ea"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -41725,6 +41727,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_Body6SchurScalarAdapter.review.md",
             "sha256": "FBBFB5159DF95C6A15AEB3E78FB7FA772E6A7C7117016584DD5E3FD31ACF8EEE"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "f7bb30a531494081b72116b1c89de3ea": {
+      "id": "f7bb30a531494081b72116b1c89de3ea",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.uniform_margin",
+      "statement": "A single positive remainder margin over a declared finite configuration set can be extracted from pointwise positive margins, while an infinite domain requires an explicit common floor and pointwise positivity alone does not suffice.",
+      "parent_id": "f333aa93b1224537b8e39797e06b91f5",
+      "status": "open",
+      "proof_sketch": "Define UniformMargin over exactly a declared configuration domain, lower existing RemainderMargin monotonically, construct a positive finite Finset floor by induction, and use the reciprocal scalar-identity family to block the invalid pointwise-positive-to-uniform-positive inference; keep source binding, coverage, and full PSD external.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "residual_absorption",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_BODY6_UNIFORM_MARGIN",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_MARGINUNIFORM20260907.lean",
+            "sha256": "0E48865FD5342ACB95C91D6D95B5028868B2A15FFB581071D41B06F6882A34F4"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_MARGINUNIFORM20260907.review.md",
+            "sha256": "F0649B9659AF302BE3093866A572181CCBFBBB1EEE137F2930B9AEBF0C59AB97"
           }
         ],
         "registry_eligible": false,
@@ -69596,6 +69633,23 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T20:17:19.493720+00:00",
+      "kind": "node_added",
+      "node_id": "f7bb30a531494081b72116b1c89de3ea",
+      "parent_id": "f333aa93b1224537b8e39797e06b91f5",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.uniform_margin"
+    },
+    {
+      "at": "2026-09-07T20:17:19.493740+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.uniform_margin"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -73252,5 +73306,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "b3d8e8240b9b1400edf35fd609e69d414b7d3041a1af23f67cda92bce407932e"
+  "state_checksum": "3589c658ec0216d9f443aab292699973d194e7c1532acfe301465e5ef2065129"
 }

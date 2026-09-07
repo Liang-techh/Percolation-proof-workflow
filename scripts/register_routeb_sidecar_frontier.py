@@ -1768,6 +1768,19 @@ CHILDREN = [
             "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_Body6SchurScalarAdapter.review.md",
         ],
     },
+    {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.uniform_margin",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin",
+        "statement": "A single positive remainder margin over a declared finite configuration set can be extracted from pointwise positive margins, while an infinite domain requires an explicit common floor and pointwise positivity alone does not suffice.",
+        "proof_sketch": "Define UniformMargin over exactly a declared configuration domain, lower existing RemainderMargin monotonically, construct a positive finite Finset floor by induction, and use the reciprocal scalar-identity family to block the invalid pointwise-positive-to-uniform-positive inference; keep source binding, coverage, and full PSD external.",
+        "lane": "source_semantics",
+        "bottleneck": "residual_absorption",
+        "status": "OPEN_UNCOMPILED_BODY6_UNIFORM_MARGIN",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_MARGINUNIFORM20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_MARGINUNIFORM20260907.review.md",
+        ],
+    },
 ]
 
 
