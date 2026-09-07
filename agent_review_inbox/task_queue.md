@@ -2350,3 +2350,17 @@ proof artifact; it does not make the parent verified or alter the P5 gates.
 - 两个结果已注册为新的子叶，O1 candidate provenance 也加入 fixed-lambda
   coefficient bridge 哈希；state revision `617`，registry `0`，admission gate
   继续关闭。
+
+### 2026-09-07 — GitHub Lean harvest: P5-027 / P5-028
+
+- T-P5-027 的 `P5NearSharpCenteredGain.lean` 已有 GitHub CI 证据：Lean
+  `4.32.0`，focused check exit 0，10 个导出声明仅
+  `[propext, Classical.choice, Quot.sound]`，无 `sorryAx`；修正后的常数为
+  `2302494677956489/400000000000000`，并保留精确 lower witness。已注册为
+  `near_sharp_scalar_fallback.compiled_candidate`，仍等待 source/K_path/P8。
+- T-P5-028 的 pinned moving-frame sidecar 已随远端提交进入本地，暂按
+  `CLAIMED_LEAN_SIDECAR_PENDING_REVIEW` 登记；不能把 claim 或 sidecar 本身
+  当成已审阅 compiled proof。
+- 本地 P3 slot adapter 已加入 central-FD algebraic leaf，明确把
+  `dM[i,j,k]` 映射为 `T[k,i,j]`，并保持余项 radius 同步置换；state revision
+  `619`，registry `0`，formal gate 仍关闭。

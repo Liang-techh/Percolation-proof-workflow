@@ -1772,6 +1772,18 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - 两者均以 conditional/pending 叶注册，没有把 concrete gain、H gap、source
   或 coverage 误报为已验证；state revision `617`，registry `0`。
 
+### 2026-09-07 — GitHub P5 Lean sidecars 收割
+
+- 巨阳仙尊的 T-P5-027 near-sharp scalar child 已在 GitHub Actions 的 pinned
+  Lean 4.32.0 环境通过 focused build 与 axiom audit。它关闭的是纯标量代数
+  child，未提供 concrete `ell2_path`/`K_path`、source semantics、P8 coverage
+  或 registry admission。
+- 苏梦辰的 T-P5-028 moving-frame Lean sidecar 已进入本地；当前只有 claim
+  与 portable sidecar，先登记为 pending review，继续保留已有六叶 theorem DAG。
+- P3 slot adapter 将 source/storage 的 `dM[i,j,k]` 与 derivative-first 的
+  `T[k,i,j]` 做成可逆 typed map，并证明 source force/remainder 等价；仍为
+  uncompiled candidate，state revision `619`。
+
 ### 2026-09-07 — body-6 / central-FD 数学叶收割
 
 - body-6 agent 独立重构第六刚体 DH/Gram，精确重现 610 行、32 个非空矩阵
