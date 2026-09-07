@@ -2187,3 +2187,21 @@ close.
 - forbidden: replacing `K_path` by a scalar without comparison, claiming
   source/Jacobian binding, coverage, Lean verification, registry admission or
   P5/P8/M4 closure.
+
+### Coordinator parallel mathematical round (2026-09-07, current)
+
+The coordinator dispatched four disjoint bottleneck tasks after the finite
+fixed-lambda correction.  They may add only their named sidecar files; state,
+registry, and shared adapters remain coordinator-owned.
+
+| agent lane | assigned bottleneck | write scope | acceptance boundary |
+|---|---|---|---|
+| Planck the 6th | body-4 Gram algebra repair | `examples/routeb_o1_body4_source_gram_proof_attempt/NEW_REPAIR_*.lean` + review | proof skeleton only until remote Lean receipt |
+| Averroes the 6th | body-5 G3/G4 Gram and trace fold | `examples/routeb_b45_source_comparator_lean/NEW_BODY5_*.lean` + review | preserve q3 support and source premises |
+| Volta the 6th | P5 feasible-cone/SPN lemma/checker refinement | `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_*` + review | no invented `K_path`, source, coverage, or Lean claim |
+| Einstein the 6th | H_acc source-refinement intake | `examples/routeb_o0_h_acc_source_refinement/NEW_*` + review | missing Julia export remains pending |
+
+Harvest rule: collect completed sidecars roughly every 20 minutes, integrate
+fail-closed metadata, refresh the advisory overlay, and synchronize one batch
+to GitHub in that window. Between harvests continue local mathematical work;
+do not fetch/push merely because an agent has emitted an intermediate file.

@@ -1600,3 +1600,18 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   立即同步；除此之外不在收割窗口外主动 fetch。
 - 关联任务/Review：body-3 decomposition、P5-024 independent review、当前
   `task_queue.md` 的 Dispatch and synchronization throttle。
+
+### 2026-09-07 — 梁智炜：fixed-lambda finite fold 数学修正
+
+- 当前完成：新增 `examples/routeb_fixed_lambda_fold/check_fold.py`，用文本有理数
+  精确折叠 `eta=2.7/5.6, lambda=2, theta=1` 两个声明分片，共 577 个 witness；
+  两个分片分别为 256/321 个不同 box，最小 margin 为
+  `2005102750930187/12500000000000000` 与
+  `2150687771402829/50000000000000000`。
+- 发现的问题：`eta=5.6` 的 `box_id` 是全局稀疏标签，不是 `1..321` 的局部序号；
+  已删除错误的稠密编号假设，改为一行一全局 box label，并把 gap 作为诊断信息保留。
+- 边界：这是 `PASS_EXACT_DECLARED_FINITE_FOLD_ONLY`，不证明 source binding、true-DH
+  coverage、Lean kernel、comparator 或 registry；对应 DAG child 已绑定脚本、测试、README
+  和 receipt，parent 仍 open。
+- 关联提交：`4a57fbc`；state revision `592`，registry `0`，
+  `formal_certificate_allowed=false`。
