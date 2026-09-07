@@ -45,8 +45,8 @@ def main() -> int:
     lifted = LIFTED.read_text(encoding="utf-8", errors="replace")
     nominal = NOMINAL.read_text(encoding="utf-8", errors="replace")
 
-    deployed_tau = re.search(r"(?ms)^\s*tau\s*=.*?\n\s*return Mq", deployed)
-    lifted_tau = re.search(r"(?ms)^tau\s*=.*?\n(descriptor|#)", lifted)
+    deployed_tau = re.search(r"(?m)^\s*tau\s*=", deployed)
+    lifted_tau = re.search(r"(?m)^\s*tau\s*=", lifted)
     required_terms = {
         "q5_over_100": r"q\s*\[?5\]?\s*/\s*100",
         "q4_over_200": r"q\s*\[?4\]?\s*/\s*200",
