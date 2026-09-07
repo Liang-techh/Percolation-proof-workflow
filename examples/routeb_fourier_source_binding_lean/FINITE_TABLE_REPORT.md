@@ -29,6 +29,13 @@ The script compiles only the new seam plus its unchanged bridge dependency,
 with warnings treated as errors, and prints the resulting Lean exit code and
 hashes.
 
+Latest focused result: `VERIFY_EXIT_CODE=0` under Mathlib commit
+`0df444a360eaa60ab8c11dca51a86af692955474`. The checked seam snapshot hashes
+were `351e47659d26998fc7f693800f34677b6169085d2d87547d20bf17b45811e98a`
+(source) and
+`6b47edb7d75efd044c6eae736d30360320ef2a1833e64ab76f96692d327ac632`
+(olean).
+
 ## Explicit open obligation
 
 The first unclosed instantiation is the construction of a concrete
