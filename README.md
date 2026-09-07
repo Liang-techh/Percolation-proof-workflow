@@ -155,6 +155,7 @@ python scripts/record_routeb_regularizer_semantics_draft.py
 python scripts/check_routeb_o1_interface.py
 python scripts/record_routeb_o1_interface_check.py
 python scripts/record_routeb_child_reviews.py
+python scripts/record_routeb_force_scale_contract.py
 ```
 
 These recorders preserve the deployment authority (`robot_final/dhport_lib.jl`),
@@ -172,6 +173,11 @@ mathematical decomposition and unresolved obligations on the corresponding DAG
 nodes, and explicitly refuses registry or certificate admission. The O1
 structural checker is likewise only an interface gate; it does not claim a Lean
 compile.
+
+`record_routeb_force_scale_contract.py` keeps the block projection honest by
+scanning the selected deployed/lifted sources for requested force-scale terms
+and recording an obstruction when they are absent. It does not infer a missing
+coefficient from a nearby nominal coupling.
 
 After an agent returns a decomposition, the same generic state can accept it with
 `propose-decomposition`; the child JSON array preserves order and each child sketch:

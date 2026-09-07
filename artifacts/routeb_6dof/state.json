@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 478,
+  "revision": 479,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13066,7 +13066,22 @@
           },
           "formal_certificate_allowed": false
         },
-        "parent_receipts": {}
+        "parent_receipts": {},
+        "force_scale_contract": {
+          "status": "FORCE_SCALE_TERMS_UNSUPPORTED_IN_CURRENT_CANONICAL_SOURCES",
+          "force_descriptor_node": "P4.true_dh_force_descriptor_semantics",
+          "requested_terms_found": {
+            "deployed_dhport": {
+              "q5_over_100": false,
+              "q4_over_200": false
+            },
+            "lifted_descriptor": {
+              "q5_over_100": false,
+              "q4_over_200": false
+            }
+          },
+          "formal_certificate_allowed": false
+        }
       }
     },
     "203c45aac1d84022b69267c0cc31db06": {
@@ -13112,7 +13127,8 @@
           "controller_damping_vector_source_equivalence",
           "authoritative_controller_parameter_selection",
           "controller_semantics_review_conflict_resolution",
-          "stale_controller_provenance_reconciliation"
+          "stale_controller_provenance_reconciliation",
+          "requested_force_scale_terms_not_found_in_canonical_sources"
         ],
         "controller_damping_semantics": {
           "schema_version": 1,
@@ -13283,7 +13299,70 @@
             "registry_promoted": false,
             "formal_certificate_allowed": false
           }
-        ]
+        ],
+        "force_scale_contract": {
+          "schema_version": 1,
+          "status": "FORCE_SCALE_TERMS_UNSUPPORTED_IN_CURRENT_CANONICAL_SOURCES",
+          "scope": "static selected-source scan; no external source mutation",
+          "blocks": {
+            "B": [
+              4,
+              5
+            ],
+            "D": [
+              1,
+              2,
+              3,
+              6
+            ]
+          },
+          "requested_force_terms": {
+            "q5_over_100": "q5/100",
+            "q4_over_200": "q4/200"
+          },
+          "requested_terms_found": {
+            "deployed_dhport": {
+              "q5_over_100": false,
+              "q4_over_200": false
+            },
+            "lifted_descriptor": {
+              "q5_over_100": false,
+              "q4_over_200": false
+            }
+          },
+          "controller_tau_source": {
+            "deployed_expression_present": true,
+            "lifted_expression_present": true,
+            "deployed_tau_region_present": true,
+            "lifted_tau_region_present": true,
+            "deployed_rows_4_5_semantics": "-Kp_B*q_B-(Kd_B+b_fr_B)*dq_B+G0v_B+GwI_B*w",
+            "lifted_rows_4_5_semantics": "-Kp_B*q_B-(Kd_B+Bfr_B)*dq_B+g0_B+GwI_B*w"
+          },
+          "lifted_nominal_projection": {
+            "lifted_q5_cross_term": true,
+            "lifted_q4_cross_term": true,
+            "observed_cross_coefficient": "1/20",
+            "interpretation": "nominal lifted coupling, not deployed tau coefficient"
+          },
+          "typed_block_interface_present": true,
+          "source_artifacts": [
+            {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\robot_final\\dhport_lib.jl",
+              "sha256": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936"
+            },
+            {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_fourier_lifted_descriptor_model.jl",
+              "sha256": "0FCF733144B3D7B1B08F328FE4AD24477057C56976F0EF53633C450D8FC4729D"
+            },
+            {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_NOMINAL_DESCRIPTOR_INTERFACE.md",
+              "sha256": "B8CCCE100EB8EEB72A245AD2B2B5489145224DEB87124DDE9CB694D71EE1A9FC"
+            }
+          ],
+          "resolution": "bind the requested force terms only after an authoritative source/config is identified; otherwise remove them from the target contract and use the observed source equations",
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
+        }
       }
     },
     "e7d759dcbf1c49cda5dfe9c1daf2cb1d": {
@@ -37610,6 +37689,25 @@
       "admission_status": "pending_coordinator_admission",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T11:34:57.178425+00:00",
+      "kind": "routeb_force_scale_contract_recorded",
+      "node_id": "203c45aac1d84022b69267c0cc31db06",
+      "parent_id": "6cebb66987f449f3b5ad8d0548dfdf83",
+      "status": "FORCE_SCALE_TERMS_UNSUPPORTED_IN_CURRENT_CANONICAL_SOURCES",
+      "requested_terms_found": {
+        "deployed_dhport": {
+          "q5_over_100": false,
+          "q4_over_200": false
+        },
+        "lifted_descriptor": {
+          "q5_over_100": false,
+          "q4_over_200": false
+        }
+      },
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -41266,5 +41364,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "7582716d27a7ce1c07cac3f17ee2c43b0133fbdb41f7fc2d0ea586e28e0768c2"
+  "state_checksum": "c1965c7732baf90ce0b6f83993ed24d2874b6a23ea5e6fe1872efd758897b569"
 }

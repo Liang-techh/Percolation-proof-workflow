@@ -1439,6 +1439,13 @@ polynomial remains a separate frontier.
   pointwise or sampled agreement as source equality, changing controller
   parameters without invalidating old receipts, or hiding normalization in an
   untyped solver callback.
+- coordinator finding (2026-09-07): the selected canonical deployed and
+  lifted files contain no literal/structural `q5/100` or `q4/200` term. The
+  lifted nominal rows contain `+q5/20` and `+q4/20`, while deployed `tau`
+  contains only the controller channels recorded above. Treat the requested
+  scale terms as an explicit unresolved source-contract obstruction until an
+  authoritative source/config is identified; do not silently reinterpret
+  them as the observed `1/20` coupling.
 
 ## Handoff format
 
