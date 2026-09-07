@@ -2113,6 +2113,12 @@ P4 Schur/PMI absorption 已接入 DAG revision 672。所有结果仍是 open/unc
 index transport 失败条件、P3 strict gap quantitative bound。它们不重复已有正/负叶，
 用于让 theorem DAG 同时维护可证明路径和不可省略的障碍。
 
+### 2026-09-07 14:52 — 梁智炜收割 parent adapters
+
+body-6 typed Schur adapter、P4 absorption obstruction、fixed-λ index obstruction 已
+接入 DAG revision 676；正路径与负路径均保留为 open/uncompiled，未改变 registry 或
+formal gate。流川枫的 GitHub 比例 lane 继续保留给后续 pinned validation。
+
 ### 2026-09-07 14:45 — 梁智炜收割 P3 quantitative gap
 
 P3 quantitative gap 叶已接入 DAG revision 673，为严格 cap-load 提供显式可计算

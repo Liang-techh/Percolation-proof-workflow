@@ -1430,6 +1430,45 @@ CHILDREN = [
             "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_STRICT_OBSTRUCTION_REVIEW.md",
         ],
     },
+    {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.obstruction",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence",
+        "statement": "Without injectivity, surjectivity, or explicit total-equality premises, a finite index map cannot transport a cell-family aggregate budget to the tagged two-row final budget.",
+        "proof_sketch": "Record exact finite counterexamples for noninjective collapse, nonsurjective omission, and bijective maps with unequal payload totals; preserve these as negative controls adjacent to the positive index adapter.",
+        "lane": "source_semantics",
+        "bottleneck": "source_semantics",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_INDEX_TRANSPORT_OBSTRUCTION",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_INDEX_TRANSPORT_OBSTRUCTIONS20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_INDEX_TRANSPORT_OBSTRUCTIONS20260907_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.obstruction",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption",
+        "statement": "The Schur/PMI absorption channel needs strict effective slack and an independent energy-feedback closure: rho_eff≥1 admits no positive absorption slack, and a residual upper bound alone cannot give a finite energy cap.",
+        "proof_sketch": "Record exact real counterexamples for rho_eff≥1, residual-only unbounded energy, and the rho=1 feedback ray; preserve these as negative controls without denying other possible proof methods or typed physical constraints.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_P4_ABSORPTION_OBSTRUCTION",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_AbsorptionObstruction.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_AbsorptionObstruction_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse",
+        "statement": "The explicit body-6 tail inverse supplies a dimensionally typed Fin-2 Schur correction adapter for arbitrary external cross blocks, with all solve and denominator premises retained.",
+        "proof_sketch": "Define X:(Fin r)×(Fin 2), Y:(Fin 2)×(Fin c), expand X*D*Y into the two reciprocal diagonal channels, and package the solve identities from the tail inverse without claiming cross-block source values or Schur PSD.",
+        "lane": "source_semantics",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_BODY6_TYPED_SCHUR_ADAPTER",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_TAILSCHUR20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_TAILSCHUR20260907_REVIEW.md",
+        ],
+    },
 ]
 
 

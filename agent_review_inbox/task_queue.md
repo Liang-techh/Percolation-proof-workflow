@@ -2809,6 +2809,13 @@ source-independent/open/uncompiled 候选。
 - 四项都服务于 parent closure 或 obstruction tracking，保持数学证明优先；GitHub
   Lean receipt 仍按六人环与流川枫比例 lane 另行处理。
 
+### 2026-09-07 — 14:52 parent adapter 收割
+
+- body-6 tail inverse→typed Schur adapter、P4 rho/slack absorption obstruction、
+  fixed-λ index transport obstruction 已完成定向 review 并登记，revision 676。
+- 负分支明确保留：rho_eff≥1 无正 slack；缺少 index injective/surjective/total
+  equality 不能搬运 aggregate；这些记录用于 scheduler 的 obstruction tracking。
+
 ### 2026-09-07 — 14:45 P3 定量 gap 收割
 
 - P3 `quantitative_gap` 已完成定向 review 并登记，revision 673；它把整体

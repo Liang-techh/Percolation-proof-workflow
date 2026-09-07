@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 673,
+  "revision": 676,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -40610,7 +40610,9 @@
       "parent_id": "4c6ec998159b4f609dda50f778e27dce",
       "status": "open",
       "proof_sketch": "Use delta>0 and rho_eff+delta≤1 to derive delta*energy-biasEff≤energy-q, require an explicit Schur/PMI comparison and optional bias≤delta*energy premise for nonnegative margin, then expose affine feedback and residual-allocation consumers without redoing weighted Cauchy or parameter rearrangement.",
-      "dependencies": [],
+      "dependencies": [
+        "8c127b5f6c354f4997e8582eb8d10778"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -40645,7 +40647,9 @@
       "parent_id": "d3c0e41e00fe4677b7c370328eecf8e8",
       "status": "open",
       "proof_sketch": "Use the previously registered positive principal minors to justify nonzero denominators, define the reciprocal diagonal table and finite 2x2 multiplication, prove left/right identity and inverse action without invoking Matrix.inv, and retain the actual source tail binding premises.",
-      "dependencies": [],
+      "dependencies": [
+        "0c17023d981c4c30baef00ee4cc1a2eb"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -40680,7 +40684,9 @@
       "parent_id": "4f053e18b0514fed992e842f1594d116",
       "status": "open",
       "proof_sketch": "Require supplied selected-row membership, injectivity, surjectivity onto the final tagged union, cell-value preservation, and exact load/margin totals; construct only the transported strict budget and leave physical coverage, digest, source, and registry external.",
-      "dependencies": [],
+      "dependencies": [
+        "7948f56e065748daae7ef6f21007fdd6"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -40767,6 +40773,111 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_QUANTITATIVE_GAP_REVIEW.md",
             "sha256": "90CA8337311CC70F713E78495D300B691378A1B50A23A93ED62DBC904C6C89B9"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "7948f56e065748daae7ef6f21007fdd6": {
+      "id": "7948f56e065748daae7ef6f21007fdd6",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.obstruction",
+      "statement": "Without injectivity, surjectivity, or explicit total-equality premises, a finite index map cannot transport a cell-family aggregate budget to the tagged two-row final budget.",
+      "parent_id": "e8b9933f26a54a40bc7282e5cd38d9e5",
+      "status": "open",
+      "proof_sketch": "Record exact finite counterexamples for noninjective collapse, nonsurjective omission, and bijective maps with unequal payload totals; preserve these as negative controls adjacent to the positive index adapter.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "source_semantics",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_FIXED_LAMBDA_INDEX_TRANSPORT_OBSTRUCTION",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_INDEX_TRANSPORT_OBSTRUCTIONS20260907.lean",
+            "sha256": "812EC2E10074C4461B04D6EE08B51CC2BD3B969F3D3ACE20C6E8B1B870920C78"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_INDEX_TRANSPORT_OBSTRUCTIONS20260907_REVIEW.md",
+            "sha256": "50FB7C38D3A05B0991E8A9AF81B5160047799A60191110C9312DD0D767CE6067"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "8c127b5f6c354f4997e8582eb8d10778": {
+      "id": "8c127b5f6c354f4997e8582eb8d10778",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.obstruction",
+      "statement": "The Schur/PMI absorption channel needs strict effective slack and an independent energy-feedback closure: rho_eff≥1 admits no positive absorption slack, and a residual upper bound alone cannot give a finite energy cap.",
+      "parent_id": "e8804b8b7d1e41519b2cbd90c57f9bfb",
+      "status": "open",
+      "proof_sketch": "Record exact real counterexamples for rho_eff≥1, residual-only unbounded energy, and the rho=1 feedback ray; preserve these as negative controls without denying other possible proof methods or typed physical constraints.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_P4_ABSORPTION_OBSTRUCTION",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_AbsorptionObstruction.lean",
+            "sha256": "7F430B08C299E9C0D25125E3AF71E524D7DD363A6F3E4A7C02AA3F24E1AE789E"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_AbsorptionObstruction_REVIEW.md",
+            "sha256": "E081A691530E91220CADB3876C2590EC8333D61B709039F0C60431DE1443F777"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "0c17023d981c4c30baef00ee4cc1a2eb": {
+      "id": "0c17023d981c4c30baef00ee4cc1a2eb",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter",
+      "statement": "The explicit body-6 tail inverse supplies a dimensionally typed Fin-2 Schur correction adapter for arbitrary external cross blocks, with all solve and denominator premises retained.",
+      "parent_id": "7651cc50c8f943908df1d0f11d0bd750",
+      "status": "open",
+      "proof_sketch": "Define X:(Fin r)×(Fin 2), Y:(Fin 2)×(Fin c), expand X*D*Y into the two reciprocal diagonal channels, and package the solve identities from the tail inverse without claiming cross-block source values or Schur PSD.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_BODY6_TYPED_SCHUR_ADAPTER",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_TAILSCHUR20260907.lean",
+            "sha256": "52226F5EDD6F122E133413F469B207D50B625FFA7066B76CA7E69EC5F5841D8B"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_TAILSCHUR20260907_REVIEW.md",
+            "sha256": "D08DD25BE5467CFF79C7B43C0ECC1606F35B15AA012502F11280831DD9FC9ACE"
           }
         ],
         "registry_eligible": false,
@@ -68277,6 +68388,57 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T19:38:11.399292+00:00",
+      "kind": "node_added",
+      "node_id": "7948f56e065748daae7ef6f21007fdd6",
+      "parent_id": "e8b9933f26a54a40bc7282e5cd38d9e5",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.obstruction"
+    },
+    {
+      "at": "2026-09-07T19:38:11.399324+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.obstruction"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T19:38:50.715154+00:00",
+      "kind": "node_added",
+      "node_id": "8c127b5f6c354f4997e8582eb8d10778",
+      "parent_id": "e8804b8b7d1e41519b2cbd90c57f9bfb",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.obstruction"
+    },
+    {
+      "at": "2026-09-07T19:38:50.715174+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.obstruction"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T19:39:28.426175+00:00",
+      "kind": "node_added",
+      "node_id": "0c17023d981c4c30baef00ee4cc1a2eb",
+      "parent_id": "7651cc50c8f943908df1d0f11d0bd750",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter"
+    },
+    {
+      "at": "2026-09-07T19:39:28.426195+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -71933,5 +72095,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "38fb442aea19cf66fdc16b0f58f6e8e94d2deecca13a8c43f514b2d22b88a91f"
+  "state_checksum": "76942db4e00afc268203f15060f895ce851e019ae3db9f2daca09fb95f302bec"
 }
