@@ -1142,6 +1142,20 @@ CHILDREN = [
             "agent_review_inbox/companion-T-P4-024-kuangmanmozun-20260907T1250.md",
         ],
     },
+    {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load",
+        "statement": "The O1 defect-aware residual admits an exact three-term weighted squared-load bound, with a necessary reciprocal coefficient condition and explicit force-versus-acceleration defect typing.",
+        "proof_sketch": "Apply weighted Cauchy to R_port aB, T_D eD, and eB; expose the division-free reciprocal condition and relative-plus-additive rho_eff/B_eff interface, preserving the existing scalar triangle fallback and source normalization boundaries.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "PENDING_MATH_CHILD_UNCOMPILED_P4_WEIGHTED_DEFECT_LOAD",
+        "artifacts": [
+            "agent_review_inbox/review-T-P4-032-defect-quadratic-liuguanyi-20260907T1306.md",
+            "agent_review_inbox/companion-T-P4-032-defect-quadratic-liuguanyi-20260907T1308.md",
+            "agent_review_inbox/claim-T-P4-032-defect-quadratic-liuguanyi-20260907T1258.md",
+        ],
+    },
 ]
 
 

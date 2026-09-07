@@ -1,0 +1,14 @@
+{
+  "record_file": "agent_review_inbox/companion-T-P4-032-defect-quadratic-liuguanyi-20260907T1308.md",
+  "record_kind": "companion_log",
+  "review_sha256": "B09409E359B16160CDFD791BA7DEAAB39ECF05F833F7C593CB166B99206ACF02",
+  "task_id": "T-P4-032",
+  "source_agent": "柳冠一",
+  "created_at": "2026-09-07T13:08:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_typed_block_source_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "integrated_at": "2026-09-07T19:03:56.058352+00:00"
+}

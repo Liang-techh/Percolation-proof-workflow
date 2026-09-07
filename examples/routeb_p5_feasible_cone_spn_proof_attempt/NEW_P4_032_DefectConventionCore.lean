@@ -125,6 +125,16 @@ theorem condensed_iff (M : Mat6) (J : DD) (aB FB : BVec)
     rw [hid] at hz
     exact (sub_eq_zero.mp hz).symm
 
+/-- An independently named O1 record must be explicitly identified with the
+adapter output; matching field names or dimensions is not such a proof. -/
+theorem identified_condensed_iff (M : Mat6) (J : DD) (aB FB : BVec)
+    (aD aD0 FD : DVec) (MDB0 : DB) (f : ForceSideDefects) (o : O1Variables)
+    (hInv : J * blockDD M = (1 : DD))
+    (hVariables : o = adapt M aB FB aD aD0 FD MDB0 f) :
+    schur M J *ᵥ aB = forceRHS M J FB FD f ↔ o.rB = o1RHS M J aB o := by
+  rw [hVariables]
+  exact condensed_iff M J aB FB aD aD0 FD MDB0 f hInv
+
 /-- Actual invocation of the existing O1 theorem after the balance adapter.
 The conclusion concerns the newly defined rB, not an arbitrary deployed residual. -/
 theorem o1_from_force_balances (M : Mat6) (J : DD) (aB FB : BVec)
@@ -197,6 +207,7 @@ end
 #print axioms balances_iff
 #print axioms condensed_residual_identity
 #print axioms condensed_iff
+#print axioms identified_condensed_iff
 #print axioms o1_from_force_balances
 #print axioms adapted_distal_with_reference
 #print axioms corrections_equal_iff

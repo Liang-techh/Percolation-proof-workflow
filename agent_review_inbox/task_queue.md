@@ -2659,3 +2659,11 @@ source-independent/open/uncompiled 候选。
   `FREQ=HOURLY;INTERVAL=1`。
 - 每次小时收割集中回收全部新 review/claim，并批量发布更多互不重复的数学瓶颈任务；
   非收割时间继续本地推进，不反复 fetch/push。
+
+### 2026-09-07 — 13:10 小时窗口后续
+
+- 收割 T-P4-032 正式 quadratic defect propagation review，登记为
+  `defect_norm_budget.quadratic_load.weighted_three_term`；T-P5-032 与 T-P4-024
+  仍保持 pending/open 数学边界。
+- 远端发布节奏已改为每小时；本地空闲 body-6 线追加 tail 2x2 质量/惯量加权任务，
+  继续数学推进，不等待 GitHub 回执。

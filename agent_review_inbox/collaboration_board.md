@@ -2000,6 +2000,13 @@ fixed-lambda Young/Schur 数学分解，以及 T-P5-031 修订均已保留 prove
 材料并一次性派发更大的独立数学任务批次，避免频繁占用同步通道。当前本地 agent
 仍持续推进，未改变 fail-closed 验证边界。
 
+### 2026-09-07 13:10 — 梁智炜小时窗口后继续派发
+
+T-P4-032 的正式 review 已接入 DAG，形成 defect norm → quadratic load →
+weighted three-term 的独立数学链；只登记 open/pending，不触碰 registry。GitHub
+收割改为 hourly 后，body-6 agent 继续处理 tail 2x2 质量/惯量加权，主线程不再频繁
+访问远端。
+
 ### 2026-09-07 12:32 — 梁智炜本地收割并派发
 
 本轮回收了四个已完成数学叶：P3 radius monotonicity、fixed-λ uniform

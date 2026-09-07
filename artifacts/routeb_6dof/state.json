@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 657,
+  "revision": 659,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -14080,6 +14080,33 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-T-P4-032-repair-20260907.md"
+          },
+          {
+            "record_file": "agent_review_inbox/companion-T-P4-032-defect-quadratic-liuguanyi-20260907T1308.md",
+            "record_kind": "companion_log",
+            "review_sha256": "B09409E359B16160CDFD791BA7DEAAB39ECF05F833F7C593CB166B99206ACF02",
+            "task_id": "T-P4-032",
+            "source_agent": "柳冠一",
+            "created_at": "2026-09-07T13:08:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_typed_block_source_bridge",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P4-032-defect-quadratic-liuguanyi-20260907T1306.md",
+            "record_kind": "review_result",
+            "review_sha256": "8B503848DE675239859830E0F0F0B29E3837F43A0DCBA90729339709E46F8608",
+            "task_id": "T-P4-032",
+            "source_agent": "柳冠一",
+            "created_at": "2026-09-07T13:06:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_typed_block_source_bridge",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "e52853e010e8ff10123812946fbec836b86f6ff2",
+            "review_file": "agent_review_inbox/review-T-P4-032-defect-quadratic-liuguanyi-20260907T1306.md"
           }
         ]
       }
@@ -39380,7 +39407,8 @@
       "status": "open",
       "proof_sketch": "Replace the Euclidean norm by its nonnegative defect cap under a supplied quadratic upper bound, multiply only by nonnegative load weight, and keep the LoadBinding and allocation inequalities explicit.",
       "dependencies": [
-        "9ad6d4f6bd9a4776a34310b2118613c2"
+        "9ad6d4f6bd9a4776a34310b2118613c2",
+        "2d0e7834c19f43c29224086f3035953f"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -39924,6 +39952,45 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\companion-T-P4-024-kuangmanmozun-20260907T1250.md",
             "sha256": "44D668B6C4E10FFB023E9103D1C0EC6FBA519408BE51C68FA94294F13197BB22"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "2d0e7834c19f43c29224086f3035953f": {
+      "id": "2d0e7834c19f43c29224086f3035953f",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term",
+      "statement": "The O1 defect-aware residual admits an exact three-term weighted squared-load bound, with a necessary reciprocal coefficient condition and explicit force-versus-acceleration defect typing.",
+      "parent_id": "2e33ad6b11c640c7ae1b28889268dddf",
+      "status": "open",
+      "proof_sketch": "Apply weighted Cauchy to R_port aB, T_D eD, and eB; expose the division-free reciprocal condition and relative-plus-additive rho_eff/B_eff interface, preserving the existing scalar triangle fallback and source normalization boundaries.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "PENDING_MATH_CHILD_UNCOMPILED_P4_WEIGHTED_DEFECT_LOAD",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-032-defect-quadratic-liuguanyi-20260907T1306.md",
+            "sha256": "8B503848DE675239859830E0F0F0B29E3837F43A0DCBA90729339709E46F8608"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\companion-T-P4-032-defect-quadratic-liuguanyi-20260907T1308.md",
+            "sha256": "B09409E359B16160CDFD791BA7DEAAB39ECF05F833F7C593CB166B99206ACF02"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\claim-T-P4-032-defect-quadratic-liuguanyi-20260907T1258.md",
+            "sha256": "2BC493E71BC33638A3E7BC3BEAFC7077E3B06642C81E5D2DEF2000356BAD67DC"
           }
         ],
         "registry_eligible": false,
@@ -67097,6 +67164,49 @@
       ],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T19:03:56.058352+00:00",
+      "kind": "agent_companion_integrated",
+      "record_file": "agent_review_inbox/companion-T-P4-032-defect-quadratic-liuguanyi-20260907T1308.md",
+      "record_kind": "companion_log",
+      "review_sha256": "B09409E359B16160CDFD791BA7DEAAB39ECF05F833F7C593CB166B99206ACF02",
+      "task_id": "T-P4-032",
+      "classification": "pending_typed_block_source_bridge",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-07T19:03:56.058652+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-032-defect-quadratic-liuguanyi-20260907T1306.md",
+      "record_kind": "review_result",
+      "review_sha256": "8B503848DE675239859830E0F0F0B29E3837F43A0DCBA90729339709E46F8608",
+      "task_id": "T-P4-032",
+      "classification": "pending_typed_block_source_bridge",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-07T19:04:14.057012+00:00",
+      "kind": "node_added",
+      "node_id": "2d0e7834c19f43c29224086f3035953f",
+      "parent_id": "2e33ad6b11c640c7ae1b28889268dddf",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term"
+    },
+    {
+      "at": "2026-09-07T19:04:14.057033+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -70753,5 +70863,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "aeee0e748aee204f07509a52c54526a3e6f1997d2e626249e76712a0cbddb635"
+  "state_checksum": "d790d5de02af220be1dc928127ee5837ed23f04b23eb042f2fa35f620b8ee96c"
 }
