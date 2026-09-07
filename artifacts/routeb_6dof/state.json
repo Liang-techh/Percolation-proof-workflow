@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 704,
+  "revision": 705,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -41971,7 +41971,9 @@
       "parent_id": "748ca7b5809948c28313422855e763e4",
       "status": "open",
       "proof_sketch": "Use distinct FrontQuadraticScale and ResidualScalarScale wrappers, feed alpha into the quadratic lower-bound adapter and g*beta into residual comparison, preserve qCap/target allocation, and retain negative-scale and alpha-versus-beta identification counterexamples.",
-      "dependencies": [],
+      "dependencies": [
+        "6ae1c6ff93364c8f841308abd603c48c"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -42241,6 +42243,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_EXPLICIT_REGISTRY_PROMOTION_GATE20260907_REVIEW.md",
             "sha256": "96A80B0175781B0393ADDD8B0750D27E2258FFE3A37040DE12A3A40DF9059520"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "6ae1c6ff93364c8f841308abd603c48c": {
+      "id": "6ae1c6ff93364c8f841308abd603c48c",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization",
+      "statement": "On a declared finite domain, separate common lower/upper bounds for front scale, residual scale, gain, and residual q can feed the dual-scale consumer; on infinite domains pointwise finite/nonnegative values do not imply the required uniform bounds.",
+      "parent_id": "0b1c1a3b979b4fe38331b9aa5a8962f8",
+      "status": "open",
+      "proof_sketch": "Define UniformData with same-domain alphaFloor/frontFloor and betaCap/gainCap/qCap, build uniform cap and target allocation by monotone multiplication, reuse the dual-scale consumer, and retain dyadic positive-floor/upper-cap and growing-margin counterexamples.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "normalization",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_P4_DUAL_SCALE_UNIFORMIZATION",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_DualScaleUniformization.lean",
+            "sha256": "B1D0343C089D0785FA6C212B2E1B28300EFD78B29130CF8FBDB1A59C42320E81"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_DualScaleUniformization.review.md",
+            "sha256": "95ADCA13DF022B35986353DF15D339F10A07FA43712E994547FB657EF88A2E96"
           }
         ],
         "registry_eligible": false,
@@ -70350,6 +70387,23 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T20:35:52.284815+00:00",
+      "kind": "node_added",
+      "node_id": "6ae1c6ff93364c8f841308abd603c48c",
+      "parent_id": "0b1c1a3b979b4fe38331b9aa5a8962f8",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization"
+    },
+    {
+      "at": "2026-09-07T20:35:52.284834+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -74006,5 +74060,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "5780d28ecaff0d8ccffc6813187e076635eb42f770041a4178278ab01b5f6a6c"
+  "state_checksum": "80c4a1ba634445ad9076d3673bd5c420d027a9807658d0eabf75575d46711b25"
 }
