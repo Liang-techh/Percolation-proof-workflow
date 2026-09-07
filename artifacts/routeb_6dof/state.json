@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 396,
+  "revision": 397,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -7247,7 +7247,8 @@
       "dependencies": [
         "94d269520f0c48c19186ee1b312ba3a3",
         "6e0bfc263cfa45ab9411fcfd0c7cc1f8",
-        "d039d2c007b348349f022a77a369392e"
+        "d039d2c007b348349f022a77a369392e",
+        "d318754f0d30438ea53a10a43987f57a"
       ],
       "verified_artifact": null,
       "attempts": [
@@ -11338,6 +11339,78 @@
           "concrete_interval_payload_and_partition_coverage",
           "ODE_flowpipe_and_terminal_transfer",
           "coordinator_statement_identity_and_comparator_receipt"
+        ]
+      }
+    },
+    "d318754f0d30438ea53a10a43987f57a": {
+      "id": "d318754f0d30438ea53a10a43987f57a",
+      "name": "P3.trig_endpoint_enclosure_leaf",
+      "statement": "Exact-real monotonicity and endpoint-to-center-radius enclosure for sine and cosine on a monotonicity cell.",
+      "parent_id": "8f7df5df39a041d7a972078830dbcee7",
+      "status": "open",
+      "proof_sketch": "Use endpoint certificates and Mathlib monotonicity; require explicit turning-point partition and keep runtime rounding as a separate source-binding child.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean-verified-abstract-external-artifact",
+        "statement_status": "lean_verified_abstract_candidate",
+        "evidence_level": "independently_compiled_external_artifact",
+        "claim_status": "abstract_trigonometric_interval_leaf_open",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "physical_certificate_allowed": false,
+        "external_artifact": "task_FLT_trig_lean_leaf_20260908",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_trig_lean_leaf_20260908\\FLT_TrigIntervalLeaf.lean",
+            "sha256": "4c95afe62390022c3e70c7e5c1289c17360fc947e4bc64d410569944cfa01b4f"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_trig_lean_leaf_20260908\\AxiomAudit.lean",
+            "sha256": "e498bc4c060f76551f6fd24411515082c47c23345e8529690b35ebd2a9e739c3"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_trig_lean_leaf_20260908\\REPORT.md",
+            "sha256": "04705bd8ce6a66df218fa95b456066640ac8a11a9b612121791a5e66fef20ba7"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_trig_lean_leaf_20260908\\RECEIPT.md",
+            "sha256": "208ecce38f07b10f4b9462e991955a9640d7dc5bc8063bdaf5d06a1164f57572"
+          }
+        ],
+        "theorem_names": [
+          "FLTTrigIntervalLeaf.increasing_endpoint_enclosure",
+          "FLTTrigIntervalLeaf.decreasing_endpoint_enclosure",
+          "FLTTrigIntervalLeaf.sin_enclosure_of_directed_endpoints",
+          "FLTTrigIntervalLeaf.cos_enclosure_of_directed_endpoints",
+          "FLTTrigIntervalLeaf.center_radius_enclosure"
+        ],
+        "pinned_receipt": {
+          "lean_toolchain": "leanprover/lean4:v4.33.0",
+          "mathlib_revision": "db584cd6d46c92f209a44c0f1c829460d327499d",
+          "compile_status": "passed",
+          "axiom_status": "standard_logic_only",
+          "placeholder_scan": "passed"
+        },
+        "frontier_contract": {
+          "input": "one-sided exact-real endpoint inequalities",
+          "output": "sin/cos pointwise and center-radius enclosure",
+          "turning_point_split_required": true,
+          "not_proved": [
+            "directed_evaluator_or_Julia_binding",
+            "IEEE754_or_libm_rounding",
+            "DH_expression_binding",
+            "partition_coverage",
+            "RouteB_certificate"
+          ]
+        },
+        "unresolved": [
+          "pinned_coordinator_statement_and_comparator_binding",
+          "concrete_directed_endpoint_evaluator",
+          "turning_point_cell_partition_coverage",
+          "DH_source_and_rounding_binding"
         ]
       }
     }
@@ -32674,6 +32747,47 @@
       "status": "lean_verified_abstract_candidate",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T08:15:51.994787+00:00",
+      "kind": "node_added",
+      "node_id": "d318754f0d30438ea53a10a43987f57a",
+      "parent_id": "8f7df5df39a041d7a972078830dbcee7",
+      "name": "P3.trig_endpoint_enclosure_leaf"
+    },
+    {
+      "at": "2026-09-07T08:15:51.994805+00:00",
+      "kind": "routeb_flt_p3_trig_leaf_recorded",
+      "node_id": "d318754f0d30438ea53a10a43987f57a",
+      "parent_id": "8f7df5df39a041d7a972078830dbcee7",
+      "theorem_names": [
+        "FLTTrigIntervalLeaf.increasing_endpoint_enclosure",
+        "FLTTrigIntervalLeaf.decreasing_endpoint_enclosure",
+        "FLTTrigIntervalLeaf.sin_enclosure_of_directed_endpoints",
+        "FLTTrigIntervalLeaf.cos_enclosure_of_directed_endpoints",
+        "FLTTrigIntervalLeaf.center_radius_enclosure"
+      ],
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_trig_lean_leaf_20260908\\FLT_TrigIntervalLeaf.lean",
+          "sha256": "4c95afe62390022c3e70c7e5c1289c17360fc947e4bc64d410569944cfa01b4f"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_trig_lean_leaf_20260908\\AxiomAudit.lean",
+          "sha256": "e498bc4c060f76551f6fd24411515082c47c23345e8529690b35ebd2a9e739c3"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_trig_lean_leaf_20260908\\REPORT.md",
+          "sha256": "04705bd8ce6a66df218fa95b456066640ac8a11a9b612121791a5e66fef20ba7"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_trig_lean_leaf_20260908\\RECEIPT.md",
+          "sha256": "208ecce38f07b10f4b9462e991955a9640d7dc5bc8063bdaf5d06a1164f57572"
+        }
+      ],
+      "status": "lean_verified_abstract_candidate",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -36330,5 +36444,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "e441a7904446118b1b629e956d1789d0e54260a390adc03ad027a5558c2fdff1"
+  "state_checksum": "a8e1c256451de335215b263d1622661dfdabd51ad82d25c87ee03b804d18d0b1"
 }

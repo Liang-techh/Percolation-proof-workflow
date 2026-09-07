@@ -1008,6 +1008,22 @@ polynomial remains a separate frontier.
   finite differences as analytic derivatives, using solver status as proof,
   or claiming full P3/Route-B closure from one local instance.
 
+### T-P3-010 — directed trig leaf to source-binding bridge
+
+- status: `open` (abstract Lean leaf recorded at Route-B revision 397)
+- owner: `红莲魔尊` for the mathematical/source-boundary bridge;
+- scope: use `P3.trig_endpoint_enclosure_leaf` to bind one declared
+  `iv_sin`/`iv_cos` monotonicity cell from the canonical Route-B interval
+  evaluator. Derive the exact turning-point split/domain obligation and list
+  the directed BigFloat/MPFR operations that still need executable evidence;
+- deliver: a bounded contract or obstruction for one concrete cell, including
+  source hash, endpoint semantics, exact angle domain, and outward conversion
+  assumptions. A focused runtime check is useful only as evidence of the
+  executable layer, not as a theorem;
+- forbidden: treating the abstract Mathlib leaf as proof of Julia/MPFR
+  rounding, skipping turning-point coverage, whole-project reruns, or closing
+  P3/Route-B from a single trigonometric cell.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it

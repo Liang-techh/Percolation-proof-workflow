@@ -424,6 +424,18 @@
 - 新派发 `T-P3-008` 给巨阳仙尊做精确 theorem/axiom 复核；`T-P3-009` 给
   大爱仙尊只攻一个 concrete true-DH derivative-hull 实例，禁止泛化审计。
 
+### 2026-09-07 — 梁智炜：接入 FLT-derived trigonometric enclosure leaf
+
+- 新增 `P3.trig_endpoint_enclosure_leaf`（`T-P3-010`）。该 child 复用
+  Mathlib 的 sine/cosine 单调性，把 directed endpoint certificate 转成
+  pointwise 与 center-radius enclosure，并显式要求 turning-point split。
+- 外部 artifact 有 pinned Lean 4.33/Mathlib receipt、七个 public theorem 的
+  standard-logic-only axiom audit 和 placeholder scan；它没有证明 Julia/MPFR
+  执行、IEEE rounding、DH source、partition coverage 或 Route-B admission。
+- `formal_certificate_allowed=false`、registry 不变。红莲魔尊负责绑定一个
+  canonical `iv_sin`/`iv_cos` cell 的 source/rounding seam，重点攻具体数学
+  接口，不做重复的全仓审计。
+
 ### 2026-09-07 — 梁智炜：P8 interval-local endpoint seam
 
 - 新增 `T-P8-011` / `P8.interval_local_endpoint_adapter`。sidecar 现在把
