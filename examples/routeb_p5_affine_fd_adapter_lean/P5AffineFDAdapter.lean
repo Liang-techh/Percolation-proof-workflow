@@ -158,7 +158,6 @@ theorem affine_box_to_weighted_dual_mixed
             (2 * (s i * cap) ^ 2 + 2 * b i ^ 2) / d i := hdiv
         _ = 2 * (s i ^ 2 / d i) * cap ^ 2 + 2 * (b i ^ 2 / d i) := by
           field_simp [ne_of_gt (hd i)]
-          ring
     _ = 2 * (∑ i, s i ^ 2 / d i) * cap ^ 2 +
         2 * (∑ i, b i ^ 2 / d i) := by
       rw [Finset.sum_add_distrib]
