@@ -1,11 +1,13 @@
 from __future__ import annotations
 
 import pytest
+import hashlib
 
 from percolation_workflow.coverage_receipt import (
     CoverageReceiptError,
     validate_canonical_coverage_triple,
     validate_coverage_receipt,
+    validate_theta2_external_premises,
 )
 
 
@@ -212,3 +214,59 @@ def test_canonical_triple_fail_closed(mutation):
         doc["coverage_join"]["premise_receipt_sha256"] = "bad"
     with pytest.raises(CoverageReceiptError):
         validate_canonical_coverage_triple(doc)
+
+
+def external_premises(tmp_path):
+    paths = {}
+    for name, content in (("triple.json", "triple\n"),
+                          ("membership.json", "membership\n"),
+                          ("join.json", "join\n")):
+        path = tmp_path / name
+        path.write_text(content, encoding="utf-8")
+        paths[name] = hashlib.sha256(path.read_bytes()).hexdigest()
+    return {
+        "schema": "routeb-theta2-external-premises-v1",
+        "claim_boundary": (
+            "source-bound receipt references only; no dynamics theorem, "
+            "Float64/libm claim, or CoverageJoin2 proof"
+        ),
+        "namespace": {
+            "name": "theta2",
+            "anchor": {"coordinate": "q2", "lo": "-3/20", "hi": "3/20"},
+        },
+        "triple_ref": {
+            "parent_id": "p", "child_id": "c", "sibling_id": "s",
+            "triple_receipt_path": "triple.json",
+            "triple_receipt_sha256": paths["triple.json"],
+        },
+        "source_interval_membership": {
+            "status": "ACCEPTED", "receipt_path": "membership.json",
+            "receipt_sha256": paths["membership.json"],
+        },
+        "coverage_join": {
+            "kind": "CoverageJoin2", "premise_receipt_path": "join.json",
+            "premise_receipt_sha256": paths["join.json"],
+        },
+    }
+
+
+def test_theta2_external_premises_binds_files_but_not_theorems(tmp_path):
+    summary = validate_theta2_external_premises(external_premises(tmp_path), base_dir=tmp_path)
+    assert summary["source_interval_membership_receipt_bound"] is True
+    assert summary["coverage_join_premise_receipt_bound"] is True
+    assert summary["dynamics_interval_membership_proven"] is False
+    assert summary["coverage_join_theorem_proven"] is False
+    assert summary["formal_certificate_allowed"] is False
+
+
+@pytest.mark.parametrize("mutation", ["hash", "extra", "status"])
+def test_theta2_external_premises_fail_closed(tmp_path, mutation):
+    document = external_premises(tmp_path)
+    if mutation == "hash":
+        document["coverage_join"]["premise_receipt_sha256"] = "a" * 64
+    elif mutation == "extra":
+        document["coverage_join"]["proof"] = True
+    else:
+        document["source_interval_membership"]["status"] = "PENDING"
+    with pytest.raises(CoverageReceiptError):
+        validate_theta2_external_premises(document, base_dir=tmp_path)

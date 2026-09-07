@@ -1,0 +1,62 @@
+{
+  "schema": "routeb.o1.true_dh_exact_typed_mdd_source.body_trace_evaluator.v1",
+  "status": "OPEN_H_BODY_PROOFS_UNCOMPILED",
+  "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+  "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+  "input": {
+    "path": "artifacts/task_routeb_body_trace_sink_current/outputs/routeB_fourier_mass_body_trace.csv",
+    "sha256": "AE1F9CD7978C4CF23626B5C097EAAF4A2C70DE9C8B86A31A61DB12997CF4C3B9",
+    "row_count": 727,
+    "retained_labels": [
+      "body", "row", "col", "frequency=(nu1..nu6)",
+      "realCoeff=(real_num,real_den)",
+      "imagCoeff=(imag_num,imag_den)"
+    ]
+  },
+  "generated_artifacts": {
+    "generator": {
+      "path": "examples/routeb_b45_source_comparator_lean/generate_body_trace_evaluator.py",
+      "sha256": "79664A62EFD9A021F52A13FC7F5DCD545DCA602DEB0FFFEC8CA5B6E96C00DC83"
+    },
+    "lean": {
+      "path": "examples/routeb_b45_source_comparator_lean/BodyTraceEvaluator.lean",
+      "sha256": "B9845D37B5DCD16E1F9E142CB2E4D0E5571452993E843C85AC8CD643F6BA5DEA",
+      "status": "GENERATED_UNCOMPILED"
+    },
+    "adapter": {
+      "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean",
+      "sha256": "2D48D0767C0C6A432A3592FDB85651D2CBD440DA63A0E0E6653CAE6FE96A20D9",
+      "status": "GENERATED_UNCOMPILED"
+    }
+  },
+  "typed_evaluator": {
+    "row_type": "BodyTraceRow",
+    "coefficient_type": "RationalTag",
+    "frequency_type": "Fin 6 -> Int",
+    "evaluator": "bodyTraceEvaluator : Fin 6 -> (Fin 6 -> Real) -> Fin 6 -> Fin 6 -> Real",
+    "definition": "foldl over tagged rows; retain a row iff body,row,col all match; evaluate realCoeff*cos(phase)-imagCoeff*sin(phase)",
+    "h_body_input_field": false
+  },
+  "concrete_targets": {
+    "h_body_1": "forall q i j, sourceBodyMass q (0 : Fin 6) i j = fourierBodyFromTrace 0 q i j",
+    "h_body_2": "forall q i j, sourceBodyMass q (1 : Fin 6) i j = fourierBodyFromTrace 1 q i j",
+    "h_body_3": "forall q i j, sourceBodyMass q (2 : Fin 6) i j = fourierBodyFromTrace 2 q i j",
+    "h_body_4": "forall q i j, sourceBodyMass q (3 : Fin 6) i j = fourierBodyFromTrace 3 q i j",
+    "h_body_5": "forall q i j, sourceBodyMass q (4 : Fin 6) i j = fourierBodyFromTrace 4 q i j",
+    "h_body_6": "forall q i j, sourceBodyMass q (5 : Fin 6) i j = fourierBodyFromTrace 5 q i j"
+  },
+  "proof_boundary": {
+    "h_body_1_through_h_body_6": "OPEN_NO_PROOF_RECEIPT",
+    "data_level_equality": "NOT_USED",
+    "registry_eligible": false,
+    "comparator_accepted": false,
+    "formal_certificate_allowed": false
+  },
+  "compile_probe": {
+    "status": "COMPILE_BLOCKED_ENVIRONMENT",
+    "attempt": "lake env lean BodyTraceEvaluator.lean",
+    "failure": "Lake attempted to clone mathlib from the repository's Linux path; Windows returned Function not implemented",
+    "verified": false
+  },
+  "next_exact_obligation": "Compile the generated file and adapter in the pinned Lean/Mathlib environment, then provide six source-bound proofs of h_body_1 through h_body_6; no premise-field substitution is admissible."
+}

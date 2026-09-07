@@ -7,6 +7,8 @@ from .coverage_receipt import (
     CoverageReceiptError,
     THETA2_Q2_LO,
     THETA2_Q2_HI,
+    EXTERNAL_PREMISES_SCHEMA,
+    validate_theta2_external_premises,
     validate_canonical_coverage_triple,
 )
 from .comparator import CandidateReceiptAudit, build_comparator_manifest, validate_candidate_receipt
@@ -121,6 +123,7 @@ __all__ = [
     "status_is_closed", "CandidateReceiptAudit", "validate_candidate_receipt",
     "CoverageReceiptError", "CANONICAL_TRIPLE_SCHEMA",
     "THETA2_Q2_LO", "THETA2_Q2_HI",
+    "EXTERNAL_PREMISES_SCHEMA", "validate_theta2_external_premises",
     "validate_canonical_coverage_triple",
     "build_comparator_manifest", "dry_run_migrate",
     "project_frontier_receipt",

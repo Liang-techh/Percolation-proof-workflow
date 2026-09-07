@@ -1362,6 +1362,11 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - O2 新 external-premises schema 与 `Theta2ExternalPremisesAdapter.lean` 已接入
   O2 节点：membership proof 和 `CoverageJoin2` proof 都必须由调用方显式提供；
   schema/hash 不能替代 theorem，real triple 仍不存在。
+- O2 Python validator 已落地：对三类 premise 文件做 path/hash 重算，并拒绝未知
+  字段；focused coverage/DAG/O1 tests 共 `75 passed`。该 validator 仍只绑定
+  provenance，不构造 `membershipProof` 或 `coverageJoinProof`。
+- O1 727-row `BodyTraceEvaluator.lean` 和 `RouteBO1PerBodyTraceAdapter.lean` 已
+  接入 7 个 leaves，body labels/频率/有理系数保留；h_body 仍是 OPEN。
 
 ### 2026-09-07 — 梁智炜：O0 exact baseline conditional child
 

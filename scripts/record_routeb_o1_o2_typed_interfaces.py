@@ -14,6 +14,7 @@ STATE = ROOT / "artifacts/routeb_6dof/state.json"
 O1_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_PER_BODY_COMPARATOR_RECEIPT.json"
 O2_SCHEMA = ROOT / "artifacts/routeb_theta2_leaf_handoff_20260907/routeb-theta2-external-premises-v1.schema.json"
 O2_LEAN = ROOT / "artifacts/routeb_theta2_leaf_handoff_20260907/Theta2ExternalPremisesAdapter.lean"
+O2_VALIDATOR = ROOT / "src/percolation_workflow/coverage_receipt.py"
 O2_NODE = "P4.true_dh_float64_evaluator_enclosure"
 O1_PARENT = "P4.true_dh_exact_real_coefficient_identity"
 
@@ -30,7 +31,7 @@ def find(state, name: str):
 
 
 def main() -> None:
-    for path in (STATE, O1_RECEIPT, O2_SCHEMA, O2_LEAN):
+    for path in (STATE, O1_RECEIPT, O2_SCHEMA, O2_LEAN, O2_VALIDATOR):
         if not path.is_file():
             raise FileNotFoundError(path)
     store = StateStore(STATE)
@@ -54,6 +55,9 @@ def main() -> None:
         "schema_sha256": digest(O2_SCHEMA),
         "lean_adapter_path": str(O2_LEAN.resolve()),
         "lean_adapter_sha256": digest(O2_LEAN),
+        "python_validator_path": str(O2_VALIDATOR.resolve()),
+        "python_validator_sha256": digest(O2_VALIDATOR),
+        "path_hash_recomputation": True,
         "namespace": "theta2",
         "source_interval_membership_explicit_input": True,
         "coverage_join2_explicit_input": True,

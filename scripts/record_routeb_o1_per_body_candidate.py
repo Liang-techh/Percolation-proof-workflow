@@ -12,6 +12,9 @@ from percolation_workflow.store import StateStore  # noqa: E402
 
 STATE = ROOT / "artifacts/routeb_6dof/state.json"
 LEAN = ROOT / "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyExactSource.lean"
+TRACE = ROOT / "examples/routeb_b45_source_comparator_lean/BodyTraceEvaluator.lean"
+ADAPTER = ROOT / "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean"
+GENERATOR = ROOT / "examples/routeb_b45_source_comparator_lean/generate_body_trace_evaluator.py"
 REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-per-body-candidate-codex-20260907.md"
 AGENT_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-per-body-source-definition-obstruction-codex-20260907.md"
 
@@ -28,7 +31,7 @@ def find(state, name: str):
 
 
 def main() -> None:
-    for path in (STATE, LEAN, REVIEW, AGENT_REVIEW):
+    for path in (STATE, LEAN, TRACE, ADAPTER, GENERATOR, REVIEW, AGENT_REVIEW):
         if not path.is_file():
             raise FileNotFoundError(path)
     store = StateStore(STATE)
@@ -42,6 +45,13 @@ def main() -> None:
         "status": "UNCOMPILED_TYPED_CANDIDATE",
         "artifact": str(LEAN.resolve()),
         "artifact_sha256": digest(LEAN),
+        "body_trace_evaluator": str(TRACE.resolve()),
+        "body_trace_evaluator_sha256": digest(TRACE),
+        "body_trace_adapter": str(ADAPTER.resolve()),
+        "body_trace_adapter_sha256": digest(ADAPTER),
+        "generator_sha256": digest(GENERATOR),
+        "typed_body_evaluator_present": True,
+        "body_trace_row_count": 727,
         "review_sha256": digest(REVIEW),
         "agent_review_sha256": digest(AGENT_REVIEW),
         "h_aggregate_function_lift_proven": False,

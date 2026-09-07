@@ -14,7 +14,7 @@ from pathlib import Path
 
 
 HERE = Path(__file__).resolve().parent
-WORKFLOW = HERE.parents[2]
+WORKFLOW = HERE.parents[1]
 CSV = WORKFLOW / "artifacts" / "task_routeb_body_trace_sink_current" / "outputs" / "routeB_fourier_mass_body_trace.csv"
 OUT = HERE / "BodyTraceEvaluator.lean"
 EXPECTED_SHA256 = "ae1f9cd7978c4cf23626b5c097eaaf4a2c70de9c8b86a31a61db12997cf4c3b9"
