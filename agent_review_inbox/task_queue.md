@@ -1361,6 +1361,58 @@ polynomial remains a separate frontier.
   agreement a source proof, or changing the controller while preserving old
   certificate receipts.
 
+### T-P4-032 — exact-real O1 port coefficient identity
+
+- status: `open` (highest-priority formalizable true-DH leaf)
+- owner: `臭屁猪` for the current-pin Lean adapter; `柳冠一` for the typed
+  block/source premises; `封不觉` only for independent receipt review.
+- scope: compile the minimal exact-real theorem from
+  `artifacts/task_routeb_exact_real_coefficient_identity_20260907/REPORT.md`:
+  with `M_DD_inv*M_DD=1`, `M_DD*v+DeltaM_DB*a_B=0`, and
+  `r_B-M_BD*v=0`, prove
+  `R_port*a_B=r_B` for
+  `R_port=-M_BD*M_DD_inv*DeltaM_DB`.
+- required interface: use column vectors and `Matrix.mulVec`; preserve shapes
+  `(B×D)(D×D)(D×B)=B×B`, factor order, and the leading minus sign. Return
+  zero-sorry, allowed-axiom, pinned-toolchain, statement-comparator, and
+  source-binding receipts if compilation succeeds.
+- boundary: this is conditional exact-real algebra only. It does not prove
+  Float64 enclosure, DH source equivalence, positivity, coverage, absorption,
+  flowpipe, terminal transfer, or registry admission.
+- forbidden: using `vecMul` in place of `mulVec`, hiding a backslash/solver call
+  inside the inverse premise, or promoting an interface draft.
+
+### T-P4-033 — regularizer semantics bridge O0
+
+- status: `open` (independent evaluator prerequisite)
+- owner: `柳冠一` for the exact/rounded semantic contract; `臭屁猪` for a
+  typed adapter if a Lean sidecar is needed; `封不觉` for independent review.
+- scope: bind the deployed Float64 `MASS_REGULARIZER=1e-6` to the exact model
+  `mu=1/1000000` by an explicit IEEE-754 outward inclusion, or formally select
+  exact-real evaluation as authoritative. Carry the same mu through M_mu,
+  M_DD, and R_port.
+- boundary: the decimal text match is not exact equality; this leaf cannot
+  close O1/O2 or enter registry by itself.
+- forbidden: replacing the Float64 literal with a rational silently or using
+  BigFloat pointwise agreement as a rounding proof.
+
+### T-P4-034 — deployed Float64 evaluator enclosure O2
+
+- status: `open` (larger source-semantics leaf)
+- owner: `柳冠一` for interval/roundoff decomposition; `红莲魔尊` for the
+  residual/energy consumption boundary; `封不觉` for independent verification.
+- scope: decompose the per-certified-box enclosure of actual
+  `dhport_lib.jl` Float64 `M`, central-FD `C/G`, `tau`, and linear solve into
+  libm/trigonometric rounding, finite operation DAG rounding, FD-shift,
+  regularizer conversion, and solve-conditioning leaves.
+- required evidence: every box must be covered; BigFloat or pointwise
+  regression is only guidance. Keep source hash, operation order, rounding
+  mode, and unresolved primitive lemmas in the receipt.
+- boundary: O2 binds the deployment evaluator but does not itself prove
+  residual absorption or flowpipe closure.
+- forbidden: declaring O2 closed from existing interval candidates, sampled
+  maxima, solver `OPTIMAL`, or a stale source hash.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it

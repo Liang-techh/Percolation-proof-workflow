@@ -721,3 +721,22 @@
   `(1.8,1.4,0.95,0.5,0.65,0.8)` 对比
   `(1.3,1.1,0.95,0.8,0.65,0.5)`；已新增 `T-P4-031`，要求先决定唯一
   source-of-truth，再重绑/重生成 full descriptor，禁止静默改参数。
+
+### 2026-09-07 — 梁智炜：把 evaluator 大叶拆成 O0/O1/O2 并提升 O1
+
+- 当前 `P4.true_dh_residual_map_coefficient_binding` 已拆为：O0 正则化
+  语义桥、O1 exact-real `R_port*a_B=r_B`、O2 deployed Float64 evaluator
+  enclosure；父级 closure gate 要求三者均有 registry 证据和 typed parent
+  receipt，任何单叶都不能提升 formal gate。
+- O1 采用 `Matrix.mulVec` 的列向量接口，保留
+  `(B×D)(D×D)(D×B)` 顺序和 leading minus；当前仅有
+  `INTERFACE_DRAFT__UNCOMPILED`，已写入 task artifact，等待 GitHub Lean
+  agent 的 pinned compile/comparator receipt。
+- scheduler 已验证 O1 排在 O0/O2 之前，并能被 formalizable frontier 选中；
+  新派发 `T-P4-032`、`T-P4-033`、`T-P4-034`。
+- 阻尼 agent 报告与 live source audit 对“当前 DH vs 历史 Fourier”表述存在
+  冲突，已记录为 `CONFLICTING_REVIEW_FAIL_CLOSED`；不覆盖任何历史证据，
+  当前 source mismatch 仍保持 open。
+- Anthropic FLT 复用仍是 advisory-only：pairing transport 为 direct，
+  quotient/spectral 为 light adaptation，其余 architecture-only；当前
+  overlay 已刷新到最新 state hash，未修改 authoritative dependencies。
