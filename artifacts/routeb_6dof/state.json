@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 710,
+  "revision": 711,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -42303,7 +42303,9 @@
       "parent_id": "a53c1dd1b44942b7a349af6f9308cce4",
       "status": "open",
       "proof_sketch": "Consume the sound Taylor lower enclosure and endpoint/cap chains at the same box, produce per-box positive quantitative margin for the endpoint-uniform consumer, and retain exact wrong-remainder and omitted-point obstructions without claiming an interval implementation.",
-      "dependencies": [],
+      "dependencies": [
+        "91b27034ae4446fd8f67063c2b8fb0d2"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -42338,7 +42340,9 @@
       "parent_id": "da00dbe94a3d4001b1cdd98101e4a56a",
       "status": "open",
       "proof_sketch": "Model each kernel identity and audit count as an independent optional field, define complete/pending/rejected predicates, prove pending or rejected kernel receipts cannot construct the promotion gate, and leave actual execution, digest validation, VERIFIED, and registry mutation external.",
-      "dependencies": [],
+      "dependencies": [
+        "9bb6643d8b21498288100ef7923210cd"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -42425,6 +42429,76 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_NominalDirectionAudit.review.md",
             "sha256": "340D25CAC1E9F0731D5B8F7EF8B3CBFD948C2C2409C8992228075E06CD75B0FF"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "91b27034ae4446fd8f67063c2b8fb0d2": {
+      "id": "91b27034ae4446fd8f67063c2b8fb0d2",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.finite_box_uniform_margin.strict_export.endpoint_uniform_margin.taylor_remainder.c2c3_regularity",
+      "statement": "A C2/C3 regularity and derivative-hull certificate supplies a per-box Taylor remainder bound and endpoint-to-gap margin only when regularity, same-box bounds, rounding, and cap/coverage premises are explicit.",
+      "parent_id": "200398af22404753838644b9f3ecc25e",
+      "status": "open",
+      "proof_sketch": "Keep c2c3Regularity and regularity_sound separate, consume the Taylor lower enclosure and endpoint/cap chain to produce per-box margin, and retain underestimated-remainder and missing-regularity obstructions without claiming a concrete Taylor implementation.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "coverage",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_CENTRAL_FD_C2C3_REMAINDER",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_C2C3_REMAINDER.lean",
+            "sha256": "46A224CC34785214C71C6DAC127E5D60BFB1F19B9B8756E6ADF8E52A430EF967"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_C2C3_REMAINDER_REVIEW.md",
+            "sha256": "BF268FD84F2B1FD8E0BFB6C7F88E49091B1144BAF8A7B97C315BE1B0B37BE387"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "9bb6643d8b21498288100ef7923210cd": {
+      "id": "9bb6643d8b21498288100ef7923210cd",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization.final_admission_contract.explicit_registry_promotion_gate.pinned_kernel_receipt.verified_registry_entry_invariant",
+      "statement": "A verified registry entry has a single explicit evidence-bundle constructor requiring final admission, pinned kernel, comparator, provenance, independent authorization, zero audit counts, and cross-layer artifact/statement digest equality; compiled-only, pending, and rejected inputs have no constructor path.",
+      "parent_id": "4ec96661d19b4f21b7889469f401d573",
+      "status": "open",
+      "proof_sketch": "Define an explicit evidence bundle and typed RegistryAdmissionInput, make admitRegistryEntry return none for compiled-only/pending/rejected inputs, and preserve the separation between an admission invariant and an actual VERIFIED status or registry mutation.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "admission",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_FIXED_LAMBDA_VERIFIED_REGISTRY_ENTRY_INVARIANT",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_VERIFIED_REGISTRY_ENTRY_INVARIANT20260907.lean",
+            "sha256": "432A7CDAFE7E052F3CAAD3785300ABCAB9671A8C19EB754E05920D5A7FF9022A"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_VERIFIED_REGISTRY_ENTRY_INVARIANT20260907_REVIEW.md",
+            "sha256": "C9FFF9E6A4EDC84A52376FC26653C0590C47F0848FE849B957454134138AEDDD"
           }
         ],
         "registry_eligible": false,
@@ -70735,6 +70809,32 @@
       "artifact_hashes_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T20:46:57.036355+00:00",
+      "kind": "node_added",
+      "node_id": "91b27034ae4446fd8f67063c2b8fb0d2",
+      "parent_id": "200398af22404753838644b9f3ecc25e",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.finite_box_uniform_margin.strict_export.endpoint_uniform_margin.taylor_remainder.c2c3_regularity"
+    },
+    {
+      "at": "2026-09-07T20:46:57.037580+00:00",
+      "kind": "node_added",
+      "node_id": "9bb6643d8b21498288100ef7923210cd",
+      "parent_id": "4ec96661d19b4f21b7889469f401d573",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization.final_admission_contract.explicit_registry_promotion_gate.pinned_kernel_receipt.verified_registry_entry_invariant"
+    },
+    {
+      "at": "2026-09-07T20:46:57.037592+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.finite_box_uniform_margin.strict_export.endpoint_uniform_margin.taylor_remainder.c2c3_regularity",
+        "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization.final_admission_contract.explicit_registry_promotion_gate.pinned_kernel_receipt.verified_registry_entry_invariant"
+      ],
+      "metadata_updated": [],
+      "artifact_hashes_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -74391,5 +74491,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "b4a38a31f82ae0f5237b566a366bc62bc3d5cb140e930553708937fbc62aa5d7"
+  "state_checksum": "4e776d0dbfb962a86998f26a0e6fb2c63382895e94b601734385041521392b3e"
 }

@@ -2015,6 +2015,32 @@ CHILDREN = [
             "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_NominalDirectionAudit.review.md",
         ],
     },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.finite_box_uniform_margin.strict_export.endpoint_uniform_margin.taylor_remainder.c2c3_regularity",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.finite_box_uniform_margin.strict_export.endpoint_uniform_margin.taylor_remainder",
+        "statement": "A C2/C3 regularity and derivative-hull certificate supplies a per-box Taylor remainder bound and endpoint-to-gap margin only when regularity, same-box bounds, rounding, and cap/coverage premises are explicit.",
+        "proof_sketch": "Keep c2c3Regularity and regularity_sound separate, consume the Taylor lower enclosure and endpoint/cap chain to produce per-box margin, and retain underestimated-remainder and missing-regularity obstructions without claiming a concrete Taylor implementation.",
+        "lane": "source_semantics",
+        "bottleneck": "coverage",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_C2C3_REMAINDER",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_C2C3_REMAINDER.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_C2C3_REMAINDER_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization.final_admission_contract.explicit_registry_promotion_gate.pinned_kernel_receipt.verified_registry_entry_invariant",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization.final_admission_contract.explicit_registry_promotion_gate.pinned_kernel_receipt",
+        "statement": "A verified registry entry has a single explicit evidence-bundle constructor requiring final admission, pinned kernel, comparator, provenance, independent authorization, zero audit counts, and cross-layer artifact/statement digest equality; compiled-only, pending, and rejected inputs have no constructor path.",
+        "proof_sketch": "Define an explicit evidence bundle and typed RegistryAdmissionInput, make admitRegistryEntry return none for compiled-only/pending/rejected inputs, and preserve the separation between an admission invariant and an actual VERIFIED status or registry mutation.",
+        "lane": "lean_adapter",
+        "bottleneck": "admission",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_VERIFIED_REGISTRY_ENTRY_INVARIANT",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_VERIFIED_REGISTRY_ENTRY_INVARIANT20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_VERIFIED_REGISTRY_ENTRY_INVARIANT20260907_REVIEW.md",
+        ],
+    },
 ]
 
 
