@@ -47,10 +47,14 @@ def candidate_receipt() -> dict[str, object]:
         artifact_sha256=hashlib.sha256(
             b"".join(path.read_bytes() for path in artifact_paths)
         ).hexdigest(),
+        source_sha256=hashlib.sha256(
+            (TARGET / "dhport_lib.jl").read_bytes()
+        ).hexdigest(),
     )
     return {
         "status": result.status,
         "artifact_sha256": result.artifact_sha256,
+        "source_sha256": result.source_sha256,
         "gram_blocks": result.gram_blocks,
         "max_gram_dimension": result.max_gram_dimension,
         "solver_lower_bound": (str(result.solver_lower_bound)
@@ -86,6 +90,7 @@ def main() -> int:
         TARGET / "routeB_tail_pmi_scalar_gram_basis.csv",
         TARGET / "routeB_tail_pmi_scalar_gram_probe.jl",
         TARGET / "routeB_physical_rational_tail_pmi_scalar_meta.csv",
+        TARGET / "dhport_lib.jl",
         ROOT / "scripts/check_routeb_rational_gram_payload.py",
         ROOT / "scripts/check_routeb_tail_gram_reconstruction.py",
         ROOT / "src/percolation_workflow/routeb_nominal_distal_contract.py",

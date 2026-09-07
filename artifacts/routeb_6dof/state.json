@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 385,
+  "revision": 386,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -10820,6 +10820,10 @@
             "sha256": "53efe6a1ffaa15b7a8eb8c08b220e5e9a0ee2f2166a0f6982de055b78bdec374"
           },
           {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\dhport_lib.jl",
+            "sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936"
+          },
+          {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\check_routeb_rational_gram_payload.py",
             "sha256": "c41321cd6f74031603ac726682b23bf78980d49733d93f2023e59d8ef216a9d5"
           },
@@ -10835,6 +10839,7 @@
         "candidate_reconstruction_receipt": {
           "status": "EXACT_RATIONAL_GRAM_RECONSTRUCTION_CANDIDATE",
           "artifact_sha256": "3911710ac51f01a4a8fb1a47db67b45646cc1856bf33c2ff7b5fcff0a574735b",
+          "source_sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936",
           "gram_blocks": 14,
           "max_gram_dimension": 83,
           "solver_lower_bound": "1255304390073691/40000000000000000",
@@ -31705,6 +31710,73 @@
       "status": "pending_pinned_lean_compile",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T07:34:42.683065+00:00",
+      "kind": "routeb_tail_gram_reconstruction_provenance_refresh",
+      "node_id": "57e8ba91205a44fb91dcbbd509078b4a",
+      "parent_id": "1e7b1df1835f4deba06b11a8182f6719",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_tail_pmi_scalar.csv",
+          "sha256": "6b00542155ff41339ab466138cb5d1612f7385f8abd158feea4630e30933e93e"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_tail_pmi_scalar_gram_rational_audit.csv",
+          "sha256": "b07c7c65dbfbaf1cee321dff433bae4a9d786c2a383d1ad5b17c8f12d004c901"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_tail_pmi_scalar_gram_rational.csv",
+          "sha256": "f39f9fbfe6ce2fce725a9a14024f622fda901ce05cd0899d33529fca5fdeb4bb"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_tail_pmi_scalar_gram_basis.csv",
+          "sha256": "caa65197131d3ff5acffd9396fa980bac91292f3d8d6453642bbcae6daf2c89c"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_tail_pmi_scalar_gram_probe.jl",
+          "sha256": "99b1fcba34d50f87b4815fad937318e1121f15f25c19c53f9b844f59dfb16df3"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_tail_pmi_scalar_meta.csv",
+          "sha256": "53efe6a1ffaa15b7a8eb8c08b220e5e9a0ee2f2166a0f6982de055b78bdec374"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\dhport_lib.jl",
+          "sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\check_routeb_rational_gram_payload.py",
+          "sha256": "c41321cd6f74031603ac726682b23bf78980d49733d93f2023e59d8ef216a9d5"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\check_routeb_tail_gram_reconstruction.py",
+          "sha256": "6389abf859907fb02a177b3b8dd4e8d409ec0d928aed4f49c2c44ec33b4b74fb"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\src\\percolation_workflow\\routeb_nominal_distal_contract.py",
+          "sha256": "16d8572962bf0dd5e449f69402289b73e68d2affc50aea904bdde26322f8c61d"
+        }
+      ],
+      "candidate_reconstruction_receipt": {
+        "status": "EXACT_RATIONAL_GRAM_RECONSTRUCTION_CANDIDATE",
+        "artifact_sha256": "3911710ac51f01a4a8fb1a47db67b45646cc1856bf33c2ff7b5fcff0a574735b",
+        "source_sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936",
+        "gram_blocks": 14,
+        "max_gram_dimension": 83,
+        "solver_lower_bound": "1255304390073691/40000000000000000",
+        "derived_constant_gap": "196141166197956673499801792910497426323482447252874873982212752409821618938418692809772200371000799/6250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "solver_minus_derived_gap": "144751057545250198207089502573676517552747125126017787247590178381061581307190227799628999201/6250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "rational_lower_bound": "31382586591/1000000000000",
+        "residual_l1": "7257601317598787401051147707887760025064208290603309087752409821618938418692809772200371000799/6250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "certified_original_scale_margin": "196133908592432401212598948852292112239974935791709396690912247590178381061581307190227799628999201/22036484547772078125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+        "errors": [],
+        "formal_certificate_allowed": false,
+        "registry_eligible": false
+      },
+      "status": "pending_exact_target_minus_opt_reconstruction",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -35361,5 +35433,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "2af52070a1295ca8e2e9efbf2016681b90ef417c1ec51ae63dfd7b8a037b5d11"
+  "state_checksum": "4ae073fca2cab66c0b220333dc8883ad478e3d277c0514b1e86eb180ef4a1a07"
 }
