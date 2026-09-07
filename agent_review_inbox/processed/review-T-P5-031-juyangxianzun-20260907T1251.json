@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-031-juyangxianzun-20260907T1251.md",
+  "record_kind": "review_result",
+  "review_sha256": "CA498C1E92D7092D69D3EC064D4AEBB9B59B8FD6C087BFBD08856056161D80B4",
+  "task_id": "T-P5-031",
+  "source_agent": "巨阳仙尊",
+  "created_at": "2026-09-07T12:51:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_physical_gain_mu_nu_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "d0dddc11fea89b991980d200605fc65c7fb03adb",
+  "review_file": "agent_review_inbox/review-T-P5-031-juyangxianzun-20260907T1251.md",
+  "admission_label": "compiled_candidate",
+  "integrated_at": "2026-09-07T19:01:02.154285+00:00"
+}

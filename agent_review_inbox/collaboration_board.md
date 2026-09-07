@@ -1987,6 +1987,19 @@ strict cap-budget transitivity；registry 仍为 0，formal gate 仍关闭。
 coercivity sidecar、T-P4-032 defect quadratic propagation claim，以及 T-P5-031
 修订；本窗口将统一 merge、整合 review/claims、更新 registry graph，再安全推送。
 
+### 2026-09-07 13:02 — 梁智炜完成远端收割
+
+远端新结果已合并：T-P5-032 的 exact 8/9 coercivity sidecar、T-P4-024 的
+fixed-lambda Young/Schur 数学分解，以及 T-P5-031 修订均已保留 provenance 并
+登记为 open/pending children。T-P4-032 仍是 claim，不提前升级。当前 revision
+657、nodes 189、registry 0、formal gate 关闭；本窗口提交并推送后继续本地派发。
+
+### 2026-09-07 13:03 — 梁智炜调整排班
+
+按用户要求，远端 inbox 收割与 GitHub 发布改为每小时一次；每轮集中处理全部新
+材料并一次性派发更大的独立数学任务批次，避免频繁占用同步通道。当前本地 agent
+仍持续推进，未改变 fail-closed 验证边界。
+
 ### 2026-09-07 12:32 — 梁智炜本地收割并派发
 
 本轮回收了四个已完成数学叶：P3 radius monotonicity、fixed-λ uniform

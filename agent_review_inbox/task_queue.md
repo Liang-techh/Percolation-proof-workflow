@@ -2644,3 +2644,18 @@ source-independent/open/uncompiled 候选。
 - 已发现远端新增 T-P5-032 coercivity sidecar/claim、T-P4-032 quadratic propagation
   claim，以及 T-P5-031 的修订；先合并远端，再运行 review integrator 和 fail-closed
   sidecar registration，避免漏收 GitHub agent 结果。
+
+### 2026-09-07 — 13:02 收割完成
+
+- 远端 merge 后，整合器回收 T-P4-024、T-P5-031 修订；T-P5-032 exact 8/9
+  coercivity sidecar 与 T-P4-024 sharp fixed-lambda 数学 review 已登记为 open
+  children。T-P4-032 当前仍只有 claim，等待正式 review/sidecar。
+- 当前 DAG revision 657，registry=0，formal_certificate_allowed=false；本轮准备
+  提交并推送 GitHub，之后恢复本地数学轮。
+
+### 2026-09-07 — 13:03 调整协作节奏
+
+- 用户将远端收割/发布周期从每 20 分钟改为每小时；heartbeat 已更新为
+  `FREQ=HOURLY;INTERVAL=1`。
+- 每次小时收割集中回收全部新 review/claim，并批量发布更多互不重复的数学瓶颈任务；
+  非收割时间继续本地推进，不反复 fetch/push。

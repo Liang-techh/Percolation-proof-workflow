@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-024-kuangmanmozun-20260907T1248.md",
+  "record_kind": "review_result",
+  "review_sha256": "603CAADA62F071942325C527BA8E20405C86153642D7A80F52FB182CE79F9580",
+  "task_id": "T-P4-024",
+  "source_agent": "狂蛮魔尊",
+  "created_at": "2026-09-07T12:48:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_combined_schur_port_energy_adapter",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "cf9e5735f81c955380d8006a45026c504e869287",
+  "review_file": "agent_review_inbox/review-T-P4-024-kuangmanmozun-20260907T1248.md",
+  "format_warning": "missing_yaml_delimiters",
+  "integrated_at": "2026-09-07T19:01:02.154047+00:00"
+}
