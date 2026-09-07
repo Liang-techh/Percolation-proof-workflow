@@ -2025,6 +2025,13 @@ P4 weighted-three-term、P3 component-radius→cap-load、fixed-λ finite reserv
 aggregation 已分别派发给空闲数学 agent；继续保留 source/coverage/Lean admission
 边界，GitHub 保持静默至下一小时窗口。
 
+### 2026-09-07 13:22 — 梁智炜回收 P4 proof-attempt
+
+K-path 的 weighted-three-term Lean skeleton 已登记到 DAG revision 662；它只推进
+权重等价、有限加权 Cauchy、三项平方范数聚合和 force/acceleration typed consumer，
+没有冒充 source、coverage、编译或 registry 证明。fixed-λ 与 P3 新叶继续做定向审阅，
+不等待远端回执。
+
 ### 2026-09-07 12:32 — 梁智炜本地收割并派发
 
 本轮回收了四个已完成数学叶：P3 radius monotonicity、fixed-λ uniform

@@ -2688,3 +2688,11 @@ source-independent/open/uncompiled 候选。
   继续派发三条新数学线：P4 weighted-three-term、P3 component-radius 到 cap-load
   单调性、fixed-λ finite reserve aggregation；均要求 conditional、fail-closed、
   不重复旧叶。
+
+### 2026-09-07 — 13:22 本地数学轮
+
+- K-path 已产出 P4 weighted-three-term 的 Lean proof-attempt sidecar，已登记为
+  `quadratic_load.weighted_three_term.lean_proof_attempt`，revision 662；仍为
+  OPEN_UNCOMPILED_P4_WEIGHTED_THREE_TERM_LEAN，未进入 verified registry。
+- fixed-λ finite reserve aggregation 与 P3 radius-to-cap-load order consumer 已有
+  新文件，先审阅其数学边界，再决定是否追加 child；本轮不做远端同步。

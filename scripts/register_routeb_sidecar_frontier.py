@@ -1209,6 +1209,45 @@ CHILDREN = [
             "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_NO_DIVISION_RATIO20260907_REVIEW.md",
         ],
     },
+    {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term",
+        "statement": "A coordinatewise Lean proof attempt formalizes the weighted three-term squared norm bound and keeps distal force defects distinct from forward acceleration defects.",
+        "proof_sketch": "Prove the reciprocal-to-polynomial weight seam, finite weighted Cauchy, Euclidean squared-norm aggregation, and typed Route-B force/acceleration consumers; leave all source, action, coverage, and admission premises explicit.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_P4_WEIGHTED_THREE_TERM_LEAN",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_WeightedThreeTerm.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_WeightedThreeTerm_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.finite_reserve_aggregation",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export",
+        "statement": "A finite family of pairwise-disjoint typed cells sums per-cell cross-multiplied reserve inequalities into an exact total-reserve and external-minus-total-charge bound.",
+        "proof_sketch": "Use explicit finite support disjointness and per-cell positive denominators, sum the no-division reserve inequalities, and expose the additive total-margin identity while leaving coverage, digest, source binding, and strict admission external.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_FINITE_RESERVE_AGGREGATION",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_FINITE_RESERVE_AGGREGATION20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_FINITE_RESERVE_AGGREGATION20260907_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.cap_load_order_consumer",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge",
+        "statement": "Nonnegative component loads transport a pointwise component-radius cap into the corresponding weighted cap-load and scalar capMax consumer inequalities.",
+        "proof_sketch": "Apply coordinatewise order under nonnegative assembled loads, then sum against component caps and compose with the existing scalar capMax inequality; retain same-point domain, velocity, and weight premises without reconstructing the radius payload.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_CAP_LOAD_ORDER_CONSUMER",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_ORDER_CONSUMER.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_ORDER_CONSUMER_REVIEW.md",
+        ],
+    },
 ]
 
 
