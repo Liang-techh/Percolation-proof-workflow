@@ -224,6 +224,26 @@ without an explicit scoped request.
 - forbidden: promoting sparse SOS output, assuming true-DH binding, or claiming
   flowpipe/terminal transfer.
 
+### T-P3-006 — source-binding interface sidecar
+
+- status: `assigned` (梁智炜, disjoint sidecar implementation)
+- scope: encode the P3-005 premise boundary in a small adapter-side contract;
+  keep source hashes, exact snapshot semantics, and interval enclosure as
+  separate fields;
+- deliver: isolated sidecar/README plus focused compile or a precise blocked
+  report;
+- forbidden: concrete Float64-to-exact equality, global DH identification,
+  registry promotion, or edits to the authoritative checkpoint.
+
+### T-P5-003 — Christoffel power identity sidecar
+
+- status: `assigned` (梁智炜, disjoint sidecar implementation)
+- scope: isolate and compile the exact Christoffel power identity already
+  identified by P5-002, with minimal imports and explicit #print axioms;
+- deliver: isolated Lean sidecar/README and focused compile evidence;
+- forbidden: importing sparse SOS or flowpipe claims, assuming source binding,
+  or closing the P5/M4 parent theorem.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it

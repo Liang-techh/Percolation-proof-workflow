@@ -33,6 +33,8 @@ TASK_TARGETS = {
     "T-P3-004": ("P3.strict_true_dh_bounds", "pending_source_semantic_adapter"),
     "T-P3-005": ("P3.strict_true_dh_bounds", "pending_semantic_binding_child"),
     "T-P5-002": ("P5.sparse_disjunctive_sos", "pending_energy_child"),
+    "T-P3-006": ("P3.strict_true_dh_bounds", "pending_semantic_binding_sidecar"),
+    "T-P5-003": ("P5.sparse_disjunctive_sos", "pending_christoffel_power_sidecar"),
     # External FLT scans are deliberately event-only: they are advisory
     # catalog evidence, not Route-B theorem nodes or registry entries.
     "T-FLT-DERIV-CALC": (None, "flt_derivation_calculus_scan"),
