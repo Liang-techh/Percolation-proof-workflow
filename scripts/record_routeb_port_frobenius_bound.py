@@ -175,11 +175,15 @@ def main() -> int:
         "consumer_interface": {
             "provided_quantity": "||R a_B||_2^2 <= rho_F^2 * (a_B^T B_up a_B)",
             "source_map": "T = R B_up^(-1/2)",
+            "preferred_consumption_route": "combined_schur_young",
+            "combined_schur_premise": "L_B=l_base+r_B and ||r_B||^2 <= rho_F^2*(a_B^T B_up a_B)",
+            "combined_schur_charge": "(1+1/theta)*rho_F^2*(a_B^T B_up a_B)",
             "robust_pmi_E_k_equivalent": False,
             "E_k_semantics": "l_true = l_poly,k + E_k xi, ||xi||_2 <= 1",
+            "E_k_route_status": "not_provided_by_this_leaf",
             "required_adapter": (
-                "descriptor/source theorem must connect the port map R a_B "
-                "to the robust residual error coordinates before E_k consumption"),
+                "typed descriptor/source theorem must bind R a_B to r_B and "
+                "bind l_base, before combined-Schur consumption"),
         },
         "unresolved": [
             "independent_interval_source_replay",

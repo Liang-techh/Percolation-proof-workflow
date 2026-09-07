@@ -1137,8 +1137,9 @@ polynomial remains a separate frontier.
   the upward seven-decimal rounding contract, and the declared source/cover
   hashes;
 - deliver: a bounded source-bound/Lean candidate or a precise obstruction,
-  including whether the Frobenius norm bound can be consumed as the fixed
-  `E_k`/port factor without changing the residual semantics. The local replay
+  including whether the Frobenius norm bound can be consumed through the
+  combined-Schur Young route without changing the residual semantics. It does
+  not provide the robust-PMI `E_k` factor directly. The local replay
   already found that Frobenius does not pointwise dominate the induced bound
   (22 cells at eta=2.7 and 39 at eta=5.6), so preserve this comparison as an
   obstruction rather than silently selecting one norm by pointwise order;

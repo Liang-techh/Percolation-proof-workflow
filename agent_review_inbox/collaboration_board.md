@@ -528,8 +528,9 @@
   攻最小 Lean lift，不得据此关闭 P4/M4。
 - 语义复核已将该叶明确标为 `robust_pmi_E_k_equivalent=false`：它提供
   `||R a_B||²` 的 port-energy bound，不直接提供
-  `l_true=l_poly,k+E_k ξ` 的误差因子；两者之间必须新增 typed
-  descriptor/source adapter，禁止直接复用。
+  `l_true=l_poly,k+E_k ξ` 的误差因子。当前首选消费路线是已有
+  combined-Schur/Young 接口：把 `rho_F²(a_BᵀB_up a_B)` 充入 `b_base`；
+  仍需 typed descriptor/source binding，不得直接复用为 `E_k`。
 - 独立重算还发现 Frobenius bound 不逐 cell 支配 induced bound：eta=2.7
   有 22 个、eta=5.6 有 39 个反例 cell。该 obstruction 已写入叶的
   `independent_replay`，后续必须证明所选 norm 的独立消费契约，不能靠
