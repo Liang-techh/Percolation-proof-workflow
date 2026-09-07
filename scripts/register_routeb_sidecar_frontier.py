@@ -782,6 +782,32 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.cap_max_witness.attainment_equality",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.cap_max_witness",
+        "statement": "Under an explicit attained capMax index and single-support load premise, the nonuniform cap budget equals the scalar capMax budget exactly.",
+        "proof_sketch": "Split the finite sum at the attained index, use the support-zero premise off that index, and preserve the general inequality as the upstream order boundary.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_CAP_MAX_ATTAINMENT_EQUALITY",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_CAPMAX_ATTAINMENT_EQUALITY.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_CAPMAX_ATTAINMENT_EQUALITY_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition",
+        "statement": "Separate positive coefficient witnesses on both eta subpartitions yield strict weighted load below each eta margin and, by addition, below the union margin.",
+        "proof_sketch": "Apply the finite-subset strict-sum lemma to each eta partition, transfer delta to eta margin, then add the two strict inequalities using the supplied union sum decomposition.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_ETA_STRICT_BUDGET",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_ETA_STRICT_BUDGET20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_ETA_STRICT_BUDGET20260907_REVIEW.md",
+        ],
+    },
+    {
         "name": "P5.componentwise_relative_decay.feasible_cone_spn.nonnegative_gain_increment_reuse",
         "parent": "P5.componentwise_relative_decay.feasible_cone_spn",
         "statement": "A nonnegative component-gain increment can reuse an existing cone SPN witness when its symmetric cone correction is entrywise below the old nonnegative slack.",
