@@ -101,6 +101,7 @@ CHILDREN = [
             "examples/routeb_o0_h_acc_semantic_export/OPEN_CONTRACT.json",
             "examples/routeb_o0_h_acc_semantic_export/RECEIPT.json",
             "examples/routeb_o0_h_acc_semantic_export/check_contract.py",
+            "examples/routeb_o0_h_acc_source_refinement/check_refinement.py",
             "agent_review_inbox/review-T-P4-033-O0-H-acc-evaluator-interval-contract-codex-20260907.md",
         ],
     },
@@ -124,12 +125,22 @@ def main() -> None:
     store = StateStore(STATE)
     state = store.load()
     added: list[str] = []
+    updated: list[str] = []
     for spec in CHILDREN:
         parent_id = find_id(state, spec["parent"])
         existing = find_node(state, spec["name"])
         if existing is not None:
             if existing.parent_id != parent_id:
                 raise ValueError(f"existing child has wrong parent: {spec['name']}")
+            expected_artifacts = [artifact(path) for path in spec["artifacts"]]
+            recorded = existing.metadata.setdefault("source_artifacts", [])
+            recorded_paths = {item.get("path") for item in recorded
+                              if isinstance(item, dict)}
+            missing = [item for item in expected_artifacts
+                       if item["path"] not in recorded_paths]
+            if missing:
+                recorded.extend(missing)
+                updated.append(spec["name"])
             continue
         source_artifacts = [artifact(path) for path in spec["artifacts"]]
         metadata = {
@@ -150,13 +161,14 @@ def main() -> None:
         state.add_node(spec["name"], spec["statement"], parent_id=parent_id,
                        proof_sketch=spec["proof_sketch"], metadata=metadata)
         added.append(spec["name"])
-    if added:
+    if added or updated:
         state.event("routeb_sidecar_frontier_registered", child_names=added,
-                    registry_promoted=False, formal_certificate_allowed=False)
+                    metadata_updated=updated, registry_promoted=False,
+                    formal_certificate_allowed=False)
         state.validate()
         store.save(state)
-    print({"status": "registered" if added else "already_registered",
-           "added": added, "revision": store.load().revision,
+    print({"status": "registered" if added or updated else "already_registered",
+           "added": added, "updated": updated, "revision": store.load().revision,
            "registry_promoted": False, "formal_certificate_allowed": False})
 
 

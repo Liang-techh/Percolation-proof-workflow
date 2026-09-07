@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 587,
+  "revision": 588,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -28391,6 +28391,10 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-033-O0-H-acc-evaluator-interval-contract-codex-20260907.md",
             "sha256": "3C9622C871534B15CB621D9898B03AABCF0AEE5A3ECA6155A151B079CA6509E1"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_o0_h_acc_source_refinement\\check_refinement.py",
+            "sha256": "1E748B3C14E0C9E7FEF75C83C620A27AD9AD5C1729B3DB20D52516509FEFA1F0"
           }
         ],
         "registry_eligible": false,
@@ -53513,6 +53517,16 @@
       ],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T16:41:13.380929+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [],
+      "metadata_updated": [
+        "P4.O0.physical_baseline_factor.H_acc_semantic_export"
+      ],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -57169,5 +57183,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "4083deb7422dae8fef5ce45b4438077199fe3acff8e52502fca85351a4711861"
+  "state_checksum": "d1261f9855637ec59cdd5592312fd4980503f305cacd411899c71fd2438e02a1"
 }
