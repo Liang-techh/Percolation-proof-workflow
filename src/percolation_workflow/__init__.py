@@ -5,6 +5,7 @@ from .store import StateStore
 from .comparator import CandidateReceiptAudit, build_comparator_manifest, validate_candidate_receipt
 from .dry_run_migrator import dry_run_migrate
 from .math_frontier import (build_frontier_cut, project_frontier_receipt,
+                             project_virtual_frontier,
                              rank_formalizable_frontier)
 from .reduction_batch import reduction_closure_batch
 from .residual_ledger import audit_full_state_binding, audit_residual_ledger
@@ -78,6 +79,7 @@ __all__ = [
     "status_is_closed", "CandidateReceiptAudit", "validate_candidate_receipt",
     "build_comparator_manifest", "dry_run_migrate",
     "project_frontier_receipt",
+    "project_virtual_frontier",
     "build_frontier_cut",
     "rank_formalizable_frontier",
     "reduction_closure_batch",

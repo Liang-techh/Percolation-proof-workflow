@@ -23,6 +23,7 @@ from .merlean_plan_projection import export_views as export_merlean_plan_views
 from .anthropic_intake import write_snapshot
 from .advisory_reuse import AdvisoryReuseError, project_advisory_reuse
 from .math_frontier import (explain_math_frontier, rank_formalizable_frontier,
+                             project_virtual_frontier,
                              rank_math_obstruction_frontier)
 
 
@@ -187,6 +188,7 @@ def main() -> int | None:
             'policy': args.math_lane_policy,
             'ranked_node_ids': ranked,
             'frontier': rows,
+            'virtual_frontier': project_virtual_frontier(state),
             'formal_admission': 'unchanged',
             'registry_promoted': False,
             'formal_certificate_allowed': False,

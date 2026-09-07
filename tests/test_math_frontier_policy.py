@@ -6,6 +6,7 @@ from percolation_workflow.math_frontier import (
     explain_math_frontier,
     math_lane,
     math_bottleneck,
+    project_virtual_frontier,
     rank_math_obstruction_frontier,
     rank_formalizable_frontier,
     rank_math_frontier,
@@ -131,6 +132,33 @@ class MathFrontierPolicyTests(unittest.TestCase):
         self.assertEqual(cut["lanes"]["lean_adapter"], [lean])
         self.assertEqual(cut["lanes"]["source_semantics"], [source])
         self.assertFalse(cut["frontier"][2]["eligible"])
+        self.assertEqual(state.to_dict(), before)
+
+    def test_virtual_frontier_exposes_metadata_leaves_without_dag_effects(self):
+        state = WorkflowState()
+        parent = state.add_node(
+            "P4.true_dh_float64_evaluator_enclosure", "O2",
+            metadata={
+                "math_lane": "source_semantics",
+                "o2_trig_binding": {
+                    "leaves": [
+                        {"id": "T-P4-036.2", "kind": "argument_range_reduction", "status": "OPEN"},
+                        {"id": "T-P4-036.1", "kind": "pi_over_two_and_angle_formation_rounding", "status": "OPEN"},
+                    ],
+                },
+            },
+        )
+        before = state.to_dict()
+
+        rows = project_virtual_frontier(state)
+
+        self.assertEqual([row["virtual_leaf_id"] for row in rows],
+                         ["T-P4-036.1", "T-P4-036.2"])
+        self.assertEqual({row["parent_node_id"] for row in rows}, {parent})
+        self.assertTrue(all(row["is_virtual"] for row in rows))
+        self.assertTrue(all(not row["closure_effect"] and not row["registry_effect"]
+                            for row in rows))
+        self.assertTrue(all(row["parent_eligible"] for row in rows))
         self.assertEqual(state.to_dict(), before)
 
 

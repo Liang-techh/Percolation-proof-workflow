@@ -408,6 +408,59 @@ def explain_math_frontier(state: WorkflowState, jobs: Mapping[str, Any] | None =
     return rows
 
 
+def project_virtual_frontier(state: WorkflowState) -> list[dict[str, Any]]:
+    """Expose metadata-only child leaves without promoting them to DAG nodes.
+
+    Some source-semantic reviews (currently the O2 Float64/trig contract)
+    decompose one real workflow node into smaller proof obligations before
+    those obligations are ready to become independently verifiable nodes.
+    This projection makes those leaves visible to coordinators and agents
+    while keeping the formal boundary explicit: virtual leaves cannot close a
+    parent, enter the registry, or affect the scheduler's actual frontier.
+    Only leaves attached to an actual current frontier node are projected.
+    """
+    state.validate()
+    rows: list[dict[str, Any]] = []
+    for parent in state.frontier():
+        metadata = parent.metadata if isinstance(parent.metadata, Mapping) else {}
+        for contract_key, contract in sorted(metadata.items(), key=lambda item: str(item[0])):
+            if not isinstance(contract, Mapping):
+                continue
+            leaves = contract.get("leaves")
+            if not isinstance(leaves, list):
+                continue
+            for position, leaf in enumerate(leaves):
+                if not isinstance(leaf, Mapping):
+                    continue
+                leaf_id = leaf.get("id")
+                kind = leaf.get("kind")
+                if not leaf_id or not kind:
+                    # Malformed advisory metadata remains visible as an
+                    # auditable row, but cannot accidentally look schedulable.
+                    leaf_id = leaf_id or f"{contract_key}.{position + 1}"
+                    kind = kind or "malformed_virtual_leaf"
+                status = str(leaf.get("status", "OPEN"))
+                rows.append({
+                    "parent_node_id": parent.id,
+                    "parent_name": parent.name,
+                    "parent_status": parent.status.value,
+                    "parent_math_lane": math_lane(parent).value,
+                    "parent_math_bottleneck": explain_math_bottleneck(parent).label,
+                    "contract_key": str(contract_key),
+                    "virtual_leaf_id": str(leaf_id),
+                    "kind": str(kind),
+                    "status": status,
+                    "parent_eligible": obstruction_rank(parent) == 0,
+                    "is_virtual": True,
+                    "closure_effect": False,
+                    "registry_effect": False,
+                })
+    rows.sort(key=lambda row: (
+        row["parent_node_id"], row["contract_key"], row["virtual_leaf_id"],
+    ))
+    return rows
+
+
 def _evidence_hash(node: Any) -> str:
     """Hash the node's advisory frontier evidence, never formal admission state."""
     metadata = node.metadata if isinstance(getattr(node, "metadata", None), Mapping) else {}
