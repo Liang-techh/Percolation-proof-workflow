@@ -143,11 +143,37 @@ without an explicit scoped request.
 
 ### T-P5-001 — energy-syzygy admission audit
 
-- status: `open`
+- status: `claimed` (Lagrange the 6th, 2026-09-06)
 - scope: isolate the exact Newton–Euler energy identity from sparse SOS and
   true-DH source obligations, and identify the smallest reusable child;
 - deliver: review result with statement, dependencies, and evidence boundary;
 - forbidden: promoting solver output or an abstract identity to physical M4.
+
+### T-P4-004 — typed normalization Lean sidecar
+
+- status: `open`
+- scope: keep force residual `l` and PMI residual `d` as distinct typed
+  objects, connected only through an explicit interface premise;
+- deliver: focused Lean sidecar or review result, with no true-DH/coverage
+  admission;
+- forbidden: closing the P4 parent or mutating the authoritative checkpoint.
+
+### T-P8-004 — explicit-time contract sidecar
+
+- status: `open`
+- scope: formalize the smallest 13-state explicit-time interface with external
+  parameter `c`, initial projection, and terminal-transfer assumptions;
+- deliver: focused Lean sidecar or review result; no broad regression;
+- forbidden: silently changing the current theorem target or claiming a flowpipe.
+
+### T-P3-004 — source-semantic adapter design
+
+- status: `open`
+- scope: design the smallest adapter from canonical Julia/DH source manifest to
+  Lean/checker semantics using existing snapshots;
+- deliver: review or disjoint sidecar with explicit semantic premises and
+  hashes; retain `pending` status;
+- forbidden: treating hash equality as a semantic proof or running full search.
 
 ## Handoff format
 
