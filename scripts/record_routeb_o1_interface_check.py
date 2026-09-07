@@ -8,6 +8,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 CHECK = ROOT / "artifacts/task_routeb_exact_real_coefficient_identity_20260907/INTERFACE_CHECK.json"
+TARGET = ROOT / "artifacts/task_routeb_o1_lean_api_audit_20260907/RouteBO1PortIdentity.lean"
 sys.path.insert(0, str(ROOT / "src"))
 
 from percolation_workflow.store import StateStore  # noqa: E402
@@ -48,6 +49,18 @@ def main() -> int:
         "registry_promoted": False,
         "formal_certificate_allowed": False,
     }
+    if TARGET.is_file():
+        target_text = TARGET.read_text(encoding="utf-8", errors="replace")
+        check["candidate_target"] = {
+            "artifact": ref(TARGET),
+            "status": "UNCOMPILED_CANDIDATE_TARGET",
+            "contains_sorry": "sorry" in target_text.lower(),
+            "contains_admit": "admit" in target_text.lower(),
+            "compile_claim": False,
+            "registry_promoted": False,
+        }
+        if check["candidate_target"]["contains_sorry"] or check["candidate_target"]["contains_admit"]:
+            raise ValueError("candidate target contains sorry/admit")
     changed = node.metadata.get("o1_interface_check") != check
     node.metadata["o1_interface_check"] = check
     if changed:

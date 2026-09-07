@@ -1379,6 +1379,10 @@ polynomial remains a separate frontier.
 - boundary: this is conditional exact-real algebra only. It does not prove
   Float64 enclosure, DH source equivalence, positivity, coverage, absorption,
   flowpipe, terminal transfer, or registry admission.
+- coordinator artifact: `artifacts/task_routeb_o1_lean_api_audit_20260907/RouteBO1PortIdentity.lean`
+  is a no-`sorry`/no-`admit` candidate target, still explicitly uncompiled;
+  remote Lean agents may compile and repair it, but file presence is not a
+  kernel receipt.
 - forbidden: using `vecMul` in place of `mulVec`, hiding a backslash/solver call
   inside the inverse premise, or promoting an interface draft.
 

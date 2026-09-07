@@ -179,6 +179,11 @@ scanning the selected deployed/lifted sources for requested force-scale terms
 and recording an obstruction when they are absent. It does not infer a missing
 coefficient from a nearby nominal coupling.
 
+The O1 API audit also emits
+`artifacts/task_routeb_o1_lean_api_audit_20260907/RouteBO1PortIdentity.lean`.
+It is a no-`sorry`/no-`admit` compilation target for the remote Lean agent, not
+a compile receipt or registry entry.
+
 After an agent returns a decomposition, the same generic state can accept it with
 `propose-decomposition`; the child JSON array preserves order and each child sketch:
 
