@@ -2199,6 +2199,19 @@ CHILDREN = [
             "examples/anthropic_flt_differentiable_coordinate_adapter/REVIEW.md",
         ],
     },
+    {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility.source_positive_target_binding.domain_object_separation",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility.source_positive_target_binding",
+        "statement": "Block state p≤28/5, saved storage V≤1, and tube V≤t² require explicit localization comparisons; full regularized six-body M and the unregularized single-body BODY6 Schur remainder are distinct objects, and Schur elimination is neither additive nor regularizer-commutative.",
+        "proof_sketch": "Define typed State, block/storage/tube regions, positive localization contracts, full and body mass objects, and explicit remainder binding; prove tube→V≤1, conditional saved-point/domain obstructions, full-diagonal strictness, and exact Schur non-additivity/regularizer counterexamples. Keep CSV reification, source identity, coverage, and kernel evidence external.",
+        "lane": "lean_adapter",
+        "bottleneck": "normalization",
+        "status": "OPEN_UNCOMPILED_P4_DOMAIN_OBJECT_SEPARATION",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_DomainObjectSeparation.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_DomainObjectSeparation.review.md",
+        ],
+    },
 ]
 
 

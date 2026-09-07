@@ -2461,3 +2461,10 @@ revision 720 接入 `differentiable_coordinate_api`，分类为 `direct_reuse` �
 BijOn evaluation coordinates、逐元素 differentiable factorization 和
 finite-support stability。这里复用的是声明/API 形状，未复制 FLT 算术证明；
 当前仍是 pending advisory，不改变本地 verified registry。
+
+### 2026-09-07 — P4 域与矩阵对象分离接入
+
+revision 721 接入 `DOMAIN_OBJECT_SEPARATION`。新叶将 `V≤t²`、`V≤1`、
+`blockP≤28/5` 的 localization 义务分开，并以精确反例说明全六体正则化
+质量矩阵与单体 BODY6 Schur 余量不能互换，Schur 也不满足简单可加或先后
+正则化交换。该结果收紧了 P4 的对象身份边界，但没有宣称完整证书失败或成功。

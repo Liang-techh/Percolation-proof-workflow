@@ -3062,3 +3062,8 @@ revision 720 接入 Anthropic FLT `differentiable_coordinate_api`。该候选分
 commit 和 Kähler/complex algebra 假设，包装 BijOn evaluation coordinates、
 differentiable factorization 与 finite-support stability；target ambient、
 upstream compile 和 admission 仍是 pending。
+
+revision 721 登记 P4 `DOMAIN_OBJECT_SEPARATION`。它证明 tube→V≤1 与
+V≤1→blockP 都需要独立正 localization；保存的 CSV 点只是条件绑定；full
+regularized six-body M、body-only unregularized remainder 和 Schur elimination
+不能通过加法或正则项重排互换。该叶用于阻断错误的域/矩阵替换，仍保持 open。
