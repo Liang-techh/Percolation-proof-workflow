@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-COMPILED-LEDGER-BINDING-liuchuanafeng-20260907T1714.md",
+  "record_kind": "review_result",
+  "review_sha256": "9EA8BE2D41017E51BE0638C806B07BEB6B2E22E7E24C29D5B7FFAC973BA1E5A6",
+  "task_id": "T-P4-COMPILED-LEDGER-BINDING",
+  "source_agent": "流川枫",
+  "created_at": "2026-09-07T17:14:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_compiled_ledger_binding",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "577ace22b54d7f71b60cf8b071e3c6604ba296ad",
+  "review_file": "agent_review_inbox/review-T-P4-COMPILED-LEDGER-BINDING-liuchuanafeng-20260907T1714.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-07T23:23:43.285869+00:00"
+}

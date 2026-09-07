@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-040-rational-lambda-guard-kuangmanmozun-20260907T1642.md",
+  "record_kind": "review_result",
+  "review_sha256": "975A1E7DB532DA160A25344746F44C4B62D29E27337A507D066D24CAC0D518A7",
+  "task_id": "T-P4-040",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_common_rational_lambda_guard",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-040-rational-lambda-guard-kuangmanmozun-20260907T1642.md",
+  "format_warning": "missing_opening_yaml_delimiter",
+  "integrated_at": "2026-09-07T23:23:43.285652+00:00"
+}

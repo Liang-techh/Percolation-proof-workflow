@@ -1,0 +1,14 @@
+{
+  "record_file": "agent_review_inbox/companion-T-P4-040-rational-lambda-guard-kuangmanmozun-20260907T1645.md",
+  "record_kind": "companion_log",
+  "review_sha256": "90EBCCCBE69724F3DCE3DE3D78FFE16DD386938962E9152B8345B2A6E711AC3A",
+  "task_id": "T-P4-040",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_common_rational_lambda_guard",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "integrated_at": "2026-09-07T23:23:43.284092+00:00"
+}

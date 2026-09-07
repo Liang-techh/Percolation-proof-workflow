@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P0-FLT-CLASSIFICATION-MATRIX-liuchuanafeng-20260907T1718.md",
+  "record_kind": "review_result",
+  "review_sha256": "7A4CF7875986280F3D4396FEEBE89686694B6E49169F518B47511EDA9D66C4CC",
+  "task_id": "T-P0-FLT-CLASSIFICATION-MATRIX",
+  "source_agent": "流川枫",
+  "created_at": "2026-09-07T17:18:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_classification_matrix_scan",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "80ee02391e3aff12e4ed4a8505477dae08e7c21a",
+  "review_file": "agent_review_inbox/review-T-P0-FLT-CLASSIFICATION-MATRIX-liuchuanafeng-20260907T1718.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-07T23:23:43.284868+00:00"
+}
