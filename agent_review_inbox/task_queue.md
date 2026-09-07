@@ -2596,3 +2596,9 @@ source-independent/open/uncompiled 候选。
 - 本地新增并登记：body-6 first-three×tail mixed Gram、P3 scalar-cap
   monotonicity、fixed-λ weighted absorption、P4 quadratic residual-load seam。
 - 远端同步只在本窗口执行；registry 仍为 0，formal gate 继续关闭。
+
+### 2026-09-07 — 12:43 本地数学轮
+
+- 新派发四个独立叶：body-6 前三列自 Gram；P4 entrywise quadratic upper
+  bound；fixed-λ 正系数严格总吸收；P3 Fin6 cap-max 压缩。
+- 本窗口已推送完毕；下一轮 20 分钟前只在本地推进，避免与 GitHub agent 抢通道。

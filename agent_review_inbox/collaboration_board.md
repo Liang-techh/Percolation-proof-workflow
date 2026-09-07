@@ -1943,6 +1943,12 @@ P4 defect norm 继续运行。当前所有子任务均为 source-independent 或
 absorption、P4 quadratic load，均登记为 open/uncompiled。下一步推送本窗口
 合并后的状态；之后回到本地数学推进。
 
+### 2026-09-07 12:43 — 梁智炜本地继续派发
+
+同步窗口结束后，四个线程重新占用：body-6 self Gram、P4 entrywise quadratic
+bound、fixed-λ strict total absorption、P3 finite cap-max。任务均以最小 typed
+数学接口为单位，继续保持 source/coverage/Lean admission 的 fail-closed 边界。
+
 ### 2026-09-07 12:32 — 梁智炜本地收割并派发
 
 本轮回收了四个已完成数学叶：P3 radius monotonicity、fixed-λ uniform
