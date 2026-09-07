@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 650,
+  "revision": 651,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -39189,7 +39189,8 @@
       "status": "open",
       "proof_sketch": "Apply coefficient monotonicity rowwise, sum load≤delta and delta≤margin over the explicit finite union, and retain positive-coefficient requirements for any future strict total inequality.",
       "dependencies": [
-        "ed401ee38b72401aaaec1ef073253d52"
+        "ed401ee38b72401aaaec1ef073253d52",
+        "6a0f7f0aa528481ebf0dc5ad4c1fb609"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -39523,6 +39524,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_SELF3_20260907_REVIEW.md",
             "sha256": "C054B95C1C77A66FBC2AF0614404741B20724428AFD6FAADB33A58598DE2A7EB"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "6a0f7f0aa528481ebf0dc5ad4c1fb609": {
+      "id": "6a0f7f0aa528481ebf0dc5ad4c1fb609",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition",
+      "statement": "Weighted loads and margins over the tagged finite union decompose exactly into two explicit eta-partition subbudgets, with rowwise budget transport preserved in each part.",
+      "parent_id": "a0b9d847bc984a5fbedf35ef8e91bb20",
+      "status": "open",
+      "proof_sketch": "Consume supplied cover, disjointness, and finite-sum partition premises for eta=2.7 and eta=5.6, then apply the existing rowwise load/delta/margin inequalities separately to each subset.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_FIXED_LAMBDA_ETA_PARTITION",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_ETA_SUM_DECOMPOSITION20260907.lean",
+            "sha256": "AB9E28910045037A9E2FEFC106B8612118FF8C333143B33B3BBCA7E7AB6BD399"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_ETA_SUM_DECOMPOSITION20260907_REVIEW.md",
+            "sha256": "4C5D6DFAF14C299AE4F01523E0120663E332F48D63AAE6612C254F86A156282C"
           }
         ],
         "registry_eligible": false,
@@ -66529,6 +66565,23 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T18:48:37.837621+00:00",
+      "kind": "node_added",
+      "node_id": "6a0f7f0aa528481ebf0dc5ad4c1fb609",
+      "parent_id": "a0b9d847bc984a5fbedf35ef8e91bb20",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition"
+    },
+    {
+      "at": "2026-09-07T18:48:37.862196+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -70185,5 +70238,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "ee8aeff987b09602f2d743c5784d30222c1bbfaf990304a4e4ef3adc8d7b387b"
+  "state_checksum": "3a86ff647988a5eb36029885c5a0477ebc333fce743c5ff0eb4ad8153a7ecb3f"
 }

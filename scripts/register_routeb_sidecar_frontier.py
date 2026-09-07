@@ -743,6 +743,19 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption",
+        "statement": "Weighted loads and margins over the tagged finite union decompose exactly into two explicit eta-partition subbudgets, with rowwise budget transport preserved in each part.",
+        "proof_sketch": "Consume supplied cover, disjointness, and finite-sum partition premises for eta=2.7 and eta=5.6, then apply the existing rowwise load/delta/margin inequalities separately to each subset.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_ETA_PARTITION",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_ETA_SUM_DECOMPOSITION20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_ETA_SUM_DECOMPOSITION20260907_REVIEW.md",
+        ],
+    },
+    {
         "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.entrywise_upper",
         "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load",
         "statement": "Entrywise absolute bounds on a 2x2 residual matrix yield a proof-valued nonnegative quadratic upper bound without PSD or spectral assumptions.",
