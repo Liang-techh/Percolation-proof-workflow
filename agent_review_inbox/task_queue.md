@@ -2628,3 +2628,11 @@ source-independent/open/uncompiled 候选。
   前提，目标是把 projection 直接接到 Schur residual。
 - 其他三条继续 body-6 加权 Gram、fixed-λ eta strict absorption、P3 capMax
   取等/最小性；GitHub 仍保持静默。
+
+### 2026-09-07 — 12:55 本地数学轮
+
+- 收割 P4 Schur elimination skeleton，已登记为 block-projection-defects 的新 open child；
+  明确左逆、矩阵顺序和两种 defect 符号约定，不把 identity 当成 PSD 或误差界。
+- body-6 mass/inertia mixed Gram 已生成但等待 REVIEW；下一轮继续收割，不提前登记。
+- 三条空闲线重新派发：Schur defect-convention adapter、fixed-λ strict certificate
+  export、P3 strict cap-budget transitivity；GitHub 保持静默至 20 分钟窗口。

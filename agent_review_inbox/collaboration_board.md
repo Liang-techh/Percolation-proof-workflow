@@ -1973,6 +1973,14 @@ K-path 线程已从 entrywise bound 转入 Schur block 消元 identity，作为�
 真实 P4 residual binding 的代数接口；其余线程继续各自数学叶，仍不改变
 formal gate 或 registry。
 
+### 2026-09-07 12:55 — 梁智炜本地收割与再派发
+
+P4 Schur elimination 已回收：它只在显式左逆下给出有序 B/D 投影恒等式，
+并保留 force-side defect 的减号约定，已加入 DAG（revision 653）。body-6
+mass/inertia mixed 表已生成，等待独立 REVIEW 后再入图。空闲 agent 分别接手
+Schur defect convention adapter、fixed-λ strict certificate export、P3
+strict cap-budget transitivity；registry 仍为 0，formal gate 仍关闭。
+
 ### 2026-09-07 12:32 — 梁智炜本地收割并派发
 
 本轮回收了四个已完成数学叶：P3 radius monotonicity、fixed-λ uniform

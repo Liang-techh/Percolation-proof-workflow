@@ -1057,6 +1057,19 @@ CHILDREN = [
             "examples/routeb_fixed_lambda_fold/NEW_FixedLambdaUniformDeclaredFold20260907_REVIEW.md",
         ],
     },
+    {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.schur_elimination",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects",
+        "statement": "Ordered B/D block projection with an explicit left inverse yields the Schur elimination identity and preserves the force-side defect convention.",
+        "proof_sketch": "Use B=(4,5), D=(1,2,3,6) projections, retain multiplication order, apply only MDDinv*MDD=I, and derive both full-balance and blockwise forcing/defect forms without PSD or norm assumptions.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_P4_SCHUR_ELIMINATION",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SchurElimination.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SchurElimination_REVIEW.md",
+        ],
+    },
 ]
 
 

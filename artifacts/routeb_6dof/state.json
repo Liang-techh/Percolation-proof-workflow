@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 652,
+  "revision": 653,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -38886,7 +38886,8 @@
       "status": "open",
       "proof_sketch": "Use Fin embeddings and finite-sum partition to derive both block matrix-vector projections, preserve the distal comparison defect, then eliminate with an explicit left inverse and retain e_D/e_B terms.",
       "dependencies": [
-        "fc4b74581af047c796bb5e1672148916"
+        "fc4b74581af047c796bb5e1672148916",
+        "f4c94f0c5ac84d42b744cb310570561e"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -39632,6 +39633,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_ETA_STRICT_BUDGET20260907_REVIEW.md",
             "sha256": "BA3CD2438A42EAE81AEEA64406C3DBD49E678AB2A8F8E240465C7B4813AB24DF"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "f4c94f0c5ac84d42b744cb310570561e": {
+      "id": "f4c94f0c5ac84d42b744cb310570561e",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.schur_elimination",
+      "statement": "Ordered B/D block projection with an explicit left inverse yields the Schur elimination identity and preserves the force-side defect convention.",
+      "parent_id": "ab976fc8bdab4889ac07ec5239e24215",
+      "status": "open",
+      "proof_sketch": "Use B=(4,5), D=(1,2,3,6) projections, retain multiplication order, apply only MDDinv*MDD=I, and derive both full-balance and blockwise forcing/defect forms without PSD or norm assumptions.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_P4_SCHUR_ELIMINATION",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_SchurElimination.lean",
+            "sha256": "DDA9F2E1B1A9D7B64784A9463A9308118ED44BEF403BD9EA00C22DF5E2620092"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_SchurElimination_REVIEW.md",
+            "sha256": "32A199D2ED02161AE639C6849598F0D982DBEA1CF9B038E1EF85F19729B5A0CA"
           }
         ],
         "registry_eligible": false,
@@ -66680,6 +66716,23 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T18:57:14.461696+00:00",
+      "kind": "node_added",
+      "node_id": "f4c94f0c5ac84d42b744cb310570561e",
+      "parent_id": "ab976fc8bdab4889ac07ec5239e24215",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.schur_elimination"
+    },
+    {
+      "at": "2026-09-07T18:57:14.461716+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.schur_elimination"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -70336,5 +70389,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "9fab8bf55cf6f8e6c5f63f3d02607b19c401ce9359c87f81ab18fef9f1396e8e"
+  "state_checksum": "101c25c269bc5984187ddf7d7c85dc761e8e7acd05730dd064a934d5c062080f"
 }
