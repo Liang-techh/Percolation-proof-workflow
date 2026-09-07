@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 535,
+  "revision": 536,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -15036,7 +15036,23 @@
           "schur_margin_consumed": false,
           "formal_certificate_allowed": false,
           "registry_promoted": false
-        }
+        },
+        "o0_strict_leftover_receipts": [
+          {
+            "task_id": "T-P4-033-O0-R3",
+            "status": "OPEN_FAIL_CLOSED",
+            "receipt_sha256": "04CBD18C664B357BF746ACB87ED64094CA73D916CB6D715E82F5BAC9BFD6B99C",
+            "same_key_receipt_found": false,
+            "missing": [
+              "weighted baseline rho_r",
+              "remaining margin m_r",
+              "fixed theta",
+              "strict leftover m_f > 0"
+            ],
+            "schur_margin_consumed": false,
+            "registry_promoted": false
+          }
+        ]
       }
     },
     "120deab092c243b6a43356e63c8b56f4": {
@@ -15750,7 +15766,17 @@
           "source_receipt_present": false,
           "formal_certificate_allowed": false,
           "registry_promoted": false
-        }
+        },
+        "o1_typed_source_export_obstructions": [
+          {
+            "task_id": "T-P4-033-O1",
+            "status": "OPEN_SAME_OBJECT_BINDING_TWO_PATHS",
+            "review_sha256": "E9719640DC1566F178FC8597E09547342E93EC38A61E26C9FA048FEC08473FF9",
+            "source_receipt_present": false,
+            "required_binding": "M_DD = M_DD45_at M mu q with exact same source/state/mu/q and D=(1,2,3,6)",
+            "registry_promoted": false
+          }
+        ]
       }
     },
     "0da99a7cef5e4f0b91c7cc06d9e7c010": {
@@ -16793,7 +16819,21 @@
           "global_coverage": false,
           "formal_certificate_allowed": false,
           "registry_promoted": false
-        }
+        },
+        "o2_same_namespace_obstructions": [
+          {
+            "task_id": "T-P4-036.2",
+            "status": "BLOCKED_AUTHORITY_NOT_ADMISSIBLE",
+            "review_sha256": "13843B04863DCA5258CC1392132AA7800294935B5624A4352A858E3233A7CE34",
+            "obstruction_sha256": "943E58062B521D65BB78655F667EC5AF5E74330A5C6CA482A9F7B6D8DE4EF5E4",
+            "authority_status": "ENDPOINT_PROVENANCE_ONLY",
+            "same_namespace_parent_found": false,
+            "same_namespace_sibling_found": false,
+            "coverage_join_premise_instantiated": false,
+            "global_coverage": false,
+            "registry_promoted": false
+          }
+        ]
       }
     }
   },
@@ -41004,6 +41044,15 @@
       "fresh_receipt_present": false,
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T14:35:23.310399+00:00",
+      "kind": "routeb_followup_obstructions_recorded",
+      "o0_status": "OPEN_FAIL_CLOSED",
+      "o1_status": "OPEN_SAME_OBJECT_BINDING_TWO_PATHS",
+      "o2_status": "BLOCKED_AUTHORITY_NOT_ADMISSIBLE",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -44660,5 +44709,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "83e46dea8bd8323d6cdd3e445ef8824a64671d7636021ffed18d0af0a00469f5"
+  "state_checksum": "3833388d1fa3e266675e5105dbaa7764cd9761a792c245786108ab2e4a533011"
 }

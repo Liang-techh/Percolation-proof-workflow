@@ -1,0 +1,94 @@
+{
+  "schema": "routeb.o0.r3.same_key_strict_margin_obstruction.v1",
+  "receipt_type": "immutable_review_receipt",
+  "status": "OPEN_FAIL_CLOSED",
+  "task": "T-P4-033-O0-R3",
+  "observed_state_revision": 508,
+  "scope": "same exact-Fourier source/state/metric/orientation key only",
+  "main_state_modified": false,
+  "registry_promoted": false,
+  "schur_margin_consumed": false,
+  "canonical_key": {
+    "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+    "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+    "metric_orientation": "left_output",
+    "metric_output_norm": "euclidean_2"
+  },
+  "search": {
+    "method": "exact source_key search across inbox, routeb_6dof state, artifacts, examples, and docs; then exact field audit",
+    "same_key_receipt_found": false,
+    "required_fields": [
+      "weighted_baseline.rho_r",
+      "schur_baseline.remaining_margin_m_r",
+      "schur_baseline.theta"
+    ],
+    "missing_fields": [
+      "authoritative weighted baseline rho_r for R_r",
+      "authoritative positive remaining baseline margin m_r",
+      "fixed exact theta > 0",
+      "strict leftover m_f > 0"
+    ],
+    "rejected_substitutes": [
+      "rho_F^2 Frobenius candidate",
+      "unkeyed candidate theta/charge/margin CSV columns",
+      "previous arithmetic root witnesses rho_27 and rho_56",
+      "old Float64 or unrelated physical Schur ledger"
+    ]
+  },
+  "available_exact_perturbation": {
+    "receipt": "agent_review_inbox/receipt-T-P4-033-O0-exact-fourier-cell-weighted-port-adapter-output-2norm-20260907.json",
+    "receipt_sha256": "8506F3FEDE09D3FCFB20C586213B0901BD065378E15492AC71BD1566BEB2120C",
+    "epsilon_R_weighted": "10884976891854242252555776013990910667449238154978439/106656554159567228416987083730445236164580900447719948854959486481478400000",
+    "epsilon_authoritative_for_this_obstruction": true,
+    "same_source_key": true,
+    "same_state_key": true
+  },
+  "strict_arithmetic_contract": {
+    "lambda": "1 + 1/theta",
+    "charge": "(1 + 1/theta) * ((rho_r + epsilon_R_weighted)^2 - rho_r^2)",
+    "equivalent_charge": "(1 + 1/theta) * (2*rho_r*epsilon_R_weighted + epsilon_R_weighted^2)",
+    "leftover": "m_f = m_r - charge",
+    "required_inequality": "m_r > (1 + 1/theta) * ((rho_r + epsilon_R_weighted)^2 - rho_r^2)",
+    "strict_check_status": "UNDECIDABLE_FROM_CURRENT_KEYED_RECEIPTS"
+  },
+  "exact_obstruction": {
+    "argument": "epsilon_R alone does not determine strict positivity when rho_r, m_r, and theta are absent",
+    "witness_theta": "1",
+    "witness_rho_r": "0",
+    "case_negative": {
+      "m_r": "epsilon_R_weighted^2",
+      "charge": "2*epsilon_R_weighted^2",
+      "leftover": "-epsilon_R_weighted^2 < 0"
+    },
+    "case_positive": {
+      "m_r": "3*epsilon_R_weighted^2",
+      "charge": "2*epsilon_R_weighted^2",
+      "leftover": "epsilon_R_weighted^2 > 0"
+    },
+    "conclusion": "both exact rational assignments are compatible with the supplied perturbation fact; a strict R3 conclusion cannot be inferred"
+  },
+  "evidence": [
+    {
+      "path": "agent_review_inbox/receipt-T-P4-033-O0-constructive-exact-fourier-cell-K-Br-Cf-20260907.json",
+      "sha256": "E570CFB418065503D9743B4496FC0902E45BF82DA4C265FD067BEA9952E821AD",
+      "finding": "same-key exact K/Br/Cf and perturbation only; no rho_r or m_r"
+    },
+    {
+      "path": "agent_review_inbox/receipt-T-P4-033-O0-exact-fourier-cell-weighted-port-adapter-output-2norm-20260907.json",
+      "sha256": "8506F3FEDE09D3FCFB20C586213B0901BD065378E15492AC71BD1566BEB2120C",
+      "finding": "same-key conditional weighted perturbation; schur_margin_consumed=false"
+    },
+    {
+      "path": "artifacts/routeb_6dof/state.json",
+      "sha256": "15DEAAC41F5E7197D41491180B103B105AA9DB5AD010F76F1D7050023E48B709",
+      "finding": "R3 rho_r and remaining margin remain unavailable"
+    }
+  ],
+  "minimum_next_receipt": [
+    "same-key weighted baseline theorem for R_r with exact rho_r >= 0, or g_r plus exact root witness",
+    "same-key fixed exact theta > 0",
+    "same-key authoritative m_r > 0 after baseline Schur charge",
+    "exact proof of charge < m_r and returned m_f > 0",
+    "same-key physical R_port*a_B=r_B if physical consumption is requested"
+  ]
+}

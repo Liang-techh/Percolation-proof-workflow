@@ -1215,3 +1215,13 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   旧 CSV，不声称 deployed `tau` 等价、Lean theorem 或 registry promotion。
 - 下一步仍只需要具备 Julia 的执行 agent 产出 16-row 完整字段、E1/E2<=1e-12、
   exit/stdout/stderr 和 CSV/receipt hashes。
+
+### 2026-09-07 — 梁智炜：O0/O1/O2 follow-up obstruction 批量收割
+
+- O0 新 JSON receipt 与此前结论一致：同键 `rho_r`、`m_r`、`theta` 均缺失，
+  strict check `UNDECIDABLE_FROM_CURRENT_KEYED_RECEIPTS`，已保留 receipt hash。
+- O1 仍只有抽象 `M_DD45_at`/`h_MDD_def` 形状，没有 source-side inhabitant；
+  `M_DD_left_inverse_witness` 继续 open，不重复代数审计。
+- O2 同 namespace 搜索仍没有 canonical 13D parent/sibling、linkage 或
+  `CoverageJoin2`；GCN 候选和 topology metadata 均不具 authority。三项均已
+  接入 state，未改变 registry/formal gate。

@@ -1876,3 +1876,12 @@ after integration; corrections should be a new result file.
   receipt、四个 E1/E2 residual 分量、process exit 0 与双 artifact hash。
 - 禁止把 runner 存在、旧 CSV 或本轮 obstruction 升级为 runtime PASS 或 DH
   source equivalence。
+
+### Follow-up harvest: O0/O1/O2 obstruction batch (2026-09-07)
+
+- O0：只收同键 strict-margin 三元组与 exact positive leftover；新 receipt
+  已确认当前不可判定，不再重复收集 candidate roots。
+- O1：只收 exact typed `M_DD45_at M mu q` 与 `h_MDD_def` source inhabitant，
+  不再重复 determinant/q=0/Float64 检查。
+- O2：只收同一 theta2 namespace 的 canonical 13D parent/sibling records 和
+  typed join；GCN-F1/F2 仅作 rejected candidate 对照。
