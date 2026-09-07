@@ -1826,3 +1826,11 @@ after integration; corrections should be a new result file.
   endpoint，拓扑 receipt 仍 `INCOMPLETE` 且 `coverage_complete=false`。
 - 暂停重复编译与泛扫描；下一步只接受 source/hash-bound parent/sibling
   records、child-to-parent inequalities 和 coverage join linkage。
+
+### T-P4-033-O0-R2/R3 — strict-margin frontier (2026-09-07)
+
+- Fin2 factor-2 与 exact-Fourier weighted perturbation 已在标量接口组合，
+  但 R3 仍缺同键 weighted baseline `rho_r`、正剩余 margin `m_r`、固定
+  `theta` 和严格 `leftover > 0`。
+- 下一步优先寻找真实 baseline receipt 或给出精确 obstruction；禁止消费
+  未绑定的 `rho_F²`、旧 Float64 ledger 或未证明的 candidate margin。

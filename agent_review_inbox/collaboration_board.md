@@ -1167,3 +1167,11 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   当前 endpoint handoff 的 source/hash-bound parent/sibling endpoint 连接。
 - 因此 O2 继续保持 `ENDPOINT_PROVENANCE_ONLY`；不实例化具体 `BoxSubset` 或
   `CoverageJoin2`，不重复 leaf-1 编译，也不改变 formal gate/global coverage。
+
+### 2026-09-07 — 梁智炜：O0 factor-2 接口转化为 R3 strict-margin frontier
+
+- Fin2 编译定理与 exact-Fourier output-2 weighted receipt 已在标量接口处
+  组合成功；factor-2 不再是瓶颈。
+- O0-R3 仍因缺少同键 weighted baseline `rho_r`、正剩余 margin `m_r`、固定
+  `theta` 和严格正 leftover 而 fail-closed；不能使用未绑定的 `rho_F²` 或旧
+  ledger margin。该 obstruction 已写入 state，Schur margin 仍未消费。

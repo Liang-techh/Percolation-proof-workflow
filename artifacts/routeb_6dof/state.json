@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 530,
+  "revision": 531,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -14910,6 +14910,47 @@
             "admitAx_present": false
           },
           "scope": "Fin2 output norm only; exact factor 2; no Schur/source/global closure",
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
+        },
+        "o0_factor2_interface_obstructions": [
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-033-O0-R2-R3",
+            "source_agent": "codex-inbox",
+            "review_status": "OPEN_FAIL_CLOSED_SAME_KEY_BASELINE_AND_STRICT_MARGIN_MISSING",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-033-O0-R2-R3-factor2-interface-obstruction-codex-20260907.md",
+              "sha256": "B0A831B60CF9AD9E2026B8721DEB6D5330656F1FB7B72931AA351776FCB30ACF"
+            },
+            "factor2_join": "COMPOSED_AT_SCALAR_INTERFACE",
+            "weighted_perturbation": "AVAILABLE_CONDITIONAL_EXACT_FOURIER_ONE_CELL",
+            "missing": [
+              "same-key weighted baseline rho_r",
+              "same-key positive remaining margin m_r",
+              "fixed exact theta",
+              "strict positive leftover",
+              "physical R_port*a_B=r_B if physical consumer is requested"
+            ],
+            "safe_weighted_epsilon": "2*epsilon_R_infinity/s",
+            "schur_margin_consumed": false,
+            "formal_certificate_allowed": false,
+            "registry_promoted": false
+          }
+        ],
+        "o0_factor2_interface_obstruction": {
+          "status": "OPEN_FAIL_CLOSED_SAME_KEY_BASELINE_AND_STRICT_MARGIN_MISSING",
+          "review_sha256": "B0A831B60CF9AD9E2026B8721DEB6D5330656F1FB7B72931AA351776FCB30ACF",
+          "factor2_join": "COMPOSED_AT_SCALAR_INTERFACE",
+          "weighted_perturbation": "AVAILABLE_CONDITIONAL_EXACT_FOURIER_ONE_CELL",
+          "missing": [
+            "same-key weighted baseline rho_r",
+            "same-key positive remaining margin m_r",
+            "fixed exact theta",
+            "strict positive leftover",
+            "physical R_port*a_B=r_B if physical consumer is requested"
+          ],
+          "schur_margin_consumed": false,
           "formal_certificate_allowed": false,
           "registry_promoted": false
         }
@@ -40716,6 +40757,16 @@
       "global_coverage": false,
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T14:17:59.709211+00:00",
+      "kind": "routeb_o0_factor2_interface_obstruction_recorded",
+      "node_id": "43e3c1a23dc34d52a19b835a8a883cb7",
+      "review_status": "OPEN_FAIL_CLOSED_SAME_KEY_BASELINE_AND_STRICT_MARGIN_MISSING",
+      "factor2_join": "COMPOSED_AT_SCALAR_INTERFACE",
+      "schur_margin_consumed": false,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -44372,5 +44423,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "716023cdccf71fee66ee6d9e7018d96059b187c047cd3278b0fe049bb4447525"
+  "state_checksum": "74efd6ad4c3427f6bc0abb718026cca6afe91178a9d612e50ba5e5b32102acfc"
 }
