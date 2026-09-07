@@ -2938,3 +2938,9 @@ receipt metadata 进入 registry。
 P4 BODY6 Schur→scalar PMI adapter 已登记 revision 690，均为
 `OPEN_UNCOMPILED`。body-6 uniform remainder margin 已产出 proof-attempt，待配套
 review 到达后登记；其无限域 uniform 正 margin 反例继续作为显式阻塞条件。
+
+revision 691 后续派发：body-6 exact source-to-Schur coefficient seam；P4
+residual allowance 到 scalar margin 的显式预算 adapter；fixed-λ receipt 的
+artifact/hash/statement provenance audit；P3 interval certificate 到连续域
+coverage 的 typed consumer。四项要求 proof-attempt + 定向 review，继续不跑
+本机 Lean/Lake、不做宽回归、不直接修改 registry。

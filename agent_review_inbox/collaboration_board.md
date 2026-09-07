@@ -2292,3 +2292,10 @@ P3 `RECEIPT_ADAPTER`、fixed-λ `COMPARATOR_RECEIPT_ADMISSION`、P4
 PMI 的显式 normalization/comparison；全部保持 `OPEN_UNCOMPILED`，未运行本机
 Lean、未进入 verified registry。body-6 `MARGINUNIFORM` 已生成，等待 review
 成对收齐后再登记。
+
+### 2026-09-07 — 梁智炜继续拆分四个数学瓶颈
+
+revision 691 后向四条本地并行线派发：BODY6 exact source-to-Schur 系数 seam、
+P4 residual allowance→scalar margin、fixed-λ receipt provenance/hash audit、
+P3 interval→continuous coverage。四项均要求最小 typed contract、精确反例或
+缺口说明和定向 review；不执行本机 Lean，不改变 registry。
