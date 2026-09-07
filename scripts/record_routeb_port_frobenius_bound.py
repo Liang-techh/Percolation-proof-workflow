@@ -173,8 +173,8 @@ def main() -> int:
         "exact_budget_rows": metrics,
         "independent_replay": replayed_maxima,
         "consumer_interface": {
-            "provided_quantity": "||R a_B||_2^2 <= rho_F^2 * (a_B^T B_up a_B)",
-            "source_map": "T = R B_up^(-1/2)",
+            "provided_quantity": "||R_port a_B||_2^2 <= rho_F^2 * (a_B^T B_up a_B)",
+            "source_map": "T = R_port B_up^(-1/2)",
             "preferred_consumption_route": "combined_schur_young",
             "combined_schur_premise": "L_B=l_base+r_B and ||r_B||^2 <= rho_F^2*(a_B^T B_up a_B)",
             "combined_schur_charge": "(1+1/theta)*rho_F^2*(a_B^T B_up a_B)",
@@ -182,7 +182,7 @@ def main() -> int:
             "E_k_semantics": "l_true = l_poly,k + E_k xi, ||xi||_2 <= 1",
             "E_k_route_status": "not_provided_by_this_leaf",
             "required_adapter": (
-                "typed descriptor/source theorem must bind R a_B to r_B and "
+                "typed descriptor/source theorem must bind R_port a_B to r_B and "
                 "bind l_base, before combined-Schur consumption"),
         },
         "unresolved": [
