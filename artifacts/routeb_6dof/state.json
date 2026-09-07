@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 384,
+  "revision": 385,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -10847,6 +10847,44 @@
           "formal_certificate_allowed": false,
           "registry_eligible": false
         }
+      }
+    },
+    "67aa96ad13094f7bb98404c6066b2d4f": {
+      "id": "67aa96ad13094f7bb98404c6066b2d4f",
+      "name": "P4.nominal_distal_residual_l1_lean_seam",
+      "statement": "A generic Lean theorem bounds a finite weighted residual by its coefficient l1 norm and absorbs it into a positive decomposition.",
+      "parent_id": null,
+      "status": "open",
+      "proof_sketch": "Use Finset.abs_sum_le_sum_abs and nonnegative multiplication to prove the weighted residual l1 bound; use abs_le and linarith for the positive-decomposition absorption. Keep the concrete Gram CSV identity as a separate source-bound receipt.",
+      "dependencies": [
+        "57e8ba91205a44fb91dcbbd509078b4a"
+      ],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean-generic-real-finite-sum",
+        "statement_status": "pending_pinned_lean_compile",
+        "evidence_level": "generic_kernel_seam_uncompiled",
+        "claim_status": "residual_l1_lean_seam_open",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "preferred_route": true,
+        "unresolved": [
+          "pinned_lean_compile_receipt",
+          "zero_sorry_and_allowed_axioms_receipt",
+          "concrete_t_p4_017_coefficient_list_binding"
+        ],
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_gram_residual_lean\\GramResidual.lean",
+            "sha256": "193e6897daf4ea823c2e72c228a2de4d50ee179eb273e0b07d2c770fd2b464be"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_gram_residual_lean\\README.md",
+            "sha256": "b8965137223b584a6b8fb0b40a64476bd7465ae72a05db0202b79c0e72d73489"
+          }
+        ]
       }
     }
   },
@@ -31641,6 +31679,32 @@
       "status": "pending_exact_target_minus_opt_reconstruction",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T07:33:31.344674+00:00",
+      "kind": "node_added",
+      "node_id": "67aa96ad13094f7bb98404c6066b2d4f",
+      "parent_id": null,
+      "name": "P4.nominal_distal_residual_l1_lean_seam"
+    },
+    {
+      "at": "2026-09-07T07:33:31.344691+00:00",
+      "kind": "routeb_residual_l1_seam_frontier_created",
+      "node_id": "67aa96ad13094f7bb98404c6066b2d4f",
+      "parent_id": "57e8ba91205a44fb91dcbbd509078b4a",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_gram_residual_lean\\GramResidual.lean",
+          "sha256": "193e6897daf4ea823c2e72c228a2de4d50ee179eb273e0b07d2c770fd2b464be"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_gram_residual_lean\\README.md",
+          "sha256": "b8965137223b584a6b8fb0b40a64476bd7465ae72a05db0202b79c0e72d73489"
+        }
+      ],
+      "status": "pending_pinned_lean_compile",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -35297,5 +35361,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "c355c26caf61e4785a7fce5647f5e21032c876161ab7a4e2453dd846c3f76d08"
+  "state_checksum": "2af52070a1295ca8e2e9efbf2016681b90ef417c1ec51ae63dfd7b8a037b5d11"
 }

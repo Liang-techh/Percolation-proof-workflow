@@ -360,3 +360,10 @@
   原尺度 margin 约 `8.9004e-9`，但不会据此关闭 frontier 或写入 registry。
 - checker 额外记录 solver lower 与 derived constant gap 的差值，后续
   adapter 必须显式声明 safe-lower 来源，防止把 solver `OPTIMAL` 当 kernel 证据。
+
+### 2026-09-07 — 梁智炜：建立 residual `l1` Lean seam
+
+- 新增 `examples/routeb_gram_residual_lean/GramResidual.lean`，只证明
+  有限加权 residual 的绝对值不超过系数 `l1` 和，以及正项分解的吸收。
+- 具体 Gram CSV、目标展开和 true-DH 绑定仍是独立 frontier；等待
+  `巨阳仙尊` 给出 pinned Lean compile/axiom receipt 后再接入 DAG。

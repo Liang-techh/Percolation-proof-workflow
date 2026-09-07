@@ -147,6 +147,21 @@ GitHub agents for the push channel.
   checker also records the solver-vs-derived constant gap; Lean adapters must
   consume the derived safe lower bound, never the raw `OPTIMAL` decimal.
 
+### T-P4-018 — reusable residual `l1` Lean seam
+
+- status: `new` (local kernel-seam preparation)
+- owner: `巨阳仙尊` for pinned Lean compilation and axiom receipt;
+  `大爱仙尊` for matching the coefficient-residual contract to the exact
+  Gram expansion;
+- source: `examples/routeb_gram_residual_lean/GramResidual.lean`;
+- scope: compile `weighted_residual_l1_bound` and
+  `decomposition_nonnegative_of_abs_residual`, then bind the concrete
+  T-P4-017 residual receipt without importing solver status as evidence;
+- deliver: Lean compile receipt, `#print axioms`, and explicit source/hash
+  binding for the concrete coefficient list;
+- forbidden: treating the generic seam as proof of the giant CSV identity,
+  true-DH semantics, domain coverage, or Route-B closure.
+
 ## Queue: Route-B current bottlenecks
 
 ### T-P3-001 — single-entry true-DH source bridge
