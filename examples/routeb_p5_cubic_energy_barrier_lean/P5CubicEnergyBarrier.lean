@@ -84,18 +84,7 @@ theorem cubic_square_strict_absorption_from_energy_barrier
       _ = (Lambda * A) * A ^ 2 := by ring
       _ < g ^ 2 * A ^ 2 := hscaled
       _ = (g * A) ^ 2 := by ring
-  rw [abs_lt]
-  constructor
-  · by_contra hnot
-    have hle : PC ≤ -(g * A) := le_of_not_gt hnot
-    have hsqge : (g * A) ^ 2 ≤ PC ^ 2 := by
-      nlinarith [sq_nonneg (PC + g * A)]
-    linarith
-  · by_contra hnot
-    have hge : g * A ≤ PC := le_of_not_gt hnot
-    have hsqge : (g * A) ^ 2 ≤ PC ^ 2 := by
-      nlinarith [sq_nonneg (PC - g * A)]
-    linarith
+  exact abs_lt_of_sq_lt_sq hsq (le_of_lt (mul_pos hg hA))
 
 /-- The algebraic Lyapunov-ledger consumer.  It keeps the positive-bias lane
 explicit and only concludes nonincrease when that lane is nonpositive. -/
