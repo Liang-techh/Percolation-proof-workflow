@@ -2503,6 +2503,12 @@ ActualStorage/ActualShift 偶速度结构的身份障碍。两者均为 open/unc
 initial-envelope/identity contract，以及对应的独立 Lean receipts；流川枫继续
 获得约三分之一 GitHub lane。
 
+revision 735–736 又收割两个契约叶：`KEYED_STORAGE_TRANSFER` 将候选函数、
+参数、初始集、比较域和 path budget 的 digest/key 与真实同域不等式分开；
+`SAME_SOURCE_CONSUMER_PACKET` 则给出 line-9 allocation 的最小 source/row/P4
+normalization 接口。后者已按约三分之一比例交给流川枫做独立 Lean receipt；
+所有节点继续保持 `OPEN_UNCOMPILED`，不改变 registry。
+
 随后新增 `STORAGE_IDENTITY_TRANSFER` 叶：它要求 `V_eps=Vfull_DH` 在同一域
 上成立，且 barrier transfer 还需要整条 path 落在该域内；相同初始上界或相同
 导数都不足以完成固定阈值的 barrier 转移。该叶保持 open/uncompiled，交给

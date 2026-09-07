@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 735,
+  "revision": 736,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -43211,7 +43211,9 @@
       "parent_id": "604c96859a8042f1be9546a18cfe03ae",
       "status": "open",
       "proof_sketch": "Reify the selected decimal row as an advisory rational-token interface, prove the exact target-allocation equivalence and the positive coefficient slack, then construct fixed-coefficient counterassignments with different base terms and a zero-metric obstruction. Keep Float64 semantics, source descriptor feasibility, domain coverage, and physical margin binding external.",
-      "dependencies": [],
+      "dependencies": [
+        "05c57b9ed61348b19166676e26487de2"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -43420,6 +43422,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_KEYEDSTORAGETRANSFER20260907.review.md",
             "sha256": "85348D9AE912CCAB60463D95FB7CD1620DD933C9166F392250123280435C5E14"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "05c57b9ed61348b19166676e26487de2": {
+      "id": "05c57b9ed61348b19166676e26487de2",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility.source_positive_target_binding.same_row_budget_audit.actual_row_missing_base.same_source_consumer_packet",
+      "statement": "A same-source P4 consumer packet can derive a positive normalized target only when one row, base residual, port residual, acceleration metric, domain, and P4 normalization are bound to the same source object; displayed row slack alone supplies none of these identities.",
+      "parent_id": "fd5b11df219a4df2a31abe3118cfee12",
+      "status": "open",
+      "proof_sketch": "Define dependent SourceKey, SourceFields, RowInterpretation, RowSourceEvidence, Allocation, and P4Binding; prove the two-vector Young bound, direct or uniform allocation, and the normalized P4 target consumer, with optional front factorization kept separate.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "residual_absorption",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_P4_SAME_SOURCE_CONSUMER_PACKET",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_SameSourceConsumerPacket.lean",
+            "sha256": "8C49603AA1C2193A5440026474D8DDC4B90E3A308C7C32AC862ACE7B8C1A160E"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_SameSourceConsumerPacket.review.md",
+            "sha256": "A93FF0CA615956842A3E15F5869B790E7891751457A01EC0EB6FB9A94BB7E1A0"
           }
         ],
         "registry_eligible": false,
@@ -72203,6 +72240,24 @@
       "artifact_hashes_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T21:46:57.409437+00:00",
+      "kind": "node_added",
+      "node_id": "05c57b9ed61348b19166676e26487de2",
+      "parent_id": "fd5b11df219a4df2a31abe3118cfee12",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility.source_positive_target_binding.same_row_budget_audit.actual_row_missing_base.same_source_consumer_packet"
+    },
+    {
+      "at": "2026-09-07T21:46:57.410964+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility.source_positive_target_binding.same_row_budget_audit.actual_row_missing_base.same_source_consumer_packet"
+      ],
+      "metadata_updated": [],
+      "artifact_hashes_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -75859,5 +75914,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "767801f10df0c19747b9d4afcd16d075a0227836d62a4adc4ffce914e6153684"
+  "state_checksum": "bc0d6a66fb6f8334a5e6b7a58460044e726c32c330dcbc367650da8091b98a36"
 }

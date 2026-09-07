@@ -3123,3 +3123,10 @@ identity 或 one-sided initial-envelope contract。
 source file 单独收 receipt；P3 推进 C2/C3 remainder 到真实 DH coefficient 的
 绑定。流川枫继续承接约三分之一 GitHub 任务，收割周期为每小时，其他时间只做
 本地数学推进，不与远端 agent 抢通道。
+
+revision 735–736：BODY6 `KEYED_STORAGE_TRANSFER` 与 P4
+`SAME_SOURCE_CONSUMER_PACKET` 已登记为独立 open leaves。前者统一 digest/key、
+同域 one-sided comparison、初始值与 pathwise barrier transfer，后者把
+`b_base`、`l_base`、port、A_up、row charge 与 P4 normalization 绑定到同一
+source object，并保留 optional front factorization 的独立边界。两者均未编译、
+未进入 verified registry；流川枫 lane 继续负责 P4 packet 的独立 Lean receipt。

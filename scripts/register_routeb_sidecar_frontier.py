@@ -2338,6 +2338,19 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility.source_positive_target_binding.same_row_budget_audit.actual_row_missing_base.same_source_consumer_packet",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility.source_positive_target_binding.same_row_budget_audit.actual_row_missing_base",
+        "statement": "A same-source P4 consumer packet can derive a positive normalized target only when one row, base residual, port residual, acceleration metric, domain, and P4 normalization are bound to the same source object; displayed row slack alone supplies none of these identities.",
+        "proof_sketch": "Define dependent SourceKey, SourceFields, RowInterpretation, RowSourceEvidence, Allocation, and P4Binding; prove the two-vector Young bound, direct or uniform allocation, and the normalized P4 target consumer, with optional front factorization kept separate.",
+        "lane": "lean_adapter",
+        "bottleneck": "residual_absorption",
+        "status": "OPEN_UNCOMPILED_P4_SAME_SOURCE_CONSUMER_PACKET",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SameSourceConsumerPacket.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SameSourceConsumerPacket.review.md",
+        ],
+    },
+    {
         "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer.compiled_ledger_binding.v0_parameter_map",
         "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer.compiled_ledger_binding",
         "statement": "The targeted-gain ledger V0 has an exact rational generator and base-plus-cross split, but scalar matching does not identify it with the compiled even-in-velocity storage; transfer requires a same-domain evaluator identity or one-sided initial-envelope contract.",
