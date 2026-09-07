@@ -12,6 +12,12 @@ from .disjoint import (audit_do, build_repair_do, canonical_do_schema,
                         classify_manual_review, do_sha256, normalize_do_path)
 from .advisory_reuse import (AdvisoryReuseError, SCHEMA_VERSION,
                               project_advisory_reuse)
+from .merlean_plan_projection import (cycles as plan_cycles,
+                                      export_views as export_plan_views,
+                                      forward_cone as plan_forward_cone,
+                                      levels as plan_levels,
+                                      project as project_plan,
+                                      topo_order as plan_topo_order)
 
 __all__ = [
     "EvidenceStage", "NodeStatus", "ProofNode", "WorkflowState", "StateStore",
@@ -25,4 +31,6 @@ __all__ = [
     "audit_full_state_binding",
     "audit_do", "build_repair_do", "canonical_do_schema", "classify_manual_review", "do_sha256", "normalize_do_path",
     "AdvisoryReuseError", "SCHEMA_VERSION", "project_advisory_reuse",
+    "project_plan", "export_plan_views", "plan_topo_order", "plan_levels",
+    "plan_forward_cone", "plan_cycles",
 ]

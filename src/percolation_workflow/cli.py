@@ -19,6 +19,7 @@ from .host_adapter import FilesystemHostAdapter
 from .codex_adapter import infer_manifest_project, run_codex_dispatch, run_codex_batch
 from .external import initialize_routeb_intake, run_external_gate, refresh_routeb_tracking
 from .repair_classification import dry_run_repair_integration
+from .merlean_plan_projection import export_views as export_merlean_plan_views
 
 
 def main() -> int | None:
@@ -28,7 +29,7 @@ def main() -> int | None:
     parser.add_argument("command", choices=["status", "audit-registry", "verify-frontier", "verify-manifest",
                                             "init-manifest", "propose-decomposition",
                                             "init-routeb-external", "refresh-routeb-external", "run-external-gate",
-                                            "prepare-agents", "dry-run-repair", "pending-agents", "bind-agent", "renew-agent", "reclaim-agent", "record-agent", "compile-agent", "retry-compile-agent", "collect-compile", "check-sketch", "next-actions", "ingest-agent-log", "persist-callback", "run-codex-agent", "run-codex-agents", "host-cycle"])
+                                            "prepare-agents", "dry-run-repair", "pending-agents", "bind-agent", "renew-agent", "reclaim-agent", "record-agent", "compile-agent", "retry-compile-agent", "collect-compile", "check-sketch", "next-actions", "ingest-agent-log", "persist-callback", "run-codex-agent", "run-codex-agents", "host-cycle", "export-plan-store"])
     parser.add_argument("state")
     parser.add_argument('--project')
     parser.add_argument('--comparator-executable')
@@ -274,6 +275,13 @@ def main() -> int | None:
         print(outcome)
         return 0 if outcome == 'verified' else 1
     state = store.load()
+    if args.command == 'export-plan-store':
+        if not args.output_dir:
+            parser.error('export-plan-store requires --output-dir')
+        paths = export_merlean_plan_views(state, args.output_dir)
+        print(json.dumps({name: str(path) for name, path in paths.items()},
+                         ensure_ascii=False, indent=2))
+        return
     if args.command == 'pending-agents':
         print(json.dumps([r for r in state.agent_requests.values()
                           if r['status'] in {'awaiting_dispatch', 'bound', 'checking'}],
