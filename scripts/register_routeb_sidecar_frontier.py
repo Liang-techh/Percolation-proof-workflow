@@ -551,6 +551,19 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects",
+        "statement": "The defect-aware port identity admits an explicit Euclidean norm budget with independent port, distal, and local defect terms.",
+        "proof_sketch": "Apply the triangle inequality to rB=Rport*aB+(MBD*MDDinv)*eD+eB, consume supplied action bounds and defect caps, and square only the total nonnegative cap without dropping cross terms.",
+        "lane": "source_semantics",
+        "bottleneck": "source_semantics",
+        "status": "OPEN_UNCOMPILED_P4_DEFECT_NORM_BUDGET",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_DefectNormBudget.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_DefectNormBudget_REVIEW.md",
+        ],
+    },
+    {
         "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source",
         "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice",
         "statement": "The first three true body-6 lever columns admit exact common-yaw local-vector expressions and a center-offset-preserving velocity Gram interface.",
