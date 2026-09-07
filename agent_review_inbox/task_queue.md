@@ -2587,3 +2587,12 @@ source-independent/open/uncompiled 候选。
   propagation。
 - fixed-λ 与 P3 已完成上一叶，立即转入 strict-margin bridge 与 common-domain
   transport；保持四线程持续占用，避免空等回执。
+
+### 2026-09-07 — 12:40 远端收割窗口
+
+- 合并 GitHub agent 的 T-P5-031：physical incremental gains → square-only
+  `mu/nu` envelope；review、companion、claims 和 portable Lean sidecar 已纳入
+  pending DAG，source gain table/Float64 semantics/P8 coverage 仍开放。
+- 本地新增并登记：body-6 first-three×tail mixed Gram、P3 scalar-cap
+  monotonicity、fixed-λ weighted absorption、P4 quadratic residual-load seam。
+- 远端同步只在本窗口执行；registry 仍为 0，formal gate 继续关闭。

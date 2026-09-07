@@ -1932,6 +1932,17 @@ T-P4-032 缺陷 O1、fixed-λ 单调性、P3 radius 单调性推进；目标是�
 P4 defect norm 继续运行。当前所有子任务均为 source-independent 或显式
 前提化数学接口，不会改变 formal gate。
 
+### 2026-09-07 12:40 — 梁智炜远端收割
+
+已抓取并合并 GitHub 新提交 `09ddf60`，整合 T-P5-031 review/companion，新增
+`P5.componentwise_relative_decay.physical_gain_mu_nu_bridge` pending 叶。该叶
+把 source physical incremental gains 连接到 T-P5-030 的 `mu/nu` gate，但不
+伪造 source gain、Float64 incremental semantics 或 P8 coverage。
+
+本地同时收割 body-6 mixed Gram、P3 cap monotonicity、fixed-λ weighted
+absorption、P4 quadratic load，均登记为 open/uncompiled。下一步推送本窗口
+合并后的状态；之后回到本地数学推进。
+
 ### 2026-09-07 12:32 — 梁智炜本地收割并派发
 
 本轮回收了四个已完成数学叶：P3 radius monotonicity、fixed-λ uniform

@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/companion-T-P5-031-guyuefangyuan-20260907T1225.md",
+  "record_kind": "companion_log",
+  "review_sha256": "7BD755505338F928909EAA19E6F9A951844E95CE606DAD6D56EF542B63A1AA34",
+  "task_id": "T-P5-031",
+  "source_agent": "古月方源",
+  "created_at": "2026-09-07T12:25:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_physical_gain_mu_nu_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-07T18:39:18.120586+00:00"
+}
