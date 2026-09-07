@@ -1859,6 +1859,19 @@ CHILDREN = [
             "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_DualScaleComposition.review.md",
         ],
     },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.finite_box_uniform_margin",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage",
+        "statement": "A nonempty finite covering box family with positive per-box gap supplies an attained common positive margin via Finset.inf', whereas empty boxes, broken coverage, and unbounded pointwise-positive gaps do not.",
+        "proof_sketch": "Define commonMu as the exact finite infimum, prove positivity and mapped-box lower bounds, consume the explicit coverage map for global strict slack, and retain empty-family, omitted-point, and reciprocal-gap obstructions.",
+        "lane": "source_semantics",
+        "bottleneck": "coverage",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_FINITE_BOX_MARGIN",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_FINITE_BOX_MARGIN.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_FINITE_BOX_MARGIN_REVIEW.md",
+        ],
+    },
 ]
 
 
