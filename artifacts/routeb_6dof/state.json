@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 503,
+  "revision": 508,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13405,6 +13405,72 @@
           "resolution": "bind the requested force terms only after an authoritative source/config is identified; otherwise remove them from the target contract and use the observed source equations",
           "formal_certificate_allowed": false,
           "registry_promoted": false
+        },
+        "compiled_candidate_receipts": [
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-KC-COORDINATE-ADAPTER",
+            "source_agent": "codex-local",
+            "review_status": "COMPILED_CANDIDATE_SOURCE_COMPARATOR_PENDING",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-force-scale-adapter-lean-target-codex-20260907.md",
+              "sha256": "0670CD174E8117954FFC64266EA1B9A9E53EEB66935311511854941FF20ECE90"
+            },
+            "receipt_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_5_residual_decomposition_lean\\COMPILE_RECEIPT_forceScaleKc_20260907.md",
+              "sha256": "41F6E65DF9644A9781EAC9388CAFC7FA79FAE456C8885989112B79CA35A1869C"
+            },
+            "candidate_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_5_residual_decomposition_lean\\ResidualDecomposition.lean",
+              "sha256": "3946389828B94AFF3B258A4635B58A7CA1BE6FF2CE4414E9BEF9553E25653CC9"
+            },
+            "candidate_sha256": "3946389828B94AFF3B258A4635B58A7CA1BE6FF2CE4414E9BEF9553E25653CC9",
+            "olean_sha256": "C8CA784F9C9AECFD2DCAE0163157FEF9A969B18809E12184FF87449504486528",
+            "theorems": [
+              "RouteBB45ResidualDecomposition.forceScaleKc_eq_rhoKc"
+            ],
+            "toolchain": {
+              "lean": "4.33.1",
+              "lean_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+              "mathlib_commit": "0df444a360eaa60ab8c11dca51a86af692955474"
+            },
+            "compile": {
+              "candidate_exit_code": 0,
+              "theorem_check_exit_code": 0,
+              "sorry_admit_scan": "PASS"
+            },
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "source_binding": "OPEN",
+            "statement_comparator": "OPEN",
+            "deployed_tau_equivalence": "NOT_CLAIMED",
+            "formal_certificate_allowed": false,
+            "registry_promoted": false,
+            "admission_status": "compiled_candidate_only"
+          }
+        ],
+        "force_scale_compiled_candidate": {
+          "status": "COMPILED_CANDIDATE_SOURCE_COMPARATOR_PENDING",
+          "theorem": "RouteBB45ResidualDecomposition.forceScaleKc_eq_rhoKc",
+          "candidate_sha256": "3946389828B94AFF3B258A4635B58A7CA1BE6FF2CE4414E9BEF9553E25653CC9",
+          "receipt_sha256": "41F6E65DF9644A9781EAC9388CAFC7FA79FAE456C8885989112B79CA35A1869C",
+          "toolchain": {
+            "lean": "4.33.1",
+            "lean_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+            "mathlib_commit": "0df444a360eaa60ab8c11dca51a86af692955474"
+          },
+          "axioms": [
+            "propext",
+            "Classical.choice",
+            "Quot.sound"
+          ],
+          "source_binding": "OPEN",
+          "statement_comparator": "OPEN",
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
         }
       }
     },
@@ -13829,6 +13895,55 @@
             "formal_certificate_allowed": false,
             "registry_promoted": false,
             "admission_status": "pending_coordinator_admission"
+          },
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-033-O0-R1-R2-perturbation",
+            "source_agent": "Codex",
+            "review_status": "OBSTRUCTION_NO_SAME_KEY_PERTURBATION_RECEIPT",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-033-O0-R1-R2-perturbation-map-obstruction-codex-20260907.md",
+              "sha256": "FFA0543825342DB16FF84CC6C0A5A38E4EE050E6D0FDAD8C5D68149CCDA651C0"
+            },
+            "conditional_reduction": {
+              "premise": "same-key authoritative dB=dC=0",
+              "unweighted": "Br*Cf*delta*K^2/(1-delta*K)",
+              "weighted": "Br*Cf*delta*K^2/((1-delta*K)*s)"
+            },
+            "missing_receipt_fields": [
+              "source_key",
+              "state_key",
+              "exact K with proof flag",
+              "Br",
+              "Cf",
+              "delta*K<1",
+              "same-key metric s",
+              "authoritative zero off-diagonal shifts",
+              "physical port identity"
+            ],
+            "admission_status": "obstruction_pending_same_key_receipt",
+            "formal_certificate_allowed": false,
+            "registry_promoted": false
+          },
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-033-O0-R1-R2-exact-bounds",
+            "source_agent": "Codex",
+            "review_status": "OBSTRUCTION_NO_SAME_KEY_EXACT_K_BR_CF_RECEIPT",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-033-O0-R1-R2-same-key-K-Br-Cf-obstruction-codex-20260907.md",
+              "sha256": "A3667777BF2BE0D8229B0BD6A4A1240ED6A09DABB6B0F11C09B8A36B1294442B"
+            },
+            "missing_same_key_fields": {
+              "K": "exact-real inverse norm with proves_exact_real_bound=true",
+              "Br": "exact norm upper bound for M_BD,r",
+              "Cf": "exact norm upper bound for DeltaM_DB,f",
+              "binding": "source_key/state_key/block orientation/norm"
+            },
+            "inherited_only": "delta and conditional off-diagonal zero-shift",
+            "admission_status": "obstruction_pending_exact_keyed_bounds",
+            "formal_certificate_allowed": false,
+            "registry_promoted": false
           }
         ],
         "independent_math_reviews": [
@@ -14086,6 +14201,39 @@
           ],
           "formal_certificate_allowed": false,
           "registry_promoted": false
+        },
+        "o0_perturbation_reduction": {
+          "status": "OBSTRUCTION_NO_SAME_KEY_PERTURBATION_RECEIPT",
+          "conditional_reduction": {
+            "premise": "same-key authoritative dB=dC=0",
+            "unweighted": "Br*Cf*delta*K^2/(1-delta*K)",
+            "weighted": "Br*Cf*delta*K^2/((1-delta*K)*s)"
+          },
+          "missing_receipt_fields": [
+            "source_key",
+            "state_key",
+            "exact K with proof flag",
+            "Br",
+            "Cf",
+            "delta*K<1",
+            "same-key metric s",
+            "authoritative zero off-diagonal shifts",
+            "physical port identity"
+          ],
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
+        },
+        "o0_exact_bounds_obstruction": {
+          "status": "OBSTRUCTION_NO_SAME_KEY_EXACT_K_BR_CF_RECEIPT",
+          "missing_same_key_fields": {
+            "K": "exact-real inverse norm with proves_exact_real_bound=true",
+            "Br": "exact norm upper bound for M_BD,r",
+            "Cf": "exact norm upper bound for DeltaM_DB,f",
+            "binding": "source_key/state_key/block orientation/norm"
+          },
+          "inherited_only": "delta and conditional off-diagonal zero-shift",
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
         }
       }
     },
@@ -14312,6 +14460,73 @@
             "formal_certificate_allowed": false,
             "registry_promoted": false,
             "admission_status": "pending_pinned_lean_compile"
+          },
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-033-O1-next",
+            "source_agent": "Codex",
+            "review_status": "EXACT_LINEAR_ALGEBRA_CHAIN_CONDITIONALLY_COMPILED",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-033-O1-next-codex.md",
+              "sha256": "3F2862B6DA66F455AA4B87C0CB3FE5F442EB5EFBCD22919D954B7EC6C8BF0569"
+            },
+            "candidate_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_o1_lean_api_audit_20260907\\RouteBO1PortIdentity.lean",
+              "sha256": "403C41C6F325E906A9D3555B6886D1371DFA2D84826ABCC7BF83C12E21293BFB"
+            },
+            "chain": [
+              "eliminate_D",
+              "schur_port_action",
+              "routeB_port_identity"
+            ],
+            "reusable_interface": {
+              "B": "Fin 2",
+              "D": "Fin 4",
+              "R_port": "-(M_BD * M_DD_inv * DeltaM_DB)",
+              "premise": "M_DD_inv * M_DD = 1"
+            },
+            "missing_premises": [
+              "determinant-to-left-inverse exact adapter",
+              "true-DH block extraction and source hash binding",
+              "exact projected h_D and h_B balance receipts",
+              "same-(mu,q) inverse witness",
+              "canonical pinned Lean/comparator receipt"
+            ],
+            "temporary_probe": {
+              "reported_exit_code": 0,
+              "reported_zero_sorry": true,
+              "reported_no_axiom": true,
+              "canonical_receipt_present": false
+            },
+            "formal_certificate_allowed": false,
+            "registry_promoted": false,
+            "admission_status": "pending_canonical_pinned_lean_receipt_and_projected_premises"
+          },
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-033-O1-det-left-inverse",
+            "source_agent": "Codex",
+            "review_status": "CONDITIONALLY_COMPILED_DET_TO_LEFT_INVERSE_OPEN_BINDING",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-033-O1-det-left-inverse-adapter-codex-20260907.md",
+              "sha256": "B18D70E9B9812D5463B9358AB72F68CE6B86817D10753DA09BDC8466FF450E4B"
+            },
+            "api": "Matrix.nonsing_inv_mul",
+            "generic_target": "A.det != 0 -> A⁻¹ * A = 1",
+            "same_named_target": "h_inv_def: M_DD_inv = (M_DD45 M)⁻¹",
+            "required_binding": [
+              "same M_DD45 block projection",
+              "same exact (mu,q) or cell key",
+              "Didx=(1,2,3,6) and source/state hash"
+            ],
+            "remaining_obstruction": "M_DD_inv definition or exact h_inv_def receipt",
+            "reported_temporary_probe": {
+              "exit_code": 0,
+              "canonical_receipt": false
+            },
+            "formal_certificate_allowed": false,
+            "registry_promoted": false,
+            "admission_status": "pending_same_object_inverse_binding"
           }
         ],
         "repair_attempts": [
@@ -14336,7 +14551,42 @@
             "registry_promoted": false,
             "formal_certificate_allowed": false
           }
-        ]
+        ],
+        "exact_port_identity_chain": {
+          "status": "CONDITIONALLY_COMPILED_CHAIN_OPEN_PREMISES",
+          "chain": [
+            "eliminate_D",
+            "schur_port_action",
+            "routeB_port_identity"
+          ],
+          "candidate_artifact": {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_o1_lean_api_audit_20260907\\RouteBO1PortIdentity.lean",
+            "sha256": "403C41C6F325E906A9D3555B6886D1371DFA2D84826ABCC7BF83C12E21293BFB"
+          },
+          "missing_premises": [
+            "determinant-to-left-inverse exact adapter",
+            "true-DH block extraction and source hash binding",
+            "exact projected h_D and h_B balance receipts",
+            "same-(mu,q) inverse witness",
+            "canonical pinned Lean/comparator receipt"
+          ],
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
+        },
+        "left_inverse_adapter": {
+          "status": "CONDITIONALLY_COMPILED_LEFT_INVERSE_ADAPTER_OPEN_BINDING",
+          "api": "Matrix.nonsing_inv_mul",
+          "generic_det_target": "A.det != 0 -> A⁻¹ * A = 1",
+          "same_named_target": "M_DD_inv = (M_DD45 M)⁻¹",
+          "remaining_obstruction": "M_DD_inv definition or exact h_inv_def receipt",
+          "required_binding": [
+            "same M_DD45 block projection",
+            "same exact (mu,q) or cell key",
+            "Didx=(1,2,3,6) and source/state hash"
+          ],
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
+        }
       }
     },
     "0da99a7cef5e4f0b91c7cc06d9e7c010": {
@@ -38980,6 +39230,51 @@
       },
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T13:08:18.781906+00:00",
+      "kind": "routeb_o1_exact_identity_review_recorded",
+      "node_id": "120deab092c243b6a43356e63c8b56f4",
+      "review_status": "EXACT_LINEAR_ALGEBRA_CHAIN_CONDITIONALLY_COMPILED",
+      "admission_status": "pending_canonical_pinned_lean_receipt_and_projected_premises",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T13:18:15.927537+00:00",
+      "kind": "routeb_o1_left_inverse_review_recorded",
+      "node_id": "120deab092c243b6a43356e63c8b56f4",
+      "review_status": "CONDITIONALLY_COMPILED_DET_TO_LEFT_INVERSE_OPEN_BINDING",
+      "admission_status": "pending_same_object_inverse_binding",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T13:20:56.772463+00:00",
+      "kind": "routeb_o0_perturbation_review_recorded",
+      "node_id": "43e3c1a23dc34d52a19b835a8a883cb7",
+      "review_status": "OBSTRUCTION_NO_SAME_KEY_PERTURBATION_RECEIPT",
+      "admission_status": "obstruction_pending_same_key_receipt",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T13:23:11.700576+00:00",
+      "kind": "routeb_force_scale_compiled_candidate_recorded",
+      "node_id": "203c45aac1d84022b69267c0cc31db06",
+      "theorem": "RouteBB45ResidualDecomposition.forceScaleKc_eq_rhoKc",
+      "admission_status": "compiled_candidate_only",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T13:24:25.768369+00:00",
+      "kind": "routeb_o0_exact_bounds_obstruction_recorded",
+      "node_id": "43e3c1a23dc34d52a19b835a8a883cb7",
+      "review_status": "OBSTRUCTION_NO_SAME_KEY_EXACT_K_BR_CF_RECEIPT",
+      "admission_status": "obstruction_pending_exact_keyed_bounds",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -42636,5 +42931,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "a357fee896e668e63251a3903111144238841b7241af84fd39fd5c83ca68d089"
+  "state_checksum": "8297bd8b4d3cdf72504faa61759441ae986437bdab729c07b7f7e71b0b71d67e"
 }
