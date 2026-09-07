@@ -38,12 +38,19 @@ BODY4_GRAM_TARGET = ROOT / "examples/routeb_b45_source_comparator_lean/RouteBO1B
 BODY4_GRAM_CHECK = ROOT / "scripts/check_routeb_o1_body4_source_gram.py"
 BODY4_GRAM_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_4_SOURCE_GRAM_TARGETS_RECEIPT.json"
 BODY4_GRAM_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-body-4-source-gram-codex-20260907.md"
+BODY4_JACOBIAN = ROOT / "examples/routeb_o1_body4_source_gram_proof_attempt/NEW_SOURCE_JACOBIAN_20260907_BODY4_BRIDGE.lean"
+BODY4_JACOBIAN_REVIEW = ROOT / "examples/routeb_o1_body4_source_gram_proof_attempt/NEW_SOURCE_JACOBIAN_20260907_BODY4_BRIDGE_REVIEW.md"
 BODY5_TRACE_TARGET = ROOT / "examples/routeb_b45_source_comparator_lean/RouteBO1Body5SourceTraceTargets.lean"
 BODY5_TRACE_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_5_SOURCE_TRACE_DECOMPOSITION_RECEIPT_20260907_44fcccf7bd1a.json"
 BODY5_TRACE_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-body-5-source-trace-decomposition-codex-20260907-a977fb4941f1.md"
 BODY5_NEW_GRAM = ROOT / "examples/routeb_b45_source_comparator_lean/NEW_BODY5_GramTraceSkeleton20260907.lean"
 BODY5_NEW_TRACE = ROOT / "examples/routeb_b45_source_comparator_lean/NEW_BODY5_FiniteTraceSkeleton20260907.lean"
 BODY5_NEW_REVIEW = ROOT / "examples/routeb_b45_source_comparator_lean/REVIEW_BODY5_G3_G4_FINITE_TRACE_20260907.md"
+BODY5_API_LIST = ROOT / "examples/routeb_b45_source_comparator_lean/NEW_BODY5_API_REPAIR_ListFinset20260907.lean"
+BODY5_API_ROW = ROOT / "examples/routeb_b45_source_comparator_lean/NEW_BODY5_API_REPAIR_RowCode20260907.lean"
+BODY5_API_Q3 = ROOT / "examples/routeb_b45_source_comparator_lean/NEW_BODY5_API_REPAIR_Q3Slice20260907.lean"
+BODY5_API_DATA = ROOT / "examples/routeb_b45_source_comparator_lean/NEW_BODY5_API_REPAIR_Q3DataLeaf20260907.lean"
+BODY5_API_REVIEW = ROOT / "examples/routeb_b45_source_comparator_lean/REVIEW_BODY5_API_REPAIR_20260907.md"
 O0_BODY3_RECEIPT = ROOT / "agent_review_inbox/receipt-T-P4-033-O0-P-NE-body3-geometry-targets-20260907.json"
 O0_BODY4_RECEIPT = ROOT / "agent_review_inbox/receipt-T-P4-033-O0-P-NE-body4-geometry-targets-20260907.json"
 O0_BODY5_RECEIPT = ROOT / "agent_review_inbox/receipt-T-P4-033-O0-P-NE-body5-geometry-source-20260907.json"
@@ -116,8 +123,10 @@ def main() -> None:
                  BODY5_RECEIPT, BODY5_CHECK, BODY5_REVIEW,
                  BODY4_FOLD_TARGET, BODY4_FOLD_RECEIPT, BODY4_FOLD_REVIEW,
                  BODY4_GRAM_TARGET, BODY4_GRAM_CHECK, BODY4_GRAM_RECEIPT, BODY4_GRAM_REVIEW,
+                 BODY4_JACOBIAN, BODY4_JACOBIAN_REVIEW,
                  BODY5_TRACE_TARGET, BODY5_TRACE_RECEIPT, BODY5_TRACE_REVIEW,
                  BODY5_NEW_GRAM, BODY5_NEW_TRACE, BODY5_NEW_REVIEW,
+                 BODY5_API_LIST, BODY5_API_ROW, BODY5_API_Q3, BODY5_API_DATA, BODY5_API_REVIEW,
                  O0_BODY3_RECEIPT, O0_BODY4_RECEIPT, O0_BODY5_RECEIPT, O0_BODY5_REVIEW,
                  HACC_REVIEW, HACC_REFINEMENT_REVIEW, HACC_CONTRACT, HACC_RECEIPT,
                  HACC_REFINEMENT_RECEIPT, HACC_NEW_SCHEMA, HACC_NEW_INTAKE,
@@ -211,6 +220,10 @@ def main() -> None:
         "body_4_source_gram_review_sha256": digest(BODY4_GRAM_REVIEW),
         "body_4_source_gram_status": "OPEN_BODY4_SOURCE_GRAM_CHILD_TARGETS_UNCOMPILED",
         "body_4_source_gram_proven": False,
+        "body_4_source_jacobian_sha256": digest(BODY4_JACOBIAN),
+        "body_4_source_jacobian_review_sha256": digest(BODY4_JACOBIAN_REVIEW),
+        "body_4_source_jacobian_status": "SOURCE_JACOBIAN_PROOF_SKELETON_UNCOMPILED",
+        "body_4_source_jacobian_proven": False,
         "body_5_source_trace_target_sha256": digest(BODY5_TRACE_TARGET),
         "body_5_source_trace_receipt_sha256": digest(BODY5_TRACE_RECEIPT),
         "body_5_source_trace_review_sha256": digest(BODY5_TRACE_REVIEW),
@@ -221,6 +234,13 @@ def main() -> None:
         "body_5_g3_g4_finite_trace_review_sha256": digest(BODY5_NEW_REVIEW),
         "body_5_g3_g4_finite_trace_status": "OPEN_UNCOMPILED_PROOF_SKELETON",
         "body_5_g3_g4_finite_trace_proven": False,
+        "body_5_api_repair_list_finset_sha256": digest(BODY5_API_LIST),
+        "body_5_api_repair_row_code_sha256": digest(BODY5_API_ROW),
+        "body_5_api_repair_q3_slice_sha256": digest(BODY5_API_Q3),
+        "body_5_api_repair_q3_data_leaf_sha256": digest(BODY5_API_DATA),
+        "body_5_api_repair_review_sha256": digest(BODY5_API_REVIEW),
+        "body_5_api_repair_status": "OPEN_UNCOMPILED_API_REPAIR",
+        "body_5_api_repair_proven": False,
         "o0_body_5_geometry_receipt_sha256": digest(O0_BODY5_RECEIPT),
         "o0_body_5_geometry_review_sha256": digest(O0_BODY5_REVIEW),
         "o0_body_5_geometry_status": "CONDITIONAL_BODY5_GEOMETRY_DERIVATION",

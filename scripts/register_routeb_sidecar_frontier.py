@@ -74,6 +74,11 @@ CHILDREN = [
             "examples/routeb_b45_source_comparator_lean/NEW_BODY5_GramTraceSkeleton20260907.lean",
             "examples/routeb_b45_source_comparator_lean/NEW_BODY5_FiniteTraceSkeleton20260907.lean",
             "examples/routeb_b45_source_comparator_lean/REVIEW_BODY5_G3_G4_FINITE_TRACE_20260907.md",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY5_API_REPAIR_ListFinset20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY5_API_REPAIR_RowCode20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY5_API_REPAIR_Q3Slice20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY5_API_REPAIR_Q3DataLeaf20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/REVIEW_BODY5_API_REPAIR_20260907.md",
         ],
     },
     {
@@ -122,6 +127,20 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P5.componentwise_relative_decay.feasible_cone_spn.cone_index",
+        "parent": "P5.componentwise_relative_decay.feasible_cone_spn",
+        "statement": "The six-channel cone labels admit a computable 36-index to 18-representative-times-sign equivalence, preserving multiplicity and full coverage witnesses.",
+        "proof_sketch": "Define the six closed cones, simultaneous global sign reversal, explicit representative selection, and the ConeIndex equivalence; prove fiber cardinality, multiplicity-preserving sums, and signed coverage without identifying equal matrix values.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "LEAN_FOCUSED_PASS_SOURCE_INDEPENDENT_CONE_INDEX",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_CONE_INDEX_Core.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_CONE_INDEX_check.py",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_CONE_INDEX_REVIEW.md",
+        ],
+    },
+    {
         "name": "P5.componentwise_relative_decay.moving_frame_parameter_transport",
         "parent": "P5.componentwise_relative_decay",
         "statement": "The block-(4,5) moving-frame difference map transports exactly to source coordinates, cancels w/c under a common ramp parameter, and yields a rank-one K_path correction under controlled parameter mismatch.",
@@ -146,6 +165,8 @@ CHILDREN = [
             "examples/routeb_o1_body4_source_gram_proof_attempt/RouteBO1Body4SourceGramProofAttempt.lean",
             "examples/routeb_o1_body4_source_gram_proof_attempt/NEW_REPAIR_20260907_BODY4_GRAM_ALGEBRA.lean",
             "examples/routeb_o1_body4_source_gram_proof_attempt/REVIEW_20260907_NEW_REPAIR_BODY4_GRAM_ALGEBRA.md",
+            "examples/routeb_o1_body4_source_gram_proof_attempt/NEW_SOURCE_JACOBIAN_20260907_BODY4_BRIDGE.lean",
+            "examples/routeb_o1_body4_source_gram_proof_attempt/NEW_SOURCE_JACOBIAN_20260907_BODY4_BRIDGE_REVIEW.md",
         ],
     },
     {

@@ -2251,7 +2251,25 @@ source/Lean receipts exist.
 - The protocol is structural/semantic intake only. A future real Julia export
   must still supply source bytes, runtime instrumentation, loaded Float64 bits,
   exact six updates, interval partition and independent soundness evidence.
-No current artifact may close H_acc or promote a registry theorem.
+  No current artifact may close H_acc or promote a registry theorem.
+
+### Mathematical round harvested (2026-09-07, local)
+
+- Sartre's body-4 Jacobian bridge is attached to the body-4 proof-attempt child:
+  active joint-3 parallel cross-product, inactive columns, source axes/origins/
+  COM/displacements, and 86 exact scalar checks; it remains uncompiled.
+- Poincare's body-5 API repair is attached to the body-5 trace child: it
+  separates List/Perm folds, tuple row-code decoding, and the q3 16-row
+  permutation candidate; source/isometry and final body premises remain open.
+- James's cone-index sidecar is a new child under the P5 feasible-cone node:
+  `P5.componentwise_relative_decay.feasible_cone_spn.cone_index`.  Its focused
+  Lean receipt is recorded in the review, but it is not registry promotion.
+- Godel's H_acc seam and T-P5-028 moving-frame transport were integrated in
+  the preceding harvest; no admission gate was relaxed.
+
+Next available slots should target the queued body-6 slice, fixed-lambda
+admissibility, concrete `K_path` comparison interface, and central-FD bridge;
+do not repeat the harvested cone-index or API-repair work.
 
 ### T-P5-028 moving-frame transport harvest (2026-09-07)
 

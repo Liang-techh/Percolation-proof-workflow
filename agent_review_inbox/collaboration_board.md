@@ -1713,6 +1713,21 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - seam 文件已接入 H_acc refinement child 的 `source_artifacts` 以及 O1 candidate
   provenance；state revision `607`，registry 仍为 `0`，formal certificate gate 仍关闭。
 
+### 2026-09-07 — current mathematical round: body-4/body-5/P5 harvest
+
+- Sartre 的 `NEW_SOURCE_JACOBIAN_20260907_BODY4_BRIDGE.lean` 保留原
+  `Body4JvTarget/Body4JwTarget`，显式处理 joint 3 active parallel cross、
+  inactive 4/5 columns 和 source frame seam；86 项精确代数检查通过，但无
+  Lean compile receipt，仍为 `SOURCE_JACOBIAN_PROOF_SKELETON_UNCOMPILED`。
+- Poincare 的四份 `NEW_BODY5_API_REPAIR_*` 将 List/Perm、tuple row-code、q3
+  slice 和 data leaf 解耦；q3 16 行 tagged multiset 核对通过，仍无 Lean/
+  comparator/registry 证据，状态 `OPEN_UNCOMPILED_API_REPAIR`。
+- James 的 `NEW_CONE_INDEX_Core.lean` 在独立 namespace 中通过 Lean 4.32.0
+  focused compile，16 项 axiom audit 仅含标准公理；36→18 代表、全局反号、
+  覆盖见证和重数保持已作为新 child 注册，但 concrete `K_path`、source、
+  coverage、P5 closure 与 registry 仍 open。
+- 本轮 state revision `611`，registry `0`，`formal_certificate_allowed=false`。
+
 ### 2026-09-07 — T-P5-028 moving-frame transport 收割
 
 - 柳冠一给出 block-(4,5) moving-frame 到 source 坐标的精确 affine difference
