@@ -22,6 +22,9 @@ SRC = ROUTE_B / "routeB_dense_Mq"
 sys.path.insert(0, str(ROOT / "src"))
 
 from percolation_workflow.store import StateStore  # noqa: E402
+from percolation_workflow.routeb_controller_semantics import (  # noqa: E402
+    audit_controller_damping_semantics,
+)
 
 
 def ref(path: Path) -> dict[str, str]:
@@ -54,6 +57,8 @@ def main() -> int:
 
     text = {key: path.read_text(encoding="utf-8", errors="replace")
             for key, path in paths.items()}
+    controller_audit = audit_controller_damping_semantics(
+        text["deployed_dh"], text["analytic_model"])
     checks = {
         "deployed_mass_and_fd_are_parameterized": (
             "function mass_matrix" in text["deployed_dh"]
@@ -94,14 +99,34 @@ def main() -> int:
             "Float64 evaluation of dhport_lib.jl is contained" in text["exact_real_boundary"]
             and "formal_certificate_allowed=false" in text["exact_real_boundary"]
         ),
+        "controller_damping_vectors_parse_exactly": (
+            controller_audit.status != "OPEN_MALFORMED_CONTROLLER_DAMPING_SOURCE"
+            and controller_audit.deployed_sum is not None
+            and controller_audit.lifted_sum is not None
+        ),
     }
     if not all(checks.values()):
         missing = [key for key, ok in checks.items() if not ok]
         raise ValueError(f"source formula audit failed: {missing}")
 
+    status = ("SOURCE_FORMULA_PRESENT_CONTROLLER_MISMATCH_AND_FLOAT64_ENCLOSURE_OPEN"
+              if controller_audit.mismatched_indices
+              else "SOURCE_FORMULA_PRESENT_FLOAT64_ENCLOSURE_OPEN")
+    known_mismatches = []
+    if controller_audit.mismatched_indices:
+        known_mismatches.append({
+            "field": "controller_damping_sum",
+            "deployed_dhport": [str(value) for value in controller_audit.deployed_sum or ()],
+            "lifted_descriptor": [str(value) for value in controller_audit.lifted_sum or ()],
+            "mismatched_joint_indices": list(controller_audit.mismatched_indices),
+            "deployed_minus_lifted": [str(value) for value in controller_audit.difference or ()],
+            "effect": "full lifted descriptor is not yet the deployed controller source",
+            "repair": "select one authoritative parameter vector and regenerate/rebind the full descriptor",
+        })
+
     audit = {
         "schema_version": 1,
-        "status": "SOURCE_FORMULA_PRESENT_CONTROLLER_MISMATCH_AND_FLOAT64_ENCLOSURE_OPEN",
+        "status": status,
         "formula": "R_port(q)=-M_BD(q)*M_DD(mu,q)^(-1)*(M_DB(q)-M0_DB)",
         "block_order": {"B": [4, 5], "D": [1, 2, 3, 6]},
         "findings": [
@@ -110,17 +135,18 @@ def main() -> int:
             "the nominal bridge retains r_B-M_BD(q)*v=0 and M_DD*v+DeltaM_DB*a_B=0",
             "the analytic c/s model includes the same explicit mu=1/1000000 diagonal regularizer",
             "the source semantics audit records matching DH parameters and h=1/100000 finite differences",
+            f"the exact controller damping audit status is {controller_audit.status}",
         ],
         "checks": checks,
-        "known_semantic_mismatches": [
-            {
-                "field": "controller_damping_sum",
-                "deployed_dhport": ["1.3", "1.1", "0.95", "0.8", "0.65", "0.5"],
-                "lifted_descriptor": ["1.8", "1.4", "0.95", "0.5", "0.65", "0.8"],
-                "effect": "full lifted descriptor is not yet the deployed controller source",
-                "repair": "select one authoritative parameter vector and regenerate/rebind the full descriptor",
-            },
-        ],
+        "controller_damping_audit": {
+            "status": controller_audit.status,
+            "mismatched_joint_indices": list(controller_audit.mismatched_indices),
+            "deployed_sum": [str(value) for value in controller_audit.deployed_sum or ()],
+            "lifted_sum": [str(value) for value in controller_audit.lifted_sum or ()],
+            "difference": [str(value) for value in controller_audit.difference or ()],
+            "errors": list(controller_audit.errors),
+        },
+        "known_semantic_mismatches": known_mismatches,
         "remaining_obligations": [
             "resolve the controller damping-vector mismatch before full descriptor source binding",
             "prove the common exact-real domain identity between deployed source and analytic/interval evaluator",

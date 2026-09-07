@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 463,
+  "revision": 466,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13061,7 +13061,8 @@
             "analytic_model_controller_block_is_present": true,
             "nominal_bridge_equations_present": true,
             "source_semantics_consistency_recorded": true,
-            "float64_enclosure_obligation_explicit": true
+            "float64_enclosure_obligation_explicit": true,
+            "controller_damping_vectors_parse_exactly": true
           },
           "formal_certificate_allowed": false
         },
@@ -13099,16 +13100,103 @@
           "schema_version": 1,
           "parent": "P4.true_dh_port_source_binding",
           "role": "source_semantics",
-          "next_agent_action": "Read the source force formula and descriptor solve as one typed real interface, explicitly retaining mu=1/1000000 and h=1/100000; do not infer exact-real equality from Float64 execution.",
-          "preserve_semantic_boundary": "force scale, regularizer, FD semantics, and M_BD*a_D must remain explicit",
+          "next_agent_action": "reconcile exact Kd+friction vectors, select authoritative source, and return a pinned source/comparator receipt",
+          "preserve_semantic_boundary": "do not silently replace deployed coefficients with lifted coefficients",
           "success_callback": "return pinned Lean/source comparator evidence to coordinator; child remains open until accepted",
           "formal_boundary": "source-binding target only; no interval coverage, residual absorption, or global gate"
         },
         "unresolved": [
           "pinned_lean_compile_receipt",
           "zero_sorry_and_allowed_axioms_receipt",
-          "statement_comparator_receipt"
-        ]
+          "statement_comparator_receipt",
+          "controller_damping_vector_source_equivalence",
+          "authoritative_controller_parameter_selection"
+        ],
+        "controller_damping_semantics": {
+          "schema_version": 1,
+          "status": "OPEN_CONTROLLER_DAMPING_VECTOR_MISMATCH",
+          "deployed": {
+            "Kd": [
+              "4/5",
+              "7/10",
+              "3/5",
+              "1/2",
+              "2/5",
+              "3/10"
+            ],
+            "friction": [
+              "1/2",
+              "2/5",
+              "7/20",
+              "3/10",
+              "1/4",
+              "1/5"
+            ],
+            "Kd_plus_friction": [
+              "13/10",
+              "11/10",
+              "19/20",
+              "4/5",
+              "13/20",
+              "1/2"
+            ]
+          },
+          "lifted": {
+            "Kd": [
+              "4/5",
+              "1/1",
+              "3/5",
+              "1/5",
+              "2/5",
+              "3/5"
+            ],
+            "friction": [
+              "1/1",
+              "2/5",
+              "7/20",
+              "3/10",
+              "1/4",
+              "1/5"
+            ],
+            "Kd_plus_friction": [
+              "9/5",
+              "7/5",
+              "19/20",
+              "1/2",
+              "13/20",
+              "4/5"
+            ]
+          },
+          "mismatched_joint_indices": [
+            1,
+            2,
+            4,
+            6
+          ],
+          "deployed_minus_lifted": [
+            "-1/2",
+            "-3/10",
+            "0/1",
+            "3/10",
+            "0/1",
+            "-3/10"
+          ],
+          "errors": [],
+          "source_artifacts": [
+            {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\dhport_lib.jl",
+              "sha256": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936"
+            },
+            {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_fourier_lifted_descriptor_model.jl",
+              "sha256": "0FCF733144B3D7B1B08F328FE4AD24477057C56976F0EF53633C450D8FC4729D"
+            }
+          ],
+          "mathematical_conclusion": "The deployed and lifted torque laws are source-equivalent only if their exact per-coordinate Kd+friction vectors agree.",
+          "required_repair": "select one authoritative damping vector and regenerate/rebind the other source before any full true-DH source equivalence claim",
+          "formal_certificate_allowed": false,
+          "registry_eligible": false
+        }
       }
     },
     "e7d759dcbf1c49cda5dfe9c1daf2cb1d": {
@@ -13219,7 +13307,8 @@
             "the residual output is R_port=-M_BD(q)*Z; positive R_gain is norm-equivalent only",
             "the nominal bridge retains r_B-M_BD(q)*v=0 and M_DD*v+DeltaM_DB*a_B=0",
             "the analytic c/s model includes the same explicit mu=1/1000000 diagonal regularizer",
-            "the source semantics audit records matching DH parameters and h=1/100000 finite differences"
+            "the source semantics audit records matching DH parameters and h=1/100000 finite differences",
+            "the exact controller damping audit status is OPEN_CONTROLLER_DAMPING_VECTOR_MISMATCH"
           ],
           "checks": {
             "deployed_mass_and_fd_are_parameterized": true,
@@ -13230,26 +13319,75 @@
             "analytic_model_controller_block_is_present": true,
             "nominal_bridge_equations_present": true,
             "source_semantics_consistency_recorded": true,
-            "float64_enclosure_obligation_explicit": true
+            "float64_enclosure_obligation_explicit": true,
+            "controller_damping_vectors_parse_exactly": true
+          },
+          "controller_damping_audit": {
+            "status": "OPEN_CONTROLLER_DAMPING_VECTOR_MISMATCH",
+            "mismatched_joint_indices": [
+              1,
+              2,
+              4,
+              6
+            ],
+            "deployed_sum": [
+              "13/10",
+              "11/10",
+              "19/20",
+              "4/5",
+              "13/20",
+              "1/2"
+            ],
+            "lifted_sum": [
+              "9/5",
+              "7/5",
+              "19/20",
+              "1/2",
+              "13/20",
+              "4/5"
+            ],
+            "difference": [
+              "-1/2",
+              "-3/10",
+              "0",
+              "3/10",
+              "0",
+              "-3/10"
+            ],
+            "errors": []
           },
           "known_semantic_mismatches": [
             {
               "field": "controller_damping_sum",
               "deployed_dhport": [
-                "1.3",
-                "1.1",
-                "0.95",
-                "0.8",
-                "0.65",
-                "0.5"
+                "13/10",
+                "11/10",
+                "19/20",
+                "4/5",
+                "13/20",
+                "1/2"
               ],
               "lifted_descriptor": [
-                "1.8",
-                "1.4",
-                "0.95",
-                "0.5",
-                "0.65",
-                "0.8"
+                "9/5",
+                "7/5",
+                "19/20",
+                "1/2",
+                "13/20",
+                "4/5"
+              ],
+              "mismatched_joint_indices": [
+                1,
+                2,
+                4,
+                6
+              ],
+              "deployed_minus_lifted": [
+                "-1/2",
+                "-3/10",
+                "0",
+                "3/10",
+                "0",
+                "-3/10"
               ],
               "effect": "full lifted descriptor is not yet the deployed controller source",
               "repair": "select one authoritative parameter vector and regenerate/rebind the full descriptor"
@@ -36662,6 +36800,45 @@
       ],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T10:58:26.678204+00:00",
+      "kind": "routeb_controller_damping_semantics_recorded",
+      "node_id": "203c45aac1d84022b69267c0cc31db06",
+      "audit_status": "OPEN_MALFORMED_CONTROLLER_DAMPING_SOURCE",
+      "mismatched_joint_indices": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T10:59:26.440252+00:00",
+      "kind": "routeb_controller_damping_semantics_recorded",
+      "node_id": "203c45aac1d84022b69267c0cc31db06",
+      "audit_status": "OPEN_CONTROLLER_DAMPING_VECTOR_MISMATCH",
+      "mismatched_joint_indices": [
+        1,
+        2,
+        4,
+        6
+      ],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T11:00:22.728684+00:00",
+      "kind": "routeb_true_dh_source_formula_audit_recorded",
+      "node_id": "8337e024d8dc4463a3389b1e65a4a5e8",
+      "parent_id": "6cebb66987f449f3b5ad8d0548dfdf83",
+      "status": "SOURCE_FORMULA_PRESENT_CONTROLLER_MISMATCH_AND_FLOAT64_ENCLOSURE_OPEN",
+      "remaining_obligations": [
+        "resolve the controller damping-vector mismatch before full descriptor source binding",
+        "prove the common exact-real domain identity between deployed source and analytic/interval evaluator",
+        "prove a roundoff-aware Float64 enclosure for M,C_fd,G_fd,tau and the solved RHS, or make exact-real evaluation authoritative",
+        "compile a typed Lean adapter for R_port*a_B=r_B with the same mu, force coordinates, and remote term",
+        "connect the source equality to coefficient-level residual absorption"
+      ],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -40318,5 +40495,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "52b9ef2c63c7bc6f66543e9a00c20b41de87410cd65d2e078d9a14cf7e4b1c7c"
+  "state_checksum": "87281c1d8be5bb2dc89bc28ed4aada24b176531cff666f403d496db93ce51503"
 }
