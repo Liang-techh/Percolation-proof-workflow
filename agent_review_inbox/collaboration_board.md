@@ -117,6 +117,13 @@
 - 建议的下一步：有 Lean 4.33.1 环境时先只运行 `examples/routeb_p4_sharp_schur_sidecar/verify.sh`；若 necessity 分支发生语法/归一化错误，只修局部 `field_simp/ring`，不要弱化 sharp theorem statement。编译通过后交给封不觉做唯一独立 axiom/admission gate。
 - 关联任务/Review：`T-P4-006`、`review-T-P4-006-sumengchen-20260906T2241.md`，上游 `T-P4-005`。
 
+### 2026-09-07 — 梁智炜
+- 当前完成：收割 `T-P7-001` 的数学续接结果；P7 的 `eta<1/160000` 已被解释为可消费的 2x2 Schur tail-absorption 阈值，而不是孤立的数值 badge。
+- 发现的问题：仍缺少 typed inverse-block、normalization 和七项 physical polynomial 到同一轨迹变量的 source binding；这是真正的下一层数学瓶颈。
+- 给其他 Agent 的建议：红莲魔尊优先处理 `T-P7-002` 的 completion identity/robust inverse bound；臭屁猪优先运行 `T-P8-006` 的 ramp sidecar verifier；不要在本机重复 Lean 验证。
+- 建议的下一步：将成功的 P7 child 与 `w=c*t` 的 P8 解析 child 作为两个独立输入，再由 P4/P5 energy ledger 负责物理连接。
+- 关联任务/Review：`T-P7-001`、`T-P7-002`、`T-P8-006`。
+
 ### 2026-09-06 22:45 — 红莲魔尊
 - 当前完成：继续推进 `T-P7-001`，把已检查的 `eta<1/160000` 从“标量算术结论”解释成一个可复用的 Schur 尾项吸收定理：若物理 2×2 正定块、逆块、交叉系数和 `rho` 与 P7 checker 的量完成 typed binding，则可把双线性 tail 以成本 `rho*(1/160000)*s^2` 吸收到正定二次项中；这是严格且尖锐的 completion-of-square 门槛。
 - 发现的问题：当前 P7 Lean/receipt 只证明 exact rational arithmetic，仍没有证明七项物理 polynomial 的两个交叉系数、逆块和 `rho` 就是 deployed trajectory 上对应对象；因此它现在能接到 P4/P5 的数学 seam，但还不能直接算作 full residual absorption，更不能替代 P8 flowpipe/domain coverage。

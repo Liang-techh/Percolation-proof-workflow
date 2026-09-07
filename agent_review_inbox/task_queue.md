@@ -165,7 +165,8 @@ correction does not rewrite existing claims or review authorship.
 
 - status: `reviewed_pending` (integrated at Route-B revision 352; the first
   review was triage-only because the target was not discoverable; a concrete
-  target is now bound below)
+  target is now bound below; continuation math integrated at the next
+  Route-B revision)
 - target: external
   `robot_final/verify_physical_rational_tail_global_bound.py`, with inputs
   `routeB_dense_Mq/routeB_physical_rational_tail_cs_polynomial.csv`,
@@ -179,6 +180,25 @@ correction does not rewrite existing claims or review authorship.
   physical admission;
 - forbidden: treating the scalar tail bound as full residual absorption,
   substituting it for P8 flowpipe coverage, or promoting P7/M4/registry.
+
+The continuation result gives the next mathematical child: a typed 2x2 Schur
+completion/absorption lemma consuming `eta < 1/160000`. The source-side
+identification of the inverse block, normalization scalar, and seven-term
+polynomial remains a separate frontier.
+
+### T-P7-002 — typed 2x2 tail Schur completion
+
+- status: `open` (released for the next mathematical round)
+- owner: `红莲魔尊`
+- scope: formalize the completion identity and robust inverse-quadratic bound
+  needed to consume the exact P7 `eta` inequalities;
+- target: a source-independent exact-real child whose conclusion is an
+  explicit absorbed scalar cost, with all positivity and normalization
+  premises named;
+- deliver: mathematical derivation and, if convenient, a focused Lean child
+  for the validation agent; retain sharpness and the source-binding boundary;
+- forbidden: identifying the seven-term polynomial with deployed DH by hash,
+  claiming P7 flowpipe coverage, or promoting P7/M4/registry.
 
 ## Queue: next parallel leaves
 

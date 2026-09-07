@@ -251,3 +251,13 @@ so only shell syntax and exact Python rational replay were observed; no kernel
 compile or axiom admission is claimed. The previously compiled P4 child remains
 the available kernel artifact, while source binding and global coverage remain
 open.
+
+## 2026-09-07 / Route-B checkpoint revision 360
+
+The continuation review for `T-P7-001` was integrated as pending mathematical
+metadata. It identifies the exact 2x2 completion-of-squares bridge behind the
+checked `eta < 1/160000`: a typed inverse-block bound can absorb one quadratic
+tail/cross term and charge the remainder as an explicit scalar supply cost.
+The review also proves that this does not supply source binding, trajectory
+coverage, or a full residual certificate; the next child is the source-independent
+2x2 Schur completion lemma.
