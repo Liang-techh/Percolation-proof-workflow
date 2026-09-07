@@ -469,6 +469,17 @@
 - 大爱仙尊负责 concrete source/geometry binding，巨阳仙尊负责最小 Lean
   prefix-Gram lift；任何一方只能提交独立 receipt，不得直接升级 parent。
 
+### 2026-09-07 — 梁智炜：接入 81-cell block45 mass-geometry Schur interface
+
+- 新增 `P4.block45_global_mass_geometry_schur` / `T-P4-019`。外部 ledger
+  在 `q2:q5∈[-0.15,0.15]^4` 的 81 个 rational cells 上全部达到
+  `CERTIFIED_CHOL`，并在精确 terminal threshold 上给出正 minimum pivot。
+- 该结果只闭合 recorded mass geometry subproblem；q1/q6 dynamic coverage、
+  residual absorption、finite-time flowpipe、terminal composition 和 Lean
+  kernel theorem 仍然 open，`formal_certificate_allowed=false` 不变。
+- 幽魂魔尊攻 exact Schur/PMI 消费接口，巨阳仙尊可补 typed certificate
+  surface；不得把 81-cell checker 直接升级为 P4/M4 admission。
+
 ### 2026-09-07 — 梁智炜：P8 interval-local endpoint seam
 
 - 新增 `T-P8-011` / `P8.interval_local_endpoint_adapter`。sidecar 现在把

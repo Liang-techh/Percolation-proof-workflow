@@ -1073,6 +1073,22 @@ polynomial remains a separate frontier.
   translational or Coriolis semantics, claiming inverse/flowpipe closure, or
   promoting the Python checker result to the verified registry.
 
+### T-P4-019 — 81-cell block45 mass-geometry Schur lift
+
+- status: `open` (external 81-cell checker candidate recorded at Route-B revision 404)
+- owner: `幽魂魔尊` for the exact Schur/PMI mathematical composition; `巨阳仙尊`
+  may provide the smallest typed Lean certificate interface;
+- scope: consume `P4.block45_global_mass_geometry_schur` and verify the exact
+  threshold, 81-cell coverage, positive minimum pivot, and the declared
+  `q1/q6` independence. Bind the mass semantics and determine the minimal
+  theorem/receipt needed to consume this geometry child in P4;
+- deliver: an independent mathematical child or obstruction with source hash,
+  cell/domain contract, and explicit separation of geometry from dynamics,
+  residual absorption, flowpipe, and terminal budget;
+- forbidden: treating directed interval output as a kernel proof, inferring
+  q1/q6 dynamic coverage from absent mass angles, using solver `OPTIMAL`, or
+  closing M4/formal admission from the 81-cell ledger alone.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it

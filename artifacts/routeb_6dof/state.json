@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 403,
+  "revision": 404,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -7475,7 +7475,8 @@
         "cce7ce18a5a147b9a20dc0c91119fdc1",
         "5233ac4cfe4c492db8250ad9f3eda543",
         "8976802ec6f946efac1182d2980b9790",
-        "57e8ba91205a44fb91dcbbd509078b4a"
+        "57e8ba91205a44fb91dcbbd509078b4a",
+        "786c11f2dd6240518df51ac77617feff"
       ],
       "verified_artifact": null,
       "attempts": [
@@ -11653,6 +11654,83 @@
           "Float64_and_libm_rounding_enclosure",
           "translation_mass_and_full_M_source_semantics",
           "P3_domain_and_flowpipe_coverage",
+          "coordinator_statement_and_comparator_receipt"
+        ]
+      }
+    },
+    "786c11f2dd6240518df51ac77617feff": {
+      "id": "786c11f2dd6240518df51ac77617feff",
+      "name": "P4.block45_global_mass_geometry_schur",
+      "statement": "The recorded 81-cell mean-value mass ledger certifies the block-(4,5) Schur threshold on the declared q2:q5 angle box.",
+      "parent_id": "1e7b1df1835f4deba06b11a8182f6719",
+      "status": "open",
+      "proof_sketch": "Validate every cell as CERTIFIED_CHOL at the exact terminal threshold, aggregate the minimum pivot, and keep q1/q6 dynamic coverage plus residual/flowpipe composition separate.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "directed-interval-mass-geometry-candidate",
+        "statement_status": "exact_threshold_81_cell_candidate_pending_lean_and_source_review",
+        "evidence_level": "complete_mean_value_geometry_checker",
+        "claim_status": "block45_global_mass_geometry_open",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "physical_certificate_allowed": false,
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_block_schur_global_geometry_interface.csv",
+            "sha256": "C768F4A0C0238765D0B8C312A0DCD3E2984E0125BE869879B03090350EB84F71"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_BLOCK_SCHUR_GLOBAL_GEOMETRY_INTERFACE.md",
+            "sha256": "3CA48AB615601CFFA575ACB876020AF9A9F9F545DF45EA57290B9BE3827A7B27"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_BLOCK_SCHUR_GLOBAL_GEOMETRY_INTERFACE_CHECK.md",
+            "sha256": "3535D5F2E8A766B24A009BDDE7042950CBA0DF8057E6F9D62823A7125C088822"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_block_schur_global_geometry_interface.py",
+            "sha256": "437444B44329681E725FAB677FD7D0135852C1F11F8D8BFE630F0B906BBBC51D"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\robot_final\\verify_compact_block_schur_global_geometry_interface.py",
+            "sha256": "24C18F821F4C39998EC96DE802F84F76522E8D8BF42C1C2911FC1D839FDF689F"
+          }
+        ],
+        "metrics": {
+          "status": "GLOBAL_GEOMETRY_SCHUR_INTERFACE",
+          "active_angles": "q2;q3;q4;q5",
+          "inactive_geometry_angles": "q1;q6",
+          "domain": "q2:q5 in [-0.15,0.15]^4",
+          "cell_half_width": "0.05000000000000000000000000000000000000000000000000000000000000000000000000000011",
+          "coverage_cells": "81",
+          "certified_cells": "81",
+          "required_block_schur_lower": "8228439564136788990170047498962311//245393314823307985274304000000000000",
+          "minimum_pivot_lower": "0.05660524925142274630328868573073763690133970520072257116486170464127515223149287",
+          "minimum_coercivity_lower": "0.00193468318465914615146308815872499233298291968621591268695640184332628851927398",
+          "global_geometry_schur_certified": "True",
+          "q1_q6_dynamic_coverage": "open",
+          "finite_time_terminal_budget_closed": "False",
+          "formal_certificate_allowed": "False"
+        },
+        "contract": {
+          "domain": "q2:q5 in [-0.15,0.15]^4",
+          "cells": 81,
+          "statement": "M(q)-c*E45 PSD on every listed cell under recorded mass semantics",
+          "threshold": "8228439564136788990170047498962311//245393314823307985274304000000000000",
+          "minimum_pivot_lower": "0.05660524925142274630328868573073763690133970520072257116486170464127515223149287",
+          "inactive_geometry_angles": [
+            "q1",
+            "q6"
+          ]
+        },
+        "unresolved": [
+          "exact_DH_mass_source_and_directed_interval_semantics",
+          "Lean_kernel_formalization_of_81_cell_ledger_or_certificates",
+          "q1_q6_dynamic_and_flowpipe_coverage",
+          "residual_absorption_and_terminal_budget_composition",
           "coordinator_statement_and_comparator_receipt"
         ]
       }
@@ -33426,6 +33504,46 @@
       "status": "exact_checker_candidate_pending_lean_and_source_review",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T08:36:45.697573+00:00",
+      "kind": "node_added",
+      "node_id": "786c11f2dd6240518df51ac77617feff",
+      "parent_id": "1e7b1df1835f4deba06b11a8182f6719",
+      "name": "P4.block45_global_mass_geometry_schur"
+    },
+    {
+      "at": "2026-09-07T08:36:45.697589+00:00",
+      "kind": "routeb_block45_global_geometry_candidate_recorded",
+      "node_id": "786c11f2dd6240518df51ac77617feff",
+      "parent_id": "1e7b1df1835f4deba06b11a8182f6719",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_block_schur_global_geometry_interface.csv",
+          "sha256": "C768F4A0C0238765D0B8C312A0DCD3E2984E0125BE869879B03090350EB84F71"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_BLOCK_SCHUR_GLOBAL_GEOMETRY_INTERFACE.md",
+          "sha256": "3CA48AB615601CFFA575ACB876020AF9A9F9F545DF45EA57290B9BE3827A7B27"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_BLOCK_SCHUR_GLOBAL_GEOMETRY_INTERFACE_CHECK.md",
+          "sha256": "3535D5F2E8A766B24A009BDDE7042950CBA0DF8057E6F9D62823A7125C088822"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_block_schur_global_geometry_interface.py",
+          "sha256": "437444B44329681E725FAB677FD7D0135852C1F11F8D8BFE630F0B906BBBC51D"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\robot_final\\verify_compact_block_schur_global_geometry_interface.py",
+          "sha256": "24C18F821F4C39998EC96DE802F84F76522E8D8BF42C1C2911FC1D839FDF689F"
+        }
+      ],
+      "threshold": "8228439564136788990170047498962311//245393314823307985274304000000000000",
+      "coverage_cells": 81,
+      "status": "exact_threshold_81_cell_candidate_pending_lean_and_source_review",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -37082,5 +37200,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "0c018b5e2b338f0b3f873d4c7688ef00aa84f5b13f2b65ea483545680b2f120c"
+  "state_checksum": "8d51a6205fd48a7df5bcb1e1f6d3e5d67870af040bc1bb35b2d3f23895a6c4f7"
 }
