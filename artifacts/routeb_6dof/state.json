@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 497,
+  "revision": 498,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -14363,6 +14363,56 @@
             "formal_certificate_allowed": false,
             "registry_promoted": false,
             "admission_status": "pending_pinned_runtime_and_lean_receipt"
+          },
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-036.4",
+            "source_agent": "01a07bbd-be84-7471-b20d-5b0b39fc5d40",
+            "review_status": "DAG_PROPAGATION_INTERFACE_DRAFT__UNCOMPILED_OPEN",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-036.4-dag-01a07bb4-be84-20260907.md",
+              "sha256": "61DD98B95F9B67B102269C342A0FD20A4A54E5954DCE803F6B3AF0A7454CF335"
+            },
+            "source_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\dhport_lib.jl",
+              "sha256": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936"
+            },
+            "line_contract": {
+              "fk_frames": "31-44",
+              "mass_matrix": "46-61",
+              "potential": "63-70",
+              "arm_MCG": "73-100",
+              "exact_ddq": "102-110"
+            },
+            "source_line_range_hashes": {
+              "fk_frames": "63742E3D81BC8B943F412B827A1E543490EA43082088870258F8629919914EEC",
+              "mass_matrix": "497E4131048E25B2E8E414AA9337180D201326E2B2CF1075A1DE2734E46738EC",
+              "potential": "1E090525F4038E7847FA6D3D2BA42B3270D36C6E59261EA03703F5C952B7113E",
+              "arm_MCG": "303DA729A3BD63C1D5DF0592AC260F792C6B9C9D07BD8D2CCCFDC5348770AA1E",
+              "exact_ddq": "93F0A87BCDB54E39818F039FCC716929BE68BFEBE956440A63A05C6667E9E607"
+            },
+            "operation_schedule_hash": "58209B231ED2BD1662B74B95CBBE5EE206AB1911BFDF03C8AED99C1BFF80C7C1",
+            "source_anchor_checks": {
+              "fk_frames": true,
+              "mass_matrix": true,
+              "potential": true,
+              "arm_MCG": true,
+              "exact_ddq": true
+            },
+            "interfaces": [
+              "RouteB.P3.DHLinkFiniteDAGEnclosure",
+              "RouteB.P3.DHChainFiniteGeometryEnclosure",
+              "RouteB.P3.DHChainFloat64EvaluatorEnclosure"
+            ],
+            "runtime_requirements": [
+              "operation_schedule_hash",
+              "Julia/runtime/libm/BLAS/rounding/FMA/threading",
+              "per_box_input_output_and_coverage",
+              "finite_non_nan_no_overflow"
+            ],
+            "formal_certificate_allowed": false,
+            "registry_promoted": false,
+            "admission_status": "pending_pinned_runtime_and_lean_receipt"
           }
         ],
         "fd_step_semantics": {
@@ -14699,6 +14749,21 @@
             "potential": "63-70",
             "arm_MCG": "73-100",
             "exact_ddq": "102-110"
+          },
+          "source_line_range_hashes": {
+            "fk_frames": "63742E3D81BC8B943F412B827A1E543490EA43082088870258F8629919914EEC",
+            "mass_matrix": "497E4131048E25B2E8E414AA9337180D201326E2B2CF1075A1DE2734E46738EC",
+            "potential": "1E090525F4038E7847FA6D3D2BA42B3270D36C6E59261EA03703F5C952B7113E",
+            "arm_MCG": "303DA729A3BD63C1D5DF0592AC260F792C6B9C9D07BD8D2CCCFDC5348770AA1E",
+            "exact_ddq": "93F0A87BCDB54E39818F039FCC716929BE68BFEBE956440A63A05C6667E9E607"
+          },
+          "operation_schedule_hash": "58209B231ED2BD1662B74B95CBBE5EE206AB1911BFDF03C8AED99C1BFF80C7C1",
+          "source_anchor_checks": {
+            "fk_frames": true,
+            "mass_matrix": true,
+            "potential": true,
+            "arm_MCG": true,
+            "exact_ddq": true
           },
           "mass_and_potential_reinvoke_fk_frames": true,
           "central_fd_consumes_two_shifted_dag_copies": true,
@@ -38533,6 +38598,15 @@
       "admission_status": "pending_pinned_runtime_and_lean_receipt",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T12:17:18.576633+00:00",
+      "kind": "routeb_o2_dag_propagation_review_recorded",
+      "node_id": "0da99a7cef5e4f0b91c7cc06d9e7c010",
+      "review_status": "DAG_PROPAGATION_INTERFACE_DRAFT__UNCOMPILED_OPEN",
+      "admission_status": "pending_pinned_runtime_and_lean_receipt",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -42189,5 +42263,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "3b5ccb4d7d4f66cefdb10a5b0eea16a0f01b732bc4c9e5a234699c0920956f8c"
+  "state_checksum": "e8b7c70f1a0f6c48cfda9d812642d5326d438845b8106ef7925def2f487cd781"
 }

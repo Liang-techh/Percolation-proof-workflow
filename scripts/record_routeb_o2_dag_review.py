@@ -12,6 +12,20 @@ REVIEW = ROOT / "agent_review_inbox/review-T-P4-036.4-dag-01a07bb4-be84-20260907
 SOURCE = ROUTE_B / "routeB_dense_Mq/dhport_lib.jl"
 STATE = ROOT / "artifacts/routeb_6dof/state.json"
 EXPECTED_SOURCE_SHA256 = "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936"
+SOURCE_LINE_RANGES = {
+    "fk_frames": (31, 44),
+    "mass_matrix": (46, 61),
+    "potential": (63, 70),
+    "arm_MCG": (73, 100),
+    "exact_ddq": (102, 110),
+}
+SOURCE_ANCHORS = {
+    "fk_frames": ("function fk_frames(q)", "return Tc, o, z"),
+    "mass_matrix": ("function mass_matrix(q;", "return M + Float64(regularization)"),
+    "potential": ("function potential(q)", "return P"),
+    "arm_MCG": ("function arm_MCG(q, dq;", "return Mq, Cdq, Gq"),
+    "exact_ddq": ("function exact_ddq(q, dq, w;", "return Mq \\ (tau - Cdq - Gq)"),
+}
 sys.path.insert(0, str(ROOT / "src"))
 
 from percolation_workflow.store import StateStore  # noqa: E402
@@ -23,6 +37,10 @@ def sha(path: Path) -> str:
 
 def ref(path: Path) -> dict[str, str]:
     return {"path": str(path.resolve()), "sha256": sha(path)}
+
+
+def text_sha(text: str) -> str:
+    return hashlib.sha256(text.encode("utf-8")).hexdigest().upper()
 
 
 def find(state, name: str):
@@ -49,6 +67,22 @@ def main() -> int:
             raise ValueError(f"O2.4 review boundary missing: {phrase}")
     if sha(SOURCE) != EXPECTED_SOURCE_SHA256:
         raise ValueError("O2.4 source hash drifted; reject stale review")
+    source_lines = SOURCE.read_text(encoding="utf-8", errors="replace").splitlines()
+    range_hashes = {}
+    for name, (start, end) in SOURCE_LINE_RANGES.items():
+        if start < 1 or end > len(source_lines) or start > end:
+            raise ValueError(f"invalid source range: {name}")
+        selected = "\n".join(source_lines[start - 1:end])
+        if not all(anchor in selected for anchor in SOURCE_ANCHORS[name]):
+            raise ValueError(f"source anchors drifted: {name}")
+        range_hashes[name] = text_sha(selected)
+    schedule_lines = []
+    for name, (start, end) in SOURCE_LINE_RANGES.items():
+        schedule_lines.extend(
+            f"{index}:{source_lines[index - 1]}"
+            for index in range(start, end + 1)
+        )
+    operation_schedule_hash = text_sha("\n".join(schedule_lines))
     review = {
         "schema_version": 1,
         "task_id": "T-P4-036.4",
@@ -63,6 +97,9 @@ def main() -> int:
             "arm_MCG": "73-100",
             "exact_ddq": "102-110",
         },
+        "source_line_range_hashes": range_hashes,
+        "operation_schedule_hash": operation_schedule_hash,
+        "source_anchor_checks": {name: True for name in SOURCE_LINE_RANGES},
         "interfaces": [
             "RouteB.P3.DHLinkFiniteDAGEnclosure",
             "RouteB.P3.DHChainFiniteGeometryEnclosure",
@@ -93,6 +130,9 @@ def main() -> int:
         "source_artifact": ref(SOURCE),
         "interfaces": review["interfaces"],
         "line_contract": review["line_contract"],
+        "source_line_range_hashes": range_hashes,
+        "operation_schedule_hash": operation_schedule_hash,
+        "source_anchor_checks": review["source_anchor_checks"],
         "mass_and_potential_reinvoke_fk_frames": True,
         "central_fd_consumes_two_shifted_dag_copies": True,
         "operation_schedule": [
