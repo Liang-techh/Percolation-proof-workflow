@@ -1,0 +1,23 @@
+{
+  "schema_version": "routeb-p3-mass-entry-compile-receipt-v1",
+  "status": "COMPILED_CANDIDATE",
+  "statement_ids": [
+    "RouteBP3MassEntryBridge.mass_entry_float64_to_exact_interval",
+    "RouteBP3MassEntryBridge.mass_entry_float64_membership"
+  ],
+  "run_id": "output/run-VJHd35nB",
+  "lean_toolchain": "leanprover/lean4:v4.32.0",
+  "source_sha256": "4cb56ec8964039e736eaba1f2b4591a7c51c366e44c551bb5f8016eb4736b89c",
+  "toolchain_file_sha256": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e",
+  "verifier_sha256": "8da26e9bd77f0e86fb135e82a89e55cc358275cd8e38019cc191bc7176fc7bda",
+  "olean_sha256": "a11e7cfecd6668afb134e68b6dd208473ff9bddb47cd0379f0c78891cfb462e7",
+  "compile_log_sha256": "21a3cf765e9dd2ccc2d497b2e4706c04d7ef6f5bcf93094a26a180ed35a30f83",
+  "compile_exit_code": 0,
+  "axioms": ["propext", "Classical.choice", "Quot.sound"],
+  "forbidden_proof_escape": false,
+  "physical_source_binding": false,
+  "global_coverage": false,
+  "registry_promoted": false,
+  "formal_certificate_allowed": false,
+  "admission": "conditional_source_bridge_open"
+}

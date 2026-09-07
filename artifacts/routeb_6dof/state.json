@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 348,
+  "revision": 349,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -7426,6 +7426,19 @@
             "classification": "pending_semantic_binding_sidecar",
             "admission_effect": "none",
             "target_scope": "routeb_node"
+          }
+        ],
+        "conditional_children": [
+          {
+            "statement_id": "RouteBP3MassEntryBridge.mass_entry_float64_to_exact_interval",
+            "status": "compiled_candidate",
+            "receipt": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_mass_entry_bridge_lean\\compile_receipt.json",
+              "sha256": "15a4cf9514d5d19ab7bf30ef28688a2fb802ac010b055d0ddebfddd2136a330a"
+            },
+            "physical_source_binding": false,
+            "global_coverage": false,
+            "registry_promoted": false
           }
         ]
       }
@@ -29868,6 +29881,26 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "catalog": "anthropic-fermats-last-theorem"
+    },
+    {
+      "at": "2026-09-07T03:46:53.973303+00:00",
+      "kind": "routeb_p3_mass_entry_compile_recorded",
+      "node_id": "8f7df5df39a041d7a972078830dbcee7",
+      "statement_ids": [
+        "RouteBP3MassEntryBridge.mass_entry_float64_to_exact_interval",
+        "RouteBP3MassEntryBridge.mass_entry_float64_membership"
+      ],
+      "receipt": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_mass_entry_bridge_lean\\compile_receipt.json",
+      "receipt_sha256": "15a4cf9514d5d19ab7bf30ef28688a2fb802ac010b055d0ddebfddd2136a330a",
+      "source_sha256": "4cb56ec8964039e736eaba1f2b4591a7c51c366e44c551bb5f8016eb4736b89c",
+      "olean_sha256": "a11e7cfecd6668afb134e68b6dd208473ff9bddb47cd0379f0c78891cfb462e7",
+      "compile_log_sha256": "21a3cf765e9dd2ccc2d497b2e4706c04d7ef6f5bcf93094a26a180ed35a30f83",
+      "compile_exit_code": 0,
+      "status": "COMPILED_CANDIDATE",
+      "physical_source_binding": false,
+      "global_coverage": false,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -33350,8 +33383,45 @@
       "coverage": false,
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "schema_version": 1,
+      "algorithm": "routeb_p3_mass_entry_bridge/v1",
+      "graph_sha256": "409952d7b08d2fafb877e71235c2d4bf07469ae309ca3f883ded5f80e0d61ba6",
+      "roots": [
+        "8f7df5df39a041d7a972078830dbcee7"
+      ],
+      "selected_nodes": [
+        "8f7df5df39a041d7a972078830dbcee7"
+      ],
+      "graph_projection": {
+        "schema_version": 1,
+        "parent": "8f7df5df39a041d7a972078830dbcee7",
+        "child_statement": "RouteBP3MassEntryBridge.mass_entry_float64_to_exact_interval",
+        "receipt_sha256": "15a4cf9514d5d19ab7bf30ef28688a2fb802ac010b055d0ddebfddd2136a330a"
+      },
+      "receipt": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_mass_entry_bridge_lean\\compile_receipt.json",
+        "sha256": "15a4cf9514d5d19ab7bf30ef28688a2fb802ac010b055d0ddebfddd2136a330a"
+      },
+      "source": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_mass_entry_bridge_lean\\MassEntryBridge.lean",
+        "sha256": "4cb56ec8964039e736eaba1f2b4591a7c51c366e44c551bb5f8016eb4736b89c"
+      },
+      "verifier": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_mass_entry_bridge_lean\\verify.sh",
+        "sha256": "8da26e9bd77f0e86fb135e82a89e55cc358275cd8e38019cc191bc7176fc7bda"
+      },
+      "toolchain": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_mass_entry_bridge_lean\\lean-toolchain",
+        "sha256": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e"
+      },
+      "status": "COMPILED_CANDIDATE",
+      "physical_source_binding": false,
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "global_closure": {},
-  "state_checksum": "c96f0a9969f08a29517c1809f4274917d980700a48137825246f908931feefa4"
+  "state_checksum": "c094ab898ea70c2b2ba976c83ece6c0c97d38f00232070bc1b19dec10a9ce6cf"
 }
