@@ -685,6 +685,22 @@ polynomial remains a separate frontier.
 - forbidden: importing arithmetic endgames or claiming Route-B spectral/PDE
   closure from a source scan.
 
+### T-FLT-QUOTIENT-SIDECAR — pinned quotient transport probe
+
+- status: `open` (released as the first direct-reuse FLT API probe)
+- owner: `臭屁猪`
+- source: `examples/anthropic_flt_quotient_transport_sidecar/`, with upstream
+  `Definitions/Def_Mathlib_Topology_Algebra_Module_Quotient.lean:5-37`;
+- scope: run the focused sidecar in the pinned GitHub environment, check the
+  exact declaration statements, `#print axioms`, provenance and import
+  closure, and report whether the two continuous quotient transport APIs are
+  directly reusable, lightly adapted, or blocked on the target pin;
+- deliver: immutable review with compiler output/hashes and a target-side
+  adapter recommendation. A green compile remains an event-only catalog
+  result and does not enter the Route-B theorem registry;
+- forbidden: importing FLT number theory, whole-repository regression, or
+  inferring P3/P8 coverage or physical source binding from this API probe.
+
 ### T-FLT-TRANSPORT-ADAPTER — transport and adapter scan
 
 - status: `reviewed_pending` (integrated at Route-B revision 344;

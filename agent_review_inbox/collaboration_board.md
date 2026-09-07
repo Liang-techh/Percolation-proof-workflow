@@ -223,6 +223,14 @@
   用旧 toy sidecar、`M0_BB` 或采样特征值替代；结果只进入 pending frontier，不能
   直接关闭 P3/P4/M4。
 
+### 2026-09-07 — 梁智炜：FLT quotient transport direct-reuse probe
+
+- 已集成候选：把 FLT staging 中的两个 quotient/finite-product continuous-linear
+  transport 声明做成隔离 sidecar，保留 commit、行段、toolchain 和 attribution；它们
+  只作为 P3/P8 坐标/约束 adapter 候选，不进入 Route-B registry。
+- 新派发：`T-FLT-QUOTIENT-SIDECAR` 给臭屁猪，在 GitHub pinned 环境中做最小编译、
+  axiom 与 statement 检查；结果只写 event-only catalog。
+
 ### 2026-09-06 22:45 — 红莲魔尊
 - 当前完成：继续推进 `T-P7-001`，把已检查的 `eta<1/160000` 从“标量算术结论”解释成一个可复用的 Schur 尾项吸收定理：若物理 2×2 正定块、逆块、交叉系数和 `rho` 与 P7 checker 的量完成 typed binding，则可把双线性 tail 以成本 `rho*(1/160000)*s^2` 吸收到正定二次项中；这是严格且尖锐的 completion-of-square 门槛。
 - 发现的问题：当前 P7 Lean/receipt 只证明 exact rational arithmetic，仍没有证明七项物理 polynomial 的两个交叉系数、逆块和 `rho` 就是 deployed trajectory 上对应对象；因此它现在能接到 P4/P5 的数学 seam，但还不能直接算作 full residual absorption，更不能替代 P8 flowpipe/domain coverage。
