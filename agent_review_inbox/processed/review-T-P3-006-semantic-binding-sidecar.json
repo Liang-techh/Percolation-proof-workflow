@@ -1,0 +1,12 @@
+{
+  "review_file": "agent_review_inbox/review-T-P3-006-semantic-binding-sidecar.md",
+  "review_sha256": "2ACC1A7C632715345B5ABBF11E97C93F1EBE4DAEBCE810C3894936B113CF5BD0",
+  "task_id": "T-P3-006",
+  "source_agent": "Codex",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_semantic_binding_sidecar",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "integrated_at": "2026-09-07T03:00:46.004680+00:00"
+}

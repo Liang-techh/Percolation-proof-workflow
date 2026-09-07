@@ -226,7 +226,8 @@ without an explicit scoped request.
 
 ### T-P3-006 — source-binding interface sidecar
 
-- status: `assigned` (梁智炜, disjoint sidecar implementation)
+- status: `reviewed_pending` (integrated at Route-B revision 342; Lean blocked:
+  `review-T-P3-006-semantic-binding-sidecar.md`)
 - scope: encode the P3-005 premise boundary in a small adapter-side contract;
   keep source hashes, exact snapshot semantics, and interval enclosure as
   separate fields;
@@ -237,7 +238,9 @@ without an explicit scoped request.
 
 ### T-P5-003 — Christoffel power identity sidecar
 
-- status: `assigned` (梁智炜, disjoint sidecar implementation)
+- status: `reviewed_pending` (integrated at Route-B revision 342; focused Lean
+  compile passed, no registry promotion:
+  `review-T-P5-003-christoffel-power-sidecar.md`)
 - scope: isolate and compile the exact Christoffel power identity already
   identified by P5-002, with minimal imports and explicit #print axioms;
 - deliver: isolated Lean sidecar/README and focused compile evidence;

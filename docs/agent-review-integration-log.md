@@ -3,7 +3,7 @@
 This log records durable integrations from `agent_review_inbox/`. The original
 review files and their SHA-256 markers remain in that directory.
 
-## 2026-09-06 / Route-B checkpoint revision 341
+## 2026-09-06 / Route-B checkpoint revision 342
 
 Integrated as pending metadata only:
 
@@ -30,12 +30,14 @@ Integrated as pending metadata only:
 | T-FLT-TOPOLOGY-QUOTIENT-CLM | external reuse catalog | `flt_topology_quotient_scan` | none |
 | T-P3-005 | `P3.strict_true_dh_bounds` | `pending_semantic_binding_child` | none |
 | T-P5-002 | `P5.sparse_disjunctive_sos` | `pending_energy_child` | none |
+| T-P3-006 | `P3.strict_true_dh_bounds` | `pending_semantic_binding_sidecar` | none |
+| T-P5-003 | `P5.sparse_disjunctive_sos` | `pending_christoffel_power_sidecar` | none |
 
 The authoritative `artifacts/routeb_6dof/state.json` was updated through
-`StateStore` from revision 328 to revision 341. Twenty-one Route-B
-`agent_review_integrated` events, twenty-one node provenance references, and two
-event-only external-catalog integrations were added. Node statuses remain open
-and the verified registry remains empty.
+`StateStore` from revision 328 to revision 342. Twenty-three Route-B
+`agent_review_integrated` events, twenty-three node provenance references, and
+two event-only external-catalog integrations were added. Node statuses remain
+open and the verified registry remains empty.
 
 No review was promoted to `VERIFIED`; P3 source semantics, P4 true-DH residual
 binding, P8 contract/flowpipe coverage, and M4 admission remain open.
@@ -73,3 +75,9 @@ of the canonical source manifest, exact snapshot, abstract true-DH semantics,
 and interval enclosure. P5-002 identifies the exact Christoffel power identity
 as the smallest standalone energy child; both remain pending and below parent
 closure.
+
+P3-006 implemented that interface as a new sidecar, but its focused compile is
+blocked by the local missing Mathlib environment (`unknown module prefix
+'Mathlib'`). P5-003 implemented the isolated Christoffel-power sidecar and its
+focused compile passed with only the standard Lean base axioms; this remains a
+pending reusable child and does not promote the physical P5 parent.

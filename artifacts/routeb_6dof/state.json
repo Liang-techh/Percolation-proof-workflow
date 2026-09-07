@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 341,
+  "revision": 342,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -7415,6 +7415,17 @@
             "classification": "pending_semantic_binding_child",
             "admission_effect": "none",
             "target_scope": "routeb_node"
+          },
+          {
+            "review_file": "agent_review_inbox/review-T-P3-006-semantic-binding-sidecar.md",
+            "review_sha256": "2ACC1A7C632715345B5ABBF11E97C93F1EBE4DAEBCE810C3894936B113CF5BD0",
+            "task_id": "T-P3-006",
+            "source_agent": "Codex",
+            "created_at": "unknown",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_semantic_binding_sidecar",
+            "admission_effect": "none",
+            "target_scope": "routeb_node"
           }
         ]
       }
@@ -7750,6 +7761,17 @@
             "created_at": "2026-09-06T00:00:00-06:00",
             "integration_status": "integrated_as_pending_metadata",
             "classification": "pending_energy_child",
+            "admission_effect": "none",
+            "target_scope": "routeb_node"
+          },
+          {
+            "review_file": "agent_review_inbox/review-T-P5-003-christoffel-power-sidecar.md",
+            "review_sha256": "55C870DA9DC9DA688D76F11BFA415928935ED78D4841E5C514363376FD068B6D",
+            "task_id": "T-P5-003",
+            "source_agent": "Codex",
+            "created_at": "2026-09-06T00:00:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_christoffel_power_sidecar",
             "admission_effect": "none",
             "target_scope": "routeb_node"
           }
@@ -29723,6 +29745,30 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "9a3a7eef35b34880b85423aac67ea015"
+    },
+    {
+      "at": "2026-09-07T03:00:46.004680+00:00",
+      "kind": "agent_review_integrated",
+      "review_file": "agent_review_inbox/review-T-P3-006-semantic-binding-sidecar.md",
+      "review_sha256": "2ACC1A7C632715345B5ABBF11E97C93F1EBE4DAEBCE810C3894936B113CF5BD0",
+      "task_id": "T-P3-006",
+      "classification": "pending_semantic_binding_sidecar",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "8f7df5df39a041d7a972078830dbcee7"
+    },
+    {
+      "at": "2026-09-07T03:00:46.004722+00:00",
+      "kind": "agent_review_integrated",
+      "review_file": "agent_review_inbox/review-T-P5-003-christoffel-power-sidecar.md",
+      "review_sha256": "55C870DA9DC9DA688D76F11BFA415928935ED78D4841E5C514363376FD068B6D",
+      "task_id": "T-P5-003",
+      "classification": "pending_christoffel_power_sidecar",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "9a3a7eef35b34880b85423aac67ea015"
     }
   ],
   "agent_requests": {},
@@ -33208,5 +33254,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "6f4b6c6d4e4d246568b13a213a93c07ff581e3201c703d71b897906e16d0007d"
+  "state_checksum": "826e9801c6f7de147135fd5568ae6181eb25ded7603dfd840f4633724acfa83e"
 }
