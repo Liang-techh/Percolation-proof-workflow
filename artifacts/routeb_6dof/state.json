@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 482,
+  "revision": 483,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13956,7 +13956,8 @@
           "statement_comparator_receipt",
           "o2_review_mathematical_obligations_open",
           "Float64_fd_step_outward_inclusion",
-          "Float64_pi_offset_outward_inclusion"
+          "Float64_pi_offset_outward_inclusion",
+          "sin_cos_shift_taylor_leaf_float64_binding"
         ],
         "independent_static_reviews": [
           {
@@ -14153,6 +14154,60 @@
             }
           ],
           "remaining_obligation": "prove the actual sin/cos/libm outputs on every certified angle box and bind the pi/2 operation schedule; scalar pi containment alone is insufficient",
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
+        },
+        "trig_shift_leaf": {
+          "schema_version": 1,
+          "status": "EXACT_TAYLOR_SHIFT_LEAF_PRESENT_FLOAT64_BINDING_OPEN",
+          "shift": "h=1/100000",
+          "rows": [
+            {
+              "name": "sin_h",
+              "lower_num": "2222218255150381837400394871382598510651039526918175778435129687474149732867003750230063331547491048144914267446240000004349534693876691428571428714693877551",
+              "lower_den": "222221825518741880832000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "upper_num": "9898972227488064548419940790704302456536448801726419376665577698748485173680289432843009385984278305372799918624160000019375199999996170909090909729090909091",
+              "upper_den": "989897222765304741888000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "polynomial_num": "15511210043072465816612442834436941171210959660824873667139794114848053690952020478813832371200436091039999872488000000030359999999994000000000001",
+              "polynomial_den": "1551121004333098598400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "error_num": "1",
+              "error_den": "10888869450418352160768000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "order": "12",
+              "theorem": "|sin x-S_12(x)| <= |x|^27/27! for |x|<=1"
+            },
+            {
+              "name": "cos_h",
+              "lower_num": "576130658723487232182625366185145988887329512131999483015013938352204978773975602539135178240275360342399910012960000023680799999994874285714286642857142857",
+              "lower_den": "576130658752293765120000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "upper_num": "122209533668618503796314471615030967339736563179515041851669623286831359133873612659816552960058409769599980911840000005023199999998912727272727469696969697",
+              "upper_den": "122209533674728980480000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "polynomial_num": "36496964806012765839623326364669881648971100316054265892353824149008460193826508758135260160017443641599994299463529413264847058823204705882353",
+              "polynomial_den": "36496964807837614080000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "error_num": "1",
+              "error_den": "4032914611266056355840000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "order": "12",
+              "theorem": "|cos x-C_12(x)| <= |x|^26/26! for |x|<=1"
+            }
+          ],
+          "source_artifacts": [
+            {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_proofgrade_trig_bounds.csv",
+              "sha256": "37306735EE307A99D8FB013F0BEAC8A1B2856B49D3729B4EB0718C1C97F0D8B0"
+            },
+            {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_PROOFGRADE_TRIG_BOUNDS.md",
+              "sha256": "A8FFB1C285502A91E5C806D133645F7EA78340D7C01180CC4C9D3F1C5A8CB570"
+            }
+          ],
+          "claims": {
+            "exact_rational_taylor_bound_for_sin_h_cos_h": true,
+            "floating_point_trig_executed": false,
+            "arbitrary_dh_angle_range_reduction": false,
+            "float64_libm_binding": false,
+            "formal_certificate_allowed": false,
+            "registry_promoted": false
+          },
+          "remaining_obligation": "bind the exact Taylor constants to the deployed Float64 sin/cos path, then prove angle-box range reduction and finite-DAG propagation",
           "formal_certificate_allowed": false,
           "registry_promoted": false
         }
@@ -37824,6 +37879,14 @@
       "status": "OPEN_DH_OFFSET_LIBM_ENCLOSURE_REQUIRED",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T11:47:08.631323+00:00",
+      "kind": "routeb_trig_shift_leaf_recorded",
+      "node_id": "0da99a7cef5e4f0b91c7cc06d9e7c010",
+      "status": "EXACT_TAYLOR_SHIFT_LEAF_PRESENT_FLOAT64_BINDING_OPEN",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -41480,5 +41543,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "a2cac18afd2fd7f0cf9254607aa6dc39c4c9d62d8c19ce8b524133bb6e88dc60"
+  "state_checksum": "38e1b196587ebad1e4833af5f0d1373ec464eef809e64d1bae7dd34480281445"
 }

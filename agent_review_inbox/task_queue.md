@@ -1425,6 +1425,10 @@ polynomial remains a separate frontier.
   binary64 dyadics inside explicit rational enclosures (`333/106 < pi < 355/113`);
   this is only a scalar offset seam. Per-angle `sin`/`cos` libm error and the
   actual operation schedule remain open.
+- coordinator finding (2026-09-07): the existing order-12 exact rational Taylor
+  artifact supplies two leaves for `sin(1/100000)` and `cos(1/100000)` without
+  floating-point trig. It is now attached as advisory O2 evidence; it does not
+  bind deployed libm results or arbitrary DH-angle boxes.
 
 ### T-P4-035 — true-DH force-descriptor block projection seam
 

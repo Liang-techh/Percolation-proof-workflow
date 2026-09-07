@@ -158,6 +158,7 @@ python scripts/record_routeb_child_reviews.py
 python scripts/record_routeb_force_scale_contract.py
 python scripts/record_routeb_fd_step_semantics.py
 python scripts/record_routeb_dh_offset_semantics.py
+python scripts/record_routeb_trig_shift_leaf.py
 ```
 
 These recorders preserve the deployment authority (`robot_final/dhport_lib.jl`),
@@ -189,6 +190,11 @@ has been enclosed.
 `record_routeb_dh_offset_semantics.py` records the binary64 `π` and `π/2`
 representations against explicit rational enclosures. It remains separate from
 the stronger per-angle `sin`/`cos` libm enclosure required by O2.
+
+`record_routeb_trig_shift_leaf.py` imports the existing exact rational Taylor
+leaf for `sin(1/100000)` and `cos(1/100000)`. It preserves the leaf as an
+advisory artifact until its relationship to deployed Float64/libm evaluation
+is proven.
 
 The O1 API audit also emits
 `artifacts/task_routeb_o1_lean_api_audit_20260907/RouteBO1PortIdentity.lean`.

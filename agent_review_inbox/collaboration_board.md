@@ -772,3 +772,10 @@
   rev 482。
 - 这只处理常量表示；每个 DH 角度盒上的 `sin`/`cos` libm 误差、范围缩减和
   有限运算 DAG 仍未闭合，不能被解释为 evaluator proof。
+
+### 2026-09-07 — 梁智炜：接入中心差分 Taylor trig leaves
+
+- 现有 order-12 有理 Taylor artifact 已提供 `sin(h)`、`cos(h)` 两个精确区间，
+  其中 `h=1/100000`，且明确未调用浮点三角函数。
+- 已将其作为 O2 advisory evidence 接入 rev 483；仍需证明它与 deployed
+  Float64/libm 输出一致，并完成一般 DH 角度盒的 range reduction。
