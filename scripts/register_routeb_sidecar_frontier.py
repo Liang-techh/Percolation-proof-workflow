@@ -566,6 +566,32 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget",
+        "statement": "An explicit upper-gap/cell-lower/ratio contract factors each row margin and proves delta=gap*cellLower is a uniform lower bound over the tagged union.",
+        "proof_sketch": "Factor marginAt exactly using the positive denominator and ratio premise, apply monotone multiplication rowwise, then package the bound into the existing uniform margin budget consumer.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_REVISED_MARGIN_BRIDGE",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_UNIFORM_MARGIN_BUDGET_REVISED20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_UNIFORM_MARGIN_BUDGET_REVISED20260907_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity",
+        "statement": "The component-radius weighted-power output composes into a scalar downstream load budget under explicit nonnegative weights, caps, domain, and velocity premises.",
+        "proof_sketch": "Bound the weighted component sum by a componentwise cap and then by a scalar cap, using finite-sum monotonicity and retain the existing consumer inequality as an upstream premise.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_SCALAR_BUDGET",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_SCALAR_BUDGET.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_SCALAR_BUDGET_REVIEW.md",
+        ],
+    },
+    {
         "name": "P5.componentwise_relative_decay.feasible_cone_spn.nonnegative_gain_increment_reuse",
         "parent": "P5.componentwise_relative_decay.feasible_cone_spn",
         "statement": "A nonnegative component-gain increment can reuse an existing cone SPN witness when its symmetric cone correction is entrywise below the old nonnegative slack.",
