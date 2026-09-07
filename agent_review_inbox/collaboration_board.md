@@ -2113,6 +2113,12 @@ P4 Schur/PMI absorption 已接入 DAG revision 672。所有结果仍是 open/unc
 index transport 失败条件、P3 strict gap quantitative bound。它们不重复已有正/负叶，
 用于让 theorem DAG 同时维护可证明路径和不可省略的障碍。
 
+### 2026-09-07 14:45 — 梁智炜收割 P3 quantitative gap
+
+P3 quantitative gap 叶已接入 DAG revision 673，为严格 cap-load 提供显式可计算
+的 selected-coordinate gap 下界；仍为 uncompiled candidate，正式 gate 和 registry
+保持不变。
+
 ### 2026-09-07 13:55 — 梁智炜收割 fixed-λ 定量 reserve
 
 fixed-λ quantitative reserve lower-bound 叶已登记到 DAG revision 668，提供显式

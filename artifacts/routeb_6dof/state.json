@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 672,
+  "revision": 673,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -40573,7 +40573,8 @@
       "status": "open",
       "proof_sketch": "Decompose the finite difference sum into the selected positive strict term and nonnegative remainder, then compose with the existing capMax and downstream consumer inequalities without rebuilding non-strict order or cap construction.",
       "dependencies": [
-        "4a0b7a5b7b0740208c6abb1efeed3e49"
+        "4a0b7a5b7b0740208c6abb1efeed3e49",
+        "89ab8807a69b40608e2735572545efb0"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -40731,6 +40732,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_STRICT_OBSTRUCTION_REVIEW.md",
             "sha256": "4CEC0D51B41F93FBCBB07E49BB13D3C57C2587753C166F5BDB3FD8B9F9367EEF"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "89ab8807a69b40608e2735572545efb0": {
+      "id": "89ab8807a69b40608e2735572545efb0",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.cap_load_order_consumer.assembled_load_nonneg_witness.squared_velocity_nonneg.strict_component_order.quantitative_gap",
+      "statement": "The weighted cap-load gap dominates the selected component gap load[j]*(qCap[j]-q[j]) under pointwise nonnegative loads and cap order, providing a quantitative strictness witness.",
+      "parent_id": "11da8982320248a8897780f4b9949db9",
+      "status": "open",
+      "proof_sketch": "Expand the Fin-6 weighted difference, isolate the selected coordinate via erase decomposition, prove all remaining terms nonnegative, and retain a positive selected gap as an explicit lower bound without rebuilding strict order or capMax.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_CENTRAL_FD_QUANTITATIVE_GAP",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_QUANTITATIVE_GAP.lean",
+            "sha256": "84F7E0416B5E3592DF5D391949FC49B753DA1A8C842760A82EEF8F74AC36A60D"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_QUANTITATIVE_GAP_REVIEW.md",
+            "sha256": "90CA8337311CC70F713E78495D300B691378A1B50A23A93ED62DBC904C6C89B9"
           }
         ],
         "registry_eligible": false,
@@ -68224,6 +68260,23 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T19:37:09.101531+00:00",
+      "kind": "node_added",
+      "node_id": "89ab8807a69b40608e2735572545efb0",
+      "parent_id": "11da8982320248a8897780f4b9949db9",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.cap_load_order_consumer.assembled_load_nonneg_witness.squared_velocity_nonneg.strict_component_order.quantitative_gap"
+    },
+    {
+      "at": "2026-09-07T19:37:09.104419+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.cap_load_order_consumer.assembled_load_nonneg_witness.squared_velocity_nonneg.strict_component_order.quantitative_gap"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -71880,5 +71933,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "538a904a1e91cd656c644720badd4046ab0ce6fb48c414df6086eab21b26f3d8"
+  "state_checksum": "38fb442aea19cf66fdc16b0f58f6e8e94d2deecca13a8c43f514b2d22b88a91f"
 }

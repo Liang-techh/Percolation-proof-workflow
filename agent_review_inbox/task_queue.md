@@ -2808,3 +2808,10 @@ source-independent/open/uncompiled 候选。
   weighted gap 的定量下界。
 - 四项都服务于 parent closure 或 obstruction tracking，保持数学证明优先；GitHub
   Lean receipt 仍按六人环与流川枫比例 lane 另行处理。
+
+### 2026-09-07 — 14:45 P3 定量 gap 收割
+
+- P3 `quantitative_gap` 已完成定向 review 并登记，revision 673；它把整体
+  weighted cap-load gap 下界化为一个选中坐标的 `load[j]*(qCap[j]-q[j])`。
+- 该叶保留其余项非负与 selected gap 前提，未重复 strict order/obstruction，
+  也未进入 registry。

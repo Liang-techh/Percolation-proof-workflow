@@ -1366,6 +1366,19 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.cap_load_order_consumer.assembled_load_nonneg_witness.squared_velocity_nonneg.strict_component_order.quantitative_gap",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.cap_load_order_consumer.assembled_load_nonneg_witness.squared_velocity_nonneg.strict_component_order",
+        "statement": "The weighted cap-load gap dominates the selected component gap load[j]*(qCap[j]-q[j]) under pointwise nonnegative loads and cap order, providing a quantitative strictness witness.",
+        "proof_sketch": "Expand the Fin-6 weighted difference, isolate the selected coordinate via erase decomposition, prove all remaining terms nonnegative, and retain a positive selected gap as an explicit lower bound without rebuilding strict order or capMax.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_QUANTITATIVE_GAP",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_QUANTITATIVE_GAP.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_QUANTITATIVE_GAP_REVIEW.md",
+        ],
+    },
+    {
         "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption",
         "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface",
         "statement": "A positive division-free slack rho_eff+delta≤1 absorbs the relative-plus-additive residual budget into Schur/PMI margin and affine feedback consumers, with additive debit and typed force/acceleration paths explicit.",
