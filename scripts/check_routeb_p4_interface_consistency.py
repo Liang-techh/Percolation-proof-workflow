@@ -48,6 +48,8 @@ def audit_state() -> dict[str, object]:
         "diagnostic_receipt", {}
     )
     lambda_witnesses = lambda_receipt.get("uniform_lambda_witnesses", {})
+    lambda_two_27 = lambda_witnesses.get("eta=2.7,lambda=2.0", {})
+    lambda_two_56 = lambda_witnesses.get("eta=5.6,lambda=2.0", {})
 
     checks = {
         "weighted_rho_is_squared": "rho_F^2" in weighted_contract.get("rho_semantics", ""),
@@ -79,14 +81,19 @@ def audit_state() -> dict[str, object]:
             }
         ),
         "fixed_lambda_two_is_declared_row_witness": (
-            lambda_witnesses.get("eta=2.7,lambda=2.0", {}).get("all_admissible") is True
-            and lambda_witnesses.get("eta=5.6,lambda=2.0", {}).get("all_admissible") is True
-            and lambda_witnesses.get("eta=5.6,lambda=2.0", {}).get("distinct_boxes", 0) > 0
+            lambda_two_27.get("all_admissible") is True
+            and lambda_two_56.get("all_admissible") is True
+            and lambda_two_27.get("box_count_matches_expected") is True
+            and lambda_two_56.get("box_count_matches_expected") is True
+            and lambda_two_27.get("one_row_per_box") is True
+            and lambda_two_56.get("one_row_per_box") is True
+            and lambda_two_27.get("theta_matches_lambda_two") is True
+            and lambda_two_56.get("theta_matches_lambda_two") is True
         ),
         "fixed_lambda_witness_has_positive_rational_margin": (
-            "/" in str(lambda_witnesses.get("eta=5.6,lambda=2.0", {}).get(
+            "/" in str(lambda_two_56.get(
                 "min_candidate_margin_exact", ""))
-            and lambda_witnesses.get("eta=5.6,lambda=2.0", {}).get(
+            and lambda_two_56.get(
                 "conservative_margin_lower_bound_1e-12") not in {None, "0"}
         ),
         "global_gate_closed_only_explicitly": state.global_closure_report()["formal_certificate_allowed"] is False,

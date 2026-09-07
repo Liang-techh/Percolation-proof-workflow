@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 445,
+  "revision": 446,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12399,7 +12399,14 @@
             "declared_partition_witnesses": {
               "eta=2.7,lambda=2.0": {
                 "row_count": 256,
+                "expected_boxes": 256,
                 "distinct_boxes": 256,
+                "one_row_per_box": true,
+                "theta_values": [
+                  "1.0"
+                ],
+                "theta_matches_lambda_two": true,
+                "box_count_matches_expected": true,
                 "all_admissible": true,
                 "min_candidate_margin": "0.16040822007441496",
                 "min_candidate_margin_exact": "2005102750930187/12500000000000000",
@@ -12408,7 +12415,14 @@
               },
               "eta=5.6,lambda=2.0": {
                 "row_count": 321,
+                "expected_boxes": 321,
                 "distinct_boxes": 321,
+                "one_row_per_box": true,
+                "theta_values": [
+                  "1.0"
+                ],
+                "theta_matches_lambda_two": true,
+                "box_count_matches_expected": true,
                 "all_admissible": true,
                 "min_candidate_margin": "0.04301375542805658",
                 "min_candidate_margin_exact": "2150687771402829/50000000000000000",
@@ -12421,7 +12435,7 @@
           "ledger_reconciliation": "do not mix aggregate routeB_compact_port_frobenius_ledger lambda bounds with per-cell combined_schur_partition_ledger bounds until their metric and PMI semantics are proven equivalent",
           "diagnostic_receipt": {
             "checker": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\check_routeb_fixed_lambda_ledger.py",
-            "checker_sha256": "aadeb4e2ebe5f51be50e50cf026d7e255aaaf93621ead4a4ccb9a509e4e91c97",
+            "checker_sha256": "084cee44807e43d5d36a13ffd6b41203905c72993475360b2e7c4fc46d922e01",
             "status": "diagnostic_pass_decimal_quantized",
             "rows": 2885,
             "per_eta": {
@@ -12450,7 +12464,14 @@
             "uniform_lambda_witnesses": {
               "eta=2.7,lambda=2.0": {
                 "row_count": 256,
+                "expected_boxes": 256,
                 "distinct_boxes": 256,
+                "one_row_per_box": true,
+                "theta_values": [
+                  "1.0"
+                ],
+                "theta_matches_lambda_two": true,
+                "box_count_matches_expected": true,
                 "all_admissible": true,
                 "min_candidate_margin": "0.16040822007441496",
                 "min_candidate_margin_exact": "2005102750930187/12500000000000000",
@@ -12459,7 +12480,14 @@
               },
               "eta=2.7,lambda=1.5": {
                 "row_count": 256,
+                "expected_boxes": 256,
                 "distinct_boxes": 256,
+                "one_row_per_box": true,
+                "theta_values": [
+                  "2.0"
+                ],
+                "theta_matches_lambda_two": true,
+                "box_count_matches_expected": true,
                 "all_admissible": true,
                 "min_candidate_margin": "0.17030616505581123",
                 "min_candidate_margin_exact": "17030616505581123/100000000000000000",
@@ -12468,7 +12496,14 @@
               },
               "eta=2.7,lambda=1.25": {
                 "row_count": 256,
+                "expected_boxes": 256,
                 "distinct_boxes": 256,
+                "one_row_per_box": true,
+                "theta_values": [
+                  "4.0"
+                ],
+                "theta_matches_lambda_two": true,
+                "box_count_matches_expected": true,
                 "all_admissible": true,
                 "min_candidate_margin": "0.17525513754650934",
                 "min_candidate_margin_exact": "8762756877325467/50000000000000000",
@@ -12477,7 +12512,14 @@
               },
               "eta=5.6,lambda=2.0": {
                 "row_count": 321,
+                "expected_boxes": 321,
                 "distinct_boxes": 321,
+                "one_row_per_box": true,
+                "theta_values": [
+                  "1.0"
+                ],
+                "theta_matches_lambda_two": true,
+                "box_count_matches_expected": true,
                 "all_admissible": true,
                 "min_candidate_margin": "0.04301375542805658",
                 "min_candidate_margin_exact": "2150687771402829/50000000000000000",
@@ -12486,7 +12528,14 @@
               },
               "eta=5.6,lambda=1.5": {
                 "row_count": 321,
+                "expected_boxes": 321,
                 "distinct_boxes": 321,
+                "one_row_per_box": true,
+                "theta_values": [
+                  "2.0"
+                ],
+                "theta_matches_lambda_two": true,
+                "box_count_matches_expected": true,
                 "all_admissible": true,
                 "min_candidate_margin": "0.08226031657104244",
                 "min_candidate_margin_exact": "2056507914276061/25000000000000000",
@@ -12495,7 +12544,14 @@
               },
               "eta=5.6,lambda=1.25": {
                 "row_count": 321,
+                "expected_boxes": 321,
                 "distinct_boxes": 321,
+                "one_row_per_box": true,
+                "theta_values": [
+                  "4.0"
+                ],
+                "theta_matches_lambda_two": true,
+                "box_count_matches_expected": true,
                 "all_admissible": true,
                 "min_candidate_margin": "0.10188359714253536",
                 "min_candidate_margin_exact": "318386241070423/3125000000000000",
@@ -35804,6 +35860,14 @@
       ],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T10:23:31.493673+00:00",
+      "kind": "routeb_fixed_cell_lambda_contract_refresh",
+      "node_id": "8cea6a84c5364384a723d88f00d9a516",
+      "parent_id": "35839e28b33e484f886081ddb6351c80",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -39460,5 +39524,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "2dd11cc0e72a9159d4a2ec4643ec6fad17ab82160100ba1d2dd2cf6269161225"
+  "state_checksum": "ab548308739b580ba360f5920f108bcb60dce11fca9802d97da64d69ad1bdff4"
 }

@@ -107,16 +107,29 @@ def audit_ledger() -> dict[str, object]:
     # witness: it says nothing about cells absent from the artifact or about
     # the true-DH/source and Lean gates.
     uniform_lambda_witnesses: dict[str, dict[str, object]] = {}
+    expected_boxes = {"2.7": 256, "5.6": 321}
     for eta in sorted(by_eta):
         eta_rows = [row for row in rows if row["eta"] == eta]
         for lambda_text in ("2.0", "1.5", "1.25"):
             selected = [row for row in eta_rows if row["lambda"] == lambda_text]
             margins = [dec(row["candidate_margin"]) for row in selected]
             exact_margins = [fraction(row["candidate_margin"]) for row in selected]
+            box_ids = [row["box_id"] for row in selected]
             key = f"eta={eta},lambda={lambda_text}"
             uniform_lambda_witnesses[key] = {
                 "row_count": len(selected),
-                "distinct_boxes": len({row["box_id"] for row in selected}),
+                "expected_boxes": expected_boxes.get(eta),
+                "distinct_boxes": len(set(box_ids)),
+                "one_row_per_box": len(box_ids) == len(set(box_ids)),
+                "theta_values": sorted({row.get("theta") for row in selected}),
+                "theta_matches_lambda_two": (
+                    lambda_text != "2.0"
+                    or bool(selected) and {row.get("theta") for row in selected} == {"1.0"}
+                ),
+                "box_count_matches_expected": (
+                    len(selected) == expected_boxes.get(eta)
+                    and len(set(box_ids)) == expected_boxes.get(eta)
+                ),
                 "all_admissible": bool(selected) and all(
                     row["admissible_fixed_lambda"].strip().lower() == "true"
                     for row in selected
