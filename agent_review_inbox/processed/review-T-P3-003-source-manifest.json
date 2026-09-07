@@ -1,0 +1,11 @@
+{
+  "review_file": "agent_review_inbox/review-T-P3-003-source-manifest.md",
+  "review_sha256": "FD5561E0A136F8B33CEDF4C9C2F8DE64C122ECBAFA15B7210CA5EBECDAE91082",
+  "task_id": "T-P3-003",
+  "source_agent": "Codex",
+  "created_at": "2026-09-06T00:00:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_source_manifest_binding",
+  "admission_effect": "none",
+  "integrated_at": "2026-09-07T02:32:52.197552+00:00"
+}

@@ -114,7 +114,8 @@ without an explicit scoped request.
 
 ### T-P3-003 — canonical source-manifest binding
 
-- status: `claimed` (Aquinas the 6th, 2026-09-06)
+- status: `reviewed_pending` (integrated at Route-B revision 334; result:
+  `review-T-P3-003-source-manifest.md`)
 - scope: reconcile the authoritative Julia/DH source, coordinate order,
   arithmetic convention, and current delivery manifest without running a full
   interval search;
@@ -124,7 +125,8 @@ without an explicit scoped request.
 
 ### T-P4-003 — force/acceleration residual normalization
 
-- status: `open`
+- status: `reviewed_pending` (integrated at Route-B revision 334; result:
+  `review-T-P4-003-residual-normalization.md`)
 - scope: formalize the typed map between `l = I f - M0 a` and the PMI-side
   residual `d`, preferably as a focused algebra/Lean sidecar;
 - deliver: review result plus focused compile/check evidence if available;
@@ -132,7 +134,8 @@ without an explicit scoped request.
 
 ### T-P8-003 — freeze the state contract
 
-- status: `open`
+- status: `reviewed_pending` (integrated at Route-B revision 334; result:
+  `review-T-P8-003-contract.md`)
 - scope: decide whether the deployed 13-state RHS requires an explicit-time
   theorem or a separately justified 14-state ramp source;
 - deliver: minimal theorem signature and admission blockers;

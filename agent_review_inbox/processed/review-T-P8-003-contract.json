@@ -1,0 +1,11 @@
+{
+  "review_file": "agent_review_inbox/review-T-P8-003-contract.md",
+  "review_sha256": "918A8DDCAA6A531AC32051CE3808820FB680205CB5C23EF240C09F9EE8765CB4",
+  "task_id": "T-P8-003",
+  "source_agent": "Codex",
+  "created_at": "2026-09-06T22:30:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "explicit_time_contract_recommended",
+  "admission_effect": "none",
+  "integrated_at": "2026-09-07T02:32:52.197552+00:00"
+}

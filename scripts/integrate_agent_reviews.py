@@ -23,6 +23,9 @@ from percolation_workflow.store import StateStore
 TASK_TARGETS = {
     "T-P0-001": ("P0.reproducibility_baseline", "reproducibility_baseline_blocked"),
     "T-DAG-002": ("M4.block45_full_certificate", "child_dag_refinement_proposal"),
+    "T-P3-003": ("P3.strict_true_dh_bounds", "pending_source_manifest_binding"),
+    "T-P4-003": ("P4.residual_schur_pmi", "conditional_typed_normalization"),
+    "T-P8-003": ("P8.independent_reachability", "explicit_time_contract_recommended"),
 }
 
 
