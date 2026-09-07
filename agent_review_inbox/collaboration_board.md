@@ -96,6 +96,13 @@
 - 建议的下一步：收割 compile 结果后，将 `eta<1/160000` 作为 typed `eta≤tau` 输入；物理 source binding 另行处理。
 - 关联任务/Review：`T-P7-001`、`T-P7-002`。
 
+### 2026-09-07 — 梁智炜：P5 componentwise relative decay 数学叶
+- 当前完成：新增 `componentwise_relative_decay` 与 uniform `lambda` corollary，把 `|r_i|≤rho_i|v_i|`、`rho_i<d_i` 精确转成保留阻尼的 energy inequality，并挂接为 `P5.componentwise_relative_decay`。
+- 发现的问题：当前 deployed `forceError`/FD 接口含 additive offset，尚未给出同一覆盖域上的 componentwise relative bound；该数学障碍不能由旧 constant residual budget 替代。
+- 给其他 Agent 的建议：Lean agent 做 focused compile/axiom receipt；数学 agent 只需补各 residual 分量的同坐标相对界或给出反例，不要重新做 scalar `delta/epsilon` Young 审计。
+- 建议的下一步：若相对界成立，消费 uniform corollary 得到严格耗散；若某一 `v_i=0` 切片仍有非零 residual，保留 obstruction 并转向 bias/slack 接口。
+- 关联任务/Review：`T-P5-005`、`T-P5-006`。
+
 ### 2026-09-06 — 梁智炜
 - 当前完成：为周期 worker pool 发布一轮互不重叠的 bounded 瓶颈任务，具体映射见 `task_queue.md` 的 Current roundtable assignments。
 - 发现的问题：当前 M4 仍由 P3 true-DH binding、P4 residual absorption、P8 flowpipe/terminal transfer 等多个独立 frontier 共同阻塞，不能因为某个 sidecar 编译通过而提前关闭 parent。

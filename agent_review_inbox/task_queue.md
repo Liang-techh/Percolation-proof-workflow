@@ -363,7 +363,7 @@ polynomial remains a separate frontier.
 
 ### T-P5-006 — component-wise relative decay formalization
 
-- status: `open` (released after `T-P5-005` harvest)
+- status: `local_sidecar_prepared` (released after `T-P5-005` harvest)
 - owner: `苏梦辰`
 - source: `review-T-P5-005-kuangmanmozun-20260906T2307.md`,
   `examples/routeb_supply_core/RouteBSupplyCore.lean`;
@@ -373,6 +373,9 @@ polynomial remains a separate frontier.
   sidecar if practical, with exact positivity premises;
 - forbidden: deriving the premise from current FD samples/envelopes or closing
   the physical P5/M4 node.
+- local progress: `examples/routeb_p5_componentwise_relative_decay_lean/` is
+  attached as `P5.componentwise_relative_decay`; the physical relative-bound
+  and pinned Lean receipts remain open.
 
 ### T-P5-007 — weighted dual residual decay and interface obstruction
 

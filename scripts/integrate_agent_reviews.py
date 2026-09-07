@@ -42,7 +42,7 @@ TASK_TARGETS = {
     "T-P5-003": ("P5.sparse_disjunctive_sos", "pending_christoffel_power_sidecar"),
     "T-P5-004": ("P5.sparse_disjunctive_sos", "pending_dissipative_residual_power_child"),
     "T-P5-005": ("P5.sparse_disjunctive_sos", "pending_relative_residual_strict_decay"),
-    "T-P5-006": ("P5.sparse_disjunctive_sos", "pending_component_relative_decay_sidecar"),
+    "T-P5-006": ("P5.componentwise_relative_decay", "pending_component_relative_decay_sidecar"),
     "T-P5-007": ("P5.sparse_disjunctive_sos", "pending_weighted_dual_decay_obstruction"),
     "T-P5-008": ("P5.sparse_disjunctive_sos", "pending_force_error_bias_split"),
     "T-P5-009": ("P5.sparse_disjunctive_sos", "pending_fd_relative_scaling_obstruction"),
