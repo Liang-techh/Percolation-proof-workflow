@@ -1383,3 +1383,6 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   `o0_physical_baseline_derivation_20260907.check.json`；结果为
   `PASS_CONDITIONAL_FAIL_CLOSED`，明确 baseline theorem 与 Schur consumption
   仍为 false。
+- O0 binding ledger 已逐项固定 6 个必须同 key 的 source/physics premise；当前
+  `P-NE`、`P-BUDGET`、`P-MU` 缺失，`P-BB-ALLQ`、`P-SYM`、`P-BUP` 仅 conditional，
+  因而 baseline child 仍不能消费。

@@ -1984,6 +1984,9 @@ after integration; corrections should be a new result file.
   source/energy binding，只有这些前提和 strict `m_f>0` receipt 齐备后才可关闭。
 - O0 conditional baseline 的 exact ratio checker 已通过；后续只补物理 premise
   binding，不重复 scalar arithmetic。
+- O0 binding ledger 已成为 canonical checklist；数学 agent 必须逐项提供
+  Fourier-to-real-DH semantic equality、all-q MBB、symmetry、budget identity、
+  B_up physical identity 和 exact mu binding，禁止只提交单独数值下界。
 - O2 provenance validator 已通过 focused tests；下一步只有真实 triple 文件及
   外部 membership/CoverageJoin2 proof bridge 才能继续，不能把 validator PASS 当
   成 dynamics/Lean theorem。

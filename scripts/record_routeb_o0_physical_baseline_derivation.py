@@ -14,6 +14,8 @@ STATE = ROOT / "artifacts/routeb_6dof/state.json"
 RECEIPT = ROOT / "artifacts/routeb_6dof/o0_physical_baseline_derivation_20260907.json"
 CHECK = ROOT / "artifacts/routeb_6dof/o0_physical_baseline_derivation_20260907.check.json"
 REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O0-exact-physical-baseline-derivation-20260907.md"
+LEDGER_RECEIPT = ROOT / "agent_review_inbox/receipt-T-P4-033-O0-physical-baseline-binding-ledger-20260907.json"
+LEDGER_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O0-physical-baseline-binding-ledger-20260907.md"
 
 
 def digest(path: Path) -> str:
@@ -35,7 +37,7 @@ def find_required(state, name: str):
 
 
 def main() -> None:
-    for path in (STATE, RECEIPT, CHECK, REVIEW):
+    for path in (STATE, RECEIPT, CHECK, REVIEW, LEDGER_RECEIPT, LEDGER_REVIEW):
         if not path.is_file():
             raise FileNotFoundError(path)
     store = StateStore(STATE)
@@ -76,6 +78,9 @@ def main() -> None:
         "checker_path": str(CHECK.resolve()),
         "checker_sha256": digest(CHECK),
         "checker_status": "PASS_CONDITIONAL_FAIL_CLOSED",
+        "binding_ledger_sha256": digest(LEDGER_RECEIPT),
+        "binding_ledger_review_sha256": digest(LEDGER_REVIEW),
+        "binding_ledger_status": "OBSTRUCTION_SAME_KEY_PHYSICAL_BINDINGS_INCOMPLETE",
         "review_sha256": digest(REVIEW),
         "L_base": "120442959/280443400",
         "mass_lower": "40147653/800000000",
