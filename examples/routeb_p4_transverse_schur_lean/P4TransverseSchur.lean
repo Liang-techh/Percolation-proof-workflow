@@ -25,13 +25,13 @@ noncomputable section
 absolute-value envelope. -/
 theorem combined_residual_abs
     (c beta gamma y z e b : ℝ)
-    (hc : 0 ≤ c) (hbeta : 0 ≤ beta) (hgamma : 0 ≤ gamma)
+    (hc : 0 ≤ c)
     (he : |e| ≤ beta * |y|)
     (hb : |b| ≤ gamma * |z|) :
     |c * y + e + b| ≤ (c + beta) * |y| + gamma * |z| := by
-  have hce : |c * y + e| ≤ |c * y| + |e| := abs_add (c * y) e
+  have hce : |c * y + e| ≤ |c * y| + |e| := abs_add_le (c * y) e
   have hceb : |c * y + e + b| ≤ |c * y + e| + |b| :=
-    abs_add (c * y + e) b
+    abs_add_le (c * y + e) b
   have hcy : |c * y| = c * |y| := by
     rw [abs_mul, abs_of_nonneg hc]
   rw [hcy] at hce
@@ -103,8 +103,7 @@ theorem relative_plus_transverse_schur
     (hb : |b| ≤ gamma * |z|)
     (hreserve : d * gamma ^ 2 ≤ (p * d - (c + beta) ^ 2) * h) :
     0 ≤ p * x ^ 2 + 2 * x * (c * y + e + b) + d * y ^ 2 + h * z ^ 2 := by
-  have hrabs := combined_residual_abs c beta gamma y z e b
-    hc hbeta hgamma he hb
+  have hrabs := combined_residual_abs c beta gamma y z e b hc he hb
   have hrsq := residual_square_budget p d (c + beta) gamma h
     (c * y + e + b) y z hp (add_nonneg hc hbeta) hgamma hDelta hrabs hreserve
   have hsquare : 0 ≤ (p * x + (c * y + e + b)) ^ 2 :=
