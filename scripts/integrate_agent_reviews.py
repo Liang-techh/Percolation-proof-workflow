@@ -21,6 +21,9 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
 from percolation_workflow.store import StateStore
+from percolation_workflow.routeb_residual_l1_contract import (
+    audit_routeb_residual_l1_lean_receipt,
+)
 
 
 TASK_TARGETS = {
@@ -197,6 +200,54 @@ def node_by_name(state, name: str):
     raise ValueError(f"no Route-B node named {name!r}")
 
 
+def routeb_residual_l1_receipt_audit(state, node, path: Path) -> dict | None:
+    """Audit only a structured T-P4-018 JSON handoff, never prose claims."""
+    if path.suffix.lower() != ".json":
+        return None
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, UnicodeDecodeError, json.JSONDecodeError):
+        return {"status": "REJECTED", "errors": ["handoff_json_malformed"],
+                "pending": []}
+    if not isinstance(payload, dict):
+        return {"status": "REJECTED", "errors": ["handoff_json_not_object"],
+                "pending": []}
+    receipt = payload.get("receipt", payload.get("lean_receipt"))
+    if not isinstance(receipt, dict):
+        return {"status": "PENDING", "errors": [],
+                "pending": ["missing_structured_residual_l1_receipt"]}
+
+    source_hash = None
+    for artifact in node.metadata.get("source_artifacts", []):
+        if (isinstance(artifact, dict) and
+                str(artifact.get("path", "")).replace("\\", "/").endswith(
+                    "examples/routeb_gram_residual_lean/GramResidual.lean")):
+            source_hash = artifact.get("sha256")
+            break
+    candidate = None
+    if node.parent_id and node.parent_id in state.nodes:
+        candidate = state.nodes[node.parent_id].metadata.get(
+            "candidate_reconstruction_receipt")
+    audit = audit_routeb_residual_l1_lean_receipt(
+        receipt,
+        expected_source_sha256=source_hash,
+        expected_coefficient_artifact_sha256=(
+            candidate.get("artifact_sha256") if isinstance(candidate, dict) else None),
+        candidate_receipt=candidate if isinstance(candidate, dict) else None,
+    )
+    return {
+        "status": audit.status,
+        "source_sha256": audit.source_sha256,
+        "coefficient_artifact_sha256": audit.coefficient_artifact_sha256,
+        "theorem_names": list(audit.theorem_names),
+        "axioms": {name: list(values) for name, values in audit.axioms.items()},
+        "errors": list(audit.errors),
+        "pending": list(audit.pending),
+        "formal_certificate_allowed": audit.formal_certificate_allowed,
+        "registry_eligible": audit.registry_eligible,
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--state", type=Path,
@@ -280,6 +331,15 @@ def main() -> int:
             ref["format_warning"] = header["_format_warning"]
         if target_name:
             node = node_by_name(state, target_name)
+            if task_id == "T-P4-018":
+                receipt_audit = routeb_residual_l1_receipt_audit(state, node, path)
+                if receipt_audit is not None:
+                    ref["residual_l1_receipt_audit"] = receipt_audit
+                    node.metadata.setdefault("residual_l1_receipt_audits", []).append({
+                        "record_file": record_file,
+                        "review_sha256": digest,
+                        **receipt_audit,
+                    })
             node.metadata.setdefault("agent_review_refs", []).append(ref)
         event_kind = {
             "review_result": "agent_review_integrated",
@@ -296,6 +356,8 @@ def main() -> int:
             admission_effect="none",
             registry_promoted=False,
             formal_certificate_allowed=False,
+            **({"residual_l1_receipt_status": ref["residual_l1_receipt_audit"]["status"]}
+               if "residual_l1_receipt_audit" in ref else {}),
             **({"node_id": node.id} if target_name else {
                 "catalog": "anthropic-fermats-last-theorem",
             }),
