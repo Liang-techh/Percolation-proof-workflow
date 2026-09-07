@@ -1,5 +1,6 @@
 import Mathlib.Data.Matrix.Basic
 import Mathlib.Data.Matrix.Mul
+import Mathlib.Tactic.Linarith
 
 noncomputable section
 
@@ -37,7 +38,7 @@ theorem routeB_port_identity {d b : Nat}
     have h := congrArg
       (fun x : DVec d => M_BD *ᵥ x) hsolve
     simpa only [Matrix.mulVec_add, Matrix.mulVec_zero,
-      Matrix.mulVec_mulVec] using h
+      Matrix.mulVec_mulVec, Matrix.mul_assoc] using h
 
   have hremote :
       M_BD *ᵥ v =

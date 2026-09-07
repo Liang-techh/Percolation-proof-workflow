@@ -821,6 +821,14 @@ binding、O0.3 outward matrix inclusion、O0.4 inverse/port resolvent consumer�
 `M^0` 绑定后才能推出 `M_float=M_exact-δI`；`M_DD^{-1}` 的影响必须使用完整
 resolvent 恒等式，不能逐对角线近似。O0 保持 open，未进入 registry。
 
+### 2026-09-07 — 梁智炜：应用 O1 最小候选 repair
+
+根据 O1 API review，候选 `RouteBO1PortIdentity.lean` 已加入显式
+`Mathlib.Tactic.Linarith`，并在 `hB_left` 中加入 `Matrix.mul_assoc`；左逆前提
+保持不变。候选 hash 已写入 repair receipt，状态为
+`REPAIR_PATCHED__PENDING_LEAN_COMPILE`。这只是待 GitHub Lean agent 验证的修复，
+不改变 O1 的 uncompiled、registry=0 和 formal gate 关闭边界；当前 state rev 495。
+
 ### 2026-09-07 — 梁智炜：细化 O1 coefficient identity interface
 
 O1 已拆为 O1.1 eliminate-D-velocity、O1.2 explicit-left-inverse、O1.3

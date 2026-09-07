@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 494,
+  "revision": 495,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13823,7 +13823,12 @@
             "normalize hB_left with Matrix.mul_assoc or right-associated product",
             "preserve explicit left inverse M_DD_inv * M_DD = 1"
           ],
-          "repair_status": "PENDING_PINNED_LEAN_COMPILE"
+          "repair_status": "REPAIR_PATCHED__PENDING_LEAN_COMPILE",
+          "latest_candidate": {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_o1_lean_api_audit_20260907\\RouteBO1PortIdentity.lean",
+            "sha256": "403C41C6F325E906A9D3555B6886D1371DFA2D84826ABCC7BF83C12E21293BFB"
+          },
+          "lean_compile_claim": false
         },
         "unresolved": [
           "pinned_lean_compile_receipt",
@@ -14002,6 +14007,29 @@
             "formal_certificate_allowed": false,
             "registry_promoted": false,
             "admission_status": "pending_pinned_lean_compile"
+          }
+        ],
+        "repair_attempts": [
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-032",
+            "status": "REPAIR_PATCHED__PENDING_LEAN_COMPILE",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-032-repair-20260907.md",
+              "sha256": "F0DDFCF07A24E82B4BD425FF74755CA7DD68780C87BF806726F08963CAE6D5AB"
+            },
+            "candidate_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_o1_lean_api_audit_20260907\\RouteBO1PortIdentity.lean",
+              "sha256": "403C41C6F325E906A9D3555B6886D1371DFA2D84826ABCC7BF83C12E21293BFB"
+            },
+            "actions": [
+              "explicit Mathlib.Tactic.Linarith import",
+              "Matrix.mul_assoc normalization in hB_left",
+              "preserve explicit left inverse premise"
+            ],
+            "lean_compiled": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
           }
         ]
       }
@@ -38426,6 +38454,14 @@
       "admission_status": "pending_pinned_runtime_and_lean_receipt",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T12:10:15.750928+00:00",
+      "kind": "routeb_o1_repair_patch_recorded",
+      "node_id": "120deab092c243b6a43356e63c8b56f4",
+      "repair_status": "REPAIR_PATCHED__PENDING_LEAN_COMPILE",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -42082,5 +42118,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "0328d1d0bbb4e05109d21154feb2eee774bd2306ce039c8a7500c90d6296246b"
+  "state_checksum": "1ae6c756bd5b01a726249d75255c9082c05b254494f89b08de3949ea7e24e896"
 }
