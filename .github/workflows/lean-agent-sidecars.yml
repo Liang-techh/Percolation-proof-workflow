@@ -79,17 +79,29 @@ jobs:
           set -euo pipefail
           mapfile -t scripts < <(find examples -type f -name verify.sh -print | sort)
           ran=0
+          failed=0
           for script in "${scripts[@]}"; do
             if grep -q 'CI_PORTABLE=1' "$script"; then
               echo "::group::Running $script"
-              bash "$script"
+              if bash "$script"; then
+                echo "SIDECAR_RESULT=PASS path=$script"
+              else
+                code=$?
+                echo "SIDECAR_RESULT=FAIL path=$script exit_code=$code"
+                echo "::error title=Portable sidecar failed::$script exited with $code"
+                failed=1
+              fi
               echo "::endgroup::"
               ran=$((ran + 1))
             fi
           done
           echo "PORTABLE_SIDECARS_RUN=$ran"
+          echo "PORTABLE_SIDECARS_FAILED=$failed"
           if [[ "$ran" -eq 0 ]]; then
             echo "No CI_PORTABLE=1 sidecars registered yet."
+          fi
+          if [[ "$failed" -ne 0 ]]; then
+            exit 1
           fi
 
       - name: Record Lean/Lake versions
