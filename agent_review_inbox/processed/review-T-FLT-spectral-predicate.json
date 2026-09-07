@@ -1,0 +1,13 @@
+{
+  "review_file": "agent_review_inbox/review-T-FLT-spectral-predicate.md",
+  "review_sha256": "C56895E7EA466D9D968AF44A5147B756F98C51689DAB68D91054C0C347051ADE",
+  "task_id": "T-FLT-SPECTRAL-PREDICATE",
+  "source_agent": "Codex",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_spectral_predicate_sidecar",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "unknown",
+  "integrated_at": "2026-09-07T03:31:34.431408+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "review_file": "agent_review_inbox/review-T-FLT-SPECTRAL-PREDICATE-xingxiuxianzun-20260906T2123.md",
+  "review_sha256": "24678B6D34BCB745B63F5E4CEE58D1504D8D4497C3E6278DE6D55E7C4008023A",
+  "task_id": "T-FLT-SPECTRAL-PREDICATE",
+  "source_agent": "星宿仙尊",
+  "created_at": "2026-09-06T21:23:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_spectral_predicate_sidecar",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-07T03:31:34.430581+00:00"
+}

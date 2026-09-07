@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 346,
+  "revision": 347,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -29832,6 +29832,30 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "catalog": "anthropic-fermats-last-theorem"
+    },
+    {
+      "at": "2026-09-07T03:31:34.430581+00:00",
+      "kind": "external_reuse_review_integrated",
+      "review_file": "agent_review_inbox/review-T-FLT-SPECTRAL-PREDICATE-xingxiuxianzun-20260906T2123.md",
+      "review_sha256": "24678B6D34BCB745B63F5E4CEE58D1504D8D4497C3E6278DE6D55E7C4008023A",
+      "task_id": "T-FLT-SPECTRAL-PREDICATE",
+      "classification": "flt_spectral_predicate_sidecar",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "catalog": "anthropic-fermats-last-theorem"
+    },
+    {
+      "at": "2026-09-07T03:31:34.431408+00:00",
+      "kind": "external_reuse_review_integrated",
+      "review_file": "agent_review_inbox/review-T-FLT-spectral-predicate.md",
+      "review_sha256": "C56895E7EA466D9D968AF44A5147B756F98C51689DAB68D91054C0C347051ADE",
+      "task_id": "T-FLT-SPECTRAL-PREDICATE",
+      "classification": "flt_spectral_predicate_sidecar",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "catalog": "anthropic-fermats-last-theorem"
     }
   ],
   "agent_requests": {},
@@ -33317,5 +33341,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "2bae4bfa743c5d1a44357055ef8406c4ae92c2c65d7e5f0fca1f2d1fc1ad9429"
+  "state_checksum": "9026963ab90b7201f73dd2d8e81cde95eb0d13dbe39ec5c1bd13267d5ca93177"
 }

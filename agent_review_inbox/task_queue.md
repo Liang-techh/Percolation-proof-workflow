@@ -295,7 +295,8 @@ without an explicit scoped request.
 
 ### T-FLT-SPECTRAL-PREDICATE — genuine eigenspace predicate sidecar
 
-- status: `queued` (梁智炜, corrective focused sidecar)
+- status: `reviewed_pending` (integrated at Route-B revision 347; statement
+  corrected, focused Lean blocked by incomplete/incompatible Mathlib `.olean`)
 - scope: replace the tautological range helper with a proposition containing an
   actual eigenspace predicate, explicit operator/eigenvalue assumptions, and a
   range-to-eigenspace equality or a clearly stated obstruction;
