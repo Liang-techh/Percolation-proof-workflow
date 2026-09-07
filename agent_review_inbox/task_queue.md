@@ -2461,3 +2461,16 @@ K_path `NEW_KPATH_INTERFACE_FinClosure.lean` 仍留在本地未提交，等待 r
   `EightComparisons` proof term，也没有 concrete path/source/coverage/registry。
 - 已注册为 `...k_path_interface.fin_closure`；state revision `627`，registry `0`，
   `formal_certificate_allowed=false`。
+### 2026-09-07 — 12:04 下一轮数学瓶颈派发
+
+- body-6 agent：从六轴 seam 下钻到 5×5 source linear-velocity Gram，处理
+  parent frame、active/inactive joint、零项和对称项；不外推 `v5=0`。
+- P5 K_path agent：将 T-P5-029 的 `BᵀEA/sym` entrywise correction 与旧
+  SPN `N` slack 扣减做成最小 typed proof，不把它误写成 PSD order。
+- fixed-λ agent：补两 eta sparse Finset 的 disjoint union/accounting seam，
+  证明 256+321=577 与 selected-box positivity 的组合。
+- P3 agent：补四层 remainder 到 source-force equality 的 typed linear adapter，
+  保持同域、rounding、source/export 前提显式。
+
+四条均由已完成的本地线程复用，继续不等待 GitHub 回执；每条只新增自己的
+proof artifact/review，不改 state/registry/shared scripts。

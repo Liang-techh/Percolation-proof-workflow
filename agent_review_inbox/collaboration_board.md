@@ -1866,3 +1866,11 @@ K_path 的新叶现在把 8 项比较从 checker 层推进到 typed proof 入口
 `Fin 8` 槽位、两行四列、非负 envelope slack、18 个代表到 36 个锥的
 重数保持都显式化。仍然缺少 canonical JSON/Lean proof reflection、真实
 `pathK`/`G` 表身份、source 同域和 SPN witness，因此保持 open。
+### 2026-09-07 12:04 — 梁智炜下一轮数学派发
+
+上一轮已收割的四个线程立即复用到更深的独立叶：body-6 5×5 线速度 Gram、
+P5 SPN 增量复用、fixed-λ 两分区账本 union、P3 四层 remainder/source-force
+线性 adapter。优先级是能关闭数学前提的最小 typed seam，不做整仓回归审计。
+
+边界继续 fail-closed：新叶不能把符号检查、checker pass 或 review claim
+升级为 Lean/kernel、source、coverage、admission 或 registry 事实。
