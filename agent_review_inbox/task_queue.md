@@ -2420,3 +2420,19 @@ coverage, admission, registry promotion, or local Lean verification.
 - 本地 P3 slot adapter 已加入 central-FD algebraic leaf，明确把
   `dM[i,j,k]` 映射为 `T[k,i,j]`，并保持余项 radius 同步置换；state revision
   `619`，registry `0`，formal gate 仍关闭。
+-
+### 2026-09-07 — 梁智炜 math-bottleneck dispatch 11:56
+
+- body-6 (`01a07ce7-9ea2-7c91-bbcb-1f203bf80e71`)：继续六轴 source 点积到
+  `SourceAxisDotTarget` 的 prefix-rotation seam；新文件尚未 review/注册。
+- P5 K_path (`01a07ce7-b566-7740-8b69-101ece07e985`)：处理 8 项
+  `pathK ≤ K_cert` 到 `ComponentLE`/SPN representative witness 的 Fin
+  索引、非负求和与 36→18 重数保持，禁止臆造 concrete source/gain。
+- fixed lambda (`01a07ce8-3c04-7190-aefd-726786f3d47d`)：补 sparse 577-row
+  fold 的 parent-level 正 margin 推出，保留稀疏 label 与 digest 外部 premise。
+- P3 central-FD (`01a07ce8-45fb-7c62-8dd2-f4ecc57540c5`)：补 Fin 6
+  velocity-quadratic power-error 的精确求和/权重 seam，保持 source/export/
+  coverage 前提显式。
+
+四项均为 disjoint mathematical leaves；agent 不得修改 state、registry 或
+共享脚本，也不得宣称本机 Lean 验证。GitHub 同步留到下一个 20 分钟收割窗口。

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 617,
+  "revision": 623,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -11821,6 +11821,21 @@
             "source_commit": "ff2cebeafce77473a008983d454cff4bf09e8f0d",
             "review_file": "agent_review_inbox/review-T-P5-027-kuangmanmozun-20260907T1044.md",
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P5-027-juyangxianzun-20260907T1136.md",
+            "record_kind": "review_result",
+            "review_sha256": "8CEC3AF3ECD2B00823F135D2C16CA78FF62EEF36AC9565E3485F2245BD5A1615",
+            "task_id": "T-P5-027",
+            "source_agent": "巨阳仙尊",
+            "created_at": "2026-09-07T11:36:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "near_sharp_exact_rational_scalar_fallback",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "2df9e607713a6b6bb5ce80eb1ca88dede11ce788",
+            "review_file": "agent_review_inbox/review-T-P5-027-juyangxianzun-20260907T1136.md",
+            "admission_label": "compiled_candidate"
           }
         ]
       }
@@ -37070,7 +37085,9 @@
       "parent_id": "4a9af66cdc4f4607857a5cf360f19eb7",
       "status": "open",
       "proof_sketch": "Use weighted AM-GM, exact Sylvester/LDL positivity for the weighted gap, derive the division-free joint bound, and retain the rational lower witness as a rejection test.",
-      "dependencies": [],
+      "dependencies": [
+        "fcaff6efd3df4a5ebee113fdf2685f63"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -37123,7 +37140,8 @@
         "da0d7d408c054b6e9a393450127e024b",
         "b4461f30c13440bf8fcfe14c4cea940c",
         "8ae8a22f30c5498d9874486d2414b3dd",
-        "146eb37cf6b3433fa669638926fc7933"
+        "146eb37cf6b3433fa669638926fc7933",
+        "e37286015acf41c6a7c3521a58f5129f"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -37476,7 +37494,9 @@
       "parent_id": "1ea06cbee9b54297913156cfb0b201ce",
       "status": "open",
       "proof_sketch": "Derive the sixth DH body directly, reify all 610 tagged rational rows, isolate the 23-row sixth column, and prove endpoint/center/Gram/Fourier seams before connecting to the legacy evaluator.",
-      "dependencies": [],
+      "dependencies": [
+        "9c970ea58ffe47c4a81d0e9008642392"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -37527,7 +37547,11 @@
       "parent_id": "d039d2c007b348349f022a77a369392e",
       "status": "open",
       "proof_sketch": "Prove tensor linearity, the three-index Christoffel remainder bound, the weighted power error, and the four-term telescoping identity while leaving machine/source/export premises explicit.",
-      "dependencies": [],
+      "dependencies": [
+        "d29396d994dc4f42a696aa879e142a44",
+        "f97b26b6f3104a54ac9cde2611af2f6e",
+        "9956ec14b5414e81a93235452d771206"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -37562,7 +37586,9 @@
       "parent_id": "f859940a1ecf4b78b63921e4454fd779",
       "status": "open",
       "proof_sketch": "Rewrite candidateMargin = externalGamma - lambda*cellGamma, cross-multiply only under cellGamma>0, and lift the equivalence pointwise without assuming dense labels or physical coverage.",
-      "dependencies": [],
+      "dependencies": [
+        "e2b68e0be9164b40b1a3f4f6da3517ca"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -37597,7 +37623,9 @@
       "parent_id": "1e3f28c782d9485bb94b0bb1e3ae0383",
       "status": "open",
       "proof_sketch": "Use the actual pathK formula once, carry the same source domain witness through ComponentBinding and ConeGapBinding, lift 18 representatives to 36 indices, and preserve the reverse gap comparison direction.",
-      "dependencies": [],
+      "dependencies": [
+        "369ff54306ce486db320557e7510f45e"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -37618,6 +37646,428 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_KPATH_INTERFACE_REVIEW.md",
             "sha256": "00715902ECF4EF4F1991EEE75756CCBC81D01732364A0B4C5619FF9BB1C5D1EE"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "fcaff6efd3df4a5ebee113fdf2685f63": {
+      "id": "fcaff6efd3df4a5ebee113fdf2685f63",
+      "name": "P5.componentwise_relative_decay.near_sharp_scalar_fallback.compiled_candidate",
+      "statement": "The source-independent near-sharp scalar block-(4,5) consumer is compiled in the pinned GitHub Lean environment with an exact lower witness.",
+      "parent_id": "11f5493619b54ba2a6f439aa24e45308",
+      "status": "open",
+      "proof_sketch": "Consume the corrected rational LDL/SOS identity, prove the division-free U*N/Q^2 bound and scalar residual consumer, and retain the exact lower witness as a sharpness obstruction; leave source and coverage external.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "COMPILED_CANDIDATE_PENDING_SOURCE_AND_ADMISSION",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_near_sharp_centered_gain_lean\\P5NearSharpCenteredGain.lean",
+            "sha256": "D40687E5641157E2DDFCA124638FB106F2BB63F3DC99ABB83511599E7115F2AA"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_near_sharp_centered_gain_lean\\README.md",
+            "sha256": "1E23A03E1416FF607D1E91260C5EE96F70A152673E2125641ADD08507E6718EB"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_near_sharp_centered_gain_lean\\lean-toolchain",
+            "sha256": "56A12C348C1FB7BB3E6475757349976A7E93E94FA2918BF92811B1B2E9634504"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_near_sharp_centered_gain_lean\\verify.sh",
+            "sha256": "B00D1B2F7386741D89A3854B1E453A2DAE225AC409D30580F24129B6604FE92A"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P5-027-juyangxianzun-20260907T1136.md",
+            "sha256": "8CEC3AF3ECD2B00823F135D2C16CA78FF62EEF36AC9565E3485F2245BD5A1615"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\claim-T-P5-027-juyangxianzun-20260907T1127.md",
+            "sha256": "81C573158F9AA29ED891A1BBBBEBC02B2D03E8892077ECAFCAF730E2AC89829D"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "e37286015acf41c6a7c3521a58f5129f": {
+      "id": "e37286015acf41c6a7c3521a58f5129f",
+      "name": "P5.componentwise_relative_decay.moving_frame_parameter_transport.compiled_candidate",
+      "statement": "A pinned Lean sidecar claims the source-independent moving-frame transport algebra, subject to independent review and without concrete source or coverage binding.",
+      "parent_id": "c6515e9480464cd0ac05240059345647",
+      "status": "open",
+      "proof_sketch": "Formalize exact affine differences, common-parameter cancellation, ramp-fiber interpolation, controlled parameter mismatch, rank-one K correction, and the fiber obstruction; keep all physical/source premises explicit.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "CLAIMED_LEAN_SIDECAR_PENDING_REVIEW",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_moving_frame_transport_lean\\P5MovingFrameTransport.lean",
+            "sha256": "2FFEA27B7ADB2FA5F7D1B1DE16056B5F60A571D75232F483687A853B95FE0E80"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_moving_frame_transport_lean\\README.md",
+            "sha256": "BA2BA32D9E1EBAC0EC413049E7334B332BD3B5C744F1CC45DEDA2143FADA0210"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_moving_frame_transport_lean\\lean-toolchain",
+            "sha256": "56A12C348C1FB7BB3E6475757349976A7E93E94FA2918BF92811B1B2E9634504"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_moving_frame_transport_lean\\verify.sh",
+            "sha256": "38B7D0883D9FF5937DF4EA35CBECC1917962836817BB48CCBB53B60CDF7B5E14"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\claim-T-P5-028-sumengchen-20260907T1116.md",
+            "sha256": "976D5979BFD9C1CC1EBD03226FE3FCBEB5DED71535D2CFDA94907B2E91EF6A31"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P5-028-liuguanyi-20260907T1112.md",
+            "sha256": "7BAF25C536EE80F3B6E60FD2E146E1D9E96D560CFD088EE021E5E07DB8940A9D"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\companion-T-P5-028-liuguanyi-20260907T1115.md",
+            "sha256": "4A057D8036CD7F17A838A4324854B839E61C930B4F77A2842BFFA1E6E8C6D35B"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "d29396d994dc4f42a696aa879e142a44": {
+      "id": "d29396d994dc4f42a696aa879e142a44",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.slot_adapter",
+      "statement": "The source-shaped dM[i,j,k] tensor and radius are explicitly permuted to the derivative-first T[k,i,j] Christoffel consumer without changing the remainder force.",
+      "parent_id": "ab7a7853dc9d4abb98ecaae0eb751536",
+      "status": "open",
+      "proof_sketch": "Define inverse slot maps, prove source/consumer contraction equality, commute addition and remainder/radius transport, and keep the derivative-hull remainder bound as an external premise.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_CENTRAL_FD_SLOT_ADAPTER",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_SLOT_ADAPTER.lean",
+            "sha256": "3A4924255504A926E391B0C041CF885741BA4144D344CDFF8D3AB52F003D3EEA"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_SLOT_ADAPTER_REVIEW.md",
+            "sha256": "6CE7E8464DBC261D723199E305D3FC5AE1D9FB066D007A39C043834AFEA0609F"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "f97b26b6f3104a54ac9cde2611af2f6e": {
+      "id": "f97b26b6f3104a54ac9cde2611af2f6e",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.fin6_consumer",
+      "statement": "The derivative-first central-FD remainder contract specializes to Fin 6 and yields explicit Christoffel component and velocity-quadratic power error bounds.",
+      "parent_id": "ab7a7853dc9d4abb98ecaae0eb751536",
+      "status": "open",
+      "proof_sketch": "Aggregate the three permuted derivative remainder radii for each Fin 6 Christoffel coefficient, apply nested finite-sum absolute bounds, and expose the six-coordinate power consumer without selecting numerical radii.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_CENTRAL_FD_FIN6_CONSUMER",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_FIN6_CONSUMER.lean",
+            "sha256": "C142BADFBFB4E03C181372D28A7734A785CAD8992C83F44D24DADB8681BA31DE"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_FIN6_CONSUMER_REVIEW.md",
+            "sha256": "17F8642FEDB2624F2DF774D8B392E4AAF8558ED657483CFBA7CC90FD252F104B"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "e2b68e0be9164b40b1a3f4f6da3517ca": {
+      "id": "e2b68e0be9164b40b1a3f4f6da3517ca",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold",
+      "statement": "A sparse Finset ledger fold preserves arbitrary global box labels, one-row-per-box membership, the 256+321=577 declared accounting, and the fixed-lambda margin bridge under an explicit digest binding premise.",
+      "parent_id": "6155b85f8e2e4d969c20ea1551780f66",
+      "status": "open",
+      "proof_sketch": "Keep selected row indices and labels typed, prove label cardinality and row-wise strict-upper/margin equivalence, and bind the canonical row encoding to an external length-64 digest token without computing SHA-256 in Lean.",
+      "dependencies": [
+        "11801688c7574fc5815ac0702521fd77"
+      ],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_FIXED_LAMBDA_SPARSE_DIGEST_FOLD",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_SPARSE_DIGEST_FOLD20260907.lean",
+            "sha256": "923864416BD3ED557743EE03294A809668DC9E829D5C3BDF73B1A804E5D5AC23"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_SPARSE_DIGEST_FOLD20260907_REVIEW.md",
+            "sha256": "D48C4AA16640BA738CD2C21A2FFE5E536957EE8CEF38B564C751C27BD0A8426D"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "9c970ea58ffe47c4a81d0e9008642392": {
+      "id": "9c970ea58ffe47c4a81d0e9008642392",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.endpoint_fourier_bridge",
+      "statement": "The independent body-6 slice has a minimal endpoint-to-center-to-zero-linear-column bridge and a 23-row signed Fourier fold for the sixth column.",
+      "parent_id": "d5f2996878744cf9aa2c9f355c4243bb",
+      "status": "open",
+      "proof_sketch": "Expand only the final DH matrix column, derive the midpoint and v5=0, fold the three compressed phases into 23 exact real atoms, and leave SourceAxisDotTarget plus the full 36-entry seam explicit.",
+      "dependencies": [
+        "1e3070ee099f4be6bf162ef5773ec0fd"
+      ],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "source_semantics",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_BODY6_ENDPOINT_FOURIER_BRIDGE",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_STEP6_Core20260907.lean",
+            "sha256": "6093CAB91DE8C12FB165E0A5E75E812ED9A52A8C7A87365F849C03DFE7EBBF28"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_STEP6_Bridge20260907.lean",
+            "sha256": "F33A23B7F7510D652A6A03C31B1F7F32F5485A14637064CB4EB332814C0D5CEA"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_STEP6_DataLeaf20260907.lean",
+            "sha256": "691D91ADC207DECF4E373E520363E94AB736AA9520A6200FD58BB5E126A8AB13"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_STEP6_check20260907.py",
+            "sha256": "B9CFCE4EE482E53561EC8C739F0FDD1E19A78B1EFE5A57548923D42AAA7F2405"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_STEP6_20260907_REVIEW.md",
+            "sha256": "B13B0ED13B49275E9F575982EF91296AC6A941B5361552A47409012C7419C9F2"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "369ff54306ce486db320557e7510f45e": {
+      "id": "369ff54306ce486db320557e7510f45e",
+      "name": "P5.componentwise_relative_decay.feasible_cone_spn.k_path_interface.exact_comparison",
+      "statement": "An exact rational checker recomputes all 8 pathK entries from A/Hjac/Scoord and verifies pathK ≤ K_cert without tolerance, while a typed cast seam exposes the comparison to the real-valued consumer.",
+      "parent_id": "755d8229d7dd477281fec06127d69cc6",
+      "status": "open",
+      "proof_sketch": "Reject noncanonical rationals, malformed dimensions, stale formula pins and all identity/comparison countercontrols; separately retain exact real entry-equality premises for the Lean ComponentLE adapter.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "EXACT_UNBOUND_COMPARISON_CHECKED_LEAN_BINDING_OPEN",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_KPATH_INTERFACE_Comparison.py",
+            "sha256": "D7DD1275A46BDA19733D0D3E2700CA891F4759C918E62F786BD2A238F5C08392"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_KPATH_INTERFACE_Comparison_test.py",
+            "sha256": "EBB410A3B86D6B970F80CBCE84E2C1034D2330B3C48F23142D4D449853A958FE"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_KPATH_INTERFACE_RationalBinding.lean",
+            "sha256": "2F46E4C077C44C91D5A9152140F2253DCFDF8C7D3EDBEBD4C4A6617C2E4AD06D"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_KPATH_INTERFACE_Comparison_REVIEW.md",
+            "sha256": "7DB7B254760EB195473AE6C43FD4D5223234373701AB3F6BE8DD560D3639D1CA"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "11801688c7574fc5815ac0702521fd77": {
+      "id": "11801688c7574fc5815ac0702521fd77",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent",
+      "statement": "Sparse one-row-per-box membership and the fixed lambda=2 strict-upper margin bridge imply a well-defined positive margin for every selected global box label.",
+      "parent_id": "e2b68e0be9164b40b1a3f4f6da3517ca",
+      "status": "open",
+      "proof_sketch": "Use witness uniqueness for each sparse label, prove selected-margin independence, then consume positive denominator and the imported coefficient bridge; keep digest/source/coverage external.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_FIXED_LAMBDA_SELECTED_BOX_PARENT",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_SELECTED_BOX_PARENT20260907.lean",
+            "sha256": "0E373AD5FB43E9C4FAE94CCE5F045996DA74878301D0039F100AF04D3F9820AB"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_SELECTED_BOX_PARENT20260907_REVIEW.md",
+            "sha256": "3E348AF418DC282CAAE6C3389B469E93E00C9E55E3546D6839081BF4EE1D3D84"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "9956ec14b5414e81a93235452d771206": {
+      "id": "9956ec14b5414e81a93235452d771206",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam",
+      "statement": "The Fin 6 central-FD remainder is consumed by an exact weighted velocity-quadratic power bound and a four-layer telescoping radius contract.",
+      "parent_id": "ab7a7853dc9d4abb98ecaae0eb751536",
+      "status": "open",
+      "proof_sketch": "Keep derivative-first T[k,i,j], aggregate the three Christoffel radii, preserve ordered j,k sums and nonnegative weights, and compose the four-term absolute bound without symmetry shortcuts.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_CENTRAL_FD_POWER_SEAM",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_POWER_SEAM.lean",
+            "sha256": "14104B4DD769673EA75797F8B8C6F9C0810D502ACDD359F50C5B106742E07A10"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_POWER_SEAM_REVIEW.md",
+            "sha256": "7A0A53462931B1B9948C0AFF412E85D6873B1A6E8299F4E8646B49B78EEDCB26"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "1e3070ee099f4be6bf162ef5773ec0fd": {
+      "id": "1e3070ee099f4be6bf162ef5773ec0fd",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.endpoint_fourier_bridge.axis_dot_seam",
+      "statement": "The six source-axis dot products are derived from the pinned real-DH prefix rotations and feed the sixth-axis target without reading Fourier rows.",
+      "parent_id": "9c970ea58ffe47c4a81d0e9008642392",
+      "status": "open",
+      "proof_sketch": "Factor every parent axis as a common yaw times a local vector, use rotation isometry, expand the final DH columns, and prove the six Fin-index dot identities while leaving the full source matrix seam explicit.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "source_semantics",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_BODY6_AXIS_DOT_SEAM",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_AXIS_Core20260907.lean",
+            "sha256": "8B4D51E5B77847F29D67314D55E7D785171D515894A35BB18F53BD31B9CD2E2F"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_AXIS_Geometry20260907.lean",
+            "sha256": "C06310D20F7317D196317DA4B185FD5C6E56A01B5CC5FC1FEB05F428A1EF3CA4"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_AXIS_Consumer20260907.lean",
+            "sha256": "E9C51CDC7106728425F25469A79B25666F8D468085EA3FD0064D75CED76764FB"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_AXIS_check20260907.py",
+            "sha256": "62F869144669848EAB8825A5493D75ED043C23BF4269CB38C30751B491ECB62C"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_AXIS_20260907_REVIEW.md",
+            "sha256": "971E416FAC7498C96DE9AA9063991913470428C181AC550035D7E1BE59325550"
           }
         ],
         "registry_eligible": false,
@@ -63890,6 +64340,144 @@
       "h_body_proven": false,
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T17:40:59.610329+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P5-027-juyangxianzun-20260907T1136.md",
+      "record_kind": "review_result",
+      "review_sha256": "8CEC3AF3ECD2B00823F135D2C16CA78FF62EEF36AC9565E3485F2245BD5A1615",
+      "task_id": "T-P5-027",
+      "classification": "near_sharp_exact_rational_scalar_fallback",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "4a9af66cdc4f4607857a5cf360f19eb7"
+    },
+    {
+      "at": "2026-09-07T17:41:53.828526+00:00",
+      "kind": "node_added",
+      "node_id": "fcaff6efd3df4a5ebee113fdf2685f63",
+      "parent_id": "11f5493619b54ba2a6f439aa24e45308",
+      "name": "P5.componentwise_relative_decay.near_sharp_scalar_fallback.compiled_candidate"
+    },
+    {
+      "at": "2026-09-07T17:41:53.831320+00:00",
+      "kind": "node_added",
+      "node_id": "e37286015acf41c6a7c3521a58f5129f",
+      "parent_id": "c6515e9480464cd0ac05240059345647",
+      "name": "P5.componentwise_relative_decay.moving_frame_parameter_transport.compiled_candidate"
+    },
+    {
+      "at": "2026-09-07T17:41:53.832249+00:00",
+      "kind": "node_added",
+      "node_id": "d29396d994dc4f42a696aa879e142a44",
+      "parent_id": "ab7a7853dc9d4abb98ecaae0eb751536",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.slot_adapter"
+    },
+    {
+      "at": "2026-09-07T17:41:53.837842+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P5.componentwise_relative_decay.near_sharp_scalar_fallback.compiled_candidate",
+        "P5.componentwise_relative_decay.moving_frame_parameter_transport.compiled_candidate",
+        "P3.central_fd_derivative_hull_composition.algebraic_interface.slot_adapter"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T17:48:04.995827+00:00",
+      "kind": "node_added",
+      "node_id": "f97b26b6f3104a54ac9cde2611af2f6e",
+      "parent_id": "ab7a7853dc9d4abb98ecaae0eb751536",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.fin6_consumer"
+    },
+    {
+      "at": "2026-09-07T17:48:05.001790+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P3.central_fd_derivative_hull_composition.algebraic_interface.fin6_consumer"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T17:49:39.198262+00:00",
+      "kind": "node_added",
+      "node_id": "e2b68e0be9164b40b1a3f4f6da3517ca",
+      "parent_id": "6155b85f8e2e4d969c20ea1551780f66",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold"
+    },
+    {
+      "at": "2026-09-07T17:49:39.210735+00:00",
+      "kind": "node_added",
+      "node_id": "9c970ea58ffe47c4a81d0e9008642392",
+      "parent_id": "d5f2996878744cf9aa2c9f355c4243bb",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.endpoint_fourier_bridge"
+    },
+    {
+      "at": "2026-09-07T17:49:39.213805+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold",
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.endpoint_fourier_bridge"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T17:51:58.465391+00:00",
+      "kind": "node_added",
+      "node_id": "369ff54306ce486db320557e7510f45e",
+      "parent_id": "755d8229d7dd477281fec06127d69cc6",
+      "name": "P5.componentwise_relative_decay.feasible_cone_spn.k_path_interface.exact_comparison"
+    },
+    {
+      "at": "2026-09-07T17:51:58.482461+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P5.componentwise_relative_decay.feasible_cone_spn.k_path_interface.exact_comparison"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T18:00:36.055897+00:00",
+      "kind": "node_added",
+      "node_id": "11801688c7574fc5815ac0702521fd77",
+      "parent_id": "e2b68e0be9164b40b1a3f4f6da3517ca",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent"
+    },
+    {
+      "at": "2026-09-07T18:00:36.067632+00:00",
+      "kind": "node_added",
+      "node_id": "9956ec14b5414e81a93235452d771206",
+      "parent_id": "ab7a7853dc9d4abb98ecaae0eb751536",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam"
+    },
+    {
+      "at": "2026-09-07T18:00:36.073842+00:00",
+      "kind": "node_added",
+      "node_id": "1e3070ee099f4be6bf162ef5773ec0fd",
+      "parent_id": "9c970ea58ffe47c4a81d0e9008642392",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.endpoint_fourier_bridge.axis_dot_seam"
+    },
+    {
+      "at": "2026-09-07T18:00:36.078760+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent",
+        "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam",
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.endpoint_fourier_bridge.axis_dot_seam"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -67546,5 +68134,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "26e8160f42b56c7e6cc232ff0a107fc98bafd2278f52095db6e747fb73eb034e"
+  "state_checksum": "03cbdaf205aa6b28b9a34c677296a45ba785762591610583dd3386a123e6c1fc"
 }

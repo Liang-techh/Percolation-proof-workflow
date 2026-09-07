@@ -363,6 +363,19 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold",
+        "statement": "Sparse one-row-per-box membership and the fixed lambda=2 strict-upper margin bridge imply a well-defined positive margin for every selected global box label.",
+        "proof_sketch": "Use witness uniqueness for each sparse label, prove selected-margin independence, then consume positive denominator and the imported coefficient bridge; keep digest/source/coverage external.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_SELECTED_BOX_PARENT",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_SELECTED_BOX_PARENT20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_SELECTED_BOX_PARENT20260907_REVIEW.md",
+        ],
+    },
+    {
         "name": "P5.componentwise_relative_decay.feasible_cone_spn.k_path_interface",
         "parent": "P5.componentwise_relative_decay.feasible_cone_spn",
         "statement": "A typed interface composes the existing pathK transport, nonnegative componentwise gain comparison, cone-index lift, and 18 representative SPN witnesses into the conditional power consumer.",
@@ -453,6 +466,19 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface",
+        "statement": "The Fin 6 central-FD remainder is consumed by an exact weighted velocity-quadratic power bound and a four-layer telescoping radius contract.",
+        "proof_sketch": "Keep derivative-first T[k,i,j], aggregate the three Christoffel radii, preserve ordered j,k sums and nonnegative weights, and compose the four-term absolute bound without symmetry shortcuts.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_POWER_SEAM",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_POWER_SEAM.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_POWER_SEAM_REVIEW.md",
+        ],
+    },
+    {
         "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice",
         "parent": "P4.O1.source_comparator.h_body_6.canonical_export",
         "statement": "An independently reconstructed body-6 Fourier slice agrees with the canonical body-6 coefficients while preserving the source-binding and zero-complement obligations.",
@@ -483,6 +509,22 @@ CHILDREN = [
             "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_STEP6_DataLeaf20260907.lean",
             "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_STEP6_check20260907.py",
             "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_STEP6_20260907_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.endpoint_fourier_bridge.axis_dot_seam",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.endpoint_fourier_bridge",
+        "statement": "The six source-axis dot products are derived from the pinned real-DH prefix rotations and feed the sixth-axis target without reading Fourier rows.",
+        "proof_sketch": "Factor every parent axis as a common yaw times a local vector, use rotation isometry, expand the final DH columns, and prove the six Fin-index dot identities while leaving the full source matrix seam explicit.",
+        "lane": "source_semantics",
+        "bottleneck": "source_semantics",
+        "status": "OPEN_UNCOMPILED_BODY6_AXIS_DOT_SEAM",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_AXIS_Core20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_AXIS_Geometry20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_AXIS_Consumer20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_AXIS_check20260907.py",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_AXIS_20260907_REVIEW.md",
         ],
     },
     {
