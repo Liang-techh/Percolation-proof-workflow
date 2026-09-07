@@ -18,6 +18,7 @@ from .routeb_mbd_obstruction import (
 from .routeb_remote_contract import (
     RouteBRemoteBindingAudit,
     audit_routeb_remote_binding,
+    audit_routeb_remote_binding_join,
 )
 from .routeb_remote_accel_budget import (
     RouteBRemoteAccelerationBudget,
@@ -48,6 +49,7 @@ __all__ = [
     "RouteBKcBudget", "derive_routeb_kc_budget",
     "RouteBProjectionObstruction", "audit_routeb_mbd_projection",
     "RouteBRemoteBindingAudit", "audit_routeb_remote_binding",
+    "audit_routeb_remote_binding_join",
     "RouteBRemoteAccelerationBudget", "derive_routeb_remote_acceleration_budget",
     "audit_do", "build_repair_do", "canonical_do_schema", "classify_manual_review", "do_sha256", "normalize_do_path",
     "AdvisoryReuseError", "SCHEMA_VERSION", "project_advisory_reuse",

@@ -16,6 +16,11 @@ and it never opens `formal_certificate_allowed` or registry eligibility.
 The actual inequalities, source binding, coverage, Lean compilation, and
 terminal theorem remain separate gates.
 
+When a full-state residual ledger is combined with this contract, use
+`audit_routeb_remote_binding_join`. It rejects otherwise-valid receipts whose
+state key, source snapshot, or norm convention differs, preventing cross-cell
+or cross-source evidence from being silently composed.
+
 The focused Python tests are in `tests/test_routeb_remote_contract.py`.  The
 JSON checker is `scripts/check_routeb_remote_contract.py`; local use is a
 structural audit only and does not invoke Lean/Lake.

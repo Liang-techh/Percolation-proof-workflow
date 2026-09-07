@@ -19,6 +19,8 @@ from collections.abc import Mapping
 from dataclasses import dataclass
 from typing import Any
 
+from .residual_ledger import audit_full_state_binding
+
 
 REMOTE_BINDING_SCHEMA = "routeb.remote_binding.v1"
 BLOCK_COORDS = (4, 5)
@@ -126,6 +128,34 @@ def audit_routeb_remote_binding(
     )
 
 
+def audit_routeb_remote_binding_join(
+    full_state_receipt: Mapping[str, Any],
+    remote_receipt: Mapping[str, Any],
+) -> dict[str, Any]:
+    """Require a full-state ledger and remote contract to describe one point.
+
+    Independent structural passes are not composable when their state keys,
+    source snapshots, or norm conventions differ.  This join is therefore a
+    separate fail-closed boundary for the P4 parent.
+    """
+    ledger = audit_full_state_binding(full_state_receipt)
+    remote = audit_routeb_remote_binding(remote_receipt)
+    errors = [f"ledger:{item}" for item in ledger["errors"]]
+    errors.extend(f"remote:{item}" for item in remote.errors)
+    if not errors:
+        for field in ("full_state_key", "source_snapshot", "norm_convention"):
+            if full_state_receipt.get(field) != remote_receipt.get(field):
+                errors.append(f"cross_receipt_mismatch:{field}")
+    return {
+        "schema_version": 1,
+        "status": "STRUCTURAL_PASS" if not errors else "OPEN_FAIL_CLOSED",
+        "binding_mode": remote.mode,
+        "errors": errors,
+        "formal_certificate_allowed": False,
+        "registry_eligible": False,
+    }
+
+
 __all__ = [
     "BLOCK_COORDS",
     "MODES",
@@ -133,4 +163,5 @@ __all__ = [
     "REMOTE_COORDS",
     "RouteBRemoteBindingAudit",
     "audit_routeb_remote_binding",
+    "audit_routeb_remote_binding_join",
 ]
