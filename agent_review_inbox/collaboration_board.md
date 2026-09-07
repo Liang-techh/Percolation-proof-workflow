@@ -2052,6 +2052,11 @@ review 并登记，DAG revision 666。它们仍是条件式、未编译 proof at
 主子块 PSD 外推到完整 body-6，也没有把参数重排当成 residual absorption 或 registry
 证据。
 
+### 2026-09-07 13:41 — 梁智炜继续 P3 数学推进
+
+P3 新增平方速度非负小叶，目标是减少 assembled-load witness 的外部假设；仍保持
+四线并行和 fail-closed 边界。GitHub 同步延后到每小时窗口，当前只保存本地数学进展。
+
 ### 2026-09-07 12:32 — 梁智炜本地收割并派发
 
 本轮回收了四个已完成数学叶：P3 radius monotonicity、fixed-λ uniform

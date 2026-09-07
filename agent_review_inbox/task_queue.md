@@ -2721,3 +2721,10 @@ source-independent/open/uncompiled 候选。
   分别登记为 `tail_psd_lower_bound` 与 `relative_additive_interface`，revision 666。
 - 前者只证明有序 2×2 tail 子块的二次型/PSD 下界，后者只做 affine square-envelope
   参数重排；二者均未升级为完整矩阵、全域 coverage 或 formal certificate。
+
+### 2026-09-07 — 13:41 下一轮本地派发
+
+- P3 已接收平方速度逐项非负叶，用于把 `squaredVelocity` 外部前提进一步收窄为
+  实向量平方非负；不重复 load witness 或 order consumer。
+- body-6、K-path、fixed-λ 继续保留独立运行；当前不访问 GitHub，小时收割时再集中
+  处理远端 inbox、冲突和发布。
