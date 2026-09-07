@@ -1,0 +1,102 @@
+{
+  "schema": "routeb.o0.h_acc.obstruction_contract.v1",
+  "status": "OPEN_H_ACC_SOURCE_REFINEMENT_AND_INTERVAL_SOUNDNESS",
+  "artifact_role": "design_and_obstruction_only",
+  "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+  "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+  "semantic_export_key": null,
+  "target": "M_NE^0: full unsimplified six-body real mass before regularizer",
+  "domain": {"dimension": 6, "lower": "-1/1000", "upper": "1/1000"},
+  "constant_policy": "source_decimal_rational_and_exact_pi",
+  "input_policy": "decoded_finite_binary64_in_Q1000",
+  "all_real_input_extension": "separate_RN64_input_error_and_expanded_input_cover_required",
+  "regularizer_in_target": false,
+  "pins": {
+    "deployed_source": {"path": "C:/Users/z5242/Desktop/重构版/6dof_sos_optimized/6dof_sos_optimized/routeB_dense_Mq/dhport_lib.jl", "sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936"},
+    "source_snapshot": {"path": "examples/routeb_source_binding_audit/snapshots/original_target/dhport_lib.jl", "sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936"},
+    "prior_h_acc_review": {"path": "agent_review_inbox/review-T-P4-033-O0-H-acc-source-semantic-export-20260907.md", "sha256": "346fbcd9321a3b8766886117f410314c62b9b5503ef73972d974fa3804b9ce3e"},
+    "instrumentation_report": {"path": "artifacts/routeb_agent_authoritative_body_instrument_20260906T021137/REPORT.md", "sha256": "c0af0ce130c147430665568b39d0f327cb84aa67e6d3350a4ea785a86ca08066"},
+    "existing_body_trace_schema": {"path": "artifacts/routeb_agent_body_trace_design_20260906T071911Z/manifest.schema.json", "sha256": "6cfe11c1b69d4a25538391671056513f708d4233ff87dc5561b0ba8faa4dcf2d"},
+    "workflow_model": {"path": "src/percolation_workflow/model.py", "sha256": "bd47f99d18cbb1b7a9cf8ef18afd4d5afe41290df5b7f10d8f9866a040c50eb8"},
+    "observed_state": {"path": "artifacts/routeb_6dof/state.json", "sha256": "e10fb969325f5b2177eaf456f7b8a268e69b7d9d690f4c5135174664df81d86b"}
+  },
+  "known_prior_source_hash_error": "aebe6db09b2d943448c5d701631109db8a5eeb070cc66593e5dbaca26485936",
+  "state_observation": {
+    "schema_version": 1, "revision": 579,
+    "parent_id": "35bcd3816acb4b2cadb9a64843839204",
+    "parent_name": "P4.O0.physical_baseline_factor", "parent_status": "open",
+    "h_acc_metadata_nodes": 7, "h_acc_independent_node_present": false,
+    "proposed_children_inserted": false
+  },
+  "exact_constants": {
+    "offset_pi_multiple": ["0", "-1/2", "1/2", "0", "0", "0"],
+    "d": ["1/10", "0", "1/20", "19/100", "0", "7/100"],
+    "a": ["2/25", "21/100", "0", "0", "0", "0"],
+    "alpha_pi_multiple": ["-1/2", "0", "1/2", "-1/2", "1/2", "0"],
+    "mass": ["1", "4/5", "3/5", "2/5", "3/10", "3/20"],
+    "I_val": ["1", "3/5", "7/20", "1/5", "1/10", "1/20"],
+    "inertia_divisor": "3", "com_divisor": "2"
+  },
+  "leaf_separation_example": {
+    "source_token": "0.8", "ideal": "4/5", "binary64_bits": "3fe999999999999a",
+    "decoded": "3602879701896397/4503599627370496", "difference": "1/22517998136852480",
+    "julia_runtime_bits_observed": false, "full_mass_counterexample_claimed": false
+  },
+  "evaluator": {
+    "implemented": false, "source_refinement_proven": false,
+    "operations": {"input": 0, "rat": 0, "pi": 0, "neg": 1, "add": 2, "mul": 2, "div_nat": 1, "sin": 1, "cos": 1},
+    "node_record": ["node_id", "op", "operand_ids", "source_span", "semantic_role", "typed_payload"],
+    "root_record": ["stage", "body_or_frame", "row", "column", "node_id"],
+    "stages": ["constants", "angle", "trig", "A", "Tc", "o", "z", "COM", "Ri", "Ii", "Jv", "Jw", "translation", "rotation", "body_contribution", "accumulator_after_body", "pre_regularizer"],
+    "forward_references_allowed": false, "unknown_operations_allowed": false,
+    "unsimplified_rotated_inertia_required": true
+  },
+  "index_contract": {
+    "joint_order": [1, 2, 3, 4, 5, 6], "body_order": [1, 2, 3, 4, 5, 6],
+    "frame_order": [0, 1, 2, 3, 4, 5, 6],
+    "matrix_order": "column_outer_row_inner", "matrix_flat_slot_zero_based": "(column-1)*6+(row-1)",
+    "matrix_coordinates": [[1,1],[2,1],[3,1],[4,1],[5,1],[6,1],[1,2],[2,2],[3,2],[4,2],[5,2],[6,2],[1,3],[2,3],[3,3],[4,3],[5,3],[6,3],[1,4],[2,4],[3,4],[4,4],[5,4],[6,4],[1,5],[2,5],[3,5],[4,5],[5,5],[6,5],[1,6],[2,6],[3,6],[4,6],[5,6],[6,6]],
+    "active_joint_prefixes": [[1],[1,2],[1,2,3],[1,2,3,4],[1,2,3,4,5],[1,2,3,4,5,6]],
+    "parent_axis_frame": "joint-1", "com_frame_pair": ["body-1", "body"],
+    "julia_Tc_slot": "frame+1", "fin_index": "human_index-1",
+    "body_root_count": 216, "accumulator_root_count": 216, "final_root_count": 36,
+    "zero_coordinates_may_be_omitted": false, "runtime_symmetry_fill_allowed": false,
+    "observation_point": "after_line_58_body_6_before_line_60"
+  },
+  "future_receipt_contract": {
+    "schema": "routeb.o0.h_acc.semantic_export_candidate.v1",
+    "common_required": ["source_key", "state_key", "semantic_export_key", "source_sha256", "dag_sha256", "target_sha256", "constant_policy", "input_policy", "environment_sha256", "artifact_hashes", "source_map", "roots", "proof_dependencies", "admission_status"],
+    "expression_required": ["source_refinement_witness", "real_evaluator_soundness_witness", "frame_jacobian_body_fold_witness"],
+    "interval_required": ["runtime_environment", "loaded_constant_bits", "lowered_kernel_contract", "box_partition_tree", "node_enclosures", "body_enclosures", "accumulator_enclosures", "final_36_error_bounds", "interval_soundness_witness", "coverage_witness", "stdout_sha256", "stderr_sha256", "exit_code"],
+    "interval_node_record": ["box_id", "node_id", "real_lower", "real_upper", "error_lower", "error_upper", "local_rounding_lower", "local_rounding_upper", "rule_witness"],
+    "rational_endpoint_encoding": "canonical signed numerator/positive denominator strings; integers allowed",
+    "box_cover": "finite rational binary partition of Q1000, every leaf certified",
+    "missing_evidence": "pending", "mismatched_or_malformed_evidence": "rejected",
+    "structural_check_can_admit_theorem": false, "round_receipt_can_discharge_exact_identity": false
+  },
+  "required_future_artifacts": [
+    {"path": "SOURCE_SNAPSHOT/dhport_lib.jl", "role": "same-source byte snapshot"},
+    {"path": "exact_target_definition.json", "role": "exact constants, recurrence and full unsimplified target"},
+    {"path": "source_dag_manifest.json", "role": "typed source/node/index map and semantic keys"},
+    {"path": "scalar_dag.json", "role": "topologically ordered scalar operations"},
+    {"path": "roots.json", "role": "36 final, 216 body, 216 accumulator roots"},
+    {"path": "runtime_environment.json", "role": "Julia methods, loaded array bits, BLAS/trig/compiler contract"},
+    {"path": "interval_receipt.json", "role": "optional round branch only: complete box/node/body/accumulator/error evidence"},
+    {"path": "source_refinement_receipt.json", "role": "mandatory expression branch source and evaluator proof evidence"}
+  ],
+  "children": [
+    {"id": "C0", "status": "OPEN", "depends_on": [], "target": "Pinned source with explicit idealization refines the exported graph; no arbitrary source-binding premise remains"},
+    {"id": "C1", "status": "OPEN", "depends_on": [], "target": "All permitted scalar DAG nodes have sound exact-real evaluation"},
+    {"id": "C2", "status": "OPEN", "depends_on": ["C0", "C1"], "target": "forall q b, frame/origin/parent-axis roots equal the six-step NE recurrence"},
+    {"id": "C3", "status": "OPEN", "depends_on": ["C2"], "target": "forall q b j, midpoint COM and all active/inactive Jv/Jw columns agree"},
+    {"id": "C4", "status": "OPEN", "depends_on": ["C3"], "target": "forall b q r c, Eval(body_root[b,r,c],q)=NEBody(b,q,r,c), preserving R I R^T"},
+    {"id": "C5", "status": "OPEN", "depends_on": ["C4"], "target": "forall b q r c, Eval(acc_root[b,r,c],q)=sum_{k=1}^b NEBody(k,q,r,c); final roots alias S6"},
+    {"id": "H_acc_expr", "status": "OPEN", "depends_on": ["C0", "C1", "C5"], "target": "forall q in Q1000, E_star(q)=M_NE^0(q) as full 6x6 matrices"},
+    {"id": "R0", "status": "OPEN", "depends_on": ["C0"], "target": "The runtime observation, finite Float64 inputs, loaded constants, and actual method/kernel execution are bound"},
+    {"id": "R1", "status": "OPEN", "depends_on": ["C1", "R0"], "target": "Each node's rational real/error enclosure is sound, including literals, trig, kernels and underflow"},
+    {"id": "R2", "status": "OPEN", "depends_on": ["R1"], "target": "Every admissible input is covered; every leaf bounds all 36 final and 216 body/accumulator coordinates"},
+    {"id": "H_acc_round", "status": "OPEN", "depends_on": ["H_acc_expr", "R2"], "target": "forall admissible qhat r c, abs(Decode(J_acc(qhat))[r,c]-M_NE^0(Decode(qhat))[r,c])<=epsilon[r,c]"}
+  ],
+  "open_obstructions": ["SOURCE_HASH_TRANSCRIPTION_IN_PRIOR_REVIEW", "IDEAL_VS_LOADED_CONSTANT_REFINEMENT", "MUTABLE_GLOBALS_AND_INPUT_METHOD_ENVIRONMENT", "SOURCE_TO_SCALAR_DAG_WITNESS_ABSENT", "DENSE_36_216_216_ROOT_EXPORT_ABSENT", "RUNTIME_KERNEL_AND_TRIG_SOUNDNESS_ABSENT", "ALL_DOMAIN_INTERVAL_RECEIPT_ABSENT"],
+  "admission": {"h_acc_expr_proven": false, "h_acc_round_proven": false, "source_binding_proven": false, "consumable_now": false, "registry_eligible": false, "registry_promoted": false, "formal_certificate_allowed": false, "baseline_consumed": false, "schur_margin_consumed": false, "main_state_modified": false, "o1_adapter_modified": false, "lean_lake_run": false, "julia_run": false}
+}

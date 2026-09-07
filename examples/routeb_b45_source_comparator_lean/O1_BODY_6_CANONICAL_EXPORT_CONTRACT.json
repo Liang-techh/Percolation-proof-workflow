@@ -1,0 +1,97 @@
+{
+  "schema": "routeb.o1.body6.canonical_export_contract.v1",
+  "status": "CONTRACT_AND_TARGETS_ONLY_SOURCE_PROOF_OPEN",
+  "scope": {
+    "csv_body_one_based": 6,
+    "lean_body_zero_based": 5,
+    "matrix_shape": [6, 6],
+    "allowed_output": "separate body-6 sidecars only",
+    "main_adapter_mutation": false,
+    "body_3_4_5_mutation": false,
+    "state_or_registry_mutation": false
+  },
+  "identity": {
+    "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+    "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+    "body6_export_key_format": "routeb-human-body-fourier:body=6|sha256=<canonical CSV SHA-256 lowercase>|contract=exp(i*nu*q)|regularizer=excluded",
+    "source_key_role": "inherited O1 consumer context; its aggregate hash is not the body-6 payload hash",
+    "body6_export_key_role": "independent payload identity; do not overwrite or reinterpret source_key",
+    "mu_exact_context": "1/1000000",
+    "body_regularizer": "0",
+    "regularization": "mu*I belongs outside the six-body sum",
+    "bidx_zero_based": [3, 4],
+    "didx_zero_based": [0, 1, 2, 5],
+    "requested_theorem_domain": "forall q : Fin 6 -> Real",
+    "consumer_cell": "forall k, abs(q k) <= 1/1000",
+    "domain_boundary": "a cell-only or q=0 theorem cannot discharge the current global h_body_6"
+  },
+  "source_semantics": {
+    "source_term": "RouteBO1PerBodyExactSource.sourceBodyMass q (5 : Fin 6) i j",
+    "mass_exact": "3/20",
+    "world_isotropic_inertia_exact": "(1/60)*I_3",
+    "parent_axis_rule": "z_j is read before DH step j; origins have slots 0..6",
+    "center_rule": "c6 = (o5+o6)/2 = o5+(7/200)*z5 in zero-based notation",
+    "velocity_rule": "v_i = z_i cross (c6-o_i), i=0..5",
+    "gram_rule": "G6_ij=(3/20)*sum_a(v_i[a]*v_j[a])+(1/60)*sum_a(z_i[a]*z_j[a])",
+    "emission_point": "body_trace_sink(6,row,col,body_term) after forming the i=5 body_term and before M[row][col] += body_term",
+    "forbidden_provenance": [
+      "aggregate payload relabelled as body 6",
+      "post-loop accumulator captured as body 6",
+      "aggregate minus other bodies without separately justified source identities",
+      "Float64 samples or fitted coefficients substituted for exact atoms"
+    ],
+    "local_replay_boundary": "replaying the pinned artifact-local Python sink establishes its coefficient provenance only; neither deployed Julia nor Lean source equality follows"
+  },
+  "canonical_csv": {
+    "header": ["body", "row", "col", "nu1", "nu2", "nu3", "nu4", "nu5", "nu6", "real_num", "real_den", "imag_num", "imag_den"],
+    "encoding": "UTF-8 without BOM; LF; final newline; comma delimiter; unquoted integer fields",
+    "integer_encoding": "base-10 minimal spelling; no plus sign, no leading zeros, zero is 0",
+    "body_rule": "every data row has body=6",
+    "matrix_indices": "one-based integers 1..6; Lean conversion subtracts one exactly once",
+    "frequency": "signed integers nu1..nu6, paired with q0..q5 respectively",
+    "coefficient": "real and imaginary reduced rationals with positive denominators; zero is 0/1",
+    "sort_key": ["body", "row", "col", "nu1", "nu2", "nu3", "nu4", "nu5", "nu6"],
+    "duplicate_policy": "exporter sums exact duplicate atoms before serialization; intake rejects duplicate keys",
+    "zero_policy": "omit exactly zero Gaussian coefficients; absent keys and absent matrix entries mean exact zero",
+    "support_policy": "cover all 36 entries including empty entries; no thresholding, frequency clipping, or inferred zero complement",
+    "evaluator": "sum over matching rows of (real_num/real_den)*cos(sum_k nu_k*q_k) - (imag_num/imag_den)*sin(sum_k nu_k*q_k)",
+    "signed_frequency_policy": "retain full positive and negative frequency representation; no extra factor 2",
+    "structural_checks": ["conjugate frequency symmetry", "transpose matrix symmetry", "36-entry callback coverage"],
+    "count_boundary": "610 rows and 32 nonempty entries describe this snapshot only; equal support or row counts with the aggregate are not semantic rejection criteria"
+  },
+  "minimum_receipt": {
+    "required_now": [
+      "schema and evidence-tier status",
+      "exact source_key, state_key and independent body6_export_key",
+      "reference to this hashed contract for indexing, regularization and domain",
+      "canonical payload path, SHA-256, row count and nonempty/empty entry coverage",
+      "hashes of source snapshot, pre-accumulation sink and audit script",
+      "same-run replay result for the selected body against existing CSV",
+      "state revision/hash/node status as read-only observation, not a state update",
+      "source/evaluator/target file hashes and explicit absent proof receipts",
+      "false source-binding, h_body_6, comparator, registry and formal-certificate flags"
+    ],
+    "required_for_future_theorem_use": [
+      "canonical CSV to generated typed row-list reification evidence, including Lean file hash",
+      "exact statement and proof of sourceBodyMass q 5 = canonical evaluator for every q,i,j",
+      "exact statement and proof connecting canonical evaluator to the existing bodyTraceEvaluator 5, if that consumer is retained",
+      "pinned toolchain/Mathlib/import-closure hashes, compilation result and axiom report",
+      "same-key downstream comparator receipt when comparator admission is requested"
+    ],
+    "missing_evidence": "pending; null proof fields cannot count as supplied premises",
+    "mismatched_present_evidence": "rejected: wrong body, source/state key, hash, coefficient, q-domain, regularizer, sign convention, or index mapping",
+    "admission_rule": "data checks and receipt presence never prove a theorem or promote a registry"
+  },
+  "downstream_targets": {
+    "sidecar_namespace": "RouteBO1Body6CanonicalExportTargets",
+    "G0": "Body6EndpointTarget and Body6CenterTarget",
+    "G1": "Body6SourceGramTarget",
+    "G2": "Body6GramFourierTarget rows with all 36 entries and a reified canonical row list",
+    "canonical_source": "G1 and G2 imply Body6CanonicalSourceTarget rows by equality transitivity",
+    "G3": "Body6LegacyTraceTarget rows; equality of CSV coefficients is not this Lean proof",
+    "legacy_consumer": "canonical_source and G3 imply the unchanged adapter h_body_6; a differently named evaluator alone does not",
+    "aggregate_boundary": "h_body_6 alone does not supply h_body_all, h_aggregate, M_DD45 binding, or an O1 left-inverse witness",
+    "small_structural_leaves": ["Body6SixthVelocityTarget", "Body6SixthColumnTarget", "Body6SixthDiagonalTarget", "Body6LastAngleIndependentTarget"],
+    "status": "UNCOMPILED_TARGETS_NO_PROOFS"
+  }
+}

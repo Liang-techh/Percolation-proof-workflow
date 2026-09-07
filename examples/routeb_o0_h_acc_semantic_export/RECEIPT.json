@@ -1,0 +1,103 @@
+{
+  "schema": "routeb.o0.h_acc.obstruction_review_receipt.v1",
+  "date": "2026-09-07",
+  "status": "OPEN_H_ACC_SOURCE_REFINEMENT_AND_INTERVAL_SOUNDNESS",
+  "receipt_kind": "source_audit_and_contract_design_not_semantic_proof",
+  "artifacts": [
+    {
+      "path": "agent_review_inbox/review-T-P4-033-O0-H-acc-evaluator-interval-contract-codex-20260907.md",
+      "sha256": "3c9622c871534b15cb621d9898b03aabcf0aee5a3eca6155a151b079ca6509e1"
+    },
+    {
+      "path": "examples/routeb_o0_h_acc_semantic_export/OPEN_CONTRACT.json",
+      "sha256": "94a874eaf968c0ef065af269068f6b228210ab4f287f58367764b73712b237cc"
+    },
+    {
+      "path": "examples/routeb_o0_h_acc_semantic_export/check_contract.py",
+      "sha256": "b442db0ff9c7c05a8f452bdd63da357ac15964bd193da4ce4857cb7b97fa6a4b"
+    }
+  ],
+  "source_evidence": {
+    "deployed_and_snapshot_sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936",
+    "old_review_transcription_mismatch_confirmed": true,
+    "constant_leaf_separation_checked_exactly": true,
+    "julia_runtime_observed": false,
+    "source_hash_is_not_an_evaluator_proof": true
+  },
+  "validation": {
+    "command": ["python", "examples/routeb_o0_h_acc_semantic_export/check_contract.py", "--self-test"],
+    "exit_code": 0,
+    "stderr": "",
+    "stdout_json": {
+      "design_check": "PASS_OPEN_DESIGN_ONLY",
+      "status": "OPEN_H_ACC_SOURCE_REFINEMENT_AND_INTERVAL_SOUNDNESS",
+      "evidence_pins_checked": 6,
+      "state_observation": {
+        "recorded_revision": 579,
+        "current_revision": 581,
+        "recorded_sha256": "e10fb969325f5b2177eaf456f7b8a268e69b7d9d690f4c5135174664df81d86b",
+        "current_sha256": "906643362f73d1107b436c44f4a69b7d1525dec0ac2492d005b5a60f5165d226",
+        "observation_pin_matches": false,
+        "current_parent_status": "open",
+        "current_h_acc_metadata_nodes": 7,
+        "current_independent_h_acc_node_present": false,
+        "state_mutated_by_checker": false
+      },
+      "negative_fixtures_rejected": 7,
+      "expected_output_roots": {"final": 36, "body": 216, "accumulator": 216},
+      "semantic_export_present": false,
+      "formal_certificate_allowed": false,
+      "files_written": 0
+    },
+    "scope": "design consistency, six evidence pins, exact dyadic example, index coverage and rejection fixtures only",
+    "initial_check": "Detected concurrent state drift; preserved revision 579 as historical observation and now reports live state separately. Source/evidence hash mismatches still reject."
+  },
+  "obstruction": {
+    "expression": "No pinned Julia-source-to-scalar-DAG refinement witness or concrete 36/216/216 root export. Ideal rational/pi semantics must be distinguished from decoded loaded constants.",
+    "runtime": "No bound immutable loaded environment, concrete input/method selection, kernel/trig soundness receipt or actual pre-line-60 observation.",
+    "interval": "No all-domain rational partition, node/body/accumulator enclosures or 36 sound final error bounds relative to the ideal exact-real target.",
+    "existing_evidence_limit": "727 body Fourier coefficient rows and 610 aggregate rows are not a dense Julia evaluator/interval export. Interval error evidence cannot discharge exact identity."
+  },
+  "minimal_next_artifact": {
+    "bundle": "routeb_o0_h_acc_pre_regularizer_export",
+    "first_required_delivery": [
+      "Same-byte SOURCE_SNAPSHOT/dhport_lib.jl with the corrected SHA256",
+      "exact_target_definition.json binding decimal-rational and exact-pi constants, full NE recurrence and Q1000",
+      "source_dag_manifest.json plus scalar_dag.json binding every source stage, operation, type and index to a DAG node",
+      "roots.json with all 36 final, 216 body contribution and 216 accumulator-after-body roots in body/column/row order",
+      "source_refinement_receipt.json with source mapping and exact-real evaluator proof evidence"
+    ],
+    "round_branch_additions": [
+      "runtime_environment.json with loaded global bits, input quantifier, selected methods and actual kernel/trig semantics",
+      "interval_receipt.json with complete rational box cover, all intermediate/body/accumulator enclosures, and 36 final error bounds",
+      "Soundness and coverage witnesses plus hashed runtime logs and exit code; all-real inputs additionally require input-rounding bounds"
+    ],
+    "formal_admission_requires": "Actual same-source proof artifacts and dependency/axiom audit through the existing explicit verification gate; a schema or executable design check is insufficient"
+  },
+  "theorem_decomposition": {
+    "children": ["C0", "C1", "C2", "C3", "C4", "C5", "H_acc_expr", "R0", "R1", "R2", "H_acc_round"],
+    "all_status": "OPEN",
+    "definition_and_edges": "OPEN_CONTRACT.json#/children",
+    "state_insertion_performed": false
+  },
+  "admission": {
+    "h_acc_expr_proven": false,
+    "h_acc_round_proven": false,
+    "consumable_now": false,
+    "source_binding_proven": false,
+    "registry_promoted": false,
+    "formal_certificate_allowed": false,
+    "numerical_evidence_promoted": false,
+    "baseline_consumed": false,
+    "schur_margin_consumed": false
+  },
+  "write_boundary": {
+    "new_files_only": true,
+    "main_state_modified_by_this_task": false,
+    "o1_adapter_modified_by_this_task": false,
+    "deployed_source_modified": false,
+    "lean_lake_run": false,
+    "julia_run": false,
+    "parallel_work_preserved": true
+  }
+}

@@ -41,6 +41,7 @@ O0_BODY5_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O0-P-NE-body5-geome
 HACC_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O0-H-acc-source-semantic-export-20260907.md"
 HACC_REFINEMENT_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O0-H-acc-evaluator-interval-contract-codex-20260907.md"
 HACC_CONTRACT = ROOT / "examples/routeb_o0_h_acc_semantic_export/OPEN_CONTRACT.json"
+HACC_RECEIPT = ROOT / "examples/routeb_o0_h_acc_semantic_export/RECEIPT.json"
 KEYED_INTERFACE = ROOT / "artifacts/task_routeb_o1_keyed_regrouping_20260907/RouteBO1KeyedRegroupingInterface.lean"
 KEYED_RECEIPT = ROOT / "artifacts/task_routeb_o1_keyed_regrouping_20260907/interface_receipt.json"
 KEYED_CHECK = ROOT / "artifacts/task_routeb_o1_keyed_regrouping_20260907/interface_check.json"
@@ -52,6 +53,7 @@ BODY6_CANONICAL_CONTRACT = ROOT / "examples/routeb_b45_source_comparator_lean/O1
 BODY6_CANONICAL_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_6_CANONICAL_EXPORT_RECEIPT.json"
 BODY6_CANONICAL_CSV = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_6_CANONICAL_SLICE.csv"
 BODY6_CANONICAL_AUDIT = ROOT / "examples/routeb_b45_source_comparator_lean/audit_body6_canonical_export.py"
+BODY6_CANONICAL_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-body-6-canonical-export-codex-20260907.md"
 PBUDGET_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O0-P-BUDGET-physical-identity-20260907.md"
 REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-per-body-candidate-codex-20260907.md"
 AGENT_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-per-body-source-definition-obstruction-codex-20260907.md"
@@ -92,11 +94,12 @@ def main() -> None:
                  BODY5_RECEIPT, BODY5_CHECK, BODY5_REVIEW,
                  BODY4_FOLD_TARGET, BODY4_FOLD_RECEIPT, BODY4_FOLD_REVIEW,
                  O0_BODY3_RECEIPT, O0_BODY4_RECEIPT, O0_BODY5_RECEIPT, O0_BODY5_REVIEW,
-                 HACC_REVIEW, HACC_REFINEMENT_REVIEW, HACC_CONTRACT,
+                 HACC_REVIEW, HACC_REFINEMENT_REVIEW, HACC_CONTRACT, HACC_RECEIPT,
                  KEYED_INTERFACE, KEYED_RECEIPT, KEYED_CHECK,
                  KEYED_ORIENTATION_REVIEW, BODY6_SUPPORT, BODY6_REVIEW,
                  BODY6_CANONICAL_TARGET, BODY6_CANONICAL_CONTRACT, BODY6_CANONICAL_RECEIPT,
-                 BODY6_CANONICAL_CSV, BODY6_CANONICAL_AUDIT, PBUDGET_REVIEW,
+                 BODY6_CANONICAL_CSV, BODY6_CANONICAL_AUDIT, BODY6_CANONICAL_REVIEW,
+                 PBUDGET_REVIEW,
                  REVIEW, AGENT_REVIEW):
         if not path.is_file():
             raise FileNotFoundError(path)
@@ -181,6 +184,7 @@ def main() -> None:
         "h_acc_proven": False,
         "h_acc_refinement_review_sha256": digest(HACC_REFINEMENT_REVIEW),
         "h_acc_contract_sha256": digest(HACC_CONTRACT),
+        "h_acc_receipt_sha256": digest(HACC_RECEIPT),
         "h_acc_refinement_status": "OPEN_H_ACC_SOURCE_REFINEMENT_AND_INTERVAL_SOUNDNESS",
         "h_acc_refinement_proven": False,
         "o0_body_3_geometry_receipt_sha256": digest(O0_BODY3_RECEIPT),
@@ -203,6 +207,7 @@ def main() -> None:
         "body_6_canonical_receipt_sha256": digest(BODY6_CANONICAL_RECEIPT),
         "body_6_canonical_slice_sha256": digest(BODY6_CANONICAL_CSV),
         "body_6_canonical_audit_sha256": digest(BODY6_CANONICAL_AUDIT),
+        "body_6_canonical_review_sha256": digest(BODY6_CANONICAL_REVIEW),
         "body_6_canonical_export_status": "COEFFICIENT_REPLAY_MATCH_SOURCE_THEOREM_OPEN",
         "body_6_canonical_export_proven": False,
         "p_budget_review_sha256": digest(PBUDGET_REVIEW),

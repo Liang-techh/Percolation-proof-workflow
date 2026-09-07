@@ -1,0 +1,119 @@
+{
+  "schema": "routeb.o1.body6.canonical_export_audit.v1",
+  "status": "COEFFICIENT_REPLAY_MATCH_SOURCE_THEOREM_OPEN",
+  "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+  "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+  "body6_export_key": "routeb-human-body-fourier:body=6|sha256=46f59e5db4d74a03d5106cee4bd501090dbeec51cc897edcfd68e559ac939c7c|contract=exp(i*nu*q)|regularizer=excluded",
+  "replay": {
+    "command": "python -B examples/routeb_b45_source_comparator_lean/audit_body6_canonical_export.py",
+    "callable": "build(body_trace_sink=sink)",
+    "selected_callback_body": 6,
+    "capture_point": "body_term before M[r][c] = add(M[r][c], body_term)",
+    "source_authority": "pinned artifact-local Python copy only",
+    "stdout_only": true,
+    "runtime_julia_run": false
+  },
+  "state_snapshot": {
+    "revision": 580,
+    "sha256": "ed3d600323877d00b2edc4f18dfce31b6688e23337cd12f7758a269391686207",
+    "node_id": "3ad9bd4fa1d040da995906fc487913fd",
+    "node_status": "open",
+    "mutated": false
+  },
+  "pinned_inputs": {
+    "artifacts/task_routeb_body_trace_sink_current/outputs/routeB_fourier_mass_body_trace.csv": "ae1f9cd7978c4cf23626b5c097eaaf4a2c70de9c8b86a31a61db12997cf4c3b9",
+    "artifacts/task_routeb_body_trace_sink_current/source_snapshot/routeB_fourier_mass_full_rational.csv": "a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8",
+    "artifacts/task_routeb_body_trace_sink_current/source_snapshot/routeB_fourier_rational_probe.py": "9460181770e47be0ecbde43a8a29ef285da1168c3121fab18d5378c671401a7b",
+    "artifacts/task_routeb_body_trace_sink_current/source_snapshot/dhport_lib.jl": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936",
+    "artifacts/task_routeb_body_trace_sink_current/routeB_fourier_rational_probe_trace_sink.py": "ffd7e06f49fc52e44bfbcbb5cb1be967f909fd4c55ef5b4147c9f9a3141a5f75"
+  },
+  "support_artifact": {
+    "sha256": "379d3d4cb91119fb5553ad718908001681ae30477272a6efe6b5ab7526ecfff9",
+    "recorded_status": "OPEN_BODY_LABEL_SEMANTIC_MISMATCH",
+    "interpretation": "same support alone does not establish aggregate mislabelling"
+  },
+  "checks": {
+    "selected_body_rows": 610,
+    "frozen_aggregate_rows": 610,
+    "same_support": true,
+    "different_coefficient_keys": 57,
+    "pre_accumulation_callback_entries": 36,
+    "pre_accumulation_replay_equals_selected_csv": true,
+    "nonempty_entries": 32,
+    "zero_entries_one_based": [
+      [
+        4,
+        5
+      ],
+      [
+        5,
+        4
+      ],
+      [
+        5,
+        6
+      ],
+      [
+        6,
+        5
+      ]
+    ],
+    "conjugate_symmetry": true,
+    "matrix_symmetry": true,
+    "frequency_nu1_nu6_zero": true,
+    "sixth_diagonal_constant": "1/60"
+  },
+  "discriminating_coefficient": {
+    "key_row_col_nu": [
+      1,
+      1,
+      0,
+      -2,
+      -2,
+      0,
+      0,
+      0
+    ],
+    "body6": [
+      "-699/512000",
+      "0"
+    ],
+    "aggregate": [
+      "-63683/12800000",
+      "0"
+    ]
+  },
+  "payload": {
+    "path": "examples/routeb_b45_source_comparator_lean/O1_BODY_6_CANONICAL_SLICE.csv",
+    "sha256": "46f59e5db4d74a03d5106cee4bd501090dbeec51cc897edcfd68e559ac939c7c",
+    "encoding": "UTF-8 without BOM; LF",
+    "row_count": 610,
+    "kind": "artifact_local_pre_accumulation_body_slice"
+  },
+  "evidence_files": {
+    "audit_body6_canonical_export.py": "b88588960f48feca9eae913aec172090ee9d0e9d53e88bfd4a437c41197a1981",
+    "RouteBO1Body6CanonicalExportTargets.lean": "24635bd0356e6c9a83b15eb0f616327b547caf9257f8992f99b5fb1b7983ce2c",
+    "RouteBO1PerBodyExactSource.lean": "c09b84677adef121488b3ceb53e886d0ef0b028c7979d91f8a7f9ba0fbfcd553",
+    "BodyTraceEvaluator.lean": "b9845d37b5dcd16e1f9e142cb2e4d0e5571452993e843c85ac8cd643f6ba5dea",
+    "RouteBO1PerBodyTraceAdapter.lean": "6b50ae63c9770e3481f79511141c8cc55d592b5c550f686654c5e756584399ef",
+    "O1_BODY_6_CANONICAL_EXPORT_CONTRACT.json": "0e03ea7e7a216574f3f76ae433a0b3bef1463675d490739da94a5635aba2eeb1"
+  },
+  "admission": {
+    "source_binding_proven": false,
+    "trace_reification_proven": false,
+    "h_body_6_proven": false,
+    "aggregate_function_lift_proven": false,
+    "compile_status": "NOT_RUN",
+    "lean_lake_run": false,
+    "comparator_accepted": false,
+    "registry_eligible": false,
+    "registry_status": "pending",
+    "formal_certificate_allowed": false
+  },
+  "missing_evidence": {
+    "canonical_csv_to_lean_reification": null,
+    "body6_source_to_real_fourier_proof": null,
+    "pinned_compile_and_axiom_receipt": null,
+    "downstream_comparator_receipt": null
+  }
+}
