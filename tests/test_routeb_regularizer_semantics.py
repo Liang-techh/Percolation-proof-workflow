@@ -316,7 +316,7 @@ def _canonical_o0_r3_receipt(**overrides):
         },
         "schur_baseline": {
             "theta": "1/4",
-            "lambda": "5",
+            "lambda": "1 + 1/theta",
             "remaining_margin_m_r": "1",
             "m_r_positive": True,
             "same_normalization_as_metric": True,

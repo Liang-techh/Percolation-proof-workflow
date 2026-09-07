@@ -318,12 +318,26 @@ def audit_routeb_o0_r3_canonical_receipt(
     rho = exact("weighted_baseline", "rho_r")
     epsilon = exact("weighted_perturbation", "epsilon_R")
     theta = exact("schur_baseline", "theta")
-    lambda_value = exact("schur_baseline", "lambda")
     margin = exact("schur_baseline", "remaining_margin_m_r")
     exact("metric", "beta")
     exact("metric", "s")
     exact("inverse", "K")
     epsilon_a = exact("inverse", "epsilon_A", allow_null=True)
+    lambda_value: Fraction | None = None
+    if schur is None or "lambda" not in schur:
+        missing.append("schur_baseline.lambda")
+    else:
+        raw_lambda = schur.get("lambda")
+        if not isinstance(raw_lambda, str):
+            errors.append("schur_baseline.lambda: exact integer/rational value required")
+        elif raw_lambda.strip().replace(" ", "") == "1+1/theta":
+            if theta is not None and theta > 0:
+                lambda_value = 1 + 1 / theta
+        else:
+            try:
+                lambda_value = _fraction(raw_lambda, "schur_baseline.lambda")
+            except TypeError as error:
+                errors.append(str(error))
     if any(value is not None and value < 0 for value in (rho, epsilon, theta, margin, epsilon_a)):
         errors.append("canonical_exact_value_negative")
     if theta is not None and theta <= 0:
