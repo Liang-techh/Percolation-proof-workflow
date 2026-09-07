@@ -2483,3 +2483,8 @@ P3 随后筛出 `continuous_add_equiv_integer_linear_api`：连续加法等价�
 `M ≃L[ℤ] M₂`，不能替代实/复标量线性或 PDE 正则性。该候选已加入下一批
 focused Lean receipt 任务，并分配约三分之一的独立 GitHub lane 给流川枫；
 任何 receipt 仍只能形成 pending provenance。
+
+P3 又加入 `pi_subtype_product_transport` architecture-only 叶：依赖积按谓词
+拆成正/余 subtype 因子，`p=False` 时一侧为空，因此它只用于 typed theorem-DAG
+分块，不提供物理覆盖、非空性、实/复线性或 PDE 正则性。该叶进入下一批
+focused receipt，流川枫继续承接约三分之一独立任务。

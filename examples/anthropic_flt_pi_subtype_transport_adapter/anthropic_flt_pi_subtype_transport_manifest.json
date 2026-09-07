@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "kind": "advisory_reuse_manifest",
+  "integration_status": "pending",
+  "classification": "architecture_only",
+  "provenance": {
+    "repository": "upstream/anthropics-fermats-last-theorem",
+    "commit": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef",
+    "source_path": "Definitions/Def_Mathlib_Topology_Algebra_ContinuousMonoidHom.lean",
+    "source_blob": "7829c8e30b406c8bb1dcbddf8e8d49745ec5c8ea",
+    "license": "Apache-2.0",
+    "imports": [
+      "Mathlib",
+      "Definitions.Def_Mathlib_Topology_Algebra_Module_Quotient"
+    ]
+  },
+  "api": {
+    "namespace": "ContinuousAddEquiv",
+    "name": "piEquivPiSubtypeProd",
+    "assumptions": [
+      "p : ι → Prop",
+      "Y : ι → Type*",
+      "each Y i has a TopologicalSpace and Add structure",
+      "[DecidablePred p]"
+    ],
+    "conclusion": "((i : ι) → Y i) ≃ₜ+ ((i : {x : ι // p x}) → Y i) × ((i : {x : ι // ¬p x}) → Y i)"
+  },
+  "target_adapter": {
+    "file": "AnthropicFLTPiSubtypeTransportAdapter.lean",
+    "namespace": "AnthropicFLTPiSubtypeTransportAdapter",
+    "status": "pending_architecture_only",
+    "wrapper": "piEquivPiSubtypeProd",
+    "theorem_dag_leaf": true,
+    "routeB_or_pde_theorem": false,
+    "registry_promotion": false
+  },
+  "admission_boundary": {
+    "predicate_split_is_not_domain_coverage": true,
+    "subtype_factor_can_be_empty": true,
+    "does_not_supply_scalar_field_linearity": true,
+    "does_not_supply_differentiability_or_pde_regularity": true,
+    "does_not_promote_verified_registry": true
+  }
+}

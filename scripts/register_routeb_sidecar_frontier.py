@@ -2241,6 +2241,20 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P0.reproducibility_baseline.anthropic_flt_registry_graph_adapter.pi_subtype_product_transport",
+        "parent": "P0.reproducibility_baseline.anthropic_flt_registry_graph_adapter",
+        "statement": "A dependent product of additive topological fibers is continuously additively equivalent to the product of its predicate and complementary-subtype restrictions; the structural split does not prove nonemptiness, analytic block coverage, scalar linearity, or PDE regularity.",
+        "proof_sketch": "Pin the upstream `ContinuousAddEquiv.piEquivPiSubtypeProd` shape, package restriction/merge as a theorem-DAG transport leaf, and retain the false-predicate counterboundary showing that an empty subtype factor may still occur. Keep this architecture-only decomposition separate from physical-domain coverage and admission.",
+        "lane": "workflow_infrastructure",
+        "bottleneck": "provenance",
+        "status": "PENDING_ARCHITECTURE_ONLY_ANTHROPIC_PI_SUBTYPE_TRANSPORT",
+        "artifacts": [
+            "examples/anthropic_flt_pi_subtype_transport_adapter/anthropic_flt_pi_subtype_transport_manifest.json",
+            "examples/anthropic_flt_pi_subtype_transport_adapter/AnthropicFLTPiSubtypeTransportAdapter.lean",
+            "examples/anthropic_flt_pi_subtype_transport_adapter/REVIEW.md",
+        ],
+    },
+    {
         "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding",
         "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction",
         "statement": "The BODY6 origin obstruction can be transported to the active V≤1 lifted domain only after an explicit binding of the actual candidate energy at the origin; normalized energy gives a conditional witness, while the audited raw and shifted energies reject the origin under the displayed constants.",

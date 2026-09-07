@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 724,
+  "revision": 725,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -42859,7 +42859,8 @@
       "dependencies": [
         "4927e27c5a08434e90753c2e4ed45e19",
         "6e43d8cee805462e9f0719b07cf91eee",
-        "639dd0424971483b89e887c3cf72c54f"
+        "639dd0424971483b89e887c3cf72c54f",
+        "38dc53586b19484599082d2217311616"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -43144,6 +43145,45 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\anthropic_flt_additive_linear_adapter\\REVIEW.md",
             "sha256": "8FA16C0A94474094233C30E641E7319A60DA112BF523CF3B371972B86F44B4F6"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "38dc53586b19484599082d2217311616": {
+      "id": "38dc53586b19484599082d2217311616",
+      "name": "P0.reproducibility_baseline.anthropic_flt_registry_graph_adapter.pi_subtype_product_transport",
+      "statement": "A dependent product of additive topological fibers is continuously additively equivalent to the product of its predicate and complementary-subtype restrictions; the structural split does not prove nonemptiness, analytic block coverage, scalar linearity, or PDE regularity.",
+      "parent_id": "6e76d5f6e723409087fb68c4ac51a79b",
+      "status": "open",
+      "proof_sketch": "Pin the upstream `ContinuousAddEquiv.piEquivPiSubtypeProd` shape, package restriction/merge as a theorem-DAG transport leaf, and retain the false-predicate counterboundary showing that an empty subtype factor may still occur. Keep this architecture-only decomposition separate from physical-domain coverage and admission.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "workflow_infrastructure",
+        "math_bottleneck": "provenance",
+        "statement_status": "indexed",
+        "evidence_status": "PENDING_ARCHITECTURE_ONLY_ANTHROPIC_PI_SUBTYPE_TRANSPORT",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\anthropic_flt_pi_subtype_transport_adapter\\anthropic_flt_pi_subtype_transport_manifest.json",
+            "sha256": "91B241B0E86F84B061690FCA4F5525ABD30ECDFB6B0532E4049D0B652C418786"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\anthropic_flt_pi_subtype_transport_adapter\\AnthropicFLTPiSubtypeTransportAdapter.lean",
+            "sha256": "731037D5D36C0C7D9EDC952CAD6445CD9DE5877C0E53151885C8DCB5076F7E2A"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\anthropic_flt_pi_subtype_transport_adapter\\REVIEW.md",
+            "sha256": "4A027F8B6F253B4D879A789388242A8EE9D74CC52644DB26965BB4D048EF1174"
           }
         ],
         "registry_eligible": false,
@@ -71757,6 +71797,24 @@
       ],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T21:25:23.700298+00:00",
+      "kind": "node_added",
+      "node_id": "38dc53586b19484599082d2217311616",
+      "parent_id": "6e76d5f6e723409087fb68c4ac51a79b",
+      "name": "P0.reproducibility_baseline.anthropic_flt_registry_graph_adapter.pi_subtype_product_transport"
+    },
+    {
+      "at": "2026-09-07T21:25:23.703024+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P0.reproducibility_baseline.anthropic_flt_registry_graph_adapter.pi_subtype_product_transport"
+      ],
+      "metadata_updated": [],
+      "artifact_hashes_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -75413,5 +75471,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "3df02ea40935b7a770ae03df719c799526a88dcb4c49c514bc6c56dcd2a1b350"
+  "state_checksum": "553ba106db9e7acbc5b3bd5ff10df67980ee6afdbb08dbf5656a7d8e62936826"
 }

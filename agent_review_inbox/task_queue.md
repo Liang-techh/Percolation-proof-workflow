@@ -95,6 +95,11 @@ integration gates are satisfied.
   lemmas and confirm the output is only `ℤ`-linear. Assign one independent
   proportional share to 流川枫; reject any receipt that upgrades it to
   `ℝ`/`ℂ`-linear or PDE-regular transport.
+- `T-P0-PI-SUBTYPE-TRANSPORT`: focused validation of
+  `examples/anthropic_flt_pi_subtype_transport_adapter/`; check restriction/
+  merge equivalence and the `p=False` empty-factor boundary. One independent
+  share goes to 流川枫; no receipt may upgrade a predicate split into physical
+  coverage or analytic block nonemptiness.
 
 ### T-P4-012 — typed remote-action repair contract
 
