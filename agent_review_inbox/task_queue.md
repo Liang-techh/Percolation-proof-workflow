@@ -2982,3 +2982,8 @@ uniform parameter、pinned-kernel/comparator/provenance evidence；不以侧车
 artifact 的 SHA-256 变化，并补充 P4 `localCap→qCap` 同域桥。BODY6
 `ENTRYMARGIN` 目前只有 proof-attempt，待 review 成对后登记；其零构型零方向
 是包含该构型时严格正 margin 不可能的 obstruction。
+
+P3 Taylor remainder 已登记 revision 707；fixed-λ pinned-kernel receipt 已
+登记 revision 708；BODY6 entry-margin obstruction 已登记 revision 709；P4
+nominal-direction audit 已登记 revision 710。所有新叶保持 `OPEN_UNCOMPILED`，
+并将 BODY6 零方向作为 domain exclusion/非严格路线的明确分叉条件。

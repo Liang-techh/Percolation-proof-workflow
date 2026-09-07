@@ -2357,3 +2357,12 @@ P3 `DERIVATIVE_ENDPOINT_GAP` 已登记 revision 696。它把显式函数值、�
 offset、余项和 rounding endpoint 链到 per-box gap lower bound，并保留错误
 余项与 sample-only 的反例；不宣称 Taylor 实现、source identity、连续覆盖或
 registry admission。随后已向 BODY6、fixed-λ、P3 三条空闲线派发下一层瓶颈。
+
+### 2026-09-07 — 梁智炜收割 margin、kernel 与方向边界
+
+P3 `TAYLOR_REMAINDER`、fixed-λ `PINNED_KERNEL_RECEIPT`、BODY6
+`ENTRYMARGIN`、P4 `NOMINAL_DIRECTION_AUDIT` 已依次登记 revision 707–710。
+其中 BODY6 首次给出规范零构型的精确 null direction：若真实目标域包含它，
+严格正 Schur margin 路线必须停止或改为排除该构型/证明非严格 PSD；这不是
+完整 6DOF 反证，仍等待真实域绑定与 Lean 验证。kernel receipt 和 nominal
+方向审计则继续保持 promotion fail-closed。
