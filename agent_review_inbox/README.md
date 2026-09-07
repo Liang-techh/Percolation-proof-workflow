@@ -24,7 +24,7 @@ Every `review_result` should include:
 - an explicit admission label: `verified`, `compiled_candidate`, `pending`,
   `rejected`, or `architecture_only`.
 
-The 30-minute integration pass reads only `review_result` files not marked
+The 20-minute integration pass reads only `review_result` files not marked
 `integrated`; it ignores `task_plan` files. It may update
 the authoritative workflow only through the normal state/receipt APIs, and it
 must preserve provenance, failed attempts, and unresolved obligations. A review
