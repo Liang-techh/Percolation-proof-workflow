@@ -10,6 +10,7 @@ from percolation_workflow.routeb_regularizer_semantics import (
     audit_routeb_regularizer_inclusion,
     convert_routeb_port_bound_to_weighted_metric,
     consume_routeb_schur_margin,
+    derive_routeb_root_witness,
     derive_routeb_general_resolvent_port_propagation,
     derive_routeb_resolvent_port_propagation,
     propagate_routeb_regularizer_diagonal,
@@ -205,6 +206,29 @@ def test_schur_margin_consumer_rejects_unproven_numeric_bounds_by_default() -> N
     assert result.margin_consumed is False
     assert "baseline_port_bound_not_authoritatively_supplied" in result.errors
     assert "weighted_port_perturbation_not_authoritatively_supplied" in result.errors
+
+
+def test_root_witness_keeps_squared_candidate_distinct_from_root() -> None:
+    result = derive_routeb_root_witness(
+        Fraction(4227, 500000), Fraction(9195, 100000),
+        source_key="compact:eta27",
+    )
+
+    assert result.status == "CONDITIONAL_ROOT_WITNESS"
+    assert result.root_bound == Fraction(9195, 100000)
+    assert result.slack == Fraction(321, 400000000)
+    assert result.squared_bound_proven is False
+    assert result.formal_certificate_allowed is False
+
+
+def test_root_witness_rejects_a_root_below_the_squared_candidate() -> None:
+    result = derive_routeb_root_witness(
+        Fraction(1, 4), Fraction(1, 3), source_key="compact"
+    )
+
+    assert result.status == "OPEN_FAIL_CLOSED"
+    assert result.slack is not None and result.slack < 0
+    assert "root_bound_squared_below_squared_bound" in result.errors
 
 
 def _o0_r3_receipt(**overrides):

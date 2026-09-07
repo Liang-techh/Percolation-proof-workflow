@@ -1564,6 +1564,21 @@ polynomial remains a separate frontier.
   check the pinned `Real.sin/cos` API; Float64/libm, D1-D3 composition and
   partition coverage remain separate open leaves.
 
+### New harvest: O0 root witnesses and force-scale Lean target (2026-09-07)
+
+- root review: `review-T-P4-033-O0-R1-R2-root-witness-check-codex-20260907.md`.
+  Exact arithmetic supplies candidate roots `9195/100000` for `4227/500000`
+  and `1859/10000` for `34547/1000000`, with positive slack; no same-key
+  `epsilon_R` or exact inverse receipt exists, so O0 remains blocked.
+- force review: `review-T-P4-force-scale-adapter-lean-target-codex-20260907.md`.
+  The smallest Lean target is `forceScaleKc_eq_rhoKc` (optionally the source
+  literal bridge and quadratic budget); it is pending fresh pinned compile and
+  axioms receipt, and never proves deployed `tau` equivalence.
+- the O0-R1/R2 review now also carries a three-layer Lean target:
+  exact scalar `K_f/DeltaK`, three-term norm inequality from an explicit
+  expansion, then keyed `U_R` adapter. The target deliberately keeps
+  `h_expand`, norm compatibility, and source/state joins as premises.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it

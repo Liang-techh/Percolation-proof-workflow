@@ -108,5 +108,158 @@ Produce one cell (or an explicitly uniform domain) with exact `K`,
 `epsilon_A`, `dB`, `Br`, `Cf`, `dC`, `s`, `beta`, `rho_r`, and `epsilon_R`,
 plus all key equalities and proof-status flags. If exact-real `K` authority,
 the metric lower-bound proof, or `R_port a_B=r_B` is absent, return an explicit
-obstruction rather than a candidate weighted bound.
+ obstruction rather than a candidate weighted bound.
 
+## Lean-agent target decomposition: `K_f`, `DeltaK`, `U_R`
+
+The canonical exact-keyed interface should be handed to Lean as three small
+targets. The first is pure exact arithmetic; the second is the norm estimate
+for the already-expanded port difference; the third is only the adapter that
+feeds the resolvent norm bounds into that estimate. This keeps matrix/source
+binding assumptions visible instead of hiding them in a computed `U_R`.
+
+### 1. Exact scalar resolvent layer
+
+Use `ℝ` in the generic theorem (a receipt with rational fields is inserted by
+the canonical `ℚ → ℝ` coercion), and define:
+
+```lean
+def K_f (K epsilon_A : ℝ) : ℝ :=
+  K / (1 - epsilon_A * K)
+
+def DeltaK (K epsilon_A : ℝ) : ℝ :=
+  epsilon_A * K ^ 2 / (1 - epsilon_A * K)
+
+def U_R (dB Br Cf dC K epsilon_A : ℝ) : ℝ :=
+  dB * K_f K epsilon_A * Cf
+    + Br * DeltaK K epsilon_A * Cf
+    + Br * K * dC
+```
+
+The smallest arithmetic goal is:
+
+```lean
+theorem resolvent_scalar_decomposition
+    {K epsilon_A : ℝ}
+    (hK : 0 ≤ K) (hE : 0 ≤ epsilon_A)
+    (hcontract : epsilon_A * K < 1) :
+    0 ≤ K_f K epsilon_A ∧
+    0 ≤ DeltaK K epsilon_A ∧
+    DeltaK K epsilon_A = epsilon_A * K * K_f K epsilon_A ∧
+    K_f K epsilon_A = K + DeltaK K epsilon_A := by
+  -- `have hden : 0 < 1 - epsilon_A * K := sub_pos.mpr hcontract`
+  -- then `field_simp [ne_of_gt hden]` / `ring` for the equalities.
+  sorry
+```
+
+The `sorry` above is a target marker only and must not enter a receipt. The
+only nontrivial premise is `hcontract`; positivity of the denominator is
+derived from it. `K_f` and `DeltaK` are therefore exact derived fields, not
+independent supplied claims.
+
+### 2. Three-term norm layer
+
+Let `Bf, Br` be the two `B` blocks, `If, Ir` the two D-block inverses, and
+`Cf, Cr` the two `C` blocks. The source-side algebra must first provide the
+exact expansion:
+
+```lean
+h_expand : Rf - Rr =
+    (Bf - Br) * If * Cf
+      + Br * (If - Ir) * Cf
+      + Br * Ir * (Cf - Cr)
+```
+
+The minimal norm target is:
+
+```lean
+theorem norm_port_difference_le_U_R
+    {E : Type*} [NormedRing E]
+    (Rf Rr Bf Br If Ir Cf Cr : E)
+    (dB BrN CfN dC K DeltaKN KfN URN : ℝ)
+    (h_expand : Rf - Rr =
+      (Bf - Br) * If * Cf
+        + Br * (If - Ir) * Cf
+        + Br * Ir * (Cf - Cr))
+    (h_dB : ‖Bf - Br‖ ≤ dB)
+    (h_Br : ‖Br‖ ≤ BrN)
+    (h_Cf : ‖Cf‖ ≤ CfN)
+    (h_dC : ‖Cf - Cr‖ ≤ dC)
+    (h_If : ‖If‖ ≤ KfN)
+    (h_Ir : ‖Ir‖ ≤ K)
+    (h_Idiff : ‖If - Ir‖ ≤ DeltaKN)
+    (h_nonneg : 0 ≤ dB ∧ 0 ≤ BrN ∧ 0 ≤ CfN ∧ 0 ≤ dC ∧ 0 ≤ KfN ∧
+      0 ≤ K ∧ 0 ≤ DeltaKN) :
+    ‖Rf - Rr‖ ≤ dB * KfN * CfN
+      + BrN * DeltaKN * CfN
+      + BrN * K * dC := by
+  sorry
+```
+
+For the concrete matrix instance, instantiate `E` with the matrix algebra and
+the *same* induced norm convention for all seven bound fields. The proof is only `h_expand`,
+`norm_add_le`, `norm_mul_le`, and monotonicity of multiplication by the
+nonnegative scalar bounds. No inverse API is needed in this layer.
+
+### 3. Exact keyed adapter for `U_R`
+
+The adapter target should combine the two layers without recomputing or
+renaming the bounds:
+
+```lean
+theorem exact_keyed_U_R_target
+    {E : Type*} [NormedRing E]
+    (Rf Rr Bf BrM If Ir CfM CrM : E)
+    (dB BrN CfN dC K epsilon_A : ℝ)
+    (h_dB : 0 ≤ dB) (h_Br : 0 ≤ BrN) (h_Cf : 0 ≤ CfN) (h_dC : 0 ≤ dC)
+    (h_inverse_f : ‖If‖ ≤ K_f K epsilon_A)
+    (h_inverse_r : ‖Ir‖ ≤ K)
+    (h_inverse_diff : ‖If - Ir‖ ≤ DeltaK K epsilon_A)
+    (h_B_diff : ‖Bf - BrM‖ ≤ dB)
+    (h_B_r : ‖BrM‖ ≤ BrN)
+    (h_C_f : ‖CfM‖ ≤ CfN)
+    (h_C_diff : ‖CfM - CrM‖ ≤ dC)
+    (h_expand : Rf - Rr =
+      (Bf - BrM) * If * CfM
+        + BrM * (If - Ir) * CfM
+        + BrM * Ir * (CfM - CrM)) :
+    ‖Rf - Rr‖ ≤ U_R dB BrN CfN dC K epsilon_A := by
+  sorry
+```
+
+This is intentionally a target signature: the concrete agent should replace
+the schematic `E` with the actual matrix type and pass the exact keyed
+premises. It must not prove the result by trusting a stored `U_R` value. A
+receipt may record the arithmetic identity
+`U_R = dB*K_f*Cf + Br*DeltaK*Cf + Br*K*dC`, but the norm inequality still
+requires `h_expand` and all five component bounds.
+
+## Minimum norm/source/state bindings
+
+The Lean target is consumable only when the following fields are joined under
+one canonical key:
+
+- **Norm:** one compatible submultiplicative induced norm for `K`,
+  `epsilon_A`, `dB`, `Br`, `Cf`, and `dC`; the norm name must be explicit
+  (`induced_2` or `induced_infinity`). If converting `U_R` to O0-R2's
+  weighted metric, additionally bind `metric.orientation = left_output`,
+  `metric.norm = induced_2`, `B_up`, exact `beta`, exact `s`, `s > 0`,
+  `s^2 ≤ beta`, and the proved `B_up ≥ beta I`.
+- **Source:** `source_key`, source snapshot/hash, exact-real and deployed-μ
+  semantics, FD step, force scale, coefficient revision, rounding/interval
+  mode, block coordinate order, and the exact `M_DD`, `M_BD`, `M_DB`/`M0_DB`
+  objects from which the four component bounds are derived.
+- **State:** `state_key`, cell/domain id and q bounds, axis order, coverage,
+  evaluator state, and the same regularization/rounding mode. The inverse,
+  B/C coupling, and metric receipts must all carry the identical
+  `source_key` and `state_key`; equality of artifact hashes alone is not the
+  join.
+- **Derived fields:** exact nonnegative `K`, `epsilon_A`, `dB`, `Br`, `Cf`,
+  `dC`, the proof of `epsilon_A*K < 1`, and the derived exact `K_f`,
+  `DeltaK`, `U_R`, with no Float64 approximation silently substituted.
+
+The remaining mathematical obstruction is precise: without an authoritative
+exact-real `‖A_r⁻¹‖ ≤ K`, the common norm convention, or the same-key
+`h_expand`/B-C bounds, Lean can still prove the generic arithmetic lemmas but
+cannot prove the keyed O0-R1/R2 claim. In that case the correct receipt
+status remains open/pending rather than a numeric `U_R` admission.

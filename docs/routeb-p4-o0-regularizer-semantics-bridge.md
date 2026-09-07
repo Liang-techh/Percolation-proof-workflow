@@ -111,6 +111,12 @@ weighted baseline/perturbation, Schur normalization, and the typed
 `R_port a_B = r_B` binding. A `READY_FOR_COORDINATOR_ADMISSION` result remains
 conditional input only; it never promotes O0 or the registry.
 
+The scalar helper `derive_routeb_root_witness` checks an exact candidate pair
+`g <= rho^2` and records the slack, while keeping `squared_bound_proven`
+explicit. This prevents a squared ledger value such as `rho_F^2` from being
+silently passed to an API that expects the root `rho_r`; the helper itself is
+still only conditional arithmetic.
+
 The API and focused tests do not run Lean/Lake, Julia, SOS, trajectory checks,
 or broad regression, and all result objects keep
 `formal_certificate_allowed=False` and `registry_eligible=False`.

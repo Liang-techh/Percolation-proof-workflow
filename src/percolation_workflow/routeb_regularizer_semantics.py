@@ -215,6 +215,26 @@ class RouteBWeightedPortMetricConversion:
 
 
 @dataclass(frozen=True)
+class RouteBRootWitness:
+    """Exact root witness for a squared baseline candidate.
+
+    This object certifies only the scalar relation ``g <= rho^2``.  It does
+    not certify that ``g`` bounds the physical baseline map or that its source
+    and metric are authoritative.
+    """
+
+    status: str
+    squared_bound: Fraction | None
+    root_bound: Fraction | None
+    slack: Fraction | None
+    source_key: str | None
+    errors: tuple[str, ...] = ()
+    squared_bound_proven: bool = False
+    formal_certificate_allowed: bool = False
+    registry_eligible: bool = False
+
+
+@dataclass(frozen=True)
 class RouteBSchurMarginConsumption:
     """Conditional Young/Schur budget after a weighted port perturbation."""
 
@@ -613,6 +633,68 @@ def convert_routeb_port_bound_to_weighted_metric(
     )
 
 
+def derive_routeb_root_witness(
+    squared_bound: Fraction | int | None,
+    root_bound: Fraction | int | None,
+    *,
+    source_key: str | None,
+    squared_bound_proven: bool = False,
+) -> RouteBRootWitness:
+    """Check an exact candidate ``rho`` against a squared bound ``g``.
+
+    The relation is checked before the provenance flag.  Thus an invalid root
+    is rejected even when the upstream receipt claims authority, while a valid
+    scalar pair without an authoritative upstream bound remains conditional.
+    """
+    errors: list[str] = []
+    values: dict[str, Fraction | None] = {}
+    for name, value in (("squared_bound", squared_bound), ("root_bound", root_bound)):
+        try:
+            values[name] = _exact_scalar(value, name) if value is not None else None
+        except TypeError as error:
+            errors.append(str(error))
+            values[name] = None
+    g = values["squared_bound"]
+    rho = values["root_bound"]
+    if g is None:
+        errors.append("squared_bound_missing")
+    elif g < 0:
+        errors.append("squared_bound_negative")
+    if rho is None:
+        errors.append("root_bound_missing")
+    elif rho < 0:
+        errors.append("root_bound_negative")
+    if not source_key:
+        errors.append("root_witness_source_key_missing")
+    if errors:
+        return RouteBRootWitness(
+            status="OPEN_FAIL_CLOSED", squared_bound=g, root_bound=rho,
+            slack=None, source_key=source_key,
+            errors=tuple(dict.fromkeys(errors)),
+            squared_bound_proven=squared_bound_proven,
+        )
+    assert g is not None and rho is not None
+    slack = rho * rho - g
+    if slack < 0:
+        return RouteBRootWitness(
+            status="OPEN_FAIL_CLOSED", squared_bound=g, root_bound=rho,
+            slack=slack, source_key=source_key,
+            errors=("root_bound_squared_below_squared_bound",),
+            squared_bound_proven=squared_bound_proven,
+        )
+    if not squared_bound_proven:
+        return RouteBRootWitness(
+            status="CONDITIONAL_ROOT_WITNESS", squared_bound=g, root_bound=rho,
+            slack=slack, source_key=source_key,
+            errors=("squared_bound_not_authoritatively_supplied",),
+            squared_bound_proven=False,
+        )
+    return RouteBRootWitness(
+        status="CONDITIONAL_ROOT_WITNESS", squared_bound=g, root_bound=rho,
+        slack=slack, source_key=source_key, squared_bound_proven=True,
+    )
+
+
 def consume_routeb_schur_margin(
     rho_baseline: Fraction | int | None,
     epsilon_port: Fraction | int | None,
@@ -726,9 +808,11 @@ __all__ = [
     "RouteBResolventPortPropagation",
     "RouteBGeneralResolventPortPropagation",
     "RouteBWeightedPortMetricConversion",
+    "RouteBRootWitness",
     "RouteBSchurMarginConsumption",
     "audit_routeb_regularizer_inclusion",
     "convert_routeb_port_bound_to_weighted_metric",
+    "derive_routeb_root_witness",
     "consume_routeb_schur_margin",
     "derive_routeb_general_resolvent_port_propagation",
     "derive_routeb_resolvent_port_propagation",

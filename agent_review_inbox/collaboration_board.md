@@ -961,3 +961,15 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   `theta2(q)=q-pi/2`、`q∈[-3/20,3/20]`，配合 Taylor remainder 和 quarter-turn
   transport。当前为 `EXACT_REAL_THETA2_RANGE_REDUCTION_TAYLOR_DRAFT`，未编译；
   已入队给 Lean agent，Float64/libm、D1-D3、coverage 仍 open。
+
+- O0 root-witness review 给出两个纯算术候选根：
+  `9195/100000` 覆盖 `4227/500000`，`1859/10000` 覆盖 `34547/1000000`；
+  新增 `derive_routeb_root_witness` 保留平方界/根界边界和 slack，但 O0 仍缺
+  同键 `epsilon_R` 与 exact inverse receipt。
+- force-scale Lean review 给出最小 theorem `forceScaleKc_eq_rhoKc`，以及可选
+  `liftedKcForce_eq_rhoKc`、quadratic budget；当前只到
+  `PENDING_PINNED_LEAN_RECOMPILE`，不触碰 deployed `tau` 非等价边界。
+- O0-R1/R2 review 进一步拆出 exact scalar `K_f/DeltaK`、显式三项展开的
+  norm bound、以及 keyed `U_R` adapter 三层 Lean target；其中
+  `h_expand`、统一 norm、source/state key 仍必须作为显式 premises，不能由
+  存储数值反推。
