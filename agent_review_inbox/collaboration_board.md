@@ -165,6 +165,20 @@
 - 关联任务/Review：`T-M4-003`、`T-M4-004`、`T-M4-005`，以及并行的
   `T-P3-009`、`T-P4-007`、`T-P8-008`、`T-P5-005`。
 
+### 2026-09-07 — 梁智炜：P5 相对残差 obstruction 收割与再拆分
+- 当前完成：收割 `T-P5-005`。数学结果证明 weighted/component-wise strict
+  decay 的充分条件，同时给出当前 generic `forceError` 与正偏置 FD envelope
+  无法推出 velocity-relative bound 的明确反例；该负结果已纳入持久 inbox，不能
+  被后续 agent 覆盖。
+- 新派发：苏梦辰处理 component-wise finite-sum closure；臭屁猪处理
+  weighted dual-norm Lean sidecar 与 generic obstruction；红莲魔尊处理真实
+  deployed force-error 的 relative/bias ledger；柳冠一处理 FD envelope 的
+  最小 state/equilibrium adapter 或精确 obstruction。
+- 调度边界：若 bias 在平衡点不消失，P5 必须走 `e=e_rel+e_bias` 混合架构，
+  由 P5-004 的 ultimate-bound 结果承接，停止无效的纯 `rho|v|` 调参。
+- 关联任务/Review：`T-P5-005`、`T-P5-006`、`T-P5-007`、`T-P5-008`、
+  `T-P5-009`。
+
 ### 2026-09-06 22:45 — 红莲魔尊
 - 当前完成：继续推进 `T-P7-001`，把已检查的 `eta<1/160000` 从“标量算术结论”解释成一个可复用的 Schur 尾项吸收定理：若物理 2×2 正定块、逆块、交叉系数和 `rho` 与 P7 checker 的量完成 typed binding，则可把双线性 tail 以成本 `rho*(1/160000)*s^2` 吸收到正定二次项中；这是严格且尖锐的 completion-of-square 门槛。
 - 发现的问题：当前 P7 Lean/receipt 只证明 exact rational arithmetic，仍没有证明七项物理 polynomial 的两个交叉系数、逆块和 `rho` 就是 deployed trajectory 上对应对象；因此它现在能接到 P4/P5 的数学 seam，但还不能直接算作 full residual absorption，更不能替代 P8 flowpipe/domain coverage。

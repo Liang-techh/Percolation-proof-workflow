@@ -202,7 +202,8 @@ polynomial remains a separate frontier.
 
 ### T-P5-005 — relative residual strict-decay closure
 
-- status: `open` (released for the next mathematical round)
+- status: `reviewed_pending` (review:
+  `review-T-P5-005-kuangmanmozun-20260906T2307.md`)
 - owner: `狂弓魔尊`
 - source: `examples/routeb_dh_power_binding/README.md`,
   `examples/routeb_residual_power/README.md`, and the exact scalar child
@@ -215,6 +216,62 @@ polynomial remains a separate frontier.
   the current residual decomposition cannot support relative scaling;
 - forbidden: inferring relative bounds from samples, mixing force and
   acceleration units, or closing P5/M4 without same-domain coverage.
+
+### T-P5-006 — component-wise relative decay formalization
+
+- status: `open` (released after `T-P5-005` harvest)
+- owner: `苏梦辰`
+- source: `review-T-P5-005-kuangmanmozun-20260906T2307.md`,
+  `examples/routeb_supply_core/RouteBSupplyCore.lean`;
+- scope: formalize the finite-sum component-wise closure
+  `|r_i|≤rho_i|v_i|`, `0≤rho_i<d_i` implies retained diagonal damping;
+- deliver: source-independent theorem decomposition and a portable Lean
+  sidecar if practical, with exact positivity premises;
+- forbidden: deriving the premise from current FD samples/envelopes or closing
+  the physical P5/M4 node.
+
+### T-P5-007 — weighted dual residual decay and interface obstruction
+
+- status: `open` (released after `T-P5-005` harvest)
+- owner: `臭屁猪`
+- source: `review-T-P5-005-kuangmanmozun-20260906T2307.md`,
+  `examples/routeb_p5_residual_power_lean/`;
+- scope: formalize the damping-weighted `dualSq r ≤ kappa²*dampedSq v`
+  implication without square roots, and retain the generic force-error
+  counterexample as a separate theorem;
+- deliver: pinned GitHub Lean sidecar or precise compile obstruction, including
+  the `kappa=0` boundary and no nonstandard axioms;
+- forbidden: treating abstract premises as true-DH source binding or promoting
+  compilation into the verified registry.
+
+### T-P5-008 — deployed force-error bias/relative split
+
+- status: `open` (released after `T-P5-005` harvest)
+- owner: `红莲魔尊`
+- source: `examples/routeb_dh_power_binding/DHPowerBinding.lean`,
+  `examples/routeb_dh_power_binding/FDForceBudget.lean`,
+  `review-T-P5-005-kuangmanmozun-20260906T2307.md`;
+- scope: classify actual mass/controller/C/G/solve terms into state-relative
+  and additive-bias parts, and determine which parts vanish at the deployed
+  equilibrium under explicit premises;
+- deliver: exact energy-ledger split or a rigorous obstruction, with units and
+  domain assumptions stated; do not infer vanishing from generic interfaces;
+- forbidden: converting positive-offset envelopes into `rho|v|`, using samples
+  as global estimates, or closing P5/M4.
+
+### T-P5-009 — FD envelope relative-scaling obstruction
+
+- status: `open` (released after `T-P5-005` harvest)
+- owner: `柳冠一`
+- source: `examples/routeb_dh_power_binding/FDForceBudget.lean` and the exact
+  offsets recorded in `review-T-P5-005-kuangmanmozun-20260906T2307.md`;
+- scope: produce a minimal typed adapter showing precisely what extra
+  equilibrium/state contract would be needed to turn a slope-plus-offset FD
+  envelope into a relative bound, or prove that the current interface cannot;
+- deliver: interface lemma or counterexample with no hidden change of cap,
+  coordinate order, or units;
+- forbidden: silently replacing the FD envelope, claiming true-DH binding, or
+  closing P5/M4.
 
 ## Queue: next parallel leaves
 

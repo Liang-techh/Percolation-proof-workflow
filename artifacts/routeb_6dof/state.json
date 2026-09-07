@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 361,
+  "revision": 362,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -7857,6 +7857,19 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "format_warning": "missing_yaml_delimiters"
+          },
+          {
+            "review_file": "agent_review_inbox/review-T-P5-005-kuangmanmozun-20260906T2307.md",
+            "review_sha256": "EAA8180A80CDC2A08159E8FC94FCF8E5B87D4E6E8F18F81F3B4B9BFB2A244398",
+            "task_id": "T-P5-005",
+            "source_agent": "狂蛮魔尊",
+            "created_at": "2026-09-06T23:07:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_relative_residual_strict_decay",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "e2dee5128d3ac6e9738d94f6ee7908ea909df2a3",
+            "admission_label": "pending"
           }
         ],
         "conditional_children": [
@@ -30259,6 +30272,18 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6f06c8545bc24dc590b6e5ade85b684d"
+    },
+    {
+      "at": "2026-09-07T05:03:23.496081+00:00",
+      "kind": "agent_review_integrated",
+      "review_file": "agent_review_inbox/review-T-P5-005-kuangmanmozun-20260906T2307.md",
+      "review_sha256": "EAA8180A80CDC2A08159E8FC94FCF8E5B87D4E6E8F18F81F3B4B9BFB2A244398",
+      "task_id": "T-P5-005",
+      "classification": "pending_relative_residual_strict_decay",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "9a3a7eef35b34880b85423aac67ea015"
     }
   ],
   "agent_requests": {},
@@ -33915,5 +33940,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "3cf794addfb8c942156e431377b31b1fbed11dc86004bbf05a2129ab82a59941"
+  "state_checksum": "e2dcbec84e4d3c133411f51ff16bb5a5be89c8f0bb571963701e775cfcce8f33"
 }
