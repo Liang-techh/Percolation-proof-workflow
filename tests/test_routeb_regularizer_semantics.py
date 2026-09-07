@@ -9,6 +9,7 @@ from percolation_workflow.routeb_regularizer_semantics import (
     RouteBExactResolventPremise,
     audit_routeb_regularizer_inclusion,
     convert_routeb_port_bound_to_weighted_metric,
+    consume_routeb_schur_margin,
     derive_routeb_general_resolvent_port_propagation,
     derive_routeb_resolvent_port_propagation,
     propagate_routeb_regularizer_diagonal,
@@ -141,3 +142,32 @@ def test_weighted_metric_conversion_rejects_unproven_or_mismatched_metric() -> N
     assert result.weighted_port_bound is None
     assert "metric_source_key_mismatch" in result.errors
     assert "metric_lower_bound_not_authoritatively_supplied" in result.errors
+
+
+def test_schur_margin_consumer_computes_added_young_charge_exactly() -> None:
+    result = consume_routeb_schur_margin(
+        Fraction(1, 2), Fraction(1, 10), Fraction(1, 4), Fraction(1),
+        source_key="ledger:B45", margin_source_key="ledger:B45",
+    )
+
+    assert result.status == "CONDITIONAL_SCHUR_MARGIN_CONSUMED"
+    assert result.rho_rounded == Fraction(3, 5)
+    assert result.added_young_charge == Fraction(11, 20)
+    assert result.remaining_margin == Fraction(9, 20)
+    assert result.margin_consumed is True
+
+
+def test_schur_margin_consumer_rejects_mismatch_and_insufficient_budget() -> None:
+    mismatch = consume_routeb_schur_margin(
+        Fraction(1), Fraction(1, 2), Fraction(1), Fraction(1),
+        source_key="port", margin_source_key="stale-ledger",
+    )
+    insufficient = consume_routeb_schur_margin(
+        Fraction(1), Fraction(1), Fraction(1), Fraction(1),
+        source_key="ledger", margin_source_key="ledger",
+    )
+
+    assert mismatch.status == "OPEN_FAIL_CLOSED"
+    assert "schur_source_key_mismatch" in mismatch.errors
+    assert insufficient.status == "OPEN_SCHUR_MARGIN_INSUFFICIENT"
+    assert insufficient.margin_consumed is False

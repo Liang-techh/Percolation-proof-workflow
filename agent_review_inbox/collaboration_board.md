@@ -908,3 +908,8 @@ O0-R2 进一步落成 `convert_routeb_port_bound_to_weighted_metric`：只接受
 且已证明的 `B_up >= beta I` 下界平方根 witness，输出
 `unweighted/sqrt(beta)` 的保守 exact-rational bound；source-key 不一致或 metric
 证据未证明时 fail-closed，且明确不消费 O0-R3 Schur margin。
+
+O0-R3 现已落成 `consume_routeb_schur_margin`：在同一 source key 下消费
+weighted baseline `rho_r`、扰动 `epsilon_R`、`theta` 与 exact remaining margin，
+计算新增 Young charge 和剩余 margin；不足或 provenance mismatch 均拒绝。该
+函数只做预算算术，不声称输入 bound 或物理 PMI 已证明。

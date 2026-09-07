@@ -212,6 +212,24 @@ class RouteBWeightedPortMetricConversion:
     registry_eligible: bool = False
 
 
+@dataclass(frozen=True)
+class RouteBSchurMarginConsumption:
+    """Conditional Young/Schur budget after a weighted port perturbation."""
+
+    status: str
+    rho_baseline: Fraction | None
+    epsilon_port: Fraction | None
+    rho_rounded: Fraction | None
+    theta: Fraction | None
+    added_young_charge: Fraction | None
+    remaining_margin: Fraction | None
+    source_key: str | None
+    errors: tuple[str, ...] = ()
+    margin_consumed: bool = False
+    formal_certificate_allowed: bool = False
+    registry_eligible: bool = False
+
+
 def routeb_regularizer_fact() -> RouteBRegularizerFact:
     """Return the recorded scalar fact without evaluating deployed code."""
     if MU_DELTA <= 0 or FLOAT64_MU >= EXACT_MU:
@@ -593,6 +611,98 @@ def convert_routeb_port_bound_to_weighted_metric(
     )
 
 
+def consume_routeb_schur_margin(
+    rho_baseline: Fraction | int | None,
+    epsilon_port: Fraction | int | None,
+    theta: Fraction | int | None,
+    remaining_schur_margin: Fraction | int | None,
+    *,
+    source_key: str | None,
+    margin_source_key: str | None,
+) -> RouteBSchurMarginConsumption:
+    """Consume the exact Young charge caused by a weighted port perturbation.
+
+    For nonnegative ``rho_baseline`` and ``epsilon_port`` and ``theta > 0``,
+    the added charge is
+
+    ``(1 + 1/theta) * ((rho_baseline + epsilon_port)^2 - rho_baseline^2)``.
+
+    This function only checks the scalar budget and matching provenance.  It
+    does not prove the baseline port bound, the weighted perturbation bound,
+    or any physical Schur/PMI statement.
+    """
+    errors: list[str] = []
+    values: dict[str, Fraction | None] = {}
+    for name, value in {
+        "rho_baseline": rho_baseline,
+        "epsilon_port": epsilon_port,
+        "theta": theta,
+        "remaining_schur_margin": remaining_schur_margin,
+    }.items():
+        try:
+            values[name] = _exact_scalar(value, name) if value is not None else None
+        except TypeError as error:
+            errors.append(str(error))
+            values[name] = None
+    rho = values["rho_baseline"]
+    epsilon = values["epsilon_port"]
+    theta_value = values["theta"]
+    margin = values["remaining_schur_margin"]
+    for name, value in (("rho_baseline", rho), ("epsilon_port", epsilon),
+                        ("remaining_schur_margin", margin)):
+        if value is None:
+            errors.append(f"{name}_missing")
+        elif value < 0:
+            errors.append(f"{name}_negative")
+    if theta_value is None:
+        errors.append("theta_missing")
+    elif theta_value <= 0:
+        errors.append("theta_not_positive")
+    if not source_key or not margin_source_key:
+        errors.append("schur_source_key_missing")
+    elif source_key != margin_source_key:
+        errors.append("schur_source_key_mismatch")
+    if errors:
+        return RouteBSchurMarginConsumption(
+            status="OPEN_FAIL_CLOSED",
+            rho_baseline=rho,
+            epsilon_port=epsilon,
+            rho_rounded=(rho + epsilon if rho is not None and epsilon is not None else None),
+            theta=theta_value,
+            added_young_charge=None,
+            remaining_margin=margin,
+            source_key=source_key,
+            errors=tuple(dict.fromkeys(errors)),
+        )
+    rho_rounded = rho + epsilon
+    charge = (1 + 1 / theta_value) * (rho_rounded * rho_rounded - rho * rho)
+    leftover = margin - charge
+    if leftover < 0:
+        return RouteBSchurMarginConsumption(
+            status="OPEN_SCHUR_MARGIN_INSUFFICIENT",
+            rho_baseline=rho,
+            epsilon_port=epsilon,
+            rho_rounded=rho_rounded,
+            theta=theta_value,
+            added_young_charge=charge,
+            remaining_margin=leftover,
+            source_key=source_key,
+            errors=("young_charge_exceeds_remaining_schur_margin",),
+        )
+    return RouteBSchurMarginConsumption(
+        status="CONDITIONAL_SCHUR_MARGIN_CONSUMED",
+        rho_baseline=rho,
+        epsilon_port=epsilon,
+        rho_rounded=rho_rounded,
+        theta=theta_value,
+        added_young_charge=charge,
+        remaining_margin=leftover,
+        source_key=source_key,
+        errors=(),
+        margin_consumed=True,
+    )
+
+
 __all__ = [
     "DEFAULT_BLOCK_COORDS",
     "DEFAULT_REMOTE_COORDS",
@@ -608,8 +718,10 @@ __all__ = [
     "RouteBResolventPortPropagation",
     "RouteBGeneralResolventPortPropagation",
     "RouteBWeightedPortMetricConversion",
+    "RouteBSchurMarginConsumption",
     "audit_routeb_regularizer_inclusion",
     "convert_routeb_port_bound_to_weighted_metric",
+    "consume_routeb_schur_margin",
     "derive_routeb_general_resolvent_port_propagation",
     "derive_routeb_resolvent_port_propagation",
     "propagate_routeb_regularizer_diagonal",

@@ -88,6 +88,13 @@ an unproven metric witness. It deliberately records
 `schur_margin_consumed=false`; O0-R3 must still prove the remaining budget
 inequality.
 
+`consume_routeb_schur_margin` implements O0-R3's scalar budget consumer. Given
+same-key weighted baseline `rho_r`, perturbation `epsilon_R`, `theta > 0`, and
+an exact remaining margin, it computes
+`(1+1/theta)*((rho_r+epsilon_R)^2-rho_r^2)` and rejects insufficient margin or
+provenance mismatch. This is only a budget arithmetic result: it does not
+prove either input bound or the underlying physical PMI statement.
+
 The API and focused tests do not run Lean/Lake, Julia, SOS, trajectory checks,
 or broad regression, and all result objects keep
 `formal_certificate_allowed=False` and `registry_eligible=False`.
