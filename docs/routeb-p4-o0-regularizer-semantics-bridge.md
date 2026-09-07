@@ -65,6 +65,21 @@ bounds and an explicitly supplied source/state key matching the inverse premise;
 omitting that key is fail-closed. The helper never infers invertibility,
 an inverse norm bound, or a coupling bound from the regularizer alone.
 
+For the genuinely rounded evaluator seam, the companion
+`derive_routeb_general_resolvent_port_propagation` consumes an explicit
+`epsilon_a >= ||A_float-A_exact||` and independent exact-rational B/C block
+bounds. When `epsilon_a*K < 1`, it returns the three-term estimate
+
+```text
+||Bf-Br|| Kf ||Cf|| + ||Br|| DeltaK ||Cf||
+  + ||Br|| K ||Cf-Cr||,
+```
+
+where `Kf = K/(1-epsilon_a*K)` and
+`DeltaK = epsilon_a*K^2/(1-epsilon_a*K)`. This is intentionally an
+unweighted conditional bound. Conversion to the `B_up` energy metric and
+consumption of the Schur/Young margin remain separate O0-R2/O0-R3 premises.
+
 The API and focused tests do not run Lean/Lake, Julia, SOS, trajectory checks,
 or broad regression, and all result objects keep
 `formal_certificate_allowed=False` and `registry_eligible=False`.

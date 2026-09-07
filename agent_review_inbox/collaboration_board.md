@@ -897,3 +897,9 @@ T-P4-033 回执已接入 `P4.true_dh_regularizer_semantics_bridge` 的
 O0-R3 baseline Schur margin 仍是独立开放前提；正则化正性本身不能推出逆矩阵或
 port bound。新 intake 为 `scripts/record_routeb_o0_math_review.py`，state rev 500，
 registry=0，formal gate 保持关闭；回执、反例和未解决项均保留，未进行 registry 晋级。
+
+随后将 O0-R1 的一般扰动公式落成
+`derive_routeb_general_resolvent_port_propagation`：显式消费
+`epsilon_A`、B/C 差异范数和 exact inverse premise，返回三项 unweighted port
+perturbation bound；仍强制 source-key 一致，并把 weighted metric / Schur margin
+留给 O0-R2/R3，避免把一般 rounded-base 情形错误等同于 common-base 特例。

@@ -8,6 +8,7 @@ from percolation_workflow.routeb_regularizer_semantics import (
     MU_DELTA,
     RouteBExactResolventPremise,
     audit_routeb_regularizer_inclusion,
+    derive_routeb_general_resolvent_port_propagation,
     derive_routeb_resolvent_port_propagation,
     propagate_routeb_regularizer_diagonal,
     routeb_regularizer_fact,
@@ -78,4 +79,42 @@ def test_resolvent_rejects_couplings_without_matching_source_key() -> None:
     assert result.status == "OPEN_FAIL_CLOSED"
     assert result.port_difference_bound is None
     assert "coupling_source_key_missing" in result.errors
+    assert result.errors.count("coupling_source_key_missing") == 1
+
+
+def test_general_resolvent_keeps_independent_block_errors_in_three_term_bound() -> None:
+    result = derive_routeb_general_resolvent_port_propagation(
+        RouteBExactResolventPremise("mass:D", "induced_2", Fraction(1)),
+        epsilon_a=MU_DELTA,
+        b_r_norm_bound=Fraction(2),
+        b_difference_norm_bound=Fraction(1, 10),
+        c_f_norm_bound=Fraction(3),
+        c_difference_norm_bound=Fraction(1, 5),
+        source_key="mass:D",
+    )
+
+    assert result.status == "CONDITIONAL_GENERAL_RESOLVENT_PORT_BOUND"
+    assert result.inverse_norm_bound_float64 == 1 / (1 - MU_DELTA)
+    assert result.inverse_difference_bound == MU_DELTA / (1 - MU_DELTA)
+    expected = (
+        Fraction(1, 10) * result.inverse_norm_bound_float64 * 3
+        + 2 * result.inverse_difference_bound * 3
+        + 2 * Fraction(1, 5)
+    )
+    assert result.port_difference_bound == expected
+    assert result.weighted_port_bound_required is True
+
+
+def test_general_resolvent_rejects_missing_epsilon_and_source_key_fail_closed() -> None:
+    result = derive_routeb_general_resolvent_port_propagation(
+        RouteBExactResolventPremise("mass:D", "induced_2", Fraction(1)),
+        b_r_norm_bound=Fraction(2),
+        b_difference_norm_bound=Fraction(1),
+        c_f_norm_bound=Fraction(1),
+        c_difference_norm_bound=Fraction(1),
+    )
+
+    assert result.status == "OPEN_FAIL_CLOSED"
+    assert result.port_difference_bound is None
+    assert "epsilon_a_missing" in result.errors
     assert result.errors.count("coupling_source_key_missing") == 1

@@ -172,6 +172,30 @@ class RouteBResolventPortPropagation:
     registry_eligible: bool = False
 
 
+@dataclass(frozen=True)
+class RouteBGeneralResolventPortPropagation:
+    """Conditional perturbation bound for independently rounded blocks.
+
+    This is the O0-R1/O0-R2 algebraic seam.  ``epsilon_a`` bounds the full
+    D-block perturbation, while the B/C terms allow the rounded evaluator to
+    differ off the diagonal.  All bounds are exact rationals supplied by an
+    upstream source/interval proof; this helper does not infer them.
+    """
+
+    status: str
+    epsilon_a: Fraction | None
+    inverse_norm_bound_exact: Fraction | None
+    inverse_norm_bound_float64: Fraction | None
+    inverse_difference_bound: Fraction | None
+    port_difference_bound: Fraction | None
+    source_key: str | None
+    errors: tuple[str, ...] = ()
+    norm_convention: str | None = None
+    weighted_port_bound_required: bool = True
+    formal_certificate_allowed: bool = False
+    registry_eligible: bool = False
+
+
 def routeb_regularizer_fact() -> RouteBRegularizerFact:
     """Return the recorded scalar fact without evaluating deployed code."""
     if MU_DELTA <= 0 or FLOAT64_MU >= EXACT_MU:
@@ -375,6 +399,127 @@ def derive_routeb_resolvent_port_propagation(
     )
 
 
+def derive_routeb_general_resolvent_port_propagation(
+    premise: RouteBExactResolventPremise | None,
+    *,
+    epsilon_a: Fraction | int | None = None,
+    b_r_norm_bound: Fraction | int | None = None,
+    b_difference_norm_bound: Fraction | int | None = None,
+    c_f_norm_bound: Fraction | int | None = None,
+    c_difference_norm_bound: Fraction | int | None = None,
+    source_key: str | None = None,
+) -> RouteBGeneralResolventPortPropagation:
+    """Compute the exact three-term port perturbation estimate.
+
+    With ``A_r``'s inverse norm bounded by ``K`` and
+    ``||A_f-A_r|| <= epsilon_a``, this requires ``epsilon_a*K < 1`` and
+    returns ``K_f``, the inverse difference bound, and
+
+    ``||B_f-B_r||*K_f*||C_f|| + ||B_r||*DeltaK*||C_f||
+    + ||B_r||*K*||C_f-C_r||``.
+
+    The result is unweighted.  A caller must separately convert it to the
+    ledger's energy metric (or provide a direct weighted bound), so this
+    function can never silently discharge a Schur/PMI obligation.
+    """
+    if premise is None:
+        return RouteBGeneralResolventPortPropagation(
+            status="PENDING_RESOLVENT_PREMISE",
+            epsilon_a=None,
+            inverse_norm_bound_exact=None,
+            inverse_norm_bound_float64=None,
+            inverse_difference_bound=None,
+            port_difference_bound=None,
+            source_key=None,
+            errors=("exact_real_inverse_norm_bound_missing",),
+        )
+
+    errors: list[str] = []
+    if not premise.source_key:
+        errors.append("resolvent_source_key_missing")
+    if premise.norm_convention not in {"induced_2", "induced_infinity"}:
+        errors.append("unsupported_norm_convention")
+    names = {
+        "inverse_norm_bound": premise.inverse_norm_bound,
+        "epsilon_a": epsilon_a,
+        "b_r_norm_bound": b_r_norm_bound,
+        "b_difference_norm_bound": b_difference_norm_bound,
+        "c_f_norm_bound": c_f_norm_bound,
+        "c_difference_norm_bound": c_difference_norm_bound,
+    }
+    values: dict[str, Fraction | None] = {}
+    for name, value in names.items():
+        try:
+            values[name] = (_exact_scalar(value, name) if value is not None else None)
+        except TypeError as error:
+            errors.append(str(error))
+            values[name] = None
+    inverse_bound = values["inverse_norm_bound"]
+    epsilon = values["epsilon_a"]
+    if not premise.proves_exact_real_bound:
+        errors.append("exact_real_inverse_bound_not_authoritatively_supplied")
+    if inverse_bound is not None and inverse_bound < 0:
+        errors.append("inverse_norm_bound_negative")
+    for name in ("epsilon_a", "b_r_norm_bound", "b_difference_norm_bound",
+                 "c_f_norm_bound", "c_difference_norm_bound"):
+        value = values[name]
+        if value is not None and value < 0:
+            errors.append(f"{name}_negative")
+    required = ("epsilon_a", "b_r_norm_bound", "b_difference_norm_bound",
+                "c_f_norm_bound", "c_difference_norm_bound")
+    for name in required:
+        if values[name] is None:
+            errors.append(f"{name}_missing")
+    if source_key is None:
+        errors.append("coupling_source_key_missing")
+    elif source_key != premise.source_key:
+        errors.append("coupling_source_key_mismatch")
+    if errors or inverse_bound is None or epsilon is None:
+        return RouteBGeneralResolventPortPropagation(
+            status="OPEN_FAIL_CLOSED" if errors else "PENDING_RESOLVENT_PREMISE",
+            epsilon_a=epsilon,
+            inverse_norm_bound_exact=inverse_bound,
+            inverse_norm_bound_float64=None,
+            inverse_difference_bound=None,
+            port_difference_bound=None,
+            source_key=premise.source_key,
+            errors=tuple(dict.fromkeys(errors)) or ("resolvent_bounds_missing",),
+            norm_convention=premise.norm_convention,
+        )
+    contraction = epsilon * inverse_bound
+    if contraction >= 1:
+        return RouteBGeneralResolventPortPropagation(
+            status="OPEN_FAIL_CLOSED",
+            epsilon_a=epsilon,
+            inverse_norm_bound_exact=inverse_bound,
+            inverse_norm_bound_float64=None,
+            inverse_difference_bound=None,
+            port_difference_bound=None,
+            source_key=premise.source_key,
+            errors=("resolvent_neumann_condition_failed",),
+            norm_convention=premise.norm_convention,
+        )
+    denominator = 1 - contraction
+    float_bound = inverse_bound / denominator
+    inverse_difference = epsilon * inverse_bound * inverse_bound / denominator
+    port_difference = (
+        values["b_difference_norm_bound"] * float_bound * values["c_f_norm_bound"]
+        + values["b_r_norm_bound"] * inverse_difference * values["c_f_norm_bound"]
+        + values["b_r_norm_bound"] * inverse_bound * values["c_difference_norm_bound"]
+    )
+    return RouteBGeneralResolventPortPropagation(
+        status="CONDITIONAL_GENERAL_RESOLVENT_PORT_BOUND",
+        epsilon_a=epsilon,
+        inverse_norm_bound_exact=inverse_bound,
+        inverse_norm_bound_float64=float_bound,
+        inverse_difference_bound=inverse_difference,
+        port_difference_bound=port_difference,
+        source_key=premise.source_key,
+        errors=(),
+        norm_convention=premise.norm_convention,
+    )
+
+
 __all__ = [
     "DEFAULT_BLOCK_COORDS",
     "DEFAULT_REMOTE_COORDS",
@@ -388,7 +533,9 @@ __all__ = [
     "RouteBRegularizerFact",
     "RouteBRegularizerInclusion",
     "RouteBResolventPortPropagation",
+    "RouteBGeneralResolventPortPropagation",
     "audit_routeb_regularizer_inclusion",
+    "derive_routeb_general_resolvent_port_propagation",
     "derive_routeb_resolvent_port_propagation",
     "propagate_routeb_regularizer_diagonal",
     "routeb_regularizer_fact",
