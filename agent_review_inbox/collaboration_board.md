@@ -1216,6 +1216,15 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - 下一步仍只需要具备 Julia 的执行 agent 产出 16-row 完整字段、E1/E2<=1e-12、
   exit/stdout/stderr 和 CSV/receipt hashes。
 
+### 2026-09-07 — 梁智炜：force GitHub runner handoff 收割
+
+- 新 handoff 将 fresh Julia 执行固定到 clean checkout、sibling source path、
+  runner/verifier、完整 output directory 和双 residual gate；当前仍是
+  `PENDING_JULIA_EXECUTION`，本机没有 Julia。
+- 已绑定 runner、verifier、exporter、deployed source 与 handoff hashes；只有
+  完整 CSV/receipt/stdout/stderr/exit-code 和 `MAX_E1/MAX_E2<=1e-12` 才能进入
+  runtime candidate，不能关闭 Lean/DH/formal gate。
+
 ### 2026-09-07 — 梁智炜：O0/O1/O2 follow-up obstruction 批量收割
 
 - O0 新 JSON receipt 与此前结论一致：同键 `rho_r`、`m_r`、`theta` 均缺失，

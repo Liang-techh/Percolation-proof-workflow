@@ -1877,6 +1877,13 @@ after integration; corrections should be a new result file.
 - 禁止把 runner 存在、旧 CSV 或本轮 obstruction 升级为 runtime PASS 或 DH
   source equivalence。
 
+### T-P4-KC-COORDINATE-ADAPTER — short GitHub runner handoff (2026-09-07)
+
+- clean GitHub runner 只执行 `run_general_state_force_binding.ps1`，不要直接
+  调 exporter；输出目录必须完整上传并保留 verifier/job stdout。
+- 入口已 hash-bound；验收要求 16 rows、B/D 顺序、完整 schema、exit 0、四个
+  E1/E2 residual 与 CSV/runtime/stdout/stderr hashes。缺任一项保持 pending/rejected。
+
 ### Follow-up harvest: O0/O1/O2 obstruction batch (2026-09-07)
 
 - O0：只收同键 strict-margin 三元组与 exact positive leftover；新 receipt

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 536,
+  "revision": 537,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13912,6 +13912,35 @@
           "runtime_status": "NOT_OBTAINED",
           "formal_certificate_allowed": false,
           "registry_promoted": false
+        },
+        "force_short_handoffs": [
+          {
+            "task_id": "T-P4-KC-COORDINATE-ADAPTER",
+            "status": "PENDING_JULIA_EXECUTION",
+            "review_sha256": "D7C0BEB408B4C321CCEAC755748EB7CEAB4BC9AC31DD9B492C916CF32655C7E9",
+            "runner_sha256": "B8DD862BD48E15E6872E0B39CC3A35E8F61AC42EC329ABD6C2C5B09665B1CF1B",
+            "verifier_sha256": "560105344B7727476D97CC77210EE1298A184BB2840F2DA636ED6D357A1151EF",
+            "exporter_sha256": "5351110E81327EBC059074A2E445A33E00859320BCE37B5B0220BB189F4E46A4",
+            "deployed_source_sha256": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936",
+            "required_output_dir": "examples/routeb_b45_5_descriptor_terms_adapter_lean/output/general-state-export-20260907/",
+            "julia_found_here": false,
+            "runtime_receipt_present": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
+          }
+        ],
+        "force_short_handoff": {
+          "status": "PENDING_JULIA_EXECUTION",
+          "review_sha256": "D7C0BEB408B4C321CCEAC755748EB7CEAB4BC9AC31DD9B492C916CF32655C7E9",
+          "runner_sha256": "B8DD862BD48E15E6872E0B39CC3A35E8F61AC42EC329ABD6C2C5B09665B1CF1B",
+          "verifier_sha256": "560105344B7727476D97CC77210EE1298A184BB2840F2DA636ED6D357A1151EF",
+          "exporter_sha256": "5351110E81327EBC059074A2E445A33E00859320BCE37B5B0220BB189F4E46A4",
+          "deployed_source_sha256": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936",
+          "required_output_dir": "examples/routeb_b45_5_descriptor_terms_adapter_lean/output/general-state-export-20260907/",
+          "julia_found_here": false,
+          "runtime_receipt_present": false,
+          "registry_promoted": false,
+          "formal_certificate_allowed": false
         }
       }
     },
@@ -41053,6 +41082,15 @@
       "o2_status": "BLOCKED_AUTHORITY_NOT_ADMISSIBLE",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T14:37:39.273607+00:00",
+      "kind": "routeb_force_short_julia_handoff_recorded",
+      "node_id": "203c45aac1d84022b69267c0cc31db06",
+      "review_status": "PENDING_JULIA_EXECUTION",
+      "runtime_receipt_present": false,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -44709,5 +44747,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "3833388d1fa3e266675e5105dbaa7764cd9761a792c245786108ab2e4a533011"
+  "state_checksum": "022beac7aa86e5ebd532801ebd8e2dff5f48bcc2f8bad680bd5e45c877f80ab5"
 }
