@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 527,
+  "revision": 529,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13844,6 +13844,41 @@
           "runtime_receipt_present": false,
           "formal_certificate_allowed": false,
           "registry_promoted": false
+        },
+        "force_runner_reviews": [
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-KC-COORDINATE-ADAPTER",
+            "source_agent": "codex-inbox",
+            "review_status": "PENDING_JULIA_EXECUTION",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-force-exporter-runner-codex-20260907.md",
+              "sha256": "E2B86ECE684220190C3970D41A5C8C8ECA9B2F8AB8355B0990B607AD12C14F34"
+            },
+            "runner": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_5_descriptor_terms_adapter_lean\\run_general_state_force_binding.ps1",
+              "sha256": "B8DD862BD48E15E6872E0B39CC3A35E8F61AC42EC329ABD6C2C5B09665B1CF1B"
+            },
+            "fresh_output_required": true,
+            "overwrite_existing_output_forbidden": true,
+            "julia_executed_here": false,
+            "fresh_csv_present": false,
+            "fresh_receipt_present": false,
+            "formal_certificate_allowed": false,
+            "registry_promoted": false
+          }
+        ],
+        "force_runner_review": {
+          "status": "PENDING_JULIA_EXECUTION",
+          "review_sha256": "E2B86ECE684220190C3970D41A5C8C8ECA9B2F8AB8355B0990B607AD12C14F34",
+          "runner_sha256": "B8DD862BD48E15E6872E0B39CC3A35E8F61AC42EC329ABD6C2C5B09665B1CF1B",
+          "fresh_output_required": true,
+          "overwrite_existing_output_forbidden": true,
+          "julia_executed_here": false,
+          "fresh_csv_present": false,
+          "fresh_receipt_present": false,
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
         }
       }
     },
@@ -15474,6 +15509,62 @@
             "didx_zero_based=[0,1,2,5]"
           ],
           "source_receipt_present": false,
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
+        },
+        "true_dh_export_obstructions": [
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-033-O1",
+            "source_agent": "codex-inbox",
+            "review_status": "OPEN_TRUE_DH_EXACT_MDD_EXPORT_OBSTRUCTION",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-033-O1-true-dh-exact-MDD-export-obstruction-codex-20260907.md",
+              "sha256": "19AB63DABEDF2E5FED8C25C4E398D9D5A2DBA8F472D0EE955E9AE09C91D1E7C4"
+            },
+            "nearest_artifacts": [
+              "debug_11_dhport.jl",
+              "debug_12n_symM.jl",
+              "P3 trig-chain contract"
+            ],
+            "missing_source_fields": [
+              "source_key",
+              "state_key",
+              "mu",
+              "q",
+              "block_order",
+              "typed Matrix (Fin 6) (Fin 6) ℝ evaluator",
+              "typed M_DD45_at projection",
+              "h_MDD_def"
+            ],
+            "accepted_paths": {
+              "A": [
+                "h_inv_def",
+                "hdet"
+              ],
+              "B": [
+                "h_left"
+              ]
+            },
+            "structural_obstruction": "current deployed source exposes Float64/runtime or symbolic probes, not same-key exact typed M_DD45",
+            "formal_certificate_allowed": false,
+            "registry_promoted": false
+          }
+        ],
+        "true_dh_export_obstruction": {
+          "status": "OPEN_TRUE_DH_EXACT_MDD_EXPORT_OBSTRUCTION",
+          "review_sha256": "19AB63DABEDF2E5FED8C25C4E398D9D5A2DBA8F472D0EE955E9AE09C91D1E7C4",
+          "missing_source_fields": [
+            "source_key",
+            "state_key",
+            "mu",
+            "q",
+            "block_order",
+            "typed Matrix (Fin 6) (Fin 6) ℝ evaluator",
+            "typed M_DD45_at projection",
+            "h_MDD_def"
+          ],
+          "structural_obstruction": "current deployed source exposes Float64/runtime or symbolic probes, not same-key exact typed M_DD45",
           "formal_certificate_allowed": false,
           "registry_promoted": false
         }
@@ -40555,6 +40646,25 @@
       "global_coverage": false,
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T14:14:17.837049+00:00",
+      "kind": "routeb_o1_true_dh_exact_mdd_export_obstruction_recorded",
+      "node_id": "120deab092c243b6a43356e63c8b56f4",
+      "review_status": "OPEN_TRUE_DH_EXACT_MDD_EXPORT_OBSTRUCTION",
+      "source_receipt_required": true,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T14:14:50.140342+00:00",
+      "kind": "routeb_force_runner_review_recorded",
+      "node_id": "203c45aac1d84022b69267c0cc31db06",
+      "review_status": "PENDING_JULIA_EXECUTION",
+      "fresh_receipt_present": false,
+      "overwrite_existing_output_forbidden": true,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -44211,5 +44321,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "ff175d8abdd43042a9027a343d569f064b54b793effadb4d07d6598f70ee87ec"
+  "state_checksum": "00755fa3d7fc982dcbf90745ca748d3328e9956513bc163903b83e5b2fa7ba5c"
 }

@@ -1150,3 +1150,12 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   `COMPILED_ENDPOINT_PROVENANCE_ONLY`。parent lift 与 sibling join 仍只接受
   conditional premises，source-bound dynamic leaf、trajectory membership 和
   global coverage 仍 open。
+
+### 2026-09-07 — 梁智炜：O1 exact export obstruction 与 force runner 收割
+
+- O1 的新结构性结果确认：`debug_11_dhport.jl` 只有 runtime Float64 6×6，
+  `debug_12n_symM.jl` 只有独立 `s_i,c_i` symbolic probe；二者都不能提供
+  同键 exact `Matrix (Fin 6) (Fin 6) ℝ` 或 `M_DD45_at`。该 obstruction 已
+  写入 state，O1 仍要求真实 typed source receipt。
+- force runner 已封装 fresh 输出目录、双 hash、Julia/Python 缺失状态和“不覆盖
+  旧 artifact”策略；当前仍 `PENDING_JULIA_EXECUTION`，没有 CSV/receipt/PASS。

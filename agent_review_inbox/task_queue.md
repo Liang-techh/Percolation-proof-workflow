@@ -1805,3 +1805,17 @@ after integration; corrections should be a new result file.
   `BoxSubset`/`CoverageJoin2` premise 的 typed transport；仍缺
   source-bound dynamic leaf、trajectory membership、parent/sibling records
   和全域 coverage，不得关闭 O2。
+
+### T-P4-033-O1 — exact source export obstruction (2026-09-07)
+
+- 当前 `debug_11_dhport.jl` 与 `debug_12n_symM.jl` 都不能提供同键 exact
+  `Matrix (Fin 6) (Fin 6) ℝ` / `M_DD45_at`；不能继续用 q=0 probe、Float64
+  inverse 或 determinant 替代 source receipt。
+- 下一步只接受真实 `source_key/state_key/mu/q/block_order` typed export，
+  然后走 Path A 或 Path B；该 obstruction 已登记，O1 不关闭。
+
+### T-P4-KC-COORDINATE-ADAPTER — force runner (2026-09-07)
+
+- fresh runner 已入库：Julia/Python 不可用时只返回 pending，已有输出目录不
+  覆盖，成功运行后必须调用完整 schema/residual verifier。
+- 当前仍无 runtime CSV/receipt；不要把 runner 存在升级为 source-binding PASS。
