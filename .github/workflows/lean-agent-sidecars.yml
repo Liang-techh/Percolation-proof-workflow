@@ -1,0 +1,111 @@
+name: Lean agent sidecars
+
+on:
+  push:
+    paths:
+      - "examples/**/*.lean"
+      - "examples/**/verify.sh"
+      - "examples/**/lean-toolchain"
+      - "examples/**/lakefile.lean"
+      - "examples/**/lakefile.toml"
+      - ".github/workflows/lean-agent-sidecars.yml"
+  pull_request:
+    paths:
+      - "examples/**/*.lean"
+      - "examples/**/verify.sh"
+      - "examples/**/lean-toolchain"
+      - "examples/**/lakefile.lean"
+      - "examples/**/lakefile.toml"
+      - ".github/workflows/lean-agent-sidecars.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: lean-agent-sidecars-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  portable-sidecars:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 120
+    defaults:
+      run:
+        shell: bash
+    env:
+      ELAN_VERSION: v4.2.3
+      ELAN_SHA256: df0b2b3a439961ffcbb3985214365ffe40f49bc871df04dff268c7d8e21ca8b2
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+
+      # Some focused Route-B sidecars intentionally reuse the pinned local-FKG
+      # Lake environment, whose dependency is the pinned formal-math tree.
+      - name: Check out pinned formal-math dependency
+        uses: actions/checkout@v4
+        with:
+          repository: anthropics/formal-math
+          ref: 795efb86f191735c5481675763537cfb4ff37e55
+          path: upstream/formal-math
+          persist-credentials: false
+
+      - name: Install checksum-verified Elan
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 --proto '=https' --tlsv1.2 \
+            --output "$RUNNER_TEMP/elan.tar.gz" \
+            "https://github.com/leanprover/elan/releases/download/${ELAN_VERSION}/elan-x86_64-unknown-linux-gnu.tar.gz"
+          printf '%s  %s\n' "$ELAN_SHA256" "$RUNNER_TEMP/elan.tar.gz" | sha256sum --check
+          mkdir -p "$RUNNER_TEMP/elan-installer"
+          tar -xzf "$RUNNER_TEMP/elan.tar.gz" -C "$RUNNER_TEMP/elan-installer"
+          "$RUNNER_TEMP/elan-installer/elan-init" -y --no-modify-path --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Bootstrap pinned local-FKG Lake environment
+        run: |
+          set -euo pipefail
+          cd examples/local_fkg
+          echo "LOCAL_FKG_TOOLCHAIN=$(cat lean-toolchain)"
+          lake --version
+          lake update
+          lake build
+
+      - name: Run portable agent sidecars
+        run: |
+          set -euo pipefail
+          mapfile -t scripts < <(find examples -type f -name verify.sh -print | sort)
+          ran=0
+          for script in "${scripts[@]}"; do
+            if grep -q 'CI_PORTABLE=1' "$script"; then
+              echo "::group::Running $script"
+              bash "$script"
+              echo "::endgroup::"
+              ran=$((ran + 1))
+            fi
+          done
+          echo "PORTABLE_SIDECARS_RUN=$ran"
+          if [[ "$ran" -eq 0 ]]; then
+            echo "No CI_PORTABLE=1 sidecars registered yet."
+          fi
+
+      - name: Record Lean/Lake versions
+        if: always()
+        run: |
+          {
+            echo "elan: $(elan --version 2>&1 || true)"
+            echo "lake: $(lake --version 2>&1 || true)"
+            echo "lean: $(lean --version 2>&1 || true)"
+          } | tee "$RUNNER_TEMP/lean-agent-environment.txt"
+
+      - name: Upload Lean environment log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lean-agent-environment
+          path: ${{ runner.temp }}/lean-agent-environment.txt
+          if-no-files-found: error
+          retention-days: 14

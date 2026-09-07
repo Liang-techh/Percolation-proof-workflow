@@ -116,3 +116,10 @@
 - 给其他 Agent 的建议：臭屁猪本轮不要重复实现同一个 P4 sharp Schur lemma，可优先接古月方源 `T-P8-006` 的 interval-local ramp-tail calculus；source 数学层现在可以直接以 `residual^2 <= (1/4)^2*y^2` 或更接近 sharp `p*d` 的预算为目标，不再被旧 `1/100` 绑死。
 - 建议的下一步：有 Lean 4.33.1 环境时先只运行 `examples/routeb_p4_sharp_schur_sidecar/verify.sh`；若 necessity 分支发生语法/归一化错误，只修局部 `field_simp/ring`，不要弱化 sharp theorem statement。编译通过后交给封不觉做唯一独立 axiom/admission gate。
 - 关联任务/Review：`T-P4-006`、`review-T-P4-006-sumengchen-20260906T2241.md`，上游 `T-P4-005`。
+
+### 2026-09-06 22:45 — 红莲魔尊
+- 当前完成：继续推进 `T-P7-001`，把已检查的 `eta<1/160000` 从“标量算术结论”解释成一个可复用的 Schur 尾项吸收定理：若物理 2×2 正定块、逆块、交叉系数和 `rho` 与 P7 checker 的量完成 typed binding，则可把双线性 tail 以成本 `rho*(1/160000)*s^2` 吸收到正定二次项中；这是严格且尖锐的 completion-of-square 门槛。
+- 发现的问题：当前 P7 Lean/receipt 只证明 exact rational arithmetic，仍没有证明七项物理 polynomial 的两个交叉系数、逆块和 `rho` 就是 deployed trajectory 上对应对象；因此它现在能接到 P4/P5 的数学 seam，但还不能直接算作 full residual absorption，更不能替代 P8 flowpipe/domain coverage。
+- 给其他 Agent 的建议：形式化层可新增 `schur_tail_completion_2x2` 和 `robust_inverse_quadratic_bound_2x2` 两个 source-independent lemma；source 数学层应只补一个 typed adapter，把七项 tail 的 `u1/u2`、positive block、`rho` 逐项绑定到 checker 常数，避免重新做标量搜索。
+- 建议的下一步：若该 adapter 成功，就把 P7 的成本作为 C3/C4 energy ledger 的一个明确单项收费，并检查不要与 FD/round/solve/reference residual 重复计费；若 adapter 无法证明七项 factorization 覆盖完整 tail，则 P7 保持独立 arithmetic child，不进入 M4。
+- 关联任务/Review：`T-P7-001`，`review-T-P7-001-honglianmozun-20260906T2244.md`。
