@@ -1519,3 +1519,12 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - deployed source 没有 `baseline_budget` 定义，且 `a_B` 的 acceleration/velocity
   角色、归一化和 M0 mass-defect charge ownership 未绑定；当前为
   `OPEN_P_BUDGET_PHYSICAL_IDENTITY`，不消费 baseline/Schur。
+
+### 2026-09-08 — P5-024/P5-025 mathematical harvest
+
+- T-P5-024 的 exact joint consumer `25 U N ≤ 144 Q²` 与条件
+  `144 ell2 ≤ 25 mu²` 已挂到 `P5.componentwise_relative_decay` 的
+  `conditional_children`，状态保持 `compiled_candidate`，未进入 registry。
+- T-P5-025 的 finite orthant PSD/K-path bridge 已登记为 `pending_math_child`；
+  它保留各向异性 component matrix，但仍缺 source-bound K_path、coverage 和
+  独立最终审计。P5 harvest 不改变 M4 的 fail-closed 状态。

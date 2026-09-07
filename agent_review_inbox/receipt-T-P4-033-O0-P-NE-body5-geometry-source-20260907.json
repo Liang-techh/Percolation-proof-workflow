@@ -1,0 +1,297 @@
+{
+  "schema": "routeb.o0.p_ne.body5_geometry_source_review.v1",
+  "status": "CONDITIONAL_BODY5_GEOMETRY_DERIVATION",
+  "consumable_now": false,
+  "main_state_modified": false,
+  "registry_promoted": false,
+  "baseline_consumed": false,
+  "schur_margin_consumed": false,
+  "lean_lake_run": false,
+  "scope": "human body-5, zero-based body index 4 only",
+  "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+  "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+  "csv_gate": {
+    "body5_csv_rows": 57,
+    "keyed_coefficient_map_matches": true,
+    "adapter_piecewise_matches_current_target_check": true,
+    "mathematical_adapter_csv_inconsistency": false,
+    "source_expansion_proven": false,
+    "trace_fold_proven": false,
+    "h_body_5_proven": false
+  },
+  "constants": {
+    "mass": "3/10",
+    "inertia_scalar": "1/30",
+    "a0": "2/25",
+    "a1": "21/100",
+    "d0": "1/10",
+    "d2": "1/20",
+    "d3": "19/100"
+  },
+  "slot_axis_reduction": {
+    "origins": {
+      "o0": "0",
+      "o1": "(2/25) er + (1/10) e3",
+      "o2": "U er + (1/10 + C) e3",
+      "o3": "o2 + (1/20) et",
+      "o4": "o3 + (19/100) z3",
+      "o5": "o4"
+    },
+    "axes": {
+      "z0": "e3",
+      "z1": "et",
+      "z2": "et",
+      "z3": "sin(phi) er + cos(phi) e3",
+      "z4": "-sin(q3) * (cos(phi) er - sin(phi) e3) + cos(q3) et"
+    },
+    "irrelevant_coordinates": [
+      "q4: step 4 has a4=d4=0 for origin; q5: joint 5 inactive"
+    ]
+  },
+  "active_columns": {
+    "ancestor_active": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "nonzero_jv": [
+      0,
+      1,
+      2
+    ],
+    "zero_jv_structural": [
+      3,
+      4
+    ],
+    "nonzero_jw": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "inactive": [
+      5
+    ],
+    "jv": {
+      "0": "A et - (1/20) er",
+      "1": "(C + (19/100) cos(phi)) er - (B + (19/100) sin(phi)) e3",
+      "2": "(19/100) (cos(phi) er - sin(phi) e3)",
+      "3": "0",
+      "4": "0"
+    },
+    "jw": {
+      "0": "e3",
+      "1": "et",
+      "2": "et",
+      "3": "z3",
+      "4": "z4"
+    }
+  },
+  "unexpanded_gram": {
+    "Gv": "[[A^2+d^2,-dP,-d*f*cos(phi),0,0],[-dP,P^2+Q^2,f*(P*cos(phi)+Q*sin(phi)),0,0],[-d*f*cos(phi),f*(P*cos(phi)+Q*sin(phi)),f^2,0,0],[0,0,0,0,0],[0,0,0,0,0]]",
+    "Gw": "[[1,0,0,cos(phi),sin(phi)*sin(q3)],[0,1,1,0,cos(q3)],[0,1,1,0,cos(q3)],[cos(phi),0,0,1,0],[sin(phi)*sin(q3),cos(q3),cos(q3),0,1]]"
+  },
+  "exact_piecewise_target": {
+    "T00": "1441/30000 + (63/6250) sin(q1) + (57/6250) sin(q1+q2) - (1323/200000) cos(2q1) + (1197/100000) cos(q2) - (1197/100000) cos(2q1+q2) - (1083/200000) cos(2q1+2q2)",
+    "T01_T10": "-(57/20000) cos(q1+q2) - (63/20000) cos(q1)",
+    "T02_T20": "-(57/20000) cos(q1+q2)",
+    "T03_T30": "(1/30) cos(q1+q2)",
+    "T04_T40": "(1/60)(cos(q1+q2-q3)-cos(q1+q2+q3))",
+    "T11": "8609/150000 + (1197/50000) cos(q2)",
+    "T12_T21": "13249/300000 + (1197/100000) cos(q2)",
+    "T14_T41": "(1/30) cos(q3)",
+    "T22": "13249/300000",
+    "T23_T32": "(1/30) cos(q3)",
+    "T24_T42": "(1/30) cos(q3)",
+    "T33": "1/30",
+    "T44": "1/30",
+    "all_other_entries": "0"
+  },
+  "csv_support_representatives": {
+    "T00": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0
+      ],
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ],
+      [
+        2,
+        1,
+        0
+      ],
+      [
+        2,
+        2,
+        0
+      ]
+    ],
+    "T01_T10": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        1,
+        1,
+        0
+      ]
+    ],
+    "T02_T20": [
+      [
+        1,
+        1,
+        0
+      ]
+    ],
+    "T03_T30": [
+      [
+        1,
+        1,
+        0
+      ]
+    ],
+    "T04_T40": [
+      [
+        1,
+        1,
+        -1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "T11": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "T12_T21": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0
+      ]
+    ],
+    "T14_T41": [
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "T22": [
+      [
+        0,
+        0,
+        0
+      ]
+    ],
+    "T24_T42": [
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "T33_T44": [
+      [
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "minimal_compiled_lemmas": [
+    "body5_frame_slot_0_to_5",
+    "body5_slot_origin_exact",
+    "body5_source_axis_exact",
+    "body5_com_exact",
+    "body5_jv_columns_exact",
+    "body5_jw_columns_exact",
+    "body5_orthogonal_trig_lemmas",
+    "body5_gram_entries_exact",
+    "body5_mass_entries_exact",
+    "body5_fourier_atom_fold_exact",
+    "h_body_5_source_to_trace_compiled"
+  ],
+  "required_final_statement": "forall q i j, sourceBodyMass q (4 : Fin 6) i j = bodyTraceEvaluator 4 q i j",
+  "proof_boundary": {
+    "source_binding_proven": false,
+    "lean_compiled": false,
+    "axiom_audit": "not available; compile intentionally not run",
+    "sorry_admit_audit": "not available; compile intentionally not run",
+    "formal_certificate_allowed": false
+  },
+  "evidence": [
+    {
+      "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean",
+      "sha256": "25F099EC5EB7F699C789AE29AA45DF0FBB24FF06547F498740968F5E1B3C9976"
+    },
+    {
+      "path": "examples/routeb_b45_source_comparator_lean/O1_BODY_5_TARGET_CHECK.json",
+      "sha256": "E761B8950929562F350F768A2C1A9B2DCD62A5CE62FB9921626172332C6EA40E"
+    },
+    {
+      "path": "examples/routeb_b45_source_comparator_lean/BodyTraceEvaluator.lean",
+      "sha256": "B9845D37B5DCD16E1F9E142CB2E4D0E5571452993E843C85AC8CD643F6BA5DEA"
+    },
+    {
+      "path": "examples/routeb_b45_source_comparator_lean/O1_BODY_TRACE_EVALUATOR_CHECK.json",
+      "sha256": "8024F6A57F6BEF890F08825A71EFF056499D995616E6A9D297FDB82773C2DB89"
+    },
+    {
+      "path": "artifacts/task_routeb_body_trace_sink_current/outputs/routeB_fourier_mass_body_trace.csv",
+      "sha256": "AE1F9CD7978C4CF23626B5C097EAAF4A2C70DE9C8B86A31A61DB12997CF4C3B9"
+    },
+    {
+      "path": "examples/routeb_real_dh_step_lean/RealDHStep.lean",
+      "sha256": "9C04DA5B9627EE749C53009733006934F95B2D33265E46CA59D0725AA453786A"
+    },
+    {
+      "path": "examples/routeb_frame_slot_accessor_lean/FrameSlotAccessor.lean",
+      "sha256": "F497BD1F45FAE4DD385F4D0F46DF79252C92E5CD027B29D5DC55011F91525C31"
+    },
+    {
+      "path": "examples/routeb_body_semantic_core_lean/BodySemanticCore.lean",
+      "sha256": "FE15F6CA9993F55FC56E6D2C9CCA5FA8C7F6E9530B9B900A6F111ED96715149C"
+    }
+  ]
+}

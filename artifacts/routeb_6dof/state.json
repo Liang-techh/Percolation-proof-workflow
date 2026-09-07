@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 576,
+  "revision": 577,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -11075,7 +11075,72 @@
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_componentwise_relative_decay_lean\\verify.sh",
             "sha256": "d7bf35f880d59dd029245badc761db16434e011d90776f4f9d30eeb279ac25a4"
           }
-        ]
+        ],
+        "conditional_children": [
+          {
+            "child_id": "T-P5-024",
+            "statement": "25 * U * N <= 144 * Q^2 and 144 * ell2 <= 25 * mu^2 implies centered coupling <= mu * Q",
+            "status": "compiled_candidate",
+            "integration_status": "pending_coordinator_admission",
+            "admission_label": "compiled_candidate",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P5-024-kuangmanmozun-20260907T0945.md",
+              "sha256": "39E955FE56D2F1CC8A735C21D411E7EDAEAAD897E476DA34F5ED1A8F92D5BB49"
+            },
+            "sidecar_artifacts": [
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_joint_centered_gain_lean\\P5JointCenteredGain.lean",
+                "sha256": "CB43A09CE19285F2D62AEBB9FAD59C1BC8296576AD17A294EB9E62416DD59DDC"
+              },
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_joint_centered_gain_lean\\README.md",
+                "sha256": "E219870B852A59CF4080A1A6D80F8A2F213A91EB3D05C8264B56C2203CA24081"
+              },
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_joint_centered_gain_lean\\lean-toolchain",
+                "sha256": "56A12C348C1FB7BB3E6475757349976A7E93E94FA2918BF92811B1B2E9634504"
+              },
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_joint_centered_gain_lean\\verify.sh",
+                "sha256": "02CA893789C801E8CDB7CB815211480C118F7011264E95C2FBABE60811D68047"
+              }
+            ],
+            "source_independent": true,
+            "physical_source_binding": false,
+            "path_or_coverage_binding": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false,
+            "evidence_boundary": "review reports focused Lean CI, but coordinator has not independently rerun it",
+            "required_followups": [
+              "independent final-agent audit",
+              "statement comparator receipt",
+              "source/path/coverage binding before any Route-B admission"
+            ]
+          },
+          {
+            "child_id": "T-P5-025",
+            "statement": "finite orthant PSD certificates consume a nonnegative K_path table directly",
+            "status": "pending_math_child",
+            "integration_status": "pending_coordinator_admission",
+            "admission_label": "pending",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P5-025-liuguanyi-20260907T1020.md",
+              "sha256": "2CC0BCBD50C280B6A1901569F44EEA6426393C18DA5371739D62165940021438"
+            },
+            "source_independent": true,
+            "physical_source_binding": false,
+            "path_or_coverage_binding": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false,
+            "evidence_boundary": "mathematical interface only; no compiled sidecar or source-bound K_path receipt",
+            "required_followups": [
+              "formalize finite orthant sign reduction",
+              "preserve K_path as a typed component matrix",
+              "independent final-agent audit"
+            ]
+          }
+        ],
+        "p5_harvest_boundary": "compiled candidates and pending mathematics do not close P5"
       }
     },
     "eaa4f6e504b8461c9bc2f0601f5d6cae": {
@@ -48153,6 +48218,19 @@
       "h_body_proven": false,
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T16:13:25.109176+00:00",
+      "kind": "routeb_p5_mathematical_harvest_recorded",
+      "node_id": "4a9af66cdc4f4607857a5cf360f19eb7",
+      "child_ids": [
+        "T-P5-024",
+        "T-P5-025"
+      ],
+      "p5_024_status": "compiled_candidate",
+      "p5_025_status": "pending_math_child",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -51809,5 +51887,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "cb05b615f62f2785498029a0449139fb969941203693e8b38fd4bf2db6750828"
+  "state_checksum": "8e62ba071e096c20a1c94c341a195451527f32e84f78fc106b50bc713891eb27"
 }

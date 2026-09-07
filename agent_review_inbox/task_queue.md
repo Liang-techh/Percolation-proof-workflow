@@ -2112,3 +2112,11 @@ after integration; corrections should be a new result file.
 
 - 继续补 `baseline_budget` 定义、变量角色/normalization、完整 regularized
   `M_BB` source binding 与 disjoint charge ownership；当前仅有 obstruction receipt。
+
+### T-P5-024/025 — exact consumer harvest (2026-09-08)
+
+- P5-024 先走 independent final-agent audit，再考虑 source-independent theorem
+  registry；当前只允许作为 conditional compiled candidate。
+- P5-025 继续 formalize finite orthant sign reduction，并把 `K_path` 保留为
+  typed component matrix；不得以 scalar `ell2_path` 或缺少 path 的 checker
+  关闭 P5/P8/M4。
