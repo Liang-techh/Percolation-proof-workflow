@@ -83,7 +83,7 @@ without an explicit scoped request.
 
 ### T-M4-001 — dependency-cone closure audit
 
-- status: `open`
+- status: `reviewed_pending` (Codex, 2026-09-06; result integrated as pending)
 - scope: use the current checkpoint and DAG projection to list the exact M4
   prerequisite cone and identify which leaves can be proven independently;
 - deliver: review result with deterministic node IDs, levels, and next frontier;

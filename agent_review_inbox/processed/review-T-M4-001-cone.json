@@ -1,0 +1,11 @@
+{
+  "review_file": "../review-T-M4-001-cone.md",
+  "review_sha256": "D453E7C27ACC7A5C727387A781F1EA55CD2D3590A5D01F176BB8BE9F69690772",
+  "task_id": "T-M4-001",
+  "integrated_at": "2026-09-06T20:22:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "target_node": "M4.block45_full_certificate",
+  "admission_effect": "none",
+  "classification": "frontier_serialization_observed",
+  "next_frontier": "refine explicit child DAG; P0 remains the graph frontier"
+}
