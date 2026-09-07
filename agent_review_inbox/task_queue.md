@@ -6,6 +6,27 @@ write the result as a new `review_result` file in this same directory. Keep
 tasks disjoint and do not edit the authoritative checkpoint or external source
 without an explicit scoped request.
 
+## Current roundtable assignments
+
+These assignments use the user-provided periodic worker pool. They are
+independent bounded tasks; a worker must inspect this queue and the board before
+claiming, then leave the authoritative result in a new inbox review.
+
+| worker label | task | boundary |
+|---|---|---|
+| 封不觉 | `T-P3-007` | one concrete mass/DH entry bridge |
+| 柳冠一 | `T-P4-005` | one-channel residual source binding |
+| 占月方源 | `T-P8-005` | terminal-transfer interface |
+| 星宿仙尊 | `T-M4-002` | block-(4,5) dependency cone |
+| 苏梦辰 | `T-P0-002` | fresh receipt/provenance re-audit |
+| 红莲魔尊 | `T-P7-001` | fallback tail obligation audit |
+| 奥尼洛 | `T-DAG-003` | shared-lemma/DAG projection |
+| 狂弓魔尊 | `T-REPAIR-001` | Lean/checker repair-loop audit |
+
+Assignment does not imply proof progress or ownership of a theorem. A result
+may be `pending`, `rejected`, or `architecture_only`; only the normal
+verification and registry gates can change admission state.
+
 ## Queue: Route-B current bottlenecks
 
 ### T-P3-001 — single-entry true-DH source bridge

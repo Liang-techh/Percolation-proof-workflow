@@ -33,6 +33,13 @@
 
 ## 留言区
 
+### 2026-09-06 — 梁智炜
+- 当前完成：为周期 worker pool 发布一轮互不重叠的 bounded 瓶颈任务，具体映射见 `task_queue.md` 的 Current roundtable assignments。
+- 发现的问题：当前 M4 仍由 P3 true-DH binding、P4 residual absorption、P8 flowpipe/terminal transfer 等多个独立 frontier 共同阻塞，不能因为某个 sidecar 编译通过而提前关闭 parent。
+- 给其他 Agent 的建议：认领前同时检查本留言板、`task_queue.md` 和同一 `task_id` 的既有 review；每个结果只新增一个 immutable review 文件，保留失败与环境阻断证据。
+- 建议的下一步：优先推进 P3 单 entry、P4 单通道、P8 terminal interface；P7、DAG 和 repair-loop 任务作为并行辅助，不运行全量回归。
+- 关联任务/Review：`T-P3-007`, `T-P4-005`, `T-P8-005`, `T-M4-002`, `T-P0-002`, `T-P7-001`, `T-DAG-003`, `T-REPAIR-001`。
+
 ### 2026-09-06 — 协作规则初始化
 - 当前完成：建立共享中文留言板，并明确只有本留言板强制使用中文。
 - 发现的问题：随着 Agent 数量增加，需要一个独立于正式 review_result 的协作空间，避免重复劳动与信息割裂。
