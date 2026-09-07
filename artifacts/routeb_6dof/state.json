@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 718,
+  "revision": 719,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -42711,7 +42711,9 @@
       "parent_id": "e8ea2f3fb84e4717b18d4594bb5c0627",
       "status": "open",
       "proof_sketch": "Define StrictMarginFeasible and NonstrictPSD separately, derive strict feasibility from a common nine-entry lower bound or finite positive cell floor, prove strict implies non-strict, and retain the exact source zero-null exclusion and unbounded away-domain obstruction. Actual candidate-domain feasibility, PSD, source semantics, coverage, and compilation remain external.",
-      "dependencies": [],
+      "dependencies": [
+        "ab9697d1445e41958eab00f4e3a03cab"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -42872,6 +42874,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\anthropic_flt_registry_graph_adapter\\REVIEW.md",
             "sha256": "71122943A703D74ECBEDC664CB2874B0F59B719B7327AA502A94B31EE91EED3D"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "ab9697d1445e41958eab00f4e3a03cab": {
+      "id": "ab9697d1445e41958eab00f4e3a03cab",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction",
+      "statement": "The literal O1 consumer cell and delivery p_B≤28/5 region contain the exact origin, while the active V≤1 lifted region contains it only under the external premise V(0,0)≤1; with only origin membership and BODY6 R(0) source binding, no common positive margin exists. These domains and the full regularized six-body M are not silently identified.",
+      "parent_id": "d98288209e3441f684338b4f285b7564",
+      "status": "open",
+      "proof_sketch": "Define exact-real O1, delivery, and active lifted predicates; prove their available origin witnesses, isolate the conditional active witness, and transport the BODY6 null-vector obstruction through the minimal zero-membership/source-binding interface. Record full M/C/G, body-only Schur, Float64/CSV, coverage, and active V identities as separate obligations.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "residual_absorption",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_BODY6_CANDIDATE_DOMAIN_ORIGIN_OBSTRUCTION",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_CANDIDATEDOMAIN20260907.lean",
+            "sha256": "A29B912819EE043209E49F56448244CFC4AB1502713FBB7CCEAEF36AE3E51086"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_CANDIDATEDOMAIN20260907.review.md",
+            "sha256": "DA89FA4E89A3ED3B1C214808B6B90F85B004D8174CBB6AFB2511665A4F1949BF"
           }
         ],
         "registry_eligible": false,
@@ -71358,6 +71395,24 @@
       "artifact_hashes_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T21:10:48.088973+00:00",
+      "kind": "node_added",
+      "node_id": "ab9697d1445e41958eab00f4e3a03cab",
+      "parent_id": "d98288209e3441f684338b4f285b7564",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction"
+    },
+    {
+      "at": "2026-09-07T21:10:48.088994+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction"
+      ],
+      "metadata_updated": [],
+      "artifact_hashes_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -75014,5 +75069,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "33e132adad5a9f092c0f3a4e4adfbccc168ce0c411574c0a31906666efc987db"
+  "state_checksum": "f578195cc7a1bf7d6e22c0f0c7a88f71fd41a358b3995c7893084dfcc25998ab"
 }

@@ -2172,6 +2172,19 @@ CHILDREN = [
             "examples/anthropic_flt_registry_graph_adapter/REVIEW.md",
         ],
     },
+    {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility",
+        "statement": "The literal O1 consumer cell and delivery p_B≤28/5 region contain the exact origin, while the active V≤1 lifted region contains it only under the external premise V(0,0)≤1; with only origin membership and BODY6 R(0) source binding, no common positive margin exists. These domains and the full regularized six-body M are not silently identified.",
+        "proof_sketch": "Define exact-real O1, delivery, and active lifted predicates; prove their available origin witnesses, isolate the conditional active witness, and transport the BODY6 null-vector obstruction through the minimal zero-membership/source-binding interface. Record full M/C/G, body-only Schur, Float64/CSV, coverage, and active V identities as separate obligations.",
+        "lane": "source_semantics",
+        "bottleneck": "residual_absorption",
+        "status": "OPEN_UNCOMPILED_BODY6_CANDIDATE_DOMAIN_ORIGIN_OBSTRUCTION",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_CANDIDATEDOMAIN20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_CANDIDATEDOMAIN20260907.review.md",
+        ],
+    },
 ]
 
 

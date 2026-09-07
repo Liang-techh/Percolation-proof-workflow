@@ -2445,3 +2445,11 @@ revision 718 登记 P0 `anthropic_flt_registry_graph_adapter`。筛选结果为
 provenance/admission seam，但不复制纯数论 theorem，不把图元数据或渲染结果
 当作证明。manifest 固定 upstream commit、路径、许可证和工具链，状态保持
 pending，registry 与正式证书均未改变。
+
+### 2026-09-07 — BODY6 候选域原点障碍接入
+
+revision 719 登记 `CANDIDATE_DOMAIN_ORIGIN_OBSTRUCTION`。该叶不是把所有
+Route-B 域混为一谈，而是分别记录 O1 consumer cell、delivery p_B≤28/5 和
+active V≤1 的原点 witness 条件；在最小 `0∈D` 与 `R(0)` source binding 下，
+BODY6 严格统一正 margin 被精确排除。active V 前提、full M/C/G、coverage 和
+body-only Schur 到完整证书的关系仍保持开放。

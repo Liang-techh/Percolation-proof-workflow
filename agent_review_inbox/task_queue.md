@@ -3051,3 +3051,8 @@ Anthropic FLT commit 的 `extract→graphdata→render→selfcheck` 架构，分
 `light_adaptation`，不是纯数论 theorem 迁移。Manifest 记录 upstream paths、
 Apache-2.0、toolchain、graph edge kinds、hash 字段与 promotion boundary；
 当前只作 pending advisory，未修改 registry。
+
+revision 719 登记 BODY6 `CANDIDATE_DOMAIN_ORIGIN_OBSTRUCTION`。O1 cell 与
+delivery p_B≤28/5 的原点 witness 已有精确 proof-attempt；active V≤1 只在
+外部给出 V(0,0)≤1 时成立。该叶把零点 source binding 的最小反证接口固定下来，
+同时保留 active/domain identity、full regularized M 与 body-only Schur 的独立义务。
