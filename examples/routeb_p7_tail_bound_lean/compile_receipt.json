@@ -1,0 +1,33 @@
+{
+  "schema_version": "routeb-p7-tail-bound-compile-receipt-v1",
+  "status": "COMPILED_CANDIDATE",
+  "statement_ids": [
+    "RouteBP7Tail.rho0_pos",
+    "RouteBP7Tail.eta01_lt_target",
+    "RouteBP7Tail.eta02_lt_target"
+  ],
+  "run_id": "output/run-pw9I9OSp",
+  "lean_toolchain": "leanprover/lean4:v4.32.0",
+  "source_sha256": "5fd5ff1b86bf41a29d4ed1aa2fec447c0da632d91fd206154d0caa97d2acb0eb",
+  "toolchain_file_sha256": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e",
+  "verifier_sha256": "ac9c8e9a1cc947dd0d0bdc006d00c6cc3c85085a546ac11d8a528c4b20bc0c41",
+  "olean_sha256": "c7bafd74dd6f413d025aadeadee3bb85979d3b5ffaaabfbbc019bd18bf2c1927",
+  "compile_log_sha256": "fa6ba98557988c422d7928f52d8f7f07b82aa5d8315237f048fddfbbe2ece4ad",
+  "external_checker": {
+    "path": "robot_final/verify_physical_rational_tail_global_bound.py",
+    "sha256": "013ff73e1e85afc2657e23d322e681130cf6c2e5022fe988a3998d66839aa6cb",
+    "result": "PHYSICAL_RATIONAL_TAIL_GLOBAL_CHECK_OK",
+    "factorization_terms": 7,
+    "eta01_strict": true,
+    "eta02_strict": true
+  },
+  "compile_exit_code": 0,
+  "axioms": ["propext", "Classical.choice", "Quot.sound"],
+  "forbidden_proof_escape": false,
+  "physical_source_binding": false,
+  "full_residual_absorption": false,
+  "global_coverage": false,
+  "registry_promoted": false,
+  "formal_certificate_allowed": false,
+  "admission": "exact_rational_tail_arithmetic_open"
+}

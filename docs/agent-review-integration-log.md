@@ -156,3 +156,36 @@ registry promotion, or admission change was performed.
 The authoritative state remains 64 open nodes with an empty verified registry;
 the shared projection is retained only as a proposal until its schema,
 snapshot binding, acyclicity, and fail-closed migration checks are implemented.
+
+## 2026-09-07 / Route-B checkpoint revision 352
+
+The `T-P7-001` review was integrated as pending triage metadata. The assigned
+worker correctly refused to guess a mathematical target from the short label.
+The coordinator then bound the task to the external seven-term rational tail
+checker and produced `examples/routeb_p7_tail_bound_lean/`, where the two strict
+scalar inequalities were proved in Lean with exact rationals. This closes only
+the arithmetic child; it does not establish the polynomial's equality to the
+deployed true-DH/Float64 source, full residual absorption, flowpipe coverage,
+terminal transfer, or M4 admission.
+
+| task | target | classification | admission effect |
+|---|---|---|---|
+| T-P7-001 | `P7.strict_tail_fallback` | `pending_tail_obligation_audit` + exact arithmetic child | none |
+
+The registry remains empty and `formal_certificate_allowed` remains false.
+
+## 2026-09-07 / Route-B checkpoint revision 353
+
+The coordinator recorded the focused P7 exact-rational child after the external
+tail checker passed. The persisted receipt binds the Lean source, verifier,
+toolchain, OLean and compile log hashes, and records the seven-term factorization
+and both strict scalar inequalities. This is a reusable arithmetic leaf only;
+it is not a physical source binding or a global Route-B certificate.
+
+| child | parent | result | admission effect |
+|---|---|---|---|
+| `RouteBP7Tail.eta01_lt_target`, `eta02_lt_target` | `P7.strict_tail_fallback` | `COMPILED_CANDIDATE` / exact rational arithmetic | none |
+
+State revision 353 retains the child as a conditional graph artifact. P7
+source equality, residual absorption, P8 flowpipe, terminal transfer, and M4
+kernel/comparator gates remain open; the verified registry is empty.

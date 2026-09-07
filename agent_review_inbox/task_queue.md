@@ -161,6 +161,25 @@ correction does not rewrite existing claims or review authorship.
   as proof evidence, weakening source/coverage gates, or promoting registry
   entries.
 
+### T-P7-001 — fallback tail obligation audit
+
+- status: `reviewed_pending` (integrated at Route-B revision 352; the first
+  review was triage-only because the target was not discoverable; a concrete
+  target is now bound below)
+- target: external
+  `robot_final/verify_physical_rational_tail_global_bound.py`, with inputs
+  `routeB_dense_Mq/routeB_physical_rational_tail_cs_polynomial.csv`,
+  `routeB_dense_Mq/routeB_physical_rational_tail_global_bound.csv`, and
+  `routeB_dense_Mq/routeB_Mq_M0.csv`;
+- exact child: `examples/routeb_p7_tail_bound_lean/`, proving the final
+  rational scalar inequalities for `qmax=13/50` and `qmax=3/8`;
+- deliver: preserve the checker and Lean receipt hashes, then determine whether
+  the polynomial tail is source-bound and can be joined to residual/flowpipe
+  obligations; the current arithmetic child is reusable but remains open for
+  physical admission;
+- forbidden: treating the scalar tail bound as full residual absorption,
+  substituting it for P8 flowpipe coverage, or promoting P7/M4/registry.
+
 ## Queue: next parallel leaves
 
 ### T-P3-003 — canonical source-manifest binding

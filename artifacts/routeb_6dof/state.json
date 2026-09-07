@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 351,
+  "revision": 353,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -7990,7 +7990,39 @@
         },
         "gate_requirements": {},
         "closure_scope": "mathematical",
-        "execution_status": "tracking_invalidated"
+        "execution_status": "tracking_invalidated",
+        "agent_review_refs": [
+          {
+            "review_file": "agent_review_inbox/review-T-P7-001-honglianmozun-20260906T2140.md",
+            "review_sha256": "956F4510242680B35692B616C7D692C44BBB3157BF1B4941C227A51D726ACB1E",
+            "task_id": "T-P7-001",
+            "source_agent": "红莲魔尊",
+            "created_at": "2026-09-06T21:40:38-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_tail_obligation_audit",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "9ae2d067fa956549906ad74f6f4e8f1bbcf74bf3",
+            "admission_label": "pending"
+          }
+        ],
+        "conditional_children": [
+          {
+            "statement_ids": [
+              "RouteBP7Tail.rho0_pos",
+              "RouteBP7Tail.eta01_lt_target",
+              "RouteBP7Tail.eta02_lt_target"
+            ],
+            "status": "compiled_candidate",
+            "receipt": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_bound_lean\\compile_receipt.json",
+              "sha256": "bd30ef7ce253c1aaf6ffa81b60129ebeed3937feb170b70fd9177221b1e2782a"
+            },
+            "physical_source_binding": false,
+            "global_coverage": false,
+            "registry_promoted": false
+          }
+        ]
       }
     },
     "edd8407c33f54c41867f03b46ec1e313": {
@@ -29951,6 +29983,48 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6f06c8545bc24dc590b6e5ade85b684d"
+    },
+    {
+      "at": "2026-09-07T03:54:13.842483+00:00",
+      "kind": "agent_review_integrated",
+      "review_file": "agent_review_inbox/review-T-P7-001-honglianmozun-20260906T2140.md",
+      "review_sha256": "956F4510242680B35692B616C7D692C44BBB3157BF1B4941C227A51D726ACB1E",
+      "task_id": "T-P7-001",
+      "classification": "pending_tail_obligation_audit",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "614d87b0f32d4f8c92eab9f5d63fbf30"
+    },
+    {
+      "at": "2026-09-07T04:01:09.867936+00:00",
+      "kind": "routeb_p7_tail_bound_compile_recorded",
+      "node_id": "614d87b0f32d4f8c92eab9f5d63fbf30",
+      "statement_ids": [
+        "RouteBP7Tail.rho0_pos",
+        "RouteBP7Tail.eta01_lt_target",
+        "RouteBP7Tail.eta02_lt_target"
+      ],
+      "receipt": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_bound_lean\\compile_receipt.json",
+      "receipt_sha256": "bd30ef7ce253c1aaf6ffa81b60129ebeed3937feb170b70fd9177221b1e2782a",
+      "source_sha256": "5fd5ff1b86bf41a29d4ed1aa2fec447c0da632d91fd206154d0caa97d2acb0eb",
+      "external_checker": {
+        "path": "robot_final/verify_physical_rational_tail_global_bound.py",
+        "sha256": "013ff73e1e85afc2657e23d322e681130cf6c2e5022fe988a3998d66839aa6cb",
+        "result": "PHYSICAL_RATIONAL_TAIL_GLOBAL_CHECK_OK",
+        "factorization_terms": 7,
+        "eta01_strict": true,
+        "eta02_strict": true
+      },
+      "olean_sha256": "c7bafd74dd6f413d025aadeadee3bb85979d3b5ffaaabfbbc019bd18bf2c1927",
+      "compile_log_sha256": "fa6ba98557988c422d7928f52d8f7f07b82aa5d8315237f048fddfbbe2ece4ad",
+      "compile_exit_code": 0,
+      "status": "COMPILED_CANDIDATE",
+      "physical_source_binding": false,
+      "full_residual_absorption": false,
+      "global_coverage": false,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -33470,8 +33544,55 @@
       "physical_source_binding": false,
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "schema_version": 1,
+      "algorithm": "routeb_p7_tail_bound/v1",
+      "graph_sha256": "e39f1d87e547c0e3321852cc8419dee995fd88073b2d93c6c2d651909ac4c80a",
+      "roots": [
+        "614d87b0f32d4f8c92eab9f5d63fbf30"
+      ],
+      "selected_nodes": [
+        "614d87b0f32d4f8c92eab9f5d63fbf30"
+      ],
+      "graph_projection": {
+        "schema_version": 1,
+        "parent": "614d87b0f32d4f8c92eab9f5d63fbf30",
+        "child_statement": "RouteBP7Tail.eta01_lt_target",
+        "receipt_sha256": "bd30ef7ce253c1aaf6ffa81b60129ebeed3937feb170b70fd9177221b1e2782a"
+      },
+      "receipt": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_bound_lean\\compile_receipt.json",
+        "sha256": "bd30ef7ce253c1aaf6ffa81b60129ebeed3937feb170b70fd9177221b1e2782a"
+      },
+      "source": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_bound_lean\\TailGlobalBound.lean",
+        "sha256": "5fd5ff1b86bf41a29d4ed1aa2fec447c0da632d91fd206154d0caa97d2acb0eb"
+      },
+      "verifier": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_bound_lean\\verify.sh",
+        "sha256": "ac9c8e9a1cc947dd0d0bdc006d00c6cc3c85085a546ac11d8a528c4b20bc0c41"
+      },
+      "toolchain": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_bound_lean\\lean-toolchain",
+        "sha256": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e"
+      },
+      "external_checker": {
+        "path": "robot_final/verify_physical_rational_tail_global_bound.py",
+        "sha256": "013ff73e1e85afc2657e23d322e681130cf6c2e5022fe988a3998d66839aa6cb",
+        "result": "PHYSICAL_RATIONAL_TAIL_GLOBAL_CHECK_OK",
+        "factorization_terms": 7,
+        "eta01_strict": true,
+        "eta02_strict": true
+      },
+      "status": "COMPILED_CANDIDATE",
+      "physical_source_binding": false,
+      "full_residual_absorption": false,
+      "global_coverage": false,
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "global_closure": {},
-  "state_checksum": "2ca364dd0bb2e2371426edbf5fc39e123dca6acb7956f124bf7f6900cfb96e56"
+  "state_checksum": "d369449cc7e7a4c7a7545ca0d29965fc66491d70c8a3751cba881dbda6c1ece6"
 }
