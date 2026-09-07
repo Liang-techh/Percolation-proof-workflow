@@ -85,11 +85,7 @@ theorem component_relative_decay_raw
             intro i _
             ring
       _ = (∑ i, d i * v i ^ 2) - ∑ i, rho i * v i ^ 2 := by
-        simpa using
-          (Finset.sum_sub_distrib
-            (s := (Finset.univ : Finset (Fin 6)))
-            (fun i => d i * v i ^ 2)
-            (fun i => rho i * v i ^ 2))
+        rw [Finset.sum_sub_distrib]
   rw [hsplit]
   linarith
 
