@@ -1339,6 +1339,32 @@ CHILDREN = [
             "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_TAILMINORS20260907_REVIEW.md",
         ],
     },
+    {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound",
+        "statement": "An explicit total-margin equality and reserve-plus-delta upper bound convert the positive aggregate delta certificate into a quantitative strict margin slack for the final consumer.",
+        "proof_sketch": "Set sigma=sum delta, consume 0<sum delta≤sum reserve, and use totalReserve+sum delta≤externalTotalMargin together with totalMargin=externalTotalMargin and shared-lambda equalities to derive 0<sigma≤finalMargin−finalLoad.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_AGGREGATE_SLACK",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_AGGREGATE_SLACK20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_AGGREGATE_SLACK20260907_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.cap_load_order_consumer.assembled_load_nonneg_witness.squared_velocity_nonneg.strict_component_order",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.cap_load_order_consumer.assembled_load_nonneg_witness.squared_velocity_nonneg",
+        "statement": "A strictly smaller cap at one positively loaded Fin-6 coordinate yields a strict weighted cap-load inequality when all other component caps are non-strictly ordered.",
+        "proof_sketch": "Decompose the finite difference sum into the selected positive strict term and nonnegative remainder, then compose with the existing capMax and downstream consumer inequalities without rebuilding non-strict order or cap construction.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_STRICT_COMPONENT_ORDER",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_STRICT_ORDER.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_STRICT_ORDER_REVIEW.md",
+        ],
+    },
 ]
 
 

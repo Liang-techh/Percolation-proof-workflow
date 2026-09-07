@@ -2776,3 +2776,11 @@ source-independent/open/uncompiled 候选。
   吸收；fixed-λ：aggregate margin 的显式正 slack；P3：一坐标严格 cap-load
   单调性。
 - 任务均为数学 proof-attempt，不替代 GitHub :10/:40 的 pinned Lean 验证批次。
+
+### 2026-09-07 — 14:18 定向收割与补派
+
+- fixed-λ aggregate slack、P3 strict component order 已登记，revision 670；前者
+  要求显式 `totalReserve+Σδ≤totalMargin`，后者要求某坐标有正 load，均不隐藏关键
+  严格性前提。
+- fixed-λ 新派 two-row/index equivalence adapter；P3 新派 zero-load/非严格 cap
+  obstruction leaf，用于 theorem graph 的负条件记录；body-6/K-path 继续工作。

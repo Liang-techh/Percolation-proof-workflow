@@ -2089,6 +2089,12 @@ receipt；绿色编译仍不能直接提升 registry。
 strict slack、P3 strict finite-sum order 四个互不重复的数学叶。GitHub Lean 任务
 保持在队列中，等 :10/:40 时段由苏梦辰/巨阳仙尊处理。
 
+### 2026-09-07 14:18 — 梁智炜收割严格性并补派障碍
+
+fixed-λ aggregate slack 与 P3 strict component order 已接入 DAG revision 670；
+同时补派 two-row/index equivalence 与 zero-load obstruction，明确记录严格闭合所需
+的 index/正性前提，防止后续 scheduler 误把弱不等式提升为严格定理。
+
 ### 2026-09-07 13:55 — 梁智炜收割 fixed-λ 定量 reserve
 
 fixed-λ quantitative reserve lower-bound 叶已登记到 DAG revision 668，提供显式
