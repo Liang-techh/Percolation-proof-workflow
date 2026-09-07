@@ -1225,6 +1225,15 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   完整 CSV/receipt/stdout/stderr/exit-code 和 `MAX_E1/MAX_E2<=1e-12` 才能进入
   runtime candidate，不能关闭 Lean/DH/formal gate。
 
+### 2026-09-07 — 梁智炜：force GitHub Actions job handoff 收割
+
+- 最新 handoff 给出了最短可复制的 `workflow_dispatch` job：固定 Julia 1.10、
+  deployed source repository/ref、sibling staging、runner/verifier 和 artifact
+  上传路径；已登记为 `PENDING_RUNTIME_JULIA`。
+- 变量未设置或 source ref 不匹配时必须失败，不允许回退到其他 source；只有
+  完整 16-row fresh receipt、双 residual gate 和全部 hashes 才能进入 runtime
+  candidate，formal/registry 继续关闭。
+
 ### 2026-09-07 — 梁智炜：O2 canonical 13D triple validator 落地
 
 - 根据最新接口 review，在 `coverage_receipt.py` 增加

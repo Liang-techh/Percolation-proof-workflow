@@ -1884,6 +1884,13 @@ after integration; corrections should be a new result file.
 - 入口已 hash-bound；验收要求 16 rows、B/D 顺序、完整 schema、exit 0、四个
   E1/E2 residual 与 CSV/runtime/stdout/stderr hashes。缺任一项保持 pending/rejected。
 
+### T-P4-KC-COORDINATE-ADAPTER — GitHub Actions execution job (2026-09-07)
+
+- 执行 agent 只需在 clean checkout 添加手动 `workflow_dispatch` job，设置
+  `DEPLOYED_SOURCE_REPOSITORY` 与 pinned `DEPLOYED_SOURCE_REF`，使用 Julia 1.10。
+- job 必须调用现有 runner、上传完整 output 和 job logs；缺 source 变量、hash
+  drift、schema/residual/exit failure 均保持 `PENDING_RUNTIME_JULIA` 或 rejected。
+
 ### T-P4-036.2 — canonical 13D triple contract implemented (2026-09-07)
 
 - 新 validator 已可消费未来的 `routeb-theta2-canonical-coverage-v1`：只接受
