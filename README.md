@@ -141,6 +141,28 @@ python scripts/audit_routeb_provenance.py --target-root C:\path\to\6dof_sos_opti
 from stage sequencing. `examples/routeb_supply_core` contains the isolated exact
 quadratic supply proof; its compilation is not a complete physical certificate.
 
+The current true-DH P4 frontier is intentionally split into small, independently
+admissible obligations. From the workflow root, refresh the source-semantics
+receipts with:
+
+```powershell
+$env:PYTHONPATH = 'src'
+python scripts/record_routeb_controller_damping_audit.py
+python scripts/record_routeb_true_dh_source_formula_audit.py
+python scripts/record_routeb_evaluator_enclosure_decomposition.py
+python scripts/record_routeb_exact_real_coefficient_identity_draft.py
+python scripts/record_routeb_regularizer_semantics_draft.py
+```
+
+These recorders preserve the deployment authority (`robot_final/dhport_lib.jl`),
+the exact port sign `R_port = -M_BD M_DD⁻¹ DeltaM_DB`, and the distinction between
+the conditional exact-real O1 identity and the larger Float64 O2 enclosure. They
+never promote a node or set `formal_certificate_allowed`; the O1 interface draft
+is uncompiled until a pinned Lean agent supplies zero-sorry, axiom, comparator, and
+source-binding receipts. `scripts/refresh_anthropic_advisory_overlay.py` refreshes
+the non-authoritative FLT adapter sidecar against the current state hash without
+adding authoritative DAG dependencies.
+
 After an agent returns a decomposition, the same generic state can accept it with
 `propose-decomposition`; the child JSON array preserves order and each child sketch:
 
