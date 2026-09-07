@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-force-exporter-runner-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "E2B86ECE684220190C3970D41A5C8C8ECA9B2F8AB8355B0990B607AD12C14F34",
+  "task_id": "T-P4-KC-COORDINATE-ADAPTER",
+  "source_agent": "codex-local",
+  "created_at": "2026-09-07",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_kc_coordinate_adapter",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-force-exporter-runner-codex-20260907.md",
+  "integrated_at": "2026-09-07T16:57:17.395193+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-007-liuguanyi-20260907T0212.md",
+  "record_kind": "review_result",
+  "review_sha256": "13CA3ECD2159E1A6B47FA5B750C753FAA5CE9FA3CDE725E987392B43F215D89F",
+  "task_id": "T-P4-007",
+  "source_agent": "柳冠一",
+  "created_at": "2026-09-07T02:12:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_actual_block45_residual_decomposition",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "9143285a7dbd562c1f873dae3b693074a6f84c70",
+  "review_file": "agent_review_inbox/review-T-P4-007-liuguanyi-20260907T0212.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-07T16:57:17.391522+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-M4-007-fengbujue-20260907T0112.md",
+  "record_kind": "review_result",
+  "review_sha256": "017A3E292465F8D7D1456990B64DCDAB3ACCC1E970E9E7E0012D8B2FBAEDEB68",
+  "task_id": "T-M4-007",
+  "source_agent": "封不觉",
+  "created_at": "2026-09-07T01:12:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_pure_budget_transfer_formalization",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "f4654e3612bbe2f17628bffd2b58fa7c9097aadd",
+  "review_file": "agent_review_inbox/review-T-M4-007-fengbujue-20260907T0112.md",
+  "admission_label": "compiled_candidate",
+  "integrated_at": "2026-09-07T16:57:17.389194+00:00"
+}

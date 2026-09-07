@@ -1,0 +1,14 @@
+{
+  "record_file": "agent_review_inbox/companion-T-P8-011-guyuefangyuan-20260907T0335.md",
+  "record_kind": "companion_log",
+  "review_sha256": "DED1148568A21D19792A0A99D4F2C81261880BC66692D598432CF346C481E7EF",
+  "task_id": "T-P8-011",
+  "source_agent": "古月方源",
+  "created_at": "2026-09-07T03:35:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_interval_local_ramp_endpoint_adapter",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "integrated_at": "2026-09-07T16:57:17.388950+00:00"
+}

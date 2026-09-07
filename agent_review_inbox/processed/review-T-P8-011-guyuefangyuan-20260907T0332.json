@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P8-011-guyuefangyuan-20260907T0332.md",
+  "record_kind": "review_result",
+  "review_sha256": "DB2C78EA3D33063B07199BFF019648A77538B4C97528FBDA29FB8AB39870BFE8",
+  "task_id": "T-P8-011",
+  "source_agent": "古月方源",
+  "created_at": "2026-09-07T03:32:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_interval_local_ramp_endpoint_adapter",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "c07975f77438377e047e93b29b144c73379ef87c",
+  "review_file": "agent_review_inbox/review-T-P8-011-guyuefangyuan-20260907T0332.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-07T16:57:17.398776+00:00"
+}

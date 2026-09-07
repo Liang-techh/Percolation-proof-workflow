@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-020-kuangmanmozun-20260907T0752.md",
+  "record_kind": "review_result",
+  "review_sha256": "22F8EDCA8AF270F3AA87EAB2322BD5912C8F2D5BBE38D44CA30A70F120F7AAF5",
+  "task_id": "T-P4-020",
+  "source_agent": "狂蛮魔尊",
+  "created_at": "2026-09-07T07:52:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_one_cell_residual_remainder_absorption",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "bf7397a9a82e1142bb7c95b1eb8e1e938c28d9e8",
+  "review_file": "agent_review_inbox/review-T-P4-020-kuangmanmozun-20260907T0752.md",
+  "integrated_at": "2026-09-07T16:57:17.394659+00:00"
+}

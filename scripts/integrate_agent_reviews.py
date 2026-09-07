@@ -46,6 +46,10 @@ TASK_TARGETS = {
     "T-P5-007": ("P5.sparse_disjunctive_sos", "pending_weighted_dual_decay_obstruction"),
     "T-P5-008": ("P5.sparse_disjunctive_sos", "pending_force_error_bias_split"),
     "T-P5-009": ("P5.sparse_disjunctive_sos", "pending_fd_relative_scaling_obstruction"),
+    "T-P5-026": ("P5.componentwise_relative_decay.feasible_cone_spn.proof_attempt",
+                 "compiled_candidate_source_independent_feasible_cone_spn"),
+    "T-P5-027": ("P5.componentwise_relative_decay",
+                 "near_sharp_exact_rational_scalar_fallback"),
     # External FLT scans are deliberately event-only: they are advisory
     # catalog evidence, not Route-B theorem nodes or registry entries.
     "T-FLT-DERIV-CALC": (None, "flt_derivation_calculus_scan"),

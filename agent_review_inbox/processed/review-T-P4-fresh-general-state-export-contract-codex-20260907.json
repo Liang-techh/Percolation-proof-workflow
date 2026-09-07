@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-fresh-general-state-export-contract-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "3114FBA448F7EF6E8AC5653BA858CFA06D3ED81F934C23C88483DF0DBF3E0522",
+  "task_id": "T-P4-KC-COORDINATE-ADAPTER",
+  "source_agent": "codex-local",
+  "created_at": "2026-09-07",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_kc_coordinate_adapter",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-fresh-general-state-export-contract-codex-20260907.md",
+  "integrated_at": "2026-09-07T16:57:17.396443+00:00"
+}

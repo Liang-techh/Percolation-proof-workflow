@@ -2205,3 +2205,16 @@ Harvest rule: collect completed sidecars roughly every 20 minutes, integrate
 fail-closed metadata, refresh the advisory overlay, and synchronize one batch
 to GitHub in that window. Between harvests continue local mathematical work;
 do not fetch/push merely because an agent has emitted an intermediate file.
+
+### Harvested P5-026/P5-027 (2026-09-07)
+
+- P5-026 remote Lean sidecar is a `compiled_candidate` with a real focused
+  Actions receipt, not a local registry theorem. Its remaining frontier is a
+  concrete `ConeIndex`/36-to-18 representative object, sign-fixed quadratic
+  identity, source-bound nonnegative `K_path`, and P8 domain coverage.
+- P5-027 is a source-independent exact-rational scalar fallback bracket. Keep
+  it as a conditional comparison candidate; direct componentwise `K_path`
+  remains the preferred mathematical route.
+- The coordinator has integrated both review families and their processed
+  markers. Do not rerun the old broad diagnostics; assign only the remaining
+  concrete cone/source/coverage obligations.

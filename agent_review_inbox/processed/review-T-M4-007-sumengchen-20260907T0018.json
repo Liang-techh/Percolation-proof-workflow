@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-M4-007-sumengchen-20260907T0018.md",
+  "record_kind": "review_result",
+  "review_sha256": "36AB616C6399AB2521421D0490505B6112265A8B3DD70FE3A8238A52DC028E69",
+  "task_id": "T-M4-007",
+  "source_agent": "苏梦辰",
+  "created_at": "2026-09-07T00:18:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_pure_budget_transfer_formalization",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "19aa5c8f0694a96c08326724766e326c4a01cf4f",
+  "review_file": "agent_review_inbox/review-T-M4-007-sumengchen-20260907T0018.md",
+  "admission_label": "compiled_candidate",
+  "integrated_at": "2026-09-07T16:57:17.389483+00:00"
+}

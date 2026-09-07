@@ -1627,3 +1627,16 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - 已将 successor Lean 与 review 作为
   `P4.O1.source_comparator.h_body_4.source_gram_targets.proof_attempt` 的
   artifact 接入；状态仍 `PROOF_ATTEMPT_UNCOMPILED`，state revision `593`。
+
+### 2026-09-07 — 20 分钟收割：P5-026 / P5-027
+
+- `T-P5-026`：GitHub Actions 的独立 sidecar 对 6-cone cover、36 product cone
+  抽象消费者、SPN 正交象限 lemma、global-sign invariance 和 residual-power
+  consumer 给出 `AXIOM_AUDIT=PASS` / focused `PASS`；但共享 all-sidecars job
+  仍因其他 lane 失败而整体为 red。本地仅将其记为 `compiled_candidate`，未注册。
+- `T-P5-027`：给 scalar fallback 一个严格有理数近 sharp bracket：
+  `11512473/2000000 < C* <= 2302494677956489/400000000000000`，约为
+  `5.7562365 < C* <= 5.756236694891222...`；它仍不绑定 concrete `K_path`、
+  source、coverage 或 P5/P8/M4 closure。
+- 本轮还把 inbox 中此前尚未消费的 fail-closed reviews 一次性写入 processed
+  markers；state revision `595`，122 nodes，registry `0`。

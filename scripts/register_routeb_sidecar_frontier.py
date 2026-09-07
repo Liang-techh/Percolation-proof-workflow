@@ -156,6 +156,12 @@ CHILDREN = [
             "examples/routeb_p5_feasible_cone_spn_proof_attempt/P5FeasibleConeSPN.lean",
             "examples/routeb_p5_feasible_cone_spn_proof_attempt/lakefile.toml",
             "examples/routeb_p5_feasible_cone_spn_proof_attempt/lean-toolchain",
+            "examples/routeb_p5_feasible_cone_spn_lean/P5FeasibleConeSPN.lean",
+            "examples/routeb_p5_feasible_cone_spn_lean/README.md",
+            "examples/routeb_p5_feasible_cone_spn_lean/verify.sh",
+            "examples/routeb_p5_feasible_cone_spn_lean/lean-toolchain",
+            "agent_review_inbox/review-T-P5-026-juyangxianzun-20260907T1048.md",
+            "agent_review_inbox/companion-T-P5-026-juyangxianzun-20260907T1050.md",
         ],
     },
     {

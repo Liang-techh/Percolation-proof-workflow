@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-M4-008-daai-xianzun-20260907T0102.md",
+  "record_kind": "review_result",
+  "review_sha256": "BFE61BB029CB1D71AC9E272161A4F685D5E452395FDBFBB657B85C0185729DF5",
+  "task_id": "T-M4-008",
+  "source_agent": "大爱仙尊",
+  "created_at": "2026-09-07T01:02:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_conditional_energy_schur_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "b58f3dec5e1185e686344d858d2a48b49fed069d",
+  "review_file": "agent_review_inbox/review-T-M4-008-daai-xianzun-20260907T0102.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-07T16:57:17.389752+00:00"
+}

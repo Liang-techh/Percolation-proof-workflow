@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-force-source-binding-contract-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "5202753CC8B5641968E6CEB4533C5C21AD1968441305C2B120198CFF8FC40F50",
+  "task_id": "T-P4-KC-COORDINATE-ADAPTER",
+  "source_agent": "codex-local",
+  "created_at": "2026-09-07",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_kc_coordinate_adapter",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-force-source-binding-contract-codex-20260907.md",
+  "integrated_at": "2026-09-07T16:57:17.395896+00:00"
+}
