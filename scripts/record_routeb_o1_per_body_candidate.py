@@ -23,6 +23,8 @@ BODY2_CHECK = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_2_TARGE
 BODY2_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_2_SOURCE_BRIDGE_RECEIPT.json"
 BODY3_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_3_SOURCE_BRIDGE_RECEIPT.json"
 BODY3_CHECK = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_3_TARGET_CHECK.json"
+BODY3_DECOMP_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_3_SOURCE_DECOMPOSITION_RECEIPT.json"
+BODY3_DECOMP_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-body-3-source-decomposition-codex-20260907.md"
 BODY4_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_4_SOURCE_BRIDGE_RECEIPT.json"
 BODY4_CHECK = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_4_TARGET_CHECK.json"
 BODY4_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-body-4-source-bridge-codex-20260907.md"
@@ -78,6 +80,7 @@ def embedded_adapter_hashes(value):
 def main() -> None:
     for path in (STATE, LEAN, TRACE, ADAPTER, GENERATOR, BODY_RECEIPT, BODY_CHECK,
                  BODY1_RECEIPT, BODY2_CHECK, BODY2_RECEIPT, BODY3_RECEIPT, BODY3_CHECK,
+                 BODY3_DECOMP_RECEIPT, BODY3_DECOMP_REVIEW,
                  BODY4_RECEIPT, BODY4_CHECK, BODY4_REVIEW,
                  BODY5_RECEIPT, BODY5_CHECK, BODY5_REVIEW,
                  BODY4_FOLD_TARGET, BODY4_FOLD_RECEIPT, BODY4_FOLD_REVIEW,
@@ -133,6 +136,10 @@ def main() -> None:
         "body_3_target_check_sha256": digest(BODY3_CHECK),
         "body_3_target_check_status": "PASS_EXACT_BODY3_TARGET_COEFFICIENTS_FAIL_CLOSED",
         "body_3_target_coefficients_proven": False,
+        "body_3_source_decomposition_receipt_sha256": digest(BODY3_DECOMP_RECEIPT),
+        "body_3_source_decomposition_review_sha256": digest(BODY3_DECOMP_REVIEW),
+        "body_3_source_decomposition_status": "OPEN_BODY_3_SOURCE_DECOMPOSITION_TARGETS_ONLY",
+        "body_3_source_decomposition_proven": False,
         "body_4_source_bridge_receipt_sha256": digest(BODY4_RECEIPT),
         "body_4_source_bridge_status": "OPEN_BODY_4_SOURCE_AND_TRACE_PREMISES",
         "body_4_source_bridge_proven": False,
