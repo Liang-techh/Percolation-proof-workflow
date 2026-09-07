@@ -2350,6 +2350,19 @@ CHILDREN = [
             "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_V0PARAMETERMAP20260907.review.md",
         ],
     },
+    {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer.keyed_storage_transfer",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer",
+        "statement": "A reusable keyed storage-transfer contract requires independently bound candidate/parameter/initial/domain digests plus an actual same-domain identity or one-sided comparison; scalar initial-value matching alone does not transfer a path barrier.",
+        "proof_sketch": "Define typed Candidate, Scope, ReceiptKey, SameStorageIdentity, OneSidedComparison, and TransferContract; prove initial and pathwise transfer under explicit inclusion and budget premises, and retain the exact equal-V0/no-barrier counterexample.",
+        "lane": "lean_adapter",
+        "bottleneck": "normalization",
+        "status": "OPEN_UNCOMPILED_BODY6_KEYED_STORAGE_TRANSFER",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_KEYEDSTORAGETRANSFER20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_KEYEDSTORAGETRANSFER20260907.review.md",
+        ],
+    },
 ]
 
 

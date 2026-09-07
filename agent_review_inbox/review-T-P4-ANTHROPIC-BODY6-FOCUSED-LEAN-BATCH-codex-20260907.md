@@ -99,10 +99,14 @@ explicitly assigned to the independent GitHub lane for 流川枫.
 - Lane: `LIUCHUANFENG_INDEPENDENT_GITHUB_LANE` (approximately 1/3 of batch)
 - Target:
   `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_ActualRowMissingBase.lean`
+- Additional target:
+  `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SameSourceConsumerPacket.lean`
 - Review:
   `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_ActualRowMissingBase.review.md`
 - Source-obstruction companion review:
   `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_Line9SourceObstruction.review.md`
+- The same-source packet must receive its own receipt companion; it is a typed
+  allocation adapter, not a replacement for the missing source manifest.
 - Focused declarations:
   `RouteBP4032ActualRowMissingBase.exact_decimal_external_slack`,
   `RouteBP4032ActualRowMissingBase.target_iff_base_allocation`,
@@ -112,6 +116,11 @@ explicitly assigned to the independent GitHub lane for 流川枫.
   `RouteBP4032ActualRowMissingBase.row_counterexample_blocks_every_positive_target`,
   `RouteBP4032ActualRowMissingBase.same_coefficients_opposite_target_results`,
   and `RouteBP4032ActualRowMissingBase.zero_metric_no_positive_floor`.
+- Same-source packet declarations:
+  `RouteBP4032SameSourceConsumerPacket.total_residual_bound`,
+  `RouteBP4032SameSourceConsumerPacket.allocated_source_floor`,
+  `RouteBP4032SameSourceConsumerPacket.allocated_P4_target`, and
+  `RouteBP4032SameSourceConsumerPacket.front_equals_bound_nominal`.
 - Boundary: printed decimal arithmetic and the missing base allocation remain
   explicit; this obstruction does not establish source/Float64 reification,
   physical descriptor feasibility, P4 closure, comparator acceptance, or
