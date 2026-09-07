@@ -25,6 +25,19 @@ class MathFrontierPolicyTests(unittest.TestCase):
         self.assertEqual(rank_math_frontier(state, jobs), [adapter, source, numeric])
         self.assertEqual(math_lane(state.nodes[adapter]), MathLane.LEAN_ADAPTER)
 
+    def test_same_lane_prefers_exact_coefficient_bottleneck(self):
+        state = WorkflowState()
+        source = state.add_node(
+            "source seam", "S",
+            metadata={"math_lane": "lean_adapter", "math_bottleneck": "source_semantics"},
+        )
+        identity = state.add_node(
+            "coefficient seam", "C",
+            metadata={"math_lane": "lean_adapter", "math_bottleneck": "coefficient_identity"},
+        )
+
+        self.assertEqual(rank_math_frontier(state), [identity, source])
+
     def test_v125_style_rows_are_classified_without_workflow_metadata(self):
         self.assertEqual(math_lane({
             "id": "B45-1_fourier_phase_bridge",

@@ -342,6 +342,10 @@ def rank_math_frontier(state: WorkflowState, jobs: Mapping[str, Any] | None = No
                   and (job_ids is None or node.id in job_ids)]
     candidates.sort(key=lambda node: (
         _LANE_ORDER[math_lane(node)],
+        # Within one lane, exact coefficient bridges and evaluator/source
+        # seams must be deterministic before closability breaks ties.  This
+        # keeps the read-only math view aligned with formalizable dispatch.
+        explain_math_bottleneck(node).priority,
         -state.frontier_closability(node.id),
         node.id,
     ))
