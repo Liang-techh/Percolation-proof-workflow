@@ -1949,6 +1949,12 @@ absorption、P4 quadratic load，均登记为 open/uncompiled。下一步推送�
 bound、fixed-λ strict total absorption、P3 finite cap-max。任务均以最小 typed
 数学接口为单位，继续保持 source/coverage/Lean admission 的 fail-closed 边界。
 
+### 2026-09-07 12:47 — 梁智炜本地收割
+
+新增两条可复用数学 seam：P3 capMax 的最小性/唯一性，以及 P4 entrywise
+absolute bound 到 quadratic upper bound。它们都没有引入 PSD、谱数值或 source
+事实；状态仍为 open/uncompiled。body-6 self Gram 与其余三条新任务继续运行。
+
 ### 2026-09-07 12:32 — 梁智炜本地收割并派发
 
 本轮回收了四个已完成数学叶：P3 radius monotonicity、fixed-λ uniform
