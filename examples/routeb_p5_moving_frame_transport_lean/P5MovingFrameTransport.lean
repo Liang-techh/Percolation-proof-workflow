@@ -135,7 +135,7 @@ theorem movingFrameUniformTransport_of_parameterControl
     (h4 h5 r4 r5 t T A4 A5 gamma1 gamma2 gamma3 gamma4
       dx4 dx5 dy4 dy5 dc : ℝ)
     (ht0 : 0 ≤ t) (htT : t ≤ T)
-    (hT : 0 ≤ T) (hA4 : 0 ≤ A4) (hA5 : 0 ≤ A5)
+    (hA4 : 0 ≤ A4) (hA5 : 0 ≤ A5)
     (hcoef4 : |h4 * t + r4| ≤ A4)
     (hcoef5 : |h5 * t + r5| ≤ A5)
     (hdc : |dc| ≤ gammaBudget gamma1 gamma2 gamma3 gamma4 dx4 dx5 dy4 dy5) :
@@ -152,32 +152,38 @@ theorem movingFrameUniformTransport_of_parameterControl
   have hG : 0 ≤ G := le_trans (abs_nonneg dc) hdc
   have hq4 : |dx4 + (h4 * t + r4) * dc| ≤ |dx4| + A4 * G := by
     calc
-      |dx4 + (h4 * t + r4) * dc| ≤ |dx4| + |(h4 * t + r4) * dc| := abs_add _ _
+      |dx4 + (h4 * t + r4) * dc| ≤ |dx4| + |(h4 * t + r4) * dc| := abs_add_le _ _
       _ = |dx4| + |h4 * t + r4| * |dc| := by rw [abs_mul]
       _ ≤ |dx4| + A4 * |dc| := by
-        exact add_le_add_left (mul_le_mul_of_nonneg_right hcoef4 (abs_nonneg dc)) _
+        have hmul := mul_le_mul_of_nonneg_right hcoef4 (abs_nonneg dc)
+        exact add_le_add (le_refl _) hmul
       _ ≤ |dx4| + A4 * G := by
-        exact add_le_add_left (mul_le_mul_of_nonneg_left hdc hA4) _
+        have hmul := mul_le_mul_of_nonneg_left hdc hA4
+        exact add_le_add (le_refl _) hmul
   have hq5 : |dx5 + (h5 * t + r5) * dc| ≤ |dx5| + A5 * G := by
     calc
-      |dx5 + (h5 * t + r5) * dc| ≤ |dx5| + |(h5 * t + r5) * dc| := abs_add _ _
+      |dx5 + (h5 * t + r5) * dc| ≤ |dx5| + |(h5 * t + r5) * dc| := abs_add_le _ _
       _ = |dx5| + |h5 * t + r5| * |dc| := by rw [abs_mul]
       _ ≤ |dx5| + A5 * |dc| := by
-        exact add_le_add_left (mul_le_mul_of_nonneg_right hcoef5 (abs_nonneg dc)) _
+        have hmul := mul_le_mul_of_nonneg_right hcoef5 (abs_nonneg dc)
+        exact add_le_add (le_refl _) hmul
       _ ≤ |dx5| + A5 * G := by
-        exact add_le_add_left (mul_le_mul_of_nonneg_left hdc hA5) _
+        have hmul := mul_le_mul_of_nonneg_left hdc hA5
+        exact add_le_add (le_refl _) hmul
   have hv4 : |dy4 + h4 * dc| ≤ |dy4| + |h4| * G := by
     calc
-      |dy4 + h4 * dc| ≤ |dy4| + |h4 * dc| := abs_add _ _
+      |dy4 + h4 * dc| ≤ |dy4| + |h4 * dc| := abs_add_le _ _
       _ = |dy4| + |h4| * |dc| := by rw [abs_mul]
       _ ≤ |dy4| + |h4| * G := by
-        exact add_le_add_left (mul_le_mul_of_nonneg_left hdc (abs_nonneg h4)) _
+        have hmul := mul_le_mul_of_nonneg_left hdc (abs_nonneg h4)
+        exact add_le_add (le_refl _) hmul
   have hv5 : |dy5 + h5 * dc| ≤ |dy5| + |h5| * G := by
     calc
-      |dy5 + h5 * dc| ≤ |dy5| + |h5 * dc| := abs_add _ _
+      |dy5 + h5 * dc| ≤ |dy5| + |h5 * dc| := abs_add_le _ _
       _ = |dy5| + |h5| * |dc| := by rw [abs_mul]
       _ ≤ |dy5| + |h5| * G := by
-        exact add_le_add_left (mul_le_mul_of_nonneg_left hdc (abs_nonneg h5)) _
+        have hmul := mul_le_mul_of_nonneg_left hdc (abs_nonneg h5)
+        exact add_le_add (le_refl _) hmul
   have hw : |t * dc| ≤ T * G := by
     rw [abs_mul, abs_of_nonneg ht0]
     calc
@@ -210,13 +216,13 @@ theorem movingFrameParameterCorrection_to_K
         K1 * |dz1| + K2 * |dz2| + K3 * |dz3| + K4 * |dz4| + kappa * |dc| := hbase
     _ ≤ K1 * |dz1| + K2 * |dz2| + K3 * |dz3| + K4 * |dz4| +
         kappa * gammaBudget gamma1 gamma2 gamma3 gamma4 dz1 dz2 dz3 dz4 :=
-      add_le_add_left hcharge _
+      add_le_add (le_refl _) hcharge
     _ =
       (K1 + kappa * gamma1) * |dz1| +
       (K2 + kappa * gamma2) * |dz2| +
       (K3 + kappa * gamma3) * |dz3| +
       (K4 + kappa * gamma4) * |dz4| := by
-      simp [gammaBudget]
+      simp only [gammaBudget]
       ring
 
 /-- Any finite four-state homogeneous centered gain valid across arbitrary
