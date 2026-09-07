@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 389,
+  "revision": 390,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -8049,7 +8049,8 @@
       "status": "open",
       "proof_sketch": "Conditional fallback only; require a theorem-backed tail and do not let it silently replace P5.",
       "dependencies": [
-        "1e7b1df1835f4deba06b11a8182f6719"
+        "1e7b1df1835f4deba06b11a8182f6719",
+        "e5a79681d5374bd58c14938f5fa31d76"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -10936,6 +10937,51 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_m4_cross_branch_budget_lean\\verify.sh",
             "sha256": "812faadf02c375b8af2125224e12ebf5e85842ae303450e0f592b57e17c9507f"
+          }
+        ]
+      }
+    },
+    "e5a79681d5374bd58c14938f5fa31d76": {
+      "id": "e5a79681d5374bd58c14938f5fa31d76",
+      "name": "P7.tail_schur_completion_2x2",
+      "statement": "A typed 2x2 Schur completion and robust inverse-quadratic bound consume the P7 tail eta inequality.",
+      "parent_id": "614d87b0f32d4f8c92eab9f5d63fbf30",
+      "status": "open",
+      "proof_sketch": "Prove the exact completion identity by field_simp/ring; bound the inverse quadratic form using absolute-value envelopes; then absorb tau-eta times s^2. Keep seven-term source binding and normalization as separate premises.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean-source-independent-real-analysis",
+        "statement_status": "pending_pinned_lean_compile",
+        "evidence_level": "generic_schur_completion_child",
+        "claim_status": "p7_tail_schur_open",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "preferred_route": true,
+        "unresolved": [
+          "pinned_lean_compile_receipt",
+          "zero_sorry_and_allowed_axioms_receipt",
+          "P7_seven_term_polynomial_source_binding",
+          "P7_inverse_block_and_normalization_binding"
+        ],
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_schur_completion_lean\\TailSchurCompletion.lean",
+            "sha256": "f78c40a2152a4d5107098cc8c3d38839fe6e8571799b5aca81330ff92d63613d"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_schur_completion_lean\\README.md",
+            "sha256": "93e5f7aea7e562d3a8a815179e8e90eada6180f3b4e8ca0842860fedaaa1205a"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_schur_completion_lean\\lean-toolchain",
+            "sha256": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_schur_completion_lean\\verify.sh",
+            "sha256": "e6005da216e98d33fa18dc1bbe14763c6ed20771a050693379a532581f398541"
           }
         ]
       }
@@ -31948,6 +31994,40 @@
       "status": "pending_pinned_lean_compile",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T07:54:48.112216+00:00",
+      "kind": "node_added",
+      "node_id": "e5a79681d5374bd58c14938f5fa31d76",
+      "parent_id": "614d87b0f32d4f8c92eab9f5d63fbf30",
+      "name": "P7.tail_schur_completion_2x2"
+    },
+    {
+      "at": "2026-09-07T07:54:48.112234+00:00",
+      "kind": "routeb_p7_tail_schur_frontier_created",
+      "node_id": "e5a79681d5374bd58c14938f5fa31d76",
+      "parent_id": "614d87b0f32d4f8c92eab9f5d63fbf30",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_schur_completion_lean\\TailSchurCompletion.lean",
+          "sha256": "f78c40a2152a4d5107098cc8c3d38839fe6e8571799b5aca81330ff92d63613d"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_schur_completion_lean\\README.md",
+          "sha256": "93e5f7aea7e562d3a8a815179e8e90eada6180f3b4e8ca0842860fedaaa1205a"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_schur_completion_lean\\lean-toolchain",
+          "sha256": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p7_tail_schur_completion_lean\\verify.sh",
+          "sha256": "e6005da216e98d33fa18dc1bbe14763c6ed20771a050693379a532581f398541"
+        }
+      ],
+      "status": "pending_pinned_lean_compile",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -35604,5 +35684,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "ccc05b655f5ed7b92bdba2fd97aabe2330c729294324e3349a75c6f7faec68c6"
+  "state_checksum": "c1089704ecb3798b083670222e7901e2bc4f9c67ccc4ae79f1381034fe5ca9e4"
 }
