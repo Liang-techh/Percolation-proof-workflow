@@ -618,6 +618,19 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.common_context",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget",
+        "statement": "The four P3 layers share a typed common-domain context that transports velocity, weight, and existing consumer premises without reproving the weighted-power estimate.",
+        "proof_sketch": "Represent machineLift, centralFD, derivativeHull, and exportCenter as a finite layer predicate family, transport one common-domain proof to the layer intersection, and package the existing consumer bound with explicit velocity and weight premises.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_COMMON_CONTEXT",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_COMMON_CONTEXT.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_COMMON_CONTEXT_REVIEW.md",
+        ],
+    },
+    {
         "name": "P5.componentwise_relative_decay.feasible_cone_spn.nonnegative_gain_increment_reuse",
         "parent": "P5.componentwise_relative_decay.feasible_cone_spn",
         "statement": "A nonnegative component-gain increment can reuse an existing cone SPN witness when its symmetric cone correction is entrywise below the old nonnegative slack.",
