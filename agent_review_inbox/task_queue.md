@@ -1974,6 +1974,9 @@ after integration; corrections should be a new result file.
 - 当前 per-body sidecar 只作为 uncompiled typed starting point；优先把
   `TypedFourierBodyExport.h_body` 从输入字段变成对真实 DH bodyMass 的证明，
   并单独留下 real-function lift 的 pinned receipt。
+- O1 的最小下一步已收窄为生成 typed `bodyTraceEvaluator`（保留 body、行列、
+  频率和有理系数标签），再分别证明 `h_body_1..h_body_6`；禁止用 CSV hash
+  或 `TypedFourierBodyExport` 的 premise field 代替这些证明。
 - O2 可直接复用的新接口是 external-premises schema + typed adapter；下一步只
   接受真实 triple 的 `source_interval_membership` 与 `CoverageJoin2` proof inputs，
   不接受 synthetic constructor 或仅 hash-shaped receipt。

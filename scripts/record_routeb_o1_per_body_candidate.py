@@ -13,6 +13,7 @@ from percolation_workflow.store import StateStore  # noqa: E402
 STATE = ROOT / "artifacts/routeb_6dof/state.json"
 LEAN = ROOT / "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyExactSource.lean"
 REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-per-body-candidate-codex-20260907.md"
+AGENT_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-per-body-source-definition-obstruction-codex-20260907.md"
 
 
 def digest(path: Path) -> str:
@@ -27,7 +28,7 @@ def find(state, name: str):
 
 
 def main() -> None:
-    for path in (STATE, LEAN, REVIEW):
+    for path in (STATE, LEAN, REVIEW, AGENT_REVIEW):
         if not path.is_file():
             raise FileNotFoundError(path)
     store = StateStore(STATE)
@@ -42,6 +43,7 @@ def main() -> None:
         "artifact": str(LEAN.resolve()),
         "artifact_sha256": digest(LEAN),
         "review_sha256": digest(REVIEW),
+        "agent_review_sha256": digest(AGENT_REVIEW),
         "h_aggregate_function_lift_proven": False,
         "h_body_proven": False,
         "source_binding_proven": False,

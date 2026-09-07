@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 552,
+  "revision": 553,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -17292,6 +17292,18 @@
             "source_binding_proven": false,
             "registry_promoted": false,
             "formal_certificate_allowed": false
+          },
+          {
+            "status": "UNCOMPILED_TYPED_CANDIDATE",
+            "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
+            "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+            "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "agent_review_sha256": "5409F4651527C64E50D01D898A5229EAAD1E1D2C567D7E4D03AB5970F6C8F90A",
+            "h_aggregate_function_lift_proven": false,
+            "h_body_proven": false,
+            "source_binding_proven": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
           }
         ]
       }
@@ -17323,6 +17335,18 @@
             "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
             "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
             "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "h_aggregate_function_lift_proven": false,
+            "h_body_proven": false,
+            "source_binding_proven": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
+          },
+          {
+            "status": "UNCOMPILED_TYPED_CANDIDATE",
+            "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
+            "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+            "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "agent_review_sha256": "5409F4651527C64E50D01D898A5229EAAD1E1D2C567D7E4D03AB5970F6C8F90A",
             "h_aggregate_function_lift_proven": false,
             "h_body_proven": false,
             "source_binding_proven": false,
@@ -17364,6 +17388,18 @@
             "source_binding_proven": false,
             "registry_promoted": false,
             "formal_certificate_allowed": false
+          },
+          {
+            "status": "UNCOMPILED_TYPED_CANDIDATE",
+            "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
+            "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+            "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "agent_review_sha256": "5409F4651527C64E50D01D898A5229EAAD1E1D2C567D7E4D03AB5970F6C8F90A",
+            "h_aggregate_function_lift_proven": false,
+            "h_body_proven": false,
+            "source_binding_proven": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
           }
         ]
       }
@@ -17395,6 +17431,18 @@
             "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
             "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
             "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "h_aggregate_function_lift_proven": false,
+            "h_body_proven": false,
+            "source_binding_proven": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
+          },
+          {
+            "status": "UNCOMPILED_TYPED_CANDIDATE",
+            "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
+            "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+            "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "agent_review_sha256": "5409F4651527C64E50D01D898A5229EAAD1E1D2C567D7E4D03AB5970F6C8F90A",
             "h_aggregate_function_lift_proven": false,
             "h_body_proven": false,
             "source_binding_proven": false,
@@ -17436,6 +17484,18 @@
             "source_binding_proven": false,
             "registry_promoted": false,
             "formal_certificate_allowed": false
+          },
+          {
+            "status": "UNCOMPILED_TYPED_CANDIDATE",
+            "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
+            "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+            "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "agent_review_sha256": "5409F4651527C64E50D01D898A5229EAAD1E1D2C567D7E4D03AB5970F6C8F90A",
+            "h_aggregate_function_lift_proven": false,
+            "h_body_proven": false,
+            "source_binding_proven": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
           }
         ]
       }
@@ -17472,6 +17532,18 @@
             "source_binding_proven": false,
             "registry_promoted": false,
             "formal_certificate_allowed": false
+          },
+          {
+            "status": "UNCOMPILED_TYPED_CANDIDATE",
+            "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
+            "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+            "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "agent_review_sha256": "5409F4651527C64E50D01D898A5229EAAD1E1D2C567D7E4D03AB5970F6C8F90A",
+            "h_aggregate_function_lift_proven": false,
+            "h_body_proven": false,
+            "source_binding_proven": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
           }
         ]
       }
@@ -17503,6 +17575,18 @@
             "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
             "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
             "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "h_aggregate_function_lift_proven": false,
+            "h_body_proven": false,
+            "source_binding_proven": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
+          },
+          {
+            "status": "UNCOMPILED_TYPED_CANDIDATE",
+            "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
+            "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+            "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "agent_review_sha256": "5409F4651527C64E50D01D898A5229EAAD1E1D2C567D7E4D03AB5970F6C8F90A",
             "h_aggregate_function_lift_proven": false,
             "h_body_proven": false,
             "source_binding_proven": false,
@@ -41966,6 +42050,24 @@
       "o2_lean_adapter_compiled": false,
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T15:15:22.250797+00:00",
+      "kind": "routeb_o1_per_body_typed_candidate_recorded",
+      "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+      "leaf_ids": [
+        "0f4d65a33b964cf38110c0f4b93a34d4",
+        "5201cf1e229544a3815e7bc832ab23b7",
+        "86049b9800f44a878a81de2e79c3e1c5",
+        "0d44099d7b1e486792f27f4787edd73e",
+        "62f56aedfc16447181e2178e44a535eb",
+        "87f1bd9c1acd42369f8814bd10230091",
+        "3ad9bd4fa1d040da995906fc487913fd"
+      ],
+      "h_aggregate_function_lift_proven": false,
+      "h_body_proven": false,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -45622,5 +45724,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "70744ea813bb956e02d523317d96e1c5bf9794a17faea1980ac7342d788aa750"
+  "state_checksum": "fdb7c11ffb6ce80c2b71f44a0d054177cb044d4941376fe7809240a82a79af0c"
 }

@@ -1350,6 +1350,9 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - 文件仍是 `UNCOMPILED_TYPED_CANDIDATE`：`TypedFourierBodyExport` 把 `h_body`
   作为输入字段，未证明六个 body 等式，也未完成 610-row function lift；不改变
   source binding、formal 或 registry 状态。
+- 最新窄审计将阻塞精确化为 `OPEN_TYPED_FOURIER_BODY_EXPORT`：真正缺的是从
+  727-row body trace 生成带 body/row/frequency 标签的 Lean `fourierBody`，再证明
+  六个 source-to-Fourier 等式；不需要新增 aggregate 数据。
 
 ### 2026-09-07 — 梁智炜：O1/O2 typed interface 收割
 
