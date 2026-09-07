@@ -2743,3 +2743,10 @@ source-independent/open/uncompiled 候选。
   assembled-load equality 与 weight 非负。
 - 该结果仍未进入 registry；body-6 determinant、fixed-λ quantitative reserve、
   K-path affine interface 继续由各自 agent 推进。
+
+### 2026-09-07 — 13:55 fixed-λ 定量叶收割
+
+- `quantitative_lower_bound` review 已到并登记，revision 668；它证明
+  `0 < Σδ ≤ Σreserve`，并通过显式 total/shared-λ equality 接到 final budget。
+- 仍不重复 strict-witness bridge，也不推断 coverage、digest、source 或 Lean
+  kernel 结果；body-6 tail minors 与 K-path affine interface 继续等待其自身 review。

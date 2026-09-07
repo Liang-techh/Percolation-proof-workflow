@@ -2069,6 +2069,12 @@ P3 的 `squared_velocity_nonneg` 已接入 DAG revision 667，作为 assembled-l
 witness 的数学前置；仅关闭实数平方非负这一小项，不改变 velocity 的物理来源，
 不触碰 formal gate 或远端同步。
 
+### 2026-09-07 13:55 — 梁智炜收割 fixed-λ 定量 reserve
+
+fixed-λ quantitative reserve lower-bound 叶已登记到 DAG revision 668，提供显式
+正的 aggregate reserve 下界；它仍是 uncompiled 条件式接口，不改变 registry=0 和
+formal certificate fail-closed 状态。body-6/K-path 继续本地推进。
+
 ### 2026-09-07 12:32 — 梁智炜本地收割并派发
 
 本轮回收了四个已完成数学叶：P3 radius monotonicity、fixed-λ uniform

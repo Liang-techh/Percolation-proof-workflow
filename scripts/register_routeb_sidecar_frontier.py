@@ -1313,6 +1313,19 @@ CHILDREN = [
             "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_SQUARED_VELOCITY_REVIEW.md",
         ],
     },
+    {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge",
+        "statement": "A finite nonempty fixed-lambda reserve family with per-cell nonnegative delta lower bounds and one positive delta witness yields an explicit positive aggregate reserve lower bound.",
+        "proof_sketch": "Use finite-sum positivity and monotonicity to prove 0 < sum delta ≤ sum reserve, then consume explicit total and shared-lambda equalities in the final budget adapter without repeating reserve aggregation or strict-witness closure.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_QUANTITATIVE_RESERVE_LOWER",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_QUANTITATIVE_RESERVE_LOWER20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_QUANTITATIVE_RESERVE_LOWER20260907_REVIEW.md",
+        ],
+    },
 ]
 
 
