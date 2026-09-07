@@ -32,6 +32,7 @@ class ReuseCandidate:
     declaration: str | None = None
     source_lines: str | None = None
     source_commit: str | None = None
+    source_sha256: str | None = None
     mathlib_revision: str | None = None
     lean_toolchain: str | None = None
     admission_status: str = "pending"
@@ -60,6 +61,14 @@ def _git(repo: Path, *args: str) -> str:
 
 def _blob(repo: Path, path: str) -> str:
     return _git(repo, "show", f"HEAD:{path}")
+
+
+def _blob_bytes(repo: Path, path: str) -> bytes:
+    result = subprocess.run(
+        ["git", "-C", str(repo), "show", f"HEAD:{path}"],
+        check=True, capture_output=True,
+    )
+    return result.stdout
 
 
 def _sha_text(text: str) -> str:
@@ -155,7 +164,7 @@ def _candidates(paths: set[str]) -> tuple[ReuseCandidate, ...]:
 
     add(
         "Definitions/Def_Mathlib_Topology_Algebra_Module_Quotient.lean",
-        "mathlib-adapter", 1, "recompile-and-admit",
+        "mathlib-adapter", 2, "adapt-and-recompile",
         "Provides continuous linear equivalences on submodule quotients and finite products; useful for quotient/state-space transport, but the FLT source is pinned to a different Mathlib revision.",
         "Future quotient/transport layer for constrained function or state spaces; recompile against the Route-B pin before admission.",
         "ATTRIBUTION.md §1: FLT/Mathlib/Topology/Algebra/Module/Quotient.lean; Apache-2.0",
@@ -304,7 +313,9 @@ def scan_fermats_repo(repo: str | Path) -> FermatSnapshot:
         },
     }
     candidates = tuple(
-        replace(candidate, source_commit=commit, mathlib_revision=mathlib_revision,
+        replace(candidate, source_commit=commit,
+                source_sha256=hashlib.sha256(_blob_bytes(root, candidate.path)).hexdigest(),
+                mathlib_revision=mathlib_revision,
                 lean_toolchain=toolchain)
         for candidate in candidates
     )

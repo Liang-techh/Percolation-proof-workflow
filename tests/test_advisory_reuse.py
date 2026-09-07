@@ -1,5 +1,6 @@
 import copy
 import hashlib
+import subprocess
 
 import pytest
 
@@ -125,3 +126,22 @@ def test_authority_fields_are_rejected_instead_of_dropped(tmp_path):
     with pytest.raises(AdvisoryReuseError, match="forbidden authority field"):
         project_advisory_reuse(catalog, tmp_path)
 
+
+def test_projection_reads_a_no_checkout_git_head_blob(tmp_path):
+    source = tmp_path / "Theorems" / "Leaf.lean"
+    source.parent.mkdir()
+    source.write_bytes(b"theorem leaf : True := by trivial\n")
+    subprocess.run(["git", "init", "-q"], cwd=tmp_path, check=True)
+    subprocess.run(["git", "config", "user.email", "test@example.invalid"],
+                   cwd=tmp_path, check=True)
+    subprocess.run(["git", "config", "user.name", "catalog-test"],
+                   cwd=tmp_path, check=True)
+    subprocess.run(["git", "add", "Theorems/Leaf.lean"], cwd=tmp_path, check=True)
+    subprocess.run(["git", "commit", "-qm", "fixture"], cwd=tmp_path, check=True)
+    catalog = _catalog(tmp_path)
+    source.unlink()
+
+    projection = project_advisory_reuse(catalog, tmp_path)
+
+    assert projection["candidates"][0]["path"] == "Theorems/Leaf.lean"
+    assert projection["candidates"][0]["sha256"] == catalog["candidates"][0]["sha256"]

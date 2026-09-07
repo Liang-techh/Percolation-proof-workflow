@@ -18,6 +18,26 @@ separately under `artifacts/` and are not promoted merely because source files c
 - `tests/`: deterministic DAG/frontier/registry tests
 - `upstream/`: read-only reference checkouts of the public repositories
 
+The Anthropic FLT intake is available as a read-only catalog pipeline. It
+records the pinned commit, Lean/Mathlib versions, per-candidate source hashes,
+classification (1 = direct reuse, 2 = light adaptation, 3 = architecture
+only), and attribution without touching the theorem registry:
+
+```powershell
+python -m percolation_workflow.cli scan-flt `
+  --target-root artifacts/anthropic_fermats_last_theorem `
+  --snapshot-output output/anthropic_flt_snapshot.json
+
+python -m percolation_workflow.cli project-flt-reuse `
+  --catalog output/anthropic_flt_snapshot.json `
+  --source-root artifacts/anthropic_fermats_last_theorem `
+  --reuse-output output/anthropic_flt_advisory_projection.json
+```
+
+The projection is hash-bound and supports a read-only Git `HEAD:path` source
+backend for no-checkout clones. It is explicitly advisory-only: it cannot
+promote a theorem, close a Route-B node, or set `formal_certificate_allowed`.
+
 Each target can provide a portable `verification-manifest.json` describing the exact
 challenge/solution modules and frozen source set for every theorem. The Linux leaf
 verifier consumes that manifest and the pinned dependency checkout. A host adapter can

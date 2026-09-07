@@ -20,17 +20,25 @@ from .codex_adapter import infer_manifest_project, run_codex_dispatch, run_codex
 from .external import initialize_routeb_intake, run_external_gate, refresh_routeb_tracking
 from .repair_classification import dry_run_repair_integration
 from .merlean_plan_projection import export_views as export_merlean_plan_views
+from .anthropic_intake import write_snapshot
+from .advisory_reuse import AdvisoryReuseError, project_advisory_reuse
 
 
 def main() -> int | None:
     if hasattr(sys.stdout, 'reconfigure'):
         sys.stdout.reconfigure(encoding='utf-8')
     parser = argparse.ArgumentParser()
-    parser.add_argument("command", choices=["status", "audit-registry", "verify-frontier", "verify-manifest",
-                                            "init-manifest", "propose-decomposition",
-                                            "init-routeb-external", "refresh-routeb-external", "run-external-gate",
-                                            "prepare-agents", "dry-run-repair", "pending-agents", "bind-agent", "renew-agent", "reclaim-agent", "record-agent", "compile-agent", "retry-compile-agent", "collect-compile", "check-sketch", "next-actions", "ingest-agent-log", "persist-callback", "run-codex-agent", "run-codex-agents", "host-cycle", "export-plan-store"])
-    parser.add_argument("state")
+    parser.add_argument("command", choices=[
+        "status", "audit-registry", "verify-frontier", "verify-manifest",
+        "init-manifest", "propose-decomposition", "init-routeb-external",
+        "refresh-routeb-external", "run-external-gate", "prepare-agents",
+        "dry-run-repair", "pending-agents", "bind-agent", "renew-agent",
+        "reclaim-agent", "record-agent", "compile-agent", "retry-compile-agent",
+        "collect-compile", "check-sketch", "next-actions", "ingest-agent-log",
+        "persist-callback", "run-codex-agent", "run-codex-agents", "host-cycle",
+        "export-plan-store", "scan-flt", "project-flt-reuse",
+    ])
+    parser.add_argument("state", nargs="?", default=".workflow/state.json")
     parser.add_argument('--project')
     parser.add_argument('--comparator-executable')
     parser.add_argument('--node-projects', help='trusted JSON mapping of every node ID to its isolated verification project')
@@ -65,9 +73,44 @@ def main() -> int | None:
     parser.add_argument('--bundle-root', help='content-addressed bundle cache; defaults to manifest verification.bundle_root')
     parser.add_argument('--comparator-tools', help='upstream comparator tool directory for verify-manifest')
     parser.add_argument('--target-root', help='external research project root for intake/gates')
+    parser.add_argument('--snapshot-output', help='JSON output for scan-flt')
+    parser.add_argument('--catalog', help='advisory FLT catalog JSON for project-flt-reuse')
+    parser.add_argument('--source-root', help='checked-out source root for project-flt-reuse')
+    parser.add_argument('--reuse-output', help='JSON output for project-flt-reuse')
     parser.add_argument('--node-name', help='external DAG node name for run-external-gate')
     parser.add_argument('--gate-command', action='append', help='one token of an external gate command; repeat for argv')
     args = parser.parse_args()
+    if args.command == 'scan-flt':
+        if not args.target_root or not args.snapshot_output:
+            parser.error('scan-flt requires --target-root and --snapshot-output')
+        snapshot = write_snapshot(args.target_root, args.snapshot_output)
+        print(json.dumps({'snapshot': str(Path(args.snapshot_output).resolve()),
+                          'commit': snapshot.commit,
+                          'candidates': len(snapshot.candidates),
+                          'source_counts': snapshot.source_counts,
+                          'registry_promoted': False,
+                          'admission_status': 'pending'},
+                         ensure_ascii=False, indent=2))
+        return 0
+    if args.command == 'project-flt-reuse':
+        if not args.catalog or not args.source_root or not args.reuse_output:
+            parser.error('project-flt-reuse requires --catalog, --source-root and --reuse-output')
+        try:
+            projection = project_advisory_reuse(args.catalog, args.source_root)
+        except AdvisoryReuseError as exc:
+            print(json.dumps({'status': 'rejected', 'reason': str(exc),
+                              'registry_promoted': False}, ensure_ascii=False, indent=2))
+            return 1
+        output = Path(args.reuse_output)
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_text(json.dumps(projection, ensure_ascii=False, indent=2) + '\n',
+                          encoding='utf-8')
+        print(json.dumps({'status': 'advisory_only', 'output': str(output.resolve()),
+                          'candidates': len(projection['candidates']),
+                          'registry_promoted': False,
+                          'formal_certificate_allowed': False},
+                         ensure_ascii=False, indent=2))
+        return 0
     store = StateStore(args.state)
     if args.command == 'init-manifest':
         if not args.manifest:

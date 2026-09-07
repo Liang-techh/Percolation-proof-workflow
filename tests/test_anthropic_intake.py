@@ -32,6 +32,7 @@ def test_declaration_candidates_keep_provenance_and_pending_boundary():
 
     for candidate in by_declaration.values():
         assert candidate.source_commit == snapshot.commit
+        assert candidate.source_sha256 and len(candidate.source_sha256) == 64
         assert candidate.path.startswith(("Definitions/",))
         assert candidate.mathlib_revision == snapshot.mathlib_revision
         assert candidate.lean_toolchain == snapshot.lean_toolchain

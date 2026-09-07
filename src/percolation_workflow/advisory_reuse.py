@@ -13,6 +13,7 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import subprocess
 from typing import Any
 
 
@@ -31,6 +32,8 @@ _CANDIDATE_METADATA = (
     "reuse_mode",
     "rationale",
     "current_routeb_use",
+    "declaration",
+    "source_lines",
 )
 _FORBIDDEN_KEYS = frozenset(
     {
@@ -113,6 +116,33 @@ def _aliased_text(
     return value.strip()
 
 
+def _source_bytes(root: Path, relative: Path, resolved: Path, location: str) -> bytes:
+    """Read a source file from the worktree or directly from a Git HEAD blob.
+
+    FLT intake intentionally supports a no-checkout, blob-filtered clone.  A
+    catalog projection must still bind candidate bytes without materializing or
+    copying the upstream tree.  Git is used only as a read-only source backend;
+    it never changes the repository or workflow state.
+    """
+    if resolved.is_file():
+        try:
+            return resolved.read_bytes()
+        except OSError as exc:
+            raise AdvisoryReuseError(f"{location} source cannot be read: {relative}") from exc
+    if not (root / ".git").exists():
+        raise AdvisoryReuseError(f"{location} source is missing: {relative}")
+    try:
+        result = subprocess.run(
+            ["git", "-C", str(root), "show", f"HEAD:{relative.as_posix()}"],
+            check=False, capture_output=True,
+        )
+    except OSError as exc:
+        raise AdvisoryReuseError(f"{location} source is missing: {relative}") from exc
+    if result.returncode != 0:
+        raise AdvisoryReuseError(f"{location} source is missing: {relative}")
+    return result.stdout
+
+
 def _bound_source(
     candidate: Mapping[str, Any], source_root: Path, index: int
 ) -> dict[str, Any]:
@@ -137,12 +167,8 @@ def _bound_source(
         inside_root = False
     if not inside_root:
         raise AdvisoryReuseError(f"{location} source path escapes source_root")
-    if not resolved.is_file():
-        raise AdvisoryReuseError(f"{location} source is missing: {relative_name}")
-    try:
-        actual_hash = hashlib.sha256(resolved.read_bytes()).hexdigest()
-    except OSError as exc:
-        raise AdvisoryReuseError(f"{location} source cannot be read: {relative_name}") from exc
+    source_bytes = _source_bytes(source_root, relative, resolved, location)
+    actual_hash = hashlib.sha256(source_bytes).hexdigest()
     if actual_hash != expected_hash.lower():
         raise AdvisoryReuseError(f"{location} source is stale: sha256 mismatch")
 
@@ -156,7 +182,7 @@ def _bound_source(
         "attribution_ref": attribution.strip(),
     }
     for key in _CANDIDATE_METADATA:
-        if key not in candidate:
+        if key not in candidate or candidate[key] is None:
             continue
         value = candidate[key]
         if key == "classification":
@@ -199,14 +225,23 @@ def project_advisory_reuse(
         raise AdvisoryReuseError(f"source_root is missing: {source_root}")
 
     projected_candidates: list[dict[str, Any]] = []
-    seen_paths: set[str] = set()
+    # A catalog may list several declarations from one source file.  Reject
+    # duplicate candidate identities, but do not reject legitimate
+    # declaration-level candidates that share the same source path.
+    seen_candidates: set[tuple[str, str]] = set()
     for index, candidate in enumerate(candidates):
         if not isinstance(candidate, Mapping):
             raise AdvisoryReuseError(f"candidate {index} must be an object")
         projected = _bound_source(candidate, root, index)
-        if projected["path"] in seen_paths:
-            raise AdvisoryReuseError(f"duplicate candidate source path: {projected['path']}")
-        seen_paths.add(projected["path"])
+        identity = (
+            projected["path"],
+            str(candidate.get("declaration") or candidate.get("kind") or ""),
+        )
+        if identity in seen_candidates:
+            raise AdvisoryReuseError(
+                f"duplicate candidate identity: {projected['path']}"
+            )
+        seen_candidates.add(identity)
         projected_candidates.append(projected)
 
     return {
