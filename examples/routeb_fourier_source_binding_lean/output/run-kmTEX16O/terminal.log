@@ -1,0 +1,15 @@
+START_UTC=2026-09-06T23:59:52Z
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+LEAN_PATH=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_fourier_source_binding_lean/output/run-kmTEX16O:/home/z5242/sos_lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/Qq/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/aesop/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/batteries/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/plausible/.lake/build/lib/lean:/home/z5242/sos_lean/.lake/packages/proofwidgets/.lake/build/lib/lean
+PROSPECTIVE_SNAPSHOT_COMPLETE
+'RouteBFourierSourceBinding.evalMatrix_congr_of_coefficients' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBFourierSourceBinding.routeB_36_entry_coefficient_bridge' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'RouteBFourierSourceBinding.routeB_has_36_matrix_entries' depends on axioms: [propext, Classical.choice, Quot.sound]
+ExactCoefficientBridge_COMPILE_EXIT_CODE=0
+9859afcc09c5dea0d20f54663b052ae5625cb6a4966e4121c5826165fdd68b29  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_fourier_source_binding_lean/output/run-kmTEX16O/ExactCoefficientBridge.lean
+a2d1fe71efae5b094f47efdd68f74ff55827773474506508cad0550b5ee4116e  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_fourier_source_binding_lean/output/run-kmTEX16O/ExactCoefficientBridge.olean
+END_UTC=2026-09-07T00:00:24Z
+VERIFY_EXIT_CODE=0

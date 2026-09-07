@@ -1,0 +1,35 @@
+{
+  "status": "EXACT_36_ENTRY_SOURCE_TO_FOURIER_COEFFICIENT_EQUALITY_CHECKED",
+  "entries_checked": 36,
+  "csv_rows_checked": 610,
+  "canonical_source": "C:/Users/z5242/Desktop/\u91cd\u6784\u7248/6dof_sos_optimized/6dof_sos_optimized/routeB_dense_Mq/dhport_lib.jl",
+  "canonical_source_sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936",
+  "reference_csv_sha256": "a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8",
+  "exact_semantics": {
+    "decimal_literals": "rational",
+    "pi_over_2": "exact quarter turn",
+    "coefficient_domain": "Gaussian rationals",
+    "default_mass_regularizer": "1/1000000",
+    "all_36_coefficient_maps_equal": true,
+    "all_real_q_extensional_equality": true,
+    "entry_support_min": 0,
+    "entry_support_max": 99,
+    "active_joint_angles": [
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "float64_semantics": {
+    "used": false,
+    "source_runtime_bridge_proved": false
+  },
+  "lean_bridge": {
+    "generic_coefficient_evaluator_compiled": "see COMPILE_RECEIPT.md",
+    "source_coefficients_instantiated_in_lean": false
+  },
+  "formal_certificate_allowed": false,
+  "physical_certificate_allowed": false,
+  "minimal_open_gap": "Lean/source instantiation and Julia Float64 execution semantics remain separate obligations"
+}

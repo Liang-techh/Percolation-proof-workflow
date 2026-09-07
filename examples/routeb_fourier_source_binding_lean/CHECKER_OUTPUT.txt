@@ -1,0 +1,8 @@
+EXACT_36_ENTRY_SOURCE_TO_FOURIER_COEFFICIENT_EQUALITY_CHECKED
+source_sha256=aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936
+reference_csv_sha256=a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8
+entries_checked=36
+csv_rows_checked=610
+support_range=0..99
+float64_used=false
+formal_certificate_allowed=false
