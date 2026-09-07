@@ -2840,3 +2840,9 @@ source-independent/open/uncompiled 候选。
 fixed-λ finite reindex weighted-sum equality 叶已登记 revision 677，保持
 `OPEN_UNCOMPILED`；它为 two-row index adapter 提供显式 Finset.sum_bij 接口。
 其余 body-6、P4 contraction、P3 slack 三项仍在本地并行处理中。
+
+### 2026-09-07 — 本地收割补充
+
+P4 `DivisionFreeContraction` 和 P3 `FamilyBridge` 已登记 revision 678，
+继续保持 `OPEN_UNCOMPILED`。body-6 的 Schur remainder 产物尚缺配套 review，
+暂不登记；待其完成后再做一次定向收割。

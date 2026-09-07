@@ -1482,6 +1482,32 @@ CHILDREN = [
             "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_FINITE_REINDEX_SUM_EQUALITY20260907.review.md",
         ],
     },
+    {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption",
+        "statement": "The scalar feedback closure is equivalently expressed as a division-free scaled inequality, and a supplied scaled budget yields an explicit finite cap under rho<1.",
+        "proof_sketch": "Prove the unconditional real rearrangement E≤B+rho*E iff (1-rho)E≤B, then use positivity of 1-rho to consume a caller-supplied cap budget; retain exact noncontractive and missing-sign controls without binding physical source data.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_P4_DIVISION_FREE_CONTRACTION",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_DivisionFreeContraction.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_DivisionFreeContraction.review.md",
+        ],
+    },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge",
+        "statement": "A common-domain family of derivative-radius, velocity, weight, and consumer premises specializes coherently at one point into a typed weighted-load record.",
+        "proof_sketch": "Require explicit membership in all shared domain predicates at the same point and copy the family radius, nonnegativity, weight, velocity, and consumer-bound fields into a dependent point record; do not infer any physical coverage or numerical bound.",
+        "lane": "source_semantics",
+        "bottleneck": "source_semantics",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_FAMILY_TO_POINT_BRIDGE",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_FAMILY_BRIDGE.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_FAMILY_BRIDGE_REVIEW.md",
+        ],
+    },
 ]
 
 

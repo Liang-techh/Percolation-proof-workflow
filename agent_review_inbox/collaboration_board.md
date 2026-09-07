@@ -2155,3 +2155,10 @@ fixed-λ 有限索引等价重标号的 aggregate equality；P3 selected positiv
 `two_row_index_equivalence` 的 open child，DAG revision 677。该叶只证明有限
 加权和的显式 bijective transport，不绑定 Route-B 数据、Lean receipt、registry
 或 formal certificate；其 cardinality-only wrapper 不替代 map premises。
+
+### 2026-09-07 — 梁智炜收割 P4/P3 两个 typed 叶
+
+P4 `DivisionFreeContraction` 与 P3 `FamilyBridge` 均完成定向 review，登记为
+open/uncompiled children，DAG revision 678。前者把 `E≤B+rho*E` 的收缩消费
+改写成无除法的 `(1-rho)E≤B`，后者保证 family 数据在同一 domain point 上
+一致 specialization；两者都没有进入 registry 或 formal gate。
