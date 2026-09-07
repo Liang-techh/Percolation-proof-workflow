@@ -351,6 +351,27 @@ class WorkflowState:
         self.event("node_added", node_id=node_id, parent_id=parent_id, name=name)
         return node_id
 
+    def _required_inputs_closed(self, node: ProofNode,
+                                closed: set[str] | None = None) -> bool:
+        """Check cross-branch theorem inputs without overloading child edges.
+
+        ``dependencies`` are the theorem-tree children that a parent closes
+        over.  ``required_node_ids`` is an optional metadata contract for a
+        node that consumes a result from another branch.  Keeping the two
+        relations separate prevents a cross-branch input from becoming a
+        bogus child (and avoids introducing a cycle merely to express data
+        flow).
+        """
+        required = node.metadata.get("required_node_ids", [])
+        if not isinstance(required, list):
+            return False
+        closed_ids = closed if closed is not None else {
+            candidate.id for candidate in self.nodes.values()
+            if node_is_closed(candidate)
+        }
+        return all(node_id in self.nodes and node_id in closed_ids
+                   for node_id in required)
+
     def frontier_closability(self, node_id: str) -> int:
         """Count open ancestors that would close after this leaf is verified.
 
@@ -361,8 +382,10 @@ class WorkflowState:
         if node_id not in self.nodes:
             raise KeyError(node_id)
         candidate = self.nodes[node_id]
-        if candidate.status != NodeStatus.OPEN or any(
-                not node_is_closed(self.nodes[dep]) for dep in candidate.dependencies):
+        if (candidate.status != NodeStatus.OPEN or
+                not self._required_inputs_closed(candidate) or any(
+                    not node_is_closed(self.nodes[dep])
+                    for dep in candidate.dependencies)):
             return 0
         reverse = {node.id: set() for node in self.nodes.values()}
         for node in self.nodes.values():
@@ -386,7 +409,8 @@ class WorkflowState:
             for node in self.nodes.values():
                 if node.id not in ancestors or node.id in closed or node.status != NodeStatus.OPEN:
                     continue
-                if all(dep in closed for dep in node.dependencies):
+                if (all(dep in closed for dep in node.dependencies) and
+                        self._required_inputs_closed(node, closed)):
                     closed.add(node.id)
                     changed = True
         return sum(1 for node in self.nodes.values()
@@ -394,7 +418,8 @@ class WorkflowState:
 
     def frontier(self) -> list[ProofNode]:
         candidates = [n for n in self.nodes.values()
-                      if n.status == NodeStatus.OPEN and all(
+                      if n.status == NodeStatus.OPEN and
+                      self._required_inputs_closed(n) and all(
                           node_is_closed(self.nodes[d]) for d in n.dependencies)]
         # dict insertion order remains the deterministic tie-breaker used by
         # the older workflow; closability is the Prove2Me-style primary key.
@@ -457,6 +482,12 @@ class WorkflowState:
                     raise ValueError('evidence-complete node has no evidence receipt')
                 if node.id in self.registry:
                     raise ValueError('evidence-complete node cannot enter theorem registry')
+            required = node.metadata.get('required_node_ids', [])
+            if (not isinstance(required, list) or
+                    any(not isinstance(required_id, str) or
+                        required_id not in self.nodes or required_id == node.id
+                        for required_id in required)):
+                raise ValueError(f'node {node.id} has malformed required_node_ids')
             if node.parent_id is not None:
                 if node.parent_id not in self.nodes:
                     raise ValueError(f'node {node.id} has a dangling parent_id')
@@ -515,6 +546,8 @@ class WorkflowState:
             raise ValueError('registry requires matching verification manifest identity')
         if any(self.nodes[dep].status != NodeStatus.VERIFIED for dep in node.dependencies):
             raise ValueError('registry requires closed dependencies')
+        if not self._required_inputs_closed(node):
+            raise ValueError('registry requires closed cross-branch inputs')
         stage = self.evidence_stage(node_id)
         if stage not in {EvidenceStage.LEAN_VERIFIED, EvidenceStage.GLOBAL_CLOSED}:
             raise ValueError('registry requires an explicit Lean-verified evidence stage')

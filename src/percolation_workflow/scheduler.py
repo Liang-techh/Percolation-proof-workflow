@@ -229,6 +229,7 @@ def explain_frontier(state: WorkflowState, jobs: dict[str, FrontierJob] | None =
             "math_bottleneck_reason": bottleneck.reason,
             "candidate_identity": candidate_identity(node),
             "dependencies": list(node.dependencies),
+            "required_node_ids": list(node.metadata.get("required_node_ids", [])),
             "resource_cost": _numeric_metadata(node, "resource_cost", 1.0),
             "scheduler_priority": _numeric_metadata(node, "scheduler_priority", 1.0),
             "eligible": eligible,

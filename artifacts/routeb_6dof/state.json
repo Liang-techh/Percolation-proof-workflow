@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 405,
+  "revision": 406,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -11814,7 +11814,14 @@
           "residual_absorption_and_terminal_transfer_semantics",
           "Lean_kernel_formalization_of_exact_2x2_metric_bridge",
           "coordinator_statement_and_comparator_receipt"
-        ]
+        ],
+        "required_node_ids": [
+          "786c11f2dd6240518df51ac77617feff"
+        ],
+        "consumption_contract": {
+          "role": "global_mass_geometry_schur_input",
+          "must_be_closed_before_frontier_dispatch": true
+        }
       }
     }
   },
@@ -33662,6 +33669,38 @@
       "status": "conditional_terminal_bridge_pending_source_energy_and_flowpipe",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T08:43:59.538068+00:00",
+      "kind": "routeb_energy_schur_budget_bridge_refresh",
+      "node_id": "025eea7911654c6c8238565d46480322",
+      "parent_id": "6f06c8545bc24dc590b6e5ade85b684d",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_energy_schur_budget_bridge.csv",
+          "sha256": "A4A929E976B2D5AF736EBAF3D4BAA06B020C5B70E9393D34CA0DD0E493E00927"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_ENERGY_SCHUR_BUDGET_BRIDGE.md",
+          "sha256": "326A2921720FC1B912E9D440328E599896FF68A270435D7104C58E4A0AA35372"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_energy_schur_budget_bridge.py",
+          "sha256": "C4B56424DD7FD3B718A58C8D91EE7359CAF413A0C7264C249F08B2BE04BD0C43"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\robot_final\\verify_compact_energy_schur_budget_bridge.py",
+          "sha256": "5C9EC57F596CC23C2CF599570542B098CDF831A568391153970967322B71D506"
+        }
+      ],
+      "threshold": "8228439564136788990170047498962311/245393314823307985274304000000000000",
+      "conditional_terminal_p_bound": 12,
+      "status": "conditional_terminal_bridge_pending_source_energy_and_flowpipe",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false,
+      "required_node_ids": [
+        "786c11f2dd6240518df51ac77617feff"
+      ]
     }
   ],
   "agent_requests": {},
@@ -37318,5 +37357,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "391cdc498436b604bf40147a501625ea2ffbf3a38174b2c9273532a9f8a6f57d"
+  "state_checksum": "295e728d22d907ae8a88e19c614643f2baa5872f8611198954ed269237b71560"
 }

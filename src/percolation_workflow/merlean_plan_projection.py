@@ -143,9 +143,11 @@ def project(state: WorkflowState, *, provenance: dict[str, Any] | None = None) -
         stage = state.evidence_stage(node_id).value
         metadata = dict(node.metadata)
         node_provenance = metadata.pop("provenance", None)
+        required_node_ids = metadata.get("required_node_ids", [])
         formal.append({
             "statement_id": node.id, "type": "Theorem", "name": node.name,
             "content": node.statement, "dependencies": sorted(node.dependencies),
+            "required_node_ids": sorted(required_node_ids),
             "dependents": forward_cone(state, node.id), "proof": node.verified_artifact,
             "proof_sketch": node.proof_sketch, "lean_path": metadata.get("lean_path"),
             "hierarchy_level": node_levels[node.id], "order": position,

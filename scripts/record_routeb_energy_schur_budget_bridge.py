@@ -41,6 +41,7 @@ def main() -> int:
     store = StateStore(ROOT / "artifacts/routeb_6dof/state.json")
     state = store.load()
     parent = find(state, "M4.block45_full_certificate")
+    geometry = find(state, "P4.block45_global_mass_geometry_schur")
     name = "M4.energy_to_schur_budget_bridge"
     csv_path = SRC / "routeB_compact_energy_schur_budget_bridge.csv"
     metrics = read_metrics(csv_path)
@@ -82,6 +83,11 @@ def main() -> int:
         "claim_status": "conditional_m4_terminal_bridge_open",
         "registry_eligible": False,
         "comparator_accepted": False,
+        "required_node_ids": [geometry.id],
+        "consumption_contract": {
+            "role": "global_mass_geometry_schur_input",
+            "must_be_closed_before_frontier_dispatch": True,
+        },
         "formal_certificate_allowed": False,
         "physical_certificate_allowed": False,
         "source_artifacts": source_artifacts,
@@ -132,6 +138,7 @@ def main() -> int:
             status=metadata["statement_status"],
             formal_certificate_allowed=False,
             registry_promoted=False,
+            required_node_ids=[geometry.id],
         )
         store.save(state)
         print({"status": "recorded", "node_id": node_id,
@@ -157,6 +164,7 @@ def main() -> int:
             status=metadata["statement_status"],
             formal_certificate_allowed=False,
             registry_promoted=False,
+            required_node_ids=[geometry.id],
         )
         store.save(state)
         print({"status": "refreshed", "node_id": existing.id,

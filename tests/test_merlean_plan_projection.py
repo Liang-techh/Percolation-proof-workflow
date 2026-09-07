@@ -31,6 +31,7 @@ class MerLeanProjectionTests(unittest.TestCase):
 
     def test_notes_are_excluded_and_candidate_cannot_be_verified(self):
         state = self.make_state()
+        state.nodes["b"].metadata["required_node_ids"] = ["a"]
         before = json.dumps(state.to_dict(), sort_keys=True)
         view = project(state)
         after = json.dumps(state.to_dict(), sort_keys=True)
@@ -39,6 +40,7 @@ class MerLeanProjectionTests(unittest.TestCase):
         self.assertEqual(middle["evidence_stage"], "compiled_candidate")
         self.assertEqual(middle["status"], "pending")
         self.assertEqual(middle["admission_status"], "compiled_candidate")
+        self.assertEqual(middle["required_node_ids"], ["a"])
         self.assertTrue(all(note["excluded_from_graph"] for note in view["notes"]))
         self.assertNotIn("completed_axiom", json.dumps(view))
 
