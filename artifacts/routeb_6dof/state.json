@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 342,
+  "revision": 344,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -29769,6 +29769,45 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "9a3a7eef35b34880b85423aac67ea015"
+    },
+    {
+      "at": "2026-09-07T03:12:43.523247+00:00",
+      "kind": "external_reuse_review_integrated",
+      "review_file": "agent_review_inbox/review-T-FLT-infra-registry.md",
+      "review_sha256": "433C0685AA19650681BC77B1042883682DE473F9EA590AFD130DA0B92DC51579",
+      "task_id": "T-FLT-INFRA-REGISTRY",
+      "classification": "flt_registry_graph_scan",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "catalog": "anthropic-fermats-last-theorem",
+      "source_commit": "unknown"
+    },
+    {
+      "at": "2026-09-07T03:12:43.523303+00:00",
+      "kind": "external_reuse_review_integrated",
+      "review_file": "agent_review_inbox/review-T-FLT-spectral-linear.md",
+      "review_sha256": "1D18E5548F1764C434B0708AB2733827E47EEB59D17C25A97F850E191BDE0349",
+      "task_id": "T-FLT-SPECTRAL-LINEAR",
+      "classification": "flt_spectral_linear_scan",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "catalog": "anthropic-fermats-last-theorem",
+      "source_commit": "unknown"
+    },
+    {
+      "at": "2026-09-07T03:14:21.550553+00:00",
+      "kind": "external_reuse_review_integrated",
+      "review_file": "agent_review_inbox/review-T-FLT-transport-adapter.md",
+      "review_sha256": "23BF0ABF1F3E424E8C773602D4F49CA0A12ECC4FEFEB5CC5AE589CF30F2331B5",
+      "task_id": "T-FLT-TRANSPORT-ADAPTER",
+      "classification": "flt_transport_adapter_scan",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "catalog": "anthropic-fermats-last-theorem",
+      "source_commit": "unknown"
     }
   ],
   "agent_requests": {},
@@ -33254,5 +33293,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "826e9801c6f7de147135fd5568ae6181eb25ded7603dfd840f4633724acfa83e"
+  "state_checksum": "36d348d3c9841ef6258739465dc71efea693ff053c2506b2cba1921240309edc"
 }

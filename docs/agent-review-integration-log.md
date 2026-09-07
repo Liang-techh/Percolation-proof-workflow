@@ -3,7 +3,7 @@
 This log records durable integrations from `agent_review_inbox/`. The original
 review files and their SHA-256 markers remain in that directory.
 
-## 2026-09-06 / Route-B checkpoint revision 342
+## 2026-09-06 / Route-B checkpoint revision 344
 
 Integrated as pending metadata only:
 
@@ -32,11 +32,14 @@ Integrated as pending metadata only:
 | T-P5-002 | `P5.sparse_disjunctive_sos` | `pending_energy_child` | none |
 | T-P3-006 | `P3.strict_true_dh_bounds` | `pending_semantic_binding_sidecar` | none |
 | T-P5-003 | `P5.sparse_disjunctive_sos` | `pending_christoffel_power_sidecar` | none |
+| T-FLT-SPECTRAL-LINEAR | external reuse catalog | `flt_spectral_linear_scan` | none |
+| T-FLT-INFRA-REGISTRY | external reuse catalog | `flt_registry_graph_scan` | none |
+| T-FLT-TRANSPORT-ADAPTER | external reuse catalog | `flt_transport_adapter_scan` | none |
 
 The authoritative `artifacts/routeb_6dof/state.json` was updated through
-`StateStore` from revision 328 to revision 342. Twenty-three Route-B
+`StateStore` from revision 328 to revision 344. Twenty-three Route-B
 `agent_review_integrated` events, twenty-three node provenance references, and
-two event-only external-catalog integrations were added. Node statuses remain
+five event-only external-catalog integrations were added. Node statuses remain
 open and the verified registry remains empty.
 
 No review was promoted to `VERIFIED`; P3 source semantics, P4 true-DH residual
@@ -81,3 +84,10 @@ blocked by the local missing Mathlib environment (`unknown module prefix
 'Mathlib'`). P5-003 implemented the isolated Christoffel-power sidecar and its
 focused compile passed with only the standard Lean base axioms; this remains a
 pending reusable child and does not promote the physical P5 parent.
+
+The spectral scan identifies an eigenspace/range bridge as the highest-value
+current-pin candidate and keeps representation-specific exact-sequence results
+below direct reuse until independently recompiled. The infrastructure scan
+confirms that challenge/solution comparison, permitted-axiom gates,
+route/stage/landmark metadata, and extract-graph-render-selfcheck are
+architecture or contract inputs only; none is proof evidence by itself.

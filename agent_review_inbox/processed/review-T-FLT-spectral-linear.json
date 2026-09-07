@@ -1,0 +1,12 @@
+{
+  "review_file": "agent_review_inbox/review-T-FLT-spectral-linear.md",
+  "review_sha256": "1D18E5548F1764C434B0708AB2733827E47EEB59D17C25A97F850E191BDE0349",
+  "task_id": "T-FLT-SPECTRAL-LINEAR",
+  "source_agent": "Codex",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_spectral_linear_scan",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "integrated_at": "2026-09-07T03:12:43.523303+00:00"
+}

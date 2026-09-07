@@ -1,0 +1,12 @@
+{
+  "review_file": "agent_review_inbox/review-T-FLT-transport-adapter.md",
+  "review_sha256": "23BF0ABF1F3E424E8C773602D4F49CA0A12ECC4FEFEB5CC5AE589CF30F2331B5",
+  "task_id": "T-FLT-TRANSPORT-ADAPTER",
+  "source_agent": "Codex",
+  "created_at": "2026-09-06T00:00:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_transport_adapter_scan",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "integrated_at": "2026-09-07T03:14:21.550553+00:00"
+}

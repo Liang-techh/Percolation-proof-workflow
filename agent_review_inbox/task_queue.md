@@ -249,7 +249,8 @@ without an explicit scoped request.
 
 ### T-FLT-SPECTRAL-LINEAR — spectral and linear algebra scan
 
-- status: `assigned` (梁智炜, independent catalog review)
+- status: `reviewed_pending` (integrated at Route-B revision 343;
+  event-only catalog review)
 - scope: inspect only non-number-theory spectral, eigenspace, finite-dimensional
   linear algebra, quotient, and exact-sequence declarations in the pinned FLT
   repository;
@@ -261,7 +262,8 @@ without an explicit scoped request.
 
 ### T-FLT-TRANSPORT-ADAPTER — transport and adapter scan
 
-- status: `assigned` (梁智炜, independent catalog review)
+- status: `reviewed_pending` (integrated at Route-B revision 344;
+  event-only catalog review)
 - scope: inspect generic continuous-map, linear-equivalence, pairing transport,
   representation, and coordinate-change adapters outside pure number theory;
 - deliver: exact statement shape, assumptions, reuse class, attribution, and
@@ -270,7 +272,8 @@ without an explicit scoped request.
 
 ### T-FLT-INFRA-REGISTRY — registry/graph/obstruction scan
 
-- status: `assigned` (梁智炜, independent architecture review)
+- status: `reviewed_pending` (integrated at Route-B revision 343;
+  event-only catalog review)
 - scope: inspect comparator, challenge/solution split, dependency graph,
   documentation extraction, attribution, and obstruction-tracking patterns;
 - deliver: architecture-only findings and concrete integration points for the

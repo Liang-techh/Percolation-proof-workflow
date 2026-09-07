@@ -1,0 +1,12 @@
+{
+  "review_file": "agent_review_inbox/review-T-FLT-infra-registry.md",
+  "review_sha256": "433C0685AA19650681BC77B1042883682DE473F9EA590AFD130DA0B92DC51579",
+  "task_id": "T-FLT-INFRA-REGISTRY",
+  "source_agent": "Codex",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_registry_graph_scan",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "integrated_at": "2026-09-07T03:12:43.523247+00:00"
+}
