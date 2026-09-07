@@ -2516,3 +2516,12 @@ source-independent/open/uncompiled 候选。
 
 当前 revision `631`，registry `0`，formal gate 关闭；GitHub 上次同步为
 `ffb3690`，本地数学提交保留到下一个 20 分钟窗口统一推送。
+### 2026-09-07 — 12:13 body-6 VGRAM 收割
+
+- body-6 新叶拆为 `velocity_offset_and_tail_origins` 与
+  `.front_tail_gram`：保留真实 `prevOrigin`/active guard、COM offset
+  分解，及零基 `(3,4)` 的非零速度 Gram 与 source mass 2×2 小块。
+- exact SymPy 检查通过：18 个速度分解残差、`v₃₃/v₄₄/v₃₄`、angular
+  cross 和 mass entries 全部为零余项，`v₄²=49/40000`；没有读取 Fourier CSV。
+- 前 3 列 lever arm 与其余 12 个上三角项仍开放，Lean/kernel/source/coverage
+  未验证；已登记为 revision `632` 的两个 open children。
