@@ -136,7 +136,7 @@ theorem t1_fifty_fifty_headroom_from_rational
           ((Z0 + Hbar + Rbar / (2 * g0)) * (13 * SF)) =
           26 * SF * g0 * (Z0 + Hbar) + 13 * SF * Rbar := by
             field_simp [ne_of_gt hg0]
-            <;> ring
+            all_goals ring
       _ < 36000000000000000 * g0 ^ 3 := hcrit
       _ = (2 * g0) * (18000000000000000 * g0 ^ 2) := by ring
   by_contra hnot
