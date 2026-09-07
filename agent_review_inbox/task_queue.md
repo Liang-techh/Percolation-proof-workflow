@@ -2351,6 +2351,22 @@ proof artifact; it does not make the parent verified or alter the P5 gates.
   coefficient bridge 哈希；state revision `617`，registry `0`，admission gate
   继续关闭。
 
+### Local mathematical follow-up round (2026-09-07 11:46)
+
+Four disjoint continuations are active and must not mutate state/registry:
+
+- body-6 (`01a07ce7-9ea2-7c91-bbcb-1f203bf80e71`): endpoint → center →
+  `v5=0` → 23-row sixth-column Fourier bridge;
+- P5 K_path (`01a07ce7-b566-7740-8b69-101ece07e985`): exact 8-entry
+  `pathK ≤ K_cert` comparison contract/checker, without inventing values;
+- fixed lambda (`01a07ce8-3c04-7190-aefd-726786f3d47d`): sparse-label,
+  one-row-per-box Finset fold reusing the coefficient bridge;
+- P3 (`01a07ce8-45fb-7c62-8dd2-f4ecc57540c5`): Fin 6 specialization of the
+  derivative-first remainder and velocity-quadratic error consumer.
+
+All four scopes remain exact/typed mathematical work. They may not claim source,
+coverage, admission, registry promotion, or local Lean verification.
+
 ### 2026-09-07 — GitHub Lean harvest: P5-027 / P5-028
 
 - T-P5-027 的 `P5NearSharpCenteredGain.lean` 已有 GitHub CI 证据：Lean

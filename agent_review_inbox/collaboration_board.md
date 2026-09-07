@@ -1772,6 +1772,16 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - 两者均以 conditional/pending 叶注册，没有把 concrete gain、H gap、source
   或 coverage 误报为已验证；state revision `617`，registry `0`。
 
+### 2026-09-07 — 梁智炜 follow-up dispatch 11:46
+
+- body-6 正在缩小到末端 DH 列和 23-row 三角折叠，避免重新展开前五步；
+- K_path 正在生成精确有理 8 项比较 checker，成功只说明 supplied tables 的
+  算术关系，不构成 source binding；
+- fixed-λ 正在把 577 行稀疏 label ledger 抽象成 typed fold；
+- P3 正在把 slot adapter 继续特化到 `Fin 6` 的 Christoffel/power consumer。
+
+这些任务均沿独立 proof leaves 推进，继续保持 registry=0 与 formal gate 关闭。
+
 ### 2026-09-07 — GitHub P5 Lean sidecars 收割
 
 - 巨阳仙尊的 T-P5-027 near-sharp scalar child 已在 GitHub Actions 的 pinned
