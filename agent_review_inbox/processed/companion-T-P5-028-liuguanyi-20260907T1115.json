@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/companion-T-P5-028-liuguanyi-20260907T1115.md",
+  "record_kind": "companion_log",
+  "review_sha256": "4A057D8036CD7F17A838A4324854B839E61C930B4F77A2842BFFA1E6E8C6D35B",
+  "task_id": "T-P5-028",
+  "source_agent": "柳冠一",
+  "created_at": "2026-09-07T11:15:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "exact_moving_frame_transport_and_parameter_cancellation",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-07T17:19:27.975784+00:00"
+}
