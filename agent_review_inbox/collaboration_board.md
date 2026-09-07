@@ -1367,6 +1367,9 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   provenance，不构造 `membershipProof` 或 `coverageJoinProof`。
 - O1 727-row `BodyTraceEvaluator.lean` 和 `RouteBO1PerBodyTraceAdapter.lean` 已
   接入 7 个 leaves，body labels/频率/有理系数保留；h_body 仍是 OPEN。
+- 最新 receipt 将 O1 状态固定为 `OPEN_H_BODY_PROOFS_UNCOMPILED`；本机 Lean 环境
+  不作为验证路径，后续必须由 pinned 远端 Lean agent 编译并提交六个 source-bound
+  proofs。
 
 ### 2026-09-07 — 梁智炜：O0 exact baseline conditional child
 

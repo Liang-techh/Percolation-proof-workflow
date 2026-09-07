@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 558,
+  "revision": 559,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -17409,6 +17409,27 @@
             "source_binding_proven": false,
             "registry_promoted": false,
             "formal_certificate_allowed": false
+          },
+          {
+            "status": "UNCOMPILED_TYPED_CANDIDATE",
+            "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
+            "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+            "body_trace_evaluator": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\BodyTraceEvaluator.lean",
+            "body_trace_evaluator_sha256": "B9845D37B5DCD16E1F9E142CB2E4D0E5571452993E843C85AC8CD643F6BA5DEA",
+            "body_trace_adapter": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyTraceAdapter.lean",
+            "body_trace_adapter_sha256": "2D48D0767C0C6A432A3592FDB85651D2CBD440DA63A0E0E6653CAE6FE96A20D9",
+            "generator_sha256": "79664A62EFD9A021F52A13FC7F5DCD545DCA602DEB0FFFEC8CA5B6E96C00DC83",
+            "body_trace_receipt_sha256": "4BCF7BE771A9C29FADAF177B65853E697C3617F898D5B87DC26686AA98D6F62D",
+            "body_trace_receipt_status": "OPEN_H_BODY_PROOFS_UNCOMPILED",
+            "typed_body_evaluator_present": true,
+            "body_trace_row_count": 727,
+            "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "agent_review_sha256": "1848BEC91863E06B9DABAC7FEB8B6622005264B91D5662765D48A7F2DDF827C2",
+            "h_aggregate_function_lift_proven": false,
+            "h_body_proven": false,
+            "source_binding_proven": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
           }
         ]
       }
@@ -17467,6 +17488,27 @@
             "body_trace_adapter": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyTraceAdapter.lean",
             "body_trace_adapter_sha256": "2D48D0767C0C6A432A3592FDB85651D2CBD440DA63A0E0E6653CAE6FE96A20D9",
             "generator_sha256": "79664A62EFD9A021F52A13FC7F5DCD545DCA602DEB0FFFEC8CA5B6E96C00DC83",
+            "typed_body_evaluator_present": true,
+            "body_trace_row_count": 727,
+            "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "agent_review_sha256": "1848BEC91863E06B9DABAC7FEB8B6622005264B91D5662765D48A7F2DDF827C2",
+            "h_aggregate_function_lift_proven": false,
+            "h_body_proven": false,
+            "source_binding_proven": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
+          },
+          {
+            "status": "UNCOMPILED_TYPED_CANDIDATE",
+            "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
+            "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+            "body_trace_evaluator": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\BodyTraceEvaluator.lean",
+            "body_trace_evaluator_sha256": "B9845D37B5DCD16E1F9E142CB2E4D0E5571452993E843C85AC8CD643F6BA5DEA",
+            "body_trace_adapter": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyTraceAdapter.lean",
+            "body_trace_adapter_sha256": "2D48D0767C0C6A432A3592FDB85651D2CBD440DA63A0E0E6653CAE6FE96A20D9",
+            "generator_sha256": "79664A62EFD9A021F52A13FC7F5DCD545DCA602DEB0FFFEC8CA5B6E96C00DC83",
+            "body_trace_receipt_sha256": "4BCF7BE771A9C29FADAF177B65853E697C3617F898D5B87DC26686AA98D6F62D",
+            "body_trace_receipt_status": "OPEN_H_BODY_PROOFS_UNCOMPILED",
             "typed_body_evaluator_present": true,
             "body_trace_row_count": 727,
             "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
@@ -17543,6 +17585,27 @@
             "source_binding_proven": false,
             "registry_promoted": false,
             "formal_certificate_allowed": false
+          },
+          {
+            "status": "UNCOMPILED_TYPED_CANDIDATE",
+            "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
+            "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+            "body_trace_evaluator": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\BodyTraceEvaluator.lean",
+            "body_trace_evaluator_sha256": "B9845D37B5DCD16E1F9E142CB2E4D0E5571452993E843C85AC8CD643F6BA5DEA",
+            "body_trace_adapter": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyTraceAdapter.lean",
+            "body_trace_adapter_sha256": "2D48D0767C0C6A432A3592FDB85651D2CBD440DA63A0E0E6653CAE6FE96A20D9",
+            "generator_sha256": "79664A62EFD9A021F52A13FC7F5DCD545DCA602DEB0FFFEC8CA5B6E96C00DC83",
+            "body_trace_receipt_sha256": "4BCF7BE771A9C29FADAF177B65853E697C3617F898D5B87DC26686AA98D6F62D",
+            "body_trace_receipt_status": "OPEN_H_BODY_PROOFS_UNCOMPILED",
+            "typed_body_evaluator_present": true,
+            "body_trace_row_count": 727,
+            "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "agent_review_sha256": "1848BEC91863E06B9DABAC7FEB8B6622005264B91D5662765D48A7F2DDF827C2",
+            "h_aggregate_function_lift_proven": false,
+            "h_body_proven": false,
+            "source_binding_proven": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
           }
         ]
       }
@@ -17601,6 +17664,27 @@
             "body_trace_adapter": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyTraceAdapter.lean",
             "body_trace_adapter_sha256": "2D48D0767C0C6A432A3592FDB85651D2CBD440DA63A0E0E6653CAE6FE96A20D9",
             "generator_sha256": "79664A62EFD9A021F52A13FC7F5DCD545DCA602DEB0FFFEC8CA5B6E96C00DC83",
+            "typed_body_evaluator_present": true,
+            "body_trace_row_count": 727,
+            "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "agent_review_sha256": "1848BEC91863E06B9DABAC7FEB8B6622005264B91D5662765D48A7F2DDF827C2",
+            "h_aggregate_function_lift_proven": false,
+            "h_body_proven": false,
+            "source_binding_proven": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
+          },
+          {
+            "status": "UNCOMPILED_TYPED_CANDIDATE",
+            "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
+            "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+            "body_trace_evaluator": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\BodyTraceEvaluator.lean",
+            "body_trace_evaluator_sha256": "B9845D37B5DCD16E1F9E142CB2E4D0E5571452993E843C85AC8CD643F6BA5DEA",
+            "body_trace_adapter": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyTraceAdapter.lean",
+            "body_trace_adapter_sha256": "2D48D0767C0C6A432A3592FDB85651D2CBD440DA63A0E0E6653CAE6FE96A20D9",
+            "generator_sha256": "79664A62EFD9A021F52A13FC7F5DCD545DCA602DEB0FFFEC8CA5B6E96C00DC83",
+            "body_trace_receipt_sha256": "4BCF7BE771A9C29FADAF177B65853E697C3617F898D5B87DC26686AA98D6F62D",
+            "body_trace_receipt_status": "OPEN_H_BODY_PROOFS_UNCOMPILED",
             "typed_body_evaluator_present": true,
             "body_trace_row_count": 727,
             "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
@@ -17677,6 +17761,27 @@
             "source_binding_proven": false,
             "registry_promoted": false,
             "formal_certificate_allowed": false
+          },
+          {
+            "status": "UNCOMPILED_TYPED_CANDIDATE",
+            "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
+            "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+            "body_trace_evaluator": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\BodyTraceEvaluator.lean",
+            "body_trace_evaluator_sha256": "B9845D37B5DCD16E1F9E142CB2E4D0E5571452993E843C85AC8CD643F6BA5DEA",
+            "body_trace_adapter": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyTraceAdapter.lean",
+            "body_trace_adapter_sha256": "2D48D0767C0C6A432A3592FDB85651D2CBD440DA63A0E0E6653CAE6FE96A20D9",
+            "generator_sha256": "79664A62EFD9A021F52A13FC7F5DCD545DCA602DEB0FFFEC8CA5B6E96C00DC83",
+            "body_trace_receipt_sha256": "4BCF7BE771A9C29FADAF177B65853E697C3617F898D5B87DC26686AA98D6F62D",
+            "body_trace_receipt_status": "OPEN_H_BODY_PROOFS_UNCOMPILED",
+            "typed_body_evaluator_present": true,
+            "body_trace_row_count": 727,
+            "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "agent_review_sha256": "1848BEC91863E06B9DABAC7FEB8B6622005264B91D5662765D48A7F2DDF827C2",
+            "h_aggregate_function_lift_proven": false,
+            "h_body_proven": false,
+            "source_binding_proven": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
           }
         ]
       }
@@ -17744,6 +17849,27 @@
             "source_binding_proven": false,
             "registry_promoted": false,
             "formal_certificate_allowed": false
+          },
+          {
+            "status": "UNCOMPILED_TYPED_CANDIDATE",
+            "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
+            "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+            "body_trace_evaluator": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\BodyTraceEvaluator.lean",
+            "body_trace_evaluator_sha256": "B9845D37B5DCD16E1F9E142CB2E4D0E5571452993E843C85AC8CD643F6BA5DEA",
+            "body_trace_adapter": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyTraceAdapter.lean",
+            "body_trace_adapter_sha256": "2D48D0767C0C6A432A3592FDB85651D2CBD440DA63A0E0E6653CAE6FE96A20D9",
+            "generator_sha256": "79664A62EFD9A021F52A13FC7F5DCD545DCA602DEB0FFFEC8CA5B6E96C00DC83",
+            "body_trace_receipt_sha256": "4BCF7BE771A9C29FADAF177B65853E697C3617F898D5B87DC26686AA98D6F62D",
+            "body_trace_receipt_status": "OPEN_H_BODY_PROOFS_UNCOMPILED",
+            "typed_body_evaluator_present": true,
+            "body_trace_row_count": 727,
+            "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "agent_review_sha256": "1848BEC91863E06B9DABAC7FEB8B6622005264B91D5662765D48A7F2DDF827C2",
+            "h_aggregate_function_lift_proven": false,
+            "h_body_proven": false,
+            "source_binding_proven": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
           }
         ]
       }
@@ -17802,6 +17928,27 @@
             "body_trace_adapter": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyTraceAdapter.lean",
             "body_trace_adapter_sha256": "2D48D0767C0C6A432A3592FDB85651D2CBD440DA63A0E0E6653CAE6FE96A20D9",
             "generator_sha256": "79664A62EFD9A021F52A13FC7F5DCD545DCA602DEB0FFFEC8CA5B6E96C00DC83",
+            "typed_body_evaluator_present": true,
+            "body_trace_row_count": 727,
+            "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "agent_review_sha256": "1848BEC91863E06B9DABAC7FEB8B6622005264B91D5662765D48A7F2DDF827C2",
+            "h_aggregate_function_lift_proven": false,
+            "h_body_proven": false,
+            "source_binding_proven": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
+          },
+          {
+            "status": "UNCOMPILED_TYPED_CANDIDATE",
+            "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
+            "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+            "body_trace_evaluator": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\BodyTraceEvaluator.lean",
+            "body_trace_evaluator_sha256": "B9845D37B5DCD16E1F9E142CB2E4D0E5571452993E843C85AC8CD643F6BA5DEA",
+            "body_trace_adapter": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyTraceAdapter.lean",
+            "body_trace_adapter_sha256": "2D48D0767C0C6A432A3592FDB85651D2CBD440DA63A0E0E6653CAE6FE96A20D9",
+            "generator_sha256": "79664A62EFD9A021F52A13FC7F5DCD545DCA602DEB0FFFEC8CA5B6E96C00DC83",
+            "body_trace_receipt_sha256": "4BCF7BE771A9C29FADAF177B65853E697C3617F898D5B87DC26686AA98D6F62D",
+            "body_trace_receipt_status": "OPEN_H_BODY_PROOFS_UNCOMPILED",
             "typed_body_evaluator_present": true,
             "body_trace_row_count": 727,
             "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
@@ -42397,6 +42544,24 @@
       "o2_lean_adapter_compiled": false,
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T15:25:48.200127+00:00",
+      "kind": "routeb_o1_per_body_typed_candidate_recorded",
+      "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+      "leaf_ids": [
+        "0f4d65a33b964cf38110c0f4b93a34d4",
+        "5201cf1e229544a3815e7bc832ab23b7",
+        "86049b9800f44a878a81de2e79c3e1c5",
+        "0d44099d7b1e486792f27f4787edd73e",
+        "62f56aedfc16447181e2178e44a535eb",
+        "87f1bd9c1acd42369f8814bd10230091",
+        "3ad9bd4fa1d040da995906fc487913fd"
+      ],
+      "h_aggregate_function_lift_proven": false,
+      "h_body_proven": false,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -46053,5 +46218,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "caad043eccc118f9e71e5a448c42ce21544b816057cdfb7704e52fbcf08c027f"
+  "state_checksum": "985ab506163a66422119c89c7a8074f41bf619498d857ba8344b4f0b69314be9"
 }

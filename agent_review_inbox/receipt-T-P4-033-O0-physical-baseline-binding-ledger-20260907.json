@@ -1,0 +1,139 @@
+{
+  "schema": "routeb.o0.physical_baseline_binding_ledger.v1",
+  "task": "T-P4-033",
+  "lane": "O0",
+  "status": "OBSTRUCTION_SAME_KEY_PHYSICAL_BINDINGS_INCOMPLETE",
+  "consumable_now": false,
+  "inherited_child": {
+    "name": "physical_baseline_factor",
+    "L_base": "120442959/280443400",
+    "source": "agent_review_inbox/receipt-T-P4-033-O0-exact-physical-baseline-derivation-20260907.json",
+    "do_not_recompute": true
+  },
+  "main_state_modified": false,
+  "registry_promoted": false,
+  "schur_margin_consumed": false,
+  "forbidden_inputs_used": {
+    "global_lower": false,
+    "unit_normalization": false,
+    "old_float64_ledger": false
+  },
+  "binding": {
+    "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+    "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+    "metric_key": "weighted-port:s=1/5|output_norm=euclidean_2|orientation=left-output",
+    "source_norm": "induced_infinity",
+    "output_norm": "euclidean_2",
+    "orientation": "B=(4,5), D=(1,2,3,6), left-output"
+  },
+  "required_conjunction": [
+    "NE_semantics(source_key, exact_mu, q-cell)",
+    "BB_all_q(source_key, state_key)",
+    "BB_sym(source_key, state_key)",
+    "baseline_budget_id(source_key, state_key)",
+    "B_up_id(source_key, state_key, metric_key)"
+  ],
+  "premise_ledger": [
+    {
+      "id": "P-NE",
+      "required_statement": "FourierMass(source_key,q) = M_NewtonEuler^mu(q) on q_i in [-1/1000,1/1000]",
+      "exact_mu": "1/1000000",
+      "current_evidence": "Matching declared DH/inertia structural data in exact Fourier source and Newton-Euler implementation",
+      "missing_fields": [
+        "authoritative exact-real semantic equality receipt",
+        "same-key block extraction B=(4,5), D=(1,2,3,6)"
+      ],
+      "status": "missing"
+    },
+    {
+      "id": "P-BB-ALLQ",
+      "required_statement": "forall q in keyed cell, ||M_BB^mu(q)-M_BB^mu(0)||_infinity <= 147/800000000",
+      "current_evidence": "NUMBERS.json exact rational E1 conditional Fourier enclosure under the same source/state key",
+      "missing_fields": [
+        "acceptance that Fourier evaluator is the physical Newton-Euler M_BB^mu(q)",
+        "authoritative all-q semantic binding"
+      ],
+      "status": "conditional_only"
+    },
+    {
+      "id": "P-SYM",
+      "required_statement": "forall q in keyed cell, M_BB^mu(q) = transpose(M_BB^mu(q))",
+      "current_evidence": "Structural Jv'Jv + Jw' R(I/3)R'Jw + mu I expression",
+      "missing_fields": [
+        "exact-real semantic bridge or exact coefficient symmetry certificate",
+        "same source/state key"
+      ],
+      "status": "unbound"
+    },
+    {
+      "id": "P-BUDGET",
+      "required_statement": "baseline_budget(q,a_B) = a_B^T M_BB^mu(q) a_B",
+      "current_evidence": "Nominal storage identity K_B0 = 1/2*dq_B^T*M0_BB*dq_B; D-base defines l_base = F_B - B0*a_B",
+      "missing_fields": [
+        "same-key all-q physical energy identity",
+        "block order and q dependence",
+        "no duplicate port/residual charge"
+      ],
+      "status": "missing"
+    },
+    {
+      "id": "P-BUP",
+      "required_statement": "B_up = diag(1402217/12000000, 200739/4000000) and A_up(q,a_B) = a_B^T*B_up*a_B",
+      "current_evidence": "Same-key weighted adapter receipt with exact matrix, beta=200739/4000000, s=1/5, Euclidean-2 left-output orientation",
+      "missing_fields": [
+        "typed physical identity to the O0 baseline/storage consumer",
+        "authoritative exact proof status for physical role"
+      ],
+      "status": "conditional_algebraic_only"
+    },
+    {
+      "id": "P-MU",
+      "required_statement": "Physical mass and Fourier evaluator use the same exact-real mu=1/1000000",
+      "current_evidence": "mu encoded in source_key and q=0 exact interpretation",
+      "missing_fields": [
+        "semantic equality of exact-real regularized physical expression and Fourier table"
+      ],
+      "status": "missing"
+    }
+  ],
+  "minimum_obstruction": [
+    "No authoritative exact-real Fourier-to-Newton-Euler semantic equality is bound to source_key/state_key.",
+    "No same-key exact symmetry receipt exists for physical M_BB^mu(q).",
+    "No same-key baseline_budget identity exists; nominal storage notation is not an all-q physical budget receipt.",
+    "B_up is present as same-key exact metric data, but its physical identity/role is not typed as a consumable baseline receipt."
+  ],
+  "evidence": [
+    {
+      "path": "artifacts/routeb_agent_schur_fullq_next_20260906T091446Z/NUMBERS.json",
+      "sha256": "59C7E9BECA460DAB46B675F056BB3BAC147001A3FF1888EBC2CE0110611F7F3E",
+      "used_for": ["source_key", "state_key", "dMBB_inf_bound", "cell"]
+    },
+    {
+      "path": "C:/Users/z5242/Desktop/重构版/6dof_sos_optimized/6dof_sos_optimized/routeB_dense_Mq/routeB_fourier_mass_full_rational.csv",
+      "sha256": "A986A208B62F585C6CA1B9C81B958710D2043E5BF786DDC930A6FA29F7A232B8",
+      "used_for": ["exact Fourier source identity candidate"]
+    },
+    {
+      "path": "agent_review_inbox/receipt-T-P4-033-O0-exact-fourier-cell-weighted-port-adapter-output-2norm-20260907.json",
+      "sha256": "8506F3FEDE09D3FCFB20C586213B0901BD065378E15492AC71BD1566BEB2120C",
+      "used_for": ["same-key B_up", "metric_key", "norm/orientation"]
+    },
+    {
+      "path": "C:/Users/z5242/Desktop/重构版/6dof_sos_optimized/6dof_sos_optimized/routeB_dense_Mq/dhport_lib.jl",
+      "sha256": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936",
+      "used_for": ["structural Newton-Euler mass symmetry candidate"]
+    },
+    {
+      "path": "C:/Users/z5242/Desktop/重构版/6dof_sos_optimized/6dof_sos_optimized/routeB_dense_Mq/P4_PHYSICAL_RATIONAL_DESCRIPTOR_BRIDGE.md",
+      "sha256": "68BBC8D4B4455A547D6A251E67F0B3A075B32827541DBF7CEC827B56D06A9487",
+      "used_for": ["physical block/decomposition boundary"]
+    }
+  ],
+  "next_receipt_requirements": [
+    "One authoritative exact-real semantic equality for FourierMass and NewtonEulerMass with exact mu.",
+    "One same-key all-q M_BB enclosure receipt consuming that semantic equality.",
+    "One same-key exact symmetry receipt.",
+    "One same-key baseline_budget identity with charge ownership.",
+    "One same-key typed B_up physical metric identity."
+  ]
+}

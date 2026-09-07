@@ -1989,6 +1989,8 @@ after integration; corrections should be a new result file.
   成 dynamics/Lean theorem。
 - O1 body trace evaluator 已生成；Lean agent 现在应把 727-row definition 在
   pinned environment 编译并证明 body 1--6，而不是再生成 CSV 或 abstract target。
+- O1 receipt 已保存 generator/Lean/adapter/source CSV hashes；当前只接受远端
+  pinned compile receipt 与六个 `h_body_i` proof，不能使用本机环境错误作为证明。
 
 ### T-P4-036.2 — theta2 namespace hardening (2026-09-07)
 

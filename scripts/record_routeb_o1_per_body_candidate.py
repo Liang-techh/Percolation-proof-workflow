@@ -15,6 +15,7 @@ LEAN = ROOT / "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyExactSo
 TRACE = ROOT / "examples/routeb_b45_source_comparator_lean/BodyTraceEvaluator.lean"
 ADAPTER = ROOT / "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean"
 GENERATOR = ROOT / "examples/routeb_b45_source_comparator_lean/generate_body_trace_evaluator.py"
+BODY_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_TRACE_EVALUATOR_RECEIPT.json"
 REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-per-body-candidate-codex-20260907.md"
 AGENT_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-per-body-source-definition-obstruction-codex-20260907.md"
 
@@ -31,7 +32,7 @@ def find(state, name: str):
 
 
 def main() -> None:
-    for path in (STATE, LEAN, TRACE, ADAPTER, GENERATOR, REVIEW, AGENT_REVIEW):
+    for path in (STATE, LEAN, TRACE, ADAPTER, GENERATOR, BODY_RECEIPT, REVIEW, AGENT_REVIEW):
         if not path.is_file():
             raise FileNotFoundError(path)
     store = StateStore(STATE)
@@ -50,6 +51,8 @@ def main() -> None:
         "body_trace_adapter": str(ADAPTER.resolve()),
         "body_trace_adapter_sha256": digest(ADAPTER),
         "generator_sha256": digest(GENERATOR),
+        "body_trace_receipt_sha256": digest(BODY_RECEIPT),
+        "body_trace_receipt_status": "OPEN_H_BODY_PROOFS_UNCOMPILED",
         "typed_body_evaluator_present": True,
         "body_trace_row_count": 727,
         "review_sha256": digest(REVIEW),
