@@ -1,10 +1,12 @@
-"""Idempotently integrate pending agent review results as fail-closed metadata.
+"""Idempotently integrate pending inbox records as fail-closed metadata.
 
 The inbox is intentionally append-only.  This command never promotes a node,
-changes the registry, or edits the review itself.  It records provenance on a
+changes the registry, or edits an input record.  It records provenance on a
 matching Route-B node or, for external-library scans, an event-only catalog
 record, then writes a small processed marker so a periodic runner can safely
-invoke it repeatedly.
+invoke it repeatedly.  In addition to review results, the collector accepts
+typed ``handoff`` and ``companion_log`` records so useful agent output is not
+lost merely because it was emitted under a different filename.
 """
 from __future__ import annotations
 
@@ -85,6 +87,12 @@ REVIEW_ID_ALIASES = {
     "review-FLT-topology-quotient-clm": "T-FLT-TOPOLOGY-QUOTIENT-CLM",
 }
 
+RECORD_GLOBS = (
+    "review-*.md", "handoff-*.md", "handoff-*.json",
+    "companion-*.md", "companion-*.json",
+)
+RECORD_KINDS = {"review_result", "handoff", "companion_log"}
+
 
 def sha256(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest().upper()
@@ -126,9 +134,47 @@ def front_matter(path: Path) -> dict[str, str]:
     return result
 
 
+def record_header(path: Path) -> dict[str, str]:
+    """Read the bounded metadata envelope for an inbox record."""
+    if path.suffix.lower() == ".json":
+        try:
+            value = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, UnicodeDecodeError, json.JSONDecodeError):
+            return {}
+        if not isinstance(value, dict):
+            return {}
+        return {str(key): str(item) if item is not None else ""
+                for key, item in value.items()}
+    return front_matter(path)
+
+
+def record_kind(path: Path, header: dict[str, str]) -> str | None:
+    """Return the accepted record kind, or ``None`` for planning/noise files."""
+    kind = header.get("kind", "")
+    if kind in RECORD_KINDS:
+        return kind
+    if kind:
+        return None
+    # A filename convention is a narrow compatibility fallback for old agent
+    # envelopes that omitted ``kind``; it does not scan the mathematical body.
+    name = path.name.lower()
+    if name.startswith("review-"):
+        return "review_result"
+    if name.startswith("handoff-"):
+        return "handoff"
+    if name.startswith("companion-"):
+        return "companion_log"
+    return None
+
+
+def inbox_records(inbox: Path) -> list[Path]:
+    """Return unique root-level record paths in deterministic order."""
+    return sorted({path for pattern in RECORD_GLOBS for path in inbox.glob(pattern)})
+
+
 def source_commit(path: Path, header: dict[str, str]) -> str:
     """Recover an explicitly printed Git commit when agents put it in prose."""
-    declared = header.get("commit", "").strip()
+    declared = str(header.get("commit", "")).strip()
     if declared:
         return declared
     text = path.read_text(encoding="utf-8")
@@ -156,9 +202,10 @@ def main() -> int:
     processed.mkdir(parents=True, exist_ok=True)
 
     candidates = []
-    for path in sorted(inbox.glob("review-*.md")):
-        header = front_matter(path)
-        if header.get("kind") != "review_result":
+    for path in inbox_records(inbox):
+        header = record_header(path)
+        kind = record_kind(path, header)
+        if kind is None:
             continue
         if header.get("integration_status") == "integrated":
             continue
@@ -180,7 +227,7 @@ def main() -> int:
             # to overwrite history.  Keep the old hash in the new provenance
             # record and require a second, explicit integration event.
             previous = old
-        candidates.append((path, header, digest, marker, previous))
+        candidates.append((path, header, kind, digest, marker, previous))
 
     if not candidates:
         print(json.dumps({"integrated": [], "state_revision": StateStore(state_path).load().revision}))
@@ -194,12 +241,14 @@ def main() -> int:
         raise ValueError("refuse inbox integration while a node is in progress")
 
     integrated = []
-    for path, header, digest, marker, previous in candidates:
+    for path, header, kind, digest, marker, previous in candidates:
         task_id = header.get("task_id", "") or REVIEW_ID_ALIASES.get(
             header.get("review_id", ""), "")
         target_name, classification = TASK_TARGETS[task_id]
+        record_file = str(path.relative_to(ROOT)).replace("\\", "/")
         ref = {
-            "review_file": str(path.relative_to(ROOT)).replace("\\", "/"),
+            "record_file": record_file,
+            "record_kind": kind,
             "review_sha256": digest,
             "task_id": task_id,
             "source_agent": header.get("source_agent", "unknown"),
@@ -210,6 +259,10 @@ def main() -> int:
             "target_scope": "routeb_node" if target_name else "external_reuse_catalog",
             "source_commit": source_commit(path, header),
         }
+        if kind == "review_result":
+            # Keep the legacy field stable for downstream reports and old
+            # processed markers while exposing the generic record envelope.
+            ref["review_file"] = record_file
         if header.get("admission_label"):
             ref["admission_label"] = header["admission_label"]
         if previous is not None:
@@ -220,9 +273,15 @@ def main() -> int:
         if target_name:
             node = node_by_name(state, target_name)
             node.metadata.setdefault("agent_review_refs", []).append(ref)
+        event_kind = {
+            "review_result": "agent_review_integrated",
+            "handoff": "agent_handoff_integrated",
+            "companion_log": "agent_companion_integrated",
+        }[kind]
         state.event(
-            "agent_review_integrated" if target_name else "external_reuse_review_integrated",
-            review_file=ref["review_file"],
+            event_kind if target_name else f"external_reuse_{event_kind}",
+            record_file=record_file,
+            record_kind=kind,
             review_sha256=digest,
             task_id=task_id,
             classification=ref["classification"],

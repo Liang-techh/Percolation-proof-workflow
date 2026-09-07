@@ -13,6 +13,9 @@ an inbox result is recorded. Historical review authors are preserved even if a
 role label is later corrected.
 
 Agents may add one self-contained `.md` or `.json` review result per finding.
+Typed `handoff` and `companion_log` records use the same bounded envelope and
+are collected by the periodic pass as provenance metadata; claims and plans
+remain non-evidence.
 Planning files use the `task_plan` label and are not treated as evidence.
 Every `review_result` should include:
 
@@ -24,8 +27,9 @@ Every `review_result` should include:
 - an explicit admission label: `verified`, `compiled_candidate`, `pending`,
   `rejected`, or `architecture_only`.
 
-The 20-minute integration pass reads only `review_result` files not marked
-`integrated`; it ignores `task_plan` files. It may update
+The 20-minute integration pass reads `review_result`, `handoff`, and
+`companion_log` files not marked `integrated`; it ignores `task_plan` and
+`task_claim` files. It may update
 the authoritative workflow only through the normal state/receipt APIs, and it
 must preserve provenance, failed attempts, and unresolved obligations. A review
 file is never proof merely because it exists or says `verified`; Lean/kernel,
