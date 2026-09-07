@@ -31,18 +31,18 @@ BASE_LEAN_PATH="$(cd "$LAKE_ROOT" && lake env printenv LEAN_PATH)"
 compile_module() {
   local module="$1"
   (
-    cd "$LAKE_ROOT"
+    cd "$SRC"
     LEAN_PATH="$BUILD:$BASE_LEAN_PATH" \
-      lean -DwarningAsError=true -o "$BUILD/${module%.lean}.olean" "$SRC/$module"
+      lean -DwarningAsError=true -o "$BUILD/${module%.lean}.olean" "$module"
   )
 }
 
 compile_module NEW_P4_032_BlockDefects.lean
 compile_module NEW_P4_032_DefectNormBudget.lean
 (
-  cd "$LAKE_ROOT"
+  cd "$SRC"
   LEAN_PATH="$BUILD:$BASE_LEAN_PATH" \
-    lean -DwarningAsError=true "$SRC/NEW_P4_032_WeightedThreeTerm.lean"
+    lean -DwarningAsError=true NEW_P4_032_WeightedThreeTerm.lean
 ) 2>&1 | tee "$OUT"
 
 for theorem in \
