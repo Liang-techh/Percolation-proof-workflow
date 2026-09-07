@@ -1390,6 +1390,18 @@ polynomial remains a separate frontier.
 - forbidden: using `vecMul` in place of `mulVec`, hiding a backslash/solver call
   inside the inverse premise, or promoting an interface draft.
 
+#### T-P4-032 remote compile dispatch packet (2026-09-07)
+
+- candidate: `artifacts/task_routeb_o1_lean_api_audit_20260907/RouteBO1PortIdentity.lean`
+- candidate SHA-256: `403C41C6F325E906A9D3555B6886D1371DFA2D84826ABCC7BF83C12E21293BFB`
+- theorem: `routeB_port_identity`
+- required repair already applied: explicit `Mathlib.Tactic.Linarith` import and
+  `Matrix.mul_assoc` in `hB_left` normalization.
+- remote agent must return pinned Lean/Lake identity, compile exit/output,
+  `#print axioms`, exact statement comparator result, and source hash. Any
+  failure becomes a new immutable repair review; it must not overwrite the
+  prior uncompiled receipt or promote the candidate automatically.
+
 ### T-P4-033 — regularizer semantics bridge O0
 
 - status: `open` (independent evaluator prerequisite)
