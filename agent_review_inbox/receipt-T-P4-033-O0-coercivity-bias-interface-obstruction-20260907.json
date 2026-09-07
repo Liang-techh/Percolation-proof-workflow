@@ -1,0 +1,58 @@
+{
+  "schema": "routeb.o0.same_key_coercivity_or_bias_interface.v1",
+  "status": "OPEN_FAIL_CLOSED_BASELINE_RESERVE_MISSING",
+  "receipt_type": "immutable_math_review",
+  "task": "T-P4-033-O0",
+  "scope": "exact-Fourier one-cell only",
+  "main_state_modified": false,
+  "schur_margin_consumed": false,
+  "registry_promoted": false,
+  "key": {
+    "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+    "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+    "metric_orientation": "left_output",
+    "source_bound_norm": "induced_infinity",
+    "metric_output_norm": "euclidean_2"
+  },
+  "constructed_or_existing_inputs": {
+    "rho_r_status": "conditional_from_Br_K_Cf_tuple",
+    "theta": "1",
+    "epsilon_R_status": "same-key-weighted-perturbation-available",
+    "no_unit_normalization_reused": true
+  },
+  "missing_coercivity_receipt": {
+    "required_symbol": "L_base",
+    "required_statement": "baseline_budget(q,a_B) >= L_base * (a_B^T*B_up(q)*a_B)",
+    "required_strict_join": "L_base > (1+1/theta)*(rho_r+epsilon_R)^2",
+    "derived_margin": "m_r = L_base-(1+1/theta)*rho_r^2",
+    "derived_leftover": "m_f = L_base-(1+1/theta)*(rho_r+epsilon_R)^2",
+    "available": false,
+    "obstruction": "Br,K,Cf constrain the port map but do not provide an energy-side baseline budget or top-block coercivity"
+  },
+  "exact_non_identifiability": {
+    "fixed_data": "same tuple, metric, cell, rho_r, epsilon_R, theta",
+    "completion_zero_reserve": "L_base=(1+1/theta)*(rho_r+epsilon_R)^2 => m_f=0",
+    "completion_positive_reserve": "L_base=(1+1/theta)*(rho_r+epsilon_R)^2+1 => m_f=1",
+    "conclusion": "tuple alone cannot determine a strict positive Schur leftover"
+  },
+  "affine_bias_interface": {
+    "decomposition": "r_B=R_rel*a_B+b_B",
+    "relative_premises": [
+      "tau > 0",
+      "||R_rel*a_B||_2^2 <= rho_rel^2*A_up",
+      "||b_B||_2^2 <= beta_bias*A_up",
+      "beta_bias >= 0"
+    ],
+    "effective_squared_gain": "gamma_bias=(1+tau)*rho_rel^2+(1+1/tau)*beta_bias",
+    "root_requirement": "exact rho_bias>=0 with gamma_bias<=rho_bias^2",
+    "strict_condition": "L_base>(1+1/theta)*(rho_bias+epsilon_R)^2",
+    "absolute_bias_alternative": "||b_B||_2^2<=beta_abs and m_add>(1+1/tau)*beta_abs",
+    "counterexample": "b_B != 0, a_B=0 gives A_up=0 but ||r_B||_2^2>0; homogeneous rho_r bound is false"
+  },
+  "required_next_receipt": [
+    "same-key L_base/coercivity theorem or direct m_r receipt",
+    "same-key strict m_f>0 proof",
+    "if affine: beta_bias/root witness or beta_abs/additive reserve",
+    "physical R_port*a_B=r_B if physical consumption is intended"
+  ]
+}

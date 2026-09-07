@@ -12,6 +12,7 @@ from percolation_workflow.routeb_regularizer_semantics import (
     convert_routeb_port_bound_to_weighted_metric,
     consume_routeb_schur_margin,
     consume_routeb_strict_schur_margin,
+    derive_routeb_affine_bias_gain,
     derive_routeb_root_witness,
     derive_routeb_zero_shift_weighted_perturbation,
     derive_routeb_general_resolvent_port_propagation,
@@ -464,3 +465,40 @@ def test_canonical_o0_r3_receipt_rejects_float_and_key_boundary_violation() -> N
     result = audit_routeb_o0_r3_canonical_receipt(receipt)
     assert result.status == "REJECTED"
     assert "admission.state_keys_not_equal" in result.errors
+
+
+def test_affine_bias_gain_replays_exact_young_composition() -> None:
+    result = derive_routeb_affine_bias_gain(
+        Fraction(1, 10), Fraction(1, 100), Fraction(1), Fraction(1, 2),
+        source_key="same-key",
+        relative_bound_proven=True,
+        bias_bound_proven=True,
+        root_bound_proven=True,
+    )
+    assert result.status == "CONDITIONAL_AFFINE_BIAS_GAIN"
+    assert result.effective_squared_gain == Fraction(1, 25)
+    assert result.root_slack == Fraction(21, 100)
+    assert result.formal_certificate_allowed is False
+    assert result.registry_eligible is False
+
+
+def test_affine_bias_gain_rejects_root_below_effective_gain() -> None:
+    result = derive_routeb_affine_bias_gain(
+        Fraction(1, 10), Fraction(1, 100), Fraction(1), Fraction(1, 10),
+        source_key="same-key",
+        relative_bound_proven=True,
+        bias_bound_proven=True,
+        root_bound_proven=True,
+    )
+    assert result.status == "OPEN_FAIL_CLOSED"
+    assert "rho_bias_squared_below_effective_gain" in result.errors
+
+
+def test_affine_bias_gain_keeps_unproven_relative_or_bias_bounds_conditional() -> None:
+    result = derive_routeb_affine_bias_gain(
+        Fraction(1, 10), Fraction(1, 100), Fraction(1), Fraction(1, 2),
+        source_key="same-key",
+    )
+    assert result.status == "CONDITIONAL_AFFINE_BIAS_GAIN"
+    assert "relative_residual_bound_not_authoritatively_supplied" in result.errors
+    assert "bias_bound_not_authoritatively_supplied" in result.errors

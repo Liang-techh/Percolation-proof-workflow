@@ -261,6 +261,33 @@ class RouteBRootWitness:
 
 
 @dataclass(frozen=True)
+class RouteBAffineBiasGain:
+    """Conditional exact gain for a relative residual plus an affine bias.
+
+    If ``r = R_rel*a + b`` and the relative and bias terms are separately
+    bounded in the same quadratic metric, Young's inequality yields
+    ``gamma_bias = (1+tau)*rho_rel^2 + (1+1/tau)*beta_bias``.  This helper
+    checks only that scalar interface and an optional exact root witness; it
+    never invents a homogeneous bound when the bias premise is absent.
+    """
+
+    status: str
+    rho_relative: Fraction | None
+    beta_bias: Fraction | None
+    tau: Fraction | None
+    effective_squared_gain: Fraction | None
+    rho_bias: Fraction | None
+    root_slack: Fraction | None
+    source_key: str | None
+    errors: tuple[str, ...] = ()
+    relative_bound_proven: bool = False
+    bias_bound_proven: bool = False
+    root_bound_proven: bool = False
+    formal_certificate_allowed: bool = False
+    registry_eligible: bool = False
+
+
+@dataclass(frozen=True)
 class RouteBZeroShiftWeightedPerturbation:
     """Conditional weighted perturbation bound when both off-diagonal shifts vanish."""
 
@@ -917,6 +944,94 @@ def derive_routeb_root_witness(
     )
 
 
+def derive_routeb_affine_bias_gain(
+    rho_relative: Fraction | int | None,
+    beta_bias: Fraction | int | None,
+    tau: Fraction | int | None,
+    rho_bias: Fraction | int | None = None,
+    *,
+    source_key: str | None,
+    relative_bound_proven: bool = False,
+    bias_bound_proven: bool = False,
+    root_bound_proven: bool = False,
+) -> RouteBAffineBiasGain:
+    """Derive the exact Young gain for an affine residual interface.
+
+    The returned result is conditional even when all scalar checks pass.  A
+    caller still has to supply authoritative source/metric statements and the
+    physical residual identity before any Schur consumer can use it.
+    """
+    errors: list[str] = []
+    values: dict[str, Fraction | None] = {}
+    for name, value in (("rho_relative", rho_relative), ("beta_bias", beta_bias),
+                        ("tau", tau), ("rho_bias", rho_bias)):
+        try:
+            values[name] = (_exact_scalar(value, name) if value is not None else None)
+        except TypeError as error:
+            errors.append(str(error))
+            values[name] = None
+    rho = values["rho_relative"]
+    beta = values["beta_bias"]
+    tau_value = values["tau"]
+    root = values["rho_bias"]
+    if rho is None:
+        errors.append("rho_relative_missing")
+    elif rho < 0:
+        errors.append("rho_relative_negative")
+    if beta is None:
+        errors.append("beta_bias_missing")
+    elif beta < 0:
+        errors.append("beta_bias_negative")
+    if tau_value is None:
+        errors.append("tau_missing")
+    elif tau_value <= 0:
+        errors.append("tau_not_positive")
+    if root is not None and root < 0:
+        errors.append("rho_bias_negative")
+    if not source_key:
+        errors.append("affine_bias_source_key_missing")
+    if not relative_bound_proven:
+        errors.append("relative_residual_bound_not_authoritatively_supplied")
+    if not bias_bound_proven:
+        errors.append("bias_bound_not_authoritatively_supplied")
+    gamma: Fraction | None = None
+    slack: Fraction | None = None
+    if rho is not None and beta is not None and tau_value is not None and not any(
+        error in {"rho_relative_negative", "beta_bias_negative", "tau_not_positive"}
+        for error in errors
+    ):
+        gamma = (1 + tau_value) * rho * rho + (1 + 1 / tau_value) * beta
+        if root is None:
+            errors.append("rho_bias_root_witness_missing")
+        else:
+            slack = root * root - gamma
+            if slack < 0:
+                errors.append("rho_bias_squared_below_effective_gain")
+            if not root_bound_proven:
+                errors.append("rho_bias_root_not_authoritatively_supplied")
+    if errors and any(
+        token in error for error in errors
+        for token in ("malformed", "negative", "not_positive", "below_effective", "missing")
+    ):
+        status = "OPEN_FAIL_CLOSED"
+    else:
+        status = "CONDITIONAL_AFFINE_BIAS_GAIN"
+    return RouteBAffineBiasGain(
+        status=status,
+        rho_relative=rho,
+        beta_bias=beta,
+        tau=tau_value,
+        effective_squared_gain=gamma,
+        rho_bias=root,
+        root_slack=slack,
+        source_key=source_key,
+        errors=tuple(dict.fromkeys(errors)),
+        relative_bound_proven=relative_bound_proven,
+        bias_bound_proven=bias_bound_proven,
+        root_bound_proven=root_bound_proven,
+    )
+
+
 def consume_routeb_schur_margin(
     rho_baseline: Fraction | int | None,
     epsilon_port: Fraction | int | None,
@@ -1070,12 +1185,14 @@ __all__ = [
     "RouteBWeightedPortMetricConversion",
     "RouteBInfinityToL2WeightedConversion",
     "RouteBRootWitness",
+    "RouteBAffineBiasGain",
     "RouteBZeroShiftWeightedPerturbation",
     "RouteBSchurMarginConsumption",
     "audit_routeb_regularizer_inclusion",
     "convert_routeb_port_bound_to_weighted_metric",
     "convert_routeb_infinity_port_bound_to_weighted_l2",
     "derive_routeb_root_witness",
+    "derive_routeb_affine_bias_gain",
     "derive_routeb_zero_shift_weighted_perturbation",
     "consume_routeb_schur_margin",
     "derive_routeb_general_resolvent_port_propagation",

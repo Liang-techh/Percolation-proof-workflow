@@ -1919,3 +1919,10 @@ after integration; corrections should be a new result file.
 
 - 当前 exact typed source inhabitant 未找到；必须补 canonical source receipt
   才能实例化既有 Path A/B inverse chain，`M_DD_left_inverse_witness` 保持 open。
+
+### T-P4-033-O0 — coercivity or bias interface (2026-09-07)
+
+- `Br/K/Cf` 只约束 port map；必须补同键 `L_base`/baseline budget，或采用
+  `beta_bias` + root / `beta_abs` + additive reserve 的 affine interface。
+- `derive_routeb_affine_bias_gain` 已可验证 exact Young composition，但结果仍
+  是 conditional；禁止把 bias 合并进 homogeneous `rho_r`，禁止关闭 Schur。

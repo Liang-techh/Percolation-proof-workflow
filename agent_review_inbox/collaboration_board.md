@@ -1273,3 +1273,14 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   O1 继续保持 `OPEN`，不是 algebra proof failure。
 - 下一步只接受 exact source/state/mu/q、D=[1,2,3,6] / Lean=[0,1,2,5]、
   projection identity 的 canonical typed receipt；不再重复 determinant 或 q=0。
+
+### 2026-09-07 — 梁智炜：O0 coercivity/bias boundary 收割
+
+- 新 receipt 明确指出 port-side `Br/K/Cf` 不能推出 energy-side `L_base`；同样
+  的 tuple 可与 `m_f=0` 或 `m_f=1` 的 exact completion 相容，因此 unit
+  normalization 不能作为 Schur reserve。
+- affine residual 已固化为两条合法接口：relative `beta_bias` + exact root，
+  或 absolute `beta_abs` + positive additive reserve；新增
+  `derive_routeb_affine_bias_gain` exact API，输出 `gamma_bias` 并 fail-closed。
+- 当前仍不消费 Schur margin；下一步只寻找同键 coercivity/reserve 或真实
+  affine-bias receipt。
