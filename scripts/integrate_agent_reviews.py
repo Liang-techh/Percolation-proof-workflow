@@ -39,6 +39,9 @@ TASK_TARGETS = {
     # catalog evidence, not Route-B theorem nodes or registry entries.
     "T-FLT-DERIV-CALC": (None, "flt_derivation_calculus_scan"),
     "T-FLT-TOPOLOGY-QUOTIENT-CLM": (None, "flt_topology_quotient_scan"),
+    "T-FLT-SPECTRAL-LINEAR": (None, "flt_spectral_linear_scan"),
+    "T-FLT-TRANSPORT-ADAPTER": (None, "flt_transport_adapter_scan"),
+    "T-FLT-INFRA-REGISTRY": (None, "flt_registry_graph_scan"),
 }
 
 REVIEW_ID_ALIASES = {

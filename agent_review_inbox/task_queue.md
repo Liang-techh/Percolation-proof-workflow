@@ -247,6 +247,37 @@ without an explicit scoped request.
 - forbidden: importing sparse SOS or flowpipe claims, assuming source binding,
   or closing the P5/M4 parent theorem.
 
+### T-FLT-SPECTRAL-LINEAR — spectral and linear algebra scan
+
+- status: `assigned` (梁智炜, independent catalog review)
+- scope: inspect only non-number-theory spectral, eigenspace, finite-dimensional
+  linear algebra, quotient, and exact-sequence declarations in the pinned FLT
+  repository;
+- deliver: three-level reuse classification, exact declaration/path, imports,
+  hypotheses, source commit/license, and the smallest current-pin sidecar
+  proposal;
+- forbidden: importing arithmetic endgames or claiming Route-B spectral/PDE
+  closure from a source scan.
+
+### T-FLT-TRANSPORT-ADAPTER — transport and adapter scan
+
+- status: `assigned` (梁智炜, independent catalog review)
+- scope: inspect generic continuous-map, linear-equivalence, pairing transport,
+  representation, and coordinate-change adapters outside pure number theory;
+- deliver: exact statement shape, assumptions, reuse class, attribution, and
+  target-side adaptation risks;
+- forbidden: whole-repository build, source copying, or registry promotion.
+
+### T-FLT-INFRA-REGISTRY — registry/graph/obstruction scan
+
+- status: `assigned` (梁智炜, independent architecture review)
+- scope: inspect comparator, challenge/solution split, dependency graph,
+  documentation extraction, attribution, and obstruction-tracking patterns;
+- deliver: architecture-only findings and concrete integration points for the
+  local DAG/frontier/registry, preserving fail-closed authority boundaries;
+- forbidden: treating HTML badges, graph nodes, or comparator fixtures as
+  proof evidence.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it
