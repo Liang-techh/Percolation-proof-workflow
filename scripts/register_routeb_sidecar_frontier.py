@@ -2364,6 +2364,19 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility.source_positive_target_binding.same_row_budget_audit.actual_row_missing_base.same_source_consumer_packet.dh_producer_base_bridge",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility.source_positive_target_binding.same_row_budget_audit.actual_row_missing_base.same_source_consumer_packet",
+        "statement": "A prospective compact DH branch can feed the same-source P4 packet only through explicit residual polynomials, producer metric, same-domain descriptor/port identities, operator bound, and a separate positive base-dominance inequality; block p45 and four-angle producer geometry are not interchangeable.",
+        "proof_sketch": "Transcribe the DH lBase and A_up formulas, define a ProducerChain carrying inverse/descriptor/port/operator premises, derive RowSourceEvidence and ConsumerPacket, and retain the acceleration-ray base-growth and block-domain mismatch obstructions.",
+        "lane": "source_semantics",
+        "bottleneck": "residual_absorption",
+        "status": "OPEN_UNCOMPILED_P4_DH_PRODUCER_BASE_BRIDGE",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_DHProducerBaseBridge.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_DHProducerBaseBridge.review.md",
+        ],
+    },
+    {
         "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer.compiled_ledger_binding.v0_parameter_map",
         "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer.compiled_ledger_binding",
         "statement": "The targeted-gain ledger V0 has an exact rational generator and base-plus-cross split, but scalar matching does not identify it with the compiled even-in-velocity storage; transfer requires a same-domain evaluator identity or one-sided initial-envelope contract.",
@@ -2387,6 +2400,19 @@ CHILDREN = [
         "artifacts": [
             "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_KEYEDSTORAGETRANSFER20260907.lean",
             "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_KEYEDSTORAGETRANSFER20260907.review.md",
+        ],
+    },
+    {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer.keyed_storage_transfer.initial_cross_delta",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer.keyed_storage_transfer",
+        "statement": "On the recorded block-only initial ball, a same-source Euclidean mass bound and explicit storage difference yield the exact one-sided cross-term delta eps*Mmax*r^2/2; row-sum data alone and an X0 bound alone do not supply the required source identity or path comparison.",
+        "proof_sketch": "Use square-root Young on the combined Euclidean radius, reify deltaX0 exactly, consume a supplied EuclideanMassBound through InitialCrossBinding, and package the result into the keyed initial transfer contract while retaining row/column and whole-path obligations.",
+        "lane": "source_semantics",
+        "bottleneck": "normalization",
+        "status": "OPEN_UNCOMPILED_BODY6_INITIAL_CROSS_DELTA",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_INITIALCROSSDELTA20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_INITIALCROSSDELTA20260907.review.md",
         ],
     },
 ]

@@ -3142,3 +3142,16 @@ revision 737 登记 P3 `C2C3_ENDPOINT_UNIFORM_CONSUMER`：它在同一 covered b
 链与 cap/load 链，取有限正 gap 的 infimum 得到 common margin；DH identity 被
 保留为独立 conjunct，未从它反推出 coverage 或 remainder soundness。P4 packet
 review 的更正 hash 已同步到 provenance，仍未进入 registry。
+
+revision 738 收割并登记 BODY6 `INITIAL_CROSS_DELTA`：在明确的 Euclidean
+mass bound、同源矩阵、X0 投影和 storage difference 前提下，精确得到
+`deltaX0=491542203/25600000000000`，只支持初始集的一侧转移，不支持全路径。
+P3 endpoint consumer 的新增 same-box 链已同步 hash。当前待推送 WIP 还包括
+P4 `DHProducerBaseBridge`，它必须先补 review；即使推送也只作 open source
+contract，不作 Lean/registry 证据。
+
+revision 739 已登记 P4 `DH_PRODUCER_BASE_BRIDGE`：选定 prospective DH 分支，
+把 `lBase`、`A_up`、descriptor/port operator chain 和同源 consumer packet
+串成明确接口，并用 acceleration ray 与 block-vs-four-angle domain mismatch
+保留两个精确障碍。base dominance、真实 descriptor inverse、Float64 reification
+和 flowpipe 仍未闭合；该叶只作为 GitHub WIP/Lean receipt 任务发布。

@@ -152,6 +152,17 @@ placeholder scan, focused exit code, stdout, and stderr.
 - Boundary: exact scalar provenance and parity/identity attempts remain
   distinct from a validated storage/source identity, path barrier, or registry
   receipt.
+- Additional target:
+  `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_INITIALCROSSDELTA20260907.lean`
+- Additional review:
+  `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_INITIALCROSSDELTA20260907.review.md`
+- Additional declarations:
+  `sqrt_product_young_attempt`, `delta_exact_attempt`,
+  `cross_bound_on_initial_attempt`, `initial_one_sided_delta_attempt`, and
+  `keyed_initial_transfer_contract_attempt`.
+- Additional boundary: the exact delta is initial-set-only and requires a
+  supplied same-source Euclidean mass bound; row/column l1 data, X0 radius,
+  or a scalar V0 match do not close that premise.
 
 ### B. BODY6 keyed storage transfer leaf
 
@@ -176,8 +187,12 @@ placeholder scan, focused exit code, stdout, and stderr.
   packet)
 - Target:
   `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SameSourceConsumerPacket.lean`
+- Additional target:
+  `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_DHProducerBaseBridge.lean`
 - Review:
   `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SameSourceConsumerPacket.review.md`
+- The DH producer bridge currently needs a separate review companion before it
+  can become a registered child; it remains an explicitly open WIP target.
 - Declarations:
   `metric_nonnegative`, `young_two_vectors`, `charge_nonnegative`,
   `total_residual_bound`, `allocated_source_floor`,
@@ -186,6 +201,17 @@ placeholder scan, focused exit code, stdout, and stderr.
 - Boundary: one source object, one row, one domain, exact residual identity,
   allocation and P4 normalization remain explicit; no line-9 source data,
   physical realization, or registry admission is supplied by the packet.
+- Additional target:
+  `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_DHProducerBaseBridge.lean`
+- Additional review:
+  `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_DHProducerBaseBridge.review.md`
+- Additional declarations:
+  `source_metric_eq`, `rowEvidenceFromProducer`, `packetFromProducer`,
+  `required_base_on_ray`, `zero_base_ray_obstruction`, and
+  `block_domain_not_producer_domain`.
+- Additional boundary: the bridge chooses the DH branch prospectively and
+  keeps inverse/descriptor/operator/base premises external; it is not a
+  physical true-DH or flowpipe certificate.
 
 ### D. P3 C2C3 source binding
 

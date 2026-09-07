@@ -2519,6 +2519,18 @@ source binding 的 covered-box 输出接到有限正 gap 的 common infimum 和�
 consumer，但 Taylor remainder、rounded endpoint soundness、全域 coverage 与
 真实 DH 数值绑定仍是外部前提，状态保持 `OPEN_UNCOMPILED`。
 
+revision 738 又登记 BODY6 initial cross delta：`sqrt`-Young 和合并半径给出
+精确 X0 单边误差，但 Euclidean mass bound、同源 M、差值公式和 X0→Q 投影仍
+是显式输入，不能把已有 l1 CSV 自动升级为欧氏算子界。P4 新 DH producer bridge
+目前仅为待 review 的 WIP，继续要求 branch/base/port/operator identity 与
+真实域绑定。
+
+revision 739 已收割 P4 DH producer/base bridge review 并登记。它把 prospective
+DH residual、producer metric、descriptor-to-port chain 与 `BaseDominance` 接到
+同源 packet；同时明确 block p45 不能替代四角 producer geometry，正 target 仍
+需要真实 base 下界。此叶及后续 receipt 继续由 GitHub agents 处理，不改变本地
+verified registry。
+
 随后新增 `STORAGE_IDENTITY_TRANSFER` 叶：它要求 `V_eps=Vfull_DH` 在同一域
 上成立，且 barrier transfer 还需要整条 path 落在该域内；相同初始上界或相同
 导数都不足以完成固定阈值的 barrier 转移。该叶保持 open/uncompiled，交给

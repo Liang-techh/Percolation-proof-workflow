@@ -18,13 +18,16 @@ requires, at that same `b` and `x`:
 2. source derivative hulls, obtained by transporting the Taylor derivative
    hulls through `same_first_derivative`, `same_second_derivative`, and
    `same_third_derivative`;
-3. the Taylor lower enclosure using the same source function, the same
+3. the rounded endpoint chain
+   `gapLower b ≤ roundedLower b ≤ TaylorExpression b x`, obtained by the
+   explicit `same_box_rounded_endpoint_to_cap_gap` theorem;
+4. the Taylor lower enclosure using the same source function, the same
    first/second derivative hulls, the same offset radius, and the same
    remainder bound;
-4. comparison of that exact expression to `capLoad x - weightedLoad x`;
-5. positive `gapLower b`, `gapLower b ≤ endpointLower b`, and the cap-load upper
+5. comparison of that exact expression to `capLoad x - weightedLoad x`;
+6. positive `gapLower b` and the cap-load upper
    chain to `capMaxLoad x`;
-6. equality of source rounded endpoints and certificate endpoints for the same
+7. equality of source rounded endpoints and certificate endpoints for the same
    listed box.
 
 The finite common margin is `inf'` of the listed per-box `gapLower` values.

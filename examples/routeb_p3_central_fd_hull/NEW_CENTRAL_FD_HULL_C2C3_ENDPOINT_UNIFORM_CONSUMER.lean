@@ -76,6 +76,45 @@ theorem common_mu_lower_at
     commonMu C ≤ C.gapLower b := by
   exact Finset.inf'_le C.source.boxes C.boxes_nonempty C.gapLower hb
 
+theorem same_box_rounded_endpoint_to_cap_gap
+    {D B : Type*} [DecidableEq B]
+    (C : EndpointUniformConsumer D B) (x : D) (hx : C.source.domain x) :
+    C.gapLower (C.source.boxOf x) ≤
+        C.source.roundedLower (C.source.boxOf x) ∧
+      C.source.roundedLower (C.source.boxOf x) ≤
+        C.source.sourceFunction x
+          - C.source.firstDerivativeHull (C.source.boxOf x) *
+              C.offsetRadius (C.source.boxOf x)
+          - C.source.secondDerivativeHull (C.source.boxOf x) *
+              C.offsetRadius (C.source.boxOf x) ^ 2 / 2
+          - C.source.remainderBound (C.source.boxOf x) ∧
+      C.source.sourceFunction x
+          - C.source.firstDerivativeHull (C.source.boxOf x) *
+              C.offsetRadius (C.source.boxOf x)
+          - C.source.secondDerivativeHull (C.source.boxOf x) *
+              C.offsetRadius (C.source.boxOf x) ^ 2 / 2
+          - C.source.remainderBound (C.source.boxOf x) ≤
+        C.capLoad x - C.weightedLoad x := by
+  have hCoverage := C.source.coverage x hx
+  have hb : C.source.boxOf x ∈ C.source.boxes := hCoverage.1
+  have hRegion : C.source.region (C.source.boxOf x) x := hCoverage.2
+  have hRounding := same_rounded_endpoints_at_covered_box C.source x hx
+  have hGapEndpoint :
+      C.gapLower (C.source.boxOf x) ≤
+        C.source.endpointLower (C.source.boxOf x) :=
+    C.gap_lower_to_endpoint (C.source.boxOf x) hb
+  have hTaylor := C.taylor_lower_enclosure (C.source.boxOf x) hb x hRegion
+  have hCapGap := C.taylor_to_cap_gap (C.source.boxOf x) hb x hRegion
+  constructor
+  · calc
+      C.gapLower (C.source.boxOf x) ≤
+          C.source.endpointLower (C.source.boxOf x) := hGapEndpoint
+      _ = C.source.roundedLower (C.source.boxOf x) := hRounding.1.symm
+  · constructor
+    · rw [hRounding.1]
+      exact hTaylor
+    · exact hCapGap
+
 theorem source_endpoint_to_common_uniform_margin
     {D B : Type*} [DecidableEq B]
     (C : EndpointUniformConsumer D B) (x : D) (hx : C.source.domain x) :
@@ -99,17 +138,12 @@ theorem source_endpoint_to_common_uniform_margin
   have hGapPos : 0 < commonMu C := common_mu_positive C
   have hMuLower : commonMu C ≤ C.gapLower (C.source.boxOf x) :=
     common_mu_lower_at C (C.source.boxOf x) hb
-  have hGapEndpoint :
-      C.gapLower (C.source.boxOf x) ≤
-        C.source.endpointLower (C.source.boxOf x) :=
-    C.gap_lower_to_endpoint (C.source.boxOf x) hb
-  have hTaylor := C.taylor_lower_enclosure (C.source.boxOf x) hb x hRegion
-  have hCapGap := C.taylor_to_cap_gap (C.source.boxOf x) hb x hRegion
+  have hRoundedChain := same_box_rounded_endpoint_to_cap_gap C x hx
   have hCapUpper := C.cap_load_upper_sound (C.source.boxOf x) hb x hRegion
   have hCapMax := C.cap_upper_to_capMax (C.source.boxOf x) hb x hRegion
   have hUniformMargin :
       C.weightedLoad x + commonMu C ≤ C.capMaxLoad x := by
-    linarith
+    linarith [hRoundedChain.1, hRoundedChain.2.1, hRoundedChain.2.2]
   exact ⟨hHulls.1, hHulls.2.1, hHulls.2.2, hRounding.1, hRounding.2,
     hGapPos, hUniformMargin⟩
 
@@ -137,6 +171,7 @@ end RouteBP3CentralFDHullC2C3EndpointUniformConsumer
 
 #print axioms RouteBP3CentralFDHullC2C3EndpointUniformConsumer.common_mu_positive
 #print axioms RouteBP3CentralFDHullC2C3EndpointUniformConsumer.common_mu_lower_at
+#print axioms RouteBP3CentralFDHullC2C3EndpointUniformConsumer.same_box_rounded_endpoint_to_cap_gap
 #print axioms RouteBP3CentralFDHullC2C3EndpointUniformConsumer.source_endpoint_to_common_uniform_margin
 #print axioms RouteBP3CentralFDHullC2C3EndpointUniformConsumer.source_endpoint_to_common_consumer_strict
 #print axioms RouteBP3CentralFDHullC2C3EndpointUniformConsumer.source_dh_identity_remains_separate
