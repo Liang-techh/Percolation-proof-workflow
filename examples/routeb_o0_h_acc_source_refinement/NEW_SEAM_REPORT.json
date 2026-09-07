@@ -1,0 +1,461 @@
+{
+  "schema": "routeb.o0.h_acc.source_theorem_seam.review.v1",
+  "status": "pending",
+  "theorem_status": "OPEN_H_ACC",
+  "checker_exit_code": 3,
+  "scope": "raw_source_locations_and_existing_candidate_consistency_only",
+  "source_sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936",
+  "submission_sha256": "01c09711ff776b80cedbe38c8cac4c03e88253348a0c90524c2d90df890c0c36",
+  "admission": {
+    "status": "pending",
+    "source_binding_proven": false,
+    "h_acc_expr_proven": false,
+    "h_acc_round_proven": false,
+    "registry_eligible": false,
+    "formal_certificate_allowed": false
+  },
+  "candidate_checks": {
+    "expression": "NOT_RUN_NO_SOURCE_EXPORT",
+    "array_mapping": "NOT_RUN_ABSENT",
+    "source_updates": "NOT_RUN_ABSENT",
+    "runtime_observation": "NOT_RUN_ABSENT",
+    "interval_candidate": "NOT_RUN_ABSENT"
+  },
+  "source_export_sha256": null,
+  "source_locations": {
+    "frame_initial": {
+      "source_span": {
+        "start_line": 32,
+        "end_line": 32,
+        "sha256": "100411397900065fc4a5a23b2b3602c240a397fa2f0b6daf973b272545d0a3d4"
+      },
+      "byte_start": 1211,
+      "byte_end_exclusive": 1235,
+      "byte_column_start": 10,
+      "byte_column_end_exclusive": 34,
+      "fragment_sha256": "fc28339bb2904d19a970e22bc1b9f660ff17fd77646a5cc90e54deeb18eb5a7b",
+      "source_text": "Matrix{Float64}(I, 4, 4)"
+    },
+    "origin_initial": {
+      "source_span": {
+        "start_line": 33,
+        "end_line": 33,
+        "sha256": "302f04db3134075ff1d951602a99601cb824fcd81142df650451b06f333687e3"
+      },
+      "byte_start": 1245,
+      "byte_end_exclusive": 1256,
+      "byte_column_start": 8,
+      "byte_column_end_exclusive": 19,
+      "fragment_sha256": "06895e39bea4c6526b3d0a25385fca79e4c27c162eb3c8a88b56872d08228261",
+      "source_text": "zeros(3, 7)"
+    },
+    "axis_initial": {
+      "source_span": {
+        "start_line": 34,
+        "end_line": 34,
+        "sha256": "a6e98174c755807b163e9f6a3943d894bd524f3d2bd7aadd80097aef17f56cce"
+      },
+      "byte_start": 1265,
+      "byte_end_exclusive": 1276,
+      "byte_column_start": 8,
+      "byte_column_end_exclusive": 19,
+      "fragment_sha256": "e37488fcad232d1ecf795589a400eb2cc44dd921b28457d3d195107533a7d5a0",
+      "source_text": "zeros(3, 6)"
+    },
+    "frame_loop": {
+      "source_span": {
+        "start_line": 35,
+        "end_line": 35,
+        "sha256": "9354bbfc068196235012960321c4ebf192180fcf76778970724c1304f8941afd"
+      },
+      "byte_start": 1281,
+      "byte_end_exclusive": 1294,
+      "byte_column_start": 4,
+      "byte_column_end_exclusive": 17,
+      "fragment_sha256": "e3367aa520c088bcef5d2cb756249e876f61bc89cbd5860354d18a7d0898dec0",
+      "source_text": "for ii in 1:6"
+    },
+    "axis_parent": {
+      "source_span": {
+        "start_line": 36,
+        "end_line": 36,
+        "sha256": "85da474bb95db99d38927bffc6c94b36e5349493d85c258e7695692918b7a549"
+      },
+      "byte_start": 1303,
+      "byte_end_exclusive": 1329,
+      "byte_column_start": 8,
+      "byte_column_end_exclusive": 34,
+      "fragment_sha256": "4eb09327aa56fb85775190e6551aba78b074746116f44d99171dc220cc98b2e9",
+      "source_text": "z[:, ii] = Tc[end][1:3, 3]"
+    },
+    "joint_angle": {
+      "source_span": {
+        "start_line": 37,
+        "end_line": 37,
+        "sha256": "d5a4e9d5b398a7abd5e24430f4f3be50ca7afa8f6df62a063ef552b44f1ca101"
+      },
+      "byte_start": 1338,
+      "byte_end_exclusive": 1360,
+      "byte_column_start": 8,
+      "byte_column_end_exclusive": 30,
+      "fragment_sha256": "23b0cec6eda10a0d1b741771c435d8ea685faed239f03f8094848353a81a2993",
+      "source_text": "th = q[ii] + DH[ii, 1]"
+    },
+    "dh_bindings": {
+      "source_span": {
+        "start_line": 37,
+        "end_line": 37,
+        "sha256": "d5a4e9d5b398a7abd5e24430f4f3be50ca7afa8f6df62a063ef552b44f1ca101"
+      },
+      "byte_start": 1362,
+      "byte_end_exclusive": 1406,
+      "byte_column_start": 32,
+      "byte_column_end_exclusive": 76,
+      "fragment_sha256": "ce1bdc7d29d4ecac10f8d1674742bde52731c776679aca8b735a714ca147e140",
+      "source_text": "d = DH[ii, 2]; a = DH[ii, 3]; al = DH[ii, 4]"
+    },
+    "trig": {
+      "source_span": {
+        "start_line": 38,
+        "end_line": 38,
+        "sha256": "8ccff358c72a3e1deb7ce8b2efad00a1894f247d020d50198d97112e1eaf935c"
+      },
+      "byte_start": 1415,
+      "byte_end_exclusive": 1466,
+      "byte_column_start": 8,
+      "byte_column_end_exclusive": 59,
+      "fragment_sha256": "de00850ed466fa9fa9b86973e1bceaea24ca0ff15cefa5b7a59f9ea32e46efc7",
+      "source_text": "ct, st, ca, sa = cos(th), sin(th), cos(al), sin(al)"
+    },
+    "dh_transform": {
+      "source_span": {
+        "start_line": 39,
+        "end_line": 39,
+        "sha256": "8c161d4924abd00550d5bafcbfe600d2338daa150b137415060f223b9ae0443c"
+      },
+      "byte_start": 1475,
+      "byte_end_exclusive": 1543,
+      "byte_column_start": 8,
+      "byte_column_end_exclusive": 76,
+      "fragment_sha256": "825adaa2d6569c76966593ceaae77adca4171d8ca5bbda5d733d66205276eb41",
+      "source_text": "A = [ct -st*ca st*sa a*ct; st ct*ca -ct*sa a*st; 0 sa ca d; 0 0 0 1]"
+    },
+    "frame_push": {
+      "source_span": {
+        "start_line": 40,
+        "end_line": 40,
+        "sha256": "51b66def4ebee60850aea4bee6b702f253575242a08813dc03d99d1f45b9586a"
+      },
+      "byte_start": 1552,
+      "byte_end_exclusive": 1574,
+      "byte_column_start": 8,
+      "byte_column_end_exclusive": 30,
+      "fragment_sha256": "6b2ea796788e54d22232337720350d3dfbf6c417f9e3db351b65337ca633c75b",
+      "source_text": "push!(Tc, Tc[end] * A)"
+    },
+    "origin_current": {
+      "source_span": {
+        "start_line": 41,
+        "end_line": 41,
+        "sha256": "623286734f0c61822071261adaddc1332daf76ae5bc12e8065c02e39b6f453fa"
+      },
+      "byte_start": 1583,
+      "byte_end_exclusive": 1611,
+      "byte_column_start": 8,
+      "byte_column_end_exclusive": 36,
+      "fragment_sha256": "a0edc716830c490c32f8306bc35bd0813f553f00d2c48cd87cb37ca060586f98",
+      "source_text": "o[:, ii+1] = Tc[end][1:3, 4]"
+    },
+    "frame_call": {
+      "source_span": {
+        "start_line": 47,
+        "end_line": 47,
+        "sha256": "71abe81639ef99112c2b69c961b389bc52a2fb4efed24d26cc14e7b6726ff5a6"
+      },
+      "byte_start": 1714,
+      "byte_end_exclusive": 1737,
+      "byte_column_start": 4,
+      "byte_column_end_exclusive": 27,
+      "fragment_sha256": "2ae56f3262e6f0f992b09879d334ec7ec580436625050461ce23c81bac465de2",
+      "source_text": "Tc, o, z = fk_frames(q)"
+    },
+    "accumulator_initial": {
+      "source_span": {
+        "start_line": 48,
+        "end_line": 48,
+        "sha256": "0715247ec6f3977c794d6e54a8896dd9f839da02b888b35ad188a1fbea051f49"
+      },
+      "byte_start": 1742,
+      "byte_end_exclusive": 1757,
+      "byte_column_start": 4,
+      "byte_column_end_exclusive": 19,
+      "fragment_sha256": "f73345882ade456be4d21808c483d8d602c6790fbb71688abb6646bc07c8f060",
+      "source_text": "M = zeros(6, 6)"
+    },
+    "body_loop": {
+      "source_span": {
+        "start_line": 49,
+        "end_line": 49,
+        "sha256": "9354bbfc068196235012960321c4ebf192180fcf76778970724c1304f8941afd"
+      },
+      "byte_start": 1762,
+      "byte_end_exclusive": 1775,
+      "byte_column_start": 4,
+      "byte_column_end_exclusive": 17,
+      "fragment_sha256": "e3367aa520c088bcef5d2cb756249e876f61bc89cbd5860354d18a7d0898dec0",
+      "source_text": "for ii in 1:6"
+    },
+    "com": {
+      "source_span": {
+        "start_line": 50,
+        "end_line": 50,
+        "sha256": "a2a6f5166d91b3a9d0b15ab01a95572bf8b17192378d7d375fef43eaa42d4953"
+      },
+      "byte_start": 1784,
+      "byte_end_exclusive": 1821,
+      "byte_column_start": 8,
+      "byte_column_end_exclusive": 45,
+      "fragment_sha256": "41f444595a3e1c71dbc12638499bea05caac5a9fd7de196009f04eab8e664381",
+      "source_text": "pcom = 0.5 .* (o[:, ii] + o[:, ii+1])"
+    },
+    "rotation_alias": {
+      "source_span": {
+        "start_line": 51,
+        "end_line": 51,
+        "sha256": "3465dfe26216bdd36a5d6df03af10fa71c2ca986aa201a226a889803e8de83ba"
+      },
+      "byte_start": 1830,
+      "byte_end_exclusive": 1853,
+      "byte_column_start": 8,
+      "byte_column_end_exclusive": 31,
+      "fragment_sha256": "92ebe5bfea0a466c2d37086ecf298c8e548eb6bae0b2b7d03c1a299bcd348f41",
+      "source_text": "Ri = Tc[ii+1][1:3, 1:3]"
+    },
+    "inertia": {
+      "source_span": {
+        "start_line": 52,
+        "end_line": 52,
+        "sha256": "7683ff6d52aa536a228506ee3ebc54bd65fa365abeca6e47b9c8b282f2ac2075"
+      },
+      "byte_start": 1862,
+      "byte_end_exclusive": 1910,
+      "byte_column_start": 8,
+      "byte_column_end_exclusive": 56,
+      "fragment_sha256": "8f110de6fbd81112c15d333807eb5207cdb9c9c1f7dd4489558478b6f0332c08",
+      "source_text": "Ii = (I_val[ii] / 3) .* Matrix{Float64}(I, 3, 3)"
+    },
+    "linear_initial": {
+      "source_span": {
+        "start_line": 53,
+        "end_line": 53,
+        "sha256": "0de9fbc4ef0d03a4872f7ae4569588709484334da884ae2afe295e89af330804"
+      },
+      "byte_start": 1919,
+      "byte_end_exclusive": 1935,
+      "byte_column_start": 8,
+      "byte_column_end_exclusive": 24,
+      "fragment_sha256": "df8dc2160863a824ad59bce734d9e5b26471b2231b09c11bfc6fd452ce56eb68",
+      "source_text": "Jv = zeros(3, 6)"
+    },
+    "angular_initial": {
+      "source_span": {
+        "start_line": 53,
+        "end_line": 53,
+        "sha256": "0de9fbc4ef0d03a4872f7ae4569588709484334da884ae2afe295e89af330804"
+      },
+      "byte_start": 1937,
+      "byte_end_exclusive": 1953,
+      "byte_column_start": 26,
+      "byte_column_end_exclusive": 42,
+      "fragment_sha256": "18b208bcc1795265e772544ef13ccc3ca45557a77ec989435d44ac93fc79085c",
+      "source_text": "Jw = zeros(3, 6)"
+    },
+    "active_prefix": {
+      "source_span": {
+        "start_line": 54,
+        "end_line": 54,
+        "sha256": "7fc7e6881f157fea3a614ccf9d25f620a9efce470cac1f57f2724ae6240aef9e"
+      },
+      "byte_start": 1962,
+      "byte_end_exclusive": 1976,
+      "byte_column_start": 8,
+      "byte_column_end_exclusive": 22,
+      "fragment_sha256": "f0a0b6f871d1b49f9e99fcc4ee56c840224874dccb606816878d3260402b2692",
+      "source_text": "for jj in 1:ii"
+    },
+    "linear_column": {
+      "source_span": {
+        "start_line": 55,
+        "end_line": 55,
+        "sha256": "5bf7c4ea9799ac5b8b11c8f8c5ada4156a9404629b021741440115e347475f2f"
+      },
+      "byte_start": 1989,
+      "byte_end_exclusive": 2033,
+      "byte_column_start": 12,
+      "byte_column_end_exclusive": 56,
+      "fragment_sha256": "82dd60a72337953e0952fb930d0ffef5a7eace913fa914dd4ee8cee4227e22b1",
+      "source_text": "Jv[:, jj] = cross(z[:, jj], pcom - o[:, jj])"
+    },
+    "angular_alias": {
+      "source_span": {
+        "start_line": 56,
+        "end_line": 56,
+        "sha256": "b1254adde5aed5813467e61c87eb3cd135dc972a4dc5dbb770352b1cf6b7202e"
+      },
+      "byte_start": 2046,
+      "byte_end_exclusive": 2066,
+      "byte_column_start": 12,
+      "byte_column_end_exclusive": 32,
+      "fragment_sha256": "0e8f3fead661858c48b7673dfbb24e00e16a394684fe3e06764c80067a7947fc",
+      "source_text": "Jw[:, jj] = z[:, jj]"
+    },
+    "translation": {
+      "source_span": {
+        "start_line": 58,
+        "end_line": 58,
+        "sha256": "21f8d126233cdaf23dec04557903ae0af8ba1f4b893a7e1264d573d0983bee76"
+      },
+      "byte_start": 2088,
+      "byte_end_exclusive": 2107,
+      "byte_column_start": 9,
+      "byte_column_end_exclusive": 28,
+      "fragment_sha256": "cef2f3fd1be22213d278099e26fb94fe93999fefcca820a2aa4dc308714ce892",
+      "source_text": "m[ii] .* (Jv' * Jv)"
+    },
+    "rotation": {
+      "source_span": {
+        "start_line": 58,
+        "end_line": 58,
+        "sha256": "21f8d126233cdaf23dec04557903ae0af8ba1f4b893a7e1264d573d0983bee76"
+      },
+      "byte_start": 2110,
+      "byte_end_exclusive": 2136,
+      "byte_column_start": 31,
+      "byte_column_end_exclusive": 57,
+      "fragment_sha256": "16c3d09974d1649bc6b3b23078520aa63d537051c915ddec2997225ee050475c",
+      "source_text": "Jw' * (Ri * Ii * Ri') * Jw"
+    },
+    "body_sum": {
+      "source_span": {
+        "start_line": 58,
+        "end_line": 58,
+        "sha256": "21f8d126233cdaf23dec04557903ae0af8ba1f4b893a7e1264d573d0983bee76"
+      },
+      "byte_start": 2088,
+      "byte_end_exclusive": 2136,
+      "byte_column_start": 9,
+      "byte_column_end_exclusive": 57,
+      "fragment_sha256": "f07ee0e862d6b4a700f1af7e6795afef1dee677d4169830a6bd4fd52d15c0046",
+      "source_text": "m[ii] .* (Jv' * Jv) + Jw' * (Ri * Ii * Ri') * Jw"
+    },
+    "accumulator_update": {
+      "source_span": {
+        "start_line": 58,
+        "end_line": 58,
+        "sha256": "21f8d126233cdaf23dec04557903ae0af8ba1f4b893a7e1264d573d0983bee76"
+      },
+      "byte_start": 2083,
+      "byte_end_exclusive": 2136,
+      "byte_column_start": 4,
+      "byte_column_end_exclusive": 57,
+      "fragment_sha256": "eaa3ef241e86a08438c0fc600e0ccf0b75d18646f3b5f7506dce9a7017801ff6",
+      "source_text": "M += m[ii] .* (Jv' * Jv) + Jw' * (Ri * Ii * Ri') * Jw"
+    },
+    "body_loop_end": {
+      "source_span": {
+        "start_line": 59,
+        "end_line": 59,
+        "sha256": "e4d3897a0f9d69c9db81bc977415e40b722a5d44dde5bd8f726451baed248a40"
+      },
+      "byte_start": 2141,
+      "byte_end_exclusive": 2144,
+      "byte_column_start": 4,
+      "byte_column_end_exclusive": 7,
+      "fragment_sha256": "361e48d0308f20e32dba5fb56328baf18d72ef0ccb43b84f5c262d2a6a1fc6c8",
+      "source_text": "end"
+    }
+  },
+  "constant_declaration_spans": {
+    "DH": {
+      "start_line": 6,
+      "end_line": 11,
+      "sha256": "f28c32bda1441b3e3b347fb48362aa9885034f635649845d5c66e27d2c542e58"
+    },
+    "m": {
+      "start_line": 12,
+      "end_line": 12,
+      "sha256": "5b7fb7f189db1ecd0f6649c61c4a58f66d509ec95da57a5c1845a43be6d7a51d"
+    },
+    "I_val": {
+      "start_line": 13,
+      "end_line": 13,
+      "sha256": "62c54b53c0ac51ac526873defb973933a3cc731624e00b83f5133191d1687aad"
+    }
+  },
+  "occurrence_line_gaps": null,
+  "required_witnesses": {
+    "SEAM_SOURCE": {
+      "obligation": "Pinned-source idealization, binding/lifetime and selected expression semantics; spans alone insufficient.",
+      "artifact": null,
+      "verified": false
+    },
+    "SEAM_EVAL": {
+      "obligation": "Total topological Real evaluator with the nine op equations and same-input node identity congruence.",
+      "artifact": null,
+      "verified": false
+    },
+    "SEAM_ARRAY": {
+      "obligation": "Source literals, DH entries, frame products, origins, COM, cross and inertia scalarization.",
+      "artifact": null,
+      "verified": false
+    },
+    "SEAM_ALIAS": {
+      "obligation": "Parent/current frame and active-prefix occurrences denote their referenced scalar nodes.",
+      "artifact": null,
+      "verified": false
+    },
+    "SEAM_BODY": {
+      "obligation": "Every translation/rotation node evaluates to the unsimplified indexed matrix term; then B addition.",
+      "artifact": null,
+      "verified": false
+    },
+    "SEAM_FOLD": {
+      "obligation": "S0, ordered coordinatewise six-step fold and final S6 alias imply target equality, conditional on body refinement.",
+      "artifact": null,
+      "verified": false
+    }
+  },
+  "blockers": [
+    "REAL_SOURCE_EXPORT_ABSENT",
+    "ARRAY_MAPPING_ABSENT",
+    "SOURCE_UPDATES_ABSENT",
+    "RUNTIME_OBSERVATION_ABSENT",
+    "INTERVAL_CANDIDATE_ABSENT",
+    "C0_SOURCE_REFINEMENT_UNCHECKED",
+    "C1_REAL_EVALUATOR_UNCHECKED",
+    "C2_C5_ARRAY_AND_BODY_SEMANTICS_UNCHECKED",
+    "R0_RUNTIME_PROVENANCE_UNCHECKED",
+    "R1_INTERVAL_SOUNDNESS_UNCHECKED",
+    "R2_FORMAL_COVERAGE_WITNESS_UNCHECKED",
+    "SEAM_SOURCE",
+    "SEAM_EVAL",
+    "SEAM_ARRAY",
+    "SEAM_ALIAS",
+    "SEAM_BODY",
+    "SEAM_FOLD"
+  ],
+  "execution": {
+    "julia": false,
+    "lean_lake": false,
+    "files_written": 0
+  },
+  "generated_source_export": null,
+  "generated_constant_values": null,
+  "generated_runtime_observation": null,
+  "implementation_sha256": {
+    "NEW_SEAM_source.py": "83f832905ad04ce91593484abec2d630e86e631d4ed34432211d33e1569cde56",
+    "NEW_source_intake.py": "002006705173ff5d0a9d93453a3070d95b9c30421d4c1afd074711a3d92f6d6b",
+    "check_refinement.py": "b265b3fc396524db093c6385ba6dff7bf9a352a57d01e2db8db21199986d780f",
+    "NEW_INTAKE_SCHEMA.json": "3f65af693f3eac3aa015ac3f982fefdb1f846b9ea27fb648fb2b301318f1572b"
+  }
+}

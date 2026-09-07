@@ -205,6 +205,10 @@ CHILDREN = [
             "examples/routeb_o0_h_acc_source_refinement/NEW_test_source_intake.py",
             "examples/routeb_o0_h_acc_source_refinement/NEW_REVIEW.md",
             "examples/routeb_o0_h_acc_source_refinement/NEW_RECEIPT.json",
+            "examples/routeb_o0_h_acc_source_refinement/NEW_SEAM_source.py",
+            "examples/routeb_o0_h_acc_source_refinement/NEW_SEAM_test_source.py",
+            "examples/routeb_o0_h_acc_source_refinement/NEW_SEAM_REPORT.json",
+            "examples/routeb_o0_h_acc_source_refinement/NEW_SEAM_REVIEW.md",
         ],
     },
     {

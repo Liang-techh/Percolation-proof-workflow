@@ -1701,3 +1701,14 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   `P5.componentwise_relative_decay.near_sharp_scalar_fallback`：精确 checker 验证
   Sylvester/LDL/AM-GM/constant/lower-witness 链；Lean 仍未编译，source/K_path、
   P8 coverage 和 parent closure 仍 open。state revision `605`。
+
+### 2026-09-07 — Godel the 6th H_acc source seam 收割
+
+- 新增 `NEW_SEAM_source.py`、`NEW_SEAM_test_source.py`、
+  `NEW_SEAM_REPORT.json`、`NEW_SEAM_REVIEW.md`，对 pinned source 定位 27 个真实
+  fragment，并将 `E_star` scalar DAG、`Ri/Jw/z` occurrence alias、body
+  translation/rotation 语义和六步 accumulator fold 收敛为六项条件化 theorem seam。
+- 9 项定向检查通过；报告保持 `pending / OPEN_H_ACC / exit 3`，没有真实 export、
+  runtime observation、Lean theorem、coverage 或 registry admission。
+- seam 文件已接入 H_acc refinement child 的 `source_artifacts` 以及 O1 candidate
+  provenance；state revision `607`，registry 仍为 `0`，formal certificate gate 仍关闭。
