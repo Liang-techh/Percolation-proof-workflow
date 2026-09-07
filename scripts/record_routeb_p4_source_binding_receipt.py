@@ -7,7 +7,7 @@ This recorder joins two already fail-closed audits:
 * the exact-rational nominal distal bridge interface.
 
 It deliberately records a *conditional interface receipt* only.  In
-particular, ``R*a_B = r_B`` is still an open theorem/adapter obligation, so
+particular, ``R_port*a_B = r_B`` is still an open theorem/adapter obligation, so
 this script never promotes a node, a registry entry, or the global gate.
 """
 from __future__ import annotations
@@ -109,7 +109,7 @@ def main() -> int:
         ),
         "actual_port_quantity": "r_B = (M_mu(q) a)_B",
         "required_remote_term": source_result.remote_term_required,
-        "normalized_port_binding_target": "R a_B = r_B",
+        "normalized_port_binding_target": "R_port a_B = r_B",
         "nominal_bridge_equations": [
             "M_mu,DD(q)*v + (M_DB(q)-M0_DB)*a_B = 0",
             "r_B - M_BD(q)*v = 0",
@@ -122,7 +122,7 @@ def main() -> int:
             "source text pass does not prove Float64-to-real equality or DH coefficient coverage",
         ],
         "open_binding_obligations": [
-            "prove or compile the typed equality R*a_B=r_B on the declared descriptor domain",
+            "prove or compile the typed equality R_port*a_B=r_B on the declared descriptor domain",
             "bind the same regularized M_mu and force coordinate scale in the Lean adapter",
             "connect the source equality to the coefficient-level residual absorption theorem",
         ],

@@ -68,9 +68,9 @@ def main() -> int:
                 "M_mu(q) a = tau(q,dq,w) - C_fd(q,dq)dq - G_fd(q)",
                 "the deployed force residual uses the explicit force-scale kc correction",
                 "the nominal descriptor bridge uses M_mu,DD*v+DeltaM_DB*a_B=0 and r_B-M_BD*v=0",
-                "R is the same typed residual map consumed by the port Frobenius bound",
+                "R_port is the same typed residual map consumed by the port Frobenius bound",
             ],
-            "conclusion": "R a_B = r_B = (M_mu(q) a)_B on the declared descriptor/source domain",
+            "conclusion": "R_port a_B = r_B = (M_mu(q) a)_B on the declared descriptor/source domain",
             "required_coordinate_scale": "force coordinates q5/100 and q4/200; normalized f coordinates must not be silently substituted",
             "required_remote_term": "M_BD(q)*a_D remains explicit in the block projection",
             "regularization": "M_mu=M+1/1000000 I and central-FD h=1/100000 must be shared by source and adapter",
@@ -104,7 +104,7 @@ def main() -> int:
             ],
         },
         "unresolved": [
-            "coefficient_level_R_aB_equals_rB_identity",
+            "coefficient_level_R_port_aB_equals_rB_identity",
             "Float64_to_exact_real_source_adapter",
             "common_domain_and_angle_graph_binding",
             "residual_absorption_and_flowpipe_consumption",
@@ -117,12 +117,12 @@ def main() -> int:
         node_id = state.add_node(
             name,
             "On the declared regularized true-DH source domain, prove the typed equality "
-            "R a_B = r_B = (M_mu(q) a)_B while retaining the explicit M_BD(q)a_D block term.",
+            "R_port a_B = r_B = (M_mu(q) a)_B while retaining the explicit M_BD(q)a_D block term.",
             parent_id=parent.id,
             proof_sketch=(
                 "Bind the deployed force/descriptor source to one exact real interface, "
                 "project the common descriptor equation to block B, and identify the "
-                "same residual map R used by the port bound. Keep force-vs-normalized "
+                "same residual map R_port used by the port bound. Keep force-vs-normalized "
                 "coordinates, regularization, FD semantics, and remote acceleration "
                 "as explicit premises; do not infer them from a numerical receipt."),
             metadata=metadata,

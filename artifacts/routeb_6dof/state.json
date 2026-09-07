@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 453,
+  "revision": 456,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12002,7 +12002,7 @@
           "deployed_descriptor_semantics": "M_mu(q) a = tau(q,dq,w) - C_fd(q,dq) dq - G_fd(q)",
           "actual_port_quantity": "r_B = (M_mu(q) a)_B",
           "required_remote_term": "M_BD(q) * a_D",
-          "normalized_port_binding_target": "R a_B = r_B",
+          "normalized_port_binding_target": "R_port a_B = r_B",
           "nominal_bridge_equations": [
             "M_mu,DD(q)*v + (M_DB(q)-M0_DB)*a_B = 0",
             "r_B - M_BD(q)*v = 0"
@@ -12015,7 +12015,7 @@
             "source text pass does not prove Float64-to-real equality or DH coefficient coverage"
           ],
           "open_binding_obligations": [
-            "prove or compile the typed equality R*a_B=r_B on the declared descriptor domain",
+            "prove or compile the typed equality R_port*a_B=r_B on the declared descriptor domain",
             "bind the same regularized M_mu and force coordinate scale in the Lean adapter",
             "connect the source equality to the coefficient-level residual absorption theorem"
           ],
@@ -12041,7 +12041,7 @@
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_NOMINAL_DESCRIPTOR_INTERFACE.md",
-            "sha256": "62A2500D51E3C8502824BBD0062C5CB8058D98C19DF2EAD3A165EC7F869A612E"
+            "sha256": "B8CCCE100EB8EEB72A245AD2B2B5489145224DEB87124DDE9CB694D71EE1A9FC"
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_DH_NOMINAL_DISTAL_BRIDGE_AUDIT.md",
@@ -12912,7 +12912,7 @@
       "statement": "On the declared regularized true-DH source domain, prove the typed equality R a_B = r_B = (M_mu(q) a)_B while retaining the explicit M_BD(q)a_D block term.",
       "parent_id": "1e7b1df1835f4deba06b11a8182f6719",
       "status": "open",
-      "proof_sketch": "Split the source binding into canonical force/descriptor semantics, an exact B-block projection retaining M_BD*a_D, and a coefficient-level identity for the residual map R. Keep all three source/Lean obligations separate from numerical port budgets and global coverage.",
+      "proof_sketch": "Split the source binding into canonical force/descriptor semantics, an exact B-block projection retaining M_BD*a_D, and a coefficient-level identity for the residual map R_port. Keep all three source/Lean obligations separate from numerical port budgets and global coverage.",
       "dependencies": [
         "203c45aac1d84022b69267c0cc31db06",
         "e7d759dcbf1c49cda5dfe9c1daf2cb1d",
@@ -12954,7 +12954,7 @@
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\record_routeb_p4_source_binding_receipt.py",
-            "sha256": "0EA3A535DD13E74492DC2ACA8F74DA8B085333773AFD9955B540EEE02A68C029"
+            "sha256": "D179B16994F6D2D7AFF2678A762D01C36174DD08AF6A448DE7C6C0E4BAA6D77D"
           }
         ],
         "source_provenance": {
@@ -12967,9 +12967,9 @@
             "M_mu(q) a = tau(q,dq,w) - C_fd(q,dq)dq - G_fd(q)",
             "the deployed force residual uses the explicit force-scale kc correction",
             "the nominal descriptor bridge uses M_mu,DD*v+DeltaM_DB*a_B=0 and r_B-M_BD*v=0",
-            "R is the same typed residual map consumed by the port Frobenius bound"
+            "R_port is the same typed residual map consumed by the port Frobenius bound"
           ],
-          "conclusion": "R a_B = r_B = (M_mu(q) a)_B on the declared descriptor/source domain",
+          "conclusion": "R_port a_B = r_B = (M_mu(q) a)_B on the declared descriptor/source domain",
           "required_coordinate_scale": "force coordinates q5/100 and q4/200; normalized f coordinates must not be silently substituted",
           "required_remote_term": "M_BD(q)*a_D remains explicit in the block projection",
           "regularization": "M_mu=M+1/1000000 I and central-FD h=1/100000 must be shared by source and adapter",
@@ -13006,7 +13006,7 @@
           ]
         },
         "unresolved": [
-          "coefficient_level_R_aB_equals_rB_identity",
+          "coefficient_level_R_port_aB_equals_rB_identity",
           "Float64_to_exact_real_source_adapter",
           "common_domain_and_angle_graph_binding",
           "residual_absorption_and_flowpipe_consumption",
@@ -13035,7 +13035,7 @@
             ],
             "required_parent_receipt": "typed_true_dh_port_source_binding",
             "required_obligations": [
-              "coefficient_level_R_aB_equals_rB_identity",
+              "coefficient_level_R_port_aB_equals_rB_identity",
               "typed_R_aB_equals_rB_adapter",
               "same_regularizer_and_fd_semantics"
             ],
@@ -13157,7 +13157,7 @@
     "8337e024d8dc4463a3389b1e65a4a5e8": {
       "id": "8337e024d8dc4463a3389b1e65a4a5e8",
       "name": "P4.true_dh_residual_map_coefficient_binding",
-      "statement": "Prove that the residual map R consumed by the Frobenius port bound has exactly the deployed source coefficients, so R*a_B=r_B on the common declared domain.",
+      "statement": "Prove that the residual map R_port consumed by the Frobenius port bound has exactly the deployed source coefficients, so R_port*a_B=r_B on the common declared domain.",
       "parent_id": "6cebb66987f449f3b5ad8d0548dfdf83",
       "status": "open",
       "proof_sketch": "Compare source-defined force/residual coefficients in force coordinates against the typed port map, including the kc scale and regularizer; expose any unmatched coefficient as an obstruction rather than weakening the statement.",
@@ -36416,6 +36416,96 @@
       ],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T10:46:43.849340+00:00",
+      "kind": "routeb_p4_source_binding_receipt_recorded",
+      "node_id": "33fdb01f3d0d4b53953680b32db11f9c",
+      "source_binding_status": "SOURCE_AND_NOMINAL_BRIDGE_PASS_BINDING_OPEN",
+      "source_contract_status": "SOURCE_CONTRACT_PASS",
+      "nominal_bridge_status": "EXACT_DESCRIPTOR_BRIDGE_CANDIDATE",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_pmi_certificate.jl",
+          "sha256": "235F4876ED1A3343F6D84F83C0079B4D279886585DC36AEB55B9FC0289177A77"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\dhport_lib.jl",
+          "sha256": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_dh_nominal_distal_bridge_audit.csv",
+          "sha256": "43EBF83D9ABFC39E58008FB9E012FEFD9DB712791E28AA8D718390229EB930C9"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_nominal_descriptor_interface.csv",
+          "sha256": "AB36538B5AA9AB9B62012D2AB90A1E20E3A226110B97F95D5E9D270F0B5A0375"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_NOMINAL_DESCRIPTOR_INTERFACE.md",
+          "sha256": "B8CCCE100EB8EEB72A245AD2B2B5489145224DEB87124DDE9CB694D71EE1A9FC"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_DH_NOMINAL_DISTAL_BRIDGE_AUDIT.md",
+          "sha256": "9BF3121A53F326A46940A157371D907C2AD27896362937625791CAEC5AA48622"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\src\\percolation_workflow\\routeb_source_contract.py",
+          "sha256": "044DD22D716F6DD21A486E381764DF5935A3EDB07F6FA9CB7B9A2DA87C6FFE3F"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\src\\percolation_workflow\\routeb_nominal_distal_contract.py",
+          "sha256": "A3F4965481F5491569CABD8BB0730963BEFF07BA5FE39402812048F61348CC89"
+        }
+      ],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T10:46:44.287374+00:00",
+      "kind": "routeb_true_dh_port_source_binding_target_refresh",
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83",
+      "parent_id": "1e7b1df1835f4deba06b11a8182f6719",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\dhport_lib.jl",
+          "sha256": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_pmi_certificate.jl",
+          "sha256": "235F4876ED1A3343F6D84F83C0079B4D279886585DC36AEB55B9FC0289177A77"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_nominal_descriptor_interface.csv",
+          "sha256": "AB36538B5AA9AB9B62012D2AB90A1E20E3A226110B97F95D5E9D270F0B5A0375"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_dh_nominal_distal_bridge_audit.csv",
+          "sha256": "43EBF83D9ABFC39E58008FB9E012FEFD9DB712791E28AA8D718390229EB930C9"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\src\\percolation_workflow\\routeb_source_contract.py",
+          "sha256": "044DD22D716F6DD21A486E381764DF5935A3EDB07F6FA9CB7B9A2DA87C6FFE3F"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\record_routeb_p4_source_binding_receipt.py",
+          "sha256": "D179B16994F6D2D7AFF2678A762D01C36174DD08AF6A448DE7C6C0E4BAA6D77D"
+        }
+      ],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T10:47:01.688863+00:00",
+      "kind": "routeb_true_dh_port_binding_decomposition_recorded",
+      "parent_id": "6cebb66987f449f3b5ad8d0548dfdf83",
+      "children": [
+        "203c45aac1d84022b69267c0cc31db06",
+        "e7d759dcbf1c49cda5dfe9c1daf2cb1d",
+        "8337e024d8dc4463a3389b1e65a4a5e8"
+      ],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -40072,5 +40162,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "dae2cf0e8820e1965f6976b1793499215e781f9cd5087d250c5917704f6d0358"
+  "state_checksum": "d53c1ee89d1f7e1e56dfe926b4437b3e071a1f32ed6949f946774c4e48065182"
 }

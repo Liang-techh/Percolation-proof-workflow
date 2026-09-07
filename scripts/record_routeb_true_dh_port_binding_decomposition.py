@@ -32,7 +32,7 @@ CHILDREN = (
     ),
     (
         "P4.true_dh_residual_map_coefficient_binding",
-        "Prove that the residual map R consumed by the Frobenius port bound has exactly the deployed source coefficients, so R*a_B=r_B on the common declared domain.",
+        "Prove that the residual map R_port consumed by the Frobenius port bound has exactly the deployed source coefficients, so R_port*a_B=r_B on the common declared domain.",
         "Compare source-defined force/residual coefficients in force coordinates against the typed port map, including the kc scale and regularizer; expose any unmatched coefficient as an obstruction rather than weakening the statement.",
         "coefficient_binding",
     ),
@@ -87,8 +87,21 @@ def main() -> int:
             child = state.nodes[child_id]
             by_name[name] = child
             changed = True
-        elif child.statement != statement or child.parent_id != parent.id:
+        elif child.parent_id != parent.id:
             raise ValueError(f"existing child contract mismatch: {name}")
+        elif child.statement != statement:
+            # One intentional semantic migration: the original target used
+            # the unsigned gain matrix R, while the descriptor equations
+            # require the actual port map R_port=-R_gain. Preserve the node
+            # identity but update this statement so stale agents cannot
+            # continue proving the wrong sign.
+            if (name == "P4.true_dh_residual_map_coefficient_binding"
+                    and "residual map R consumed" in child.statement
+                    and "R*a_B=r_B" in child.statement):
+                child.statement = statement
+                changed = True
+            else:
+                raise ValueError(f"existing child contract mismatch: {name}")
         if child.id not in parent.dependencies:
             parent.dependencies.append(child.id)
             changed = True
@@ -105,7 +118,7 @@ def main() -> int:
             "required_child_ids": child_ids,
             "required_parent_receipt": "typed_true_dh_port_source_binding",
             "required_obligations": [
-                "coefficient_level_R_aB_equals_rB_identity",
+                "coefficient_level_R_port_aB_equals_rB_identity",
                 "typed_R_aB_equals_rB_adapter",
                 "same_regularizer_and_fd_semantics",
             ],
@@ -125,7 +138,7 @@ def main() -> int:
     parent.proof_sketch = (
         "Split the source binding into canonical force/descriptor semantics, an "
         "exact B-block projection retaining M_BD*a_D, and a coefficient-level "
-        "identity for the residual map R. Keep all three source/Lean obligations "
+        "identity for the residual map R_port. Keep all three source/Lean obligations "
         "separate from numerical port budgets and global coverage."
     )
     if changed:

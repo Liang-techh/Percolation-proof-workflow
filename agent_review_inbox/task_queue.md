@@ -1318,7 +1318,7 @@ polynomial remains a separate frontier.
 - current evidence: `P5_COMPACT_DH_FOURIER_SOURCE_SEMANTICS_AUDIT.md` records
   source-level agreement; `P5_COMPACT_EXACT_REAL_MODEL_BOUNDARY.md` explicitly
   says Float64 inclusion remains open; local state receipt is
-  `SOURCE_FORMULA_PRESENT_FLOAT64_ENCLOSURE_OPEN`.
+  `SOURCE_FORMULA_PRESENT_CONTROLLER_MISMATCH_AND_FLOAT64_ENCLOSURE_OPEN`.
 - forbidden: promoting the formula audit, BigFloat interval output, one-cell
   checks, solver status, or source hash into a kernel-verified theorem or
   registry entry.
