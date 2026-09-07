@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-036.2-leaf1-parent-sibling-authority-stop-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "053001F6C02B4769FBC7DA24A30B1096E0BA175B236A7D4A2842FE18175B1FAD",
+  "task_id": "T-P4-036.2",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_authoritative_endpoint_witness",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-036.2-leaf1-parent-sibling-authority-stop-codex-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.670395+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-O1-body-4-source-bridge-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "3E7C44076D636F50D91BB2165CD2E7836A6F47117794B584D53F83A0BCC00D42",
+  "task_id": "T-P4-033",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_regularizer_or_correlated_metric_source_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-033-O1-body-4-source-bridge-codex-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.660717+00:00"
+}

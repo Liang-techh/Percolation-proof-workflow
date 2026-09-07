@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-O1-source-binding-witness-generator-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "CBC405EE1E1331F312F0A0B1E4AE71781C85EDBA341159A09D313B0B1A575199",
+  "task_id": "T-P4-033",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_regularizer_or_correlated_metric_source_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-033-O1-source-binding-witness-generator-codex-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.665095+00:00"
+}

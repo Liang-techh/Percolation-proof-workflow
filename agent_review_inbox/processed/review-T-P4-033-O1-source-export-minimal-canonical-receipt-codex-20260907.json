@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-O1-source-export-minimal-canonical-receipt-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "373657337E99E642EA7E26ACBCC37F9CBB90C1D9A082A561E834F4F939276DA0",
+  "task_id": "T-P4-033",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_regularizer_or_correlated_metric_source_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-033-O1-source-export-minimal-canonical-receipt-codex-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.665600+00:00"
+}

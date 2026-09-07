@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-O0-P-MU-B-block-api-atomic-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "EF51F8586431D4B917A48A77D5F81C37022A56CE7E6DBF4C9695BC2689BE68F9",
+  "task_id": "T-P4-033",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_regularizer_or_correlated_metric_source_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-033-O0-P-MU-B-block-api-atomic-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.651278+00:00"
+}

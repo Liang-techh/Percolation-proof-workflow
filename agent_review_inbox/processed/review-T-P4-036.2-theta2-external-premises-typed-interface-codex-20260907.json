@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-036.2-theta2-external-premises-typed-interface-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "562CD3067757EFC57AD1E78AF4928F98BFA0D38BAB0C3B39866C0B3B76FE8F95",
+  "task_id": "T-P4-036.2",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_authoritative_endpoint_witness",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-036.2-theta2-external-premises-typed-interface-codex-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.673033+00:00"
+}

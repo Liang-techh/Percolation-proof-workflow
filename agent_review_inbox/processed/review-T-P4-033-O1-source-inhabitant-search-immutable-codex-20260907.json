@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-O1-source-inhabitant-search-immutable-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "A35E04FF25C9B92E6CBADE215D77F484F20FC1DA3508E01939524D58C8B1135F",
+  "task_id": "T-P4-033",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_regularizer_or_correlated_metric_source_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-033-O1-source-inhabitant-search-immutable-codex-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.665832+00:00"
+}

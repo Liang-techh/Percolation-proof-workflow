@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-O0-R2-R3-factor2-interface-obstruction-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "B0A831B60CF9AD9E2026B8721DEB6D5330656F1FB7B72931AA351776FCB30ACF",
+  "task_id": "T-P4-033",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_regularizer_or_correlated_metric_source_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-033-O0-R2-R3-factor2-interface-obstruction-codex-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.657700+00:00"
+}

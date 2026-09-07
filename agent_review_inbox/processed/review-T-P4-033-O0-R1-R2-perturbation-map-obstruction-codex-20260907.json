@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-O0-R1-R2-perturbation-map-obstruction-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "FFA0543825342DB16FF84CC6C0A5A38E4EE050E6D0FDAD8C5D68149CCDA651C0",
+  "task_id": "T-P4-033",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_regularizer_or_correlated_metric_source_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-033-O0-R1-R2-perturbation-map-obstruction-codex-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.656637+00:00"
+}

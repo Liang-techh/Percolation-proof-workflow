@@ -2531,6 +2531,11 @@ DH residual、producer metric、descriptor-to-port chain 与 `BaseDominance` 接
 需要真实 base 下界。此叶及后续 receipt 继续由 GitHub agents 处理，不改变本地
 verified registry。
 
+revision 740–741：integrator 新增安全的 record-id task 路由，收割了远端多批
+ review/companion。该修复解决旧 agent envelope 缺少显式 `task_id` 时的漏收问题，
+ 只产生 pending provenance/event，不改变 registry 或 formal gate；对应的
+ processed markers 已随状态一起持久化，便于 GitHub agent 后续幂等接手。
+
 随后新增 `STORAGE_IDENTITY_TRANSFER` 叶：它要求 `V_eps=Vfull_DH` 在同一域
 上成立，且 barrier transfer 还需要整条 path 落在该域内；相同初始上界或相同
 导数都不足以完成固定阈值的 barrier 转移。该叶保持 open/uncompiled，交给

@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-correlated-metric-kuangmanmozun-20260907T1441.md",
+  "record_kind": "review_result",
+  "review_sha256": "A0DD229A71198488A28BA2E0041E45162B8D58993C25755BACD6704683724903",
+  "task_id": "T-P4-033",
+  "source_agent": "狂蛮魔尊",
+  "created_at": "2026-09-07T14:41:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_regularizer_or_correlated_metric_source_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "6ae939335bff0fcc1bbccb7fc5413a40b5585a59",
+  "review_file": "agent_review_inbox/review-T-P4-033-correlated-metric-kuangmanmozun-20260907T1441.md",
+  "integrated_at": "2026-09-07T22:23:27.648198+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P3-012-liuchuanafeng-20260907T1518.md",
+  "record_kind": "review_result",
+  "review_sha256": "37FA44D3629B19DA1AEBF6C5DC9DC70F5B9454411A6DC93C79F6FECB099A3EBD",
+  "task_id": "T-P3-012",
+  "source_agent": "流川枫",
+  "created_at": "2026-09-07T15:18:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_flt_derivative_leaf_review",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "018112bf21cd99cdfe09de5fcfbe1fc6bdf8f657",
+  "review_file": "agent_review_inbox/review-T-P3-012-liuchuanafeng-20260907T1518.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-07T22:21:08.026545+00:00"
+}

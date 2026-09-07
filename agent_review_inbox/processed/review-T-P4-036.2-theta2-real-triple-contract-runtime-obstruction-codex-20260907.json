@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-036.2-theta2-real-triple-contract-runtime-obstruction-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "B3E6845E268C35BC44A0E919826EAA4E3CED58D0A6139C97C7E8BC65FEC9D582",
+  "task_id": "T-P4-036.2",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_authoritative_endpoint_witness",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-036.2-theta2-real-triple-contract-runtime-obstruction-codex-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.674575+00:00"
+}

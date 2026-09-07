@@ -3155,3 +3155,9 @@ revision 739 已登记 P4 `DH_PRODUCER_BASE_BRIDGE`：选定 prospective DH 分�
 串成明确接口，并用 acceleration ray 与 block-vs-four-angle domain mismatch
 保留两个精确障碍。base dominance、真实 descriptor inverse、Float64 reification
 和 flowpipe 仍未闭合；该叶只作为 GitHub WIP/Lean receipt 任务发布。
+
+revision 740–741 的定时收割修复了 review envelope 路由：当 agent 只提供
+`review_id=review-T-...` 而省略 `task_id` 时，integrator 现在只按已知
+`TASK_TARGETS` 做最长边界前缀匹配，不读取数学正文。该轮补收 P3-009/P3-012、
+P4-030/031/033/036.2/037/038/039 与 P8-002 的 pending review metadata；
+所有结果仍不进入 verified registry。

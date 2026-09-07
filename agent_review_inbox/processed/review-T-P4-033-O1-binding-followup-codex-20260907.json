@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-O1-binding-followup-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "148302ABC42D9EB2E64F7A49D6357F2815C5C1F28581FD8F05477F368D3C7CA5",
+  "task_id": "T-P4-033",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_regularizer_or_correlated_metric_source_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-033-O1-binding-followup-codex-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.659442+00:00"
+}

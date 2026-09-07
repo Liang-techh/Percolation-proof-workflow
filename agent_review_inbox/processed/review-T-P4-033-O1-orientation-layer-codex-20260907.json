@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-O1-orientation-layer-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "0ECC8B702A44E6191FCAADCF354E7FC31E899328D9E01C3EBE0C138128334D04",
+  "task_id": "T-P4-033",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_regularizer_or_correlated_metric_source_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-033-O1-orientation-layer-codex-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.664302+00:00"
+}

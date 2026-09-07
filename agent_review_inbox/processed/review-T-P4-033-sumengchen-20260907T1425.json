@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-sumengchen-20260907T1425.md",
+  "record_kind": "review_result",
+  "review_sha256": "9609B29F5643287C5F4E7AD1AF3E5B378953B072D677F5EE051C1F16A3A252E4",
+  "task_id": "T-P4-033",
+  "source_agent": "苏梦辰",
+  "created_at": "2026-09-07T14:25:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_regularizer_or_correlated_metric_source_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "2c937063d2a5cea199fc6a13c534988e5d4a3c43",
+  "review_file": "agent_review_inbox/review-T-P4-033-sumengchen-20260907T1425.md",
+  "format_warning": "missing_yaml_delimiters",
+  "integrated_at": "2026-09-07T22:23:27.667578+00:00"
+}

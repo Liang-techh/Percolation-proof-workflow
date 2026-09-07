@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-O1-body-6-canonical-export-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "0559712903B61235A5DEE4761D450F1683A99B26D41EA1B13D8A03D420C35391",
+  "task_id": "T-P4-033",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_regularizer_or_correlated_metric_source_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-033-O1-body-6-canonical-export-codex-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.662642+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-036.2-receipt-to-lean-single-leaf-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "30C70BAC8C236C5C825CC39E3B715E6EEDBF7F27C0622B01D77EE395135FF347",
+  "task_id": "T-P4-036.2",
+  "source_agent": "Codex",
+  "created_at": "2026-09-07",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_authoritative_endpoint_witness",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+  "review_file": "agent_review_inbox/review-T-P4-036.2-receipt-to-lean-single-leaf-codex-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.671815+00:00"
+}

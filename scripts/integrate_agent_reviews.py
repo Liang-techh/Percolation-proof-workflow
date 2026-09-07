@@ -34,6 +34,7 @@ TASK_TARGETS = {
     "T-P4-004": ("P4.residual_schur_pmi", "conditional_typed_normalization_sidecar"),
     "T-P8-003": ("P8.independent_reachability", "explicit_time_contract_recommended"),
     "T-P8-004": ("P8.independent_reachability", "explicit_time_typed_sidecar"),
+    "T-P8-002": ("P8.independent_reachability", "pending_explicit_time_parent_option"),
     "T-P5-001": ("P5.sparse_disjunctive_sos", "energy_syzygy_reuse_audit"),
     "T-P3-004": ("P3.strict_true_dh_bounds", "pending_source_semantic_adapter"),
     "T-P3-005": ("P3.strict_true_dh_bounds", "pending_semantic_binding_child"),
@@ -60,6 +61,20 @@ TASK_TARGETS = {
                   "pending_physical_gain_mu_nu_bridge"),
     "T-P4-032": ("P4.true_dh_port_source_binding",
                  "pending_typed_block_source_bridge"),
+    "T-P4-030": ("P4.true_dh_port_source_binding",
+                 "pending_port_sign_propagation"),
+    "T-P4-031": ("P4.true_dh_port_source_binding",
+                 "pending_controller_damping_source_decision"),
+    "T-P4-033": ("P4.true_dh_regularizer_semantics_bridge",
+                 "pending_regularizer_or_correlated_metric_source_bridge"),
+    "T-P4-036.2": ("P4.fixed_lambda_two_row_admissibility",
+                   "pending_authoritative_endpoint_witness"),
+    "T-P4-037": ("P4.true_dh_port_source_binding",
+                 "pending_weighted_scalar_budget_transport"),
+    "T-P4-038": ("P4.scalar_young_square",
+                 "pending_young_feasibility_discriminant_formalization"),
+    "T-P4-039": ("P4.fixed_lambda_two_row_admissibility",
+                 "pending_common_lambda_feasibility_formalization"),
     "T-P4-033-O1-body6-slice": ("P4.O1.source_comparator.h_body_6.canonical_export",
                                 "pending_independent_body6_source_slice"),
     "T-P4-fixed-lambda-admissibility": ("P4.fixed_lambda_two_row_admissibility",
@@ -223,6 +238,30 @@ def inbox_records(inbox: Path) -> list[Path]:
     return sorted({path for pattern in RECORD_GLOBS for path in inbox.glob(pattern)})
 
 
+def resolve_task_id(path: Path, header: dict[str, str]) -> str:
+    """Resolve an omitted task id from a bounded record-id prefix.
+
+    Periodic agents historically emitted ``review_id`` values such as
+    ``review-T-P4-038-agent-20260907T1558`` without a separate ``task_id``.
+    Recover only from the known TASK_TARGETS keys and choose the longest
+    boundary-aligned prefix; never inspect the mathematical body for routing
+    hints.  An explicit task_id remains authoritative, including an unknown
+    value which must stay in the inbox for manual triage.
+    """
+    explicit = str(header.get("task_id", "")).strip()
+    if explicit:
+        return explicit
+    candidates: list[str] = []
+    for raw in (header.get("review_id", ""), path.stem):
+        token = str(raw).strip()
+        token = re.sub(r"^(?:review|handoff|companion)-", "", token,
+                       flags=re.IGNORECASE)
+        for task_id in TASK_TARGETS:
+            if token == task_id or token.startswith(task_id + "-"):
+                candidates.append(task_id)
+    return max(candidates, key=len) if candidates else ""
+
+
 def source_commit(path: Path, header: dict[str, str]) -> str:
     """Recover an explicitly printed Git commit when agents put it in prose."""
     declared = str(header.get("commit", "")).strip()
@@ -308,7 +347,7 @@ def main() -> int:
             continue
         if header.get("integration_status") == "integrated":
             continue
-        task_id = header.get("task_id", "") or REVIEW_ID_ALIASES.get(
+        task_id = resolve_task_id(path, header) or REVIEW_ID_ALIASES.get(
             header.get("review_id", ""), "")
         if task_id not in TASK_TARGETS:
             continue
@@ -341,7 +380,7 @@ def main() -> int:
 
     integrated = []
     for path, header, kind, digest, marker, previous in candidates:
-        task_id = header.get("task_id", "") or REVIEW_ID_ALIASES.get(
+        task_id = resolve_task_id(path, header) or REVIEW_ID_ALIASES.get(
             header.get("review_id", ""), "")
         target_name, classification = TASK_TARGETS[task_id]
         record_file = str(path.relative_to(ROOT)).replace("\\", "/")

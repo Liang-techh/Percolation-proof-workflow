@@ -1,6 +1,11 @@
 import json
 
-from scripts.integrate_agent_reviews import inbox_records, record_header, record_kind
+from scripts.integrate_agent_reviews import (
+    inbox_records,
+    record_header,
+    record_kind,
+    resolve_task_id,
+)
 
 
 def test_md_handoff_and_json_companion_are_discoverable(tmp_path):
@@ -28,3 +33,24 @@ def test_planning_and_claim_files_are_not_records(tmp_path):
     plan = tmp_path / "task_plan.md"
     plan.write_text("kind: task_plan\n", encoding="utf-8")
     assert inbox_records(tmp_path) == []
+
+
+def test_record_id_recovers_known_task_without_scanning_body(tmp_path):
+    review = tmp_path / "review-T-P4-038-agent-20260907T1558.md"
+    review.write_text(
+        "---\nkind: review_result\nreview_id: review-T-P4-038-agent-20260907T1558\n"
+        "---\nThis body mentions T-P3-009 but must not affect routing.\n",
+        encoding="utf-8",
+    )
+    header = record_header(review)
+    assert resolve_task_id(review, header) == "T-P4-038"
+
+
+def test_longest_known_task_prefix_wins(tmp_path):
+    review = tmp_path / "review-T-P4-033-O1-body6-slice-agent-20260907T1600.md"
+    review.write_text(
+        "---\nkind: review_result\nreview_id: review-T-P4-033-O1-body6-slice-agent-20260907T1600\n"
+        "---\n",
+        encoding="utf-8",
+    )
+    assert resolve_task_id(review, record_header(review)) == "T-P4-033-O1-body6-slice"

@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-031-liuchuanafeng-20260907T1408.md",
+  "record_kind": "review_result",
+  "review_sha256": "084B9FC4B3DC9D48ACD7D5CB5F4872D70CB93E598630EF07856A255AB1EA6B69",
+  "task_id": "T-P4-031",
+  "source_agent": "流川枫",
+  "created_at": "2026-09-07T14:08:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_controller_damping_source_decision",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "eac34076032b55542632e44af93556bce5ed141a",
+  "review_file": "agent_review_inbox/review-T-P4-031-liuchuanafeng-20260907T1408.md",
+  "admission_label": "architecture_only",
+  "integrated_at": "2026-09-07T22:23:27.647608+00:00"
+}

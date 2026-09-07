@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-036.2-theta2-external-premises-validator-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "0A09163928B4CA4356206250988CDA1AFB0ED14B64226EFBEA6B8ED885EED609",
+  "task_id": "T-P4-036.2",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_authoritative_endpoint_witness",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-036.2-theta2-external-premises-validator-codex-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.673393+00:00"
+}

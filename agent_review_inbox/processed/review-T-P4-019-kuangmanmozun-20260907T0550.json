@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-019-kuangmanmozun-20260907T0550.md",
+  "record_kind": "review_result",
+  "review_sha256": "51FB5E9D8C438E2047774075ACEE2650640CD27D54920461632A0B6F72261015",
+  "task_id": "T-P4-019",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_block45_global_geometry_schur_lift",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-019-kuangmanmozun-20260907T0550.md",
+  "integrated_at": "2026-09-07T22:21:08.026945+00:00"
+}

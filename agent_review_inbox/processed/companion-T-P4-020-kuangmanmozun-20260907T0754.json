@@ -1,0 +1,14 @@
+{
+  "record_file": "agent_review_inbox/companion-T-P4-020-kuangmanmozun-20260907T0754.md",
+  "record_kind": "companion_log",
+  "review_sha256": "AEEAF9D438D4F29CCAB48B3430C2E564A5331F8585345B6D629EE91F74230649",
+  "task_id": "T-P4-020",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_one_cell_residual_remainder_absorption",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "integrated_at": "2026-09-07T22:21:08.026215+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-036.2-theta2-exporter-namespace-hash-binding-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "D1E14478EA44ADFE89C53A7148556BC840C7ABB999DEB1C0A6AF6AE3E25DF75C",
+  "task_id": "T-P4-036.2",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_authoritative_endpoint_witness",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-036.2-theta2-exporter-namespace-hash-binding-codex-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.672667+00:00"
+}

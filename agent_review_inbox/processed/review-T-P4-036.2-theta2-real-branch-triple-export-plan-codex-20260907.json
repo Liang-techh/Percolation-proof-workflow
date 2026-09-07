@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-036.2-theta2-real-branch-triple-export-plan-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "624C6D634E3CE9DA587881F0EFE253E1C6F22290C07D2CDA201BE71C670E685C",
+  "task_id": "T-P4-036.2",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_authoritative_endpoint_witness",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-036.2-theta2-real-branch-triple-export-plan-codex-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.674150+00:00"
+}

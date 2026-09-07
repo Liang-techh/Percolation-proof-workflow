@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-036.2-theta2-proof-bridge-contract-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "AD9C049EFE8EE6A935411B7B083D104793B6C337157C791B5E453D622DB99897",
+  "task_id": "T-P4-036.2",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_authoritative_endpoint_witness",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-036.2-theta2-proof-bridge-contract-codex-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.673706+00:00"
+}

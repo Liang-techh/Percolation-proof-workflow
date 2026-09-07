@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-O0-P-NE-fourier-newton-euler-binding-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "05F619E6E7C8A6ACB90EED85E0EB2FE8D305259E3B2D10E31FACB0DC601413AD",
+  "task_id": "T-P4-033",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_regularizer_or_correlated_metric_source_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-033-O0-P-NE-fourier-newton-euler-binding-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.655250+00:00"
+}

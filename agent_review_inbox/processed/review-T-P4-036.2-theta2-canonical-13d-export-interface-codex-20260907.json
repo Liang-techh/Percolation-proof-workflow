@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-036.2-theta2-canonical-13d-export-interface-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "A758D69972C658A9A6041D3C5667330646C3E7C2C32EDC747F7F4EFD25E8A6C9",
+  "task_id": "T-P4-036.2",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_authoritative_endpoint_witness",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-036.2-theta2-canonical-13d-export-interface-codex-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.672425+00:00"
+}

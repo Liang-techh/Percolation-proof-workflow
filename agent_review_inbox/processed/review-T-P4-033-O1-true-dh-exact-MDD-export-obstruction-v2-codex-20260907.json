@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-O1-true-dh-exact-MDD-export-obstruction-v2-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "7875537B1AD64709080523B94C676EE9A860287E26CB9F38D52D6AC828B47418",
+  "task_id": "T-P4-033",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_regularizer_or_correlated_metric_source_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-033-O1-true-dh-exact-MDD-export-obstruction-v2-codex-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.666227+00:00"
+}

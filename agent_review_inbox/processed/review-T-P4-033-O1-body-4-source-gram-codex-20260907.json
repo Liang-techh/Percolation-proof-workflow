@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-O1-body-4-source-gram-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "F9E542737915676A995103874361928C5EA6E7BAF08EE20F6A2A50015823396F",
+  "task_id": "T-P4-033",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_regularizer_or_correlated_metric_source_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "review_file": "agent_review_inbox/review-T-P4-033-O1-body-4-source-gram-codex-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.661152+00:00"
+}

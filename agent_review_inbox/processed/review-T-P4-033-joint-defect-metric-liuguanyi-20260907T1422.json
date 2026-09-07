@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-joint-defect-metric-liuguanyi-20260907T1422.md",
+  "record_kind": "review_result",
+  "review_sha256": "FCA66946D7033C4C24C4CC31AE345B427EF47C564C1DF383CFF68D73B2EC3B39",
+  "task_id": "T-P4-033",
+  "source_agent": "柳冠一",
+  "created_at": "2026-09-07T14:22:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_regularizer_or_correlated_metric_source_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "19200c3d4c0a8ccc5f071bd1a2027188f47e74e1",
+  "review_file": "agent_review_inbox/review-T-P4-033-joint-defect-metric-liuguanyi-20260907T1422.md",
+  "format_warning": "missing_yaml_delimiters",
+  "integrated_at": "2026-09-07T22:23:27.648341+00:00"
+}

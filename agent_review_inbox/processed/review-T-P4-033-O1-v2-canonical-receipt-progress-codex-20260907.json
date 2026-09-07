@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-O1-v2-canonical-receipt-progress-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "DB7A9DEA940117E80F1EB240C4CFD4A28BF705D96F432D87257B92B9D1733254",
+  "task_id": "T-P4-033",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_regularizer_or_correlated_metric_source_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-033-O1-v2-canonical-receipt-progress-codex-20260907.md",
+  "integrated_at": "2026-09-07T22:23:27.666818+00:00"
+}
