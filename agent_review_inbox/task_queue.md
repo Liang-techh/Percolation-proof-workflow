@@ -2139,3 +2139,21 @@ adapter or promote a theorem.
 At the next 20-minute harvest, integrate only new immutable results, refresh
 the candidate/state provenance, and sync the integrated batch once. Do not
 fetch during the intervening local mathematical work.
+
+### Harvested coordinator sidecars (2026-09-07)
+
+- `T-P4-033-O1-body4-gram`: exact SymPy/QQ diagnostic checked 273 scalar
+  identities; source Gram Lean targets and receipt are present, but all target
+  inhabitants and pinned compilation remain open.
+- `T-P4-033-O1-body5-fold`: exact Laurent diagnostic and 57-row/q3 partition
+  targets are present; the corrected `(2,3)/(3,2)=0` boundary is recorded, but
+  source expansion, tagged permutation, fold and Lean proof remain open.
+- `T-P4-033-O0-Hacc-export`: the three semantic layers and the required
+  `36/216/216` scalar-DAG output contract are recorded; no same-source export,
+  interval cover or runtime-kernel theorem is present.
+- `T-P4-033-O1-body6-export`: pre-accumulation body-6 callback replay exits 0,
+  with 610 exact rows and 57 distinguishing coefficients versus the aggregate;
+  canonical reification and source theorem remain open.
+
+These results are attached to the O1 candidate as conditional metadata only;
+the verified registry remains empty and `formal_certificate_allowed=false`.

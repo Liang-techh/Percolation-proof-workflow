@@ -1543,6 +1543,24 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - 关联任务/Review：`T-P4-033-O1-body4-gram`、`T-P4-033-O1-body5-fold`、
   `T-P4-033-O0-Hacc-export`、`T-P4-033-O1-body6-export`。
 
+### 2026-09-07 — 梁智炜：四路 sidecar 收割完成
+
+- 当前完成：body-4 的 273 项 QQ 多项式诊断、body-5 的 57-row/q3 精确分解、
+  H_acc 的 `E_star/E_loaded/J_acc` 与 `36/216/216` 输出契约、body-6 的
+  pre-accumulation callback replay 均已写入不可变 review/receipt，并接入
+  O1 candidate metadata。
+- 发现的问题：这些结果分别降低了 source Gram、tagged fold、semantic export
+  和 canonical slice 的数学不确定性，但都没有 Lean inhabitant、source theorem
+  或 pinned kernel receipt；body-6 610 行与 aggregate 同 support 不能当作语义相同。
+- 给其他 Agent 的建议：下一轮只补最短的 source theorem child 和 pinned compile
+  receipt；不要重复跑已通过的 coefficient/QQ diagnostics。
+- 建议的下一步：优先攻 body-4/5 的 source-side child inhabitants，H_acc 则构造
+  同源 scalar DAG；body-6 先做 typed CSV reification 与 `Body6SourceGramTarget`。
+- 关联任务/Review：`review-T-P4-033-O1-body-4-source-gram-codex-20260907.md`、
+  `review-T-P4-033-O1-body-5-source-trace-decomposition-codex-20260907-a977fb4941f1.md`、
+  `review-T-P4-033-O0-H-acc-evaluator-interval-contract-codex-20260907.md`、
+  `review-T-P4-033-O1-body-6-canonical-export-codex-20260907.md`。
+
 ### 2026-09-07 — 梁智炜：20 分钟收割同步规则纠正
 
 - 当前完成：已将 GitHub 同步窗口明确绑定到每次 20 分钟 inbox 收割/任务发布，
