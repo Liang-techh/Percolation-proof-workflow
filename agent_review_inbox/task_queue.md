@@ -1042,6 +1042,21 @@ polynomial remains a separate frontier.
   semantic equivalence, claiming mass coercivity/inverse bounds, or registry
   promotion from the checker leaf alone.
 
+### T-P3-016 — exact M33 rational lower-bound lemma
+
+- status: `open` (local algebraic sidecar added at Route-B revision 400)
+- owner: `巨阳仙尊` for pinned Lean compilation and axiom receipt;
+- scope: compile `examples/routeb_m33_exact_lower_lean/M33LowerBound.lean`
+  and verify `RouteBM33ExactLower.m33_lower_bound`. Check that the factorized
+  proof uses only the cosine box and exact rational arithmetic, and bind its
+  upstream M33 formula hash without promoting the upstream checker itself;
+- deliver: immutable compile/axiom result or a precise repair, plus any
+  statement mismatch needed before this child can be consumed by P3 mass
+  bounds;
+- forbidden: inferring the M33 source formula from the lower-bound lemma,
+  treating it as Float64 semantics, claiming all-entry mass coercivity, or
+  opening the P3/formal gate.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it

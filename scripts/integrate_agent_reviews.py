@@ -80,6 +80,7 @@ TASK_TARGETS = {
     "T-P3-013": ("P3.strict_true_dh_bounds", "pending_concrete_true_dh_derivative_hull_instance"),
     "T-P3-014": ("P3.trig_endpoint_enclosure_leaf", "pending_concrete_trig_source_binding"),
     "T-P3-015": ("P3.m33_exact_fourier_source_leaf", "pending_m33_fourier_leaf_lift"),
+    "T-P3-016": ("P3.m33_exact_lower_bound", "pending_m33_exact_lower_bound_compile"),
     "T-P8-005": ("P8.independent_reachability", "pending_terminal_transfer_interface"),
     "T-P8-006": ("P8.ramp_reconstruction_compiled_candidate", "pending_ramp_reconstruction_child"),
     "T-P8-007": ("P8.independent_reachability", "pending_ramp_sidecar_validation"),

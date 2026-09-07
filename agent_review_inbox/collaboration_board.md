@@ -448,6 +448,16 @@
 - `T-P3-015` 由巨阳仙尊做最小 Lean lift/obstruction probe，大爱仙尊可
   独立研究该恒等式对具体质量下界的消费方式。
 
+### 2026-09-07 — 梁智炜：从 M33 Fourier 恒等式推出 exact rational lower bound
+
+- 新增 `P3.m33_exact_lower_bound` / `T-P3-016`。在 `u=cos(q5)`、
+  `x=cos(2q4)` 的 [-1,1] box 上，将 M33 减去
+  `3016537/12000000` 因式分解为非负项，得到全域 exact rational lower
+  bound，避免把 source checker 的公式结果直接当成 mass coercivity。
+- 该 child 已保留上游 M33 source hash、11-mode exactization 和未闭合的
+  parser-to-Lean binding；当前仅是待 pinned compile 的代数候选，registry
+  与 formal gate 均不变。
+
 ### 2026-09-07 — 梁智炜：P8 interval-local endpoint seam
 
 - 新增 `T-P8-011` / `P8.interval_local_endpoint_adapter`。sidecar 现在把
