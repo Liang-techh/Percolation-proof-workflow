@@ -560,7 +560,7 @@ def convert_routeb_port_bound_to_weighted_metric(
     *,
     source_key: str | None,
     metric_source_key: str | None,
-    metric_lower_bound_proven: bool = True,
+    metric_lower_bound_proven: bool = False,
 ) -> RouteBWeightedPortMetricConversion:
     """Convert ``||R||`` to a conservative ``B_up``-weighted port bound.
 
@@ -619,6 +619,8 @@ def consume_routeb_schur_margin(
     *,
     source_key: str | None,
     margin_source_key: str | None,
+    baseline_bound_proven: bool = False,
+    perturbation_bound_proven: bool = False,
 ) -> RouteBSchurMarginConsumption:
     """Consume the exact Young charge caused by a weighted port perturbation.
 
@@ -662,6 +664,10 @@ def consume_routeb_schur_margin(
         errors.append("schur_source_key_missing")
     elif source_key != margin_source_key:
         errors.append("schur_source_key_mismatch")
+    if not baseline_bound_proven:
+        errors.append("baseline_port_bound_not_authoritatively_supplied")
+    if not perturbation_bound_proven:
+        errors.append("weighted_port_perturbation_not_authoritatively_supplied")
     if errors:
         return RouteBSchurMarginConsumption(
             status="OPEN_FAIL_CLOSED",

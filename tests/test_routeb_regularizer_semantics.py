@@ -124,7 +124,8 @@ def test_general_resolvent_rejects_missing_epsilon_and_source_key_fail_closed() 
 
 def test_weighted_metric_conversion_requires_same_key_and_positive_root() -> None:
     result = convert_routeb_port_bound_to_weighted_metric(
-        Fraction(3), Fraction(2), source_key="schur:B45", metric_source_key="schur:B45"
+        Fraction(3), Fraction(2), source_key="schur:B45", metric_source_key="schur:B45",
+        metric_lower_bound_proven=True,
     )
 
     assert result.status == "CONDITIONAL_WEIGHTED_PORT_BOUND"
@@ -148,6 +149,7 @@ def test_schur_margin_consumer_computes_added_young_charge_exactly() -> None:
     result = consume_routeb_schur_margin(
         Fraction(1, 2), Fraction(1, 10), Fraction(1, 4), Fraction(1),
         source_key="ledger:B45", margin_source_key="ledger:B45",
+        baseline_bound_proven=True, perturbation_bound_proven=True,
     )
 
     assert result.status == "CONDITIONAL_SCHUR_MARGIN_CONSUMED"
@@ -161,13 +163,27 @@ def test_schur_margin_consumer_rejects_mismatch_and_insufficient_budget() -> Non
     mismatch = consume_routeb_schur_margin(
         Fraction(1), Fraction(1, 2), Fraction(1), Fraction(1),
         source_key="port", margin_source_key="stale-ledger",
+        baseline_bound_proven=True, perturbation_bound_proven=True,
     )
     insufficient = consume_routeb_schur_margin(
         Fraction(1), Fraction(1), Fraction(1), Fraction(1),
         source_key="ledger", margin_source_key="ledger",
+        baseline_bound_proven=True, perturbation_bound_proven=True,
     )
 
     assert mismatch.status == "OPEN_FAIL_CLOSED"
     assert "schur_source_key_mismatch" in mismatch.errors
     assert insufficient.status == "OPEN_SCHUR_MARGIN_INSUFFICIENT"
     assert insufficient.margin_consumed is False
+
+
+def test_schur_margin_consumer_rejects_unproven_numeric_bounds_by_default() -> None:
+    result = consume_routeb_schur_margin(
+        Fraction(1, 2), Fraction(1, 10), Fraction(1, 4), Fraction(1),
+        source_key="ledger", margin_source_key="ledger",
+    )
+
+    assert result.status == "OPEN_FAIL_CLOSED"
+    assert result.margin_consumed is False
+    assert "baseline_port_bound_not_authoritatively_supplied" in result.errors
+    assert "weighted_port_perturbation_not_authoritatively_supplied" in result.errors

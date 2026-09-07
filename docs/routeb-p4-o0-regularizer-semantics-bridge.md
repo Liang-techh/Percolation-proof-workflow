@@ -84,7 +84,8 @@ consumption of the Schur/Young margin remain separate O0-R2/O0-R3 premises.
 conversion when the caller supplies a proved `B_up >= beta I` witness through
 an exact rational `s` satisfying `s^2 <= beta`. It returns the conservative
 bound `unweighted_port_bound / s`, requires matching source keys, and rejects
-an unproven metric witness. It deliberately records
+an unproven metric witness; `metric_lower_bound_proven` must be explicitly set
+to true. It deliberately records
 `schur_margin_consumed=false`; O0-R3 must still prove the remaining budget
 inequality.
 
@@ -92,7 +93,9 @@ inequality.
 same-key weighted baseline `rho_r`, perturbation `epsilon_R`, `theta > 0`, and
 an exact remaining margin, it computes
 `(1+1/theta)*((rho_r+epsilon_R)^2-rho_r^2)` and rejects insufficient margin or
-provenance mismatch. This is only a budget arithmetic result: it does not
+provenance mismatch. The baseline and perturbation proof flags are explicit and
+default false, so exact-rational candidate numbers cannot silently pass as
+authoritative bounds. This is only a budget arithmetic result: it does not
 prove either input bound or the underlying physical PMI statement.
 
 The API and focused tests do not run Lean/Lake, Julia, SOS, trajectory checks,

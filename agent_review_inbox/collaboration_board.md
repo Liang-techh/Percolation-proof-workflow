@@ -913,3 +913,7 @@ O0-R3 现已落成 `consume_routeb_schur_margin`：在同一 source key 下消�
 weighted baseline `rho_r`、扰动 `epsilon_R`、`theta` 与 exact remaining margin，
 计算新增 Young charge 和剩余 margin；不足或 provenance mismatch 均拒绝。该
 函数只做预算算术，不声称输入 bound 或物理 PMI 已证明。
+
+进一步收紧 admission：O0-R2 的 metric proof flag、O0-R3 的 baseline/perturbation
+proof flags 现在均默认 false，必须显式提供权威证明标志；exact-rational 数值、
+source key 或通过单测本身都不能替代 bound receipt。
