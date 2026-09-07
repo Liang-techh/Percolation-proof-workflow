@@ -119,3 +119,22 @@ the concrete `Fin 2 → ℚ` canonical eigenspace. Their differing source hashes
 are preserved as provenance, and the current predicate sidecar remains pending
 until the pinned Mathlib environment is repaired and the exact source is
 recompiled.
+
+## 2026-09-07 / Route-B checkpoint revisions 349–350
+
+The focused P3 mass-entry compile receipt was persisted at revision 349 as a
+conditional graph artifact. It is explicitly source-unbound and did not enter
+the verified registry. Su Mengchen's `T-P0-002` review was then integrated at
+revision 350 as pending metadata:
+
+| task | target | classification | admission effect |
+|---|---|---|---|
+| T-P0-002 | `P0.reproducibility_baseline` | `pending_fresh_receipt_reaudit` | none |
+
+The review establishes that the historical receipt is evidence only for its
+old snapshot. The current canonical state has moved, and no deterministic
+fresh receipt/output-hash binding was found; a Git blob hash is not substituted
+for a receipt output hash. The proposed next step is a stable receipt alias or
+index followed by an independent hash check. Node statuses remain open, the
+verified registry remains empty, and `formal_certificate_allowed` remains
+false.

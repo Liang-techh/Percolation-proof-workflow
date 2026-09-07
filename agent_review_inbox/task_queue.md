@@ -120,6 +120,18 @@ verification and registry gates can change admission state.
   exact evidence paths;
 - forbidden: broad reruns, status promotion, or registry mutation.
 
+### T-P0-002 — fresh receipt/provenance re-audit
+
+- status: `reviewed_pending` (integrated at Route-B revision 350; current
+  snapshot has no stable fresh receipt/output-hash binding)
+- scope: compare the historical P0 receipt against the current canonical
+  `state.json` revision, Git/source snapshot, receipt path and output hashes;
+  keep workflow-node completion separate from fresh provenance verification;
+- deliver: exact current revision and hash evidence, a deterministic receipt
+  alias/index proposal, and all unresolved freshness blockers;
+- forbidden: deriving a receipt hash from a Git blob hash, reusing an old
+  receipt as current evidence, status promotion, or registry mutation.
+
 ### T-DAG-002 — explicit child-DAG refinement
 
 - status: `reviewed_pending` (integrated at Route-B revision 333; result:
