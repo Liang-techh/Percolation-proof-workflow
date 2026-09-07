@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 700,
+  "revision": 701,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -42006,7 +42006,9 @@
       "parent_id": "831ff74290214fd99eed93f9837b1e46",
       "status": "open",
       "proof_sketch": "Define commonMu as the exact finite infimum, prove positivity and mapped-box lower bounds, consume the explicit coverage map for global strict slack, and retain empty-family, omitted-point, and reciprocal-gap obstructions.",
-      "dependencies": [],
+      "dependencies": [
+        "6664b3523bba4fb9b3fe9dcec165b6ff"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -42093,6 +42095,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_TAILSOLVECERT20260907.review.md",
             "sha256": "51E8CB03409B0695086ABBF55B1AB5863CC8334B88DB8A2683F6220E01ED181A"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "6664b3523bba4fb9b3fe9dcec165b6ff": {
+      "id": "6664b3523bba4fb9b3fe9dcec165b6ff",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.finite_box_uniform_margin.strict_export",
+      "statement": "A positive common margin under explicit coverage and consumer≤weightedLoad exports quantitative weighted and consumer strict inequalities, but does not itself satisfy the independent comparator receipt/registry gate.",
+      "parent_id": "d273df02e4c24913a7aebccacb1d97a7",
+      "status": "open",
+      "proof_sketch": "Consume StrictMarginExportContract with commonMu>0, covered-point weightedLoad+mu≤capMax, and same-domain consumer bound; package comparatorAccepted separately and retain zero-margin, missing-coverage, and absent-receipt obstructions.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "admission",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_CENTRAL_FD_STRICT_MARGIN_EXPORT",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_STRICT_EXPORT.lean",
+            "sha256": "8AD0F9D3E3C4318A8418C5047F840CB2A1ADD2BA70C75176E1B09DA159A04ED2"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_STRICT_EXPORT_REVIEW.md",
+            "sha256": "146AFA7234E624815FA96D373BADD15627BB458B3439278A00A46834C7E9EB0F"
           }
         ],
         "registry_eligible": false,
@@ -70134,6 +70171,23 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T20:30:14.412418+00:00",
+      "kind": "node_added",
+      "node_id": "6664b3523bba4fb9b3fe9dcec165b6ff",
+      "parent_id": "d273df02e4c24913a7aebccacb1d97a7",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.finite_box_uniform_margin.strict_export"
+    },
+    {
+      "at": "2026-09-07T20:30:14.412436+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.finite_box_uniform_margin.strict_export"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -73790,5 +73844,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "8ed65af70070da8e28822bc13f10feffeef44d12a7c07d5e0d8b7916e203137c"
+  "state_checksum": "1e19a712c2a9e0409517a0e48e7d57bc1584c6afcc595b3eb75de13ae0e68967"
 }

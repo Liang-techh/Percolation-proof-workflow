@@ -1898,6 +1898,19 @@ CHILDREN = [
             "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_TAILSOLVECERT20260907.review.md",
         ],
     },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.finite_box_uniform_margin.strict_export",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.finite_box_uniform_margin",
+        "statement": "A positive common margin under explicit coverage and consumer≤weightedLoad exports quantitative weighted and consumer strict inequalities, but does not itself satisfy the independent comparator receipt/registry gate.",
+        "proof_sketch": "Consume StrictMarginExportContract with commonMu>0, covered-point weightedLoad+mu≤capMax, and same-domain consumer bound; package comparatorAccepted separately and retain zero-margin, missing-coverage, and absent-receipt obstructions.",
+        "lane": "source_semantics",
+        "bottleneck": "admission",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_STRICT_MARGIN_EXPORT",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_STRICT_EXPORT.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_STRICT_EXPORT_REVIEW.md",
+        ],
+    },
 ]
 
 
