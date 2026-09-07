@@ -23,7 +23,10 @@ M_BD(0)e1 = (7/60,-21/80000)
 ```
 
 The local checker is `scripts/check_routeb_p4_mbd_obstruction.py`; it uses
-only exact rational arithmetic and reports `PROJECTION_OBSTRUCTION_EXACT`.
+only exact rational arithmetic, reports `PROJECTION_OBSTRUCTION_EXACT`, and
+emits the input SHA-256 together with
+`math_lane=structural_obstruction` and
+`math_bottleneck=physical_schur_binding`.
 
 ## Consequence for the theorem DAG
 

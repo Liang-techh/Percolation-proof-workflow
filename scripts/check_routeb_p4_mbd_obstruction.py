@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 from pathlib import Path
 import sys
 
@@ -28,9 +29,13 @@ def main() -> int:
             "registry_eligible": False,
         }, indent=2))
         return 2
-    result = audit_routeb_mbd_projection(path.read_text(encoding="utf-8"))
+    source_bytes = path.read_bytes()
+    result = audit_routeb_mbd_projection(source_bytes.decode("utf-8"))
     payload = {
         "status": result.status,
+        "evidence_level": "exact_rational_negative_evidence",
+        "math_lane": "structural_obstruction",
+        "math_bottleneck": "physical_schur_binding",
         "matrix_at_zero": [[str(x) for x in row] for row in result.matrix_at_zero],
         "first_column_vector": [str(x) for x in result.first_column_vector],
         "projection_factor": str(result.projection_factor),
@@ -39,6 +44,7 @@ def main() -> int:
         "formal_certificate_allowed": result.formal_certificate_allowed,
         "registry_eligible": result.registry_eligible,
         "source": str(path),
+        "source_sha256": hashlib.sha256(source_bytes).hexdigest().upper(),
     }
     print(json.dumps(payload, indent=2))
     return 0 if result.status == "PROJECTION_OBSTRUCTION_EXACT" else 2
