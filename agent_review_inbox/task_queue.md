@@ -2735,3 +2735,11 @@ source-independent/open/uncompiled 候选。
   determinant/principal-minor 正性；P3：平方速度非负；K-path：relative/additive
   参数重排。
 - 新任务均为相互独立的数学接口，继续避免重复审计、完整回归和过早 Lean 结论。
+
+### 2026-09-07 — 13:50 P3 小叶收割
+
+- P3 `squared_velocity_nonneg` 已通过边界审阅并登记，revision 667；它以
+  `sq_nonneg` 消除 assembled-load 的平方速度非负外部前提，但仍要求显式
+  assembled-load equality 与 weight 非负。
+- 该结果仍未进入 registry；body-6 determinant、fixed-λ quantitative reserve、
+  K-path affine interface 继续由各自 agent 推进。

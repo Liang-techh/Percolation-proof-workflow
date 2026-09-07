@@ -2063,6 +2063,12 @@ fixed-λ 转入定量 reserve 下界，body-6 转入 tail determinant/principal-
 继续平方非负，K-path 继续 affine budget 重排。所有任务都要求 typed、条件式和
 可追溯边界，当前不进行远端同步。
 
+### 2026-09-07 13:50 — 梁智炜收割 P3 平方非负
+
+P3 的 `squared_velocity_nonneg` 已接入 DAG revision 667，作为 assembled-load
+witness 的数学前置；仅关闭实数平方非负这一小项，不改变 velocity 的物理来源，
+不触碰 formal gate 或远端同步。
+
 ### 2026-09-07 12:32 — 梁智炜本地收割并派发
 
 本轮回收了四个已完成数学叶：P3 radius monotonicity、fixed-λ uniform

@@ -1300,6 +1300,19 @@ CHILDREN = [
             "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_RelativeAdditive_REVIEW.md",
         ],
     },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.cap_load_order_consumer.assembled_load_nonneg_witness.squared_velocity_nonneg",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.cap_load_order_consumer.assembled_load_nonneg_witness",
+        "statement": "Every coordinate square of a real six-component velocity is nonnegative and can supply the squared-velocity premise of the assembled-load witness through an explicit load equality.",
+        "proof_sketch": "Define squaredVelocity i = (velocity i)^2 on Fin 6, apply real square nonnegativity pointwise, and consume the resulting premise with an explicit assembled-load equality while retaining the physical velocity/source meaning as external.",
+        "lane": "source_semantics",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_SQUARED_VELOCITY_NONNEG",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_SQUARED_VELOCITY.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_SQUARED_VELOCITY_REVIEW.md",
+        ],
+    },
 ]
 
 
