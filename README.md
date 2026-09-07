@@ -152,6 +152,9 @@ python scripts/record_routeb_true_dh_source_formula_audit.py
 python scripts/record_routeb_evaluator_enclosure_decomposition.py
 python scripts/record_routeb_exact_real_coefficient_identity_draft.py
 python scripts/record_routeb_regularizer_semantics_draft.py
+python scripts/check_routeb_o1_interface.py
+python scripts/record_routeb_o1_interface_check.py
+python scripts/record_routeb_child_reviews.py
 ```
 
 These recorders preserve the deployment authority (`robot_final/dhport_lib.jl`),
@@ -162,6 +165,13 @@ is uncompiled until a pinned Lean agent supplies zero-sorry, axiom, comparator, 
 source-binding receipts. `scripts/refresh_anthropic_advisory_overlay.py` refreshes
 the non-authoritative FLT adapter sidecar against the current state hash without
 adding authoritative DAG dependencies.
+
+`record_routeb_child_reviews.py` is the fail-closed harvest step for completed
+O0/O1/O2 static agent reports. It verifies report/source hashes, records the
+mathematical decomposition and unresolved obligations on the corresponding DAG
+nodes, and explicitly refuses registry or certificate admission. The O1
+structural checker is likewise only an interface gate; it does not claim a Lean
+compile.
 
 After an agent returns a decomposition, the same generic state can accept it with
 `propose-decomposition`; the child JSON array preserves order and each child sketch:

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 476,
+  "revision": 478,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13611,7 +13611,8 @@
           "statement_comparator_receipt",
           "IEEE754_outward_inclusion_for_mu",
           "shared_mu_binding_through_MDD_and_R_port",
-          "authoritative_evaluator_choice"
+          "authoritative_evaluator_choice",
+          "o0_review_mathematical_obligations_open"
         ],
         "regularizer_semantics": {
           "schema_version": 1,
@@ -13635,7 +13636,46 @@
           "remaining_obligation": "prove an outward inclusion for the deployed evaluation, or declare the exact-real evaluator authoritative and rebind all source claims",
           "formal_certificate_allowed": false,
           "registry_eligible": false
-        }
+        },
+        "independent_static_reviews": [
+          {
+            "schema_version": 1,
+            "review_status": "OPEN_MINIMAL_OUTWARD_INCLUSION_DESIGN",
+            "receipt_schema": "routeb-o0-rounding-bridge-audit-v1",
+            "review_artifacts": [
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_o0_rounding_bridge_audit_20260907\\REPORT.md",
+                "sha256": "A47DF33CE52AF11DE2C4E9C3C81F40F77BAA436F8942AC0DDA1A058B49F8A18F"
+              },
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_o0_rounding_bridge_audit_20260907\\RECEIPT.json",
+                "sha256": "68CB17A5FE83FB2C01777355D2F08C78AC4D0AC64198A4F6FD21A8670220574E"
+              }
+            ],
+            "source_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\robot_final\\dhport_lib.jl",
+              "sha256": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936"
+            },
+            "evidence_level": "static_source_inspection_plus_exact_rational_arithmetic",
+            "claims": {
+              "exact_scalar_fact": true,
+              "conditional_diagonal_propagation": true,
+              "full_float64_to_exact_mass_binding": false,
+              "M_DD_inverse_bound": false,
+              "R_port_bound": false,
+              "C_G_fd_binding": false,
+              "coverage_flowpipe_terminal_transfer": false,
+              "lean_verified": false,
+              "formal_certificate_allowed": false,
+              "registry_promoted": false
+            },
+            "unresolved": [],
+            "minimal_decomposition": [],
+            "formal_certificate_allowed": false,
+            "registry_promoted": false,
+            "admission_status": "pending_coordinator_admission"
+          }
+        ]
       }
     },
     "120deab092c243b6a43356e63c8b56f4": {
@@ -13680,7 +13720,8 @@
           "uncompiled_exact_real_interface",
           "typed_block_extraction_binding",
           "M_DD_left_inverse_witness",
-          "Matrix_mulVec_orientation_and_associativity"
+          "Matrix_mulVec_orientation_and_associativity",
+          "o1_review_mathematical_obligations_open"
         ],
         "o1_interface_draft": {
           "schema_version": 1,
@@ -13753,7 +13794,35 @@
           "compile_claim": false,
           "registry_promoted": false,
           "formal_certificate_allowed": false
-        }
+        },
+        "independent_static_reviews": [
+          {
+            "schema_version": 1,
+            "review_status": "UNCOMPILED__NON_VERIFIED",
+            "receipt_schema": "routeb.o1.lean_mathlib_matrix_api_audit.v1",
+            "review_artifacts": [
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_o1_lean_api_audit_20260907\\REPORT.md",
+                "sha256": "69C2C58EB1EDB20C1C5D464FFCBAE58F1680EE14AB6E09B29EB5E526BE24BCA6"
+              },
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_o1_lean_api_audit_20260907\\RECEIPT.json",
+                "sha256": "A0FB40F177EBE2D776C9398C2A5E33E86C1312209E0BBF7529678F5E7742F36E"
+              }
+            ],
+            "source_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_exact_real_coefficient_identity_20260907\\REPORT.md",
+              "sha256": "367211FEB1ED031720C059BDBAFBD8495CF431E5D3C2F25AA2C5448CDAD3CB33"
+            },
+            "evidence_level": null,
+            "claims": {},
+            "unresolved": [],
+            "minimal_decomposition": [],
+            "formal_certificate_allowed": false,
+            "registry_promoted": false,
+            "admission_status": "pending_coordinator_admission"
+          }
+        ]
       }
     },
     "0da99a7cef5e4f0b91c7cc06d9e7c010": {
@@ -13794,7 +13863,132 @@
         "unresolved": [
           "pinned_lean_compile_receipt",
           "zero_sorry_and_allowed_axioms_receipt",
-          "statement_comparator_receipt"
+          "statement_comparator_receipt",
+          "o2_review_mathematical_obligations_open"
+        ],
+        "independent_static_reviews": [
+          {
+            "schema_version": 1,
+            "review_status": "OPEN_MINIMAL_DECOMPOSITION_COMPLETE",
+            "receipt_schema": "routeb-o2-evaluator-minimal-decomposition-v1",
+            "review_artifacts": [
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_o2_evaluator_minimal_decomposition_20260907\\REPORT.md",
+                "sha256": "9653559621CBD9692288F370A13BEAA2CAC65452169B5A31C0286778374D2B1D"
+              },
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_o2_evaluator_minimal_decomposition_20260907\\RECEIPT.json",
+                "sha256": "68331C9B8F745E72DBA3568AB671809235FF78C74DB50FF0D680731DDE9D9DA1"
+              }
+            ],
+            "source_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\dhport_lib.jl",
+              "sha256": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936"
+            },
+            "evidence_level": "static_read_only_research",
+            "claims": {},
+            "unresolved": [
+              "pinned Julia VERSION/platform/BLAS/libm evidence",
+              "Float64 literal and pi bit-level inclusion",
+              "actual sin/cos libm rounding lemma",
+              "fixed operation schedule for matrix products/broadcast reductions",
+              "Float64 endpoint and central-FD rounding ledger",
+              "generic M\\b conditioning/output enclosure",
+              "complete certified-box coverage receipts"
+            ],
+            "minimal_decomposition": [
+              {
+                "id": "O2.1_source_runtime_pin",
+                "priority": "P0-1",
+                "status": "OPEN",
+                "requires": [
+                  "source_hash",
+                  "input_box",
+                  "Julia_VERSION",
+                  "platform",
+                  "BLAS_libm",
+                  "rounding_mode",
+                  "operation_schedule"
+                ],
+                "closure": "deployment source and execution semantics are uniquely pinned"
+              },
+              {
+                "id": "O2.2_mu_h_semantic_bridge",
+                "priority": "P0-2",
+                "status": "OPEN",
+                "requires": [
+                  "Float64 literal conversion bounds",
+                  "mu propagated through M and FD endpoints",
+                  "h propagated through central-FD"
+                ],
+                "closure": "encoded Float64 mu/h are contained in the exact-model constants with explicit outward error"
+              },
+              {
+                "id": "O2.3_trig_libm",
+                "priority": "P0-3",
+                "status": "OPEN",
+                "requires": [
+                  "all q+DH offsets",
+                  "all fixed alpha calls",
+                  "pi and pi/2 conversion",
+                  "libm error bound"
+                ],
+                "closure": "every actual sin/cos return is enclosed on every certified angle box"
+              },
+              {
+                "id": "O2.4_finite_float64_dag",
+                "priority": "P0-4",
+                "status": "OPEN",
+                "requires": [
+                  "FK matrix products",
+                  "cross products",
+                  "mass/potential reductions",
+                  "broadcasts",
+                  "accumulation order"
+                ],
+                "closure": "every finite arithmetic node has an outward Float64 rounding envelope"
+              },
+              {
+                "id": "O2.5_central_fd_CG",
+                "priority": "P0-5",
+                "status": "OPEN",
+                "requires": [
+                  "12 mass endpoint calls",
+                  "12 potential endpoint calls",
+                  "2h division",
+                  "216 Christoffel contractions"
+                ],
+                "closure": "deployed central-FD C/G is enclosed with endpoint, cancellation, division, and contraction errors"
+              },
+              {
+                "id": "O2.6_linear_solve",
+                "priority": "P0-6",
+                "status": "OPEN_UNKNOWN_INVERSE_GUARD",
+                "requires": [
+                  "mass nonsingularity margin",
+                  "generic solve or charged symmetry error",
+                  "backward/residual error",
+                  "outward output interval"
+                ],
+                "closure": "actual M\\b output is contained; failed guard remains UNKNOWN"
+              },
+              {
+                "id": "O2.7_box_composition_coverage",
+                "priority": "P0-7",
+                "status": "OPEN",
+                "requires": [
+                  "receipt for every certified BxW",
+                  "domain coverage",
+                  "unresolved primitive list",
+                  "source hash"
+                ],
+                "closure": "all declared boxes compose to M,C,G,tau,rhs,a inclusion without gaps"
+              }
+            ],
+            "formal_certificate_allowed": false,
+            "registry_promoted": false,
+            "admission_status": "pending_coordinator_admission"
+          }
         ]
       }
     }
@@ -37386,6 +37580,36 @@
       },
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T11:28:32.000670+00:00",
+      "kind": "routeb_child_static_review_recorded",
+      "node_id": "43e3c1a23dc34d52a19b835a8a883cb7",
+      "child": "o0",
+      "review_status": "OPEN_MINIMAL_OUTWARD_INCLUSION_DESIGN",
+      "admission_status": "pending_coordinator_admission",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T11:28:32.000698+00:00",
+      "kind": "routeb_child_static_review_recorded",
+      "node_id": "0da99a7cef5e4f0b91c7cc06d9e7c010",
+      "child": "o2",
+      "review_status": "OPEN_MINIMAL_DECOMPOSITION_COMPLETE",
+      "admission_status": "pending_coordinator_admission",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T11:29:04.635767+00:00",
+      "kind": "routeb_child_static_review_recorded",
+      "node_id": "120deab092c243b6a43356e63c8b56f4",
+      "child": "o1",
+      "review_status": "UNCOMPILED__NON_VERIFIED",
+      "admission_status": "pending_coordinator_admission",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -41042,5 +41266,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "b052367c7b20ae750b99d00e1a975e8e745abd11f840bb6e8d956eed242f2ccc"
+  "state_checksum": "7582716d27a7ce1c07cac3f17ee2c43b0133fbdb41f7fc2d0ea586e28e0768c2"
 }
