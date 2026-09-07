@@ -182,6 +182,12 @@ CHILDREN = [
             "examples/routeb_o0_h_acc_source_refinement/test_refinement.py",
             "examples/routeb_o0_h_acc_source_refinement/REVIEW.md",
             "examples/routeb_o0_h_acc_source_refinement/RECEIPT.json",
+            "examples/routeb_o0_h_acc_source_refinement/NEW_INTAKE_SCHEMA.json",
+            "examples/routeb_o0_h_acc_source_refinement/NEW_INTAKE.json",
+            "examples/routeb_o0_h_acc_source_refinement/NEW_LAYOUT_FIXTURE.json",
+            "examples/routeb_o0_h_acc_source_refinement/NEW_source_intake.py",
+            "examples/routeb_o0_h_acc_source_refinement/NEW_test_source_intake.py",
+            "examples/routeb_o0_h_acc_source_refinement/NEW_REVIEW.md",
         ],
     },
     {

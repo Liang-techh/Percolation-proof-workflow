@@ -1663,6 +1663,17 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - 已将两份 skeleton/review 接入 body-5 source-trace child 和 O1 candidate；状态
   `OPEN_UNCOMPILED_PROOF_SKELETON`，state revision `600`。
 
+### 2026-09-07 — H_acc occurrence-aware intake 收割
+
+- Einstein the 6th 新协议把 scalar DAG 的 definition span 与 dense array
+  occurrence span 分离，解决 `Ri`、`Jw`、`z` 等 alias 跨 source role 的真实接口瓶颈；
+  同时固定 36/216/216 坐标、六次 accumulator update、strict duplicate-key、
+  partition geometry 和 interval error assembly 规则。
+- 18 个针对性测试通过；`NEW_INTAKE.json` 的 source export/runtime/interval
+  仍为 null，checker 结果是 pending/exit 3。已接入 H_acc refinement validator
+  与 O1 candidate metadata；没有 source theorem、Float64 runtime、coverage 或
+  registry 证据。state revision `602`。
+
 ### 2026-09-07 — 调度字段回填修正
 
 - 发现旧 decomposition child 缺少显式 `math_lane/math_bottleneck`，且

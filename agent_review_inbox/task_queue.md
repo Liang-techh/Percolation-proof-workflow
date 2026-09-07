@@ -2227,3 +2227,14 @@ do not fetch/push merely because an agent has emitted an intermediate file.
 - The fixed-lambda fold now has both a data-contract checker and a separate
   Lean-interface task. Preserve the sparse global box labels discovered in the
   ledger; do not reintroduce a dense `1..N` assumption.
+
+### H_acc occurrence-aware intake harvest
+
+- Einstein's protocol is now the preferred pending schema for future H_acc
+  submissions: definition spans identify scalar nodes, occurrence spans identify
+  dense array uses, and aliases must preserve node identity plus typed
+  coordinates.
+- The protocol is structural/semantic intake only. A future real Julia export
+  must still supply source bytes, runtime instrumentation, loaded Float64 bits,
+  exact six updates, interval partition and independent soundness evidence.
+  No current artifact may close H_acc or promote a registry theorem.

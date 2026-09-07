@@ -1,0 +1,20 @@
+{
+  "schema": "routeb.o0.h_acc.source_export_extension.v1",
+  "source_sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936",
+  "constant_policy": "source_decimal_rational_and_exact_pi",
+  "input_policy": "decoded_finite_binary64_in_Q1000",
+  "source_export": null,
+  "source_export_sha256": null,
+  "array_mapping": null,
+  "source_updates": null,
+  "runtime_observation": null,
+  "interval_candidate": null,
+  "admission": {
+    "status": "pending",
+    "source_binding_proven": false,
+    "h_acc_expr_proven": false,
+    "h_acc_round_proven": false,
+    "registry_eligible": false,
+    "formal_certificate_allowed": false
+  }
+}
