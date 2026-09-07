@@ -2370,3 +2370,6 @@ P3 `TAYLOR_REMAINDER`、fixed-λ `PINNED_KERNEL_RECEIPT`、BODY6
 下一轮派发已完成：BODY6 处理零方向后的域分叉，P4 处理 uniform allocation
 的无限域阻塞，fixed-λ 处理 registry entry invariant，P3 处理真实导数正则性
 到 Taylor remainder 的桥。继续只登记条件式 open leaves，不提前关闭 parent。
+
+automation cadence 已与当前长期目标对齐为每 20 分钟；保留“无新内容静默”和
+“其他时间不碰远端”的限制。

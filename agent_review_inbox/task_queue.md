@@ -2992,3 +2992,7 @@ nominal-direction audit 已登记 revision 710。所有新叶保持 `OPEN_UNCOMP
 allocation obstruction；fixed-λ VerifiedRegistryEntry invariant；P3 C2/C3
 Taylor remainder contract。四项互不重叠，均要求 proof-attempt + review，
 不运行本机 Lean/Lake。
+
+收割 automation 已按当前目标改为每 20 分钟；只在窗口内处理 inbox 和必要的
+远端同步，其余时间持续本地数学推进。流川枫继续按每批约三分之一的 GitHub
+任务承接，所有结果仍须由梁智炜最终 integration。
