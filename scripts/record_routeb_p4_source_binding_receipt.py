@@ -145,8 +145,14 @@ def main() -> int:
             changed = True
 
     unresolved = list(metadata.get("unresolved", []))
+    unresolved = [
+        "typed_source_binding_R_port_aB_equals_rB"
+        if item == "typed_source_binding_R_aB_equals_rB" else item
+        for item in unresolved
+    ]
+    unresolved = list(dict.fromkeys(unresolved))
     for item in (
-        "typed_source_binding_R_aB_equals_rB",
+        "typed_source_binding_R_port_aB_equals_rB",
         "regularized_force_scale_binding",
         "source_to_coefficient_residual_absorption",
     ):

@@ -698,7 +698,7 @@
 - 仍明确保持 `SOURCE_FORMULA_PRESENT_FLOAT64_ENCLOSURE_OPEN`：解析/区间模型
   与部署 `Float64` 求值之间的逐盒包含性、舍入误差、以及 typed Lean
   `R*a_B=r_B` adapter 还未证明。该审计不关闭 theorem、registry 或 global gate。
-- state revision 推进到 453；当前主线应优先攻克 evaluator enclosure 与
+- state revision 推进到 463；当前主线应优先攻克 evaluator enclosure 与
   typed adapter，不再重复做同一端口范数审计。
 
 ### 2026-09-07 — 梁智炜：修正端口消元符号并加执行式父级 closure gate
@@ -715,7 +715,7 @@
   必须同时看到精确 child registry、`typed_true_dh_port_source_binding` parent
   receipt、required obligations 与 `registry_eligible=true`，才允许 reduction
   cascade 或 registry promotion。当前 gate 有意保持 blocked。
-- true-DH parent decomposition 已写入该 gate；state revision 456，global gate、
+- true-DH parent decomposition 已写入该 gate；state revision 463，global gate、
   registry 和 formal certificate 仍未改变。
 - 同轮 source audit 另记录完整 lifted descriptor 的阻尼合计与部署源不一致：
   `(1.8,1.4,0.95,0.5,0.65,0.8)` 对比

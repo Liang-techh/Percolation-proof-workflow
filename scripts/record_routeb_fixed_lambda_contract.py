@@ -100,7 +100,7 @@ def main() -> int:
             ],
             "next_missing_theorem": "lift the finite ledger witness to true-DH interval/source coverage",
             "promotion_blocked_until": [
-                "source_binding_R_aB_equals_rB",
+                "source_binding_R_port_aB_equals_rB",
                 "coefficient_level_residual_absorption",
                 "complete_domain_coverage",
                 "pinned_lean_comparator_receipt",

@@ -119,12 +119,12 @@ def main() -> int:
             "required_parent_receipt": "typed_true_dh_port_source_binding",
             "required_obligations": [
                 "coefficient_level_R_port_aB_equals_rB_identity",
-                "typed_R_aB_equals_rB_adapter",
+                "typed_R_port_aB_equals_rB_adapter",
                 "same_regularizer_and_fd_semantics",
             ],
             "repair_route": {
                 "owner": "P4.true_dh_residual_map_coefficient_binding",
-                "action": "build_typed_R_aB_equals_rB_adapter",
+                "action": "build_typed_R_port_aB_equals_rB_adapter",
             },
             "promotion_boundary": "children and parent receipt must be registry-eligible before parent assembly",
         },

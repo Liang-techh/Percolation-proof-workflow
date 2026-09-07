@@ -125,7 +125,7 @@ def main() -> int:
             "resolve the controller damping-vector mismatch before full descriptor source binding",
             "prove the common exact-real domain identity between deployed source and analytic/interval evaluator",
             "prove a roundoff-aware Float64 enclosure for M,C_fd,G_fd,tau and the solved RHS, or make exact-real evaluation authoritative",
-            "compile a typed Lean adapter for R*a_B=r_B with the same mu, force coordinates, and remote term",
+            "compile a typed Lean adapter for R_port*a_B=r_B with the same mu, force coordinates, and remote term",
             "connect the source equality to coefficient-level residual absorption",
         ],
         "non_implications": [
@@ -153,10 +153,19 @@ def main() -> int:
         leaf.metadata["math_bottleneck"] = "evaluator_enclosure"
         changed = True
     unresolved = list(leaf.metadata.get("unresolved", []))
+    # Migrate the pre-sign-fix obligation label; historical attempts/events
+    # remain untouched, but the live frontier must not advertise the wrong
+    # typed target.
+    unresolved = [
+        "typed_R_port_aB_equals_rB_adapter"
+        if item == "typed_R_aB_equals_rB_adapter" else item
+        for item in unresolved
+    ]
+    unresolved = list(dict.fromkeys(unresolved))
     for item in (
         "exact_real_deployed_evaluator_enclosure",
         "float64_roundoff_inclusion_for_R_source",
-        "typed_R_aB_equals_rB_adapter",
+        "typed_R_port_aB_equals_rB_adapter",
     ):
         if item not in unresolved:
             unresolved.append(item)
