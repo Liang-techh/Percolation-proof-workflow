@@ -1,0 +1,11 @@
+{
+  "review_file": "../review-T-P3-001-p3-audit.md",
+  "review_sha256": "764125243CF5E907E91AFD7B6060A2A313675703F2286F3C7D963A78BD7E53B3",
+  "task_id": "T-P3-001",
+  "integrated_at": "2026-09-06T20:10:06-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "target_node": "P3.strict_true_dh_bounds",
+  "admission_effect": "none",
+  "classification": "compiled_candidate",
+  "next_frontier": "fixed-box IEEE-754 operation trace and exact-DH evaluator agreement"
+}

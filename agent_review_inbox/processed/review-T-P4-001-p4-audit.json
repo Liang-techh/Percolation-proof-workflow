@@ -1,0 +1,11 @@
+{
+  "review_file": "../review-T-P4-001-p4-audit.md",
+  "review_sha256": "24F024EF4FB8AED1B85EBDAAA270C460804AF0648BB9E4F370AAF0089184FE3F",
+  "task_id": "T-P4-001",
+  "integrated_at": "2026-09-06T20:10:06-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "target_node": "P4.residual_schur_pmi",
+  "admission_effect": "none",
+  "classification": "pending",
+  "next_frontier": "P4_TRUE_DH_RESIDUAL_ENVELOPE_ON_CELL"
+}

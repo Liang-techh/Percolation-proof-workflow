@@ -21,7 +21,7 @@ without an explicit scoped request.
 
 ### T-P4-001 — residual source binding
 
-- status: `claimed` (Codex, 2026-09-06)
+- status: `reviewed_pending` (Codex, 2026-09-06; result integrated as pending)
 - scope: one P4 residual/Schur channel and its exported decimal or rational
   witness;
 - inspect: `examples/routeb_p4_next_child/`,
@@ -45,7 +45,7 @@ without an explicit scoped request.
 
 ### T-WF-001 — registry/admission boundary audit
 
-- status: `open`
+- status: `reviewed_pending` (Codex, 2026-09-06; result integrated as documentation-only)
 - claimed_by: `Codex`
 - claimed_at: `2026-09-06T20:20:00-06:00`
 - scope: read-only audit of any proposed `review_result` against

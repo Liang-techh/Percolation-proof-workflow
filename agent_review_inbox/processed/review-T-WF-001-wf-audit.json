@@ -1,0 +1,11 @@
+{
+  "review_file": "../review-T-WF-001-wf-audit.md",
+  "review_sha256": "08AEBD4E5C2BCD51CAA95BE4668E19BC4A14BAD47FC9FB6784C890A11B178075",
+  "task_id": "T-WF-001",
+  "integrated_at": "2026-09-06T20:10:06-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "target_node": "routeb-6dof-external",
+  "admission_effect": "none",
+  "classification": "documentation_only",
+  "next_frontier": "P3 source semantics, P4 true-DH residual binding, P8 contract repair"
+}
