@@ -1199,6 +1199,9 @@ polynomial remains a separate frontier.
 - explicitly distinguish this Young-budget adapter from robust-PMI `E_k`:
   it closes only the algebraic port-energy consumption interface, not the
   residual decomposition, all-cell coverage, flowpipe, or terminal transfer;
+- notation is fixed: `rho` means the squared Frobenius budget `rho_F²`, while
+  `A` means `A_up=a_BᵀB_up a_B`; agents must reject receipts that silently
+  substitute `rho_F` or an unbound energy scalar;
 - forbidden: treating a positive ledger margin, Float64 source, solver status,
   or one-cell result as kernel verification or P4/M4 closure.
 

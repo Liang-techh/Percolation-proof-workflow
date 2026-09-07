@@ -40,6 +40,8 @@ def main() -> int:
         },
         "mathematical_contract": {
             "variables": "real finite-dimensional vectors l and r",
+            "rho_semantics": "rho is rho_F^2, the squared Frobenius budget; it is not rho_F",
+            "energy_symbol": "A is A_up = a_B^T B_up a_B",
             "premises": [
                 "theta > 0",
                 "||r||_2^2 <= rho * A",
@@ -47,7 +49,7 @@ def main() -> int:
             ],
             "conclusion": "||l+r||_2^2 <= b",
             "proof_route": "expand the square, apply Young 2<l,r> <= theta||l||^2 + theta^(-1)||r||^2, then consume the weighted port-energy bound",
-            "routeb_binding": "l is the declared base residual and A=a_B^T B_up a_B; source binding remains an adapter obligation",
+            "routeb_binding": "l is the declared base residual, A=A_up=a_B^T B_up a_B, and rho=rho_F^2; source binding remains an adapter obligation",
             "not_an_E_k_bridge": True,
             "not_a_pmi_closure": True,
         },
