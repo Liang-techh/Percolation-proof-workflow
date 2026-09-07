@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 623,
+  "revision": 626,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -11658,7 +11658,8 @@
       "dependencies": [
         "1e3f28c782d9485bb94b0bb1e3ae0383",
         "11f5493619b54ba2a6f439aa24e45308",
-        "c6515e9480464cd0ac05240059345647"
+        "c6515e9480464cd0ac05240059345647",
+        "c25dd0d571c044b1baf282521c26c66e"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -11836,6 +11837,21 @@
             "source_commit": "2df9e607713a6b6bb5ce80eb1ca88dede11ce788",
             "review_file": "agent_review_inbox/review-T-P5-027-juyangxianzun-20260907T1136.md",
             "admission_label": "compiled_candidate"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P5-030-honglianmozun-20260907T1205.md",
+            "record_kind": "review_result",
+            "review_sha256": "C9161C56D142F80A04C25C446BCB729F0D23DDE69084DD780AF16FFABDEDF273",
+            "task_id": "T-P5-030",
+            "source_agent": "红莲魔尊",
+            "created_at": "2026-09-07T12:05:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_incremental_moving_frame_parameter_tube",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "f08cd54cf56d8f375b7d176267617ffa209214f6",
+            "review_file": "agent_review_inbox/review-T-P5-030-honglianmozun-20260907T1205.md",
+            "admission_label": "pending"
           }
         ]
       }
@@ -36756,7 +36772,8 @@
       "dependencies": [
         "4e7586a2f5b048f19443d4c406afb7aa",
         "ad4de6d7afdc4b7aba4453c4913d66ac",
-        "755d8229d7dd477281fec06127d69cc6"
+        "755d8229d7dd477281fec06127d69cc6",
+        "519e99360cda4f0eabcbfab63c3316ca"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -36782,7 +36799,37 @@
         "formal_certificate_allowed": false,
         "proof_proven": false,
         "source_binding_proven": false,
-        "lean_compiled": false
+        "lean_compiled": false,
+        "agent_review_refs": [
+          {
+            "record_file": "agent_review_inbox/companion-T-P5-029-kuangmanmozun-20260907T1155.md",
+            "record_kind": "companion_log",
+            "review_sha256": "878735E9992AD5A6329233397348C62C3B1F38CD8608A3620155617DF2160FF4",
+            "task_id": "T-P5-029",
+            "source_agent": "狂蛮魔尊",
+            "created_at": "2026-09-07T11:55:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_spn_nonnegative_gain_increment_reuse",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P5-029-kuangmanmozun-20260907T1152.md",
+            "record_kind": "review_result",
+            "review_sha256": "882B697850FACA81E17946842D3F1EF5A794FB9257EA91365D0A3AF7F7CC10C2",
+            "task_id": "T-P5-029",
+            "source_agent": "狂蛮魔尊",
+            "created_at": "2026-09-07T11:52:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_spn_nonnegative_gain_increment_reuse",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "15672d6f25c6098d681d9ab8b26a45b89b95bec3",
+            "review_file": "agent_review_inbox/review-T-P5-029-kuangmanmozun-20260907T1152.md",
+            "admission_label": "pending"
+          }
+        ]
       }
     },
     "8bf01ea9be4d4b29a8ff1a329ad54f14": {
@@ -37196,6 +37243,21 @@
             "target_scope": "routeb_node",
             "source_commit": "a3e00b66ae6c738d3f876b1efcf88ab0a2a67f65",
             "review_file": "agent_review_inbox/review-T-P5-028-liuguanyi-20260907T1112.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P5-028-sumengchen-20260907T1149.md",
+            "record_kind": "review_result",
+            "review_sha256": "B0077789058F742540885EBA077811166534B0F5E384255F33AEE6CB8E22034B",
+            "task_id": "T-P5-028",
+            "source_agent": "苏梦辰",
+            "created_at": "2026-09-07T11:49:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "exact_moving_frame_transport_and_parameter_cancellation",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "15672d6f25c6098d681d9ab8b26a45b89b95bec3",
+            "review_file": "agent_review_inbox/review-T-P5-028-sumengchen-20260907T1149.md",
             "admission_label": "pending"
           }
         ]
@@ -38068,6 +38130,80 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_AXIS_20260907_REVIEW.md",
             "sha256": "971E416FAC7498C96DE9AA9063991913470428C181AC550035D7E1BE59325550"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "519e99360cda4f0eabcbfab63c3316ca": {
+      "id": "519e99360cda4f0eabcbfab63c3316ca",
+      "name": "P5.componentwise_relative_decay.feasible_cone_spn.nonnegative_gain_increment_reuse",
+      "statement": "A nonnegative component-gain increment can reuse an existing cone SPN witness when its symmetric cone correction is entrywise below the old nonnegative slack.",
+      "parent_id": "1e3f28c782d9485bb94b0bb1e3ae0383",
+      "status": "open",
+      "proof_sketch": "Rewrite the envelope increment as the symmetric part of BᵀEA in cone coordinates, prove entrywise nonnegativity, and subtract it from N while preserving the old PSD S witness; keep rank-one K correction and concrete source external.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "PENDING_SOURCE_INDEPENDENT_SPN_INCREMENT_REUSE",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P5-029-kuangmanmozun-20260907T1152.md",
+            "sha256": "882B697850FACA81E17946842D3F1EF5A794FB9257EA91365D0A3AF7F7CC10C2"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\companion-T-P5-029-kuangmanmozun-20260907T1155.md",
+            "sha256": "878735E9992AD5A6329233397348C62C3B1F38CD8608A3620155617DF2160FF4"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\claim-T-P5-029-kuangmanmozun-20260907T1145.md",
+            "sha256": "B29A9D9691FAF1E4182ED409980AFA413C0987BDD91FE2ACAE6D9BF6EB308A6C"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "c25dd0d571c044b1baf282521c26c66e": {
+      "id": "c25dd0d571c044b1baf282521c26c66e",
+      "name": "P5.componentwise_relative_decay.incremental_moving_frame_parameter_tube",
+      "statement": "Own-frame affine-ramp subtraction removes the ramp parameter from the relative block, yielding a rational parameter-cell energy tube under an incremental residual envelope.",
+      "parent_id": "4a9af66cdc4f4607857a5cf360f19eb7",
+      "status": "open",
+      "proof_sketch": "Derive the exact two-trajectory difference equation, compute the initial mismatch energy, consume the direct metric ISS inequality, and apply the exact condition 11424*mu + 137088*nu < 2285 for Vd < dc²/12; leave source and continuation premises explicit.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "energy",
+        "math_bottleneck": "flowpipe_continuation",
+        "statement_status": "indexed",
+        "evidence_status": "PENDING_INCREMENTAL_PARAMETER_TUBE_MATH",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P5-030-honglianmozun-20260907T1205.md",
+            "sha256": "C9161C56D142F80A04C25C446BCB729F0D23DDE69084DD780AF16FFABDEDF273"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\claim-T-P5-030-honglianmozun-20260907T1156.md",
+            "sha256": "C702CFB4165B410503336D7A7F8234D85D056AB6B5FCEB006418E4B90BB64055"
           }
         ],
         "registry_eligible": false,
@@ -64478,6 +64614,83 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T18:01:12.416458+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P5-028-sumengchen-20260907T1149.md",
+      "record_kind": "review_result",
+      "review_sha256": "B0077789058F742540885EBA077811166534B0F5E384255F33AEE6CB8E22034B",
+      "task_id": "T-P5-028",
+      "classification": "exact_moving_frame_transport_and_parameter_cancellation",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "c6515e9480464cd0ac05240059345647"
+    },
+    {
+      "at": "2026-09-07T18:01:51.232412+00:00",
+      "kind": "agent_companion_integrated",
+      "record_file": "agent_review_inbox/companion-T-P5-029-kuangmanmozun-20260907T1155.md",
+      "record_kind": "companion_log",
+      "review_sha256": "878735E9992AD5A6329233397348C62C3B1F38CD8608A3620155617DF2160FF4",
+      "task_id": "T-P5-029",
+      "classification": "pending_spn_nonnegative_gain_increment_reuse",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383"
+    },
+    {
+      "at": "2026-09-07T18:01:51.232719+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P5-029-kuangmanmozun-20260907T1152.md",
+      "record_kind": "review_result",
+      "review_sha256": "882B697850FACA81E17946842D3F1EF5A794FB9257EA91365D0A3AF7F7CC10C2",
+      "task_id": "T-P5-029",
+      "classification": "pending_spn_nonnegative_gain_increment_reuse",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383"
+    },
+    {
+      "at": "2026-09-07T18:01:51.232953+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P5-030-honglianmozun-20260907T1205.md",
+      "record_kind": "review_result",
+      "review_sha256": "C9161C56D142F80A04C25C446BCB729F0D23DDE69084DD780AF16FFABDEDF273",
+      "task_id": "T-P5-030",
+      "classification": "pending_incremental_moving_frame_parameter_tube",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "4a9af66cdc4f4607857a5cf360f19eb7"
+    },
+    {
+      "at": "2026-09-07T18:02:16.922932+00:00",
+      "kind": "node_added",
+      "node_id": "519e99360cda4f0eabcbfab63c3316ca",
+      "parent_id": "1e3f28c782d9485bb94b0bb1e3ae0383",
+      "name": "P5.componentwise_relative_decay.feasible_cone_spn.nonnegative_gain_increment_reuse"
+    },
+    {
+      "at": "2026-09-07T18:02:16.923803+00:00",
+      "kind": "node_added",
+      "node_id": "c25dd0d571c044b1baf282521c26c66e",
+      "parent_id": "4a9af66cdc4f4607857a5cf360f19eb7",
+      "name": "P5.componentwise_relative_decay.incremental_moving_frame_parameter_tube"
+    },
+    {
+      "at": "2026-09-07T18:02:16.940315+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P5.componentwise_relative_decay.feasible_cone_spn.nonnegative_gain_increment_reuse",
+        "P5.componentwise_relative_decay.incremental_moving_frame_parameter_tube"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -68134,5 +68347,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "03cbdaf205aa6b28b9a34c677296a45ba785762591610583dd3386a123e6c1fc"
+  "state_checksum": "e9cbb1c2afd511912463b1fd9ff035fe2aef5ca1a0a8da289cf7b343ae816696"
 }

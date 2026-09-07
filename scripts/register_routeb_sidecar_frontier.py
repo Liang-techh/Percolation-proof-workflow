@@ -405,6 +405,33 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P5.componentwise_relative_decay.feasible_cone_spn.nonnegative_gain_increment_reuse",
+        "parent": "P5.componentwise_relative_decay.feasible_cone_spn",
+        "statement": "A nonnegative component-gain increment can reuse an existing cone SPN witness when its symmetric cone correction is entrywise below the old nonnegative slack.",
+        "proof_sketch": "Rewrite the envelope increment as the symmetric part of BᵀEA in cone coordinates, prove entrywise nonnegativity, and subtract it from N while preserving the old PSD S witness; keep rank-one K correction and concrete source external.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "PENDING_SOURCE_INDEPENDENT_SPN_INCREMENT_REUSE",
+        "artifacts": [
+            "agent_review_inbox/review-T-P5-029-kuangmanmozun-20260907T1152.md",
+            "agent_review_inbox/companion-T-P5-029-kuangmanmozun-20260907T1155.md",
+            "agent_review_inbox/claim-T-P5-029-kuangmanmozun-20260907T1145.md",
+        ],
+    },
+    {
+        "name": "P5.componentwise_relative_decay.incremental_moving_frame_parameter_tube",
+        "parent": "P5.componentwise_relative_decay",
+        "statement": "Own-frame affine-ramp subtraction removes the ramp parameter from the relative block, yielding a rational parameter-cell energy tube under an incremental residual envelope.",
+        "proof_sketch": "Derive the exact two-trajectory difference equation, compute the initial mismatch energy, consume the direct metric ISS inequality, and apply the exact condition 11424*mu + 137088*nu < 2285 for Vd < dc²/12; leave source and continuation premises explicit.",
+        "lane": "energy",
+        "bottleneck": "flowpipe_continuation",
+        "status": "PENDING_INCREMENTAL_PARAMETER_TUBE_MATH",
+        "artifacts": [
+            "agent_review_inbox/review-T-P5-030-honglianmozun-20260907T1205.md",
+            "agent_review_inbox/claim-T-P5-030-honglianmozun-20260907T1156.md",
+        ],
+    },
+    {
         "name": "P5.componentwise_relative_decay.near_sharp_scalar_fallback.compiled_candidate",
         "parent": "P5.componentwise_relative_decay.near_sharp_scalar_fallback",
         "statement": "The source-independent near-sharp scalar block-(4,5) consumer is compiled in the pinned GitHub Lean environment with an exact lower witness.",

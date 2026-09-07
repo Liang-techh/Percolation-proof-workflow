@@ -1848,3 +1848,15 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 统一边界：只新增 proof artifact/review，不写 state/registry；所有 source、
 coverage、Lean compile 和 admission 仍保持 fail-closed。下一次 20 分钟窗口
 再集中收割、整合并同步 GitHub。
+### 2026-09-07 12:00 — 梁智炜收割与远端整合
+
+这轮的有效数学增量是两条 P5 桥：
+
+- T-P5-029 把非负 gain increment 变成物理锥坐标中的 entrywise nonnegative
+  correction，可在旧 `N_C` slack 足够时复用旧 `S_C`/LDL witness；
+- T-P5-030 用每条轨迹自己的 affine frame 消掉 ramp 参数，导出增量能量 tube，
+  条件为 `11424*mu + 137088*nu < 2285`。
+
+这两条都不提供 concrete source、coverage、ODE continuation 或 admission，已按
+pending theorem child 接入 DAG。同期本地 body-6 六轴、fixed-λ parent margin、
+P3 weighted power seam 也已注册。下一轮继续优先数学瓶颈，避免重复审计。

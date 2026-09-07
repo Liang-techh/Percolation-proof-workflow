@@ -2436,3 +2436,19 @@ coverage, admission, registry promotion, or local Lean verification.
 
 四项均为 disjoint mathematical leaves；agent 不得修改 state、registry 或
 共享脚本，也不得宣称本机 Lean 验证。GitHub 同步留到下一个 20 分钟收割窗口。
+### 2026-09-07 — 12:00 收割与远端数学整合
+
+- GitHub 新增 T-P5-029：非负 `K` 增量在物理锥坐标中形成 entrywise-nonnegative
+  quadratic correction；若不超过旧 SPN 的 `N_C` slack，可复用旧 PSD `S_C`，
+  不必重算 LDL。已作为 pending theorem child 登记。
+- GitHub 新增 T-P5-030：为两条不同 ramp 参数各自减去 affine particular
+  solution 后，relative block 中 `c` 精确消失；在 incremental residual
+  envelope 下得到 `Vd < (dc)^2/12` 的 rational tube 条件
+  `11424*mu + 137088*nu < 2285`。source/ODE/coverage 仍为显式前提。
+- GitHub T-P5-028 的 pinned Lean sidecar review 已收割，保留为
+  `compiled_candidate`，不改变 registry/admission。
+- 本地 body-6 axis、fixed-λ selected-box parent、P3 weighted power seam 已
+  收割并注册；state revision `626`，registry `0`，formal gate 关闭。
+
+远端同步已在本窗口完成：先提交本地审阅文件，再 merge origin/main；未审阅的
+K_path `NEW_KPATH_INTERFACE_FinClosure.lean` 仍留在本地未提交，等待 review。
