@@ -1588,6 +1588,9 @@ polynomial remains a separate frontier.
   `derive_routeb_zero_shift_weighted_perturbation` implements only this scalar
   reduction and remains fail-closed until exact `K`, `Br`, `Cf`, metric, and
   zero-shift proof flags are supplied.
+- coordinator intake: `scripts/record_routeb_o0_perturbation_review.py`; it
+  records this reduction and obstruction in the O0 node without consuming the
+  candidate ledger.
 
 ### New harvest: O1 determinant-to-left-inverse adapter (2026-09-07)
 
