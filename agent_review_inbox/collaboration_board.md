@@ -2509,6 +2509,11 @@ revision 735–736 又收割两个契约叶：`KEYED_STORAGE_TRANSFER` 将候选
 normalization 接口。后者已按约三分之一比例交给流川枫做独立 Lean receipt；
 所有节点继续保持 `OPEN_UNCOMPILED`，不改变 registry。
 
+下一批已发布为四条数学/接口 frontier：V0 cross-term 的同域 delta、line-9
+真实 source 的最小 base/port 界、C2/C3 到 endpoint margin 的连接，以及对应
+的声明级 Lean receipt。任务边界不重叠；流川枫继续负责 P4 packet 的约三分之一
+GitHub lane，梁智炜保留最终 integration 与 admission 决策。
+
 随后新增 `STORAGE_IDENTITY_TRANSFER` 叶：它要求 `V_eps=Vfull_DH` 在同一域
 上成立，且 barrier transfer 还需要整条 path 落在该域内；相同初始上界或相同
 导数都不足以完成固定阈值的 barrier 转移。该叶保持 open/uncompiled，交给

@@ -3130,3 +3130,9 @@ revision 735–736：BODY6 `KEYED_STORAGE_TRANSFER` 与 P4
 `b_base`、`l_base`、port、A_up、row charge 与 P4 normalization 绑定到同一
 source object，并保留 optional front factorization 的独立边界。两者均未编译、
 未进入 verified registry；流川枫 lane 继续负责 P4 packet 的独立 Lean receipt。
+
+下一轮数学派发已切成四条互不重叠的 frontier：BODY6 计算 V0 cross-term 的
+同域 one-sided delta；P4 追踪 line-9 到真实 source 的最小 base/port inequality；
+P3 将 C2/C3 source binding 接到 endpoint-uniform margin；Lean lane 只维护这四
+条叶的独立 receipt boundary，其中 P4 packet 继续由流川枫承担约三分之一的
+GitHub 任务。所有 proof-attempt 与 review 仍保持 `OPEN_UNCOMPILED`。
