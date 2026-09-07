@@ -2,7 +2,13 @@ name: Workflow tests, Harris replay, and local-FKG verification
 
 on:
   push:
+    paths-ignore:
+      - "docs/**"
+      - "**/*.md"
   pull_request:
+    paths-ignore:
+      - "docs/**"
+      - "**/*.md"
   workflow_dispatch:
 
 permissions:
@@ -41,10 +47,21 @@ jobs:
           path: upstream/formal-math
           persist-credentials: false
 
-      # The current tests do not read upstream/prove2me_workspace.
+      # Upload-plan tests use this public fixture. Pin it so CI is reproducible.
+      - name: Check out the pinned Prove2Me fixture
+        uses: actions/checkout@v4
+        with:
+          repository: prove2me/prove2me_workspace
+          ref: 58332c69693c59d948b2546b78baf348ce2f0c2e
+          path: upstream/prove2me_workspace
+          persist-credentials: false
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.13"
+
+      - name: Install Python test dependencies
+        run: python -m pip install --disable-pip-version-check pytest==8.4.2
 
       - uses: actions/setup-go@v5
         with:
