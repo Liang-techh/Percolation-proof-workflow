@@ -1910,3 +1910,8 @@ T-P5-030 已从 review 数学推进到独立 rational Lean skeleton：初值严�
 fixed-λ 已从 selected-box 正性推进到整个 tagged sparse union 的统一参数
 可行性 witness。该层解决了“逐行 margin 如何形成共享 λ”的数学瓶颈，但仍
 不是 source/coverage 或 formal admission 证明。
+### 2026-09-07 12:20 — 梁智炜远端收割
+
+T-P4-032 的真正瓶颈已明确：不是 O1 纯代数，而是 B/D 投影、source force
+和 defect 的 typed binding；T-P5-030 已有独立 Lean sidecar，但还缺独立 receipt
+review。两项都保持 pending，不能影响 registry。已合并本地数学成果并完成本窗口同步。

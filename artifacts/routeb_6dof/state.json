@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 634,
+  "revision": 636,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13793,7 +13793,8 @@
       "dependencies": [
         "203c45aac1d84022b69267c0cc31db06",
         "e7d759dcbf1c49cda5dfe9c1daf2cb1d",
-        "8337e024d8dc4463a3389b1e65a4a5e8"
+        "8337e024d8dc4463a3389b1e65a4a5e8",
+        "7d28d783c3cd408abc6b5600c26e5184"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -13958,7 +13959,51 @@
             }
           },
           "formal_certificate_allowed": false
-        }
+        },
+        "agent_review_refs": [
+          {
+            "record_file": "agent_review_inbox/review-T-P4-032-codex-20260907.md",
+            "record_kind": "review_result",
+            "review_sha256": "2AF2BAB1E262DF779C394FAB224F6DF303141AD4D92BEE7C52D40C98FF81617B",
+            "task_id": "T-P4-032",
+            "source_agent": "Codex",
+            "created_at": "2026-09-07",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_typed_block_source_bridge",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-T-P4-032-codex-20260907.md"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P4-032-liuguanyi-20260907T1210.md",
+            "record_kind": "review_result",
+            "review_sha256": "11FBA4F21C0EAD702B87DA1D0E3D73AB0FD86456D07EB0872237BB5391BE00DF",
+            "task_id": "T-P4-032",
+            "source_agent": "柳冠一",
+            "created_at": "2026-09-07T12:10:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_typed_block_source_bridge",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "35c5b3fb8a06780b70dcb1142bdb0583f92993fa",
+            "review_file": "agent_review_inbox/review-T-P4-032-liuguanyi-20260907T1210.md"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P4-032-repair-20260907.md",
+            "record_kind": "review_result",
+            "review_sha256": "F0DDFCF07A24E82B4BD425FF74755CA7DD68780C87BF806726F08963CAE6D5AB",
+            "task_id": "T-P4-032",
+            "source_agent": "Liang-techh coordinator",
+            "created_at": "2026-09-07",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_typed_block_source_bridge",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-T-P4-032-repair-20260907.md"
+          }
+        ]
       }
     },
     "203c45aac1d84022b69267c0cc31db06": {
@@ -38196,7 +38241,8 @@
       "status": "open",
       "proof_sketch": "Derive the exact two-trajectory difference equation, compute the initial mismatch energy, consume the direct metric ISS inequality, and apply the exact condition 11424*mu + 137088*nu < 2285 for Vd < dc²/12; leave source and continuation premises explicit.",
       "dependencies": [
-        "fed7c1182f744019b62e6ebad16ec749"
+        "fed7c1182f744019b62e6ebad16ec749",
+        "44af15ef7b5f4b3a878c20e32fa28dbd"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -38584,6 +38630,96 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_UNIFORM_FEASIBILITY20260907_REVIEW.md",
             "sha256": "51ECA7E9C7A769D60AF4488F1BA9A05B426218AB2B0A08C5E14645371059F5EB"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "7d28d783c3cd408abc6b5600c26e5184": {
+      "id": "7d28d783c3cd408abc6b5600c26e5184",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge",
+      "statement": "The block split B=(4,5), D=(1,2,3,6) has a typed exact-real source bridge for the O1 port identity, including a defect-aware fallback and one-time force normalization.",
+      "parent_id": "6cebb66987f449f3b5ad8d0548dfdf83",
+      "status": "open",
+      "proof_sketch": "Fix Fin embeddings and block shapes, distinguish distal acceleration correction from physical velocity, derive the distal comparison identity and leading minus sign, and retain e_D/e_B defects when zero-defect compatibility is absent.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "source_semantics",
+        "statement_status": "indexed",
+        "evidence_status": "REPAIR_PATCHED_PENDING_LEAN_COMPILE",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-032-liuguanyi-20260907T1210.md",
+            "sha256": "11FBA4F21C0EAD702B87DA1D0E3D73AB0FD86456D07EB0872237BB5391BE00DF"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-032-codex-20260907.md",
+            "sha256": "2AF2BAB1E262DF779C394FAB224F6DF303141AD4D92BEE7C52D40C98FF81617B"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-032-repair-20260907.md",
+            "sha256": "F0DDFCF07A24E82B4BD425FF74755CA7DD68780C87BF806726F08963CAE6D5AB"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\claim-T-P4-032-liuguanyi-20260907T1202.md",
+            "sha256": "698FD6392C9385EA29E78F8D44F12B55A38B88CD5CA5E77DDBD66B8043AC0C49"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_o1_lean_api_audit_20260907\\RouteBO1PortIdentity.lean",
+            "sha256": "403C41C6F325E906A9D3555B6886D1371DFA2D84826ABCC7BF83C12E21293BFB"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "44af15ef7b5f4b3a878c20e32fa28dbd": {
+      "id": "44af15ef7b5f4b3a878c20e32fa28dbd",
+      "name": "P5.componentwise_relative_decay.incremental_moving_frame_parameter_tube.compiled_candidate",
+      "statement": "A pinned Lean sidecar claims the source-independent parameter-tube gain algebra, pending independent receipt review and without source or flowpipe admission.",
+      "parent_id": "c25dd0d571c044b1baf282521c26c66e",
+      "status": "open",
+      "proof_sketch": "Use the sidecar's outer-product increment, anisotropic gain inflation, row-sum specialization, and finite-cover target lemmas; preserve source/coverage/ODE boundaries and require pinned CI evidence before any compiled-candidate label.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "CLAIMED_LEAN_SIDECAR_PENDING_REVIEW",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_parameter_tube_gain_lean\\P5ParameterTubeGain.lean",
+            "sha256": "05EF47D62C0FEC3241F0ED57966CCD4160BC02DC6A604CC45D1958AD4BF01331"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_parameter_tube_gain_lean\\README.md",
+            "sha256": "45CB1BBDD7BC7C1120CD837419FD1CF680B97C2A8006A7912CFEF1724CDA52C1"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_parameter_tube_gain_lean\\lean-toolchain",
+            "sha256": "56A12C348C1FB7BB3E6475757349976A7E93E94FA2918BF92811B1B2E9634504"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\claim-T-P5-030-sumengchen-20260907T1207.md",
+            "sha256": "3D659F76DF54468EDE3FD2C40A8E0D0156C6CADEBEA5BB16EC69BAA9DA980365"
           }
         ],
         "registry_eligible": false,
@@ -65223,6 +65359,70 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T18:21:41.072663+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-032-codex-20260907.md",
+      "record_kind": "review_result",
+      "review_sha256": "2AF2BAB1E262DF779C394FAB224F6DF303141AD4D92BEE7C52D40C98FF81617B",
+      "task_id": "T-P4-032",
+      "classification": "pending_typed_block_source_bridge",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-07T18:21:41.073020+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-032-liuguanyi-20260907T1210.md",
+      "record_kind": "review_result",
+      "review_sha256": "11FBA4F21C0EAD702B87DA1D0E3D73AB0FD86456D07EB0872237BB5391BE00DF",
+      "task_id": "T-P4-032",
+      "classification": "pending_typed_block_source_bridge",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-07T18:21:41.073268+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-032-repair-20260907.md",
+      "record_kind": "review_result",
+      "review_sha256": "F0DDFCF07A24E82B4BD425FF74755CA7DD68780C87BF806726F08963CAE6D5AB",
+      "task_id": "T-P4-032",
+      "classification": "pending_typed_block_source_bridge",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-07T18:22:14.548108+00:00",
+      "kind": "node_added",
+      "node_id": "7d28d783c3cd408abc6b5600c26e5184",
+      "parent_id": "6cebb66987f449f3b5ad8d0548dfdf83",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge"
+    },
+    {
+      "at": "2026-09-07T18:22:14.563876+00:00",
+      "kind": "node_added",
+      "node_id": "44af15ef7b5f4b3a878c20e32fa28dbd",
+      "parent_id": "c25dd0d571c044b1baf282521c26c66e",
+      "name": "P5.componentwise_relative_decay.incremental_moving_frame_parameter_tube.compiled_candidate"
+    },
+    {
+      "at": "2026-09-07T18:22:14.585661+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.true_dh_port_source_binding.typed_block_source_bridge",
+        "P5.componentwise_relative_decay.incremental_moving_frame_parameter_tube.compiled_candidate"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -68879,5 +69079,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "e0dcc1e93b0609f5531a03efb9a040a7aee622551351e18af04eb01b0ae932f7"
+  "state_checksum": "6c5b368c2b43794ca97512798663ac24c4c903a35ef2d6386a01777009f9ce16"
 }

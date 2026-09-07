@@ -324,6 +324,22 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge",
+        "parent": "P4.true_dh_port_source_binding",
+        "statement": "The block split B=(4,5), D=(1,2,3,6) has a typed exact-real source bridge for the O1 port identity, including a defect-aware fallback and one-time force normalization.",
+        "proof_sketch": "Fix Fin embeddings and block shapes, distinguish distal acceleration correction from physical velocity, derive the distal comparison identity and leading minus sign, and retain e_D/e_B defects when zero-defect compatibility is absent.",
+        "lane": "source_semantics",
+        "bottleneck": "source_semantics",
+        "status": "REPAIR_PATCHED_PENDING_LEAN_COMPILE",
+        "artifacts": [
+            "agent_review_inbox/review-T-P4-032-liuguanyi-20260907T1210.md",
+            "agent_review_inbox/review-T-P4-032-codex-20260907.md",
+            "agent_review_inbox/review-T-P4-032-repair-20260907.md",
+            "agent_review_inbox/claim-T-P4-032-liuguanyi-20260907T1202.md",
+            "artifacts/task_routeb_o1_lean_api_audit_20260907/RouteBO1PortIdentity.lean",
+        ],
+    },
+    {
         "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer",
         "parent": "P4.fixed_lambda_two_row_admissibility",
         "statement": "A typed two-row consumer binds the same fixed lambda=2 and theta=1 to the declared PMI and Schur inequalities with explicit denominator positivity and positive margin.",
@@ -533,6 +549,21 @@ CHILDREN = [
         "artifacts": [
             "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P5_030_ISSBoundary.lean",
             "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P5_030_ISSBoundary_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P5.componentwise_relative_decay.incremental_moving_frame_parameter_tube.compiled_candidate",
+        "parent": "P5.componentwise_relative_decay.incremental_moving_frame_parameter_tube",
+        "statement": "A pinned Lean sidecar claims the source-independent parameter-tube gain algebra, pending independent receipt review and without source or flowpipe admission.",
+        "proof_sketch": "Use the sidecar's outer-product increment, anisotropic gain inflation, row-sum specialization, and finite-cover target lemmas; preserve source/coverage/ODE boundaries and require pinned CI evidence before any compiled-candidate label.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "CLAIMED_LEAN_SIDECAR_PENDING_REVIEW",
+        "artifacts": [
+            "examples/routeb_p5_parameter_tube_gain_lean/P5ParameterTubeGain.lean",
+            "examples/routeb_p5_parameter_tube_gain_lean/README.md",
+            "examples/routeb_p5_parameter_tube_gain_lean/lean-toolchain",
+            "agent_review_inbox/claim-T-P5-030-sumengchen-20260907T1207.md",
         ],
     },
     {

@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-032-codex-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "2AF2BAB1E262DF779C394FAB224F6DF303141AD4D92BEE7C52D40C98FF81617B",
+  "task_id": "T-P4-032",
+  "source_agent": "Codex",
+  "created_at": "2026-09-07",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_typed_block_source_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-032-codex-20260907.md",
+  "integrated_at": "2026-09-07T18:21:41.072663+00:00"
+}

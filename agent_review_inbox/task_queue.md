@@ -2542,3 +2542,15 @@ source-independent/open/uncompiled 候选。
 - 非空 union、row data、digest/source/coverage 均保持为显式前提；未声称
   577 行覆盖真实 DH 域。状态 `OPEN_UNCOMPILED_FIXED_LAMBDA_UNIFORM_FEASIBILITY`，
   revision `634`。
+### 2026-09-07 — 12:20 远端收割
+
+- T-P4-032：收割 typed block/source bridge。固定 `B=(4,5)`、
+  `D=(1,2,3,6)` 的 Fin 映射，区分 distal acceleration correction 与物理
+  velocity，保留 defect-aware O1 identity 和一次性 force normalization。
+  API review 指出 `linarith`/`Matrix.mul_assoc` 修复已应用，但仍待 pinned Lean
+  compile；已登记为 `REPAIR_PATCHED_PENDING_LEAN_COMPILE`。
+- T-P5-030：收割远端 `P5ParameterTubeGain.lean` sidecar 及 claim，暂登记
+  `CLAIMED_LEAN_SIDECAR_PENDING_REVIEW`，未把 sidecar 本身当作 CI/kernel 证据。
+- 已运行 inbox integration；state revision `636`，registry `0`，正式 gate 关闭。
+
+本窗口合并并推送 GitHub；下一窗口前只继续本地数学叶和 agent 派发。

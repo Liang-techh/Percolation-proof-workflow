@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-032-repair-20260907.md",
+  "record_kind": "review_result",
+  "review_sha256": "F0DDFCF07A24E82B4BD425FF74755CA7DD68780C87BF806726F08963CAE6D5AB",
+  "task_id": "T-P4-032",
+  "source_agent": "Liang-techh coordinator",
+  "created_at": "2026-09-07",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_typed_block_source_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-032-repair-20260907.md",
+  "integrated_at": "2026-09-07T18:21:41.073268+00:00"
+}

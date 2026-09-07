@@ -56,6 +56,8 @@ TASK_TARGETS = {
                  "pending_spn_nonnegative_gain_increment_reuse"),
     "T-P5-030": ("P5.componentwise_relative_decay",
                  "pending_incremental_moving_frame_parameter_tube"),
+    "T-P4-032": ("P4.true_dh_port_source_binding",
+                 "pending_typed_block_source_bridge"),
     "T-P4-033-O1-body6-slice": ("P4.O1.source_comparator.h_body_6.canonical_export",
                                 "pending_independent_body6_source_slice"),
     "T-P4-fixed-lambda-admissibility": ("P4.fixed_lambda_two_row_admissibility",
