@@ -56,7 +56,7 @@ def pathEll2 {R p m n k : ℕ}
 
 /-- Scalar finite telescoping identity for a path with `R` increments. -/
 theorem telescoping_nat (f : ℕ → ℝ) (R : ℕ) :
-    (∑ r in Finset.range R, (f (r + 1) - f r)) = f R - f 0 := by
+    (∑ r ∈ Finset.range R, (f (r + 1) - f r)) = f R - f 0 := by
   induction R with
   | zero => simp
   | succ R ih =>
@@ -274,8 +274,9 @@ theorem unbridged_endpoint_jump (M : ℝ) (hM : 0 < M) :
     ∃ eMinus ePlus : ℝ,
       |ePlus - eMinus| = M ∧ ¬ |ePlus - eMinus| ≤ 0 := by
   refine ⟨0, M, ?_, ?_⟩
-  · simpa [abs_of_pos hM]
-  · simpa [abs_of_pos hM] using (not_le.mpr hM)
+  · simp [abs_of_pos hM]
+  · have hnot : ¬ M ≤ 0 := not_le.mpr hM
+    simpa [abs_of_pos hM] using hnot
 
 #print axioms telescoping_nat
 #print axioms forceMap_abs_le
