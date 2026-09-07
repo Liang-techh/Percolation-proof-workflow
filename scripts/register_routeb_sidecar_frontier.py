@@ -644,6 +644,19 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.cap_max_witness",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget",
+        "statement": "A finite six-component cap vector with an explicit upper-bound and attainment witness transfers its nonuniform weighted load budget to a scalar cap-max budget.",
+        "proof_sketch": "Keep the maximum as a proof-valued witness, derive capMax nonnegativity from attainment, apply finite-sum monotonicity under nonnegative loads, and transit an existing consumer bound.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_CAP_MAX",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_CAPMAX.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_CAPMAX_REVIEW.md",
+        ],
+    },
+    {
         "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption",
         "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer",
         "statement": "A strict pointwise load below delta composes with nonnegative finite-row coefficients to a total weighted load bounded by the total weighted row margin.",
