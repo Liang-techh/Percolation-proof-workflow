@@ -515,6 +515,22 @@ polynomial remains a separate frontier.
 - forbidden: point-sample equality, hash-only semantic binding, or closing P4
   from the abstract Schur child.
 
+### T-P4-008 — explicit `kc`/remote-`M_BD` obstruction child
+
+- status: `open` (released as a disjoint negative/obstruction leaf)
+- owner: `柳冠一`
+- source: `docs/routeb-c2-d-normalization-audit.md:105-128,235-241`,
+  `docs/routeb-source-fork-canonical-audit.md:80-108`, and the historical
+  `B45-5_kc_mismatch_and_mbd_obstruction` audit;
+- scope: formalize or sharply restate that the deployed block identity contains
+  `M_BD(q)a_D` and explicit `kc` residual terms, while the current PMI projection
+  and acceleration-side D-row do not supply those bindings;
+- deliver: a typed obstruction/countermodel identifying the missing bounded
+  full-state or source-model contract, with the force-vs-acceleration units kept
+  distinct;
+- forbidden: using the old comment `(M-M0)_BD a_D` as the current identity,
+  treating the numerical Gram residual as physical error, or closing P4/M4.
+
 ### T-P3-008 — central-FD Christoffel source binding
 
 - status: `open` (released for the next mathematical round)

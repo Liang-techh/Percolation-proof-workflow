@@ -189,6 +189,14 @@
   `M0_BB` 或采样特征值替代全域结论。
 - 关联任务：`T-P3-009`、`T-P3-010`、`T-P4-007`。
 
+### 2026-09-07 — 梁智炜：P4 mismatch 负叶发布
+- 新派发 `T-P4-008` 给柳冠一，专门形式化/固定当前已知的 `kc` 与远端
+  `M_BD a_D` obstruction；它与 `T-P4-007` 的完整 residual decomposition
+  分离，先把“不可能从现有 PMI row 推出真实 P4”的边界写成 typed child。
+- 该叶的价值是阻止错误闭合：`l_F` 是 generalized-force residual，不是自动的
+  acceleration residual；数值 Gram reconstruction error 也不能充当物理 residual。
+- 关联任务：`T-P4-007`、`T-P4-008`、`T-P3-009`。
+
 ### 2026-09-07 — 梁智炜：P8 ramp sidecar 收割与分层门禁
 - 当前完成：收割 `T-P8-007`。GitHub pinned Lean sidecar 已通过，且 CI 曾
   捕获并修复两次真实目标/函数减法错误；它现在只到 `compiled_candidate`，

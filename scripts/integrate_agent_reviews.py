@@ -54,6 +54,7 @@ TASK_TARGETS = {
     "T-P4-005": ("P4.residual_schur_pmi", "pending_one_channel_source_binding"),
     "T-P4-006": ("P4.residual_schur_pmi", "pending_sharp_schur_formalization"),
     "T-P4-007": ("P4.residual_schur_pmi", "pending_actual_block45_residual_decomposition"),
+    "T-P4-008": ("P4.residual_schur_pmi", "pending_kc_mbd_obstruction_formalization"),
     "T-P3-008": ("P3.strict_true_dh_bounds", "pending_central_fd_christoffel_binding"),
     "T-P3-009": ("P3.strict_true_dh_bounds", "pending_block45_positive_inverse_bounds"),
     "T-P3-010": ("P3.strict_true_dh_bounds", "pending_block45_mass_interval_derivation"),
