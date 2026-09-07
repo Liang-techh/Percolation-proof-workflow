@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 592,
+  "revision": 593,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -29292,6 +29292,14 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_o1_body4_source_gram_proof_attempt\\RouteBO1Body4SourceGramProofAttempt.lean",
             "sha256": "8D8477F64347B6875B0995D2094FB6F8E8ABA837BC25FFDEF53310EB98B1A322"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_o1_body4_source_gram_proof_attempt\\NEW_REPAIR_20260907_BODY4_GRAM_ALGEBRA.lean",
+            "sha256": "B508CA7FB043B2E365E4A99650D9C60C7B4420E01DC221401C13768EABD0D94E"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_o1_body4_source_gram_proof_attempt\\REVIEW_20260907_NEW_REPAIR_BODY4_GRAM_ALGEBRA.md",
+            "sha256": "0C6A3B614E64F8F8D8E4300C444B25504506DE006503DCC4572DEB96F64F3D6A"
           }
         ],
         "registry_eligible": false,
@@ -54581,6 +54589,16 @@
       ],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T16:54:19.166434+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [],
+      "metadata_updated": [
+        "P4.O1.source_comparator.h_body_4.source_gram_targets.proof_attempt"
+      ],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -58237,5 +58255,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "d5c822057303cf0d46071ef2f4f6af39f4224887f43312b10783b6ba03c23516"
+  "state_checksum": "f44e52398932c47da2514d6d642795561a89aaa3ae074bcbd1dbf725168f9616"
 }

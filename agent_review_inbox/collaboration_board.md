@@ -1615,3 +1615,15 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   和 receipt，parent 仍 open。
 - 关联提交：`4a57fbc`；state revision `592`，registry `0`，
   `formal_certificate_allowed=false`。
+
+### 2026-09-07 — 收割 body-4 Gram 局部 repair successor
+
+- Planck the 6th 新增 6 个未编译局部 theorem：`basis_dot`、`basis_cross`、
+  `linear_gram`、`angular_gram`、`inertia`、`diagonal_angular_sum`；重点修整
+  `Fin 3` 索引归约、单位圆因子、向量类型与有限惯量收缩接口。
+- 最小剩余阻塞已定位为 `Body4JvTarget`/`Body4JwTarget` 的 source Jacobian
+  绑定；局部 Gram 恒等式不能替代 source geometry，也不关闭 piecewise、trace
+  fold、Float64 或 registry gates。
+- 已将 successor Lean 与 review 作为
+  `P4.O1.source_comparator.h_body_4.source_gram_targets.proof_attempt` 的
+  artifact 接入；状态仍 `PROOF_ATTEMPT_UNCOMPILED`，state revision `593`。

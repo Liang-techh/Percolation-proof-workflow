@@ -128,6 +128,8 @@ CHILDREN = [
         "status": "PROOF_ATTEMPT_UNCOMPILED",
         "artifacts": [
             "examples/routeb_o1_body4_source_gram_proof_attempt/RouteBO1Body4SourceGramProofAttempt.lean",
+            "examples/routeb_o1_body4_source_gram_proof_attempt/NEW_REPAIR_20260907_BODY4_GRAM_ALGEBRA.lean",
+            "examples/routeb_o1_body4_source_gram_proof_attempt/REVIEW_20260907_NEW_REPAIR_BODY4_GRAM_ALGEBRA.md",
         ],
     },
     {
