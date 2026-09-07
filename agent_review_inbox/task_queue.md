@@ -2609,3 +2609,9 @@ source-independent/open/uncompiled 候选。
   quadratic upper bound。
 - body-6 self3、P4 quadratic source instantiation、fixed-λ strict total、P3
   capMax 后续任务继续并行；未触发新的远端同步。
+
+### 2026-09-07 — 12:50 本地数学轮
+
+- 收割并登记 body-6 first-three self Gram、P3 capMax minimality、P4
+  entrywise quadratic upper bound、fixed-λ eta partition。
+- 继续运行 body-6/P4/P3/fixed-λ 四条新 frontier；GitHub 保持静默至下一窗口。

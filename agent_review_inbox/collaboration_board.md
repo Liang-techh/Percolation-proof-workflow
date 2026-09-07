@@ -1955,6 +1955,12 @@ bound、fixed-λ strict total absorption、P3 finite cap-max。任务均以最�
 absolute bound 到 quadratic upper bound。它们都没有引入 PSD、谱数值或 source
 事实；状态仍为 open/uncompiled。body-6 self Gram 与其余三条新任务继续运行。
 
+### 2026-09-07 12:50 — 梁智炜本地收割
+
+已将 body-6 self Gram、P3 capMax minimality、P4 entrywise quadratic、fixed-λ
+eta partition 接入 theorem DAG；这些叶只增加显式数学前提，不改变 registry 或
+formal gate。下一次远端同步窗口前继续本地推进。
+
 ### 2026-09-07 12:32 — 梁智炜本地收割并派发
 
 本轮回收了四个已完成数学叶：P3 radius monotonicity、fixed-λ uniform
