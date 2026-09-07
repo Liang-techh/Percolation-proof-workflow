@@ -1989,6 +1989,19 @@ CHILDREN = [
             "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_PINNED_KERNEL_RECEIPT_FAIL_CLOSED20260907_REVIEW.md",
         ],
     },
+    {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients",
+        "statement": "A sufficient BODY6 strict remainder margin follows from symmetric nine-entry diagonal dominance with Rii≥mu+2beta and |Rij|≤beta, but the规范 zero configuration has an exact nonzero null direction and therefore cannot support mu>0 if included in the domain.",
+        "proof_sketch": "Use the two-variable cross-term bound to combine three diagonal and six off-diagonal entry inequalities into RemainderMargin, transport the envelope through the exact source coefficient seam, and retain the exact q=0 null-vector obstruction; do not treat failure of this sufficient envelope as non-PSD.",
+        "lane": "source_semantics",
+        "bottleneck": "residual_absorption",
+        "status": "OPEN_UNCOMPILED_BODY6_ENTRY_MARGIN_OBSTRUCTION",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_ENTRYMARGIN20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_ENTRYMARGIN20260907.review.md",
+        ],
+    },
 ]
 
 
