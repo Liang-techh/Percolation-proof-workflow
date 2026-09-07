@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 369,
+  "revision": 370,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -7467,7 +7467,8 @@
         "8f7df5df39a041d7a972078830dbcee7",
         "f1864c5a432948b7856a00bd365e5bed",
         "aa46ed7e78d649ef978baee4eca44885",
-        "cce7ce18a5a147b9a20dc0c91119fdc1"
+        "cce7ce18a5a147b9a20dc0c91119fdc1",
+        "5233ac4cfe4c492db8250ad9f3eda543"
       ],
       "verified_artifact": null,
       "attempts": [
@@ -10609,6 +10610,64 @@
           "pinned_lean_compile_and_axioms",
           "K_is_a_covered_domain_MBD_squared_operator_bound",
           "mass_to_PMI_scale_source_bridge"
+        ]
+      }
+    },
+    "5233ac4cfe4c492db8250ad9f3eda543": {
+      "id": "5233ac4cfe4c492db8250ad9f3eda543",
+      "name": "P4.nominal_distal_descriptor_bridge",
+      "statement": "The block-(4,5) Route-B residual closes through a nominal distal remote descriptor a_D^nom, reduced variable v, and retained port r_B-M_BD*v, with exact rational bridge identities.",
+      "parent_id": null,
+      "status": "open",
+      "proof_sketch": "Use M_mu,DD*a_D^nom=b_D-M0_DB*a_B; derive M_mu,DD*v+DeltaM_DB*a_B=0 and r_B-M_BD*v=0. Keep the retained M_BD*S*y contribution in the descriptor linking equations and certify the tail PMI without a coarse norm re-charge.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean-source-independent",
+        "statement_status": "pending_source_binding_and_pinned_compile",
+        "evidence_level": "exact_descriptor_design",
+        "claim_status": "algebraic_bridge_open",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "preferred_route": true,
+        "fallback_route": false,
+        "competes_with": [
+          "P4.remote_acceleration_budget",
+          "P4.vector_remote_budget_pmi_composition"
+        ],
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_dh_nominal_distal_bridge_audit.csv",
+            "sha256": "43ebf83d9abfc39e58008fb9e012fefd9db712791e28aa8d718390229eb930c9"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_nominal_descriptor_interface.csv",
+            "sha256": "ab36538b5aa9ab9b62012d2ab90a1e20e3a226110b97f95d5e9d270f0b5a0375"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\dhport_lib.jl",
+            "sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P4_PHYSICAL_RATIONAL_DESCRIPTOR_BRIDGE.md",
+            "sha256": "68bbc8d4b4455a547d6a251e67f0b3a075b32827541dbf7cec827b56d06a9487"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\PROJECT_REFORM_TARGET.md",
+            "sha256": "439a7378bdbf8950445b91a66d917535ede341065ced8a548a176517d679138c"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\src\\percolation_workflow\\routeb_nominal_distal_contract.py",
+            "sha256": "97c64a55d83e9b4090bd41b86c9a211d1ffbf886d209a4c0b7c3e058d74ec09c"
+          }
+        ],
+        "unresolved": [
+          "source_binding_of_nominal_and_reduced_DH_descriptors",
+          "rational_tail_PMI_or_co-state_aware_Schur_certificate",
+          "covered_domain_and_global_residual_absorption",
+          "pinned_lean_compile_and_comparator_receipt"
         ]
       }
     }
@@ -30611,6 +30670,50 @@
       "status": "pending_pinned_compile",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T06:37:44.262969+00:00",
+      "kind": "node_added",
+      "node_id": "5233ac4cfe4c492db8250ad9f3eda543",
+      "parent_id": null,
+      "name": "P4.nominal_distal_descriptor_bridge"
+    },
+    {
+      "at": "2026-09-07T06:37:44.262988+00:00",
+      "kind": "routeb_nominal_distal_bridge_checkpoint",
+      "node_id": "5233ac4cfe4c492db8250ad9f3eda543",
+      "parent_id": "1e7b1df1835f4deba06b11a8182f6719",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_dh_nominal_distal_bridge_audit.csv",
+          "sha256": "43ebf83d9abfc39e58008fb9e012fefd9db712791e28aa8d718390229eb930c9"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_nominal_descriptor_interface.csv",
+          "sha256": "ab36538b5aa9ab9b62012d2ab90a1e20e3a226110b97f95d5e9d270f0b5a0375"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\dhport_lib.jl",
+          "sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P4_PHYSICAL_RATIONAL_DESCRIPTOR_BRIDGE.md",
+          "sha256": "68bbc8d4b4455a547d6a251e67f0b3a075b32827541dbf7cec827b56d06a9487"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\PROJECT_REFORM_TARGET.md",
+          "sha256": "439a7378bdbf8950445b91a66d917535ede341065ced8a548a176517d679138c"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\src\\percolation_workflow\\routeb_nominal_distal_contract.py",
+          "sha256": "97c64a55d83e9b4090bd41b86c9a211d1ffbf886d209a4c0b7c3e058d74ec09c"
+        }
+      ],
+      "preferred_route": true,
+      "fallback_route": false,
+      "status": "pending_source_binding_and_pinned_compile",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -34267,5 +34370,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "1487ca2a24b0794b4c4d77618d2439d467114388b3a0f989e6399a0a4842396c"
+  "state_checksum": "8f64c2a7e6ab0e1522350ba0d0be48994f357bc43914b52674e4c29a1d5e920d"
 }

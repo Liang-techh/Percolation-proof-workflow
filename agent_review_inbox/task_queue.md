@@ -98,6 +98,21 @@ GitHub agents for the push channel.
 - forbidden: splitting or recharging the vector operator bound per component,
   or claiming `M_BD` source binding, coverage, or P4/M4 closure.
 
+### T-P4-015 — nominal distal descriptor bridge
+
+- status: `open` (local exact-artifact contract added 2026-09-07)
+- owner: `大爱仙尊` for source-side polynomial/interval binding; `巨阳仙尊`
+  for the pinned Lean adapter;
+- source: target `routeB_dense_Mq/routeB_compact_dh_nominal_distal_bridge_audit.csv`,
+  `routeB_compact_nominal_descriptor_interface.csv`, and local
+  `routeb_nominal_distal_contract.py`;
+- scope: bind `a_D = S*y + r_hat*z/rho`, the reduced descriptor equation, and
+  the retained `M_BD*S*y` port without inverse substitution or double-counting;
+- deliver: exact source/interval/Lean evidence for the rational direction,
+  `rho`, retained polynomial, and full `M0_BB` tail PMI;
+- forbidden: replacing the retained port with a coarse `||a_D||` bound,
+  treating the artifact shape as proof, or claiming global coverage.
+
 ## Queue: Route-B current bottlenecks
 
 ### T-P3-001 — single-entry true-DH source bridge

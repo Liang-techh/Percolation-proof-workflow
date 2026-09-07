@@ -327,3 +327,15 @@
 - 该 seam 避免把同一个 operator bound 在 block 两个坐标上重复 Young 收费；
   仍完全 source-independent，必须等待 pinned Lean agent 的编译/axioms
   回执，不能关闭 P4 或改变最终 gate。
+
+### 2026-09-07 — 梁智炜：P4 主路线切换为 nominal distal bridge
+
+- 依据目标项目已有 exact descriptor artifact，新增 `T-P4-015` 与本地
+  `routeb_nominal_distal_contract.py`。它检查 `B=(4,5)`、`D=(1,2,3,6)`、
+  `M_DD(mu)` nominal/reduced 四行、两行 retained port、精确 split identity
+  和禁止 inverse substitution 的 contract。
+- 主路线采用 `a_D=S*y+r_hat*z/rho`：tail `M_BD*r_hat` 进入一次性 PMI，
+  retained `M_BD*S*y` 留在 descriptor linking equations；此前的
+  `‖a_D‖²≤90*mass` 保留为 fallback，不再作为默认 P4 方案。
+- 该 artifact contract 仍是 exact algebraic candidate，未证明 interval
+  coverage、FD remainder、source equality、flowpipe 或 registry admission。
