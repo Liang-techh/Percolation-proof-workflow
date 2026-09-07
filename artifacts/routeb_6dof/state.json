@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 443,
+  "revision": 444,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12567,7 +12567,17 @@
           "pinned_lean_compile_receipt",
           "zero_sorry_and_allowed_axioms_receipt",
           "statement_comparator_receipt"
-        ]
+        ],
+        "frontier_repair_contract": {
+          "schema_version": 1,
+          "parent": "P4.fixed_cell_lambda_admissibility",
+          "decomposition_role": "fixed_lambda_decimal_quantization",
+          "next_agent_action": "replay declared decimal fields as exact rationals and prove the conservative floor inequality",
+          "input_receipt": "P4.fixed_cell_lambda_admissibility.mathematical_contract.diagnostic_receipt",
+          "preserve_obstruction": "eta=5.6 rows rejecting historical lambda=5 or lambda=3",
+          "success_callback": "return a pinned receipt for this child; coordinator closes the parent only after all four children pass",
+          "formal_boundary": "finite declared ledger witness only; source/true-DH/coverage/registry remain open"
+        }
       }
     },
     "44d878413c584d81b8bd4b7d68966a14": {
@@ -12598,7 +12608,17 @@
           "pinned_lean_compile_receipt",
           "zero_sorry_and_allowed_axioms_receipt",
           "statement_comparator_receipt"
-        ]
+        ],
+        "frontier_repair_contract": {
+          "schema_version": 1,
+          "parent": "P4.fixed_cell_lambda_admissibility",
+          "decomposition_role": "fixed_lambda_upper_ratio_identity",
+          "next_agent_action": "prove the positive-denominator ratio and margin identities before any strict interval comparison",
+          "input_receipt": "P4.fixed_cell_lambda_admissibility.mathematical_contract.diagnostic_receipt",
+          "preserve_obstruction": "eta=5.6 rows rejecting historical lambda=5 or lambda=3",
+          "success_callback": "return a pinned receipt for this child; coordinator closes the parent only after all four children pass",
+          "formal_boundary": "finite declared ledger witness only; source/true-DH/coverage/registry remain open"
+        }
       }
     },
     "b88c2ed6186d442f84b9b652de48a125": {
@@ -12629,7 +12649,17 @@
           "pinned_lean_compile_receipt",
           "zero_sorry_and_allowed_axioms_receipt",
           "statement_comparator_receipt"
-        ]
+        ],
+        "frontier_repair_contract": {
+          "schema_version": 1,
+          "parent": "P4.fixed_cell_lambda_admissibility",
+          "decomposition_role": "fixed_lambda_two_row_admissibility",
+          "next_agent_action": "instantiate the fixed lambda=2, theta=1 witness on every declared row and preserve rejected rows",
+          "input_receipt": "P4.fixed_cell_lambda_admissibility.mathematical_contract.diagnostic_receipt",
+          "preserve_obstruction": "eta=5.6 rows rejecting historical lambda=5 or lambda=3",
+          "success_callback": "return a pinned receipt for this child; coordinator closes the parent only after all four children pass",
+          "formal_boundary": "finite declared ledger witness only; source/true-DH/coverage/registry remain open"
+        }
       }
     },
     "aae74d8831a94cd49d04612a2490eaa2": {
@@ -12660,7 +12690,17 @@
           "pinned_lean_compile_receipt",
           "zero_sorry_and_allowed_axioms_receipt",
           "statement_comparator_receipt"
-        ]
+        ],
+        "frontier_repair_contract": {
+          "schema_version": 1,
+          "parent": "P4.fixed_cell_lambda_admissibility",
+          "decomposition_role": "fixed_lambda_uniform_declared_row_fold",
+          "next_agent_action": "fold the two finite eta row sets and emit the exact witness set without claiming missing-cell coverage",
+          "input_receipt": "P4.fixed_cell_lambda_admissibility.mathematical_contract.diagnostic_receipt",
+          "preserve_obstruction": "eta=5.6 rows rejecting historical lambda=5 or lambda=3",
+          "success_callback": "return a pinned receipt for this child; coordinator closes the parent only after all four children pass",
+          "formal_boundary": "finite declared ledger witness only; source/true-DH/coverage/registry remain open"
+        }
       }
     }
   },
@@ -35571,6 +35611,20 @@
       "parent_id": "35839e28b33e484f886081ddb6351c80",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T10:21:21.826470+00:00",
+      "kind": "routeb_fixed_lambda_decomposition_recorded",
+      "parent_id": "8cea6a84c5364384a723d88f00d9a516",
+      "children": [
+        "30778a1dfd4e43f4bf8372c0b63449c1",
+        "44d878413c584d81b8bd4b7d68966a14",
+        "b88c2ed6186d442f84b9b652de48a125",
+        "aae74d8831a94cd49d04612a2490eaa2"
+      ],
+      "closure_rule": "fixed_cell_lambda_admissibility closes only after every child is VERIFIED and comparator-accepted",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -39227,5 +39281,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "484ace9237701439a42d6a0b262159abc85007c38df6a9f9d1ca08fd3527a964"
+  "state_checksum": "b28b11ee1292cd9ccbd66ce2d9a5affdc2daa10bc05e7834b180519d6ab3cedd"
 }

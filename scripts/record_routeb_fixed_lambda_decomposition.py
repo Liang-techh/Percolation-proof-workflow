@@ -45,6 +45,21 @@ CHILDREN = (
     ),
 )
 
+CHILD_ACTIONS = {
+    "P4.fixed_lambda_decimal_quantization": (
+        "replay declared decimal fields as exact rationals and prove the conservative floor inequality"
+    ),
+    "P4.fixed_lambda_upper_ratio_identity": (
+        "prove the positive-denominator ratio and margin identities before any strict interval comparison"
+    ),
+    "P4.fixed_lambda_two_row_admissibility": (
+        "instantiate the fixed lambda=2, theta=1 witness on every declared row and preserve rejected rows"
+    ),
+    "P4.fixed_lambda_uniform_declared_row_fold": (
+        "fold the two finite eta row sets and emit the exact witness set without claiming missing-cell coverage"
+    ),
+}
+
 
 def main() -> int:
     store = StateStore(ROOT / "artifacts/routeb_6dof/state.json")
@@ -90,6 +105,19 @@ def main() -> int:
                 raise ValueError(f"existing child statement mismatch: {name}")
             if child.parent_id != parent.id:
                 raise ValueError(f"existing child has unexpected parent: {name}")
+        child_repair_contract = {
+            "schema_version": 1,
+            "parent": parent.name,
+            "decomposition_role": name.rsplit(".", 1)[-1],
+            "next_agent_action": CHILD_ACTIONS[name],
+            "input_receipt": "P4.fixed_cell_lambda_admissibility.mathematical_contract.diagnostic_receipt",
+            "preserve_obstruction": "eta=5.6 rows rejecting historical lambda=5 or lambda=3",
+            "success_callback": "return a pinned receipt for this child; coordinator closes the parent only after all four children pass",
+            "formal_boundary": "finite declared ledger witness only; source/true-DH/coverage/registry remain open",
+        }
+        if child.metadata.get("frontier_repair_contract") != child_repair_contract:
+            child.metadata["frontier_repair_contract"] = child_repair_contract
+            changed = True
         if child.id not in parent.dependencies:
             parent.dependencies.append(child.id)
             changed = True
