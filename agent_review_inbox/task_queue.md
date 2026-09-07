@@ -2933,3 +2933,8 @@ body-6 `SCHURMARGIN` review 已到达并登记 revision 688，状态保持
 P3 interval receipt boundary 已登记 revision 689，保持 `OPEN_UNCOMPILED`；
 后续若接入真实 payload，仍需独立 endpoint/rounding/source 证明，不能只凭
 receipt metadata 进入 registry。
+
+本轮收割：P3 receipt→数学区间证书 adapter、fixed-λ comparator receipt admission、
+P4 BODY6 Schur→scalar PMI adapter 已登记 revision 690，均为
+`OPEN_UNCOMPILED`。body-6 uniform remainder margin 已产出 proof-attempt，待配套
+review 到达后登记；其无限域 uniform 正 margin 反例继续作为显式阻塞条件。

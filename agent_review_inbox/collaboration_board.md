@@ -2283,3 +2283,12 @@ body-6 `SOURCEBLOCKBIND`、P4 `DOMAIN_UNIFORM_CONTRACTION`、fixed-λ
 补上 A/X/Y 的显式 source-binding 契约、全域 uniform rho 的消费与反例、以及
 有限有理聚合到实数的 cast seam；均保持 open/uncompiled，不改变 registry 或
 formal gate。
+
+### 2026-09-07 — 梁智炜收割 comparator/receipt/Schur 三条接口
+
+P3 `RECEIPT_ADAPTER`、fixed-λ `COMPARATOR_RECEIPT_ADMISSION`、P4
+`BODY6_SCHUR_SCALAR_ADAPTER` 已完成定向 review 并登记 revision 690。三条叶
+分别要求数学区间证据、完整 comparator receipt、以及 BODY6 remainder 到标量
+PMI 的显式 normalization/comparison；全部保持 `OPEN_UNCOMPILED`，未运行本机
+Lean、未进入 verified registry。body-6 `MARGINUNIFORM` 已生成，等待 review
+成对收齐后再登记。

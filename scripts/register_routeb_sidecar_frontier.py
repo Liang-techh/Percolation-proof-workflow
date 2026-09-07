@@ -1729,6 +1729,45 @@ CHILDREN = [
             "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_INTERVAL_RECEIPT_REVIEW.md",
         ],
     },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary",
+        "statement": "A receipt payload becomes an interval-enclosure certificate only after explicit endpoint order, rounding soundness, gap/cap inequalities, and same-point coverage are supplied; metadata alone is insufficient.",
+        "proof_sketch": "Use the typed IntervalReceiptPayload and MathEnclosureEvidence adapter, preserve per-box provenance/checker fields, reject missing fields and missing coverage, and retain the forged endpoint-order counterexample without claiming source or registry admission.",
+        "lane": "source_semantics",
+        "bottleneck": "provenance",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_RECEIPT_MATH_ADAPTER",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_RECEIPT_ADAPTER.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_RECEIPT_ADAPTER_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary",
+        "statement": "Comparator receipt admission remains fail-closed until exact statement equivalence, exit code 0, standalone success output, nonempty artifact hash, and nonempty provenance are all present; receipt completeness does not promote the registry.",
+        "proof_sketch": "Build ComparatorReceiptRecord and ComparatorReceiptComplete over the tagged statement boundary, prove each missing field makes admission uninhabited, and keep explicit registry promotion as a separate authorization gate without executing the comparator.",
+        "lane": "lean_adapter",
+        "bottleneck": "provenance",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_COMPARATOR_RECEIPT_ADMISSION",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_COMPARATOR_RECEIPT_ADMISSION20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_COMPARATOR_RECEIPT_ADMISSION20260907_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer",
+        "statement": "An externally supplied BODY6 RemainderMargin can feed the existing scalar Schur/PMI consumer only through explicit residual, nonnegative scaling, nominal allocation, normalization comparison, and same-domain premises.",
+        "proof_sketch": "Define a typed RemainderField and ScalarBridgeEvidence, consume the BODY6 quadratic lower bound monotonically, construct the existing SchurPMIComparison, then invoke the conditional margin consumer while retaining missing-comparison and negative-scale counterexamples.",
+        "lane": "lean_adapter",
+        "bottleneck": "residual_absorption",
+        "status": "OPEN_UNCOMPILED_P4_BODY6_SCHUR_SCALAR_ADAPTER",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_Body6SchurScalarAdapter.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_Body6SchurScalarAdapter.review.md",
+        ],
+    },
 ]
 
 
