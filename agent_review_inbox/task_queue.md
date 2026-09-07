@@ -2271,6 +2271,18 @@ Next available slots should target the queued body-6 slice, fixed-lambda
 admissibility, concrete `K_path` comparison interface, and central-FD bridge;
 do not repeat the harvested cone-index or API-repair work.
 
+### Local parallel round (2026-09-07 11:20)
+
+The coordinator opened four disjoint local proof lanes with explicit write
+scopes: body-6 slice (`01a07ce7-9ea2-7c91-bbcb-1f203bf80e71`), fixed-lambda
+admissibility (`01a07ce8-3c04-7190-aefd-726786f3d47d`), P5 `K_path` interface
+(`01a07ce7-b566-7740-8b69-101ece07e985`), and P3 central-FD hull
+(`01a07ce8-45fb-7c62-8dd2-f4ecc57540c5`).  The two initial Spark launches
+failed at the host usage-limit gate and were replaced by `gpt-5.6-luna`;
+the failed launches are retained as agent-history context, not mathematical
+results.  All four lanes remain forbidden from editing state/registry or
+claiming source, coverage, admission, or final closure.
+
 ### T-P5-028 moving-frame transport harvest (2026-09-07)
 
 - The exact block-(4,5) moving-frame difference map is now a separate P5 child:
