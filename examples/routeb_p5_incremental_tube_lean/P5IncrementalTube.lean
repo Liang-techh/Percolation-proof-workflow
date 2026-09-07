@@ -185,7 +185,6 @@ theorem matching_initial_storage : storage 0 0 0 0 = 0 := by
 using only `V <= 21/25 N`. -/
 theorem iss_storage_refinement
     (V Vdot N R2 : ℝ)
-    (hN : 0 ≤ N)
     (hVupper : V ≤ (21/25 : ℝ) * N)
     (hdot : Vdot ≤ -(457/1600 : ℝ)*N + (800/457 : ℝ)*R2) :
     Vdot ≤ -(457/1344 : ℝ)*V + (800/457 : ℝ)*R2 := by
