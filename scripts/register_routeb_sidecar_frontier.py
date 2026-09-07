@@ -171,6 +171,21 @@ CHILDREN = [
             "examples/routeb_o0_h_acc_source_refinement/RECEIPT.json",
         ],
     },
+    {
+        "name": "P4.fixed_lambda_uniform_declared_row_fold",
+        "parent": "P4.fixed_cell_lambda_admissibility",
+        "statement": "Fold the finite declared ledger rows for eta=2.7 and eta=5.6 into a uniform lambda=2 witness, without claiming coverage outside the ledger artifact.",
+        "proof_sketch": "Use exact textual rationals, one-row-per-box finite membership, strict lambda_upper > 2, positive candidate margins, and a canonical witness digest; keep sparse global box labels explicit.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "FINITE_DECLARED_FOLD_CHECKED_UNPROVEN",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/check_fold.py",
+            "examples/routeb_fixed_lambda_fold/test_check_fold.py",
+            "examples/routeb_fixed_lambda_fold/README.md",
+            "examples/routeb_fixed_lambda_fold/RECEIPT.json",
+        ],
+    },
 ]
 
 
