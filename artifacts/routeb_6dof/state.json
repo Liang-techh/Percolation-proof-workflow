@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 386,
+  "revision": 387,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -10778,7 +10778,9 @@
       "parent_id": null,
       "status": "open",
       "proof_sketch": "Parse the local monomial bases and every rational Gram block; expand the 14 blocks and three circle multipliers exactly. Bind the exact objective lower bound, compute the target-minus-expansion residual, and close it with a rational coefficient l1 bound. Keep this candidate separate from kernel admission.",
-      "dependencies": [],
+      "dependencies": [
+        "67aa96ad13094f7bb98404c6066b2d4f"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -10858,12 +10860,10 @@
       "id": "67aa96ad13094f7bb98404c6066b2d4f",
       "name": "P4.nominal_distal_residual_l1_lean_seam",
       "statement": "A generic Lean theorem bounds a finite weighted residual by its coefficient l1 norm and absorbs it into a positive decomposition.",
-      "parent_id": null,
+      "parent_id": "57e8ba91205a44fb91dcbbd509078b4a",
       "status": "open",
       "proof_sketch": "Use Finset.abs_sum_le_sum_abs and nonnegative multiplication to prove the weighted residual l1 bound; use abs_le and linarith for the positive-decomposition absorption. Keep the concrete Gram CSV identity as a separate source-bound receipt.",
-      "dependencies": [
-        "57e8ba91205a44fb91dcbbd509078b4a"
-      ],
+      "dependencies": [],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -31777,6 +31777,26 @@
       "status": "pending_exact_target_minus_opt_reconstruction",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T07:36:28.706298+00:00",
+      "kind": "routeb_residual_l1_seam_provenance_refresh",
+      "node_id": "67aa96ad13094f7bb98404c6066b2d4f",
+      "parent_id": "57e8ba91205a44fb91dcbbd509078b4a",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_gram_residual_lean\\GramResidual.lean",
+          "sha256": "193e6897daf4ea823c2e72c228a2de4d50ee179eb273e0b07d2c770fd2b464be"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_gram_residual_lean\\README.md",
+          "sha256": "b8965137223b584a6b8fb0b40a64476bd7465ae72a05db0202b79c0e72d73489"
+        }
+      ],
+      "dag_orientation": "parent_id_to_parent_dependency",
+      "status": "pending_pinned_lean_compile",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -35433,5 +35453,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "4ae073fca2cab66c0b220333dc8883ad478e3d277c0514b1e86eb180ef4a1a07"
+  "state_checksum": "3aa2ef6b2095de7b096463e1314d7683d830243eb39888806178480426f32ea5"
 }

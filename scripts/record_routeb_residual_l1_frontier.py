@@ -43,8 +43,17 @@ def main() -> int:
         if existing.metadata.get("unresolved") != unresolved:
             existing.metadata["unresolved"] = unresolved
             changed = True
-        if parent.id not in existing.dependencies:
-            existing.dependencies.append(parent.id)
+        if existing.parent_id != parent.id:
+            existing.parent_id = parent.id
+            changed = True
+        if parent.id in existing.dependencies:
+            existing.dependencies = [
+                dependency for dependency in existing.dependencies
+                if dependency != parent.id
+            ]
+            changed = True
+        if existing.id not in parent.dependencies:
+            parent.dependencies.append(existing.id)
             changed = True
         if changed:
             existing.metadata["source_artifacts"] = source_artifacts
@@ -52,6 +61,7 @@ def main() -> int:
                 "routeb_residual_l1_seam_provenance_refresh",
                 node_id=existing.id, parent_id=parent.id,
                 source_artifacts=source_artifacts,
+                dag_orientation="parent_id_to_parent_dependency",
                 status=existing.metadata.get("statement_status"),
                 formal_certificate_allowed=False, registry_promoted=False,
             )
@@ -67,7 +77,8 @@ def main() -> int:
         name,
         "A generic Lean theorem bounds a finite weighted residual by its "
         "coefficient l1 norm and absorbs it into a positive decomposition.",
-        dependencies=[parent.id],
+        parent_id=parent.id,
+        dependencies=[],
         proof_sketch=(
             "Use Finset.abs_sum_le_sum_abs and nonnegative multiplication to "
             "prove the weighted residual l1 bound; use abs_le and linarith "
