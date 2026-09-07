@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 495,
+  "revision": 496,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -14667,6 +14667,24 @@
           },
           "mass_and_potential_reinvoke_fk_frames": true,
           "central_fd_consumes_two_shifted_dag_copies": true,
+          "operation_schedule": [
+            "T_prev * A_i",
+            "extract z_i from T_prev before A_i",
+            "translation/rotation slices",
+            "cross-product subtraction order",
+            "Jv_transpose * Jv",
+            "Ri * Ii * Ri_transpose",
+            "Jw_transpose * rotated_inertia * Jw",
+            "M accumulator then mu*I",
+            "pcom_z * mass * gravity then P accumulator"
+          ],
+          "runtime_receipt_requirements": [
+            "operation_schedule_hash",
+            "Julia/runtime/libm/BLAS/rounding/FMA/threading",
+            "mu_and_h_binary64_bits",
+            "per_box_input_output_and_coverage",
+            "finite_non_nan_no_overflow"
+          ],
           "formal_certificate_allowed": false,
           "registry_promoted": false
         }
@@ -38462,6 +38480,15 @@
       "repair_status": "REPAIR_PATCHED__PENDING_LEAN_COMPILE",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T12:11:32.259926+00:00",
+      "kind": "routeb_o2_dag_propagation_review_recorded",
+      "node_id": "0da99a7cef5e4f0b91c7cc06d9e7c010",
+      "review_status": "DAG_PROPAGATION_INTERFACE_DRAFT__UNCOMPILED_OPEN",
+      "admission_status": "pending_pinned_runtime_and_lean_receipt",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -42118,5 +42145,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "1ae6c756bd5b01a726249d75255c9082c05b254494f89b08de3949ea7e24e896"
+  "state_checksum": "905e2ccd7a726c1c7d253ff173cd44a2b21cc20c0db82704a4714b0dc0f709e2"
 }

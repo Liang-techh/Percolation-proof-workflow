@@ -813,6 +813,12 @@ interface draft。source-binding 回执进一步固定 deployed 角度公式
 `required_node_ids`、不进入 registry；当前 state rev 489，O2/node status=open，
 `formal_certificate_allowed=false`。
 
+O2.4 metadata 已进一步冻结 operation schedule：`T_prev*A_i`、父变换 z 轴提取、
+rotation/translation slice、cross subtraction、`JvᵀJv`、`Ri*Ii*Riᵀ`、`Jw` 惯量
+项、`M+μI` 和势能累加；并要求 runtime/libm/BLAS/rounding/FMA、mu/h bits、逐盒
+coverage 与 finite/non-NaN receipt。该结构只为后续证明提供 source contract，
+不改变 O2 open 状态。
+
 ### 2026-09-07 — 梁智炜：细化 O0 regularizer semantics bridge
 
 O0 已按独立接口拆为 O0.1 literal representation（事实已记录）、O0.2 common-base
@@ -846,4 +852,4 @@ O2.4 已记录 D1/D2/D3 三层 finite-DAG interface，并冻结 deployed source 
 contract：`fk_frames=31-44`、`mass_matrix=46-61`、`potential=63-70`、
 `arm_MCG=73-100`、`exact_ddq=102-110`。特别保留源码中 `mass_matrix` 与
 `potential` 分别重调用 `fk_frames` 的 runtime 事实；中心差分必须复制两侧
-shifted DAG。state rev 494，O2 仍 open，registry=0，formal gate 仍关闭。
+shifted DAG。state rev 496，O2 仍 open，registry=0，formal gate 仍关闭。
