@@ -288,6 +288,36 @@ class RouteBAffineBiasGain:
 
 
 @dataclass(frozen=True)
+class RouteBPhysicalBaselineFactor:
+    """Conditional exact ratio from a physical mass lower bound to ``A_up``.
+
+    The scalar ratio is useful for the O0 frontier, but it is not a physical
+    theorem until the mass enclosure, symmetry, energy identity, and metric
+    binding are all supplied under one source key.  This object deliberately
+    keeps those premises explicit and never consumes a Schur margin by itself.
+    """
+
+    status: str
+    mass_lower: Fraction | None
+    metric_upper: Fraction | None
+    L_base: Fraction | None
+    theta: Fraction | None
+    rho_rounded: Fraction | None
+    strict_margin: Fraction | None
+    source_key: str | None
+    errors: tuple[str, ...] = ()
+    mass_enclosure_proven: bool = False
+    symmetry_proven: bool = False
+    energy_identity_proven: bool = False
+    metric_binding_proven: bool = False
+    baseline_bound_proven: bool = False
+    strict_margin_proven: bool = False
+    schur_margin_consumed: bool = False
+    formal_certificate_allowed: bool = False
+    registry_eligible: bool = False
+
+
+@dataclass(frozen=True)
 class RouteBZeroShiftWeightedPerturbation:
     """Conditional weighted perturbation bound when both off-diagonal shifts vanish."""
 
@@ -1032,6 +1062,100 @@ def derive_routeb_affine_bias_gain(
     )
 
 
+def derive_routeb_physical_baseline_factor(
+    mass_lower: Fraction | int | None,
+    metric_upper: Fraction | int | None,
+    *,
+    source_key: str | None,
+    mass_enclosure_proven: bool = False,
+    symmetry_proven: bool = False,
+    energy_identity_proven: bool = False,
+    metric_binding_proven: bool = False,
+    theta: Fraction | int | None = None,
+    rho_rounded: Fraction | int | None = None,
+    strict_margin_proven: bool = False,
+) -> RouteBPhysicalBaselineFactor:
+    """Compute an exact conditional physical baseline factor.
+
+    If ``mass_lower`` bounds ``a_Bᵀ M_BB a_B`` and ``metric_upper`` bounds
+    ``A_up`` relative to the same ``||a_B||₂²``, the scalar candidate is their
+    ratio.  The caller must explicitly bind all four physical premises before
+    this can be treated as a baseline theorem.  When ``theta`` and
+    ``rho_rounded`` are supplied, the strict Schur leftover is calculated but
+    is never marked consumed by this helper.
+    """
+    errors: list[str] = []
+    values: dict[str, Fraction | None] = {}
+    for name, value in (("mass_lower", mass_lower), ("metric_upper", metric_upper),
+                        ("theta", theta), ("rho_rounded", rho_rounded)):
+        try:
+            values[name] = _exact_scalar(value, name) if value is not None else None
+        except TypeError as error:
+            errors.append(str(error))
+            values[name] = None
+    mass = values["mass_lower"]
+    metric = values["metric_upper"]
+    theta_value = values["theta"]
+    rho_value = values["rho_rounded"]
+    if mass is None:
+        errors.append("mass_lower_missing")
+    elif mass < 0:
+        errors.append("mass_lower_negative")
+    if metric is None:
+        errors.append("metric_upper_missing")
+    elif metric <= 0:
+        errors.append("metric_upper_not_positive")
+    if not source_key:
+        errors.append("baseline_source_key_missing")
+    for flag, label in (
+        (mass_enclosure_proven, "mass_enclosure"),
+        (symmetry_proven, "symmetry"),
+        (energy_identity_proven, "energy_identity"),
+        (metric_binding_proven, "metric_binding"),
+    ):
+        if not flag:
+            errors.append(f"{label}_not_authoritatively_supplied")
+    if theta_value is not None and theta_value <= 0:
+        errors.append("theta_not_positive")
+    if rho_value is not None and rho_value < 0:
+        errors.append("rho_rounded_negative")
+    baseline_proven = all((mass_enclosure_proven, symmetry_proven,
+                           energy_identity_proven, metric_binding_proven))
+    L_base: Fraction | None = None
+    strict_margin: Fraction | None = None
+    if mass is not None and metric is not None and metric > 0:
+        L_base = mass / metric
+        if theta_value is not None and rho_value is not None and theta_value > 0 and rho_value >= 0:
+            strict_margin = L_base - (1 + 1 / theta_value) * rho_value * rho_value
+            if strict_margin_proven and (not baseline_proven or strict_margin <= 0):
+                errors.append("strict_margin_not_proven_or_not_positive")
+    invalid = any(
+        token in error for error in errors
+        for token in ("missing", "negative", "not_positive", "malformed")
+    )
+    status = "OPEN_FAIL_CLOSED" if invalid else "CONDITIONAL_EXACT_PHYSICAL_BASELINE"
+    if not baseline_proven and status != "OPEN_FAIL_CLOSED":
+        status = "CONDITIONAL_EXACT_PHYSICAL_BASELINE"
+    return RouteBPhysicalBaselineFactor(
+        status=status,
+        mass_lower=mass,
+        metric_upper=metric,
+        L_base=L_base,
+        theta=theta_value,
+        rho_rounded=rho_value,
+        strict_margin=strict_margin,
+        source_key=source_key,
+        errors=tuple(dict.fromkeys(errors)),
+        mass_enclosure_proven=mass_enclosure_proven,
+        symmetry_proven=symmetry_proven,
+        energy_identity_proven=energy_identity_proven,
+        metric_binding_proven=metric_binding_proven,
+        baseline_bound_proven=baseline_proven,
+        strict_margin_proven=(strict_margin_proven and baseline_proven
+                              and strict_margin is not None and strict_margin > 0),
+    )
+
+
 def consume_routeb_schur_margin(
     rho_baseline: Fraction | int | None,
     epsilon_port: Fraction | int | None,
@@ -1186,6 +1310,7 @@ __all__ = [
     "RouteBInfinityToL2WeightedConversion",
     "RouteBRootWitness",
     "RouteBAffineBiasGain",
+    "RouteBPhysicalBaselineFactor",
     "RouteBZeroShiftWeightedPerturbation",
     "RouteBSchurMarginConsumption",
     "audit_routeb_regularizer_inclusion",
@@ -1193,6 +1318,7 @@ __all__ = [
     "convert_routeb_infinity_port_bound_to_weighted_l2",
     "derive_routeb_root_witness",
     "derive_routeb_affine_bias_gain",
+    "derive_routeb_physical_baseline_factor",
     "derive_routeb_zero_shift_weighted_perturbation",
     "consume_routeb_schur_margin",
     "derive_routeb_general_resolvent_port_propagation",

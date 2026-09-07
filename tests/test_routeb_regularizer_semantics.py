@@ -13,6 +13,7 @@ from percolation_workflow.routeb_regularizer_semantics import (
     consume_routeb_schur_margin,
     consume_routeb_strict_schur_margin,
     derive_routeb_affine_bias_gain,
+    derive_routeb_physical_baseline_factor,
     derive_routeb_root_witness,
     derive_routeb_zero_shift_weighted_perturbation,
     derive_routeb_general_resolvent_port_propagation,
@@ -34,6 +35,47 @@ def test_scalar_fact_keeps_float64_below_exact_rational() -> None:
     assert fact.delta_exact == MU_DELTA
     assert fact.formal_certificate_allowed is False
     assert fact.registry_eligible is False
+
+
+def test_physical_baseline_ratio_is_exact_but_conditional_without_bindings() -> None:
+    result = derive_routeb_physical_baseline_factor(
+        Fraction(40147653, 800000000),
+        Fraction(1402217, 12000000),
+        source_key="same-key",
+        theta=1,
+        rho_rounded=Fraction(0),
+    )
+    assert result.status == "CONDITIONAL_EXACT_PHYSICAL_BASELINE"
+    assert result.L_base == Fraction(120442959, 280443400)
+    assert result.strict_margin == result.L_base
+    assert result.baseline_bound_proven is False
+    assert result.schur_margin_consumed is False
+    assert result.formal_certificate_allowed is False
+
+
+def test_physical_baseline_requires_all_explicit_premises_for_strict_flag() -> None:
+    result = derive_routeb_physical_baseline_factor(
+        Fraction(40147653, 800000000),
+        Fraction(1402217, 12000000),
+        source_key="same-key",
+        mass_enclosure_proven=True,
+        symmetry_proven=True,
+        energy_identity_proven=True,
+        metric_binding_proven=True,
+        theta=1,
+        rho_rounded=Fraction(0),
+        strict_margin_proven=True,
+    )
+    assert result.baseline_bound_proven is True
+    assert result.strict_margin_proven is True
+    assert result.schur_margin_consumed is False
+
+
+def test_physical_baseline_rejects_float_seam() -> None:
+    result = derive_routeb_physical_baseline_factor(
+        0.5, Fraction(1), source_key="same-key"
+    )
+    assert result.status == "OPEN_FAIL_CLOSED"
 
 
 def test_matrix_inclusion_requires_exact_rational_inputs() -> None:

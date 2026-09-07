@@ -1,0 +1,150 @@
+{
+  "schema": "routeb.o0.exact_physical_baseline_derivation.v1",
+  "task": "T-P4-033",
+  "lane": "O0",
+  "status": "CONDITIONAL_EXACT_SAME_KEY_BASELINE_DERIVATION",
+  "consumable_now": false,
+  "disposition": "CONDITIONAL_UNTIL_NEWTON_EULER_SEMANTIC_AND_PHYSICAL_BASELINE_BINDINGS",
+  "main_state_modified": false,
+  "registry_promoted": false,
+  "schur_margin_consumed": false,
+  "forbidden_inputs_used": {
+    "global_lower": false,
+    "unit_normalization": false,
+    "old_float64_ledger": false
+  },
+  "binding": {
+    "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+    "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+    "metric_key": "weighted-port:s=1/5|output_norm=euclidean_2|orientation=left-output",
+    "source_norm": "induced_infinity",
+    "output_norm": "euclidean_2",
+    "orientation": "left-output"
+  },
+  "source_exact_values": {
+    "exact_mu": "1/1000000",
+    "MBB_unregularized_q0": [
+      [
+        "7/60",
+        "0"
+      ],
+      [
+        "0",
+        "40147/800000"
+      ]
+    ],
+    "MBB_regularized_q0": [
+      [
+        "350003/3000000",
+        "0"
+      ],
+      [
+        "0",
+        "200739/4000000"
+      ]
+    ],
+    "dMBB_infinity_bound": "147/800000000",
+    "cell": "q_i in [-1/1000,1/1000] for i=1..6"
+  },
+  "metric_values": {
+    "B_up": [
+      [
+        "1402217/12000000",
+        "0"
+      ],
+      [
+        "0",
+        "200739/4000000"
+      ]
+    ],
+    "beta": "200739/4000000",
+    "s": "1/5",
+    "s_squared": "1/25",
+    "B_up_psd_reason": "positive exact diagonal entries"
+  },
+  "derived_baseline": {
+    "lower_mass_scalar": "40147653/800000000",
+    "B_up_max_eigenvalue": "1402217/12000000",
+    "L_base": "120442959/280443400",
+    "L_base_positive": true,
+    "baseline_budget_definition": "a_B^T*M_BB^mu(q)*a_B",
+    "statement": "baseline_budget(q,a_B) >= (120442959/280443400)*A_up(q,a_B)",
+    "A_up": "a_B^T*B_up(q)*a_B",
+    "derivation": [
+      "lambda_min(MBB^mu(0)) = 200739/4000000",
+      "lambda_min(MBB^mu(q)) >= 200739/4000000 - 147/800000000 = 40147653/800000000",
+      "A_up <= (1402217/12000000)*||a_B||_2^2",
+      "L_base = (40147653/800000000)/(1402217/12000000)"
+    ]
+  },
+  "strict_schur_gate": {
+    "theta": "exact theta > 0 required",
+    "inequality": "(1+1/theta)*(rho_r+epsilon_R)^2 < 120442959/280443400",
+    "leftover": "m_f=120442959/280443400-(1+1/theta)*(rho_r+epsilon_R)^2",
+    "rho_r_consumed": false,
+    "epsilon_R_consumed": false
+  },
+  "unbound_source_premises": [
+    "exact Fourier table equals the real Newton-Euler M^mu(q) with the same exact mu",
+    "q=0 coefficient sum and zero off-diagonal support are authoritative for MBB^mu(0)",
+    "dMBB_inf_bound is an authoritative all-q enclosure under the exact source/state key",
+    "MBB^mu(q) is exact-real symmetric for the spectral norm step",
+    "baseline_budget is physically identical to a_B^T*MBB^mu(q)*a_B",
+    "B_up is accepted as the same canonical O0 physical metric",
+    "physical port identity R_port*a_B=r_B or an exact affine residual decomposition remains unbound"
+  ],
+  "physical_descriptor_boundary": {
+    "exact_decomposition": [
+      "a_D=S*y+r_hat*z/rho",
+      "M_BD*a_D=(M_BD*S)*y+(M_BD*r_hat)*z/rho"
+    ],
+    "does_not_prove": [
+      "R_port*a_B=r_B",
+      "relative beta_bias",
+      "absolute beta_abs",
+      "Schur margin consumption"
+    ]
+  },
+  "evidence": [
+    {
+      "path": "artifacts/routeb_agent_schur_fullq_next_20260906T091446Z/NUMBERS.json",
+      "sha256": "59C7E9BECA460DAB46B675F056BB3BAC147001A3FF1888EBC2CE0110611F7F3E",
+      "fields": [
+        "dMBB_inf_bound",
+        "source_binding",
+        "cell"
+      ]
+    },
+    {
+      "path": "C:/Users/z5242/Desktop/重构版/6dof_sos_optimized/6dof_sos_optimized/routeB_dense_Mq/routeB_fourier_mass_full_rational.csv",
+      "sha256": "A986A208B62F585C6CA1B9C81B958710D2043E5BF786DDC930A6FA29F7A232B8",
+      "fields": [
+        "exact Fourier coefficients used for q0 MBB sum"
+      ]
+    },
+    {
+      "path": "agent_review_inbox/receipt-T-P4-033-O0-exact-fourier-cell-weighted-port-adapter-output-2norm-20260907.json",
+      "sha256": "8506F3FEDE09D3FCFB20C586213B0901BD065378E15492AC71BD1566BEB2120C",
+      "fields": [
+        "same-key B_up",
+        "beta",
+        "s",
+        "output norm",
+        "orientation"
+      ]
+    },
+    {
+      "path": "C:/Users/z5242/Desktop/重构版/6dof_sos_optimized/6dof_sos_optimized/routeB_dense_Mq/P4_PHYSICAL_RATIONAL_DESCRIPTOR_BRIDGE.md",
+      "sha256": "68BBC8D4B4455A547D6A251E67F0B3A075B32827541DBF7CEC827B56D06A9487",
+      "fields": [
+        "Newton-Euler physical block decomposition; algebraic subcertificate boundary"
+      ]
+    }
+  ],
+  "next_receipt_requirements": [
+    "bind exact Fourier mass semantics to Newton-Euler M^mu(q)",
+    "bind dMBB enclosure and symmetry to the same key",
+    "bind baseline_budget identity",
+    "bind physical R_port residual identity or affine R_rel,b_B bounds"
+  ]
+}
