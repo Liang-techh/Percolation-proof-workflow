@@ -44,22 +44,22 @@ theorem ramp_w_eq_mul
     (hc : ∀ t : ℝ, c t = c0)
     (hw : ∀ t : ℝ, HasDerivAt w (c t) t) :
     ∀ t : ℝ, w t = c0 * t := by
-  let h : ℝ → ℝ := fun t => w t - c0 * t
+  let lin : ℝ → ℝ := fun s => c0 * s
+  let h : ℝ → ℝ := w - lin
   have hh : ∀ t : ℝ, HasDerivAt h 0 t := by
     intro t
     have hw' : HasDerivAt w c0 t := by
       simpa [hc t] using hw t
-    have hlin : HasDerivAt (fun s : ℝ => c0 * s) c0 t := by
-      simpa using (hasDerivAt_id t).const_mul c0
-    simpa only [h, Pi.sub_apply] using hw'.sub hlin
+    have hlin : HasDerivAt lin c0 t := by
+      simpa [lin] using (hasDerivAt_id t).const_mul c0
+    have hsub := hw'.sub hlin
+    simpa [h] using hsub
   have hdiff : Differentiable ℝ h := fun t => (hh t).differentiableAt
   have hzero : ∀ t : ℝ, deriv h t = 0 := fun t => (hh t).deriv
   intro t
   have hconst : h t = h 0 := is_const_of_deriv_eq_zero hdiff hzero t 0
-  dsimp [h] at hconst
-  rw [hw0] at hconst
-  norm_num at hconst
-  linarith
+  simp only [h, lin, Pi.sub_apply, hw0, mul_zero, sub_zero] at hconst
+  exact hconst
 
 /-- Combined scalar ramp reconstruction. -/
 theorem ramp_reconstruction
