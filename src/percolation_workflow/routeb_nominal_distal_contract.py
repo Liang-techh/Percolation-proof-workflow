@@ -62,6 +62,15 @@ EXPECTED_TAIL_META = {
     "energy_accounting": "tail_only_no_double_count",
     "evidence_level": "algebraic_sos_input_candidate",
 }
+EXPECTED_GRAM_AUDIT = {
+    "status": "PASS",
+    "denominator_cap": "1000000000000",
+    "exact_bareiss_positive": "true",
+    "gram_blocks": "14",
+    "max_gram_dimension": "83",
+    "formal_certificate_allowed": "false",
+    "evidence_level": "rigorous_numerical_tail_subcertificate_candidate",
+}
 
 
 @dataclass(frozen=True)
@@ -85,6 +94,21 @@ class RouteBPhysicalRationalTailAudit:
     source_sha256: str | None
     scalar_terms: int
     scalar_max_total_cs_degree: int
+    errors: tuple[str, ...] = ()
+    formal_certificate_allowed: bool = False
+    registry_eligible: bool = False
+
+
+@dataclass(frozen=True)
+class RouteBPhysicalRationalGramAudit:
+    """Exact rational Gram payload status, below Lean/kernel admission."""
+
+    status: str
+    artifact_sha256: str | None
+    source_sha256: str | None
+    gram_blocks: int
+    max_gram_dimension: int
+    min_ldl_pivot: Fraction | None
     errors: tuple[str, ...] = ()
     formal_certificate_allowed: bool = False
     registry_eligible: bool = False
@@ -219,13 +243,151 @@ def audit_routeb_physical_rational_tail(
     )
 
 
+def _exact_gram_groups(text: str):
+    rows = csv.DictReader(io.StringIO(text))
+    required = {"kind", "clique", "constraint", "block", "row", "col", "num", "den"}
+    if not rows.fieldnames or not required.issubset(rows.fieldnames):
+        return {}, {}, ["gram_payload_header_mismatch"]
+    gram = defaultdict(dict)
+    equality = defaultdict(list)
+    errors: list[str] = []
+    for line_no, row in enumerate(rows, start=2):
+        try:
+            kind = row["kind"]
+            key = (row["clique"], row["constraint"], row["block"])
+            denominator = int(row["den"])
+            numerator = int(row["num"])
+            if denominator <= 0:
+                errors.append(f"gram_nonpositive_denominator:{line_no}")
+            if kind == "gram":
+                gram[key][(int(row["row"]) - 1, int(row["col"]) - 1)] = Fraction(
+                    numerator, denominator)
+            elif kind == "eq_multiplier":
+                equality[key].append((int(row["row"]), int(row["col"]),
+                                      Fraction(numerator, denominator)))
+            else:
+                errors.append(f"gram_unknown_kind:{line_no}")
+        except (KeyError, TypeError, ValueError, ZeroDivisionError):
+            errors.append(f"gram_malformed_row:{line_no}")
+    return dict(gram), dict(equality), errors
+
+
+def _basis_groups(text: str):
+    rows = csv.DictReader(io.StringIO(text))
+    required = {"kind", "clique", "constraint", "block", "block_row",
+                "basis_index", "exponents"}
+    if not rows.fieldnames or not required.issubset(rows.fieldnames):
+        return {}, ["gram_basis_header_mismatch"]
+    groups = defaultdict(list)
+    errors: list[str] = []
+    for line_no, row in enumerate(rows, start=2):
+        try:
+            key = (row["clique"], row["constraint"], row["block"])
+            exponents = tuple(int(item) for item in row["exponents"].split(";")
+                              if item != "")
+            if any(power < 0 for power in exponents):
+                errors.append(f"gram_basis_negative_exponent:{line_no}")
+            groups[(row["kind"], *key)].append(
+                (int(row["block_row"]), int(row["basis_index"]), exponents))
+        except (KeyError, TypeError, ValueError):
+            errors.append(f"gram_basis_malformed_row:{line_no}")
+    return dict(groups), errors
+
+
+def _positive_exact_gram(entries):
+    n = max(max(index) for index in entries) + 1
+    if len(entries) != n * n:
+        return n, None, "gram_matrix_not_dense"
+    matrix = [[entries[(i, j)] for j in range(n)] for i in range(n)]
+    if any(matrix[i][j] != matrix[j][i]
+           for i in range(n) for j in range(n)):
+        return n, None, "gram_matrix_not_symmetric"
+    lower = [[Fraction(0) for _ in range(n)] for _ in range(n)]
+    pivots: list[Fraction] = []
+    for i in range(n):
+        lower[i][i] = Fraction(1)
+        pivot = matrix[i][i] - sum(
+            lower[i][k] * lower[i][k] * pivots[k] for k in range(i)
+        )
+        if pivot <= 0:
+            return n, pivot, "gram_matrix_not_positive_definite"
+        pivots.append(pivot)
+        for j in range(i + 1, n):
+            lower[j][i] = (
+                matrix[j][i] - sum(
+                    lower[j][k] * lower[i][k] * pivots[k] for k in range(i)
+                )
+            ) / pivot
+    return n, min(pivots), None
+
+
+def audit_routeb_physical_rational_gram(
+    audit_csv_text: str,
+    gram_csv_text: str,
+    basis_csv_text: str,
+    *,
+    artifact_sha256: str | None = None,
+    source_sha256: str | None = None,
+) -> RouteBPhysicalRationalGramAudit:
+    """Independently check rational Gram shape, symmetry and exact PD blocks."""
+    audit = _read_metric_csv(audit_csv_text)
+    errors = [
+        f"gram_audit_mismatch:{key}"
+        for key, expected in EXPECTED_GRAM_AUDIT.items()
+        if audit.get(key) != expected
+    ]
+    gram, equality, gram_errors = _exact_gram_groups(gram_csv_text)
+    basis, basis_errors = _basis_groups(basis_csv_text)
+    errors.extend(gram_errors)
+    errors.extend(basis_errors)
+    min_pivot: Fraction | None = None
+    dimensions: list[int] = []
+    for key, entries in gram.items():
+        dimension, pivot, error = _positive_exact_gram(entries)
+        dimensions.append(dimension)
+        if pivot is not None and (min_pivot is None or pivot < min_pivot):
+            min_pivot = pivot
+        if error:
+            errors.append(f"{error}:{key}")
+        basis_key = ("gram", *key)
+        records = basis.get(basis_key, [])
+        if len(records) != dimension:
+            errors.append(f"gram_basis_dimension_mismatch:{key}")
+        else:
+            rows = sorted(record[0] for record in records)
+            indices = [record[1] for record in records]
+            if rows != list(range(1, dimension + 1)):
+                errors.append(f"gram_basis_row_mismatch:{key}")
+            if len(set(indices)) != dimension or any(index < 1 for index in indices):
+                errors.append(f"gram_basis_index_mismatch:{key}")
+    if len(gram) != 14:
+        errors.append("gram_block_count_mismatch")
+    if max(dimensions, default=0) != 83:
+        errors.append("gram_max_dimension_mismatch")
+    if set(equality) != {("1", "1", "0"), ("1", "2", "0"), ("1", "3", "0")}:
+        errors.append("equality_multiplier_group_mismatch")
+    status = "EXACT_RATIONAL_GRAM_CANDIDATE" if not errors else "OPEN_FAIL_CLOSED"
+    return RouteBPhysicalRationalGramAudit(
+        status=status,
+        artifact_sha256=artifact_sha256,
+        source_sha256=source_sha256,
+        gram_blocks=len(gram),
+        max_gram_dimension=max(dimensions, default=0),
+        min_ldl_pivot=min_pivot,
+        errors=tuple(errors),
+    )
+
+
 __all__ = [
     "EXPECTED_AUDIT",
     "EXPECTED_INTERFACE",
     "EXPECTED_BRIDGE",
     "EXPECTED_TAIL_META",
+    "EXPECTED_GRAM_AUDIT",
     "RouteBNominalDistalBridgeAudit",
     "RouteBPhysicalRationalTailAudit",
+    "RouteBPhysicalRationalGramAudit",
     "audit_routeb_nominal_distal_bridge",
     "audit_routeb_physical_rational_tail",
+    "audit_routeb_physical_rational_gram",
 ]

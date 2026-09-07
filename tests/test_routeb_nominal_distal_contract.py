@@ -4,6 +4,7 @@ from itertools import product
 
 from percolation_workflow.routeb_nominal_distal_contract import (
     audit_routeb_nominal_distal_bridge,
+    audit_routeb_physical_rational_gram,
     audit_routeb_physical_rational_tail,
 )
 
@@ -151,3 +152,22 @@ def test_exact_rational_tail_rejects_active_variable_drift():
     )
     assert result.status == "OPEN_FAIL_CLOSED"
     assert "scalar_polynomial_active_variable_mismatch" in result.errors
+
+
+def test_rational_gram_rejects_asymmetric_block_fail_closed():
+    audit = "metric,value\nformal_certificate_allowed,false\n"
+    gram = (
+        "kind,clique,constraint,block,row,col,num,den\n"
+        "gram,1,1,1,1,1,1,1\n"
+        "gram,1,1,1,1,2,1,1\n"
+        "gram,1,1,1,2,1,0,1\n"
+        "gram,1,1,1,2,2,1,1\n"
+    )
+    basis = (
+        "kind,clique,constraint,block,block_row,basis_index,exponents\n"
+        "gram,1,1,1,1,1,\n"
+        "gram,1,1,1,2,2,1\n"
+    )
+    result = audit_routeb_physical_rational_gram(audit, gram, basis)
+    assert result.status == "OPEN_FAIL_CLOSED"
+    assert "gram_matrix_not_symmetric:('1', '1', '1')" in result.errors

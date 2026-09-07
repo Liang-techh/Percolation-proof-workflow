@@ -26,8 +26,10 @@ from .routeb_remote_accel_budget import (
 )
 from .routeb_nominal_distal_contract import (
     RouteBNominalDistalBridgeAudit,
+    RouteBPhysicalRationalGramAudit,
     RouteBPhysicalRationalTailAudit,
     audit_routeb_nominal_distal_bridge,
+    audit_routeb_physical_rational_gram,
     audit_routeb_physical_rational_tail,
 )
 from .disjoint import (audit_do, build_repair_do, canonical_do_schema,
@@ -58,6 +60,7 @@ __all__ = [
     "audit_routeb_remote_binding_join",
     "RouteBRemoteAccelerationBudget", "derive_routeb_remote_acceleration_budget",
     "RouteBNominalDistalBridgeAudit", "audit_routeb_nominal_distal_bridge",
+    "RouteBPhysicalRationalGramAudit", "audit_routeb_physical_rational_gram",
     "RouteBPhysicalRationalTailAudit", "audit_routeb_physical_rational_tail",
     "audit_do", "build_repair_do", "canonical_do_schema", "classify_manual_review", "do_sha256", "normalize_do_path",
     "AdvisoryReuseError", "SCHEMA_VERSION", "project_advisory_reuse",
