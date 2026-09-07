@@ -1504,3 +1504,18 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - 初版 agent target 错把 q(3) coupling 扩到 `(1,3)/(2,3)`；key-map checker
   发现 CSV 实际只包含 `(1,4)/(2,4)` 及转置，已修正 adapter/review/receipt，
   并重算 adapter provenance。source expansion、trace fold、`h_body_5` 仍 open。
+
+### 2026-09-08 — body-6 semantic boundary and aggregate orientation
+
+- body-6 bucket 的 610 行被确认是完整 aggregate-shaped support，而不是
+  human body-6 slice；当前状态 `OPEN_BODY_LABEL_SEMANTIC_MISMATCH`，不得生成
+  `h_body_6`。最小缺口是独立 per-body-6 exact export。
+- aggregate orientation layer 已给出纯有限和 generic lemma（`Fintype.sum_comm`
+  与 filter 消去），但 source-bound 727-row orientation、payload-trace key
+  equality 和 registry 仍 false。
+
+### 2026-09-08 — P-BUDGET physical identity obstruction
+
+- deployed source 没有 `baseline_budget` 定义，且 `a_B` 的 acceleration/velocity
+  角色、归一化和 M0 mass-defect charge ownership 未绑定；当前为
+  `OPEN_P_BUDGET_PHYSICAL_IDENTITY`，不消费 baseline/Schur。

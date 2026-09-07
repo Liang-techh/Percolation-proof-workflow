@@ -34,6 +34,10 @@ O0_BODY4_RECEIPT = ROOT / "agent_review_inbox/receipt-T-P4-033-O0-P-NE-body4-geo
 KEYED_INTERFACE = ROOT / "artifacts/task_routeb_o1_keyed_regrouping_20260907/RouteBO1KeyedRegroupingInterface.lean"
 KEYED_RECEIPT = ROOT / "artifacts/task_routeb_o1_keyed_regrouping_20260907/interface_receipt.json"
 KEYED_CHECK = ROOT / "artifacts/task_routeb_o1_keyed_regrouping_20260907/interface_check.json"
+KEYED_ORIENTATION_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-orientation-layer-codex-20260907.md"
+BODY6_SUPPORT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_6_SUPPORT_TARGET.json"
+BODY6_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-body-6-support-target-codex-20260907.md"
+PBUDGET_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O0-P-BUDGET-physical-identity-20260907.md"
 REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-per-body-candidate-codex-20260907.md"
 AGENT_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-per-body-source-definition-obstruction-codex-20260907.md"
 
@@ -71,6 +75,7 @@ def main() -> None:
                  BODY4_RECEIPT, BODY4_CHECK, BODY4_REVIEW,
                  BODY5_RECEIPT, BODY5_CHECK, BODY5_REVIEW,
                  O0_BODY3_RECEIPT, O0_BODY4_RECEIPT, KEYED_INTERFACE, KEYED_RECEIPT, KEYED_CHECK,
+                 KEYED_ORIENTATION_REVIEW, BODY6_SUPPORT, BODY6_REVIEW, PBUDGET_REVIEW,
                  REVIEW, AGENT_REVIEW):
         if not path.is_file():
             raise FileNotFoundError(path)
@@ -145,6 +150,15 @@ def main() -> None:
         "keyed_regrouping_proven": False,
         "keyed_regrouping_check_sha256": digest(KEYED_CHECK),
         "keyed_regrouping_check_status": "PASS_TYPED_KEYED_REGROUPING_INTERFACE_FAIL_CLOSED",
+        "keyed_orientation_review_sha256": digest(KEYED_ORIENTATION_REVIEW),
+        "keyed_generic_orientation_lemma_proven": True,
+        "keyed_source_bound_orientation_proven": False,
+        "body_6_support_target_sha256": digest(BODY6_SUPPORT),
+        "body_6_support_status": "OPEN_BODY_LABEL_SEMANTIC_MISMATCH",
+        "body_6_source_binding_proven": False,
+        "p_budget_review_sha256": digest(PBUDGET_REVIEW),
+        "p_budget_status": "OPEN_P_BUDGET_PHYSICAL_IDENTITY",
+        "p_budget_physical_identity_proven": False,
         "typed_body_evaluator_present": True,
         "body_trace_row_count": 727,
         "review_sha256": digest(REVIEW),

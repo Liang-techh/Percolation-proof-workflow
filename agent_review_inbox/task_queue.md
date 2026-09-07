@@ -2097,3 +2097,18 @@ after integration; corrections should be a new result file.
 - B-block regularizer API 已有 focused receipt，但仍是 conditional exact API。
 - 继续寻找并绑定 `H_acc`、Float64 exact decode `H_mu`、以及 `μ=1/1000000`
   的 physical source receipt；在三者齐全前不得关闭 P-BUDGET 或 strict Schur。
+
+### T-P4-033-O1 — body-6 label boundary (2026-09-08)
+
+- 610-row `body=6` bucket 已被判定为 aggregate-shaped，不能当 human body-6
+  proof target。下一步寻找独立 body-6 export；在此之前保持 L0–L4 blocked。
+
+### T-P4-033-O1 — orientation generic bridge (2026-09-08)
+
+- generic finite-sum orientation lemma 已落盘，可作为 algebraic bridge；继续
+  攻 source-bound adapter/key equality，不把 generic lemma 当数据 theorem。
+
+### T-P4-033-O0 — P-BUDGET physical identity (2026-09-08)
+
+- 继续补 `baseline_budget` 定义、变量角色/normalization、完整 regularized
+  `M_BB` source binding 与 disjoint charge ownership；当前仅有 obstruction receipt。

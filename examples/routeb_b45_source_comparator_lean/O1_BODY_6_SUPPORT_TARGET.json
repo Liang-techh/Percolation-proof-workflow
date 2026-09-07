@@ -1,0 +1,898 @@
+{
+  "schema": "routeb.o1.true_dh_exact_typed_mdd_source.body_6_support_entry_target.v1",
+  "status": "OPEN_BODY_LABEL_SEMANTIC_MISMATCH",
+  "body_label": 6,
+  "zero_based_body": 5,
+  "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+  "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+  "inputs": {
+    "body_trace_path": "artifacts/task_routeb_body_trace_sink_current/outputs/routeB_fourier_mass_body_trace.csv",
+    "body_trace_sha256": "ae1f9cd7978c4cf23626b5c097eaaf4a2c70de9c8b86a31a61db12997cf4c3b9",
+    "selected_body_bucket_rows": 610,
+    "frozen_610_row_path": "artifacts/task_routeb_body_trace_sink_current/source_snapshot/routeB_fourier_mass_full_rational.csv",
+    "frozen_610_row_sha256": "a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8",
+    "frozen_row_count": 610,
+    "csv_is_proof": false
+  },
+  "semantic_boundary": {
+    "observed": "body=6 bucket has the complete 610-row aggregate-shaped support, not an isolated human body-6 source slice",
+    "body6_source_binding": false,
+    "aggregate_binding": false,
+    "admissible_as_h_body_6": false,
+    "smallest_missing_artifact": "a separately emitted exact Fourier slice for human body 6 with body=6 labels, sourceBodyMass q 5 binding, and its own source comparator key"
+  },
+  "typed_target_schema": {
+    "source_term": "sourceBodyMass q (5 : Fin 6) i j",
+    "required_trace_term": "body6TraceEvaluator q i j",
+    "entry_target": "forall q i j, sourceBodyMass q 5 i j = body6TraceEvaluator q i j",
+    "support_evaluator": "sum tagged rows selected by exact (row,col), with rational real/imag coefficients and phase sum nu_k*q_k",
+    "target_status": "BLOCKED_UNTIL_BODY6_SLICE_IS_SEMANTICALLY_BOUND"
+  },
+  "sparse_block_summary": {
+    "matrix_index_convention": "one-based CSV row/col; B=(4,5), D=(1,2,3,6)",
+    "blocks": {
+      "D_D": {
+        "entry_count": 16,
+        "term_count": 382,
+        "entries": [
+          {
+            "row": 1,
+            "col": 1,
+            "block": "D_D",
+            "term_count": 99,
+            "frequency_support_count": 99,
+            "frequency_coordinate_min": [
+              0,
+              -2,
+              -2,
+              -2,
+              -2,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              2,
+              2,
+              2,
+              2,
+              0
+            ],
+            "frequency_l1_max": 8,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 1,
+            "col": 2,
+            "block": "D_D",
+            "term_count": 44,
+            "frequency_support_count": 44,
+            "frequency_coordinate_min": [
+              0,
+              -1,
+              -1,
+              -2,
+              -2,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              1,
+              1,
+              2,
+              2,
+              0
+            ],
+            "frequency_l1_max": 6,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 1,
+            "col": 3,
+            "block": "D_D",
+            "term_count": 34,
+            "frequency_support_count": 34,
+            "frequency_coordinate_min": [
+              0,
+              -1,
+              -1,
+              -2,
+              -2,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              1,
+              1,
+              2,
+              2,
+              0
+            ],
+            "frequency_l1_max": 6,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 1,
+            "col": 6,
+            "block": "D_D",
+            "term_count": 12,
+            "frequency_support_count": 12,
+            "frequency_coordinate_min": [
+              0,
+              -1,
+              -1,
+              -1,
+              -1,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "frequency_l1_max": 4,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 2,
+            "col": 1,
+            "block": "D_D",
+            "term_count": 44,
+            "frequency_support_count": 44,
+            "frequency_coordinate_min": [
+              0,
+              -1,
+              -1,
+              -2,
+              -2,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              1,
+              1,
+              2,
+              2,
+              0
+            ],
+            "frequency_l1_max": 6,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 2,
+            "col": 2,
+            "block": "D_D",
+            "term_count": 25,
+            "frequency_support_count": 25,
+            "frequency_coordinate_min": [
+              0,
+              0,
+              -1,
+              -2,
+              -2,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              0,
+              1,
+              2,
+              2,
+              0
+            ],
+            "frequency_l1_max": 4,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 2,
+            "col": 3,
+            "block": "D_D",
+            "term_count": 25,
+            "frequency_support_count": 25,
+            "frequency_coordinate_min": [
+              0,
+              0,
+              -1,
+              -2,
+              -2,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              0,
+              1,
+              2,
+              2,
+              0
+            ],
+            "frequency_l1_max": 4,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 2,
+            "col": 6,
+            "block": "D_D",
+            "term_count": 4,
+            "frequency_support_count": 4,
+            "frequency_coordinate_min": [
+              0,
+              0,
+              0,
+              -1,
+              -1,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "frequency_l1_max": 2,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 3,
+            "col": 1,
+            "block": "D_D",
+            "term_count": 34,
+            "frequency_support_count": 34,
+            "frequency_coordinate_min": [
+              0,
+              -1,
+              -1,
+              -2,
+              -2,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              1,
+              1,
+              2,
+              2,
+              0
+            ],
+            "frequency_l1_max": 6,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 3,
+            "col": 2,
+            "block": "D_D",
+            "term_count": 25,
+            "frequency_support_count": 25,
+            "frequency_coordinate_min": [
+              0,
+              0,
+              -1,
+              -2,
+              -2,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              0,
+              1,
+              2,
+              2,
+              0
+            ],
+            "frequency_l1_max": 4,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 3,
+            "col": 3,
+            "block": "D_D",
+            "term_count": 11,
+            "frequency_support_count": 11,
+            "frequency_coordinate_min": [
+              0,
+              0,
+              0,
+              -2,
+              -2,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              0,
+              0,
+              2,
+              2,
+              0
+            ],
+            "frequency_l1_max": 4,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 3,
+            "col": 6,
+            "block": "D_D",
+            "term_count": 4,
+            "frequency_support_count": 4,
+            "frequency_coordinate_min": [
+              0,
+              0,
+              0,
+              -1,
+              -1,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "frequency_l1_max": 2,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 6,
+            "col": 1,
+            "block": "D_D",
+            "term_count": 12,
+            "frequency_support_count": 12,
+            "frequency_coordinate_min": [
+              0,
+              -1,
+              -1,
+              -1,
+              -1,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "frequency_l1_max": 4,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 6,
+            "col": 2,
+            "block": "D_D",
+            "term_count": 4,
+            "frequency_support_count": 4,
+            "frequency_coordinate_min": [
+              0,
+              0,
+              0,
+              -1,
+              -1,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "frequency_l1_max": 2,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 6,
+            "col": 3,
+            "block": "D_D",
+            "term_count": 4,
+            "frequency_support_count": 4,
+            "frequency_coordinate_min": [
+              0,
+              0,
+              0,
+              -1,
+              -1,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "frequency_l1_max": 2,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 6,
+            "col": 6,
+            "block": "D_D",
+            "term_count": 1,
+            "frequency_support_count": 1,
+            "frequency_coordinate_min": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "frequency_l1_max": 0,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          }
+        ]
+      },
+      "D_B": {
+        "entry_count": 7,
+        "term_count": 112,
+        "entries": [
+          {
+            "row": 1,
+            "col": 4,
+            "block": "D_B",
+            "term_count": 34,
+            "frequency_support_count": 34,
+            "frequency_coordinate_min": [
+              0,
+              -1,
+              -1,
+              -1,
+              -2,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              1,
+              1,
+              1,
+              2,
+              0
+            ],
+            "frequency_l1_max": 5,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 1,
+            "col": 5,
+            "block": "D_B",
+            "term_count": 28,
+            "frequency_support_count": 28,
+            "frequency_coordinate_min": [
+              0,
+              -1,
+              -1,
+              -1,
+              -1,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "frequency_l1_max": 4,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 2,
+            "col": 4,
+            "block": "D_B",
+            "term_count": 16,
+            "frequency_support_count": 16,
+            "frequency_coordinate_min": [
+              0,
+              0,
+              -1,
+              -1,
+              -2,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              0,
+              1,
+              1,
+              2,
+              0
+            ],
+            "frequency_l1_max": 3,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 2,
+            "col": 5,
+            "block": "D_B",
+            "term_count": 18,
+            "frequency_support_count": 18,
+            "frequency_coordinate_min": [
+              0,
+              0,
+              -1,
+              -1,
+              -1,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "frequency_l1_max": 3,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 3,
+            "col": 4,
+            "block": "D_B",
+            "term_count": 8,
+            "frequency_support_count": 8,
+            "frequency_coordinate_min": [
+              0,
+              0,
+              0,
+              -1,
+              -2,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              0,
+              0,
+              1,
+              2,
+              0
+            ],
+            "frequency_l1_max": 3,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 3,
+            "col": 5,
+            "block": "D_B",
+            "term_count": 6,
+            "frequency_support_count": 6,
+            "frequency_coordinate_min": [
+              0,
+              0,
+              0,
+              -1,
+              -1,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "frequency_l1_max": 2,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 6,
+            "col": 4,
+            "block": "D_B",
+            "term_count": 2,
+            "frequency_support_count": 2,
+            "frequency_coordinate_min": [
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "frequency_l1_max": 1,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          }
+        ]
+      },
+      "B_D": {
+        "entry_count": 7,
+        "term_count": 112,
+        "entries": [
+          {
+            "row": 4,
+            "col": 1,
+            "block": "B_D",
+            "term_count": 34,
+            "frequency_support_count": 34,
+            "frequency_coordinate_min": [
+              0,
+              -1,
+              -1,
+              -1,
+              -2,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              1,
+              1,
+              1,
+              2,
+              0
+            ],
+            "frequency_l1_max": 5,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 4,
+            "col": 2,
+            "block": "B_D",
+            "term_count": 16,
+            "frequency_support_count": 16,
+            "frequency_coordinate_min": [
+              0,
+              0,
+              -1,
+              -1,
+              -2,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              0,
+              1,
+              1,
+              2,
+              0
+            ],
+            "frequency_l1_max": 3,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 4,
+            "col": 3,
+            "block": "B_D",
+            "term_count": 8,
+            "frequency_support_count": 8,
+            "frequency_coordinate_min": [
+              0,
+              0,
+              0,
+              -1,
+              -2,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              0,
+              0,
+              1,
+              2,
+              0
+            ],
+            "frequency_l1_max": 3,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 4,
+            "col": 6,
+            "block": "B_D",
+            "term_count": 2,
+            "frequency_support_count": 2,
+            "frequency_coordinate_min": [
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "frequency_l1_max": 1,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 5,
+            "col": 1,
+            "block": "B_D",
+            "term_count": 28,
+            "frequency_support_count": 28,
+            "frequency_coordinate_min": [
+              0,
+              -1,
+              -1,
+              -1,
+              -1,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              1,
+              1,
+              1,
+              1,
+              0
+            ],
+            "frequency_l1_max": 4,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 5,
+            "col": 2,
+            "block": "B_D",
+            "term_count": 18,
+            "frequency_support_count": 18,
+            "frequency_coordinate_min": [
+              0,
+              0,
+              -1,
+              -1,
+              -1,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              0,
+              1,
+              1,
+              1,
+              0
+            ],
+            "frequency_l1_max": 3,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 5,
+            "col": 3,
+            "block": "B_D",
+            "term_count": 6,
+            "frequency_support_count": 6,
+            "frequency_coordinate_min": [
+              0,
+              0,
+              0,
+              -1,
+              -1,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              0,
+              0,
+              1,
+              1,
+              0
+            ],
+            "frequency_l1_max": 2,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          }
+        ]
+      },
+      "B_B": {
+        "entry_count": 2,
+        "term_count": 4,
+        "entries": [
+          {
+            "row": 4,
+            "col": 4,
+            "block": "B_B",
+            "term_count": 3,
+            "frequency_support_count": 3,
+            "frequency_coordinate_min": [
+              0,
+              0,
+              0,
+              0,
+              -2,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              0,
+              0,
+              0,
+              2,
+              0
+            ],
+            "frequency_l1_max": 2,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          },
+          {
+            "row": 5,
+            "col": 5,
+            "block": "B_B",
+            "term_count": 1,
+            "frequency_support_count": 1,
+            "frequency_coordinate_min": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "frequency_coordinate_max": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "frequency_l1_max": 0,
+            "target": "sum over tagged rows of realCoeff*cos(sum(nu_k*q_k))-imagCoeff*sin(sum(nu_k*q_k))"
+          }
+        ]
+      }
+    },
+    "total_entry_count": 32,
+    "total_term_count": 610
+  },
+  "proof_decomposition": [
+    {
+      "leaf": "L0_body6_label_binding",
+      "target": "prove the emitted body=6 rows are the human body-6 term, not aggregate rows",
+      "status": "OPEN_REQUIRED_SOURCE_ARTIFACT"
+    },
+    {
+      "leaf": "L1_body6_source_expansion",
+      "target": "expand sourceBodyMass q 5 entrywise through bodyMass/bodyJv/bodyJw",
+      "status": "BLOCKED_BY_L0"
+    },
+    {
+      "leaf": "L2_body6_trace_reification",
+      "target": "define body6TraceEvaluator from the correctly labelled sparse support",
+      "status": "BLOCKED_BY_L0"
+    },
+    {
+      "leaf": "L3_entrywise_bridge",
+      "target": "prove sourceBodyMass q 5 i j = body6TraceEvaluator q i j for every supported entry and zero complement",
+      "status": "BLOCKED_BY_L0_L1_L2"
+    },
+    {
+      "leaf": "L4_h_body_6_composition",
+      "target": "compose the source and trace premises into h_body_6",
+      "status": "BLOCKED"
+    }
+  ],
+  "fail_closed": {
+    "source_expansion_proved": false,
+    "trace_fold_proved": false,
+    "h_body_6_proved": false,
+    "registry_eligible": false,
+    "comparator_accepted": false,
+    "formal_certificate_allowed": false
+  },
+  "next_exact_action": "Obtain a separate canonical per-body human-body-6 export; only then generate a Lean body6TraceEvaluator and entrywise source/trace targets."
+}
