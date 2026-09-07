@@ -1967,6 +1967,12 @@ fixed-λ 与 P3 的上一轮完成后已分别推进到 eta 分区严格吸收�
 条件；body-6 与 P4 仍在做质量加权与 entrywise 具体化。继续维持本地数学轮，
 不与 GitHub agent 抢通道。
 
+### 2026-09-07 12:53 — 梁智炜追加 P4 派发
+
+K-path 线程已从 entrywise bound 转入 Schur block 消元 identity，作为后续
+真实 P4 residual binding 的代数接口；其余线程继续各自数学叶，仍不改变
+formal gate 或 registry。
+
 ### 2026-09-07 12:32 — 梁智炜本地收割并派发
 
 本轮回收了四个已完成数学叶：P3 radius monotonicity、fixed-λ uniform

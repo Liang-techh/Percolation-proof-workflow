@@ -2621,3 +2621,10 @@ source-independent/open/uncompiled 候选。
 - fixed-λ 已转入 eta 分区 strict-total absorption；P3 已转入 capMax budget
   取等条件。body-6 加权 mixed Gram 与 P4 entrywise quadratic 继续运行。
 - 暂不访问远端；下一次收割窗口再处理 GitHub agent 的新 review/claim。
+
+### 2026-09-07 — 12:53 本地数学轮
+
+- P4/K-path 空闲线程已转入 block Schur 消元 identity；保留左逆和 defect
+  前提，目标是把 projection 直接接到 Schur residual。
+- 其他三条继续 body-6 加权 Gram、fixed-λ eta strict absorption、P3 capMax
+  取等/最小性；GitHub 仍保持静默。
