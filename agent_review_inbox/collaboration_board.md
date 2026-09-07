@@ -1860,3 +1860,9 @@ coverage、Lean compile 和 admission 仍保持 fail-closed。下一次 20 分�
 这两条都不提供 concrete source、coverage、ODE continuation 或 admission，已按
 pending theorem child 接入 DAG。同期本地 body-6 六轴、fixed-λ parent margin、
 P3 weighted power seam 也已注册。下一轮继续优先数学瓶颈，避免重复审计。
+### 2026-09-07 12:03 — 梁智炜收割 K_path Fin closure
+
+K_path 的新叶现在把 8 项比较从 checker 层推进到 typed proof 入口：
+`Fin 8` 槽位、两行四列、非负 envelope slack、18 个代表到 36 个锥的
+重数保持都显式化。仍然缺少 canonical JSON/Lean proof reflection、真实
+`pathK`/`G` 表身份、source 同域和 SPN witness，因此保持 open。

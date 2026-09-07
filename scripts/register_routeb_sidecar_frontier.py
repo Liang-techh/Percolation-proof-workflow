@@ -405,6 +405,19 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P5.componentwise_relative_decay.feasible_cone_spn.k_path_interface.fin_closure",
+        "parent": "P5.componentwise_relative_decay.feasible_cone_spn.k_path_interface",
+        "statement": "The eight exact path/cert comparisons are lifted through a typed Fin slot equivalence to the real 2x4 componentwise gain consumer, with cone-index multiplicity preserved.",
+        "proof_sketch": "Define the row-major Fin 8 equivalence, carry exact rational-to-real table identities, prove the envelope slack sum and nonnegativity, and lift 18 representative SPN witnesses to all 36 cones without value deduplication.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_KPATH_FIN_CLOSURE",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_KPATH_INTERFACE_FinClosure.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_KPATH_INTERFACE_FinClosure_REVIEW.md",
+        ],
+    },
+    {
         "name": "P5.componentwise_relative_decay.feasible_cone_spn.nonnegative_gain_increment_reuse",
         "parent": "P5.componentwise_relative_decay.feasible_cone_spn",
         "statement": "A nonnegative component-gain increment can reuse an existing cone SPN witness when its symmetric cone correction is entrywise below the old nonnegative slack.",

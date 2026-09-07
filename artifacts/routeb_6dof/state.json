@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 626,
+  "revision": 627,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -37686,7 +37686,8 @@
       "status": "open",
       "proof_sketch": "Use the actual pathK formula once, carry the same source domain witness through ComponentBinding and ConeGapBinding, lift 18 representatives to 36 indices, and preserve the reverse gap comparison direction.",
       "dependencies": [
-        "369ff54306ce486db320557e7510f45e"
+        "369ff54306ce486db320557e7510f45e",
+        "45be85a217aa43b99228b7c097e73733"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -38204,6 +38205,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\claim-T-P5-030-honglianmozun-20260907T1156.md",
             "sha256": "C702CFB4165B410503336D7A7F8234D85D056AB6B5FCEB006418E4B90BB64055"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "45be85a217aa43b99228b7c097e73733": {
+      "id": "45be85a217aa43b99228b7c097e73733",
+      "name": "P5.componentwise_relative_decay.feasible_cone_spn.k_path_interface.fin_closure",
+      "statement": "The eight exact path/cert comparisons are lifted through a typed Fin slot equivalence to the real 2x4 componentwise gain consumer, with cone-index multiplicity preserved.",
+      "parent_id": "755d8229d7dd477281fec06127d69cc6",
+      "status": "open",
+      "proof_sketch": "Define the row-major Fin 8 equivalence, carry exact rational-to-real table identities, prove the envelope slack sum and nonnegativity, and lift 18 representative SPN witnesses to all 36 cones without value deduplication.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_KPATH_FIN_CLOSURE",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_KPATH_INTERFACE_FinClosure.lean",
+            "sha256": "437B31F7A76F1FB134A07099EFFB5EC4667D861158AF6D1702357E6090B43537"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_KPATH_INTERFACE_FinClosure_REVIEW.md",
+            "sha256": "A29283A5037D311D9B3E45EA343775A0F0DB926D5AD1871B7741E66221217C7D"
           }
         ],
         "registry_eligible": false,
@@ -64691,6 +64727,23 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T18:03:08.620036+00:00",
+      "kind": "node_added",
+      "node_id": "45be85a217aa43b99228b7c097e73733",
+      "parent_id": "755d8229d7dd477281fec06127d69cc6",
+      "name": "P5.componentwise_relative_decay.feasible_cone_spn.k_path_interface.fin_closure"
+    },
+    {
+      "at": "2026-09-07T18:03:08.638331+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P5.componentwise_relative_decay.feasible_cone_spn.k_path_interface.fin_closure"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -68347,5 +68400,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "e9cbb1c2afd511912463b1fd9ff035fe2aef5ca1a0a8da289cf7b343ae816696"
+  "state_checksum": "2909ec26edf077f504f7f60a00b52bb520fef617eb763126c1ebe17a04945771"
 }

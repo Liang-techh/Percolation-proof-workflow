@@ -2452,3 +2452,12 @@ coverage, admission, registry promotion, or local Lean verification.
 
 远端同步已在本窗口完成：先提交本地审阅文件，再 merge origin/main；未审阅的
 K_path `NEW_KPATH_INTERFACE_FinClosure.lean` 仍留在本地未提交，等待 review。
+### 2026-09-07 — 12:03 K_path Fin closure 收割
+
+- K_path agent 补齐 `Fin 8 ≃ Fin 2 × Fin 4` 的 row-major typed closure，保留
+  8 项 exact rational comparison、real table identity、envelope slack 非负、
+  36→18 cone representative 重数与 SPN witness lift。
+- 该叶仍是未编译 source-independent skeleton；checker 的 pass 不替代
+  `EightComparisons` proof term，也没有 concrete path/source/coverage/registry。
+- 已注册为 `...k_path_interface.fin_closure`；state revision `627`，registry `0`，
+  `formal_certificate_allowed=false`。
