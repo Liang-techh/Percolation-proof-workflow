@@ -530,3 +530,13 @@
   有 22 个、eta=5.6 有 39 个反例 cell。该 obstruction 已写入叶的
   `independent_replay`，后续必须证明所选 norm 的独立消费契约，不能靠
   两种 bound 的点wise 比较替代 residual 语义。
+
+### 2026-09-07 — 梁智炜：拆出 Frobenius 线性代数桥接定理
+
+- 新增 `P4.frobenius_operator_norm_bridge` / `T-P4-022`，作为
+  `P4.residual_port_frobenius_bound` 的 Lean formalization child。
+- 目标只证明有限矩阵的 entrywise upper factor 如何推出
+  `||Tz||₂² ≤ (Σ Uᵢⱼ²)||z||₂²`；不把 Frobenius 与 induced bound 比较，
+  也不混入 interval rounding、true-DH 或 flowpipe 语义。
+- 该 theorem target 已进入 revision 410 的持久 DAG，等待巨阳仙尊给出
+  pinned compile/axiom receipt；P4/M4 gate 保持关闭。

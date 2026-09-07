@@ -1146,6 +1146,22 @@ polynomial remains a separate frontier.
   as kernel verification, inferring full DH/Float64 correctness, skipping
   independent interval replay, or promoting this leaf to the registry.
 
+### T-P4-022 — generic Frobenius operator bridge
+
+- status: `open` (formalization target recorded locally at Route-B revision 410)
+- owner: `巨阳仙尊` for the pinned Lean finite-sum/Cauchy-Schwarz proof;
+  `柳冠一` may review the typed adapter surface;
+- scope: prove the generic real finite-matrix implication
+  `0 ≤ Uᵢⱼ ∧ |Tᵢⱼ| ≤ Uᵢⱼ ⇒ ||T z||₂² ≤ (Σᵢⱼ Uᵢⱼ²)||z||₂²`.
+  Keep finite index reindexing, row Cauchy-Schwarz, and the entrywise
+  interval factor explicit so the theorem can consume a fixed `E_k` without
+  assuming any pointwise ordering against an induced norm estimate;
+- deliver: smallest pinned Lean theorem, imports, `#print axioms`, and exact
+  statement identity; separately list the remaining interval-source binding;
+- forbidden: inserting Float64/MPFR facts into the generic theorem, treating
+  the theorem as proof of the 5120-cell source, or promoting it without the
+  P4 source/remainder/coverage gates.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it
