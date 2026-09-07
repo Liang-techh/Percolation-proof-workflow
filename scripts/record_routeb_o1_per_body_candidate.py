@@ -47,6 +47,11 @@ KEYED_CHECK = ROOT / "artifacts/task_routeb_o1_keyed_regrouping_20260907/interfa
 KEYED_ORIENTATION_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-orientation-layer-codex-20260907.md"
 BODY6_SUPPORT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_6_SUPPORT_TARGET.json"
 BODY6_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-body-6-support-target-codex-20260907.md"
+BODY6_CANONICAL_TARGET = ROOT / "examples/routeb_b45_source_comparator_lean/RouteBO1Body6CanonicalExportTargets.lean"
+BODY6_CANONICAL_CONTRACT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_6_CANONICAL_EXPORT_CONTRACT.json"
+BODY6_CANONICAL_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_6_CANONICAL_EXPORT_RECEIPT.json"
+BODY6_CANONICAL_CSV = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_6_CANONICAL_SLICE.csv"
+BODY6_CANONICAL_AUDIT = ROOT / "examples/routeb_b45_source_comparator_lean/audit_body6_canonical_export.py"
 PBUDGET_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O0-P-BUDGET-physical-identity-20260907.md"
 REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-per-body-candidate-codex-20260907.md"
 AGENT_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-per-body-source-definition-obstruction-codex-20260907.md"
@@ -89,7 +94,9 @@ def main() -> None:
                  O0_BODY3_RECEIPT, O0_BODY4_RECEIPT, O0_BODY5_RECEIPT, O0_BODY5_REVIEW,
                  HACC_REVIEW, HACC_REFINEMENT_REVIEW, HACC_CONTRACT,
                  KEYED_INTERFACE, KEYED_RECEIPT, KEYED_CHECK,
-                 KEYED_ORIENTATION_REVIEW, BODY6_SUPPORT, BODY6_REVIEW, PBUDGET_REVIEW,
+                 KEYED_ORIENTATION_REVIEW, BODY6_SUPPORT, BODY6_REVIEW,
+                 BODY6_CANONICAL_TARGET, BODY6_CANONICAL_CONTRACT, BODY6_CANONICAL_RECEIPT,
+                 BODY6_CANONICAL_CSV, BODY6_CANONICAL_AUDIT, PBUDGET_REVIEW,
                  REVIEW, AGENT_REVIEW):
         if not path.is_file():
             raise FileNotFoundError(path)
@@ -191,6 +198,13 @@ def main() -> None:
         "body_6_support_target_sha256": digest(BODY6_SUPPORT),
         "body_6_support_status": "OPEN_BODY_LABEL_SEMANTIC_MISMATCH",
         "body_6_source_binding_proven": False,
+        "body_6_canonical_target_sha256": digest(BODY6_CANONICAL_TARGET),
+        "body_6_canonical_contract_sha256": digest(BODY6_CANONICAL_CONTRACT),
+        "body_6_canonical_receipt_sha256": digest(BODY6_CANONICAL_RECEIPT),
+        "body_6_canonical_slice_sha256": digest(BODY6_CANONICAL_CSV),
+        "body_6_canonical_audit_sha256": digest(BODY6_CANONICAL_AUDIT),
+        "body_6_canonical_export_status": "COEFFICIENT_REPLAY_MATCH_SOURCE_THEOREM_OPEN",
+        "body_6_canonical_export_proven": False,
         "p_budget_review_sha256": digest(PBUDGET_REVIEW),
         "p_budget_status": "OPEN_P_BUDGET_PHYSICAL_IDENTITY",
         "p_budget_physical_identity_proven": False,
