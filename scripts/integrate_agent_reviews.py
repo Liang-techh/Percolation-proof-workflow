@@ -76,6 +76,16 @@ def front_matter(path: Path) -> dict[str, str]:
     return result
 
 
+def source_commit(path: Path, header: dict[str, str]) -> str:
+    """Recover an explicitly printed Git commit when agents put it in prose."""
+    declared = header.get("commit", "").strip()
+    if declared:
+        return declared
+    text = path.read_text(encoding="utf-8")
+    match = re.search(r"(?<![0-9a-f])[0-9a-f]{40}(?![0-9a-f])", text, re.IGNORECASE)
+    return match.group(0) if match else "unknown"
+
+
 def node_by_name(state, name: str):
     for node in state.nodes.values():
         if node.name == name:
@@ -148,6 +158,7 @@ def main() -> int:
             "classification": classification,
             "admission_effect": "none",
             "target_scope": "routeb_node" if target_name else "external_reuse_catalog",
+            "source_commit": source_commit(path, header),
         }
         if previous is not None:
             ref["correction_of_sha256"] = previous.get("review_sha256")
@@ -168,7 +179,6 @@ def main() -> int:
             formal_certificate_allowed=False,
             **({"node_id": node.id} if target_name else {
                 "catalog": "anthropic-fermats-last-theorem",
-                "source_commit": header.get("commit", "unknown"),
             }),
         )
         integrated.append((path, marker, ref, state.events[-1]["at"]))
