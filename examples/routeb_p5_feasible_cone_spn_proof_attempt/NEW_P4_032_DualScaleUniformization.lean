@@ -44,6 +44,17 @@ structure UniformData {X : Type*} (f : ParameterField X)
   nominal_realization : ∀ x, f.domain x →
     d.offset x + (s.front x).value * (d.mu x * frontEnergy (d.front x)) ≤ m.nominal x
 
+/-- Pointwise qCap(x) needs its OWN same-domain upper bound before it can
+be replaced by a single qCap. Finite bounds on unrelated samples do not suffice. -/
+def capFromLocalBounds {X : Type*} (f : ParameterField X)
+    (localCap : X → ℝ) (qCap : ℝ) (hc0 : 0 ≤ qCap)
+    (hq0 : ∀ x, f.domain x → 0 ≤ f.residual x)
+    (hq : ∀ x, f.domain x → f.residual x ≤ localCap x)
+    (hc : ∀ x, f.domain x → localCap x ≤ qCap) : CapEvidence f qCap where
+  cap_nonnegative := hc0
+  residual_nonnegative := hq0
+  bound := fun x hx => (hq x hx).trans (hc x hx)
+
 def uniformCapEvidence {X : Type*} (f : ParameterField X)
     (d : RemainderField X) (m : MarginField X) (s : ScaleFields X)
     (u : UniformData f d m s) : CapEvidence f u.qCap where
@@ -108,7 +119,7 @@ theorem finite_lower_upper {X : Type*} (cells : Finset X) (v : X → ℝ) :
   intro x hx
   exact ⟨by linarith [hl x hx], hu x hx⟩
 
-/-- Simultaneous finite upper bound for the four slots alpha,beta,gain,q.
+/-- Simultaneous finite upper bound for the slots alpha,beta,gain,local qCap.
 For nonnegative slots, 0 supplies their common nonnegative lower bound. -/
 theorem finite_four_envelope {X : Type*} (cells : Finset X) (v : X → Fin 4 → ℝ)
     (h0 : ∀ x ∈ cells, ∀ i, 0 ≤ v x i) :
@@ -162,6 +173,7 @@ end
 
 -- Future audit commands only; NOT executed in this round.
 #print axioms uniformTargetAllocation
+#print axioms capFromLocalBounds
 #print axioms uniformized_scalar_margin
 #print axioms finite_upper
 #print axioms finite_lower_upper

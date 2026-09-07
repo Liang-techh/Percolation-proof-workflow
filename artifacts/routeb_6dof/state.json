@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 705,
+  "revision": 706,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -36900,7 +36900,7 @@
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_o0_h_acc_source_refinement\\check_refinement.py",
-            "sha256": "1E748B3C14E0C9E7FEF75C83C620A27AD9AD5C1729B3DB20D52516509FEFA1F0"
+            "sha256": "B265B3FC396524DB093C6385BA6DFF7BF9A352A57D01E2DB8DB21199986D780F"
           }
         ],
         "registry_eligible": false,
@@ -37079,7 +37079,7 @@
         "source_artifacts": [
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\P5FeasibleConeSPN.lean",
-            "sha256": "F87DDE161A0FAF9E4511BC6B51D551776E67C8733FDB1BA40EB56F89521B85EC"
+            "sha256": "FA9D990CFB2ADB6FCE049B4C6FEB9AB2DFED3C2BCD14B059A0A8332138E1E824"
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\lakefile.toml",
@@ -37243,7 +37243,7 @@
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_o0_h_acc_source_refinement\\NEW_REVIEW.md",
-            "sha256": "35F0A915CBCF9D69D15F2E1EA431D506F1ADF719C80D2BBBE03A1FC74DBA94D3"
+            "sha256": "665D88BC8DEBC92EE45C8EAC607049FF69744C5BAFCD4075D24F7164F8AE3C66"
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_o0_h_acc_source_refinement\\NEW_RECEIPT.json",
@@ -37942,7 +37942,7 @@
         "source_artifacts": [
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_moving_frame_transport_lean\\P5MovingFrameTransport.lean",
-            "sha256": "2FFEA27B7ADB2FA5F7D1B1DE16056B5F60A571D75232F483687A853B95FE0E80"
+            "sha256": "E8B45FD63A3969B64D64F2AA31D7BE42D66703A594829387CC40C6D8F2317961"
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_moving_frame_transport_lean\\README.md",
@@ -38286,7 +38286,7 @@
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_AXIS_20260907_REVIEW.md",
-            "sha256": "971E416FAC7498C96DE9AA9063991913470428C181AC550035D7E1BE59325550"
+            "sha256": "65C8403DFFDC64301400540FC42AE55A2E5CF40294DE8F2AB41B4B875F24F669"
           }
         ],
         "registry_eligible": false,
@@ -38433,11 +38433,11 @@
         "source_artifacts": [
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_TWO_ETA_UNION20260907.lean",
-            "sha256": "F63F751A54DBA8FC358EC53562562701CE5D341DE777FF74714FC778905F4C34"
+            "sha256": "191114C416C782A93AF0A79409A9D23BF0F5BBCB0E083B3931F7CB03D710BB60"
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_TWO_ETA_UNION20260907_REVIEW.md",
-            "sha256": "C13773B9C370E30CA6BC0297DA2FB96467B02E828FF79A2E15D80C2E5CA1336E"
+            "sha256": "5A60F702F4D640AA6AB71ED490BB2FBB1617BD10A22AD7CFD333AE9D17C4EA43"
           }
         ],
         "registry_eligible": false,
@@ -39358,7 +39358,7 @@
         "source_artifacts": [
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_physical_gain_parameter_tube_lean\\P5PhysicalGainParameterTube.lean",
-            "sha256": "4A12E7950BB9FE4D953616DDE4B78509375ACC489837AAA9A4C4A899EDCBE6BF"
+            "sha256": "D7A00B2E3AC73739709C478C7B469400AA3BC9BD1AB2F814A5B69A858796E947"
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_physical_gain_parameter_tube_lean\\README.md",
@@ -40328,11 +40328,11 @@
         "source_artifacts": [
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_STRICT_RESERVE_FINAL_BRIDGE20260907.lean",
-            "sha256": "58015527D12983207F0374C6A8D5342FD7BC41C38FA100567D3B62F8D692CCE9"
+            "sha256": "D96E9FECD78A16A4002D84F33562DD8BD40FFB182BB0B0D1D1B73C109F207A66"
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_STRICT_RESERVE_FINAL_BRIDGE20260907_REVIEW.md",
-            "sha256": "002CC644FFB17C7C035EF77860585E2A329555B8F983AD45FA269C2950D3AAF2"
+            "sha256": "660199600E04E5B47FAAE57479A08EF3BF2C308C8D672425562C5DA077A42D87"
           }
         ],
         "registry_eligible": false,
@@ -41099,11 +41099,11 @@
         "source_artifacts": [
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_FAMILY_SLACK.lean",
-            "sha256": "E24DBADB5379731FEA0B61B82EC815D7BCA697A1DE1B0561C9E41F91181670CD"
+            "sha256": "6C296D581F9D4695AC67BD45C11BB407466C25891B466BD6518AF74644BDB014"
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_FAMILY_SLACK_REVIEW.md",
-            "sha256": "883863721EA7451EE7AFE22B83692D254721F89535FC44A78B9D50E11BC6D911"
+            "sha256": "21940A150467B2C5769217436E0E28DA3006707B5BCBF27E7CE26788512FDCCB"
           }
         ],
         "registry_eligible": false,
@@ -41288,7 +41288,7 @@
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_FINITE_UNIFORM_GAP_REVIEW.md",
-            "sha256": "90801F1C3EE6EEB4F964FA20C4FC62B6AE0365208A64E9017EB6A45F679B0BBE"
+            "sha256": "940310843C06D40AC8A2DDD1FD57843EDCD58A90EB1A630F8420A6C9FB825F7A"
           }
         ],
         "registry_eligible": false,
@@ -42273,11 +42273,11 @@
         "source_artifacts": [
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_DualScaleUniformization.lean",
-            "sha256": "B1D0343C089D0785FA6C212B2E1B28300EFD78B29130CF8FBDB1A59C42320E81"
+            "sha256": "E3244DD9A70B4CCAAAD8D63BA9CF9D293E22B59D0FAA66BED877B31AEEFB9CEA"
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_DualScaleUniformization.review.md",
-            "sha256": "95ADCA13DF022B35986353DF15D339F10A07FA43712E994547FB657EF88A2E96"
+            "sha256": "5FAF1A0984C6B5AA7FF73A9D2BC39F7DE6539977857F254497BF29EF1DD4BECC"
           }
         ],
         "registry_eligible": false,
@@ -70404,6 +70404,118 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T20:37:29.663666+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [],
+      "metadata_updated": [
+        "P4.O0.physical_baseline_factor.H_acc_semantic_export",
+        "P5.componentwise_relative_decay.feasible_cone_spn.proof_attempt",
+        "P4.O0.physical_baseline_factor.H_acc_semantic_export.source_refinement_validator",
+        "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union",
+        "P5.componentwise_relative_decay.physical_gain_mu_nu_bridge",
+        "P5.componentwise_relative_decay.moving_frame_parameter_transport.compiled_candidate",
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.endpoint_fourier_bridge.axis_dot_seam",
+        "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge",
+        "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack",
+        "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid",
+        "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization"
+      ],
+      "artifact_hashes_updated": [
+        {
+          "name": "P4.O0.physical_baseline_factor.H_acc_semantic_export",
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_o0_h_acc_source_refinement\\check_refinement.py",
+          "old_sha256": "1E748B3C14E0C9E7FEF75C83C620A27AD9AD5C1729B3DB20D52516509FEFA1F0",
+          "new_sha256": "B265B3FC396524DB093C6385BA6DFF7BF9A352A57D01E2DB8DB21199986D780F"
+        },
+        {
+          "name": "P5.componentwise_relative_decay.feasible_cone_spn.proof_attempt",
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\P5FeasibleConeSPN.lean",
+          "old_sha256": "F87DDE161A0FAF9E4511BC6B51D551776E67C8733FDB1BA40EB56F89521B85EC",
+          "new_sha256": "FA9D990CFB2ADB6FCE049B4C6FEB9AB2DFED3C2BCD14B059A0A8332138E1E824"
+        },
+        {
+          "name": "P4.O0.physical_baseline_factor.H_acc_semantic_export.source_refinement_validator",
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_o0_h_acc_source_refinement\\NEW_REVIEW.md",
+          "old_sha256": "35F0A915CBCF9D69D15F2E1EA431D506F1ADF719C80D2BBBE03A1FC74DBA94D3",
+          "new_sha256": "665D88BC8DEBC92EE45C8EAC607049FF69744C5BAFCD4075D24F7164F8AE3C66"
+        },
+        {
+          "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union",
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_TWO_ETA_UNION20260907.lean",
+          "old_sha256": "F63F751A54DBA8FC358EC53562562701CE5D341DE777FF74714FC778905F4C34",
+          "new_sha256": "191114C416C782A93AF0A79409A9D23BF0F5BBCB0E083B3931F7CB03D710BB60"
+        },
+        {
+          "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union",
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_TWO_ETA_UNION20260907_REVIEW.md",
+          "old_sha256": "C13773B9C370E30CA6BC0297DA2FB96467B02E828FF79A2E15D80C2E5CA1336E",
+          "new_sha256": "5A60F702F4D640AA6AB71ED490BB2FBB1617BD10A22AD7CFD333AE9D17C4EA43"
+        },
+        {
+          "name": "P5.componentwise_relative_decay.physical_gain_mu_nu_bridge",
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_physical_gain_parameter_tube_lean\\P5PhysicalGainParameterTube.lean",
+          "old_sha256": "4A12E7950BB9FE4D953616DDE4B78509375ACC489837AAA9A4C4A899EDCBE6BF",
+          "new_sha256": "D7A00B2E3AC73739709C478C7B469400AA3BC9BD1AB2F814A5B69A858796E947"
+        },
+        {
+          "name": "P5.componentwise_relative_decay.moving_frame_parameter_transport.compiled_candidate",
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_moving_frame_transport_lean\\P5MovingFrameTransport.lean",
+          "old_sha256": "2FFEA27B7ADB2FA5F7D1B1DE16056B5F60A571D75232F483687A853B95FE0E80",
+          "new_sha256": "E8B45FD63A3969B64D64F2AA31D7BE42D66703A594829387CC40C6D8F2317961"
+        },
+        {
+          "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.endpoint_fourier_bridge.axis_dot_seam",
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_AXIS_20260907_REVIEW.md",
+          "old_sha256": "971E416FAC7498C96DE9AA9063991913470428C181AC550035D7E1BE59325550",
+          "new_sha256": "65C8403DFFDC64301400540FC42AE55A2E5CF40294DE8F2AB41B4B875F24F669"
+        },
+        {
+          "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge",
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_STRICT_RESERVE_FINAL_BRIDGE20260907.lean",
+          "old_sha256": "58015527D12983207F0374C6A8D5342FD7BC41C38FA100567D3B62F8D692CCE9",
+          "new_sha256": "D96E9FECD78A16A4002D84F33562DD8BD40FFB182BB0B0D1D1B73C109F207A66"
+        },
+        {
+          "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge",
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_STRICT_RESERVE_FINAL_BRIDGE20260907_REVIEW.md",
+          "old_sha256": "002CC644FFB17C7C035EF77860585E2A329555B8F983AD45FA269C2950D3AAF2",
+          "new_sha256": "660199600E04E5B47FAAE57479A08EF3BF2C308C8D672425562C5DA077A42D87"
+        },
+        {
+          "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack",
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_FAMILY_SLACK.lean",
+          "old_sha256": "E24DBADB5379731FEA0B61B82EC815D7BCA697A1DE1B0561C9E41F91181670CD",
+          "new_sha256": "6C296D581F9D4695AC67BD45C11BB407466C25891B466BD6518AF74644BDB014"
+        },
+        {
+          "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack",
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_FAMILY_SLACK_REVIEW.md",
+          "old_sha256": "883863721EA7451EE7AFE22B83692D254721F89535FC44A78B9D50E11BC6D911",
+          "new_sha256": "21940A150467B2C5769217436E0E28DA3006707B5BCBF27E7CE26788512FDCCB"
+        },
+        {
+          "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid",
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_FINITE_UNIFORM_GAP_REVIEW.md",
+          "old_sha256": "90801F1C3EE6EEB4F964FA20C4FC62B6AE0365208A64E9017EB6A45F679B0BBE",
+          "new_sha256": "940310843C06D40AC8A2DDD1FD57843EDCD58A90EB1A630F8420A6C9FB825F7A"
+        },
+        {
+          "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization",
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_DualScaleUniformization.lean",
+          "old_sha256": "B1D0343C089D0785FA6C212B2E1B28300EFD78B29130CF8FBDB1A59C42320E81",
+          "new_sha256": "E3244DD9A70B4CCAAAD8D63BA9CF9D293E22B59D0FAA66BED877B31AEEFB9CEA"
+        },
+        {
+          "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization",
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_DualScaleUniformization.review.md",
+          "old_sha256": "95ADCA13DF022B35986353DF15D339F10A07FA43712E994547FB657EF88A2E96",
+          "new_sha256": "5FAF1A0984C6B5AA7FF73A9D2BC39F7DE6539977857F254497BF29EF1DD4BECC"
+        }
+      ],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -74060,5 +74172,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "80c4a1ba634445ad9076d3673bd5c420d027a9807658d0eabf75575d46711b25"
+  "state_checksum": "b4ccedf2436202530f748ceacc9649888e403276e1872cfc4405dbafa7a310ee"
 }

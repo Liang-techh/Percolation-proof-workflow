@@ -7,7 +7,7 @@
 ## 有限域到底能提供什么
 
 `finite_lower_upper` 给任意实值函数在固定 Finset 上的共同有限下界/上界；
-`finite_four_envelope` 用乘积有限集同时覆盖 alpha、beta、gain、q 四个槽。
+`finite_four_envelope` 用乘积有限集同时覆盖 alpha、beta、gain、局部 qCap(x) 四个槽。
 若四个槽非负，可用共同下界 0 和一个共同有限上界。
 `finite_positive_floor` 在额外逐点 alpha>0 前提下给出严格正共同下界，
 复用旧 `finite_strict_majorant`，不重复其有限域证明。
@@ -33,6 +33,11 @@ alpha 用于正 front 贡献，所以消费者需要下界；beta/gain/q 用于�
 alpha 的上界虽在有限域上存在，但本单侧 margin 公式不需要它。
 frontFloor 可为零；若想得到正贡献，必须另证相应严格正性。
 offsetFloor 可以是任意实数。
+
+若输入原本是逐点 q(x)≤localCap(x)，`capFromLocalBounds` 另要求同域
+localCap(x)≤qCap，再通过传递生成统一 CapEvidence。有限域第四个槽的最大值只有在
+localCap 确实控制相同 residual 时才能这样使用；不能从 cap 函数本身推断 residual 上界。
+所得 bound 可填入 UniformData 的 q_bound，所有路径最终使用相同的统一 qCap。
 
 还有一条不能省略的 **nominal_realization**：
 
@@ -66,8 +71,10 @@ target + gainCap*(betaCap*qCap) ≤ offsetFloor + alphaFloor*frontFloor。
    可令 L=Q=1、offset=0、gain=beta=q=0、nominal=margin=alpha_n；
    normalization 与局部组合关系成立，却不能保证任何统一正 target。
    共同非负下界 0 仍存在，不能把“无正下界”说成“无任何下界”。
-2. `no_dyadic_upper`：将 beta、gain 或 q 中任一个槽设为 2^n，便没有共同有限上界；
+2. `no_dyadic_upper`：将 beta、gain 或 localCap 中任一个槽设为 2^n，便没有共同有限上界；
    每点取值仍有限且非负。这不是说每个无限域函数都无界。
+   localCap 无界只阻断对此 cap 函数的统一上界替换；若要同时展示实际 residual 无界，
+   可取 q_n=localCap_n=2^n，不能把任意保守 cap 的无界误说成 q 必定无界。
 3. `infinite_margin_counterexample`：alpha=L=Q=g=q=1、offset=0、beta_n=2^n，
    nominal=1、margin_n=1-beta_n。normalization comparison 等号成立，qCap=1 也存在，
    但任意统一 target 都被某点击败。将增长槽换成 gain 或 q，标量表达式相同；

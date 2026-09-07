@@ -1971,6 +1971,7 @@ def main() -> None:
     state = store.load()
     added: list[str] = []
     updated: list[str] = []
+    hash_updates: list[dict[str, str]] = []
     for spec in CHILDREN:
         parent_id = find_id(state, spec["parent"])
         existing = find_node(state, spec["name"])
@@ -1986,6 +1987,27 @@ def main() -> None:
             if missing:
                 recorded.extend(missing)
                 updated.append(spec["name"])
+            # A harvested agent may revise an already indexed sidecar after
+            # its first registration.  Refresh the digest in place and retain
+            # the old/new values in the integration event; stale provenance
+            # must never survive merely because the path was already present.
+            for expected in expected_artifacts:
+                current = next((item for item in recorded
+                                if isinstance(item, dict)
+                                and item.get("path") == expected["path"]), None)
+                if current is None:
+                    continue
+                old_hash = current.get("sha256")
+                if old_hash != expected["sha256"]:
+                    current["sha256"] = expected["sha256"]
+                    hash_updates.append({
+                        "name": spec["name"],
+                        "path": expected["path"],
+                        "old_sha256": str(old_hash),
+                        "new_sha256": expected["sha256"],
+                    })
+                    if spec["name"] not in updated:
+                        updated.append(spec["name"])
             # Older decomposition scripts predate the explicit math-policy
             # fields.  Backfill only absent advisory/gate defaults so the
             # scheduler sees the same bottleneck as a newly registered child;
@@ -2029,12 +2051,16 @@ def main() -> None:
         added.append(spec["name"])
     if added or updated:
         state.event("routeb_sidecar_frontier_registered", child_names=added,
-                    metadata_updated=updated, registry_promoted=False,
+                    metadata_updated=updated,
+                    artifact_hashes_updated=hash_updates,
+                    registry_promoted=False,
                     formal_certificate_allowed=False)
         state.validate()
         store.save(state)
     print({"status": "registered" if added or updated else "already_registered",
-           "added": added, "updated": updated, "revision": store.load().revision,
+           "added": added, "updated": updated,
+           "artifact_hashes_updated": hash_updates,
+           "revision": store.load().revision,
            "registry_promoted": False, "formal_certificate_allowed": False})
 
 
