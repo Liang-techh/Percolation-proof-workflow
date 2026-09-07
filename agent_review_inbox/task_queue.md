@@ -1697,3 +1697,10 @@ after integration; corrections should be a new result file.
 - Do not spend the next cycle on broad regression. Prioritize fresh mathematical
   bottleneck work: O0 keyed bounds, O1 typed inverse binding, O2 exact-real
   coverage/transport, and force-scale deployed witness binding.
+### O2 sidecar hash drift guard (2026-09-07)
+
+- The theta2 exact-real intake now records a stale source/olean pair as
+  `REJECTED_STALE_SOURCE_OR_OLEAN_HASH` instead of raising an untracked failure.
+- Re-run admission only after the agent produces a fresh pinned compile receipt
+  whose source and OLean hashes match the current sidecar; the mathematical
+  child remains conditional and does not close O2.

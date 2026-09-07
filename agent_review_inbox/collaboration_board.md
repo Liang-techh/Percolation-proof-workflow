@@ -1009,3 +1009,10 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   exact-real `K/Br/Cf` 三元组；`rho_F`、Float64 候选、zero-shift 不能替代它。
   已写入 O0 intake，保持 `formal_certificate_allowed=false`、registry false。
 - 本轮只更新本地 state；不主动同步 GitHub，等待下一次 20 分钟收割或重大突破。
+### 2026-09-07 — 梁智炜：O2 stale sidecar 防护生效
+
+- `T-P4-036.2` 的旧 exact-real receipt 与当前 `Theta2ExactRealApi.lean` hash
+  不一致，而且源码仍在变化；新的 intake 已将其记录为
+  `REJECTED_STALE_SOURCE_OR_OLEAN_HASH`，没有把过期的 theorem child 当成新证据。
+- Hilbert 需要在源码稳定后重新生成 source/olean 成对 hash；在此之前 O2 只保留
+  open frontier，不消耗 coverage、Float64/libm 或 registry gate。

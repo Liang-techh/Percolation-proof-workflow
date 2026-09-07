@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 511,
+  "revision": 512,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -15472,6 +15472,42 @@
             "per_box_input_output_and_coverage",
             "finite_non_nan_no_overflow"
           ],
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
+        },
+        "o2_exact_real_children": [
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-036.2",
+            "source_agent": "codex-local",
+            "review_status": "REJECTED_STALE_SOURCE_OR_OLEAN_HASH",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-036.2-range-reduction-lemma-codex-20260907.md",
+              "sha256": "017ABA695E0B26343C6A00A8D00B0E8A83A8084A92CAB70297F09F7631EFEDA2"
+            },
+            "current_source_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\routeb_fd8_tensor_christoffel_enclosure_20260906\\mathlib\\DownstreamTest\\Theta2ExactRealApi.lean",
+              "sha256": "F4088AEF30F99E3FC61B4B08122283E148AE5EFB1B24F56E91BFD4EC4433E6A0"
+            },
+            "current_olean_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\routeb_fd8_tensor_christoffel_enclosure_20260906\\mathlib\\DownstreamTest\\Theta2ExactRealApi.olean",
+              "sha256": "BAAD80B24C28639EF8C9E0453ED0D20D8C8CFCD12CF748EC8C178B8F3DEA413B"
+            },
+            "expected_source_sha256": "5E5C064FDC2179FE966FED6DE298564F45F69998DCB675D9CDB0AA59172BADAF",
+            "expected_olean_sha256": "BAAD80B24C28639EF8C9E0453ED0D20D8C8CFCD12CF748EC8C178B8F3DEA413B",
+            "coverage": "OPEN",
+            "formal_certificate_allowed": false,
+            "registry_promoted": false
+          }
+        ],
+        "o2_theta2_exact_real_child": {
+          "status": "REJECTED_STALE_SOURCE_OR_OLEAN_HASH",
+          "task_id": "T-P4-036.2",
+          "expected_source_sha256": "5E5C064FDC2179FE966FED6DE298564F45F69998DCB675D9CDB0AA59172BADAF",
+          "current_source_sha256": "F4088AEF30F99E3FC61B4B08122283E148AE5EFB1B24F56E91BFD4EC4433E6A0",
+          "expected_olean_sha256": "BAAD80B24C28639EF8C9E0453ED0D20D8C8CFCD12CF748EC8C178B8F3DEA413B",
+          "current_olean_sha256": "BAAD80B24C28639EF8C9E0453ED0D20D8C8CFCD12CF748EC8C178B8F3DEA413B",
+          "coverage": "OPEN",
           "formal_certificate_allowed": false,
           "registry_promoted": false
         }
@@ -39435,6 +39471,15 @@
       "admission_status": "obstruction_pending_exact_keyed_bounds",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T13:36:19.865673+00:00",
+      "kind": "routeb_o2_theta2_receipt_rejected_stale_hash",
+      "node_id": "0da99a7cef5e4f0b91c7cc06d9e7c010",
+      "expected_source_sha256": "5E5C064FDC2179FE966FED6DE298564F45F69998DCB675D9CDB0AA59172BADAF",
+      "current_source_sha256": "F4088AEF30F99E3FC61B4B08122283E148AE5EFB1B24F56E91BFD4EC4433E6A0",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -43091,5 +43136,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "f54402533145ae037bf68fbf2dc0e906ca8ad07bd6378176c72166e97efd34af"
+  "state_checksum": "2641829883c87dd94b363b8aae939b45a79a73be45834006d4ded16005636c4b"
 }
