@@ -33,8 +33,9 @@ theorem young_gap_mul_identity
     (A P D theta : ℝ) (htheta0 : theta ≠ 0) :
     theta * (D - youngCost theta A P) =
       (D - A - P) * theta - A * theta^2 - P := by
-  field_simp [youngCost, htheta0]
-  <;> ring
+  unfold youngCost
+  field_simp [htheta0]
+  ring
 
 /-- For `theta>0`, the Young budget is equivalent to one polynomial quadratic
 inequality, with no division remaining in the checker-facing condition. -/
@@ -108,8 +109,12 @@ theorem young_scalar_discriminant_necessary
       _ ≤ X^2 := hamgm
       _ ≤ (G * theta)^2 := hsq_cmp
       _ = G^2 * theta^2 := by ring
-  have hdisc : 4 * A * P ≤ G^2 :=
-    (mul_le_mul_right htheta2).mp hscaled
+  have hdisc : 4 * A * P ≤ G^2 := by
+    by_contra hnot
+    have hlt : G^2 < 4 * A * P := lt_of_not_ge hnot
+    have hscaled_strict : G^2 * theta^2 < (4 * A * P) * theta^2 :=
+      mul_lt_mul_of_pos_right hlt htheta2
+    linarith
   constructor
   · simpa [G] using hG
   · simpa [G] using hdisc
@@ -119,8 +124,9 @@ theorem young_theta_gap_identity
     (A P G : ℝ) (hA0 : A ≠ 0) (hG0 : G ≠ 0) :
     A + P + G - youngCost (G / (2 * A)) A P =
       (G^2 - 4 * A * P) / (2 * G) := by
-  field_simp [youngCost, hA0, hG0]
-  <;> ring
+  unfold youngCost
+  field_simp [hA0, hG0]
+  ring
 
 /-- Sharp constructive sufficiency.  Notably, `P≥0` is unnecessary once the
 positive-slack and discriminant premises are supplied. -/
@@ -147,7 +153,7 @@ theorem young_lambda_gap_identity
         (1 + 2 * A / G) * P) =
       (G^2 - 4 * A * P) / (2 * G) := by
   field_simp [hA0, hG0]
-  <;> ring
+  ring
 
 /-- Constructive rational `lambda>1` consumer for the combined-Schur ledger. -/
 theorem young_scalar_lambda_constructive
@@ -161,7 +167,9 @@ theorem young_scalar_lambda_constructive
       (((1 + 2 * A / G) / ((1 + 2 * A / G) - 1)) * A +
         (1 + 2 * A / G) * P) =
       (G^2 - 4 * A * P) / (2 * G) := by
-  have hlambda : 1 < 1 + 2 * A / G := by positivity
+  have hfrac : 0 < 2 * A / G := by
+    exact div_pos (mul_pos (by norm_num) hA) hG
+  have hlambda : 1 < 1 + 2 * A / G := by linarith
   have hgap := young_lambda_gap_identity A P G (ne_of_gt hA) (ne_of_gt hG)
   have hgap_nonneg :
       0 ≤ A + P + G -
