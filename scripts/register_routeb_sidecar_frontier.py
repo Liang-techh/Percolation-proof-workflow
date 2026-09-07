@@ -1963,6 +1963,19 @@ CHILDREN = [
             "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_DualScaleUniformization.review.md",
         ],
     },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.finite_box_uniform_margin.strict_export.endpoint_uniform_margin.taylor_remainder",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.finite_box_uniform_margin.strict_export.endpoint_uniform_margin",
+        "statement": "A Taylor/interval remainder certificate supplies the per-box endpoint-to-gap margin only with explicit function, derivative, offset, remainder, rounding, endpoint, cap, and coverage evidence; underestimated remainder or omitted coverage blocks closure.",
+        "proof_sketch": "Consume the sound Taylor lower enclosure and endpoint/cap chains at the same box, produce per-box positive quantitative margin for the endpoint-uniform consumer, and retain exact wrong-remainder and omitted-point obstructions without claiming an interval implementation.",
+        "lane": "source_semantics",
+        "bottleneck": "coverage",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_TAYLOR_REMAINDER",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_TAYLOR_REMAINDER.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_TAYLOR_REMAINDER_REVIEW.md",
+        ],
+    },
 ]
 
 
