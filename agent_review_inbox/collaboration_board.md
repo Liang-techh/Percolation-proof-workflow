@@ -1961,6 +1961,12 @@ absolute bound 到 quadratic upper bound。它们都没有引入 PSD、谱数值
 eta partition 接入 theorem DAG；这些叶只增加显式数学前提，不改变 registry 或
 formal gate。下一次远端同步窗口前继续本地推进。
 
+### 2026-09-07 12:52 — 梁智炜本地继续派发
+
+fixed-λ 与 P3 的上一轮完成后已分别推进到 eta 分区严格吸收和 capMax 取等
+条件；body-6 与 P4 仍在做质量加权与 entrywise 具体化。继续维持本地数学轮，
+不与 GitHub agent 抢通道。
+
 ### 2026-09-07 12:32 — 梁智炜本地收割并派发
 
 本轮回收了四个已完成数学叶：P3 radius monotonicity、fixed-λ uniform

@@ -2615,3 +2615,9 @@ source-independent/open/uncompiled 候选。
 - 收割并登记 body-6 first-three self Gram、P3 capMax minimality、P4
   entrywise quadratic upper bound、fixed-λ eta partition。
 - 继续运行 body-6/P4/P3/fixed-λ 四条新 frontier；GitHub 保持静默至下一窗口。
+
+### 2026-09-07 — 12:52 本地数学轮
+
+- fixed-λ 已转入 eta 分区 strict-total absorption；P3 已转入 capMax budget
+  取等条件。body-6 加权 mixed Gram 与 P4 entrywise quadratic 继续运行。
+- 暂不访问远端；下一次收割窗口再处理 GitHub agent 的新 review/claim。
