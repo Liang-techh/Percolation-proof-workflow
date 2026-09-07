@@ -1625,6 +1625,45 @@ CHILDREN = [
             "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_UniformParameterBridge.review.md",
         ],
     },
+    {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding",
+        "statement": "The existing SELF3 velocity/axis Gram and mass-law interfaces conditionally bind the complete nine-entry weighted body-6 front block A, while independent candidate identities remain explicit.",
+        "proof_sketch": "Consume center-offset and SourceWeightsTarget premises, combine the actual mass Gram law with SELF3 tables, expand all nine weighted entries including off-diagonal inertia contributions, and feed the resulting A binding into the mixed source contract without asserting unconditioned candidate validity.",
+        "lane": "source_semantics",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_BODY6_SELF3_MASS_BINDING",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_SELF3MASSBIND20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_SELF3MASSBIND20260907.review.md",
+        ],
+    },
+    {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast",
+        "statement": "The rational composed strict budget survives explicit ℚ→ℝ cast chains and yields a real-valued final load strictly below the real final margin.",
+        "proof_sketch": "Retain rational source/target/reserve/load and final-margin equalities, transport sigma and the rational gap with the existing cast adapter, make subtraction casts explicit, and conclude the real strict inequality without repeating reindex or slack proofs.",
+        "lane": "lean_adapter",
+        "bottleneck": "source_semantics",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_REAL_FINAL_STRICT_CONSUMER",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_REAL_FINAL_STRICT_CONSUMER20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_REAL_FINAL_STRICT_CONSUMER20260907_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid",
+        "statement": "A finite family of explicitly covering regions, each carrying a uniform gap and cap-load comparison, yields the corresponding whole-domain strict slack consumer; grid membership alone does not.",
+        "proof_sketch": "Select a listed region from the coverage witness at the same domain point, consume its uniform gap and cap comparison, and preserve omitted-point counterexamples to block promotion without an explicit cover.",
+        "lane": "source_semantics",
+        "bottleneck": "coverage",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_BOX_COVERAGE",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_BOX_COVERAGE.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_BOX_COVERAGE_REVIEW.md",
+        ],
+    },
 ]
 
 

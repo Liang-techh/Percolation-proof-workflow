@@ -2866,6 +2866,10 @@ fixed-λ `COMPOSED_REINDEX_SLACK` 和 P3 `FAMILY_SLACK` 已登记 revision 680�
 保持 `OPEN_UNCOMPILED`。下一轮优先收割 body-6 mixed-block binding 与 P4
 uniform contraction；若只得到缺失字段，则记录 obstruction 而不填入假数据。
 
+body-6 SELF3 mass binding、fixed-λ real final strict consumer、P3 box coverage
+已登记 revision 685，均未进入 registry。下一轮继续寻找实际 interval/source
+数值绑定与 residual/flowpipe 连接，不把抽象 consumer 当作 Route-B 证书。
+
 补充本地派发：
 
 - fixed-λ：有限 ℚ weighted-sum 的 ℚ→ℝ cast/reindex adapter；

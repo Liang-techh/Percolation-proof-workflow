@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 684,
+  "revision": 685,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -41122,7 +41122,9 @@
       "parent_id": "9d21b2840c41476596a3a169ad778509",
       "status": "open",
       "proof_sketch": "Bind front and tail indices to actual sourceBodyMass entries, use source symmetry for the reverse mixed block, and consume all three binding fields in the coefficient formula; do not infer arbitrary candidate arrays, complete PSD, or coverage.",
-      "dependencies": [],
+      "dependencies": [
+        "b9170319d9654c91a0ef4ab01e111b86"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -41194,7 +41196,9 @@
       "parent_id": "0cf1b155a71c496b992d6fc532486488",
       "status": "open",
       "proof_sketch": "Prove the finite sum cast seam and apply it to both source and target sides of the existing rational reindex adapter, exposing a real-valued equality chain without repeating reindex or strict-slack logic.",
-      "dependencies": [],
+      "dependencies": [
+        "3e433a1cd430478c9017029b76231fa0"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -41266,7 +41270,9 @@
       "parent_id": "5d8b98a8aa624372bac5042ad1ee6c88",
       "status": "open",
       "proof_sketch": "Use Finset.inf' membership and lower-bound lemmas to extract the finite minimum, then retain an omitted-point Bool counterexample showing that finite-grid positivity is not continuous-domain coverage.",
-      "dependencies": [],
+      "dependencies": [
+        "f21e0d152652420e89bf91f741ce86fd"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -41318,6 +41324,111 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_UniformParameterBridge.review.md",
             "sha256": "A5DF0208FFB4802B2FDEBA092A484CB571E825CCA56ECE15585A0EC2DE8B9999"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "b9170319d9654c91a0ef4ab01e111b86": {
+      "id": "b9170319d9654c91a0ef4ab01e111b86",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass",
+      "statement": "The existing SELF3 velocity/axis Gram and mass-law interfaces conditionally bind the complete nine-entry weighted body-6 front block A, while independent candidate identities remain explicit.",
+      "parent_id": "d05f06142f284bb4afc90b9e4059e5fb",
+      "status": "open",
+      "proof_sketch": "Consume center-offset and SourceWeightsTarget premises, combine the actual mass Gram law with SELF3 tables, expand all nine weighted entries including off-diagonal inertia contributions, and feed the resulting A binding into the mixed source contract without asserting unconditioned candidate validity.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_BODY6_SELF3_MASS_BINDING",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_SELF3MASSBIND20260907.lean",
+            "sha256": "1B198A0846BC118042741410A488E5F9EEFBF9DCB50B709D15A44B37B47B53AB"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_SELF3MASSBIND20260907.review.md",
+            "sha256": "2187F012BA64982FB33A44C24F121CDDEE5BC1EE3BCA9E641206B71257FECE37"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "3e433a1cd430478c9017029b76231fa0": {
+      "id": "3e433a1cd430478c9017029b76231fa0",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer",
+      "statement": "The rational composed strict budget survives explicit ℚ→ℝ cast chains and yields a real-valued final load strictly below the real final margin.",
+      "parent_id": "4aa0a8deaacf4e1da5364b9ad0f10afb",
+      "status": "open",
+      "proof_sketch": "Retain rational source/target/reserve/load and final-margin equalities, transport sigma and the rational gap with the existing cast adapter, make subtraction casts explicit, and conclude the real strict inequality without repeating reindex or slack proofs.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "source_semantics",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_FIXED_LAMBDA_REAL_FINAL_STRICT_CONSUMER",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_REAL_FINAL_STRICT_CONSUMER20260907.lean",
+            "sha256": "8CE0421612ABCB77F4115E01B9718E7CB8CB0D60F0740FB5E7BE1FCB5332ECC8"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_REAL_FINAL_STRICT_CONSUMER20260907_REVIEW.md",
+            "sha256": "B988AA22177B0B3613DF0D479254B47DF9F59EF1C5A8DFEE91CD359AA192E725"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "f21e0d152652420e89bf91f741ce86fd": {
+      "id": "f21e0d152652420e89bf91f741ce86fd",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage",
+      "statement": "A finite family of explicitly covering regions, each carrying a uniform gap and cap-load comparison, yields the corresponding whole-domain strict slack consumer; grid membership alone does not.",
+      "parent_id": "52bdfd78a4d64ed4a68d51ea8d8b98ce",
+      "status": "open",
+      "proof_sketch": "Select a listed region from the coverage witness at the same domain point, consume its uniform gap and cap comparison, and preserve omitted-point counterexamples to block promotion without an explicit cover.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "coverage",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_CENTRAL_FD_BOX_COVERAGE",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_BOX_COVERAGE.lean",
+            "sha256": "FC0C37C0102D707089F68273B3F8524F53EDD2CFBBAD4DD467DC94C79B846F7C"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_BOX_COVERAGE_REVIEW.md",
+            "sha256": "AD208A0E9FFD5635EA0A460662CCD7CFAC56462F75183F70B8880BFF6258CE3B"
           }
         ],
         "registry_eligible": false,
@@ -69047,6 +69158,39 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T20:00:51.088205+00:00",
+      "kind": "node_added",
+      "node_id": "b9170319d9654c91a0ef4ab01e111b86",
+      "parent_id": "d05f06142f284bb4afc90b9e4059e5fb",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass"
+    },
+    {
+      "at": "2026-09-07T20:00:51.089349+00:00",
+      "kind": "node_added",
+      "node_id": "3e433a1cd430478c9017029b76231fa0",
+      "parent_id": "4aa0a8deaacf4e1da5364b9ad0f10afb",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer"
+    },
+    {
+      "at": "2026-09-07T20:00:51.090380+00:00",
+      "kind": "node_added",
+      "node_id": "f21e0d152652420e89bf91f741ce86fd",
+      "parent_id": "52bdfd78a4d64ed4a68d51ea8d8b98ce",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage"
+    },
+    {
+      "at": "2026-09-07T20:00:51.090389+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass",
+        "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer",
+        "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -72703,5 +72847,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "e83b60d340a23f737c535096b9675441c077c0b11a73e28ac744dd7e51d7e9b7"
+  "state_checksum": "8e42b4870649319e2315494bcb9f11f9f7504eb1e600e30ed5a9c7677a52aa9f"
 }
