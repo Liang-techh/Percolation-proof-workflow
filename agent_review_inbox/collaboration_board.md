@@ -1206,3 +1206,12 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   margin 未消费，registry 与 formal gate 均保持关闭。
 - 下一步只派发同键 baseline bound + positive margin + theta 的精确 receipt，
   不重复 factor-2 或旧 CSV 审计。
+
+### 2026-09-07 — 梁智炜：fresh force execution obstruction 收割
+
+- fresh general-state exporter 本轮未执行：Julia 未安装/不在 PATH，未生成 CSV
+  或 runtime receipt；已记录为 `PENDING_JULIA_EXECUTION`。
+- exporter 与 deployed `dhport_lib.jl` hash 均重新核对并匹配冻结 gate；不消费
+  旧 CSV，不声称 deployed `tau` 等价、Lean theorem 或 registry promotion。
+- 下一步仍只需要具备 Julia 的执行 agent 产出 16-row 完整字段、E1/E2<=1e-12、
+  exit/stdout/stderr 和 CSV/receipt hashes。

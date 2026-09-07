@@ -1867,3 +1867,12 @@ after integration; corrections should be a new result file.
   当前无法判定正负，继续保持 `OPEN_FAIL_CLOSED_STRICT_LEFTOVER_REQUIRED`。
 - 派发目标：只寻找带 source/state/metric/orientation 绑定的 baseline、margin、
   theta 三元组及 exact strict arithmetic；禁止重复已完成的 norm conversion。
+
+### T-P4-KC-COORDINATE-ADAPTER — fresh execution obstruction (2026-09-07)
+
+- 当前环境 `julia` 不可用，fresh exporter 未运行、CSV/receipt 不存在；状态
+  保持 `PENDING_JULIA_EXECUTION`，不改变 force gate。
+- exporter/deployed source hashes 已核对；后续执行 agent 必须生成完整 16-row
+  receipt、四个 E1/E2 residual 分量、process exit 0 与双 artifact hash。
+- 禁止把 runner 存在、旧 CSV 或本轮 obstruction 升级为 runtime PASS 或 DH
+  source equivalence。
