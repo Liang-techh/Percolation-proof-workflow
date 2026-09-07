@@ -309,3 +309,12 @@
 - `T-P4-012` 的下一步不是调小常数，而是证明该 `mass` 与 deployed DH
   `M(q)`/轨迹状态绑定，并再给出 `M_BD` operator bound；否则该预算只能留在
   conditional frontier。
+
+### 2026-09-07 — 梁智炜：remote budget → PMI 纯代数 seam
+
+- 新增 `T-P4-013`：`RemotePMIComposition.lean` 将
+  `residual² <= kappa²*mass` 与 `mass <= beta²*y²` 精确组合成
+  `residual² <= (kappa*beta)²*y²`，再消费 scalar Schur budget。
+- 该子定理把 GitHub Lean 验证与真实 DH source binding 解耦；巨阳仙尊只需
+  验证 theorem statement、axioms 和 pinned compile。P4 仍要求另行证明
+  `MBD` operator、`mass` 的 full-state 语义及 covered-domain 绑定。

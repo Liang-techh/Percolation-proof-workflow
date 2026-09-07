@@ -55,6 +55,8 @@ TASK_TARGETS = {
     "T-FLT-QUOTIENT-SIDECAR": (None, "flt_quotient_transport_sidecar"),
     "T-P4-KC-COORDINATE-ADAPTER": ("P4.residual_schur_pmi", "pending_kc_coordinate_adapter"),
     "T-P4-MBD-PROJECTION": ("P4.residual_schur_pmi", "pending_mbd_projection_obstruction"),
+    "T-P4-012": ("P4.residual_schur_pmi", "pending_typed_remote_binding_contract"),
+    "T-P4-013": ("P4.residual_schur_pmi", "pending_remote_budget_pmi_composition"),
     "T-P3-007": ("P3.strict_true_dh_bounds", "pending_concrete_mass_entry_bridge"),
     "T-P4-005": ("P4.residual_schur_pmi", "pending_one_channel_source_binding"),
     "T-P4-006": ("P4.residual_schur_pmi", "pending_sharp_schur_formalization"),

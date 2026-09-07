@@ -72,6 +72,18 @@ GitHub agents for the push channel.
 - forbidden: block-only remote bounds, arbitrary physical reachability claims,
   or treating the structural contract as registry/formal admission.
 
+### T-P4-013 — remote budget to scalar PMI composition
+
+- status: `open` (isolated Lean seam added 2026-09-07)
+- owner: `巨阳仙尊`
+- source: `examples/routeb_remote_pmi_composition/RemotePMIComposition.lean`;
+- scope: compile the two source-independent composition theorems and inspect
+  exact statements, pinned toolchain, and `#print axioms`;
+- deliver: immutable review with Lean exit code, theorem names, source/blob
+  hashes, and a specialization note for `kappa`/`beta`;
+- forbidden: treating the composition as a proof of `M_BD`, mass/source
+  equality, coverage, or P4/M4 closure.
+
 ## Queue: Route-B current bottlenecks
 
 ### T-P3-001 — single-entry true-DH source bridge

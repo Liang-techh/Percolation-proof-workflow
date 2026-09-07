@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 366,
+  "revision": 367,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -7465,7 +7465,8 @@
       "proof_sketch": "Inject the residual, preserve its direction, and prove strict PSD on every covered cell.",
       "dependencies": [
         "8f7df5df39a041d7a972078830dbcee7",
-        "f1864c5a432948b7856a00bd365e5bed"
+        "f1864c5a432948b7856a00bd365e5bed",
+        "aa46ed7e78d649ef978baee4eca44885"
       ],
       "verified_artifact": null,
       "attempts": [
@@ -10529,6 +10530,45 @@
           "MBD_operator_bound_on_covered_domain",
           "descriptor_identity_or_exact_schur_elimination",
           "true_DH_and_flowpipe_coverage"
+        ]
+      }
+    },
+    "aa46ed7e78d649ef978baee4eca44885": {
+      "id": "aa46ed7e78d649ef978baee4eca44885",
+      "name": "P4.remote_budget_pmi_composition",
+      "statement": "A remote residual bound residual^2 <= kappa^2*mass and a scale bridge mass <= beta^2*y^2 imply the scalar P4 Schur envelope with coefficient (kappa*beta)^2.",
+      "parent_id": null,
+      "status": "open",
+      "proof_sketch": "Multiply the mass bridge by kappa^2, normalize the exact square, then apply the existing scalar Schur completion.",
+      "dependencies": [
+        "f1864c5a432948b7856a00bd365e5bed"
+      ],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean-source-independent",
+        "statement_status": "pending_pinned_compile",
+        "evidence_level": "isolated_lean_candidate",
+        "claim_status": "physical_binding_open",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "upstream_node": "f1864c5a432948b7856a00bd365e5bed",
+        "p4_parent": "1e7b1df1835f4deba06b11a8182f6719",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_remote_pmi_composition\\RemotePMIComposition.lean",
+            "sha256": "9ea91cd2a320344a1baf7ccd6a0a5f85170f5187ec3c3dee6ac2c0fd022b5f79"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_remote_pmi_composition\\README.md",
+            "sha256": "dc716bcaf44bac160506c970ea4e89709ab854149a6acb9a37a9bdf30a4c5b17"
+          }
+        ],
+        "unresolved": [
+          "pinned_lean_compile_and_axioms",
+          "MBD_operator_source_bound",
+          "mass_to_PMI_scale_source_bridge"
         ]
       }
     }
@@ -30459,6 +30499,33 @@
       "status": "conditional_candidate",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T06:24:30.002277+00:00",
+      "kind": "node_added",
+      "node_id": "aa46ed7e78d649ef978baee4eca44885",
+      "parent_id": null,
+      "name": "P4.remote_budget_pmi_composition"
+    },
+    {
+      "at": "2026-09-07T06:24:30.002969+00:00",
+      "kind": "routeb_remote_pmi_composition_checkpoint",
+      "node_id": "aa46ed7e78d649ef978baee4eca44885",
+      "parent_id": "1e7b1df1835f4deba06b11a8182f6719",
+      "upstream_node": "f1864c5a432948b7856a00bd365e5bed",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_remote_pmi_composition\\RemotePMIComposition.lean",
+          "sha256": "9ea91cd2a320344a1baf7ccd6a0a5f85170f5187ec3c3dee6ac2c0fd022b5f79"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_remote_pmi_composition\\README.md",
+          "sha256": "dc716bcaf44bac160506c970ea4e89709ab854149a6acb9a37a9bdf30a4c5b17"
+        }
+      ],
+      "status": "pending_pinned_compile",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -34115,5 +34182,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "6dfb2035f61f5a54df3fdbce5801fbe86dccfda2315e7125b751cabfc1375106"
+  "state_checksum": "54aad1e9acc110c3e016ef0cec09043cf576942e92079b45de82dd758dbfc0d5"
 }
