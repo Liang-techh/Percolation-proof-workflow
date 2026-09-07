@@ -2,7 +2,7 @@
 kind: review_result
 task_id: T-P8-003
 source_agent: Codex
-created_at: 2026-09-06T23:30:00-06:00
+created_at: 2026-09-06T22:30:00-06:00
 integration_status: pending
 ---
 
@@ -10,149 +10,148 @@ integration_status: pending
 
 ## Scope and decision boundary
 
-This is a read-only contract freeze audit for the current Route-B P8 leaf.
-It only compares the deployed 13-state source contract against the existing
-14-state ramp parent and the explicit-time 13-state fallback. No theorem
-target, state registry entry, source file, or external project was modified.
+This is a read-only audit of the current P8 state contract choice. I inspected the
+existing docs, the Lean adapter scaffold, and the source-contract metadata only.
+No theorem target, state shape, registry entry, or external project was modified.
 No broad test run was performed.
 
-The inspected evidence is the same contract layer already reflected in:
+The question is not whether the deployed RHS is mathematically interesting. The
+question is whether the currently deployed source can honestly inhabit the existing
+14-state ramp contract, or whether it must be frozen as an explicit-time 13-state
+contract instead.
 
-- `docs/routeb-p8-next-concrete-child.md`
-- `docs/routeb-p8-flowpipe-binding-next.md`
-- `examples/routeb_p8_picard_step_lean/RouteBP8PicardStep.lean`
-- `examples/routeb_p8_contract_adapter/P8ContractAdapter.lean`
-- `examples/routeb_p8_rhs_payload_generator/SOURCE_METADATA.json`
-- `examples/routeb_p8_rhs_payload_generator/receipt.template.json`
+## Inspected evidence
 
-## Freeze decision
+| artifact | SHA-256 | relevance |
+|---|---|---|
+| `docs/routeb-p8-next-concrete-child.md` | `9EF74058FB6711946A253A9DED55EB6CE91DDA01059A78999B413FF98E57AB0E` | states the 13-state source / 14-state ramp mismatch and the `c=1` witness |
+| `docs/routeb-p8-flowpipe-binding-next.md` | `47681DFC4DE2153B34AD8B2269FF747583D09E3FADDACA50FDA27D94BC43A6AB` | coordinate map, source hash notes, and flowpipe chain boundary |
+| `examples/routeb_p8_contract_adapter/P8ContractAdapter.lean` | `DC4BF1C7C0B1EE428EE3BF146E90801E08A2199FB931789699FE8073A82AB7F9` | exact negative `zeroTailLift_not_ramp` and conditional `timeLift_rampPremise` |
+| `examples/routeb_p8_rhs_payload_generator/SOURCE_METADATA.json` | `C8045946C2E087FF8B31010A823F7EAD6A1AF56D2D84D68DD39D62C70A6EED34` | declares `julia_state_dimension=13`, `w_rhs=0`, and `c` as sidecar |
+| `examples/routeb_p8_rhs_payload_generator/receipt.template.json` | `545E99CB45B95D804962F70A3B5EC4A44F88BD9F4D6649976A986512B453A207` | endpoint receipt is still pending; no hidden 14-state source binding |
+| `examples/routeb_p8_picard_step_lean/RouteBP8PicardStep.lean` | `99D309B1D07439DFB7DE1088D6A2E34F7DCA664EFE72857F94ECE5F28A635741` | parent contract still expects `w'=c` and `c'=0` |
 
-Freeze the contract as follows:
+Commit context: current worktree head before this edit was `b667ccc`. The decision
+below is based on the inspected files above, not on a new source mutation.
 
-- the deployed source is currently only a 13-state RHS with `w` as the last
-  state and `c` as an open sidecar parameter;
-- the existing 14-state parent is not directly instantiated by that source;
-- the correct frozen decision is therefore a named explicit-time 13-state
-  theorem family, unless the source itself is repaired into a genuine 14-state
-  ramp RHS.
+## Decision
 
-In other words, the current evidence supports “explicit-time 13-state parent
-now” as the admission-safe freeze. The 14-state ramp parent remains the
-preferred semantic target only if the source contract is later changed to
-`w' = c, c' = 0`.
+Freeze the deployed source as an explicit-time 13-state contract, not as the
+existing 14-state ramp theorem.
 
-## Minimum theorem signature
+Why:
 
-The smallest semantically honest signature is an explicit-time 13-state one:
+- the source metadata says the deployed RHS is 13-state;
+- `w` is written as a constant source literal (`w_rhs=0`);
+- `c` is marked as a sidecar parameter, not a consumed state;
+- the 14-state parent requires `w'=c` and `c'=0`, which the current deployed source
+  cannot satisfy on the legal `c=1` initial state;
+- the Lean adapter already isolates the negative fact that the zero-tail lift does
+  not satisfy the ramp premise.
+
+In short: the 14-state ramp theorem is the wrong frozen contract for the current
+deployed source. The semantically honest freeze is an explicit-time 13-state parent
+with `c` external to the state vector.
+
+## Minimal theorem signature
+
+The smallest safe theorem family to freeze is:
 
 ```text
-State13 := Fin 13 → ℝ
-F13 : ℝ → ℝ → State13 → State13
-
-theorem explicit_time_flowpipe
+theorem P8_explicit_time_flowpipe
   (F13 : ℝ → ℝ → State13 → State13)
   (x₀ : State13) (c : ℝ)
-  (hinit : mechanicalEnergy13 x₀ ≤ 9/400 ∧ x₀[w] = 0 ∧ c^2 ≤ 3)
-  (hbinding : ∀ t x, F13 t c x = source_rhs13 t c x)
-  (hregular : ...)
+  (hinit : explicitInitial13 x₀ c)
+  (hbind : ∀ t x, F13 t c x = source_rhs13 t c x)
+  (hreg : ...)
   (hbox : ...)
-  :
-  ∃ y, solution13 F13 c x₀ y ∧
-    ∀ t ∈ Set.Icc 0 1, y t ∈ certifiedTube13 t
+  (hcont : ...)
+  : ∃ y, solution13 F13 c x₀ y ∧
+      ∀ t ∈ Set.Icc 0 1, y t ∈ certifiedTube13 t
 ```
 
-If the source is later repaired into a genuine 14-state ramp RHS, the parent
-signature can stay closer to the existing Lean scaffold:
+If the team wants the theorem to remain closer to the current adapter shape, the
+type can be presented as a ramp-repair bridge, but only with `c` external:
 
 ```text
-RampRhsPremise(F) := ∀ z, F z wSlot = z cSlot ∧ F z cSlot = 0
+theorem P8_explicit_time_ramp_bridge
+  (G : ℝ → State13 → State13)
+  (c : ℝ)
+  : RampShapeAfterLift G c
 ```
 
-That 14-state form is not currently justified by the deployed source contract.
+That second form is only an interface theorem. It is not enough for admission by
+itself unless the source binding child is also proved.
 
 ## Selection advice
 
-Prefer the explicit-time 13-state contract for the current freeze. It matches
-the deployed source shape and keeps the ramp parameter `c` explicit rather than
-pretending it has been consumed by the RHS.
+Choose the explicit-time 13-state contract if the deployed code is fixed and the
+source contract cannot be changed immediately.
 
-Keep the 14-state ramp parent only as the long-term semantic target if the
-source is re-bound to a true 14-state ODE. The current source metadata and
-payload template both record `julia_state_dimension = 13` and `ramp_binding =
-OPEN`, so the 14-state parent cannot be treated as a drop-in theorem target.
+Choose the 14-state ramp contract only if the deployed source is repaired so that
+`c` is an actual state coordinate and the RHS really satisfies `w'=c, c'=0` for
+all admissible states.
+
+Given the current evidence, the first option is the correct freeze.
 
 ## Initial-domain impact
 
-The initial domain changes only in how it is quantified.
+The initial mechanical domain should stay the same:
 
-- In the 14-state parent, `c` lives in the state and the full initial set is a
-  single `FullX0(z)` predicate.
-- In the explicit-time 13-state contract, the initial set becomes a dependent
-  family `X₀(c)`, with `c² ≤ 3` as an external parameter condition.
+- the `q/dq` energy or box conditions do not need to be weakened;
+- `w(0)=0` stays explicit;
+- `c^2 ≤ 3` remains a parameter restriction, but it is no longer encoded as a state
+  coordinate.
 
-The mechanical ball itself should not change: keep the same `9/400` bound on
-the 12 mechanical coordinates and `w(0) = 0`. What changes is the logical
-shape of the quantifier. The 13-state version must prove both directions of the
-state projection relation, not just a one-way forgetful map.
+So the initial family becomes dependent on `c`:
 
-Concretely, the following transfer lemmas matter:
+```text
+X₀(c) := mechanicalInitialSet ∧ w(0)=0 ∧ c²≤3
+```
 
-- `FullX0(z) → ExplicitInitial13(forgetTail z, z[c])`
-- `ExplicitInitial13(x, c) → FullX0(rampLift x c 0)`
-
-Without both directions, a 13-state parent can silently weaken or enlarge the
-original initial set.
+That means any reuse of the old `FullX0` theorem needs a projection/forget-tail lemma.
+Without that lemma, the 13-state contract would silently change the quantified
+initial set.
 
 ## Terminal-transfer impact
 
-Terminal transfer depends on which contract is frozen.
+Terminal transfer becomes a projection theorem, not a definitional reuse.
 
-- For the explicit-time 13-state parent, terminal comparison must rewrite
-  through the explicit relation `w(t) = c * t`.
-- For a future genuine 14-state ramp parent, terminal transfer can remain a
-  direct projection once the ramp premise is proved.
+- If the terminal predicate does not mention `c`, then `w(t)=c*t` is the bridge
+  needed to rewrite the terminal comparison.
+- If the terminal predicate does mention `c`, then `c` must remain an explicit
+  parameter in the terminal statement.
 
-The important blocker is that the endpoint payload alone does not establish
-full transfer. A terminal equality at `t = 1` is not enough; the theorem still
-needs a continuous-time tube covering every `t ∈ [0,1]` and a domain
-continuation statement in the selected contract.
+Either way, the old 14-state terminal theorem cannot be inherited by simple
+definitional equality. The proof must first establish the time-indexed relation
+`w(t)=c*t` in the selected 13-state semantics, and only then transfer the terminal
+predicate.
 
 ## Admission blockers
 
-The current admission blockers are:
+The current blocker list is short and closed:
 
-1. the deployed source is 13-state, while the existing Lean parent expects a
-   14-state ramp RHS with `w' = c` and `c' = 0`;
-2. `examples/routeb_p8_rhs_payload_generator/SOURCE_METADATA.json` marks
-   `ramp_binding` as `OPEN` and `c` as a sidecar parameter;
-3. `examples/routeb_p8_rhs_payload_generator/receipt.template.json` keeps the
-   dynamic endpoint payload pending, with no authenticated outward rounding;
-4. the current adapter theorem
-   `examples/routeb_p8_contract_adapter/P8ContractAdapter.lean` only proves
-   the conditional interface shape, not source binding or flowpipe existence;
-5. no outward RHS enclosure, solution existence, local flowpipe, partition
-   continuation, or `[0,1]` coverage has been established for either contract.
+1. The deployed source is 13-state while the current ramp parent expects 14-state
+   input/output semantics.
+2. The deployed source does not consume `c`; the ramp parent requires `w'=c`.
+3. The available Lean adapter shows the zero-tail lift is not ramp-compatible.
+4. The current receipt template is still pending and does not provide a continuous
+   RHS binding or an outward interval enclosure.
+5. No solution existence, flowpipe coverage, or terminal-transfer theorem has been
+   established for either contract yet.
 
-So the freeze decision is admission-closed for the 14-state ramp theorem in the
-current source state, and admission-open only for a new explicit-time 13-state
-parent family.
+These blockers are semantic, not numerical. No amount of endpoint padding or wider
+sampling removes them.
 
 ## Recommendation
 
-Freeze the contract on the explicit-time 13-state path now, and keep the
-14-state ramp parent as a future source-repair target rather than a current
-theorem target. That preserves semantic honesty, avoids silently changing the
-state contract, and matches the evidence already recorded in the docs and
-payload metadata.
+Freeze the state contract as:
 
-## Evidence notes
+- `13-state explicit-time source` as the deployed contract;
+- `14-state ramp` retained only as a separate future theorem family, if the source
+  is later repaired.
 
-The current docs and examples already agree on the central mismatch:
+That gives the smallest honest theorem boundary and preserves the distinction
+between the current deployed code and the intended ramp semantics.
 
-- the Lean parent is 14-state and expects `w' = c, c' = 0`;
-- the deployed source is 13-state and records `du[13] = 0`;
-- the payload generator keeps `c` open as a sidecar;
-- the explicit-time adapter is only a conditional scaffold.
-
-This audit therefore freezes the contract choice rather than claiming a
-flowpipe result.
+No registry promotion is eligible from this audit alone.
