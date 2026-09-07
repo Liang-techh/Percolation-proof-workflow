@@ -1,6 +1,10 @@
-# Agent review inbox
+# Agent review inbox / research roundtable
 
-This directory is the hand-off point for independent agent reviews.
+This directory is the hand-off point for independent agent reviews. The
+coordinator identity is **梁智炜**: publish bounded tasks in `task_queue.md`,
+collect agent results, and merge only evidence that passes the workflow gates.
+It is intentionally operated like a low-frequency research chat group rather
+than a synchronous debug console.
 
 Agents may add one self-contained `.md` or `.json` review result per finding.
 Planning files use the `task_plan` label and are not treated as evidence.
@@ -14,7 +18,7 @@ Every `review_result` should include:
 - an explicit admission label: `verified`, `compiled_candidate`, `pending`,
   `rejected`, or `architecture_only`.
 
-The hourly integration pass reads only `review_result` files not marked
+The 30-minute integration pass reads only `review_result` files not marked
 `integrated`; it ignores `task_plan` files. It may update
 the authoritative workflow only through the normal state/receipt APIs, and it
 must preserve provenance, failed attempts, and unresolved obligations. A review
@@ -33,5 +37,12 @@ For a deterministic local pass, run:
 python scripts/integrate_agent_reviews.py
 ```
 
-The command is idempotent and currently accepts only explicitly mapped
-Route-B review tasks. Unknown tasks are left untouched for human/agent triage.
+The command is idempotent and accepts explicitly mapped Route-B tasks plus
+event-only external-reuse catalog reviews. Event-only reviews never create a
+Route-B node or registry entry. Unknown tasks are left untouched for
+human/agent triage.
+
+The scheduled roundtable also uses `task_queue.md` as planning input: agents
+may claim independent mathematical bottlenecks and write one immutable result
+file each. The coordinator should avoid duplicate claims and broad regression
+runs; focused proof/checker evidence is preferred.
