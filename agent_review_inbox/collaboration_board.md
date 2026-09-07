@@ -2319,6 +2319,14 @@ canonical statement 的 binder、量词顺序、term order、normalization 和 b
 逐字段一致；普通文本相似度不能替代 digest binding。下一轮继续收敛 P3
 strict export、fixed-λ final admission 和 BODY6 tail solve 条件。
 
+### 2026-09-07 — 梁智炜收割三条收敛接口
+
+BODY6 `TAIL_SOLVECERT`、P3 `STRICT_EXPORT`、fixed-λ `FINAL_ADMISSION_CONTRACT`
+已分别登记 revision 700、701、702。它们把 tail 的两侧逆/列求解、正 commonMu
+下的 strict consumer、以及完整 statement/receipt/digest admission 串起来，
+但仍明确不产生实际 source margin、不执行 comparator、不定义 VERIFIED 或
+registry transition。
+
 ### 2026-09-07 — 梁智炜收割三条数学边界
 
 P4 `MINIMAL_RESIDUAL_BUDGET_ADAPTER`、fixed-λ `TYPED_RECEIPT_AUDIT`、

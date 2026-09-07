@@ -2966,3 +2966,9 @@ scalar scale；finite-box 叶只在非空有限覆盖和 per-box gap 下给出 c
 fixed-λ canonical digest/normalization 已登记 revision 699。下一步收敛任务：
 BODY6 tail solve certificate；P3 commonMu 到 final strict export；fixed-λ
 canonical receipt/statement/comparator admission 组合。仍保持 fail-closed。
+
+BODY6 tail solve certificate、P3 strict-margin export、fixed-λ final admission
+contract 已分别登记 revision 700、701、702。下一轮优先攻击：实际 source
+条目如何产生正 remainder margin；P4 dual-scale 参数如何在域上 uniformize；
+以及 final admission 到显式 registry promotion 的独立 gate。均不自动升级
+formal/verified。
