@@ -21,7 +21,8 @@ must preserve provenance, failed attempts, and unresolved obligations. A review
 file is never proof merely because it exists or says `verified`; Lean/kernel,
 comparator, source-binding, and domain-coverage gates remain authoritative.
 
-After integration, the pass records the result in the workflow history and adds
-an `integration_status` field or a companion log entry. Do not delete the
-original review. If a review requires a material mathematical scope change,
-leave it `pending` for explicit user direction.
+After integration, the pass records the result in the workflow history and
+writes a companion marker under `processed/` with the original review hash and
+the integration result. Do not delete or rewrite the original review. If a
+review requires a material mathematical scope change, leave it `pending` for
+explicit user direction.
