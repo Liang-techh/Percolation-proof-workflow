@@ -1,0 +1,129 @@
+{
+  "schema": "routeb.o0.h_acc.source_refinement_review.v1",
+  "status": "pending",
+  "theorem_status": "OPEN_H_ACC",
+  "checker_scope": "intake_schema_and_structural_consistency_only",
+  "checker_exit_code": 3,
+  "formal_certificate_allowed": false,
+  "source_binding_proven": false,
+  "h_acc_expr_proven": false,
+  "h_acc_round_proven": false,
+  "registry_eligible": false,
+  "expected_roots": {
+    "final": 36,
+    "body": 216,
+    "accumulator": 216
+  },
+  "execution": {
+    "julia": false,
+    "lean_lake": false,
+    "files_written": 0
+  },
+  "checker_sha256": "b265b3fc396524db093c6385ba6dff7bf9a352a57d01e2db8db21199986d780f",
+  "submission_sha256": "72d63e60a1b8bacadd9ca935c6917fd353b3c1a9cc68ba931d34ac488934b4b4",
+  "source_sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936",
+  "source_spans": {
+    "constants": {
+      "start_line": 6,
+      "end_line": 13,
+      "sha256": "5224e25da6b66e0d844d2b093f82fbb6278aabb79553f07f10bd383d560c9d3c"
+    },
+    "input": {
+      "start_line": 31,
+      "end_line": 37,
+      "sha256": "cc6a89ecbf07dd1e8514278b71b88cc36254c3080854a66a33b374930fc0eecf"
+    },
+    "angle": {
+      "start_line": 37,
+      "end_line": 37,
+      "sha256": "d5a4e9d5b398a7abd5e24430f4f3be50ca7afa8f6df62a063ef552b44f1ca101"
+    },
+    "trig": {
+      "start_line": 38,
+      "end_line": 38,
+      "sha256": "8ccff358c72a3e1deb7ce8b2efad00a1894f247d020d50198d97112e1eaf935c"
+    },
+    "A": {
+      "start_line": 39,
+      "end_line": 39,
+      "sha256": "8c161d4924abd00550d5bafcbfe600d2338daa150b137415060f223b9ae0443c"
+    },
+    "Tc": {
+      "start_line": 32,
+      "end_line": 40,
+      "sha256": "724f132b5ce3309b31997ac930af80fd93132af098e6012f3dbf516b3cd3695a"
+    },
+    "o": {
+      "start_line": 33,
+      "end_line": 41,
+      "sha256": "05f1c3b49840d5e05761a3086fd3ea5e301e06f32cec52902545090e2aa85e76"
+    },
+    "z": {
+      "start_line": 34,
+      "end_line": 36,
+      "sha256": "f5f554bd0c169ad2305d982aeca117e8dedc80cc7ee361bced99f203b0ef4a2e"
+    },
+    "COM": {
+      "start_line": 50,
+      "end_line": 50,
+      "sha256": "a2a6f5166d91b3a9d0b15ab01a95572bf8b17192378d7d375fef43eaa42d4953"
+    },
+    "Ri": {
+      "start_line": 51,
+      "end_line": 51,
+      "sha256": "3465dfe26216bdd36a5d6df03af10fa71c2ca986aa201a226a889803e8de83ba"
+    },
+    "Ii": {
+      "start_line": 52,
+      "end_line": 52,
+      "sha256": "7683ff6d52aa536a228506ee3ebc54bd65fa365abeca6e47b9c8b282f2ac2075"
+    },
+    "Jv": {
+      "start_line": 53,
+      "end_line": 55,
+      "sha256": "e588ffbf155d0b97114ae9162efdfb139115ff0507f9b4a7b7032b18c5278820"
+    },
+    "Jw": {
+      "start_line": 53,
+      "end_line": 56,
+      "sha256": "414ab86a744b692d3afaf6bb1a4d59eb319b234a8566715ea365d368303ed9b8"
+    },
+    "translation": {
+      "start_line": 58,
+      "end_line": 58,
+      "sha256": "21f8d126233cdaf23dec04557903ae0af8ba1f4b893a7e1264d573d0983bee76"
+    },
+    "rotation": {
+      "start_line": 58,
+      "end_line": 58,
+      "sha256": "21f8d126233cdaf23dec04557903ae0af8ba1f4b893a7e1264d573d0983bee76"
+    },
+    "initial_zero": {
+      "start_line": 48,
+      "end_line": 48,
+      "sha256": "0715247ec6f3977c794d6e54a8896dd9f839da02b888b35ad188a1fbea051f49"
+    },
+    "body_contribution": {
+      "start_line": 58,
+      "end_line": 58,
+      "sha256": "21f8d126233cdaf23dec04557903ae0af8ba1f4b893a7e1264d573d0983bee76"
+    },
+    "accumulator_after_body": {
+      "start_line": 58,
+      "end_line": 58,
+      "sha256": "21f8d126233cdaf23dec04557903ae0af8ba1f4b893a7e1264d573d0983bee76"
+    },
+    "pre_regularizer": {
+      "start_line": 58,
+      "end_line": 59,
+      "sha256": "2754488cdac936f57f8dc2ba073145eb0c4730ff15f37185facc84647f90f096"
+    }
+  },
+  "structural_check": "NOT_RUN_NO_SOURCE_EXPORT",
+  "blockers": [
+    "REAL_SOURCE_EXPORT_ABSENT",
+    "SOURCE_REFINEMENT_WITNESS_ABSENT",
+    "RUNTIME_AND_INTERVAL_EVIDENCE_ABSENT"
+  ],
+  "source_export_present": false
+}

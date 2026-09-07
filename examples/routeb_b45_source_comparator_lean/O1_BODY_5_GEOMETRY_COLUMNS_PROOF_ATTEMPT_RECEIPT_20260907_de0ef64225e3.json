@@ -1,0 +1,254 @@
+{
+  "schema": "routeb.o1.body5.geometry_columns.proof_attempt.sidecar.v1",
+  "date": "2026-09-07",
+  "status": "OPEN_UNCOMPILED_PROOF_SKELETON",
+  "human_body": 5,
+  "zero_based_body": 4,
+  "zero_based_inactive_joint": 5,
+  "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+  "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+  "key_policy": "Inherited context only. Attempted geometry and column statements quantify over every real q; no q-cell, mass-entry equality or O0 claim is established.",
+  "sidecar": {
+    "path": "examples/routeb_b45_source_comparator_lean/RouteBO1Body5GeometryColumnsProofAttempt20260907.lean",
+    "sha256": "ef515a822e237ae30b90caec9c2d3b123671d351d37ac0c27f337d210960a11b",
+    "namespace": "RouteBO1Body5GeometryColumnsProofAttempt20260907",
+    "import": "RouteBO1Body5SourceTraceTargets",
+    "theorem_declaration_count": 28,
+    "classification": "PROOF_SKELETON_WITH_CONCRETE_TACTIC_BODIES",
+    "kernel_proof": false,
+    "parsed": false,
+    "elaborated": false,
+    "meaning": "Source-bound theorem declarations with attempted proof bodies; no declaration is recorded as accepted by Lean. Absence of placeholders does not establish kernel acceptance."
+  },
+  "review": {
+    "path": "agent_review_inbox/review-T-P4-033-O1-body-5-geometry-columns-proof-attempt-codex-20260907-13187bba68a4.md",
+    "sha256": "13187bba68a48129b5d4b34bc94675affdbb2c460f2e12fa4b7e376334547601"
+  },
+  "input_bindings": [
+    {
+      "sha256": "aa314706ef2a42dca2e73b8b5ded22dc2f598e395e775e860f993da34739d9a9",
+      "path": "examples/routeb_b45_source_comparator_lean/RouteBO1Body5SourceTraceTargets.lean"
+    },
+    {
+      "sha256": "6b50ae63c9770e3481f79511141c8cc55d592b5c550f686654c5e756584399ef",
+      "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean"
+    },
+    {
+      "sha256": "c09b84677adef121488b3ceb53e886d0ef0b028c7979d91f8a7f9ba0fbfcd553",
+      "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyExactSource.lean"
+    },
+    {
+      "sha256": "b9845d37b5dcd16e1f9e142cb2e4d0e5571452993e843c85ac8cd643f6ba5dea",
+      "path": "examples/routeb_b45_source_comparator_lean/BodyTraceEvaluator.lean"
+    },
+    {
+      "sha256": "44fcccf7bd1aa2184802d63d1808a14a3551aeebc0edc6c4f4bc167f3d1e80f0",
+      "path": "examples/routeb_b45_source_comparator_lean/O1_BODY_5_SOURCE_TRACE_DECOMPOSITION_RECEIPT_20260907_44fcccf7bd1a.json"
+    },
+    {
+      "sha256": "a977fb4941f1d99d5a0d0abaee43048bc011ddaa6030323170c02482e6a259d8",
+      "path": "agent_review_inbox/review-T-P4-033-O1-body-5-source-trace-decomposition-codex-20260907-a977fb4941f1.md"
+    },
+    {
+      "sha256": "fe15f6ca9993f55fc56e6d2c9cca5fa8c7f6e9530b9b900a6f111ed96715149c",
+      "path": "examples/routeb_body_semantic_core_lean/BodySemanticCore.lean"
+    },
+    {
+      "sha256": "58c0b15b6fceb1064f773acdb9f684dc55a021ac69a030c13e1c8b46f7b9a8dc",
+      "path": "examples/routeb_source_contract_adapter_lean/SourceContractAdapter.lean"
+    },
+    {
+      "sha256": "2a18c7b6733af6245f3e5ba6dedd714a9ec7f28fd010122c0258611ce7aac452",
+      "path": "examples/routeb_source_contract_index_adapter_lean/SourceContractIndexAdapter.lean"
+    },
+    {
+      "sha256": "f497bd1f45fae4dd385f4d0f46df79252c92e5cd027b29d5dc55011f91525c31",
+      "path": "examples/routeb_frame_slot_accessor_lean/FrameSlotAccessor.lean"
+    },
+    {
+      "sha256": "8f8d3333c9d4ff2e5a4a3cf25fa1c11ba6c6c719b10598f8b0e03162c524ef39",
+      "path": "examples/routeb_frame_origin_axis_lean/FrameOriginAxis.lean"
+    },
+    {
+      "sha256": "9c04da5b9627ee749c53009733006934f95b2d33265e46ca59d0725aa453786a",
+      "path": "examples/routeb_real_dh_step_lean/RealDHStep.lean"
+    },
+    {
+      "sha256": "56ec2f2d29a22942bcb83a3ba98197ae1ce4d607340072b81c013b8d358d3218",
+      "path": "examples/routeb_b45_fourier_normal_form/FourierNormalForm.lean"
+    }
+  ],
+  "binding_verification": {
+    "status": "PASS_BYTE_HASH_CHECK_ONLY",
+    "checked_inputs": 13,
+    "all_equal_to_pre_edit_hashes": true,
+    "scope": "Inspected source/target/decomposition dependencies only; not a full transitive import or Mathlib dependency closure.",
+    "tracked_diff_at_review": "git diff --name-only returned no paths",
+    "concurrent_untracked_files": "Other tasks added unrelated files while this task ran. They were not modified or included as this task's output."
+  },
+  "proof_attempt_inventory": [
+    {
+      "group": "G1 structural source leaves",
+      "declarations": [
+        "origin_mul_step4_attempt",
+        "origin_mul_step3_attempt",
+        "axis_mul_step3_attempt",
+        "source_o5_eq_o4_attempt",
+        "source_o4_sub_o3_attempt",
+        "source_com_eq_o4_attempt"
+      ],
+      "external_geometry_premise": false,
+      "status": "OPEN_UNPROVEN_UNCOMPILED",
+      "method": "Single DH step with arbitrary parent F; existing source/frame accessors. a4=d4=0; a3=0,d3=19/100."
+    },
+    {
+      "group": "G2 zero and inactive source leaves",
+      "declarations": [
+        "cross3_self_scale_attempt",
+        "source_v3_zero_attempt",
+        "source_v4_zero_attempt",
+        "source_joint5_inactive_attempt"
+      ],
+      "external_geometry_premise": false,
+      "status": "OPEN_UNPROVEN_UNCOMPILED",
+      "method": "v3 uses COM-o3=(19/100)z3; v4 uses COM=o4; joint 5 uses guard 4<5 for both Jv/Jw."
+    },
+    {
+      "group": "Cylindrical bridge",
+      "declarations": [
+        "lift_zero_attempt",
+        "lift_sub_attempt",
+        "lift_cross_attempt",
+        "lift_isometry_attempt"
+      ],
+      "external_geometry_premise": false,
+      "status": "OPEN_UNPROVEN_UNCOMPILED",
+      "method": "Coordinate algebra plus Real.sin_sq_add_cos_sq (q 0); cross orientation and dot isometry both attempted."
+    },
+    {
+      "group": "G1 complete source target",
+      "declaration": "body5_geometry_attempt",
+      "target": "Body5GeometryTarget",
+      "external_geometry_premise": false,
+      "status": "OPEN_UNPROVEN_UNCOMPILED",
+      "method": "Bounded prefix scalar reductions in slots 0..3; structural step-3 origin/axis and step-4 origin. Six origins and five parent axes; no slot-5 orientation."
+    },
+    {
+      "group": "G2 conditional implication target",
+      "declaration": "body5_geometry_to_columns_attempt",
+      "target": "Body5GeometryToColumnsTarget",
+      "premises": [
+        "Body5GeometryTarget"
+      ],
+      "status": "OPEN_UNPROVEN_UNCOMPILED",
+      "method": "Explicit local active crosses, source COM, lift subtraction/cross, actual inactive guard."
+    },
+    {
+      "group": "G2 unconditional source columns",
+      "declaration": "body5_columns_attempt",
+      "target": "Body5ColumnsTarget",
+      "external_geometry_premise": false,
+      "status": "OPEN_UNPROVEN_UNCOMPILED",
+      "method": "Composes the G2 attempt with this sidecar's uncompiled G1 attempt; internal proof dependencies are not kernel-accepted evidence."
+    }
+  ],
+  "diagnostic": {
+    "status": "PASS_EXACT_SYMBOLIC_DIAGNOSTIC_ONLY",
+    "execution": "One inline Python invocation via stdin; no files generated",
+    "sympy_version": "1.14.0",
+    "arithmetic": "Exact rational coefficients and independent symbolic sin/cos variables; angle addition represented polynomially",
+    "manual_transcription": true,
+    "checked": {
+      "origins": 6,
+      "parent_axes": 5,
+      "active_local_crosses": 5,
+      "o5_eq_o4": true,
+      "o4_minus_o3_eq_19_over_100_z3": true,
+      "lift_cross_residual_factorization": true,
+      "lift_dot_residual_factorization": true
+    },
+    "cross_residual": "[0,0,(c0^2+s0^2-1)*(u0*v1-u1*v0)]",
+    "dot_residual": "(c0^2+s0^2-1)*(u0*v0+u1*v1)",
+    "output": "PASS exact symbolic G1/G2 diagnostic: 6 origins, 5 parent axes, 5 active local crosses, o5=o4, o4-o3=(19/100)z3, lift cross and dot residual factorizations.",
+    "inactive_joint_check": "Source-level guard and existing lemma signature review only; not an executed Lean check.",
+    "limitations": [
+      "Manual transcription is not a Lean source interpreter.",
+      "No parser, elaborator, tactic or kernel validation.",
+      "No trace fold, Gram, piecewise or Fourier checks run.",
+      "No floating-point sampling or executable-enclosure claim."
+    ]
+  },
+  "static_checks": {
+    "classification": "TEXT_SCAN_ONLY_NOT_A_LEAN_OR_AXIOM_AUDIT",
+    "unique_theorem_names": 28,
+    "forbidden_tokens_found": [],
+    "forbidden_token_scan": [
+      "sorry",
+      "admit",
+      "axiom",
+      "unsafe",
+      "native_decide",
+      "implemented_by"
+    ],
+    "fold_expansion_references_found": [],
+    "fold_reference_scan": [
+      "body5Fold",
+      "bodyTraceRows5",
+      "traceRowContribution"
+    ],
+    "trailing_whitespace": false,
+    "git_diff_check": "passed; untracked sidecar whitespace checked separately"
+  },
+  "compile_probe": {
+    "status": "NOT_ATTEMPTED_BY_USER_REQUEST",
+    "lean_or_lake_run": false,
+    "local_compilation_attempted": false,
+    "remote_compilation_requested": false,
+    "import_resolution": "UNCHECKED",
+    "usable_toolchain": "UNESTABLISHED",
+    "mathlib_environment": "UNVERIFIED",
+    "remaining_validation": [
+      "Parser and elaborator acceptance",
+      "Fin coercion and macro elaboration",
+      "Rewrite matching and tactic completion/resources",
+      "Kernel proof checking and dependency/axiom audit"
+    ]
+  },
+  "fail_closed": {
+    "G1": "OPEN_UNPROVEN",
+    "G2": "OPEN_UNPROVEN",
+    "source_leaves": "OPEN_UNPROVEN",
+    "lift_cross_and_isometry": "OPEN_UNPROVEN",
+    "G3_G4": "NOT_ATTEMPTED_OPEN",
+    "trace_fold": "NOT_ATTEMPTED_OPEN",
+    "h_body_5": "OPEN_UNPROVEN",
+    "lean_compiled": false,
+    "kernel_checked": false,
+    "axioms_checked": false,
+    "verified": false,
+    "source_expansion_proven": false,
+    "trace_fold_proven": false,
+    "comparator_accepted": false,
+    "registry_eligible": false,
+    "registry_promoted": false,
+    "formal_certificate_allowed": false
+  },
+  "scope": {
+    "outputs": "One new standalone Lean proof-attempt sidecar, one new immutable review, one new immutable receipt",
+    "existing_targets_modified": false,
+    "main_adapter_modified": false,
+    "existing_sidecars_modified": false,
+    "decomposition_modified": false,
+    "evaluator_or_csv_modified": false,
+    "state_or_registry_modified": false,
+    "build_configuration_modified": false,
+    "fold_57_rows_expanded": false
+  },
+  "immutable_policy": {
+    "kind": "WRITE_ONCE_CONTENT_HASH_SNAPSHOT",
+    "filename_suffix": "First 12 hexadecimal characters of SHA-256 of each file's bytes",
+    "review_and_receipt_windows_read_only": true,
+    "future_revision": "Create new hash-named snapshots; never overwrite these review/receipt files.",
+    "limitation": "Windows read-only is reversible, not WORM. Hashes detect byte changes, not mathematical validity. No self-referential receipt hash is embedded."
+  }
+}

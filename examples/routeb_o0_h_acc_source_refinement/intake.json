@@ -1,0 +1,58 @@
+{
+  "schema": "routeb.o0.h_acc.source_refinement_intake.v1",
+  "source_sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936",
+  "semantic_layers": {
+    "E_star": "unrounded real graph; source decimal tokens as rationals; pi exact; div_nat retained",
+    "E_loaded": "unrounded real graph with actual exported Float64 constants decoded as dyadics; absent",
+    "J_acc": "actual machine accumulator after body 6 line 58, before line 60; absent",
+    "bridges": "E_star=M_NE^0; E_loaded-E_star constant error; J_acc-E_loaded execution error: all OPEN"
+  },
+  "index_contract": {
+    "human_body_joint_row_column": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "frames": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "final": "36: column outer, row inner; slot=(column-1)*6+(row-1)",
+    "body": "216: body outer, column middle, row inner; slot=(body-1)*36+(column-1)*6+(row-1)",
+    "accumulator": "216: body outer, column middle, row inner; slot=(body-1)*36+(column-1)*6+(row-1)",
+    "frame_mapping": "Tc[frame+1],o[:,frame+1]; z[:,joint] from frame joint-1 before transform",
+    "jacobian": "joint<=body active; remaining columns explicit zero; COM frames body-1 and body",
+    "fin_mapping": "human index minus 1; frame already zero-based",
+    "coverage": "both triangles and all zeros mandatory; S0 exact zero; six ordered additions; final aliases S6"
+  },
+  "runtime_policy": {
+    "input_type": "Vector{Float64} of length 6, finite entries",
+    "quantifier": "all finite binary64 qhat with Decode(qhat) in [-1/1000,1/1000]^6",
+    "all_real_extension": "requires RN64 input-conversion error and expanded input cover separately",
+    "globals": "isolated include; export full DH,m,I_val shapes/types/raw bits; no intervening mutation",
+    "environment": "pin Julia version, platform, methods, compiler, BLAS kernels/threads, trig implementation",
+    "arithmetic": "bind reductions, FMA/folding, rounding, overflow, subnormal and underflow behavior",
+    "observation": "six actual accumulator updates; final after body 6, before line 60",
+    "instrumentation": "own source hash, patch and refinement evidence; stdout/stderr hashes and exit code",
+    "forbidden_substitutes": "no triangle copying, post-hoc body sum, regularizer subtraction or zero-regularizer return",
+    "interval": "complete rational partition of Q1000; intermediate/body/accumulator enclosures and 36 errors; soundness witnesses",
+    "runtime_evidence": null
+  },
+  "source_export": null,
+  "source_export_sha256": null,
+  "admission": {
+    "h_acc_expr_proven": false,
+    "h_acc_round_proven": false,
+    "source_binding_proven": false,
+    "registry_eligible": false,
+    "formal_certificate_allowed": false
+  }
+}

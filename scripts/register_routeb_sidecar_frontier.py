@@ -118,6 +118,59 @@ CHILDREN = [
             "agent_review_inbox/companion-T-P5-026-guyuefangyuan-20260907T1033.md",
         ],
     },
+    {
+        "name": "P4.O1.source_comparator.h_body_4.source_gram_targets.proof_attempt",
+        "parent": "P4.O1.source_comparator.h_body_4.source_gram_targets",
+        "statement": "An explicit tactic proof attempt discharges the body-4 source Gram target layers in a pinned remote Lean environment.",
+        "proof_sketch": "Use exact trig leaves, finite frame expansion, source origin/axis bridges, active/inactive Jacobian formulas, finite Gram tables, and ring normalization; endpoint remains expected-entry only.",
+        "lane": "lean_adapter",
+        "bottleneck": "source_semantics",
+        "status": "PROOF_ATTEMPT_UNCOMPILED",
+        "artifacts": [
+            "examples/routeb_o1_body4_source_gram_proof_attempt/RouteBO1Body4SourceGramProofAttempt.lean",
+        ],
+    },
+    {
+        "name": "P4.O1.source_comparator.h_body_5.source_trace_decomposition.geometry_proof_attempt",
+        "parent": "P4.O1.source_comparator.h_body_5.source_trace_decomposition",
+        "statement": "An explicit tactic proof attempt discharges body-5 source geometry, active columns, inactive joint, and cylindrical lift leaves.",
+        "proof_sketch": "Prove step-4 origin invariance, step-3 translation, midpoint COM, parallel cross-product zero, inactive joint 5, lift linearity/cross/isometry, then bind G1/G2.",
+        "lane": "lean_adapter",
+        "bottleneck": "source_semantics",
+        "status": "PROOF_ATTEMPT_UNCOMPILED",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/RouteBO1Body5GeometryColumnsProofAttempt20260907.lean",
+        ],
+    },
+    {
+        "name": "P5.componentwise_relative_decay.feasible_cone_spn.proof_attempt",
+        "parent": "P5.componentwise_relative_decay.feasible_cone_spn",
+        "statement": "An explicit Lean proof attempt formalizes the exact six-cone cover, 18 representative certificates, and orthant/SPN consumers.",
+        "proof_sketch": "Construct cone cover by sign cases, prove interleave/map and sign identities, reduce absolute envelope to a congruent quadratic, then add orthant and SPN lemmas without concrete K_path.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "PROOF_ATTEMPT_UNCOMPILED",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/P5FeasibleConeSPN.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/lakefile.toml",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/lean-toolchain",
+        ],
+    },
+    {
+        "name": "P4.O0.physical_baseline_factor.H_acc_semantic_export.source_refinement_validator",
+        "parent": "P4.O0.physical_baseline_factor.H_acc_semantic_export",
+        "statement": "A fail-closed intake validator enforces the H_acc source-refinement DAG shape, dense roots, source spans, and runtime policy before any export is accepted.",
+        "proof_sketch": "Validate canonical DAG arities, topological references, source spans, dense 36/216/216 coordinate order, six accumulator updates, and explicit null/pending semantics.",
+        "lane": "source_semantics",
+        "bottleneck": "evaluator_enclosure",
+        "status": "STRUCTURAL_VALIDATOR_PENDING_SOURCE_EXPORT",
+        "artifacts": [
+            "examples/routeb_o0_h_acc_source_refinement/check_refinement.py",
+            "examples/routeb_o0_h_acc_source_refinement/test_refinement.py",
+            "examples/routeb_o0_h_acc_source_refinement/REVIEW.md",
+            "examples/routeb_o0_h_acc_source_refinement/RECEIPT.json",
+        ],
+    },
 ]
 
 

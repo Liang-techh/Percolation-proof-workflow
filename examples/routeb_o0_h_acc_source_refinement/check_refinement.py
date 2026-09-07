@@ -213,6 +213,8 @@ def inspect(doc, source):
 def audit(path, source_path=SOURCE):
     receipt = {"schema": "routeb.o0.h_acc.source_refinement_review.v1",
                "status": "pending", "theorem_status": "OPEN_H_ACC",
+               "checker_scope": "intake_schema_and_structural_consistency_only",
+               "checker_exit_code": 3,
                "formal_certificate_allowed": False, "source_binding_proven": False,
                "h_acc_expr_proven": False, "h_acc_round_proven": False,
                "registry_eligible": False, "expected_roots": {"final": 36, "body": 216, "accumulator": 216},
@@ -233,7 +235,8 @@ def audit(path, source_path=SOURCE):
         receipt.update(structural_check="NOT_RUN_MISSING_ARTIFACT", blockers=[str(exc)])
         return receipt, 3
     except (OSError, ValueError, TypeError, KeyError, ZeroDivisionError, OverflowError, RecursionError) as exc:
-        receipt.update(status="rejected", structural_check="REJECTED", blockers=[str(exc)])
+        receipt.update(status="rejected", checker_exit_code=2,
+                       structural_check="REJECTED", blockers=[str(exc)])
         return receipt, 2
 
 
