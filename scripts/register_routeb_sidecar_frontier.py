@@ -122,6 +122,19 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P5.componentwise_relative_decay.moving_frame_parameter_transport",
+        "parent": "P5.componentwise_relative_decay",
+        "statement": "The block-(4,5) moving-frame difference map transports exactly to source coordinates, cancels w/c under a common ramp parameter, and yields a rank-one K_path correction under controlled parameter mismatch.",
+        "proof_sketch": "Formalize the sparse affine difference map, common-c cancellation, ramp-fiber segment lemma, uniform transport bounds, K_eff=K0+kappa tensor gamma, and the finite-gain fiber-constancy obstruction; keep source H, P8 coverage, and physical binding as separate premises.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "PENDING_MOVING_FRAME_TRANSPORT_MATH",
+        "artifacts": [
+            "agent_review_inbox/review-T-P5-028-liuguanyi-20260907T1112.md",
+            "agent_review_inbox/companion-T-P5-028-liuguanyi-20260907T1115.md",
+        ],
+    },
+    {
         "name": "P4.O1.source_comparator.h_body_4.source_gram_targets.proof_attempt",
         "parent": "P4.O1.source_comparator.h_body_4.source_gram_targets",
         "statement": "An explicit tactic proof attempt discharges the body-4 source Gram target layers in a pinned remote Lean environment.",

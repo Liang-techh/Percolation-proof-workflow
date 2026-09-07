@@ -2251,4 +2251,15 @@ source/Lean receipts exist.
 - The protocol is structural/semantic intake only. A future real Julia export
   must still supply source bytes, runtime instrumentation, loaded Float64 bits,
   exact six updates, interval partition and independent soundness evidence.
-  No current artifact may close H_acc or promote a registry theorem.
+No current artifact may close H_acc or promote a registry theorem.
+
+### T-P5-028 moving-frame transport harvest (2026-09-07)
+
+- The exact block-(4,5) moving-frame difference map is now a separate P5 child:
+  `P5.componentwise_relative_decay.moving_frame_parameter_transport`.
+- Under a common ramp parameter `c`, the source `w/c` displacement rows are
+  exactly zero.  Under a controlled mismatch `|Delta c| <= gamma |Delta z|`,
+  the direct component interface is `K_eff = K0 + kappa tensor gamma`.
+- This is source-to-math transport only.  Concrete `H`, source/Float64 binding,
+  P8 coverage, Lean compilation, and registry admission remain open; the two
+  inbox records were integrated as pending metadata only.

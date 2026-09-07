@@ -50,6 +50,8 @@ TASK_TARGETS = {
                  "compiled_candidate_source_independent_feasible_cone_spn"),
     "T-P5-027": ("P5.componentwise_relative_decay",
                  "near_sharp_exact_rational_scalar_fallback"),
+    "T-P5-028": ("P5.componentwise_relative_decay.moving_frame_parameter_transport",
+                 "exact_moving_frame_transport_and_parameter_cancellation"),
     # External FLT scans are deliberately event-only: they are advisory
     # catalog evidence, not Route-B theorem nodes or registry entries.
     "T-FLT-DERIV-CALC": (None, "flt_derivation_calculus_scan"),

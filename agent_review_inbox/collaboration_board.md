@@ -1712,3 +1712,15 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   runtime observation、Lean theorem、coverage 或 registry admission。
 - seam 文件已接入 H_acc refinement child 的 `source_artifacts` 以及 O1 candidate
   provenance；state revision `607`，registry 仍为 `0`，formal certificate gate 仍关闭。
+
+### 2026-09-07 — T-P5-028 moving-frame transport 收割
+
+- 柳冠一给出 block-(4,5) moving-frame 到 source 坐标的精确 affine difference
+  map：common ramp parameter 时 `Delta q=(Delta x)`、`Delta v=(Delta y)`、
+  `Delta w=Delta c=0`；参数不一致时得到 exact rank-one `K_eff` 修正。
+- 同时证明了四状态 centered gain 若允许 fixed-`z` 的不同 `c`，则必然要求
+  residual 沿参数 fiber 恒定；否则只能采用 common-`c`、gamma 控制、扩展状态或
+  additive/transverse lane，不能静默忽略 `Delta c`。
+- 已新增 `P5.componentwise_relative_decay.moving_frame_parameter_transport`
+  child，并将 review/companion 以 pending metadata 集成；没有 Lean/source/
+  coverage/registry admission effect。state revision `609`。
