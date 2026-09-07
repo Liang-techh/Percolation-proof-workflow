@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 475,
+  "revision": 476,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13725,6 +13725,32 @@
           },
           "compile_claim": false,
           "source_binding": false,
+          "registry_promoted": false,
+          "formal_certificate_allowed": false
+        },
+        "o1_interface_check": {
+          "schema_version": 1,
+          "status": "O1_INTERFACE_PENDING_LEAN_COMPILE",
+          "state_revision_checked": 475,
+          "checks": {
+            "node_statement_uses_R_port": true,
+            "node_statement_has_negative_port_formula": true,
+            "draft_definition_has_negative_port_formula": true,
+            "column_vector_action": true,
+            "product_order": true,
+            "left_inverse_present": true,
+            "D_balance_present": true,
+            "B_balance_present": true,
+            "matrix_shapes_present": true,
+            "uncompiled_boundary_explicit": true,
+            "registry_boundary_explicit": true
+          },
+          "artifact": {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_exact_real_coefficient_identity_20260907\\INTERFACE_CHECK.json",
+            "sha256": "D61F58F1C938B507D545767F645FF8BA3EFC4C0220DA2254DA9C90650522F1E9"
+          },
+          "statement_comparator_status": "pending_compile_and_coordinator_receipt",
+          "compile_claim": false,
           "registry_promoted": false,
           "formal_certificate_allowed": false
         }
@@ -37348,6 +37374,18 @@
       ],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T11:24:23.363436+00:00",
+      "kind": "routeb_o1_interface_check_recorded",
+      "node_id": "120deab092c243b6a43356e63c8b56f4",
+      "check_status": "O1_INTERFACE_PENDING_LEAN_COMPILE",
+      "check_artifact": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_exact_real_coefficient_identity_20260907\\INTERFACE_CHECK.json",
+        "sha256": "D61F58F1C938B507D545767F645FF8BA3EFC4C0220DA2254DA9C90650522F1E9"
+      },
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -41004,5 +41042,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "cfe4fd0745508a2eb57036e7406b63463bcd1635f70ded11785511624780e06e"
+  "state_checksum": "b052367c7b20ae750b99d00e1a975e8e745abd11f840bb6e8d956eed242f2ccc"
 }
