@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 709,
+  "revision": 710,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -42266,7 +42266,9 @@
       "parent_id": "0b1c1a3b979b4fe38331b9aa5a8962f8",
       "status": "open",
       "proof_sketch": "Define UniformData with same-domain alphaFloor/frontFloor and betaCap/gainCap/qCap, build uniform cap and target allocation by monotone multiplication, reuse the dual-scale consumer, and retain dyadic positive-floor/upper-cap and growing-margin counterexamples.",
-      "dependencies": [],
+      "dependencies": [
+        "17184cd4b2324d2da5725352966bec02"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -42388,6 +42390,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_ENTRYMARGIN20260907.review.md",
             "sha256": "5C2AC3F9DA01FB3D1A39C45ECCD1F47BC3026BB6BF766B669A5B45B9653B4AE0"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "17184cd4b2324d2da5725352966bec02": {
+      "id": "17184cd4b2324d2da5725352966bec02",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.nominal_direction_audit",
+      "statement": "Nominal upper bound, nominal lower realization, and target allocation are distinct directions: the current pair forces nominal equality to the expression, q≤qCap is independent, and target≤margin does not imply nonnegative or positive margin without target sign evidence.",
+      "parent_id": "6ae1c6ff93364c8f841308abd603c48c",
+      "status": "open",
+      "proof_sketch": "Define direction-typed NominalUpper/NominalLower and ExpressionAllocation, transport only the sufficient lower direction to TargetAllocation, prove the current contract pair forces equality, and retain wrong-direction, missing-cap, and negative-target exact counterexamples.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "normalization",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_P4_NOMINAL_DIRECTION_AUDIT",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_NominalDirectionAudit.lean",
+            "sha256": "18AD001EABF1179878632786E38ACBAA21960E6CDA8BB9141310ED0550970238"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_NominalDirectionAudit.review.md",
+            "sha256": "340D25CAC1E9F0731D5B8F7EF8B3CBFD948C2C2409C8992228075E06CD75B0FF"
           }
         ],
         "registry_eligible": false,
@@ -70680,6 +70717,24 @@
       "artifact_hashes_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T20:42:43.032027+00:00",
+      "kind": "node_added",
+      "node_id": "17184cd4b2324d2da5725352966bec02",
+      "parent_id": "6ae1c6ff93364c8f841308abd603c48c",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.nominal_direction_audit"
+    },
+    {
+      "at": "2026-09-07T20:42:43.032045+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.nominal_direction_audit"
+      ],
+      "metadata_updated": [],
+      "artifact_hashes_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -74336,5 +74391,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "76ec5899912ae11ec0ddfee5ada7ead47cca5ec634d898e6febe1af389c6bd29"
+  "state_checksum": "b4a38a31f82ae0f5237b566a366bc62bc3d5cb140e930553708937fbc62aa5d7"
 }

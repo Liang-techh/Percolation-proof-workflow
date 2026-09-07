@@ -2002,6 +2002,19 @@ CHILDREN = [
             "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_ENTRYMARGIN20260907.review.md",
         ],
     },
+    {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.nominal_direction_audit",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization",
+        "statement": "Nominal upper bound, nominal lower realization, and target allocation are distinct directions: the current pair forces nominal equality to the expression, q≤qCap is independent, and target≤margin does not imply nonnegative or positive margin without target sign evidence.",
+        "proof_sketch": "Define direction-typed NominalUpper/NominalLower and ExpressionAllocation, transport only the sufficient lower direction to TargetAllocation, prove the current contract pair forces equality, and retain wrong-direction, missing-cap, and negative-target exact counterexamples.",
+        "lane": "lean_adapter",
+        "bottleneck": "normalization",
+        "status": "OPEN_UNCOMPILED_P4_NOMINAL_DIRECTION_AUDIT",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_NominalDirectionAudit.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_NominalDirectionAudit.review.md",
+        ],
+    },
 ]
 
 
