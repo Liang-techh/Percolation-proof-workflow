@@ -1971,6 +1971,9 @@ after integration; corrections should be a new result file.
 - DAG 已将该 frontier 拆成 7 个独立 OPEN leaves；agent 应认领具体
   `h_aggregate_function_lift` 或 `h_body_1..h_body_6`，并提交 source-bound
   receipt 与编译/比较证据，不要只返回重复的数据级 equality。
+- 当前 per-body sidecar 只作为 uncompiled typed starting point；优先把
+  `TypedFourierBodyExport.h_body` 从输入字段变成对真实 DH bodyMass 的证明，
+  并单独留下 real-function lift 的 pinned receipt。
 
 ### T-P4-036.2 — theta2 namespace hardening (2026-09-07)
 

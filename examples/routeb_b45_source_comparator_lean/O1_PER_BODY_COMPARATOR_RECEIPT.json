@@ -1,0 +1,54 @@
+{
+  "schema": "routeb.o1.true_dh_exact_typed_mdd_source.per_body.v1",
+  "status": "OPEN_MISSING_FOURIER_BODY_DEFINITION_AND_HBODY",
+  "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+  "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+  "mu_exact": "1/1000000",
+  "q_domain": {
+    "kind": "exact_uniform_q_cell",
+    "center": [0, 0, 0, 0, 0, 0],
+    "radius": "1/1000"
+  },
+  "block_order_one_based": [1, 2, 3, 6],
+  "didx_zero_based": [0, 1, 2, 5],
+  "bidx_zero_based": [3, 4],
+  "candidate_lean": "RouteBO1PerBodyExactSource.lean",
+  "candidate_compile_status": "UNCOMPILED_CANDIDATE",
+  "per_body_source_definition": {
+    "status": "PRESENT_EXACT_DEFINITION",
+    "term": "sourceBodyMass q body = contractMass (sourceContract q) body (routeBMass body) (routeBInertia body)",
+    "body_count": 6,
+    "body_mass_expansion": "bodyMass (sourceContract q).origins (sourceContract q).axes body (routeBMass body) (routeBInertia body)",
+    "bridge_target": "sourceBodyMass_eq_juliaExactBodyMass"
+  },
+  "h_body": {
+    "status": "OPEN_TYPED_PREMISE",
+    "target": "∀ body q i j, sourceBodyMass q body i j = fourierBody body q i j",
+    "smallest_missing_artifact": "A Lean definition of the body-labelled FourierBody generated from the 727-row body trace, plus six exact DH-to-Fourier equality proofs under this source/state key.",
+    "current_obstruction": "Existing source comparator defines exact DH contract/bodyMass, while the Fourier body trace is only CSV/sidecar data; no Lean term fourierBody is joined to sourceBodyMass."
+  },
+  "real_cos_sin_function_lift": {
+    "status": "MINIMAL_LEMMA_TARGET_PRESENT_UNCOMPILED",
+    "lemma": "Complex.re (((a : ℂ) + (b : ℂ) * Complex.I) * Complex.exp (Complex.I * (phase nu q : ℂ))) = realFourierAtom nu a b q",
+    "supporting_additivity": "realFourierAtom_add",
+    "purpose": "Lift finite rational coefficient equality to the real cos/sin evaluator used by h_aggregate."
+  },
+  "source_binding_proven": false,
+  "formal_certificate_allowed": false,
+  "registry_eligible": false,
+  "hashes": {
+    "candidate_lean": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+    "source_comparator_base_lean": "BC2A2136576AC0A726F168492789A24703642D44865C1CCE6AE9EEF57955F76B",
+    "source_contract_adapter": "58C0B15B6FCEB1064F773ACDB9F684DC55A021AC69A030C13E1C8B46F7B9A8DC",
+    "source_contract_index_adapter": "2A18C7B6733AF6245F3E5BA6DEDD714A9EC7F28FD010122C0258611CE7AAC452",
+    "body_contract_core": "525E564BDBB57976F0C8A119A6E4BF9294D979DBFCC35CA705BF12A7AD95A4DB",
+    "body_semantic_core": "FE15F6CA9993F55FC56E6D2C9CCA5FA8C7F6E9530B9B900A6F111ED96715149C",
+    "fourier_normal_form": "56EC2F2D29A22942BCB83A3BA98197AE1CE4D607340072B81C013B8D358D3218",
+    "body_trace_csv": "AE1F9CD7978C4CF23626B5C097EAAF4A2C70DE9C8B86A31A61DB12997CF4C3B9",
+    "aggregate_csv": "8FFB1A1ABDB9DC7AA3F7849CACCA63D1BA8249A6D87C7949AF1FF9DBBD134856",
+    "exact_trace_checker": "11E84251109CFC297D806287AF783607C9765B2C6AC6B27CB0B91A636DE23073",
+    "fourier_probe": "9460181770E47BE0ECBDE43A8A29EF285DA1168C3121FAB18D5378C671401A7B",
+    "deployed_dhport": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936"
+  },
+  "next_action": "Generate the typed bodyTraceEvaluator/fourierBody term from the hashed body trace and prove h_body for each body; then compile this candidate and use the realFourierAtom_complex_re_target lemma for the h_aggregate function lift."
+}

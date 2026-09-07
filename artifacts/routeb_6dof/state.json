@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 550,
+  "revision": 551,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -17251,7 +17251,20 @@
         "registry_eligible": false,
         "comparator_accepted": false,
         "source_binding_proven": false,
-        "formal_certificate_allowed": false
+        "formal_certificate_allowed": false,
+        "candidate_artifacts": [
+          {
+            "status": "UNCOMPILED_TYPED_CANDIDATE",
+            "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
+            "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+            "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "h_aggregate_function_lift_proven": false,
+            "h_body_proven": false,
+            "source_binding_proven": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
+          }
+        ]
       }
     },
     "5201cf1e229544a3815e7bc832ab23b7": {
@@ -17274,7 +17287,20 @@
         "registry_eligible": false,
         "comparator_accepted": false,
         "source_binding_proven": false,
-        "formal_certificate_allowed": false
+        "formal_certificate_allowed": false,
+        "candidate_artifacts": [
+          {
+            "status": "UNCOMPILED_TYPED_CANDIDATE",
+            "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
+            "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+            "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "h_aggregate_function_lift_proven": false,
+            "h_body_proven": false,
+            "source_binding_proven": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
+          }
+        ]
       }
     },
     "86049b9800f44a878a81de2e79c3e1c5": {
@@ -17297,7 +17323,20 @@
         "registry_eligible": false,
         "comparator_accepted": false,
         "source_binding_proven": false,
-        "formal_certificate_allowed": false
+        "formal_certificate_allowed": false,
+        "candidate_artifacts": [
+          {
+            "status": "UNCOMPILED_TYPED_CANDIDATE",
+            "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
+            "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+            "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "h_aggregate_function_lift_proven": false,
+            "h_body_proven": false,
+            "source_binding_proven": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
+          }
+        ]
       }
     },
     "0d44099d7b1e486792f27f4787edd73e": {
@@ -17320,7 +17359,20 @@
         "registry_eligible": false,
         "comparator_accepted": false,
         "source_binding_proven": false,
-        "formal_certificate_allowed": false
+        "formal_certificate_allowed": false,
+        "candidate_artifacts": [
+          {
+            "status": "UNCOMPILED_TYPED_CANDIDATE",
+            "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
+            "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+            "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "h_aggregate_function_lift_proven": false,
+            "h_body_proven": false,
+            "source_binding_proven": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
+          }
+        ]
       }
     },
     "62f56aedfc16447181e2178e44a535eb": {
@@ -17343,7 +17395,20 @@
         "registry_eligible": false,
         "comparator_accepted": false,
         "source_binding_proven": false,
-        "formal_certificate_allowed": false
+        "formal_certificate_allowed": false,
+        "candidate_artifacts": [
+          {
+            "status": "UNCOMPILED_TYPED_CANDIDATE",
+            "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
+            "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+            "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "h_aggregate_function_lift_proven": false,
+            "h_body_proven": false,
+            "source_binding_proven": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
+          }
+        ]
       }
     },
     "87f1bd9c1acd42369f8814bd10230091": {
@@ -17366,7 +17431,20 @@
         "registry_eligible": false,
         "comparator_accepted": false,
         "source_binding_proven": false,
-        "formal_certificate_allowed": false
+        "formal_certificate_allowed": false,
+        "candidate_artifacts": [
+          {
+            "status": "UNCOMPILED_TYPED_CANDIDATE",
+            "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
+            "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+            "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "h_aggregate_function_lift_proven": false,
+            "h_body_proven": false,
+            "source_binding_proven": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
+          }
+        ]
       }
     },
     "3ad9bd4fa1d040da995906fc487913fd": {
@@ -17389,7 +17467,20 @@
         "registry_eligible": false,
         "comparator_accepted": false,
         "source_binding_proven": false,
-        "formal_certificate_allowed": false
+        "formal_certificate_allowed": false,
+        "candidate_artifacts": [
+          {
+            "status": "UNCOMPILED_TYPED_CANDIDATE",
+            "artifact": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1PerBodyExactSource.lean",
+            "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+            "review_sha256": "2F5484CC308C2295DB3F1E7170551620188E4C13876E5C06839C54DE6982E9EB",
+            "h_aggregate_function_lift_proven": false,
+            "h_body_proven": false,
+            "source_binding_proven": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
+          }
+        ]
       }
     }
   },
@@ -41817,6 +41908,24 @@
       "parent_closure_requires_all": true,
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T15:13:50.695580+00:00",
+      "kind": "routeb_o1_per_body_typed_candidate_recorded",
+      "artifact_sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+      "leaf_ids": [
+        "0f4d65a33b964cf38110c0f4b93a34d4",
+        "5201cf1e229544a3815e7bc832ab23b7",
+        "86049b9800f44a878a81de2e79c3e1c5",
+        "0d44099d7b1e486792f27f4787edd73e",
+        "62f56aedfc16447181e2178e44a535eb",
+        "87f1bd9c1acd42369f8814bd10230091",
+        "3ad9bd4fa1d040da995906fc487913fd"
+      ],
+      "h_aggregate_function_lift_proven": false,
+      "h_body_proven": false,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -45473,5 +45582,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "ba03d293f471acfe1013b22443fa4d16f94559b5debcd190827164a33f237dbd"
+  "state_checksum": "79c00ddaf42e3b554746e269833a4145946a2ea4499be3c875b34ff434d08af2"
 }

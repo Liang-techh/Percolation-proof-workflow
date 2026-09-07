@@ -1342,3 +1342,11 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   `h_body` 等式；parent closure 明确要求全部叶子关闭。
 - 这使 scheduler 可以并行分派每个 body lemma，任何单叶完成都不会绕过
   source-binding、Lean comparator 或 registry gate。
+
+### 2026-09-07 — 梁智炜：O1 per-body typed candidate 收割
+
+- `RouteBO1PerBodyExactSource.lean` 提供 concrete `sourceBodyMass`、body/inertia
+  展开和通用 `realFourierAtom` cos/sin lift 起点，并已挂到 7 个 O1 frontier leaves。
+- 文件仍是 `UNCOMPILED_TYPED_CANDIDATE`：`TypedFourierBodyExport` 把 `h_body`
+  作为输入字段，未证明六个 body 等式，也未完成 610-row function lift；不改变
+  source binding、formal 或 registry 状态。
