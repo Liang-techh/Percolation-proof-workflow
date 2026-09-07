@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 641,
+  "revision": 642,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -38935,7 +38935,9 @@
       "parent_id": "915317bad91542b7aefcec1790e81ca2",
       "status": "open",
       "proof_sketch": "Factor marginAt exactly using the positive denominator and ratio premise, apply monotone multiplication rowwise, then package the bound into the existing uniform margin budget consumer.",
-      "dependencies": [],
+      "dependencies": [
+        "5b7ec48e8f3e419abc9d7eb7fbff17cc"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -39022,6 +39024,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_DefectNormBudget_REVIEW.md",
             "sha256": "1B34F6F5CEACC9EF049DFAC1BFB694717D5400E2E24B07CF513775E4C1AD1AEB"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "5b7ec48e8f3e419abc9d7eb7fbff17cc": {
+      "id": "5b7ec48e8f3e419abc9d7eb7fbff17cc",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer",
+      "statement": "The explicit positive delta bridge yields rowwise lambda<lambdaUpper, positive margin, and strict downstream load separation over the tagged union.",
+      "parent_id": "db73c59b84614a608e2eaab3d82a75c7",
+      "status": "open",
+      "proof_sketch": "Use gap positivity for the strict upper inequality, delta positivity plus the rowwise lower bound for positive margins, and strict transitivity for loads below delta.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_FIXED_LAMBDA_STRICT_MARGIN",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_STRICT_MARGIN_CONSUMER20260907.lean",
+            "sha256": "7C66CEADF748E46C25E538EA5607E0C6C6A1E07C6DC1AD8FDB0B92C116DE2E16"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_STRICT_MARGIN_CONSUMER20260907_REVIEW.md",
+            "sha256": "62B4C50D634A467822D83FD5B4C0F4BBE094BE441DE3B27980FE8B13516BECFD"
           }
         ],
         "registry_eligible": false,
@@ -65834,6 +65871,23 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T18:37:30.351738+00:00",
+      "kind": "node_added",
+      "node_id": "5b7ec48e8f3e419abc9d7eb7fbff17cc",
+      "parent_id": "db73c59b84614a608e2eaab3d82a75c7",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer"
+    },
+    {
+      "at": "2026-09-07T18:37:30.378546+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -69490,5 +69544,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "dad60ffcff4e8716039cc7746b4b3a32f5eeb41d95dc2e0248085ce24d8cc4df"
+  "state_checksum": "d28baed7588136d7f0cd518e0e76369c8046b039f181cb185cafbaf42e772e54"
 }
