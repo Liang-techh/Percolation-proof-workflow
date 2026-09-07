@@ -1,0 +1,144 @@
+"""Idempotently integrate pending agent review results as fail-closed metadata.
+
+The inbox is intentionally append-only.  This command never promotes a node,
+changes the registry, or edits the review itself.  It only records provenance
+on the matching Route-B node and writes a small processed marker, so an hourly
+runner can safely invoke it repeatedly.
+"""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+from pathlib import Path
+import re
+import sys
+
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
+
+from percolation_workflow.store import StateStore
+
+
+TASK_TARGETS = {
+    "T-P0-001": ("P0.reproducibility_baseline", "reproducibility_baseline_blocked"),
+    "T-DAG-002": ("M4.block45_full_certificate", "child_dag_refinement_proposal"),
+}
+
+
+def sha256(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest().upper()
+
+
+def front_matter(path: Path) -> dict[str, str]:
+    lines = path.read_text(encoding="utf-8").splitlines()
+    if len(lines) < 3 or lines[0].strip() != "---":
+        return {}
+    try:
+        end = lines.index("---", 1)
+    except ValueError:
+        return {}
+    result: dict[str, str] = {}
+    for line in lines[1:end]:
+        match = re.fullmatch(r"([A-Za-z_][A-Za-z0-9_-]*):\s*(.*)", line)
+        if match:
+            result[match.group(1)] = match.group(2).strip().strip("'\"")
+    return result
+
+
+def node_by_name(state, name: str):
+    for node in state.nodes.values():
+        if node.name == name:
+            return node
+    raise ValueError(f"no Route-B node named {name!r}")
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--state", type=Path,
+                        default=ROOT / "artifacts/routeb_6dof/state.json")
+    parser.add_argument("--inbox", type=Path,
+                        default=ROOT / "agent_review_inbox")
+    args = parser.parse_args()
+    state_path = args.state.resolve(strict=True)
+    inbox = args.inbox.resolve(strict=True)
+    processed = inbox / "processed"
+    processed.mkdir(parents=True, exist_ok=True)
+
+    candidates = []
+    for path in sorted(inbox.glob("review-*.md")):
+        header = front_matter(path)
+        if header.get("kind") != "review_result":
+            continue
+        if header.get("integration_status") == "integrated":
+            continue
+        task_id = header.get("task_id", "")
+        if task_id not in TASK_TARGETS:
+            continue
+        digest = sha256(path)
+        marker = processed / path.with_suffix(".json").name
+        if marker.exists():
+            try:
+                old = json.loads(marker.read_text(encoding="utf-8"))
+            except json.JSONDecodeError as exc:
+                raise ValueError(f"malformed processed marker: {marker}") from exc
+            if old.get("review_sha256", "").upper() == digest:
+                continue
+            raise ValueError(f"review changed after processing: {path}")
+        candidates.append((path, header, digest, marker))
+
+    if not candidates:
+        print(json.dumps({"integrated": [], "state_revision": StateStore(state_path).load().revision}))
+        return 0
+
+    store = StateStore(state_path)
+    state = store.load()
+    if state.project != "routeb-6dof-external":
+        raise ValueError(f"unexpected project: {state.project!r}")
+    if any(node.status.value == "in_progress" for node in state.nodes.values()):
+        raise ValueError("refuse inbox integration while a node is in progress")
+
+    integrated = []
+    for path, header, digest, marker in candidates:
+        task_id = header["task_id"]
+        target_name, classification = TASK_TARGETS[task_id]
+        node = node_by_name(state, target_name)
+        ref = {
+            "review_file": str(path.relative_to(ROOT)).replace("\\", "/"),
+            "review_sha256": digest,
+            "task_id": task_id,
+            "source_agent": header.get("source_agent", "unknown"),
+            "created_at": header.get("created_at", "unknown"),
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": classification,
+            "admission_effect": "none",
+        }
+        node.metadata.setdefault("agent_review_refs", []).append(ref)
+        state.event(
+            "agent_review_integrated",
+            review_file=ref["review_file"],
+            review_sha256=digest,
+            task_id=task_id,
+            node_id=node.id,
+            classification=classification,
+            admission_effect="none",
+            registry_promoted=False,
+            formal_certificate_allowed=False,
+        )
+        integrated.append((path, marker, ref))
+
+    # StateStore performs the optimistic revision check and checksum update.
+    store.save(state)
+    for path, marker, ref in integrated:
+        marker.write_text(json.dumps({**ref, "integrated_at": state.events[-1]["at"]},
+                                     ensure_ascii=False, indent=2) + "\n",
+                          encoding="utf-8")
+    print(json.dumps({"integrated": [ref["task_id"] for _, _, ref in integrated],
+                      "state_revision": state.revision,
+                      "registry_size": len(state.registry),
+                      "formal_certificate_allowed": False}, ensure_ascii=False))
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

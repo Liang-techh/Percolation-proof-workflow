@@ -26,3 +26,12 @@ writes a companion marker under `processed/` with the original review hash and
 the integration result. Do not delete or rewrite the original review. If a
 review requires a material mathematical scope change, leave it `pending` for
 explicit user direction.
+
+For a deterministic local pass, run:
+
+```text
+python scripts/integrate_agent_reviews.py
+```
+
+The command is idempotent and currently accepts only explicitly mapped
+Route-B review tasks. Unknown tasks are left untouched for human/agent triage.

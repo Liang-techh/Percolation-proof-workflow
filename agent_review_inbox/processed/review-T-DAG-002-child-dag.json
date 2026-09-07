@@ -1,0 +1,11 @@
+{
+  "review_file": "agent_review_inbox/review-T-DAG-002-child-dag.md",
+  "review_sha256": "DC7568DF5725DBEB3828F65FDE2487FE9ECA36AB1480AB2168C1266513088327",
+  "task_id": "T-DAG-002",
+  "source_agent": "Codex",
+  "created_at": "2026-09-06T21:30:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "child_dag_refinement_proposal",
+  "admission_effect": "none",
+  "integrated_at": "2026-09-07T02:28:57.242042+00:00"
+}

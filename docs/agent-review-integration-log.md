@@ -3,7 +3,7 @@
 This log records durable integrations from `agent_review_inbox/`. The original
 review files and their SHA-256 markers remain in that directory.
 
-## 2026-09-06 / Route-B checkpoint revision 329
+## 2026-09-06 / Route-B checkpoint revision 333
 
 Integrated as pending metadata only:
 
@@ -17,11 +17,17 @@ Integrated as pending metadata only:
 | T-P4-002 | `P4.residual_schur_pmi` | `pending` | none |
 | T-P8-002 | `P8.independent_reachability` | `architecture_decision_pending_contract_change` | none |
 | T-M4-001 | `M4.block45_full_certificate` | `frontier_serialization_observed` | none |
+| T-P0-001 | `P0.reproducibility_baseline` | `reproducibility_baseline_blocked` | none |
+| T-DAG-002 | `M4.block45_full_certificate` | `child_dag_refinement_proposal` | none |
 
 The authoritative `artifacts/routeb_6dof/state.json` was updated through
-`StateStore` from revision 328 to revision 332. Eight
-`agent_review_integrated` events and eight node provenance references were
+`StateStore` from revision 328 to revision 333. Ten
+`agent_review_integrated` events and ten node provenance references were
 added. Node statuses remain open and the verified registry remains empty.
 
 No review was promoted to `VERIFIED`; P3 source semantics, P4 true-DH residual
 binding, P8 contract/flowpipe coverage, and M4 admission remain open.
+
+P0 remains blocked by current snapshot drift and missing fresh receipts.  The
+child-DAG proposal is retained as a projection only; it does not migrate the
+64-node authoritative graph or change theorem statements.

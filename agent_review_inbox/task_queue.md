@@ -91,7 +91,8 @@ without an explicit scoped request.
 
 ### T-P0-001 — reproducibility baseline re-audit
 
-- status: `claimed`
+- status: `reviewed_pending` (integrated at Route-B revision 333; result:
+  `review-T-P0-001-repro.md`)
 - scope: existing P0 attempts, receipts, source hashes, and the smallest
   reproducibility checker only;
 - deliver: whether P0 can enter `evidence_complete`, with missing gates and
@@ -100,13 +101,50 @@ without an explicit scoped request.
 
 ### T-DAG-002 — explicit child-DAG refinement
 
-- status: `claimed`
+- status: `reviewed_pending` (integrated at Route-B revision 333; result:
+  `review-T-DAG-002-child-dag.md`)
 - scope: propose disjoint P3/P4/P5/P6/P8/M4 source-binding, algebra,
   coverage, and terminal-transfer child nodes;
 - deliver: deterministic node names/dependencies, admission boundaries, and
   migration risks;
 - forbidden: mutating the authoritative checkpoint or silently changing the
   theorem statement.
+
+## Queue: next parallel leaves
+
+### T-P3-003 — canonical source-manifest binding
+
+- status: `claimed` (Aquinas the 6th, 2026-09-06)
+- scope: reconcile the authoritative Julia/DH source, coordinate order,
+  arithmetic convention, and current delivery manifest without running a full
+  interval search;
+- deliver: one review result with exact paths, hashes, and the smallest
+  admissible source-binding contract;
+- forbidden: treating equal payload bits or point samples as global bounds.
+
+### T-P4-003 — force/acceleration residual normalization
+
+- status: `open`
+- scope: formalize the typed map between `l = I f - M0 a` and the PMI-side
+  residual `d`, preferably as a focused algebra/Lean sidecar;
+- deliver: review result plus focused compile/check evidence if available;
+- forbidden: closing true-DH binding, coverage, or the P4 parent.
+
+### T-P8-003 — freeze the state contract
+
+- status: `open`
+- scope: decide whether the deployed 13-state RHS requires an explicit-time
+  theorem or a separately justified 14-state ramp source;
+- deliver: minimal theorem signature and admission blockers;
+- forbidden: silently changing the target theorem or claiming a flowpipe.
+
+### T-P5-001 — energy-syzygy admission audit
+
+- status: `open`
+- scope: isolate the exact Newton–Euler energy identity from sparse SOS and
+  true-DH source obligations, and identify the smallest reusable child;
+- deliver: review result with statement, dependencies, and evidence boundary;
+- forbidden: promoting solver output or an abstract identity to physical M4.
 
 ## Handoff format
 

@@ -1,0 +1,11 @@
+{
+  "review_file": "agent_review_inbox/review-T-P0-001-repro.md",
+  "review_sha256": "7FD1B287604F979DB0EFFB5723379435256C9CE91422CCE48D7F18D4690BDD6F",
+  "task_id": "T-P0-001",
+  "source_agent": "Codex",
+  "created_at": "2026-09-06T21:00:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "reproducibility_baseline_blocked",
+  "admission_effect": "none",
+  "integrated_at": "2026-09-07T02:28:57.242042+00:00"
+}
