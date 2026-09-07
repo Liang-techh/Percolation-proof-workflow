@@ -1130,7 +1130,7 @@ polynomial remains a separate frontier.
 - status: `open` (candidate leaf recorded locally at Route-B revision 407)
 - owner: `大爱仙尊` for the interval/source semantic binding; `巨阳仙尊` for
   the smallest typed Lean statement and axiom receipt;
-- scope: inspect `P4.residual_port_frobenius_bound` and its four hashed source
+- scope: inspect `P4.residual_port_frobenius_bound` and its five hashed source
   artifacts, replay the 5120 resolved cells and the exact rational Young
   budgets for eta=2.7 and 5.6, and determine the minimal theorem interface
   needed by the P4 residual PMI. Preserve the left-output metric orientation,

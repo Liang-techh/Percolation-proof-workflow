@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import csv
 import hashlib
+from collections import Counter
 from fractions import Fraction
 from pathlib import Path
 import re
@@ -49,10 +50,11 @@ def before_summary(path: Path) -> list[dict[str, str]]:
 
 def main() -> int:
     partition = SRC / "routeB_compact_port_bi_partition_probe_left_frobenius_output.csv"
+    cover = SRC / "routeB_compact_qbox_cover_depth3.csv"
     ledger = SRC / "routeB_compact_port_frobenius_ledger.csv"
     report = SRC / "P5_COMPACT_PORT_FROBENIUS_LEDGER.md"
     generator = SRC / "routeB_compact_port_frobenius_ledger.py"
-    for path in (partition, ledger, report, generator):
+    for path in (partition, cover, ledger, report, generator):
         if not path.is_file():
             raise FileNotFoundError(path)
 
@@ -62,6 +64,15 @@ def main() -> int:
     cover_match = re.search(r"^cover_sha256,([0-9a-f]{64})$", footer, re.MULTILINE)
     if source_match is None or cover_match is None:
         raise ValueError("partition provenance footer is malformed")
+    if hashlib.sha256(cover.read_bytes()).hexdigest() != cover_match.group(1):
+        raise ValueError("declared cover hash does not match coverage artifact")
+    cover_rows = list(csv.DictReader(cover.open(newline="", encoding="utf-8")))
+    cover_counts = Counter((row.get("eta"), row.get("status")) for row in cover_rows)
+    if cover_counts != Counter({("2.7", "INTERSECTS"): 2560,
+                                ("5.6", "INTERSECTS"): 2560,
+                                ("2.7", "OUTSIDE"): 1536,
+                                ("5.6", "OUTSIDE"): 1536}):
+        raise ValueError("q-box cover has unexpected eta/status accounting")
     by_eta = {eta: [row for row in rows if row["eta"] == eta]
               for eta in {row["eta"] for row in rows}}
     if set(by_eta) != {"2.7", "5.6"} or any(len(cell_rows) != 2560
@@ -93,7 +104,7 @@ def main() -> int:
     state = store.load()
     parent = find(state, "P4.residual_schur_pmi")
     name = "P4.residual_port_frobenius_bound"
-    source_artifacts = [ref(path) for path in (partition, ledger, report, generator)]
+    source_artifacts = [ref(path) for path in (partition, cover, ledger, report, generator)]
     metadata = {
         "verification_domain": "external-research",
         "research_stage": "P4",
