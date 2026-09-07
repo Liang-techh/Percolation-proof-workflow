@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 670,
+  "revision": 672,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -40387,7 +40387,9 @@
       "parent_id": "4433e80c13ae40258342fcacd879bbf6",
       "status": "open",
       "proof_sketch": "Substitute ED≤kappaD*energy+biasD and EB≤kappaB*energy+biasB into the weighted budget, retain tau² and nonnegative parameter premises, and expose separate force/acceleration typed consumers without redoing Cauchy or defect convention conversion.",
-      "dependencies": [],
+      "dependencies": [
+        "e8804b8b7d1e41519b2cbd90c57f9bfb"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -40496,7 +40498,9 @@
       "parent_id": "c2b18f19cf3949b284c14d4839ee7454",
       "status": "open",
       "proof_sketch": "Reuse the explicit diagonal/zero-cross-term table, define the scalar 2x2 determinant and three principal-minor predicates, prove the determinant product and positivity, and connect only this diagonal subblock to TailPSD without invoking a full-body eigenvalue claim.",
-      "dependencies": [],
+      "dependencies": [
+        "7651cc50c8f943908df1d0f11d0bd750"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -40531,7 +40535,9 @@
       "parent_id": "dad62f6ac0f741dc9c9f20cdbd377059",
       "status": "open",
       "proof_sketch": "Set sigma=sum delta, consume 0<sum delta≤sum reserve, and use totalReserve+sum delta≤externalTotalMargin together with totalMargin=externalTotalMargin and shared-lambda equalities to derive 0<sigma≤finalMargin−finalLoad.",
-      "dependencies": [],
+      "dependencies": [
+        "e8b9933f26a54a40bc7282e5cd38d9e5"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -40566,7 +40572,9 @@
       "parent_id": "fae0b75eca7c4b41b4c0afebe0691ca4",
       "status": "open",
       "proof_sketch": "Decompose the finite difference sum into the selected positive strict term and nonnegative remainder, then compose with the existing capMax and downstream consumer inequalities without rebuilding non-strict order or cap construction.",
-      "dependencies": [],
+      "dependencies": [
+        "4a0b7a5b7b0740208c6abb1efeed3e49"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -40583,6 +40591,146 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_STRICT_ORDER_REVIEW.md",
             "sha256": "82E4A03B7D66B0436B9CEDBDEA567783DE9AAA1B6AFA2E7D607808D664B30FB6"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "e8804b8b7d1e41519b2cbd90c57f9bfb": {
+      "id": "e8804b8b7d1e41519b2cbd90c57f9bfb",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption",
+      "statement": "A positive division-free slack rho_eff+delta≤1 absorbs the relative-plus-additive residual budget into Schur/PMI margin and affine feedback consumers, with additive debit and typed force/acceleration paths explicit.",
+      "parent_id": "4c6ec998159b4f609dda50f778e27dce",
+      "status": "open",
+      "proof_sketch": "Use delta>0 and rho_eff+delta≤1 to derive delta*energy-biasEff≤energy-q, require an explicit Schur/PMI comparison and optional bias≤delta*energy premise for nonnegative margin, then expose affine feedback and residual-allocation consumers without redoing weighted Cauchy or parameter rearrangement.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_P4_SCHUR_PMI_ABSORPTION",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_SchurPMIAbsorption.lean",
+            "sha256": "F18F9FB180AEAFAAD0DC3CD5149894D03EE111DB5C45ABFB86CAA927DF4050E3"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_SchurPMIAbsorption_REVIEW.md",
+            "sha256": "846C47CB8E7DCC845332CD10C4B84A492119399C0F66A03EB0DA74AF371A1698"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "7651cc50c8f943908df1d0f11d0bd750": {
+      "id": "7651cc50c8f943908df1d0f11d0bd750",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse",
+      "statement": "The positive diagonal weighted tail 2x2 block has an explicit reciprocal diagonal inverse with two-sided multiplication identities and a typed solve interface for Schur consumers.",
+      "parent_id": "d3c0e41e00fe4677b7c370328eecf8e8",
+      "status": "open",
+      "proof_sketch": "Use the previously registered positive principal minors to justify nonzero denominators, define the reciprocal diagonal table and finite 2x2 multiplication, prove left/right identity and inverse action without invoking Matrix.inv, and retain the actual source tail binding premises.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_BODY6_TAIL_INVERSE",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_TAILINVERSE20260907.lean",
+            "sha256": "BD681202326A1E2D3E33793E578869B9FD32B7C0DE259F515CD242FA6DBF0C2C"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_TAILINVERSE20260907_REVIEW.md",
+            "sha256": "9EFC73FE117EBE1BF4BED82DD4D2BBA491BA469A51863763570CCAAC1E63D911"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "e8b9933f26a54a40bc7282e5cd38d9e5": {
+      "id": "e8b9933f26a54a40bc7282e5cd38d9e5",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence",
+      "statement": "An explicit finite row map, value preservation, shared-lambda equality, and total equalities transport an independently indexed reserve family into the tagged two-row final strict export.",
+      "parent_id": "4f053e18b0514fed992e842f1594d116",
+      "status": "open",
+      "proof_sketch": "Require supplied selected-row membership, injectivity, surjectivity onto the final tagged union, cell-value preservation, and exact load/margin totals; construct only the transported strict budget and leave physical coverage, digest, source, and registry external.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "source_semantics",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_FIXED_LAMBDA_TWO_ROW_INDEX_ADAPTER",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_INDEX_EQUIVALENCE_ADAPTER20260907.lean",
+            "sha256": "0CE295D40F946964FC4CCF35E05088285ADEC86F5BC21F428EE747A116994236"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_INDEX_EQUIVALENCE_ADAPTER20260907_REVIEW.md",
+            "sha256": "4E72C7366E42A8B7D78D1424E4C0740B169F4A1BBA92E8FD5369F9A1C8C6DF60"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "4a0b7a5b7b0740208c6abb1efeed3e49": {
+      "id": "4a0b7a5b7b0740208c6abb1efeed3e49",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.cap_load_order_consumer.assembled_load_nonneg_witness.squared_velocity_nonneg.strict_component_order.obstruction",
+      "statement": "A strict component cap gap does not imply a strict weighted cap-load gap without positive load on that coordinate, and entirely non-strict caps cannot yield strictness.",
+      "parent_id": "11da8982320248a8897780f4b9949db9",
+      "status": "open",
+      "proof_sketch": "Record exact Fin-6 counterexamples with zero selected load or equality caps, preserving the obstruction next to the positive strict-order theorem so the scheduler retains necessary positive-load and strict-gap premises.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_CENTRAL_FD_STRICT_ORDER_OBSTRUCTION",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_STRICT_OBSTRUCTION.lean",
+            "sha256": "49D280C494A06C9D40FDB727C888F8ABAEAFE2A6AB3CEF6FCAB529B46B5120EF"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_STRICT_OBSTRUCTION_REVIEW.md",
+            "sha256": "4CEC0D51B41F93FBCBB07E49BB13D3C57C2587753C166F5BDB3FD8B9F9367EEF"
           }
         ],
         "registry_eligible": false,
@@ -68026,6 +68174,56 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T19:33:42.004236+00:00",
+      "kind": "node_added",
+      "node_id": "e8804b8b7d1e41519b2cbd90c57f9bfb",
+      "parent_id": "4c6ec998159b4f609dda50f778e27dce",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption"
+    },
+    {
+      "at": "2026-09-07T19:33:42.004255+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T19:34:39.903857+00:00",
+      "kind": "node_added",
+      "node_id": "7651cc50c8f943908df1d0f11d0bd750",
+      "parent_id": "d3c0e41e00fe4677b7c370328eecf8e8",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse"
+    },
+    {
+      "at": "2026-09-07T19:34:39.904681+00:00",
+      "kind": "node_added",
+      "node_id": "e8b9933f26a54a40bc7282e5cd38d9e5",
+      "parent_id": "4f053e18b0514fed992e842f1594d116",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence"
+    },
+    {
+      "at": "2026-09-07T19:34:39.905429+00:00",
+      "kind": "node_added",
+      "node_id": "4a0b7a5b7b0740208c6abb1efeed3e49",
+      "parent_id": "11da8982320248a8897780f4b9949db9",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.cap_load_order_consumer.assembled_load_nonneg_witness.squared_velocity_nonneg.strict_component_order.obstruction"
+    },
+    {
+      "at": "2026-09-07T19:34:39.905436+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse",
+        "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence",
+        "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.cap_load_order_consumer.assembled_load_nonneg_witness.squared_velocity_nonneg.strict_component_order.obstruction"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -71682,5 +71880,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "5b09988aec422ee849f5deaa4b0c1617560ead8e69216894bd6813cb250bcbda"
+  "state_checksum": "538a904a1e91cd656c644720badd4046ab0ce6fb48c414df6086eab21b26f3d8"
 }

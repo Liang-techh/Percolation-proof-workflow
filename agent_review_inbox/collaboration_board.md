@@ -2095,6 +2095,18 @@ fixed-λ aggregate slack 与 P3 strict component order 已接入 DAG revision 67
 同时补派 two-row/index equivalence 与 zero-load obstruction，明确记录严格闭合所需
 的 index/正性前提，防止后续 scheduler 误把弱不等式提升为严格定理。
 
+### 2026-09-07 14:24 — 梁智炜接入流川枫
+
+用户新增 GitHub agent 流川枫。已更新 roster、hourly heartbeat 和 task queue；
+不擅自增加分钟槽，改为每批约三分之一的比例 lane。首个任务是 P4 Schur/PMI
+absorption 的混合 Lean/边界验证，最终 integration 仍由梁智炜完成。
+
+### 2026-09-07 14:30 — 梁智炜收割四个数学接口
+
+body-6 tail inverse、fixed-λ two-row/index adapter、P3 strict-order obstruction 与
+P4 Schur/PMI absorption 已接入 DAG revision 672。所有结果仍是 open/uncompiled 或
+待 GitHub pinned receipt；流川枫的约三分之一批次 lane 已启用，不改变 fail-closed gate。
+
 ### 2026-09-07 13:55 — 梁智炜收割 fixed-λ 定量 reserve
 
 fixed-λ quantitative reserve lower-bound 叶已登记到 DAG revision 668，提供显式

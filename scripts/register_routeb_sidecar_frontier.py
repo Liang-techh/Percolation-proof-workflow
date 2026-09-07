@@ -1365,6 +1365,58 @@ CHILDREN = [
             "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_STRICT_ORDER_REVIEW.md",
         ],
     },
+    {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface",
+        "statement": "A positive division-free slack rho_eff+delta≤1 absorbs the relative-plus-additive residual budget into Schur/PMI margin and affine feedback consumers, with additive debit and typed force/acceleration paths explicit.",
+        "proof_sketch": "Use delta>0 and rho_eff+delta≤1 to derive delta*energy-biasEff≤energy-q, require an explicit Schur/PMI comparison and optional bias≤delta*energy premise for nonnegative margin, then expose affine feedback and residual-allocation consumers without redoing weighted Cauchy or parameter rearrangement.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_P4_SCHUR_PMI_ABSORPTION",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SchurPMIAbsorption.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SchurPMIAbsorption_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors",
+        "statement": "The positive diagonal weighted tail 2x2 block has an explicit reciprocal diagonal inverse with two-sided multiplication identities and a typed solve interface for Schur consumers.",
+        "proof_sketch": "Use the previously registered positive principal minors to justify nonzero denominators, define the reciprocal diagonal table and finite 2x2 multiplication, prove left/right identity and inverse action without invoking Matrix.inv, and retain the actual source tail binding premises.",
+        "lane": "source_semantics",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_BODY6_TAIL_INVERSE",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_TAILINVERSE20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_TAILINVERSE20260907_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack",
+        "statement": "An explicit finite row map, value preservation, shared-lambda equality, and total equalities transport an independently indexed reserve family into the tagged two-row final strict export.",
+        "proof_sketch": "Require supplied selected-row membership, injectivity, surjectivity onto the final tagged union, cell-value preservation, and exact load/margin totals; construct only the transported strict budget and leave physical coverage, digest, source, and registry external.",
+        "lane": "lean_adapter",
+        "bottleneck": "source_semantics",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_TWO_ROW_INDEX_ADAPTER",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_INDEX_EQUIVALENCE_ADAPTER20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_INDEX_EQUIVALENCE_ADAPTER20260907_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.cap_load_order_consumer.assembled_load_nonneg_witness.squared_velocity_nonneg.strict_component_order.obstruction",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.cap_load_order_consumer.assembled_load_nonneg_witness.squared_velocity_nonneg.strict_component_order",
+        "statement": "A strict component cap gap does not imply a strict weighted cap-load gap without positive load on that coordinate, and entirely non-strict caps cannot yield strictness.",
+        "proof_sketch": "Record exact Fin-6 counterexamples with zero selected load or equality caps, preserving the obstruction next to the positive strict-order theorem so the scheduler retains necessary positive-load and strict-gap premises.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_STRICT_ORDER_OBSTRUCTION",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_STRICT_OBSTRUCTION.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_STRICT_OBSTRUCTION_REVIEW.md",
+        ],
+    },
 ]
 
 

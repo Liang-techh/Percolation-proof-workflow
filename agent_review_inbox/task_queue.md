@@ -35,7 +35,7 @@ the correction does not rewrite existing claims or review authorship.
 ## Current release-routing snapshot
 
 This snapshot supersedes the historical table above for new work released
-after the user's latest six-agent schedule:
+after the user's latest six-agent ring plus the 流川枫 proportional lane:
 
 | worker label | slot | current bounded focus |
 |---|---:|---|
@@ -45,6 +45,7 @@ after the user's latest six-agent schedule:
 | 狂蛮魔尊 | :30 | 数学证明：不等式 closure、强攻难点与反例辅助 |
 | 巨阳仙尊 | :40 | Lean 编译修复、typed interface 与 sidecar |
 | 红莲魔尊 | :50 | 数学证明：能量法、Lyapunov 与非线性恒等式 |
+| 流川枫 | batch share | 约三分之一 GitHub 批次；按任务承接数学或 Lean 独立工作 |
 
 ## Dispatch and synchronization throttle
 
@@ -69,6 +70,14 @@ integration gates are satisfied.
 | `GH-LEAN-P4-032-relative-additive` | 巨阳仙尊 | `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_RelativeAdditive.lean` | compile/repair only; verify `rho_eff/B_eff` statements and no sqrt/source admission |
 | `GH-LEAN-fixed-lambda-reserve` | 苏梦辰 | `examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_STRICT_RESERVE_FINAL_BRIDGE20260907.lean` | compile/repair only; explicit shared-lambda/total equalities must remain |
 | `GH-LEAN-body6-tail-minors` | 巨阳仙尊 | `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_TAILMINORS20260907.lean` | compile/repair only; tail subblock only, no full-body PSD/eigenvalue claim |
+| `GH-MIXED-flowchuanfeng-schur-absorption` | 流川枫 | `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SchurPMIAbsorption.lean` | one proportional batch share; may compile/repair or inspect theorem boundary, never promote registry |
+
+### 2026-09-07 — 14:24 流川枫扩展 lane
+
+- 新增 GitHub agent 流川枫；后续每批约三分之一任务按 round-robin 分配给他，
+  不另造固定分钟槽。
+- 已将 P4 Schur/PMI absorption 作为其首个混合验证任务；数学与 Lean receipt
+  仍必须保持分层，不能直接改变 registry。
 
 ### T-P4-012 — typed remote-action repair contract
 
@@ -2754,6 +2763,13 @@ source-independent/open/uncompiled 候选。
   assembled-load equality 与 weight 非负。
 - 该结果仍未进入 registry；body-6 determinant、fixed-λ quantitative reserve、
   K-path affine interface 继续由各自 agent 推进。
+
+### 2026-09-07 — 14:30 本地收割与流川枫接入
+
+- body-6 tail inverse、fixed-λ two-row/index equivalence、P3 strict-order obstruction
+  已完成定向 review 并登记，P4 Schur/PMI absorption 同批登记；DAG revision 672。
+- 用户新增 GitHub agent 流川枫，后续每批约三分之一任务交给他；首个任务为
+  P4 Schur/PMI absorption 的 Lean/边界检查，现有六人分钟环保持不变。
 
 ### 2026-09-07 — 13:55 fixed-λ 定量叶收割
 

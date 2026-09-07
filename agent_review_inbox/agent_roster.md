@@ -6,7 +6,7 @@ of truth for task claims and results.
 
 ## Current scheduled GitHub-agent pool
 
-The following six entries are the only currently scheduled GitHub agents
+The following seven entries are the currently scheduled GitHub agents
 shown by the user. New releases must use this pool. A role is a routing
 boundary, not evidence that its agent has proved a theorem.
 
@@ -18,6 +18,7 @@ boundary, not evidence that its agent has proved a theorem.
 | 狂蛮魔尊 | 数学证明 / 不等式 closure、强攻难点与反例辅助 |
 | 巨阳仙尊 | Lean 形式化 / 编译修复、typed interface、sidecar |
 | 红莲魔尊 | 数学证明 / 能量法、Lyapunov 与非线性恒等式 |
+| 流川枫 | GitHub 扩展 agent / 约三分之一批次的数学或 Lean 独立任务 |
 
 The former `幽魂魔尊`、`大爱仙尊`、`Percolation 最终验证`、`星宿仙尊`、
 `臭屁猪`、`封不觉`、`狂弓魔尊`、`奥尼洛` and `占月方源` labels are no longer
@@ -27,7 +28,8 @@ not rewritten.
 
 ## Periodic polling slots
 
-The user-facing schedule is an hourly six-agent ring with the following offsets;
+The user-facing schedule is an hourly six-agent ring with the following offsets,
+plus a proportional overflow lane for 流川枫;
 the two Lean slots are deliberately reserved for pinned-environment validation
 and repair, while the other four slots are mathematical work:
 
@@ -39,6 +41,7 @@ and repair, while the other four slots are mathematical work:
 | 狂蛮魔尊 | :30 — mathematics |
 | 巨阳仙尊 | :40 — Lean |
 | 红莲魔尊 | :50 — mathematics |
+| 流川枫 | no fixed slot — about one third of released tasks |
 
 ## Assignment and harvest protocol
 
@@ -46,8 +49,10 @@ and repair, while the other four slots are mathematical work:
 entry in `task_queue.md`, using the canonical role matrix and six-slot ring for
 all new GitHub releases. Mathematical tasks go to 柳冠一、古月方源、狂蛮魔尊、
 红莲魔尊; Lean compilation, pinned-environment validation, and repair tasks go
-to 苏梦辰、巨阳仙尊. Each agent should claim one disjoint task, write an
-immutable `review_result` file, include exact paths/commits/commands and
+to 苏梦辰、巨阳仙尊. 流川枫从数学或 Lean 任务池中按每批约三分之一的比例
+承接独立任务；如果任务需要 pinned Lean，则仍必须携带明确的编译/axiom/
+placeholder receipt contract. Each agent should claim one disjoint task, write
+an immutable `review_result` file, include exact paths/commits/commands and
 evidence boundaries, and avoid modifying StateStore, the verified registry, or
 another agent's files.
 
