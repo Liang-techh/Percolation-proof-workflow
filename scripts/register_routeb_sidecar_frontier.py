@@ -1924,6 +1924,19 @@ CHILDREN = [
             "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_FINAL_ADMISSION_CONTRACT20260907_REVIEW.md",
         ],
     },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.finite_box_uniform_margin.strict_export.endpoint_uniform_margin",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.finite_box_uniform_margin.strict_export",
+        "statement": "A nonempty finite endpoint/rounding certificate with same-point coverage yields an attained common positive gap and quantitative consumer strictness; empty boxes, zero margin, or broken coverage remain blocking.",
+        "proof_sketch": "Take commonMu as Finset.inf' of per-box gaps, chain gapLower≤endpointLower≤capLoad-weightedLoad≤capMax-weightedLoad at the mapped box, and add consumer≤weightedLoad while preserving empty/zero/omitted-point obstructions.",
+        "lane": "source_semantics",
+        "bottleneck": "coverage",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_ENDPOINT_UNIFORM_MARGIN",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_ENDPOINT_UNIFORM_MARGIN.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_ENDPOINT_UNIFORM_MARGIN_REVIEW.md",
+        ],
+    },
 ]
 
 
