@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 714,
+  "revision": 715,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -42561,7 +42561,9 @@
       "parent_id": "f850da53a286431d918355d6f412fd66",
       "status": "open",
       "proof_sketch": "Define strict and non-strict domain margin requests, use the source zero-null obstruction to reject strict requests containing q=0, restrict margins only along an explicit punctured-domain inclusion, and retain an away-from-zero reciprocal-gap counterexample plus the failure of zero request to prove PSD.",
-      "dependencies": [],
+      "dependencies": [
+        "d98288209e3441f684338b4f285b7564"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -42683,6 +42685,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_APPEND_ONLY_REGISTRY_TRANSITION20260907_REVIEW.md",
             "sha256": "E4ADA7DCA79628AA5AFA32DFD47FB0173BC61C59DCCE34DD9D90942DF2F59298"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "d98288209e3441f684338b4f285b7564": {
+      "id": "d98288209e3441f684338b4f285b7564",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility",
+      "statement": "Strict BODY6 feasibility is an existence statement for a common positive margin, not a consequence of a domain label or zero exclusion; it follows from same-domain nine-entry bounds or a finite all-points cell cover, while the away-from-zero reciprocal-gap family shows pointwise positivity can still lack a uniform margin.",
+      "parent_id": "e8ea2f3fb84e4717b18d4594bb5c0627",
+      "status": "open",
+      "proof_sketch": "Define StrictMarginFeasible and NonstrictPSD separately, derive strict feasibility from a common nine-entry lower bound or finite positive cell floor, prove strict implies non-strict, and retain the exact source zero-null exclusion and unbounded away-domain obstruction. Actual candidate-domain feasibility, PSD, source semantics, coverage, and compilation remain external.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "residual_absorption",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_BODY6_STRICT_FEASIBILITY",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_STRICTFEASIBILITY20260907.lean",
+            "sha256": "A24595758EE169D9D9340EEC71D226EBF71EA0C773E624741428834E8F545122"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_STRICTFEASIBILITY20260907.review.md",
+            "sha256": "73CFECD0932EB508E50B3474E49626A02EE0AE6E0F35B20A891D4126D6F9913D"
           }
         ],
         "registry_eligible": false,
@@ -71089,6 +71126,24 @@
       "artifact_hashes_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T20:58:04.039291+00:00",
+      "kind": "node_added",
+      "node_id": "d98288209e3441f684338b4f285b7564",
+      "parent_id": "e8ea2f3fb84e4717b18d4594bb5c0627",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility"
+    },
+    {
+      "at": "2026-09-07T20:58:04.039309+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility"
+      ],
+      "metadata_updated": [],
+      "artifact_hashes_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -74745,5 +74800,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "509d3cc9c008ae3d228d8109b28c70bd76276465d4c8f450c1b18955cadeb618"
+  "state_checksum": "e4081b99ea11df1b340cbc5c89f915a2be2ee5ea58258ce3b7115b3c68a36453"
 }

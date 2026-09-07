@@ -2106,6 +2106,19 @@ CHILDREN = [
             "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_APPEND_ONLY_REGISTRY_TRANSITION20260907_REVIEW.md",
         ],
     },
+    {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair",
+        "statement": "Strict BODY6 feasibility is an existence statement for a common positive margin, not a consequence of a domain label or zero exclusion; it follows from same-domain nine-entry bounds or a finite all-points cell cover, while the away-from-zero reciprocal-gap family shows pointwise positivity can still lack a uniform margin.",
+        "proof_sketch": "Define StrictMarginFeasible and NonstrictPSD separately, derive strict feasibility from a common nine-entry lower bound or finite positive cell floor, prove strict implies non-strict, and retain the exact source zero-null exclusion and unbounded away-domain obstruction. Actual candidate-domain feasibility, PSD, source semantics, coverage, and compilation remain external.",
+        "lane": "source_semantics",
+        "bottleneck": "residual_absorption",
+        "status": "OPEN_UNCOMPILED_BODY6_STRICT_FEASIBILITY",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_STRICTFEASIBILITY20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_STRICTFEASIBILITY20260907.review.md",
+        ],
+    },
 ]
 
 
