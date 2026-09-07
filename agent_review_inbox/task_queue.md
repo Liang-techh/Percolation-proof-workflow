@@ -317,6 +317,18 @@ correction does not rewrite existing claims or review authorship.
 - forbidden: importing sparse SOS or flowpipe claims, assuming source binding,
   or closing the P5/M4 parent theorem.
 
+### T-P5-004 — dissipative residual-power inequality child
+
+- status: `reviewed_pending` (integrated at Route-B revision 354; Lean child
+  now compiled at `examples/routeb_p5_residual_power_lean/`)
+- scope: formalize the scalar premise `y ≤ -δ*x^2 + ε*x` and expose exact
+  retained-dissipation, Young-family, threshold, and relative-residual lemmas;
+- deliver: compile receipt and a typed downstream interface for supplying
+  physical coercivity/residual bounds;
+- forbidden: assuming `δ` and `ε` from samples, identifying force and
+  acceleration residuals without a units bridge, or closing P5/M4 from this
+  abstract child alone.
+
 ### T-FLT-SPECTRAL-LINEAR — spectral and linear algebra scan
 
 - status: `reviewed_pending` (integrated at Route-B revision 343;

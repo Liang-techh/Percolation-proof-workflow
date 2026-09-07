@@ -189,3 +189,26 @@ it is not a physical source binding or a global Route-B certificate.
 State revision 353 retains the child as a conditional graph artifact. P7
 source equality, residual absorption, P8 flowpipe, terminal transfer, and M4
 kernel/comparator gates remain open; the verified registry is empty.
+
+## 2026-09-07 / Route-B checkpoint revisions 354–355
+
+The `T-P5-004` result was integrated at revision 354. It identifies the exact
+scalar input needed for a retained-dissipation closure and warns that a mere
+constant residual bound cannot imply global strict decay. The inbox parser was
+also repaired to accept this worker's legacy header shape while recording a
+format warning, so the mathematical body is now harvestable without weakening
+the gates.
+
+At revision 355, the new Lean child
+`examples/routeb_p5_residual_power_lean/` was persisted as a conditional graph
+artifact. Its five lemmas compile under the pinned Lean toolchain with only
+standard axioms. The child remains below physical source binding: `δ`, `ε`,
+units conversion, domain coverage, and residual semantics must still be proved
+from the deployed Route-B model.
+
+| task/child | target | result | admission effect |
+|---|---|---|---|
+| T-P5-004 / `RouteBP5ResidualPower.*` | `P5.sparse_disjunctive_sos` | `COMPILED_CANDIDATE` / exact scalar closure | none |
+
+The verified registry remains empty and `formal_certificate_allowed` remains
+false.

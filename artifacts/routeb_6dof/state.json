@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 353,
+  "revision": 355,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -7800,6 +7800,38 @@
             "classification": "pending_christoffel_power_sidecar",
             "admission_effect": "none",
             "target_scope": "routeb_node"
+          },
+          {
+            "review_file": "agent_review_inbox/review-T-P5-004-kuangmanmozun-20260906T2153.md",
+            "review_sha256": "EE544C4F5B2D6A1D2FBC97DA063AE9C48ECA580A3E8BA41B5152A9B3F4F7EDA9",
+            "task_id": "T-P5-004",
+            "source_agent": "狂蛮魔尊",
+            "created_at": "2026-09-06T21:53:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_dissipative_residual_power_child",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "format_warning": "missing_yaml_delimiters"
+          }
+        ],
+        "conditional_children": [
+          {
+            "statement_ids": [
+              "RouteBP5ResidualPower.global_upper_bound",
+              "RouteBP5ResidualPower.retained_dissipation",
+              "RouteBP5ResidualPower.parameterized_young",
+              "RouteBP5ResidualPower.strict_negativity_above_threshold",
+              "RouteBP5ResidualPower.strict_decay_under_relative_residual"
+            ],
+            "status": "compiled_candidate",
+            "receipt": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_residual_power_lean\\compile_receipt.json",
+              "sha256": "5f60148790703839a092c800fb4cbe712237ee102c9a56b8415d79a1bce9465c"
+            },
+            "physical_source_binding": false,
+            "global_coverage": false,
+            "registry_promoted": false
           }
         ]
       }
@@ -30025,6 +30057,42 @@
       "global_coverage": false,
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T04:03:15.598891+00:00",
+      "kind": "agent_review_integrated",
+      "review_file": "agent_review_inbox/review-T-P5-004-kuangmanmozun-20260906T2153.md",
+      "review_sha256": "EE544C4F5B2D6A1D2FBC97DA063AE9C48ECA580A3E8BA41B5152A9B3F4F7EDA9",
+      "task_id": "T-P5-004",
+      "classification": "pending_dissipative_residual_power_child",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "9a3a7eef35b34880b85423aac67ea015"
+    },
+    {
+      "at": "2026-09-07T04:14:21.541069+00:00",
+      "kind": "routeb_p5_residual_power_compile_recorded",
+      "node_id": "9a3a7eef35b34880b85423aac67ea015",
+      "statement_ids": [
+        "RouteBP5ResidualPower.global_upper_bound",
+        "RouteBP5ResidualPower.retained_dissipation",
+        "RouteBP5ResidualPower.parameterized_young",
+        "RouteBP5ResidualPower.strict_negativity_above_threshold",
+        "RouteBP5ResidualPower.strict_decay_under_relative_residual"
+      ],
+      "receipt": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_residual_power_lean\\compile_receipt.json",
+      "receipt_sha256": "5f60148790703839a092c800fb4cbe712237ee102c9a56b8415d79a1bce9465c",
+      "source_sha256": "1fb0e2cbf4f74e6123bf671ba38b32296ada71fd67faa90a2fbc4ef9cb677e01",
+      "olean_sha256": "6d06e1ac82bf6a558f827a50ba2c3716e19defc1bc1f73e480b2e5bac5502529",
+      "compile_log_sha256": "6cbc21c11e9484c41b5c17fd5bc1ad98b81a489f53b605f317bd13f266fda20b",
+      "compile_exit_code": 0,
+      "status": "COMPILED_CANDIDATE",
+      "physical_source_binding": false,
+      "coercivity_and_residual_premises": "external_open",
+      "global_coverage": false,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -33591,8 +33659,52 @@
       "global_coverage": false,
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "schema_version": 1,
+      "algorithm": "routeb_p5_residual_power/v1",
+      "graph_sha256": "e5242c22df8e645e8a6be9602af8f0ca6f1a49014b06c906b47072d3712f602d",
+      "roots": [
+        "9a3a7eef35b34880b85423aac67ea015"
+      ],
+      "selected_nodes": [
+        "9a3a7eef35b34880b85423aac67ea015"
+      ],
+      "graph_projection": {
+        "schema_version": 1,
+        "parent": "9a3a7eef35b34880b85423aac67ea015",
+        "child_statements": [
+          "RouteBP5ResidualPower.global_upper_bound",
+          "RouteBP5ResidualPower.retained_dissipation",
+          "RouteBP5ResidualPower.parameterized_young",
+          "RouteBP5ResidualPower.strict_negativity_above_threshold",
+          "RouteBP5ResidualPower.strict_decay_under_relative_residual"
+        ],
+        "receipt_sha256": "5f60148790703839a092c800fb4cbe712237ee102c9a56b8415d79a1bce9465c"
+      },
+      "receipt": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_residual_power_lean\\compile_receipt.json",
+        "sha256": "5f60148790703839a092c800fb4cbe712237ee102c9a56b8415d79a1bce9465c"
+      },
+      "source": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_residual_power_lean\\DissipativeResidualPower.lean",
+        "sha256": "1fb0e2cbf4f74e6123bf671ba38b32296ada71fd67faa90a2fbc4ef9cb677e01"
+      },
+      "verifier": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_residual_power_lean\\verify.sh",
+        "sha256": "0cd6fa4ef59f3749ed9be049df66953f3a0d50239759c086ccf95f8a30b46955"
+      },
+      "toolchain": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_residual_power_lean\\lean-toolchain",
+        "sha256": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e"
+      },
+      "status": "COMPILED_CANDIDATE",
+      "physical_source_binding": false,
+      "coercivity_and_residual_premises": "external_open",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "global_closure": {},
-  "state_checksum": "d369449cc7e7a4c7a7545ca0d29965fc66491d70c8a3751cba881dbda6c1ece6"
+  "state_checksum": "2669a1b72834093d65b146434297be857e104c3ad8ed87855d3c2a318208f04b"
 }

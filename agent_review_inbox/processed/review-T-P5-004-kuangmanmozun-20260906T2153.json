@@ -1,0 +1,14 @@
+{
+  "review_file": "agent_review_inbox/review-T-P5-004-kuangmanmozun-20260906T2153.md",
+  "review_sha256": "EE544C4F5B2D6A1D2FBC97DA063AE9C48ECA580A3E8BA41B5152A9B3F4F7EDA9",
+  "task_id": "T-P5-004",
+  "source_agent": "狂蛮魔尊",
+  "created_at": "2026-09-06T21:53:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_dissipative_residual_power_child",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "format_warning": "missing_yaml_delimiters",
+  "integrated_at": "2026-09-07T04:03:15.598891+00:00"
+}

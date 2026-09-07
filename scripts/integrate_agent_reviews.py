@@ -35,6 +35,7 @@ TASK_TARGETS = {
     "T-P5-002": ("P5.sparse_disjunctive_sos", "pending_energy_child"),
     "T-P3-006": ("P3.strict_true_dh_bounds", "pending_semantic_binding_sidecar"),
     "T-P5-003": ("P5.sparse_disjunctive_sos", "pending_christoffel_power_sidecar"),
+    "T-P5-004": ("P5.sparse_disjunctive_sos", "pending_dissipative_residual_power_child"),
     # External FLT scans are deliberately event-only: they are advisory
     # catalog evidence, not Route-B theorem nodes or registry entries.
     "T-FLT-DERIV-CALC": (None, "flt_derivation_calculus_scan"),
@@ -74,6 +75,20 @@ def front_matter(path: Path) -> dict[str, str]:
     try:
         end = lines.index("---", start)
     except ValueError:
+        if legacy:
+            # A few periodic workers emit a key/value header without either
+            # YAML delimiter.  Recover only the contiguous pre-heading
+            # metadata; never scan the mathematical body for task fields.
+            recovered: dict[str, str] = {}
+            for line in lines:
+                if line.lstrip().startswith("#"):
+                    break
+                match = re.fullmatch(r"([A-Za-z_][A-Za-z0-9_-]*):\s*(.*)", line)
+                if match:
+                    recovered[match.group(1)] = match.group(2).strip().strip("'\"")
+            if recovered.get("kind"):
+                recovered["_format_warning"] = "missing_yaml_delimiters"
+                return recovered
         return {}
     result: dict[str, str] = {}
     for line in lines[start:end]:

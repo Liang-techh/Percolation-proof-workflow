@@ -1,0 +1,27 @@
+{
+  "schema_version": "routeb-p5-dissipative-residual-power-compile-receipt-v1",
+  "status": "COMPILED_CANDIDATE",
+  "statement_ids": [
+    "RouteBP5ResidualPower.global_upper_bound",
+    "RouteBP5ResidualPower.retained_dissipation",
+    "RouteBP5ResidualPower.parameterized_young",
+    "RouteBP5ResidualPower.strict_negativity_above_threshold",
+    "RouteBP5ResidualPower.strict_decay_under_relative_residual"
+  ],
+  "run_id": "output/run-4UQHUWtH",
+  "lean_toolchain": "leanprover/lean4:v4.32.0",
+  "source_sha256": "1fb0e2cbf4f74e6123bf671ba38b32296ada71fd67faa90a2fbc4ef9cb677e01",
+  "toolchain_file_sha256": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e",
+  "verifier_sha256": "0cd6fa4ef59f3749ed9be049df66953f3a0d50239759c086ccf95f8a30b46955",
+  "olean_sha256": "6d06e1ac82bf6a558f827a50ba2c3716e19defc1bc1f73e480b2e5bac5502529",
+  "compile_log_sha256": "6cbc21c11e9484c41b5c17fd5bc1ad98b81a489f53b605f317bd13f266fda20b",
+  "compile_exit_code": 0,
+  "axioms": ["propext", "Classical.choice", "Quot.sound"],
+  "forbidden_proof_escape": false,
+  "physical_source_binding": false,
+  "coercivity_and_residual_premises": "external_open",
+  "global_coverage": false,
+  "registry_promoted": false,
+  "formal_certificate_allowed": false,
+  "admission": "exact_scalar_closure_open"
+}
