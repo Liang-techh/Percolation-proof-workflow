@@ -9,6 +9,7 @@ from __future__ import annotations
 import csv
 from collections import defaultdict
 from decimal import Decimal, getcontext
+from fractions import Fraction
 from pathlib import Path
 
 getcontext().prec = 80
@@ -21,6 +22,17 @@ LEDGER = (ROOT.parent / "6dof_sos_optimized" / "6dof_sos_optimized" /
 
 def dec(value: str) -> Decimal:
     return Decimal(value.strip())
+
+
+def fraction(value: str) -> Fraction:
+    """Treat a declared decimal field as its exact quantized rational text."""
+    return Fraction(value.strip())
+
+
+def conservative_floor(value: Fraction, digits: int = 12) -> Fraction:
+    """Return a decimal-grid lower bound, never larger than ``value``."""
+    scale = 10 ** digits
+    return Fraction((value.numerator * scale) // value.denominator, scale)
 
 
 def audit_ledger() -> dict[str, object]:
@@ -100,6 +112,7 @@ def audit_ledger() -> dict[str, object]:
         for lambda_text in ("2.0", "1.5", "1.25"):
             selected = [row for row in eta_rows if row["lambda"] == lambda_text]
             margins = [dec(row["candidate_margin"]) for row in selected]
+            exact_margins = [fraction(row["candidate_margin"]) for row in selected]
             key = f"eta={eta},lambda={lambda_text}"
             uniform_lambda_witnesses[key] = {
                 "row_count": len(selected),
@@ -109,6 +122,13 @@ def audit_ledger() -> dict[str, object]:
                     for row in selected
                 ),
                 "min_candidate_margin": str(min(margins)) if margins else None,
+                "min_candidate_margin_exact": (
+                    str(min(exact_margins)) if exact_margins else None
+                ),
+                "conservative_margin_lower_bound_1e-12": (
+                    str(conservative_floor(min(exact_margins)))
+                    if exact_margins else None
+                ),
                 "proof_boundary": "declared ledger rows only; not global coverage",
             }
 

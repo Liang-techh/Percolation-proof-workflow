@@ -83,6 +83,12 @@ def audit_state() -> dict[str, object]:
             and lambda_witnesses.get("eta=5.6,lambda=2.0", {}).get("all_admissible") is True
             and lambda_witnesses.get("eta=5.6,lambda=2.0", {}).get("distinct_boxes", 0) > 0
         ),
+        "fixed_lambda_witness_has_positive_rational_margin": (
+            "/" in str(lambda_witnesses.get("eta=5.6,lambda=2.0", {}).get(
+                "min_candidate_margin_exact", ""))
+            and lambda_witnesses.get("eta=5.6,lambda=2.0", {}).get(
+                "conservative_margin_lower_bound_1e-12") not in {None, "0"}
+        ),
         "global_gate_closed_only_explicitly": state.global_closure_report()["formal_certificate_allowed"] is False,
     }
     errors.extend(f"failed:{name}" for name, ok in checks.items() if not ok)

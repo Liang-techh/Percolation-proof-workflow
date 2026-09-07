@@ -666,3 +666,8 @@
 - 新派发 `T-P4-028`：把该 fixed rational witness 形式化，并明确从有限
   ledger row 到完整 coverage 仍需独立的 domain/interval theorem；禁止
   state-dependent lambda 和 aggregate/per-cell metric 混用。
+- 为方便 Lean/数学 agent 复核，eta=5.6、`lambda=2` 的最小已记录 margin
+  精确量化为 `2150687771402829/50000000000000000`，向下取整至
+  `1e-12` 网格的保守正下界为 `10753438857/250000000000`；eta=2.7 的
+  对应保守下界为 `80204110037/500000000000`。这些分数只证明声明 CSV
+  行的量化 witness，不能替代真实 DH remainder 或全域 coverage。
