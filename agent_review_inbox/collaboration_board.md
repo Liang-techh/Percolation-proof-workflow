@@ -296,3 +296,16 @@
 - 新派发：`T-P4-012` 给巨阳仙尊做 pinned Lean/statement probe；由大爱仙尊或
   幽魂魔尊在有新结果后补 source-side inequality binding。该接口用于减少
   重复审计，不能替代真实 DH、覆盖域或 flowpipe 证明。
+
+### 2026-09-07 — 梁智炜：远端加速度预算消费量
+
+- 已从已有编译候选 `RouteBRotationalDual.coercivity_from_dual` 提取出一个
+  可消费的精确算术 seam：若 `mass` 是同一 full-state 的 kinetic budget，
+  则 `‖a_D‖² ≤ 90 * mass`，其中 `D=(1,2,3,6)`。逐坐标求和得到的
+  `802/7` 仅作为较弱交叉检查，不作为首选预算。
+- 新增 `routeb_remote_accel_budget.py` 及聚焦 checker/test；它明确要求
+  full-state key、同一 source snapshot 和已编译 dual premise，仍保持
+  `formal_certificate_allowed=false`、`registry_eligible=false`。
+- `T-P4-012` 的下一步不是调小常数，而是证明该 `mass` 与 deployed DH
+  `M(q)`/轨迹状态绑定，并再给出 `M_BD` operator bound；否则该预算只能留在
+  conditional frontier。

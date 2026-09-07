@@ -66,7 +66,9 @@ GitHub agents for the push channel.
   bind one of the two admissible repairs for `M_BD(q)a_D`: `full_state` or
   `d_row_schur`;
 - deliver: exact source/interval/Lean evidence for every named premise and a
-  typed adapter to the P4 residual node;
+  typed adapter to the P4 residual node.  The local conditional candidate
+  `‖a_D‖² <= 90*mass` in `routeb_remote_accel_budget.py` may be consumed only
+  after its full-state mass/source binding is proved;
 - forbidden: block-only remote bounds, arbitrary physical reachability claims,
   or treating the structural contract as registry/formal admission.
 
