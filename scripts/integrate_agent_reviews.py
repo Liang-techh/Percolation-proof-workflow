@@ -52,6 +52,14 @@ TASK_TARGETS = {
                  "near_sharp_exact_rational_scalar_fallback"),
     "T-P5-028": ("P5.componentwise_relative_decay.moving_frame_parameter_transport",
                  "exact_moving_frame_transport_and_parameter_cancellation"),
+    "T-P4-033-O1-body6-slice": ("P4.O1.source_comparator.h_body_6.canonical_export",
+                                "pending_independent_body6_source_slice"),
+    "T-P4-fixed-lambda-admissibility": ("P4.fixed_lambda_two_row_admissibility",
+                                        "pending_fixed_lambda_admissibility_formalization"),
+    "T-P5-026-Kpath-interface": ("P5.componentwise_relative_decay.feasible_cone_spn",
+                                 "pending_concrete_k_path_comparison_interface"),
+    "T-P3-central-FD-hull": ("P3.central_fd_derivative_hull_composition",
+                             "pending_exact_central_fd_derivative_hull_bridge"),
     # External FLT scans are deliberately event-only: they are advisory
     # catalog evidence, not Route-B theorem nodes or registry entries.
     "T-FLT-DERIV-CALC": (None, "flt_derivation_calculus_scan"),
