@@ -113,13 +113,13 @@ theorem repair13_eq_source_at_iff_c_zero
   constructor
   · intro hEq
     have hw := congrFun hEq wSlot13
-    simpa [repair13, pack13, wSlot13, hzero] using hw
+    rw [repair13_tail S c x, hzero] at hw
+    exact hw
   · intro hc
     subst c
     funext i
-    fin_cases i <;>
-      simp [repair13, pack13, sourceMechanical, proj12_13, embed12_13,
-        wSlot13, hzero]
+    fin_cases i <;> try rfl
+    simpa [wSlot13] using hzero.symm
 
 /-- If the literal source has zero tail everywhere, the whole repaired field
     equals it if and only if the ramp coefficient is zero. -/
