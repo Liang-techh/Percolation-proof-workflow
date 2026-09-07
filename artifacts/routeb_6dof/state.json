@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 698,
+  "revision": 699,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -41862,7 +41862,9 @@
       "parent_id": "94897baa001a4b6bb1202ba45050e3e7",
       "status": "open",
       "proof_sketch": "Require expected artifact/hash/digest values and exact statement-equivalence evidence, define pending and rejected predicates, prove each missing field is pending and both pending/rejected states exclude admission, while leaving hash algorithm, byte binding, checker execution, VERIFIED, and registry promotion external.",
-      "dependencies": [],
+      "dependencies": [
+        "05c84124386a42df949b29cdd2847ca3"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -42019,6 +42021,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_FINITE_BOX_MARGIN_REVIEW.md",
             "sha256": "B9317A68C9EE77AB1FD70426CF433F04B1DD0DA6C81FDD65C18862685D33836D"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "05c84124386a42df949b29cdd2847ca3": {
+      "id": "05c84124386a42df949b29cdd2847ca3",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization",
+      "statement": "Canonical statement digest requires exact equality of binder, quantifier order, term order, normalization, and body fields; ordinary text similarity cannot substitute for statement binding.",
+      "parent_id": "94911df42fdc408090485ec30e3965eb",
+      "status": "open",
+      "proof_sketch": "Define a structured CanonicalStatementForm and explicit digest oracle, reject a near-text candidate with different term order, and require receipt digest equality to the target oracle while retaining byte-hash, provenance, comparator, VERIFIED, and registry boundaries.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "provenance",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_FIXED_LAMBDA_CANONICAL_DIGEST_NORMALIZATION",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_CANONICAL_DIGEST_NORMALIZATION20260907.lean",
+            "sha256": "F61907D1243710A9DD2F31B211598628B16DD72AD03C96B07F8C838826108779"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_CANONICAL_DIGEST_NORMALIZATION20260907_REVIEW.md",
+            "sha256": "18CAC308686051E3BA89EB8BCE022F1F861789D32A6C57943CAD5B0D92C5DE4F"
           }
         ],
         "registry_eligible": false,
@@ -70026,6 +70063,23 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T20:27:45.013900+00:00",
+      "kind": "node_added",
+      "node_id": "05c84124386a42df949b29cdd2847ca3",
+      "parent_id": "94911df42fdc408090485ec30e3965eb",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization"
+    },
+    {
+      "at": "2026-09-07T20:27:45.013918+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -73682,5 +73736,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "18e62eb5751ae7b407d2169dc0095589267ef070f2f0fb6e03d50170b490e259"
+  "state_checksum": "b5a99bfbdcea8a030895c0964619264c98e2786d20d31ab73c1719ac729d9f3d"
 }

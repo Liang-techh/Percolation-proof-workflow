@@ -1872,6 +1872,19 @@ CHILDREN = [
             "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_FINITE_BOX_MARGIN_REVIEW.md",
         ],
     },
+    {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit",
+        "statement": "Canonical statement digest requires exact equality of binder, quantifier order, term order, normalization, and body fields; ordinary text similarity cannot substitute for statement binding.",
+        "proof_sketch": "Define a structured CanonicalStatementForm and explicit digest oracle, reject a near-text candidate with different term order, and require receipt digest equality to the target oracle while retaining byte-hash, provenance, comparator, VERIFIED, and registry boundaries.",
+        "lane": "lean_adapter",
+        "bottleneck": "provenance",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_CANONICAL_DIGEST_NORMALIZATION",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_CANONICAL_DIGEST_NORMALIZATION20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_CANONICAL_DIGEST_NORMALIZATION20260907_REVIEW.md",
+        ],
+    },
 ]
 
 
