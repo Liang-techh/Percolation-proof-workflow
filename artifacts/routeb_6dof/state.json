@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 653,
+  "revision": 655,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -39227,7 +39227,9 @@
       "parent_id": "3ebbde90980343afb5ebbd8036dcff65",
       "status": "open",
       "proof_sketch": "Use yaw/isometry and cross-product covariance to derive the 3×2 axis/triple tables, then combine them into the mixed velocity Gram while keeping CenterOffsetTarget explicit and reusing existing tail seams.",
-      "dependencies": [],
+      "dependencies": [
+        "d64e0544ba8a40d8bdfb3d50fe5edcd3"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -39364,7 +39366,8 @@
       "proof_sketch": "Keep the maximum as a proof-valued witness, derive capMax nonnegativity from attainment, apply finite-sum monotonicity under nonnegative loads, and transit an existing consumer bound.",
       "dependencies": [
         "9b91d871fbf943dc91c8462cf90bb991",
-        "42b8483546ae4f99a9b31dca6cb33b25"
+        "42b8483546ae4f99a9b31dca6cb33b25",
+        "865b54649fd347f1ac13d4fa3e8d345d"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -39616,7 +39619,9 @@
       "parent_id": "6a0f7f0aa528481ebf0dc5ad4c1fb609",
       "status": "open",
       "proof_sketch": "Apply the finite-subset strict-sum lemma to each eta partition, transfer delta to eta margin, then add the two strict inequalities using the supplied union sum decomposition.",
-      "dependencies": [],
+      "dependencies": [
+        "0fe416640a7d47b39868489351b873e9"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -39668,6 +39673,115 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_SchurElimination_REVIEW.md",
             "sha256": "32A199D2ED02161AE639C6849598F0D982DBEA1CF9B038E1EF85F19729B5A0CA"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "865b54649fd347f1ac13d4fa3e8d345d": {
+      "id": "865b54649fd347f1ac13d4fa3e8d345d",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.cap_max_witness.strict_margin_bridge",
+      "statement": "A nonuniform cap budget bounded by a scalar cap budget that is strictly below a downstream margin is itself strictly below that margin.",
+      "parent_id": "991d3dd053954b4d817a01ff5d931f1b",
+      "status": "open",
+      "proof_sketch": "Consume the existing nonuniform-to-scalar order bound and an explicit strict scalar-margin premise, then close the downstream strict inequality by exact order transitivity; keep the capMax specialization shape-compatible.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_CENTRAL_FD_STRICT_MARGIN_BRIDGE",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_MARGIN_BRIDGE.lean",
+            "sha256": "33DD53C87E2732734B361F33EC7B001563BA042ABCB8027B7E893D5C6DC5E9ED"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_MARGIN_BRIDGE_REVIEW.md",
+            "sha256": "230932683ED1A3E4DC4DEDF827B91B9CBB36C9BC81CBE04A2794289D95B61C5C"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "d64e0544ba8a40d8bdfb3d50fe5edcd3": {
+      "id": "d64e0544ba8a40d8bdfb3d50fe5edcd3",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.mixed_tail_gram.mass_weighted",
+      "statement": "The exact body-6 first-three by tail mixed Gram table remains valid after explicit mass and already-divided inertia weighting, with the h² axial correction retained.",
+      "parent_id": "5c0032ca85be419285507ff8a3b353d1",
+      "status": "open",
+      "proof_sketch": "Multiply the existing six mixed velocity entries by m and the six axis entries by kappa, derive the explicit weighted table, then bind source mass and inertia values while keeping CenterOffsetTarget and weight premises explicit.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_BODY6_MASS_WEIGHTED_MIXED_GRAM",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_MASSMIX_Core20260907.lean",
+            "sha256": "4687A9A47FB24F8F14A13288CE90CC1396DB3F04B54E02F4F6E34CAF2850AD7D"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_MASSMIX_Source20260907.lean",
+            "sha256": "1E4CE5F456278B753655F59066595F4E6AD1045A5687AF7BF0072DC23D9659BA"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_MASSMIX_20260907_REVIEW.md",
+            "sha256": "A056785E276891BF5418C233179D04425F4B812307B327D20C2F1759E77845FE"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "0fe416640a7d47b39868489351b873e9": {
+      "id": "0fe416640a7d47b39868489351b873e9",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export",
+      "statement": "The eta-partition strict budget certificate and a typed two-row margin/denominator premise combine into a fixed-lambda final strict-consumer export.",
+      "parent_id": "47e1d631d4e741a6ac3ab30b99df6d1e",
+      "status": "open",
+      "proof_sketch": "Reuse the union strict budget and existing two-row upper-to-positive-margin/admissibility bridges; bind the same fixed lambda through UniformMarginLowerBound and keep denominator, ratio, margin, and lambdaUpper premises typed.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_FIXED_LAMBDA_FINAL_STRICT_EXPORT",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_FINAL_STRICT_EXPORT20260907.lean",
+            "sha256": "6E688206214D2906EB9C882D551AC8A9217474B96210DA816B9C5CC3DF9D7320"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_FINAL_STRICT_EXPORT20260907_REVIEW.md",
+            "sha256": "8B4D41D376C949CBDC677988F05B5A9629A03C8FE43BF0EC6920E8B38F11B650"
           }
         ],
         "registry_eligible": false,
@@ -66733,6 +66847,48 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T18:59:29.726208+00:00",
+      "kind": "node_added",
+      "node_id": "865b54649fd347f1ac13d4fa3e8d345d",
+      "parent_id": "991d3dd053954b4d817a01ff5d931f1b",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.cap_max_witness.strict_margin_bridge"
+    },
+    {
+      "at": "2026-09-07T18:59:29.727435+00:00",
+      "kind": "node_added",
+      "node_id": "d64e0544ba8a40d8bdfb3d50fe5edcd3",
+      "parent_id": "5c0032ca85be419285507ff8a3b353d1",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.mixed_tail_gram.mass_weighted"
+    },
+    {
+      "at": "2026-09-07T18:59:29.727444+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.cap_max_witness.strict_margin_bridge",
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.mixed_tail_gram.mass_weighted"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T19:00:19.209950+00:00",
+      "kind": "node_added",
+      "node_id": "0fe416640a7d47b39868489351b873e9",
+      "parent_id": "47e1d631d4e741a6ac3ab30b99df6d1e",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export"
+    },
+    {
+      "at": "2026-09-07T19:00:19.209981+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -70389,5 +70545,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "101c25c269bc5984187ddf7d7c85dc761e8e7acd05730dd064a934d5c062080f"
+  "state_checksum": "0e763bd0cc0784944e877071194dc7fd20ae6d94fc5edc69f12582856a526d27"
 }

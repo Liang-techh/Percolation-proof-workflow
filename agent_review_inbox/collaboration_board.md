@@ -1981,6 +1981,12 @@ mass/inertia mixed 表已生成，等待独立 REVIEW 后再入图。空闲 agen
 Schur defect convention adapter、fixed-λ strict certificate export、P3
 strict cap-budget transitivity；registry 仍为 0，formal gate 仍关闭。
 
+### 2026-09-07 13:00 — 梁智炜 20 分钟 GitHub 收割窗口
+
+本地已收割三条数学叶并登记至 revision 655。远端出现 T-P5-032 exact 8/9
+coercivity sidecar、T-P4-032 defect quadratic propagation claim，以及 T-P5-031
+修订；本窗口将统一 merge、整合 review/claims、更新 registry graph，再安全推送。
+
 ### 2026-09-07 12:32 — 梁智炜本地收割并派发
 
 本轮回收了四个已完成数学叶：P3 radius monotonicity、fixed-λ uniform

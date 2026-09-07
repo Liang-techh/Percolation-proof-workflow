@@ -1070,6 +1070,46 @@ CHILDREN = [
             "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SchurElimination_REVIEW.md",
         ],
     },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.cap_max_witness.strict_margin_bridge",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.cap_max_witness",
+        "statement": "A nonuniform cap budget bounded by a scalar cap budget that is strictly below a downstream margin is itself strictly below that margin.",
+        "proof_sketch": "Consume the existing nonuniform-to-scalar order bound and an explicit strict scalar-margin premise, then close the downstream strict inequality by exact order transitivity; keep the capMax specialization shape-compatible.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_STRICT_MARGIN_BRIDGE",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_MARGIN_BRIDGE.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_MARGIN_BRIDGE_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.mixed_tail_gram.mass_weighted",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.mixed_tail_gram",
+        "statement": "The exact body-6 first-three by tail mixed Gram table remains valid after explicit mass and already-divided inertia weighting, with the h² axial correction retained.",
+        "proof_sketch": "Multiply the existing six mixed velocity entries by m and the six axis entries by kappa, derive the explicit weighted table, then bind source mass and inertia values while keeping CenterOffsetTarget and weight premises explicit.",
+        "lane": "source_semantics",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_BODY6_MASS_WEIGHTED_MIXED_GRAM",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_MASSMIX_Core20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_MASSMIX_Source20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_MASSMIX_20260907_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget",
+        "statement": "The eta-partition strict budget certificate and a typed two-row margin/denominator premise combine into a fixed-lambda final strict-consumer export.",
+        "proof_sketch": "Reuse the union strict budget and existing two-row upper-to-positive-margin/admissibility bridges; bind the same fixed lambda through UniformMarginLowerBound and keep denominator, ratio, margin, and lambdaUpper premises typed.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_FINAL_STRICT_EXPORT",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_FINAL_STRICT_EXPORT20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_FINAL_STRICT_EXPORT20260907_REVIEW.md",
+        ],
+    },
 ]
 
 

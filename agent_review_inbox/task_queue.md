@@ -2636,3 +2636,11 @@ source-independent/open/uncompiled 候选。
 - body-6 mass/inertia mixed Gram 已生成但等待 REVIEW；下一轮继续收割，不提前登记。
 - 三条空闲线重新派发：Schur defect-convention adapter、fixed-λ strict certificate
   export、P3 strict cap-budget transitivity；GitHub 保持静默至 20 分钟窗口。
+
+### 2026-09-07 — 13:00 20 分钟收割窗口
+
+- 本地收割并登记 P3 strict margin bridge、body-6 mass/inertia weighted mixed Gram、
+  fixed-λ final strict export；DAG revision 655，registry=0，formal gate 关闭。
+- 已发现远端新增 T-P5-032 coercivity sidecar/claim、T-P4-032 quadratic propagation
+  claim，以及 T-P5-031 的修订；先合并远端，再运行 review integrator 和 fail-closed
+  sidecar registration，避免漏收 GitHub agent 结果。
