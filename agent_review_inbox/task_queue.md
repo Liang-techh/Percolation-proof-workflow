@@ -116,6 +116,11 @@ integration gates are satisfied.
   verify the typed initial/path ledger contracts and the exact shifted-baseline
   boundary. Keep imported compiled leaves separate from this new sidecar and
   do not infer source identity, flowpipe, or registry admission.
+- `T-P0-FLT-CLASSIFICATION-MATRIX`: use
+  `examples/anthropic_flt_adapter_audit/ADAPTER_CLASSIFICATION_MATRIX.md` as
+  intake routing only. Prioritize the differentiable-coordinate adapter for
+  one independent 流川枫 receipt; keep quotient direct reuse, countable-cover,
+  integer-linear, and subtype architecture boundaries distinct.
 
 ### T-P4-012 — typed remote-action repair contract
 

@@ -2505,3 +2505,8 @@ Lean lane 做 focused receipt，不改变 registry。
 等式、path-domain identity、path inclusion、source tube 和 `tube<1`。因此
 旧的 scalar `V0` 与 shifted comparison 仍不能关闭 active barrier；该 source
 file 将与其他 BODY6 文件分别出 Lean receipt。
+
+Anthropic intake 分类矩阵已形成：differentiable-coordinate 是最高价值的
+analytic typed interface，quotient 是结构性 runner-up，countable-cover 与
+`ℤ`-linear 是支持 seam，predicate subtype 仅 architecture-only。矩阵已挂到
+P0 graph/provenance intake，不作为 Lean theorem 或 registry 证据。

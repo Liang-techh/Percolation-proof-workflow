@@ -2170,6 +2170,7 @@ CHILDREN = [
             "examples/anthropic_flt_registry_graph_adapter/anthropic_flt_registry_graph_manifest.json",
             "examples/anthropic_flt_registry_graph_adapter/AnthropicFLTRegistryGraphAdapter.lean",
             "examples/anthropic_flt_registry_graph_adapter/REVIEW.md",
+            "examples/anthropic_flt_adapter_audit/ADAPTER_CLASSIFICATION_MATRIX.md",
         ],
     },
     {

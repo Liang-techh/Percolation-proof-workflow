@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 730,
+  "revision": 731,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -42882,6 +42882,10 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\anthropic_flt_registry_graph_adapter\\REVIEW.md",
             "sha256": "71122943A703D74ECBEDC664CB2874B0F59B719B7327AA502A94B31EE91EED3D"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\anthropic_flt_adapter_audit\\ADAPTER_CLASSIFICATION_MATRIX.md",
+            "sha256": "D45B1C0C328D0D2DC23F2DD8572E43AEE4468466197B5DAE0BB4E1D62B8669C3"
           }
         ],
         "registry_eligible": false,
@@ -72010,6 +72014,17 @@
       "artifact_hashes_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T21:37:34.421590+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [],
+      "metadata_updated": [
+        "P0.reproducibility_baseline.anthropic_flt_registry_graph_adapter"
+      ],
+      "artifact_hashes_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -75666,5 +75681,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "3dca2575090002c329a1999b04b512251a59af50c7c4ae4bb339d0c9ee639be2"
+  "state_checksum": "b6b0249326562ea6d41d1bcb453ecbc716f0623c0f19c7f529d432c2f22bb2b0"
 }
