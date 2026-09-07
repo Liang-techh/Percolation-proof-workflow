@@ -1,0 +1,9 @@
+name = "routeBJointPSigmaBudget"
+version = "0.1.0"
+
+[leanOptions]
+warningAsError = true
+
+[[lean_lib]]
+name = "JointPSigmaBudget"
+roots = ["JointPSigmaBudget"]
