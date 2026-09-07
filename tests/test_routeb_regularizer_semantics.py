@@ -11,6 +11,7 @@ from percolation_workflow.routeb_regularizer_semantics import (
     convert_routeb_port_bound_to_weighted_metric,
     consume_routeb_schur_margin,
     derive_routeb_root_witness,
+    derive_routeb_zero_shift_weighted_perturbation,
     derive_routeb_general_resolvent_port_propagation,
     derive_routeb_resolvent_port_propagation,
     propagate_routeb_regularizer_diagonal,
@@ -229,6 +230,32 @@ def test_root_witness_rejects_a_root_below_the_squared_candidate() -> None:
     assert result.status == "OPEN_FAIL_CLOSED"
     assert result.slack is not None and result.slack < 0
     assert "root_bound_squared_below_squared_bound" in result.errors
+
+
+def test_zero_shift_reduction_derives_weighted_perturbation_exactly() -> None:
+    result = derive_routeb_zero_shift_weighted_perturbation(
+        Fraction(1, 10), Fraction(1, 2), Fraction(2), Fraction(3), Fraction(1, 5),
+        source_key="canonical", metric_source_key="canonical",
+        exact_inverse_proven=True, zero_offdiagonal_shift_proven=True,
+        metric_lower_bound_proven=True,
+    )
+
+    assert result.status == "CONDITIONAL_ZERO_SHIFT_WEIGHTED_PORT_BOUND"
+    assert result.inverse_difference_bound == Fraction(1, 38)
+    assert result.unweighted_bound == Fraction(3, 19)
+    assert result.weighted_bound == Fraction(15, 19)
+    assert result.formal_certificate_allowed is False
+
+
+def test_zero_shift_reduction_rejects_unproven_zero_shift() -> None:
+    result = derive_routeb_zero_shift_weighted_perturbation(
+        Fraction(1, 10), Fraction(1, 2), Fraction(2), Fraction(3), Fraction(1, 5),
+        source_key="canonical", metric_source_key="canonical",
+        exact_inverse_proven=True, metric_lower_bound_proven=True,
+    )
+
+    assert result.status == "OPEN_FAIL_CLOSED"
+    assert "zero_offdiagonal_shift_not_authoritatively_supplied" in result.errors
 
 
 def _o0_r3_receipt(**overrides):

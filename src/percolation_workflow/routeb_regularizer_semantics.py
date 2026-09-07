@@ -235,6 +235,28 @@ class RouteBRootWitness:
 
 
 @dataclass(frozen=True)
+class RouteBZeroShiftWeightedPerturbation:
+    """Conditional weighted perturbation bound when both off-diagonal shifts vanish."""
+
+    status: str
+    delta: Fraction | None
+    inverse_bound: Fraction | None
+    inverse_difference_bound: Fraction | None
+    b_r_norm_bound: Fraction | None
+    c_f_norm_bound: Fraction | None
+    sqrt_metric_lower_bound: Fraction | None
+    unweighted_bound: Fraction | None
+    weighted_bound: Fraction | None
+    source_key: str | None
+    errors: tuple[str, ...] = ()
+    exact_inverse_proven: bool = False
+    zero_offdiagonal_shift_proven: bool = False
+    metric_lower_bound_proven: bool = False
+    formal_certificate_allowed: bool = False
+    registry_eligible: bool = False
+
+
+@dataclass(frozen=True)
 class RouteBSchurMarginConsumption:
     """Conditional Young/Schur budget after a weighted port perturbation."""
 
@@ -633,6 +655,97 @@ def convert_routeb_port_bound_to_weighted_metric(
     )
 
 
+def derive_routeb_zero_shift_weighted_perturbation(
+    delta: Fraction | int | None,
+    inverse_bound: Fraction | int | None,
+    b_r_norm_bound: Fraction | int | None,
+    c_f_norm_bound: Fraction | int | None,
+    sqrt_metric_lower_bound: Fraction | int | None,
+    *,
+    source_key: str | None,
+    metric_source_key: str | None,
+    exact_inverse_proven: bool = False,
+    zero_offdiagonal_shift_proven: bool = False,
+    metric_lower_bound_proven: bool = False,
+) -> RouteBZeroShiftWeightedPerturbation:
+    """Derive the reduced O0-R1/R2 bound under explicit zero-shift premises.
+
+    When ``dB=dC=0`` is authoritative, the general three-term estimate reduces
+    to ``Br * Cf * delta*K^2/(1-delta*K)``.  All inputs remain conditional
+    receipt fields; this helper never proves the zero-shift or physical map
+    identity itself.
+    """
+    errors: list[str] = []
+    values: dict[str, Fraction | None] = {}
+    for name, value in (
+        ("delta", delta), ("inverse_bound", inverse_bound),
+        ("b_r_norm_bound", b_r_norm_bound), ("c_f_norm_bound", c_f_norm_bound),
+        ("sqrt_metric_lower_bound", sqrt_metric_lower_bound),
+    ):
+        try:
+            values[name] = _exact_scalar(value, name) if value is not None else None
+        except TypeError as error:
+            errors.append(str(error))
+            values[name] = None
+    for name in values:
+        value = values[name]
+        if value is None:
+            errors.append(f"{name}_missing")
+        elif value < 0:
+            errors.append(f"{name}_negative")
+    if not source_key or not metric_source_key:
+        errors.append("zero_shift_source_key_missing")
+    elif source_key != metric_source_key:
+        errors.append("zero_shift_metric_source_key_mismatch")
+    if not exact_inverse_proven:
+        errors.append("exact_inverse_not_authoritatively_supplied")
+    if not zero_offdiagonal_shift_proven:
+        errors.append("zero_offdiagonal_shift_not_authoritatively_supplied")
+    if not metric_lower_bound_proven:
+        errors.append("metric_lower_bound_not_authoritatively_supplied")
+    delta_value = values["delta"]
+    inverse = values["inverse_bound"]
+    root = values["sqrt_metric_lower_bound"]
+    if root is not None and root <= 0:
+        errors.append("sqrt_metric_lower_bound_not_positive")
+    if errors:
+        return RouteBZeroShiftWeightedPerturbation(
+            status="OPEN_FAIL_CLOSED", delta=delta_value, inverse_bound=inverse,
+            inverse_difference_bound=None, b_r_norm_bound=values["b_r_norm_bound"],
+            c_f_norm_bound=values["c_f_norm_bound"],
+            sqrt_metric_lower_bound=root, unweighted_bound=None, weighted_bound=None,
+            source_key=source_key, errors=tuple(dict.fromkeys(errors)),
+            exact_inverse_proven=exact_inverse_proven,
+            zero_offdiagonal_shift_proven=zero_offdiagonal_shift_proven,
+            metric_lower_bound_proven=metric_lower_bound_proven,
+        )
+    assert delta_value is not None and inverse is not None and root is not None
+    contraction = delta_value * inverse
+    if contraction >= 1:
+        return RouteBZeroShiftWeightedPerturbation(
+            status="OPEN_FAIL_CLOSED", delta=delta_value, inverse_bound=inverse,
+            inverse_difference_bound=None, b_r_norm_bound=values["b_r_norm_bound"],
+            c_f_norm_bound=values["c_f_norm_bound"],
+            sqrt_metric_lower_bound=root, unweighted_bound=None, weighted_bound=None,
+            source_key=source_key, errors=("resolvent_neumann_condition_failed",),
+            exact_inverse_proven=True, zero_offdiagonal_shift_proven=True,
+            metric_lower_bound_proven=True,
+        )
+    delta_inverse = delta_value * inverse * inverse / (1 - contraction)
+    unweighted = values["b_r_norm_bound"] * values["c_f_norm_bound"] * delta_inverse
+    assert unweighted is not None
+    return RouteBZeroShiftWeightedPerturbation(
+        status="CONDITIONAL_ZERO_SHIFT_WEIGHTED_PORT_BOUND", delta=delta_value,
+        inverse_bound=inverse, inverse_difference_bound=delta_inverse,
+        b_r_norm_bound=values["b_r_norm_bound"],
+        c_f_norm_bound=values["c_f_norm_bound"],
+        sqrt_metric_lower_bound=root, unweighted_bound=unweighted,
+        weighted_bound=unweighted / root, source_key=source_key,
+        exact_inverse_proven=True, zero_offdiagonal_shift_proven=True,
+        metric_lower_bound_proven=True,
+    )
+
+
 def derive_routeb_root_witness(
     squared_bound: Fraction | int | None,
     root_bound: Fraction | int | None,
@@ -809,10 +922,12 @@ __all__ = [
     "RouteBGeneralResolventPortPropagation",
     "RouteBWeightedPortMetricConversion",
     "RouteBRootWitness",
+    "RouteBZeroShiftWeightedPerturbation",
     "RouteBSchurMarginConsumption",
     "audit_routeb_regularizer_inclusion",
     "convert_routeb_port_bound_to_weighted_metric",
     "derive_routeb_root_witness",
+    "derive_routeb_zero_shift_weighted_perturbation",
     "consume_routeb_schur_margin",
     "derive_routeb_general_resolvent_port_propagation",
     "derive_routeb_resolvent_port_propagation",

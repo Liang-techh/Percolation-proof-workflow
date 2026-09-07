@@ -117,6 +117,12 @@ explicit. This prevents a squared ledger value such as `rho_F^2` from being
 silently passed to an API that expects the root `rho_r`; the helper itself is
 still only conditional arithmetic.
 
+When an authoritative receipt proves both off-diagonal regularizer shifts are
+zero, `derive_routeb_zero_shift_weighted_perturbation` reduces the general
+three-term estimate to
+`Br*Cf*delta*K^2/(1-delta*K)/s`. The helper requires explicit exact-inverse,
+zero-shift, metric, and same-key premises; it does not infer any of them.
+
 The API and focused tests do not run Lean/Lake, Julia, SOS, trajectory checks,
 or broad regression, and all result objects keep
 `formal_certificate_allowed=False` and `registry_eligible=False`.

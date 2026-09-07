@@ -97,19 +97,10 @@ two. Since `sin 0 = 0`, `cos 0 = 1`, and the third derivative of `sin` is
 |sin(y) - y| ≤ |y|^3 / 6 ≤ (3/20)^3 / 6 = 9/16000.
 ```
 
-A Lean-facing local helper can be stated independently of the Route-B source:
-
-```lean
-lemma sin_sub_linear_remainder
-    (y : ℝ) : |Real.sin y - y| ≤ |y| ^ 3 / 6 := by
-  -- Taylor integral remainder; use |cos t| ≤ 1 under the integral.
-  exact abs_integral_kernel_bound_sin y
-```
-
-The name `abs_integral_kernel_bound_sin` is a proof-draft placeholder for the
-small integral-remainder lemma to be proved or located in the pinned Mathlib
-environment. It is not an imported theorem claim. Applying it with `hqabs`
-and `norm_num` yields `sin_local_taylor_bound`, then
+A preliminary proof draft used an `abs_integral_kernel_bound_sin` helper here;
+the pinned API result below supersedes that placeholder. Applying the exact
+`Real.abs_sub_sin_le` theorem with `hqabs` and rational normalization yields
+`sin_local_taylor_bound`, then
 
 ```text
 -3/20 - 9/16000 = -2409/16000
@@ -117,10 +108,119 @@ and `norm_num` yields `sin_local_taylor_bound`, then
   3/20 + 9/16000 = 2409/16000.
 ```
 
-For cosine, the degree-one Taylor remainder and the global upper bound give
+## Pinned Mathlib API result
+
+The placeholder above can be removed for the sine child. In the pinned source
+tree
 
 ```text
-|cos(y) - 1| ≤ |y|^2 / 2,
+artifacts/routeb_fd8_tensor_christoffel_enclosure_20260906/mathlib/Mathlib
+```
+
+the exact public theorem is:
+
+```lean
+Real.abs_sub_sin_le (x : ℝ) :
+  |x - Real.sin x| ≤ |x| ^ 3 / 6
+```
+
+It is in `Analysis/SpecialFunctions/Trigonometric/Bounds.lean` and is already
+the scalar cubic Taylor remainder needed here. It has no positivity or domain
+side condition. Thus the Lean-facing helper should be stated as:
+
+```lean
+lemma sin_sub_linear_remainder (y : ℝ) :
+    |y - Real.sin y| ≤ |y| ^ 3 / 6 :=
+  Real.abs_sub_sin_le y
+```
+
+The exact quarter-turn transport is also present, directly in the `Real`
+namespace, in `Analysis/SpecialFunctions/Trigonometric/Basic.lean`:
+
+```lean
+Real.sin_sub_pi_div_two (x : ℝ) :
+  Real.sin (x - Real.pi / 2) = -Real.cos x
+
+Real.cos_sub_pi_div_two (x : ℝ) :
+  Real.cos (x - Real.pi / 2) = Real.sin x
+```
+
+These are preferable to expanding `Real.sin_sub`/`Real.cos_sub` and then
+supplying `Real.sin_pi_div_two` and `Real.cos_pi_div_two`; the latter two also
+exist, but are not needed by the minimal transport step:
+
+```lean
+have hsin_shift : Real.sin (theta2 q) = -Real.cos q := by
+  simpa [theta2] using Real.sin_sub_pi_div_two q
+have hcos_shift : Real.cos (theta2 q) = Real.sin q := by
+  simpa [theta2] using Real.cos_sub_pi_div_two q
+```
+
+For the cosine enclosure no second generic Taylor instantiation is required.
+The pinned `Bounds.lean` exposes the exact polynomial lower bound
+
+```lean
+Real.one_sub_sq_div_two_le_cos {x : ℝ} :
+  1 - x ^ 2 / 2 ≤ Real.cos x
+```
+
+and the global upper bound is `Real.cos_le_one (x : ℝ)`. Consequently the
+local helper can be reduced to:
+
+```lean
+lemma cos_local_taylor_bound
+    {y : ℝ} (hy : |y| ≤ 3 / 20) :
+    791 / 800 ≤ Real.cos y ∧ Real.cos y ≤ 1 := by
+  constructor
+  · calc
+      (791 / 800 : ℝ) ≤ 1 - y ^ 2 / 2 := by
+        have hsq : y ^ 2 ≤ (3 / 20 : ℝ) ^ 2 := by
+          have hsq' : |y| ^ 2 ≤ (3 / 20 : ℝ) ^ 2 :=
+            pow_le_pow_left₀ (abs_nonneg y) hy 2
+          simpa [sq_abs] using hsq'
+        nlinarith [hsq]
+      _ ≤ Real.cos y := Real.one_sub_sq_div_two_le_cos
+  · exact Real.cos_le_one y
+```
+
+The displayed `nlinarith` line is a proof draft: its only mathematical input
+is `hy` (after converting `hy` to `-3/20 ≤ y ∧ y ≤ 3/20`), not a numerical
+receipt. The sine arithmetic similarly instantiates `Real.abs_sub_sin_le q`
+and bounds `|q| ^ 3 / 6` by `9/16000`.
+
+## Exact API obstruction / compile boundary
+
+No quarter-turn API obstruction was found: the two direct theorem names and
+their argument types above match the pinned source. No ready-made theorem with
+the exact name or type
+
+```lean
+|Real.cos y - 1| ≤ |y| ^ 2 / 2
+```
+
+was found. That is not a mathematical gap, because
+`Real.one_sub_sq_div_two_le_cos` plus `Real.cos_le_one` is sufficient for this
+child. If an implementation insists on deriving both sine and cosine from a
+generic Taylor theorem, the pinned `TaylorIntegral.lean` only offers the
+higher-dimensional
+`map_add_eq_sum_add_integral_iteratedFDeriv`; it does not expose a scalar
+sin/cos remainder theorem with the required interval-bound conclusion. Such an
+implementation must additionally prove derivative simplification and bound
+the interval integral. That generic route is therefore an API/adapter burden,
+not a reason to replace the direct `Bounds.lean` lemmas.
+
+Lean/Lake compilation was intentionally not run under this task's boundary.
+Accordingly, this review makes no claim that the draft syntax has been
+elaborated in the repository's active environment. The precise remaining
+compile check, if later authorized, is import availability for
+`Trigonometric.Basic` and `Trigonometric.Bounds`, followed by ordinary tactic
+normalization of the rational inequalities; it is not a missing theorem-name
+claim.
+
+For cosine, the pinned quadratic lower-bound lemma and the global upper bound
+give
+
+```text
 cos(y) ≤ 1,
 cos(y) ≥ 1 - y^2/2 ≥ 1 - (3/20)^2/2 = 791/800.
 ```
@@ -129,18 +229,14 @@ The final range transport uses exact quarter-turn identities:
 
 ```lean
 have hsin_shift : Real.sin (theta2 q) = -Real.cos q := by
-  unfold theta2
-  rw [Real.sin_sub, Real.sin_pi_div_two, Real.cos_pi_div_two]
-  ring
+  simpa [theta2] using Real.sin_sub_pi_div_two q
 
 have hcos_shift : Real.cos (theta2 q) = Real.sin q := by
-  unfold theta2
-  rw [Real.cos_sub, Real.sin_pi_div_two, Real.cos_pi_div_two]
-  ring
+  simpa [theta2] using Real.cos_sub_pi_div_two q
 ```
 
-Here the `Real.*_pi_div_two` names are proof-draft names to be checked against
-the pinned Mathlib API. The mathematical content is the exact identities
+The pinned direct names are therefore resolved, not placeholders. The
+mathematical content is the exact identities
 `sin(q-pi/2)=-cos(q)` and `cos(q-pi/2)=sin(q)`. Combining them with the two
 local bounds gives
 
@@ -221,4 +317,3 @@ coverage: OPEN
 formal_certificate_allowed: false
 registry_promoted: false
 ```
-

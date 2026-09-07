@@ -1579,6 +1579,27 @@ polynomial remains a separate frontier.
   expansion, then keyed `U_R` adapter. The target deliberately keeps
   `h_expand`, norm compatibility, and source/state joins as premises.
 
+### New harvest: O0 zero-shift perturbation reduction (2026-09-07)
+
+- review: `review-T-P4-033-O0-R1-R2-perturbation-map-obstruction-codex-20260907.md`
+- if the same-key receipt proves `dB=dC=0`, the exact three-term bound reduces
+  to `Br*Cf*delta*K^2/(1-delta*K)`, then to weighted `epsilon_R` by the same
+  metric root `s`. The new helper
+  `derive_routeb_zero_shift_weighted_perturbation` implements only this scalar
+  reduction and remains fail-closed until exact `K`, `Br`, `Cf`, metric, and
+  zero-shift proof flags are supplied.
+
+### New harvest: O1 determinant-to-left-inverse adapter (2026-09-07)
+
+- review: `review-T-P4-033-O1-det-left-inverse-adapter-codex-20260907.md`
+- pinned Mathlib exposes `Matrix.nonsing_inv_mul`, so
+  `det(M_DD45) != 0` can produce the canonical inverse identity. If the
+  candidate keeps an arbitrary `M_DD_inv`, it additionally needs the exact
+  same-object definition `M_DD_inv = (M_DD45 M)⁻¹`.
+- coordinator intake: `scripts/record_routeb_o1_left_inverse_review.py`.
+  State records the adapter as conditionally compiled but open until the
+  `(mu,q)`, block projection, and inverse-definition bindings are supplied.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it

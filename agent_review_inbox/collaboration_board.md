@@ -973,3 +973,11 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   norm bound、以及 keyed `U_R` adapter 三层 Lean target；其中
   `h_expand`、统一 norm、source/state key 仍必须作为显式 premises，不能由
   存储数值反推。
+- 最新 O0 perturbation review 发现：若同键证明 `dB=dC=0`，可将三项误差
+  精确化简为 `Br*Cf*delta*K^2/(1-delta*K)`，再除以同键 metric root `s`。
+  已实现 `derive_routeb_zero_shift_weighted_perturbation`；当前仍缺 exact
+  `K/Br/Cf` 与 zero-shift authoritative receipt，O0 不变。
+- O1 左逆 review 确认 Mathlib API 本身不再是瓶颈：
+  `Matrix.nonsing_inv_mul` 可由同一 `M_DD45.det ≠ 0` 得 canonical inverse。
+  若 candidate 保留独立 `M_DD_inv`，必须补
+  `M_DD_inv = (M_DD45 M)⁻¹`；已写入 state rev 505，O1 仍 open。
