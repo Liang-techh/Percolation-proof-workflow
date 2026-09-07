@@ -2178,6 +2178,13 @@ strict-slack 的 composed adapter；P3 family specialization 到 cap budget 的
 typed consumer。任务均保持独立、exact/conditional、未编译，不触碰 registry 或
 formal gate。
 
+### 2026-09-07 — 梁智炜推进 M4 剩余闭合接口
+
+新四线分别处理 body-6 source Schur-margin contract、P4 residual→PMI margin
+consumer、fixed-λ exact statement/comparator boundary、P3 box interval
+soundness consumer。每项都要求把 source/coverage/normalization/rounding
+作为显式前提，不能由抽象不等式或 solver 结果越级到最终证书。
+
 ### 2026-09-07 — 梁智炜收割三条闭合接口叶
 
 body-6 `SELF3_MASS_BIND`、fixed-λ `REAL_FINAL_STRICT_CONSUMER` 与 P3

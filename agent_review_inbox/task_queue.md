@@ -2904,3 +2904,7 @@ proof-attempt + 定向 review，保持 `OPEN_UNCOMPILED`。
 - P3：有限 Finset positive gap 到 uniform lower bound，并记录不能外推连续域。
 
 所有产物必须以 proof-attempt + 定向 review 成对提交；仍保持 fail-closed。
+
+当前新派发：body-6 source Schur margin、P4 residual/PMI margin、fixed-λ
+statement comparator boundary、P3 box interval soundness。均要求成对
+proof-attempt/review，保持 `OPEN_UNCOMPILED`；不要运行宽回归或同步远端。
