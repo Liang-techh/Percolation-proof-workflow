@@ -1429,6 +1429,12 @@ polynomial remains a separate frontier.
   artifact supplies two leaves for `sin(1/100000)` and `cos(1/100000)` without
   floating-point trig. It is now attached as advisory O2 evidence; it does not
   bind deployed libm results or arbitrary DH-angle boxes.
+- coordinator finding (2026-09-07): the external P3 DH trig-chain artifact is
+  now attached to O2. It is a 12-row exact-real rational interval contract for
+  six links and theta/alpha atoms, conditional on the local q-box assignment.
+  It closes phase/center bookkeeping only. Float64 argument formation, libm
+  sin/cos, finite-DAG propagation, and per-box composition remain explicit open
+  leaves; no registry or formal-gate transition is allowed.
 
 ### T-P4-035 — true-DH force-descriptor block projection seam
 

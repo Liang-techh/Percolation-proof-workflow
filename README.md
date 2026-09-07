@@ -388,3 +388,13 @@ and projected type/value edge provenance, so the DAG's source plan remains audit
 `scripts/extract_percolation_types.lean` collects printed elaborated types and transitive axiom sets.
 `scripts/attach_percolation_types.py` attaches that evidence without replacing trusted Challenge text
 or promoting nodes. Printed types still require elaboration in context before proof reuse.
+
+### Route-B P3 DH trig-chain contract
+
+`scripts/record_routeb_trig_chain_contract.py` attaches the external
+`routeB_dense_Mq/P3_DH_TRIG_CHAIN_CONTRACT.md` and
+`routeB_p3_dh_trig_chain_contract.csv` to the O2 evaluator frontier. The recorder
+rechecks the six-link theta/alpha rational-endpoint contract and preserves its
+conditional exact-real boundary. Float64 `pi/2`, argument formation, libm
+`sin/cos`, finite-DAG propagation, and per-box composition remain open; the
+recorder cannot promote the node or open the formal gate.

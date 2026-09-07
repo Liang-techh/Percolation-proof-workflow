@@ -779,3 +779,17 @@
   其中 `h=1/100000`，且明确未调用浮点三角函数。
 - 已将其作为 O2 advisory evidence 接入 rev 483；仍需证明它与 deployed
   Float64/libm 输出一致，并完成一般 DH 角度盒的 range reduction。
+
+### 2026-09-07 — 梁智炜：接入 P3 DH exact-real trig-chain contract
+
+外部 P3 合同已通过最小结构校验并接入
+`P4.true_dh_float64_evaluator_enclosure`：覆盖 6 个 link、theta/alpha 两类
+atom，共 12 行有理端点；theta 行使用 `[-3/20,3/20]`，alpha 行使用退化的
+固定零输入列，报告明确给出 quarter-turn 中心表和 order-12 Taylor range
+reduction。其证据等级是 conditional exact-real contract，不是 deployed
+Float64 evaluator proof。
+
+新 unresolved markers 为 `dh_trig_chain_float64_argument_binding` 和
+`dh_trig_chain_libm_enclosure`。仍需把 `pi/2` 与参数形成的舍入绑定到每个角度
+盒，证明实际 libm `sin/cos` 包围，并完成有限运算传播与逐盒 coverage composition；
+state rev 484、registry=0、`formal_certificate_allowed=false` 保持不变。
