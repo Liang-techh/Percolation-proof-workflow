@@ -2304,3 +2304,49 @@ proof artifact; it does not make the parent verified or alter the P5 gates.
 - This is source-to-math transport only.  Concrete `H`, source/Float64 binding,
   P8 coverage, Lean compilation, and registry admission remain open; the two
   inbox records were integrated as pending metadata only.
+
+### 2026-09-07 — fixed-lambda typed consumer harvest
+
+- 固定 lambda 线新增 `P4.fixed_lambda_two_row_admissibility.typed_consumer` DAG
+  leaf，绑定同一个精确 `lambda=2`、`theta=1` 到 PMI/Schur 两行，并显式保留
+  分母正性、`lambdaUpper > 2` 与正 margin。
+- 该 sidecar 仅是 source-independent 的 Lean 形式接口；review 明确尚未
+  Lean/Lake 编译，也没有 source binding、coverage、comparator 或 registry
+  证据。父节点仍 open，`formal_certificate_allowed=false`。
+- candidate provenance 已同步记录该 typed consumer 的文件哈希和
+  `OPEN_UNCOMPILED_FIXED_LAMBDA_TYPED_CONSUMER` 状态；state revision `614`。
+
+### 当前继续推进的数学叶
+
+- body-6：610 行、32 个非空矩阵条目的独立精确有理数 slice，正在补 review
+  和 source seam；与 aggregate 仍有 57 个系数差异，不能把 aggregate 当作
+  body-6 证明。
+- P5 `K_path`：正在检查现有 `pathK = Sum |A| * Hjac * Scoord` 与 18 份
+  cone certificate 的类型连接，方向为二次型 gap 比较，不是逐项矩阵序。
+- P3 central-FD hull：继续等待独立中心差分组合叶，不扩大到无关回归测试。
+
+### 2026-09-07 — body-6 与 central-FD 采纳为独立 DAG 叶
+
+- body-6 独立 slice 已注册为
+  `P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice`：
+  610 行、32 个非空条目、23-row 第六列和 57 个 aggregate 差异键均有精确
+  数据证据，但 source seam、Lean 编译与 legacy fold 仍 open。
+- P3 central-FD 代数接口已注册为
+  `P3.central_fd_derivative_hull_composition.algebraic_interface`：保留
+  Christoffel 三指标余项、velocity-quadratic power 和四项 telescoping
+  contract；machine/source/export 前提仍必须由后续 adapter 提供。
+- 两个新叶均为 `OPEN_UNCOMPILED_*`，不影响 registry 或 admission gate；
+  registrar 后 state revision `615`。
+
+### 2026-09-07 — second mathematical harvest: coefficient bridge and K_path
+
+- fixed-lambda agent 新增 `NEW_FIXED_LAMBDA_ADMISSIBILITY_COEFFICIENT_BRIDGE20260907.lean`，
+  将 `candidateMargin` 与 `lambdaUpper` 的 exact identity、正分母下的严格
+  upper iff positive margin，提升到任意有限 `Finset Nat` 与既有 `Fin 2` consumer。
+- K_path agent 新增 typed interface，实际复用现有 `pathK`、same-domain
+  `ComponentBinding`、36→18 cone-index lift 和 SPN consumer；agent 报告的
+  source-bundle 检查为 Lean 4.32.0 exit 0、12 个接口仅标准公理，但这仍是
+  conditional interface，不是 concrete K_path/source/coverage/registry 证明。
+- 两个结果已注册为新的子叶，O1 candidate provenance 也加入 fixed-lambda
+  coefficient bridge 哈希；state revision `617`，registry `0`，admission gate
+  继续关闭。

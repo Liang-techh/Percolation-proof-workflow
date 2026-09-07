@@ -51,6 +51,10 @@ BODY5_API_ROW = ROOT / "examples/routeb_b45_source_comparator_lean/NEW_BODY5_API
 BODY5_API_Q3 = ROOT / "examples/routeb_b45_source_comparator_lean/NEW_BODY5_API_REPAIR_Q3Slice20260907.lean"
 BODY5_API_DATA = ROOT / "examples/routeb_b45_source_comparator_lean/NEW_BODY5_API_REPAIR_Q3DataLeaf20260907.lean"
 BODY5_API_REVIEW = ROOT / "examples/routeb_b45_source_comparator_lean/REVIEW_BODY5_API_REPAIR_20260907.md"
+FIXED_LAMBDA_TYPED = ROOT / "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY20260907.lean"
+FIXED_LAMBDA_TYPED_REVIEW = ROOT / "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY20260907_REVIEW.md"
+FIXED_LAMBDA_BRIDGE = ROOT / "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_COEFFICIENT_BRIDGE20260907.lean"
+FIXED_LAMBDA_BRIDGE_REVIEW = ROOT / "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_COEFFICIENT_BRIDGE20260907_REVIEW.md"
 O0_BODY3_RECEIPT = ROOT / "agent_review_inbox/receipt-T-P4-033-O0-P-NE-body3-geometry-targets-20260907.json"
 O0_BODY4_RECEIPT = ROOT / "agent_review_inbox/receipt-T-P4-033-O0-P-NE-body4-geometry-targets-20260907.json"
 O0_BODY5_RECEIPT = ROOT / "agent_review_inbox/receipt-T-P4-033-O0-P-NE-body5-geometry-source-20260907.json"
@@ -127,6 +131,8 @@ def main() -> None:
                  BODY5_TRACE_TARGET, BODY5_TRACE_RECEIPT, BODY5_TRACE_REVIEW,
                  BODY5_NEW_GRAM, BODY5_NEW_TRACE, BODY5_NEW_REVIEW,
                  BODY5_API_LIST, BODY5_API_ROW, BODY5_API_Q3, BODY5_API_DATA, BODY5_API_REVIEW,
+                 FIXED_LAMBDA_TYPED, FIXED_LAMBDA_TYPED_REVIEW,
+                 FIXED_LAMBDA_BRIDGE, FIXED_LAMBDA_BRIDGE_REVIEW,
                  O0_BODY3_RECEIPT, O0_BODY4_RECEIPT, O0_BODY5_RECEIPT, O0_BODY5_REVIEW,
                  HACC_REVIEW, HACC_REFINEMENT_REVIEW, HACC_CONTRACT, HACC_RECEIPT,
                  HACC_REFINEMENT_RECEIPT, HACC_NEW_SCHEMA, HACC_NEW_INTAKE,
@@ -241,6 +247,14 @@ def main() -> None:
         "body_5_api_repair_review_sha256": digest(BODY5_API_REVIEW),
         "body_5_api_repair_status": "OPEN_UNCOMPILED_API_REPAIR",
         "body_5_api_repair_proven": False,
+        "fixed_lambda_typed_consumer_sha256": digest(FIXED_LAMBDA_TYPED),
+        "fixed_lambda_typed_consumer_review_sha256": digest(FIXED_LAMBDA_TYPED_REVIEW),
+        "fixed_lambda_typed_consumer_status": "OPEN_UNCOMPILED_FIXED_LAMBDA_TYPED_CONSUMER",
+        "fixed_lambda_typed_consumer_proven": False,
+        "fixed_lambda_coefficient_bridge_sha256": digest(FIXED_LAMBDA_BRIDGE),
+        "fixed_lambda_coefficient_bridge_review_sha256": digest(FIXED_LAMBDA_BRIDGE_REVIEW),
+        "fixed_lambda_coefficient_bridge_status": "OPEN_UNCOMPILED_FIXED_LAMBDA_COEFFICIENT_BRIDGE",
+        "fixed_lambda_coefficient_bridge_proven": False,
         "o0_body_5_geometry_receipt_sha256": digest(O0_BODY5_RECEIPT),
         "o0_body_5_geometry_review_sha256": digest(O0_BODY5_REVIEW),
         "o0_body_5_geometry_status": "CONDITIONAL_BODY5_GEOMETRY_DERIVATION",

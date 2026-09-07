@@ -1749,3 +1749,36 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - 已新增 `P5.componentwise_relative_decay.moving_frame_parameter_transport`
   child，并将 review/companion 以 pending metadata 集成；没有 Lean/source/
   coverage/registry admission effect。state revision `609`。
+
+### 2026-09-07 — fixed-lambda typed consumer 收割
+
+- `NEW_FIXED_LAMBDA_ADMISSIBILITY20260907.lean` 将固定 `lambda=2`、
+  `theta=1`、正分母、严格 upper ratio、正 margin 与 `Fin 2` 两行共用参数
+  绑定为一个 typed consumer；与 577 行 declared fold 的稀疏 box label 契约
+  保持分离。
+- 静态审阅结果为 `OPEN_UNCOMPILED_FIXED_LAMBDA_TYPED_CONSUMER`：没有本地
+  Lean/Lake、source evaluator、true-DH coverage、comparator 或 registry
+  receipt，因此未关闭 parent，也未改变 admission gate。
+- registrar 新增 leaf，O1 candidate provenance 同步哈希；state revision `614`，
+  registry `0`，`formal_certificate_allowed=false`。
+
+### 2026-09-07 — coefficient bridge / K_path interface 收割
+
+- fixed-lambda 线已从参数结构推进到可复用的系数层：严格上界与正 margin 完全等价，
+  并支持任意有限行集合和 `Fin 2` 两行 consumer；仍依赖外部 row data/source。
+- K_path 线完成了真实声明之间的类型连接：`pathK` 只使用一次，完整 2×4
+  矩阵通过非负 componentwise comparison 消费 18 个代表 SPN witness，并保留
+  36 个 cone index 的覆盖/重数；agent 报告 source-bundle Lean 检查通过。
+- 两者均以 conditional/pending 叶注册，没有把 concrete gain、H gap、source
+  或 coverage 误报为已验证；state revision `617`，registry `0`。
+
+### 2026-09-07 — body-6 / central-FD 数学叶收割
+
+- body-6 agent 独立重构第六刚体 DH/Gram，精确重现 610 行、32 个非空矩阵
+  条目，并确认与 frozen aggregate 有 57 个系数键不同；这为标签错配提供
+  了可复核负控，但不把 canonical CSV 直接提升为 source theorem。
+- P3 agent 给出 source-independent central-FD → derivative-hull bridge：
+  tensor linearity、三指标 Christoffel remainder、加权 cubic power error、
+  以及 machine/centralSecant/derivative/hull/export 四项余项的精确 telescoping。
+- 两者均已作为独立 DAG leaf 注册；review 保持未编译和 fail-closed，state
+  revision `615`，registry `0`，`formal_certificate_allowed=false`。
