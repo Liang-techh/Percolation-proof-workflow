@@ -764,3 +764,11 @@
 - 该结果只关闭了 scalar representation 事实，未关闭 endpoint、`2h` 除法、
   central-FD `C/G` 或逐盒 evaluator enclosure；O2 仍保持 open。
 - 主状态推进到 rev 481，registry=0，formal gate 仍关闭。
+
+### 2026-09-07 — 梁智炜：补齐 DH π offset scalar seam
+
+- `record_routeb_dh_offset_semantics.py` 已将 deployed `pi`/`pi/2` 的 binary64
+  dyadic 表示与 `333/106 < pi < 355/113` 的有理包围写入 O2，状态推进到
+  rev 482。
+- 这只处理常量表示；每个 DH 角度盒上的 `sin`/`cos` libm 误差、范围缩减和
+  有限运算 DAG 仍未闭合，不能被解释为 evaluator proof。

@@ -157,6 +157,7 @@ python scripts/record_routeb_o1_interface_check.py
 python scripts/record_routeb_child_reviews.py
 python scripts/record_routeb_force_scale_contract.py
 python scripts/record_routeb_fd_step_semantics.py
+python scripts/record_routeb_dh_offset_semantics.py
 ```
 
 These recorders preserve the deployment authority (`robot_final/dhport_lib.jl`),
@@ -184,6 +185,10 @@ coefficient from a nearby nominal coupling.
 deployed `1e-5` finite-difference step and its outward interval relative to
 the exact model `1/100000`; it does not claim that the complete `C/G` evaluator
 has been enclosed.
+
+`record_routeb_dh_offset_semantics.py` records the binary64 `π` and `π/2`
+representations against explicit rational enclosures. It remains separate from
+the stronger per-angle `sin`/`cos` libm enclosure required by O2.
 
 The O1 API audit also emits
 `artifacts/task_routeb_o1_lean_api_audit_20260907/RouteBO1PortIdentity.lean`.

@@ -1421,6 +1421,10 @@ polynomial remains a separate frontier.
   model `1/100000` by
   `1509/1844674407370955161600000`. The scalar seam is recorded, but endpoint
   propagation and the `2h` division error remain open.
+- coordinator finding (2026-09-07): deployed `pi`/`pi/2` are now recorded as
+  binary64 dyadics inside explicit rational enclosures (`333/106 < pi < 355/113`);
+  this is only a scalar offset seam. Per-angle `sin`/`cos` libm error and the
+  actual operation schedule remain open.
 
 ### T-P4-035 — true-DH force-descriptor block projection seam
 
