@@ -30,16 +30,31 @@ def main() -> int:
     if state.project != "routeb-6dof-external":
         raise ValueError(f"unexpected project: {state.project!r}")
     name = "P4.vector_remote_budget_pmi_composition"
+    source = ROOT / "examples/routeb_remote_vector_pmi/RemoteVectorPMI.lean"
+    readme = source.parent / "README.md"
+    source_artifacts = [ref(source), ref(readme)]
     existing = next((n for n in state.nodes.values() if n.name == name), None)
     if existing is not None:
+        if existing.metadata.get("source_artifacts") != source_artifacts:
+            existing.metadata["source_artifacts"] = source_artifacts
+            state.event(
+                "routeb_vector_remote_pmi_provenance_refresh",
+                node_id=existing.id,
+                source_artifacts=source_artifacts,
+                status=existing.metadata.get("statement_status"),
+                formal_certificate_allowed=False,
+                registry_promoted=False,
+            )
+            store.save(state)
+            print({"status": "provenance_refreshed", "node_id": existing.id,
+                   "state_revision": state.revision})
+            return 0
         print({"status": "already_recorded", "node_id": existing.id,
                "state_revision": state.revision})
         return 0
 
     p4 = find(state, "P4.residual_schur_pmi")
     scalar = find(state, "P4.remote_budget_pmi_composition")
-    source = ROOT / "examples/routeb_remote_vector_pmi/RemoteVectorPMI.lean"
-    readme = source.parent / "README.md"
     node_id = state.add_node(
         name,
         "A single squared-norm bound for the two-dimensional remote action, "
@@ -60,7 +75,7 @@ def main() -> int:
             "formal_certificate_allowed": False,
             "upstream_node": scalar.id,
             "p4_parent": p4.id,
-            "source_artifacts": [ref(source), ref(readme)],
+            "source_artifacts": source_artifacts,
             "unresolved": [
                 "pinned_lean_compile_and_axioms",
                 "K_is_a_covered_domain_MBD_squared_operator_bound",
@@ -74,7 +89,7 @@ def main() -> int:
         node_id=node_id,
         parent_id=p4.id,
         upstream_node=scalar.id,
-        source_artifacts=[ref(source), ref(readme)],
+        source_artifacts=source_artifacts,
         status="pending_pinned_compile",
         formal_certificate_allowed=False,
         registry_promoted=False,

@@ -32,6 +32,30 @@ theorem vector_schur_nonnegative
           2 * (x1 * r1 + x2 * r2) + d * y ^ 2) := by ring
   exact (mul_nonneg_iff_of_pos_left hp).mp hmul
 
+theorem vector_schur_nonnegative_iff
+    (p d r1 r2 y : ℝ) (hp : 0 < p) :
+    (∀ x1 x2 : ℝ, 0 ≤ p * (x1 ^ 2 + x2 ^ 2) +
+      2 * (x1 * r1 + x2 * r2) + d * y ^ 2) ↔
+      r1 ^ 2 + r2 ^ 2 ≤ p * d * y ^ 2 := by
+  constructor
+  · intro h
+    have hp0 : p ≠ 0 := ne_of_gt hp
+    have hmin := h (-r1 / p) (-r2 / p)
+    have hscaled :
+        0 ≤ p * (p * ((-r1 / p) ^ 2 + (-r2 / p) ^ 2) +
+          2 * ((-r1 / p) * r1 + (-r2 / p) * r2) + d * y ^ 2) :=
+      mul_nonneg hp.le hmin
+    have hid :
+        p * (p * ((-r1 / p) ^ 2 + (-r2 / p) ^ 2) +
+          2 * ((-r1 / p) * r1 + (-r2 / p) * r2) + d * y ^ 2) =
+          p * d * y ^ 2 - (r1 ^ 2 + r2 ^ 2) := by
+      field_simp [hp0]
+      ring
+    rw [hid] at hscaled
+    linarith
+  · intro hbudget x1 x2
+    exact vector_schur_nonnegative p d x1 x2 r1 r2 y hp hbudget
+
 theorem vector_pmi_nonnegative_of_mass_enclosure
     (p d x1 x2 r1 r2 y k mass beta : ℝ)
     (hp : 0 < p)
@@ -51,6 +75,7 @@ theorem vector_pmi_nonnegative_of_mass_enclosure
       exact mul_le_mul_of_nonneg_right hschur (sq_nonneg y)
 
 #print axioms vector_schur_nonnegative
+#print axioms vector_schur_nonnegative_iff
 #print axioms vector_pmi_nonnegative_of_mass_enclosure
 
 end

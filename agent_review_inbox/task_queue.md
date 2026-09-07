@@ -89,7 +89,8 @@ GitHub agents for the push channel.
 - status: `open` (isolated Lean seam added 2026-09-07)
 - owner: `巨阳仙尊`
 - source: `examples/routeb_remote_vector_pmi/RemoteVectorPMI.lean`;
-- scope: compile the division-free two-dimensional theorem that consumes one
+- scope: compile the division-free two-dimensional theorem (including its
+  sharp iff form) that consumes one
   squared-norm remote bound `‖r_B‖² <= K*mass`, an explicit `0 <= K`, one scale
   bridge, and `K*beta² <= p*d`;
 - deliver: immutable Lean review with exact theorem statements, axioms,

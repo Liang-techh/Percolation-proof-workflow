@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 368,
+  "revision": 369,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -10598,11 +10598,11 @@
         "source_artifacts": [
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_remote_vector_pmi\\RemoteVectorPMI.lean",
-            "sha256": "b2c5702ff26ade4dc57210ea3aa7769b3081a9a8376cf256431fd6941f01f79f"
+            "sha256": "c49b0ebd0eba828d9d5effc930520637fbf818108735cdf8c55b47b01845f435"
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_remote_vector_pmi\\README.md",
-            "sha256": "e12e2d5d19f9b7797523cfdd342c9d50f67d2a4762780f16feac6fbdbd0d6030"
+            "sha256": "c68e9df973eb84b95eb84eabf8ef1d38993fe23d2bb8f4b540b7184e5bf1c1b5"
           }
         ],
         "unresolved": [
@@ -30593,6 +30593,24 @@
       "status": "pending_pinned_compile",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T06:31:04.841319+00:00",
+      "kind": "routeb_vector_remote_pmi_provenance_refresh",
+      "node_id": "cce7ce18a5a147b9a20dc0c91119fdc1",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_remote_vector_pmi\\RemoteVectorPMI.lean",
+          "sha256": "c49b0ebd0eba828d9d5effc930520637fbf818108735cdf8c55b47b01845f435"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_remote_vector_pmi\\README.md",
+          "sha256": "c68e9df973eb84b95eb84eabf8ef1d38993fe23d2bb8f4b540b7184e5bf1c1b5"
+        }
+      ],
+      "status": "pending_pinned_compile",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -34249,5 +34267,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "dcf9ad128347cb9aef083d9852148e7b84b48280b1a90b04af58487a698af1ad"
+  "state_checksum": "1487ca2a24b0794b4c4d77618d2439d467114388b3a0f989e6399a0a4842396c"
 }
