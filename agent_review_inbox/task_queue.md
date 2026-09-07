@@ -3023,3 +3023,8 @@ all-points cell cover 两条充分路径，并证明 strict→nonstrict；同时
 零点仍非充分，远离零点的无界 reciprocal-gap 族仍可没有共同正下界。当前
 实际 BODY6 candidate domain、source binding、cell coverage 与 positive rho
 仍是开放瓶颈。
+
+最高优先级数学任务已转为“实际域含零构型”的连接证明：检查 Route-B 的
+`p≤eta` 与 joint-limit 域能否精确给出 `0∈D`，并与 BODY6 q=0 的 exact
+source/null-vector obstruction 绑定。若连接成功，严格统一正 margin 路线应
+被明确拒绝；若连接缺字段，则只登记最小 domain/source interface 缺口。

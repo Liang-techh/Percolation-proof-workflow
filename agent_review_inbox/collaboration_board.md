@@ -2410,3 +2410,8 @@ revision 715 登记 BODY6 `STRICT_FEASIBILITY`。它把“存在共同正余量�
 含零构型”严格分开，给出同域九项充分条件与有限全点覆盖充分条件，并保留
 远离零点但 margin 趋零的精确反例。因此下一步不是继续重复审计，而是寻找
 真实 candidate domain 上的 uniform rho/mu、source 条目绑定和可复核 coverage。
+
+新的最高优先级不是调参或宽回归，而是验证 Route-B 候选域是否包含零构型，
+并把它与 BODY6 q=0 的 exact null direction 接上。若真实 source binding
+也成立，则 strict positive uniform margin 是数学上不可行的路线；系统应
+保留该 obstruction，并转向非严格/删域/改残差结构，而不是继续盲目搜索。
