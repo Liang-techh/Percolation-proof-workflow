@@ -409,6 +409,22 @@ polynomial remains a separate frontier.
 - forbidden: point-sample equality, hash-only semantic binding, or closing P4
   from the abstract Schur child.
 
+### T-P3-008 — central-FD Christoffel source binding
+
+- status: `open` (released for the next mathematical round)
+- owner: `古月方源`
+- source: external `routeB_dense_Mq/dhport_lib.jl:73-92` and
+  `routeB_analytic_fourier_dynamics_probe.py:94-97`; local exact algebra at
+  `examples/routeb_source_binding_audit/snapshots/current_exact/ChristoffelPower.lean`;
+- scope: derive the typed equality between the source `Cdq` central-difference
+  contraction and the generic Christoffel tensor expression, keeping FD
+  remainder and true-DH derivative semantics as explicit premises;
+- deliver: a source-independent algebraic child plus the smallest semantic
+  adapter statement, or a precise obstruction if the source indexing differs;
+- forbidden: treating the generic Christoffel identity as source binding,
+  replacing central differences by analytic derivatives silently, or closing
+  P3/P5/M4.
+
 ### T-P8-008 — first-12 explicit-time source adapter
 
 - status: `open` (released for the next mathematical round)

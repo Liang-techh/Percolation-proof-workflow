@@ -49,6 +49,7 @@ TASK_TARGETS = {
     "T-P4-005": ("P4.residual_schur_pmi", "pending_one_channel_source_binding"),
     "T-P4-006": ("P4.residual_schur_pmi", "pending_sharp_schur_formalization"),
     "T-P4-007": ("P4.residual_schur_pmi", "pending_actual_block45_residual_decomposition"),
+    "T-P3-008": ("P3.strict_true_dh_bounds", "pending_central_fd_christoffel_binding"),
     "T-P8-005": ("P8.independent_reachability", "pending_terminal_transfer_interface"),
     "T-P8-006": ("P8.independent_reachability", "pending_ramp_reconstruction_child"),
     "T-P8-007": ("P8.independent_reachability", "pending_ramp_sidecar_validation"),
