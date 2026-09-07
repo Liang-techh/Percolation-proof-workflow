@@ -6,103 +6,65 @@ created_at: 2026-09-06T00:00:00-06:00
 integration_status: pending
 ---
 
-# T-FLT-DERIV-CALC review: derivation / calculus / continuous / integral / limit reuse scan
+# T-FLT-DERIV-CALC review: derivation / calculus / smooth / continuous / integral / limit reuse scan
 
-Inspected commit: `aa2d8b3` in `upstream/anthropics-fermats-last-theorem`.
+## Scope and method
 
-Scope filtered to `Definitions/` and `Theorems/` entries whose file names or internal symbols are tied to `derivation`, `calculus`, `derivative`, `smooth`, `continuous`, `integral`, or `limit`. I did not run a full compile.
+Reviewed only `upstream/anthropics-fermats-last-theorem` at commit `aa2d8b34692b` and only files under `Definitions/` and `Theorems/` whose path/name intersects the requested families:
+`derivation`, `calculus`, `derivative`, `smooth`, `continuous`, `integral`, `limit`.
+
+No Lean build, no full tree compilation, no registry/state edits, no upstream source mutation.
+
+The filter kept theorem-adjacent infrastructure and proof seams, not the number-theoretic end theorems themselves.
+
+## Judgment summary
+
+I found a small set of reusable theorem infrastructure in three bands:
+
+- direct reuse: generic analytic/algebraic bridge theorems that already expose the right target shape and do not embed FLT-specific arithmetic;
+- light adaptation: theorems whose statement shape is reusable but whose ambient objects are specialized to `Place`, curve models, or complex geometry;
+- architecture only: transport/limit/tendsto scaffolding that is structurally useful but too domain-bound to lift as-is.
+
+I did not find a clean direct-reuse candidate among the curve/place theorem family that can be moved unchanged into a nontrivial downstream calculus proof without changing the ambient typeclass stack.
 
 ## Direct reuse
 
-- `Definitions/Def_Algebra_PointDerivations.lean`
-  - Namespace / theorem names: `Algebra.PointDerivations`, `PointDerivations.mem_iff`, `PointDerivations.apply_mul`, `PointDerivations.apply_one`, `PointDerivations.apply_algebraMap`, `PointDerivations.map`, `PointDerivations.map_id`, `PointDerivations.map_comp`.
-  - Why reusable: this is clean algebraic infrastructure for pointwise derivations at an evaluation homomorphism; it is generic in `k`, `A`, and target module `M`.
-  - Dependencies: only `Mathlib`, `Field`, `CommRing`, `Algebra`, `LinearMap`, `Submodule`, and the evaluation map `ev : A →+* k`.
-  - Adaptation risk: low. The interface is abstract enough to port as-is if the target project needs point-derivation bookkeeping.
-
-- `Definitions/Def_Analysis_HalfLineIntercept.lean`
-  - Namespace / theorem names: `HalfLine.slope`, `HalfLine.intercept`, `HalfLine.slope_eq_of_forall_le_eq_add_mul`, `HalfLine.intercept_eq_of_forall_le_eq_add_mul`, `HalfLine.eq_and_eq_of_forall_le_eq_add_mul`.
-  - Why reusable: this packages eventual affine asymptotics on `ℝ → ℂ` into a compact limit-based API.
-  - Dependencies: `Mathlib.Analysis.Complex.Basic`, `Filter.limUnder`, `tendsto_nhds_of_eventually_eq`, `ring`.
-  - Adaptation risk: low to medium. The shape is generic, but the codomain is specialized to `ℂ`; if the target wants another normed ring, the proofs need a small codomain-generalization.
-
-- `Definitions/Def_AlgebraicCurve_Differentials.lean`
-  - Namespace / theorem names: `AlgebraicCurve.Place.dCoordFn`, `Place.ord_dCoordFn`, `Place.dCoord_eq_D_dCoordFn`, `Place.chartRead`, `Place.chartRead_apply`, `Place.readDifferential`, `Place.readDifferential_apply`, `Place.IsPrimitiveAlong`, `Place.pathIntegral`, `Place.pathIntegral_def`, `Place.abelJacobiVec`, `Place.abelJacobiVec_def`, `Place.abelJacobiDiv`, `Place.abelJacobiDiv_single`, `Place.abelJacobiDiv_apply`, `Place.pathPeriodLattice`, `Place.mem_pathPeriodLattice_of_loop`.
-  - Why reusable: this is a self-contained differential-reading / path-integral / Abel-Jacobi interface with explicit definitional equalities.
-  - Dependencies: `Mathlib`, `Topology`, `Manifold`, `Place`, `Path`, `Ω[F⁄ℂ]`, and choice-based classical witnesses.
-  - Adaptation risk: medium. The definitions are clean, but they are embedded in a place/curve geometry stack, so porting outside that geometry would require replacing the ambient objects, not just renaming.
-
-- `Theorems/Thm_contDiff_top_and_hasCompactSupport_integral_comp_affine.lean`
-  - Namespace / theorem name: `contDiff_top_and_hasCompactSupport_integral_comp_affine`.
-  - Why reusable: this is a generic smoothness-under-integral theorem with compact support and a properness-type bound.
-  - Dependencies: finite-dimensional normed spaces over `ℝ`, `MeasureTheory`, `ContDiff`, `HasCompactSupport`, `Continuous`, `IsFiniteMeasure`, and a coercive growth bound `hproper`.
-  - Adaptation risk: low to medium. The theorem is broad, but the proof is a `p2m_exact_reverting` wrapper, so reuse is more about the statement shape than the proof body.
-
-- `Theorems/Thm_Real_norm_le_and_norm_integral_cexp_sum_mul_le_mul_prod_inv_one_add_abs_sq_of_contDiff.lean` and `Theorems/Thm_Real_norm_le_and_norm_integral_cexp_mul_le_mul_inv_one_add_abs_sq_of_piecewise_contDiff_two.lean`
-  - Why reusable: these are analytic estimate templates for oscillatory integrals under differentiability hypotheses.
-  - Dependencies: `ContDiff`, `integral`, decay bounds, and real/complex norm control.
-  - Adaptation risk: medium. They are likely useful as pattern templates, but the exact integrands and decay structure are specialized.
+| Level | Exact relative path | Namespace / theorem name | Dependencies / reuse notes | Adaptation risk |
+|---|---|---|---|---|
+| direct reuse | `Theorems/Thm_Algebra_exists_bijOn_eval_differentiableOn_of_smooth_of_kaehlerDifferential.lean` | `Algebra.exists_bijOn_eval_differentiableOn_of_smooth_of_kaehlerDifferential` | Imports `Mathlib`, `P2M.Util`, and the matching `P2M.Sol` proof. Statement packages `Algebra.Smooth ℂ S`, `Module.rank S (KaehlerDifferential ℂ S) = 1`, and a nonvanishing Kähler differential into a local bijection/differentiability theorem for evaluation at `σ₀ t`, plus a local openness/finite support stability clause. | Low to moderate. The shape is very reusable for downstream “smooth implies local differentiable coordinate parametrization” work, but the ambient field is complex, the target is algebra homs `S →ₐ[ℂ] ℂ`, and the proof is tied to the Kähler differential setup. |
+| direct reuse | `Theorems/Thm_Algebra_exists_bijOn_eval_differentiableOn_pi_of_smooth_of_kaehlerDifferential.lean` | `Algebra.exists_bijOn_eval_differentiableOn_pi_of_smooth_of_kaehlerDifferential` | Same basic imports and proof style as above, but with a finite coordinate family `Fin n → S` and a rank condition `Module.rank S (KaehlerDifferential ℂ S) = n`. The theorem provides a bijection to a ball in `Fin n → ℂ`, with the same differentiable factorization and local stability clause. | Low to moderate. This is the best reusable finite-dimensional version of the previous theorem. The only real adaptation risk is replacing the `ℂ`-linear ambient with the downstream scalar field or topology. |
 
 ## Light adaptation
 
-- `Theorems/Thm_AlgebraicCurve_Place_derivation_apply_eq_diffCoeff_D_mul.lean`
-  - Namespace / theorem name: `AlgebraicCurve.Place.derivation_apply_eq_diffCoeff_D_mul`.
-  - Why light adaptation: it gives a derivation evaluation identity in terms of `diffCoeff` and Kähler differential `D`, which is structurally reusable for local derivation calculations.
-  - Dependencies: `Definitions.Def_AlgebraicCurve_Differentials`, `Place.diffCoeff`, `KaehlerDifferential.D`, `Derivation`, and algebraic-closure hypotheses on `F`.
-  - Risk: medium. The theorem is tightly tied to algebraic curves and a chosen local parameter `t`, so the exact statement will need domain-specific adaptation.
-
-- `Theorems/Thm_Algebra_trace_inv_mul_derivation_eq_inv_norm_mul_derivation_norm.lean`
-  - Namespace / theorem name: `Algebra.trace_inv_mul_derivation_eq_inv_norm_mul_derivation_norm`.
-  - Why light adaptation: this is a trace/norm/derivation compatibility identity, useful as a reusable algebraic lemma when moving derivations across finite extensions.
-  - Dependencies: `RingTheory.Norm.Basic`, `RingTheory.Trace.Basic`, `RingTheory.Derivation.Basic`, and an extension-compatibility hypothesis `hd`.
-  - Risk: medium. It is generic at the algebra level, but the proof is a direct `p2m_exact_reverting` shell and expects a very specific commutation hypothesis.
-
-- `Theorems/Thm_UpperHalfPlane_integral_mul_eq_zero_of_periodic_of_tendsto_atImInfty.lean`
-  - Namespace / theorem name: `UpperHalfPlane.integral_mul_eq_zero_of_periodic_of_tendsto_atImInfty`.
-  - Why light adaptation: this is a useful contour/integral-vanishing pattern for periodic analytic functions with cusp decay.
-  - Dependencies: `UpperHalfPlane`, `Complex`, `MeasureTheory`, periodicity, `Tendsto ω atImInfty`, holomorphicity on neighborhoods, and compact support cutoffs `p`, `ρ`.
-  - Risk: medium to high. The theorem is analytically reusable, but its hypotheses are very tailored to the upper half-plane setup and a specific partition-of-unity style cutoff.
-
-- `Theorems/Thm_AlgebraicCurve_Place_derivative_evalEval_evalAt_ne_zero_of_ord_sub_eq_one_of_forall_evalAt_ne.lean`
-  - Why light adaptation: this is a local derivative nonvanishing criterion in the place/evaluation framework.
-  - Dependencies: `Place.derivative`, `evalEval`, ord conditions, and separability-style assumptions.
-  - Risk: medium. Likely reusable as a lemma template in local valuation/curve arguments, but not as a generic derivative fact.
+| Level | Exact relative path | Namespace / theorem name | Dependencies / reuse notes | Adaptation risk |
+|---|---|---|---|---|
+| light adaptation | `Theorems/Thm_Algebra_trace_inv_mul_derivation_eq_inv_norm_mul_derivation_norm.lean` | `Algebra.trace_inv_mul_derivation_eq_inv_norm_mul_derivation_norm` | Imports `Mathlib.RingTheory.Norm.Basic`, `Mathlib.RingTheory.Trace.Basic`, `Mathlib.RingTheory.Derivation.Basic`, and proves a trace/norm identity for derivations along an algebra tower. The theorem is algebraic, not geometric, but the conclusion is a clean reusable identity template for “derivation commutes with extension” style arguments. | Moderate. It is reusable as a lemma schema, but the downstream environment must still supply the matching tower `R ⟶ F ⟶ F'`, the compatibility hypothesis `hd`, and the same trace/norm normalization. |
+| light adaptation | `Theorems/Thm_AlgebraicCurve_Place_continuous_restrictAlong.lean` | `AlgebraicCurve.Place.continuous_restrictAlong` | Imports `Definitions.Def_AlgebraicCurve_Correspondence`, `Definitions.Def_AlgebraicCurve_IsCurveOver`, `Definitions.Def_AlgebraicCurve_PlaceEvaluation`, and proves continuity of `w ↦ w.restrictAlong φ hφ` for curve places under a heavy meromorphic-at/ord hypothesis on both source and target curves. | Moderate to high. The continuity statement is reusable as a transport theorem, but the ambient objects are deeply curve-specific and the hypotheses are meromorphic, charted, compact, and T2 conditions on `Place ℂ F`. |
+| light adaptation | `Theorems/Thm_AlgebraicCurve_Place_derivation_apply_eq_diffCoeff_D_mul.lean` | `AlgebraicCurve.Place.derivation_apply_eq_diffCoeff_D_mul` | Imports `Definitions.Def_AlgebraicCurve_Differentials` and proves a derivation evaluation formula `δ f = Place.diffCoeff t (KaehlerDifferential.D K F f) * δ t` under a valuation-order-1 hypothesis. This is a highly local coefficient identity, but its derivative/derivation seam is exactly the kind of bridge one might want in a local calculus adapter. | Moderate. The statement is very specific to `Place`, `ord`, and `diffCoeff`; it can seed a local adapter, but it is not portable as a general derivative lemma without rebuilding the ambient valuation geometry. |
+| light adaptation | `Theorems/Thm_AlgebraicCurve_Place_exists_sub_algebraMap_evalAt_eq_mul_of_derivative_evalEval_ne_zero.lean` | `AlgebraicCurve.Place.exists_sub_algebraMap_evalAt_eq_mul_of_derivative_evalEval_ne_zero` | Imports `Definitions.Def_AlgebraicCurve_PlaceEvaluation` and proves a divisibility-style factorization from a nonzero evaluated derivative: `y - algebraMap K F (v.evalAt y) = h * (z - algebraMap K F (v.evalAt z))`. This is a root-separation/implicit-function-flavored statement built from the derivative nonvanishing hypothesis. | Moderate. The shape is reusable as a local factorization lemma, but the proof is anchored to rational places, valuation subrings, and polynomial `evalEval` infrastructure. |
 
 ## Architecture only
 
-- `Theorems/Thm_AlgebraicCurve_Place_continuous_restrictAlong.lean`
-  - Why architecture only: the file is about continuity of a restriction/transport map along places, but the payoff is bound to the place machinery rather than a general continuity infrastructure.
-  - Dependencies: curve/place topology, charted spaces, `Continuous`, and specialized evaluation maps.
-  - Risk: high if treated as a generic continuity lemma; the statement is best viewed as a local adapter around the place API.
+| Level | Exact relative path | Namespace / theorem name | Dependencies / reuse notes | Adaptation risk |
+|---|---|---|---|---|
+| architecture only | `Theorems/Thm_AlgebraicGeometry_exists_tendsto_appLE_of_isProper_of_smoothOfRelativeDimension_one_complex.lean` | `AlgebraicGeometry.exists_tendsto_appLE_of_isProper_of_smoothOfRelativeDimension_one_complex` | Imports `Definitions.Def_CerednikDrinfeld_QMModuli` and a large number of `AlgebraicCurve`, `ModularCurve`, and `Topology` simp/instance overrides. The theorem is a compactness/properness-driven `Tendsto` extraction over `SchemeHomOver`, with a strict monotone subsequence and eventual section control. | High. This is useful as a proof-architecture pattern for limit extraction and subsequence control, but the ambient scheme/moduli stack is too specialized to lift directly into a generic calculus library. |
+| architecture only | `Definitions/Def_Dieudonne_WittHomColimit.lean` | `Deformation.TruncWitt.verschiebungIter`, `shiftLE`, `shiftLE_truncate`, `coeff_shiftLE`, `shiftLE_refl`, `shiftLE_shiftLE`, `shiftLE_succ`, `shiftLE_injective`, `map_shiftLE`, `frobeniusFun_shiftLE`, `verschiebung_shiftLE`, `verschiebung_iterate_eq_zero` | This is not calculus in the analytic sense, but it is a genuine limit/transport infrastructure file: iterated Verschiebung, compatibility of truncation lifts, functoriality under ring maps, and stabilization identities. It is good evidence for an inverse-system API pattern. | High. The file is algebraic/Witt-vector infrastructure, not analytic limit theory. Reuse should stay at the level of transport/refinement shape, not theorem content. |
+| architecture only | `Theorems/Thm_AlgebraicCurve_coeffIn_local_calculus.lean` | `AlgebraicCurve.coeffIn_local_calculus` | The path name suggests a local-calculus helper in the curve setting; even without promoting any statement here, it sits in the exact seam where coefficient extraction and local analytic reasoning are wired together. | High. Treat as a namespace/organization clue only unless the downstream project also uses the same local curve calculus apparatus. |
 
-- `Theorems/Thm_AlgebraicCurve_CurveModel_smoothOfRelativeDimension_genusFF_of_representsRelSubPic.lean`
-  - Why architecture only: this is a high-level smoothness result in a curve-model pipeline, not a reusable smoothness tool.
-  - Dependencies: algebraic geometry curve-model stack and representability hypotheses.
-  - Risk: high for direct reuse; useful mainly as a map of how smoothness is threaded through the architecture.
+## What I would actually carry forward
 
-- `Theorems/Thm_AlgebraicGeometry_Smooth_of_comp_of_smooth_of_surjective.lean`
-  - Why architecture only: although it encodes a standard smoothness composition principle, in this repo it is used as a structural bridge inside a larger AG pipeline.
-  - Dependencies: `Smooth`, `surjective`, and the ambient scheme/morphism framework.
-  - Risk: medium. The mathematical content is standard, but the repo-specific role is mostly orchestration.
+If the target project needs a calculus-adjacent reusable kernel, the best acquisition order is:
 
-- `Theorems/Thm_groupCohomology_finiteDimensional_continuous_of_shortExact.lean`
-  - Why architecture only: continuity is present in the name, but the theorem is really a cohomological finiteness transfer statement.
-  - Dependencies: group cohomology, short exact sequences, and continuous module structures.
-  - Risk: high for direct reuse outside the group-cohomology stack.
+1. `Algebra.exists_bijOn_eval_differentiableOn_pi_of_smooth_of_kaehlerDifferential`
+2. `Algebra.exists_bijOn_eval_differentiableOn_of_smooth_of_kaehlerDifferential`
+3. `Algebra.trace_inv_mul_derivation_eq_inv_norm_mul_derivation_norm`
+4. `AlgebraicCurve.Place.continuous_restrictAlong`
+5. `AlgebraicCurve.Place.derivation_apply_eq_diffCoeff_D_mul`
+6. `AlgebraicCurve.Place.exists_sub_algebraMap_evalAt_eq_mul_of_derivative_evalEval_ne_zero`
+7. `AlgebraicGeometry.exists_tendsto_appLE_of_isProper_of_smoothOfRelativeDimension_one_complex` only for proof-architecture reference, not theorem transfer
 
-## Reuse summary
+## Boundary note
 
-The strongest direct-reuse candidates are the abstract infrastructure files:
+I excluded the bulk of the FLT arithmetic/core number-theory statements, even when their filenames mention `continuous`, `smooth`, `integral`, or `limit`, because they are not reusable as calculus infrastructure without importing the surrounding number-field package and its proof obligations.
 
-1. `Definitions/Def_Algebra_PointDerivations.lean`
-2. `Definitions/Def_Analysis_HalfLineIntercept.lean`
-3. `Definitions/Def_AlgebraicCurve_Differentials.lean`
-
-The best light-adaptation candidates are the analytic/derivation theorem wrappers:
-
-1. `Theorems/Thm_contDiff_top_and_hasCompactSupport_integral_comp_affine.lean`
-2. `Theorems/Thm_Algebra_trace_inv_mul_derivation_eq_inv_norm_mul_derivation_norm.lean`
-3. `Theorems/Thm_UpperHalfPlane_integral_mul_eq_zero_of_periodic_of_tendsto_atImInfty.lean`
-
-The rest are mostly architectural markers for how the repo threads smoothness, continuity, and integration through specialized algebraic-geometry and arithmetic pipelines.
-
+No authoritative state, registry entry, or upstream source was changed by this review.
