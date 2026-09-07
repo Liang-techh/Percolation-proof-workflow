@@ -5,6 +5,8 @@ from .store import StateStore
 from .coverage_receipt import (
     CANONICAL_TRIPLE_SCHEMA,
     CoverageReceiptError,
+    THETA2_Q2_LO,
+    THETA2_Q2_HI,
     validate_canonical_coverage_triple,
 )
 from .comparator import CandidateReceiptAudit, build_comparator_manifest, validate_candidate_receipt
@@ -91,6 +93,14 @@ from .routeb_o0_r3_receipt import (
     audit_routeb_o0_r3_receipt,
     audit_routeb_o0_r3_canonical_receipt,
 )
+from .routeb_o1_source_receipt import (
+    O1_SOURCE_RECEIPT_SCHEMA,
+    O1_BLOCK_ORDER,
+    O1_DIDX,
+    O1_BIDX,
+    RouteBO1SourceReceiptAudit,
+    audit_routeb_o1_source_receipt,
+)
 from .disjoint import (audit_do, build_repair_do, canonical_do_schema,
                         classify_manual_review, do_sha256, normalize_do_path)
 from .advisory_reuse import (AdvisoryReuseError, SCHEMA_VERSION,
@@ -106,6 +116,7 @@ __all__ = [
     "EvidenceStage", "NodeStatus", "ProofNode", "WorkflowState", "StateStore",
     "status_is_closed", "CandidateReceiptAudit", "validate_candidate_receipt",
     "CoverageReceiptError", "CANONICAL_TRIPLE_SCHEMA",
+    "THETA2_Q2_LO", "THETA2_Q2_HI",
     "validate_canonical_coverage_triple",
     "build_comparator_manifest", "dry_run_migrate",
     "project_frontier_receipt",
@@ -154,6 +165,8 @@ __all__ = [
     "O0_R3_RECEIPT_SCHEMA", "RouteBO0R3ReceiptAudit",
     "audit_routeb_o0_r3_receipt", "O0_R3_CANONICAL_RECEIPT_SCHEMA",
     "RouteBO0R3CanonicalReceiptAudit", "audit_routeb_o0_r3_canonical_receipt",
+    "O1_SOURCE_RECEIPT_SCHEMA", "O1_BLOCK_ORDER", "O1_DIDX", "O1_BIDX",
+    "RouteBO1SourceReceiptAudit", "audit_routeb_o1_source_receipt",
     "audit_do", "build_repair_do", "canonical_do_schema", "classify_manual_review", "do_sha256", "normalize_do_path",
     "AdvisoryReuseError", "SCHEMA_VERSION", "project_advisory_reuse",
     "project_plan", "export_plan_views", "plan_topo_order", "plan_levels",

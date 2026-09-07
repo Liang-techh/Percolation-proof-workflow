@@ -1954,3 +1954,20 @@ after integration; corrections should be a new result file.
 - force job 尚未出现在 Actions list，必须先落地
   `.github/workflows/force-general-state-export.yml` 并设置 pinned source vars；
   未落地前保持 `BLOCKED_WORKFLOW_NOT_LANDED`。
+
+### T-P4-033-O1 — typed source receipt intake (2026-09-07)
+
+- 本地已加入 fail-closed validator：schema
+  `routeb.o1.true_dh_exact_typed_mdd_source.v2`、exact `mu=1/1000000`、
+  `M_exact`/projection/index contract、source binding path 与 SHA-256 形状。
+- 继续只接收同 key 的真实 `M_exact`、`h_MDD_def` 和
+  `h_source_mass` 或 `h_aggregate+h_body`；abstract-only export 仍为
+  `CONDITIONAL_TYPED_SOURCE_EXPORT`。
+
+### T-P4-036.2 — theta2 namespace hardening (2026-09-07)
+
+- canonical triple validator 现在要求 exact namespace anchor
+  `q2=[-3/20,3/20]`，并检查 parent q2 box subset；现有 exporter 必须补出
+  namespace 字段且仍需外部 hash 文件内容绑定。
+- Julia-capable agent 只做 parse/minimal selector 与真实 receipt 产出，禁止
+  用 synthetic triple 绕过 source membership 或 CoverageJoin2 premise。

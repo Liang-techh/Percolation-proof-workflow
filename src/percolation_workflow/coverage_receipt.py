@@ -27,6 +27,8 @@ KNOWN_LEAF_CLASSIFICATIONS = frozenset({
 })
 CANONICAL_TRIPLE_SCHEMA = "routeb-theta2-canonical-coverage-v1"
 CANONICAL_TRIPLE_DIMENSIONS = 13
+THETA2_Q2_LO = Fraction(-3, 20)
+THETA2_Q2_HI = Fraction(3, 20)
 ACCEPTED_INTERVAL_MEMBERSHIP_STATUSES = frozenset({
     "ACCEPTED",
     "PROVEN",
@@ -84,6 +86,19 @@ def validate_canonical_coverage_triple(document: Mapping[str, Any]) -> dict[str,
             or any(not isinstance(x, str) or not x for x in order)
             or len(set(order)) != CANONICAL_TRIPLE_DIMENSIONS):
         raise CoverageReceiptError("coordinate_order must contain 13 unique names")
+    namespace = document.get("namespace")
+    if not isinstance(namespace, Mapping) or namespace.get("name") != "theta2":
+        raise CoverageReceiptError("namespace must identify theta2")
+    anchor = namespace.get("anchor")
+    if (not isinstance(anchor, Mapping) or anchor.get("coordinate") != "q2"
+            or anchor.get("lo") is None or anchor.get("hi") is None):
+        raise CoverageReceiptError("theta2 namespace must provide a q2 anchor")
+    anchor_lo = _fraction(anchor.get("lo"), "namespace.anchor.lo")
+    anchor_hi = _fraction(anchor.get("hi"), "namespace.anchor.hi")
+    if anchor_lo != THETA2_Q2_LO or anchor_hi != THETA2_Q2_HI:
+        raise CoverageReceiptError("theta2 namespace anchor must be q2=[-3/20,3/20]")
+    if "q2" not in order:
+        raise CoverageReceiptError("theta2 coordinate_order must contain q2")
     source = document.get("source")
     if not isinstance(source, Mapping):
         raise CoverageReceiptError("source is missing")
@@ -104,6 +119,9 @@ def validate_canonical_coverage_triple(document: Mapping[str, Any]) -> dict[str,
     p_lo, p_hi = _canonical_triple_box(parent, "parent")
     c_lo, c_hi = _canonical_triple_box(child, "child")
     s_lo, s_hi = _canonical_triple_box(sibling, "sibling")
+    q2_axis = order.index("q2")
+    if p_lo[q2_axis] < THETA2_Q2_LO or p_hi[q2_axis] > THETA2_Q2_HI:
+        raise CoverageReceiptError("parent q2 interval escapes theta2 namespace")
     for name, lo, hi in (("child", c_lo, c_hi), ("sibling", s_lo, s_hi)):
         if any(p_lo[i] > lo[i] or hi[i] > p_hi[i] for i in range(CANONICAL_TRIPLE_DIMENSIONS)):
             raise CoverageReceiptError(f"{name} escapes parent box")

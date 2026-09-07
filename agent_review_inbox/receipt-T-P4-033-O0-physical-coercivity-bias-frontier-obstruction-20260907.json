@@ -1,0 +1,90 @@
+{
+  "schema": "routeb.o0.physical_coercivity_bias_frontier.v1",
+  "task": "T-P4-033",
+  "lane": "O0",
+  "status": "OBSTRUCTION",
+  "disposition": "OPEN_FAIL_CLOSED_NO_SAME_KEY_PHYSICAL_COERCIVITY_OR_BIAS_RECEIPT",
+  "receipt_type": "immutable_math_review",
+  "main_state_modified": false,
+  "registry_promoted": false,
+  "schur_margin_consumed": false,
+  "unit_normalization_used": false,
+  "binding": {
+    "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+    "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+    "metric_key": "weighted-port:s=1/5|output_norm=euclidean_2|orientation=left-output",
+    "source_bound_norm": "induced_infinity",
+    "output_metric_norm": "euclidean_2",
+    "output_orientation": "left-output",
+    "partition_B_one_based": [
+      4,
+      5
+    ],
+    "partition_D_one_based": [
+      1,
+      2,
+      3,
+      6
+    ]
+  },
+  "checked_evidence": [
+    {
+      "path": "artifacts/routeb_agent_schur_fullq_next_20260906T091446Z/NUMBERS.json",
+      "sha256": "59C7E9BECA460DAB46B675F056BB3BAC147001A3FF1888EBC2CE0110611F7F3E",
+      "scope": "conditional exact one-cell MDD inverse/resolvent and MBD/MDB port enclosures; no physical baseline or residual bound"
+    },
+    {
+      "path": "agent_review_inbox/receipt-T-P4-033-O0-constructive-exact-fourier-cell-K-Br-Cf-20260907.json",
+      "sha256": "E570CFB418065503D9743B4496FC0902E45BF82DA4C265FD067BEA9952E821AD",
+      "scope": "exact Br/K/Cf port-side tuple only"
+    },
+    {
+      "path": "artifacts/routeb_6dof/state.json",
+      "sha256": "CCDF3073FDA3F55D564F67B787EEF3EDC55022B05A004674F35D9DFE0CFBF2C9",
+      "scope": "current state snapshot; no same-key physical L_base, beta_bias, beta_abs, or additive reserve field"
+    },
+    {
+      "path": "src/percolation_workflow/routeb_regularizer_semantics.py",
+      "sha256": "A15FC02A03E8F5D5210E61E411C7D56080CDB070A61D307524F4F5C42649EC89",
+      "scope": "generic affine Young-gain API; conditional without authoritative physical binding"
+    }
+  ],
+  "required_baseline_receipt": {
+    "A_up": "a_B^T*B_up(q)*a_B",
+    "premises": [
+      "B_up(q) PSD under the same source/state/metric/orientation key",
+      "baseline_budget(q,a_B) >= L_base*A_up(q,a_B) for all a_B",
+      "L_base exact rational and L_base >= 0",
+      "typed physical identity for baseline_budget"
+    ],
+    "strict_join": "m_f = L_base-(1+1/theta)*(rho_r+epsilon_R)^2 > 0",
+    "reserve": "m_r = L_base-(1+1/theta)*rho_r^2"
+  },
+  "required_affine_bias_receipt": {
+    "physical_identity": "r_B=R_rel*a_B+b_B",
+    "relative_option": [
+      "||R_rel*a_B||_2^2 <= rho_relative^2*A_up",
+      "||b_B||_2^2 <= beta_bias*A_up",
+      "beta_bias >= 0",
+      "tau > 0 exact",
+      "(1+tau)*rho_relative^2+(1+1/tau)*beta_bias <= rho_bias^2 exact root witness"
+    ],
+    "absolute_option": [
+      "||b_B||_2^2 <= beta_abs",
+      "m_add > (1+1/tau)*beta_abs with m_add an exact positive same-key physical reserve"
+    ]
+  },
+  "obstruction": {
+    "missing_fields": [
+      "same-key physical baseline_budget",
+      "same-key exact L_base or direct positive m_r/m_f",
+      "same-key physical residual identity",
+      "same-key R_rel and b_B bounds",
+      "same-key beta_bias or beta_abs",
+      "same-key positive additive reserve for absolute bias"
+    ],
+    "non_identifiability": "The same Br/K/Cf port tuple permits L_base=lambda*(rho_r+epsilon_R)^2 giving m_f=0 or L_base=lambda*(rho_r+epsilon_R)^2+1 giving m_f=1.",
+    "affine_counterexample": "b_B != 0 and a_B=0 imply A_up=0 but ||r_B||_2^2>0, so a homogeneous rho bound is invalid without relative bias control."
+  },
+  "next_action": "Issue one canonical same-key baseline-coercivity, relative-bias, or absolute-bias-plus-additive-reserve receipt; do not consume this obstruction as O0 closure."
+}

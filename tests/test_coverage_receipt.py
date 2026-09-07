@@ -159,13 +159,21 @@ def test_canonical_partial_effective_box_is_rejected():
 
 
 def canonical_triple():
+    order = ["q1", "q2", "q3", "q4", "q5", "q6",
+             "dq1", "dq2", "dq3", "dq4", "dq5", "dq6", "w"]
     lo = ["0"] * 13
     hi = ["1"] * 13
+    lo[1] = "-3/20"
+    hi[1] = "3/20"
     child_hi = hi.copy(); child_hi[0] = "1/2"
     sibling_lo = lo.copy(); sibling_lo[0] = "1/2"
     return {
         "schema": "routeb-theta2-canonical-coverage-v1",
-        "coordinate_order": [f"x{i}" for i in range(13)],
+        "coordinate_order": order,
+        "namespace": {
+            "name": "theta2",
+            "anchor": {"coordinate": "q2", "lo": "-3/20", "hi": "3/20"},
+        },
         "source": {
             "receipt_sha256": H,
             "generator_sha256": "b" * 64,
@@ -174,7 +182,7 @@ def canonical_triple():
         "parent": {"id": "p", "box_lo": lo, "box_hi": hi},
         "child": {"id": "c", "parent_id": "p", "box_lo": lo, "box_hi": child_hi},
         "sibling": {"id": "s", "parent_id": "p", "box_lo": sibling_lo, "box_hi": hi},
-        "linkage": {"split_axis": "x0", "split_cut": "1/2", "adjacency": "shared_face"},
+        "linkage": {"split_axis": "q1", "split_cut": "1/2", "adjacency": "shared_face"},
         "source_interval_membership": {"status": "ACCEPTED", "receipt_sha256": "d" * 64},
         "coverage_join": {"kind": "CoverageJoin2", "premise_receipt_sha256": "e" * 64},
     }

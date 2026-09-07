@@ -1305,3 +1305,14 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - 当前 source patch 与 pre-edit backup hash 已保留；后续执行必须显式提供
   `P3_BB_TRIPLE_CELL_ID` 和全部 external premise hashes，只有实际 READY JSON
   才能进入 canonical validator。
+
+### 2026-09-07 — 梁智炜：O1 intake validator 与 theta2 namespace gate
+
+- 新增 `routeb_o1_source_receipt.py`，对 exact typed `M_exact`/`M_DD45_at`、
+  `h_MDD_def`、mu、坐标映射、q-domain 和三类 source/hash 字段做结构性审计；
+  source binding 未证明时只返回 conditional，证明后也只到 intake boundary，
+  不进入 formal/registry。
+- 收割 O2 review 后收紧 canonical triple：必须声明
+  `namespace.name=theta2`、`q2` anchor 为 `[-3/20,3/20]`，且 parent q2 区间
+  必须落在该 namespace 内；否则拒绝，避免任意 13D geometry receipt 冒充 theta2。
+- focused tests 当前 `55 passed`；未运行本机 Lean/Julia，未同步 GitHub。

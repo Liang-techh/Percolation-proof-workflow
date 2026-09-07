@@ -1,0 +1,112 @@
+{
+  "schema": "routeb.o0.same_key_baseline_bias_search.v1",
+  "task": "T-P4-033",
+  "lane": "O0",
+  "status": "OBSTRUCTION",
+  "disposition": "NO_STRICT_SCHUR_CONSUMABLE_SAME_KEY_BASELINE_OR_AFFINE_BIAS_RECEIPT",
+  "main_state_modified": false,
+  "registry_promoted": false,
+  "schur_margin_consumed": false,
+  "unit_normalization_used": false,
+  "binding": {
+    "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+    "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+    "metric_key": "weighted-port:s=1/5|output_norm=euclidean_2|orientation=left-output",
+    "source_norm": "induced_infinity",
+    "output_norm": "euclidean_2",
+    "orientation": "left-output"
+  },
+  "same_key_exact_port_data": {
+    "K": "1194377771728717533600000000/18430531027503268060090421",
+    "Br": "320646431/2400000000",
+    "Cf": "1929397/4800000000",
+    "delta": "3339/73786976294838206464000000",
+    "epsilon_R_infinity": "10884976891854242252555776013990910667449238154978439/1066565541595672284169870837304452361645809004477199488549594864814784000000",
+    "metric": {
+      "B_up": [
+        [
+          "1402217/12000000",
+          "0"
+        ],
+        [
+          "0",
+          "200739/4000000"
+        ]
+      ],
+      "beta": "200739/4000000",
+      "s": "1/5",
+      "s_squared": "1/25",
+      "beta_minus_s_squared": "40739/4000000",
+      "epsilon_R_2_weighted_formula": "2*epsilon_R_infinity/s"
+    }
+  },
+  "rejected_apparent_baseline": {
+    "path": "artifacts/routeb_agent_global_coverage_20260906T011623Z/receipt.json",
+    "sha256": "EF68B59EF44EB90D9EED028164EF843ACBEE99280A2AF1D29807212EC2A302C0",
+    "reported_value": "regularized_global_lower=1/1000000",
+    "status": "blocked_global_true_dh_coverage",
+    "rejection_reasons": [
+      "no exact-Fourier source_key",
+      "no matching cell state_key",
+      "no matching weighted metric key",
+      "no typed baseline_budget >= L_base*A_up theorem",
+      "global residual absorption remains open"
+    ],
+    "consumable_as_L_base": false
+  },
+  "required_baseline_contract": {
+    "A_up": "a_B^T*B_up(q)*a_B",
+    "premises": [
+      "B_up(q) PSD under the exact source/state/metric/orientation binding",
+      "baseline_budget(q,a_B) >= L_base*A_up(q,a_B) for all a_B",
+      "L_base exact rational and L_base >= 0",
+      "typed physical identity for baseline_budget"
+    ],
+    "strict_margin": "m_f=L_base-(1+1/theta)*(rho_r+epsilon_R)^2 > 0",
+    "baseline_reserve": "m_r=L_base-(1+1/theta)*rho_r^2"
+  },
+  "required_relative_bias_contract": {
+    "physical_identity": "r_B=R_rel*a_B+b_B",
+    "premises": [
+      "||R_rel*a_B||_2^2 <= rho_relative^2*A_up",
+      "||b_B||_2^2 <= beta_bias*A_up",
+      "beta_bias >= 0",
+      "tau > 0 exact",
+      "(1+tau)*rho_relative^2+(1+1/tau)*beta_bias <= rho_bias^2 exact root witness",
+      "L_base>(1+1/theta)*(rho_bias+epsilon_R)^2"
+    ]
+  },
+  "required_absolute_bias_contract": {
+    "premises": [
+      "r_B=R_rel*a_B+b_B under the same key",
+      "||b_B||_2^2 <= beta_abs",
+      "m_add>(1+1/tau)*beta_abs",
+      "m_add is exact, positive, and in the same physical storage/output metric"
+    ]
+  },
+  "missing_fields": [
+    "same-key baseline_budget",
+    "same-key exact L_base or direct positive m_r/m_f",
+    "same-key physical residual identity",
+    "same-key R_rel and b_B",
+    "same-key beta_bias or beta_abs",
+    "same-key positive additive reserve m_add"
+  ],
+  "evidence": [
+    {
+      "path": "agent_review_inbox/receipt-T-P4-033-O0-constructive-exact-fourier-cell-K-Br-Cf-20260907.json",
+      "sha256": "E570CFB418065503D9743B4496FC0902E45BF82DA4C265FD067BEA9952E821AD",
+      "scope": "same-key exact port tuple only"
+    },
+    {
+      "path": "agent_review_inbox/receipt-T-P4-033-O0-exact-fourier-cell-weighted-port-adapter-output-2norm-20260907.json",
+      "scope": "same-key conditional factor-2 weighted output adapter; no baseline or physical residual identity"
+    },
+    {
+      "path": "artifacts/routeb_agent_schur_fullq_next_20260906T091446Z/NUMBERS.json",
+      "sha256": "59C7E9BECA460DAB46B675F056BB3BAC147001A3FF1888EBC2CE0110611F7F3E",
+      "scope": "same exact Fourier cell; one-cell port/resolvent enclosure"
+    }
+  ],
+  "next_action": "Generate one canonical same-key baseline-coercivity or relative/absolute bias receipt; do not consume the 1/1000000 global lower as L_base."
+}
