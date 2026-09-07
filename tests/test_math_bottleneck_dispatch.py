@@ -4,6 +4,7 @@ from percolation_workflow.math_frontier import (
     explain_math_bottleneck,
     explain_math_frontier,
     math_bottleneck,
+    rank_formalizable_frontier,
 )
 from percolation_workflow.model import EvidenceStage, NodeStatus, WorkflowState
 from percolation_workflow.scheduler import (
@@ -62,6 +63,37 @@ class MathBottleneckDispatchTests(unittest.TestCase):
         })
         self.assertEqual(decision.label, "coefficient_identity")
         self.assertEqual(decision.priority, 1)
+
+    def test_formalizable_dispatch_prefers_coefficient_identity_over_unrelated_leaves(self):
+        state = WorkflowState()
+        evaluator = state.add_node(
+            "evaluator", "O2", metadata={
+                "math_lane": "source_semantics", "math_bottleneck": "evaluator_enclosure",
+            },
+        )
+        identity = state.add_node(
+            "identity", "O1", metadata={
+                "math_lane": "lean_adapter", "math_bottleneck": "coefficient_identity",
+            },
+        )
+        unrelated = state.add_node("unrelated adapter", "other")
+
+        self.assertEqual(rank_formalizable_frontier(state), [identity, evaluator, unrelated])
+
+    def test_formalizable_dispatch_excludes_lean_typed_coverage_rows(self):
+        state = WorkflowState()
+        coverage = state.add_node(
+            "legacy coverage row", "global flowpipe coverage",
+            metadata={"verification_domain": "lean"},
+        )
+        identity = state.add_node(
+            "identity", "O1", metadata={
+                "math_lane": "lean_adapter", "math_bottleneck": "coefficient_identity",
+            },
+        )
+
+        self.assertEqual(rank_formalizable_frontier(state), [identity])
+        self.assertNotIn(coverage, rank_formalizable_frontier(state))
 
     def test_scheduler_uses_stable_math_order_but_never_relaxes_obstruction(self):
         state = WorkflowState()

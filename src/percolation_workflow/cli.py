@@ -22,6 +22,8 @@ from .repair_classification import dry_run_repair_integration
 from .merlean_plan_projection import export_views as export_merlean_plan_views
 from .anthropic_intake import write_snapshot
 from .advisory_reuse import AdvisoryReuseError, project_advisory_reuse
+from .math_frontier import (explain_math_frontier, rank_formalizable_frontier,
+                             rank_math_obstruction_frontier)
 
 
 def main() -> int | None:
@@ -36,7 +38,7 @@ def main() -> int | None:
         "reclaim-agent", "record-agent", "compile-agent", "retry-compile-agent",
         "collect-compile", "check-sketch", "next-actions", "ingest-agent-log",
         "persist-callback", "run-codex-agent", "run-codex-agents", "host-cycle",
-        "export-plan-store", "scan-flt", "project-flt-reuse",
+        "export-plan-store", "scan-flt", "project-flt-reuse", "math-frontier",
     ])
     parser.add_argument("state", nargs="?", default=".workflow/state.json")
     parser.add_argument('--project')
@@ -172,6 +174,23 @@ def main() -> int | None:
         return
     if args.command == 'next-actions':
         print(json.dumps(next_actions(store), ensure_ascii=False, indent=2))
+        return
+    if args.command == 'math-frontier':
+        state = store.load()
+        rows = explain_math_frontier(state)
+        if args.math_lane_policy == 'formalizable':
+            ranked = rank_formalizable_frontier(state)
+        else:
+            ranked = rank_math_obstruction_frontier(state)
+        print(json.dumps({
+            'schema_version': 1,
+            'policy': args.math_lane_policy,
+            'ranked_node_ids': ranked,
+            'frontier': rows,
+            'formal_admission': 'unchanged',
+            'registry_promoted': False,
+            'formal_certificate_allowed': False,
+        }, ensure_ascii=False, indent=2))
         return
     if args.command == 'host-cycle':
         comparator_command = None

@@ -359,12 +359,28 @@ def rank_formalizable_frontier(state: WorkflowState,
     available work items.
     Ordinary scheduler callers are unchanged.
     """
-    ranked = rank_math_frontier(state, jobs)
-    return [node_id for node_id in ranked
-            if math_lane(state.nodes[node_id]) not in {
-                MathLane.NUMERICAL_BLOCKER,
-                MathLane.STRUCTURAL_OBSTRUCTION,
-            }]
+    candidates = [node for node in state.frontier()
+                  if obstruction_rank(node) == 0
+                  and (jobs is None or node.id in jobs)
+                  and math_lane(node) not in {
+                      MathLane.NUMERICAL_BLOCKER,
+                      MathLane.STRUCTURAL_OBSTRUCTION,
+                  }]
+    # Legacy rows can be typed as Lean while their statement is actually a
+    # coverage/flowpipe obligation.  The bottleneck classification is the
+    # stronger signal for this dispatch view, so such rows must not consume a
+    # formal adapter slot merely because they have a Lean-shaped domain.
+    candidates = [node for node in candidates
+                  if explain_math_bottleneck(node).label not in {
+                      "coverage", "physical_schur_binding",
+                  }]
+    candidates.sort(key=lambda node: (
+        explain_math_bottleneck(node).priority,
+        _LANE_ORDER[math_lane(node)],
+        -state.frontier_closability(node.id),
+        node.id,
+    ))
+    return [node.id for node in candidates]
 
 
 def explain_math_frontier(state: WorkflowState, jobs: Mapping[str, Any] | None = None) -> list[dict[str, Any]]:
