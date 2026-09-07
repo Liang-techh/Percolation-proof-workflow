@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 398,
+  "revision": 399,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -7248,7 +7248,8 @@
         "94d269520f0c48c19186ee1b312ba3a3",
         "6e0bfc263cfa45ab9411fcfd0c7cc1f8",
         "d039d2c007b348349f022a77a369392e",
-        "d318754f0d30438ea53a10a43987f57a"
+        "d318754f0d30438ea53a10a43987f57a",
+        "cbffb1ed7cb74283a216738af2cfdb06"
       ],
       "verified_artifact": null,
       "attempts": [
@@ -11411,6 +11412,104 @@
           "concrete_directed_endpoint_evaluator",
           "turning_point_cell_partition_coverage",
           "DH_source_and_rounding_binding"
+        ]
+      }
+    },
+    "cbffb1ed7cb74283a216738af2cfdb06": {
+      "id": "cbffb1ed7cb74283a216738af2cfdb06",
+      "name": "P3.m33_exact_fourier_source_leaf",
+      "statement": "The canonical exactized DH source entry M33 equals an explicit 11-mode Fourier expression for every real joint configuration.",
+      "parent_id": "8f7df5df39a041d7a972078830dbcee7",
+      "status": "open",
+      "proof_sketch": "Parse the canonical source into a Gaussian-rational Laurent ring, compare all coefficients with the witness, and retain the exactization and Float64 gap as separate obligations.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "exact-rational-executable-checker",
+        "statement_status": "exact_checker_leaf_pending_formalization",
+        "evidence_level": "exact_extensional_checker_pass",
+        "claim_status": "concrete_m33_exact_formula_open",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "physical_certificate_allowed": false,
+        "external_artifact": "task_routeb_source_fourier_binding_current",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_routeb_source_fourier_binding_current\\check_m33_source_fourier_binding.py",
+            "sha256": "CD554C9CDEC35F47844B5CB686386A40CE1DA2098C5DAC921D0140435DE5CD5E"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_routeb_source_fourier_binding_current\\m33_fourier_witness.csv",
+            "sha256": "F920391FDADA3F08E7A827880CDA5C387B6FF6F105B2A8E992E0FDB117AEB869"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_routeb_source_fourier_binding_current\\CHECK_RESULT.json",
+            "sha256": "A3542383D8CB1E04F82A109EF0095D8458573F75B64FB28BFC14D7870DDB002B"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_routeb_source_fourier_binding_current\\CHECKER_OUTPUT.txt",
+            "sha256": "4A6D2A9C1B1411E88E995B75553B5B069856EF3627C98AF91F66FB8E066FA417"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_routeb_source_fourier_binding_current\\REPORT.md",
+            "sha256": "2CE97EDBAE7D08E4BB623184B61ACB686DEE5100A04F1429BAD5EB70F1937F83"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_routeb_source_fourier_binding_current\\README.md",
+            "sha256": "200ECF5943E262306BAB8F1790CE2A73BEA5660042494ABC965A6B28DA62DD81"
+          }
+        ],
+        "checker_contract": {
+          "status": "EXACT_M33_SOURCE_TO_FOURIER_EXTENSIONAL_EQUALITY_CHECKED",
+          "entry": "M33",
+          "canonical_source": "routeB_dense_Mq/dhport_lib.jl",
+          "canonical_source_sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936",
+          "exact_semantics": {
+            "decimal_literals": "rational",
+            "pi_over_2": "exact quarter turn",
+            "coefficient_domain": "Gaussian rationals",
+            "default_mass_regularizer": "1/1000000",
+            "support_size": 11,
+            "active_joint_angles": [
+              4,
+              5
+            ],
+            "coefficient_map_equal": true,
+            "all_real_q_extensional_equality": true
+          },
+          "float64_semantics": {
+            "status": "NOT_RUN_JULIA_NOT_ON_PATH",
+            "used_for_exact_pass": false
+          },
+          "reference_cross_check": "routeB_fourier_mass_full_rational.csv M33 plus exact 1e-6 diagonal regularizer agrees",
+          "formal_certificate_allowed": false,
+          "physical_certificate_allowed": false,
+          "dag_leaf": {
+            "admissible_as_exact_executable_checker_leaf": true,
+            "admissible_as_formal_kernel_theorem_leaf": false,
+            "requires_source_sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936"
+          },
+          "minimal_open_gap": "Julia Float64 AST/libm/rounding equivalence to the exactized DH formula is not proved"
+        },
+        "exactization": {
+          "decimal_literals": "rational",
+          "pi_over_2": "exact quarter turn",
+          "coefficient_domain": "Gaussian rationals",
+          "entry": "M33",
+          "active_joint_angles": [
+            4,
+            5
+          ],
+          "support_size": 11
+        },
+        "unresolved": [
+          "Lean_kernel_formalization_of_the_11_mode_identity",
+          "Julia_Float64_AST_and_libm_rounding_binding",
+          "all_entry_mass_source_binding",
+          "P3_partition_coverage_and_inverse_bounds",
+          "coordinator_statement_and_comparator_receipt"
         ]
       }
     }
@@ -32972,6 +33071,59 @@
       "admission_effect": "none",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T08:23:09.453823+00:00",
+      "kind": "node_added",
+      "node_id": "cbffb1ed7cb74283a216738af2cfdb06",
+      "parent_id": "8f7df5df39a041d7a972078830dbcee7",
+      "name": "P3.m33_exact_fourier_source_leaf"
+    },
+    {
+      "at": "2026-09-07T08:23:09.453839+00:00",
+      "kind": "routeb_m33_exact_fourier_leaf_recorded",
+      "node_id": "cbffb1ed7cb74283a216738af2cfdb06",
+      "parent_id": "8f7df5df39a041d7a972078830dbcee7",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_routeb_source_fourier_binding_current\\check_m33_source_fourier_binding.py",
+          "sha256": "CD554C9CDEC35F47844B5CB686386A40CE1DA2098C5DAC921D0140435DE5CD5E"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_routeb_source_fourier_binding_current\\m33_fourier_witness.csv",
+          "sha256": "F920391FDADA3F08E7A827880CDA5C387B6FF6F105B2A8E992E0FDB117AEB869"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_routeb_source_fourier_binding_current\\CHECK_RESULT.json",
+          "sha256": "A3542383D8CB1E04F82A109EF0095D8458573F75B64FB28BFC14D7870DDB002B"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_routeb_source_fourier_binding_current\\CHECKER_OUTPUT.txt",
+          "sha256": "4A6D2A9C1B1411E88E995B75553B5B069856EF3627C98AF91F66FB8E066FA417"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_routeb_source_fourier_binding_current\\REPORT.md",
+          "sha256": "2CE97EDBAE7D08E4BB623184B61ACB686DEE5100A04F1429BAD5EB70F1937F83"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_routeb_source_fourier_binding_current\\README.md",
+          "sha256": "200ECF5943E262306BAB8F1790CE2A73BEA5660042494ABC965A6B28DA62DD81"
+        }
+      ],
+      "exactization": {
+        "decimal_literals": "rational",
+        "pi_over_2": "exact quarter turn",
+        "coefficient_domain": "Gaussian rationals",
+        "entry": "M33",
+        "active_joint_angles": [
+          4,
+          5
+        ],
+        "support_size": 11
+      },
+      "status": "exact_checker_leaf_pending_formalization",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -36628,5 +36780,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "6962f0fee237c8ad8eb703c6701b0f2612f4cd3cdbcbefb1173ec9db3848746a"
+  "state_checksum": "0e52c5062147b5e1622cbf52b6dca5b635089b5e68831ed15934649b159b5094"
 }

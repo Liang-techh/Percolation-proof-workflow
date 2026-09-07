@@ -1024,6 +1024,24 @@ polynomial remains a separate frontier.
   rounding, skipping turning-point coverage, whole-project reruns, or closing
   P3/Route-B from a single trigonometric cell.
 
+### T-P3-015 — exact M33 Fourier leaf lift
+
+- status: `open` (exact checker leaf recorded at Route-B revision 399)
+- owner: `巨阳仙尊` for the smallest pinned Lean statement/axiom probe;
+  `大爱仙尊` may separately inspect whether the exact M33 identity can feed a
+  concrete P3 mass-entry bound;
+- scope: inspect `P3.m33_exact_fourier_source_leaf` and the referenced
+  `task_routeb_source_fourier_binding_current` artifact. Preserve the
+  canonical `dhport_lib.jl` hash, rationalization convention, 11-mode witness,
+  and active angles `{q4,q5}`. Determine the smallest kernel-friendly theorem
+  or exact obstruction for lifting the coefficient identity;
+- deliver: a bounded Lean/checker receipt or a concrete obstruction that keeps
+  exact formula equality, Float64/libm rounding, all-entry binding, and P3
+  coverage as separate obligations;
+- forbidden: using grid samples, treating the exactized formula as Float64
+  semantic equivalence, claiming mass coercivity/inverse bounds, or registry
+  promotion from the checker leaf alone.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it

@@ -436,6 +436,18 @@
   canonical `iv_sin`/`iv_cos` cell 的 source/rounding seam，重点攻具体数学
   接口，不做重复的全仓审计。
 
+### 2026-09-07 — 梁智炜：接入 concrete M33 exact Fourier leaf
+
+- 新增 `P3.m33_exact_fourier_source_leaf` / `T-P3-015`。当前 canonical
+  `dhport_lib.jl` 的 `M33` 在 exact rational、`pi/2` exact quarter-turn
+  语义下，已通过 11-mode Gaussian-rational coefficient equality checker，
+  对所有实数 `q` 给出 extensional Fourier 公式。
+- 这是一个具体 source-level 数学叶，支持后续 P3 mass-entry 推导；但
+  Float64 AST/libm/rounding、全部质量矩阵条目、coercivity/inverse、partition
+  coverage 仍未证明，因此不进入 registry，也不改变 formal gate。
+- `T-P3-015` 由巨阳仙尊做最小 Lean lift/obstruction probe，大爱仙尊可
+  独立研究该恒等式对具体质量下界的消费方式。
+
 ### 2026-09-07 — 梁智炜：P8 interval-local endpoint seam
 
 - 新增 `T-P8-011` / `P8.interval_local_endpoint_adapter`。sidecar 现在把
