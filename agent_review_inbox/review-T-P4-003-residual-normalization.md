@@ -2,126 +2,120 @@
 kind: review_result
 task_id: T-P4-003
 source_agent: Codex
-created_at: 2026-09-06T22:40:00-06:00
+created_at: 2026-09-06T19:45:00-06:00
 integration_status: pending
 ---
 
-# T-P4-003 review: force / PMI-side residual normalization
+# T-P4-003 review: force / acceleration residual typed normalization only
 
-## Scope and inspected evidence
+## Scope and evidence
 
-This is a read-only audit. I did not modify external Route-B source, registry
-state, or run a full regression.
+This is a read-only audit. It only checks typed normalization for the force residual
+`l = I f - M0 a` and the PMI-side residual `d`. It does not close true-DH binding,
+coverage, P4 admission, or any global residual claim.
 
 Inspected:
 
-- `agent_review_inbox/task_queue.md`
 - `docs/routeb-c2-d-normalization-audit.md`
-- `agent_review_inbox/review-T-P4-002-one-channel.md`
-- `agent_review_inbox/review-T-DAG-002-child-dag.md`
-- `B45SchurResidualRepair.lean`
-- `artifacts/routeb_agent_p4_source_bridge_next_20260906T092639Z/SourceToP4Bridge.lean`
-- `artifacts/routeb_agent_p4_next_semantic_repair_20260906T100414Z/run-pinned/P4InterfacePMI.lean`
+- `examples/routeb_force_accel_normalization_lean/README.md`
+- `examples/routeb_force_accel_normalization_lean/RouteBForceAccelNormalization.lean`
+- `examples/routeb_force_accel_normalization_lean/REPORT.md`
+- `examples/routeb_force_accel_normalization_lean/verify.sh`
+- focused compile output under `examples/routeb_force_accel_normalization_lean/output/run-BbbmCQRa`
 
-The inspection stayed within the requested boundary:
+The existing documentation already separates the relevant units:
 
-- force residual `l = I f - M0 a`
-- PMI-side residual `d`
-
-It did not attempt to close true-DH binding, coverage, or the P4 parent.
-
-## Typed normalization conclusion
-
-The available Lean sidecar already separates the two roles that matter here:
-
-- `SourceToP4Bridge.source_force_expansion` and
-  `SourceToP4Bridge.source_descriptor_residual_zero` keep the source-side
-  force residual explicit.
-- `RouteBAgentP4InterfacePMI.interfaceEquality_is_dRow` identifies the
-  PMI-side interface condition as a `dRowEquality` premise.
-- `RouteBAgentP4InterfacePMI.fullStatePMI_eq_schurResidual_on_interface`
-  gives the algebraic bridge from the full block to the Schur residual only
-  after that interface premise is admitted.
-
-That is enough to justify a narrow typed normalization claim, but only as a
-conditional adapter. It does not justify reusing `l` as `d`, and it does not
-turn the source force residual into a PMI-side acceleration residual.
+- `I_B f_B` is a force-side generalized-force expression;
+- `M0_BB a_B` is a reference mass times acceleration;
+- their difference `l_F = I_B f_B - M0_BB a_B` is force residual, not acceleration residual;
+- the PMI-side scalar `d` remains an abstract D-row/Schur parameter and is not
+  silently identified with `l_F`.
 
 ## Theorem signature
 
-Smallest useful child theorem shape:
+The smallest reusable Lean shape for this audit is the conditional exact-real adapter
+in `RouteBForceAccelNormalization.lean`:
 
 ```text
-theorem source_force_to_pmi_normalization
-    (sourceEll sourceD sourceP : ℝ)
-    (x a : ℝ)
-    (h_force : l = I * f - M0 * a)
-    (h_interface : RouteBAgentP4InterfacePMI.interfaceEquality sourceEll sourceD x a)
-    (hd : 0 < sourceD) :
-    RouteBAgentP4InterfacePMI.fullStatePMI sourceP sourceEll sourceD x a =
-      RouteBAgentP4InterfacePMI.schurResidual sourceP sourceEll sourceD x
+acceleration_budget_le_of_force_power_budget :
+  (M : Mat n) (eA eF : Fin ι → Vec n) (D κ B : ℝ) →
+  0 < D →
+  0 < κ →
+  (∀ t, eF t = matVec M (eA t)) →
+  OperatorLowerBound M κ →
+  forcePower D eF ≤ B →
+  accelerationBudget eA ≤ 2 * D * B / κ
 ```
 
-The exact names will depend on the eventual sidecar, but the theorem must keep
-the source-side force residual and the PMI-side `d` as distinct typed objects.
-It should only transport through the explicit interface premise, not through an
-implicit semantic identification.
+For the normalization sanity instance, the file also instantiates the exact rational
+block:
 
-## Dependency chain
+```text
+exactBlockMass_acceleration_budget_conversion :
+  (eA eF : Fin ι → Vec 2) (D B : ℝ) →
+  0 < D →
+  (∀ t, eF t = matVec exactBlockMass (eA t)) →
+  forcePower D eF ≤ B →
+  accelerationBudget eA ≤ 200 * D * B
+```
 
-The minimal dependency chain is:
+The negative boundary lemma
+`no_force_only_acceleration_bound_without_lower_bound` is also relevant because it
+records that a force-only budget does not by itself produce an acceleration-side
+conclusion.
 
-1. `B45SchurResidualRepair.Binding` for the source/descriptor residual binding
-   discipline.
-2. `SourceToP4Bridge.source_force_expansion` for the exact force-side
-   expansion.
-3. `SourceToP4Bridge.source_descriptor_residual_zero` for the residual-zero
-   transport pattern.
-4. `RouteBAgentP4InterfacePMI.interfaceEquality_is_dRow` for the typed
-   interpretation of the PMI-side row condition.
-5. `RouteBAgentP4InterfacePMI.fullStatePMI_eq_schurResidual_on_interface`
-   for the Schur reduction on an admitted interface.
+## Dependencies
 
-This is a typed-adapter dependency chain, not a physical certificate chain.
+Direct mathematical dependencies in the sidecar are minimal:
+
+- `Mathlib` only, with the exact-real finite-dimensional vector and matrix definitions
+  internal to the file.
+- An explicit factorization premise `eF = M eA`.
+- A positive operator lower bound `OperatorLowerBound M κ`.
+- A positive scalar budget parameter `D`.
+
+Documentary dependencies for the audit boundary are:
+
+- `docs/routeb-c2-d-normalization-audit.md`, which states that `l_F` is force-side and
+  must not be renamed as acceleration-side without an explicit bridge.
+- `examples/routeb_force_accel_normalization_lean/README.md`, which states that the
+  sidecar is conditional exact-real math only and does not claim a DH, Float64, D-row,
+  coverage, or registry result.
 
 ## Evidence boundary
 
-What this audit can support:
+What the current evidence supports:
 
-- the source force residual is a generalized-force quantity, not an
-  acceleration residual;
-- the PMI-side `d` is a separate scalar interface parameter;
-- a conditional algebraic bridge is available once the interface premise is
-  admitted;
-- the bridge can be used as a focused Lean sidecar without full regression.
+- a typed conversion from force residual power to acceleration budget under an explicit
+  linear factorization and lower operator bound;
+- a small exact rational sanity instance for `diag(1/5, 1/10)`;
+- a boundary lemma showing that force-only information is insufficient without a lower
+  bound.
 
-What this audit does not support:
+What it does not support:
 
-- true-DH closure;
-- cell coverage;
-- any claim that the source force residual and PMI-side `d` are the same
-  object;
-- any claim that the P4 parent is closed.
+- identifying deployed `l_F = I_B f_B - M0_BB a_B` with an actual acceleration residual;
+- identifying the PMI-side scalar `d` with `l_F` or with any acceleration residual;
+- claiming true-DH binding, cell coverage, or P4/M4 closure;
+- claiming that the sidecar closes the physical Route-B admission obligation.
+
+Focused compile evidence:
+
+- `examples/routeb_force_accel_normalization_lean/verify.sh` completed successfully.
+- compiled object hash:
+  `15ae2631b4c7aa012440701d58ba0234492f648061bea62f73ecc11f3f5bdd57`
+- compile log hash:
+  `d6e88c20b6d369239ef7d3d1d637e2fc3b26aa19f0ad6fbd3888f3206fe609a2`
+- axiom reports in the compile log: exactly 3, each only
+  `propext`, `Classical.choice`, `Quot.sound`
 
 ## Blocker
 
-The blocker is semantic, not syntactic:
+The remaining blocker is not the typed normalization itself. The blocker is the missing
+admitted bridge from the deployed Route-B force residual `l_F = I_B f_B - M0_BB a_B`
+to the PMI-side `d` contract, together with the missing explicit source/coverage
+receipt that would let that bridge be interpreted as a physical true-DH statement.
 
-- no admitted theorem in the inspected material identifies `l = I f - M0 a`
-  with the PMI-side residual `d`;
-- the source bridge still needs an explicit normalization lemma that carries
-  the force-side quantity into the PMI interface without collapsing the typed
-  distinction;
-- without that lemma, the sidecar stays conditional and cannot be promoted to a
-  true-DH or coverage result.
-
-## Focused sidecar status
-
-The existing artifacts already provide the right shape for a focused sidecar.
-I did not run a full regression or attempt to close the parent, because that
-would exceed the requested scope.
-
-The safest next Lean child is a one-step normalization lemma that rewrites the
-source-side force residual into the PMI interface hypothesis and then delegates
-to `fullStatePMI_eq_schurResidual_on_interface`.
+Until that bridge exists, this should remain a conditional exact-real normalization
+adapter only. It is reusable downstream, but it is not a closure proof.
 
