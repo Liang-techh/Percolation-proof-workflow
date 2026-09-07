@@ -1,0 +1,247 @@
+{
+  "schema": "routeb.o1.body5.source_trace_decomposition.sidecar.v1",
+  "date": "2026-09-07",
+  "status": "OPEN_UNPROVEN_BODY5_SOURCE_TRACE_DECOMPOSITION",
+  "lean_status": "UNCOMPILED",
+  "human_body": 5,
+  "zero_based_body": 4,
+  "coordinate_convention": "q3 means q (3), CSV nu4; frequencies are [0,u,v,w,0,0]",
+  "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+  "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+  "key_policy": "Inherited context identifiers only; body equality targets quantify over all real q and do not establish a cell, baseline or O0 theorem.",
+  "immutable_policy": {
+    "kind": "WRITE_ONCE_CONTENT_HASH_SNAPSHOT",
+    "filename_suffix": "First 12 hexadecimal characters of SHA-256 of the file bytes",
+    "review_and_receipt_windows_read_only": true,
+    "future_revision": "Create a new hash-named review and receipt; never overwrite these snapshots.",
+    "limitation": "Read-only attributes are reversible and not WORM storage. SHA-256 detects changed content; it is not proof evidence. No self-referential receipt hash is embedded."
+  },
+  "sidecar": {
+    "path": "examples/routeb_b45_source_comparator_lean/RouteBO1Body5SourceTraceTargets.lean",
+    "sha256": "aa314706ef2a42dca2e73b8b5ded22dc2f598e395e775e860f993da34739d9a9",
+    "status": "TARGETS_AND_CONDITIONAL_HANDOFF_CANDIDATES_ONLY_UNCOMPILED",
+    "namespace": "RouteBO1Body5SourceTraceTargets",
+    "conditional_candidates": [
+      "body5_source_handoff_candidate",
+      "body5_trace_handoff_candidate"
+    ],
+    "candidate_policy": "Explicit equality premises are required. Neither candidate supplies any source, geometry, pair, or fold proof. Neither was elaborated."
+  },
+  "review": {
+    "path": "agent_review_inbox/review-T-P4-033-O1-body-5-source-trace-decomposition-codex-20260907-a977fb4941f1.md",
+    "sha256": "a977fb4941f1d99d5a0d0abaee43048bc011ddaa6030323170c02482e6a259d8"
+  },
+  "input_bindings": [
+    {
+      "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean",
+      "sha256": "6b50ae63c9770e3481f79511141c8cc55d592b5c550f686654c5e756584399ef",
+      "role": "Frozen body_5_piecewise and existing conditional h_body_5 composition; untouched"
+    },
+    {
+      "path": "examples/routeb_b45_source_comparator_lean/BodyTraceEvaluator.lean",
+      "sha256": "b9845d37b5dcd16e1f9e142cb2e4d0e5571452993e843c85ac8cd643f6ba5dea",
+      "role": "Literal source-tagged finite rows and evaluator; untouched"
+    },
+    {
+      "path": "artifacts/task_routeb_body_trace_sink_current/outputs/routeB_fourier_mass_body_trace.csv",
+      "sha256": "ae1f9cd7978c4cf23626b5c097eaaf4a2c70de9c8b86a31a61db12997cf4c3b9",
+      "role": "Frozen 57-row human body-5 slice in the existing full trace"
+    },
+    {
+      "path": "examples/routeb_b45_source_comparator_lean/O1_BODY_5_TARGET_CHECK.json",
+      "sha256": "e761b8950929562f350f768a2c1a9b2dcd62a5ce62fb9921626172332c6ea40e",
+      "role": "Existing target evidence; not rewritten or promoted"
+    },
+    {
+      "path": "examples/routeb_b45_source_comparator_lean/O1_BODY_5_SOURCE_BRIDGE_RECEIPT.json",
+      "sha256": "a13f70d9e71108283c574a8cc7181311e182f5263482b91a44f75be59e61e031",
+      "role": "Existing OPEN receipt; entry_2_3 prose error is corrected only in this sidecar"
+    },
+    {
+      "path": "agent_review_inbox/review-T-P4-033-O0-P-NE-body5-geometry-source-20260907.md",
+      "sha256": "8f9e8e10caaa700d8a68aa1634e69b730b6b1be92e6e7f390fc8c944b30c325f",
+      "role": "Existing geometry derivation; section 4 has an entry_23/32 transcription error"
+    },
+    {
+      "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyExactSource.lean",
+      "sha256": "c09b84677adef121488b3ceb53e886d0ef0b028c7979d91f8a7f9ba0fbfcd553",
+      "role": "Concrete exact-real sourceBodyMass and existing real Fourier atom bridge"
+    },
+    {
+      "path": "examples/routeb_real_dh_step_lean/RealDHStep.lean",
+      "sha256": "9c04da5b9627ee749c53009733006934f95b2d33265e46ca59d0725aa453786a",
+      "role": "Exact DH step matrix and joint phase offsets"
+    },
+    {
+      "path": "examples/routeb_b45_fourier_normal_form/FourierNormalForm.lean",
+      "sha256": "56ec2f2d29a22942bcb83a3ba98197ae1ce4d607340072b81c013b8d358d3218",
+      "role": "Exact alpha/a/d constants"
+    },
+    {
+      "path": "examples/routeb_frame_slot_accessor_lean/FrameSlotAccessor.lean",
+      "sha256": "f497bd1f45fae4dd385f4d0f46df79252c92e5cd027b29d5dc55011f91525c31",
+      "role": "Existing prefix-frame accessors"
+    },
+    {
+      "path": "examples/routeb_source_contract_adapter_lean/SourceContractAdapter.lean",
+      "sha256": "58c0b15b6fceb1064f773acdb9f684dc55a021ac69a030c13e1c8b46f7b9a8dc",
+      "role": "Existing source-to-frame origin and parent-axis function equalities"
+    },
+    {
+      "path": "examples/routeb_body_semantic_core_lean/BodySemanticCore.lean",
+      "sha256": "fe15f6ca9993f55fc56e6d2c9cca5fa8c7f6e9530b9b900a6f111ed96715149c",
+      "role": "COM, active/inactive Jacobian columns, linkMass and bodyMass definitions"
+    }
+  ],
+  "minimal_obligations": [
+    {
+      "id": "G1",
+      "target": "Body5GeometryTarget",
+      "content": "Actual source origins 0..5 and parent axes 0..4 equal the cylindrical-basis formulas; o5=o4, without needing slot-5 orientation or source axis 5.",
+      "status": "OPEN_UNPROVEN"
+    },
+    {
+      "id": "G2",
+      "target": "Body5GeometryToColumnsTarget",
+      "content": "Geometry implies actual Jv/Jw columns; COM, cross products, v3=v4=0 and inactive joint 5 must be proved.",
+      "status": "OPEN_UNPROVEN"
+    },
+    {
+      "id": "G3",
+      "target": "Body5ColumnsToGramTarget",
+      "content": "Columns plus Body5LiftIsometryTarget imply Body5SourceToGramTarget with mass 3/10 and isotropic inertia 1/30. Isometry is also open.",
+      "status": "OPEN_UNPROVEN"
+    },
+    {
+      "id": "G4",
+      "target": "Body5GramToPiecewiseTarget",
+      "content": "Finite entry cases, rational normalization and scalar trig identities give the imported piecewise definition.",
+      "status": "OPEN_UNPROVEN"
+    },
+    {
+      "id": "F1",
+      "target": "Body5ExactPartitionTarget",
+      "content": "57=7+2*25, key Nodup, guards, nonzero denominators, real constants and exact whole-record List.Perm into constants and pairs.",
+      "status": "OPEN_UNPROVEN"
+    },
+    {
+      "id": "F2",
+      "target": "Body5FullToBlockFoldTarget",
+      "content": "For every seed, isolate bodyTraceRows5 from the full finite fold by body guards and append; do not expand other-body trigonometry.",
+      "status": "OPEN_UNPROVEN"
+    },
+    {
+      "id": "F3",
+      "target": "Body5RegroupTarget",
+      "content": "Foldl equals seed plus sum of contributions; exact permutation gives seven constants and twenty-five paired contributions.",
+      "status": "OPEN_UNPROVEN"
+    },
+    {
+      "id": "F4",
+      "target": "Body5PairedToPiecewiseTarget",
+      "content": "Body5PhaseTarget, Body5ConjugateAtomTarget, row/col guards and exact coefficients reduce paired value to the imported piecewise definition.",
+      "status": "OPEN_UNPROVEN"
+    }
+  ],
+  "q3_pairs": {
+    "target": "Body5Q3ExactPairsTarget",
+    "geometry_scalar_target": "Body5Q3ProductToSumTarget",
+    "status": "OPEN_UNPROVEN",
+    "pairs": 8,
+    "rows": 16,
+    "remaining_non_q3_pairs": 17,
+    "imaginary_coefficients": "0 for every q3 row",
+    "families": [
+      {
+        "entries": [[0, 4], [4, 0]],
+        "representative": [1, 1, -1],
+        "partner": [-1, -1, 1],
+        "each_atom_real_coefficient": "1/120",
+        "pair_value": "cos(phi-q3)/60"
+      },
+      {
+        "entries": [[0, 4], [4, 0]],
+        "representative": [1, 1, 1],
+        "partner": [-1, -1, -1],
+        "each_atom_real_coefficient": "-1/120",
+        "pair_value": "-cos(phi+q3)/60"
+      },
+      {
+        "entries": [[1, 4], [4, 1], [2, 4], [4, 2]],
+        "representative": [0, 0, 1],
+        "partner": [0, 0, -1],
+        "each_atom_real_coefficient": "1/60",
+        "pair_value": "cos(q3)/30"
+      }
+    ],
+    "mixed_entry_geometry": "sin(phi)*sin(q3)/30 = (cos(phi-q3)-cos(phi+q3))/60",
+    "entry_23_entry_32": "0; old prose is wrong, imported adapter and CSV are unchanged"
+  },
+  "diagnostic_checks": {
+    "status": "PASS_EXACT_ALGEBRA_DIAGNOSTIC_ONLY",
+    "execution": "One inline Python diagnostic; no existing checker outputs were regenerated",
+    "runtime": "Python 3.13 / SymPy 1.14.0",
+    "arithmetic": "Exact integers and rationals with independent Laurent indeterminates; no Python complex or floating-point sampling",
+    "csv_rows": 57,
+    "unique_entry_frequency_keys": 57,
+    "constant_rows": 7,
+    "pairs": 25,
+    "q3_pairs": 8,
+    "literal_lean_csv_tag_order_match": true,
+    "exact_label_multiset_partition": true,
+    "dh_origins_checked": 6,
+    "parent_axes_checked": 5,
+    "active_Jv_columns_checked": 5,
+    "inactive_joint_5": "Reviewed against source definition guard; not an executed Lean lemma",
+    "adapter_branches_parsed": 19,
+    "gram_piecewise_entries_checked": 36,
+    "fourier_piecewise_entries_checked": 36,
+    "entry_23_entry_32_zero": true,
+    "limitations": [
+      "DH parameters and proposed geometry were manually transcribed from inspected definitions into the diagnostic.",
+      "The diagnostic does not parse or elaborate the new Lean sidecar.",
+      "Formal Laurent polynomial identities do not supply Lean source, pair or fold witnesses.",
+      "The existing target checker converts Fraction to Python complex; its historical status is not upgraded by this separate diagnostic."
+    ]
+  },
+  "compile_probe": {
+    "status": "NOT_ATTEMPTED_BY_REQUEST",
+    "lean_or_lake_run": false,
+    "local_compilation_attempted": false,
+    "remote_compilation_requested": false,
+    "path_lookup": "Only a non-executing Get-Command lookup found .elan/bin/lean.exe and lake.exe entries",
+    "usable_toolchain": "UNESTABLISHED",
+    "mathlib_environment": "UNVERIFIED"
+  },
+  "fail_closed": {
+    "source_expansion": "OPEN_UNPROVEN",
+    "q3_pair_target": "OPEN_UNPROVEN",
+    "finite_fold": "OPEN_UNPROVEN",
+    "h_body_5": "OPEN_UNPROVEN",
+    "lean_compiled": false,
+    "axioms_checked": false,
+    "source_expansion_proven": false,
+    "trace_fold_proven": false,
+    "h_body_5_proven": false,
+    "verified": false,
+    "registry_eligible": false,
+    "registry_promoted": false,
+    "comparator_accepted": false,
+    "formal_certificate_allowed": false,
+    "O0_P_NE_closed": false,
+    "Float64_or_coverage_claim": false
+  },
+  "scope": {
+    "main_adapter_modified": false,
+    "body_3_or_4_files_modified_by_this_task": false,
+    "generated_evaluator_or_csv_modified": false,
+    "state_or_registry_modified": false,
+    "changes": "One body-5 Lean target sidecar and two immutable evidence snapshots only"
+  },
+  "next_proof_order": [
+    "Prove the small q3 scalar identity and exact representative/permutation targets in a separately authorized pinned environment.",
+    "Discharge F2/F3/F4 and G4 using finite sums and scalar identities.",
+    "Discharge G1 then G2/G3 from actual source slots; do not substitute the algebra diagnostic for these proofs.",
+    "Only after actual compilation and dependency/axiom audit, re-evaluate both handoffs and the existing h_body_5_of_entry_targets under the same keys. No such work was executed here."
+  ]
+}

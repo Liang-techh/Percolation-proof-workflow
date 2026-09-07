@@ -34,6 +34,13 @@ BODY5_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-body-5-source-bridg
 BODY4_FOLD_TARGET = ROOT / "examples/routeb_b45_source_comparator_lean/RouteBO1Body4TraceFoldTargets.lean"
 BODY4_FOLD_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_4_TRACE_FOLD_TARGETS_RECEIPT.json"
 BODY4_FOLD_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-body-4-tagged-trace-fold-codex-20260907.md"
+BODY4_GRAM_TARGET = ROOT / "examples/routeb_b45_source_comparator_lean/RouteBO1Body4SourceGramTargets.lean"
+BODY4_GRAM_CHECK = ROOT / "scripts/check_routeb_o1_body4_source_gram.py"
+BODY4_GRAM_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_4_SOURCE_GRAM_TARGETS_RECEIPT.json"
+BODY4_GRAM_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-body-4-source-gram-codex-20260907.md"
+BODY5_TRACE_TARGET = ROOT / "examples/routeb_b45_source_comparator_lean/RouteBO1Body5SourceTraceTargets.lean"
+BODY5_TRACE_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_5_SOURCE_TRACE_DECOMPOSITION_RECEIPT_20260907_44fcccf7bd1a.json"
+BODY5_TRACE_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-body-5-source-trace-decomposition-codex-20260907-a977fb4941f1.md"
 O0_BODY3_RECEIPT = ROOT / "agent_review_inbox/receipt-T-P4-033-O0-P-NE-body3-geometry-targets-20260907.json"
 O0_BODY4_RECEIPT = ROOT / "agent_review_inbox/receipt-T-P4-033-O0-P-NE-body4-geometry-targets-20260907.json"
 O0_BODY5_RECEIPT = ROOT / "agent_review_inbox/receipt-T-P4-033-O0-P-NE-body5-geometry-source-20260907.json"
@@ -93,6 +100,8 @@ def main() -> None:
                  BODY4_RECEIPT, BODY4_CHECK, BODY4_REVIEW,
                  BODY5_RECEIPT, BODY5_CHECK, BODY5_REVIEW,
                  BODY4_FOLD_TARGET, BODY4_FOLD_RECEIPT, BODY4_FOLD_REVIEW,
+                 BODY4_GRAM_TARGET, BODY4_GRAM_CHECK, BODY4_GRAM_RECEIPT, BODY4_GRAM_REVIEW,
+                 BODY5_TRACE_TARGET, BODY5_TRACE_RECEIPT, BODY5_TRACE_REVIEW,
                  O0_BODY3_RECEIPT, O0_BODY4_RECEIPT, O0_BODY5_RECEIPT, O0_BODY5_REVIEW,
                  HACC_REVIEW, HACC_REFINEMENT_REVIEW, HACC_CONTRACT, HACC_RECEIPT,
                  KEYED_INTERFACE, KEYED_RECEIPT, KEYED_CHECK,
@@ -106,10 +115,11 @@ def main() -> None:
     adapter_sha256 = digest(ADAPTER)
     for receipt_path in (BODY1_RECEIPT, BODY2_RECEIPT, BODY3_RECEIPT, BODY4_RECEIPT,
                          BODY5_RECEIPT, BODY4_FOLD_RECEIPT, O0_BODY3_RECEIPT,
-                         O0_BODY4_RECEIPT, O0_BODY5_RECEIPT):
+                         O0_BODY4_RECEIPT, O0_BODY5_RECEIPT, BODY4_GRAM_RECEIPT,
+                         BODY5_TRACE_RECEIPT):
         receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
         embedded = list(embedded_adapter_hashes(receipt))
-        if embedded and any(value != adapter_sha256 for value in embedded):
+        if embedded and any(str(value).upper() != adapter_sha256 for value in embedded):
             raise ValueError(
                 f"stale adapter provenance in {receipt_path}: {embedded!r} != {adapter_sha256}"
             )
@@ -175,6 +185,17 @@ def main() -> None:
         "body_4_trace_fold_review_sha256": digest(BODY4_FOLD_REVIEW),
         "body_4_trace_fold_status": "TARGETS_ONLY_UNPROVEN",
         "body_4_trace_fold_proven": False,
+        "body_4_source_gram_target_sha256": digest(BODY4_GRAM_TARGET),
+        "body_4_source_gram_checker_sha256": digest(BODY4_GRAM_CHECK),
+        "body_4_source_gram_receipt_sha256": digest(BODY4_GRAM_RECEIPT),
+        "body_4_source_gram_review_sha256": digest(BODY4_GRAM_REVIEW),
+        "body_4_source_gram_status": "OPEN_BODY4_SOURCE_GRAM_CHILD_TARGETS_UNCOMPILED",
+        "body_4_source_gram_proven": False,
+        "body_5_source_trace_target_sha256": digest(BODY5_TRACE_TARGET),
+        "body_5_source_trace_receipt_sha256": digest(BODY5_TRACE_RECEIPT),
+        "body_5_source_trace_review_sha256": digest(BODY5_TRACE_REVIEW),
+        "body_5_source_trace_status": "OPEN_UNPROVEN_BODY5_SOURCE_TRACE_DECOMPOSITION",
+        "body_5_source_trace_proven": False,
         "o0_body_5_geometry_receipt_sha256": digest(O0_BODY5_RECEIPT),
         "o0_body_5_geometry_review_sha256": digest(O0_BODY5_REVIEW),
         "o0_body_5_geometry_status": "CONDITIONAL_BODY5_GEOMETRY_DERIVATION",
