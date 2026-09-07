@@ -1,0 +1,5 @@
+This sidecar contains an adaptation of P2M/Util.lean from Anthropic's
+Fermat's Last Theorem in Lean 4 repository, commit
+aa2d8b34692b16c70f699536de0d8e75b9a3e9ef. The source repository is released
+under the Apache License, Version 2.0. See the upstream NOTICE and
+ATTRIBUTION.md for the complete third-party attribution record.
