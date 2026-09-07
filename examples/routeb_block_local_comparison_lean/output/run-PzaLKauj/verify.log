@@ -1,0 +1,20 @@
+UTC=2026-09-06T23:58:39Z
+RUN=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_local_comparison_lean/output/run-PzaLKauj
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+0abc34a8df4ce8bb6432a6e7cd6b660500c9a61a68b089d7b6e943c2444d92db  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_local_comparison_lean/output/run-PzaLKauj/BlockLocalComparison.lean
+eaaf300ccd6be174f4a964f09c64507b4a3b8b3dd18a2ffbac61f6d40a621993  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_local_comparison_lean/output/run-PzaLKauj/README.md
+4bc74894152b00142d7edaaec6c8fb61a9b8b248ce9f712db0a4bcf519d495a2  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_local_comparison_lean/output/run-PzaLKauj/verify.sh
+058fe6692deca45f4c66142cc63898c98b5d0bbe402dbedbf86885f85fdefe91  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_local_comparison_lean/output/run-PzaLKauj/LocalEnergyBudget.olean
+'RouteBBlockLocalComparison.p45_le_Lambda_mul_VB' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBlockLocalComparison.p45_le_mul_VB_of_Lambda_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBlockLocalComparison.derivative_budget_and_storage_comparison' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+LEAN_COMPILE_EXIT_CODE=0
+SOURCE_RESTRICTION_CHECK=PASSED
+0a492c382fba296abfd4baa47184651dc2efe634ae3f5afed022b7ef04232136  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_local_comparison_lean/output/run-PzaLKauj/BlockLocalComparison.olean
+REAL_DYNAMICS_BINDING=OPEN
+RESIDUAL_BOUND=OPEN
+DOMAIN_COVERAGE=OPEN
+VERIFY_EXIT_CODE=0

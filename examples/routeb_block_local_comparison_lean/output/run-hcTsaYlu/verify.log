@@ -1,0 +1,19 @@
+UTC=2026-09-06T23:57:01Z
+RUN=/mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_local_comparison_lean/output/run-hcTsaYlu
+Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+MATHLIB_COMMIT=0df444a360eaa60ab8c11dca51a86af692955474
+984230b080af5f0581621ea5772ab8500bffdb0f94c2a6376d4074f948238deb  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_local_comparison_lean/output/run-hcTsaYlu/BlockLocalComparison.lean
+8836c925588add0654a759ccb63646e471449d5bcec1f2b016ad0a4c32fbb66c  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_local_comparison_lean/output/run-hcTsaYlu/README.md
+4bc74894152b00142d7edaaec6c8fb61a9b8b248ce9f712db0a4bcf519d495a2  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_local_comparison_lean/output/run-hcTsaYlu/verify.sh
+058fe6692deca45f4c66142cc63898c98b5d0bbe402dbedbf86885f85fdefe91  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_local_comparison_lean/output/run-hcTsaYlu/LocalEnergyBudget.olean
+'RouteBBlockLocalComparison.p45_le_Lambda_mul_VB' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RouteBBlockLocalComparison.derivative_budget_and_storage_comparison' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+LEAN_COMPILE_EXIT_CODE=0
+SOURCE_RESTRICTION_CHECK=PASSED
+fea7c81290db3f28009c28326b61cb60a6ba39072abaa7f82217831387555418  /mnt/c/Users/z5242/Desktop/重构版/工作流/examples/routeb_block_local_comparison_lean/output/run-hcTsaYlu/BlockLocalComparison.olean
+REAL_DYNAMICS_BINDING=OPEN
+RESIDUAL_BOUND=OPEN
+DOMAIN_COVERAGE=OPEN
+VERIFY_EXIT_CODE=0
