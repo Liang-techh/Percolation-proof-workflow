@@ -1325,3 +1325,12 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - 该 gate 只验证 provenance 文件绑定，不证明 source theorem、Lean kernel 或
   comparator；当前 v2 receipt 的 source binding 仍保持 conditional。
 - focused tests 当前 `58 passed`。
+
+### 2026-09-07 — 梁智炜：O1 source-comparator frontier 收割
+
+- `RouteBO1SourceComparatorV2.lean` 与 `SOURCE_COMPARATOR_RECEIPT.json` 已生成并
+  接入 state；610-row aggregate/body exact Fraction comparison 为零 mismatch。
+- 该结果仍是 data-level evidence：real cos/sin function lift 未 pinned，六个
+  exact DH `h_body` 等式也未证明；状态保持 `OPEN_H_BODY_SOURCE_COMPARATOR`，
+  不进入 source binding、formal certificate 或 registry。
+- 后续 O1 任务只攻 function lift 与 per-body `h_body`，不再重复 aggregate 数据审计。

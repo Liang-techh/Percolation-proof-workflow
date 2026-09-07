@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 548,
+  "revision": 549,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -16031,7 +16031,35 @@
             "registry_promoted": false,
             "formal_certificate_allowed": false
           }
-        ]
+        ],
+        "o1_source_comparator_frontiers": [
+          {
+            "status": "OPEN_H_BODY_SOURCE_COMPARATOR",
+            "receipt_sha256": "AE31CEAE16C966DD97793435262044401CFA73D0DBD64869E92B2E127AECE997",
+            "lean_sha256": "94BB9FB5EB318E77EFC3766947F024E3476EA42008571F04F0BEA468F38D4A8F",
+            "review_sha256": "B6AEABE312536B34D5A0CB5ACEB705A2644117F480B4DD1DACEE8928A3CB3CC4",
+            "h_aggregate_data_level_exact": true,
+            "h_aggregate_function_lift_proven": false,
+            "h_body_proven": false,
+            "source_binding_proven": false,
+            "lean_compile_status": "UNCOMPILED_CANDIDATE",
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
+          }
+        ],
+        "o1_source_comparator_frontier": {
+          "status": "OPEN_H_BODY_SOURCE_COMPARATOR",
+          "receipt_sha256": "AE31CEAE16C966DD97793435262044401CFA73D0DBD64869E92B2E127AECE997",
+          "lean_sha256": "94BB9FB5EB318E77EFC3766947F024E3476EA42008571F04F0BEA468F38D4A8F",
+          "review_sha256": "B6AEABE312536B34D5A0CB5ACEB705A2644117F480B4DD1DACEE8928A3CB3CC4",
+          "h_aggregate_data_level_exact": true,
+          "h_aggregate_function_lift_proven": false,
+          "h_body_proven": false,
+          "source_binding_proven": false,
+          "lean_compile_status": "UNCOMPILED_CANDIDATE",
+          "registry_promoted": false,
+          "formal_certificate_allowed": false
+        }
       }
     },
     "0da99a7cef5e4f0b91c7cc06d9e7c010": {
@@ -41517,6 +41545,17 @@
       },
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T15:09:52.559593+00:00",
+      "kind": "routeb_o1_source_comparator_frontier",
+      "status": "OPEN_H_BODY_SOURCE_COMPARATOR",
+      "h_aggregate_data_level_exact": true,
+      "h_aggregate_function_lift_proven": false,
+      "h_body_proven": false,
+      "source_binding_proven": false,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -45173,5 +45212,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "9d66c87782f89caf8ab8c659f86809e37cfa8c48c1ef1377c699e9a6c711e043"
+  "state_checksum": "b89ac78f42f475ec7e633b33f3b538338437ccc8009eadeb828a9599ff340de2"
 }
