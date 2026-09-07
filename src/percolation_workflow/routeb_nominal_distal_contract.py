@@ -114,6 +114,25 @@ class RouteBPhysicalRationalGramAudit:
     registry_eligible: bool = False
 
 
+@dataclass(frozen=True)
+class RouteBPhysicalRationalGramReconstructionAudit:
+    """Exact coefficient reconstruction, still below kernel admission."""
+
+    status: str
+    artifact_sha256: str | None
+    source_sha256: str | None
+    gram_blocks: int
+    max_gram_dimension: int
+    rational_scale: Fraction | None
+    rational_lower_bound: Fraction | None
+    residual_l1: Fraction | None
+    certified_scaled_margin: Fraction | None
+    certified_original_scale_margin: Fraction | None
+    errors: tuple[str, ...] = ()
+    formal_certificate_allowed: bool = False
+    registry_eligible: bool = False
+
+
 def _read_metric_csv(text: str) -> dict[str, str]:
     rows = csv.DictReader(io.StringIO(text))
     result: dict[str, str] = {}
@@ -407,6 +426,231 @@ def _positive_exact_gram(entries):
     return n, min(pivots), None
 
 
+def _quantize_common_denominator(value: Fraction, denominator_cap: int) -> Fraction:
+    """Round a printed decimal to the declared common rational denominator."""
+    scaled = value * denominator_cap
+    quotient, remainder = divmod(scaled.numerator, scaled.denominator)
+    if 2 * remainder >= scaled.denominator:
+        quotient += 1
+    return Fraction(quotient, denominator_cap)
+
+
+def _sparse_support_to_exp(text: str, dimension: int = 6) -> tuple[int, ...]:
+    exponents = [0] * dimension
+    if text:
+        for item in text.split(";"):
+            index = int(item)
+            if not 1 <= index <= dimension:
+                raise ValueError(f"basis_variable_index:{index}")
+            exponents[index - 1] += 1
+    return tuple(exponents)
+
+
+def _reconstruction_basis_groups(text: str):
+    rows = csv.DictReader(io.StringIO(text))
+    required = {"kind", "clique", "constraint", "block", "block_row",
+                "basis_index", "exponents"}
+    if not rows.fieldnames or not required.issubset(rows.fieldnames):
+        return {}, ["reconstruction_basis_header_mismatch"]
+    groups = defaultdict(dict)
+    errors: list[str] = []
+    for line_no, row in enumerate(rows, start=2):
+        try:
+            key = (row["kind"], row["clique"], row["constraint"], row["block"])
+            groups[key][int(row["block_row"])] = _sparse_support_to_exp(
+                row["exponents"])
+        except (KeyError, TypeError, ValueError) as error:
+            errors.append(f"reconstruction_basis_malformed_row:{line_no}:{error}")
+    return dict(groups), errors
+
+
+def _tail_box_and_circle_generators():
+    zero = (0,) * 6
+    cmin, smax = Fraction(4831, 5000), Fraction(13, 50)
+    generators = [{zero: Fraction(1)}]
+    for coordinate in (0, 2, 4):
+        c = [0] * 6
+        c[coordinate] = 1
+        generators.extend([
+            {tuple(c): Fraction(1), zero: -cmin},
+            {zero: Fraction(1), tuple(c): Fraction(-1)},
+        ])
+        s = [0] * 6
+        s[coordinate + 1] = 1
+        generators.extend([
+            {zero: smax, tuple(s): Fraction(-1)},
+            {zero: smax, tuple(s): Fraction(1)},
+        ])
+    equalities = []
+    for coordinate in (0, 2, 4):
+        c = [0] * 6
+        s = [0] * 6
+        c[coordinate] = 2
+        s[coordinate + 1] = 2
+        equalities.append({tuple(c): Fraction(1), tuple(s): Fraction(1),
+                           zero: Fraction(-1)})
+    return generators, equalities
+
+
+def audit_routeb_physical_rational_gram_reconstruction(
+    probe_csv_text: str,
+    scalar_csv_text: str,
+    gram_csv_text: str,
+    basis_csv_text: str,
+    *,
+    denominator_cap: int = 10**12,
+    artifact_sha256: str | None = None,
+    source_sha256: str | None = None,
+) -> RouteBPhysicalRationalGramReconstructionAudit:
+    """Reconstruct the rationalized tail SOS identity coefficient-by-coefficient.
+
+    This deliberately admits only a candidate-level margin.  The solver's
+    decimal objective and scale are rationalized under an explicit cap, so the
+    result is not a proof of the original optimization problem or a Lean
+    theorem.  In particular, this function never promotes the result to the
+    verified registry.
+    """
+    probe = _read_metric_csv(probe_csv_text)
+    errors: list[str] = []
+    expected_probe = {
+        "status": "OPTIMAL",
+        "active_variables": "c3;s3;c4;s4;c5;s5",
+        "inequalities": "12",
+        "circle_equalities": "3",
+        "formal_certificate_allowed": "false",
+    }
+    errors.extend(
+        f"probe_mismatch:{key}"
+        for key, expected in expected_probe.items()
+        if probe.get(key) != expected
+    )
+    try:
+        scale = _quantize_common_denominator(
+            Fraction(probe["scale_factor"]), denominator_cap)
+        lower = _quantize_common_denominator(
+            Fraction(probe["objective_lower_bound"]), denominator_cap)
+        if scale <= 0 or lower <= 0:
+            errors.append("probe_scale_or_lower_bound_not_positive")
+    except (KeyError, TypeError, ValueError, ZeroDivisionError):
+        scale = lower = None
+        errors.append("probe_scale_or_lower_bound_malformed")
+
+    raw_target, target_errors = _read_exact_scalar_polynomial(scalar_csv_text)
+    errors.extend(target_errors)
+    zero = (0,) * 6
+    target = defaultdict(Fraction)
+    for monomial, value in raw_target.items():
+        if any(monomial[index] != 0 for index in (*range(4), 10, 11)):
+            errors.append("reconstruction_target_inactive_variable")
+        target[tuple(monomial[4:10])] += value
+    if len(target) != 27:
+        errors.append("reconstruction_target_term_count_mismatch")
+
+    gram, equality, gram_errors = _exact_gram_groups(gram_csv_text)
+    basis, basis_errors = _reconstruction_basis_groups(basis_csv_text)
+    errors.extend(gram_errors)
+    errors.extend(basis_errors)
+    generators, equalities = _tail_box_and_circle_generators()
+    reconstruction = defaultdict(Fraction)
+    dimensions: list[int] = []
+
+    def merge_reconstruction(polynomial):
+        for monomial, value in polynomial.items():
+            reconstruction[monomial] += value
+
+    for key, entries in gram.items():
+        if key[1] not in {str(index) for index in range(1, 14)}:
+            errors.append(f"reconstruction_unknown_constraint:{key}")
+            continue
+        if not entries:
+            errors.append(f"reconstruction_empty_gram:{key}")
+            continue
+        dimension = max(max(index) for index in entries) + 1
+        dimensions.append(dimension)
+        basis_rows = basis.get(("gram", *key), {})
+        if any(index not in basis_rows for index in range(1, dimension + 1)):
+            errors.append(f"reconstruction_basis_dimension_mismatch:{key}")
+            continue
+        _dimension, _pivot, positivity_error = _positive_exact_gram(entries)
+        if positivity_error:
+            errors.append(f"reconstruction_{positivity_error}:{key}")
+        gram_polynomial = defaultdict(Fraction)
+        for row in range(dimension):
+            for col in range(row, dimension):
+                upper = entries.get((row, col))
+                lower_entry = entries.get((col, row))
+                if upper is None or lower_entry is None:
+                    errors.append(f"reconstruction_gram_not_dense:{key}")
+                    continue
+                if upper != lower_entry:
+                    errors.append(f"reconstruction_gram_not_symmetric:{key}")
+                coefficient = upper * (1 if row == col else 2)
+                left = basis_rows[row + 1]
+                right = basis_rows[col + 1]
+                monomial = tuple(a + b for a, b in zip(left, right))
+                gram_polynomial[monomial] += coefficient
+        constraint = int(key[1])
+        merge_reconstruction(
+            _multiply_polynomials(gram_polynomial, generators[constraint - 1]))
+
+    for key, values in equality.items():
+        constraint = int(key[1]) if key[1].isdigit() else 0
+        if constraint not in {1, 2, 3}:
+            errors.append(f"reconstruction_unknown_equality:{key}")
+            continue
+        basis_rows = basis.get(("eq_multiplier", *key), {})
+        multiplier = defaultdict(Fraction)
+        for row, _col, value in values:
+            if row not in basis_rows:
+                errors.append(f"reconstruction_equality_basis_missing:{key}:{row}")
+                continue
+            multiplier[basis_rows[row]] += value
+        merge_reconstruction(
+            _multiply_polynomials(multiplier, equalities[constraint - 1]))
+
+    if len(gram) != 14:
+        errors.append("reconstruction_gram_block_count_mismatch")
+    if max(dimensions, default=0) != 83:
+        errors.append("reconstruction_gram_max_dimension_mismatch")
+    if set(equality) != {("1", "1", "0"), ("1", "2", "0"),
+                         ("1", "3", "0")}:
+        errors.append("reconstruction_equality_multiplier_group_mismatch")
+
+    residual_l1 = None
+    scaled_margin = None
+    original_margin = None
+    if scale is not None and lower is not None and not errors:
+        residual = defaultdict(Fraction)
+        for monomial in set(target) | set(reconstruction):
+            residual[monomial] = (
+                target[monomial] * scale - reconstruction[monomial]
+                - (lower if monomial == zero else Fraction(0))
+            )
+        residual_l1 = sum((abs(value) for value in residual.values()), Fraction(0))
+        scaled_margin = lower - residual_l1
+        original_margin = scaled_margin / scale
+        if scaled_margin <= 0:
+            errors.append("reconstruction_nonpositive_margin")
+
+    status = (
+        "EXACT_RATIONAL_GRAM_RECONSTRUCTION_CANDIDATE"
+        if not errors else "OPEN_FAIL_CLOSED"
+    )
+    return RouteBPhysicalRationalGramReconstructionAudit(
+        status=status,
+        artifact_sha256=artifact_sha256,
+        source_sha256=source_sha256,
+        gram_blocks=len(gram),
+        max_gram_dimension=max(dimensions, default=0),
+        rational_scale=scale,
+        rational_lower_bound=lower,
+        residual_l1=residual_l1,
+        certified_scaled_margin=scaled_margin,
+        certified_original_scale_margin=original_margin,
+        errors=tuple(errors),
+    )
+
+
 def audit_routeb_physical_rational_gram(
     audit_csv_text: str,
     gram_csv_text: str,
@@ -473,7 +717,9 @@ __all__ = [
     "RouteBNominalDistalBridgeAudit",
     "RouteBPhysicalRationalTailAudit",
     "RouteBPhysicalRationalGramAudit",
+    "RouteBPhysicalRationalGramReconstructionAudit",
     "audit_routeb_nominal_distal_bridge",
     "audit_routeb_physical_rational_tail",
     "audit_routeb_physical_rational_gram",
+    "audit_routeb_physical_rational_gram_reconstruction",
 ]

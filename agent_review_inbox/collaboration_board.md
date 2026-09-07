@@ -356,3 +356,5 @@
 - 当前必须绑定 exact `opt`、单项式 basis、12 个 box generator、3 个
   circle identity、rational residual l1 bound，再交给 Lean agent 做 kernel
   级复核；在此之前保持 candidate/open。
+- 本地已加入独立 reconstruction checker；生产 payload 重构成功，候选
+  原尺度 margin 约 `8.9004e-9`，但不会据此关闭 frontier 或写入 registry。

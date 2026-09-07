@@ -5,6 +5,7 @@ from itertools import product
 from percolation_workflow.routeb_nominal_distal_contract import (
     audit_routeb_nominal_distal_bridge,
     audit_routeb_physical_rational_gram,
+    audit_routeb_physical_rational_gram_reconstruction,
     audit_routeb_physical_rational_tail,
 )
 
@@ -180,3 +181,16 @@ def test_tail_identity_check_requires_both_source_inputs():
     )
     assert result.status == "OPEN_FAIL_CLOSED"
     assert "tail_identity_inputs_incomplete" in result.errors
+
+
+def test_gram_reconstruction_is_fail_closed_without_probe_contract():
+    result = audit_routeb_physical_rational_gram_reconstruction(
+        "field,value\n",
+        scalar_csv(),
+        "kind,clique,constraint,block,row,col,num,den\n",
+        "kind,clique,constraint,block,block_row,basis_index,exponents\n",
+    )
+    assert result.status == "OPEN_FAIL_CLOSED"
+    assert "probe_mismatch:status" in result.errors
+    assert result.formal_certificate_allowed is False
+    assert result.registry_eligible is False

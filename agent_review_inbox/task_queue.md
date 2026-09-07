@@ -141,6 +141,9 @@ GitHub agents for the push channel.
   and a fail-closed receipt separating rational candidate from kernel proof;
 - forbidden: inferring target equality from positive Gram blocks alone, using
   a decimal `opt` without exact provenance, or claiming Route-B closure.
+- local progress: `check_routeb_tail_gram_reconstruction.py` now independently
+  expands the rational payload and reports a positive candidate margin; the
+  exact solver `opt` provenance and pinned Lean receipt remain open.
 
 ## Queue: Route-B current bottlenecks
 

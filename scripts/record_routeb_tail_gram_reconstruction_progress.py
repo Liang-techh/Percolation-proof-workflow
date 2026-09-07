@@ -40,6 +40,7 @@ def main() -> int:
         TARGET / "routeB_tail_pmi_scalar_gram_probe.jl",
         TARGET / "routeB_physical_rational_tail_pmi_scalar_meta.csv",
         ROOT / "scripts/check_routeb_rational_gram_payload.py",
+        ROOT / "scripts/check_routeb_tail_gram_reconstruction.py",
         ROOT / "src/percolation_workflow/routeb_nominal_distal_contract.py",
     )]
     unresolved = [
