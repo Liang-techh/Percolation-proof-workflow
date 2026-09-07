@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 707,
+  "revision": 708,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -42228,7 +42228,9 @@
       "parent_id": "3231e81f6f184209ba9e09ad3ae30499",
       "status": "open",
       "proof_sketch": "Model all five evidence classes as independently optional records, define pending for missing components and rejected for invalid present components, and prove either state excludes the explicit promotion contract without defining VERIFIED or mutating the registry.",
-      "dependencies": [],
+      "dependencies": [
+        "4ec96661d19b4f21b7889469f401d573"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -42315,6 +42317,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_TAYLOR_REMAINDER_REVIEW.md",
             "sha256": "9837FCB39E4C5F8A0D27F0191346B2226A0FCC09682714D669CA292A094FF2D0"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "4ec96661d19b4f21b7889469f401d573": {
+      "id": "4ec96661d19b4f21b7889469f401d573",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization.final_admission_contract.explicit_registry_promotion_gate.pinned_kernel_receipt",
+      "statement": "The pinned Lean kernel prerequisite requires exact project commit, toolchain, theorem identity, artifact digest, exit code 0, and zero sorry/admit/nonstandard-axiom counts; missing or mismatched receipt evidence blocks promotion.",
+      "parent_id": "da00dbe94a3d4001b1cdd98101e4a56a",
+      "status": "open",
+      "proof_sketch": "Model each kernel identity and audit count as an independent optional field, define complete/pending/rejected predicates, prove pending or rejected kernel receipts cannot construct the promotion gate, and leave actual execution, digest validation, VERIFIED, and registry mutation external.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "admission",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_FIXED_LAMBDA_PINNED_KERNEL_RECEIPT",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_PINNED_KERNEL_RECEIPT_FAIL_CLOSED20260907.lean",
+            "sha256": "DDCA83472F067F5AC154DBA1D874DF275C9DE21831A38990651ECB16EC19FE6A"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_PINNED_KERNEL_RECEIPT_FAIL_CLOSED20260907_REVIEW.md",
+            "sha256": "27C552435904107A00C78D10D544A2A5218048FE075CA9225E5970D89A21F1C3"
           }
         ],
         "registry_eligible": false,
@@ -70571,6 +70608,24 @@
       "artifact_hashes_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T20:41:38.611336+00:00",
+      "kind": "node_added",
+      "node_id": "4ec96661d19b4f21b7889469f401d573",
+      "parent_id": "da00dbe94a3d4001b1cdd98101e4a56a",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization.final_admission_contract.explicit_registry_promotion_gate.pinned_kernel_receipt"
+    },
+    {
+      "at": "2026-09-07T20:41:38.611355+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization.final_admission_contract.explicit_registry_promotion_gate.pinned_kernel_receipt"
+      ],
+      "metadata_updated": [],
+      "artifact_hashes_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -74227,5 +74282,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "d42d2cce0bb0e4705967a4960a114413255233fe0403500f0c377a006d67614a"
+  "state_checksum": "1e00eee29ec7cd612ab8037ceacbfd81a42b2d1be2002ab8080b9beee89e7c3e"
 }

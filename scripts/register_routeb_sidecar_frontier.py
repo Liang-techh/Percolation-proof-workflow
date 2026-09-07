@@ -1976,6 +1976,19 @@ CHILDREN = [
             "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_TAYLOR_REMAINDER_REVIEW.md",
         ],
     },
+    {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization.final_admission_contract.explicit_registry_promotion_gate.pinned_kernel_receipt",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization.final_admission_contract.explicit_registry_promotion_gate",
+        "statement": "The pinned Lean kernel prerequisite requires exact project commit, toolchain, theorem identity, artifact digest, exit code 0, and zero sorry/admit/nonstandard-axiom counts; missing or mismatched receipt evidence blocks promotion.",
+        "proof_sketch": "Model each kernel identity and audit count as an independent optional field, define complete/pending/rejected predicates, prove pending or rejected kernel receipts cannot construct the promotion gate, and leave actual execution, digest validation, VERIFIED, and registry mutation external.",
+        "lane": "lean_adapter",
+        "bottleneck": "admission",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_PINNED_KERNEL_RECEIPT",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_PINNED_KERNEL_RECEIPT_FAIL_CLOSED20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_PINNED_KERNEL_RECEIPT_FAIL_CLOSED20260907_REVIEW.md",
+        ],
+    },
 ]
 
 
