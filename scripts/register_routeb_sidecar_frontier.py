@@ -1586,6 +1586,19 @@ CHILDREN = [
             "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_RAT_REAL_FINITE_SUM_CAST20260907_REVIEW.md",
         ],
     },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack",
+        "statement": "A supplied positive domain-wide gap lower bound transfers pointwise cap-load comparisons into uniform weighted-load strict slack, while pointwise positivity alone admits an exact reciprocal-gap counterexample.",
+        "proof_sketch": "Use reciprocalGap(x)=1/(x+1) on the nonnegative real domain to separate pointwise from uniform positivity, then consume an explicit UniformGapCapCertificate and finite Fin-6 wrapper without deriving uniformity from naming or samples.",
+        "lane": "source_semantics",
+        "bottleneck": "coverage",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_UNIFORM_GAP",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_UNIFORM_SLACK.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_UNIFORM_SLACK_REVIEW.md",
+        ],
+    },
 ]
 
 

@@ -2178,6 +2178,13 @@ strict-slack 的 composed adapter；P3 family specialization 到 cap budget 的
 typed consumer。任务均保持独立、exact/conditional、未编译，不触碰 registry 或
 formal gate。
 
+### 2026-09-07 — 梁智炜收割 P3 uniform-gap 叶
+
+`CENTRAL_FD_HULL_UNIFORM_SLACK` 已完成定向审阅并登记 revision 682。它明确
+区分 pointwise positive gap 与 domain-wide uniform gap：用 exact reciprocal-gap
+反例保留 coverage 障碍，再用显式 uniform certificate 消费到 capMax 严格余量；
+未把有限采样或命名约定当作全域证明。
+
 ### 2026-09-07 — 梁智炜收割 fixed-λ/P3 closure 组合叶
 
 fixed-λ `COMPOSED_REINDEX_SLACK` 与 P3 `FAMILY_SLACK` 已完成定向 review，

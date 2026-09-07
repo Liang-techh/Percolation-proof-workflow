@@ -2877,3 +2877,6 @@ uniform contraction；若只得到缺失字段，则记录 obstruction 而不填
 三叶收割结果：body-6 source block binding、P4 domain-uniform contraction、
 fixed-λ rational-to-real finite-sum cast 已登记 revision 681。P3 uniform-gap
 叶仍等待独立 review；未配对的草稿继续留在工作区，不进入 DAG。
+
+P3 uniform-gap review 已到达并登记 revision 682，状态仍为 `OPEN_UNCOMPILED`；
+它把全域 uniformity 设为显式输入，保留 pointwise-only 的 exact obstruction。
