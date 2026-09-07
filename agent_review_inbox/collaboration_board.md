@@ -2312,6 +2312,13 @@ P4 `DUAL_SCALE_COMPOSITION`、P3 `FINITE_BOX_MARGIN` 已分别登记 revision 69
 同时保留空集、断覆盖和无限域 reciprocal-gap 阻塞。全部仍为
 `OPEN_UNCOMPILED`，registry=0。
 
+### 2026-09-07 — 梁智炜收割 canonical digest
+
+fixed-λ `CANONICAL_DIGEST_NORMALIZATION` 已登记 revision 699。它要求
+canonical statement 的 binder、量词顺序、term order、normalization 和 body
+逐字段一致；普通文本相似度不能替代 digest binding。下一轮继续收敛 P3
+strict export、fixed-λ final admission 和 BODY6 tail solve 条件。
+
 ### 2026-09-07 — 梁智炜收割三条数学边界
 
 P4 `MINIMAL_RESIDUAL_BUDGET_ADAPTER`、fixed-λ `TYPED_RECEIPT_AUDIT`、

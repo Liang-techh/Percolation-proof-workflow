@@ -2962,3 +2962,7 @@ P3 finite-cover 到全域统一正 margin。三项仍需 proof-attempt + 定向 
 P4 dual-scale composition 已登记 revision 697；P3 finite-box uniform margin
 已登记 revision 698。dual-scale 叶明确区分 front quadratic scale 与 residual
 scalar scale；finite-box 叶只在非空有限覆盖和 per-box gap 下给出 commonMu。
+
+fixed-λ canonical digest/normalization 已登记 revision 699。下一步收敛任务：
+BODY6 tail solve certificate；P3 commonMu 到 final strict export；fixed-λ
+canonical receipt/statement/comparator admission 组合。仍保持 fail-closed。
