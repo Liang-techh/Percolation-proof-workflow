@@ -41,6 +41,12 @@ class MerLeanProjectionTests(unittest.TestCase):
         row = next(item for item in project(state)["statements"]
                    if item["statement_id"] == consumer)
         self.assertEqual(row["required_node_ids"], [source])
+        self.assertEqual(row["required_input_registry_refs"][source]["status"], "missing")
+        state.nodes[source].status = NodeStatus.VERIFIED
+        state.registry[source] = {"artifact": "source.lean"}
+        row = next(item for item in project(state)["statements"]
+                   if item["statement_id"] == consumer)
+        self.assertEqual(row["required_input_registry_refs"][source]["artifact"], "source.lean")
 
     def test_notes_are_excluded_and_candidate_cannot_be_verified(self):
         state = self.make_state()

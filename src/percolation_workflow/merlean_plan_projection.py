@@ -7,6 +7,7 @@ here are deterministic export views for dashboards, inspection, and interop.
 from __future__ import annotations
 
 import json
+import hashlib
 from collections import defaultdict, deque
 from pathlib import Path
 from typing import Any, Iterable
@@ -148,10 +149,22 @@ def project(state: WorkflowState, *, provenance: dict[str, Any] | None = None) -
         metadata = dict(node.metadata)
         node_provenance = metadata.pop("provenance", None)
         required_node_ids = metadata.get("required_node_ids", [])
+        required_input_registry_refs = {}
+        for required_id in sorted(required_node_ids):
+            required_node = state.nodes[required_id]
+            entry = state.registry.get(required_id)
+            required_input_registry_refs[required_id] = {
+                "name": required_node.name,
+                "statement_sha256": hashlib.sha256(
+                    required_node.statement.encode("utf-8")).hexdigest(),
+                "status": "verified_registry" if entry is not None else "missing",
+                "artifact": entry.get("artifact") if isinstance(entry, dict) else None,
+            }
         formal.append({
             "statement_id": node.id, "type": "Theorem", "name": node.name,
             "content": node.statement, "dependencies": sorted(node.dependencies),
             "required_node_ids": sorted(required_node_ids),
+            "required_input_registry_refs": required_input_registry_refs,
             "dependents": forward_cone(state, node.id), "proof": node.verified_artifact,
             "proof_sketch": node.proof_sketch, "lean_path": metadata.get("lean_path"),
             "hierarchy_level": node_levels[node.id], "order": position,
