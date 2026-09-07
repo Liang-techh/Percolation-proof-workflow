@@ -59,8 +59,6 @@ theorem balanced_square_split
   have hDne : D ≠ 0 := ne_of_gt hD
   have hnumPos : 0 < D + X - Y := by
     nlinarith
-  have hotherPos : 0 < D - X + Y := by
-    nlinarith
   have hnumLt : D + X - Y < 2 * D := by
     nlinarith
   have hmu0 : 0 < balancedMu D X Y := by
@@ -80,18 +78,18 @@ theorem balanced_square_split
         (D + X - Y) ^ 2 / (4 * D) := by
     rw [balancedMu]
     field_simp [hDne]
-    <;> ring
+    ring
   have hOneMu :
       1 - balancedMu D X Y = (D - X + Y) / (2 * D) := by
     rw [balancedMu]
     field_simp [hDne]
-    <;> ring
+    ring
   have hOneMuSq :
       D * (1 - balancedMu D X Y) ^ 2 =
         (D - X + Y) ^ 2 / (4 * D) := by
     rw [hOneMu]
     field_simp [hDne]
-    <;> ring
+    ring
   have hx : X < D * (balancedMu D X Y) ^ 2 := by
     rw [hmuSq]
     apply (lt_div_iff₀ hD4).2
@@ -135,7 +133,9 @@ theorem p5_centered_anchor_balanced_mu
   have hDelta' :
       4 * (13600 * ell2 * Vstar) * (11424 * B2) <
         (2285 * Vstar - 13600 * ell2 * Vstar - 11424 * B2) ^ 2 := by
-    convert hDelta using 1 <;> simp [p5Headroom] <;> ring
+    rw [p5Headroom] at hDelta
+    ring_nf at hDelta ⊢
+    exact hDelta
   have hs := balanced_square_split
     (2285 * Vstar) (13600 * ell2 * Vstar) (11424 * B2)
     hD hX hY hC' hDelta'
@@ -148,8 +148,16 @@ theorem p5_centered_anchor_balanced_mu
   rcases hs with ⟨hmu0, hmu1, hx, hy⟩
   have hxCancel :
       13600 * ell2 < 2285 * (p5BalancedMu ell2 B2 Vstar) ^ 2 := by
-    apply (mul_lt_mul_left hV).mp
-    simpa [mul_assoc, mul_left_comm, mul_comm] using hx
+    by_contra hnot
+    have hrev :
+        2285 * (p5BalancedMu ell2 B2 Vstar) ^ 2 ≤ 13600 * ell2 :=
+      le_of_not_gt hnot
+    have hmul := mul_le_mul_of_nonneg_left hrev (le_of_lt hV)
+    have hx' :
+        Vstar * (13600 * ell2) <
+          Vstar * (2285 * (p5BalancedMu ell2 B2 Vstar) ^ 2) := by
+      simpa [mul_assoc, mul_left_comm, mul_comm] using hx
+    exact (not_lt_of_ge hmul) hx'
   have hxFinal :
       2720 * ell2 < 457 * (p5BalancedMu ell2 B2 Vstar) ^ 2 := by
     nlinarith
@@ -184,7 +192,9 @@ theorem p5_quarter_discriminant_barrier
   have hDelta' :
       4 * (13600 * ell2) * (45696 * B2) <
         (2285 - 13600 * ell2 - 45696 * B2) ^ 2 := by
-    convert hDelta using 1 <;> simp [quarterHeadroom] <;> ring
+    rw [quarterHeadroom] at hDelta
+    ring_nf at hDelta ⊢
+    exact hDelta
   have hs := balanced_square_split
     2285 (13600 * ell2) (45696 * B2)
     (by norm_num) (by positivity) (by positivity) hC' hDelta'
@@ -232,7 +242,9 @@ theorem p5_common_margin_discriminant_barrier
   have hDelta' :
       4 * (106080 * ell2 * sigma ^ 2) * (3716608 * B2) <
         (17823 * sigma ^ 2 - 106080 * ell2 * sigma ^ 2 - 3716608 * B2) ^ 2 := by
-    convert hDelta using 1 <;> simp [commonMarginHeadroom] <;> ring
+    rw [commonMarginHeadroom] at hDelta
+    ring_nf at hDelta ⊢
+    exact hDelta
   have hs := balanced_square_split
     (17823 * sigma ^ 2) (106080 * ell2 * sigma ^ 2) (3716608 * B2)
     hD hX hY hC' hDelta'
@@ -247,8 +259,16 @@ theorem p5_common_margin_discriminant_barrier
   have hxCancel :
       106080 * ell2 <
         17823 * (commonMarginBalancedMu ell2 B2 sigma) ^ 2 := by
-    apply (mul_lt_mul_left hSigmaSq).mp
-    simpa [mul_assoc, mul_left_comm, mul_comm] using hx
+    by_contra hnot
+    have hrev :
+        17823 * (commonMarginBalancedMu ell2 B2 sigma) ^ 2 ≤ 106080 * ell2 :=
+      le_of_not_gt hnot
+    have hmul := mul_le_mul_of_nonneg_left hrev (le_of_lt hSigmaSq)
+    have hx' :
+        sigma ^ 2 * (106080 * ell2) <
+          sigma ^ 2 * (17823 * (commonMarginBalancedMu ell2 B2 sigma) ^ 2) := by
+      simpa [mul_assoc, mul_left_comm, mul_comm] using hx
+    exact (not_lt_of_ge hmul) hx'
   have hxFinal :
       2720 * ell2 < 457 * (commonMarginBalancedMu ell2 B2 sigma) ^ 2 := by
     nlinarith
