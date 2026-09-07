@@ -74,17 +74,7 @@ theorem nine_square_coefficients_positive :
 /-- Main sharpened coercivity theorem: `Q >= (8/9) V`. -/
 theorem q_ge_eight_ninths_storage (x4 x5 y4 y5 : ℝ) :
     (8/9 : ℝ) * vStorage x4 x5 y4 y5 ≤ qDissipation x4 x5 y4 y5 := by
-  rw [show qDissipation x4 x5 y4 y5 - (8/9 : ℝ) * vStorage x4 x5 y4 y5 =
-      (51869/13500000 : ℝ) * x4^2 +
-      (16837/3000000 : ℝ) * x5^2 +
-      (15616199/27000000 : ℝ) * y4^2 +
-      (6647479/12000000 : ℝ) * y5^2 +
-      (1/240 : ℝ) * (x4-x5)^2 +
-      (350003/6750000 : ℝ) * (x4-y4)^2 +
-      (1/800 : ℝ) * (x4+y5)^2 +
-      (1/800 : ℝ) * (x5-y4)^2 +
-      (66913/3000000 : ℝ) * (x5-y5)^2 by
-        exact nine_square_gap_identity x4 x5 y4 y5] at *
+  have hid := nine_square_gap_identity x4 x5 y4 y5
   have hgap : 0 ≤
       (51869/13500000 : ℝ) * x4^2 +
       (16837/3000000 : ℝ) * x5^2 +
