@@ -2303,3 +2303,11 @@ P3 interval→continuous coverage。四项均要求最小 typed contract、精�
 P3 `CONTINUOUS_COVERAGE` 已收割并登记 revision 692。该叶完成 interval
 certificate 到抽象连续域的同点 coverage bridge；没有把 finite grid、sample
 receipt 或 box 列表升级成连续覆盖，也没有改变 formal gate。
+
+### 2026-09-07 — 梁智炜收割三条数学边界
+
+P4 `MINIMAL_RESIDUAL_BUDGET_ADAPTER`、fixed-λ `TYPED_RECEIPT_AUDIT`、
+BODY6 `EXACTSCHURCOEFF` 已分别登记 revision 693、694、695。它们补齐
+residual cap/scale 的条件消费、receipt 的 pending/rejected provenance
+边界、以及实际 source Schur 九项系数绑定；全部保持 `OPEN_UNCOMPILED`，
+没有把抽象反例、静态检查或 receipt 元数据升级为 formal/verified 结论。
