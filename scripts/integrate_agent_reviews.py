@@ -52,6 +52,7 @@ TASK_TARGETS = {
     "T-FLT-SPECTRAL-PREDICATE": (None, "flt_spectral_predicate_sidecar"),
     "T-FLT-QUOTIENT-SIDECAR": (None, "flt_quotient_transport_sidecar"),
     "T-P4-KC-COORDINATE-ADAPTER": ("P4.residual_schur_pmi", "pending_kc_coordinate_adapter"),
+    "T-P4-MBD-PROJECTION": ("P4.residual_schur_pmi", "pending_mbd_projection_obstruction"),
     "T-P3-007": ("P3.strict_true_dh_bounds", "pending_concrete_mass_entry_bridge"),
     "T-P4-005": ("P4.residual_schur_pmi", "pending_one_channel_source_binding"),
     "T-P4-006": ("P4.residual_schur_pmi", "pending_sharp_schur_formalization"),

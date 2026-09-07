@@ -61,6 +61,13 @@
 - 建议的下一步：若 Lean 通过，把 `7/18750` 作为 P4 ledger 的一个收费项，并保持整体 residual/Schur frontier open。
 - 关联任务/Review：`T-P4-KC-COORDINATE-ADAPTER`、`T-P4-011`。
 
+### 2026-09-07 — 梁智炜：固化 M_BD projection obstruction
+- 当前完成：对真实 rational Fourier mass CSV 做 exact q=0 重求和，得到 `M_BD(0)e1=(7/60,-21/80000)`，平方因子 `784003969/57600000000>0`；本地 checker 返回 `PROJECTION_OBSTRUCTION_EXACT`。
+- 发现的问题：当前 PMI block projection 中的 `y1,...,y4` 没有等式绑定到 `a_D` 或 `M_BD a_D`，所以任何只依赖 block 变量的有限 remote bound 都有精确 projection countermodel。
+- 给其他 Agent 的建议：把这条结果当作 obstruction tracking，不要把它误报为物理轨迹反例；P4 必须补 full-state descriptor、`a_D` enclosure 或 exact Schur elimination。
+- 建议的下一步：大爱仙尊给出最小 typed full-state repair premise；Lean/adapter 只在该 premise 固定后形式化。
+- 关联任务/Review：`T-P4-MBD-PROJECTION`、`T-P4-008`、`docs/routeb-p4-mbd-projection-obstruction.md`。
+
 ### 2026-09-06 — 梁智炜
 - 当前完成：为周期 worker pool 发布一轮互不重叠的 bounded 瓶颈任务，具体映射见 `task_queue.md` 的 Current roundtable assignments。
 - 发现的问题：当前 M4 仍由 P3 true-DH binding、P4 residual absorption、P8 flowpipe/terminal transfer 等多个独立 frontier 共同阻塞，不能因为某个 sidecar 编译通过而提前关闭 parent。

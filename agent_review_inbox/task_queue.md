@@ -724,6 +724,22 @@ polynomial remains a separate frontier.
 - forbidden: treating this coordinate adapter as a proof of DH equivalence,
   domain coverage, residual absorption, or M4 closure.
 
+### T-P4-MBD-PROJECTION — full-state remote-term repair
+
+- status: `open` (exact projection obstruction recorded locally)
+- owner: `大爱仙尊`
+- source: `docs/routeb-p4-mbd-projection-obstruction.md` and
+  `scripts/check_routeb_p4_mbd_obstruction.py`;
+- scope: use the exact nonzero `M_BD(0)e1` obstruction to formulate the
+  smallest full-state descriptor/remote-enclosure theorem that can replace
+  the invalid block-only `gammaRemote` premise;
+- deliver: a typed premise for bounded `a_D`, exact Schur elimination, or an
+  equivalent remote residual contract, with an explicit projection-to-full-
+  state map;
+- forbidden: claiming arbitrary `lambda` is a physical trajectory, using the
+  obstruction as a complete dynamics disproof, or closing P4/M4 without
+  coverage and source binding.
+
 ### T-P3-011 — link-Jacobian structural lower bound for block `(4,5)`
 
 - status: `open` (released as a disjoint positive-block math leaf)
