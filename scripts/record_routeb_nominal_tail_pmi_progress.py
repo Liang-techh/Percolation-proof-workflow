@@ -44,11 +44,23 @@ def main() -> int:
         TARGET / "routeB_tail_pmi_scalar_gram_basis.csv",
         TARGET / "P4_PHYSICAL_RATIONAL_TAIL_PMI_SCALAR.md",
         ROOT / "src/percolation_workflow/routeb_nominal_distal_contract.py",
+        ROOT / "scripts/check_routeb_physical_rational_tail.py",
+        ROOT / "scripts/check_routeb_rational_gram_payload.py",
     )]
 
     existing = next((n for n in state.nodes.values() if n.name == name), None)
     if existing is not None:
         changed = existing.metadata.get("source_artifacts") != source_artifacts
+        required_unresolved = [
+            "exact_nonnegativity_on_circle_identities_and_q_domain",
+            "certified_gram_or_Lean_proof_of_27_term_scalar_polynomial",
+            "target_minus_opt_exact_gram_reconstruction_receipt",
+            "finite_difference_and_partition_remainder_absorption",
+            "pinned_lean_compile_and_comparator_receipt",
+        ]
+        if existing.metadata.get("unresolved") != required_unresolved:
+            existing.metadata["unresolved"] = required_unresolved
+            changed = True
         if changed:
             existing.metadata["source_artifacts"] = source_artifacts
             state.event(
@@ -95,6 +107,7 @@ def main() -> int:
             "unresolved": [
                 "exact_nonnegativity_on_circle_identities_and_q_domain",
                 "certified_gram_or_Lean_proof_of_27_term_scalar_polynomial",
+                "target_minus_opt_exact_gram_reconstruction_receipt",
                 "finite_difference_and_partition_remainder_absorption",
                 "pinned_lean_compile_and_comparator_receipt",
             ],
