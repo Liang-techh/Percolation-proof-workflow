@@ -12,7 +12,8 @@ This file is a publication/task-boundary draft only.  No target was compiled,
 no GitHub job was run, no comparator was executed, and no verified registry or
 workflow state was modified.
 
-The batch contains three disjoint focused targets.  One of the three is
+The batch contains three disjoint focused work packages.  The BODY6 package
+contains two closely related source files.  One of the three packages is
 explicitly assigned to the independent GitHub lane for 流川枫.
 
 ## Batch allocation
@@ -34,13 +35,17 @@ explicitly assigned to the independent GitHub lane for 流川枫.
   `aa2d8b34692b16c70f699536de0d8e75b9a3e9ef` and the exact source blob hash
   recorded in the review.
 
-### 2. BODY6 active-energy origin adapter
+### 2. BODY6 active-energy and storage-identity package
 
 - Lane: `FOCUSED_LEAN_LANE`
 - Target:
   `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_ACTIVEENERGYORIGIN20260907.lean`
+- Additional target:
+  `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_STORAGEIDENTITY20260907.lean`
 - Review context:
-  `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_20260907_REVIEW.md`
+  `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_ACTIVEENERGYORIGIN20260907.review.md`
+  and
+  `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_STORAGEIDENTITY20260907.review.md`
 - Focused declarations:
   `normalized_origin_attempt`, `offset_origin_attempt`,
   `raw_origin_attempt`, `shifted_origin_attempt`,
@@ -48,10 +53,17 @@ explicitly assigned to the independent GitHub lane for 流川枫.
   `shifted_lifted_origin_rejected_attempt`,
   `normalized_lifted_origin_attempt`, and
   `bound_active_body6_obstruction_attempt`.
+- Storage-transfer declarations:
+  `initial_bound_transfer_attempt`, `barrier_transfer_attempt`,
+  `offset_barrier_iff_attempt`, `routeb_bound_transfers_if_bound_attempt`,
+  `scalar_budget_below_bar_attempt`,
+  `shared_initial_bound_counterexample_attempt`, and
+  `derivative_identity_counterexample_attempt`.
 - Boundary: normalized/raw/shifted energy candidates remain distinct;
   active-domain membership requires the explicit `V(0,0)` source identity.
-  This target does not close BODY6 source binding, full coverage, PSD, or
-  flow validity.
+  Storage transfer additionally requires same-domain identity, initial-set
+  inclusion, and path inclusion; it does not identify `V_eps` with `Vfull_DH`
+  or close BODY6 source binding, full coverage, PSD, or flow validity.
 
 ### 3. P4 BODY6 Schur-to-scalar adapter
 
@@ -72,8 +84,9 @@ explicitly assigned to the independent GitHub lane for 流川枫.
 
 ## Shared focused receipt contract
 
-Each target must produce a separate receipt.  A batch-level green summary is
-not sufficient.  The receipt must bind:
+Each source file must produce a separately named receipt, even within the
+BODY6 package.  A batch-level green summary is not sufficient.  Each receipt
+must bind:
 
 1. target path, exact declaration names, and source file SHA-256;
 2. repository commit, `lean-toolchain`, Lean version, Lake manifest, and
