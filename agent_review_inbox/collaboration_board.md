@@ -2039,6 +2039,19 @@ fixed-λ 处理有限非空族严格 reserve 的聚合闭合，P3 处理 assembl
 这些任务分别落在 coefficient identity、finite-order strictness、source-semantics
 adapter，不扩展到重复审计或大规模回归测试。
 
+### 2026-09-07 13:31 — 梁智炜定向收割
+
+P3 load witness 和 fixed-λ strict reserve final bridge 已完成边界审阅并登记到
+DAG，revision 665；二者均为 open/uncompiled。body-6 PSD 和 K-path 参数重排仍在
+进行，继续保留 verified registry=0 与正式证书 fail-closed。
+
+### 2026-09-07 13:36 — 梁智炜收割 body-6/K-path
+
+body-6 tail PSD lower-bound 与 K-path relative-plus-additive 两个叶已通过定向
+review 并登记，DAG revision 666。它们仍是条件式、未编译 proof attempts；没有把
+主子块 PSD 外推到完整 body-6，也没有把参数重排当成 residual absorption 或 registry
+证据。
+
 ### 2026-09-07 12:32 — 梁智炜本地收割并派发
 
 本轮回收了四个已完成数学叶：P3 radius monotonicity、fixed-λ uniform

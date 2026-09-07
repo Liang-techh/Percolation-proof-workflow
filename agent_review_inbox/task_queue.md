@@ -2705,3 +2705,19 @@ source-independent/open/uncompiled 候选。
   adapter；P3 线转向从非负 weight/velocity 构造 assembled-load 非负 witness。
 - 四条线均保持数学瓶颈优先；新叶不重复已登记的 Cauchy、total aggregation、
   capMax 或 source/coverage/registry 层。
+
+### 2026-09-07 — 13:31 定向收割
+
+- P3 assembled-load nonnegative witness 已审阅并登记，revision 664；它只由
+  `weight[i]≥0` 与 `squaredVelocity[i]≥0` 给出 `Fin 6` load witness。
+- fixed-λ strict reserve final bridge 已审阅并登记，revision 665；它要求有限族
+  非空及至少一个严格 reserve，并通过显式 total equalities 接入 final consumer。
+- body-6 PSD 下界与 P4 relative-plus-additive 参数重排仍在生成 review；不提前登记、
+  不把静态检查当成 Lean 验证。
+
+### 2026-09-07 — 13:36 数学叶收割
+
+- body-6 tail PSD/最小对角下界与 K-path relative-plus-additive 接口 review 已到，
+  分别登记为 `tail_psd_lower_bound` 与 `relative_additive_interface`，revision 666。
+- 前者只证明有序 2×2 tail 子块的二次型/PSD 下界，后者只做 affine square-envelope
+  参数重排；二者均未升级为完整矩阵、全域 coverage 或 formal certificate。

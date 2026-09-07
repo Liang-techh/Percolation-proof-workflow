@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 663,
+  "revision": 666,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -39851,7 +39851,8 @@
       "status": "open",
       "proof_sketch": "Reuse the union strict budget and existing two-row upper-to-positive-margin/admissibility bridges; bind the same fixed lambda through UniformMarginLowerBound and keep denominator, ratio, margin, and lambdaUpper premises typed.",
       "dependencies": [
-        "8572ee67c3c6489dac7cade8070e5074"
+        "8572ee67c3c6489dac7cade8070e5074",
+        "ee393b4a0fdd4bc6ad1d9b1c5607dd3f"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -40053,7 +40054,9 @@
       "parent_id": "3ebbde90980343afb5ebbd8036dcff65",
       "status": "open",
       "proof_sketch": "Reuse the existing tail self Gram and yaw-isometry interfaces, retain the h²(I-p pᵀ) correction, derive the three independent weighted entries, and bind source weights only through explicit CenterOffsetTarget and weight premises.",
-      "dependencies": [],
+      "dependencies": [
+        "c2b18f19cf3949b284c14d4839ee7454"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -40164,7 +40167,9 @@
       "parent_id": "2d0e7834c19f43c29224086f3035953f",
       "status": "open",
       "proof_sketch": "Prove the reciprocal-to-polynomial weight seam, finite weighted Cauchy, Euclidean squared-norm aggregation, and typed Route-B force/acceleration consumers; leave all source, action, coverage, and admission premises explicit.",
-      "dependencies": [],
+      "dependencies": [
+        "4c6ec998159b4f609dda50f778e27dce"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -40234,7 +40239,9 @@
       "parent_id": "700e2ab2917d4f17b1092ee53a3e3937",
       "status": "open",
       "proof_sketch": "Apply coordinatewise order under nonnegative assembled loads, then sum against component caps and compose with the existing scalar capMax inequality; retain same-point domain, velocity, and weight premises without reconstructing the radius payload.",
-      "dependencies": [],
+      "dependencies": [
+        "d99a8ff4969f42898f393b81167827fc"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -40251,6 +40258,146 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_ORDER_CONSUMER_REVIEW.md",
             "sha256": "4E712FFE73B7F2DEB3C31A0D29CCBA76F64211E5CC0D4941C4934A5E4F7450C6"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "d99a8ff4969f42898f393b81167827fc": {
+      "id": "d99a8ff4969f42898f393b81167827fc",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.cap_load_order_consumer.assembled_load_nonneg_witness",
+      "statement": "An assembled six-component load coefficient is pointwise nonnegative when its selected weights and squared-velocity premises are pointwise nonnegative, yielding the load witness consumed by the cap-load order bridge.",
+      "parent_id": "d2188a561e4a436bb8338c1b72406ba8",
+      "status": "open",
+      "proof_sketch": "Define load i = weight i * squaredVelocity i on Fin 6, prove pointwise nonnegativity by multiplication order, and package it with the common same-point domain context while leaving velocity formation and source semantics external.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_CENTRAL_FD_LOAD_NONNEG_WITNESS",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_LOAD_WITNESS.lean",
+            "sha256": "5EB39043D3C8C36638AB07E7C92BE05414DE9A2EFB5B6F8E027C19600027D11D"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_LOAD_WITNESS_REVIEW.md",
+            "sha256": "4C34B33E6FC52CCC83A21B1F5809CCE7EDBA7AD951E4E96345213FA2CA3F49EF"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "ee393b4a0fdd4bc6ad1d9b1c5607dd3f": {
+      "id": "ee393b4a0fdd4bc6ad1d9b1c5607dd3f",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge",
+      "statement": "A nonempty finite fixed-lambda reserve family with nonnegative per-cell reserves and one strict reserve witness transfers through explicit total equalities to the final strict weighted-budget consumer.",
+      "parent_id": "0fe416640a7d47b39868489351b873e9",
+      "status": "open",
+      "proof_sketch": "Use finite-sum strictness after the previously registered non-strict reserve aggregation, then require an explicit adapter equating cell-family totals with final weighted load/margin totals; do not infer row identity, coverage, digest, or source binding.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_FIXED_LAMBDA_STRICT_RESERVE_FINAL_BRIDGE",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_STRICT_RESERVE_FINAL_BRIDGE20260907.lean",
+            "sha256": "58015527D12983207F0374C6A8D5342FD7BC41C38FA100567D3B62F8D692CCE9"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_STRICT_RESERVE_FINAL_BRIDGE20260907_REVIEW.md",
+            "sha256": "002CC644FFB17C7C035EF77860585E2A329555B8F983AD45FA269C2950D3AAF2"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "c2b18f19cf3949b284c14d4839ee7454": {
+      "id": "c2b18f19cf3949b284c14d4839ee7454",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound",
+      "statement": "The exact mass/inertia weighted body-6 tail 2x2 Gram is positive semidefinite and has quadratic form and minimum-diagonal lower bounds by kappa, while remaining a proper subblock only.",
+      "parent_id": "1b4f406e910b446093c9e38b5ed6401c",
+      "status": "open",
+      "proof_sketch": "Consume the explicit diagonal/zero-cross-term tail table, decompose its quadratic form into kappa times the Euclidean square plus a nonnegative h² correction, and prove the exact minimum diagonal expression without calling it a full-matrix eigenvalue bound.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_BODY6_TAIL_PSD_LOWER_BOUND",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_TAILPSD20260907.lean",
+            "sha256": "BB18FF316F6CF0193CCCA504577703B6D308638D9430365B5CB7A8E9B0FBF38D"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_TAILPSD20260907_REVIEW.md",
+            "sha256": "0EDF9278E54BD132C5A5456CD85D8555A0D18EB74998E08E00C01A0B61698E31"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "4c6ec998159b4f609dda50f778e27dce": {
+      "id": "4c6ec998159b4f609dda50f778e27dce",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface",
+      "statement": "The weighted three-term defect budget transports affine square envelopes for distal and local defects into an explicit relative-plus-additive bound with rho_eff and B_eff.",
+      "parent_id": "4433e80c13ae40258342fcacd879bbf6",
+      "status": "open",
+      "proof_sketch": "Substitute ED≤kappaD*energy+biasD and EB≤kappaB*energy+biasB into the weighted budget, retain tau² and nonnegative parameter premises, and expose separate force/acceleration typed consumers without redoing Cauchy or defect convention conversion.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_P4_RELATIVE_ADDITIVE_INTERFACE",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_RelativeAdditive.lean",
+            "sha256": "6A6668D8AA3ECBC33E08D47680BF426CB6002904E85169C49C14107409EDC4A6"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_RelativeAdditive_REVIEW.md",
+            "sha256": "251F05062B6F48F7E0AE884B0FC047CB24F938C63E4F67CDD1D5B09115ED844C"
           }
         ],
         "registry_eligible": false,
@@ -67559,6 +67706,65 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T19:17:26.260113+00:00",
+      "kind": "node_added",
+      "node_id": "d99a8ff4969f42898f393b81167827fc",
+      "parent_id": "d2188a561e4a436bb8338c1b72406ba8",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.cap_load_order_consumer.assembled_load_nonneg_witness"
+    },
+    {
+      "at": "2026-09-07T19:17:26.260132+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.cap_load_order_consumer.assembled_load_nonneg_witness"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T19:17:54.691165+00:00",
+      "kind": "node_added",
+      "node_id": "ee393b4a0fdd4bc6ad1d9b1c5607dd3f",
+      "parent_id": "0fe416640a7d47b39868489351b873e9",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge"
+    },
+    {
+      "at": "2026-09-07T19:17:54.691185+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T19:18:44.877212+00:00",
+      "kind": "node_added",
+      "node_id": "c2b18f19cf3949b284c14d4839ee7454",
+      "parent_id": "1b4f406e910b446093c9e38b5ed6401c",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound"
+    },
+    {
+      "at": "2026-09-07T19:18:44.877972+00:00",
+      "kind": "node_added",
+      "node_id": "4c6ec998159b4f609dda50f778e27dce",
+      "parent_id": "4433e80c13ae40258342fcacd879bbf6",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface"
+    },
+    {
+      "at": "2026-09-07T19:18:44.877979+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound",
+        "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -71215,5 +71421,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "d1f4fdd47de6936f4bd27da874d1ce3729c45e5e21fd1d76192f0d6637669f58"
+  "state_checksum": "e143873f9ea7578135011511465f70f449f22a53bb68929da3b11ef2c8a352f6"
 }

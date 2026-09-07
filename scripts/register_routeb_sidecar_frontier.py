@@ -1248,6 +1248,58 @@ CHILDREN = [
             "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_ORDER_CONSUMER_REVIEW.md",
         ],
     },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.cap_load_order_consumer.assembled_load_nonneg_witness",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.cap_load_order_consumer",
+        "statement": "An assembled six-component load coefficient is pointwise nonnegative when its selected weights and squared-velocity premises are pointwise nonnegative, yielding the load witness consumed by the cap-load order bridge.",
+        "proof_sketch": "Define load i = weight i * squaredVelocity i on Fin 6, prove pointwise nonnegativity by multiplication order, and package it with the common same-point domain context while leaving velocity formation and source semantics external.",
+        "lane": "source_semantics",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_LOAD_NONNEG_WITNESS",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_LOAD_WITNESS.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_LOAD_WITNESS_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export",
+        "statement": "A nonempty finite fixed-lambda reserve family with nonnegative per-cell reserves and one strict reserve witness transfers through explicit total equalities to the final strict weighted-budget consumer.",
+        "proof_sketch": "Use finite-sum strictness after the previously registered non-strict reserve aggregation, then require an explicit adapter equating cell-family totals with final weighted load/margin totals; do not infer row identity, coverage, digest, or source binding.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_STRICT_RESERVE_FINAL_BRIDGE",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_STRICT_RESERVE_FINAL_BRIDGE20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_STRICT_RESERVE_FINAL_BRIDGE20260907_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted",
+        "statement": "The exact mass/inertia weighted body-6 tail 2x2 Gram is positive semidefinite and has quadratic form and minimum-diagonal lower bounds by kappa, while remaining a proper subblock only.",
+        "proof_sketch": "Consume the explicit diagonal/zero-cross-term tail table, decompose its quadratic form into kappa times the Euclidean square plus a nonnegative h² correction, and prove the exact minimum diagonal expression without calling it a full-matrix eigenvalue bound.",
+        "lane": "source_semantics",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_BODY6_TAIL_PSD_LOWER_BOUND",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_TAILPSD20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_TAILPSD20260907_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt",
+        "statement": "The weighted three-term defect budget transports affine square envelopes for distal and local defects into an explicit relative-plus-additive bound with rho_eff and B_eff.",
+        "proof_sketch": "Substitute ED≤kappaD*energy+biasD and EB≤kappaB*energy+biasB into the weighted budget, retain tau² and nonnegative parameter premises, and expose separate force/acceleration typed consumers without redoing Cauchy or defect convention conversion.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_P4_RELATIVE_ADDITIVE_INTERFACE",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_RelativeAdditive.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_RelativeAdditive_REVIEW.md",
+        ],
+    },
 ]
 
 
