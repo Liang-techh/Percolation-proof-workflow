@@ -1110,3 +1110,11 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   factor-2 缺口。
 - 目前仅是未编译源码，不能写入 verified registry；已交给 Euclid 做 pinned
   Lean compile、axiom、sorry/admit 与 source/olean hash receipt。
+### 2026-09-07 — 梁智炜：O0 factor-2 receipt 与 O2 receipt-to-Lean 收割完成
+
+- O0 新回执已按 `Fin 2` 的显式 factor `2` 重新接入，`epsilon_R_2_weighted`
+  与 workflow API 精确一致；这是 conditional exact-Fourier weighted child，
+  不是 Schur margin 消费或 global Route-B proof。
+- O2 新回执已把真实 `cell_id=1` coverage candidate 的 hash、canonical 13-coordinate
+  order、generated Lean source/olean、compile exit 0 与标准 axiom 集合绑定到 state；
+  `InRectBox` 实例的实际 witness 仍未由 receipt 自动制造。

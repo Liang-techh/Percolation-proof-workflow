@@ -1758,3 +1758,11 @@ after integration; corrections should be a new result file.
 - After receipt, feed the theorem as the explicit `output_norm_conversion_proven`
   premise; keep source/runtime binding, global coverage, and Schur consumption
   independent.
+### New harvest: factor-2 weighted receipt and O2 generated adapter (2026-09-07)
+
+- The O0 weighted child now has a corrected exact-rational output-2 norm factor
+  and is accepted by the coordinator math API. Its one-cell/source-key scope,
+  no-Schur-consumption boundary, and no-registry status remain mandatory.
+- The O2 generated adapter is a compiled single-leaf transport artifact. It
+  still needs an authoritative `InRectBox` witness and coverage join; parsing a
+  candidate JSON is not a proof of global partition membership.
