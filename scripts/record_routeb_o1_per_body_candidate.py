@@ -16,6 +16,8 @@ TRACE = ROOT / "examples/routeb_b45_source_comparator_lean/BodyTraceEvaluator.le
 ADAPTER = ROOT / "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean"
 GENERATOR = ROOT / "examples/routeb_b45_source_comparator_lean/generate_body_trace_evaluator.py"
 BODY_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_TRACE_EVALUATOR_RECEIPT.json"
+BODY_CHECK = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_TRACE_EVALUATOR_CHECK.json"
+BODY1_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_1_SOURCE_BRIDGE_RECEIPT.json"
 REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-per-body-candidate-codex-20260907.md"
 AGENT_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-per-body-source-definition-obstruction-codex-20260907.md"
 
@@ -32,7 +34,8 @@ def find(state, name: str):
 
 
 def main() -> None:
-    for path in (STATE, LEAN, TRACE, ADAPTER, GENERATOR, BODY_RECEIPT, REVIEW, AGENT_REVIEW):
+    for path in (STATE, LEAN, TRACE, ADAPTER, GENERATOR, BODY_RECEIPT, BODY_CHECK,
+                 BODY1_RECEIPT, REVIEW, AGENT_REVIEW):
         if not path.is_file():
             raise FileNotFoundError(path)
     store = StateStore(STATE)
@@ -53,6 +56,12 @@ def main() -> None:
         "generator_sha256": digest(GENERATOR),
         "body_trace_receipt_sha256": digest(BODY_RECEIPT),
         "body_trace_receipt_status": "OPEN_H_BODY_PROOFS_UNCOMPILED",
+        "body_trace_check_sha256": digest(BODY_CHECK),
+        "body_trace_check_status": "PASS_GENERATED_TYPED_EVALUATOR_FAIL_CLOSED",
+        "body_trace_structure_checked": True,
+        "body_1_source_bridge_receipt_sha256": digest(BODY1_RECEIPT),
+        "body_1_source_bridge_status": "OPEN_BODY_1_SOURCE_EXPANSION_LEMMAS",
+        "body_1_source_bridge_proven": False,
         "typed_body_evaluator_present": True,
         "body_trace_row_count": 727,
         "review_sha256": digest(REVIEW),

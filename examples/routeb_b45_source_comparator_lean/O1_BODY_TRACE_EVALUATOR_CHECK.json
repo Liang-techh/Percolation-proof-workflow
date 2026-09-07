@@ -1,0 +1,29 @@
+{
+  "schema": "routeb.o1.body_trace_evaluator.check.v1",
+  "status": "PASS_GENERATED_TYPED_EVALUATOR_FAIL_CLOSED",
+  "csv_sha256": "AE1F9CD7978C4CF23626B5C097EAAF4A2C70DE9C8B86A31A61DB12997CF4C3B9",
+  "lean_sha256": "B9845D37B5DCD16E1F9E142CB2E4D0E5571452993E843C85AC8CD643F6BA5DEA",
+  "row_count": 727,
+  "body_counts": {
+    "1": 1,
+    "2": 6,
+    "3": 13,
+    "4": 40,
+    "5": 57,
+    "6": 610
+  },
+  "labels_retained": [
+    "body",
+    "row",
+    "col",
+    "frequency",
+    "realCoeff",
+    "imagCoeff"
+  ],
+  "finite_fold_present": true,
+  "lean_compiled": false,
+  "h_body_proven": false,
+  "source_binding_proven": false,
+  "formal_certificate_allowed": false,
+  "registry_promoted": false
+}

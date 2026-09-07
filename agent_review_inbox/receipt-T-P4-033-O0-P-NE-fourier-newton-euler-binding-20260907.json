@@ -1,0 +1,111 @@
+{
+  "schema": "routeb.o0.p_ne.fourier_newton_euler_binding.v1",
+  "task": "T-P4-033",
+  "lane": "O0",
+  "scope": "P-NE only",
+  "status": "OBSTRUCTION_P_NE_FUNCTION_EQUALITY_NOT_BOUND",
+  "consumable_now": false,
+  "main_state_modified": false,
+  "registry_promoted": false,
+  "l_base_recomputed": false,
+  "forbidden_inputs_used": {
+    "float64_agreement_as_proof": false,
+    "numerical_candidate_as_proof": false,
+    "previous_baseline_arithmetic": false
+  },
+  "binding": {
+    "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+    "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+    "mu_exact": "1/1000000",
+    "q_domain": "forall k : Fin 6, abs (q k) <= 1/1000",
+    "block_order": "B=(4,5), D=(1,2,3,6), one-based physical order",
+    "matrix_type": "Matrix (Fin 6) (Fin 6) Real"
+  },
+  "target_statement": "forall q in q_domain, FourierMass^mu(source_key,q) = NewtonEulerMass^mu(source_key,q)",
+  "existing_sidecars": [
+    {
+      "path": "examples/routeb_b45_source_mass_fourier_bridge_lean/SourceMassFourierBridge.lean",
+      "sha256": "7FAE7A6E574FC7C904E1E7A7B59620FA1910C38CBB6D442072DB5251691523E1",
+      "olean_sha256": "3E9DA6A0067A61E2194831B1A989BC3A693FC41413A08EE28BEFE72F03870771",
+      "compiled": true,
+      "theorem": "sourceMass_to_regularized_fullSixBodyFourier",
+      "boundary": "conditional on abstract h_body"
+    },
+    {
+      "path": "examples/routeb_b45_full_610_aggregate_lean/Full610AggregateComparator.lean",
+      "sha256": "504A6947C0A627CEE42F4DF9304D332082E3668A3F26C34C9FEBC07B3BC56FE4",
+      "olean_sha256": "6232006CA5C4B330973B3E59FA87F365A76A4D058DD98E708CB343A0B03870A6",
+      "compiled": true,
+      "theorem": "regularized_source_eq_full_610_aggregate",
+      "boundary": "conditional on h_aggregate and h_body"
+    },
+    {
+      "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyExactSource.lean",
+      "sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+      "compiled": false,
+      "theorem": "sourceBodyMass_eq_juliaExactBodyMass",
+      "boundary": "exact body definition and extensional bridge; h_body absent"
+    },
+    {
+      "path": "examples/routeb_b45_source_comparator_lean/BodyTraceEvaluator.lean",
+      "sha256": "B9845D37B5DCD16E1F9E142CB2E4D0E5571452993E843C85AC8CD643F6BA5DEA",
+      "compiled": false,
+      "boundary": "generated 727-row evaluator; no h_body proof"
+    },
+    {
+      "path": "examples/routeb_fourier_source_binding_lean/ExactCoefficientBridge.lean",
+      "boundary": "generic coefficient-map congruence only; no exact-DH map instantiation"
+    },
+    {
+      "path": "examples/routeb_mass_zero_bridge_lean/MassZeroBridge.lean",
+      "boundary": "q=0 literal aggregate only; not a q-function identity"
+    },
+    {
+      "path": "artifacts/task_routeb_o1_true_dh_exact_typed_mdd_source_v2_20260907/RouteBTrueDHExactTypedMDDSourceV2.lean",
+      "sha256": "C7CAAEE9B782F34367721EEA41590E21354B3D4A76D8D4BDB2A34E1480F83B45",
+      "theorem": "h_source_mass_of_aggregate_body",
+      "boundary": "requires AggregateBodyPremises.h_aggregate and .h_body"
+    },
+    {
+      "path": "artifacts/task_routeb_o1_true_dh_exact_typed_mdd_source_v2_20260907/RECEIPT.json",
+      "boundary": "source_binding_proven=false; h_aggregate and h_body missing"
+    }
+  ],
+  "missing_atomic_statement": "forall body q i j, contractMass(sourceContract q, body, routeBMass body, routeBInertia body) i j = bodyTraceEvaluator body q i j",
+  "minimum_direct_receipt": {
+    "kind": "exact_real_fourier_newton_euler_mass_binding",
+    "required_theorem": "h_fourier_mass_newton_euler",
+    "required_statement": "forall q in q_domain, FourierMass^mu(source_key,q) = NewtonEulerMass^mu(source_key,q)",
+    "required_fields": [
+      "source_key",
+      "state_key",
+      "mu_exact",
+      "q_domain",
+      "block_order",
+      "exact_definition_hash_for_FourierMass",
+      "exact_definition_hash_for_NewtonEulerMass",
+      "compiled_lean_file_hash",
+      "olean_hash",
+      "exit_code=0",
+      "print_axioms",
+      "zero_sorry_admit_axiom_audit"
+    ]
+  },
+  "minimum_decomposed_receipt": {
+    "h_body": "forall body q i j, BodyMass_NE(body,q,i,j) = BodyFourier(body,q,i,j)",
+    "h_aggregate": "forall q i j, CSV610Mass(q,i,j) = sum body, BodyFourier(body,q,i,j)",
+    "h_regularizer": "both sides use the same exact-real mu=1/1000000 diagonal addition",
+    "requirements": [
+      "six concrete h_body proofs",
+      "function-level h_aggregate over the q-domain",
+      "single source_key/state_key/mu binding",
+      "compiled and audited Lean receipt"
+    ]
+  },
+  "obstruction": [
+    "No current Lean theorem instantiates h_body for the 727-row body trace.",
+    "No current Lean theorem instantiates the 610-row aggregate function lift.",
+    "Exact coefficient checker and source hashes are not kernel proof of the function equality.",
+    "The available q=0 bridge is not a uniform-in-q semantic equality."
+  ]
+}

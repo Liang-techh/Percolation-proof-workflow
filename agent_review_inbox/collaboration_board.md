@@ -1386,3 +1386,30 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - O0 binding ledger 已逐项固定 6 个必须同 key 的 source/physics premise；当前
   `P-NE`、`P-BUDGET`、`P-MU` 缺失，`P-BB-ALLQ`、`P-SYM`、`P-BUP` 仅 conditional，
   因而 baseline child 仍不能消费。
+
+### 2026-09-07 — 梁智炜：O1 body-trace 结构 checker
+
+- 新增非 Lean checker，冻结并重算 body-trace CSV SHA-256，确认 727 行、六个
+  body 分片计数 `1/6/13/40/57/610`，以及 Lean 生成物中的 body/row/col/frequency
+  和有理 cos/sin 系数标签、finite fold 定义均存在。
+- 结果为 `PASS_GENERATED_TYPED_EVALUATOR_FAIL_CLOSED`；checker 明确保留
+  `lean_compiled=false`、`h_body_proven=false`、`source_binding_proven=false`，
+  因而不改变 O1 frontier、formal certificate 或 verified registry。
+- 候选记录已绑定该 checker receipt 的 hash/status，后续远端 Lean agent 只需提交
+  编译与六个 source-bound `h_body_i` proof，不再重复生成物结构审计。
+
+### 2026-09-07 — O2 proof-bridge contract 收割
+
+- O2 external-premises validator 现在还要求 source-bound Lean bridge 的路径、
+  SHA-256、membership proof symbol 和 `CoverageJoin2` proof symbol；缺失、漂移或
+  未知字段均拒绝。
+- bridge 仍只是显式 proof handoff 契约，Python receipt、文件 hash、box subset
+  或 structural split 不会被提升为 dynamics theorem；formal/registry gates 继续关闭。
+
+### 2026-09-07 — O1 body-1 composition seam
+
+- 在 `RouteBO1PerBodyTraceAdapter.lean` 增加
+  `h_body_1_of_entry_targets`：把 source-entry equality 与 tagged-trace
+  equality 组合成 `h_body_1` 的纯逻辑桥。
+- 该桥不提供两侧前提；body-1 的 source 展开和 finite-fold reduction 仍分别
+  OPEN，receipt 继续标记 `TARGETS_ONLY_UNCOMPILED`，不进入 source/formal/registry。

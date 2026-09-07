@@ -220,7 +220,8 @@ def external_premises(tmp_path):
     paths = {}
     for name, content in (("triple.json", "triple\n"),
                           ("membership.json", "membership\n"),
-                          ("join.json", "join\n")):
+                          ("join.json", "join\n"),
+                          ("proof_bridge.lean", "-- explicit proof bridge\n")):
         path = tmp_path / name
         path.write_text(content, encoding="utf-8")
         paths[name] = hashlib.sha256(path.read_bytes()).hexdigest()
@@ -246,6 +247,14 @@ def external_premises(tmp_path):
         "coverage_join": {
             "kind": "CoverageJoin2", "premise_receipt_path": "join.json",
             "premise_receipt_sha256": paths["join.json"],
+        },
+        "proof_bridge": {
+            "schema": "routeb-theta2-proof-bridge-v1",
+            "status": "EXPLICIT_PROOFS_REQUIRED",
+            "lean_module_path": "proof_bridge.lean",
+            "lean_module_sha256": paths["proof_bridge.lean"],
+            "membership_proof_symbol": "membershipProof",
+            "coverage_join_proof_symbol": "coverageJoinProof",
         },
     }
 

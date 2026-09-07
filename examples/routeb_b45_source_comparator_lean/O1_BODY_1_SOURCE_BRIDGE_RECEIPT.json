@@ -1,0 +1,51 @@
+{
+  "schema": "routeb.o1.true_dh_exact_typed_mdd_source.body_1_source_bridge.v1",
+  "status": "OPEN_BODY_1_SOURCE_EXPANSION_LEMMAS",
+  "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+  "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+  "body": 1,
+  "lean_adapter": {
+    "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean",
+      "sha256": "5B4B08AA7FE385AB7E13B26BAAEA081EA0D3F8225375C9B594049859F841E896",
+      "status": "TARGETS_ONLY_UNCOMPILED"
+  },
+  "source_target": "forall q i j, bodyMass (sourceContract q).origins (sourceContract q).axes (0 : Fin 6) (routeBMass 0) (routeBInertia 0) i j = bodyTraceEvaluator 0 q i j",
+  "decomposition": {
+    "h_body_1_source_entry_target": "direct source bodyMass to generated evaluator target",
+    "h_body_1_expected_entry_target": "sourceBodyMass q 0 i j = if i=0 and j=0 then 628/1875 else 0",
+    "h_body_1_trace_entry_target": "the expected entry equals bodyTraceEvaluator 0 q i j"
+  },
+  "symbolic_source_obligation": {
+    "status": "OPEN",
+    "required_expansions": [
+      "sourceContract q origins at slots 0 and 1",
+      "sourceContract q axis at joint 0",
+      "routeBFrameSlot q 0 and q 1 origin/zAxis entries",
+      "bodyJv/bodyJw active-column reduction for body 0",
+      "diagonal routeBInertia 0 reduction",
+      "Real.sin_sq_add_cos_sq for the first-step translation"
+    ],
+    "expected_geometry": "only active joint 0; Jw contribution 1/3 and translational contribution (2/25)^2/4 = 1/625 at entry (0,0)",
+    "proof_status": "NO_PROOF"
+  },
+  "trace_obligation": {
+    "status": "OPEN",
+    "required_step": "reduce the tagged body-1 fold to its zero-frequency real coefficient and zero elsewhere",
+    "proof_status": "NO_PROOF",
+    "data_level_equality_substitution": false
+  },
+  "composition_bridge": {
+    "theorem": "h_body_1_of_entry_targets",
+    "status": "LOGICAL_COMPOSITION_ONLY",
+    "source_target_and_trace_target_still_open": true
+  },
+  "compile_probe": {
+    "status": "COMPILE_BLOCKED_ENVIRONMENT",
+    "failure": "local Lake manifest points to a Linux mathlib path; Windows clone attempt returned Function not implemented",
+    "verified": false
+  },
+  "registry_eligible": false,
+  "comparator_accepted": false,
+  "formal_certificate_allowed": false,
+  "next_exact_action": "In the pinned Lean environment, prove the six source slot/origin/axis entry lemmas for body 0, then prove h_body_1_trace_entry_target by finite-fold reduction and compose the two targets; retain the same source/state key."
+}

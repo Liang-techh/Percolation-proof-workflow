@@ -2002,3 +2002,17 @@ after integration; corrections should be a new result file.
   namespace 字段且仍需外部 hash 文件内容绑定。
 - Julia-capable agent 只做 parse/minimal selector 与真实 receipt 产出，禁止
   用 synthetic triple 绕过 source membership 或 CoverageJoin2 premise。
+
+### T-P4-033-O1 — body trace structure gate (2026-09-07)
+
+- 已完成本地非 Lean 结构门：冻结 CSV hash、727 行、六 body 分片、标签保留与
+  finite fold 均通过；receipt 状态固定为
+  `PASS_GENERATED_TYPED_EVALUATOR_FAIL_CLOSED`。
+- 继续攻 source-bound `h_body_1..h_body_6` 与 aggregate function lift；不得把
+  checker PASS、CSV equality 或 typed premise field 当作 Lean theorem。
+
+### T-P4-036.2 — explicit proof bridge (2026-09-07)
+
+- O2 bridge contract 已加入 external-premises intake，要求 source-bound Lean
+  module/hash 和两个显式 proof symbol；下一步只接收真实 membership 与
+  `CoverageJoin2` proof，不创建 synthetic proof。

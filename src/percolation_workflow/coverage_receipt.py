@@ -37,6 +37,7 @@ ACCEPTED_INTERVAL_MEMBERSHIP_STATUSES = frozenset({
     "SOURCE_INTERVAL_MEMBERSHIP_PROVEN",
 })
 EXTERNAL_PREMISES_SCHEMA = "routeb-theta2-external-premises-v1"
+PROOF_BRIDGE_SCHEMA = "routeb-theta2-proof-bridge-v1"
 EXTERNAL_PREMISES_CLAIM_BOUNDARY = (
     "source-bound receipt references only; no dynamics theorem, "
     "Float64/libm claim, or CoverageJoin2 proof"
@@ -123,9 +124,10 @@ def validate_theta2_external_premises(
 ) -> dict[str, Any]:
     """Validate source-bound O2 premise references without proving them.
 
-    The three referenced files must exist and match their declared SHA-256:
-    the canonical triple receipt, the source interval-membership receipt, and
-    the ``CoverageJoin2`` premise receipt.  If ``canonical_triple`` is
+    The four referenced files must exist and match their declared SHA-256:
+    the canonical triple receipt, the source interval-membership receipt, the
+    ``CoverageJoin2`` premise receipt, and the Lean bridge module.  If
+    ``canonical_triple`` is
     supplied, its structural validator is run and its three IDs must agree
     with ``triple_ref``.  Neither mode turns receipt metadata into a dynamics
     theorem or a Lean ``CoverageJoin2`` proof; those remain explicit inputs to
@@ -142,7 +144,7 @@ def validate_theta2_external_premises(
     _external_only_keys(
         document,
         {"schema", "claim_boundary", "namespace", "triple_ref",
-         "source_interval_membership", "coverage_join"},
+         "source_interval_membership", "coverage_join", "proof_bridge"},
         "external premises",
     )
 
@@ -209,6 +211,31 @@ def validate_theta2_external_premises(
         base_dir=root,
     )
 
+    proof_bridge = document.get("proof_bridge")
+    if not isinstance(proof_bridge, Mapping):
+        raise CoverageReceiptError("proof_bridge is missing")
+    _external_only_keys(
+        proof_bridge,
+        {"schema", "status", "lean_module_path", "lean_module_sha256",
+         "membership_proof_symbol", "coverage_join_proof_symbol"},
+        "proof_bridge",
+    )
+    if proof_bridge.get("schema") != PROOF_BRIDGE_SCHEMA:
+        raise CoverageReceiptError("proof_bridge schema is unsupported")
+    if proof_bridge.get("status") != "EXPLICIT_PROOFS_REQUIRED":
+        raise CoverageReceiptError("proof_bridge must require explicit proofs")
+    for field in ("membership_proof_symbol", "coverage_join_proof_symbol"):
+        value = proof_bridge.get(field)
+        if (not isinstance(value, str) or not value.strip()
+                or any(ch.isspace() for ch in value)):
+            raise CoverageReceiptError(f"proof_bridge.{field} must be a symbol reference")
+    lean_module = _bound_external_receipt(
+        proof_bridge,
+        path_field="lean_module_path",
+        hash_field="lean_module_sha256",
+        base_dir=root,
+    )
+
     structural = None
     if canonical_triple is not None:
         structural = validate_canonical_coverage_triple(canonical_triple)
@@ -231,6 +258,13 @@ def validate_theta2_external_premises(
         "coverage_join": {
             "kind": "CoverageJoin2",
             "premise_receipt": coverage_receipt,
+        },
+        "proof_bridge": {
+            "schema": PROOF_BRIDGE_SCHEMA,
+            "status": "EXPLICIT_PROOFS_REQUIRED",
+            "lean_module": lean_module,
+            "membership_proof_symbol": proof_bridge["membership_proof_symbol"],
+            "coverage_join_proof_symbol": proof_bridge["coverage_join_proof_symbol"],
         },
         "canonical_triple_structurally_validated": structural is not None,
         "source_interval_membership_receipt_bound": True,
@@ -613,6 +647,7 @@ __all__ = [
     "SCHEMA",
     "CANONICAL_TRIPLE_SCHEMA",
     "EXTERNAL_PREMISES_SCHEMA",
+    "PROOF_BRIDGE_SCHEMA",
     "validate_coverage_receipt",
     "validate_canonical_coverage_triple",
     "validate_theta2_external_premises",
