@@ -2432,3 +2432,8 @@ revision 717 接入 `SOURCE_POSITIVE_TARGET_BINDING`。该叶确认正目标不�
 normalization/nominal/credit 证据；它同时保留 exact F≤L、zero-floor 和
 zero-front-test obstruction。P4 的具体 Route-B 实例化、true-DH source、
 coverage 与 Lean kernel 仍未关闭。
+
+后续并行线已重新分离：BODY6 处理实际域身份与零构型障碍，P4 处理不同域和
+不同矩阵对象的 typed separation，P3 处理 Anthropic FLT 中 registry/graph
+架构的最小 provenance-preserving 轻改。这样优先推进数学瓶颈，同时避免重复
+审计和把候选接口误标成 theorem。

@@ -3039,3 +3039,9 @@ revision 717 登记 P4 `SOURCE_POSITIVE_TARGET_BINDING`。它把 source-view 的
 energy、force residual、BODY6/front、scale、gain、offset、nominal 与 scalar
 margin 绑定到同一源状态，并保留 F≤L、zero-floor、zero-front-test 等精确
 阻塞。当前没有具体 Route-B 正 target 证据，仍不得关闭 P4 parent。
+
+下一轮分工：BODY6 继续核对实际 candidate domain 与 q=0 obstruction；P4
+核对 p_B≤28/5、V≤1、full regularized M/C/G 与 BODY6 Schur 对象的身份；
+P3 已转入 Anthropic FLT 非数论 registry/graph 基础设施的最小 provenance-
+preserving 轻改接入。所有结果都要求 proof-attempt + review，并保持
+未编译/待验证边界。
