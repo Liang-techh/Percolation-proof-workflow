@@ -172,6 +172,15 @@ def main() -> int:
         },
         "exact_budget_rows": metrics,
         "independent_replay": replayed_maxima,
+        "consumer_interface": {
+            "provided_quantity": "||R a_B||_2^2 <= rho_F^2 * (a_B^T B_up a_B)",
+            "source_map": "T = R B_up^(-1/2)",
+            "robust_pmi_E_k_equivalent": False,
+            "E_k_semantics": "l_true = l_poly,k + E_k xi, ||xi||_2 <= 1",
+            "required_adapter": (
+                "descriptor/source theorem must connect the port map R a_B "
+                "to the robust residual error coordinates before E_k consumption"),
+        },
         "unresolved": [
             "independent_interval_source_replay",
             "true_dh_and_float64_semantic_binding",

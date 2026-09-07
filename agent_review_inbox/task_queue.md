@@ -1142,6 +1142,9 @@ polynomial remains a separate frontier.
   already found that Frobenius does not pointwise dominate the induced bound
   (22 cells at eta=2.7 and 39 at eta=5.6), so preserve this comparison as an
   obstruction rather than silently selecting one norm by pointwise order;
+- explicitly distinguish the supplied port-energy quantity `||R a_B||²` from
+  the robust-PMI error factor `E_k` in `l_true=l_poly,k+E_k xi`; they are not
+  interchangeable without a typed descriptor/source adapter;
 - forbidden: treating `RESOLVED`, positive Young margin, or `implicit_HG_spd`
   as kernel verification, inferring full DH/Float64 correctness, skipping
   independent interval replay, or promoting this leaf to the registry.
