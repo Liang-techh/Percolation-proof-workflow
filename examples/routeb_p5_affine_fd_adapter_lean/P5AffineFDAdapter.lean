@@ -120,14 +120,12 @@ def offsetDual (d b : Vec6) : ℝ :=
   ∑ i, b i ^ 2 / d i
 
 /-- A six-channel affine component box yields a legal mixed weighted-dual
-relative-plus-additive charge.  Positive offsets are retained explicitly as
-`2*offsetDual`; they are not silently converted into a homogeneous gain. -/
+relative-plus-additive charge.  The component envelope itself already forces
+its right-hand side nonnegative, so no separate sign assumptions on `s`, `b`,
+or `cap` are required for this square estimate. -/
 theorem affine_box_to_weighted_dual_mixed
     (d s b e : Vec6) (cap : ℝ)
     (hd : ∀ i, 0 < d i)
-    (hs : ∀ i, 0 ≤ s i)
-    (hb : ∀ i, 0 ≤ b i)
-    (hcap : 0 ≤ cap)
     (he : ∀ i, |e i| ≤ s i * cap + b i) :
     weightedDual d e ≤
       2 * slopeDual d s * cap ^ 2 + 2 * offsetDual d b := by
@@ -170,15 +168,12 @@ theorem affine_box_to_weighted_dual_mixed
 theorem affine_box_to_weighted_dual_state_mixed
     (d s b e : Vec6) (cap K A : ℝ)
     (hd : ∀ i, 0 < d i)
-    (hs : ∀ i, 0 ≤ s i)
-    (hb : ∀ i, 0 ≤ b i)
-    (hcap0 : 0 ≤ cap)
     (he : ∀ i, |e i| ≤ s i * cap + b i)
     (hS : 0 ≤ slopeDual d s)
     (hcapA : cap ^ 2 ≤ K ^ 2 * A) :
     weightedDual d e ≤
       2 * slopeDual d s * K ^ 2 * A + 2 * offsetDual d b := by
-  have hmixed := affine_box_to_weighted_dual_mixed d s b e cap hd hs hb hcap0 he
+  have hmixed := affine_box_to_weighted_dual_mixed d s b e cap hd he
   have hscale :
       2 * slopeDual d s * cap ^ 2 ≤
         2 * slopeDual d s * (K ^ 2 * A) := by
