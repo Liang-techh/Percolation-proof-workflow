@@ -7,7 +7,7 @@ candidate is inserted into the verified registry by this scanner.
 """
 from __future__ import annotations
 
-from dataclasses import asdict, dataclass
+from dataclasses import asdict, dataclass, replace
 import hashlib
 import json
 from pathlib import Path
@@ -29,6 +29,13 @@ class ReuseCandidate:
     rationale: str
     current_routeb_use: str
     attribution_ref: str
+    declaration: str | None = None
+    source_lines: str | None = None
+    source_commit: str | None = None
+    mathlib_revision: str | None = None
+    lean_toolchain: str | None = None
+    admission_status: str = "pending"
+    pending_reason: str = "static catalog entry; declaration-level compilation is required"
 
 
 @dataclass(frozen=True)
@@ -84,8 +91,63 @@ def _candidate(path: str, kind: str, classification: int, mode: str,
     return ReuseCandidate(path, kind, classification, mode, rationale, routeb, attribution)
 
 
+def _declaration(path: str, name: str, lines: str, classification: int,
+                 mode: str, rationale: str, routeb: str,
+                 attribution: str) -> ReuseCandidate:
+    """Add a declaration-level candidate; provenance is bound after HEAD is read."""
+    return ReuseCandidate(
+        path, "declaration", classification, mode, rationale, routeb, attribution,
+        declaration=name, source_lines=lines,
+    )
+
+
 def _candidates(paths: set[str]) -> tuple[ReuseCandidate, ...]:
     known: list[ReuseCandidate] = []
+
+    def add_declaration(path: str, *args):
+        if path in paths:
+            known.append(_declaration(path, *args))
+
+    add_declaration(
+        "Definitions/Def_Mathlib_IsModuleTopology.lean",
+        "Module.continuous_bilinear_of_finite_free", "147-165", 1,
+        "recompile-and-admit",
+        "Finite-free bilinear continuity for a generic module-level coordinate or modal term; no number-theory hypotheses are required.",
+        "P3/P7 finite-dimensional coordinate and bilinear continuity adapters; does not prove a PDE estimate or positivity bound.",
+        "ATTRIBUTION.md §1: FLT/Mathlib/Topology/Algebra/Module/ModuleTopology.lean; Apache-2.0",
+    )
+    add_declaration(
+        "Definitions/Def_Mathlib_IsModuleTopology.lean",
+        "IsModuleTopology.continuousLinearEquiv", "362-375", 2,
+        "adapt-and-recompile",
+        "Builds a ContinuousLinearEquiv from a LinearEquiv under module-topology hypotheses; useful, but the FLT staging class must be reconciled with the target API.",
+        "Coordinate/state-space transport only; continuity does not imply an isometry, norm constant, or flowpipe result.",
+        "ATTRIBUTION.md §1: FLT/Mathlib/Topology/Algebra/Module/ModuleTopology.lean; Apache-2.0",
+    )
+    add_declaration(
+        "Definitions/Def_Mathlib_Topology_Algebra_Module_Quotient.lean",
+        "Submodule.Quotient.continuousLinearEquiv", "5-18", 1,
+        "recompile-and-admit",
+        "Continuous linear transport between submodule quotients; a precise generic interface for kernel or boundary quotient coordinates.",
+        "P3/P8 quotient-level state and residual transport; it supplies no coverage or trajectory inclusion.",
+        "ATTRIBUTION.md §1: FLT/Mathlib/Topology/Algebra/Module/Quotient.lean; Apache-2.0",
+    )
+    add_declaration(
+        "Definitions/Def_Mathlib_Topology_Algebra_Module_Quotient.lean",
+        "Submodule.quotientPiContinuousLinearEquiv", "20-37", 1,
+        "recompile-and-admit",
+        "Finite-product quotient transport with explicit Fintype and topological additive-group assumptions.",
+        "Finite cell/product coordinate adapters only; do not generalize the finite-index topology contract.",
+        "ATTRIBUTION.md §1: FLT/Mathlib/Topology/Algebra/Module/Quotient.lean; Apache-2.0",
+    )
+    add_declaration(
+        "Definitions/Def_LinearMap_ExtPushout.lean",
+        "ExtPushout (extPushoutRel, mk, inl, inr, proj, lift, hom_ext)", "12-129", 1,
+        "recompile-and-admit",
+        "Pure module pushout/quotient construction with kernel-range and universal-property declarations; no topology or number theory.",
+        "Descriptor, constraint, or boundary quotient construction after the concrete Route-B map and semantics are supplied.",
+        "Repository source; inspect ATTRIBUTION.md and NOTICE before copying; Apache-2.0",
+    )
 
     def add(path: str, *args):
         if path in paths:
@@ -93,7 +155,7 @@ def _candidates(paths: set[str]) -> tuple[ReuseCandidate, ...]:
 
     add(
         "Definitions/Def_Mathlib_Topology_Algebra_Module_Quotient.lean",
-        "mathlib-adapter", 2, "adapt-and-recompile",
+        "mathlib-adapter", 1, "recompile-and-admit",
         "Provides continuous linear equivalences on submodule quotients and finite products; useful for quotient/state-space transport, but the FLT source is pinned to a different Mathlib revision.",
         "Future quotient/transport layer for constrained function or state spaces; recompile against the Route-B pin before admission.",
         "ATTRIBUTION.md §1: FLT/Mathlib/Topology/Algebra/Module/Quotient.lean; Apache-2.0",
@@ -222,6 +284,7 @@ def scan_fermats_repo(repo: str | Path) -> FermatSnapshot:
     commit = _git(root, "rev-parse", "HEAD").strip()
     toolchain = _blob(root, "lean-toolchain").strip()
     manifest = _blob(root, "lake-manifest.json")
+    mathlib_revision = _mathlib_revision(manifest)
     candidates = _candidates(path_set)
     architecture = {
         "theorem_solution_split": {"statements": "Theorems/", "solutions": "P2M/Sol/"},
@@ -240,9 +303,14 @@ def scan_fermats_repo(repo: str | Path) -> FermatSnapshot:
             "formalization.yaml": _sha_text(_blob(root, "formalization.yaml")),
         },
     }
+    candidates = tuple(
+        replace(candidate, source_commit=commit, mathlib_revision=mathlib_revision,
+                lean_toolchain=toolchain)
+        for candidate in candidates
+    )
     return FermatSnapshot(
         repository=REPO, commit=commit, lean_toolchain=toolchain,
-        mathlib_revision=_mathlib_revision(manifest), license="Apache-2.0",
+        mathlib_revision=mathlib_revision, license="Apache-2.0",
         source_counts=_counts(paths), candidates=candidates, architecture=architecture,
     )
 
