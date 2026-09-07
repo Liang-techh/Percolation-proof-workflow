@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 339,
+  "revision": 340,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -29651,6 +29651,32 @@
       "admission_effect": "none",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T02:53:56.964646+00:00",
+      "kind": "external_reuse_review_integrated",
+      "review_file": "agent_review_inbox/review-FLT-derivation-calculus.md",
+      "review_sha256": "6FCF8262E880BBE9B2D4DB3F906DF3B378B5002693A4527AFEF1A16E988D317C",
+      "task_id": "T-FLT-DERIV-CALC",
+      "classification": "flt_derivation_calculus_scan",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "catalog": "anthropic-fermats-last-theorem",
+      "source_commit": "unknown"
+    },
+    {
+      "at": "2026-09-07T02:53:56.964680+00:00",
+      "kind": "external_reuse_review_integrated",
+      "review_file": "agent_review_inbox/review-FLT-topology-quotient-clm.md",
+      "review_sha256": "779D208A01208371A7F8D145B16680307F7E944D7E8281E2163886F61B9D7814",
+      "task_id": "T-FLT-TOPOLOGY-QUOTIENT-CLM",
+      "classification": "flt_topology_quotient_scan",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "catalog": "anthropic-fermats-last-theorem",
+      "source_commit": "aa2d8b3"
     }
   ],
   "agent_requests": {},
@@ -33136,5 +33162,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "c2b0ef22f5d7b25ea96c1e618c123b428b6ef2ac1e4b4c5a73e5b198d2bac3b5"
+  "state_checksum": "bf4e7b8ec1838c34d65b306bc357fe8292a5b2b5bb2b47a83dfd934a91f0e822"
 }

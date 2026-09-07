@@ -1,0 +1,12 @@
+{
+  "review_file": "agent_review_inbox/review-FLT-topology-quotient-clm.md",
+  "review_sha256": "779D208A01208371A7F8D145B16680307F7E944D7E8281E2163886F61B9D7814",
+  "task_id": "T-FLT-TOPOLOGY-QUOTIENT-CLM",
+  "source_agent": "Codex",
+  "created_at": "2026-09-06T00:00:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_topology_quotient_scan",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "integrated_at": "2026-09-07T02:53:56.964680+00:00"
+}

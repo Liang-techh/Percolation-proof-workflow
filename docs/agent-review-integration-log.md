@@ -3,7 +3,7 @@
 This log records durable integrations from `agent_review_inbox/`. The original
 review files and their SHA-256 markers remain in that directory.
 
-## 2026-09-06 / Route-B checkpoint revision 339
+## 2026-09-06 / Route-B checkpoint revision 340
 
 Integrated as pending metadata only:
 
@@ -26,11 +26,14 @@ Integrated as pending metadata only:
 | T-P5-001 | `P5.sparse_disjunctive_sos` | `energy_syzygy_reuse_audit` | none |
 | T-P8-004 | `P8.independent_reachability` | `explicit_time_typed_sidecar` | none |
 | T-P3-004 | `P3.strict_true_dh_bounds` | `pending_source_semantic_adapter` | none |
+| T-FLT-DERIV-CALC | external reuse catalog | `flt_derivation_calculus_scan` | none |
+| T-FLT-TOPOLOGY-QUOTIENT-CLM | external reuse catalog | `flt_topology_quotient_scan` | none |
 
 The authoritative `artifacts/routeb_6dof/state.json` was updated through
-`StateStore` from revision 328 to revision 339. Nineteen
-`agent_review_integrated` events and nineteen node provenance references were
-added. Node statuses remain open and the verified registry remains empty.
+`StateStore` from revision 328 to revision 340. Nineteen Route-B
+`agent_review_integrated` events, nineteen node provenance references, and two
+event-only external-catalog integrations were added. Node statuses remain open
+and the verified registry remains empty.
 
 No review was promoted to `VERIFIED`; P3 source semantics, P4 true-DH residual
 binding, P8 contract/flowpipe coverage, and M4 admission remain open.
@@ -58,3 +61,7 @@ not establish source binding, flowpipe coverage, or terminal transfer.
 P3-004 confirms the smallest source-semantic adapter remains premise-driven:
 hash equality is provenance only, while Julia Float64 semantics and Lean exact
 semantics still require a separate machine-checkable binding receipt.
+
+The two Anthropic FLT scans are retained as advisory, provenance-bearing
+catalog events only. They do not create Route-B nodes, alter theorem
+dependencies, or qualify any theorem for registry promotion.

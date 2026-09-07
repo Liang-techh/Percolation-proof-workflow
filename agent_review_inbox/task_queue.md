@@ -179,6 +179,49 @@ without an explicit scoped request.
   hashes; retain `pending` status;
 - forbidden: treating hash equality as a semantic proof or running full search.
 
+### T-FLT-DERIV-CALC — Anthropic FLT derivation/calculus scan
+
+- status: `reviewed_pending` (catalog review integrated as event-only metadata)
+- scope: audit generic derivation, calculus, continuity, integral, and limit
+  infrastructure from the pinned Anthropic FLT source; identify only candidates
+  whose assumptions can be restated for the current adapter/PDE lanes;
+- deliver: exact source path, declaration, commit, license/provenance, reuse
+  class, and a focused target-side compile proposal;
+- forbidden: importing FLT-specific arithmetic or treating a scan as a proof,
+  Route-B node closure, or registry promotion.
+
+### T-FLT-TOPOLOGY-QUOTIENT-CLM — quotient/topology transport scan
+
+- status: `reviewed_pending` (catalog review integrated as event-only metadata)
+- scope: audit quotient, subsingleton, connectedness, continuity,
+  `ContinuousLinearMap`, and transport infrastructure for small adapter-side
+  reuse;
+- deliver: exact source path/declaration, hypotheses, reuse class, and the
+  smallest target-side sidecar that could be compiled without whole-repo build;
+- forbidden: copying the upstream tree, weakening assumptions, or promoting
+  architecture-only evidence to a verified theorem.
+
+### T-P3-005 — minimal semantic-binding child theorem
+
+- status: `assigned` (梁智炜, bounded agent review)
+- scope: isolate the smallest typed child interface that connects the
+  canonical Julia/DH source to Lean/checker semantics, with explicit semantic
+  premises and independent provenance hashes;
+- deliver: exact statement, dependency boundary, focused-check proposal, and
+  unresolved true-DH/coverage blockers;
+- forbidden: equating hashes with semantics, changing the authoritative source,
+  or closing P3/P0/M4.
+
+### T-P5-002 — minimal Newton–Euler energy child
+
+- status: `assigned` (梁智炜, bounded agent review)
+- scope: isolate a standalone energy/power identity or syzygy child theorem
+  from the current 6-DOF dynamics implementation;
+- deliver: typed statement, exact dependencies, evidence level, and a focused
+  compile/check route that does not require a full regression;
+- forbidden: promoting sparse SOS output, assuming true-DH binding, or claiming
+  flowpipe/terminal transfer.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it

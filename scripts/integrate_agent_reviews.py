@@ -1,9 +1,10 @@
 """Idempotently integrate pending agent review results as fail-closed metadata.
 
 The inbox is intentionally append-only.  This command never promotes a node,
-changes the registry, or edits the review itself.  It only records provenance
-on the matching Route-B node and writes a small processed marker, so an hourly
-runner can safely invoke it repeatedly.
+changes the registry, or edits the review itself.  It records provenance on a
+matching Route-B node or, for external-library scans, an event-only catalog
+record, then writes a small processed marker so a periodic runner can safely
+invoke it repeatedly.
 """
 from __future__ import annotations
 
@@ -30,6 +31,16 @@ TASK_TARGETS = {
     "T-P8-004": ("P8.independent_reachability", "explicit_time_typed_sidecar"),
     "T-P5-001": ("P5.sparse_disjunctive_sos", "energy_syzygy_reuse_audit"),
     "T-P3-004": ("P3.strict_true_dh_bounds", "pending_source_semantic_adapter"),
+    "T-P3-005": ("P3.strict_true_dh_bounds", "pending_semantic_binding_child"),
+    "T-P5-002": ("P5.sparse_disjunctive_sos", "pending_energy_child"),
+    # External FLT scans are deliberately event-only: they are advisory
+    # catalog evidence, not Route-B theorem nodes or registry entries.
+    "T-FLT-DERIV-CALC": (None, "flt_derivation_calculus_scan"),
+    "T-FLT-TOPOLOGY-QUOTIENT-CLM": (None, "flt_topology_quotient_scan"),
+}
+
+REVIEW_ID_ALIASES = {
+    "review-FLT-topology-quotient-clm": "T-FLT-TOPOLOGY-QUOTIENT-CLM",
 }
 
 
@@ -85,7 +96,8 @@ def main() -> int:
             continue
         if header.get("integration_status") == "integrated":
             continue
-        task_id = header.get("task_id", "")
+        task_id = header.get("task_id", "") or REVIEW_ID_ALIASES.get(
+            header.get("review_id", ""), "")
         if task_id not in TASK_TARGETS:
             continue
         digest = sha256(path)
@@ -117,9 +129,9 @@ def main() -> int:
 
     integrated = []
     for path, header, digest, marker, previous in candidates:
-        task_id = header["task_id"]
+        task_id = header.get("task_id", "") or REVIEW_ID_ALIASES.get(
+            header.get("review_id", ""), "")
         target_name, classification = TASK_TARGETS[task_id]
-        node = node_by_name(state, target_name)
         ref = {
             "review_file": str(path.relative_to(ROOT)).replace("\\", "/"),
             "review_sha256": digest,
@@ -129,23 +141,29 @@ def main() -> int:
             "integration_status": "integrated_as_pending_metadata",
             "classification": classification,
             "admission_effect": "none",
+            "target_scope": "routeb_node" if target_name else "external_reuse_catalog",
         }
         if previous is not None:
             ref["correction_of_sha256"] = previous.get("review_sha256")
             ref["classification"] = f"{classification}_revision"
         if header.get("_format_warning"):
             ref["format_warning"] = header["_format_warning"]
-        node.metadata.setdefault("agent_review_refs", []).append(ref)
+        if target_name:
+            node = node_by_name(state, target_name)
+            node.metadata.setdefault("agent_review_refs", []).append(ref)
         state.event(
-            "agent_review_integrated",
+            "agent_review_integrated" if target_name else "external_reuse_review_integrated",
             review_file=ref["review_file"],
             review_sha256=digest,
             task_id=task_id,
-            node_id=node.id,
             classification=ref["classification"],
             admission_effect="none",
             registry_promoted=False,
             formal_certificate_allowed=False,
+            **({"node_id": node.id} if target_name else {
+                "catalog": "anthropic-fermats-last-theorem",
+                "source_commit": header.get("commit", "unknown"),
+            }),
         )
         integrated.append((path, marker, ref, state.events[-1]["at"]))
 

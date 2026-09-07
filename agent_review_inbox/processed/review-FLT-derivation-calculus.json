@@ -1,0 +1,12 @@
+{
+  "review_file": "agent_review_inbox/review-FLT-derivation-calculus.md",
+  "review_sha256": "6FCF8262E880BBE9B2D4DB3F906DF3B378B5002693A4527AFEF1A16E988D317C",
+  "task_id": "T-FLT-DERIV-CALC",
+  "source_agent": "Codex",
+  "created_at": "2026-09-06T00:00:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_derivation_calculus_scan",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "integrated_at": "2026-09-07T02:53:56.964646+00:00"
+}
