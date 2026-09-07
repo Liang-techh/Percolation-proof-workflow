@@ -2800,3 +2800,11 @@ source-independent/open/uncompiled 候选。
   严格性前提。
 - fixed-λ 新派 two-row/index equivalence adapter；P3 新派 zero-load/非严格 cap
   obstruction leaf，用于 theorem graph 的负条件记录；body-6/K-path 继续工作。
+
+### 2026-09-07 — 14:38 本地 parent-closure 派发
+
+- body-6：tail inverse 到 typed Schur elimination；K-path：rho_eff≥1 与有限 affine
+  bound obstruction；fixed-λ：index transport 缺 premise obstruction；P3：strict
+  weighted gap 的定量下界。
+- 四项都服务于 parent closure 或 obstruction tracking，保持数学证明优先；GitHub
+  Lean receipt 仍按六人环与流川枫比例 lane 另行处理。

@@ -2107,6 +2107,12 @@ body-6 tail inverse、fixed-λ two-row/index adapter、P3 strict-order obstructi
 P4 Schur/PMI absorption 已接入 DAG revision 672。所有结果仍是 open/uncompiled 或
 待 GitHub pinned receipt；流川枫的约三分之一批次 lane 已启用，不改变 fail-closed gate。
 
+### 2026-09-07 14:38 — 梁智炜继续 parent-closure 方向
+
+新一轮四叶分别处理 tail→Schur typed transport、P4 absorption 失败条件、fixed-λ
+index transport 失败条件、P3 strict gap quantitative bound。它们不重复已有正/负叶，
+用于让 theorem DAG 同时维护可证明路径和不可省略的障碍。
+
 ### 2026-09-07 13:55 — 梁智炜收割 fixed-λ 定量 reserve
 
 fixed-λ quantitative reserve lower-bound 叶已登记到 DAG revision 668，提供显式
