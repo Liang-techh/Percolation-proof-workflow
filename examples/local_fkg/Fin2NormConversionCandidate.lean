@@ -66,20 +66,21 @@ theorem fin2_euclidean_weighted_adapter
   have hr2 : norm2 r ≤ 2 * normInf r := norm2_le_two_normInf r
   have hnonneg_a : 0 ≤ normInf a := normInf_nonneg a
   have hright : 2 * normInf r ≤ 2 * epsilon * normInf a :=
-    mul_le_mul_of_nonneg_left h_output (by norm_num)
+    mul_le_mul_of_nonneg_left h_output (show 0 ≤ (2 : ℝ) by norm_num)
   have hinput' : epsilon * normInf a ≤ epsilon * norm2 a :=
     mul_le_mul_of_nonneg_left ha_inf hε
   have hscale : epsilon * norm2 a ≤ epsilon * (weighted / s) :=
     mul_le_mul_of_nonneg_left h_input hε
   have hweighted : 2 * epsilon * normInf a ≤
       2 * epsilon * (weighted / s) := by
-    exact (mul_le_mul_of_nonneg_left (hinput'.trans hscale) (by norm_num))
+    exact (mul_le_mul_of_nonneg_left (hinput'.trans hscale)
+      (show 0 ≤ (2 : ℝ) by norm_num))
   calc
     norm2 r ≤ 2 * normInf r := hr2
     _ ≤ 2 * epsilon * normInf a := hright
     _ ≤ 2 * epsilon * (weighted / s) := hweighted
     _ = (2 * epsilon / s) * weighted := by
-      field_simp [ne_of_gt hs]
+      ring
 
 end
 end RouteBO0Fin2NormConversionCandidate
