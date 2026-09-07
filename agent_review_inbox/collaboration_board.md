@@ -2327,6 +2327,14 @@ BODY6 `TAIL_SOLVECERT`、P3 `STRICT_EXPORT`、fixed-λ `FINAL_ADMISSION_CONTRACT
 但仍明确不产生实际 source margin、不执行 comparator、不定义 VERIFIED 或
 registry transition。
 
+### 2026-09-07 — 梁智炜收割 endpoint uniform margin 与 promotion gate
+
+P3 `ENDPOINT_UNIFORM_MARGIN` 已登记 revision 703，fixed-λ
+`EXPLICIT_REGISTRY_PROMOTION_GATE` 已登记 revision 704。前者用有限非空
+box 的 `inf'` 组合 endpoint/rounding 与统一 margin；后者把 final admission、
+pinned kernel、comparator、provenance 和显式授权完全分离。两者均未运行
+Lean/comparator，registry 仍为 0。
+
 ### 2026-09-07 — 梁智炜收割三条数学边界
 
 P4 `MINIMAL_RESIDUAL_BUDGET_ADAPTER`、fixed-λ `TYPED_RECEIPT_AUDIT`、

@@ -2972,3 +2972,8 @@ contract 已分别登记 revision 700、701、702。下一轮优先攻击：实�
 条目如何产生正 remainder margin；P4 dual-scale 参数如何在域上 uniformize；
 以及 final admission 到显式 registry promotion 的独立 gate。均不自动升级
 formal/verified。
+
+P3 endpoint→common uniform margin 已登记 revision 703；fixed-λ explicit
+registry promotion gate 已登记 revision 704。后续只接受真正的 source margin、
+uniform parameter、pinned-kernel/comparator/provenance evidence；不以侧车
+契约本身关闭 parent。
