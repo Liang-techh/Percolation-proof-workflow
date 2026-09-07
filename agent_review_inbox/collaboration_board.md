@@ -1138,3 +1138,15 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - 当前缺的不是更多 determinant 计算，而是同一 `(mu,q,source,state)` 下的
   typed `M_DD45_at M mu q` 导出及 inverse/left-inverse receipt；已登记为
   `OPEN_TYPED_SOURCE_BINDING_PATH_A_OR_B`，不关闭 O1、不进入 registry。
+
+### 2026-09-07 — 梁智炜：Fin2 编译收割与 O2 endpoint witness 收割
+
+- Fin2 candidate 已取得 pinned Lean 4.32.0 的 source/olean/print 三项
+  exit 0、statement comparator PASS、仅允许的标准 axiom，且无 sorry/admit；
+  状态为 `COMPILED_CONDITIONAL_FIN2_OUTPUT_NORM_CONVERSION`，可作为 O0
+  factor-2 premise，但不消费 Schur margin。
+- O2 已把真实 leaf-1 endpoint handoff 编译为具体 lower-corner
+  `InRectBox` witness，并绑定 schema/handoff/source/Lean/olean hash；状态为
+  `COMPILED_ENDPOINT_PROVENANCE_ONLY`。parent lift 与 sibling join 仍只接受
+  conditional premises，source-bound dynamic leaf、trajectory membership 和
+  global coverage 仍 open。
