@@ -50,9 +50,22 @@ def test_resolvent_without_premise_stays_pending() -> None:
     assert result.inverse_difference_bound is None
 
 
-def test_resolvent_rejects_float_bound() -> None:
+def test_resolvent_numeric_premise_is_not_authoritative_by_default() -> None:
     result = derive_routeb_resolvent_port_propagation(
         RouteBExactResolventPremise("mass:D", "induced_2", Fraction(1)),
+        mbd_norm_bound=Fraction(2),
+        delta_m_db_norm_bound=Fraction(3),
+        source_key="mass:D",
+    )
+
+    assert result.status == "OPEN_FAIL_CLOSED"
+    assert result.inverse_difference_bound is None
+    assert "exact_real_inverse_bound_not_authoritatively_supplied" in result.errors
+
+
+def test_resolvent_rejects_float_bound() -> None:
+    result = derive_routeb_resolvent_port_propagation(
+        RouteBExactResolventPremise("mass:D", "induced_2", Fraction(1), True),
         mbd_norm_bound=1.0,
         delta_m_db_norm_bound=Fraction(1),
     )
@@ -62,7 +75,7 @@ def test_resolvent_rejects_float_bound() -> None:
 
 def test_resolvent_can_produce_conditional_bound_with_exact_premises() -> None:
     result = derive_routeb_resolvent_port_propagation(
-        RouteBExactResolventPremise("mass:D", "induced_2", Fraction(1)),
+        RouteBExactResolventPremise("mass:D", "induced_2", Fraction(1), True),
         mbd_norm_bound=Fraction(2),
         delta_m_db_norm_bound=Fraction(3),
         source_key="mass:D",
@@ -74,7 +87,7 @@ def test_resolvent_can_produce_conditional_bound_with_exact_premises() -> None:
 
 def test_resolvent_rejects_couplings_without_matching_source_key() -> None:
     result = derive_routeb_resolvent_port_propagation(
-        RouteBExactResolventPremise("mass:D", "induced_2", Fraction(1)),
+        RouteBExactResolventPremise("mass:D", "induced_2", Fraction(1), True),
         mbd_norm_bound=Fraction(2),
         delta_m_db_norm_bound=Fraction(3),
     )
@@ -86,7 +99,7 @@ def test_resolvent_rejects_couplings_without_matching_source_key() -> None:
 
 def test_general_resolvent_keeps_independent_block_errors_in_three_term_bound() -> None:
     result = derive_routeb_general_resolvent_port_propagation(
-        RouteBExactResolventPremise("mass:D", "induced_2", Fraction(1)),
+        RouteBExactResolventPremise("mass:D", "induced_2", Fraction(1), True),
         epsilon_a=MU_DELTA,
         b_r_norm_bound=Fraction(2),
         b_difference_norm_bound=Fraction(1, 10),
@@ -109,7 +122,7 @@ def test_general_resolvent_keeps_independent_block_errors_in_three_term_bound() 
 
 def test_general_resolvent_rejects_missing_epsilon_and_source_key_fail_closed() -> None:
     result = derive_routeb_general_resolvent_port_propagation(
-        RouteBExactResolventPremise("mass:D", "induced_2", Fraction(1)),
+        RouteBExactResolventPremise("mass:D", "induced_2", Fraction(1), True),
         b_r_norm_bound=Fraction(2),
         b_difference_norm_bound=Fraction(1),
         c_f_norm_bound=Fraction(1),

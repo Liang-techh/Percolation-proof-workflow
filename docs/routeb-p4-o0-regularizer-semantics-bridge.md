@@ -54,6 +54,10 @@ output cannot silently become an exact-real input.
 `K >= ||M_DD(mu_exact)^(-1)||` and `delta*K < 1`, it returns only the
 conditional bounds
 
+The premise's `proves_exact_real_bound` flag defaults to false. It must be set
+explicitly after an authoritative exact-real inverse receipt is available;
+typing a rational `K` alone is not sufficient.
+
 ```text
 ||M_DD(mu_float)^(-1)|| <= K/(1-delta*K)
 ||M_DD(mu_float)^(-1)-M_DD(mu_exact)^(-1)||

@@ -152,7 +152,9 @@ class RouteBExactResolventPremise:
     source_key: str
     norm_convention: str
     inverse_norm_bound: Fraction
-    proves_exact_real_bound: bool = True
+    # A numeric bound is only a candidate until its exact-real proof receipt
+    # is explicitly attached by the caller.
+    proves_exact_real_bound: bool = False
 
 
 @dataclass(frozen=True)

@@ -917,3 +917,7 @@ weighted baseline `rho_r`、扰动 `epsilon_R`、`theta` 与 exact remaining mar
 进一步收紧 admission：O0-R2 的 metric proof flag、O0-R3 的 baseline/perturbation
 proof flags 现在均默认 false，必须显式提供权威证明标志；exact-rational 数值、
 source key 或通过单测本身都不能替代 bound receipt。
+
+同样将 `RouteBExactResolventPremise.proves_exact_real_bound` 默认改为 false，
+要求 O0 inverse norm `K` 必须显式携带 exact-real 权威证明标志；纯数字 premise
+现在直接返回 `OPEN_FAIL_CLOSED`。
