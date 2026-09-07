@@ -417,3 +417,8 @@ O2 runtime evidence is intake-checked by
 pending, source/schedule or admission-boundary mismatches are rejected, and a
 complete receipt is only `READY_FOR_COORDINATOR_ADMISSION`, never a Lean or
 registry proof.
+
+The coordinator entry point `scripts/record_routeb_o2_runtime_receipt.py` reads
+an external receipt, binds it to the O2 node's current source/schedule hashes,
+and persists its pending/rejected/ready audit. It never promotes the node or
+changes the formal-certificate gate.

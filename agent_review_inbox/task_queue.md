@@ -1541,3 +1541,7 @@ after integration; corrections should be a new result file.
   runtime identity, operation schedule, finite/non-NaN/no-overflow assumptions,
   repeated `fk_frames` calls, and coverage. A successful static or numerical
   run is not a Lean/kernel receipt and cannot close O2.
+- coordinator intake: submit the JSON receipt to
+  `scripts/record_routeb_o2_runtime_receipt.py`; the script binds it to the
+  current source/schedule hashes and records `PENDING_REQUIRED_FIELDS`,
+  `REJECTED`, or `READY_FOR_COORDINATOR_ADMISSION` without changing O2 status.
