@@ -1202,6 +1202,28 @@ polynomial remains a separate frontier.
 - forbidden: treating a positive ledger margin, Float64 source, solver status,
   or one-cell result as kernel verification or P4/M4 closure.
 
+### T-P4-025 — real norm-square expansion
+
+- status: `open` (decomposition child of `T-P4-024`)
+- owner: `巨阳仙尊` for the pinned real inner-product/norm API;
+- scope: prove `||l+r||₂² = ||l||₂² + 2*⟪l,r⟫ + ||r||₂²` for finite-dimensional
+  real vectors, with exact statement identity and `#print axioms` receipt;
+- deliver: smallest reusable Lean lemma, independent of Route-B source or
+  numerical artifacts;
+- forbidden: treating the identity as residual decomposition or PMI closure.
+
+### T-P4-026 — Young cross-term bound
+
+- status: `open` (decomposition child of `T-P4-024`)
+- owner: `狂蛮魔尊` for the sharp inequality; `巨阳仙尊` for pinned Lean
+  lemma names and strict `theta>0` division;
+- scope: prove `theta>0 ⇒ 2*⟪l,r⟫ ≤ theta*||l||₂² +
+  theta⁻¹*||r||₂²` for finite-dimensional real vectors;
+- deliver: exact Lean theorem/receipt and any API obstruction, preserving the
+  scalar positivity premise explicitly;
+- forbidden: absorbing the term with an unstated safety factor or claiming
+  the Route-B residual/coverage gates are closed.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it

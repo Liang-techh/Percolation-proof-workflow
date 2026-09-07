@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 414,
+  "revision": 415,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12046,7 +12046,10 @@
       "parent_id": "33fdb01f3d0d4b53953680b32db11f9c",
       "status": "open",
       "proof_sketch": "Use the exact norm-square expansion and Young's inequality for the cross term. Keep rho*A as the typed port-energy input supplied by the weighted Frobenius adapter; do not reinterpret it as robust-PMI E_k or claim global closure.",
-      "dependencies": [],
+      "dependencies": [
+        "e1c831a58a2c4aeca7956b57861d68e2",
+        "6c0a93c749f24bb7b8b70d9610935680"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -12084,6 +12087,81 @@
           "strict_positive_theta_division_api",
           "typed_binding_of_l_base_and_A_up",
           "residual_PMI_and_flowpipe_consumption"
+        ]
+      }
+    },
+    "e1c831a58a2c4aeca7956b57861d68e2": {
+      "id": "e1c831a58a2c4aeca7956b57861d68e2",
+      "name": "P4.real_norm_square_expansion",
+      "statement": "For real finite-dimensional vectors l,r, ||l+r||₂² = ||l||₂² + 2*<l,r> + ||r||₂².",
+      "parent_id": "35839e28b33e484f886081ddb6351c80",
+      "status": "open",
+      "proof_sketch": "Expand the inner product bilinearly and use the norm-square definition; keep this identity independent of Route-B source semantics.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "research_stage": "P4",
+        "statement_status": "formalization_target",
+        "evidence_level": "generic-real-inner-product-lemma-target",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "source_provenance": {
+          "origin": "new decomposition lemma; no upstream code copied",
+          "upstream_inspiration": "Route-B combined-Schur/Young interface",
+          "attribution_required": true
+        },
+        "claim_status": "norm_square_expansion_open",
+        "mathematical_contract": {
+          "premises": [
+            "l and r are vectors in a real inner-product space"
+          ],
+          "conclusion": "||l+r||₂² = ||l||₂² + 2*<l,r> + ||r||₂²",
+          "consumption": "exact first step of the combined-Schur adapter"
+        },
+        "unresolved": [
+          "pinned_real_inner_product_norm_sq API",
+          "finite-dimensional coercion identity"
+        ]
+      }
+    },
+    "6c0a93c749f24bb7b8b70d9610935680": {
+      "id": "6c0a93c749f24bb7b8b70d9610935680",
+      "name": "P4.young_cross_term_bound",
+      "statement": "For theta>0 and real finite-dimensional vectors l,r, 2*<l,r> ≤ theta*||l||₂² + theta⁻¹*||r||₂².",
+      "parent_id": "35839e28b33e484f886081ddb6351c80",
+      "status": "open",
+      "proof_sketch": "Apply Cauchy-Schwarz followed by the scalar Young inequality, with strict positivity of theta explicit.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "research_stage": "P4",
+        "statement_status": "formalization_target",
+        "evidence_level": "generic-real-inner-product-lemma-target",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "source_provenance": {
+          "origin": "new decomposition lemma; no upstream code copied",
+          "upstream_inspiration": "Route-B combined-Schur/Young interface",
+          "attribution_required": true
+        },
+        "claim_status": "young_cross_term_bound_open",
+        "mathematical_contract": {
+          "premises": [
+            "theta > 0",
+            "l and r are vectors in a real inner-product space"
+          ],
+          "conclusion": "2*<l,r> ≤ theta*||l||₂² + theta⁻¹*||r||₂²",
+          "consumption": "cross-term absorption in the combined-Schur adapter"
+        },
+        "unresolved": [
+          "pinned Cauchy-Schwarz/Young lemma names",
+          "strict positive theta division API"
         ]
       }
     }
@@ -34288,6 +34366,36 @@
       ],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T09:19:11.162342+00:00",
+      "kind": "node_added",
+      "node_id": "e1c831a58a2c4aeca7956b57861d68e2",
+      "parent_id": "35839e28b33e484f886081ddb6351c80",
+      "name": "P4.real_norm_square_expansion"
+    },
+    {
+      "at": "2026-09-07T09:19:11.162358+00:00",
+      "kind": "routeb_norm_square_expansion_target_added",
+      "node_id": "e1c831a58a2c4aeca7956b57861d68e2",
+      "parent_id": "35839e28b33e484f886081ddb6351c80",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T09:19:11.162372+00:00",
+      "kind": "node_added",
+      "node_id": "6c0a93c749f24bb7b8b70d9610935680",
+      "parent_id": "35839e28b33e484f886081ddb6351c80",
+      "name": "P4.young_cross_term_bound"
+    },
+    {
+      "at": "2026-09-07T09:19:11.162374+00:00",
+      "kind": "routeb_young_cross_term_target_added",
+      "node_id": "6c0a93c749f24bb7b8b70d9610935680",
+      "parent_id": "35839e28b33e484f886081ddb6351c80",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -37944,5 +38052,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "29ccf5f424f8d8ad43584119e828f2dbdaa33c49de5b8f99b98a9ea96fed7ffa"
+  "state_checksum": "025b0527998748829ea392e618989ea8a42436be41fdf9bc7371cb44f7e6de53"
 }

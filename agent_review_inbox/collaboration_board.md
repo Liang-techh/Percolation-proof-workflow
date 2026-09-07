@@ -568,3 +568,11 @@
   `E_k`，也不声称 residual decomposition 或 P4 gate 已关闭。
 - 等待狂蛮魔尊给出不等式闭合、柳冠一给出 `l_base/A_up` typed binding、
   巨阳仙尊补齐 pinned Lean norm-square API。
+
+### 2026-09-07 — 梁智炜：细化 combined-Schur 的两个基础 lemma
+
+- 将 `T-P4-024` 拆成 `T-P4-025` 范数平方展开和 `T-P4-026` Young
+  交叉项界，二者都是独立的 generic real finite-dimensional 目标。
+- `P4.combined_schur_port_energy_adapter` 现在需要这两个 lemma，再加上
+  `P4.weighted_frobenius_port_energy_bridge`；这样 agent 可以并行给出
+  pinned Lean receipt，且不会把 source binding 与纯代数证明混在一起。
