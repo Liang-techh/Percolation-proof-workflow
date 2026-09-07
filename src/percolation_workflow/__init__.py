@@ -10,6 +10,7 @@ from .reduction_batch import reduction_closure_batch
 from .residual_ledger import audit_full_state_binding, audit_residual_ledger
 from .routeb_source_contract import (RouteBP4SourceContract,
                                      audit_routeb_p4_source_contract)
+from .routeb_kc_budget import RouteBKcBudget, derive_routeb_kc_budget
 from .disjoint import (audit_do, build_repair_do, canonical_do_schema,
                         classify_manual_review, do_sha256, normalize_do_path)
 from .advisory_reuse import (AdvisoryReuseError, SCHEMA_VERSION,
@@ -32,6 +33,7 @@ __all__ = [
     "audit_residual_ledger",
     "audit_full_state_binding",
     "RouteBP4SourceContract", "audit_routeb_p4_source_contract",
+    "RouteBKcBudget", "derive_routeb_kc_budget",
     "audit_do", "build_repair_do", "canonical_do_schema", "classify_manual_review", "do_sha256", "normalize_do_path",
     "AdvisoryReuseError", "SCHEMA_VERSION", "project_advisory_reuse",
     "project_plan", "export_plan_views", "plan_topo_order", "plan_levels",
