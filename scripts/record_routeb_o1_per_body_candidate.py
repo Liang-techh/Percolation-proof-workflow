@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from hashlib import sha256
+import json
 from pathlib import Path
 import sys
 
@@ -48,6 +49,22 @@ def find(state, name: str):
     raise ValueError(f"missing node: {name}")
 
 
+def embedded_adapter_hashes(value):
+    if isinstance(value, dict):
+        path_text = value.get("path")
+        if path_text and "sha256" in value:
+            candidate = Path(path_text)
+            if not candidate.is_absolute():
+                candidate = ROOT / candidate
+            if candidate.resolve() == ADAPTER.resolve():
+                yield value["sha256"]
+        for child in value.values():
+            yield from embedded_adapter_hashes(child)
+    elif isinstance(value, list):
+        for child in value:
+            yield from embedded_adapter_hashes(child)
+
+
 def main() -> None:
     for path in (STATE, LEAN, TRACE, ADAPTER, GENERATOR, BODY_RECEIPT, BODY_CHECK,
                  BODY1_RECEIPT, BODY2_CHECK, BODY2_RECEIPT, BODY3_RECEIPT, BODY3_CHECK,
@@ -57,6 +74,15 @@ def main() -> None:
                  REVIEW, AGENT_REVIEW):
         if not path.is_file():
             raise FileNotFoundError(path)
+    adapter_sha256 = digest(ADAPTER)
+    for receipt_path in (BODY1_RECEIPT, BODY2_RECEIPT, BODY3_RECEIPT, BODY4_RECEIPT,
+                         BODY5_RECEIPT, O0_BODY3_RECEIPT, O0_BODY4_RECEIPT):
+        receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
+        embedded = list(embedded_adapter_hashes(receipt))
+        if embedded and any(value != adapter_sha256 for value in embedded):
+            raise ValueError(
+                f"stale adapter provenance in {receipt_path}: {embedded!r} != {adapter_sha256}"
+            )
     store = StateStore(STATE)
     state = store.load()
     leaves = [
@@ -71,7 +97,7 @@ def main() -> None:
         "body_trace_evaluator": str(TRACE.resolve()),
         "body_trace_evaluator_sha256": digest(TRACE),
         "body_trace_adapter": str(ADAPTER.resolve()),
-        "body_trace_adapter_sha256": digest(ADAPTER),
+        "body_trace_adapter_sha256": adapter_sha256,
         "generator_sha256": digest(GENERATOR),
         "body_trace_receipt_sha256": digest(BODY_RECEIPT),
         "body_trace_receipt_status": "OPEN_H_BODY_PROOFS_UNCOMPILED",

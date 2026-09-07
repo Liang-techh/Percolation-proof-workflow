@@ -7,7 +7,7 @@
   "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
   "lean_adapter": {
     "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean",
-    "sha256": "C6FC99DE41F8A5010CD79F18B89FD39811B63717810E437A5AE88DD6095F2FE7",
+    "sha256": "25F099EC5EB7F699C789AE29AA45DF0FBB24FF06547F498740968F5E1B3C9976",
     "status": "TARGETS_ONLY_UNCOMPILED"
   },
   "trace_input": {
