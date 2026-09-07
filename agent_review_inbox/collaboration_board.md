@@ -2185,6 +2185,10 @@ formal gate。
 反例保留 coverage 障碍，再用显式 uniform certificate 消费到 capMax 严格余量；
 未把有限采样或命名约定当作全域证明。
 
+P3 finite-grid 叶收割后，立即补派 partition/box coverage bridge：只有显式
+全域覆盖、逐 box uniform gap 和同点消费，才能把有限局部结果提升为全域
+strict slack；未覆盖 box 的反例必须保留。
+
 ### 2026-09-07 — 梁智炜收割 P3 finite-grid uniform gap
 
 `CENTRAL_FD_HULL_FINITE_UNIFORM_GAP` 已登记 revision 683。该叶在显式非空

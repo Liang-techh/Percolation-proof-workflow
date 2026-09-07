@@ -2884,6 +2884,10 @@ P3 finite-grid uniform gap 已完成成对 review 并登记 revision 683，状�
 P3 uniform-gap review 已到达并登记 revision 682，状态仍为 `OPEN_UNCOMPILED`；
 它把全域 uniformity 设为显式输入，保留 pointwise-only 的 exact obstruction。
 
+补派 P3 partition/box coverage bridge：有限区域集合的全域覆盖、逐区域
+uniform gap 与全域 strict consumer；明确网格点不足以替代 coverage。要求
+proof-attempt + 定向 review，保持 `OPEN_UNCOMPILED`。
+
 ### 2026-09-07 — 当前四线派发
 
 - body-6：SELF3/Gram 到前三块 A 的 source binding；
