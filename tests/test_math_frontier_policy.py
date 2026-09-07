@@ -161,6 +161,22 @@ class MathFrontierPolicyTests(unittest.TestCase):
         self.assertTrue(all(row["parent_eligible"] for row in rows))
         self.assertEqual(state.to_dict(), before)
 
+    def test_receipt_and_cut_include_virtual_frontier_as_advisory_only(self):
+        state = WorkflowState()
+        state.add_node("evaluator", "O2", metadata={
+            "o2_trig_binding": {
+                "leaves": [{"id": "T-P4-036.4", "kind": "finite_dag", "status": "OPEN"}],
+            },
+        })
+
+        from percolation_workflow.math_frontier import project_frontier_receipt
+        receipt = project_frontier_receipt(state)
+        cut = build_frontier_cut(state)
+
+        self.assertEqual(receipt["virtual_frontier"][0]["virtual_leaf_id"], "T-P4-036.4")
+        self.assertEqual(cut["virtual_frontier"][0]["parent_name"], "evaluator")
+        self.assertFalse(receipt["virtual_frontier"][0]["closure_effect"])
+
 
 if __name__ == "__main__":
     unittest.main()

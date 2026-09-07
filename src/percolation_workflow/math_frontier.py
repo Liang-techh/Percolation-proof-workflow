@@ -504,7 +504,12 @@ def project_frontier_receipt(state: WorkflowState, jobs: Mapping[str, Any] | Non
             "priority": _LANE_ORDER[lane],
             "repair_contract": node.metadata.get("frontier_repair_contract"),
         })
-    return {"schema_version": 1, "formal_admission": "unchanged", "frontier": rows}
+    return {
+        "schema_version": 1,
+        "formal_admission": "unchanged",
+        "frontier": rows,
+        "virtual_frontier": project_virtual_frontier(state),
+    }
 
 
 def build_frontier_cut(state: WorkflowState, jobs: Mapping[str, Any] | None = None) -> dict[str, Any]:
@@ -531,6 +536,7 @@ def build_frontier_cut(state: WorkflowState, jobs: Mapping[str, Any] | None = No
         "formal_admission": "unchanged",
         "job_filter": sorted(job_ids) if job_ids is not None else None,
         "frontier": rows,
+        "virtual_frontier": project_virtual_frontier(state),
         "lanes": lanes,
     }
     encoded = json.dumps(payload, ensure_ascii=False, sort_keys=True,
