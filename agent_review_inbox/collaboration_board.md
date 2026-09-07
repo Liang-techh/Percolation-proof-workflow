@@ -2366,3 +2366,7 @@ P3 `TAYLOR_REMAINDER`、fixed-λ `PINNED_KERNEL_RECEIPT`、BODY6
 严格正 Schur margin 路线必须停止或改为排除该构型/证明非严格 PSD；这不是
 完整 6DOF 反证，仍等待真实域绑定与 Lean 验证。kernel receipt 和 nominal
 方向审计则继续保持 promotion fail-closed。
+
+下一轮派发已完成：BODY6 处理零方向后的域分叉，P4 处理 uniform allocation
+的无限域阻塞，fixed-λ 处理 registry entry invariant，P3 处理真实导数正则性
+到 Taylor remainder 的桥。继续只登记条件式 open leaves，不提前关闭 parent。

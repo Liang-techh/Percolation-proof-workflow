@@ -2987,3 +2987,8 @@ P3 Taylor remainder 已登记 revision 707；fixed-λ pinned-kernel receipt 已
 登记 revision 708；BODY6 entry-margin obstruction 已登记 revision 709；P4
 nominal-direction audit 已登记 revision 710。所有新叶保持 `OPEN_UNCOMPILED`，
 并将 BODY6 零方向作为 domain exclusion/非严格路线的明确分叉条件。
+
+下一轮已派发：BODY6 domain exclusion/non-strict fallback；P4 infinite-domain
+allocation obstruction；fixed-λ VerifiedRegistryEntry invariant；P3 C2/C3
+Taylor remainder contract。四项互不重叠，均要求 proof-attempt + review，
+不运行本机 Lean/Lake。
