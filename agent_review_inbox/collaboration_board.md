@@ -921,3 +921,14 @@ source key 或通过单测本身都不能替代 bound receipt。
 同样将 `RouteBExactResolventPremise.proves_exact_real_bound` 默认改为 false，
 要求 O0 inverse norm `K` 必须显式携带 exact-real 权威证明标志；纯数字 premise
 现在直接返回 `OPEN_FAIL_CLOSED`。
+
+新收割的 T-P4-033 O0-R3 review 确认当前不存在可消费的 same-key physical
+`(rho_r, remaining Schur margin)` 对：`P4.residual_port_frobenius_bound` 只有
+未验证的 `rho_F^2` candidate，physical Schur ledger 缺少同域 `A>mu` 与物理
+coupling receipt，downstream adapter 也缺少 `R_port*a_B=r_B`。该负结果已由
+`scripts/record_routeb_o0_r3_review.py` 写入 state rev 501，保持 O0 open。
+
+随后修复该 intake 的幂等性：observed pre-integration state hash 只作为 provenance，
+不再作为 review 身份；重复执行按 `task_id/subtask/review_status` 逻辑键识别，
+不会继续追加 review 或推进 state。历史重复记录保留，不删除既有证据；当前 state
+rev 502，第二次执行前后 state hash 相同。

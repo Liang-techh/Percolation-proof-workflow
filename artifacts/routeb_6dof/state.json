@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 500,
+  "revision": 502,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13726,7 +13726,10 @@
           "o0_review_mathematical_obligations_open",
           "o0_math_closure_premises_open",
           "o0_weighted_port_metric_open",
-          "o0_schur_margin_consumer_open"
+          "o0_schur_margin_consumer_open",
+          "o0_r3_no_consumable_same_key_physical_pair",
+          "o0_r3_weighted_baseline_missing",
+          "o0_r3_remaining_margin_missing"
         ],
         "regularizer_semantics": {
           "schema_version": 1,
@@ -13898,6 +13901,108 @@
             "admission_status": "pending_coordinator_admission",
             "registry_promoted": false,
             "formal_certificate_allowed": false
+          },
+          {
+            "schema_version": 1,
+            "source_agent": "Codex",
+            "task_id": "T-P4-033",
+            "subtask": "O0-R3",
+            "review_status": "NO_CONSUMABLE_SAME_KEY_PHYSICAL_PAIR",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-033-O0-R3-same-key-ledger-codex-20260907.md",
+              "sha256": "BD2DFAC31FF7B937FC9F8DD3D4504CD160B2F154FA3B3574D70805880EAC5403"
+            },
+            "supporting_artifacts": [
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_DP_physical_schur_margin_20260906\\REPORT.md",
+                "sha256": "BBB491B4453BD7814175F9BF6981C5A523E3CA50160FAF8D9658E94B128CD4D7"
+              },
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_DP_physical_schur_margin_20260906\\ledger.json",
+                "sha256": "6E4D5CB800AF58141914CFAE2EE75DCAAD571B1C84DE636A8C91200098A69DD9"
+              }
+            ],
+            "observed_state_sha256_before_integration": "F50FBC724308C228460CD2FE3D313C22589F0564C9556A142482A6D6152E76D8",
+            "evidence_level": "read_only_same_key_ledger_obstruction",
+            "claims": {
+              "same_key_weighted_baseline_available": false,
+              "same_key_weighted_perturbation_available": false,
+              "same_key_remaining_schur_margin_available": false,
+              "strict_margin_inequality_checked": false,
+              "lean_verified": false,
+              "registry_promoted": false,
+              "formal_certificate_allowed": false
+            },
+            "unresolved": [
+              "canonical_source_state_key",
+              "weighted_baseline_rho_r_or_upper_root",
+              "weighted_perturbation_epsilon_R",
+              "positive_remaining_baseline_schur_margin",
+              "typed_R_port_aB_equals_rB",
+              "same_domain_true_dh_float64_coverage"
+            ],
+            "required_receipt_fields": [
+              "source/runtime/coordinate/mu/fd/force-scale key",
+              "weighted baseline rho_r or upper-root witness",
+              "weighted perturbation epsilon_R",
+              "same-key positive remaining margin and theta",
+              "R_port*a_B=r_B plus full consumed-cell coverage",
+              "strict lambda*((rho_r+epsilon_R)^2-rho_r^2) < m_r"
+            ],
+            "admission_status": "pending_same_key_physical_receipt",
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
+          },
+          {
+            "schema_version": 1,
+            "source_agent": "Codex",
+            "task_id": "T-P4-033",
+            "subtask": "O0-R3",
+            "review_status": "NO_CONSUMABLE_SAME_KEY_PHYSICAL_PAIR",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-033-O0-R3-same-key-ledger-codex-20260907.md",
+              "sha256": "BD2DFAC31FF7B937FC9F8DD3D4504CD160B2F154FA3B3574D70805880EAC5403"
+            },
+            "supporting_artifacts": [
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_DP_physical_schur_margin_20260906\\REPORT.md",
+                "sha256": "BBB491B4453BD7814175F9BF6981C5A523E3CA50160FAF8D9658E94B128CD4D7"
+              },
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_DP_physical_schur_margin_20260906\\ledger.json",
+                "sha256": "6E4D5CB800AF58141914CFAE2EE75DCAAD571B1C84DE636A8C91200098A69DD9"
+              }
+            ],
+            "observed_state_sha256_before_integration": "5CF8105FA341568DACE8A583FD25023E1FE059F3549B24E5AFDDD32D999B871E",
+            "evidence_level": "read_only_same_key_ledger_obstruction",
+            "claims": {
+              "same_key_weighted_baseline_available": false,
+              "same_key_weighted_perturbation_available": false,
+              "same_key_remaining_schur_margin_available": false,
+              "strict_margin_inequality_checked": false,
+              "lean_verified": false,
+              "registry_promoted": false,
+              "formal_certificate_allowed": false
+            },
+            "unresolved": [
+              "canonical_source_state_key",
+              "weighted_baseline_rho_r_or_upper_root",
+              "weighted_perturbation_epsilon_R",
+              "positive_remaining_baseline_schur_margin",
+              "typed_R_port_aB_equals_rB",
+              "same_domain_true_dh_float64_coverage"
+            ],
+            "required_receipt_fields": [
+              "source/runtime/coordinate/mu/fd/force-scale key",
+              "weighted baseline rho_r or upper-root witness",
+              "weighted perturbation epsilon_R",
+              "same-key positive remaining margin and theta",
+              "R_port*a_B=r_B plus full consumed-cell coverage",
+              "strict lambda*((rho_r+epsilon_R)^2-rho_r^2) < m_r"
+            ],
+            "admission_status": "pending_same_key_physical_receipt",
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
           }
         ],
         "o0_math_closure": {
@@ -13941,6 +14046,33 @@
             }
           ],
           "counterexample_boundary": "regularizer positivity alone does not imply D-block invertibility, unweighted inverse difference does not imply weighted port gain",
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
+        },
+        "o0_r3_same_key_ledger": {
+          "schema_version": 1,
+          "task_id": "T-P4-033",
+          "subtask": "O0-R3",
+          "status": "NO_CONSUMABLE_SAME_KEY_PHYSICAL_PAIR",
+          "review_artifact": {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-033-O0-R3-same-key-ledger-codex-20260907.md",
+            "sha256": "BD2DFAC31FF7B937FC9F8DD3D4504CD160B2F154FA3B3574D70805880EAC5403"
+          },
+          "candidate_node": "P4.residual_port_frobenius_bound",
+          "physical_ledger_status": "BLOCKED_MISSING_A_GT_MU_AND_PHYSICAL_COUPLING_RECEIPT",
+          "same_key_required": true,
+          "rho_r_available": false,
+          "epsilon_R_available": false,
+          "remaining_margin_available": false,
+          "strict_budget_checked": false,
+          "required_next_receipt": [
+            "source/runtime/coordinate/mu/fd/force-scale key",
+            "weighted baseline rho_r or upper-root witness",
+            "weighted perturbation epsilon_R",
+            "same-key positive remaining margin and theta",
+            "R_port*a_B=r_B plus full consumed-cell coverage",
+            "strict lambda*((rho_r+epsilon_R)^2-rho_r^2) < m_r"
+          ],
           "formal_certificate_allowed": false,
           "registry_promoted": false
         }
@@ -38798,6 +38930,26 @@
       "admission_status": "pending_coordinator_admission",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T12:48:40.222734+00:00",
+      "kind": "routeb_o0_r3_same_key_obstruction_recorded",
+      "node_id": "43e3c1a23dc34d52a19b835a8a883cb7",
+      "task_id": "T-P4-033",
+      "review_status": "NO_CONSUMABLE_SAME_KEY_PHYSICAL_PAIR",
+      "admission_status": "pending_same_key_physical_receipt",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T12:49:24.350524+00:00",
+      "kind": "routeb_o0_r3_same_key_obstruction_recorded",
+      "node_id": "43e3c1a23dc34d52a19b835a8a883cb7",
+      "task_id": "T-P4-033",
+      "review_status": "NO_CONSUMABLE_SAME_KEY_PHYSICAL_PAIR",
+      "admission_status": "pending_same_key_physical_receipt",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -42454,5 +42606,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "f7b1d7d82ad59150c01203d0e6c8011ce498dc0264302b2e0a9e4dcd123bcaf9"
+  "state_checksum": "e394753701c9654a8de69d525cf29c9af3f522ee5cb1ae42406ee6d750c391ca"
 }

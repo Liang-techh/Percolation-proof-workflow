@@ -1424,6 +1424,12 @@ polynomial remains a separate frontier.
   conversion; O0-R3 must consume a baseline `rho_r` with a strict remaining
   Schur/Young margin. Positivity of the regularizer alone is insufficient, and
   the review is recorded by `scripts/record_routeb_o0_math_review.py`.
+- coordinator finding (2026-09-07, T-P4-033 O0-R3): no consumable same-key physical
+  `(rho_r, remaining Schur margin)` pair exists at state rev 500. The resolved-cell
+  port row stores only unverified `rho_F^2`; the physical Schur ledger lacks same-domain
+  `A>mu` and coupling receipts; the downstream adapter lacks typed `R_port*a_B=r_B`.
+  Intake is `scripts/record_routeb_o0_r3_review.py`; this is a preserved obstruction,
+  not an O0 closure.
 - forbidden: replacing the Float64 literal with a rational silently or using
   BigFloat pointwise agreement as a rounding proof.
 
