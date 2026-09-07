@@ -26,7 +26,9 @@ class EvidenceStageTests(unittest.TestCase):
                          "verified_root_pending_global_gate")
         with self.assertRaises(ValueError):
             state.close_global_theorem({"ci_passed": False})
-        state.close_global_theorem({"ci_passed": True, "project_sha256": "abc"})
+        state.close_global_theorem({"ci_passed": True,
+                                    "formal_certificate_allowed": True,
+                                    "project_sha256": "abc"})
         self.assertEqual(state.global_closure_report()["status"], "global_closed")
         state.validate()
 

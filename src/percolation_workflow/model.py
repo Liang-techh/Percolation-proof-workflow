@@ -304,7 +304,8 @@ class WorkflowState:
         """Return a fail-closed view; this never promotes a node implicitly."""
         root_id = self.root_id
         if root_id is None or root_id not in self.nodes:
-            return {"status": "open", "reason": "no theorem root"}
+            return {"status": "open", "reason": "no theorem root",
+                    "formal_certificate_allowed": False}
         reachable = set()
         work = [root_id]
         while work:
@@ -319,12 +320,15 @@ class WorkflowState:
         all_verified = all(self.nodes[node_id].status == NodeStatus.VERIFIED for node_id in reachable)
         receipt = self.global_closure if isinstance(self.global_closure, dict) else {}
         closed = (receipt.get("root_id") == root_id and receipt.get("status") == "global_closed"
+                  and receipt.get("formal_certificate_allowed") is True
                   and all_verified and all(self.evidence_stage(node_id) == EvidenceStage.GLOBAL_CLOSED
                                            for node_id in reachable))
         return {"status": "global_closed" if closed else
                 ("verified_root_pending_global_gate" if all_verified else "open"),
                 "root_id": root_id, "reachable_nodes": sorted(reachable),
-                "all_reachable_verified": all_verified, "receipt": receipt}
+                "all_reachable_verified": all_verified,
+                "formal_certificate_allowed": closed,
+                "receipt": receipt}
 
     def close_global_theorem(self, receipt: dict[str, Any]) -> dict[str, Any]:
         """Explicit final CI/project gate; local node verification is insufficient."""
@@ -333,6 +337,8 @@ class WorkflowState:
             raise ValueError("global theorem requires every reachable node to be verified")
         if not isinstance(receipt, dict) or receipt.get("ci_passed") is not True:
             raise ValueError("global theorem requires an explicit ci_passed receipt")
+        if receipt.get("formal_certificate_allowed") is not True:
+            raise ValueError("global theorem requires an explicit formal_certificate_allowed=true receipt")
         root_id = report["root_id"]
         for node_id in report["reachable_nodes"]:
             self.set_evidence_stage(node_id, EvidenceStage.GLOBAL_CLOSED)

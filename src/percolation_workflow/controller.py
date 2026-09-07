@@ -39,8 +39,8 @@ def final_project_check(store, state, project, comparator_command, *, manifest_i
                                if node.status == NodeStatus.VERIFIED}:
         admission_reasons.append('verified-node set and registry disagree')
     declared_gate = state.global_closure.get('formal_certificate_allowed')
-    if declared_gate is False:
-        admission_reasons.append('formal_certificate_allowed is explicitly false')
+    if declared_gate is not True:
+        admission_reasons.append('formal_certificate_allowed is not explicitly true')
     if admission_reasons:
         state.event('controller_final_admission', accepted=False,
                     reasons=admission_reasons, comparator_skipped=True)

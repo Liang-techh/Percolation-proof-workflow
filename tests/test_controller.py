@@ -80,6 +80,8 @@ class ControllerTests(unittest.TestCase):
                 state.nodes[node_id].status = NodeStatus.VERIFIED
                 state.set_evidence_stage(node_id, 'lean_verified')
                 state.registry[node_id] = {'test_fixture': True}
+                if node_id == parent:
+                    state.global_closure['formal_certificate_allowed'] = True
                 store.save(state)
                 return True
             with patch('percolation_workflow.controller.verify_and_register', side_effect=simulated_gate), \
