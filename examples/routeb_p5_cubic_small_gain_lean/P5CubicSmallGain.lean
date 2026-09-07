@@ -110,8 +110,12 @@ theorem nonzero_cubic_ray_not_globally_quadratic_absorbable
   have ht2 : 0 < t ^ 2 := sq_pos_of_pos ht
   have hfactored : (|c| * t) * t ^ 2 ≤ (kappa * a) * t ^ 2 := by
     nlinarith
-  have hlinear : |c| * t ≤ kappa * a :=
-    (mul_le_mul_right ht2).mp hfactored
+  have hlinear : |c| * t ≤ kappa * a := by
+    by_contra hnot
+    have hgt : kappa * a < |c| * t := lt_of_not_ge hnot
+    have hmulgt : (kappa * a) * t ^ 2 < (|c| * t) * t ^ 2 :=
+      mul_lt_mul_of_pos_right hgt ht2
+    exact (not_lt_of_ge hfactored) hmulgt
   have hkappa_abs : kappa * a ≤ |kappa| * a := by
     exact mul_le_mul_of_nonneg_right (le_abs_self kappa) (le_of_lt ha)
   have hcne : |c| ≠ 0 := ne_of_gt hcabs
