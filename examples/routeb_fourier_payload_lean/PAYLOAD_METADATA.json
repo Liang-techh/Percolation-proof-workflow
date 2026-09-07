@@ -1,0 +1,17 @@
+{
+  "status": "LITERAL_PAYLOAD_GENERATED_FROM_FROZEN_CSV",
+  "csv_sha256": "a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8",
+  "csv_rows": 610,
+  "unique_keys": 610,
+  "nonempty_matrix_entries": 32,
+  "full_matrix_entries": 36,
+  "missing_zero_entries": [
+    "(4,5)",
+    "(5,4)",
+    "(5,6)",
+    "(6,5)"
+  ],
+  "per_entry_blocks": 32,
+  "generator_is_proof": false,
+  "exactized_dh_map_equality_proved_in_lean": false
+}
