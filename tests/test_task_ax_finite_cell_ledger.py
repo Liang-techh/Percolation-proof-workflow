@@ -1,17 +1,23 @@
 import importlib.util
 import json
+import unittest
 from pathlib import Path
 
 
 ROOT = Path(__file__).parents[1]
 ART = ROOT / "artifacts" / "task_AX_finite_cell_ledger_v2"
-spec = importlib.util.spec_from_file_location("ax_checker", ART / "check_finite_cell_ledger.py")
+SCRIPT = ART / "check_finite_cell_ledger.py"
+DATA = ART / "finite_cell_ledger_v2.json"
+if not SCRIPT.is_file() or not DATA.is_file():
+    raise unittest.SkipTest(f"optional local finite-cell artifact is not checked in: {ART}")
+spec = importlib.util.spec_from_file_location("ax_checker", SCRIPT)
 checker = importlib.util.module_from_spec(spec)
+assert spec.loader is not None
 spec.loader.exec_module(checker)
 
 
 def load():
-    return json.loads((ART / "finite_cell_ledger_v2.json").read_text(encoding="utf-8"))
+    return json.loads(DATA.read_text(encoding="utf-8"))
 
 
 def test_open_skeleton_is_admissible_but_not_flowpipe():

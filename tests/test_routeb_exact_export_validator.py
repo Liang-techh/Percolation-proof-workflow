@@ -7,6 +7,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "artifacts/task_BD_exact_coefficient_gram_validator_20260906/validate_exact_export.py"
+if not SCRIPT.is_file():
+    raise unittest.SkipTest(f"optional local artifact is not checked in: {SCRIPT}")
 spec = importlib.util.spec_from_file_location("exact_export_validator", SCRIPT)
 validator = importlib.util.module_from_spec(spec)
 assert spec.loader is not None

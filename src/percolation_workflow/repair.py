@@ -11,6 +11,22 @@ from .store import StateStore
 Repair = Callable[[str, str, str, int], str | Path | None]
 
 
+def _portable_repair_path(project_dir: str | Path, source_path: str | Path) -> str:
+    """Return a stable project-relative receipt path when possible.
+
+    Repair callbacks may operate on absolute temporary paths.  The disjoint DO
+    receipt surface intentionally accepts only portable relative POSIX paths, so
+    normalize a source inside ``project_dir`` before building the receipt.
+    """
+    project = Path(project_dir).resolve()
+    source = Path(source_path).resolve()
+    try:
+        return source.relative_to(project).as_posix()
+    except ValueError:
+        # Keep fail-closed behavior for sources outside the assigned project.
+        return str(source_path)
+
+
 def repair_until_verified(state: WorkflowState, node_id: str, agent_id: str, project_dir: str | Path,
                           source_path: str, repair: Repair, *, max_rounds: int = 3,
                           command: list[str] | None = None, store: StateStore | None = None) -> bool:
@@ -44,11 +60,12 @@ def repair_until_verified(state: WorkflowState, node_id: str, agent_id: str, pro
             if store:
                 store.save(state)
             return False
+        receipt_path = _portable_repair_path(project_dir, source_path)
         state.event("repair_requested", node_id=node_id, round=round_no,
                     diagnostic=result.stderr or result.stdout, next_path=str(next_path) if next_path else None,
                     # DO paths are portable receipt paths; the live source path
                     # remains in ``next_path`` and is intentionally untouched.
-                    disjoint_do=audit_do(build_repair_do(source_path)))
+                    disjoint_do=audit_do(build_repair_do(receipt_path)))
         if store:
             store.save(state)
         if next_path is None:
