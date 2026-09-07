@@ -2485,3 +2485,19 @@ proof artifact/review，不改 state/registry/shared scripts。
 - 两叶均已登记为 pending DAG children；revision `628`，registry `0`，正式
   certificate gate 继续关闭。仅做了 placeholder declaration 静态检查，未运行
   Lean/Lake。
+### 2026-09-07 — 12:10–12:11 数学收割
+
+- P5 T-P5-029 已形成 `C=sym(BᵀEA)` 的 typed SPN increment skeleton：严格保留
+  cone `u≥0`、entrywise `C≤N`、旧 PSD `S` 不变和 18→36 lift；不推出全局
+  PSD/Loewner 单调性。已登记为 `...nonnegative_gain_increment_reuse.typed_skeleton`。
+- body-6 5×5 线速度 Gram 已完成小尾块候选：真实 `prevOrigin`/active joint、
+  18 个速度分解残差、(3,3)/(4,4)/(3,4) 精确 Gram/质量项；SymPy checker
+  通过，Lean 尚未编译，review 待 agent 完成。
+- fixed-λ canonical digest composition 已完成：per-eta encoding、union
+  concatenation 与外部 union oracle 组成 typed binding，明确不假设 SHA256
+  可由两个 hash 直接合成；已登记为 digest composition child。
+- P3 unified input 已完成：四层 remainder radius 精确求和、非负性和统一
+  weighted-power input；已登记为 `...force_adapter.unified_input`。
+
+当前 state revision `631`，registry `0`，formal gate 仍关闭；这些均是
+source-independent/open/uncompiled 候选。

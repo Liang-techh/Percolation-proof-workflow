@@ -1879,3 +1879,12 @@ P5 SPN 增量复用、fixed-λ 两分区账本 union、P3 四层 remainder/sourc
 fixed-λ 已补齐两个 eta 分区的 tagged union 逻辑，P3 已补齐四层 remainder
 到 source-force 的线性 typed seam。两者都把真实 source、rounding、coverage
 和 kernel 编译保留为外部未决前提；不升级 registry，不做大规模回归。
+### 2026-09-07 12:11 — 梁智炜数学收割
+
+当前四条主要进展：P5 增量 SPN slack 复用、body-6 5×5 尾部 Gram、fixed-λ
+union digest typed composition、P3 unified radius input。它们分别消除了
+“不能复用旧 witness”“误把 v5=0 外推到前五列”“错误合成 SHA digest”和
+“四层误差无法喂入 power consumer”这几个结构瓶颈，但都没有改变正式准入门槛。
+
+仍需远端/授权环境验证 Lean kernel、实际 source/export、coverage 和后续
+flowpipe；本地继续只做数学叶和定向检查。

@@ -431,6 +431,19 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union",
+        "statement": "Per-eta canonical row encodings and digest tokens compose into an explicit union digest binding under an external equality between canonical union encoding and concatenated selected-row encodings.",
+        "proof_sketch": "Keep the union oracle result and concatenation equality as typed premises, project each partition's existing digest binding, and package the union token without pretending SHA256 hashes compose algebraically.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_DIGEST_COMPOSITION",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_CANONICAL_DIGEST_COMPOSITION20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_CANONICAL_DIGEST_COMPOSITION20260907_REVIEW.md",
+        ],
+    },
+    {
         "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter",
         "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam",
         "statement": "Four derivative-first remainder layers split linearly under one Christoffel-to-force contraction and feed the existing Fin 6 weighted power consumer.",
@@ -441,6 +454,19 @@ CHILDREN = [
         "artifacts": [
             "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_FORCE_ADAPTER.lean",
             "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_FORCE_ADAPTER_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter",
+        "statement": "The four derivative-first remainder radii are summed exactly once into a unified nonnegative radius and weighted-power input on a common domain.",
+        "proof_sketch": "Construct R=R₀+R₁+R₂+R₃ and mu=mu₀+mu₁+mu₂+mu₃, prove the triangle and nonnegativity bounds, and package velocity/weight/domain premises without choosing a concrete source or radius.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_UNIFIED_INPUT",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_UNIFIED_INPUT.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_UNIFIED_INPUT_REVIEW.md",
         ],
     },
     {
@@ -455,6 +481,19 @@ CHILDREN = [
             "agent_review_inbox/review-T-P5-029-kuangmanmozun-20260907T1152.md",
             "agent_review_inbox/companion-T-P5-029-kuangmanmozun-20260907T1155.md",
             "agent_review_inbox/claim-T-P5-029-kuangmanmozun-20260907T1145.md",
+        ],
+    },
+    {
+        "name": "P5.componentwise_relative_decay.feasible_cone_spn.nonnegative_gain_increment_reuse.typed_skeleton",
+        "parent": "P5.componentwise_relative_decay.feasible_cone_spn.nonnegative_gain_increment_reuse",
+        "statement": "The fixed-N SPN update is typed through C=sym(BᵀEA): a nonnegative cone correction can be charged against N while retaining the old PSD S witness, including rank-one increments.",
+        "proof_sketch": "Keep cone absolute-value maps and u≥0 as explicit premises, prove correction/envelope identities and entrywise nonnegativity, update all 18 representatives and lift by flip without claiming PSD monotonicity.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_SPN_INCREMENT_TYPED_SKELETON",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_KPATH_INTERFACE_SPNIncrement.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_KPATH_INTERFACE_SPNIncrement_REVIEW.md",
         ],
     },
     {

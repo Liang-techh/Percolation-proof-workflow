@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 628,
+  "revision": 631,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -38153,7 +38153,9 @@
       "parent_id": "1e3f28c782d9485bb94b0bb1e3ae0383",
       "status": "open",
       "proof_sketch": "Rewrite the envelope increment as the symmetric part of BᵀEA in cone coordinates, prove entrywise nonnegativity, and subtract it from N while preserving the old PSD S witness; keep rank-one K correction and concrete source external.",
-      "dependencies": [],
+      "dependencies": [
+        "ce72ed4b15ce4eddadc7d97d1877dfb7"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -38262,7 +38264,9 @@
       "parent_id": "11801688c7574fc5815ac0702521fd77",
       "status": "open",
       "proof_sketch": "Use EtaTag×Nat row indices, explicit cross-eta label disjointness, local injectivity, cardinality addition, and the selected-box positive margin theorem; keep digest/source/coverage external.",
-      "dependencies": [],
+      "dependencies": [
+        "ee9e3c418b394786a4dee8059e9948b3"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -38297,7 +38301,9 @@
       "parent_id": "9956ec14b5414e81a93235452d771206",
       "status": "open",
       "proof_sketch": "Name machine/lift, central-FD, derivative-hull, and export-center tensors; prove contraction additivity, force-error vector identity, and one-use radius triangle bound while leaving source/rounding/export/coverage as typed premises.",
-      "dependencies": [],
+      "dependencies": [
+        "34135461e6f1410a8474f9afc75beb79"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -38314,6 +38320,111 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_FORCE_ADAPTER_REVIEW.md",
             "sha256": "43ED492DBB53CEAC2038C5A0FA3C38E1EF1DD0ACD9EC0FAD68766BAB2A70BDCE"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "ce72ed4b15ce4eddadc7d97d1877dfb7": {
+      "id": "ce72ed4b15ce4eddadc7d97d1877dfb7",
+      "name": "P5.componentwise_relative_decay.feasible_cone_spn.nonnegative_gain_increment_reuse.typed_skeleton",
+      "statement": "The fixed-N SPN update is typed through C=sym(BᵀEA): a nonnegative cone correction can be charged against N while retaining the old PSD S witness, including rank-one increments.",
+      "parent_id": "519e99360cda4f0eabcbfab63c3316ca",
+      "status": "open",
+      "proof_sketch": "Keep cone absolute-value maps and u≥0 as explicit premises, prove correction/envelope identities and entrywise nonnegativity, update all 18 representatives and lift by flip without claiming PSD monotonicity.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_SPN_INCREMENT_TYPED_SKELETON",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_KPATH_INTERFACE_SPNIncrement.lean",
+            "sha256": "2E7C2BDAAB7653BD15D253CA9D8729A412788DFFF144E41D7626FB6014418E56"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_KPATH_INTERFACE_SPNIncrement_REVIEW.md",
+            "sha256": "B5AA664E0C805DFE2334226E90DF5C8AC0A0A89698D964B864EB60F86C733BA3"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "34135461e6f1410a8474f9afc75beb79": {
+      "id": "34135461e6f1410a8474f9afc75beb79",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input",
+      "statement": "The four derivative-first remainder radii are summed exactly once into a unified nonnegative radius and weighted-power input on a common domain.",
+      "parent_id": "5e72c5ff760847cdbc282c9ee03b7d85",
+      "status": "open",
+      "proof_sketch": "Construct R=R₀+R₁+R₂+R₃ and mu=mu₀+mu₁+mu₂+mu₃, prove the triangle and nonnegativity bounds, and package velocity/weight/domain premises without choosing a concrete source or radius.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_CENTRAL_FD_UNIFIED_INPUT",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_UNIFIED_INPUT.lean",
+            "sha256": "0040CF2FC03024F999E636A3D4D3889670823D95219ED03C09CC453261FA614E"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_UNIFIED_INPUT_REVIEW.md",
+            "sha256": "E841564E06BBFDEF216888E3BA9BC41FAE082CFD357D914B06B9F4929DB37180"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "ee9e3c418b394786a4dee8059e9948b3": {
+      "id": "ee9e3c418b394786a4dee8059e9948b3",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition",
+      "statement": "Per-eta canonical row encodings and digest tokens compose into an explicit union digest binding under an external equality between canonical union encoding and concatenated selected-row encodings.",
+      "parent_id": "04654b90f0f64484bb248748ac8d7485",
+      "status": "open",
+      "proof_sketch": "Keep the union oracle result and concatenation equality as typed premises, project each partition's existing digest binding, and package the union token without pretending SHA256 hashes compose algebraically.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_FIXED_LAMBDA_DIGEST_COMPOSITION",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_CANONICAL_DIGEST_COMPOSITION20260907.lean",
+            "sha256": "F2E06C7DE6B89631D30FFC1B7F2215CBBDCA5F86A593536A0AE762C0991139EB"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_CANONICAL_DIGEST_COMPOSITION20260907_REVIEW.md",
+            "sha256": "66A66EB1A5D474365B298E01FA5329B105FB166F960587CF3DB645E206E28C09"
           }
         ],
         "registry_eligible": false,
@@ -64843,6 +64954,57 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T18:09:50.586428+00:00",
+      "kind": "node_added",
+      "node_id": "ce72ed4b15ce4eddadc7d97d1877dfb7",
+      "parent_id": "519e99360cda4f0eabcbfab63c3316ca",
+      "name": "P5.componentwise_relative_decay.feasible_cone_spn.nonnegative_gain_increment_reuse.typed_skeleton"
+    },
+    {
+      "at": "2026-09-07T18:09:50.605618+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P5.componentwise_relative_decay.feasible_cone_spn.nonnegative_gain_increment_reuse.typed_skeleton"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T18:10:49.653322+00:00",
+      "kind": "node_added",
+      "node_id": "34135461e6f1410a8474f9afc75beb79",
+      "parent_id": "5e72c5ff760847cdbc282c9ee03b7d85",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input"
+    },
+    {
+      "at": "2026-09-07T18:10:49.674922+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T18:11:35.785539+00:00",
+      "kind": "node_added",
+      "node_id": "ee9e3c418b394786a4dee8059e9948b3",
+      "parent_id": "04654b90f0f64484bb248748ac8d7485",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition"
+    },
+    {
+      "at": "2026-09-07T18:11:35.807236+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -68499,5 +68661,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "6a191032952903a291988fde6addb18804224f656bfbb54fa415fc5a55778960"
+  "state_checksum": "344ca30468bb4e5b8eaed636d19c16f4120e89cad24aa37ce6417795e5e6c2ec"
 }
