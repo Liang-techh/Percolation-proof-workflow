@@ -1490,6 +1490,11 @@ polynomial remains a separate frontier.
   scale terms as an explicit unresolved source-contract obstruction until an
   authoritative source/config is identified; do not silently reinterpret
   them as the observed `1/20` coupling.
+- coordinator decomposition (2026-09-07): this obstruction is now tracked as
+  F0 source selection, F1 controller tau semantics, F2 coefficient
+  normalization, F3 true-DH B=(4,5) block projection, and F4 source-bound
+  admission. F0/F2/F3/F4 remain open until an authoritative source/config is
+  identified; the lifted `1/20` terms are not a substitute.
 
 ## Handoff format
 

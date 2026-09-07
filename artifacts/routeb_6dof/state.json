@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 498,
+  "revision": 499,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13345,6 +13345,38 @@
             "interpretation": "nominal lifted coupling, not deployed tau coefficient"
           },
           "typed_block_interface_present": true,
+          "decomposition": [
+            {
+              "id": "F0",
+              "name": "authoritative_source_selection",
+              "status": "OPEN",
+              "interface": "RouteB.Force.AuthoritativeSourceKey"
+            },
+            {
+              "id": "F1",
+              "name": "controller_tau_semantics",
+              "status": "STATIC_FACT_PENDING_AUTHORITY",
+              "interface": "RouteB.Force.ControllerTauSemantics"
+            },
+            {
+              "id": "F2",
+              "name": "coefficient_normalization",
+              "status": "OPEN",
+              "interface": "RouteB.Force.CoefficientNormalization"
+            },
+            {
+              "id": "F3",
+              "name": "block_projection_B45",
+              "status": "OPEN",
+              "interface": "RouteB.Force.TrueDHBlockProjection"
+            },
+            {
+              "id": "F4",
+              "name": "source_bound_admission",
+              "status": "OPEN",
+              "interface": "RouteB.Force.SourceBoundAdmission"
+            }
+          ],
           "source_artifacts": [
             {
               "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\robot_final\\dhport_lib.jl",
@@ -38607,6 +38639,25 @@
       "admission_status": "pending_pinned_runtime_and_lean_receipt",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T12:20:59.484492+00:00",
+      "kind": "routeb_force_scale_contract_recorded",
+      "node_id": "203c45aac1d84022b69267c0cc31db06",
+      "parent_id": "6cebb66987f449f3b5ad8d0548dfdf83",
+      "status": "FORCE_SCALE_TERMS_UNSUPPORTED_IN_CURRENT_CANONICAL_SOURCES",
+      "requested_terms_found": {
+        "deployed_dhport": {
+          "q5_over_100": false,
+          "q4_over_200": false
+        },
+        "lifted_descriptor": {
+          "q5_over_100": false,
+          "q4_over_200": false
+        }
+      },
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -42263,5 +42314,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "e8b7c70f1a0f6c48cfda9d812642d5326d438845b8106ef7925def2f487cd781"
+  "state_checksum": "6e31d36947451e4a06874e35458d56e883f7e14e5026ddd204dc414f8b04a1f0"
 }

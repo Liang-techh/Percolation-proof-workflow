@@ -831,6 +831,11 @@ O0 helper 的 fail-closed 边界已补强：只有在 `M_BD`/`DeltaM_DB` 范数�
 与 exact inverse premise 相同的显式 source key 时，才允许返回 conditional port
 bound；省略或错配 source key 均拒绝。新增 focused test 覆盖该缺口。
 
+true-DH force/source obstruction 也已拆成 F0 authoritative source selection、F1
+controller tau semantics、F2 coefficient normalization、F3 B=(4,5) block projection、
+F4 source-bound admission 五层。当前缺少 `q5/100` 与 `q4/200` 的权威来源，因此
+F0/F2/F3/F4 保持 open；观察到的 lifted `1/20` 不能静默替代请求系数。
+
 ### 2026-09-07 — 梁智炜：应用 O1 最小候选 repair
 
 根据 O1 API review，候选 `RouteBO1PortIdentity.lean` 已加入显式

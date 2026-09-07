@@ -108,6 +108,38 @@ def main() -> int:
             "interpretation": "nominal lifted coupling, not deployed tau coefficient",
         },
         "typed_block_interface_present": interface_contract_present,
+        "decomposition": [
+            {
+                "id": "F0",
+                "name": "authoritative_source_selection",
+                "status": "OPEN" if not requested_present else "PENDING_BINDING",
+                "interface": "RouteB.Force.AuthoritativeSourceKey",
+            },
+            {
+                "id": "F1",
+                "name": "controller_tau_semantics",
+                "status": "STATIC_FACT_PENDING_AUTHORITY",
+                "interface": "RouteB.Force.ControllerTauSemantics",
+            },
+            {
+                "id": "F2",
+                "name": "coefficient_normalization",
+                "status": "OPEN" if not requested_present else "PENDING_BINDING",
+                "interface": "RouteB.Force.CoefficientNormalization",
+            },
+            {
+                "id": "F3",
+                "name": "block_projection_B45",
+                "status": "OPEN",
+                "interface": "RouteB.Force.TrueDHBlockProjection",
+            },
+            {
+                "id": "F4",
+                "name": "source_bound_admission",
+                "status": "OPEN",
+                "interface": "RouteB.Force.SourceBoundAdmission",
+            },
+        ],
         "source_artifacts": [ref(DEPLOYED), ref(LIFTED), ref(NOMINAL)],
         "resolution": (
             "bind the requested force terms only after an authoritative source/config is identified; "
