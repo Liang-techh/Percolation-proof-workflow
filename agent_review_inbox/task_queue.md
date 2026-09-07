@@ -1413,6 +1413,33 @@ polynomial remains a separate frontier.
 - forbidden: declaring O2 closed from existing interval candidates, sampled
   maxima, solver `OPTIMAL`, or a stale source hash.
 
+### T-P4-035 — true-DH force-descriptor block projection seam
+
+- status: `open` (source-bound math prerequisite for P4)
+- owner: `大爱仙尊` for the exact block algebra; `柳冠一` for the typed
+  source/config adapter; `封不觉` for an independent sign and provenance
+  receipt.
+- scope: derive the smallest conditional theorem that connects the deployed
+  force descriptor to the Route-B block equation on `B=(4,5)` and
+  `D=(1,2,3,6)`. State explicitly which terms are `M_BD*a_D`, which terms
+  are the force-scale contributions `q5/100` and `q4/200`, and which
+  quantities are merely analytic-lifted surrogates. Produce a typed
+  source-binding interface that can feed O1 without assuming the current
+  lifted model is canonical.
+- required evidence: exact index/order ledger, source file/hash, coefficient
+  normalization, a sign-consistent `DeltaM_DB` contract, and an explicit
+  mismatch obstruction whenever deployed `dhport_lib.jl` and the lifted
+  descriptor disagree. If equality is unavailable, return the strongest
+  one-sided or conditional statement that remains valid.
+- boundary: this seam does not prove Float64 enclosure, positivity,
+  coverage, residual absorption, flowpipe, terminal transfer, or registry
+  admission; it must remain below O1 parent closure until source binding is
+  accepted.
+- forbidden: silently importing the historical lifted descriptor, treating
+  pointwise or sampled agreement as source equality, changing controller
+  parameters without invalidating old receipts, or hiding normalization in an
+  untyped solver callback.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it
