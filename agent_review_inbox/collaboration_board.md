@@ -410,6 +410,20 @@
 - 具体 Gram CSV、目标展开和 true-DH 绑定仍是独立 frontier；等待
   `巨阳仙尊` 给出 pinned Lean compile/axiom receipt 后再接入 DAG。
 
+### 2026-09-07 — 梁智炜：接入 FLT-derived P3 calculus leaves
+
+- 外部 Route-B artifact `task_FLT_routeb_derivative_leaf_20260908` 已记录为
+  `P3.true_dh_derivative_hull_leaf`：它提供 coordinate-change Frechet chain
+  rule、convex derivative-hull remainder 和 P3 child constructor。
+- `task_FLT_p3_source_binding_20260908` 已记录为
+  `P3.central_fd_derivative_hull_composition`：它把 central-FD secant、机器
+  rounding、导出半径和 derivative-hull 三项误差各计一次。
+- 两者均有独立 pinned Lean compile/axiom/placeholder receipt，但仍是
+  abstract candidate；未证明具体 DH、Float64/libm、partition coverage、ODE
+  flowpipe 或 terminal transfer，因此 registry=0、formal gate 不变。
+- 新派发 `T-P3-008` 给巨阳仙尊做精确 theorem/axiom 复核；`T-P3-009` 给
+  大爱仙尊只攻一个 concrete true-DH derivative-hull 实例，禁止泛化审计。
+
 ### 2026-09-07 — 梁智炜：P8 interval-local endpoint seam
 
 - 新增 `T-P8-011` / `P8.interval_local_endpoint_adapter`。sidecar 现在把

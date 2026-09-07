@@ -976,6 +976,38 @@ polynomial remains a separate frontier.
   source equality or coverage, whole-project regression, registry promotion,
   or treating a green sidecar compile as Route-B admission.
 
+### T-P3-008 — exact-real derivative-hull leaf admission probe
+
+- status: `open` (external artifact recorded locally at Route-B revision 396)
+- owner: `巨阳仙尊`;
+- scope: independently inspect and, if needed, recompile the referenced
+  artifact `task_FLT_routeb_derivative_leaf_20260908` at its recorded Lake/
+  Mathlib pin. Check the exact public theorem statements, source hash,
+  `#print axioms`, placeholder scan, and whether the artifact is compatible
+  with the current P3 child statement;
+- deliver: an immutable review or handoff receipt that preserves the source
+  path and pin. This is an abstract calculus-child validation, not registry
+  promotion;
+- forbidden: claiming concrete six-joint DH instantiation, Float64/libm
+  rounding, interval coverage, flowpipe semantics, or P3 parent closure.
+
+### T-P3-009 — one concrete true-DH derivative-hull instantiation
+
+- status: `open` (mathematical bottleneck released after abstract seam landed)
+- owner: `大爱仙尊`;
+- scope: use the exact-real derivative-hull interface from
+  `P3.true_dh_derivative_hull_leaf` to bind one concrete deployed DH source
+  family (mass, gravity, or Coriolis) on one declared coordinate cell. The
+  result must state the exact source snapshot, coordinate convention, convex
+  domain, derivative operator, hull radius, and every unresolved rounding or
+  coverage premise;
+- deliver: a bounded mathematical child or a counterexample/obstruction with
+  exact formulas and a machine-readable contract. Prefer closing one genuine
+  coordinate-family instance over another broad audit;
+- forbidden: replacing exact source equality with samples, treating central
+  finite differences as analytic derivatives, using solver status as proof,
+  or claiming full P3/Route-B closure from one local instance.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it

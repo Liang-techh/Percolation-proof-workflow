@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 395,
+  "revision": 396,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -7245,7 +7245,9 @@
       "status": "open",
       "proof_sketch": "Branch boxes until every cell is resolved or fail closed; record unknown and boundary cells.",
       "dependencies": [
-        "94d269520f0c48c19186ee1b312ba3a3"
+        "94d269520f0c48c19186ee1b312ba3a3",
+        "6e0bfc263cfa45ab9411fcfd0c7cc1f8",
+        "d039d2c007b348349f022a77a369392e"
       ],
       "verified_artifact": null,
       "attempts": [
@@ -11167,6 +11169,176 @@
             "routeb_admission"
           ]
         }
+      }
+    },
+    "6e0bfc263cfa45ab9411fcfd0c7cc1f8": {
+      "id": "6e0bfc263cfa45ab9411fcfd0c7cc1f8",
+      "name": "P3.true_dh_derivative_hull_leaf",
+      "statement": "The exact-real Frechet chain-rule and convex derivative-hull leaf for a coordinate-changed true-DH map.",
+      "parent_id": "8f7df5df39a041d7a972078830dbcee7",
+      "status": "open",
+      "proof_sketch": "Consume the abstract HasFDerivAt composition and convex remainder bound; keep concrete DH, rounding, and coverage as separate leaves.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean-verified-abstract-external-artifact",
+        "statement_status": "lean_verified_abstract_candidate",
+        "evidence_level": "independently_compiled_external_artifact",
+        "claim_status": "abstract_p3_child_open",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "physical_certificate_allowed": false,
+        "external_artifact": "task_FLT_routeb_derivative_leaf_20260908",
+        "external_artifact_contract": {
+          "artifact": "task_FLT_routeb_derivative_leaf_20260908",
+          "status": "LEAN_VERIFIED_EXACT_REAL_CALCULUS_LEAF",
+          "p3_role": "source_semantics_child",
+          "source_type": "abstract_exact_real_true_DH",
+          "theorems": {
+            "coordinate_change": "FLTRouteBDerivativeLeaf.trueDH_coordinate_change_hasFDerivAt",
+            "derivative_hull": "FLTRouteBDerivativeLeaf.trueDH_coordinate_change_derivative_hull",
+            "child_constructor": "FLTRouteBDerivativeLeaf.p3SourceSemanticsChild_of_trueDH"
+          },
+          "proved": {
+            "frechet_chain_rule": true,
+            "convex_set_affine_derivative_hull": true
+          },
+          "not_proved": {
+            "concrete_DH_formula_instantiation": true,
+            "central_finite_difference_equivalence_or_error": true,
+            "Float64_source_binding_or_rounding_enclosure": true,
+            "ODE_or_flowpipe_semantics": true,
+            "P3_parent_gate_closure": true
+          },
+          "formal_certificate_allowed": false
+        },
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_routeb_derivative_leaf_20260908\\contract.json",
+            "sha256": "912bf04d75624d6dc95d4809b39e9b93f8f4f7841dfe5f2d06f5ccda3d741e6e"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_routeb_derivative_leaf_20260908\\AxiomAudit.lean",
+            "sha256": "294c00e1e3db4858459051c7d7240092ff1790e3bdd60154fb24f892cb42f763"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_routeb_derivative_leaf_20260908\\VERIFICATION.md",
+            "sha256": "38ee476c22518f9509848fa70251af17b229d9636392d337f67bd22056695ea5"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_routeb_derivative_leaf_20260908\\PINNED_ENVIRONMENT.md",
+            "sha256": "155f0e7bcb24e97afa7fa395e542581143d32dead21b08ee3ef95998b8632be1"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_routeb_derivative_leaf_20260908\\README.md",
+            "sha256": "64d14f215db944f5df9a0ce870588b0c2e26687c9ed31408fdb2aa1dcd2db9f8"
+          }
+        ],
+        "provenance_status": "reference_only_no_copy_no_source_mutation",
+        "unresolved": [
+          "concrete_six_joint_DH_instantiation",
+          "operation_DAG_or_rounding_binding",
+          "concrete_interval_payload_and_partition_coverage",
+          "ODE_flowpipe_and_terminal_transfer",
+          "coordinator_statement_identity_and_comparator_receipt"
+        ]
+      }
+    },
+    "d039d2c007b348349f022a77a369392e": {
+      "id": "d039d2c007b348349f022a77a369392e",
+      "name": "P3.central_fd_derivative_hull_composition",
+      "statement": "The exact-real central finite-difference to derivative-hull bridge and three-term rational interval error composition.",
+      "parent_id": "8f7df5df39a041d7a972078830dbcee7",
+      "status": "open",
+      "proof_sketch": "Use the convex secant estimate, then add exported-radius, machine rounding, and derivative-hull terms exactly once.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean-verified-abstract-external-artifact",
+        "statement_status": "lean_verified_abstract_candidate",
+        "evidence_level": "independently_compiled_external_artifact",
+        "claim_status": "abstract_p3_child_open",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "physical_certificate_allowed": false,
+        "external_artifact": "task_FLT_p3_source_binding_20260908",
+        "external_artifact_contract": {
+          "artifact": "task_FLT_p3_source_binding_20260908",
+          "status": "LEAN_VERIFIED_ABSTRACT_SOURCE_BINDING_INTERFACE",
+          "scope": "pointwise exact-real true-DH derivative to finite rational interval composition",
+          "source_type": "abstract exact-real map with finite scalar coordinates",
+          "theorems": {
+            "central_fd_derivative_hull": "FLTP3SourceBinding.centralFD_sub_center_le_of_derivative_hull",
+            "abstract_center_binding": "FLTP3SourceBinding.exact_trueDH_mem_inflated_source_interval",
+            "exact_derivative_binding": "FLTP3SourceBinding.exact_trueDH_derivative_mem_inflated_source_interval"
+          },
+          "error_ledger": [
+            "exported_interval_radius",
+            "machine_rounding_radius",
+            "derivative_hull_radius_times_direction_norm"
+          ],
+          "proved": {
+            "central_fd_secant_from_derivative_hull": true,
+            "three_term_interval_error_composition": true,
+            "exact_derivative_specialization": true
+          },
+          "not_proved": {
+            "concrete_six_joint_DH_instantiation": true,
+            "concrete_derivative_hull": true,
+            "julia_operation_DAG_binding": true,
+            "Float64_or_libm_rounding_enclosure": true,
+            "concrete_interval_payload": true,
+            "partition_coverage": true,
+            "ODE_flowpipe_or_terminal_transfer": true
+          },
+          "provenance": {
+            "authoritative_source": "routeB_dense_Mq/dhport_lib.jl",
+            "authoritative_source_sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936",
+            "matching_copy": "robot_final/dhport_lib.jl",
+            "matching_copy_hash_equal": true
+          },
+          "formal_certificate_allowed": false,
+          "physical_certificate_allowed": false,
+          "main_state_modified": false
+        },
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_p3_source_binding_20260908\\contract.json",
+            "sha256": "23c5dba03a17a0ae956165b328d733867975ce96ca4758271eff7115c78e1f73"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_p3_source_binding_20260908\\AxiomAudit.lean",
+            "sha256": "9a105a2d053f159bbd6696be7e15f5bb1bf7add3b3c7a0761079cdf52a9ee59c"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_p3_source_binding_20260908\\VERIFICATION.md",
+            "sha256": "2c1aef936c6ff7a9410530df5c15806dffba2ec1a775d79b2d3c5b023fc43b61"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_p3_source_binding_20260908\\PINNED_ENVIRONMENT.md",
+            "sha256": "77f55a777b3501f3639d56a5dc2f516b4826b13e9f0c460e9f779217d869a978"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_p3_source_binding_20260908\\AUDIT.md",
+            "sha256": "cf34743dd79ee4a4f9eb1ac86bac692f5f775a1c6dfebc80060ae06485241bd8"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_p3_source_binding_20260908\\README.md",
+            "sha256": "37a146bf679f0583308850dd085bbb78fe2e39609fbf142144ab7fee22925d65"
+          }
+        ],
+        "provenance_status": "reference_only_no_copy_no_source_mutation",
+        "unresolved": [
+          "concrete_six_joint_DH_instantiation",
+          "operation_DAG_or_rounding_binding",
+          "concrete_interval_payload_and_partition_coverage",
+          "ODE_flowpipe_and_terminal_transfer",
+          "coordinator_statement_identity_and_comparator_receipt"
+        ]
       }
     }
   },
@@ -32398,6 +32570,110 @@
       ],
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T08:13:39.694950+00:00",
+      "kind": "node_added",
+      "node_id": "6e0bfc263cfa45ab9411fcfd0c7cc1f8",
+      "parent_id": "8f7df5df39a041d7a972078830dbcee7",
+      "name": "P3.true_dh_derivative_hull_leaf"
+    },
+    {
+      "at": "2026-09-07T08:13:39.694968+00:00",
+      "kind": "routeb_flt_p3_abstract_leaf_recorded",
+      "node_id": "6e0bfc263cfa45ab9411fcfd0c7cc1f8",
+      "parent_id": "8f7df5df39a041d7a972078830dbcee7",
+      "external_artifact": "task_FLT_routeb_derivative_leaf_20260908",
+      "theorem_contract": {
+        "coordinate_change": "FLTRouteBDerivativeLeaf.trueDH_coordinate_change_hasFDerivAt",
+        "derivative_hull": "FLTRouteBDerivativeLeaf.trueDH_coordinate_change_derivative_hull",
+        "child_constructor": "FLTRouteBDerivativeLeaf.p3SourceSemanticsChild_of_trueDH"
+      },
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_routeb_derivative_leaf_20260908\\contract.json",
+          "sha256": "912bf04d75624d6dc95d4809b39e9b93f8f4f7841dfe5f2d06f5ccda3d741e6e"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_routeb_derivative_leaf_20260908\\AxiomAudit.lean",
+          "sha256": "294c00e1e3db4858459051c7d7240092ff1790e3bdd60154fb24f892cb42f763"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_routeb_derivative_leaf_20260908\\VERIFICATION.md",
+          "sha256": "38ee476c22518f9509848fa70251af17b229d9636392d337f67bd22056695ea5"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_routeb_derivative_leaf_20260908\\PINNED_ENVIRONMENT.md",
+          "sha256": "155f0e7bcb24e97afa7fa395e542581143d32dead21b08ee3ef95998b8632be1"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_routeb_derivative_leaf_20260908\\README.md",
+          "sha256": "64d14f215db944f5df9a0ce870588b0c2e26687c9ed31408fdb2aa1dcd2db9f8"
+        }
+      ],
+      "status": "lean_verified_abstract_candidate",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T08:13:39.697546+00:00",
+      "kind": "node_added",
+      "node_id": "d039d2c007b348349f022a77a369392e",
+      "parent_id": "8f7df5df39a041d7a972078830dbcee7",
+      "name": "P3.central_fd_derivative_hull_composition"
+    },
+    {
+      "at": "2026-09-07T08:13:39.697554+00:00",
+      "kind": "routeb_flt_p3_abstract_leaf_recorded",
+      "node_id": "d039d2c007b348349f022a77a369392e",
+      "parent_id": "8f7df5df39a041d7a972078830dbcee7",
+      "external_artifact": "task_FLT_p3_source_binding_20260908",
+      "theorem_contract": {
+        "central_fd_derivative_hull": "FLTP3SourceBinding.centralFD_sub_center_le_of_derivative_hull",
+        "abstract_center_binding": "FLTP3SourceBinding.exact_trueDH_mem_inflated_source_interval",
+        "exact_derivative_binding": "FLTP3SourceBinding.exact_trueDH_derivative_mem_inflated_source_interval"
+      },
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_p3_source_binding_20260908\\contract.json",
+          "sha256": "23c5dba03a17a0ae956165b328d733867975ce96ca4758271eff7115c78e1f73"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_p3_source_binding_20260908\\AxiomAudit.lean",
+          "sha256": "9a105a2d053f159bbd6696be7e15f5bb1bf7add3b3c7a0761079cdf52a9ee59c"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_p3_source_binding_20260908\\VERIFICATION.md",
+          "sha256": "2c1aef936c6ff7a9410530df5c15806dffba2ec1a775d79b2d3c5b023fc43b61"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_p3_source_binding_20260908\\PINNED_ENVIRONMENT.md",
+          "sha256": "77f55a777b3501f3639d56a5dc2f516b4826b13e9f0c460e9f779217d869a978"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_p3_source_binding_20260908\\AUDIT.md",
+          "sha256": "cf34743dd79ee4a4f9eb1ac86bac692f5f775a1c6dfebc80060ae06485241bd8"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_p3_source_binding_20260908\\README.md",
+          "sha256": "37a146bf679f0583308850dd085bbb78fe2e39609fbf142144ab7fee22925d65"
+        }
+      ],
+      "status": "lean_verified_abstract_candidate",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T08:13:39.697559+00:00",
+      "kind": "routeb_flt_p3_abstract_leaf_catalog_refresh",
+      "parent_id": "8f7df5df39a041d7a972078830dbcee7",
+      "children": [
+        "6e0bfc263cfa45ab9411fcfd0c7cc1f8",
+        "d039d2c007b348349f022a77a369392e"
+      ],
+      "status": "lean_verified_abstract_candidate",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -36054,5 +36330,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "fcbccd878cabd9ab8deb13a24aa4d4d62abebb3c53eaa59b670061972d6f447c"
+  "state_checksum": "e441a7904446118b1b629e956d1789d0e54260a390adc03ad027a5558c2fdff1"
 }
