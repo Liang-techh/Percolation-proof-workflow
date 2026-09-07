@@ -1102,3 +1102,11 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - O2 的单叶 `cell_id=1` receipt→Lean adapter 已用真实 input/generator/source/olean
   hash 接入，`receipt_leaf1_theta2_exact_real_interval` 编译退出 0、标准 axiom
   集合已记录；实际 `InRectBox` witness 和 parent coverage 仍 open。
+### 2026-09-07 — 梁智炜：Fin 2 输出范数 Lean 候选已出现
+
+- `examples/local_fkg/Fin2NormConversionCandidate.lean` 现在给出
+  `norm2_le_two_normInf`、`normInf_le_norm2` 与组合的
+  `fin2_euclidean_weighted_adapter`，数学上正好补齐 O0 weighted child 的
+  factor-2 缺口。
+- 目前仅是未编译源码，不能写入 verified registry；已交给 Euclid 做 pinned
+  Lean compile、axiom、sorry/admit 与 source/olean hash receipt。

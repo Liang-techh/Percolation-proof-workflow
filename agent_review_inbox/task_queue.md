@@ -1750,3 +1750,11 @@ after integration; corrections should be a new result file.
   task is to supply the actual `InRectBox` witness from an authoritative leaf
   record and then a parent/sibling coverage join; do not treat parsing alone as
   coverage closure.
+### O0 Fin 2 norm theorem candidate (2026-09-07)
+
+- `examples/local_fkg/Fin2NormConversionCandidate.lean` is the next exact
+  mathematical child. It proves the safe rational output factor 2 and the
+  weighted composition, but remains uncompiled until a pinned receipt exists.
+- After receipt, feed the theorem as the explicit `output_norm_conversion_proven`
+  premise; keep source/runtime binding, global coverage, and Schur consumption
+  independent.
