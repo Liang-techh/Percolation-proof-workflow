@@ -383,6 +383,17 @@ polynomial remains a separate frontier.
 - forbidden: claiming ODE existence, `[0,1]` flowpipe coverage, deployed
   13-state semantic binding, or P8/M4 admission from this child alone.
 
+### T-P8-007 — pinned validation of ramp sidecar
+
+- status: `claimed` by 臭屁猪 (GitHub validation lane)
+- scope: run the focused verifier for
+  `examples/routeb_p8_ramp_reconstruction_sidecar/` under the pinned Lean
+  environment and retain the exact compile/axiom output;
+- deliver: immutable review plus receipt if compiled, or a precise repair
+  report if the sidecar has a local Lean error;
+- forbidden: local-environment substitution, source-binding claims, flowpipe
+  coverage, registry promotion, or broad regression.
+
 ### T-FLT-SPECTRAL-LINEAR — spectral and linear algebra scan
 
 - status: `reviewed_pending` (integrated at Route-B revision 343;
