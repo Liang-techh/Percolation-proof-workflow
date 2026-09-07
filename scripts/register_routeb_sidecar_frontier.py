@@ -2269,6 +2269,19 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding",
+        "statement": "The targeted-gain initial bound can transfer to a full-DH storage only under an explicit same-storage identity on the domain; a future barrier additionally requires path inclusion in that domain, and equal initial values or derivatives alone are insufficient.",
+        "proof_sketch": "Define SameStorageIdentity, InitialBoundBinding, SublevelBarrier, and RouteBInitialTransfer; prove initial and pathwise transfer lemmas plus additive-constant and equal-initial-bound counterexamples. Keep actual storage formula, domain/path inclusion, dynamics, source semantics, and formal admission external.",
+        "lane": "source_semantics",
+        "bottleneck": "normalization",
+        "status": "OPEN_UNCOMPILED_BODY6_STORAGE_IDENTITY_TRANSFER",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_STORAGEIDENTITY20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_STORAGEIDENTITY20260907_REVIEW.md",
+        ],
+    },
+    {
         "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility.source_positive_target_binding.same_row_budget_audit",
         "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility.source_positive_target_binding",
         "statement": "A positive P4 target budget is meaningful only for a complete same-origin row carrying every required slot; mixed front floors or an unrecorded qCap can create a false positive or leave feasibility underdetermined.",

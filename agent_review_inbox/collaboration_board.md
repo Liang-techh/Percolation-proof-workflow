@@ -2494,3 +2494,8 @@ external row 虽有正的 `gamma−charge`，但真正的 consumer 还需要
 `target+2‖l_base‖²+charge·A_up≤b_base`。固定所有已显示系数、只改变未记录
 的 `b_base` 即可翻转 target feasibility；因此该叶只登记为 open obstruction，
 并交给流川枫做独立 focused Lean receipt。
+
+随后新增 `STORAGE_IDENTITY_TRANSFER` 叶：它要求 `V_eps=Vfull_DH` 在同一域
+上成立，且 barrier transfer 还需要整条 path 落在该域内；相同初始上界或相同
+导数都不足以完成固定阈值的 barrier 转移。该叶保持 open/uncompiled，交给
+Lean lane 做 focused receipt，不改变 registry。

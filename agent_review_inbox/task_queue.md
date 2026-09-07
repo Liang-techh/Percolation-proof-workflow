@@ -106,6 +106,11 @@ integration gates are satisfied.
   share; verify the exact target-allocation equivalence and fixed-coefficient
   opposite-base counterexample. Do not treat decimal-token arithmetic as
   Float64/source reification or promote the result to registry evidence.
+- `T-P4-STORAGE-IDENTITY-TRANSFER`: focused Lean validation of
+  `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_STORAGEIDENTITY20260907.lean`;
+  verify same-domain initial-bound/barrier transfer and the additive-constant
+  counterexamples. Keep `V_eps` and `Vfull_DH` distinct; no physical barrier or
+  registry promotion follows from this receipt.
 
 ### T-P4-012 — typed remote-action repair contract
 

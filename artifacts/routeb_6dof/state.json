@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 726,
+  "revision": 727,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -43050,7 +43050,9 @@
       "parent_id": "ab9697d1445e41958eab00f4e3a03cab",
       "status": "open",
       "proof_sketch": "Separate normalized, offset, raw, and shifted energy definitions; prove their exact origin values and conditional active-domain membership, then consume the existing center-offset/null-direction obstruction only under the explicit V(0,0) binding and domain inclusion. Leave source identity, full M/C/G, coverage, flowpipe, and pinned Lean evidence external.",
-      "dependencies": [],
+      "dependencies": [
+        "e64f0bd1919f467cb995c355c6028c66"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -43221,6 +43223,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_ActualRowMissingBase.review.md",
             "sha256": "CB0913C0FB20BE3362E97354DB874CFB2B5F62B321B7FC5EA0975845EB6CD15C"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "e64f0bd1919f467cb995c355c6028c66": {
+      "id": "e64f0bd1919f467cb995c355c6028c66",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer",
+      "statement": "The targeted-gain initial bound can transfer to a full-DH storage only under an explicit same-storage identity on the domain; a future barrier additionally requires path inclusion in that domain, and equal initial values or derivatives alone are insufficient.",
+      "parent_id": "808bfcf45e914d19ae958a40ab809b08",
+      "status": "open",
+      "proof_sketch": "Define SameStorageIdentity, InitialBoundBinding, SublevelBarrier, and RouteBInitialTransfer; prove initial and pathwise transfer lemmas plus additive-constant and equal-initial-bound counterexamples. Keep actual storage formula, domain/path inclusion, dynamics, source semantics, and formal admission external.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "normalization",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_BODY6_STORAGE_IDENTITY_TRANSFER",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_STORAGEIDENTITY20260907.lean",
+            "sha256": "486F16CEBDCF6A9C9A370F2519FDA1BE9C8C577858BACE0D9611274606AC4A40"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_STORAGEIDENTITY20260907_REVIEW.md",
+            "sha256": "914558A854BA6D8DDB543CFDA83534E20D328AF03BA86E4A369BD66F07930B0C"
           }
         ],
         "registry_eligible": false,
@@ -71870,6 +71907,24 @@
       "artifact_hashes_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T21:28:48.478768+00:00",
+      "kind": "node_added",
+      "node_id": "e64f0bd1919f467cb995c355c6028c66",
+      "parent_id": "808bfcf45e914d19ae958a40ab809b08",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer"
+    },
+    {
+      "at": "2026-09-07T21:28:48.480419+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer"
+      ],
+      "metadata_updated": [],
+      "artifact_hashes_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -75526,5 +75581,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "9a609ff7fe876f507d2e61ce4c4105f8ce86ab551bcff1843266a407ef04cbe2"
+  "state_checksum": "b92965ca10fb1a00e1b3cc7011bece95c5d4cfad411b03ef1a521bf5e8735056"
 }
