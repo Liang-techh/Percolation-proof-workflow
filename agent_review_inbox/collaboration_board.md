@@ -2199,6 +2199,13 @@ body-6 `SELF3_MASS_BIND`、fixed-λ `REAL_FINAL_STRICT_CONSUMER` 与 P3
 反例保留 coverage 障碍，再用显式 uniform certificate 消费到 capMax 严格余量；
 未把有限采样或命名约定当作全域证明。
 
+### 2026-09-07 — 梁智炜收割 P3 interval-enclosure 叶
+
+`CENTRAL_FD_HULL_INTERVAL_ENCLOSURE` 已登记 revision 686。该叶把每个覆盖
+box 的 gap lower、cap-load upper chain 和 rounding/interval soundness 作为
+显式输入，输出全域 strict consumer；sample/solver positivity 仍由 exact
+反例隔离，未进入 registry。
+
 ### 2026-09-07 — 梁智炜收割 P4 uniform parameter bridge
 
 `UNIFORM_PARAMETER_BRIDGE` 已完成定向 review 并登记 revision 684。它把同一

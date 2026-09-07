@@ -2876,6 +2876,10 @@ body-6 SELF3 mass binding、fixed-λ real final strict consumer、P3 box coverag
 - P3：pointwise positive gap 不推出 global uniform slack 的 exact obstruction，
 以及显式 uniform-gap consumer。
 
+P3 interval-enclosure review 已到达并登记 revision 686，保持
+`OPEN_UNCOMPILED`；下一步可继续推进实际 interval payload/box source binding，
+但不能用采样或 solver receipt 替代 rounding soundness。
+
 P4 `UNIFORM_PARAMETER_BRIDGE` 已成对审阅并登记 revision 684，保持
 `OPEN_UNCOMPILED`；它明确要求 total additive 为 `base+biasEff`，并把统一
 参数、feedback、coverage 作为显式前提。

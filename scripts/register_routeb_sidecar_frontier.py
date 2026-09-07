@@ -1664,6 +1664,19 @@ CHILDREN = [
             "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_BOX_COVERAGE_REVIEW.md",
         ],
     },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage",
+        "statement": "Explicit per-box interval/rounding soundness, gap lower bounds, cap-load upper chains, and whole-domain coverage yield a strict capMax consumer; sampled positivity alone does not.",
+        "proof_sketch": "Select a covered box at each domain point, consume its sound enclosure and positive gap, and keep an exact sample-only counterexample to prevent upgrading solver/grid evidence without interval soundness.",
+        "lane": "source_semantics",
+        "bottleneck": "coverage",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_INTERVAL_ENCLOSURE",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_INTERVAL_ENCLOSURE.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_INTERVAL_ENCLOSURE_REVIEW.md",
+        ],
+    },
 ]
 
 
