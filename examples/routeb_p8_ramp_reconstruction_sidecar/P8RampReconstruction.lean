@@ -51,7 +51,7 @@ theorem ramp_w_eq_mul
       simpa [hc t] using hw t
     have hlin : HasDerivAt (fun s : ℝ => c0 * s) c0 t := by
       simpa using (hasDerivAt_id t).const_mul c0
-    simpa [h] using hw'.sub hlin
+    simpa only [h, Pi.sub_apply] using hw'.sub hlin
   have hdiff : Differentiable ℝ h := fun t => (hh t).differentiableAt
   have hzero : ∀ t : ℝ, deriv h t = 0 := fun t => (hh t).deriv
   intro t
