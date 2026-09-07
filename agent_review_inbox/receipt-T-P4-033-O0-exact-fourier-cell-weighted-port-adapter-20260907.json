@@ -1,0 +1,77 @@
+{
+  "schema": "routeb-o0-exact-fourier-cell-weighted-port-adapter-v1",
+  "task": "T-P4-033",
+  "observed_state_revision": 508,
+  "status": "CONDITIONAL_WEIGHTED_ADAPTER_CONSTRUCTED",
+  "scope": "exact-Fourier one-cell O0 weighted port metric adapter",
+  "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+  "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+  "key_equality": {
+    "metric_source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+    "metric_state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+    "same_source_key": true,
+    "same_state_key": true,
+    "same_orientation": true
+  },
+  "orientation": {
+    "norm": "induced_infinity",
+    "B_one_based": [4, 5],
+    "D_one_based": [1, 2, 3, 6],
+    "M_BD": "rows B, columns D",
+    "DeltaM_DB_f": "M_DB,f(q)-M_DB,f(0), rows D, columns B"
+  },
+  "exact_metric": {
+    "B_up": [
+      ["1402217/12000000", "0"],
+      ["0", "200739/4000000"]
+    ],
+    "beta": "200739/4000000",
+    "B_up_minus_beta_I": [
+      ["1/15", "0"],
+      ["0", "0"]
+    ],
+    "B_up_ge_beta_I": true,
+    "s": "1/5",
+    "s_positive": true,
+    "s_squared": "1/25",
+    "beta_minus_s_squared": "40739/4000000",
+    "s_squared_le_beta": true,
+    "metric_source_artifact": "C:/Users/z5242/Desktop/重构版/6dof_sos_optimized/6dof_sos_optimized/routeB_dense_Mq/routeB_compact_port_implicit_cellwise_monotonicity_audit.py",
+    "metric_source_sha256": "E3C41F30BDDDB2FBAC9BB5BB651B307E81F21D210BC07C390CB1AC48B7C3C9A4"
+  },
+  "input_bound": {
+    "epsilon_R_unweighted": "10884976891854242252555776013990910667449238154978439/1066565541595672284169870837304452361645809004477199488549594864814784000000",
+    "norm": "induced_infinity",
+    "statement": "||R_delta a_B||_infinity <= epsilon_R_unweighted * ||a_B||_infinity",
+    "source": "receipt-T-P4-033-O0-constructive-exact-fourier-cell-K-Br-Cf-20260907.json",
+    "exact_fourier_cell_contract": true
+  },
+  "adapter": {
+    "norm_compatibility": [
+      "||a_B||_infinity <= ||a_B||_2",
+      "B_up >= beta I",
+      "s^2 <= beta",
+      "||a_B||_2 <= sqrt(a_B^T B_up a_B)/s"
+    ],
+    "weighted_statement": "for every q in state_key and every a_B, ||R_delta a_B||_infinity <= epsilon_R_weighted * sqrt(a_B^T B_up a_B)",
+    "epsilon_R_weighted": "10884976891854242252555776013990910667449238154978439/213313108319134456833974167460890472329161800895439897709918972962956800000",
+    "epsilon_R_weighted_decimal_check": "5.102816689337908e-23",
+    "formula": "epsilon_R_weighted = epsilon_R_unweighted/s",
+    "arithmetic_exact": true
+  },
+  "proof_boundary": {
+    "weighted_adapter_proven_under_exact_fourier_cell_contract": true,
+    "uses_rho_F_squared": false,
+    "uses_float64_candidate": false,
+    "consumes_schur_margin": false,
+    "deployed_float64_q_nonzero_binding": false,
+    "global_coverage": false,
+    "formal_certificate_allowed": false,
+    "registry_eligible": false
+  },
+  "mutation": {
+    "main_state_modified": false,
+    "workflow_source_modified": false,
+    "lean_or_lake_run": false
+  }
+}

@@ -1076,3 +1076,12 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - 给其他 Agent 的建议：equilibrium-containing 路线优先证明真实 Float64 error map 的 centered increment；若做不到，则保留 weighted-dual additive budget，不要把 `b_i` 偷换成相对增益。source/checker lane 还需在同一 P8 域给出 `cap^2<=K^2*A` 或更强 typed bridge。
 - 建议的下一步：优先补 `FD_CAP_STATE_COMPATIBILITY`、`CENTERED_FLOAT64_INCREMENT_BINDING`、`TRUE_DH_SOURCE_BINDING`、`P8_SAME_DOMAIN_COVERAGE`；本 sidecar 只到 `compiled_candidate`，不宣称 P5/P8/M4 closure 或 registry admission。
 - 关联任务/Review：`T-P5-009`、`review-T-P5-009-liuguanyi-20260907T0606.md`、`review-T-P5-009-sumengchen-20260907T0701.md`。
+### 2026-09-07 — 梁智炜：O0 weighted adapter 发现并固化输出范数缺口
+
+- 新 receipt 已确认同键 exact metric：`B_up >= beta I`、`s=1/5`、`s²<=beta`，
+  但它把 induced-∞ 的输出界直接写成 Euclidean-2 输出界，漏了二维
+  `||y||₂ <= sqrt(2)||y||∞`。
+- intake 已将状态标为 `CONDITIONAL_METRIC_PRESENT_OUTPUT_NORM_CONVERSION_REQUIRED`，
+  不消费 Schur margin；同时给出安全 exact-rational bound `2*epsilon_R/s`，
+  其中因 `sqrt(2)<=2` 使用 factor 2。只有补齐 Fin 2 norm conversion 或直接
+  生成 induced-2 source bound 后，才可进入 weighted Schur consumer。

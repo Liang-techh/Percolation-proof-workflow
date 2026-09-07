@@ -1723,3 +1723,12 @@ after integration; corrections should be a new result file.
   OLean hashes. The next mathematical target is a receipt-to-Lean adapter that
   parses one authoritative leaf's rational bounds, coordinate order, and leaf
   id into `RectBox13`/`InRectBox`, then feeds the existing theta2 transport.
+### New harvest: O0 weighted metric adapter audit (2026-09-07)
+
+- The exact-Fourier cell now has a same-key metric lower root `s=1/5`, but the
+  submitted adapter's induced-infinity-to-Euclidean statement is missing the
+  two-dimensional output factor. Keep its claimed `epsilon_R/s` non-consumable.
+- The safe rational fallback is `2*epsilon_R/s`; the preferred next child is a
+  Lean proof of the Fin-2 norm conversion or a direct induced-2 port receipt.
+  Schur margin remains untouched until the weighted baseline, perturbation, and
+  strict margin are all keyed and proved.

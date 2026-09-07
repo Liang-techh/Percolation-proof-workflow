@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 517,
+  "revision": 518,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -14454,6 +14454,52 @@
           "cell_scope": "exact-Fourier one-cell child only",
           "global_coverage": false,
           "weighted_metric_conversion": false,
+          "schur_margin_consumed": false,
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
+        },
+        "o0_weighted_adapter_audits": [
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-033",
+            "source_agent": "codex-inbox",
+            "review_status": "CONDITIONAL_METRIC_PRESENT_OUTPUT_NORM_CONVERSION_REQUIRED",
+            "receipt_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\receipt-T-P4-033-O0-exact-fourier-cell-weighted-port-adapter-20260907.json",
+              "sha256": "254817B2E987AD0072FC1AD39EEB8E996444397157A37FEEE0B2EA9F12DBDE06"
+            },
+            "tuple_receipt_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\receipt-T-P4-033-O0-constructive-exact-fourier-cell-K-Br-Cf-20260907.json",
+              "sha256": "E570CFB418065503D9743B4496FC0902E45BF82DA4C265FD067BEA9952E821AD"
+            },
+            "metric_source_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_port_implicit_cellwise_monotonicity_audit.py",
+              "sha256": "E3C41F30BDDDB2FBAC9BB5BB651B307E81F21D210BC07C390CB1AC48B7C3C9A4"
+            },
+            "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+            "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+            "input_norm": "induced_infinity",
+            "output_norm": "Euclidean_2",
+            "metric_root_s": "1/5",
+            "claimed_epsilon_weighted": "10884976891854242252555776013990910667449238154978439/213313108319134456833974167460890472329161800895439897709918972962956800000",
+            "safe_rational_epsilon_weighted_with_factor_2": "10884976891854242252555776013990910667449238154978439/106656554159567228416987083730445236164580900447719948854959486481478400000",
+            "missing_premise": "proved induced_infinity_output_to_Euclidean_2 conversion for Fin 2",
+            "schur_margin_consumed": false,
+            "formal_certificate_allowed": false,
+            "registry_promoted": false,
+            "admission_status": "metric_child_only_pending_norm_conversion"
+          }
+        ],
+        "o0_weighted_adapter": {
+          "status": "CONDITIONAL_METRIC_PRESENT_OUTPUT_NORM_CONVERSION_REQUIRED",
+          "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+          "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+          "input_norm": "induced_infinity",
+          "output_norm": "Euclidean_2",
+          "metric_root_s": "1/5",
+          "claimed_epsilon_weighted": "10884976891854242252555776013990910667449238154978439/213313108319134456833974167460890472329161800895439897709918972962956800000",
+          "safe_rational_epsilon_weighted_with_factor_2": "10884976891854242252555776013990910667449238154978439/106656554159567228416987083730445236164580900447719948854959486481478400000",
+          "output_norm_conversion": "OPEN",
           "schur_margin_consumed": false,
           "formal_certificate_allowed": false,
           "registry_promoted": false
@@ -39767,6 +39813,17 @@
       "coverage": "OPEN",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T13:46:03.211996+00:00",
+      "kind": "routeb_o0_weighted_adapter_audited",
+      "node_id": "43e3c1a23dc34d52a19b835a8a883cb7",
+      "review_status": "CONDITIONAL_METRIC_PRESENT_OUTPUT_NORM_CONVERSION_REQUIRED",
+      "output_norm_conversion": "OPEN",
+      "safe_factor": 2,
+      "schur_margin_consumed": false,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -43423,5 +43480,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "ab31484a184c7f3ce193f7a6628de196a63b4844577cb19064cda8c46f563707"
+  "state_checksum": "80c1a381a451cfa51a45b4685c5ca86996a45a40c49efebc53f294305937d868"
 }
