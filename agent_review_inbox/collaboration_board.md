@@ -1660,3 +1660,12 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - fixed-λ fold 已恢复为 `lean_adapter/coefficient_identity`；排序结果显示
   P5 SPN proof attempt 与 fixed-λ fold 位于 coefficient lane，H_acc 仍为
   evaluator-enclosure，source 语义边界保持不变。state revision `597`。
+
+### 2026-09-07 — fixed-λ Lean interface 收割
+
+- Kant the 6th 新增 `FixedLambdaWitness`、`DeclaredPartition`、`Finset.all`
+  fold、严格 `lambdaUpper > 2`/正 margin、每行一 box 以及稀疏 label cardinality
+  接口；没有把 577 行 CSV 或 receipt 当成 Lean theorem。
+- review 明确：没有 Lean/Lake、source evaluator、true-DH coverage、comparator
+  或 registry 证据；已作为 fold child 的 successor artifact 接入，parent 继续 open。
+  state revision `598`。

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 597,
+  "revision": 598,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13601,6 +13601,14 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\RECEIPT.json",
             "sha256": "1F1F9E090A4DA2214031FBE55F9E5FD444E186B6C68EE1BE4C61C51CEEC961C9"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FixedLambdaUniformDeclaredFold20260907.lean",
+            "sha256": "7E91F0E88BD069D309761F2F6D633383ED191E34F7A694242D6FC899ADB58067"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FixedLambdaUniformDeclaredFold20260907_REVIEW.md",
+            "sha256": "C3D994CDC5D9CBDE8B0DBA42AA4457C335FB02D1710995CFB061EBB683130607"
           }
         ],
         "math_lane": "lean_adapter",
@@ -56108,6 +56116,16 @@
       ],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T17:03:16.852324+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [],
+      "metadata_updated": [
+        "P4.fixed_lambda_uniform_declared_row_fold"
+      ],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -59764,5 +59782,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "314f882e605b91caf3eb60371e4d41ea016d8b6e4cf761b95467f58045e5a530"
+  "state_checksum": "a431e617457f014cf6f3f80d8faa0dbf8464b45510767aa71aec3f2187a90946"
 }

@@ -194,6 +194,8 @@ CHILDREN = [
             "examples/routeb_fixed_lambda_fold/test_check_fold.py",
             "examples/routeb_fixed_lambda_fold/README.md",
             "examples/routeb_fixed_lambda_fold/RECEIPT.json",
+            "examples/routeb_fixed_lambda_fold/NEW_FixedLambdaUniformDeclaredFold20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FixedLambdaUniformDeclaredFold20260907_REVIEW.md",
         ],
     },
 ]
