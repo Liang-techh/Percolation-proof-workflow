@@ -2996,3 +2996,8 @@ Taylor remainder contract。四项互不重叠，均要求 proof-attempt + revie
 收割 automation 已按当前目标改为每 20 分钟；只在窗口内处理 inbox 和必要的
 远端同步，其余时间持续本地数学推进。流川枫继续按每批约三分之一的 GitHub
 任务承接，所有结果仍须由梁智炜最终 integration。
+
+revision 711 收割 P3 C2/C3 regularity remainder 与 fixed-λ VerifiedRegistryEntry
+invariant；revision 712 收割 BODY6 domain repair 与 P4 split allocation obstruction。
+新 frontier：排除零点后的实际正 margin、positive-target feasibility、append-only
+registry transition、真实 DH coefficient 到 C2/C3 绑定。

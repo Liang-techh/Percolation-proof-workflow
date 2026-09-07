@@ -2373,3 +2373,11 @@ P3 `TAYLOR_REMAINDER`、fixed-λ `PINNED_KERNEL_RECEIPT`、BODY6
 
 automation cadence 已与当前长期目标对齐为每 20 分钟；保留“无新内容静默”和
 “其他时间不碰远端”的限制。
+
+### 2026-09-07 — 梁智炜收割 domain repair 与 split allocation
+
+revision 711 收齐 C2/C3 与 VerifiedRegistryEntry invariant；revision 712
+收齐 BODY6 domain repair 和 P4 split allocation obstruction。BODY6 的零构型
+分叉现已明确：排除零点只提供必要条件，不提供正 margin；P4 则明确 finite
+allocation 不能自动给预设正 target。下一轮继续攻实际 margin、positive target、
+append-only registry 和真实 DH derivative binding。
