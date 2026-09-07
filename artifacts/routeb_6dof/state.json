@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 554,
+  "revision": 555,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -14055,7 +14055,8 @@
       "dependencies": [
         "43e3c1a23dc34d52a19b835a8a883cb7",
         "120deab092c243b6a43356e63c8b56f4",
-        "0da99a7cef5e4f0b91c7cc06d9e7c010"
+        "0da99a7cef5e4f0b91c7cc06d9e7c010",
+        "35bcd3816acb4b2cadb9a64843839204"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -16121,6 +16122,21 @@
             "schur_margin_consumed": false,
             "registry_promoted": false,
             "formal_certificate_allowed": false
+          },
+          {
+            "status": "CONDITIONAL_EXACT_SAME_KEY_BASELINE_DERIVATION",
+            "receipt_path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\routeb_6dof\\o0_physical_baseline_derivation_20260907.json",
+            "receipt_sha256": "D4A8332A3D42B5A4004708CF5C2E3AFF0DF5ED7F884DA35D3CFF0D65B8F08A3C",
+            "review_sha256": "070B41EBC4C578975458D63A5CCEA5EB2CD3C273598A4631C34B84377A73280B",
+            "L_base": "120442959/280443400",
+            "mass_lower": "40147653/800000000",
+            "metric_upper": "1402217/12000000",
+            "baseline_bound_proven": false,
+            "physical_energy_identity_proven": false,
+            "physical_residual_binding_proven": false,
+            "schur_margin_consumed": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
           }
         ],
         "o0_physical_baseline_derivation": {
@@ -17626,6 +17642,42 @@
             "formal_certificate_allowed": false
           }
         ]
+      }
+    },
+    "35bcd3816acb4b2cadb9a64843839204": {
+      "id": "35bcd3816acb4b2cadb9a64843839204",
+      "name": "P4.O0.physical_baseline_factor",
+      "statement": "Under the exact same source/state key, derive a physical baseline factor L_base from the M_BB mass lower bound and A_up metric upper bound.",
+      "parent_id": "8337e024d8dc4463a3389b1e65a4a5e8",
+      "status": "open",
+      "proof_sketch": "Use the exact M_BB center and all-q enclosure, symmetry, and the weighted A_up comparison to derive L_base; keep every source/energy/residual binding premise explicit.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "external-research",
+        "research_stage": "P4",
+        "statement_status": "conditional_exact_baseline_derivation",
+        "frontier_kind": "O0_physical_coercivity",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "source_binding_proven": false,
+        "formal_certificate_allowed": false,
+        "conditional_derivation_receipt": {
+          "status": "CONDITIONAL_EXACT_SAME_KEY_BASELINE_DERIVATION",
+          "receipt_path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\routeb_6dof\\o0_physical_baseline_derivation_20260907.json",
+          "receipt_sha256": "D4A8332A3D42B5A4004708CF5C2E3AFF0DF5ED7F884DA35D3CFF0D65B8F08A3C",
+          "review_sha256": "070B41EBC4C578975458D63A5CCEA5EB2CD3C273598A4631C34B84377A73280B",
+          "L_base": "120442959/280443400",
+          "mass_lower": "40147653/800000000",
+          "metric_upper": "1402217/12000000",
+          "baseline_bound_proven": false,
+          "physical_energy_identity_proven": false,
+          "physical_residual_binding_proven": false,
+          "schur_margin_consumed": false,
+          "registry_promoted": false,
+          "formal_certificate_allowed": false
+        }
       }
     }
   },
@@ -42111,6 +42163,25 @@
       "schur_margin_consumed": false,
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T15:20:23.546602+00:00",
+      "kind": "node_added",
+      "node_id": "35bcd3816acb4b2cadb9a64843839204",
+      "parent_id": "8337e024d8dc4463a3389b1e65a4a5e8",
+      "name": "P4.O0.physical_baseline_factor"
+    },
+    {
+      "at": "2026-09-07T15:20:23.547764+00:00",
+      "kind": "routeb_o0_physical_baseline_derivation",
+      "status": "CONDITIONAL_EXACT_SAME_KEY_BASELINE_DERIVATION",
+      "baseline_leaf_id": "35bcd3816acb4b2cadb9a64843839204",
+      "L_base": "120442959/280443400",
+      "baseline_bound_proven": false,
+      "physical_energy_identity_proven": false,
+      "schur_margin_consumed": false,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -45767,5 +45838,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "53abdd3f4460bb97aeff2ab96e714592ab8e74d3be8fdf84f4373b80039c1bec"
+  "state_checksum": "aae4cf76d570f105124bb6d21594c28b53c223769b04b3303d39aabef017230d"
 }

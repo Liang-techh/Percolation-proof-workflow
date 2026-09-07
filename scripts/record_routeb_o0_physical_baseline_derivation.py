@@ -23,7 +23,7 @@ def find(state, name: str):
     for node in state.nodes.values():
         if node.name == name:
             return node
-    raise ValueError(f"missing node: {name}")
+    return None
 
 
 def find_required(state, name: str):
@@ -39,7 +39,7 @@ def main() -> None:
             raise FileNotFoundError(path)
     store = StateStore(STATE)
     state = store.load()
-    node = find(state, "P4.true_dh_exact_real_coefficient_identity")
+    node = find_required(state, "P4.true_dh_exact_real_coefficient_identity")
     residual_parent = find_required(
         state, "P4.true_dh_residual_map_coefficient_binding"
     )
