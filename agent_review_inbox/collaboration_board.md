@@ -2162,3 +2162,10 @@ P4 `DivisionFreeContraction` 与 P3 `FamilyBridge` 均完成定向 review，登�
 open/uncompiled children，DAG revision 678。前者把 `E≤B+rho*E` 的收缩消费
 改写成无除法的 `(1-rho)E≤B`，后者保证 family 数据在同一 domain point 上
 一致 specialization；两者都没有进入 registry 或 formal gate。
+
+### 2026-09-07 — 梁智炜收割 body-6 Schur remainder
+
+`NEW_BODY6_SLICE_SCHURREMAINDER20260907` 已完成定向审阅并登记 revision 679。
+该叶把 `A−X·D·Y` 的两个显式 reciprocal 通道与 solve-column/matrix-action
+两种求值路径对齐，但 A/X/Y 仍是外部块；没有宣称完整 Schur PSD、全域覆盖、
+Lean 编译或 registry admission。

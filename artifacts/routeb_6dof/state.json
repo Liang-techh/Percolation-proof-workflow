@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 678,
+  "revision": 679,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -40864,7 +40864,9 @@
       "parent_id": "7651cc50c8f943908df1d0f11d0bd750",
       "status": "open",
       "proof_sketch": "Define X:(Fin r)×(Fin 2), Y:(Fin 2)×(Fin c), expand X*D*Y into the two reciprocal diagonal channels, and package the solve identities from the tail inverse without claiming cross-block source values or Schur PSD.",
-      "dependencies": [],
+      "dependencies": [
+        "9d21b2840c41476596a3a169ad778509"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -40986,6 +40988,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_FAMILY_BRIDGE_REVIEW.md",
             "sha256": "DA872462A86145BA02CE0BCB6383151EE2F9E6E271921B6BD480AEA49B0899A0"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "9d21b2840c41476596a3a169ad778509": {
+      "id": "9d21b2840c41476596a3a169ad778509",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder",
+      "statement": "The body-6 tail inverse gives a dimensionally typed A−X·D·Y Schur remainder whose coefficient expansion and solve-column/matrix-action evaluation paths agree.",
+      "parent_id": "0c17023d981c4c30baef00ee4cc1a2eb",
+      "status": "open",
+      "proof_sketch": "Keep A, X, and Y as arbitrary external blocks; expand the Fin-2 diagonal correction into the two explicit reciprocal channels, align solved columns with finite matrix action, and package the existing tail elimination adapter without asserting full Schur PSD or source binding of cross blocks.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_BODY6_SCHUR_REMAINDER",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_SCHURREMAINDER20260907.lean",
+            "sha256": "F16FE297A105DC5373DC102A62CBF040BBF9DA92EF6FB2B0890034619901DD5B"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_SCHURREMAINDER20260907.review.md",
+            "sha256": "D474819347C2863A52A39AF32746EC8F6DC52E9B83AA659A24CB3D3CB1CF2FBA"
           }
         ],
         "registry_eligible": false,
@@ -68589,6 +68626,23 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T19:45:56.834496+00:00",
+      "kind": "node_added",
+      "node_id": "9d21b2840c41476596a3a169ad778509",
+      "parent_id": "0c17023d981c4c30baef00ee4cc1a2eb",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder"
+    },
+    {
+      "at": "2026-09-07T19:45:56.834516+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -72245,5 +72299,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "d9026778370de8bbae57cd816002c159bef5a60424f555bf940e7b19fa6b37c9"
+  "state_checksum": "c668d6936dd96f7fb5c3fa123d1e22e49834eed51e45d1e260f8116e279056ae"
 }

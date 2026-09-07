@@ -2846,3 +2846,7 @@ fixed-λ finite reindex weighted-sum equality 叶已登记 revision 677，保持
 P4 `DivisionFreeContraction` 和 P3 `FamilyBridge` 已登记 revision 678，
 继续保持 `OPEN_UNCOMPILED`。body-6 的 Schur remainder 产物尚缺配套 review，
 暂不登记；待其完成后再做一次定向收割。
+
+body-6 Schur remainder review 已到达，现已登记 revision 679；下一步继续寻找
+实际 mixed-block source binding 或 residual margin 的独立数学叶，不重复已有
+纯代数展开。

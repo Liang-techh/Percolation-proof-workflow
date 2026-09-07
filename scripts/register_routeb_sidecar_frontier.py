@@ -1508,6 +1508,19 @@ CHILDREN = [
             "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_FAMILY_BRIDGE_REVIEW.md",
         ],
     },
+    {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter",
+        "statement": "The body-6 tail inverse gives a dimensionally typed A−X·D·Y Schur remainder whose coefficient expansion and solve-column/matrix-action evaluation paths agree.",
+        "proof_sketch": "Keep A, X, and Y as arbitrary external blocks; expand the Fin-2 diagonal correction into the two explicit reciprocal channels, align solved columns with finite matrix action, and package the existing tail elimination adapter without asserting full Schur PSD or source binding of cross blocks.",
+        "lane": "source_semantics",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_BODY6_SCHUR_REMAINDER",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_SCHURREMAINDER20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_SCHURREMAINDER20260907.review.md",
+        ],
+    },
 ]
 
 
