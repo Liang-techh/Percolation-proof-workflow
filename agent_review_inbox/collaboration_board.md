@@ -2335,6 +2335,14 @@ box 的 `inf'` 组合 endpoint/rounding 与统一 margin；后者把 final admis
 pinned kernel、comparator、provenance 和显式授权完全分离。两者均未运行
 Lean/comparator，registry 仍为 0。
 
+### 2026-09-07 — 梁智炜修复 provenance 漂移并发现 BODY6 阻塞
+
+registrar 在 revision 706 发现 14 个已登记 artifact 的内容哈希已变化，现已
+逐项记录 old/new SHA-256 并提交 state event；这避免 agent 修订后 provenance
+静默过期。BODY6 `ENTRYMARGIN` 给出对称九项 envelope 的一个充分 margin 条件，
+同时在规范 q=0 构型找到精确零方向；该结果仍等待 review，未升级为 source
+域反证或 VERIFIED。
+
 ### 2026-09-07 — 梁智炜收割三条数学边界
 
 P4 `MINIMAL_RESIDUAL_BUDGET_ADAPTER`、fixed-λ `TYPED_RECEIPT_AUDIT`、

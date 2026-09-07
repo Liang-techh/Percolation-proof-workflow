@@ -2977,3 +2977,8 @@ P3 endpoint→common uniform margin 已登记 revision 703；fixed-λ explicit
 registry promotion gate 已登记 revision 704。后续只接受真正的 source margin、
 uniform parameter、pinned-kernel/comparator/provenance evidence；不以侧车
 契约本身关闭 parent。
+
+本轮 provenance 修订已写入 revision 706：registrar 检测并记录 14 个历史
+artifact 的 SHA-256 变化，并补充 P4 `localCap→qCap` 同域桥。BODY6
+`ENTRYMARGIN` 目前只有 proof-attempt，待 review 成对后登记；其零构型零方向
+是包含该构型时严格正 margin 不可能的 obstruction。
