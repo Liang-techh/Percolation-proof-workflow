@@ -2750,3 +2750,11 @@ source-independent/open/uncompiled 候选。
   `0 < Σδ ≤ Σreserve`，并通过显式 total/shared-λ equality 接到 final budget。
 - 仍不重复 strict-witness bridge，也不推断 coverage、digest、source 或 Lean
   kernel 结果；body-6 tail minors 与 K-path affine interface 继续等待其自身 review。
+
+### 2026-09-07 — 14:02 更新 GitHub 六人排班
+
+- 当前新发布只使用六人环：柳冠一/古月方源/狂蛮魔尊/红莲魔尊负责数学，
+  苏梦辰/巨阳仙尊负责 Lean decomposition、pinned 编译与 repair；分钟槽为
+  :00/:10/:20/:30/:40/:50，整体每小时循环。
+- 已完成 body-6 tail principal-minor 叶，登记前沿 revision 669；Lean 验证任务
+  后续放入两个 Lean 槽，主线程只在小时收割时集中回收和同步。

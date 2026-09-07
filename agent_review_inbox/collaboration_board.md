@@ -2069,6 +2069,13 @@ P3 的 `squared_velocity_nonneg` 已接入 DAG revision 667，作为 assembled-l
 witness 的数学前置；仅关闭实数平方非负这一小项，不改变 velocity 的物理来源，
 不触碰 formal gate 或远端同步。
 
+### 2026-09-07 14:02 — 梁智炜接入六人 GitHub 排班
+
+已将 canonical roster 更新为数学四人、Lean 两人：柳冠一、古月方源、狂蛮魔尊、
+红莲魔尊做数学；苏梦辰、巨阳仙尊做 Lean 编译/修复。今后需要 pinned Lean 验证的
+候选只在 :10/:40 槽发布，最终 integration 仍由梁智炜负责；当前 body-6 主子式叶
+已登记到 revision 669，继续 fail-closed。
+
 ### 2026-09-07 13:55 — 梁智炜收割 fixed-λ 定量 reserve
 
 fixed-λ quantitative reserve lower-bound 叶已登记到 DAG revision 668，提供显式

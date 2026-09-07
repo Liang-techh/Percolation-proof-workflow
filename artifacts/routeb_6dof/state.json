@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 668,
+  "revision": 669,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -40350,7 +40350,9 @@
       "parent_id": "1b4f406e910b446093c9e38b5ed6401c",
       "status": "open",
       "proof_sketch": "Consume the explicit diagonal/zero-cross-term tail table, decompose its quadratic form into kappa times the Euclidean square plus a nonnegative h² correction, and prove the exact minimum diagonal expression without calling it a full-matrix eigenvalue bound.",
-      "dependencies": [],
+      "dependencies": [
+        "d3c0e41e00fe4677b7c370328eecf8e8"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -40472,6 +40474,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_QUANTITATIVE_RESERVE_LOWER20260907_REVIEW.md",
             "sha256": "CF20CC1545C9CBC6D4DE584366DEE64ED259B5EA27D9F29CEC67BE7AB7FCF8EC"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "d3c0e41e00fe4677b7c370328eecf8e8": {
+      "id": "d3c0e41e00fe4677b7c370328eecf8e8",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors",
+      "statement": "The exact weighted tail 2x2 block has strictly positive one- and two-dimensional principal minors under the explicit sign premises, with a diagonal-minor bridge to the tail PSD predicate.",
+      "parent_id": "c2b18f19cf3949b284c14d4839ee7454",
+      "status": "open",
+      "proof_sketch": "Reuse the explicit diagonal/zero-cross-term table, define the scalar 2x2 determinant and three principal-minor predicates, prove the determinant product and positivity, and connect only this diagonal subblock to TailPSD without invoking a full-body eigenvalue claim.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_BODY6_TAIL_PRINCIPAL_MINORS",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_TAILMINORS20260907.lean",
+            "sha256": "90686F7FCD2AC9701CA9E1D32816667D0B106527B61C9022A3788154AA335C8E"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_TAILMINORS20260907_REVIEW.md",
+            "sha256": "BF0D5CF4012E82DF31AD497CBF7C0ABDC9DC5566708B65626294CE593A94DBFE"
           }
         ],
         "registry_eligible": false,
@@ -67873,6 +67910,23 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T19:24:32.969782+00:00",
+      "kind": "node_added",
+      "node_id": "d3c0e41e00fe4677b7c370328eecf8e8",
+      "parent_id": "c2b18f19cf3949b284c14d4839ee7454",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors"
+    },
+    {
+      "at": "2026-09-07T19:24:32.969807+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -71529,5 +71583,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "1e34973e661249961b14ff3fe2f0d27d83fe9d3203d01f192daf144b6c5b3f25"
+  "state_checksum": "94cd8006b3ec397a2e36962749324bac716f158c51f8b9568c408e4e88124453"
 }
