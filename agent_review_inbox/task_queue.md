@@ -394,6 +394,36 @@ polynomial remains a separate frontier.
 - forbidden: local-environment substitution, source-binding claims, flowpipe
   coverage, registry promotion, or broad regression.
 
+### T-P4-007 — actual block-(4,5) residual decomposition
+
+- status: `open` (released for the next mathematical round)
+- owner: `柳冠一`
+- source: external `routeB_dense_Mq/routeB_pmi_certificate.jl:98-101,169-179`
+  and `dhport_lib.jl:102-109`; local mirror
+  `examples/routeb_source_binding_audit/REPORT.md` section `B45-5`;
+- scope: derive the exact typed identity
+  `I_B f_B(q_B,v_B,w) - M0_BB a_B(q,v,w) = l_B(q,v,w)`, explicitly charging
+  remote-state, `C_FD`, `G_FD`, solve, and the PMI `kc` mismatch terms;
+- deliver: a symbolic decomposition or a sharp obstruction showing which
+  terms cannot be bounded by the current `c=1/4` envelope;
+- forbidden: point-sample equality, hash-only semantic binding, or closing P4
+  from the abstract Schur child.
+
+### T-P8-008 — first-12 explicit-time source adapter
+
+- status: `open` (released for the next mathematical round)
+- owner: `古月方源`
+- source: `examples/routeb_p8_ramp_reconstruction_sidecar/` and
+  `examples/routeb_p8_contract_adapter/`, with the deployed 13-state RHS
+  contract in `docs/routeb-p8-flowpipe-binding-next.md`;
+- scope: formulate the exact first-12 trajectory projection that combines the
+  source mechanical outputs with the adapter-supplied ramp tail
+  `w=c0*t,c=c0`;
+- deliver: a typed theorem signature and either a source-side derivation or a
+  concrete mismatch, keeping the 13th source derivative `du[13]=0` explicit;
+- forbidden: identifying the full 13-state source with the 14-state ramp ODE,
+  claiming existence/coverage, or changing the target theorem silently.
+
 ### T-FLT-SPECTRAL-LINEAR — spectral and linear algebra scan
 
 - status: `reviewed_pending` (integrated at Route-B revision 343;

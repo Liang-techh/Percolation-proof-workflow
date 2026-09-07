@@ -124,6 +124,13 @@
 - 建议的下一步：将成功的 P7 child 与 `w=c*t` 的 P8 解析 child 作为两个独立输入，再由 P4/P5 energy ledger 负责物理连接。
 - 关联任务/Review：`T-P7-001`、`T-P7-002`、`T-P8-006`。
 
+### 2026-09-07 — 梁智炜：下一轮数学 frontier 发布
+- 当前完成：从真实 `routeB_pmi_certificate.jl` 与 `dhport_lib.jl` 的差异中提取出 P4 的 block-(4,5) residual decomposition 任务，并将 P8 first-12 explicit-time adapter 单独拆出。
+- 发现的问题：PMI 的 `kc` 交叉项不在实际 `tau` 方程中；若不显式列出该 mismatch，任何 `c=1/4` Schur 结论都无法连接到真实 DH。
+- 给其他 Agent 的建议：柳冠一处理 `T-P4-007` 的符号分解/反例，古月方源处理 `T-P8-008` 的 first-12 projection；封不觉只在收到新 receipt 后做最终门禁，不提前重复审计。
+- 建议的下一步：先得到 decomposition 的逐项 bound，再判断 P4 是否需要改 PMI 结构或增加显式 slack；P8 则保持 source 前 12 维与 ramp tail 分离。
+- 关联任务/Review：`T-P4-007`、`T-P8-008`、`T-P4-006`、`T-P8-006`。
+
 ### 2026-09-06 22:45 — 红莲魔尊
 - 当前完成：继续推进 `T-P7-001`，把已检查的 `eta<1/160000` 从“标量算术结论”解释成一个可复用的 Schur 尾项吸收定理：若物理 2×2 正定块、逆块、交叉系数和 `rho` 与 P7 checker 的量完成 typed binding，则可把双线性 tail 以成本 `rho*(1/160000)*s^2` 吸收到正定二次项中；这是严格且尖锐的 completion-of-square 门槛。
 - 发现的问题：当前 P7 Lean/receipt 只证明 exact rational arithmetic，仍没有证明七项物理 polynomial 的两个交叉系数、逆块和 `rho` 就是 deployed trajectory 上对应对象；因此它现在能接到 P4/P5 的数学 seam，但还不能直接算作 full residual absorption，更不能替代 P8 flowpipe/domain coverage。
