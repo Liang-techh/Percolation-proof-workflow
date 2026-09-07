@@ -8,6 +8,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 ROUTE_B = ROOT.parent / "6dof_sos_optimized" / "6dof_sos_optimized"
 SRC = ROUTE_B / "routeB_dense_Mq"
+DEPLOYED_SRC = ROUTE_B / "robot_final"
 sys.path.insert(0, str(ROOT / "src"))
 
 from percolation_workflow.routeb_controller_semantics import (  # noqa: E402
@@ -33,7 +34,9 @@ def frac_list(values):
 
 
 def main() -> int:
-    deployed = SRC / "dhport_lib.jl"
+    # robot_final is the deployment authority; the dense-source copy is only
+    # a source-side mirror and must not silently define deployment semantics.
+    deployed = DEPLOYED_SRC / "dhport_lib.jl"
     lifted = SRC / "routeB_fourier_lifted_descriptor_model.jl"
     for path in (deployed, lifted):
         if not path.is_file():

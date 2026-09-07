@@ -19,6 +19,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 ROUTE_B = ROOT.parent / "6dof_sos_optimized" / "6dof_sos_optimized"
 SRC = ROUTE_B / "routeB_dense_Mq"
+DEPLOYED_SRC = ROUTE_B / "robot_final"
 sys.path.insert(0, str(ROOT / "src"))
 
 from percolation_workflow.store import StateStore  # noqa: E402
@@ -43,7 +44,8 @@ def find(state, name: str):
 
 def main() -> int:
     paths = {
-        "deployed_dh": SRC / "dhport_lib.jl",
+        # Keep the deployment authority distinct from routeB_dense_Mq mirrors.
+        "deployed_dh": DEPLOYED_SRC / "dhport_lib.jl",
         "interval_probe": SRC / "routeB_compact_port_bi_partition_probe.jl",
         "analytic_model": SRC / "routeB_fourier_lifted_descriptor_model.jl",
         "nominal_interface": SRC / "P5_COMPACT_NOMINAL_DESCRIPTOR_INTERFACE.md",

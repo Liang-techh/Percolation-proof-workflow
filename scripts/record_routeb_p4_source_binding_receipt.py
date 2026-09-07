@@ -19,6 +19,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 ROUTE_B = ROOT.parent / "6dof_sos_optimized" / "6dof_sos_optimized"
 SRC = ROUTE_B / "routeB_dense_Mq"
+DEPLOYED_SRC = ROUTE_B / "robot_final"
 sys.path.insert(0, str(ROOT / "src"))
 
 from percolation_workflow.routeb_nominal_distal_contract import (  # noqa: E402
@@ -46,7 +47,9 @@ def find(state, name: str):
 
 def main() -> int:
     pmi = SRC / "routeB_pmi_certificate.jl"
-    dh = SRC / "dhport_lib.jl"
+    # robot_final is the deployment source of truth; routeB_dense_Mq contains
+    # research mirrors and must not silently define the deployed contract.
+    dh = DEPLOYED_SRC / "dhport_lib.jl"
     bridge_audit = SRC / "routeB_compact_dh_nominal_distal_bridge_audit.csv"
     bridge_interface = SRC / "routeB_compact_nominal_descriptor_interface.csv"
     nominal_doc = SRC / "P5_COMPACT_NOMINAL_DESCRIPTOR_INTERFACE.md"
