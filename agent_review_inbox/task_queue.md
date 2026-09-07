@@ -90,6 +90,11 @@ integration gates are satisfied.
   assumptions, axioms, and placeholder status. Owner: one Lean slot and one
   independent 流川枫 share; countable topology must not be reported as physical
   coverage or quantitative enclosure.
+- `T-P0-INT-CONTINUOUS-LINEAR-API`: focused pinned Lean validation of
+  `examples/anthropic_flt_additive_linear_adapter/`; check the two application
+  lemmas and confirm the output is only `ℤ`-linear. Assign one independent
+  proportional share to 流川枫; reject any receipt that upgrades it to
+  `ℝ`/`ℂ`-linear or PDE-regular transport.
 
 ### T-P4-012 — typed remote-action repair contract
 

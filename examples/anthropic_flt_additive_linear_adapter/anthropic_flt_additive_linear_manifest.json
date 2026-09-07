@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "kind": "advisory_reuse_manifest",
+  "integration_status": "pending",
+  "classification": "light_adaptation",
+  "provenance": {
+    "repository": "upstream/anthropics-fermats-last-theorem",
+    "commit": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef",
+    "source_path": "Definitions/Def_Mathlib_Topology_Algebra_ContinuousMonoidHom.lean",
+    "source_blob": "7829c8e30b406c8bb1dcbddf8e8d49745ec5c8ea",
+    "license": "Apache-2.0",
+    "imports": [
+      "Mathlib",
+      "Definitions.Def_Mathlib_Topology_Algebra_Module_Quotient"
+    ]
+  },
+  "api": {
+    "namespace": "ContinuousAddEquiv",
+    "name": "toIntContinuousLinearEquiv",
+    "assumptions": [
+      "M and M₂ are additive commutative groups",
+      "M and M₂ carry topological spaces",
+      "e : M ≃ₜ+ M₂"
+    ],
+    "conclusion": "M ≃L[ℤ] M₂"
+  },
+  "target_adapter": {
+    "file": "AnthropicFLTAdditiveLinearAdapter.lean",
+    "namespace": "AnthropicFLTAdditiveLinearAdapter",
+    "status": "pending_api_candidate",
+    "wrapper": "toIntContinuousLinearEquiv",
+    "routeB_or_pde_theorem": false,
+    "registry_promotion": false
+  },
+  "admission_boundary": {
+    "integer_scalar_only": true,
+    "requires_target_scalar_adaptation": true,
+    "does_not_supply_real_or_general_ring_linearity": true,
+    "does_not_supply_differentiability_or_pde_regularity": true,
+    "does_not_promote_verified_registry": true
+  }
+}

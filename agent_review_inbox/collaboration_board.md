@@ -2478,3 +2478,8 @@ identity 才能给 active `V≤1` 域提供原点 witness，当前 raw/shifted �
 countable open-embedding cover→second-countability API，附带 sampled-patch
 反例；它不产生 Route-B 的数值覆盖、flowpipe 或 admission。两者均保持
 未编译/pending，不改变 verified registry。
+
+P3 随后筛出 `continuous_add_equiv_integer_linear_api`：连续加法等价只产生
+`M ≃L[ℤ] M₂`，不能替代实/复标量线性或 PDE 正则性。该候选已加入下一批
+focused Lean receipt 任务，并分配约三分之一的独立 GitHub lane 给流川枫；
+任何 receipt 仍只能形成 pending provenance。

@@ -2227,6 +2227,20 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P0.reproducibility_baseline.anthropic_flt_registry_graph_adapter.continuous_add_equiv_integer_linear_api",
+        "parent": "P0.reproducibility_baseline.anthropic_flt_registry_graph_adapter",
+        "statement": "A continuous additive equivalence between topological additive commutative groups yields a continuous linear equivalence over ℤ; this generic transport API does not supply ℝ/ℂ scalar compatibility, differentiability, PDE regularity, or theorem admission.",
+        "proof_sketch": "Pin the upstream declaration and source blob, mirror its typed construction and application lemmas, and retain the discrete-ℤ counterboundary showing that additive-homeomorphic transport cannot be promoted to real/complex-linear coordinate transport without separate scalar and regularity hypotheses.",
+        "lane": "workflow_infrastructure",
+        "bottleneck": "provenance",
+        "status": "PENDING_ADVISORY_LIGHT_ADAPTATION_ANTHROPIC_INT_LINEAR_API",
+        "artifacts": [
+            "examples/anthropic_flt_additive_linear_adapter/anthropic_flt_additive_linear_manifest.json",
+            "examples/anthropic_flt_additive_linear_adapter/AnthropicFLTAdditiveLinearAdapter.lean",
+            "examples/anthropic_flt_additive_linear_adapter/REVIEW.md",
+        ],
+    },
+    {
         "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding",
         "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction",
         "statement": "The BODY6 origin obstruction can be transported to the active V≤1 lifted domain only after an explicit binding of the actual candidate energy at the origin; normalized energy gives a conditional witness, while the audited raw and shifted energies reject the origin under the displayed constants.",
@@ -2237,6 +2251,20 @@ CHILDREN = [
         "artifacts": [
             "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_ACTIVEENERGYORIGIN20260907.lean",
             "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_ACTIVEENERGYORIGIN20260907_REVIEW.md",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_ACTIVEENERGYORIGIN20260907.review.md",
+        ],
+    },
+    {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility.source_positive_target_binding.same_row_budget_audit",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility.source_positive_target_binding",
+        "statement": "A positive P4 target budget is meaningful only for a complete same-origin row carrying every required slot; mixed front floors or an unrecorded qCap can create a false positive or leave feasibility underdetermined.",
+        "proof_sketch": "Define manifest/artifact/row/stage/domain/object/unit context, require complete same-origin slot reification, prove exact credit-loss target equivalences and mixed-origin/missing-slot obstructions, then transport the result through the existing composition and nominal contracts without authenticating source values.",
+        "lane": "lean_adapter",
+        "bottleneck": "normalization",
+        "status": "OPEN_UNCOMPILED_P4_SAME_ROW_BUDGET_AUDIT",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SameRowBudgetAudit.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SameRowBudgetAudit.review.md",
         ],
     },
 ]
