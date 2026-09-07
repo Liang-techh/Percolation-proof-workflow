@@ -42,10 +42,14 @@ explicitly assigned to the independent GitHub lane for 流川枫.
   `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_ACTIVEENERGYORIGIN20260907.lean`
 - Additional target:
   `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_STORAGEIDENTITY20260907.lean`
+- Additional target:
+  `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_COMPILEDLEDGERBINDING20260907.lean`
 - Review context:
   `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_ACTIVEENERGYORIGIN20260907.review.md`
   and
-  `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_STORAGEIDENTITY20260907.review.md`
+  `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_STORAGEIDENTITY20260907.review.md`,
+  and
+  `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_COMPILEDLEDGERBINDING20260907_REVIEW.md`
 - Focused declarations:
   `normalized_origin_attempt`, `offset_origin_attempt`,
   `raw_origin_attempt`, `shifted_origin_attempt`,
@@ -59,6 +63,11 @@ explicitly assigned to the independent GitHub lane for 流川枫.
   `scalar_budget_below_bar_attempt`,
   `shared_initial_bound_counterexample_attempt`, and
   `derivative_identity_counterexample_attempt`.
+- Ledger-binding declarations:
+  `existing_initial_theorem_instance_attempt`,
+  `initial_ledger_bound_attempt`, `path_ledger_barrier_attempt`,
+  `existing_shifted_comparison_instance_attempt`, and
+  `shifted_comparison_baseline_exceeds_45_attempt`.
 - Boundary: normalized/raw/shifted energy candidates remain distinct;
   active-domain membership requires the explicit `V(0,0)` source identity.
   Storage transfer additionally requires same-domain identity, initial-set

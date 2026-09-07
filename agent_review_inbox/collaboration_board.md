@@ -2499,3 +2499,9 @@ external row 虽有正的 `gamma−charge`，但真正的 consumer 还需要
 上成立，且 barrier transfer 还需要整条 path 落在该域内；相同初始上界或相同
 导数都不足以完成固定阈值的 barrier 转移。该叶保持 open/uncompiled，交给
 Lean lane 做 focused receipt，不改变 registry。
+
+`COMPILED_LEDGER_BINDING` 已加入 BODY6 package：它消费已有 compiled
+`ActualStorage`/`ActualShift` theorem，但要求显式 `StorageData`、初始 ledger
+等式、path-domain identity、path inclusion、source tube 和 `tube<1`。因此
+旧的 scalar `V0` 与 shifted comparison 仍不能关闭 active barrier；该 source
+file 将与其他 BODY6 文件分别出 Lean receipt。

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 728,
+  "revision": 729,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -43241,7 +43241,9 @@
       "parent_id": "808bfcf45e914d19ae958a40ab809b08",
       "status": "open",
       "proof_sketch": "Define SameStorageIdentity, InitialBoundBinding, SublevelBarrier, and RouteBInitialTransfer; prove initial and pathwise transfer lemmas plus additive-constant and equal-initial-bound counterexamples. Keep actual storage formula, domain/path inclusion, dynamics, source semantics, and formal admission external.",
-      "dependencies": [],
+      "dependencies": [
+        "9809ea1d38ea4b8db4bceb459f5c5841"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -43262,6 +43264,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_STORAGEIDENTITY20260907.review.md",
             "sha256": "AE720C0F6C588C5791400F4C62102F02FF8760825C4A7C53C70E9B8D8F135EE4"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "9809ea1d38ea4b8db4bceb459f5c5841": {
+      "id": "9809ea1d38ea4b8db4bceb459f5c5841",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer.compiled_ledger_binding",
+      "statement": "The existing compiled actual-storage bounds can be consumed by a Route-B ledger only through explicit StorageData, initial-set equality, path-domain identity, path inclusion, source tube, and threshold contracts; the scalar initial upper bound and shifted comparison do not supply those bindings.",
+      "parent_id": "e64f0bd1919f467cb995c355c6028c66",
+      "status": "open",
+      "proof_sketch": "Define typed storage and sample records, instantiate the compiled `storageV_initial_upper` theorem under its exact premises, transfer the result through `InitialLedgerBinding`, and prove a pathwise strict barrier through `PathLedgerBinding`. Retain the component-cap and shifted-baseline counterboundaries; leave dynamics, source semantics, coverage, and admission external.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "normalization",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_BODY6_COMPILED_LEDGER_BINDING",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_COMPILEDLEDGERBINDING20260907.lean",
+            "sha256": "0DE2680D048C620A05FD2E02402B24C333A63E9C768C3193C819E09E48EAEB9B"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_COMPILEDLEDGERBINDING20260907_REVIEW.md",
+            "sha256": "CEBE5965E98D8098481CF441BFE2EA4F4289785BAA77B505C45E1E7D3050D23C"
           }
         ],
         "registry_eligible": false,
@@ -71940,6 +71977,24 @@
       "artifact_hashes_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T21:34:42.602577+00:00",
+      "kind": "node_added",
+      "node_id": "9809ea1d38ea4b8db4bceb459f5c5841",
+      "parent_id": "e64f0bd1919f467cb995c355c6028c66",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer.compiled_ledger_binding"
+    },
+    {
+      "at": "2026-09-07T21:34:42.604186+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer.compiled_ledger_binding"
+      ],
+      "metadata_updated": [],
+      "artifact_hashes_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -75596,5 +75651,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "e360246a3029b8dbddab96697e22d93f191b384cd8eb8038789fa3b8be4d99f8"
+  "state_checksum": "245655ce9cda886b21be8f2813b4b653d91bc668f99cb490b416114fc4d83566"
 }

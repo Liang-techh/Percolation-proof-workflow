@@ -111,6 +111,11 @@ integration gates are satisfied.
   verify same-domain initial-bound/barrier transfer and the additive-constant
   counterexamples. Keep `V_eps` and `Vfull_DH` distinct; no physical barrier or
   registry promotion follows from this receipt.
+- `T-P4-COMPILED-LEDGER-BINDING`: focused Lean validation of
+  `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_COMPILEDLEDGERBINDING20260907.lean`;
+  verify the typed initial/path ledger contracts and the exact shifted-baseline
+  boundary. Keep imported compiled leaves separate from this new sidecar and
+  do not infer source identity, flowpipe, or registry admission.
 
 ### T-P4-012 — typed remote-action repair contract
 

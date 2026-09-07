@@ -2283,6 +2283,19 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer.compiled_ledger_binding",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer",
+        "statement": "The existing compiled actual-storage bounds can be consumed by a Route-B ledger only through explicit StorageData, initial-set equality, path-domain identity, path inclusion, source tube, and threshold contracts; the scalar initial upper bound and shifted comparison do not supply those bindings.",
+        "proof_sketch": "Define typed storage and sample records, instantiate the compiled `storageV_initial_upper` theorem under its exact premises, transfer the result through `InitialLedgerBinding`, and prove a pathwise strict barrier through `PathLedgerBinding`. Retain the component-cap and shifted-baseline counterboundaries; leave dynamics, source semantics, coverage, and admission external.",
+        "lane": "source_semantics",
+        "bottleneck": "normalization",
+        "status": "OPEN_UNCOMPILED_BODY6_COMPILED_LEDGER_BINDING",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_COMPILEDLEDGERBINDING20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_COMPILEDLEDGERBINDING20260907_REVIEW.md",
+        ],
+    },
+    {
         "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility.source_positive_target_binding.same_row_budget_audit",
         "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility.source_positive_target_binding",
         "statement": "A positive P4 target budget is meaningful only for a complete same-origin row carrying every required slot; mixed front floors or an unrecorded qCap can create a false positive or leave feasibility underdetermined.",
