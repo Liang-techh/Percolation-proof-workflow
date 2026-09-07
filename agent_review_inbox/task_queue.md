@@ -113,6 +113,20 @@ GitHub agents for the push channel.
 - forbidden: replacing the retained port with a coarse `||a_D||` bound,
   treating the artifact shape as proof, or claiming global coverage.
 
+### T-P4-016 — exact nominal-distal tail PMI positivity
+
+- status: `open` (independent leaf split 2026-09-07)
+- owner: `大爱仙尊` for exact rational/SOS tail positivity; `巨阳仙尊`
+  for the pinned Lean scalar/3x3 adapter;
+- source: `routeB_physical_rational_tail_pmi_scalar.csv`, its metadata,
+  the complete `M0_BB` bridge metadata, and the local tail contract;
+- scope: prove the square-root-free 3x3 PMI using the full off-diagonal
+  `M0_BB`, or produce a precise obstruction that selects the next route;
+- deliver: exact polynomial identity, circle/domain multipliers or Lean proof,
+  and a receipt that distinguishes candidate Gram data from kernel verification;
+- forbidden: two independent component gains, floating PSD, sampled positivity,
+  or any claim of global coverage / residual / flowpipe closure.
+
 ## Queue: Route-B current bottlenecks
 
 ### T-P3-001 — single-entry true-DH source bridge

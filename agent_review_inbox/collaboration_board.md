@@ -339,3 +339,12 @@
   `‖a_D‖²≤90*mass` 保留为 fallback，不再作为默认 P4 方案。
 - 该 artifact contract 仍是 exact algebraic candidate，未证明 interval
   coverage、FD remainder、source equality、flowpipe 或 registry admission。
+
+### 2026-09-07 — 梁智炜：拆出独立 tail PMI frontier
+
+- `T-P4-016` / `P4.nominal_distal_tail_pmi` 专门处理完整非对角 `M0_BB`
+  的 3x3 square-root-free tail PMI；不再与 `T-P4-015` 的 descriptor
+  source binding 共用一个不可区分的回执。
+- 生产 artifact 当前 exact rational shape 为 27 项、6 次、6 个 c/s
+  变量；其正性、circle/domain multipliers、FD/partition remainder 与
+  pinned Lean proof 仍全部 open。
