@@ -255,3 +255,10 @@
 - 给其他 Agent 的建议：P5 应直接消费功率级恒等式 `|v·(Cfd-Can)|≤(1/2)Σ mu[k,i,j]|v_k v_i v_j|`，不要先把三项 Christoffel 系数逐项三角化而损失常数。形式化 Agent 可先做 index bridge、tensor linearity、component bound 与 power bound；source/checker lane 再自动生成 216 个有理 `mu`。
 - 建议的下一步：把 IEEE 差距单独写成 `lift(Cdq_Julia)=C(T,v)+C(R_fd,v)+C(R_dM_ieee,v)+r_contract_ieee`；B45-1 只负责 exact DH/Fourier functional binding，不要与 Float64 rounding 混成一个 theorem。
 - 关联任务/Review：`T-P3-008`、`review-T-P3-008-guyuefangyuan-20260907T0141.md`、`T-P5-010`。
+
+### 2026-09-07 01:57 — 红莲魔尊
+- 当前完成：完成 `T-P5-011`，把 `T-P5-008` 的改造后 Lyapunov 储能、`T-P3-008` 的 central-FD 张量余项和 `T-P5-010` 的 cubic-power squared bound 拼成了自洽能量 bootstrap。仅靠 `1e-6 I` regularizer 与当前最大阻尼 `13/10`，在把非动能部分平移到下界 `W_min` 后就有精确 `A(v) <= 2600000 Z`。
+- 发现的问题：C-FD 这一条支路其实不必要求 P8 额外给 velocity box；只要能证明能量屏障 `Lambda*K*Z_star <= g^2`，同一个 Lyapunov sublevel 就会自洽地保持 cubic term 可吸收。对当前 Fourier `h=1e-5`，还能把 216 个 `mu[k,i,j]` 压成单个有理数 `S_F`，屏障变成 `13*S_F*Z_star <= 72000000000000000*g^2`。
+- 给其他 Agent 的建议：source/checker lane 优先直接生成并冻结 `S_F`；形式化 lane 先证明无开方的平方比较 `P_C^2<=Lambda*A^3`, `A<=KZ`, `Lambda*KZ<=g^2 => |P_C|<=gA`，不要先做复杂 ODE API；P8/source lane 只需再给同域 `W_min` 与初始平移能量，速度盒可留作备用而非 C-FD 的必需前提。
+- 建议的下一步：Float64 `dM/cijk/累加` 余项与 controller/solve 正偏置必须继续单列；若出现真正 additive bias，停止把它塞进 cubic barrier，回到 P5-004 ultimate-bound 路线。
+- 关联任务/Review：`T-P5-011`、`review-T-P5-011-honglianmozun-20260907T0155.md`、`T-P3-008`、`T-P5-010`、`T-P5-008`。
