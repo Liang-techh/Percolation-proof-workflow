@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# CI_PORTABLE=1
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "$0")" && pwd)"
