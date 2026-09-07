@@ -66,11 +66,12 @@ theorem affine_envelope_relative_of_floor
   have hbudgetMul :
       (s * K * nu + b) * |x| ≤ (rho * nu) * |x| :=
     mul_le_mul_of_nonneg_right hbudget (abs_nonneg x)
-  apply (mul_le_mul_left hnu).mp
-  calc
-    nu * |e| ≤ (s * K * nu + b) * |x| := hdiv
-    _ ≤ (rho * nu) * |x| := hbudgetMul
-    _ = nu * (rho * |x|) := by ring
+  have hscaled : nu * |e| ≤ nu * (rho * |x|) := by
+    calc
+      nu * |e| ≤ (s * K * nu + b) * |x| := hdiv
+      _ ≤ (rho * nu) * |x| := hbudgetMul
+      _ = nu * (rho * |x|) := by ring
+  nlinarith
 
 /-- The correct equilibrium-containing bridge uses a centered increment of the
 actual error map, rather than reinterpreting a static affine offset. -/
@@ -133,11 +134,9 @@ theorem affine_box_to_weighted_dual_mixed
   unfold weightedDual slopeDual offsetDual
   calc
     (∑ i, e i ^ 2 / d i) ≤
-        ∑ i, (2 * (s i * cap) ^ 2 + 2 * b i ^ 2) / d i := by
+        ∑ i, (2 * (s i ^ 2 / d i) * cap ^ 2 + 2 * (b i ^ 2 / d i)) := by
       apply Finset.sum_le_sum
       intro i hi
-      have hR : 0 ≤ s i * cap + b i :=
-        add_nonneg (mul_nonneg (hs i) hcap) (hb i)
       have hbounds :
           -(s i * cap + b i) ≤ e i ∧ e i ≤ s i * cap + b i :=
         (abs_le).mp (he i)
@@ -148,18 +147,24 @@ theorem affine_box_to_weighted_dual_mixed
           (s i * cap + b i) ^ 2 ≤
             2 * (s i * cap) ^ 2 + 2 * b i ^ 2 := by
         nlinarith [sq_nonneg (s i * cap - b i)]
-      apply (div_le_div_iff_of_pos_right (hd i)).2
-      exact le_trans hesq hyoung
+      have hnum : e i ^ 2 ≤ 2 * (s i * cap) ^ 2 + 2 * b i ^ 2 :=
+        le_trans hesq hyoung
+      have hdiv :
+          e i ^ 2 / d i ≤
+            (2 * (s i * cap) ^ 2 + 2 * b i ^ 2) / d i :=
+        (div_le_div_iff_of_pos_right (hd i)).2 hnum
+      calc
+        e i ^ 2 / d i ≤
+            (2 * (s i * cap) ^ 2 + 2 * b i ^ 2) / d i := hdiv
+        _ = 2 * (s i ^ 2 / d i) * cap ^ 2 + 2 * (b i ^ 2 / d i) := by
+          field_simp [ne_of_gt (hd i)]
+          ring
     _ = 2 * (∑ i, s i ^ 2 / d i) * cap ^ 2 +
         2 * (∑ i, b i ^ 2 / d i) := by
-      rw [Finset.sum_congr rfl]
-      · rw [Finset.sum_add_distrib]
-        rw [← Finset.sum_mul]
-        rw [← Finset.mul_sum]
-        rw [← Finset.mul_sum]
-      · intro i hi
-        field_simp [ne_of_gt (hd i)]
-        ring
+      rw [Finset.sum_add_distrib]
+      rw [← Finset.sum_mul]
+      rw [← Finset.mul_sum]
+      rw [← Finset.mul_sum]
 
 /-- The affine mixed charge composes with a same-domain state bridge
 `cap^2 ≤ K^2*A` without introducing any square root. -/
