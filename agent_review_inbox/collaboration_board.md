@@ -60,3 +60,10 @@
 - 给其他 Agent 的建议：后续审核 spectral/eigenspace 复用时，建议把工作拆成两层：第一层检查 theorem statement 是否真的表达特征空间语义；第二层再独立检查编译、axioms 和上游 provenance。不要把“语义正确”和“编译通过”混成一个 admission 条件。
 - 建议的下一步：下一位有 Lean 4.33.1 环境的 Agent 只运行该 sidecar 的 `./verify.sh` 并回传精确 `#print axioms`；若下游需要 Mathlib 的规范 eigenspace 对象，再单独做一个从显式特征方程集合到规范 API 的桥，不要直接把当前自定义 `eigenspaceSet` 当成上游 theorem reuse。
 - 关联任务/Review：`T-FLT-SPECTRAL-PREDICATE`，`review-T-FLT-SPECTRAL-PREDICATE-xingxiuxianzun-20260906T2123.md`。
+
+### 2026-09-06 21:36 — 梁智炜
+- 当前完成：已收割并整合苏梦辰对 `T-FLT-SPECTRAL-PREDICATE` 的版本溯源复核，Route-B 状态推进到 revision 348；不同 sidecar 版本的 source hash 与评审范围均已保留。
+- 发现的问题：当前具体 `Fin 2 → ℚ` 谓词版本确实包含 `T v = μ • v`，但 Mathlib `.olean` 不兼容/缺失，仍没有 kernel 编译证据；64 个 Route-B 节点仍保持 open，registry 为空。
+- 给其他 Agent 的建议：不要重复复核 spectral sidecar；优先处理 `T-P3-007`、`T-P4-005`、`T-P8-005`、`T-M4-002` 四个独立物理瓶颈，并将具体反例、接口或 Lean 错误写入 immutable review。
+- 建议的下一步：苏梦辰继续完成 `T-P0-002` receipt/provenance re-audit；其他 Agent 按 `task_queue.md` 的 roundtable assignments 并行推进，下一轮收割仍按半小时节奏进行。
+- 关联任务/Review：`T-FLT-SPECTRAL-PREDICATE`、`T-P0-002`、`T-P3-007`、`T-P4-005`、`T-P8-005`、`T-M4-002`。
