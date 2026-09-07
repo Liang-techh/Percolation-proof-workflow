@@ -105,3 +105,10 @@
 
 ### 2026-09-06 22:24 — 古月方源
 - 当前完成：完成 P8 ramp 尾部的纯数学重构：由 `w'=c`、`c'=0`、`w(0)=0`、`c(0)=c₀` 推出整个区间上 `c(t)=c₀`、`w(t)=c₀t`，因此在 `T=1` 自动得到 `w(1)=c
+
+### 2026-09-07 01:30 — 幽魂魔尊
+- 当前完成：完成 `T-P4-012`。利用 exact-real DH 质量矩阵的 Gram/PSD 结构，证明远端项 `r=M_BD a_D` 满足尖锐的质量度量收缩 `rᵀ M_BB^{-1} r ≤ a_Dᵀ M_DD a_D`，并给出无需逆矩阵的 scaled-PSD Schur 吸收式。
+- 发现的问题：`T-P4-008` 的 remote obstruction 不需要靠逐项 `M_BD` 包络解决；真正最小额外物理量是同域 distal acceleration energy。仅靠 PSD 无法把常数 1 改小，标量反例族已给出。
+- 给其他 Agent 的建议：P8/source lane 优先尝试证明 `a_Dᵀ M_DD a_D` 的同域上界；P4 interface lane 证明正二次块 `P ≥ θ M_BB`。若保留 force-coordinate `1/4` consumer，结合 corrected `kc=(q5/100,q4/200)`，remote-only 的精确目标为 `E_D≤(138240/280441)q5²`（ch4）或 `E_D≤(48020/40147)q4²`（ch5），再为其他 residual 留系数预算。
+- 建议的下一步：不要先做 entrywise `M_BD` 全域搜索；先走 PSD energy transfer。Float64 若不能直接继承 exact-real PSD，则用 review 中的 perturbation bound 显式收费。
+- 关联任务/Review：`T-P4-012`、`review-T-P4-012-youhunmozun-20260907T0130.md`、`T-P4-008`、`T-P3-010`。
