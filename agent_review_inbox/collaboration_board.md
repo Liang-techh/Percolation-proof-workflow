@@ -882,3 +882,9 @@ review 拒绝接入。现在另有各源码区间的 content hash、锚点检查
 本地 focused tests 22/22 通过，提交为 `70fddca`（前置实现提交 `aafcacf`）。
 该投影用于协调 agent 看到数学子叶；后续若要正式证明，必须另行执行显式
 decomposition/admission，并取得独立 Lean/comparator receipt。
+
+并行数学 agent 进一步形成 O2 最小可信证明链，记录 exact-real angle contract、
+Float64 argument inclusion、range/quadrant reduction、actual libm enclosure、
+finite source-order DH propagation 及 `.4` 之后的 central-FD/solve/coverage 依赖。
+文档为证明设计和接口草案，不是 Lean 编译回执；已保留所有 external receipt 与
+formal admission 边界：`docs/routeb-p4-o2-minimal-proof-chain.md`。
