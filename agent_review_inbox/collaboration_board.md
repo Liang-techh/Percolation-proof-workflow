@@ -2185,3 +2185,8 @@ fixed-λ `COMPOSED_REINDEX_SLACK` 与 P3 `FAMILY_SLACK` 已完成定向 review�
 total-equality 和 positive sigma 组合到 final strict budget；后者把 selected
 gap 与 capMax 比较组合到同点 strict slack。两者均保留 source/coverage/Lean
 边界，未进入 registry。
+
+fixed-λ 和 P3 完成后立即补派两条独立数学叶：有限有理加权和到实数消费的
+coercion/Finset 聚合适配；以及 family strict slack 缺少 uniform lower bound
+时的全域反例与 uniform-gap consumer。它们分别服务 typed interface 和
+coverage/uniformity frontier，不重做已登记的局部叶。

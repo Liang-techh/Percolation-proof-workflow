@@ -2865,3 +2865,11 @@ body-6 Schur remainder review 已到达，现已登记 revision 679；下一步�
 fixed-λ `COMPOSED_REINDEX_SLACK` 和 P3 `FAMILY_SLACK` 已登记 revision 680，
 保持 `OPEN_UNCOMPILED`。下一轮优先收割 body-6 mixed-block binding 与 P4
 uniform contraction；若只得到缺失字段，则记录 obstruction 而不填入假数据。
+
+补充本地派发：
+
+- fixed-λ：有限 ℚ weighted-sum 的 ℚ→ℝ cast/reindex adapter；
+- P3：pointwise positive gap 不推出 global uniform slack 的 exact obstruction，
+  以及显式 uniform-gap consumer。
+
+两项均要求 proof-attempt + 定向 review，暂不运行大回归或进入 registry。
