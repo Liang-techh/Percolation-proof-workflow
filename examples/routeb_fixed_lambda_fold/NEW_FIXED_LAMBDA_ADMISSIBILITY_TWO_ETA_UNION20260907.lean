@@ -49,6 +49,16 @@ def CrossEtaLabelsDisjoint (f : Declared577SparseFold) : Prop :=
   ∀ i ∈ f.eta27.rows, ∀ j ∈ f.eta56.rows,
     f.eta27.boxLabel i ≠ f.eta56.boxLabel j
 
+theorem mem_unionRows_eta27_iff
+    (f : Declared577SparseFold) (i : Nat) :
+    (EtaTag.eta27, i) ∈ unionRows f ↔ i ∈ f.eta27.rows := by
+  simp [unionRows]
+
+theorem mem_unionRows_eta56_iff
+    (f : Declared577SparseFold) (i : Nat) :
+    (EtaTag.eta56, i) ∈ unionRows f ↔ i ∈ f.eta56.rows := by
+  simp [unionRows]
+
 theorem union_rows_card
     (f : Declared577SparseFold) :
     (unionRows f).card =
@@ -86,48 +96,37 @@ theorem union_oneRowPerBox
   intro x y hx hy hlabel
   rcases x with ⟨tagX, i⟩
   rcases y with ⟨tagY, j⟩
-  cases tagX <;> cases tagY
-  · rcases Finset.mem_union.mp hx with hx | hx
-    · rcases Finset.mem_image.mp hx with ⟨i', hi', hxi⟩
-      cases hxi
-      rcases Finset.mem_union.mp hy with hy | hy
-      · rcases Finset.mem_image.mp hy with ⟨j', hj', hyj⟩
-        cases hyj
-        have hsame := f.eta27.oneRowPerBox hi' hj' hlabel
-        cases hsame
-      · rcases Finset.mem_image.mp hy with ⟨j', hj', hyj⟩
-        cases hyj
-        exact (hdisjoint i' hi' j' hj' hlabel).elim
-    · rcases Finset.mem_image.mp hx with ⟨i', hi', hxi⟩
-      cases hxi
-      rcases Finset.mem_union.mp hy with hy | hy
-      · rcases Finset.mem_image.mp hy with ⟨j', hj', hyj⟩
-        cases hyj
-        exact (hdisjoint j' hj' i' hi' hlabel.symm).elim
-      · rcases Finset.mem_image.mp hy with ⟨j', hj', hyj⟩
-        cases hyj
-        have hsame := f.eta56.oneRowPerBox hi' hj' hlabel
-        cases hsame
-  · rcases Finset.mem_union.mp hx with hx | hx
-    · rcases Finset.mem_image.mp hx with ⟨i', hi', hxi⟩
-      cases hxi
-      rcases Finset.mem_union.mp hy with hy | hy
-      · rcases Finset.mem_image.mp hy with ⟨j', hj', hyj⟩
-        cases hyj
-        exact (hdisjoint i' hi' j' hj' hlabel).elim
-      · rcases Finset.mem_image.mp hy with ⟨j', hj', hyj⟩
-        cases hyj
-        exact (hdisjoint j' hj' i' hi' hlabel.symm).elim
-    · rcases Finset.mem_image.mp hx with ⟨i', hi', hxi⟩
-      cases hxi
-      rcases Finset.mem_union.mp hy with hy | hy
-      · rcases Finset.mem_image.mp hy with ⟨j', hj', hyj⟩
-        cases hyj
-        have hsame := f.eta27.oneRowPerBox hi' hj' hlabel
-        cases hsame
-      · rcases Finset.mem_image.mp hy with ⟨j', hj', hyj⟩
-        cases hyj
-        exact (hdisjoint j' hj' i' hi' hlabel.symm).elim
+  cases tagX
+  · cases tagY
+    · have hi : i ∈ f.eta27.rows :=
+        (mem_unionRows_eta27_iff f i).mp hx
+      have hj : j ∈ f.eta27.rows :=
+        (mem_unionRows_eta27_iff f j).mp hy
+      change f.eta27.boxLabel i = f.eta27.boxLabel j at hlabel
+      have hsame := f.eta27.oneRowPerBox hi hj hlabel
+      cases hsame
+      rfl
+    · have hi : i ∈ f.eta27.rows :=
+        (mem_unionRows_eta27_iff f i).mp hx
+      have hj : j ∈ f.eta56.rows :=
+        (mem_unionRows_eta56_iff f j).mp hy
+      change f.eta27.boxLabel i = f.eta56.boxLabel j at hlabel
+      exact (hdisjoint i hi j hj hlabel).elim
+  · cases tagY
+    · have hi : i ∈ f.eta56.rows :=
+        (mem_unionRows_eta56_iff f i).mp hx
+      have hj : j ∈ f.eta27.rows :=
+        (mem_unionRows_eta27_iff f j).mp hy
+      change f.eta56.boxLabel i = f.eta27.boxLabel j at hlabel
+      exact (hdisjoint j hj i hi hlabel.symm).elim
+    · have hi : i ∈ f.eta56.rows :=
+        (mem_unionRows_eta56_iff f i).mp hx
+      have hj : j ∈ f.eta56.rows :=
+        (mem_unionRows_eta56_iff f j).mp hy
+      change f.eta56.boxLabel i = f.eta56.boxLabel j at hlabel
+      have hsame := f.eta56.oneRowPerBox hi hj hlabel
+      cases hsame
+      rfl
 
 theorem union_boxLabels_card
     (f : Declared577SparseFold)
@@ -151,43 +150,24 @@ theorem union_selected_box_has_positive_margin
     (f : Declared577SparseFold)
     (hupper : uniformStrictUpper f)
     {b : Nat} (hb : b ∈ unionBoxLabels f) :
-    ∃ x ∈ unionRows f,
+  ∃ x ∈ unionRows f,
       0 < (unionRow f x).candidateMargin ∧ unionBoxLabel f x = b := by
-  rcases Finset.mem_image.mp hb with ⟨x, hx, hlabel⟩
-  rcases x with ⟨tag, i⟩
+  rcases Finset.mem_image.mp hb with ⟨⟨tag, i⟩, _, hlabel⟩
   cases tag
-  · rcases Finset.mem_union.mp hx with hx | hx
-    · rcases Finset.mem_image.mp hx with ⟨i', hi', hxi⟩
-      cases hxi
-      have hbox : f.eta27.boxLabel i' = b := hlabel
-      have hm := selected_box_margins_positive_of_uniform_upper
-        f.params f.eta27 hupper.1 b
-      rcases hm hbox with ⟨k, hk, hpos, hkbox⟩
-      exact ⟨(EtaTag.eta27, k),
-        Finset.mem_union.mpr (Or.inl (Finset.mem_image.mpr ⟨k, hk, rfl⟩)),
-        hpos, hkbox⟩
-    · rcases Finset.mem_image.mp hx with ⟨i', hi', hxi⟩
-      cases hxi
-      have hbox : f.eta56.boxLabel i' = b := hlabel
-      have hm := selected_box_margins_positive_of_uniform_upper
-        f.params f.eta56 hupper.2 b
-      rcases hm hbox with ⟨k, hk, hpos, hkbox⟩
-      exact ⟨(EtaTag.eta56, k),
-        Finset.mem_union.mpr (Or.inr (Finset.mem_image.mpr ⟨k, hk, rfl⟩)),
-        hpos, hkbox⟩
-  · rcases Finset.mem_union.mp hx with hx | hx
-    · rcases Finset.mem_image.mp hx with ⟨i', hi', hxi⟩
-      cases hxi
-      exact False.elim (by simp at hlabel)
-    · rcases Finset.mem_image.mp hx with ⟨i', hi', hxi⟩
-      cases hxi
-      have hbox : f.eta56.boxLabel i' = b := hlabel
-      have hm := selected_box_margins_positive_of_uniform_upper
-        f.params f.eta56 hupper.2 b
-      rcases hm hbox with ⟨k, hk, hpos, hkbox⟩
-      exact ⟨(EtaTag.eta56, k),
-        Finset.mem_union.mpr (Or.inr (Finset.mem_image.mpr ⟨k, hk, rfl⟩)),
-        hpos, hkbox⟩
+  ·
+    change f.eta27.boxLabel i = b at hlabel
+    rcases selected_box_has_positive_margin f.params f.eta27 hupper.1 hlabel with
+      ⟨k, hk, hpos, hkbox⟩
+    exact ⟨(EtaTag.eta27, k),
+      Finset.mem_union.mpr (Or.inl (Finset.mem_image.mpr ⟨k, hk, rfl⟩)),
+      hpos, hkbox⟩
+  ·
+    change f.eta56.boxLabel i = b at hlabel
+    rcases selected_box_has_positive_margin f.params f.eta56 hupper.2 hlabel with
+      ⟨k, hk, hpos, hkbox⟩
+    exact ⟨(EtaTag.eta56, k),
+      Finset.mem_union.mpr (Or.inr (Finset.mem_image.mpr ⟨k, hk, rfl⟩)),
+      hpos, hkbox⟩
 
 /-!
 The exact accounting theorem consumes only the declared row-count premises;

@@ -31,7 +31,8 @@ partitions.  They are not computed or used to manufacture a Lean fact here.
 The theorem consumes, rather than establishes, the two local one-row-per-box
 facts, the cross-eta label-disjointness premise, row counts, positive
 denominators, margin equations, and strict upper conditions.  It does not bind
-any of these to the CSV/source evaluator or verify the SHA-256 digest.
+any of these to the CSV/source evaluator or verify the exact SHA-256 digest
+against the canonical row encoding.
 
 The union is only the supplied finite declared artifact.  The cardinality 577
 does not prove complete box coverage, dense labels, true-DH interval coverage,
