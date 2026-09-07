@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 529,
+  "revision": 530,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -16511,6 +16511,47 @@
           "authority_status": "ENDPOINT_PROVENANCE_ONLY",
           "source_bound_dynamic_leaf": false,
           "trajectory_membership": false,
+          "global_coverage": false,
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
+        },
+        "o2_parent_sibling_authority_stops": [
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-036.2",
+            "source_agent": "codex-inbox",
+            "review_status": "OPEN_PARENT_SIBLING_AUTHORITY_STOP",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-036.2-leaf1-parent-sibling-authority-stop-codex-20260907.md",
+              "sha256": "053001F6C02B4769FBC7DA24A30B1096E0BA175B236A7D4A2842FE18175B1FAD"
+            },
+            "topology_sha256": "0D191AD5F86D15F492AE7060E41AE0CBF42BB47E7DBF94AD273FFA32E5F32E5D",
+            "local_payload_sha256": "028C0E2F1DE5FC0D84BCA8B8F7043073CA02424E5C402889ECE69B94F6F8FF6B",
+            "leaf_handoff_sha256": "9453049983A4F59D0438CE0F51EDD6BC6F6C0E6FDEA91522B524A5828C6709ED",
+            "parent_sibling_records_present": false,
+            "box_subset_premise_instantiated": false,
+            "coverage_join_premise_instantiated": false,
+            "authority_status": "ENDPOINT_PROVENANCE_ONLY",
+            "missing_fields": [
+              "parent box/source/hash",
+              "sibling box/source/hash",
+              "child-to-parent endpoint inequalities",
+              "same coordinate/leaf linkage"
+            ],
+            "global_coverage": false,
+            "formal_certificate_allowed": false,
+            "registry_promoted": false
+          }
+        ],
+        "o2_parent_sibling_authority_stop": {
+          "status": "OPEN_PARENT_SIBLING_AUTHORITY_STOP",
+          "review_sha256": "053001F6C02B4769FBC7DA24A30B1096E0BA175B236A7D4A2842FE18175B1FAD",
+          "topology_sha256": "0D191AD5F86D15F492AE7060E41AE0CBF42BB47E7DBF94AD273FFA32E5F32E5D",
+          "local_payload_sha256": "028C0E2F1DE5FC0D84BCA8B8F7043073CA02424E5C402889ECE69B94F6F8FF6B",
+          "parent_sibling_records_present": false,
+          "box_subset_premise_instantiated": false,
+          "coverage_join_premise_instantiated": false,
+          "authority_status": "ENDPOINT_PROVENANCE_ONLY",
           "global_coverage": false,
           "formal_certificate_allowed": false,
           "registry_promoted": false
@@ -40665,6 +40706,16 @@
       "overwrite_existing_output_forbidden": true,
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T14:16:37.656170+00:00",
+      "kind": "routeb_o2_parent_sibling_authority_stop_recorded",
+      "node_id": "0da99a7cef5e4f0b91c7cc06d9e7c010",
+      "review_status": "OPEN_PARENT_SIBLING_AUTHORITY_STOP",
+      "parent_sibling_records_present": false,
+      "global_coverage": false,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -44321,5 +44372,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "00755fa3d7fc982dcbf90745ca748d3328e9956513bc163903b83e5b2fa7ba5c"
+  "state_checksum": "716023cdccf71fee66ee6d9e7018d96059b187c047cd3278b0fe049bb4447525"
 }

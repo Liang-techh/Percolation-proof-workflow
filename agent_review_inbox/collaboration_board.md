@@ -1159,3 +1159,11 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   写入 state，O1 仍要求真实 typed source receipt。
 - force runner 已封装 fresh 输出目录、双 hash、Julia/Python 缺失状态和“不覆盖
   旧 artifact”策略；当前仍 `PENDING_JULIA_EXECUTION`，没有 CSV/receipt/PASS。
+
+### 2026-09-07 — 梁智炜：O2 parent/sibling authority stop 收割
+
+- 定向检查确认现有 local payload 只有 leaf-1，topology receipt 虽有
+  parent/children 拓扑但 `INCOMPLETE`、`coverage_complete=false`，没有与
+  当前 endpoint handoff 的 source/hash-bound parent/sibling endpoint 连接。
+- 因此 O2 继续保持 `ENDPOINT_PROVENANCE_ONLY`；不实例化具体 `BoxSubset` 或
+  `CoverageJoin2`，不重复 leaf-1 编译，也不改变 formal gate/global coverage。

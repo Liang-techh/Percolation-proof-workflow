@@ -1819,3 +1819,10 @@ after integration; corrections should be a new result file.
 - fresh runner 已入库：Julia/Python 不可用时只返回 pending，已有输出目录不
   覆盖，成功运行后必须调用完整 schema/residual verifier。
 - 当前仍无 runtime CSV/receipt；不要把 runner 存在升级为 source-binding PASS。
+
+### T-P4-036.2 — parent/sibling authority stop (2026-09-07)
+
+- 当前 leaf-1 只有 endpoint provenance；local payload 没有 parent/sibling
+  endpoint，拓扑 receipt 仍 `INCOMPLETE` 且 `coverage_complete=false`。
+- 暂停重复编译与泛扫描；下一步只接受 source/hash-bound parent/sibling
+  records、child-to-parent inequalities 和 coverage join linkage。
