@@ -176,6 +176,10 @@
   最小 state/equilibrium adapter 或精确 obstruction。
 - 调度边界：若 bias 在平衡点不消失，P5 必须走 `e=e_rel+e_bias` 混合架构，
   由 P5-004 的 ultimate-bound 结果承接，停止无效的纯 `rho|v|` 调参。
+- source 定位已补充：真实端 `routeB_dense_Mq/dhport_lib.jl` 使用显式
+  `1e-6` mass regularizer、`1e-5` central FD，并以 `tau-Cdq-Gq` 求解加速度；
+  因此 P5-008 必须把这些项作为独立 bias/relative 候选，不可从抽象
+  `forceError` 名称直接回填。
 - 关联任务/Review：`T-P5-005`、`T-P5-006`、`T-P5-007`、`T-P5-008`、
   `T-P5-009`。
 

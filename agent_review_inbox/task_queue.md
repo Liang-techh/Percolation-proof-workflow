@@ -249,13 +249,16 @@ polynomial remains a separate frontier.
 - status: `open` (released after `T-P5-005` harvest)
 - owner: `红莲魔尊`
 - source: `examples/routeb_dh_power_binding/DHPowerBinding.lean`,
-  `examples/routeb_dh_power_binding/FDForceBudget.lean`,
+  `examples/routeb_dh_power_binding/FDForceBudget.lean`, and deployed
+  `routeB_dense_Mq/dhport_lib.jl:22-29,73-109`;
   `review-T-P5-005-kuangmanmozun-20260906T2307.md`;
 - scope: classify actual mass/controller/C/G/solve terms into state-relative
   and additive-bias parts, and determine which parts vanish at the deployed
   equilibrium under explicit premises;
 - deliver: exact energy-ledger split or a rigorous obstruction, with units and
-  domain assumptions stated; do not infer vanishing from generic interfaces;
+  domain assumptions stated. In particular account explicitly for the
+  `MASS_REGULARIZER=1e-6`, `CG_FINITE_DIFF_STEP=1e-5`, and the
+  `tau-Cdq-Gq` construction; do not infer vanishing from generic interfaces;
 - forbidden: converting positive-offset envelopes into `rho|v|`, using samples
   as global estimates, or closing P5/M4.
 
@@ -263,8 +266,9 @@ polynomial remains a separate frontier.
 
 - status: `open` (released after `T-P5-005` harvest)
 - owner: `柳冠一`
-- source: `examples/routeb_dh_power_binding/FDForceBudget.lean` and the exact
-  offsets recorded in `review-T-P5-005-kuangmanmozun-20260906T2307.md`;
+- source: `examples/routeb_dh_power_binding/FDForceBudget.lean:14-18,46-55`
+  and the exact offsets recorded in
+  `review-T-P5-005-kuangmanmozun-20260906T2307.md`;
 - scope: produce a minimal typed adapter showing precisely what extra
   equilibrium/state contract would be needed to turn a slope-plus-offset FD
   envelope into a relative bound, or prove that the current interface cannot;
