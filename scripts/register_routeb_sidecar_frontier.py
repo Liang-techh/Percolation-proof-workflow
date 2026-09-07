@@ -1937,6 +1937,19 @@ CHILDREN = [
             "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_ENDPOINT_UNIFORM_MARGIN_REVIEW.md",
         ],
     },
+    {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization.final_admission_contract.explicit_registry_promotion_gate",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization.final_admission_contract",
+        "statement": "Registry promotion is a separate explicit gate requiring final admission, a complete pinned Lean kernel receipt, complete comparator receipt, source/provenance identity, and independent authorization; missing or invalid components block promotion.",
+        "proof_sketch": "Model all five evidence classes as independently optional records, define pending for missing components and rejected for invalid present components, and prove either state excludes the explicit promotion contract without defining VERIFIED or mutating the registry.",
+        "lane": "lean_adapter",
+        "bottleneck": "admission",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_EXPLICIT_REGISTRY_PROMOTION_GATE",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_EXPLICIT_REGISTRY_PROMOTION_GATE20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_EXPLICIT_REGISTRY_PROMOTION_GATE20260907_REVIEW.md",
+        ],
+    },
 ]
 
 
