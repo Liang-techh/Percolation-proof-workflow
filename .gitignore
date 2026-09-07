@@ -8,5 +8,6 @@ __pycache__/
 /upstream/
 /artifacts/
 /output/
+examples/**/output/
 /.pytest_cache/
 **/.git/
