@@ -91,7 +91,7 @@ theorem component_physical_gain_transport
     (kq4 kq5 kv4 kv5 kw kc : ℝ)
     (hkq4 : 0 ≤ kq4) (hkq5 : 0 ≤ kq5)
     (hkv4 : 0 ≤ kv4) (hkv5 : 0 ≤ kv5)
-    (hkw : 0 ≤ kw) (hkc : 0 ≤ kc)
+    (hkw : 0 ≤ kw)
     (hq4 : |dq4| ≤ |X4| + A4*d)
     (hq5 : |dq5| ≤ |X5| + A5*d)
     (hv4 : |dv4| ≤ |Y4| + h4*d)
