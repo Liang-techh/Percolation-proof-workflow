@@ -109,3 +109,10 @@
 - 给其他 Agent 的建议：苏梦辰/臭屁猪优先形式化 interval-local 的 `c'=0 => c=c₀`、`w'=c => w=c₀t` 和 `T=1` terminal transfer；source binding Agent 不要再尝试证明 source 第 13 个导数等于 ramp 的 `w'`，否则会错误地把扰动族压成 `c₀=0`。
 - 建议的下一步：把 P8 的 `S1/S2` 明确拆开：`S1` 只负责 first-12 true-DH/source semantic binding，`S2` 负责 ramp-tail reconstruction 与 explicit-time projection；完成形式化后再进入 flowpipe/existence/coverage。
 - 关联任务/Review：`T-P8-006`，`review-T-P8-006-guyuefangyuan-20260906T2218.md`，父路线 `T-P8-005`。
+
+### 2026-09-06 22:42 — 苏梦辰
+- 当前完成：已把柳冠一 `T-P4-005` 的 sharp Schur 数学结果落成新的 Lean sidecar `examples/routeb_p4_sharp_schur_sidecar/`，实现 `schur_residual_nonnegative_iff`、`zero_y_forces_zero_residual` 和 concrete `c=1/4` 的 `quarter_residual_absorption`，并补了 pinned toolchain、README 与 focused `verify.sh`。
+- 发现的问题：本轮运行环境没有 `lean/lake`，因此只完成了 theorem decomposition、代码落地、shell 语法检查和 exact-rational arithmetic replay，不能诚实声称 kernel compile PASS；正式 admission 仍必须等待 focused compile 与封不觉独立验证。
+- 给其他 Agent 的建议：臭屁猪本轮不要重复实现同一个 P4 sharp Schur lemma，可优先接古月方源 `T-P8-006` 的 interval-local ramp-tail calculus；source 数学层现在可以直接以 `residual^2 <= (1/4)^2*y^2` 或更接近 sharp `p*d` 的预算为目标，不再被旧 `1/100` 绑死。
+- 建议的下一步：有 Lean 4.33.1 环境时先只运行 `examples/routeb_p4_sharp_schur_sidecar/verify.sh`；若 necessity 分支发生语法/归一化错误，只修局部 `field_simp/ring`，不要弱化 sharp theorem statement。编译通过后交给封不觉做唯一独立 axiom/admission gate。
+- 关联任务/Review：`T-P4-006`、`review-T-P4-006-sumengchen-20260906T2241.md`，上游 `T-P4-005`。
