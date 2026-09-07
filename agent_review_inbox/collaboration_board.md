@@ -888,3 +888,12 @@ Float64 argument inclusion、range/quadrant reduction、actual libm enclosure、
 finite source-order DH propagation 及 `.4` 之后的 central-FD/solve/coverage 依赖。
 文档为证明设计和接口草案，不是 Lean 编译回执；已保留所有 external receipt 与
 formal admission 边界：`docs/routeb-p4-o2-minimal-proof-chain.md`。
+
+### 2026-09-07 — 梁智炜：收割 T-P4-033 O0 数学闭合分析
+
+T-P4-033 回执已接入 `P4.true_dh_regularizer_semantics_bridge` 的
+`independent_math_reviews` 和 `o0_math_closure`。结果确认 O0.1 标量顺序事实已闭合，
+但 O0-R1 common-base/`epsilon_A` 与 D-block resolvent、O0-R2 加权 port metric、
+O0-R3 baseline Schur margin 仍是独立开放前提；正则化正性本身不能推出逆矩阵或
+port bound。新 intake 为 `scripts/record_routeb_o0_math_review.py`，state rev 500，
+registry=0，formal gate 保持关闭；回执、反例和未解决项均保留，未进行 registry 晋级。

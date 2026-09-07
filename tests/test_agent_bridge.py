@@ -52,6 +52,37 @@ class BridgeTests(unittest.TestCase):
             self.assertEqual(requests[0]['frontier_repair_contract']['next_agent_action'],
                              'build adapter')
 
+    def test_prepare_requests_carries_virtual_frontier_as_advisory_context(self):
+        with tempfile.TemporaryDirectory() as directory:
+            store = StateStore(Path(directory) / 'state.json')
+            state = WorkflowState()
+            node_id = state.add_node(
+                'O2 evaluator', 'theorem o2 : True',
+                metadata={
+                    'statement_status': 'formalization_target',
+                    'math_lane': 'source_semantics',
+                    'frontier_repair_contract': {'next_agent_action': 'bind O2'},
+                    'o2_trig_binding': {
+                        'leaves': [{
+                            'id': 'T-P4-036.3',
+                            'kind': 'float64_libm_sin_cos_enclosure',
+                            'status': 'OPEN',
+                        }],
+                    },
+                })
+            before_nodes = len(state.nodes)
+            store.save(state)
+
+            request = prepare_requests(store, limit=1)[0]
+
+            self.assertEqual(request['node_id'], node_id)
+            self.assertEqual(request['virtual_frontier'][0]['virtual_leaf_id'],
+                             'T-P4-036.3')
+            self.assertTrue(request['virtual_frontier'][0]['is_virtual'])
+            self.assertFalse(request['virtual_frontier'][0]['closure_effect'])
+            saved = store.load()
+            self.assertEqual(len(saved.nodes), before_nodes)
+
     def test_prepare_requests_preserves_cross_branch_input_contract(self):
         with tempfile.TemporaryDirectory() as directory:
             store = StateStore(Path(directory) / 'state.json')

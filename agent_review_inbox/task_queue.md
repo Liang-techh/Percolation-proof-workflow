@@ -1418,6 +1418,12 @@ polynomial remains a separate frontier.
   `docs/routeb-p4-o0-regularizer-semantics-bridge.md` now expose the scalar,
   common-base matrix/block, and conditional resolvent layers. The API rejects
   implicit Python floats and remains non-registry evidence.
+- coordinator finding (2026-09-07, T-P4-033): scalar `delta` is not the remaining
+  mathematical bottleneck. O0-R1 needs common-base equality or a quantitative
+  `epsilon_A` plus exact D-block inverse bound; O0-R2 needs a weighted port-metric
+  conversion; O0-R3 must consume a baseline `rho_r` with a strict remaining
+  Schur/Young margin. Positivity of the regularizer alone is insufficient, and
+  the review is recorded by `scripts/record_routeb_o0_math_review.py`.
 - forbidden: replacing the Float64 literal with a rational silently or using
   BigFloat pointwise agreement as a rounding proof.
 

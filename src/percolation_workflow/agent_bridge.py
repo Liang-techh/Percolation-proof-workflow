@@ -12,7 +12,7 @@ from .store import StateStore
 from .registry import audit_registry
 from .model import EvidenceStage, now
 from .scheduler import candidate_identity, obstruction_rank, rank_frontier
-from .math_frontier import rank_formalizable_frontier
+from .math_frontier import project_virtual_frontier, rank_formalizable_frontier
 from pathlib import Path
 
 
@@ -122,6 +122,9 @@ def prepare_requests(store: StateStore, *, limit: int = 4,
     # Candidate de-duplication happens after completed/pending attempts are
     # filtered, so a finished representative cannot hide a live duplicate.
     eligible = {}
+    virtual_by_parent = {}
+    for row in project_virtual_frontier(state):
+        virtual_by_parent.setdefault(row['parent_node_id'], []).append(row)
     repair_statuses = {'compile_error', 'verification_error', 'provenance_rejected',
                        'verification_rejected', 'strict_admission_rejected',
                        'agent_error', 'agent_timeout'}
@@ -222,6 +225,10 @@ def prepare_requests(store: StateStore, *, limit: int = 4,
                    'repair_context': repair_context,
                    'frontier_repair_contract': node.metadata.get(
                        'frontier_repair_contract'),
+                   # Metadata-only child obligations are advisory context;
+                   # they are not request node ids and cannot be compiled,
+                   # registered, or used to close this parent.
+                   'virtual_frontier': virtual_by_parent.get(node.id, []),
                    'decomposition_contract': {
                        'required_fields': ['sketch', 'children', 'comparator_gate'],
                        'comparator_gate_fields_per_child': [
