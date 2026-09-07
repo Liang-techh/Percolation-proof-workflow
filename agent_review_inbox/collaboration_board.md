@@ -870,3 +870,15 @@ shifted DAG。source hash 漂移检查已加入，当前 canonical hash 必须�
 `AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936`；不匹配时
 review 拒绝接入。现在另有各源码区间的 content hash、锚点检查和统一
 `operation_schedule_hash`；state rev 498，O2 仍 open，registry=0，formal gate 仍关闭。
+
+### 2026-09-07 — 梁智炜：接入 metadata-only virtual frontier
+
+为避免 O2 的 `T-P4-036.1-.4` 隐藏在 parent metadata 中而无法被调度侧发现，
+新增只读 `project_virtual_frontier`。它只扫描当前真实 frontier node 下带有
+`leaves` 的 contract，并在 CLI `math-frontier`、frontier receipt 和 frontier cut
+中公开 virtual rows。每行固定标记 `is_virtual=true`、`closure_effect=false`、
+`registry_effect=false`；不新增 DAG node、不创建 attempt、不放宽 obstruction gate。
+
+本地 focused tests 22/22 通过，提交为 `70fddca`（前置实现提交 `aafcacf`）。
+该投影用于协调 agent 看到数学子叶；后续若要正式证明，必须另行执行显式
+decomposition/admission，并取得独立 Lean/comparator receipt。
