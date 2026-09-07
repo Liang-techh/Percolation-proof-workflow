@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 636,
+  "revision": 639,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -37603,7 +37603,8 @@
       "proof_sketch": "Derive the sixth DH body directly, reify all 610 tagged rational rows, isolate the 23-row sixth column, and prove endpoint/center/Gram/Fourier seams before connecting to the legacy evaluator.",
       "dependencies": [
         "9c970ea58ffe47c4a81d0e9008642392",
-        "916c6109fe624ad3a9a3b3caef40271d"
+        "916c6109fe624ad3a9a3b3caef40271d",
+        "3ebbde90980343afb5ebbd8036dcff65"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -38422,7 +38423,9 @@
       "parent_id": "5e72c5ff760847cdbc282c9ee03b7d85",
       "status": "open",
       "proof_sketch": "Construct R=R₀+R₁+R₂+R₃ and mu=mu₀+mu₁+mu₂+mu₃, prove the triangle and nonnegativity bounds, and package velocity/weight/domain premises without choosing a concrete source or radius.",
-      "dependencies": [],
+      "dependencies": [
+        "d9db43e2cd2f4dfbaed3c99c11be1189"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -38613,7 +38616,10 @@
       "parent_id": "ee9e3c418b394786a4dee8059e9948b3",
       "status": "open",
       "proof_sketch": "Define marginAt and uniform feasibility over the sparse union, use the existing positive-denominator bridge rowwise, and package nonemptiness plus the fixed parameter record without claiming domain completeness.",
-      "dependencies": [],
+      "dependencies": [
+        "2a26fd2ddfb949d7b25faa97792fdf20",
+        "915317bad91542b7aefcec1790e81ca2"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -38648,7 +38654,9 @@
       "parent_id": "6cebb66987f449f3b5ad8d0548dfdf83",
       "status": "open",
       "proof_sketch": "Fix Fin embeddings and block shapes, distinguish distal acceleration correction from physical velocity, derive the distal comparison identity and leading minus sign, and retain e_D/e_B defects when zero-defect compatibility is absent.",
-      "dependencies": [],
+      "dependencies": [
+        "ab976fc8bdab4889ac07ec5239e24215"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -38720,6 +38728,189 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\claim-T-P5-030-sumengchen-20260907T1207.md",
             "sha256": "3D659F76DF54468EDE3FD2C40A8E0D0156C6CADEBEA5BB16EC69BAA9DA980365"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "2a26fd2ddfb949d7b25faa97792fdf20": {
+      "id": "2a26fd2ddfb949d7b25faa97792fdf20",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.monotonicity",
+      "statement": "With positive cell denominators, finite-union margin feasibility is downward monotone in the shared lambda; any 1<lambda≤lambda0 preserves strict upper bounds and positive margins.",
+      "parent_id": "21cd8dd890044d33bfda56b3ac343a24",
+      "status": "open",
+      "proof_sketch": "Use the exact affine margin difference, positive cellGamma, finite union quantification, and a 2≤lambda0 corollary for fixed lambda=2/theta=1 without repeating digest or union accounting.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_FIXED_LAMBDA_MONOTONICITY",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_MONOTONICITY20260907.lean",
+            "sha256": "D8AE52222628C4228D79E210597C884C87F3F5B74EA69F29FBBAFD2B615F0AE5"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_MONOTONICITY20260907_REVIEW.md",
+            "sha256": "DB482003A9141FE8C09D780F45F61B118556CB6F3DDDC7C8F195D9021CABCAF5"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "d9db43e2cd2f4dfbaed3c99c11be1189": {
+      "id": "d9db43e2cd2f4dfbaed3c99c11be1189",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity",
+      "statement": "The Fin 6 weighted-power consumer is monotone under a larger nonnegative unified derivative remainder radius.",
+      "parent_id": "34135461e6f1410a8474f9afc75beb79",
+      "status": "open",
+      "proof_sketch": "Prove radius, component quadratic, weighted finite-sum and absolute-value multiplication monotonicity, then lift an existing consumer bound from R to qBar while keeping common-domain and velocity premises explicit.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_CENTRAL_FD_RADIUS_MONOTONICITY",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_MONOTONICITY.lean",
+            "sha256": "78A7165F0A17011066A87A4182428FB90283D88B88F62BB78311EB5653ECF6DB"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_MONOTONICITY_REVIEW.md",
+            "sha256": "3BAEFBEC95D31C83BBA86A7E886D51917CFFFA67FC8A166CF63B0DD236564B52"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "915317bad91542b7aefcec1790e81ca2": {
+      "id": "915317bad91542b7aefcec1790e81ca2",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget",
+      "statement": "A finite tagged sparse union admits a reusable positive uniform margin budget when a scalar delta is explicitly below every selected row margin.",
+      "parent_id": "21cd8dd890044d33bfda56b3ac343a24",
+      "status": "open",
+      "proof_sketch": "Package delta positivity and pointwise load absorption over the union, retain the external coefficient lower bound as a separate source-facing premise, and avoid claiming a receipt-derived minimum.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_FIXED_LAMBDA_MARGIN_BUDGET",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_UNIFORM_MARGIN_BUDGET20260907.lean",
+            "sha256": "9204466B3EC02F9C4EF4AAC646BBA7F5CD5A05D850D1C289921D3BFC48365464"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_UNIFORM_MARGIN_BUDGET20260907_REVIEW.md",
+            "sha256": "7B7CF6CAC4CA74EC2FC92B5FFEC3CE1DE2FC24D98A9FAF9C0DEE8C816A34BB02"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "ab976fc8bdab4889ac07ec5239e24215": {
+      "id": "ab976fc8bdab4889ac07ec5239e24215",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects",
+      "statement": "The ordered B=(4,5), D=(1,2,3,6) split has exact finite projections and a defect-aware port elimination identity with explicit zero-defect corollary.",
+      "parent_id": "7d28d783c3cd408abc6b5600c26e5184",
+      "status": "open",
+      "proof_sketch": "Use Fin embeddings and finite-sum partition to derive both block matrix-vector projections, preserve the distal comparison defect, then eliminate with an explicit left inverse and retain e_D/e_B terms.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "source_semantics",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_P4_BLOCK_PROJECTION_DEFECTS",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_BlockDefects.lean",
+            "sha256": "16C8CD3A2787CC9737BD21A8CE8C9C61B040889CF9C731B01B012FDFC47BF234"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_BlockDefects_REVIEW.md",
+            "sha256": "75EF7FE4D4E4AB646D82BA225EFB67AEAFAF2C3BE103407662E67E4E3B2AD644"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "3ebbde90980343afb5ebbd8036dcff65": {
+      "id": "3ebbde90980343afb5ebbd8036dcff65",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source",
+      "statement": "The first three true body-6 lever columns admit exact common-yaw local-vector expressions and a center-offset-preserving velocity Gram interface.",
+      "parent_id": "d5f2996878744cf9aa2c9f355c4243bb",
+      "status": "open",
+      "proof_sketch": "Expand only the DH prefix origins and first axes, derive b_i=z_i×(o_5-o_i) for i=0,1,2, transport cross products through yaw, and retain the existing CenterOffsetTarget for complete velocity columns.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "source_semantics",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_BODY6_FIRST_THREE_LEVER",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_LEVER_Core20260907.lean",
+            "sha256": "FD54BF1330623FB04D0BD09D44C52D615DD546AEAE0AB2F07BF95FA6B3DB2F5B"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_LEVER_Source20260907.lean",
+            "sha256": "D5E397318E3C58DCB2540FB63F8300693F49B1490E660F2E20E07BA246C5A143"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_LEVER_check20260907.py",
+            "sha256": "7291128BA659C860DE7A00E1494FD7B3C561E34D85E389464CDED4D78B1F64BE"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_LEVER_20260907_REVIEW.md",
+            "sha256": "9BC78FB9E53434E3D24A4F366F4B5BE8E0963344584F5ED379D3ACC2251F9ACD"
           }
         ],
         "registry_eligible": false,
@@ -65423,6 +65614,73 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T18:27:30.814644+00:00",
+      "kind": "node_added",
+      "node_id": "2a26fd2ddfb949d7b25faa97792fdf20",
+      "parent_id": "21cd8dd890044d33bfda56b3ac343a24",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.monotonicity"
+    },
+    {
+      "at": "2026-09-07T18:27:30.842157+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.monotonicity"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T18:30:59.539766+00:00",
+      "kind": "node_added",
+      "node_id": "d9db43e2cd2f4dfbaed3c99c11be1189",
+      "parent_id": "34135461e6f1410a8474f9afc75beb79",
+      "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity"
+    },
+    {
+      "at": "2026-09-07T18:30:59.556378+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T18:32:11.858462+00:00",
+      "kind": "node_added",
+      "node_id": "915317bad91542b7aefcec1790e81ca2",
+      "parent_id": "21cd8dd890044d33bfda56b3ac343a24",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget"
+    },
+    {
+      "at": "2026-09-07T18:32:11.859519+00:00",
+      "kind": "node_added",
+      "node_id": "ab976fc8bdab4889ac07ec5239e24215",
+      "parent_id": "7d28d783c3cd408abc6b5600c26e5184",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects"
+    },
+    {
+      "at": "2026-09-07T18:32:11.861598+00:00",
+      "kind": "node_added",
+      "node_id": "3ebbde90980343afb5ebbd8036dcff65",
+      "parent_id": "d5f2996878744cf9aa2c9f355c4243bb",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source"
+    },
+    {
+      "at": "2026-09-07T18:32:11.887098+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget",
+        "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects",
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -69079,5 +69337,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "6c5b368c2b43794ca97512798663ac24c4c903a35ef2d6386a01777009f9ce16"
+  "state_checksum": "d7c653c842cfd006d737c6e3bd8b4eb188ff93f85d545f939185950bb13d29eb"
 }

@@ -1925,3 +1925,13 @@ P5 参数 tube、fixed-λ feasibility 和 P3 radius consumer。
 当前没有新的远端 review，因此继续本地并行。四条线程分别向 body-6 前三列、
 T-P4-032 缺陷 O1、fixed-λ 单调性、P3 radius 单调性推进；目标是补足可复用
 的数学接口，而不是重复审计或提前改变准入状态。
+
+### 2026-09-07 12:32 — 梁智炜本地收割并派发
+
+本轮回收了四个已完成数学叶：P3 radius monotonicity、fixed-λ uniform
+margin budget、T-P4-032 有序 block projection/defect identity、body-6 前三根
+真实 lever。已写入 DAG，状态仍是 open/uncompiled，registry=0。
+
+继续派发四条独立瓶颈：body-6 first-three×tail 混合 Gram、P4 defect norm
+propagation、fixed-λ 显式 delta lower-bound bridge、P3 scalar weighted-power
+budget。数学优先，GitHub 同步留在下一个 20 分钟窗口。

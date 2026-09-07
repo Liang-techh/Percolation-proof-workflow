@@ -2571,3 +2571,12 @@ source-independent/open/uncompiled 候选。
 
 四条均为互不重复的 typed mathematical leaves；state/registry 继续只由协调者
 收割更新，Lean/kernel/source/coverage 边界不放宽。
+
+### 2026-09-07 — 12:32 本地数学轮
+
+- 已登记并保持 fail-closed：P3 unified-radius monotonicity、fixed-λ uniform
+  margin budget、T-P4-032 block projection/defects、body-6 first-three lever。
+- 新一轮四条独立任务：body-6 前三列与 tail 的混合 Gram；T-P4-032 defect
+  norm propagation；fixed-λ `delta=gap*cellLower` 的逐行 lower-bound bridge；
+  P3 scalar weighted-power budget seam。
+- 只做本地数学推进；等下一次 20 分钟远端收割窗口再同步 GitHub。
