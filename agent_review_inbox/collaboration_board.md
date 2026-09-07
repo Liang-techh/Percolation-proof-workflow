@@ -458,6 +458,17 @@
   parser-to-Lean binding；当前仅是待 pinned compile 的代数候选，registry
   与 formal gate 均不变。
 
+### 2026-09-07 — 梁智炜：接入 rotational prefix mass lower-bound candidate
+
+- 新增 `P3.rotational_prefix_mass_lower_bound` / `T-P3-017`。外部 exact
+  checker 记录 6×6 prefix Gram 的 6 个严格正主子式，给出 q-independent
+  regularized mass lower `9401/1000000`；它直接服务于 P3 的质量下界入口。
+- 当前仍只证明/检查 recorded isotropic-link 与 unit DH-axis 语义下的结构
+  candidate，不包含 Float64/libm、全 M source、inverse bound、coverage、
+  flowpipe 或 P4 residual。formal gate 和 registry 保持关闭。
+- 大爱仙尊负责 concrete source/geometry binding，巨阳仙尊负责最小 Lean
+  prefix-Gram lift；任何一方只能提交独立 receipt，不得直接升级 parent。
+
 ### 2026-09-07 — 梁智炜：P8 interval-local endpoint seam
 
 - 新增 `T-P8-011` / `P8.interval_local_endpoint_adapter`。sidecar 现在把

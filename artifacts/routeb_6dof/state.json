@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 402,
+  "revision": 403,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -7249,7 +7249,8 @@
         "6e0bfc263cfa45ab9411fcfd0c7cc1f8",
         "d039d2c007b348349f022a77a369392e",
         "d318754f0d30438ea53a10a43987f57a",
-        "cbffb1ed7cb74283a216738af2cfdb06"
+        "cbffb1ed7cb74283a216738af2cfdb06",
+        "0cea98302dcb4fc68dda8df511bea6ae"
       ],
       "verified_artifact": null,
       "attempts": [
@@ -11587,6 +11588,72 @@
           "upstream_checker_to_lean_formula_binding",
           "Float64_rounding_and_all_entry_mass_binding",
           "P3_partition_coverage_and_inverse_bounds"
+        ]
+      }
+    },
+    "0cea98302dcb4fc68dda8df511bea6ae": {
+      "id": "0cea98302dcb4fc68dda8df511bea6ae",
+      "name": "P3.rotational_prefix_mass_lower_bound",
+      "statement": "The recorded isotropic-link rotational prefix Gram gives a q-independent regularized mass lower bound 9401/1000000.",
+      "parent_id": "8f7df5df39a041d7a972078830dbcee7",
+      "status": "open",
+      "proof_sketch": "Use omega-prefix increments and exact unit-axis semantics to reduce rotational mass to a rational 6x6 Gram; prove all six leading principal minors positive and add the diagonal regularizer. Keep source semantics and Lean lift separate.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "exact-rational-structural-source-candidate",
+        "statement_status": "exact_checker_candidate_pending_lean_and_source_review",
+        "evidence_level": "exact_prefix_gram_checker",
+        "claim_status": "uniform_rotational_mass_lower_bound_open",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "physical_certificate_allowed": false,
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_rotational_mass_lower_certificate.csv",
+            "sha256": "E5386990995F592B1D31A36664ADDB7DD22157A65DB10B1B370EF59E20C8C481"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_ROTATIONAL_MASS_LOWER_CERTIFICATE_CHECK.md",
+            "sha256": "03F87650B920641C10142E670F677B4EDD154C67E106EBBA1E24DB4B4A2499C3"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\robot_final\\verify_compact_rotational_mass_lower_certificate.py",
+            "sha256": "62EAFA6847B0BC347318BF60AD5A989148697E8FA7D624A87F7B77D7FCCD9466"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\robot_final\\P4_ROTATIONAL_COERCIVITY_CERTIFICATE.md",
+            "sha256": "460FEAEB16ED0D39EECB950786C5BFCFCD4F3CAD090B2986E2158C537D8BC7A1"
+          }
+        ],
+        "metrics": {
+          "status": "ROTATIONAL_PREFIX_MASS_LOWER_CERTIFICATE",
+          "inertia_over_three": "1/3;1/5;7/60;1/15;1/30;1/60",
+          "prefix_matrix_dimension": "6",
+          "candidate_mu": "47/5000",
+          "leading_principal_minors": "11359/15000;29981881/225000000;4768182031/375000000000;3315209700379/5625000000000000;283363624051937/28125000000000000000;1177610493420899/1265625000000000000000000",
+          "rotational_lower_certified": "True",
+          "regularized_mass_lower": "9401/1000000",
+          "q_dependence": "none",
+          "formal_certificate_allowed": "False"
+        },
+        "derived_contract": {
+          "candidate_mu": "47/5000",
+          "regularized_mass_lower": "9401/1000000",
+          "q_dependence": "none",
+          "mechanism": "isotropic link inertia plus unit DH-axis prefix map",
+          "matrix_dimension": 6,
+          "leading_principal_minors_count": 6
+        },
+        "unresolved": [
+          "Lean_kernel_formalization_of_prefix_Gram_argument",
+          "exact_DH_axis_orthogonality_source_binding",
+          "Float64_and_libm_rounding_enclosure",
+          "translation_mass_and_full_M_source_semantics",
+          "P3_domain_and_flowpipe_coverage",
+          "coordinator_statement_and_comparator_receipt"
         ]
       }
     }
@@ -33324,6 +33391,41 @@
       "status": "pending_pinned_lean_compile",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T08:33:18.957147+00:00",
+      "kind": "node_added",
+      "node_id": "0cea98302dcb4fc68dda8df511bea6ae",
+      "parent_id": "8f7df5df39a041d7a972078830dbcee7",
+      "name": "P3.rotational_prefix_mass_lower_bound"
+    },
+    {
+      "at": "2026-09-07T08:33:18.957163+00:00",
+      "kind": "routeb_rotational_mass_lower_candidate_recorded",
+      "node_id": "0cea98302dcb4fc68dda8df511bea6ae",
+      "parent_id": "8f7df5df39a041d7a972078830dbcee7",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_rotational_mass_lower_certificate.csv",
+          "sha256": "E5386990995F592B1D31A36664ADDB7DD22157A65DB10B1B370EF59E20C8C481"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_ROTATIONAL_MASS_LOWER_CERTIFICATE_CHECK.md",
+          "sha256": "03F87650B920641C10142E670F677B4EDD154C67E106EBBA1E24DB4B4A2499C3"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\robot_final\\verify_compact_rotational_mass_lower_certificate.py",
+          "sha256": "62EAFA6847B0BC347318BF60AD5A989148697E8FA7D624A87F7B77D7FCCD9466"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\robot_final\\P4_ROTATIONAL_COERCIVITY_CERTIFICATE.md",
+          "sha256": "460FEAEB16ED0D39EECB950786C5BFCFCD4F3CAD090B2986E2158C537D8BC7A1"
+        }
+      ],
+      "regularized_mass_lower": "9401/1000000",
+      "status": "exact_checker_candidate_pending_lean_and_source_review",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -36980,5 +37082,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "c2e3e7aeea7ee5c7e786832a70a6539c361a8bbe7a78028cfce5b4771e6bee0e"
+  "state_checksum": "0c018b5e2b338f0b3f873d4c7688ef00aa84f5b13f2b65ea483545680b2f120c"
 }

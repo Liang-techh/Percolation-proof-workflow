@@ -1057,6 +1057,22 @@ polynomial remains a separate frontier.
   treating it as Float64 semantics, claiming all-entry mass coercivity, or
   opening the P3/formal gate.
 
+### T-P3-017 — rotational prefix mass lower-bound lift
+
+- status: `open` (external exact checker candidate recorded at Route-B revision 403)
+- owner: `大爱仙尊` for the concrete source/geometry binding; `巨阳仙尊` for
+  the smallest pinned Lean formalization of the prefix-Gram argument;
+- scope: consume `P3.rotational_prefix_mass_lower_bound` and the referenced
+  `routeB_compact_rotational_mass_lower_certificate.csv`. Establish the
+  exact six-link prefix-map inequality from isotropic inertia and unit DH-axis
+  semantics, and report all assumptions needed to turn the six positive
+  principal minors into `M(q) ⪰ 9401/1000000 I`;
+- deliver: a bounded Lean child, or a source-semantics obstruction with exact
+  principal-minor values, source hashes, and q-independence argument;
+- forbidden: using the result as Float64 evidence, silently adding
+  translational or Coriolis semantics, claiming inverse/flowpipe closure, or
+  promoting the Python checker result to the verified registry.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it
