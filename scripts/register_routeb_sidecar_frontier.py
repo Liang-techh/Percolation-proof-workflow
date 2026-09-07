@@ -1807,6 +1807,19 @@ CHILDREN = [
             "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_MinimalResidualBudgetAdapter.review.md",
         ],
     },
+    {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission",
+        "statement": "A typed comparator receipt audit separates source artifact identity, provenance, byte hash, exact statement digest, checker result, pending, rejected, and admission; missing authoritative fields remain pending and concrete mismatches are rejected.",
+        "proof_sketch": "Require expected artifact/hash/digest values and exact statement-equivalence evidence, define pending and rejected predicates, prove each missing field is pending and both pending/rejected states exclude admission, while leaving hash algorithm, byte binding, checker execution, VERIFIED, and registry promotion external.",
+        "lane": "lean_adapter",
+        "bottleneck": "provenance",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_TYPED_RECEIPT_AUDIT",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_TYPED_RECEIPT_AUDIT20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_TYPED_RECEIPT_AUDIT20260907_REVIEW.md",
+        ],
+    },
 ]
 
 
