@@ -35,29 +35,40 @@ the correction does not rewrite existing claims or review authorship.
 ## Current release-routing snapshot
 
 This snapshot supersedes the historical table above for new work released
-after the user's schedule change:
+after the user's latest six-agent schedule:
 
-| worker label | current bounded focus |
-|---|---|
-| 柳冠一 | Inbox 去重与 adapter/interface 结果回收 |
-| 苏梦辰 | Inbox 协作与 theorem-decomposition 结果整理 |
-| 幽魂魔尊 | 独立数学突破：P4 force/Schur bottleneck |
-| 大爱仙尊 | 独立数学突破：P3 true-DH coercivity bottleneck |
-| 古月方源 | Inbox 协作与 P8 主路线协调 |
-| Percolation 最终验证 | 唯一 admission、axiom、provenance 与最终 gate |
-| 巨阳仙尊 | Lean sidecar 编译、typed interface 与 repair |
-| 狂蛮魔尊 | Inbox 协作与不等式/反例难点协调 |
-| 红莲魔尊 | Inbox 协作与能量/Lyapunov 难点协调 |
+| worker label | slot | current bounded focus |
+|---|---:|---|
+| 柳冠一 | :00 | 数学证明：adapter 背后的实质数学与主路线瓶颈 |
+| 苏梦辰 | :10 | Lean theorem decomposition、pinned 编译与 repair |
+| 古月方源 | :20 | 数学证明：主路线探索与数学瓶颈 |
+| 狂蛮魔尊 | :30 | 数学证明：不等式 closure、强攻难点与反例辅助 |
+| 巨阳仙尊 | :40 | Lean 编译修复、typed interface 与 sidecar |
+| 红莲魔尊 | :50 | 数学证明：能量法、Lyapunov 与非线性恒等式 |
 
 ## Dispatch and synchronization throttle
 
-The coordinator may integrate inbox results locally on the 20-minute harvest
+The coordinator may integrate inbox results locally on the hourly harvest
 cycle. At that same harvest/release point, it may fetch, merge, and push the
-integrated batch once; this is the normal synchronization window requested by
-the user. Outside that window, do not routinely sync to GitHub unless there is
-a major mathematical breakthrough, a verified architecture milestone, or an
-explicit user request, to avoid competing with scheduled GitHub agents for the
-push channel.
+integrated batch once; outside that window, do not routinely sync to GitHub
+unless there is a major mathematical breakthrough, a verified architecture
+milestone, or an explicit user request, to avoid competing with scheduled
+GitHub agents for the push channel.
+
+## Next GitHub Lean validation batch
+
+These are task plans, not proof receipts. They are reserved for the next
+available `:10`/`:40` Lean slots and must return immutable review results with
+exact commit, pinned toolchain, exit code, theorem names, `#print axioms`, and
+placeholder scan. A green compile remains candidate evidence until independent
+integration gates are satisfied.
+
+| task | Lean owner | target | boundary |
+|---|---|---|---|
+| `GH-LEAN-P4-032-weighted-three-term` | 苏梦辰 | `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_WeightedThreeTerm.lean` | compile/repair only; preserve force-vs-accel types and do not claim source/coverage |
+| `GH-LEAN-P4-032-relative-additive` | 巨阳仙尊 | `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_RelativeAdditive.lean` | compile/repair only; verify `rho_eff/B_eff` statements and no sqrt/source admission |
+| `GH-LEAN-fixed-lambda-reserve` | 苏梦辰 | `examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_STRICT_RESERVE_FINAL_BRIDGE20260907.lean` | compile/repair only; explicit shared-lambda/total equalities must remain |
+| `GH-LEAN-body6-tail-minors` | 巨阳仙尊 | `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_TAILMINORS20260907.lean` | compile/repair only; tail subblock only, no full-body PSD/eigenvalue claim |
 
 ### T-P4-012 — typed remote-action repair contract
 

@@ -2076,6 +2076,13 @@ witness 的数学前置；仅关闭实数平方非负这一小项，不改变 ve
 候选只在 :10/:40 槽发布，最终 integration 仍由梁智炜负责；当前 body-6 主子式叶
 已登记到 revision 669，继续 fail-closed。
 
+### 2026-09-07 14:05 — 梁智炜排班 Lean 验证任务
+
+已将 P4 weighted-three-term、P4 relative-additive、fixed-λ strict reserve bridge、
+body-6 tail minors 写入 `Next GitHub Lean validation batch`。它们只投递给 :10/:40
+的苏梦辰与巨阳仙尊，要求 pinned 编译、错误修复、精确 theorem/axiom/placeholder
+receipt；绿色编译仍不能直接提升 registry。
+
 ### 2026-09-07 13:55 — 梁智炜收割 fixed-λ 定量 reserve
 
 fixed-λ quantitative reserve lower-bound 叶已登记到 DAG revision 668，提供显式
