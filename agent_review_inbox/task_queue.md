@@ -2280,7 +2280,9 @@ admissibility (`01a07ce8-3c04-7190-aefd-726786f3d47d`), P5 `K_path` interface
 (`01a07ce8-45fb-7c62-8dd2-f4ecc57540c5`).  The two initial Spark launches
 failed at the host usage-limit gate and were replaced by `gpt-5.6-luna`;
 the failed launches are retained as agent-history context, not mathematical
-results.  All four lanes remain forbidden from editing state/registry or
+results: fixed-lambda `01a07ce7-a82f-7212-97af-6824f8b984be` and central-FD
+`01a07ce7-bfc3-7cf2-8858-6be4cb31f600` both stopped before execution at the
+Spark usage-limit gate.  All four lanes remain forbidden from editing state/registry or
 claiming source, coverage, admission, or final closure.
 
 ### T-P5-028 moving-frame transport harvest (2026-09-07)
