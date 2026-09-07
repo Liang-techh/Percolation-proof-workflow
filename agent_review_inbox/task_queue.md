@@ -2157,3 +2157,16 @@ fetch during the intervening local mathematical work.
 
 These results are attached to the O1 candidate as conditional metadata only;
 the verified registry remains empty and `formal_certificate_allowed=false`.
+
+### T-P5-026 — feasible-cone SPN consumer (harvested 2026-09-07)
+
+- status: `pending_math_child`; source-independent exact mathematics only;
+- result: six feasible cones per channel, 36 product cones, 18 certificates up
+  to simultaneous global sign reversal; orthant nonnegativity can use rational
+  PSD-plus-entrywise-nonnegative (SPN) witnesses;
+- next: formalize cone cover, two-channel lift, orthant quadratic lemma and SPN
+  consumer; only then search against a concrete source-bound nonnegative
+  `K_path`;
+- forbidden: replacing `K_path` by a scalar without comparison, claiming
+  source/Jacobian binding, coverage, Lean verification, registry admission or
+  P5/P8/M4 closure.

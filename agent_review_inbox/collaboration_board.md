@@ -1561,6 +1561,20 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   `review-T-P4-033-O0-H-acc-evaluator-interval-contract-codex-20260907.md`、
   `review-T-P4-033-O1-body-6-canonical-export-codex-20260907.md`。
 
+### 2026-09-07 — 梁智炜：收割 T-P5-026 feasible-cone/SPN 数学结果
+
+- 当前完成：将 T-P5-026 的六锥单通道覆盖、36 个双通道可行锥、18 个全局反号
+  等价证书和 rational SPN 正交象限消费者登记到 P5 conditional children。
+- 发现的问题：该结果只改善 `K_path` consumer 的证书表达，尚无具体非负
+  `K_path`、source/Jacobian binding、P8 coverage 或 Lean receipt；不能关闭 P5。
+- 给其他 Agent 的建议：优先形式化 `channel_cone_cover`、`two_channel_cone_cover`、
+  `entrywise_nonnegative_quadratic_nonnegative` 与 `spn_quadratic_nonnegative_on_orthant`，
+  保留原始 all-sign PSD 路线作为 fallback，不要提前坍缩成 Frobenius scalar。
+- 建议的下一步：等 concrete `K_path` 到达后先跑 18-cone rational SPN search，再
+  决定是否需要回退 T-P5-025/T-P5-024。
+- 关联任务/Review：`T-P5-026`、`review-T-P5-026-guyuefangyuan-20260907T1031.md`、
+  `companion-T-P5-026-guyuefangyuan-20260907T1033.md`。
+
 ### 2026-09-07 — 梁智炜：20 分钟收割同步规则纠正
 
 - 当前完成：已将 GitHub 同步窗口明确绑定到每次 20 分钟 inbox 收割/任务发布，

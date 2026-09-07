@@ -13,6 +13,8 @@ P5_NODE = ROOT / "examples/routeb_p5_joint_centered_gain_lean"
 P5_024_REVIEW = ROOT / "agent_review_inbox/review-T-P5-024-kuangmanmozun-20260907T0945.md"
 P5_024_INDEPENDENT_REVIEW = ROOT / "agent_review_inbox/review-T-P5-024-juyangxianzun-20260907T1017.md"
 P5_025_REVIEW = ROOT / "agent_review_inbox/review-T-P5-025-liuguanyi-20260907T1020.md"
+P5_026_REVIEW = ROOT / "agent_review_inbox/review-T-P5-026-guyuefangyuan-20260907T1031.md"
+P5_026_COMPANION = ROOT / "agent_review_inbox/companion-T-P5-026-guyuefangyuan-20260907T1033.md"
 
 sys.path.insert(0, str(ROOT / "src"))
 from percolation_workflow.store import StateStore  # noqa: E402
@@ -34,7 +36,8 @@ def artifact(path: Path) -> dict[str, str]:
 
 
 def main() -> None:
-    files = [P5_024_REVIEW, P5_024_INDEPENDENT_REVIEW, P5_025_REVIEW, P5_NODE / "P5JointCenteredGain.lean",
+    files = [P5_024_REVIEW, P5_024_INDEPENDENT_REVIEW, P5_025_REVIEW,
+             P5_026_REVIEW, P5_026_COMPANION, P5_NODE / "P5JointCenteredGain.lean",
              P5_NODE / "README.md", P5_NODE / "lean-toolchain", P5_NODE / "verify.sh"]
     for path in files:
         if not path.is_file():
@@ -80,13 +83,34 @@ def main() -> None:
             "independent final-agent audit",
         ],
     }
+    p5_026 = {
+        "child_id": "T-P5-026",
+        "statement": "exact feasible-cone reduction and optional SPN certificate consumer for the direct K_path small-gain route",
+        "status": "pending_math_child",
+        "integration_status": "pending_coordinator_admission",
+        "admission_label": "pending",
+        "review_artifact": artifact(P5_026_REVIEW),
+        "companion_log": artifact(P5_026_COMPANION),
+        "source_independent": True,
+        "physical_source_binding": False,
+        "path_or_coverage_binding": False,
+        "registry_promoted": False,
+        "formal_certificate_allowed": False,
+        "evidence_boundary": "exact six-cone/18-certificate mathematics and SPN consumer design; no concrete K_path, source/coverage, Lean or admission receipt",
+        "required_followups": [
+            "formalize exact channel_cone_cover and two_channel_cone_cover",
+            "formalize orthant quadratic and SPN consumers",
+            "bind a concrete nonnegative K_path before certificate search",
+            "independent final-agent audit",
+        ],
+    }
     store = StateStore(STATE)
     state = store.load()
     node = find(state, NODE_NAME)
     children = list(node.metadata.get("conditional_children", []))
     by_id = {entry.get("child_id"): entry for entry in children if isinstance(entry, dict)}
     changed = False
-    for entry in (p5_024, p5_025):
+    for entry in (p5_024, p5_025, p5_026):
         if by_id.get(entry["child_id"]) != entry:
             by_id[entry["child_id"]] = entry
             changed = True
@@ -96,9 +120,10 @@ def main() -> None:
         state.event(
             "routeb_p5_mathematical_harvest_recorded",
             node_id=node.id,
-            child_ids=["T-P5-024", "T-P5-025"],
+            child_ids=["T-P5-024", "T-P5-025", "T-P5-026"],
             p5_024_status=p5_024["status"],
             p5_025_status=p5_025["status"],
+            p5_026_status=p5_026["status"],
             registry_promoted=False,
             formal_certificate_allowed=False,
         )
