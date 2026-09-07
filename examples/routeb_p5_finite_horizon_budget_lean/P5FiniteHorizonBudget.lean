@@ -105,7 +105,7 @@ theorem mixed_energy_rate
 horizon immediately implies strict sublevel retention at every earlier time. -/
 theorem linear_growth_stays_below_barrier
     (t T Zt Z0 B Zstar : ℝ)
-    (ht0 : 0 ≤ t) (htT : t ≤ T) (hB : 0 ≤ B)
+    (htT : t ≤ T) (hB : 0 ≤ B)
     (hgrowth : Zt ≤ Z0 + t * B)
     (hheadroom : Z0 + T * B < Zstar) :
     Zt < Zstar := by
@@ -139,7 +139,13 @@ theorem t1_fifty_fifty_headroom_from_rational
             <;> ring
       _ < 36000000000000000 * g0 ^ 3 := hcrit
       _ = (2 * g0) * (18000000000000000 * g0 ^ 2) := by ring
-  exact (mul_lt_mul_left hdenG).mp hscaled
+  by_contra hnot
+  have hrev :
+      18000000000000000 * g0 ^ 2 ≤
+        (Z0 + Hbar + Rbar / (2 * g0)) * (13 * SF) :=
+    le_of_not_gt hnot
+  have hmul := mul_le_mul_of_nonneg_left hrev (le_of_lt hdenG)
+  linarith
 
 /-- The available one-sided storage coercivity `A ≤ K*Z` cannot by itself be
 turned into a negative multiple of positive storage.  This concrete witness is
