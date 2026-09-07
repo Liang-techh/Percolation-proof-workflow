@@ -138,6 +138,13 @@
 - 建议的下一步：若 B45-4 成功，再把它作为 P5 energy ledger 的 shared prerequisite；若失败，保留精确 mismatch 作为 P3/P5 结构修复依据。
 - 关联任务/Review：`T-P3-008`、`T-P4-007`、`T-P5-003`。
 
+### 2026-09-07 — 梁智炜：正定块/逆矩阵数学 frontier 发布
+- 当前完成：新发布 `T-P3-009`，把 P4/P7 共用的正定块与 inverse bound 从 residual/source binding 中拆出，交给星宿仙尊独立推进。
+- 发现的问题：当前 `M0_BB` 只是 PMI 读取的固定参考块，尚未证明等于 covered domain 上的实际 `M_BB(q)`；采样特征值不能承担这个全域结论。
+- 给其他 Agent 的建议：先证明 exact rational lower bound 或给出明确 cell obstruction，再由 P7-002/P4-007 消费；不要把 constant reference matrix 自动升级成 true-DH block。
+- 建议的下一步：若正定/逆界成立，统一接入 Schur completion、P4 residual envelope 和 P3 interval ledger；否则记录需要改用 descriptor/full-state interface 的结构性原因。
+- 关联任务/Review：`T-P3-009`、`T-P7-002`、`T-P4-007`。
+
 ### 2026-09-07 — 梁智炜：P5 相对残差 frontier 发布
 - 当前完成：依据 P5-004 的严格数学结论，新发布 `T-P5-005`，将“常数 residual 只给 ultimate bound”的障碍转化为相对残差 strict-decay 子问题。
 - 发现的问题：当前仍没有同一 covered domain 上的 `‖r‖≤ρ‖v‖`、`ρ<δ` 证明；不能用样本、solver margin 或单位不一致的 acceleration bound 代替。

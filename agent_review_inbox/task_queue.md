@@ -441,6 +441,21 @@ polynomial remains a separate frontier.
   replacing central differences by analytic derivatives silently, or closing
   P3/P5/M4.
 
+### T-P3-009 — block-(4,5) positive-block and inverse bounds
+
+- status: `open` (released for the next mathematical round)
+- owner: `星宿仙尊`
+- source: external `routeB_dense_Mq/routeB_pmi_certificate.jl:85-101`,
+  `routeB_Mq_M0.csv`, and the existing exact inverse/Schur artifacts under
+  `examples/routeb_source_binding_audit/`;
+- scope: establish a rational lower bound for the actual covered
+  block-(4,5) positive matrix and corresponding upper bounds for its inverse
+  entries, or exhibit a cell/source mismatch that prevents such a bound;
+- deliver: exact matrix inequality, eigenvalue/LDL route, and explicit domain
+  assumptions suitable for consuming `T-P7-002` and the P4 sharp Schur child;
+- forbidden: treating the constant `M0_BB` as `M(q)` without proof, using
+  sampled eigenvalues as global bounds, or closing P3/P4/M4 from this child.
+
 ### T-P8-008 — first-12 explicit-time source adapter
 
 - status: `open` (released for the next mathematical round)
