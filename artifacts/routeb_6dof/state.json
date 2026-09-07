@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 440,
+  "revision": 441,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12467,7 +12467,26 @@
           "typed connection from lambda_upper_k to the pinned cell ledger",
           "all-cell witness/coverage receipt",
           "reconciliation of aggregate and per-cell lambda admissibility ledgers"
-        ]
+        ],
+        "frontier_repair_contract": {
+          "schema_version": 1,
+          "obstruction": "some declared eta=5.6 rows reject the historical lambda=5 or lambda=3 candidate",
+          "preferred_repair": "reuse fixed rational lambda=2 (theta=1) on each declared row and recompute the Schur margin",
+          "witness_receipt_key": "uniform_lambda_witnesses[eta=*,lambda=2.0]",
+          "acceptance_conditions": [
+            "every selected declared row is marked admissible_fixed_lambda=true",
+            "the exact quantized margin and a conservative positive rational lower bound are recorded",
+            "lambda remains fixed per cell and is not state-dependent",
+            "rejected historical rows remain immutable obstruction evidence"
+          ],
+          "next_missing_theorem": "lift the finite ledger witness to true-DH interval/source coverage",
+          "promotion_blocked_until": [
+            "source_binding_R_aB_equals_rB",
+            "coefficient_level_residual_absorption",
+            "complete_domain_coverage",
+            "pinned_lean_comparator_receipt"
+          ]
+        }
       }
     }
   },
@@ -35320,6 +35339,14 @@
       },
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T10:16:56.300985+00:00",
+      "kind": "routeb_fixed_cell_lambda_contract_refresh",
+      "node_id": "8cea6a84c5364384a723d88f00d9a516",
+      "parent_id": "35839e28b33e484f886081ddb6351c80",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -38976,5 +39003,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "9b8b4b6183e41660a7f9e6d9f22269b71946ffc2a028e83a9668f55908c5bb2e"
+  "state_checksum": "eab0ee92eeb51945a2125c1b8967d4b49d54554914cc63f88b08d238c6a31c36"
 }

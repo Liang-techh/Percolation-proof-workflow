@@ -205,6 +205,8 @@ def prepare_requests(store: StateStore, *, limit: int = 4,
                    'repair_policy': {'max_rounds': max_repair_rounds,
                                     'policy': 'bounded-host-repair-v1'},
                    'repair_context': repair_context,
+                   'frontier_repair_contract': node.metadata.get(
+                       'frontier_repair_contract'),
                    'decomposition_contract': {
                        'required_fields': ['sketch', 'children', 'comparator_gate'],
                        'comparator_gate_fields_per_child': [

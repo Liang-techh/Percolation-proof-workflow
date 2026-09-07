@@ -371,6 +371,7 @@ def explain_math_frontier(state: WorkflowState, jobs: Mapping[str, Any] | None =
             "math_bottleneck_reason": bottleneck.reason,
             "obstruction_rank": rank,
             "eligible": rank == 0 and (job_ids is None or node.id in job_ids),
+            "repair_contract": node.metadata.get("frontier_repair_contract"),
         })
     return rows
 
@@ -416,6 +417,7 @@ def project_frontier_receipt(state: WorkflowState, jobs: Mapping[str, Any] | Non
             "blocker": blocker,
             "evidence_hash": _evidence_hash(node),
             "priority": _LANE_ORDER[lane],
+            "repair_contract": node.metadata.get("frontier_repair_contract"),
         })
     return {"schema_version": 1, "formal_admission": "unchanged", "frontier": rows}
 

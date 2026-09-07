@@ -74,6 +74,25 @@ def main() -> int:
             "not_a_coverage_proof": True,
             "not_a_residual_decomposition": True,
         },
+        "frontier_repair_contract": {
+            "schema_version": 1,
+            "obstruction": "some declared eta=5.6 rows reject the historical lambda=5 or lambda=3 candidate",
+            "preferred_repair": "reuse fixed rational lambda=2 (theta=1) on each declared row and recompute the Schur margin",
+            "witness_receipt_key": "uniform_lambda_witnesses[eta=*,lambda=2.0]",
+            "acceptance_conditions": [
+                "every selected declared row is marked admissible_fixed_lambda=true",
+                "the exact quantized margin and a conservative positive rational lower bound are recorded",
+                "lambda remains fixed per cell and is not state-dependent",
+                "rejected historical rows remain immutable obstruction evidence",
+            ],
+            "next_missing_theorem": "lift the finite ledger witness to true-DH interval/source coverage",
+            "promotion_blocked_until": [
+                "source_binding_R_aB_equals_rB",
+                "coefficient_level_residual_absorption",
+                "complete_domain_coverage",
+                "pinned_lean_comparator_receipt",
+            ],
+        },
         "unresolved": [
             "exact Lean statement for strict rational interval membership",
             "typed connection from lambda_upper_k to the pinned cell ledger",
