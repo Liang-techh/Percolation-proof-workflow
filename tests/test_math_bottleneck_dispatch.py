@@ -53,6 +53,16 @@ class MathBottleneckDispatchTests(unittest.TestCase):
         self.assertEqual(decision.label, "evaluator_enclosure")
         self.assertEqual(decision.priority, 1)
 
+    def test_exact_coefficient_identity_is_a_first_class_math_bottleneck(self):
+        decision = explain_math_bottleneck({
+            "metadata": {
+                "math_lane": "lean_adapter",
+                "math_bottleneck": "exact-real-coefficient-identity",
+            },
+        })
+        self.assertEqual(decision.label, "coefficient_identity")
+        self.assertEqual(decision.priority, 1)
+
     def test_scheduler_uses_stable_math_order_but_never_relaxes_obstruction(self):
         state = WorkflowState()
         central = state.add_node("central_fd", "FD")

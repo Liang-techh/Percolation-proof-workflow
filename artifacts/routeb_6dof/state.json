@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 471,
+  "revision": 472,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13555,16 +13555,66 @@
         "frontier_repair_contract": {
           "schema_version": 1,
           "parent": "P4.true_dh_residual_map_coefficient_binding",
-          "next_agent_action": "Use M_DD*v+DeltaM_DB*a_B=0 and r_B-M_BD*v=0; preserve the minus sign and retain the explicit remote block term. This is conditional exact-real algebra, not Float64 source equivalence.",
-          "preserve_semantic_boundary": "conditional exact-real algebra, Float64 enclosure, and global coverage must remain separate",
+          "next_agent_action": "compile the exact-real O1 theorem against the current pin, then return zero-sorry, allowed-axiom, statement-comparator, and source-binding receipts",
+          "preserve_semantic_boundary": "keep the left-inverse algebra separate from block extraction, Float64 enclosure, norms, coverage, and physical source binding",
           "success_callback": "return pinned Lean/source comparator evidence; child remains open until coordinator admission",
           "formal_boundary": "no global residual absorption or flowpipe closure"
         },
         "unresolved": [
           "pinned_lean_compile_receipt",
           "zero_sorry_and_allowed_axioms_receipt",
-          "statement_comparator_receipt"
-        ]
+          "statement_comparator_receipt",
+          "uncompiled_exact_real_interface",
+          "typed_block_extraction_binding",
+          "M_DD_left_inverse_witness",
+          "Matrix_mulVec_orientation_and_associativity"
+        ],
+        "o1_interface_draft": {
+          "schema_version": 1,
+          "status": "INTERFACE_DRAFT__UNCOMPILED",
+          "theorem": "routeB_port_identity",
+          "definition": "R_port = -(M_BD * M_DD_inv * DeltaM_DB)",
+          "assumptions": {
+            "field": "ℝ",
+            "vectors": {
+              "v": "Fin d → ℝ",
+              "a_B": "Fin b → ℝ",
+              "r_B": "Fin b → ℝ"
+            },
+            "matrices": {
+              "M_DD": "Matrix (Fin d) (Fin d) ℝ",
+              "M_DD_inv": "Matrix (Fin d) (Fin d) ℝ",
+              "DeltaM_DB": "Matrix (Fin d) (Fin b) ℝ",
+              "M_BD": "Matrix (Fin b) (Fin d) ℝ"
+            },
+            "equations": [
+              "M_DD.mulVec v + DeltaM_DB.mulVec a_B = 0",
+              "r_B - M_BD.mulVec v = 0"
+            ],
+            "minimal_inverse_obligation": "M_DD_inv * M_DD = 1",
+            "semantic_contract_note": "A genuine two-sided inverse may be required by the upstream contract, but the displayed implication uses only the left-inverse equation."
+          },
+          "dimension_audit": {
+            "M_DD": "D×D",
+            "DeltaM_DB": "D×B",
+            "M_BD": "B×D",
+            "R_port": "B×B",
+            "product_order": "(B×D)(D×D)(D×B)=B×B",
+            "column_action": "Matrix.mulVec"
+          },
+          "report": {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_exact_real_coefficient_identity_20260907\\REPORT.md",
+            "sha256": "367211FEB1ED031720C059BDBAFBD8495CF431E5D3C2F25AA2C5448CDAD3CB33"
+          },
+          "receipt": {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_exact_real_coefficient_identity_20260907\\RECEIPT.json",
+            "sha256": "79365BDC91C27E48D3A3A12D2E4CD632BBF03546966511D0037DB1F8FECBF6DA"
+          },
+          "compile_claim": false,
+          "source_binding": false,
+          "registry_promoted": false,
+          "formal_certificate_allowed": false
+        }
       }
     },
     "0da99a7cef5e4f0b91c7cc06d9e7c010": {
@@ -37129,6 +37179,22 @@
       ],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T11:10:08.429981+00:00",
+      "kind": "routeb_o1_exact_real_coefficient_identity_draft_recorded",
+      "node_id": "120deab092c243b6a43356e63c8b56f4",
+      "draft_status": "INTERFACE_DRAFT__UNCOMPILED",
+      "report": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_exact_real_coefficient_identity_20260907\\REPORT.md",
+        "sha256": "367211FEB1ED031720C059BDBAFBD8495CF431E5D3C2F25AA2C5448CDAD3CB33"
+      },
+      "receipt": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_exact_real_coefficient_identity_20260907\\RECEIPT.json",
+        "sha256": "79365BDC91C27E48D3A3A12D2E4CD632BBF03546966511D0037DB1F8FECBF6DA"
+      },
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -40785,5 +40851,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "01cb9eb09249db0a3a989ab358222485bea46af58eb352c4e2057ac645058cad"
+  "state_checksum": "8d967a43a4170f6d106ec6df40eaaf41cb86edf15623f8a3319f5d1fbca6483b"
 }
