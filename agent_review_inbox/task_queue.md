@@ -203,7 +203,8 @@ without an explicit scoped request.
 
 ### T-P3-005 — minimal semantic-binding child theorem
 
-- status: `assigned` (梁智炜, bounded agent review)
+- status: `reviewed_pending` (integrated at Route-B revision 341; result:
+  `review-T-P3-005-semantic-binding-child.md`)
 - scope: isolate the smallest typed child interface that connects the
   canonical Julia/DH source to Lean/checker semantics, with explicit semantic
   premises and independent provenance hashes;
@@ -214,7 +215,8 @@ without an explicit scoped request.
 
 ### T-P5-002 — minimal Newton–Euler energy child
 
-- status: `assigned` (梁智炜, bounded agent review)
+- status: `reviewed_pending` (integrated at Route-B revision 341; result:
+  `review-T-P5-002-energy-child.md`)
 - scope: isolate a standalone energy/power identity or syzygy child theorem
   from the current 6-DOF dynamics implementation;
 - deliver: typed statement, exact dependencies, evidence level, and a focused

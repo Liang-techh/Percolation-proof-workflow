@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 340,
+  "revision": 341,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -7404,6 +7404,17 @@
             "integration_status": "integrated_as_pending_metadata",
             "classification": "pending_source_semantic_adapter",
             "admission_effect": "none"
+          },
+          {
+            "review_file": "agent_review_inbox/review-T-P3-005-semantic-binding-child.md",
+            "review_sha256": "1FF227A16E4F1DECE8BD85D3C4B84E4A2C5768ACC8D5A077307EC5A81C47BD49",
+            "task_id": "T-P3-005",
+            "source_agent": "Codex",
+            "created_at": "unknown",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_semantic_binding_child",
+            "admission_effect": "none",
+            "target_scope": "routeb_node"
           }
         ]
       }
@@ -7730,6 +7741,17 @@
             "classification": "energy_syzygy_reuse_audit",
             "admission_effect": "none",
             "format_warning": "missing_opening_yaml_delimiter"
+          },
+          {
+            "review_file": "agent_review_inbox/review-T-P5-002-energy-child.md",
+            "review_sha256": "AAAC74592B05801B110A474E5922AE16F48824A7EDA823B436C9141940EC36A4",
+            "task_id": "T-P5-002",
+            "source_agent": "Codex",
+            "created_at": "2026-09-06T00:00:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_energy_child",
+            "admission_effect": "none",
+            "target_scope": "routeb_node"
           }
         ]
       }
@@ -29677,6 +29699,30 @@
       "formal_certificate_allowed": false,
       "catalog": "anthropic-fermats-last-theorem",
       "source_commit": "aa2d8b3"
+    },
+    {
+      "at": "2026-09-07T02:56:34.617366+00:00",
+      "kind": "agent_review_integrated",
+      "review_file": "agent_review_inbox/review-T-P3-005-semantic-binding-child.md",
+      "review_sha256": "1FF227A16E4F1DECE8BD85D3C4B84E4A2C5768ACC8D5A077307EC5A81C47BD49",
+      "task_id": "T-P3-005",
+      "classification": "pending_semantic_binding_child",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "8f7df5df39a041d7a972078830dbcee7"
+    },
+    {
+      "at": "2026-09-07T02:56:34.617400+00:00",
+      "kind": "agent_review_integrated",
+      "review_file": "agent_review_inbox/review-T-P5-002-energy-child.md",
+      "review_sha256": "AAAC74592B05801B110A474E5922AE16F48824A7EDA823B436C9141940EC36A4",
+      "task_id": "T-P5-002",
+      "classification": "pending_energy_child",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "9a3a7eef35b34880b85423aac67ea015"
     }
   ],
   "agent_requests": {},
@@ -33162,5 +33208,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "bf4e7b8ec1838c34d65b306bc357fe8292a5b2b5bb2b47a83dfd934a91f0e822"
+  "state_checksum": "6f4b6c6d4e4d246568b13a213a93c07ff581e3201c703d71b897906e16d0007d"
 }

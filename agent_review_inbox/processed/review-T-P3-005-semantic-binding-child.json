@@ -1,0 +1,12 @@
+{
+  "review_file": "agent_review_inbox/review-T-P3-005-semantic-binding-child.md",
+  "review_sha256": "1FF227A16E4F1DECE8BD85D3C4B84E4A2C5768ACC8D5A077307EC5A81C47BD49",
+  "task_id": "T-P3-005",
+  "source_agent": "Codex",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_semantic_binding_child",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "integrated_at": "2026-09-07T02:56:34.617366+00:00"
+}

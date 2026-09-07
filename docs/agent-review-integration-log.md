@@ -3,7 +3,7 @@
 This log records durable integrations from `agent_review_inbox/`. The original
 review files and their SHA-256 markers remain in that directory.
 
-## 2026-09-06 / Route-B checkpoint revision 340
+## 2026-09-06 / Route-B checkpoint revision 341
 
 Integrated as pending metadata only:
 
@@ -28,10 +28,12 @@ Integrated as pending metadata only:
 | T-P3-004 | `P3.strict_true_dh_bounds` | `pending_source_semantic_adapter` | none |
 | T-FLT-DERIV-CALC | external reuse catalog | `flt_derivation_calculus_scan` | none |
 | T-FLT-TOPOLOGY-QUOTIENT-CLM | external reuse catalog | `flt_topology_quotient_scan` | none |
+| T-P3-005 | `P3.strict_true_dh_bounds` | `pending_semantic_binding_child` | none |
+| T-P5-002 | `P5.sparse_disjunctive_sos` | `pending_energy_child` | none |
 
 The authoritative `artifacts/routeb_6dof/state.json` was updated through
-`StateStore` from revision 328 to revision 340. Nineteen Route-B
-`agent_review_integrated` events, nineteen node provenance references, and two
+`StateStore` from revision 328 to revision 341. Twenty-one Route-B
+`agent_review_integrated` events, twenty-one node provenance references, and two
 event-only external-catalog integrations were added. Node statuses remain open
 and the verified registry remains empty.
 
@@ -65,3 +67,9 @@ semantics still require a separate machine-checkable binding receipt.
 The two Anthropic FLT scans are retained as advisory, provenance-bearing
 catalog events only. They do not create Route-B nodes, alter theorem
 dependencies, or qualify any theorem for registry promotion.
+
+P3-005 narrows the semantic-binding frontier to a premise-driven composition
+of the canonical source manifest, exact snapshot, abstract true-DH semantics,
+and interval enclosure. P5-002 identifies the exact Christoffel power identity
+as the smallest standalone energy child; both remain pending and below parent
+closure.
