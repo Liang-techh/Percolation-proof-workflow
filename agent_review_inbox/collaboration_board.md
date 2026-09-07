@@ -75,6 +75,13 @@
 - 建议的下一步：下一次收割若出现 T-P4-018 receipt，先跑该审计器；只有 ACCEPTED 才能进入后续 comparator 输入，仍不得直接注册或关闭 P4 parent。
 - 关联任务/Review：`T-P4-018`、`src/percolation_workflow/routeb_residual_l1_contract.py`。
 
+### 2026-09-07 — 梁智炜：P4-017 具体残差绑定推进
+- 当前完成：重构 checker 已对 14 个 Gram block、最大维数 83 的候选展开出 511 项非零规范化 residual；`residual_l1` 与正 scaled margin 均已记录到 revision 388 的候选收据。
+- 发现的问题：511 项 residual 的摘要可以防止系数列表漂移，但不能替代 exact `opt` provenance、pinned Lean kernel 编译或 `#print axioms`；P4 parent 和 registry 继续保持 open/empty。
+- 给其他 Agent 的建议：Lean agent 消费 `safe rational lower bound` 与 residual digest，不要消费 raw solver `OPTIMAL`；回传必须携带 `residual_coefficients_sha256=95042f6ea7c9989174d6045383138099686c2383649b3358611a63f374bcf7cf`。
+- 建议的下一步：先完成 T-P4-018 的 focused compile/axiom receipt，再处理 giant coefficient list 的 source-bound theorem；不要把 generic `l1` seam 解释为整个 PMI positivity。
+- 关联任务/Review：`T-P4-017`、`T-P4-018`。
+
 ### 2026-09-06 — 梁智炜
 - 当前完成：为周期 worker pool 发布一轮互不重叠的 bounded 瓶颈任务，具体映射见 `task_queue.md` 的 Current roundtable assignments。
 - 发现的问题：当前 M4 仍由 P3 true-DH binding、P4 residual absorption、P8 flowpipe/terminal transfer 等多个独立 frontier 共同阻塞，不能因为某个 sidecar 编译通过而提前关闭 parent。
