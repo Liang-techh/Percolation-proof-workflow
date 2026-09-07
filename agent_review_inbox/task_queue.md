@@ -1554,6 +1554,16 @@ polynomial remains a separate frontier.
   extraction, projected `h_D/h_B`, same-`(mu,q)` inverse binding, and pinned
   candidate/comparator receipts are supplied.
 
+### New harvest: O2 theta2 exact-real child (2026-09-07)
+
+- review: `review-T-P4-036.2-range-reduction-lemma-codex-20260907.md`
+- smallest Lean-facing target is one row, `theta2(q)=q-pi/2` for
+  `q ∈ [-3/20,3/20]`, with exact reduction `reduced2 q=q`, local sine/cosine
+  Taylor bounds, and quarter-turn transport. It is a proof draft, not compiled.
+- next action: Lean agent should locate/prove the integral Taylor remainder and
+  check the pinned `Real.sin/cos` API; Float64/libm, D1-D3 composition and
+  partition coverage remain separate open leaves.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it

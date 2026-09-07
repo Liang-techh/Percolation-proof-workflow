@@ -956,3 +956,8 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   pinned Mathlib 下报告编译通过，但 canonical candidate 尚无正式 receipt；
   已由 `record_routeb_o1_exact_identity_review.py` 接入 state rev 504，O1
   仍 open。下一步只攻左逆、block extraction 与 projected balance premises。
+
+- O2 新 review 将 exact-real trig 再压缩为单行 `theta2` child：
+  `theta2(q)=q-pi/2`、`q∈[-3/20,3/20]`，配合 Taylor remainder 和 quarter-turn
+  transport。当前为 `EXACT_REAL_THETA2_RANGE_REDUCTION_TAYLOR_DRAFT`，未编译；
+  已入队给 Lean agent，Float64/libm、D1-D3、coverage 仍 open。
