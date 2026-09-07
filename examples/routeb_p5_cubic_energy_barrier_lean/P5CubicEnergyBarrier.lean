@@ -38,8 +38,7 @@ quadratic damping whenever storage controls the damping energy and the
 energy-dependent gain stays below `g^2`. -/
 theorem cubic_square_absorption_from_energy_barrier
     (A Z PC Lambda K g : ℝ)
-    (hA : 0 ≤ A) (hZ : 0 ≤ Z)
-    (hLambda : 0 ≤ Lambda) (hK : 0 ≤ K) (hg : 0 ≤ g)
+    (hA : 0 ≤ A) (hLambda : 0 ≤ Lambda) (hg : 0 ≤ g)
     (hcoerce : A ≤ K * Z)
     (hcubic : PC ^ 2 ≤ Lambda * A ^ 3)
     (hbarrier : Lambda * K * Z ≤ g ^ 2) :
@@ -65,19 +64,12 @@ theorem cubic_square_absorption_from_energy_barrier
 energy imply strict power absorption. -/
 theorem cubic_square_strict_absorption_from_energy_barrier
     (A Z PC Lambda K g : ℝ)
-    (hA : 0 < A) (hZ : 0 ≤ Z)
-    (hLambda : 0 ≤ Lambda) (hK : 0 ≤ K) (hg : 0 ≤ g)
+    (hA : 0 < A) (hLambda : 0 ≤ Lambda) (hg : 0 < g)
     (hcoerce : A ≤ K * Z)
     (hcubic : PC ^ 2 ≤ Lambda * A ^ 3)
     (hbarrier : Lambda * K * Z < g ^ 2) :
     |PC| < g * A := by
-  have hA0 : 0 ≤ A := le_of_lt hA
   have hA2pos : 0 < A ^ 2 := sq_pos_of_pos hA
-  have hleft0 : 0 ≤ Lambda * K * Z := by
-    exact mul_nonneg (mul_nonneg hLambda hK) hZ
-  have hg2pos : 0 < g ^ 2 := lt_of_le_of_lt hleft0 hbarrier
-  have hgpos : 0 < g := by
-    nlinarith
   have hLambdaA : Lambda * A < g ^ 2 := by
     calc
       Lambda * A ≤ Lambda * (K * Z) :=
@@ -92,7 +84,6 @@ theorem cubic_square_strict_absorption_from_energy_barrier
       _ = (Lambda * A) * A ^ 2 := by ring
       _ < g ^ 2 * A ^ 2 := hscaled
       _ = (g * A) ^ 2 := by ring
-  have hy : 0 < g * A := mul_pos hgpos hA
   rw [abs_lt]
   constructor
   · by_contra hnot
@@ -110,9 +101,8 @@ theorem cubic_square_strict_absorption_from_energy_barrier
 explicit and only concludes nonincrease when that lane is nonpositive. -/
 theorem cubic_energy_barrier_dissipation
     (A Z Zdot PC PR PB Lambda K kappaR : ℝ)
-    (hA : 0 ≤ A) (hZ : 0 ≤ Z)
-    (hLambda : 0 ≤ Lambda) (hK : 0 ≤ K)
-    (hkappa0 : 0 ≤ kappaR) (hkappa1 : kappaR ≤ 1)
+    (hA : 0 ≤ A) (hLambda : 0 ≤ Lambda)
+    (hkappa1 : kappaR ≤ 1)
     (hledger : Zdot ≤ -A + PC + PR + PB)
     (hrel : PR ≤ kappaR * A)
     (hbias : PB ≤ 0)
@@ -123,7 +113,7 @@ theorem cubic_energy_barrier_dissipation
   have hg : 0 ≤ 1 - kappaR := by linarith
   have habs := cubic_square_absorption_from_energy_barrier
     A Z PC Lambda K (1 - kappaR)
-    hA hZ hLambda hK hg hcoerce hcubic hbarrier
+    hA hLambda hg hcoerce hcubic hbarrier
   have hPC : PC ≤ (1 - kappaR) * A := le_trans (le_abs_self PC) habs
   nlinarith
 
@@ -131,9 +121,8 @@ theorem cubic_energy_barrier_dissipation
 forces strict decrease if the bias lane is nonpositive. -/
 theorem cubic_energy_barrier_strict_dissipation
     (A Z Zdot PC PR PB Lambda K kappaR : ℝ)
-    (hA : 0 < A) (hZ : 0 ≤ Z)
-    (hLambda : 0 ≤ Lambda) (hK : 0 ≤ K)
-    (hkappa0 : 0 ≤ kappaR) (hkappa1 : kappaR < 1)
+    (hA : 0 < A) (hLambda : 0 ≤ Lambda)
+    (hkappa1 : kappaR < 1)
     (hledger : Zdot ≤ -A + PC + PR + PB)
     (hrel : PR ≤ kappaR * A)
     (hbias : PB ≤ 0)
@@ -141,10 +130,10 @@ theorem cubic_energy_barrier_strict_dissipation
     (hcubic : PC ^ 2 ≤ Lambda * A ^ 3)
     (hbarrier : Lambda * K * Z < (1 - kappaR) ^ 2) :
     Zdot < 0 := by
-  have hg : 0 ≤ 1 - kappaR := by linarith
+  have hg : 0 < 1 - kappaR := by linarith
   have habs := cubic_square_strict_absorption_from_energy_barrier
     A Z PC Lambda K (1 - kappaR)
-    hA hZ hLambda hK hg hcoerce hcubic hbarrier
+    hA hLambda hg hcoerce hcubic hbarrier
   have hPC : PC ≤ |PC| := le_abs_self PC
   nlinarith
 
@@ -187,7 +176,7 @@ theorem fourier_barrier_from_division_free
 /-- Final exact-real consumer for the one-scalar Fourier interface. -/
 theorem fourier_cubic_absorption_from_division_free_barrier
     (A Z PC SF g : ℝ)
-    (hA : 0 ≤ A) (hZ : 0 ≤ Z) (hSF : 0 ≤ SF) (hg : 0 ≤ g)
+    (hA : 0 ≤ A) (hSF : 0 ≤ SF) (hg : 0 ≤ g)
     (hcoerce : A ≤ 2600000 * Z)
     (hcubic : PC ^ 2 ≤ fdLambda SF * A ^ 3)
     (hbarrier :
@@ -198,7 +187,7 @@ theorem fourier_cubic_absorption_from_division_free_barrier
     positivity
   apply cubic_square_absorption_from_energy_barrier
       A Z PC (fdLambda SF) 2600000 g
-      hA hZ hLambda (by norm_num) hg hcoerce hcubic
+      hA hLambda hg hcoerce hcubic
   exact fourier_barrier_from_division_free SF Z g hbarrier
 
 #print axioms abs_le_of_sq_le_sq_nonneg
