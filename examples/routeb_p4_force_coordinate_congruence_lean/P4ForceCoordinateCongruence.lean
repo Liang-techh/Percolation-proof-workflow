@@ -96,8 +96,7 @@ theorem mixed_normalization_extremizer
   · rw [abs_of_nonneg hA, abs_one, mul_one]
   constructor
   · rw [abs_of_nonneg hF, abs_one, mul_one]
-  · rw [abs_one, mul_one]
-    exact abs_of_nonneg hsum
+  · simpa only [abs_one, mul_one] using abs_of_nonneg hsum
 
 /-- Exact channel-4 force scaling of the literal `1/20` nominal coefficient. -/
 theorem channel4_kc_force :
