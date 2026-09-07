@@ -54,6 +54,41 @@ without an explicit scoped request.
   rejected, or eligible for an existing explicit gate;
 - forbidden: changing status or registry directly.
 
+## Queue: next smallest leaves
+
+### T-P3-002 — fixed-point IEEE trace witness
+
+- status: `open`
+- scope: one fixed q-box and one `M[i,j]`, preferably at a deterministic
+  source point such as `q=0`;
+- deliver: a replayable Float64 operation/rounding witness or a precise reason
+  it cannot be produced with the current runtime; write only a review result;
+- forbidden: infer global interval soundness from one point or from equal bits.
+
+### T-P4-002 — one-channel true-DH residual envelope
+
+- status: `open`
+- scope: consume the exact Schur leaf for one channel and identify the smallest
+  executable source-binding witness for `d`, `p`, and the actual residual;
+- deliver: checker/Lean boundary, normalization map, and receipt contract;
+- forbidden: using the decimal audit as DH equality or closing P4 globally.
+
+### T-P8-002 — explicit-time 13-state parent option
+
+- status: `open`
+- scope: compare a new explicit-time 13-state parent with the existing
+  14-state ramp parent, including initial-domain and terminal statement changes;
+- deliver: a decision memo and minimal theorem signature, with no source edits;
+- forbidden: silently changing the target theorem or claiming flowpipe coverage.
+
+### T-M4-001 — dependency-cone closure audit
+
+- status: `open`
+- scope: use the current checkpoint and DAG projection to list the exact M4
+  prerequisite cone and identify which leaves can be proven independently;
+- deliver: review result with deterministic node IDs, levels, and next frontier;
+- forbidden: status promotion, deletion of failed history, or broad regression.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it

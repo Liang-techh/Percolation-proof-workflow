@@ -1,0 +1,11 @@
+{
+  "review_file": "../review-T-P3-002-ieee-trace.md",
+  "review_sha256": "AA9FB1BF1F40698577EFB880EF8CF4B3FC870857AD5816BADDDE584203468077",
+  "task_id": "T-P3-002",
+  "integrated_at": "2026-09-06T20:18:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "target_node": "P3.strict_true_dh_bounds",
+  "admission_effect": "none",
+  "classification": "pending_runtime_blocked",
+  "next_frontier": "expose pinned Julia and generate one fixed-point IEEE operation trace"
+}

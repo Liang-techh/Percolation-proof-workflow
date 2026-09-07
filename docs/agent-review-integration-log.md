@@ -13,10 +13,13 @@ Integrated as pending metadata only:
 | T-P4-001 | `P4.residual_schur_pmi` | `pending` | none |
 | T-WF-001 | `P0.reproducibility_baseline` / workflow audit | `documentation_only` | none |
 | T-P8-001 | `P8.independent_reachability` | `blocked_current_contract_conditional_adapter` | none |
+| T-P3-002 | `P3.strict_true_dh_bounds` | `pending_runtime_blocked` | none |
+| T-P4-002 | `P4.residual_schur_pmi` | `pending` | none |
+| T-P8-002 | `P8.independent_reachability` | `architecture_decision_pending_contract_change` | none |
 
 The authoritative `artifacts/routeb_6dof/state.json` was updated through
-`StateStore` from revision 328 to revision 330. Four
-`agent_review_integrated` events and four node provenance references were
+`StateStore` from revision 328 to revision 331. Seven
+`agent_review_integrated` events and seven node provenance references were
 added. Node statuses remain open and the verified registry remains empty.
 
 No review was promoted to `VERIFIED`; P3 source semantics, P4 true-DH residual

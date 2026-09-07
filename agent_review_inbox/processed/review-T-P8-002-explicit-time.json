@@ -1,0 +1,11 @@
+{
+  "review_file": "../review-T-P8-002-explicit-time.md",
+  "review_sha256": "3D36F7D889BEF845C9779B7F3EBEA23D9286F8C4D44A66E10B962A59BB91C75D",
+  "task_id": "T-P8-002",
+  "integrated_at": "2026-09-06T20:18:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "target_node": "P8.independent_reachability",
+  "admission_effect": "none",
+  "classification": "architecture_decision_pending_contract_change",
+  "next_frontier": "P8_SOURCE_CONTRACT_BINDING_13_OR_14"
+}
