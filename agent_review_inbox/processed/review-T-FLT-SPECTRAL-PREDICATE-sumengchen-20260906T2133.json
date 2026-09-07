@@ -1,0 +1,14 @@
+{
+  "review_file": "agent_review_inbox/review-T-FLT-SPECTRAL-PREDICATE-sumengchen-20260906T2133.md",
+  "review_sha256": "943481087766157154F0989EF5235F2CDA2D39F03C58D3EE7966ECE39823D8EB",
+  "task_id": "T-FLT-SPECTRAL-PREDICATE",
+  "source_agent": "苏梦辰",
+  "created_at": "2026-09-06T21:33:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_spectral_predicate_sidecar",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "79c2e82c9e1b064712e8e7dd11eba287539ffe03",
+  "admission_label": "architecture_only",
+  "integrated_at": "2026-09-07T03:35:51.097951+00:00"
+}

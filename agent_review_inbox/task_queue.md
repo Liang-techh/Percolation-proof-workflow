@@ -316,8 +316,9 @@ verification and registry gates can change admission state.
 
 ### T-FLT-SPECTRAL-PREDICATE — genuine eigenspace predicate sidecar
 
-- status: `reviewed_pending` (integrated at Route-B revision 347; statement
-  corrected, focused Lean blocked by incomplete/incompatible Mathlib `.olean`)
+- status: `reviewed_pending` (integrated at Route-B revision 348; current
+  version has a real eigenspace predicate, but Mathlib `.olean` verification
+  is blocked; prior reviews cover successive sidecar versions)
 - scope: replace the tautological range helper with a proposition containing an
   actual eigenspace predicate, explicit operator/eigenvalue assumptions, and a
   range-to-eigenspace equality or a clearly stated obstruction;
