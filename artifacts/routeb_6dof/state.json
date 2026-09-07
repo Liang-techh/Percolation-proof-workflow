@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 388,
+  "revision": 389,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -8390,7 +8390,8 @@
       "dependencies": [
         "9a3a7eef35b34880b85423aac67ea015",
         "4236b22d4cd54fa4bd7cb66f458e8768",
-        "edd8407c33f54c41867f03b46ec1e313"
+        "edd8407c33f54c41867f03b46ec1e313",
+        "c6cbcccc9a444686ba1c732e6f4f8d32"
       ],
       "verified_artifact": null,
       "attempts": [
@@ -10890,6 +10891,51 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_gram_residual_lean\\README.md",
             "sha256": "b8965137223b584a6b8fb0b40a64476bd7465ae72a05db0202b79c0e72d73489"
+          }
+        ]
+      }
+    },
+    "c6cbcccc9a444686ba1c732e6f4f8d32": {
+      "id": "c6cbcccc9a444686ba1c732e6f4f8d32",
+      "name": "M4.cross_branch_budget_transfer",
+      "statement": "The conditional P7 tail charge transfers into the improved M4 residual budget window by exact rational arithmetic.",
+      "parent_id": "6f06c8545bc24dc590b6e5ade85b684d",
+      "status": "open",
+      "proof_sketch": "Formalize D_new-D_old=1/10000, the old-gate rho_bar<=16 corollary, and the general slack form. Keep the P7 integral estimate and P8 ramp/source bindings as separate obligations.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean-pure-arithmetic",
+        "statement_status": "pending_pinned_lean_compile",
+        "evidence_level": "conditional_arithmetic_child",
+        "claim_status": "cross_branch_budget_arithmetic_open",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "preferred_route": true,
+        "unresolved": [
+          "pinned_lean_compile_receipt",
+          "zero_sorry_and_allowed_axioms_receipt",
+          "P7_integral_tail_charge_binding",
+          "P8_ramp_identity_binding"
+        ],
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_m4_cross_branch_budget_lean\\CrossBranchBudget.lean",
+            "sha256": "b7e23d4703957381ae99bb0dbce151a3b140c02c05af80a59b58bc2d8aad92b6"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_m4_cross_branch_budget_lean\\README.md",
+            "sha256": "e386e711ea097c9f07a3d60dbe74ec21163ab73380f9e3c5f463733be6f3925e"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_m4_cross_branch_budget_lean\\lean-toolchain",
+            "sha256": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_m4_cross_branch_budget_lean\\verify.sh",
+            "sha256": "812faadf02c375b8af2125224e12ebf5e85842ae303450e0f592b57e17c9507f"
           }
         ]
       }
@@ -31868,6 +31914,40 @@
       "status": "pending_exact_target_minus_opt_reconstruction",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T07:50:57.154462+00:00",
+      "kind": "node_added",
+      "node_id": "c6cbcccc9a444686ba1c732e6f4f8d32",
+      "parent_id": "6f06c8545bc24dc590b6e5ade85b684d",
+      "name": "M4.cross_branch_budget_transfer"
+    },
+    {
+      "at": "2026-09-07T07:50:57.154477+00:00",
+      "kind": "routeb_m4_cross_branch_budget_child_created",
+      "node_id": "c6cbcccc9a444686ba1c732e6f4f8d32",
+      "parent_id": "6f06c8545bc24dc590b6e5ade85b684d",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_m4_cross_branch_budget_lean\\CrossBranchBudget.lean",
+          "sha256": "b7e23d4703957381ae99bb0dbce151a3b140c02c05af80a59b58bc2d8aad92b6"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_m4_cross_branch_budget_lean\\README.md",
+          "sha256": "e386e711ea097c9f07a3d60dbe74ec21163ab73380f9e3c5f463733be6f3925e"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_m4_cross_branch_budget_lean\\lean-toolchain",
+          "sha256": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_m4_cross_branch_budget_lean\\verify.sh",
+          "sha256": "812faadf02c375b8af2125224e12ebf5e85842ae303450e0f592b57e17c9507f"
+        }
+      ],
+      "status": "pending_pinned_lean_compile",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -35524,5 +35604,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "aa3359f7e48d7c5e72bed7ebc4c90e93d2f6919ed7e908b67639389cd1e5eb37"
+  "state_checksum": "ccc05b655f5ed7b92bdba2fd97aabe2330c729294324e3349a75c6f7faec68c6"
 }
