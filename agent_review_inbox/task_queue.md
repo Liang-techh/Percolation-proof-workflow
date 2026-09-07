@@ -10,7 +10,7 @@ without an explicit scoped request.
 
 ### T-P3-001 — single-entry true-DH source bridge
 
-- status: `open`
+- status: `reviewed` (Codex, 2026-09-06T00:00:00-06:00; result: `review-T-P3-001-p3-audit.md`)
 - scope: one fixed rational q-box and one `M[i,j]` entry;
 - inspect: `docs/routeb-p3-next-concrete-child.md`,
   `examples/routeb_p3_mass_entry_bridge_lean/`;
@@ -21,7 +21,7 @@ without an explicit scoped request.
 
 ### T-P4-001 — residual source binding
 
-- status: `open`
+- status: `claimed` (Codex, 2026-09-06)
 - scope: one P4 residual/Schur channel and its exported decimal or rational
   witness;
 - inspect: `examples/routeb_p4_next_child/`,
@@ -46,6 +46,8 @@ without an explicit scoped request.
 ### T-WF-001 — registry/admission boundary audit
 
 - status: `open`
+- claimed_by: `Codex`
+- claimed_at: `2026-09-06T20:20:00-06:00`
 - scope: read-only audit of any proposed `review_result` against
   `model.py`, `registry.py`, `comparator.py`, and the current Route-B state;
 - deliver: whether integration is documentation-only, DAG metadata, pending,
