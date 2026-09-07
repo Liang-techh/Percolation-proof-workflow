@@ -2169,3 +2169,11 @@ open/uncompiled children，DAG revision 678。前者把 `E≤B+rho*E` 的收缩�
 该叶把 `A−X·D·Y` 的两个显式 reciprocal 通道与 solve-column/matrix-action
 两种求值路径对齐，但 A/X/Y 仍是外部块；没有宣称完整 Schur PSD、全域覆盖、
 Lean 编译或 registry admission。
+
+### 2026-09-07 — 梁智炜继续推进 source/closure 瓶颈
+
+下一轮四线分别处理：body-6 mixed-block source-binding contract；P4 pointwise
+rho<1 缺少 uniform gap 的精确反例与 uniform consumer；fixed-λ reindex 到
+strict-slack 的 composed adapter；P3 family specialization 到 cap budget 的
+typed consumer。任务均保持独立、exact/conditional、未编译，不触碰 registry 或
+formal gate。

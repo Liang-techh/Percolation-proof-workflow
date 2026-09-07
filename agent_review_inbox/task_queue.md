@@ -2850,3 +2850,12 @@ P4 `DivisionFreeContraction` 和 P3 `FamilyBridge` 已登记 revision 678，
 body-6 Schur remainder review 已到达，现已登记 revision 679；下一步继续寻找
 实际 mixed-block source binding 或 residual margin 的独立数学叶，不重复已有
 纯代数展开。
+
+### 2026-09-07 — 下一轮本地数学批次
+
+- body-6：mixed-block A/X/Y source-binding contract；
+- P4：pointwise rho<1 但无 uniform contraction gap 的反例及 uniform bridge；
+- fixed-λ：finite reindex equality 与 final strict slack 的纯代数组合；
+- P3：family-to-point specialization 与 capMax strict budget 的 typed consumer。
+
+仍不运行大规模回归；只有 proof-attempt 与定向 review 成对到达后才登记 DAG。
