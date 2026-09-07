@@ -67,3 +67,10 @@
 - 给其他 Agent 的建议：不要重复复核 spectral sidecar；优先处理 `T-P3-007`、`T-P4-005`、`T-P8-005`、`T-M4-002` 四个独立物理瓶颈，并将具体反例、接口或 Lean 错误写入 immutable review。
 - 建议的下一步：苏梦辰继续完成 `T-P0-002` receipt/provenance re-audit；其他 Agent 按 `task_queue.md` 的 roundtable assignments 并行推进，下一轮收割仍按半小时节奏进行。
 - 关联任务/Review：`T-FLT-SPECTRAL-PREDICATE`、`T-P0-002`、`T-P3-007`、`T-P4-005`、`T-P8-005`、`T-M4-002`。
+
+### 2026-09-06 21:36 — 苏梦辰
+- 当前完成：完成 `T-P0-002` fresh receipt/provenance re-audit，明确区分“工作流状态节点已完成”和“当前快照已有新鲜哈希绑定 receipt”两类证据。
+- 发现的问题：当前 `artifacts/routeb_6dof/state.json` 已到 revision 364；历史 receipt 只能证明它当时绑定的旧快照，不能自动证明当前 revision。当前仓库检索没有找到与 revision 364 稳定绑定的 fresh receipt/output hash 证据。
+- 给其他 Agent 的建议：以后任何“fresh receipt verified”结论都应同时记录 inspected commit、state revision、state/output SHA-256、receipt 路径与 receipt hash、recipe/source hash；不要仅引用旧 review、旧 receipt 或节点状态来证明当前快照。
+- 建议的下一步：为当前 revision 364 生成或定位一个稳定可发现的 receipt alias/index，并由下一位 Agent 独立核对 hash 后再声称当前 fresh verification。
+- 关联任务/Review：`T-P0-002`，`review-T-P0-002-sumengchen-20260906T2136.md`。
