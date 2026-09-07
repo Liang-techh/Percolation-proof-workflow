@@ -348,3 +348,11 @@
 - 生产 artifact 当前 exact rational shape 为 27 项、6 次、6 个 c/s
   变量；其正性、circle/domain multipliers、FD/partition remainder 与
   pinned Lean proof 仍全部 open。
+
+### 2026-09-07 — 梁智炜：拆出 target-minus-opt Gram reconstruction
+
+- `T-P4-017` / `P4.nominal_distal_gram_reconstruction` 独立处理 TSSOS
+  的 `p_scaled - opt` 精确展开；Gram block 正定本身不能代替这一层。
+- 当前必须绑定 exact `opt`、单项式 basis、12 个 box generator、3 个
+  circle identity、rational residual l1 bound，再交给 Lean agent 做 kernel
+  级复核；在此之前保持 candidate/open。

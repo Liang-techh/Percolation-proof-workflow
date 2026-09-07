@@ -127,6 +127,21 @@ GitHub agents for the push channel.
 - forbidden: two independent component gains, floating PSD, sampled positivity,
   or any claim of global coverage / residual / flowpipe closure.
 
+### T-P4-017 — exact target-minus-opt Gram reconstruction
+
+- status: `open` (separated from PMI positivity 2026-09-07)
+- owner: `大爱仙尊` for exact rational expansion and residual bound;
+  `巨阳仙尊` for the Lean representation/receipt adapter;
+- source: rational Gram payload plus local monomial basis, scalar PMI target,
+  and the recorded lower-bound candidate;
+- scope: reconstruct `p_scaled - opt` exactly modulo the 12 box generators
+  and three circle identities, then prove the rational residual bound and
+  positive margin;
+- deliver: exact `opt` provenance, expansion identity, all Gram PSD evidence,
+  and a fail-closed receipt separating rational candidate from kernel proof;
+- forbidden: inferring target equality from positive Gram blocks alone, using
+  a decimal `opt` without exact provenance, or claiming Route-B closure.
+
 ## Queue: Route-B current bottlenecks
 
 ### T-P3-001 — single-entry true-DH source bridge

@@ -60,6 +60,7 @@ TASK_TARGETS = {
     "T-P4-014": ("P4.residual_schur_pmi", "pending_vector_remote_pmi_composition"),
     "T-P4-015": ("P4.residual_schur_pmi", "pending_nominal_distal_descriptor_bridge"),
     "T-P4-016": ("P4.residual_schur_pmi", "pending_nominal_distal_tail_pmi"),
+    "T-P4-017": ("P4.residual_schur_pmi", "pending_tail_gram_reconstruction"),
     "T-P3-007": ("P3.strict_true_dh_bounds", "pending_concrete_mass_entry_bridge"),
     "T-P4-005": ("P4.residual_schur_pmi", "pending_one_channel_source_binding"),
     "T-P4-006": ("P4.residual_schur_pmi", "pending_sharp_schur_formalization"),
