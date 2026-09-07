@@ -671,3 +671,17 @@
   `1e-12` 网格的保守正下界为 `10753438857/250000000000`；eta=2.7 的
   对应保守下界为 `80204110037/500000000000`。这些分数只证明声明 CSV
   行的量化 witness，不能替代真实 DH remainder 或全域 coverage。
+
+### 2026-09-07 — 梁智炜：建立 true-DH port source-binding theorem target
+
+- 新增 `P4.true_dh_port_source_binding`，挂在
+  `P4.residual_schur_pmi` 下，明确主阻塞不是再做一遍 Frobenius 数值
+  审计，而是证明同一 typed residual map 满足
+  `R a_B = r_B = (M_mu(q)a)_B`。
+- target 强制绑定 `M_mu=M+1/1000000 I`、central-FD `h=1/100000`、
+  force-scale `q5/100,q4/200`，并保留显式 `M_BD(q)a_D`。source audit、
+  nominal bridge 和 port budget 只作为输入 provenance，均不自动关闭该
+  theorem。
+- 该节点进入 `source_semantics/source_binding` frontier，等待 source/Lean
+  agent 给出系数级 adapter、pinned compile 和 comparator receipt；在此
+  之前 P4/M4 gate 不变。
