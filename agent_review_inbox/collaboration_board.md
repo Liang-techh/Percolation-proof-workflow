@@ -1471,3 +1471,28 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - checker 状态为 `PASS_EXACT_BODY3_TARGET_COEFFICIENTS_FAIL_CLOSED`；source
   expansion、trace fold、`h_body_3` 和 Lean compile 仍为 false，receipt hash
   已记录到 O1 candidate leaves。
+
+### 2026-09-08 — O1 keyed regrouping interface gate
+
+- 新增 interface checker，确认 `Fin 610/727/6`、共同 `FourierKey`、
+  `CoeffPair=ℚ×ℚ`、payload/trace/body finite folds 和三个 regrouping target
+  均存在，且无 `sorry/admit/axiom` shortcut。
+- 结果为 `PASS_TYPED_KEYED_REGROUPING_INTERFACE_FAIL_CLOSED`；Lean compile、
+  payload-trace equality、keyed regrouping theorem 和 registry 仍为 false，结果
+  已绑定到 O1 candidate state。
+
+### 2026-09-08 — O1 body-4 exact coefficient gate
+
+- human body-4（zero-based `3`）的 40 个 tagged atoms 已通过精确 key-map checker，
+  与 adapter 中七项 `(0,0)` Fourier 目标及其余非零 entry 一致。
+- 新 receipt 状态为 `PASS_EXACT_BODY4_TARGET_COEFFICIENTS_FAIL_CLOSED`；source
+  expansion、trace fold、`h_body_4` 和 Lean compile 仍为 false，已记录到 state
+  revision `570`。Anthropic advisory overlay 已刷新到同一 revision。
+
+### 2026-09-08 — P-MU/P-BUDGET block API harvest
+
+- exact block API 已确认：`P_B(M+μI₆)P_Bᵀ=P_BMP_Bᵀ+μI₂`，且 off-block 不变；
+  focused API check 为 `2 passed, 32 deselected`。
+- 该结果仅为 `PASS_CONDITIONAL_EXACT_API_OPEN_SOURCE_BINDING`。仍缺 `H_acc`、
+  `H_mu`、`H_mu_1e6` 三个 physical source binding，不消费 P-BUDGET、baseline
+  或 strict Schur margin；`μ=1/10^6` 与 binary64 decode 的差异已保留。

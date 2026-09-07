@@ -115,7 +115,7 @@
     },
     {
       "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean",
-      "sha256": "E16C7420996CEB395FCDE479C0A255748DEC1F6859FDD4E1B7F821D5784AF0CF",
+      "sha256": "C6FC99DE41F8A5010CD79F18B89FD39811B63717810E437A5AE88DD6095F2FE7",
       "role": "existing per-body target adapter"
     },
     {

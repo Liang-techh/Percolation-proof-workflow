@@ -1,0 +1,79 @@
+{
+  "schema": "routeb.o1.true_dh_exact_typed_mdd_source.body_4_source_bridge.v1",
+  "status": "OPEN_BODY_4_SOURCE_AND_TRACE_PREMISES",
+  "body_label": 4,
+  "zero_based_body": 3,
+  "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+  "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+  "lean_adapter": {
+    "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean",
+    "sha256": "C6FC99DE41F8A5010CD79F18B89FD39811B63717810E437A5AE88DD6095F2FE7",
+    "status": "TARGETS_ONLY_UNCOMPILED"
+  },
+  "trace_input": {
+    "path": "artifacts/task_routeb_body_trace_sink_current/outputs/routeB_fourier_mass_body_trace.csv",
+    "sha256": "AE1F9CD7978C4CF23626B5C097EAAF4A2C70DE9C8B86A31A61DB12997CF4C3B9",
+    "frequency_coordinates": ["q 1", "q 2"]
+  },
+  "exact_piecewise_fourier_expression_zero_based": {
+    "entry_0_0": "48511/600000 + (42/3125)*sin(q 1) + (19/3125)*sin(q 1+q 2) - (441/50000)*cos(2*q 1) + (399/50000)*cos(q 2) - (399/50000)*cos(2*q 1+q 2) - (361/200000)*cos(2*q 1+2*q 2)",
+    "entry_0_1": "-(19/10000)*cos(q 1+q 2) - (21/5000)*cos(q 1)",
+    "entry_1_0": "-(19/10000)*cos(q 1+q 2) - (21/5000)*cos(q 1)",
+    "entry_0_2": "-(19/10000)*cos(q 1+q 2)",
+    "entry_2_0": "-(19/10000)*cos(q 1+q 2)",
+    "entry_0_3": "(1/15)*cos(q 1+q 2)",
+    "entry_3_0": "(1/15)*cos(q 1+q 2)",
+    "entry_1_1": "211/2400 + (399/25000)*cos(q 2)",
+    "entry_1_2": "21083/300000 + (399/50000)*cos(q 2)",
+    "entry_2_1": "21083/300000 + (399/50000)*cos(q 2)",
+    "entry_2_2": "21083/300000",
+    "entry_3_3": "1/15",
+    "all_other_entries": "0",
+    "coefficient_labels": [
+      "(nu2=-2,nu3=-2, real=-361/400000, imag=0)",
+      "(nu2=-2,nu3=-1, real=-399/100000, imag=0)",
+      "(nu2=-2,nu3=0, real=-441/100000, imag=0)",
+      "(nu2=-1,nu3=-1, real=0, imag=19/6250)",
+      "(nu2=-1,nu3=0, real=0, imag=21/3125)",
+      "(nu2=0,nu3=-1, real=399/100000, imag=0)",
+      "(nu=0, real=48511/600000, imag=0)",
+      "(nu2=0,nu3=1, real=399/100000, imag=0)",
+      "(nu2=1,nu3=0, real=0, imag=-21/3125)",
+      "(nu2=1,nu3=1, real=0, imag=-19/6250)",
+      "(nu2=2,nu3=0, real=-441/100000, imag=0)",
+      "(nu2=2,nu3=1, real=-399/100000, imag=0)",
+      "(nu2=2,nu3=2, real=-361/400000, imag=0)"
+    ]
+  },
+  "lean_targets": {
+    "piecewise_definition": "body_4_piecewise",
+    "source_expansion": "h_body_4_source_expanded_target",
+    "source_to_trace": "h_body_4_source_entry_target",
+    "source_expected_piecewise": "h_body_4_expected_entry_target",
+    "trace_fold": "h_body_4_trace_fold_target",
+    "conditional_composition": "h_body_4_of_entry_targets",
+    "premise_policy": "targets are Props only; no h_body_4 proof or premise field is supplied"
+  },
+  "reusable_geometry_lemmas": [
+    "body zero-based 3 has active joints 0,1,2,3 and bodyJv column 3 is zero because the fourth DH step has a=0",
+    "origin slots 0..3 and parent axes 0..3 are obtained by prefixFrame expansion",
+    "z0=(0,0,1), z1=z2=(-sin(q 0),cos(q 0),0), and z3 is the explicit q 1/q 2 rotated axis",
+    "origin slot 4 - origin slot 3 = (19/100)*z3",
+    "bodyJv/bodyJw active-column formulas and explicit dot products remove q 0 from scalar Gram entries",
+    "routeBMass 3=2/5 and routeBInertia 3 is diagonal isotropic with scalar 1/15",
+    "sin/cos parity, sin_sq_add_cos_sq, and double-angle identities for q 1 and q 2"
+  ],
+  "proof_status": {
+    "source_expansion": "OPEN_NO_PROOF",
+    "trace_fold": "OPEN_NO_PROOF",
+    "verified": false,
+    "registry_eligible": false,
+    "comparator_accepted": false,
+    "formal_certificate_allowed": false
+  },
+  "compile_probe": {
+    "status": "NOT_ATTEMPTED_BY_REQUEST",
+    "lean_or_lake_run": false
+  },
+  "next_exact_action": "Prove the body-4 prefix-frame coordinate/axis lemmas and the finite tagged-fold reduction in the pinned Lean environment, then apply h_body_4_of_entry_targets under the same source/state key."
+}

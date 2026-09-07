@@ -1,0 +1,131 @@
+{
+  "schema": "routeb.o0.p_ne.body4_geometry_targets.v1",
+  "status": "CONDITIONAL_BODY4_GEOMETRY_DERIVATION",
+  "consumable_now": false,
+  "main_state_modified": false,
+  "registry_promoted": false,
+  "baseline_consumed": false,
+  "schur_margin_consumed": false,
+  "lean_lake_run": false,
+  "scope": "human body-4, zero-based body index 3 only; exact DH Jacobian/Gram/Fourier target",
+  "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+  "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+  "orientation": "source-frame DH; prefix frame slots; T3 = (2/5) Gv + (1/15) Gw",
+  "exact_symbols": {
+    "phi": "q 1 + q 2",
+    "er": "(cos(q 0), sin(q 0), 0)",
+    "et": "(-sin(q 0), cos(q 0), 0)",
+    "e3": "(0,0,1)",
+    "U": "2/25 + (21/100) * sin(q 1)",
+    "B": "(21/100) * sin(q 1)",
+    "C": "(21/100) * cos(q 1)",
+    "D": "1/20",
+    "E": "19/200",
+    "A": "U + E * sin(phi)",
+    "P": "C + E * cos(phi)",
+    "Q": "B + E * sin(phi)"
+  },
+  "slot_axis_reduction": {
+    "origins": {
+      "o0": "0",
+      "o1": "(2/25) er + (1/10) e3",
+      "o2": "U er + (1/10 + C) e3",
+      "o3": "o2 + D et",
+      "o4": "o3 + (19/100) z3"
+    },
+    "axes": {
+      "z0": "e3",
+      "z1": "et",
+      "z2": "et",
+      "z3": "sin(phi) er + cos(phi) e3"
+    },
+    "q3_absent_reason": "DH step 3 has a_3=0; body-4 uses source axis slot 3 and COM slots 3,4"
+  },
+  "active_columns": {
+    "jv": {
+      "0": "A et - D er",
+      "1": "(C + E cos(phi)) er - (B + E sin(phi)) e3",
+      "2": "E (cos(phi) er - sin(phi) e3)",
+      "3": "0",
+      "4_plus": "0"
+    },
+    "jw": {
+      "0": "e3",
+      "1": "et",
+      "2": "et",
+      "3": "z3",
+      "4_plus": "0"
+    }
+  },
+  "required_trig_identities": [
+    "er dot er = et dot et = 1; er dot et = 0; e3 orthogonal to er,et",
+    "sin^2(x) + cos^2(x) = 1",
+    "sin(q1) sin(phi) + cos(q1) cos(phi) = cos(q2)",
+    "sin^2(x) = (1 - cos(2x))/2",
+    "sin(x) sin(y) = (cos(x-y) - cos(x+y))/2"
+  ],
+  "exact_fourier_target": {
+    "T00": "48511/600000 + (42/3125) sin(q1) + (19/3125) sin(q1+q2) + (399/50000) cos(q2) - (441/50000) cos(2q1) - (399/50000) cos(2q1+q2) - (361/200000) cos(2q1+2q2)",
+    "T01_T10": "-(21/5000) cos(q1) - (19/10000) cos(q1+q2)",
+    "T02_T20": "-(19/10000) cos(q1+q2)",
+    "T03_T30": "(1/15) cos(q1+q2)",
+    "T11": "211/2400 + (399/25000) cos(q2)",
+    "T12_T21": "21083/300000 + (399/50000) cos(q2)",
+    "T22": "21083/300000",
+    "T33": "1/15",
+    "zero_entries": ["T13", "T31", "T23", "T32"]
+  },
+  "minimal_compiled_lemmas": [
+    "body4_frame_slot_0_to_4",
+    "body4_slot_origin_exact",
+    "body4_source_axis_exact",
+    "body4_com_displacements_exact",
+    "body4_cross_columns_exact",
+    "body4_angular_columns_exact",
+    "body4_dot_trig_orthonormal",
+    "body4_gram_entries_exact",
+    "body4_mass_entries_exact",
+    "body4_fourier_atom_fold_exact",
+    "h_body_4_source_to_trace_compiled"
+  ],
+  "required_final_statement": "forall q i j, sourceBodyMass q (3 : Fin 6) i j = bodyTraceEvaluator 3 q i j",
+  "current_proof_boundary": {
+    "source_body4_bridge": "target-level/open; no compiled proof in this receipt",
+    "trace_evaluator": "generated/uncompiled",
+    "source_binding_proven": false,
+    "axiom_audit": "not available because no compile was run",
+    "sorry_admit_audit": "not available because no compile was run"
+  },
+  "evidence": [
+    {
+      "path": "examples/routeb_real_dh_step_lean/RealDHStep.lean",
+      "sha256": "9C04DA5B9627EE749C53009733006934F95B2D33265E46CA59D0725AA453786A",
+      "role": "exact DH step and phase definitions"
+    },
+    {
+      "path": "examples/routeb_frame_slot_accessor_lean/FrameSlotAccessor.lean",
+      "sha256": "F497BD1F45FAE4DD385F4D0F46DF79252C92E5CD027B29D5DC55011F91525C31",
+      "role": "prefix frame slot/origin/axis access"
+    },
+    {
+      "path": "examples/routeb_body_semantic_core_lean/BodySemanticCore.lean",
+      "sha256": "FE15F6CA9993F55FC56E6D2C9CCA5FA8C7F6E9530B9B900A6F111ED96715149C",
+      "role": "COM/Jv/Jw/body Gram semantics"
+    },
+    {
+      "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyExactSource.lean",
+      "sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553",
+      "role": "source mass/inertia constants and body source definition"
+    },
+    {
+      "path": "examples/routeb_b45_source_comparator_lean/BodyTraceEvaluator.lean",
+      "sha256": "B9845D37B5DCD16E1F9E142CB2E4D0E5571452993E843C85AC8CD643F6BA5DEA",
+      "role": "generated body trace evaluator; uncompiled"
+    },
+    {
+      "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean",
+      "sha256": "C6FC99DE41F8A5010CD79F18B89FD39811B63717810E437A5AE88DD6095F2FE7",
+      "role": "body proposition targets; uncompiled"
+    }
+  ]
+}

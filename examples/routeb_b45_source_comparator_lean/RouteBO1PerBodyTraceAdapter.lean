@@ -241,6 +241,182 @@ theorem h_body_3_of_entry_targets
         else 0) := h_source q i j
     _ = bodyTraceEvaluator 2 q i j := h_trace q i j
 
+/- Human body 4 is zero-based body 3.  Its exact trace uses q 1 and q 2. -/
+def body_4_piecewise (q : Q6) (i j : Joint) : ℝ :=
+  if i = (0 : Joint) ∧ j = (0 : Joint) then
+    (48511 / 600000 : ℝ) +
+        (42 / 3125 : ℝ) * Real.sin (q (1 : Joint)) +
+        (19 / 3125 : ℝ) * Real.sin (q (1 : Joint) + q (2 : Joint)) -
+        (441 / 50000 : ℝ) * Real.cos (2 * q (1 : Joint)) +
+        (399 / 50000 : ℝ) * Real.cos (q (2 : Joint)) -
+        (399 / 50000 : ℝ) * Real.cos (2 * q (1 : Joint) + q (2 : Joint)) -
+        (361 / 200000 : ℝ) * Real.cos (2 * q (1 : Joint) + 2 * q (2 : Joint))
+  else if i = (0 : Joint) ∧ j = (1 : Joint) then
+    (-19 / 10000 : ℝ) * Real.cos (q (1 : Joint) + q (2 : Joint)) -
+        (21 / 5000 : ℝ) * Real.cos (q (1 : Joint))
+  else if i = (1 : Joint) ∧ j = (0 : Joint) then
+    (-19 / 10000 : ℝ) * Real.cos (q (1 : Joint) + q (2 : Joint)) -
+        (21 / 5000 : ℝ) * Real.cos (q (1 : Joint))
+  else if i = (0 : Joint) ∧ j = (2 : Joint) then
+    (-19 / 10000 : ℝ) * Real.cos (q (1 : Joint) + q (2 : Joint))
+  else if i = (2 : Joint) ∧ j = (0 : Joint) then
+    (-19 / 10000 : ℝ) * Real.cos (q (1 : Joint) + q (2 : Joint))
+  else if i = (0 : Joint) ∧ j = (3 : Joint) then
+    (1 / 15 : ℝ) * Real.cos (q (1 : Joint) + q (2 : Joint))
+  else if i = (3 : Joint) ∧ j = (0 : Joint) then
+    (1 / 15 : ℝ) * Real.cos (q (1 : Joint) + q (2 : Joint))
+  else if i = (1 : Joint) ∧ j = (1 : Joint) then
+    (211 / 2400 : ℝ) +
+        (399 / 25000 : ℝ) * Real.cos (q (2 : Joint))
+  else if i = (1 : Joint) ∧ j = (2 : Joint) then
+    (21083 / 300000 : ℝ) +
+        (399 / 50000 : ℝ) * Real.cos (q (2 : Joint))
+  else if i = (2 : Joint) ∧ j = (1 : Joint) then
+    (21083 / 300000 : ℝ) +
+        (399 / 50000 : ℝ) * Real.cos (q (2 : Joint))
+  else if i = (2 : Joint) ∧ j = (2 : Joint) then
+    (21083 / 300000 : ℝ)
+  else if i = (3 : Joint) ∧ j = (3 : Joint) then
+    (1 / 15 : ℝ)
+  else 0
+
+def h_body_4_source_expanded_target : Prop :=
+  ∀ q i j,
+    (routeBMass 3) *
+        (∑ a : Axis,
+          bodyJv (sourceContract q).origins (sourceContract q).axes
+            (3 : Body) a i *
+          bodyJv (sourceContract q).origins (sourceContract q).axes
+            (3 : Body) a j) +
+      (∑ a : Axis, ∑ b : Axis,
+        bodyJw (sourceContract q).axes (3 : Body) a i *
+          routeBInertia 3 a b *
+        bodyJw (sourceContract q).axes (3 : Body) b j) =
+      body_4_piecewise q i j
+
+def h_body_4_source_entry_target : Prop :=
+  ∀ q i j,
+    sourceBodyMass q (3 : Body) i j =
+      bodyTraceEvaluator 3 q i j
+
+def h_body_4_expected_entry_target : Prop :=
+  ∀ q i j,
+    sourceBodyMass q (3 : Body) i j = body_4_piecewise q i j
+
+def h_body_4_trace_fold_target : Prop :=
+  ∀ q i j,
+    body_4_piecewise q i j = bodyTraceEvaluator 3 q i j
+
+theorem h_body_4_of_entry_targets
+    (h_source : h_body_4_expected_entry_target)
+    (h_trace : h_body_4_trace_fold_target) : h_body_4 := by
+  intro q i j
+  change sourceBodyMass q (3 : Body) i j = bodyTraceEvaluator 3 q i j
+  calc
+    sourceBodyMass q (3 : Body) i j = body_4_piecewise q i j := h_source q i j
+    _ = bodyTraceEvaluator 3 q i j := h_trace q i j
+
+/- Human body 5 is zero-based body 4.  Its exact trace uses q 1, q 2, q 3. -/
+def body_5_piecewise (q : Q6) (i j : Joint) : ℝ :=
+  if i = (0 : Joint) ∧ j = (0 : Joint) then
+    (1441 / 30000 : ℝ) +
+        (63 / 6250 : ℝ) * Real.sin (q (1 : Joint)) +
+        (57 / 6250 : ℝ) * Real.sin (q (1 : Joint) + q (2 : Joint)) -
+        (1323 / 200000 : ℝ) * Real.cos (2 * q (1 : Joint)) +
+        (1197 / 100000 : ℝ) * Real.cos (q (2 : Joint)) -
+        (1197 / 100000 : ℝ) * Real.cos (2 * q (1 : Joint) + q (2 : Joint)) -
+        (1083 / 200000 : ℝ) * Real.cos (2 * q (1 : Joint) + 2 * q (2 : Joint))
+  else if i = (0 : Joint) ∧ j = (1 : Joint) then
+    (-57 / 20000 : ℝ) * Real.cos (q (1 : Joint) + q (2 : Joint)) -
+        (63 / 20000 : ℝ) * Real.cos (q (1 : Joint))
+  else if i = (1 : Joint) ∧ j = (0 : Joint) then
+    (-57 / 20000 : ℝ) * Real.cos (q (1 : Joint) + q (2 : Joint)) -
+        (63 / 20000 : ℝ) * Real.cos (q (1 : Joint))
+  else if i = (0 : Joint) ∧ j = (2 : Joint) then
+    (-57 / 20000 : ℝ) * Real.cos (q (1 : Joint) + q (2 : Joint))
+  else if i = (2 : Joint) ∧ j = (0 : Joint) then
+    (-57 / 20000 : ℝ) * Real.cos (q (1 : Joint) + q (2 : Joint))
+  else if i = (0 : Joint) ∧ j = (3 : Joint) then
+    (1 / 30 : ℝ) * Real.cos (q (1 : Joint) + q (2 : Joint))
+  else if i = (3 : Joint) ∧ j = (0 : Joint) then
+    (1 / 30 : ℝ) * Real.cos (q (1 : Joint) + q (2 : Joint))
+  else if i = (0 : Joint) ∧ j = (4 : Joint) then
+    (1 / 60 : ℝ) *
+        (Real.cos (q (1 : Joint) + q (2 : Joint) - q (3 : Joint)) -
+          Real.cos (q (1 : Joint) + q (2 : Joint) + q (3 : Joint)))
+  else if i = (4 : Joint) ∧ j = (0 : Joint) then
+    (1 / 60 : ℝ) *
+        (Real.cos (q (1 : Joint) + q (2 : Joint) - q (3 : Joint)) -
+          Real.cos (q (1 : Joint) + q (2 : Joint) + q (3 : Joint)))
+  else if i = (1 : Joint) ∧ j = (1 : Joint) then
+    (8609 / 150000 : ℝ) +
+        (1197 / 50000 : ℝ) * Real.cos (q (2 : Joint))
+  else if i = (1 : Joint) ∧ j = (2 : Joint) then
+    (13249 / 300000 : ℝ) +
+        (1197 / 100000 : ℝ) * Real.cos (q (2 : Joint))
+  else if i = (2 : Joint) ∧ j = (1 : Joint) then
+    (13249 / 300000 : ℝ) +
+        (1197 / 100000 : ℝ) * Real.cos (q (2 : Joint))
+  else if i = (1 : Joint) ∧ j = (3 : Joint) then
+    (1 / 30 : ℝ) * Real.cos (q (3 : Joint))
+  else if i = (3 : Joint) ∧ j = (1 : Joint) then
+    (1 / 30 : ℝ) * Real.cos (q (3 : Joint))
+  else if i = (1 : Joint) ∧ j = (4 : Joint) then
+    (1 / 30 : ℝ) * Real.cos (q (3 : Joint))
+  else if i = (4 : Joint) ∧ j = (1 : Joint) then
+    (1 / 30 : ℝ) * Real.cos (q (3 : Joint))
+  else if i = (2 : Joint) ∧ j = (2 : Joint) then
+    (13249 / 300000 : ℝ)
+  else if i = (2 : Joint) ∧ j = (3 : Joint) then
+    (1 / 30 : ℝ) * Real.cos (q (3 : Joint))
+  else if i = (3 : Joint) ∧ j = (2 : Joint) then
+    (1 / 30 : ℝ) * Real.cos (q (3 : Joint))
+  else if i = (2 : Joint) ∧ j = (4 : Joint) then
+    (1 / 30 : ℝ) * Real.cos (q (3 : Joint))
+  else if i = (4 : Joint) ∧ j = (2 : Joint) then
+    (1 / 30 : ℝ) * Real.cos (q (3 : Joint))
+  else if i = (3 : Joint) ∧ j = (3 : Joint) then
+    (1 / 30 : ℝ)
+  else if i = (4 : Joint) ∧ j = (4 : Joint) then
+    (1 / 30 : ℝ)
+  else 0
+
+def h_body_5_source_expanded_target : Prop :=
+  ∀ q i j,
+    (routeBMass 4) *
+        (∑ a : Axis,
+          bodyJv (sourceContract q).origins (sourceContract q).axes
+            (4 : Body) a i *
+          bodyJv (sourceContract q).origins (sourceContract q).axes
+            (4 : Body) a j) +
+      (∑ a : Axis, ∑ b : Axis,
+        bodyJw (sourceContract q).axes (4 : Body) a i *
+          routeBInertia 4 a b *
+        bodyJw (sourceContract q).axes (4 : Body) b j) =
+      body_5_piecewise q i j
+
+def h_body_5_source_entry_target : Prop :=
+  ∀ q i j,
+    sourceBodyMass q (4 : Body) i j =
+      bodyTraceEvaluator 4 q i j
+
+def h_body_5_expected_entry_target : Prop :=
+  ∀ q i j,
+    sourceBodyMass q (4 : Body) i j = body_5_piecewise q i j
+
+def h_body_5_trace_fold_target : Prop :=
+  ∀ q i j,
+    body_5_piecewise q i j = bodyTraceEvaluator 4 q i j
+
+theorem h_body_5_of_entry_targets
+    (h_source : h_body_5_expected_entry_target)
+    (h_trace : h_body_5_trace_fold_target) : h_body_5 := by
+  intro q i j
+  change sourceBodyMass q (4 : Body) i j = bodyTraceEvaluator 4 q i j
+  calc
+    sourceBodyMass q (4 : Body) i j = body_5_piecewise q i j := h_source q i j
+    _ = bodyTraceEvaluator 4 q i j := h_trace q i j
+
 /- Intended composition, still unproved:
    h_body_1_expected_entry_target ∧ h_body_1_trace_entry_target
    implies h_body_1.  The source proof needs explicit slot-0/slot-1 origin,

@@ -99,7 +99,7 @@
     },
     {
       "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean",
-      "sha256": "8D3AA7716897269F2885A471A225EA11995869944E7D623DE33978F442EE7EDB",
+      "sha256": "C6FC99DE41F8A5010CD79F18B89FD39811B63717810E437A5AE88DD6095F2FE7",
       "role": "body-1/2 target propositions"
     },
     {

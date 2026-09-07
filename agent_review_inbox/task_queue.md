@@ -2070,3 +2070,23 @@ after integration; corrections should be a new result file.
   source frame/Jacobian/Gram 展开和 finite trace fold。
 - `PASS_EXACT_BODY3_TARGET_COEFFICIENTS_FAIL_CLOSED` 只表示目标与 CSV 一致，
   不能替代 source-bound Lean theorem。
+
+### T-P4-033-O1 — keyed interface structural gate (2026-09-08)
+
+- `KeyedCoeffRow/CoeffPair` interface 已通过无 shortcut 的结构 checker，并绑定到
+  O1 state；继续攻 exact payload/trace adapters、keywise equality 和 finite-sum
+  orientation proof。
+- 当前 gate 只证明接口结构存在，不能关闭 aggregate function lift。
+
+### T-P4-033-O1 — body-4 exact target (2026-09-08)
+
+- body-4（zero-based `3`）40-row exact Fourier target 已冻结并通过 checker，
+  状态为 `PASS_EXACT_BODY4_TARGET_COEFFICIENTS_FAIL_CLOSED`。
+- 下一步只攻 prefix-frame/axis、body-4 Jacobian/Gram source expansion 及 tagged
+  trace fold；不把 CSV 一致性当作 Lean proof。
+
+### T-P4-033-O0 — P-MU/P-BUDGET block API (2026-09-08)
+
+- B-block regularizer API 已有 focused receipt，但仍是 conditional exact API。
+- 继续寻找并绑定 `H_acc`、Float64 exact decode `H_mu`、以及 `μ=1/1000000`
+  的 physical source receipt；在三者齐全前不得关闭 P-BUDGET 或 strict Schur。
