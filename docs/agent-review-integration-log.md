@@ -212,3 +212,32 @@ from the deployed Route-B model.
 
 The verified registry remains empty and `formal_certificate_allowed` remains
 false.
+
+## 2026-09-07 / Route-B checkpoint revision 356
+
+The `T-P4-005` review was integrated as pending mathematical metadata. It
+identified the exact necessary-and-sufficient scalar condition for the PMI
+quadratic channel, `r² ≤ p*d*y²`, and showed that the deployed block budget
+admits the rational choice `c = 1/4`. It also records the obstruction that a
+nonzero additive bias cannot satisfy universal PSD at `y = 0`. No
+force/acceleration source binding, coverage, registry promotion, or parent
+closure was performed.
+
+## 2026-09-07 / Route-B checkpoint revision 357
+
+`T-P8-006` was integrated as pending mathematical metadata. The review closes
+the abstract ramp reconstruction on an interval: `c'=0` and `w'=c` with
+`w(0)=0` imply `c(t)=c0` and `w(t)=c0*t`, hence `w(1)=c0` when `1` lies in
+the interval. It also narrows the deployed-source boundary to first-12
+mechanical binding plus an adapter-supplied ramp tail. A Lean interval child,
+ODE existence, flowpipe coverage, and terminal admission are still open.
+
+## 2026-09-07 / Route-B checkpoint revision 358
+
+The focused P4 sharp child `examples/routeb_p4_sharp_residual_lean/` was
+recorded as a conditional compiled candidate. Its Schur equivalence,
+three-term residual envelope, and quarter-budget inequality compile under the
+pinned Lean toolchain with only standard axioms. The child materially weakens
+the algebraic bottleneck, but source residual units, true-DH semantic binding,
+global cell coverage, and the P4/M4 join remain open. The verified registry
+remains empty and `formal_certificate_allowed` remains `false`.

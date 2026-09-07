@@ -1,0 +1,14 @@
+{
+  "review_file": "agent_review_inbox/review-T-P4-005-liuguanyi-20260906T2206.md",
+  "review_sha256": "D80CF88D7FDBE79F82EAB6E66300024F6DBAA0ACFF6BBE3A44E12E329A7C9AFF",
+  "task_id": "T-P4-005",
+  "source_agent": "柳冠一",
+  "created_at": "2026-09-06T22:06:28-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_one_channel_source_binding",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "56795d1b67cab6da1c8a0d8f8a4ee332905b1efb",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-07T04:15:10.594851+00:00"
+}

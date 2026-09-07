@@ -48,6 +48,7 @@ TASK_TARGETS = {
     "T-P3-007": ("P3.strict_true_dh_bounds", "pending_concrete_mass_entry_bridge"),
     "T-P4-005": ("P4.residual_schur_pmi", "pending_one_channel_source_binding"),
     "T-P8-005": ("P8.independent_reachability", "pending_terminal_transfer_interface"),
+    "T-P8-006": ("P8.independent_reachability", "pending_ramp_reconstruction_child"),
     "T-P0-002": ("P0.reproducibility_baseline", "pending_fresh_receipt_reaudit"),
     "T-M4-002": ("M4.block45_full_certificate", "pending_dependency_cone_reaudit"),
     "T-P7-001": ("P7.strict_tail_fallback", "pending_tail_obligation_audit"),

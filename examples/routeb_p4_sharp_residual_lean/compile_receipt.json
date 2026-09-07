@@ -1,0 +1,25 @@
+{
+  "schema_version": "routeb-p4-sharp-residual-compile-receipt-v1",
+  "status": "COMPILED_CANDIDATE",
+  "statement_ids": [
+    "RouteBP4SharpResidual.schur_residual_nonnegative_iff",
+    "RouteBP4SharpResidual.one_channel_residual_envelope",
+    "RouteBP4SharpResidual.quarter_budget_strict"
+  ],
+  "run_id": "output/run-FtGsElwU",
+  "lean_toolchain": "leanprover/lean4:v4.32.0",
+  "source_sha256": "ad1c26a6d101689fc475dde8d4cff694f4945a1151c27cc75a533b2d9a5e4ca4",
+  "toolchain_file_sha256": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e",
+  "verifier_sha256": "fed703ce5518b32692cefdbf8c2675f8baa5a1c74114c5d4645ebd1df21915a5",
+  "olean_sha256": "d869340de74c6f606d3eeccea23eefc06b84f0b358f27ddc7de3bc13973f3474",
+  "compile_log_sha256": "086839a7edd4cbddb6a44e3e4c44cacee4530bef9ff02f17d2244e2b729ca161",
+  "compile_exit_code": 0,
+  "axioms": ["propext", "Classical.choice", "Quot.sound"],
+  "forbidden_proof_escape": false,
+  "physical_source_binding": false,
+  "source_residual_units_bound": false,
+  "global_coverage": false,
+  "registry_promoted": false,
+  "formal_certificate_allowed": false,
+  "admission": "sharp_scalar_pmi_bridge_open"
+}

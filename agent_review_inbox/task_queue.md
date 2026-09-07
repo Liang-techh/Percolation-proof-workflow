@@ -329,6 +329,28 @@ correction does not rewrite existing claims or review authorship.
   acceleration residuals without a units bridge, or closing P5/M4 from this
   abstract child alone.
 
+### T-P4-005 — sharp one-channel residual source binding
+
+- status: `reviewed_pending` (integrated at Route-B revision 356; exact scalar
+  child compiled at `examples/routeb_p4_sharp_residual_lean/`)
+- scope: replace the unnecessarily conservative `r² ≤ (1/100)² y²` target by
+  the sharp scalar interface `r² ≤ p*d*y²`, then bind one actual deployed
+  force/acceleration residual channel to that envelope;
+- deliver: exact source-bound residual lemma and a focused receipt, retaining
+  `p`, `d`, units, and the source expression as typed objects;
+- forbidden: equating force and acceleration residuals, using a constant bias as
+  a universal PSD witness, or closing P4/M4 from the abstract sharp child.
+
+### T-P8-006 — ramp reconstruction and terminal transfer
+
+- status: `reviewed_pending` (math result from 古月方源; formalization queued)
+- scope: formalize the scalar tail equations `w'=c`, `c'=0`, `w(0)=0` and
+  derive `c(t)=c0`, `w(t)=c0*t`, plus the `T=1` terminal transfer;
+- deliver: minimal Lean child or a precise interval-API blocker, with the
+  first-12 explicit-time projection kept separate from source binding;
+- forbidden: claiming ODE existence, `[0,1]` flowpipe coverage, deployed
+  13-state semantic binding, or P8/M4 admission from this child alone.
+
 ### T-FLT-SPECTRAL-LINEAR — spectral and linear algebra scan
 
 - status: `reviewed_pending` (integrated at Route-B revision 343;

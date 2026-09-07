@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 355,
+  "revision": 358,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -7636,6 +7636,37 @@
             "integration_status": "integrated_as_pending_metadata",
             "classification": "conditional_typed_normalization_sidecar",
             "admission_effect": "none"
+          },
+          {
+            "review_file": "agent_review_inbox/review-T-P4-005-liuguanyi-20260906T2206.md",
+            "review_sha256": "D80CF88D7FDBE79F82EAB6E66300024F6DBAA0ACFF6BBE3A44E12E329A7C9AFF",
+            "task_id": "T-P4-005",
+            "source_agent": "柳冠一",
+            "created_at": "2026-09-06T22:06:28-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_one_channel_source_binding",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "56795d1b67cab6da1c8a0d8f8a4ee332905b1efb",
+            "admission_label": "pending"
+          }
+        ],
+        "conditional_children": [
+          {
+            "statement_ids": [
+              "RouteBP4SharpResidual.schur_residual_nonnegative_iff",
+              "RouteBP4SharpResidual.one_channel_residual_envelope",
+              "RouteBP4SharpResidual.quarter_budget_strict"
+            ],
+            "status": "compiled_candidate",
+            "receipt": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p4_sharp_residual_lean\\compile_receipt.json",
+              "sha256": "c722093c9e69ec61a740160ce6d40b1dce200312a0eb50ed35e55d516867e5ec"
+            },
+            "source_residual_units_bound": false,
+            "physical_source_binding": false,
+            "global_coverage": false,
+            "registry_promoted": false
           }
         ]
       }
@@ -8249,6 +8280,18 @@
             "integration_status": "integrated_as_pending_metadata",
             "classification": "explicit_time_typed_sidecar",
             "admission_effect": "none"
+          },
+          {
+            "review_file": "agent_review_inbox/review-T-P8-006-guyuefangyuan-20260906T2218.md",
+            "review_sha256": "EB2E49656C3FB2ADD88559BB4AB20ED34AF006D4682DE3A293AC2EBD90CD0A19",
+            "task_id": "T-P8-006",
+            "source_agent": "古月方源",
+            "created_at": "2026-09-06T22:18:45-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_ramp_reconstruction_child",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "af50cbc74e35a73fe1dee1b93ddfc561863c274a"
           }
         ]
       }
@@ -30093,6 +30136,54 @@
       "global_coverage": false,
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T04:15:10.594851+00:00",
+      "kind": "agent_review_integrated",
+      "review_file": "agent_review_inbox/review-T-P4-005-liuguanyi-20260906T2206.md",
+      "review_sha256": "D80CF88D7FDBE79F82EAB6E66300024F6DBAA0ACFF6BBE3A44E12E329A7C9AFF",
+      "task_id": "T-P4-005",
+      "classification": "pending_one_channel_source_binding",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e7b1df1835f4deba06b11a8182f6719"
+    },
+    {
+      "at": "2026-09-07T04:34:48.881499+00:00",
+      "kind": "agent_review_integrated",
+      "review_file": "agent_review_inbox/review-T-P8-006-guyuefangyuan-20260906T2218.md",
+      "review_sha256": "EB2E49656C3FB2ADD88559BB4AB20ED34AF006D4682DE3A293AC2EBD90CD0A19",
+      "task_id": "T-P8-006",
+      "classification": "pending_ramp_reconstruction_child",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "edd8407c33f54c41867f03b46ec1e313"
+    },
+    {
+      "at": "2026-09-07T04:34:49.327099+00:00",
+      "kind": "routeb_p4_sharp_residual_compile_recorded",
+      "node_id": "1e7b1df1835f4deba06b11a8182f6719",
+      "statement_ids": [
+        "RouteBP4SharpResidual.schur_residual_nonnegative_iff",
+        "RouteBP4SharpResidual.one_channel_residual_envelope",
+        "RouteBP4SharpResidual.quarter_budget_strict"
+      ],
+      "receipt": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p4_sharp_residual_lean\\compile_receipt.json",
+      "receipt_sha256": "c722093c9e69ec61a740160ce6d40b1dce200312a0eb50ed35e55d516867e5ec",
+      "source_sha256": "ad1c26a6d101689fc475dde8d4cff694f4945a1151c27cc75a533b2d9a5e4ca4",
+      "verifier_sha256": "fed703ce5518b32692cefdbf8c2675f8baa5a1c74114c5d4645ebd1df21915a5",
+      "toolchain_file_sha256": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e",
+      "olean_sha256": "d869340de74c6f606d3eeccea23eefc06b84f0b358f27ddc7de3bc13973f3474",
+      "compile_log_sha256": "086839a7edd4cbddb6a44e3e4c44cacee4530bef9ff02f17d2244e2b729ca161",
+      "compile_exit_code": 0,
+      "status": "COMPILED_CANDIDATE",
+      "source_residual_units_bound": false,
+      "physical_source_binding": false,
+      "global_coverage": false,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -33703,8 +33794,51 @@
       "coercivity_and_residual_premises": "external_open",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "schema_version": 1,
+      "algorithm": "routeb_p4_sharp_residual/v1",
+      "graph_sha256": "127e7f4a3852b3d9513169a65ffe0e48fe073641918b80e9c5901cdaefeabf2f",
+      "roots": [
+        "1e7b1df1835f4deba06b11a8182f6719"
+      ],
+      "selected_nodes": [
+        "1e7b1df1835f4deba06b11a8182f6719"
+      ],
+      "graph_projection": {
+        "schema_version": 1,
+        "parent": "1e7b1df1835f4deba06b11a8182f6719",
+        "child_statements": [
+          "RouteBP4SharpResidual.schur_residual_nonnegative_iff",
+          "RouteBP4SharpResidual.one_channel_residual_envelope",
+          "RouteBP4SharpResidual.quarter_budget_strict"
+        ],
+        "receipt_sha256": "c722093c9e69ec61a740160ce6d40b1dce200312a0eb50ed35e55d516867e5ec"
+      },
+      "receipt": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p4_sharp_residual_lean\\compile_receipt.json",
+        "sha256": "c722093c9e69ec61a740160ce6d40b1dce200312a0eb50ed35e55d516867e5ec"
+      },
+      "source": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p4_sharp_residual_lean\\SharpResidualBridge.lean",
+        "sha256": "ad1c26a6d101689fc475dde8d4cff694f4945a1151c27cc75a533b2d9a5e4ca4"
+      },
+      "verifier": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p4_sharp_residual_lean\\verify.sh",
+        "sha256": "fed703ce5518b32692cefdbf8c2675f8baa5a1c74114c5d4645ebd1df21915a5"
+      },
+      "toolchain": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p4_sharp_residual_lean\\lean-toolchain",
+        "sha256": "2773c517aa90b66ea8a2c52bddddf84393157797f8341be0df45294fff7fd32e"
+      },
+      "status": "COMPILED_CANDIDATE",
+      "source_residual_units_bound": false,
+      "physical_source_binding": false,
+      "global_coverage": false,
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "global_closure": {},
-  "state_checksum": "2669a1b72834093d65b146434297be857e104c3ad8ed87855d3c2a318208f04b"
+  "state_checksum": "723fad44de4643e9e68e3ffd34724ddb9b8f8a5b16016274c26077146c638599"
 }
