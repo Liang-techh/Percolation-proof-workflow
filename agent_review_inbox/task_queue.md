@@ -3017,3 +3017,9 @@ P4 positive-target feasibility 与 fixed-λ append-only registry transition。
 推进正 target 与 source/normalization 的同域绑定；P3 推进 DH coefficient
 bridge 到真实函数定义和箱覆盖。GitHub 批次约三分之一交给流川枫，收割节奏
 改为每小时一次；其他时间本地继续数学推演。
+
+revision 715 登记 BODY6 `STRICT_FEASIBILITY`。该叶给出同域九项下界和有限
+all-points cell cover 两条充分路径，并证明 strict→nonstrict；同时明确排除
+零点仍非充分，远离零点的无界 reciprocal-gap 族仍可没有共同正下界。当前
+实际 BODY6 candidate domain、source binding、cell coverage 与 positive rho
+仍是开放瓶颈。

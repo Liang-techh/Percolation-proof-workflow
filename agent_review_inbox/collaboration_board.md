@@ -2403,3 +2403,10 @@ BODY6 strict-feasibility 已产生 proof-attempt，等待 review 成对后接入
 继续把 domain repair、positive margin、parent closure 和 source binding 串入
 同一条 frontier。automation 已纠正为 hourly，并保留流川枫承接约三分之一
 GitHub 任务的扩展 lane。
+
+### 2026-09-07 — 梁智炜接入 BODY6 feasibility 分叉
+
+revision 715 登记 BODY6 `STRICT_FEASIBILITY`。它把“存在共同正余量”与“域不
+含零构型”严格分开，给出同域九项充分条件与有限全点覆盖充分条件，并保留
+远离零点但 margin 趋零的精确反例。因此下一步不是继续重复审计，而是寻找
+真实 candidate domain 上的 uniform rho/mu、source 条目绑定和可复核 coverage。
