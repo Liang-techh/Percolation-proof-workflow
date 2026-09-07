@@ -62,6 +62,18 @@ def main() -> int:
     pmi_text = pmi.read_text(encoding="utf-8", errors="replace")
     dh_text = dh.read_text(encoding="utf-8", errors="replace")
     source_result = audit_routeb_p4_source_contract(pmi_text, dh_text)
+    strict_source_checks = {
+        "mass_regularizer_literal": "const MASS_REGULARIZER = 1e-6" in dh_text,
+        "fd_step_literal": "const CG_FINITE_DIFF_STEP = 1e-5" in dh_text,
+        "mass_regularizer_is_parameterized": (
+            "mass_regularization::Real = MASS_REGULARIZER" in dh_text
+            and "regularization = mass_regularization" in dh_text
+        ),
+        "fd_step_is_parameterized": (
+            "fd_step::Real = CG_FINITE_DIFF_STEP" in dh_text
+            and "fd_step = fd_step" in dh_text
+        ),
+    }
 
     audit_text = bridge_audit.read_text(encoding="utf-8")
     interface_text = bridge_interface.read_text(encoding="utf-8")
@@ -79,6 +91,8 @@ def main() -> int:
     )
     if source_result.errors:
         raise ValueError(f"source contract rejected: {source_result.errors}")
+    if not all(strict_source_checks.values()):
+        raise ValueError(f"strict source semantics rejected: {strict_source_checks}")
     if bridge_result.errors:
         raise ValueError(f"nominal bridge rejected: {bridge_result.errors}")
 
@@ -87,6 +101,7 @@ def main() -> int:
         "status": "SOURCE_AND_NOMINAL_BRIDGE_PASS_BINDING_OPEN",
         "source_contract_status": source_result.status,
         "nominal_bridge_status": bridge_result.status,
+        "strict_source_checks": strict_source_checks,
         "force_coordinate_kc": list(source_result.expected_force_rho_kc),
         "normalized_coordinate_kc": list(source_result.expected_rho_kc),
         "deployed_descriptor_semantics": (
@@ -100,6 +115,7 @@ def main() -> int:
             "r_B - M_BD(q)*v = 0",
         ],
         "regularizer": "mu=1/1000000 in every mass and descriptor term",
+        "finite_difference_semantics": "central FD with h=1/100000 for C/G",
         "required_semantic_separation": [
             "the PMI kc term is normalized f-scale, while the deployed force residual uses q5/100,q4/200",
             "the port provider gives a squared Frobenius budget, not a proof of source equality",

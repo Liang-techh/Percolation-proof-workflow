@@ -64,6 +64,14 @@ def audit_state() -> dict[str, object]:
         "source_binding_requires_actual_remote_term": (
             source_binding.get("required_remote_term") == "M_BD(q) * a_D"
         ),
+        "source_binding_pins_mass_and_fd_semantics": (
+            source_binding.get("strict_source_checks") == {
+                "mass_regularizer_literal": True,
+                "fd_step_literal": True,
+                "mass_regularizer_is_parameterized": True,
+                "fd_step_is_parameterized": True,
+            }
+        ),
         "global_gate_closed_only_explicitly": state.global_closure_report()["formal_certificate_allowed"] is False,
     }
     errors.extend(f"failed:{name}" for name, ok in checks.items() if not ok)
