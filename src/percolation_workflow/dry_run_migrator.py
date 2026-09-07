@@ -67,8 +67,12 @@ def dry_run_migrate(state_path: str | Path, proposal_path: str | Path) -> dict[s
         if not condition:
             failures.append(name)
 
-    require("schema", proposal.get("schema") == "routeb-entry-dag-proposed-patch-v1",
-            "recognized proposal schema")
+    proposal_schema = proposal.get("schema")
+    shared_schema = proposal_schema == "routeb-shared-dag-proposed-patch-v2"
+    require("schema", proposal_schema in {
+                "routeb-entry-dag-proposed-patch-v1",
+                "routeb-shared-dag-proposed-patch-v2",
+            }, "recognized proposal schema")
     require("mutation_guard", proposal.get("mode") == "proposal_only" and
             proposal.get("state_mutation") is False,
             "proposal declares proposal_only and state_mutation=false")
@@ -83,17 +87,47 @@ def dry_run_migrate(state_path: str | Path, proposal_path: str | Path) -> dict[s
 
     existing = state.get("nodes", {})
     proposed = proposal.get("nodes", [])
-    ids = [node.get("id") for node in proposed if isinstance(node, dict)]
-    names = [node.get("name") for node in proposed if isinstance(node, dict)]
-    layers = [node.get("metadata", {}).get("entry_contract_layer")
-              for node in proposed if isinstance(node, dict)]
+    require("nodes_list", isinstance(proposed, list), "proposal nodes is a list")
+    if not isinstance(proposed, list):
+        proposed = []
+    ids = [node.get("id") for node in proposed
+           if isinstance(node, dict) and isinstance(node.get("id"), str)]
+    names = [node.get("name") for node in proposed
+             if isinstance(node, dict) and isinstance(node.get("name"), str)]
+    malformed_ids = [node for node in proposed
+                     if isinstance(node, dict) and not isinstance(node.get("id"), str)]
+    malformed_names = [node for node in proposed
+                       if isinstance(node, dict) and not isinstance(node.get("name"), str)]
+    require("node_id_shape", not malformed_ids, "every proposed node has a string ID")
+    require("node_name_shape", not malformed_names, "every proposed node has a string name")
     require("unique_proposed_ids", len(ids) == len(set(ids)), "no duplicate proposed IDs")
     require("no_id_overwrite", not (set(existing) & set(ids)), "no proposed ID exists in state")
     existing_names = {node.get("name") for node in existing.values()}
     require("unique_names", len(names) == len(set(names)) and not (set(names) & existing_names),
             "no duplicate or existing theorem names")
-    require("complete_layers", set(layers) == {f"L{i}" for i in range(7)} and len(layers) == 7,
-            "exactly one proposed child for each L0-L6")
+    if shared_schema:
+        layer_policy = proposal.get("layer_policy")
+        allowed_layers = (layer_policy.get("allowed_layers")
+                          if isinstance(layer_policy, dict) else None)
+        require("layer_policy", isinstance(layer_policy, dict) and
+                layer_policy.get("mode") == "allow_multiple" and
+                isinstance(allowed_layers, list) and bool(allowed_layers) and
+                all(isinstance(layer, str) and layer.strip() for layer in allowed_layers) and
+                len(allowed_layers) == len(set(allowed_layers)),
+                "shared proposal declares a unique nonempty allowed layer set")
+        logical_layers = [node.get("metadata", {}).get("logical_layer")
+                          for node in proposed if isinstance(node, dict)]
+        require("logical_layer_shape", len(logical_layers) == len(proposed) and
+                all(isinstance(layer, str) and layer.strip() for layer in logical_layers),
+                "every shared-DAG node declares a logical layer")
+        if isinstance(allowed_layers, list):
+            require("allowed_layers", all(layer in allowed_layers for layer in logical_layers),
+                    "every logical layer is declared by the proposal policy")
+    else:
+        layers = [node.get("metadata", {}).get("entry_contract_layer")
+                  for node in proposed if isinstance(node, dict)]
+        require("complete_layers", set(layers) == {f"L{i}" for i in range(7)} and len(layers) == 7,
+                "exactly one proposed child for each L0-L6")
 
     all_ids = set(existing) | set(ids)
     edges = {node_id: [] for node_id in all_ids}
@@ -106,14 +140,21 @@ def dry_run_migrate(state_path: str | Path, proposal_path: str | Path) -> dict[s
         metadata = node.get("metadata")
         deps = node.get("dependencies")
         parent = node.get("parent_id")
+        try:
+            unique_deps = len(deps) == len(set(deps)) if isinstance(deps, list) else False
+        except TypeError:
+            unique_deps = False
         good_shape = (isinstance(node_id, str) and isinstance(metadata, dict) and
-                      isinstance(deps, list) and len(deps) == len(set(deps)))
+                      isinstance(deps, list) and unique_deps)
         require(f"node_shape:{node_id}", good_shape, "ID, metadata, and unique dependency list")
         if not good_shape:
             continue
-        require(f"parent:{node_id}", parent in existing,
-                "parent is an existing node; installation cannot invent/reparent the spine")
-        require(f"dependencies:{node_id}", all(dep in all_ids and dep != node_id for dep in deps),
+        parent_is_existing = isinstance(parent, str) and parent in existing
+        parent_allowed = parent_is_existing or (shared_schema and parent is None)
+        require(f"parent:{node_id}", parent_allowed,
+                "parent is existing, or null for a shared-DAG prerequisite")
+        require(f"dependencies:{node_id}", all(isinstance(dep, str) and
+                                                 dep in all_ids and dep != node_id for dep in deps),
                 "all dependencies resolve in the combined graph and no self-edge")
         require(f"open:{node_id}", node.get("status") == NodeStatus.OPEN.value,
                 "proposed children enter only as open nodes")
@@ -124,11 +165,11 @@ def dry_run_migrate(state_path: str | Path, proposal_path: str | Path) -> dict[s
                 "evidence level is explicitly labelled; registry eligibility remains separate")
         require(f"no_receipt:{node_id}", not node.get("verified_artifact") and
                 not node.get("attempts"), "proposal carries no verification/attempt state")
-        if parent in existing:
+        if parent_is_existing:
             parent_edges.append({"child_id": node_id, "parent_id": parent})
             edges[parent].append(node_id)
         for dep in deps:
-            if dep in edges:
+            if isinstance(dep, str) and dep in edges:
                 edges[dep].append(node_id)
 
     acyclic, cycle = _acyclic(edges)
@@ -163,7 +204,8 @@ def dry_run_migrate(state_path: str | Path, proposal_path: str | Path) -> dict[s
     require("registry_unchanged", plan["registry_delta"] == {"add": [], "remove": []},
             "registry has no simulated additions or removals")
     return {
-        "schema": "theorem-dag-dry-run-migration-report-v1",
+        "schema": ("theorem-dag-dry-run-migration-report-v2"
+                   if shared_schema else "theorem-dag-dry-run-migration-report-v1"),
         "mode": "dry_run",
         "safe_to_install": not failures,
         "input": {"state_path": str(state_path), "proposal_path": str(proposal_path),

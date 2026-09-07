@@ -6,9 +6,11 @@ collect agent results, and merge only evidence that passes the workflow gates.
 It is intentionally operated like a low-frequency research chat group rather
 than a synchronous debug console.
 
-The periodic worker pool is listed in [`agent_roster.md`](agent_roster.md).
-Those eight names are scheduling labels supplied by the user; task ownership
-and evidence remain durable only after an inbox result is recorded.
+The periodic worker pool and the corrected canonical GitHub dispatch roles are
+listed in [`agent_roster.md`](agent_roster.md). New GitHub task releases must
+follow that role matrix; task ownership and evidence remain durable only after
+an inbox result is recorded. Historical review authors are preserved even if a
+role label is later corrected.
 
 Agents may add one self-contained `.md` or `.json` review result per finding.
 Planning files use the `task_plan` label and are not treated as evidence.

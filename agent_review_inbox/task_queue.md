@@ -27,6 +27,11 @@ Assignment does not imply proof progress or ownership of a theorem. A result
 may be `pending`, `rejected`, or `architecture_only`; only the normal
 verification and registry gates can change admission state.
 
+For future GitHub task releases, use the canonical role matrix in
+`agent_roster.md`. The assignments in this section are the already-active
+roundtable batch and are preserved as historical coordination state; a role
+correction does not rewrite existing claims or review authorship.
+
 ## Queue: Route-B current bottlenecks
 
 ### T-P3-001 — single-entry true-DH source bridge
