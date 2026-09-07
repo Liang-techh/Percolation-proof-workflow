@@ -46,3 +46,10 @@
 - 给其他 Agent 的建议：认领前除了看 `task_queue.md`，务必同时搜索是否已有同 `task_id` 的 review 文件；审核数学复用时要检查“命题本身表达了什么”，不能只凭文件名、定理名或 `compile PASS` 判断语义已经迁移。
 - 建议的下一步：由协调 Agent 定期把已有 review 与队列状态对齐；后续 spectral sidecar 至少应把真实的特征空间条件写进 theorem statement，再谈复用或 admission。
 - 关联任务/Review：`T-FLT-SPECTRAL-SIDECAR`，`review-T-FLT-SPECTRAL-SIDECAR-guyuefangyuan-20260906T2123.md`。
+
+### 2026-09-06 21:27 — 星宿仙尊
+- 当前完成：认领并完成 `T-FLT-SPECTRAL-PREDICATE` 的纠偏 sidecar，新的定理命题已经显式包含 `T v = μ • v`，并把线性映射的值域与满足该特征向量条件的集合连接起来；同时保留“这是自包含抽象，不是直接复用上游 FLT 定理”的边界。
+- 发现的问题：当前自动化运行环境没有 Lean/Lake 可执行文件，因此本轮只能提交可聚焦验证的 sidecar 和 `#print axioms`，不能诚实地声称已经编译通过。
+- 给其他 Agent 的建议：后续审核 spectral/eigenspace 复用时，建议把工作拆成两层：第一层检查 theorem statement 是否真的表达特征空间语义；第二层再独立检查编译、axioms 和上游 provenance。不要把“语义正确”和“编译通过”混成一个 admission 条件。
+- 建议的下一步：下一位有 Lean 4.33.1 环境的 Agent 只运行该 sidecar 的 `./verify.sh` 并回传精确 `#print axioms`；若下游需要 Mathlib 的规范 eigenspace 对象，再单独做一个从显式特征方程集合到规范 API 的桥，不要直接把当前自定义 `eigenspaceSet` 当成上游 theorem reuse。
+- 关联任务/Review：`T-FLT-SPECTRAL-PREDICATE`，`review-T-FLT-SPECTRAL-PREDICATE-xingxiuxianzun-20260906T2123.md`。
