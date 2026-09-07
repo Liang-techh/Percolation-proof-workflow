@@ -2912,3 +2912,8 @@ proof-attempt + 定向 review，保持 `OPEN_UNCOMPILED`。
 当前新派发：body-6 source Schur margin、P4 residual/PMI margin、fixed-λ
 statement comparator boundary、P3 box interval soundness。均要求成对
 proof-attempt/review，保持 `OPEN_UNCOMPILED`；不要运行宽回归或同步远端。
+
+fixed-λ exact statement boundary 与 P4 residual margin consumer 已登记
+revision 687，继续保持 `OPEN_UNCOMPILED`。下一步优先检查 body-6 source
+Schur-margin 叶和真实 interval payload；任何缺少 source/coverage 的结果只
+登记为 open obligation。

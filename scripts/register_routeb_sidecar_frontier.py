@@ -1677,6 +1677,32 @@ CHILDREN = [
             "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_INTERVAL_ENCLOSURE_REVIEW.md",
         ],
     },
+    {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer",
+        "statement": "A real strict inequality is transported to a tagged final proposition only through explicit tag, binder, order, normalization, and target equalities; comparator acceptance premises remain separate.",
+        "proof_sketch": "Define tagged statement and exact boundary contracts, reject any concrete metadata or target mismatch, and keep checker exit/output premises separate without claiming comparator execution or registry admission.",
+        "lane": "lean_adapter",
+        "bottleneck": "source_semantics",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_EXACT_STATEMENT_BOUNDARY",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_EXACT_STATEMENT_BOUNDARY20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_EXACT_STATEMENT_BOUNDARY20260907_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge",
+        "statement": "Uniform energy, residual-allowance, scalar Schur/PMI comparison, and nominal allocation premises yield a conditional domain-wide scalar margin bound, with no PSD or solver upgrade.",
+        "proof_sketch": "Consume the uniform parameter bridge for an energy cap, derive residual≤qCap using nonnegative effective coefficients, then combine gain nonnegativity, comparison, and explicit nominal allocation; preserve zero-residual negative-margin obstruction.",
+        "lane": "lean_adapter",
+        "bottleneck": "residual_absorption",
+        "status": "OPEN_UNCOMPILED_P4_RESIDUAL_MARGIN_CONSUMER",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_ResidualMarginConsumer.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_ResidualMarginConsumer.review.md",
+        ],
+    },
 ]
 
 

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 686,
+  "revision": 687,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -41307,7 +41307,9 @@
       "parent_id": "93ebd8fc6e374451aa01999cb646d7de",
       "status": "open",
       "proof_sketch": "Define ParameterField, LocalEvidence, and UniformParameters on one domain; include base+defect bias rather than dropping base, consume existing weighted and division-free interfaces, and retain a rhoEff≥1 obstruction without binding true-DH data.",
-      "dependencies": [],
+      "dependencies": [
+        "976b56723af448a198dbfbda2cedc2c2"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -41377,7 +41379,9 @@
       "parent_id": "4aa0a8deaacf4e1da5364b9ad0f10afb",
       "status": "open",
       "proof_sketch": "Retain rational source/target/reserve/load and final-margin equalities, transport sigma and the rational gap with the existing cast adapter, make subtraction casts explicit, and conclude the real strict inequality without repeating reindex or slack proofs.",
-      "dependencies": [],
+      "dependencies": [
+        "c07700a889b84cd6a282dfa2a746a7b3"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -41466,6 +41470,76 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_INTERVAL_ENCLOSURE_REVIEW.md",
             "sha256": "9394A6A6FCBF707463BB300AE6EE53583D201E130FA6E30ED7A5C9EEA4F1CA32"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "c07700a889b84cd6a282dfa2a746a7b3": {
+      "id": "c07700a889b84cd6a282dfa2a746a7b3",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary",
+      "statement": "A real strict inequality is transported to a tagged final proposition only through explicit tag, binder, order, normalization, and target equalities; comparator acceptance premises remain separate.",
+      "parent_id": "3e433a1cd430478c9017029b76231fa0",
+      "status": "open",
+      "proof_sketch": "Define tagged statement and exact boundary contracts, reject any concrete metadata or target mismatch, and keep checker exit/output premises separate without claiming comparator execution or registry admission.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "source_semantics",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_FIXED_LAMBDA_EXACT_STATEMENT_BOUNDARY",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_EXACT_STATEMENT_BOUNDARY20260907.lean",
+            "sha256": "25604F8DECF58D59E18BF0CADF5B107776E6530F30508061B0EA2F80FB7845EF"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_EXACT_STATEMENT_BOUNDARY20260907_REVIEW.md",
+            "sha256": "7EF3837DD214D4751F66C183D19AAA6BC3765753D60528274BE8AD20331457C7"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "976b56723af448a198dbfbda2cedc2c2": {
+      "id": "976b56723af448a198dbfbda2cedc2c2",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer",
+      "statement": "Uniform energy, residual-allowance, scalar Schur/PMI comparison, and nominal allocation premises yield a conditional domain-wide scalar margin bound, with no PSD or solver upgrade.",
+      "parent_id": "7cabf129d5a145b69d65afef6a62dd16",
+      "status": "open",
+      "proof_sketch": "Consume the uniform parameter bridge for an energy cap, derive residual≤qCap using nonnegative effective coefficients, then combine gain nonnegativity, comparison, and explicit nominal allocation; preserve zero-residual negative-margin obstruction.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "residual_absorption",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_P4_RESIDUAL_MARGIN_CONSUMER",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_ResidualMarginConsumer.lean",
+            "sha256": "0E4F6DD5565C98E1E31E1D236B03727B2CAC3F4D8ED4C42CB88B3F3B27805CCA"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_ResidualMarginConsumer.review.md",
+            "sha256": "8D1926931D3B6A35382D3F12DB379AE22142EA61F8C43E9CEBBBD6FB4B5595E1"
           }
         ],
         "registry_eligible": false,
@@ -69245,6 +69319,31 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T20:05:02.610728+00:00",
+      "kind": "node_added",
+      "node_id": "c07700a889b84cd6a282dfa2a746a7b3",
+      "parent_id": "3e433a1cd430478c9017029b76231fa0",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary"
+    },
+    {
+      "at": "2026-09-07T20:05:02.611585+00:00",
+      "kind": "node_added",
+      "node_id": "976b56723af448a198dbfbda2cedc2c2",
+      "parent_id": "7cabf129d5a145b69d65afef6a62dd16",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer"
+    },
+    {
+      "at": "2026-09-07T20:05:02.611593+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary",
+        "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -72901,5 +73000,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "e3556d9c21d7d47b4dc34c4098b79703b817b546ef7de0af13384b432f2a5666"
+  "state_checksum": "1ed67e8cd932a5a9e4b87871a7eeb86e86f53872c183b20ac2c1c8b778883bda"
 }

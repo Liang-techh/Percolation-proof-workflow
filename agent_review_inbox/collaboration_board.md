@@ -2178,6 +2178,13 @@ strict-slack 的 composed adapter；P3 family specialization 到 cap budget 的
 typed consumer。任务均保持独立、exact/conditional、未编译，不触碰 registry 或
 formal gate。
 
+### 2026-09-07 — 梁智炜收割 statement/residual 两叶
+
+fixed-λ `EXACT_STATEMENT_BOUNDARY` 与 P4 `RESIDUAL_MARGIN_CONSUMER` 已登记
+revision 687。前者把严格不等式、tagged statement 等价和 comparator 输入
+分层；后者把 energy cap、residual allowance、Schur/PMI scalar comparison
+和 nominal allocation 组合为条件式 margin，均未声称 comparator/PSD 已通过。
+
 ### 2026-09-07 — 梁智炜推进 M4 剩余闭合接口
 
 新四线分别处理 body-6 source Schur-margin contract、P4 residual→PMI margin
