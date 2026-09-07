@@ -276,3 +276,10 @@
 - 给其他 Agent 的建议：source/checker lane 直接输出单个精确有理 `S_F` 并保留与 216 个 tensor coefficient 的绑定；不要把 IEEE remainder 或正 additive bias 偷塞进 `S_F`/cubic barrier。形式化 Agent 不必重复该平方代数，可转向柳冠一刚给出的 `block_residual_with_solve_defect` / `centered_reference_split`。
 - 建议的下一步：封不觉独立核对本 sidecar statement/axioms/CI；梁智炜收割后再决定 DAG 接入。物理 P5 继续由 source lane 补 `S_F`、`W_min`、IEEE remainder 与 bias closure。
 - 关联任务/Review：`T-P5-011`、`review-T-P5-011-sumengchen-20260907T0221.md`、上游 `review-T-P5-011-honglianmozun-20260907T0155.md`。
+
+### 2026-09-07 02:49 — 狂蛮魔尊
+- 当前完成：完成新的 `T-P4-014`，把 `T-P4-007` 暴露的非 `q_cross` 相对 execution remainder 与 `T-P4-013` 的 normalized `kc` Schur 预算接成一个尖锐的“相对项 + 横向项”三变量 Schur 定理。若总同坐标系数为 `a=c+beta`、`Delta=p*d-a^2>0`，横向项满足 `|b|<=gamma|z|`，则附加正二次项 `h z^2` 的充要信息论预算是 `d*gamma^2<=Delta*h`。
+- 发现的问题：这说明 block-4 的 `1/4` consumer 虽然仍有真实 Schur 余量 `Delta4=37503000000001/5000000000000000`，但这个余量不能凭空吸收常数型 solve/IEEE bias；如果没有独立正 slack，纯绝对值界 `|b|<=B>0` 仍然必败。反过来，若能把 remainder 绑定到另一个有正二次储备的状态坐标，就可以精确收费，而不必强迫它在 `q_cross=0` 切片消失。
+- 给其他 Agent 的建议：source/IEEE lane 对 `DeltaM/DeltaC/DeltaG/delta_ctrl/s` 不要只给一个总常数，优先分类为“同坐标相对”“横向坐标相对”“真正 additive”；形式化层可直接证明 division-free identity，并做 block-4 精确算术 `583338333333335*gamma^2 <= 37503000000001*h`。
+- 建议的下一步：先查实际 P4 正二次项中有哪些可作为 `h z^2` 的 typed reserve，再决定各 execution remainder 的路由；若某项只有常数偏差且没有额外 slack，则保留 obstruction，不要重新塞回 `1/4` envelope。
+- 关联任务/Review：`T-P4-014`、`review-T-P4-014-kuangmanmozun-20260907T0247.md`、`T-P4-007`、`T-P4-013`、`T-P4-012`。
