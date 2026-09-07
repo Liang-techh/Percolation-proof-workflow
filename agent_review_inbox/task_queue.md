@@ -159,6 +159,12 @@ GitHub agents for the push channel.
   T-P4-017 residual receipt without importing solver status as evidence;
 - deliver: Lean compile receipt, `#print axioms`, and explicit source/hash
   binding for the concrete coefficient list;
+- receipt contract: `routeb.residual_l1_lean_receipt.v1`, audited by
+  `audit_routeb_residual_l1_lean_receipt`.  The handoff must include the
+  pinned source/artifact hashes, both theorem names, zero `sorry`/`admit`,
+  exit code `0`, coefficient term count, `residual_l1`, safe rational lower
+  bound, and positive scaled margin.  Missing coordinator-owned pins remain
+  `PENDING`; mismatches are `REJECTED`.
 - forbidden: treating the generic seam as proof of the giant CSV identity,
   true-DH semantics, domain coverage, or Route-B closure.
 

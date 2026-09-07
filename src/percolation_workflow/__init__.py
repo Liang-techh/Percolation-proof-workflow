@@ -34,6 +34,12 @@ from .routeb_nominal_distal_contract import (
     audit_routeb_physical_rational_gram_reconstruction,
     audit_routeb_physical_rational_tail,
 )
+from .routeb_residual_l1_contract import (
+    EXPECTED_THEOREMS as RESIDUAL_L1_EXPECTED_THEOREMS,
+    RESIDUAL_L1_LEAN_RECEIPT_SCHEMA,
+    RouteBResidualL1LeanReceiptAudit,
+    audit_routeb_residual_l1_lean_receipt,
+)
 from .disjoint import (audit_do, build_repair_do, canonical_do_schema,
                         classify_manual_review, do_sha256, normalize_do_path)
 from .advisory_reuse import (AdvisoryReuseError, SCHEMA_VERSION,
@@ -66,6 +72,8 @@ __all__ = [
     "RouteBPhysicalRationalGramReconstructionAudit",
     "audit_routeb_physical_rational_gram_reconstruction",
     "RouteBPhysicalRationalTailAudit", "audit_routeb_physical_rational_tail",
+    "RESIDUAL_L1_EXPECTED_THEOREMS", "RESIDUAL_L1_LEAN_RECEIPT_SCHEMA",
+    "RouteBResidualL1LeanReceiptAudit", "audit_routeb_residual_l1_lean_receipt",
     "audit_do", "build_repair_do", "canonical_do_schema", "classify_manual_review", "do_sha256", "normalize_do_path",
     "AdvisoryReuseError", "SCHEMA_VERSION", "project_advisory_reuse",
     "project_plan", "export_plan_views", "plan_topo_order", "plan_levels",

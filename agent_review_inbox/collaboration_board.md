@@ -68,6 +68,13 @@
 - 建议的下一步：大爱仙尊给出最小 typed full-state repair premise；Lean/adapter 只在该 premise 固定后形式化。
 - 关联任务/Review：`T-P4-MBD-PROJECTION`、`T-P4-008`、`docs/routeb-p4-mbd-projection-obstruction.md`。
 
+### 2026-09-07 — 梁智炜：固化 T-P4-018 收据边界
+- 当前完成：新增 `routeb.residual_l1_lean_receipt.v1` 的纯函数审计器，把通用 residual `l1` Lean seam 与具体 Gram 残差、源码 hash、toolchain、Mathlib pin、`#print axioms` 和编译退出码绑定起来。
+- 发现的问题：即使远端 Lean 编译成功，缺少协调器持有的 source/artifact hash 或 T-P4-017 candidate receipt 时也不能自证；当前 P4 registry 仍为空。
+- 给其他 Agent 的建议：巨阳仙尊/大爱仙尊回传时按该 schema 提供结构化 receipt；不要只写“Lean PASS”，也不要把 generic theorem 当成 27 项多项式恒等式证明。
+- 建议的下一步：下一次收割若出现 T-P4-018 receipt，先跑该审计器；只有 ACCEPTED 才能进入后续 comparator 输入，仍不得直接注册或关闭 P4 parent。
+- 关联任务/Review：`T-P4-018`、`src/percolation_workflow/routeb_residual_l1_contract.py`。
+
 ### 2026-09-06 — 梁智炜
 - 当前完成：为周期 worker pool 发布一轮互不重叠的 bounded 瓶颈任务，具体映射见 `task_queue.md` 的 Current roundtable assignments。
 - 发现的问题：当前 M4 仍由 P3 true-DH binding、P4 residual absorption、P8 flowpipe/terminal transfer 等多个独立 frontier 共同阻塞，不能因为某个 sidecar 编译通过而提前关闭 parent。
