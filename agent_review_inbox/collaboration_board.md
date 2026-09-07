@@ -1640,3 +1640,14 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   source、coverage 或 P5/P8/M4 closure。
 - 本轮还把 inbox 中此前尚未消费的 fail-closed reviews 一次性写入 processed
   markers；state revision `595`，122 nodes，registry `0`。
+
+### 2026-09-07 — P5-026 geometry/SPN companion 收割
+
+- Volta the 6th 的 `NEW_exact_geometry_spn.py` 对六个闭锥的精确逆映射/Farkas
+  条件、36 个符号恒等式、18 个 sign-orbit 代表和 24 个篡改负控通过；普通模式
+  与优化模式均通过，样本数为 0。
+- 该结果已绑定到 `P5.componentwise_relative_decay.feasible_cone_spn.proof_attempt`
+  的 artifact 集；仍未运行 Lean，且没有 concrete `K_path`、source semantics、
+  coverage 或 registry admission。
+- 下一条新增并行线由 Kant the 6th 处理固定 λ 有限 fold 的抽象 Lean 接口，写入
+  `examples/routeb_fixed_lambda_fold/NEW_*`，不覆盖现有 checker/receipt。

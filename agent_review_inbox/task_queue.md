@@ -2218,3 +2218,12 @@ do not fetch/push merely because an agent has emitted an intermediate file.
 - The coordinator has integrated both review families and their processed
   markers. Do not rerun the old broad diagnostics; assign only the remaining
   concrete cone/source/coverage obligations.
+
+### Current local companion harvest
+
+- P5-026 `NEW_exact_geometry_spn.py` is accepted as an exact symbolic/rational
+  companion only. Its negative controls are useful for future checker repair,
+  but no `K_path` source binding may be inferred from them.
+- The fixed-lambda fold now has both a data-contract checker and a separate
+  Lean-interface task. Preserve the sparse global box labels discovered in the
+  ledger; do not reintroduce a dense `1..N` assumption.

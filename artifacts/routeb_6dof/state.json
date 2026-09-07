@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 595,
+  "revision": 596,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -30101,6 +30101,14 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\companion-T-P5-026-juyangxianzun-20260907T1050.md",
             "sha256": "6037178D13727369A2CDED76DF2C23A15003991D50EB5662C2513987389FCE5C"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_exact_geometry_spn.py",
+            "sha256": "263FAC727C1C3068043C02A63DADE5995A22E1E7E9A879682AC3E69BAFD54F42"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\REVIEW_exact_geometry_spn.md",
+            "sha256": "2BC8CED0635990A7F71CDC223E67F2113BAD7E23F1879281D1D4C8F2B9F5382D"
           }
         ],
         "registry_eligible": false,
@@ -56073,6 +56081,16 @@
       ],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T16:59:03.554198+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [],
+      "metadata_updated": [
+        "P5.componentwise_relative_decay.feasible_cone_spn.proof_attempt"
+      ],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -59729,5 +59747,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "b9c456489c597a11634c316d746331dba794bc5df31482c4605c7724dadf1c49"
+  "state_checksum": "3b8fd924e773d8d96283d501923b6a0aed56e7ac6c9747f9395b0a4ba4ab760f"
 }

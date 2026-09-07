@@ -162,6 +162,8 @@ CHILDREN = [
             "examples/routeb_p5_feasible_cone_spn_lean/lean-toolchain",
             "agent_review_inbox/review-T-P5-026-juyangxianzun-20260907T1048.md",
             "agent_review_inbox/companion-T-P5-026-juyangxianzun-20260907T1050.md",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_exact_geometry_spn.py",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/REVIEW_exact_geometry_spn.md",
         ],
     },
     {
