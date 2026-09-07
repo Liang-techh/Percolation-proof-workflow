@@ -1138,7 +1138,10 @@ polynomial remains a separate frontier.
   hashes;
 - deliver: a bounded source-bound/Lean candidate or a precise obstruction,
   including whether the Frobenius norm bound can be consumed as the fixed
-  `E_k`/port factor without changing the residual semantics;
+  `E_k`/port factor without changing the residual semantics. The local replay
+  already found that Frobenius does not pointwise dominate the induced bound
+  (22 cells at eta=2.7 and 39 at eta=5.6), so preserve this comparison as an
+  obstruction rather than silently selecting one norm by pointwise order;
 - forbidden: treating `RESOLVED`, positive Young margin, or `implicit_HG_spd`
   as kernel verification, inferring full DH/Float64 correctness, skipping
   independent interval replay, or promoting this leaf to the registry.

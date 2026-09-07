@@ -526,3 +526,7 @@
   hash、true-DH/Float64 语义、固定 `E_k` 消费、residual PMI、flowpipe
   和 Lean comparator 仍独立开放。大爱仙尊攻 source binding，巨阳仙尊
   攻最小 Lean lift，不得据此关闭 P4/M4。
+- 独立重算还发现 Frobenius bound 不逐 cell 支配 induced bound：eta=2.7
+  有 22 个、eta=5.6 有 39 个反例 cell。该 obstruction 已写入叶的
+  `independent_replay`，后续必须证明所选 norm 的独立消费契约，不能靠
+  两种 bound 的点wise 比较替代 residual 语义。
