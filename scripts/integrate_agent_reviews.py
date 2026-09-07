@@ -29,6 +29,7 @@ TASK_TARGETS = {
     "T-P8-003": ("P8.independent_reachability", "explicit_time_contract_recommended"),
     "T-P8-004": ("P8.independent_reachability", "explicit_time_typed_sidecar"),
     "T-P5-001": ("P5.sparse_disjunctive_sos", "energy_syzygy_reuse_audit"),
+    "T-P3-004": ("P3.strict_true_dh_bounds", "pending_source_semantic_adapter"),
 }
 
 

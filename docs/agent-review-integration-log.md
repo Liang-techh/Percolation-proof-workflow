@@ -3,7 +3,7 @@
 This log records durable integrations from `agent_review_inbox/`. The original
 review files and their SHA-256 markers remain in that directory.
 
-## 2026-09-06 / Route-B checkpoint revision 338
+## 2026-09-06 / Route-B checkpoint revision 339
 
 Integrated as pending metadata only:
 
@@ -25,10 +25,11 @@ Integrated as pending metadata only:
 | T-P4-004 | `P4.residual_schur_pmi` | `conditional_typed_normalization_sidecar` | none |
 | T-P5-001 | `P5.sparse_disjunctive_sos` | `energy_syzygy_reuse_audit` | none |
 | T-P8-004 | `P8.independent_reachability` | `explicit_time_typed_sidecar` | none |
+| T-P3-004 | `P3.strict_true_dh_bounds` | `pending_source_semantic_adapter` | none |
 
 The authoritative `artifacts/routeb_6dof/state.json` was updated through
-`StateStore` from revision 328 to revision 338. Eighteen
-`agent_review_integrated` events and eighteen node provenance references were
+`StateStore` from revision 328 to revision 339. Nineteen
+`agent_review_integrated` events and nineteen node provenance references were
 added. Node statuses remain open and the verified registry remains empty.
 
 No review was promoted to `VERIFIED`; P3 source semantics, P4 true-DH residual
@@ -53,3 +54,7 @@ Newton–Euler syzygy. Both remain below physical parent admission.
 P8-004 supplies a focused explicit-time 13-state interface sidecar with the
 `c` parameter external to the state vector. It remains conditional and does
 not establish source binding, flowpipe coverage, or terminal transfer.
+
+P3-004 confirms the smallest source-semantic adapter remains premise-driven:
+hash equality is provenance only, while Julia Float64 semantics and Lean exact
+semantics still require a separate machine-checkable binding receipt.

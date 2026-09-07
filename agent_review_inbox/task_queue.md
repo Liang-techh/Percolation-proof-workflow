@@ -171,7 +171,8 @@ without an explicit scoped request.
 
 ### T-P3-004 — source-semantic adapter design
 
-- status: `claimed` (Schrodinger the 6th, 2026-09-06)
+- status: `reviewed_pending` (integrated at Route-B revision 339; result:
+  `review-T-P3-004-semantic-adapter.md`)
 - scope: design the smallest adapter from canonical Julia/DH source manifest to
   Lean/checker semantics using existing snapshots;
 - deliver: review or disjoint sidecar with explicit semantic premises and

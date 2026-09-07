@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 338,
+  "revision": 339,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -7394,6 +7394,16 @@
             "classification": "pending_source_manifest_binding_revision",
             "admission_effect": "none",
             "correction_of_sha256": "FD5561E0A136F8B33CEDF4C9C2F8DE64C122ECBAFA15B7210CA5EBECDAE91082"
+          },
+          {
+            "review_file": "agent_review_inbox/review-T-P3-004-semantic-adapter.md",
+            "review_sha256": "5D33F2E0EE0BC02DA8837605D4C2079F505E71272B6664F34E0BA672E6DC11CE",
+            "task_id": "T-P3-004",
+            "source_agent": "Codex",
+            "created_at": "2026-09-06T00:00:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_source_semantic_adapter",
+            "admission_effect": "none"
           }
         ]
       }
@@ -29629,6 +29639,18 @@
       "admission_effect": "none",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T02:45:34.940192+00:00",
+      "kind": "agent_review_integrated",
+      "review_file": "agent_review_inbox/review-T-P3-004-semantic-adapter.md",
+      "review_sha256": "5D33F2E0EE0BC02DA8837605D4C2079F505E71272B6664F34E0BA672E6DC11CE",
+      "task_id": "T-P3-004",
+      "node_id": "8f7df5df39a041d7a972078830dbcee7",
+      "classification": "pending_source_semantic_adapter",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -33114,5 +33136,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "dcf600a65b463893110d576d62caf6c6af168f9d5ae75920f26942610046ebcd"
+  "state_checksum": "c2b0ef22f5d7b25ea96c1e618c123b428b6ef2ac1e4b4c5a73e5b198d2bac3b5"
 }
