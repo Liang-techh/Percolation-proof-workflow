@@ -12,7 +12,8 @@ from __future__ import annotations
 import csv
 from dataclasses import dataclass
 import io
-from typing import Mapping
+from collections import defaultdict
+from fractions import Fraction
 
 
 EXPECTED_AUDIT = {
@@ -37,6 +38,30 @@ EXPECTED_INTERFACE = {
     "v_descriptor_equation": "M_DD(q)*v+DeltaM_DB(q)*a_B=0",
     "force_port_equation": "r_B-M_BD(q)*v=0",
 }
+EXPECTED_BRIDGE = {
+    "block_B": "4,5",
+    "D_coordinates": "1,2,3,6",
+    "r_hat": "0,1,-6377/6250,0",
+    "rho_num": "10616159325566083327957",
+    "rho_den": "39062500000000000000000",
+    "orthogonality_entries": "3",
+    "retained_polynomial_terms": "46",
+    "retained_max_total_cs_degree": "5",
+    "full_MBB_12": "153080849893419/50000000000000000000000000000000",
+    "full_MBB_21": "153080849893419/50000000000000000000000000000000",
+    "evidence_level": "algebraic_subcertificate",
+}
+EXPECTED_TAIL_META = {
+    "pmi_dimension": "3",
+    "schur_scalar_dimension": "1",
+    "scalar_terms": "27",
+    "scalar_max_total_cs_degree": "6",
+    "rho": "10616159325566083327957/39062500000000000000000",
+    "delta_sq": "1/160000",
+    "active_variables": "c3;s3;c4;s4;c5;s5",
+    "energy_accounting": "tail_only_no_double_count",
+    "evidence_level": "algebraic_sos_input_candidate",
+}
 
 
 @dataclass(frozen=True)
@@ -46,6 +71,20 @@ class RouteBNominalDistalBridgeAudit:
     source_sha256: str | None
     block_coordinates: tuple[int, ...]
     remote_coordinates: tuple[int, ...]
+    errors: tuple[str, ...] = ()
+    formal_certificate_allowed: bool = False
+    registry_eligible: bool = False
+
+
+@dataclass(frozen=True)
+class RouteBPhysicalRationalTailAudit:
+    """Exact-rational tail seam status, still below theorem admission."""
+
+    status: str
+    artifact_sha256: str | None
+    source_sha256: str | None
+    scalar_terms: int
+    scalar_max_total_cs_degree: int
     errors: tuple[str, ...] = ()
     formal_certificate_allowed: bool = False
     registry_eligible: bool = False
@@ -75,6 +114,30 @@ def _coordinates(value: str | None) -> tuple[int, ...]:
         return ()
 
 
+def _read_exact_scalar_polynomial(text: str) -> tuple[dict[tuple[int, ...], Fraction], list[str]]:
+    rows = csv.DictReader(io.StringIO(text))
+    required = {"row", "col", "num", "den", *(f"e{k}" for k in range(1, 13))}
+    if not rows.fieldnames or not required.issubset(rows.fieldnames):
+        return {}, ["scalar_polynomial_header_mismatch"]
+    polynomial: defaultdict[tuple[int, ...], Fraction] = defaultdict(Fraction)
+    errors: list[str] = []
+    for line_no, row in enumerate(rows, start=2):
+        try:
+            if row.get("row") != "1" or row.get("col") != "1":
+                errors.append(f"scalar_polynomial_coordinate_mismatch:{line_no}")
+            monomial = tuple(int(row[f"e{k}"]) for k in range(1, 13))
+            if any(power < 0 for power in monomial):
+                errors.append(f"scalar_polynomial_negative_exponent:{line_no}")
+            denominator = int(row["den"])
+            numerator = int(row["num"])
+            if denominator <= 0:
+                errors.append(f"scalar_polynomial_nonpositive_denominator:{line_no}")
+            polynomial[monomial] += Fraction(numerator, denominator)
+        except (KeyError, TypeError, ValueError, ZeroDivisionError):
+            errors.append(f"scalar_polynomial_malformed_row:{line_no}")
+    return ({monomial: value for monomial, value in polynomial.items() if value}, errors)
+
+
 def audit_routeb_nominal_distal_bridge(
     audit_csv_text: str,
     interface_csv_text: str,
@@ -95,6 +158,7 @@ def audit_routeb_nominal_distal_bridge(
         for key, expected in EXPECTED_INTERFACE.items()
         if interface.get(key) != expected
     )
+
     block = _coordinates(interface.get("block_B"))
     remote = _coordinates(interface.get("block_D"))
     if block != (4, 5):
@@ -112,9 +176,56 @@ def audit_routeb_nominal_distal_bridge(
     )
 
 
+def audit_routeb_physical_rational_tail(
+    bridge_csv_text: str,
+    tail_meta_csv_text: str,
+    scalar_csv_text: str,
+    *,
+    artifact_sha256: str | None = None,
+    source_sha256: str | None = None,
+) -> RouteBPhysicalRationalTailAudit:
+    """Check the exact rational tail seam without asserting global positivity."""
+    bridge = _read_metric_csv(bridge_csv_text)
+    meta = _read_metric_csv(tail_meta_csv_text)
+    errors = [
+        f"bridge_mismatch:{key}"
+        for key, expected in EXPECTED_BRIDGE.items()
+        if bridge.get(key) != expected
+    ]
+    errors.extend(
+        f"tail_meta_mismatch:{key}"
+        for key, expected in EXPECTED_TAIL_META.items()
+        if meta.get(key) != expected
+    )
+    polynomial, polynomial_errors = _read_exact_scalar_polynomial(scalar_csv_text)
+    errors.extend(polynomial_errors)
+    terms = len(polynomial)
+    degree = max((sum(monomial) for monomial in polynomial), default=0)
+    if terms != 27:
+        errors.append("scalar_polynomial_term_count_mismatch")
+    if degree != 6:
+        errors.append("scalar_polynomial_degree_mismatch")
+    if any(any(power != 0 for power in monomial[:4] + monomial[10:])
+           for monomial in polynomial):
+        errors.append("scalar_polynomial_active_variable_mismatch")
+    status = "EXACT_RATIONAL_TAIL_CANDIDATE" if not errors else "OPEN_FAIL_CLOSED"
+    return RouteBPhysicalRationalTailAudit(
+        status=status,
+        artifact_sha256=artifact_sha256,
+        source_sha256=source_sha256,
+        scalar_terms=terms,
+        scalar_max_total_cs_degree=degree,
+        errors=tuple(errors),
+    )
+
+
 __all__ = [
     "EXPECTED_AUDIT",
     "EXPECTED_INTERFACE",
+    "EXPECTED_BRIDGE",
+    "EXPECTED_TAIL_META",
     "RouteBNominalDistalBridgeAudit",
+    "RouteBPhysicalRationalTailAudit",
     "audit_routeb_nominal_distal_bridge",
+    "audit_routeb_physical_rational_tail",
 ]

@@ -37,10 +37,14 @@ def main() -> int:
     interface = TARGET / "routeB_compact_nominal_descriptor_interface.csv"
     source = TARGET / "dhport_lib.jl"
     design = TARGET / "P4_PHYSICAL_RATIONAL_DESCRIPTOR_BRIDGE.md"
+    bridge_meta = TARGET / "routeB_physical_rational_descriptor_bridge.csv"
+    tail_meta = TARGET / "routeB_physical_rational_tail_pmi_scalar_meta.csv"
+    tail_scalar = TARGET / "routeB_physical_rational_tail_pmi_scalar.csv"
     reform = EXTERNAL / "PROJECT_REFORM_TARGET.md"
     contract = ROOT / "src/percolation_workflow/routeb_nominal_distal_contract.py"
     source_artifacts = [ref(path) for path in
-                        (audit, interface, source, design, reform, contract)]
+                        (audit, interface, source, design, bridge_meta, tail_meta,
+                         tail_scalar, reform, contract)]
 
     existing = next((n for n in state.nodes.values() if n.name == name), None)
     p4 = find(state, "P4.residual_schur_pmi")

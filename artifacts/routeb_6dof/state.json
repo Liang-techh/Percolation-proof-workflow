@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 370,
+  "revision": 371,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -10655,12 +10655,24 @@
             "sha256": "68bbc8d4b4455a547d6a251e67f0b3a075b32827541dbf7cec827b56d06a9487"
           },
           {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_descriptor_bridge.csv",
+            "sha256": "8313f4a7c6b580d480200b88ed7457e5a9acc3262925a5358f360be93fe6fccb"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_tail_pmi_scalar_meta.csv",
+            "sha256": "53efe6a1ffaa15b7a8eb8c08b220e5e9a0ee2f2166a0f6982de055b78bdec374"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_tail_pmi_scalar.csv",
+            "sha256": "6b00542155ff41339ab466138cb5d1612f7385f8abd158feea4630e30933e93e"
+          },
+          {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\PROJECT_REFORM_TARGET.md",
             "sha256": "439a7378bdbf8950445b91a66d917535ede341065ced8a548a176517d679138c"
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\src\\percolation_workflow\\routeb_nominal_distal_contract.py",
-            "sha256": "97c64a55d83e9b4090bd41b86c9a211d1ffbf886d209a4c0b7c3e058d74ec09c"
+            "sha256": "705332a5613499ce299ebd9689a3db157bd42af34432d53a8d4e5b6152bd4295"
           }
         ],
         "unresolved": [
@@ -30714,6 +30726,53 @@
       "status": "pending_source_binding_and_pinned_compile",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T06:42:17.322251+00:00",
+      "kind": "routeb_nominal_distal_bridge_provenance_refresh",
+      "node_id": "5233ac4cfe4c492db8250ad9f3eda543",
+      "parent_id": "1e7b1df1835f4deba06b11a8182f6719",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_dh_nominal_distal_bridge_audit.csv",
+          "sha256": "43ebf83d9abfc39e58008fb9e012fefd9db712791e28aa8d718390229eb930c9"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_nominal_descriptor_interface.csv",
+          "sha256": "ab36538b5aa9ab9b62012d2ab90a1e20e3a226110b97f95d5e9d270f0b5a0375"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\dhport_lib.jl",
+          "sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P4_PHYSICAL_RATIONAL_DESCRIPTOR_BRIDGE.md",
+          "sha256": "68bbc8d4b4455a547d6a251e67f0b3a075b32827541dbf7cec827b56d06a9487"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_descriptor_bridge.csv",
+          "sha256": "8313f4a7c6b580d480200b88ed7457e5a9acc3262925a5358f360be93fe6fccb"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_tail_pmi_scalar_meta.csv",
+          "sha256": "53efe6a1ffaa15b7a8eb8c08b220e5e9a0ee2f2166a0f6982de055b78bdec374"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_tail_pmi_scalar.csv",
+          "sha256": "6b00542155ff41339ab466138cb5d1612f7385f8abd158feea4630e30933e93e"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\PROJECT_REFORM_TARGET.md",
+          "sha256": "439a7378bdbf8950445b91a66d917535ede341065ced8a548a176517d679138c"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\src\\percolation_workflow\\routeb_nominal_distal_contract.py",
+          "sha256": "705332a5613499ce299ebd9689a3db157bd42af34432d53a8d4e5b6152bd4295"
+        }
+      ],
+      "status": "pending_source_binding_and_pinned_compile",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -34370,5 +34429,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "8f64c2a7e6ab0e1522350ba0d0be48994f357bc43914b52674e4c29a1d5e920d"
+  "state_checksum": "14dd56d3ee26acbc2cca2b33949fac94d9b1416ca52bd87988403a4c221ee01f"
 }

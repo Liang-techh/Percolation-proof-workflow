@@ -1,5 +1,10 @@
+import csv
+import io
+from itertools import product
+
 from percolation_workflow.routeb_nominal_distal_contract import (
     audit_routeb_nominal_distal_bridge,
+    audit_routeb_physical_rational_tail,
 )
 
 
@@ -52,3 +57,97 @@ def test_nominal_bridge_rejects_inverses_or_coordinate_drift():
     assert result.status == "OPEN_FAIL_CLOSED"
     assert "interface_mismatch:nominal_remote_equation" in result.errors
     assert "remote_coordinate_order_mismatch" in result.errors
+
+
+def bridge_metadata_csv():
+    rows = [
+        ("block_B", "4,5"),
+        ("D_coordinates", "1,2,3,6"),
+        ("r_hat", "0,1,-6377/6250,0"),
+        ("rho_num", "10616159325566083327957"),
+        ("rho_den", "39062500000000000000000"),
+        ("orthogonality_entries", "3"),
+        ("retained_polynomial_terms", "46"),
+        ("retained_max_total_cs_degree", "5"),
+        ("full_MBB_12", "153080849893419/50000000000000000000000000000000"),
+        ("full_MBB_21", "153080849893419/50000000000000000000000000000000"),
+        ("evidence_level", "algebraic_subcertificate"),
+    ]
+    output = io.StringIO()
+    writer = csv.writer(output, lineterminator="\n")
+    writer.writerow(["metric", "value"])
+    writer.writerows(rows)
+    return output.getvalue()
+
+
+def tail_meta_csv():
+    rows = [
+        ("pmi_dimension", "3"),
+        ("schur_scalar_dimension", "1"),
+        ("scalar_terms", "27"),
+        ("scalar_max_total_cs_degree", "6"),
+        ("rho", "10616159325566083327957/39062500000000000000000"),
+        ("delta_sq", "1/160000"),
+        ("active_variables", "c3;s3;c4;s4;c5;s5"),
+        ("energy_accounting", "tail_only_no_double_count"),
+        ("evidence_level", "algebraic_sos_input_candidate"),
+    ]
+    return "metric,value\n" + "\n".join(f"{k},{v}" for k, v in rows) + "\n"
+
+
+def scalar_csv():
+    header = "row,col," + ",".join(f"e{k}" for k in range(1, 13)) + ",num,den\n"
+    zero = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1\n"
+    return header + "1,1,0,0,0,0,1,0,0,0,0,0,0,0,1,1\n" + zero
+
+
+def valid_scalar_csv():
+    output = io.StringIO()
+    writer = csv.writer(output, lineterminator="\n")
+    writer.writerow(["row", "col", *[f"e{k}" for k in range(1, 13)], "num", "den"])
+    monomials = []
+    for total in range(3):
+        monomials.extend(
+            exponents for exponents in product(range(3), repeat=6)
+            if sum(exponents) == total
+        )
+    monomials = monomials[:26] + [(6, 0, 0, 0, 0, 0)]
+    for exponents in monomials:
+        writer.writerow([1, 1, *([0] * 4), *exponents, 0, 0, 1, 1])
+    return output.getvalue()
+
+
+def test_exact_rational_tail_candidate_is_pending():
+    # Keep the fixture small: duplicate rows combine, while the production
+    # artifact is checked for its full 27-term canonical polynomial.
+    scalar = scalar_csv().replace(
+        "1,1,0,0,0,0,1,0,0,0,0,0,0,0,1,1\n",
+        "1,1,0,0,0,0,1,0,0,0,0,0,0,0,1,1\n" * 27
+    )
+    result = audit_routeb_physical_rational_tail(
+        bridge_metadata_csv(), tail_meta_csv(), scalar,
+    )
+    assert result.status == "OPEN_FAIL_CLOSED"
+    assert "scalar_polynomial_term_count_mismatch" in result.errors
+
+
+def test_exact_rational_tail_shape_can_pass_without_proving_psd():
+    result = audit_routeb_physical_rational_tail(
+        bridge_metadata_csv(), tail_meta_csv(), valid_scalar_csv(),
+    )
+    assert result.status == "EXACT_RATIONAL_TAIL_CANDIDATE"
+    assert result.scalar_terms == 27
+    assert result.scalar_max_total_cs_degree == 6
+    assert result.formal_certificate_allowed is False
+
+
+def test_exact_rational_tail_rejects_active_variable_drift():
+    scalar = scalar_csv().replace(
+        "1,1,0,0,0,0,1,0,0,0,0,0,0,0,1,1",
+        "1,1,1,0,0,0,1,0,0,0,0,0,0,0,1,1",
+    )
+    result = audit_routeb_physical_rational_tail(
+        bridge_metadata_csv(), tail_meta_csv(), scalar,
+    )
+    assert result.status == "OPEN_FAIL_CLOSED"
+    assert "scalar_polynomial_active_variable_mismatch" in result.errors
