@@ -2381,3 +2381,10 @@ revision 711 收齐 C2/C3 与 VerifiedRegistryEntry invariant；revision 712
 分叉现已明确：排除零点只提供必要条件，不提供正 margin；P4 则明确 finite
 allocation 不能自动给预设正 target。下一轮继续攻实际 margin、positive target、
 append-only registry 和真实 DH derivative binding。
+
+### 2026-09-07 — 梁智炜继续向最终闭合推进
+
+已向四条线派发下一层：BODY6 domain exclusion 后的实际正 margin feasibility、
+P4 positive-target 条件、fixed-λ append-only registry transition、P3 真实 DH
+coefficient 与 C2/C3 derivative binding。当前所有结果仍只允许进入 open frontier，
+不提前关闭 parent 或 registry。

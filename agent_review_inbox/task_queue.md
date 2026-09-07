@@ -3001,3 +3001,7 @@ revision 711 收割 P3 C2/C3 regularity remainder 与 fixed-λ VerifiedRegistryE
 invariant；revision 712 收割 BODY6 domain repair 与 P4 split allocation obstruction。
 新 frontier：排除零点后的实际正 margin、positive-target feasibility、append-only
 registry transition、真实 DH coefficient 到 C2/C3 绑定。
+
+下一轮已派发：BODY6 排除零点后的正 margin feasibility；P4 positive-target
+feasibility；fixed-λ append-only registry transition；P3 C2/C3 到真实 DH
+coefficient binding。四项继续保持 `OPEN_UNCOMPILED`，等待 proof-attempt + review。
