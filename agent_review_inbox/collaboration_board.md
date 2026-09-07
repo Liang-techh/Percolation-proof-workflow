@@ -740,3 +740,18 @@
 - Anthropic FLT 复用仍是 advisory-only：pairing transport 为 direct，
   quotient/spectral 为 light adaptation，其余 architecture-only；当前
   overlay 已刷新到最新 state hash，未修改 authoritative dependencies。
+
+### 2026-09-07 — 梁智炜：收割 O0/O1/O2 并锁定 force-scale 来源阻塞
+
+- O0/O1/O2 三份独立静态报告已通过 hash/边界 intake，分别挂到
+  `P4.true_dh_regularizer_semantics_bridge`、
+  `P4.true_dh_exact_real_coefficient_identity` 和
+  `P4.true_dh_float64_evaluator_enclosure`；三者均保持 open，未进入 registry。
+- 新增 `math-frontier` CLI，formalizable 调度按数学 bottleneck 优先；当前
+  O1 `coefficient_identity` 排在 O2 `evaluator_enclosure` 与无关 Lean 叶之前。
+  旧的“Lean 类型但实际 coverage”叶片已从 formalizable dispatch 排除。
+- 静态扫描部署 `robot_final/dhport_lib.jl` 与 lifted descriptor 确认：两者都
+  没有 `q5/100`、`q4/200`；lifted nominal 行实际含 `+q5/20`、`+q4/20`，而
+  deployed `tau` 使用 `-Kp*q-(Kd+b_fr)*dq+G0v+GwI*w`。因此 T-P4-035 将该
+  差异标为 source-contract obstruction，禁止把 `1/20` 近似解释成请求系数。
+- 当前主状态仍为 rev 479、registry=0、`formal_certificate_allowed=false`。
