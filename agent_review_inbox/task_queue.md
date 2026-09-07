@@ -2953,3 +2953,8 @@ P4 residual-budget adapter 已登记 revision 693；fixed-λ typed receipt audit
 已登记 revision 694；body-6 exact source-to-Schur coefficient seam 已登记
 revision 695。三者仍为 `OPEN_UNCOMPILED`，分别保留 qCap/scale、hash/digest/
 pending-rejected、九项 R=A-XDY 等独立义务。
+
+P3 derivative-endpoint/gap bridge 已登记 revision 696。下一批继续拆分：BODY6
+tail inverse/solve 与分母条件；fixed-λ canonical statement digest/normalization；
+P3 finite-cover 到全域统一正 margin。三项仍需 proof-attempt + 定向 review，
+不做本机 Lean/Lake 和宽回归。

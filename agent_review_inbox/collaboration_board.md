@@ -2311,3 +2311,10 @@ BODY6 `EXACTSCHURCOEFF` 已分别登记 revision 693、694、695。它们补齐
 residual cap/scale 的条件消费、receipt 的 pending/rejected provenance
 边界、以及实际 source Schur 九项系数绑定；全部保持 `OPEN_UNCOMPILED`，
 没有把抽象反例、静态检查或 receipt 元数据升级为 formal/verified 结论。
+
+### 2026-09-07 — 梁智炜收割 derivative endpoint 叶
+
+P3 `DERIVATIVE_ENDPOINT_GAP` 已登记 revision 696。它把显式函数值、导数界、
+offset、余项和 rounding endpoint 链到 per-box gap lower bound，并保留错误
+余项与 sample-only 的反例；不宣称 Taylor 实现、source identity、连续覆盖或
+registry admission。随后已向 BODY6、fixed-λ、P3 三条空闲线派发下一层瓶颈。
