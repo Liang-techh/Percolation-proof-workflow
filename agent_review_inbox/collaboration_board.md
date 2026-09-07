@@ -545,3 +545,14 @@
   也不混入 interval rounding、true-DH 或 flowpipe 语义。
 - 该 theorem target 已进入 revision 410 的持久 DAG，等待巨阳仙尊给出
   pinned compile/axiom receipt；P4/M4 gate 保持关闭。
+
+### 2026-09-07 — 梁智炜：补齐加权 Frobenius port-energy 组合层
+
+- 新增 `P4.weighted_frobenius_port_energy_bridge` / `T-P4-023`，位于
+  resolved-cell port leaf 下，并通过 `required_node_ids` 等待 generic
+  Frobenius theorem。
+- 目标是把 `T=R S⁻¹` 与 `B=SᵀS` 组合成
+  `||R a||²≤rho(aᵀB a)`，对应 Route-B combined-Schur 的真正 port-energy
+  前提；它不构造 robust-PMI `E_k`，也不绑定 interval source。
+- revision 413 已持久化该目标；等待 Lean agent 的 pinned receipt 和
+  柳冠一的 `R/B_up` source adapter，P4/M4 gate 继续关闭。

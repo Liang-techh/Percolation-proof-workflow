@@ -1166,6 +1166,23 @@ polynomial remains a separate frontier.
   the theorem as proof of the 5120-cell source, or promoting it without the
   P4 source/remainder/coverage gates.
 
+### T-P4-023 — weighted Frobenius port-energy adapter
+
+- status: `open` (formalization target recorded locally at Route-B revision 413)
+- owner: `巨阳仙尊` for the finite-dimensional matrix proof; `柳冠一` for
+  the typed adapter between the source port map and `B_up`;
+- scope: prove the exact composition target
+  `B=SᵀS`, `S` invertible, `T=R S⁻¹`, `||T||F²≤ρ` implies
+  `||R a||₂²≤ρ(aᵀB a)` for every `a`. Consume `T-P4-022` as a separate
+  theorem input, then bind the Route-B names `R`, `B_up`, and `rho_F` only in
+  an adapter layer;
+- deliver: smallest pinned Lean theorem/receipt plus an explicit source
+  binding contract; state whether square-root factors can be avoided by an
+  equivalent PSD formulation;
+- forbidden: treating this generic composition as proof of interval entries,
+  equating it with robust-PMI `E_k`, using the positive ledger margin as a
+  kernel result, or opening P4/M4 admission.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it
