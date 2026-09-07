@@ -102,6 +102,15 @@ default false, so exact-rational candidate numbers cannot silently pass as
 authoritative bounds. This is only a budget arithmetic result: it does not
 prove either input bound or the underlying physical PMI statement.
 
+The future receipt boundary is implemented separately by
+`audit_routeb_o0_r3_receipt` and its nested canonical variant
+`audit_routeb_o0_r3_canonical_receipt` (`routeb.o0.canonical_source_metric_schur_receipt.v1`).
+The canonical variant additionally binds `state_key`, cell coordinates,
+`mu`/FD/force semantics, metric orientation, exact-real inverse evidence,
+weighted baseline/perturbation, Schur normalization, and the typed
+`R_port a_B = r_B` binding. A `READY_FOR_COORDINATOR_ADMISSION` result remains
+conditional input only; it never promotes O0 or the registry.
+
 The API and focused tests do not run Lean/Lake, Julia, SOS, trajectory checks,
 or broad regression, and all result objects keep
 `formal_certificate_allowed=False` and `registry_eligible=False`.

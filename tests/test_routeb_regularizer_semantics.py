@@ -15,6 +15,11 @@ from percolation_workflow.routeb_regularizer_semantics import (
     propagate_routeb_regularizer_diagonal,
     routeb_regularizer_fact,
 )
+from percolation_workflow.routeb_o0_r3_receipt import (
+    O0_R3_CANONICAL_RECEIPT_SCHEMA,
+    audit_routeb_o0_r3_canonical_receipt,
+    audit_routeb_o0_r3_receipt,
+)
 
 
 def test_scalar_fact_keeps_float64_below_exact_rational() -> None:
@@ -200,3 +205,166 @@ def test_schur_margin_consumer_rejects_unproven_numeric_bounds_by_default() -> N
     assert result.margin_consumed is False
     assert "baseline_port_bound_not_authoritatively_supplied" in result.errors
     assert "weighted_port_perturbation_not_authoritatively_supplied" in result.errors
+
+
+def _o0_r3_receipt(**overrides):
+    receipt = {
+        "source_key": "physical:B45:cell-01",
+        "metric_source_key": "physical:B45:cell-01",
+        "margin_source_key": "physical:B45:cell-01",
+        "rho_baseline": "1/2",
+        "epsilon_port": "1/10",
+        "theta": "1/4",
+        "remaining_schur_margin": "1",
+        "baseline_bound_proven": True,
+        "perturbation_bound_proven": True,
+        "metric_lower_bound_proven": True,
+        "semantic_binding_proven": True,
+        "port_binding_proven": True,
+        "coverage_complete": True,
+        "source_artifact_hashes": {"dhport_lib.jl": "ABC"},
+    }
+    receipt.update(overrides)
+    return receipt
+
+
+def test_o0_r3_receipt_validator_checks_exact_budget_and_provenance() -> None:
+    result = audit_routeb_o0_r3_receipt(_o0_r3_receipt())
+
+    assert result.status == "READY_FOR_COORDINATOR_ADMISSION"
+    assert result.added_young_charge == Fraction(11, 20)
+    assert result.leftover_margin == Fraction(9, 20)
+    assert result.formal_certificate_allowed is False
+    assert result.registry_eligible is False
+
+
+def test_o0_r3_receipt_validator_is_pending_until_all_proof_flags_are_explicit() -> None:
+    result = audit_routeb_o0_r3_receipt(
+        _o0_r3_receipt(semantic_binding_proven=False)
+    )
+
+    assert result.status == "PENDING_PROOF_FIELDS"
+    assert "semantic_binding_proven_not_proven" in result.errors
+    assert result.added_young_charge is None
+
+
+def test_o0_r3_receipt_validator_rejects_float_and_nonpositive_leftover() -> None:
+    float_result = audit_routeb_o0_r3_receipt(_o0_r3_receipt(rho_baseline=0.5))
+    margin_result = audit_routeb_o0_r3_receipt(
+        _o0_r3_receipt(remaining_schur_margin="11/20")
+    )
+
+    assert float_result.status == "REJECTED"
+    assert "exact integer/rational value required" in " ".join(float_result.errors)
+    assert margin_result.status == "REJECTED"
+    assert margin_result.leftover_margin == 0
+
+
+def _canonical_o0_r3_receipt(**overrides):
+    receipt = {
+        "schema": O0_R3_CANONICAL_RECEIPT_SCHEMA,
+        "status": "PENDING",
+        "receipt_id": "receipt-01",
+        "source_key": "canonical-K",
+        "state_key": "canonical-K:cell-01:state-01",
+        "domain": {
+            "cell_id": "cell-01",
+            "q_lo": ["0", "0", "0", "0", "0", "0"],
+            "q_hi": ["1", "1", "1", "1", "1", "1"],
+            "axis_order": ["q1", "q2", "q3", "q4", "q5", "q6"],
+            "coverage": "complete-for-this-receipt",
+        },
+        "semantics": {
+            "exact_real_mu": "1/1000000",
+            "deployed_mu_literal": "1e-6",
+            "fd_step": "1/1000",
+            "force_scale": "canonical-force",
+            "coefficient_version": "v1",
+            "rounding_or_interval_mode": "outward",
+        },
+        "metric": {
+            "orientation": "left_output",
+            "norm": "induced_2",
+            "B_up_identity": "B_up = S^T S",
+            "beta": "1/2",
+            "s": "1/4",
+            "s_positive": True,
+            "s_sq_le_beta": True,
+            "B_up_ge_beta_I_proved": True,
+        },
+        "inverse": {
+            "matrix": "M_DD(mu_exact)",
+            "K": "1",
+            "norm": "induced_2",
+            "proves_exact_real_bound": True,
+            "proof_receipt": "lean-K",
+            "epsilon_A": "1/100",
+            "epsilon_A_times_K_lt_one": True,
+        },
+        "weighted_baseline": {
+            "map": "R_r",
+            "rho_r": "1/2",
+            "rho_r_nonnegative": True,
+            "statement": "forall a_B, ||R_r a_B||_2^2 <= rho_r^2 * (a_B^T B_up a_B)",
+            "proof_receipt": "baseline-K",
+        },
+        "weighted_perturbation": {
+            "map": "R_f - R_r",
+            "epsilon_R": "1/10",
+            "statement": "||(R_f-R_r)a_B||_2 <= epsilon_R*sqrt(a_B^T B_up a_B)",
+            "proof_receipt": "perturb-K",
+        },
+        "schur_baseline": {
+            "theta": "1/4",
+            "lambda": "5",
+            "remaining_margin_m_r": "1",
+            "m_r_positive": True,
+            "same_normalization_as_metric": True,
+            "proof_receipt": "schur-K",
+        },
+        "physical_binding": {
+            "statement": "R_port a_B = r_B",
+            "proof_receipt": "binding-K",
+        },
+        "admission": {
+            "all_source_keys_equal": True,
+            "all_state_keys_equal": True,
+            "registry_promoted": False,
+            "formal_certificate_allowed": False,
+        },
+    }
+    receipt.update(overrides)
+    return receipt
+
+
+def test_canonical_o0_r3_receipt_enforces_nested_same_key_contract() -> None:
+    result = audit_routeb_o0_r3_canonical_receipt(_canonical_o0_r3_receipt())
+
+    assert result.status == "READY_FOR_COORDINATOR_ADMISSION"
+    assert result.added_young_charge == Fraction(11, 20)
+    assert result.leftover_margin == Fraction(9, 20)
+    assert result.formal_certificate_allowed is False
+    assert result.registry_eligible is False
+
+
+def test_canonical_o0_r3_receipt_keeps_missing_physical_proof_pending() -> None:
+    receipt = _canonical_o0_r3_receipt()
+    receipt["physical_binding"] = {"statement": "R_port a_B = r_B"}
+    result = audit_routeb_o0_r3_canonical_receipt(receipt)
+
+    assert result.status == "PENDING_REQUIRED_FIELDS"
+    assert "physical_binding.proof_receipt" in result.missing
+
+
+def test_canonical_o0_r3_receipt_rejects_float_and_key_boundary_violation() -> None:
+    receipt = _canonical_o0_r3_receipt()
+    receipt["weighted_baseline"]["rho_r"] = 0.5
+    result = audit_routeb_o0_r3_canonical_receipt(receipt)
+    assert result.status == "REJECTED"
+    assert "exact integer/rational value required" in " ".join(result.errors)
+
+    receipt = _canonical_o0_r3_receipt()
+    receipt["admission"]["all_state_keys_equal"] = False
+    result = audit_routeb_o0_r3_canonical_receipt(receipt)
+    assert result.status == "REJECTED"
+    assert "admission.state_keys_not_equal" in result.errors

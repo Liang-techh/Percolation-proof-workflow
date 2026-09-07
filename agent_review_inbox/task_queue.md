@@ -1508,6 +1508,17 @@ polynomial remains a separate frontier.
   admission. F0/F2/F3/F4 remain open until an authoritative source/config is
   identified; the lifted `1/20` terms are not a substitute.
 
+### T-P4-033 O0-R3 receipt contract (2026-09-07)
+
+- current live result: `NO_CONSUMABLE_SAME_KEY_PHYSICAL_PAIR`
+- required intake: `src/percolation_workflow/routeb_o0_r3_receipt.py`
+- a future receipt must bind one canonical source/metric/margin key, exact
+  rational `rho_r`, `epsilon_R`, `theta`, and remaining margin; explicitly prove
+  weighted baseline/perturbation, semantic binding, `R_port*a_B=r_B`, and full
+  consumed-cell coverage; then pass the strict post-charge inequality.
+- `READY_FOR_COORDINATOR_ADMISSION` remains conditional input only; it cannot
+  close O0 or promote the registry without the existing Lean/comparator gates.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it

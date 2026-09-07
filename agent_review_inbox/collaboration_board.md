@@ -932,3 +932,10 @@ coupling receipt，downstream adapter 也缺少 `R_port*a_B=r_B`。该负结果�
 不再作为 review 身份；重复执行按 `task_id/subtask/review_status` 逻辑键识别，
 不会继续追加 review 或推进 state。历史重复记录保留，不删除既有证据；当前 state
 rev 502，第二次执行前后 state hash 相同。
+
+为下一轮真实 receipt 减少格式猜测，新增
+`audit_routeb_o0_r3_receipt` 及嵌套的
+`audit_routeb_o0_r3_canonical_receipt`。后者要求同一 canonical
+source/state key、cell/domain、μ/FD/力尺度、metric/inverse、weighted
+baseline/perturbation、Schur normalization 和 `R_port a_B = r_B` proof
+receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 registry。
