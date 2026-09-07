@@ -412,6 +412,19 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.fin6_consumer",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface",
+        "statement": "The derivative-first central-FD remainder contract specializes to Fin 6 and yields explicit Christoffel component and velocity-quadratic power error bounds.",
+        "proof_sketch": "Aggregate the three permuted derivative remainder radii for each Fin 6 Christoffel coefficient, apply nested finite-sum absolute bounds, and expose the six-coordinate power consumer without selecting numerical radii.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_FIN6_CONSUMER",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_FIN6_CONSUMER.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_FIN6_CONSUMER_REVIEW.md",
+        ],
+    },
+    {
         "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice",
         "parent": "P4.O1.source_comparator.h_body_6.canonical_export",
         "statement": "An independently reconstructed body-6 Fourier slice agrees with the canonical body-6 coefficients while preserving the source-binding and zero-complement obligations.",

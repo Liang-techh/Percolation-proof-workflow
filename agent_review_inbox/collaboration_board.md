@@ -1782,6 +1782,14 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 
 这些任务均沿独立 proof leaves 推进，继续保持 registry=0 与 formal gate 关闭。
 
+### 2026-09-07 — P3 Fin-6 consumer 收割
+
+- Fin-6 专用 consumer 已把三指标 `mu` 半径聚合成显式 Christoffel 分量界，
+  再提升为六维 velocity-quadratic power-error 界；source/storage 的槽位变换
+  仍由前一层 adapter 唯一负责。
+- 结果是 exact-real typed candidate，未实例化具体半径、Float64 误差、source
+  语义或 coverage；已作为独立 DAG leaf 注册，state revision `620`。
+
 ### 2026-09-07 — GitHub P5 Lean sidecars 收割
 
 - 巨阳仙尊的 T-P5-027 near-sharp scalar child 已在 GitHub Actions 的 pinned

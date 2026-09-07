@@ -2367,6 +2367,16 @@ Four disjoint continuations are active and must not mutate state/registry:
 All four scopes remain exact/typed mathematical work. They may not claim source,
 coverage, admission, registry promotion, or local Lean verification.
 
+### 2026-09-07 — P3 Fin-6 consumer harvest
+
+- P3 follow-up 已完成 `NEW_CENTRAL_FD_HULL_FIN6_CONSUMER.lean`：将
+  derivative-first `T/R/mu` 专用于六维，给出三项 Christoffel radius、逐分量
+  velocity-quadratic bound 与总 power-error consumer。
+- 该叶不选择任何具体 `mu`、速度盒或 source 数值，并明确依赖前置 slot
+  adapter；review 为 `OPEN_UNCOMPILED_CENTRAL_FD_FIN6_CONSUMER`。
+- 已注册到 central-FD algebraic interface，state revision `620`，registry 和
+  formal admission 均未改变。
+
 ### 2026-09-07 — GitHub Lean harvest: P5-027 / P5-028
 
 - T-P5-027 的 `P5NearSharpCenteredGain.lean` 已有 GitHub CI 证据：Lean
