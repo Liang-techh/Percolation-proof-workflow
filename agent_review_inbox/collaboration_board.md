@@ -358,3 +358,5 @@
   级复核；在此之前保持 candidate/open。
 - 本地已加入独立 reconstruction checker；生产 payload 重构成功，候选
   原尺度 margin 约 `8.9004e-9`，但不会据此关闭 frontier 或写入 registry。
+- checker 额外记录 solver lower 与 derived constant gap 的差值，后续
+  adapter 必须显式声明 safe-lower 来源，防止把 solver `OPTIMAL` 当 kernel 证据。

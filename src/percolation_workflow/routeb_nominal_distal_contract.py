@@ -126,6 +126,7 @@ class RouteBPhysicalRationalGramReconstructionAudit:
     rational_scale: Fraction | None
     solver_lower_bound: Fraction | None
     derived_constant_gap: Fraction | None
+    solver_minus_derived_gap: Fraction | None
     rational_lower_bound: Fraction | None
     residual_l1: Fraction | None
     certified_scaled_margin: Fraction | None
@@ -632,6 +633,10 @@ def audit_routeb_physical_rational_gram_reconstruction(
         target[zero] * scale - reconstruction[zero]
         if scale is not None else None
     )
+    solver_minus_derived_gap = (
+        solver_lower - derived_gap
+        if solver_lower is not None and derived_gap is not None else None
+    )
     safe_lower = (
         _floor_common_denominator(derived_gap, denominator_cap)
         if derived_gap is not None else None
@@ -664,6 +669,7 @@ def audit_routeb_physical_rational_gram_reconstruction(
         rational_scale=scale,
         solver_lower_bound=solver_lower,
         derived_constant_gap=derived_gap,
+        solver_minus_derived_gap=solver_minus_derived_gap,
         rational_lower_bound=safe_lower,
         residual_l1=residual_l1,
         certified_scaled_margin=scaled_margin,

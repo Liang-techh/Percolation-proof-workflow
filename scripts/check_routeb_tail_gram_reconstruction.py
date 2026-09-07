@@ -47,6 +47,8 @@ def main() -> int:
                                 if result.solver_lower_bound is not None else None),
         "derived_constant_gap": (str(result.derived_constant_gap)
                                   if result.derived_constant_gap is not None else None),
+        "solver_minus_derived_gap": (str(result.solver_minus_derived_gap)
+                                      if result.solver_minus_derived_gap is not None else None),
         "rational_lower_bound": (str(result.rational_lower_bound)
                                  if result.rational_lower_bound is not None else None),
         "residual_l1": (str(result.residual_l1)

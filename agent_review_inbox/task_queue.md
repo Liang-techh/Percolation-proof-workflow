@@ -143,7 +143,9 @@ GitHub agents for the push channel.
   a decimal `opt` without exact provenance, or claiming Route-B closure.
 - local progress: `check_routeb_tail_gram_reconstruction.py` now independently
   expands the rational payload and reports a positive candidate margin; the
-  exact solver `opt` provenance and pinned Lean receipt remain open.
+  exact solver `opt` provenance and pinned Lean receipt remain open. The
+  checker also records the solver-vs-derived constant gap; Lean adapters must
+  consume the derived safe lower bound, never the raw `OPTIMAL` decimal.
 
 ## Queue: Route-B current bottlenecks
 
