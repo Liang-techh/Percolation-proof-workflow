@@ -127,6 +127,84 @@ explicitly assigned to the independent GitHub lane for 流川枫.
   registry admission.  The line-9 companion remains a review-only
   source-obstruction artifact and has no Lean receipt claim.
 
+## Next independent receipt round
+
+The following four source files are separate focused tasks and must never be
+collapsed into one batch-level PASS.  Each file independently records its
+source SHA-256, repository/Lean commit, `lean-toolchain`, Lake/Mathlib pin,
+exact declaration-level `#print axioms` output, declaration-position
+placeholder scan, focused exit code, stdout, and stderr.
+
+### A. BODY6 V0 delta/parameter leaf
+
+- Target:
+  `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_V0PARAMETERMAP20260907.lean`
+- Review:
+  `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_V0PARAMETERMAP20260907.review.md`
+- Declarations:
+  `v0_generator_identity_attempt`, `v0_base_plus_cross_budget_attempt`,
+  `scalar_match_only_attempt`,
+  `targeted_gain_change_vanishes_on_block_initial_attempt`,
+  `mass_cross_odd_attempt`, `signed_kinetic_even_attempt`,
+  `actual_storage_even_attempt`, `actual_shift_energy_even_attempt`,
+  `same_candidate_requires_zero_cross_attempt`,
+  `envelope_delivers_v0_attempt`, and `candidate_v0_transfer_attempt`.
+- Boundary: exact scalar provenance and parity/identity attempts remain
+  distinct from a validated storage/source identity, path barrier, or registry
+  receipt.
+
+### B. BODY6 keyed storage transfer leaf
+
+- Target:
+  `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_KEYEDSTORAGETRANSFER20260907.lean`
+- Review:
+  `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_KEYEDSTORAGETRANSFER20260907.review.md`
+- Declarations:
+  `identity_supplies_comparison_attempt`,
+  `initial_bound_transfer_attempt`, `barrier_transfer_attempt`,
+  `exact_v0_match_no_barrier_transfer_attempt`, and the associated
+  `SameStorageIdentity`, `TransferContract`, and `OneSidedComparison`
+  structures/definitions.
+- Boundary: keyed source identity and a charged one-sided delta are explicit;
+  no whole-path identity, physical source realization, or barrier admission is
+  inferred from a scalar V0 match.
+
+### C. P4 same-source consumer packet — independent GitHub lane
+
+- Lane: `LIUCHUANFENG_INDEPENDENT_GITHUB_LANE` (approximately one-third of
+  the next independent task allocation; prioritize this missing-base consumer
+  packet)
+- Target:
+  `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SameSourceConsumerPacket.lean`
+- Review:
+  `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SameSourceConsumerPacket.review.md`
+- Declarations:
+  `metric_nonnegative`, `young_two_vectors`, `charge_nonnegative`,
+  `total_residual_bound`, `allocated_source_floor`,
+  `allocationFromUniform`, `allocated_P4_target`, and
+  `front_equals_bound_nominal`.
+- Boundary: one source object, one row, one domain, exact residual identity,
+  allocation and P4 normalization remain explicit; no line-9 source data,
+  physical realization, or registry admission is supplied by the packet.
+
+### D. P3 C2C3 source binding
+
+- Target:
+  `examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_C2C3_SOURCE_BINDING.lean`
+- Review:
+  `examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_C2C3_SOURCE_BINDING_REVIEW.md`
+- Declarations:
+  `source_derivative_hull_at_covered_point`,
+  `source_dh_identity_at_covered_point`,
+  `same_rounded_endpoints_at_covered_box`,
+  `source_value_binding_at_covered_point`,
+  `missing_same_function_obstruction`,
+  `missing_same_box_coverage_obstruction`, and
+  `missing_same_rounding_obstruction`.
+- Boundary: same source function, derivative fields, box coverage, rounded
+  endpoints, and DH identity remain separate premises; no Float64/source
+  reification or continuous-domain admission is inferred.
+
 ## Shared focused receipt contract
 
 Each source file must produce a separately named receipt, even within the
