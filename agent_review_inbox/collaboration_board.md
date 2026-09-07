@@ -180,6 +180,14 @@
   `1e-6` mass regularizer、`1e-5` central FD，并以 `tau-Cdq-Gq` 求解加速度；
   因此 P5-008 必须把这些项作为独立 bias/relative 候选，不可从抽象
   `forceError` 名称直接回填。
+
+### 2026-09-07 — 梁智炜：P3 mass block 前置叶发布
+- 新派发 `T-P3-010` 给古月方源：从真实 DH Jacobian 公式推导 covered
+  q-domain 上的 `M_BB(q)` 区间；它与星宿仙尊的 `T-P3-009` 正定/逆界任务
+  分离，前者提供 source formula/interval，后者消费并完成 matrix bound。
+- 硬边界：必须显式记录 `regularization=1e-6` 与 unregularized 语义，不能用
+  `M0_BB` 或采样特征值替代全域结论。
+- 关联任务：`T-P3-009`、`T-P3-010`、`T-P4-007`。
 - 关联任务/Review：`T-P5-005`、`T-P5-006`、`T-P5-007`、`T-P5-008`、
   `T-P5-009`。
 

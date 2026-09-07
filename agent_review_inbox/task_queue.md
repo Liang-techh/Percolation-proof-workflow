@@ -517,6 +517,21 @@ polynomial remains a separate frontier.
 - forbidden: treating the constant `M0_BB` as `M(q)` without proof, using
   sampled eigenvalues as global bounds, or closing P3/P4/M4 from this child.
 
+### T-P3-010 — actual DH block-(4,5) mass interval derivation
+
+- status: `open` (released as a disjoint P3 source-math leaf)
+- owner: `古月方源`
+- source: external `routeB_dense_Mq/dhport_lib.jl:31-60`,
+  `routeB_Mq_M0.csv`, and the deployed q-box/domain contract;
+- scope: derive the exact block-(4,5) entries of `M(q)` from the DH Jacobian
+  construction, then give rational interval bounds on the covered q-domain
+  (or a precise obstruction caused by the regularized/Float64 semantics);
+- deliver: formula-level source binding plus an interval/monotonicity route that
+  `T-P3-009` can consume, explicitly separating `regularization=1e-6` from the
+  unregularized DH matrix;
+- forbidden: identifying `M0_BB` with `M(q)`, using sampled extrema as global
+  bounds, silently differentiating Float64 code analytically, or closing P3/P4/M4.
+
 ### T-M4-003 — weighted terminal split and exact wider residual gate
 
 - status: `reviewed_pending` (review:
