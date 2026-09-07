@@ -143,6 +143,19 @@ verification and registry gates can change admission state.
 - forbidden: mutating the authoritative checkpoint or silently changing the
   theorem statement.
 
+### T-DAG-003 — shared-lemma/DAG projection
+
+- status: `reviewed_pending` (integrated at Route-B revision 351; architecture
+  only; no authoritative graph migration)
+- scope: project shared source-manifest, true-DH semantic, and domain-partition
+  contracts separately from P3/P4/P5/P8 quantity-specific children; remove
+  scheduling-only edges between independent abstract lemmas;
+- deliver: deterministic shared-node projection, cross-branch dependencies,
+  migration risks, and any proposal-schema requirements;
+- forbidden: changing the 64-node authoritative graph, treating a projection
+  as proof evidence, weakening source/coverage gates, or promoting registry
+  entries.
+
 ## Queue: next parallel leaves
 
 ### T-P3-003 — canonical source-manifest binding

@@ -138,3 +138,21 @@ for a receipt output hash. The proposed next step is a stable receipt alias or
 index followed by an independent hash check. Node statuses remain open, the
 verified registry remains empty, and `formal_certificate_allowed` remains
 false.
+
+## 2026-09-07 / Route-B checkpoint revision 351
+
+The `T-DAG-003` shared-lemma audit was integrated as architecture-only pending
+metadata. It proposes shared nodes for source manifest, true-DH semantic
+binding, and pure domain partition completeness, while keeping P3/P4/P5/P8
+physical joins explicit. It also identifies that the current dry-run proposal
+schema cannot represent multiple shared nodes in one layer without a versioned
+schema change. No authoritative graph migration, theorem-statement change,
+registry promotion, or admission change was performed.
+
+| task | target | classification | admission effect |
+|---|---|---|---|
+| T-DAG-003 | `M4.block45_full_certificate` | `pending_shared_lemma_projection` | none |
+
+The authoritative state remains 64 open nodes with an empty verified registry;
+the shared projection is retained only as a proposal until its schema,
+snapshot binding, acyclicity, and fail-closed migration checks are implemented.

@@ -1,0 +1,14 @@
+{
+  "review_file": "agent_review_inbox/review-T-DAG-003-choupizhu-20260906T2148.md",
+  "review_sha256": "CE1611E567DC9719B7405BA32B3AFBF8212902403F70DEDD27AFCCF66AAD90DF",
+  "task_id": "T-DAG-003",
+  "source_agent": "臭屁猪",
+  "created_at": "2026-09-06T21:48:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_shared_lemma_projection",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "0ea5119474bf55cd0c6571cfb0c3447eb4f625e8",
+  "admission_label": "architecture_only",
+  "integrated_at": "2026-09-07T03:49:09.209024+00:00"
+}

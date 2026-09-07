@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 350,
+  "revision": 351,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -8568,6 +8568,19 @@
             "integration_status": "integrated_as_pending_metadata",
             "classification": "child_dag_refinement_proposal",
             "admission_effect": "none"
+          },
+          {
+            "review_file": "agent_review_inbox/review-T-DAG-003-choupizhu-20260906T2148.md",
+            "review_sha256": "CE1611E567DC9719B7405BA32B3AFBF8212902403F70DEDD27AFCCF66AAD90DF",
+            "task_id": "T-DAG-003",
+            "source_agent": "臭屁猪",
+            "created_at": "2026-09-06T21:48:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_shared_lemma_projection",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "0ea5119474bf55cd0c6571cfb0c3447eb4f625e8",
+            "admission_label": "architecture_only"
           }
         ]
       }
@@ -29926,6 +29939,18 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "527611b83f6a49dda06a0d4eb711f129"
+    },
+    {
+      "at": "2026-09-07T03:49:09.209024+00:00",
+      "kind": "agent_review_integrated",
+      "review_file": "agent_review_inbox/review-T-DAG-003-choupizhu-20260906T2148.md",
+      "review_sha256": "CE1611E567DC9719B7405BA32B3AFBF8212902403F70DEDD27AFCCF66AAD90DF",
+      "task_id": "T-DAG-003",
+      "classification": "pending_shared_lemma_projection",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6f06c8545bc24dc590b6e5ade85b684d"
     }
   ],
   "agent_requests": {},
@@ -33448,5 +33473,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "03c1d8a241ce53ef9bd2ff8aca9cf47fa88f3da26c82d0f9b4eaf994b548616d"
+  "state_checksum": "2ca364dd0bb2e2371426edbf5fc39e123dca6acb7956f124bf7f6900cfb96e56"
 }
