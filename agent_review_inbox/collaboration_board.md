@@ -2488,3 +2488,9 @@ P3 又加入 `pi_subtype_product_transport` architecture-only 叶：依赖积按
 拆成正/余 subtype 因子，`p=False` 时一侧为空，因此它只用于 typed theorem-DAG
 分块，不提供物理覆盖、非空性、实/复线性或 PDE 正则性。该叶进入下一批
 focused receipt，流川枫继续承接约三分之一独立任务。
+
+P4 新增 `ACTUAL_ROW_MISSING_BASE` obstruction：选定 eta=5.6、theta=1 的
+external row 虽有正的 `gamma−charge`，但真正的 consumer 还需要
+`target+2‖l_base‖²+charge·A_up≤b_base`。固定所有已显示系数、只改变未记录
+的 `b_base` 即可翻转 target feasibility；因此该叶只登记为 open obstruction，
+并交给流川枫做独立 focused Lean receipt。

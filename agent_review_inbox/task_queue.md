@@ -100,6 +100,12 @@ integration gates are satisfied.
   merge equivalence and the `p=False` empty-factor boundary. One independent
   share goes to 流川枫; no receipt may upgrade a predicate split into physical
   coverage or analytic block nonemptiness.
+- `T-P4-ACTUAL-ROW-MISSING-BASE`: focused Lean validation of
+  `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_ActualRowMissingBase.lean`.
+  Assign this independent P4 obstruction to 流川枫 for roughly one-third lane
+  share; verify the exact target-allocation equivalence and fixed-coefficient
+  opposite-base counterexample. Do not treat decimal-token arithmetic as
+  Float64/source reification or promote the result to registry evidence.
 
 ### T-P4-012 — typed remote-action repair contract
 

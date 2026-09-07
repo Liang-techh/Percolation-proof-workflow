@@ -2281,6 +2281,19 @@ CHILDREN = [
             "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SameRowBudgetAudit.review.md",
         ],
     },
+    {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility.source_positive_target_binding.same_row_budget_audit.actual_row_missing_base",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility.source_positive_target_binding.same_row_budget_audit",
+        "statement": "A positive external gamma-minus-charge slack does not close the P4 scalar budget: the actual consumer additionally requires target plus Young loss and metric charge to be bounded by the same-row base term, and an unrecorded base can reverse target feasibility while all displayed coefficients remain fixed.",
+        "proof_sketch": "Reify the selected decimal row as an advisory rational-token interface, prove the exact target-allocation equivalence and the positive coefficient slack, then construct fixed-coefficient counterassignments with different base terms and a zero-metric obstruction. Keep Float64 semantics, source descriptor feasibility, domain coverage, and physical margin binding external.",
+        "lane": "source_semantics",
+        "bottleneck": "residual_absorption",
+        "status": "OPEN_UNCOMPILED_P4_ACTUAL_ROW_MISSING_BASE",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_ActualRowMissingBase.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_ActualRowMissingBase.review.md",
+        ],
+    },
 ]
 
 
