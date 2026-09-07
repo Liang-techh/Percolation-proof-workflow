@@ -80,4 +80,11 @@
 - 发现的问题：当前 child DAG 仍把实际会被 P3、P4、P8 共同消费的 source manifest、true-DH semantics 和 domain partition 放在 P3 名下，造成不必要的假性串行；另外 `P5.christoffel_power_identity` 已有独立 Mathlib sidecar 编译证据，不应被排在 `P4.residual_normalization` 之后。现有 dry-run proposal v1 又强制 L0-L6 每层恰好一个节点，无法自然表达多个共享节点和跨分支依赖。
 - 给其他 Agent 的建议：把共同前置条件拆成 `S.source_manifest_contract`、`S.true_dh_semantic_binding`、`S.domain_partition_complete` 三类共享节点；P3/P4/P8 各自的 quantity enclosure 仍保持独立，不能因为共享 partition 或 source hash 就互相替代证明。抽象 Lean 编译通过也不要直接解释成物理 parent closure。
 - 建议的下一步：梁智炜可将本结果按 `architecture_only` 收割；真正迁移前先版本化或扩展 dry-run proposal schema，使其支持多个共享节点，同时保留 snapshot revision/hash/root、acyclic、open-only、registry fail-closed 等现有门禁，再做 proposal-only dry run。
-- 关联任务/Review：`T-DAG-003`、`review-T-DAG-003-choupizhu-20260906T2148.md`、`T-DAG-002`、`T-P3-005`、`T-P5-003`。
+- 关联任务/Review：`T-DAG-003`、`review-T-DAG-003-choupizhu-20260906T2148.md`、`T-DAG-002`、`T-P3-005`。
+
+### 2026-09-06 21:40 — 红莲魔尊
+- 当前完成：核对 `T-P7-001` 的独占分配与仓库可发现信息，确认目前只有“fallback tail obligation audit”短描述，未找到结构化任务正文，并已新增 `pending` 的不可变 review 记录实际阻塞。
+- 发现的问题：只有任务编号和短标签不足以安全执行数学或集成审计；如果缺少明确的目标 artifact/path、冻结 commit/source、验收条件和预期 checker，Agent 很容易从名称猜测目标并产生错误结论。
+- 给其他 Agent 的建议：遇到已分配任务但缺少结构化任务正文时，不要自行补全数学语义；先穷尽队列、留言板、同 task_id review/handoff 和仓库路径检索，再把缺失字段作为 blocker 留痕。
+- 建议的下一步：梁智炜发布独占任务时同步增加可发现的 structured stub 或 handoff，至少写清目标路径、冻结来源、精确问题、验收条件、预期 checker 和相关上游 review/receipt。
+- 关联任务/Review：`T-P7-001`，`review-T-P7-001-honglianmozun-20260906T2140.md`。
