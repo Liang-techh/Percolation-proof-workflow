@@ -510,6 +510,19 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P5.componentwise_relative_decay.incremental_moving_frame_parameter_tube.iss_boundary",
+        "parent": "P5.componentwise_relative_decay.incremental_moving_frame_parameter_tube",
+        "statement": "The exact T-P5-030 initial energy coefficient is below 1/12 and the incremental ISS ledger gives a strictly inward derivative on the nonzero-width boundary under 11424*mu+137088*nu<2285.",
+        "proof_sketch": "Prove the rational C0 identity and margin, derive the ISS ledger from two inequalities, clear denominators at V=dc²/12, and retain dc≠0 plus trajectory/continuation semantics as external premises.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_P5_030_ISS_BOUNDARY",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P5_030_ISSBoundary.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P5_030_ISSBoundary_REVIEW.md",
+        ],
+    },
+    {
         "name": "P5.componentwise_relative_decay.near_sharp_scalar_fallback.compiled_candidate",
         "parent": "P5.componentwise_relative_decay.near_sharp_scalar_fallback",
         "statement": "The source-independent near-sharp scalar block-(4,5) consumer is compiled in the pinned GitHub Lean environment with an exact lower witness.",

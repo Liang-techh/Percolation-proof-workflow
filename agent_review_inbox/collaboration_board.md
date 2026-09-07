@@ -1900,3 +1900,8 @@ body-6 现在不仅有第六列轴点积，还新增了前部速度 Gram 的真�
 `v₃,v₄` 都保持真实非零结构，(3,4) 交叉项由轴正交推出，质量 Gram 使用
 `3/20·vᵀv + 1/60·zᵀz`。下一瓶颈明确收缩到前三个 lever arm 和剩余 12 项，
 避免重新展开完整 610 行数据。
+### 2026-09-07 12:14 — 梁智炜收割 P5-030 ISS boundary
+
+T-P5-030 已从 review 数学推进到独立 rational Lean skeleton：初值严格落在
+`1/12` tube 内，非零参数宽度下边界导数严格 inward。仍需 ODE/first-exit
+和真实 residual envelope 才能关闭 flowpipe，不改变正式准入状态。

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 632,
+  "revision": 633,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -38195,7 +38195,9 @@
       "parent_id": "4a9af66cdc4f4607857a5cf360f19eb7",
       "status": "open",
       "proof_sketch": "Derive the exact two-trajectory difference equation, compute the initial mismatch energy, consume the direct metric ISS inequality, and apply the exact condition 11424*mu + 137088*nu < 2285 for Vd < dc²/12; leave source and continuation premises explicit.",
-      "dependencies": [],
+      "dependencies": [
+        "fed7c1182f744019b62e6ebad16ec749"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -38510,6 +38512,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_VGRAM_20260907_REVIEW.md",
             "sha256": "19CCE977D3240599766BB7DF85408F8D267804A0D257150A666458DECFDE39DC"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "fed7c1182f744019b62e6ebad16ec749": {
+      "id": "fed7c1182f744019b62e6ebad16ec749",
+      "name": "P5.componentwise_relative_decay.incremental_moving_frame_parameter_tube.iss_boundary",
+      "statement": "The exact T-P5-030 initial energy coefficient is below 1/12 and the incremental ISS ledger gives a strictly inward derivative on the nonzero-width boundary under 11424*mu+137088*nu<2285.",
+      "parent_id": "c25dd0d571c044b1baf282521c26c66e",
+      "status": "open",
+      "proof_sketch": "Prove the rational C0 identity and margin, derive the ISS ledger from two inequalities, clear denominators at V=dc²/12, and retain dc≠0 plus trajectory/continuation semantics as external premises.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_P5_030_ISS_BOUNDARY",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P5_030_ISSBoundary.lean",
+            "sha256": "D638CA315C87657019CBEB0B53E92C6FB54B1A3A51CF43176B7592085A7BB1CB"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P5_030_ISSBoundary_REVIEW.md",
+            "sha256": "D73CC1FD2EE857F87808CC63021C3C25C71615DC41FA9360ED88EA9A58324CD2"
           }
         ],
         "registry_eligible": false,
@@ -65115,6 +65152,23 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T18:15:42.509340+00:00",
+      "kind": "node_added",
+      "node_id": "fed7c1182f744019b62e6ebad16ec749",
+      "parent_id": "c25dd0d571c044b1baf282521c26c66e",
+      "name": "P5.componentwise_relative_decay.incremental_moving_frame_parameter_tube.iss_boundary"
+    },
+    {
+      "at": "2026-09-07T18:15:42.529179+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P5.componentwise_relative_decay.incremental_moving_frame_parameter_tube.iss_boundary"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -68771,5 +68825,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "35ed925264b341baa6f908f94df012bb614b94ff73cd760f1719c538e0f56baa"
+  "state_checksum": "85a252a577b83215ae65a17f58c0727c2e453b13edd202b54e5b6af4f5f2d147"
 }

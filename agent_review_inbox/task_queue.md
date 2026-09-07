@@ -2525,3 +2525,12 @@ source-independent/open/uncompiled 候选。
   cross 和 mass entries 全部为零余项，`v₄²=49/40000`；没有读取 Fourier CSV。
 - 前 3 列 lever arm 与其余 12 个上三角项仍开放，Lean/kernel/source/coverage
   未验证；已登记为 revision `632` 的两个 open children。
+### 2026-09-07 — 12:14 P5-030 ISS boundary 收割
+
+- T-P5-030 新增 source-independent `ISSBoundary` 叶：精确验证
+  `C0=474733828336525417/5726342542105201000 < 1/12`，并在
+  `11424*mu+137088*nu<2285`、`dc²>0` 和 ISS ledger 前提下推出
+  `V=dc²/12` 边界导数严格为负。
+- 明确不把边界导数升级为 tube invariance；first-exit、ODE continuation、
+  residual/source semantics 与 coverage 仍外置。已登记为
+  `...incremental_moving_frame_parameter_tube.iss_boundary`，revision `633`。
