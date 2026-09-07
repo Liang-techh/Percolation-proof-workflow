@@ -1603,6 +1603,16 @@ polynomial remains a separate frontier.
   State records the adapter as conditionally compiled but open until the
   `(mu,q)`, block projection, and inverse-definition bindings are supplied.
 
+### New harvest: O1 typed binding refinement (2026-09-07)
+
+- review: `review-T-P4-033-O1-binding-followup-2-codex-20260907.md`
+- admissible paths are exactly either (A) `h_MDD_def + h_inv_def + hdet`, or
+  (B) `h_MDD_def + direct exact h_left`. Both require identical source/state,
+  `mu`, `q`, and `Didx=(1,2,3,6)` order; a determinant or hash alone is not
+  enough.
+- coordinator intake: `scripts/record_routeb_o1_binding_followup2.py`;
+  state keeps `M_DD_left_inverse_witness=OPEN`.
+
 ### New harvest: force-scale pinned compile receipt (2026-09-07)
 
 - receipt: `examples/routeb_b45_5_residual_decomposition_lean/COMPILE_RECEIPT_forceScaleKc_20260907.md`

@@ -983,6 +983,10 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   `Matrix.nonsing_inv_mul` 可由同一 `M_DD45.det ≠ 0` 得 canonical inverse。
   若 candidate 保留独立 `M_DD_inv`，必须补
   `M_DD_inv = (M_DD45 M)⁻¹`；已写入 state rev 505，O1 仍 open。
+- O1 follow-up 将 binding 收敛为两个且仅两个路径：
+  (A) `h_MDD_def + h_inv_def + hdet`，或 (B) `h_MDD_def + direct h_left`。
+  两条都要求同一 source/state、`(mu,q)` 与 D-index 顺序；已接入 state rev
+  509，`M_DD_left_inverse_witness` 仍 OPEN。
 - force-scale 子定理收到 fresh pinned receipt：`forceScaleKc_eq_rhoKc`
   已进入 `COMPILED_CANDIDATE_SOURCE_COMPARATOR_PENDING`（state rev 507）。
   candidate/source hash、Lean 4.33.1、Mathlib pin、compile/theorem-check exit 0

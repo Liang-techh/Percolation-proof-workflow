@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 508,
+  "revision": 509,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -14527,6 +14527,31 @@
             "formal_certificate_allowed": false,
             "registry_promoted": false,
             "admission_status": "pending_same_object_inverse_binding"
+          },
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-033-O1-binding-followup-2",
+            "source_agent": "Codex",
+            "review_status": "OPEN_SAME_OBJECT_BINDING_TWO_PATHS",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-033-O1-binding-followup-2-codex-20260907.md",
+              "sha256": "F776E53B875D15B9AAD647E8BBFB99812CA9BE940CF7F1D157F405BD883BB9C9"
+            },
+            "binding_paths": {
+              "A": "h_MDD_def + h_inv_def + exact hdet",
+              "B": "h_MDD_def + direct exact h_left"
+            },
+            "required_key_equalities": [
+              "source_key",
+              "state_key",
+              "mu",
+              "q",
+              "block_order=(1,2,3,6)"
+            ],
+            "remaining_obstruction": "missing same-key typed receipt for M_DD and M_DD_inv",
+            "formal_certificate_allowed": false,
+            "registry_promoted": false,
+            "admission_status": "pending_same_object_binding"
           }
         ],
         "repair_attempts": [
@@ -14574,18 +14599,30 @@
           "registry_promoted": false
         },
         "left_inverse_adapter": {
-          "status": "CONDITIONALLY_COMPILED_LEFT_INVERSE_ADAPTER_OPEN_BINDING",
+          "status": "OPEN_SAME_OBJECT_BINDING_TWO_PATHS",
           "api": "Matrix.nonsing_inv_mul",
           "generic_det_target": "A.det != 0 -> A⁻¹ * A = 1",
           "same_named_target": "M_DD_inv = (M_DD45 M)⁻¹",
-          "remaining_obstruction": "M_DD_inv definition or exact h_inv_def receipt",
+          "remaining_obstruction": "missing same-key typed receipt for M_DD and M_DD_inv",
           "required_binding": [
             "same M_DD45 block projection",
             "same exact (mu,q) or cell key",
             "Didx=(1,2,3,6) and source/state hash"
           ],
           "formal_certificate_allowed": false,
-          "registry_promoted": false
+          "registry_promoted": false,
+          "binding_paths": {
+            "A": "h_MDD_def + h_inv_def + exact hdet",
+            "B": "h_MDD_def + direct exact h_left"
+          },
+          "required_key_equalities": [
+            "source_key",
+            "state_key",
+            "mu",
+            "q",
+            "block_order=(1,2,3,6)"
+          ],
+          "required_premise": "h_MDD_def"
         }
       }
     },
@@ -39275,6 +39312,15 @@
       "admission_status": "obstruction_pending_exact_keyed_bounds",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T13:27:48.559203+00:00",
+      "kind": "routeb_o1_binding_followup_recorded",
+      "node_id": "120deab092c243b6a43356e63c8b56f4",
+      "review_status": "OPEN_SAME_OBJECT_BINDING_TWO_PATHS",
+      "admission_status": "pending_same_object_binding",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -42931,5 +42977,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "8297bd8b4d3cdf72504faa61759441ae986437bdab729c07b7f7e71b0b71d67e"
+  "state_checksum": "a49c0d1647435f7ce6d4f89ae7d0dc30770d1b3a310ccf80d9bb3044064b7568"
 }
