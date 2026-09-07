@@ -170,6 +170,22 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P5.componentwise_relative_decay.near_sharp_scalar_fallback",
+        "parent": "P5.componentwise_relative_decay",
+        "statement": "The source-independent scalar block-(4,5) fallback has an exact rational upper constant and an explicit lower obstruction witness.",
+        "proof_sketch": "Use weighted AM-GM, exact Sylvester/LDL positivity for the weighted gap, derive the division-free joint bound, and retain the rational lower witness as a rejection test.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "EXACT_RATIONAL_SCALAR_BOUND_UNCOMPILED",
+        "artifacts": [
+            "examples/routeb_p5_scalar_fallback/NEW_P5_027_near_sharp_scalar_fallback.lean",
+            "examples/routeb_p5_scalar_fallback/NEW_check_exact.py",
+            "examples/routeb_p5_scalar_fallback/NEW_P5_027_REVIEW.md",
+            "agent_review_inbox/review-T-P5-027-kuangmanmozun-20260907T1044.md",
+            "agent_review_inbox/companion-T-P5-027-kuangmanmozun-20260907T1048.md",
+        ],
+    },
+    {
         "name": "P4.O0.physical_baseline_factor.H_acc_semantic_export.source_refinement_validator",
         "parent": "P4.O0.physical_baseline_factor.H_acc_semantic_export",
         "statement": "A fail-closed intake validator enforces the H_acc source-refinement DAG shape, dense roots, source spans, and runtime policy before any export is accepted.",
@@ -188,6 +204,7 @@ CHILDREN = [
             "examples/routeb_o0_h_acc_source_refinement/NEW_source_intake.py",
             "examples/routeb_o0_h_acc_source_refinement/NEW_test_source_intake.py",
             "examples/routeb_o0_h_acc_source_refinement/NEW_REVIEW.md",
+            "examples/routeb_o0_h_acc_source_refinement/NEW_RECEIPT.json",
         ],
     },
     {

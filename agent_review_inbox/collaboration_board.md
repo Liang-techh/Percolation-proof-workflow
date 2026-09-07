@@ -1691,3 +1691,13 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - review 明确：没有 Lean/Lake、source evaluator、true-DH coverage、comparator
   或 registry 证据；已作为 fold child 的 successor artifact 接入，parent 继续 open。
   state revision `598`。
+
+### 2026-09-07 — H_acc receipt 与 P5-027 scalar child 收口
+
+- H_acc occurrence-aware intake 的 `NEW_RECEIPT.json` 已接入 validator 和 O1
+  candidate；它明确 `pending/exit 3`，缺少真实 source export、runtime observation
+  和 interval candidate，不产生任何 admission effect。
+- Maxwell the 6th 的 P5-027 sidecar 已注册为
+  `P5.componentwise_relative_decay.near_sharp_scalar_fallback`：精确 checker 验证
+  Sylvester/LDL/AM-GM/constant/lower-witness 链；Lean 仍未编译，source/K_path、
+  P8 coverage 和 parent closure 仍 open。state revision `605`。

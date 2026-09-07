@@ -1,0 +1,43 @@
+{
+  "schema": "routeb.o0.h_acc.source_export_extension.v1.review",
+  "status": "pending",
+  "checker_exit_code": 3,
+  "scope": "candidate_structure_exact_cover_and_rational_consistency_only",
+  "admission": {
+    "status": "pending",
+    "source_binding_proven": false,
+    "h_acc_expr_proven": false,
+    "h_acc_round_proven": false,
+    "registry_eligible": false,
+    "formal_certificate_allowed": false
+  },
+  "execution": {
+    "julia": false,
+    "lean_lake": false,
+    "files_written": 0
+  },
+  "checker_sha256": "002006705173ff5d0a9d93453a3070d95b9c30421d4c1afd074711a3d92f6d6b",
+  "base_checker_sha256": "b265b3fc396524db093c6385ba6dff7bf9a352a57d01e2db8db21199986d780f",
+  "submission_sha256": "01c09711ff776b80cedbe38c8cac4c03e88253348a0c90524c2d90df890c0c36",
+  "source_sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936",
+  "checks": {
+    "expression": "NOT_RUN_NO_SOURCE_EXPORT",
+    "array_mapping": "NOT_RUN_ABSENT",
+    "source_updates": "NOT_RUN_ABSENT",
+    "runtime_observation": "NOT_RUN_ABSENT",
+    "interval_candidate": "NOT_RUN_ABSENT"
+  },
+  "blockers": [
+    "REAL_SOURCE_EXPORT_ABSENT",
+    "ARRAY_MAPPING_ABSENT",
+    "SOURCE_UPDATES_ABSENT",
+    "RUNTIME_OBSERVATION_ABSENT",
+    "INTERVAL_CANDIDATE_ABSENT",
+    "C0_SOURCE_REFINEMENT_UNCHECKED",
+    "C1_REAL_EVALUATOR_UNCHECKED",
+    "C2_C5_ARRAY_AND_BODY_SEMANTICS_UNCHECKED",
+    "R0_RUNTIME_PROVENANCE_UNCHECKED",
+    "R1_INTERVAL_SOUNDNESS_UNCHECKED",
+    "R2_FORMAL_COVERAGE_WITNESS_UNCHECKED"
+  ]
+}
