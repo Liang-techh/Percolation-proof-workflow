@@ -793,3 +793,10 @@ Float64 evaluator proof。
 `dh_trig_chain_libm_enclosure`。仍需把 `pi/2` 与参数形成的舍入绑定到每个角度
 盒，证明实际 libm `sin/cos` 包围，并完成有限运算传播与逐盒 coverage composition；
 state rev 484、registry=0、`formal_certificate_allowed=false` 保持不变。
+
+### 2026-09-07 — 梁智炜：拆出 T-P4-036 Float64 trig binding frontier
+
+P3 exact-real 合同已经独立落盘，但其最关键的部署鸿沟仍是 Float64 角度形成
+和 libm 输出。新增 `T-P4-036`，要求 agent 分别给出 `pi/2` 舍入、参数范围缩减、
+`sin/cos` enclosure、有限运算传播的接口与证据边界；允许未编译 interface draft，
+禁止借 Taylor-only 或采样结果关闭 O2。该任务与 P3 recorder disjoint，可并行推进。

@@ -1486,3 +1486,21 @@ integration_status: pending
 Then record the inspected paths/commit, exact evidence and hashes, proposed
 integration, and unresolved blockers. The original result remains immutable
 after integration; corrections should be a new result file.
+
+### T-P4-036 — DH Float64 angle/trig binding leaf
+
+- status: `open` (highest-value remaining O2 trig leaf)
+- owner: `臭屁猪` for typed interface and compile-side repair hints; `古月方源`
+  for exact interval/range-reduction mathematics; `封不觉` for independent
+  source/hash/provenance review.
+- scope: turn the P3 exact-real DH theta/alpha rows into a fail-closed interface
+  for the deployed Julia `Float64` path. Separate (i) `pi/2` and angle-formation
+  rounding, (ii) argument range reduction, (iii) libm `sin/cos` enclosure, and
+  (iv) finite operation propagation. The P3 CSV is conditional evidence only.
+- required output: a report or Lean target with explicit theorem signatures,
+  source hashes, per-link/per-atom index order, and status for each leaf. A
+  candidate may be `INTERFACE_DRAFT__UNCOMPILED`, but may not be registered or
+  used to close O2 without pinned Lean/comparator evidence.
+- boundary: no numerical sampling, pointwise Julia output, or Taylor-only
+  central-FD leaf can discharge the deployed libm binding. Keep
+  `formal_certificate_allowed=false` and `registry_promoted=false`.
