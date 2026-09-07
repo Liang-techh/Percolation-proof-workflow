@@ -21,6 +21,8 @@ set_option autoImplicit false
 
 namespace RouteBP5Block45NinetyThreeSOS
 
+noncomputable section
+
 /-- Exact block-(4,5) storage from T-P5-019/T-P5-032/T-P5-033. -/
 def V45 (x4 x5 y4 y5 : ℝ) : ℝ :=
   (1 / 2 : ℝ) *
@@ -54,6 +56,7 @@ theorem block45_Q_minus_93_100_V_sos
       + (1 / 800 : ℝ) * (x4 + y5)^2
       + (1 / 800 : ℝ) * (x5 - y4)^2
       + (18668727 / 7200000000 : ℝ) * (x5 - 9 * y5)^2 := by
+  simp [Q45, V45]
   ring
 
 /-- The nine-square identity yields the strengthened coercivity
