@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 400,
+  "revision": 402,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -11544,7 +11544,11 @@
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_m33_exact_lower_lean\\README.md",
-            "sha256": "023B50B90A19B36691D574715AB28EE63B4493BD8E38EBD0EE87DDF9016C1CEC"
+            "sha256": "D295E59AE8922B38871A0DB581CF30B42169628605FED55BFC97923C0C3E2D2E"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_m33_exact_lower_lean\\check_exact_lower.py",
+            "sha256": "B0A172E95AB5796465696FFE91E62F50409ED3D4B5A73C99EA7C10440F45BBD5"
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_m33_exact_lower_lean\\lean-toolchain",
@@ -33240,6 +33244,86 @@
       "status": "pending_pinned_lean_compile",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T08:30:09.672149+00:00",
+      "kind": "routeb_m33_exact_lower_bound_refresh",
+      "node_id": "fc0a03cdad564202b4e1894cd14e0300",
+      "parent_id": "cbffb1ed7cb74283a216738af2cfdb06",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_m33_exact_lower_lean\\M33LowerBound.lean",
+          "sha256": "9B2FC3ABEDF4A50C9C621C14145A175292952B7433BE09BAA147D86D349EDDB5"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_m33_exact_lower_lean\\README.md",
+          "sha256": "D295E59AE8922B38871A0DB581CF30B42169628605FED55BFC97923C0C3E2D2E"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_m33_exact_lower_lean\\check_exact_lower.py",
+          "sha256": "F60D0A6F48BC82C7FFF5D3131943F50E9888E23103C761EC802C7FC78168214F"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_m33_exact_lower_lean\\lean-toolchain",
+          "sha256": "2773C517AA90B66EA8A2C52BDDDDF84393157797F8341BE0DF45294FFF7FD32E"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_m33_exact_lower_lean\\verify.sh",
+          "sha256": "FDC8F7A5B7CF6B03D85D590E581CED7C52EE37147240A0F3E4387D1139A0B308"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_routeb_source_fourier_binding_current\\CHECK_RESULT.json",
+          "sha256": "A3542383D8CB1E04F82A109EF0095D8458573F75B64FB28BFC14D7870DDB002B"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_routeb_source_fourier_binding_current\\m33_fourier_witness.csv",
+          "sha256": "F920391FDADA3F08E7A827880CDA5C387B6FF6F105B2A8E992E0FDB117AEB869"
+        }
+      ],
+      "bound": "3016537/12000000",
+      "status": "pending_pinned_lean_compile",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T08:30:37.756350+00:00",
+      "kind": "routeb_m33_exact_lower_bound_refresh",
+      "node_id": "fc0a03cdad564202b4e1894cd14e0300",
+      "parent_id": "cbffb1ed7cb74283a216738af2cfdb06",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_m33_exact_lower_lean\\M33LowerBound.lean",
+          "sha256": "9B2FC3ABEDF4A50C9C621C14145A175292952B7433BE09BAA147D86D349EDDB5"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_m33_exact_lower_lean\\README.md",
+          "sha256": "D295E59AE8922B38871A0DB581CF30B42169628605FED55BFC97923C0C3E2D2E"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_m33_exact_lower_lean\\check_exact_lower.py",
+          "sha256": "B0A172E95AB5796465696FFE91E62F50409ED3D4B5A73C99EA7C10440F45BBD5"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_m33_exact_lower_lean\\lean-toolchain",
+          "sha256": "2773C517AA90B66EA8A2C52BDDDDF84393157797F8341BE0DF45294FFF7FD32E"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_m33_exact_lower_lean\\verify.sh",
+          "sha256": "FDC8F7A5B7CF6B03D85D590E581CED7C52EE37147240A0F3E4387D1139A0B308"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_routeb_source_fourier_binding_current\\CHECK_RESULT.json",
+          "sha256": "A3542383D8CB1E04F82A109EF0095D8458573F75B64FB28BFC14D7870DDB002B"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_routeb_source_fourier_binding_current\\m33_fourier_witness.csv",
+          "sha256": "F920391FDADA3F08E7A827880CDA5C387B6FF6F105B2A8E992E0FDB117AEB869"
+        }
+      ],
+      "bound": "3016537/12000000",
+      "status": "pending_pinned_lean_compile",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -36896,5 +36980,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "c575ce073e779f92c024657a97882dc125cee299070654cbc7b727ac00f8bb4b"
+  "state_checksum": "c2e3e7aeea7ee5c7e786832a70a6539c361a8bbe7a78028cfce5b4771e6bee0e"
 }

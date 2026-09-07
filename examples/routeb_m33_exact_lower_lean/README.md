@@ -18,6 +18,11 @@ The proof uses only `u = cos(q5) in [-1,1]`, `x = cos(2*q4) in [-1,1]`,
 and `cos(2*q5) = 2*u^2 - 1`. The result is an exact algebraic child, not a
 sampled or floating-point lower bound.
 
+`check_exact_lower.py` independently checks the polynomial coefficient
+identity and the positive rational endpoint gap using Python `Fraction`.
+This is a pre-Lean consistency check only; the pinned Lean receipt remains
+the authoritative proof evidence for the sidecar theorem.
+
 ## Provenance
 
 Upstream exact source-to-Fourier artifact:

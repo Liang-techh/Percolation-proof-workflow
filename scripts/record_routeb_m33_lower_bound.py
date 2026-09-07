@@ -34,6 +34,7 @@ def main() -> int:
     paths = [
         SIDEcar / "M33LowerBound.lean",
         SIDEcar / "README.md",
+        SIDEcar / "check_exact_lower.py",
         SIDEcar / "lean-toolchain",
         SIDEcar / "verify.sh",
         ARTIFACT / "CHECK_RESULT.json",
