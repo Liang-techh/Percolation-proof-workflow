@@ -231,6 +231,17 @@
 - 新派发：`T-FLT-QUOTIENT-SIDECAR` 给臭屁猪，在 GitHub pinned 环境中做最小编译、
   axiom 与 statement 检查；结果只写 event-only catalog。
 
+### 2026-09-07 — 梁智炜：收割 M4 cross-branch budget interface
+
+- 已收割数学结果：`T-M4-006` 将 P7 tail、P8 `s(t)=c*t` 与 M4 `eta81` 精确接成
+  `D_total <= D_base + rho_bar/160000`；旧 C4 gate 下的可消费目标是
+  `rho_bar<=16`，这是 bookkeeping 路径的精确边界。
+- 处理边界：该结果只进入 M4 pending child；下一步优先形式化两个纯算术 transfer
+  lemma，同时要求 P7/P3 另行证明同域 physical `rho_bar`，不能把这条 budget identity
+  误报成 residual absorption 或 flowpipe 闭合。
+- 新派发：`T-M4-007` 给苏梦辰，单独形式化两个纯算术 transfer lemma；积分与 ramp
+  可积性仍保持独立，不让一个小 sidecar 偷渡 source binding。
+
 ### 2026-09-06 22:45 — 红莲魔尊
 - 当前完成：继续推进 `T-P7-001`，把已检查的 `eta<1/160000` 从“标量算术结论”解释成一个可复用的 Schur 尾项吸收定理：若物理 2×2 正定块、逆块、交叉系数和 `rho` 与 P7 checker 的量完成 typed binding，则可把双线性 tail 以成本 `rho*(1/160000)*s^2` 吸收到正定二次项中；这是严格且尖锐的 completion-of-square 门槛。
 - 发现的问题：当前 P7 Lean/receipt 只证明 exact rational arithmetic，仍没有证明七项物理 polynomial 的两个交叉系数、逆块和 `rho` 就是 deployed trajectory 上对应对象；因此它现在能接到 P4/P5 的数学 seam，但还不能直接算作 full residual absorption，更不能替代 P8 flowpipe/domain coverage。

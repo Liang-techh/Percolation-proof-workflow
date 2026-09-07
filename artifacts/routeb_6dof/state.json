@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 363,
+  "revision": 365,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -7870,6 +7870,19 @@
             "target_scope": "routeb_node",
             "source_commit": "e2dee5128d3ac6e9738d94f6ee7908ea909df2a3",
             "admission_label": "pending"
+          },
+          {
+            "review_file": "agent_review_inbox/review-T-P5-007-choupizhu-20260906T2329.md",
+            "review_sha256": "024FC4C1F159EB4E04FA11AF26AC78A9D65655717E0AF41EF1566B55D17CD9A5",
+            "task_id": "T-P5-007",
+            "source_agent": "臭屁猪",
+            "created_at": "2026-09-06T23:29:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_weighted_dual_decay_obstruction",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "admission_label": "pending"
           }
         ],
         "conditional_children": [
@@ -8344,6 +8357,19 @@
             "target_scope": "routeb_node",
             "source_commit": "21ec7b34033ba8a2a62c8831e4d20b59635d0ac0",
             "admission_label": "compiled_candidate"
+          },
+          {
+            "review_file": "agent_review_inbox/review-T-P8-010-fengbujue-20260906T2318.md",
+            "review_sha256": "164DA7EA2E19F736AC43441FA8604B91EB2F4F82BFF668FE0DDB8540380A1C8D",
+            "task_id": "T-P8-010",
+            "source_agent": "封不觉",
+            "created_at": "2026-09-06T23:18:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_compiled_candidate_gate_review",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "0723aea49d4051af7cb1c6e5848b1a1984e6bbdc",
+            "admission_label": "compiled_candidate"
           }
         ]
       }
@@ -8752,6 +8778,19 @@
             "admission_effect": "none",
             "target_scope": "routeb_node",
             "source_commit": "dbb3e349b8faf62a772651f3745ce8ce9836a567",
+            "admission_label": "pending"
+          },
+          {
+            "review_file": "agent_review_inbox/review-T-M4-006-daai-xianzun-20260906T2346.md",
+            "review_sha256": "788173B9B2BCA8B254B45BDA33663495F6A03E56F12C9DDBDABEBAA5F3AC6FF1",
+            "task_id": "T-M4-006",
+            "source_agent": "大爱仙尊",
+            "created_at": "2026-09-06T23:46:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_cross_branch_budget_transfer",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
             "admission_label": "pending"
           }
         ]
@@ -30309,6 +30348,42 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "edd8407c33f54c41867f03b46ec1e313"
+    },
+    {
+      "at": "2026-09-07T05:39:02.999220+00:00",
+      "kind": "agent_review_integrated",
+      "review_file": "agent_review_inbox/review-T-P5-007-choupizhu-20260906T2329.md",
+      "review_sha256": "024FC4C1F159EB4E04FA11AF26AC78A9D65655717E0AF41EF1566B55D17CD9A5",
+      "task_id": "T-P5-007",
+      "classification": "pending_weighted_dual_decay_obstruction",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "9a3a7eef35b34880b85423aac67ea015"
+    },
+    {
+      "at": "2026-09-07T05:39:02.999634+00:00",
+      "kind": "agent_review_integrated",
+      "review_file": "agent_review_inbox/review-T-P8-010-fengbujue-20260906T2318.md",
+      "review_sha256": "164DA7EA2E19F736AC43441FA8604B91EB2F4F82BFF668FE0DDB8540380A1C8D",
+      "task_id": "T-P8-010",
+      "classification": "pending_compiled_candidate_gate_review",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "edd8407c33f54c41867f03b46ec1e313"
+    },
+    {
+      "at": "2026-09-07T05:39:47.510471+00:00",
+      "kind": "agent_review_integrated",
+      "review_file": "agent_review_inbox/review-T-M4-006-daai-xianzun-20260906T2346.md",
+      "review_sha256": "788173B9B2BCA8B254B45BDA33663495F6A03E56F12C9DDBDABEBAA5F3AC6FF1",
+      "task_id": "T-M4-006",
+      "classification": "pending_cross_branch_budget_transfer",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6f06c8545bc24dc590b6e5ade85b684d"
     }
   ],
   "agent_requests": {},
@@ -33965,5 +34040,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "c2f1085e2c3896b47b669905cb3d91f69a8f88b77d44f5718beb3d66a4281a96"
+  "state_checksum": "603e7a16508840727048ba80ea8e38f0303862c3f6e1e6e1c937b144361280e8"
 }

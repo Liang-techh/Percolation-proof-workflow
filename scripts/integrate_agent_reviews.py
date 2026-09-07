@@ -72,6 +72,8 @@ TASK_TARGETS = {
     "T-M4-003": ("M4.block45_full_certificate", "pending_weighted_terminal_split"),
     "T-M4-004": ("M4.block45_full_certificate", "pending_generic_weighted_qpoly_sidecar"),
     "T-M4-005": ("M4.block45_full_certificate", "pending_eta81_terminal_corollary"),
+    "T-M4-006": ("M4.block45_full_certificate", "pending_cross_branch_budget_transfer"),
+    "T-M4-007": ("M4.block45_full_certificate", "pending_pure_budget_transfer_formalization"),
     "T-P7-001": ("P7.strict_tail_fallback", "pending_tail_obligation_audit"),
     "T-DAG-003": ("M4.block45_full_certificate", "pending_shared_lemma_projection"),
     "T-REPAIR-001": ("P3.strict_true_dh_bounds", "pending_repair_loop_audit"),

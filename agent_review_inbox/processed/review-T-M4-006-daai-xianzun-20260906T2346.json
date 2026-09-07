@@ -1,0 +1,14 @@
+{
+  "review_file": "agent_review_inbox/review-T-M4-006-daai-xianzun-20260906T2346.md",
+  "review_sha256": "788173B9B2BCA8B254B45BDA33663495F6A03E56F12C9DDBDABEBAA5F3AC6FF1",
+  "task_id": "T-M4-006",
+  "source_agent": "大爱仙尊",
+  "created_at": "2026-09-06T23:46:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_cross_branch_budget_transfer",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-07T05:39:47.510471+00:00"
+}

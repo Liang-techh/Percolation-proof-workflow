@@ -622,6 +622,34 @@ polynomial remains a separate frontier.
 - forbidden: silently replacing `D_gate=4483/2000`, creating physical `L/g`
   bounds, or closing M4/P8 from this arithmetic child alone.
 
+### T-M4-006 — P7 × P8 × M4 cross-branch budget transfer
+
+- status: `reviewed_pending` (review:
+  `review-T-M4-006-daai-xianzun-20260906T2346.md`)
+- owner: `大爱仙尊` (mathematical source); formalization and source-binding
+  children remain separate;
+- scope: compose the conditional P7 tail charge with the P8 ramp identity and
+  the exact M4 `eta=81/160` consumer. The reusable interface is
+  `D_total <= D_base + rho_bar/160000`; at the old gate,
+  `D_base<=4483/2000` and `rho_bar<=16` imply
+  `D_total<=1401/625`;
+- boundary: this is a budget-transfer theorem only. It does not prove a
+  physical `rho_bar`, identify the P7 variables with deployed DH variables,
+  establish flowpipe/coverage, or change the authoritative M4 gate.
+
+### T-M4-007 — pure arithmetic budget-transfer sidecar
+
+- status: `open` (released from the M4-006 mathematical review)
+- owner: `苏梦辰`
+- source: `review-T-M4-006-daai-xianzun-20260906T2346.md`;
+- scope: formalize only the division-free arithmetic implications
+  `D_base+D_tail <= 1401/625` from `D_tail<=rho_bar/160000` and the exact
+  old-gate corollary `rho_bar<=16`; keep the integral/ramp lemma separate;
+- deliver: pinned GitHub Lean sidecar or precise compile obstruction, with
+  exact rational constants and no hidden source assumptions;
+- forbidden: changing `D_gate`, proving physical `rho_bar`, or closing
+  residual absorption/flowpipe/M4 from arithmetic alone.
+
 ### T-P8-008 — first-12 explicit-time source adapter
 
 - status: `open` (released for the next mathematical round)
