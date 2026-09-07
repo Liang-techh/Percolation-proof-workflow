@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 397,
+  "revision": 398,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -32788,6 +32788,190 @@
       "status": "lean_verified_abstract_candidate",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T08:20:39.721917+00:00",
+      "kind": "external_routeb_artifact_intake",
+      "artifact": "task_FLT_p3_source_binding_20260908",
+      "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_p3_source_binding_20260908",
+      "manifest_sha256": "2FA7703F64580CEECBCB0F840FE2B6022D8AD5E195EFE7C51281B1198DB86DDE",
+      "files": [
+        {
+          "name": "AUDIT.md",
+          "sha256": "CF34743DD79EE4A4F9EB1AC86BAC692F5F775A1C6DFEBC80060AE06485241BD8",
+          "bytes": 7044
+        },
+        {
+          "name": "contract.json",
+          "sha256": "23C5DBA03A17A0AE956165B328D733867975CE96CA4758271EFF7115C78E1F73",
+          "bytes": 1615
+        },
+        {
+          "name": "OBLIGATIONS.csv",
+          "sha256": "CC0473DBAF606FDA01F2319F5211F66AE070059F5FC448AB503FA92A398F7BB4",
+          "bytes": 1318
+        },
+        {
+          "name": "PINNED_ENVIRONMENT.md",
+          "sha256": "77F55A777B3501F3639D56A5DC2F516B4826B13E9F0C460E9F779217D869A978",
+          "bytes": 931
+        },
+        {
+          "name": "README.md",
+          "sha256": "37A146BF679F0583308850DD085BBB78FE2E39609FBF142144AB7FEE22925D65",
+          "bytes": 979
+        },
+        {
+          "name": "VERIFICATION.md",
+          "sha256": "2C1AEF936C6FF7A9410530DF5C15806DFFBA2EC1A775D79B2D3C5B023FC43B61",
+          "bytes": 829
+        }
+      ],
+      "contract": {
+        "status": "LEAN_VERIFIED_ABSTRACT_SOURCE_BINDING_INTERFACE",
+        "artifact": "task_FLT_p3_source_binding_20260908",
+        "theorems": {
+          "central_fd_derivative_hull": "FLTP3SourceBinding.centralFD_sub_center_le_of_derivative_hull",
+          "abstract_center_binding": "FLTP3SourceBinding.exact_trueDH_mem_inflated_source_interval",
+          "exact_derivative_binding": "FLTP3SourceBinding.exact_trueDH_derivative_mem_inflated_source_interval"
+        },
+        "formal_certificate_allowed": false,
+        "physical_certificate_allowed": false
+      },
+      "evidence_class": "lean_verified_abstract_candidate",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T08:20:39.722735+00:00",
+      "kind": "external_routeb_artifact_intake",
+      "artifact": "task_FLT_rounding_patch_design_20260908",
+      "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_rounding_patch_design_20260908",
+      "manifest_sha256": "5DA1C868421BAC0165AEFF285332EA8112B52C9AC1C22F4503E8B3F99AC95324",
+      "files": [
+        {
+          "name": "REPORT.md",
+          "sha256": "0AA5D1E447F2E09CF893FC6EB0743F0DE98DD8AA62E60414F55DDE98060EFB7E",
+          "bytes": 2750
+        }
+      ],
+      "contract": null,
+      "evidence_class": "pending_validation_design",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T08:20:39.724433+00:00",
+      "kind": "external_routeb_artifact_intake",
+      "artifact": "task_FLT_routeb_derivative_leaf_20260908",
+      "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_routeb_derivative_leaf_20260908",
+      "manifest_sha256": "1D1232686CA84B69CBED4A1384BB6EFD63B5788D8317D7FADF2B26D7BFBFE25C",
+      "files": [
+        {
+          "name": "contract.json",
+          "sha256": "912BF04D75624D6DC95D4809B39E9B93F8F4F7841DFE5F2D06F5CCDA3D741E6E",
+          "bytes": 885
+        },
+        {
+          "name": "PINNED_ENVIRONMENT.md",
+          "sha256": "155F0E7BCB24E97AFA7FA395E542581143D32DEAD21B08EE3EF95998B8632BE1",
+          "bytes": 1018
+        },
+        {
+          "name": "README.md",
+          "sha256": "64D14F215DB944F5DF9A0CE870588B0C2E26687C9ED31408FDB2AA1DCD2DB9F8",
+          "bytes": 2564
+        },
+        {
+          "name": "VERIFICATION.md",
+          "sha256": "38EE476C22518F9509848FA70251AF17B229D9636392D337F67BD22056695EA5",
+          "bytes": 1173
+        }
+      ],
+      "contract": {
+        "status": "LEAN_VERIFIED_EXACT_REAL_CALCULUS_LEAF",
+        "artifact": "task_FLT_routeb_derivative_leaf_20260908",
+        "theorems": {
+          "coordinate_change": "FLTRouteBDerivativeLeaf.trueDH_coordinate_change_hasFDerivAt",
+          "derivative_hull": "FLTRouteBDerivativeLeaf.trueDH_coordinate_change_derivative_hull",
+          "child_constructor": "FLTRouteBDerivativeLeaf.p3SourceSemanticsChild_of_trueDH"
+        },
+        "formal_certificate_allowed": false,
+        "physical_certificate_allowed": null
+      },
+      "evidence_class": "lean_verified_abstract_candidate",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T08:20:39.725427+00:00",
+      "kind": "external_routeb_artifact_intake",
+      "artifact": "task_FLT_trig_lean_leaf_20260908",
+      "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_trig_lean_leaf_20260908",
+      "manifest_sha256": "D67BB38C642AF821226CC84CFB55A625B8F40B8923594EC0CBE38825F805373D",
+      "files": [
+        {
+          "name": "RECEIPT.md",
+          "sha256": "208ECCE38F07B10F4B9462E991955A9640D7DC5BC8063BDAF5D06A1164F57572",
+          "bytes": 2399
+        },
+        {
+          "name": "REPORT.md",
+          "sha256": "04705BD8CE6A66DF218FA95B456066640AC8A11A9B612121791A5E66FEF20BA7",
+          "bytes": 1994
+        }
+      ],
+      "contract": null,
+      "evidence_class": "unclassified_external_artifact",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T08:20:39.726158+00:00",
+      "kind": "external_routeb_artifact_intake",
+      "artifact": "task_FLT_trig_rounding_audit_20260908",
+      "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_FLT_trig_rounding_audit_20260908",
+      "manifest_sha256": "5812AB67309AC12F415447A548C9F66439C6C4957785B704EAFB98CE067A7509",
+      "files": [
+        {
+          "name": "REPORT.md",
+          "sha256": "19249A598994F74E1F89931F62A5B4BD68624B03975C3EDAC512818901AA7576",
+          "bytes": 6709
+        }
+      ],
+      "contract": null,
+      "evidence_class": "unclassified_external_artifact",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T08:20:39.727262+00:00",
+      "kind": "external_routeb_artifact_intake",
+      "artifact": "task_routeb_source_fourier_binding_current",
+      "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\artifacts\\task_routeb_source_fourier_binding_current",
+      "manifest_sha256": "4F1AA5C776F67AB207F1B5A12A555F7D5EEC231DAEC4339840F7DB25652E1259",
+      "files": [
+        {
+          "name": "README.md",
+          "sha256": "200ECF5943E262306BAB8F1790CE2A73BEA5660042494ABC965A6B28DA62DD81",
+          "bytes": 2703
+        },
+        {
+          "name": "REPORT.md",
+          "sha256": "2CE97EDBAE7D08E4BB623184B61ACB686DEE5100A04F1429BAD5EB70F1937F83",
+          "bytes": 2205
+        }
+      ],
+      "contract": null,
+      "evidence_class": "unclassified_external_artifact",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -36444,5 +36628,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "a8e1c256451de335215b263d1622661dfdabd51ad82d25c87ee03b804d18d0b1"
+  "state_checksum": "6962f0fee237c8ad8eb703c6701b0f2612f4cd3cdbcbefb1173ec9db3848746a"
 }

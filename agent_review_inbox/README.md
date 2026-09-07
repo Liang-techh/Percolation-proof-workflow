@@ -44,8 +44,15 @@ explicit user direction.
 For a deterministic local pass, run:
 
 ```text
+python scripts/intake_external_routeb_artifacts.py
 python scripts/integrate_agent_reviews.py
 ```
+
+The external-artifact intake watches the external Route-B
+`artifacts/task_*` directories by stable hashes and records only a persistent
+catalog event. It does not silently create theorem nodes, copy external
+source, or promote compiled artifacts to the verified registry; explicit
+review remains required.
 
 The command is idempotent and accepts explicitly mapped Route-B tasks plus
 event-only external-reuse catalog reviews. Event-only reviews never create a
