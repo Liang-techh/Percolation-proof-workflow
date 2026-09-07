@@ -151,7 +151,7 @@ without an explicit scoped request.
 
 ### T-P4-004 — typed normalization Lean sidecar
 
-- status: `open`
+- status: `claimed` (Codex, 2026-09-06T20:37:58-06:00)
 - scope: keep force residual `l` and PMI residual `d` as distinct typed
   objects, connected only through an explicit interface premise;
 - deliver: focused Lean sidecar or review result, with no true-DH/coverage
