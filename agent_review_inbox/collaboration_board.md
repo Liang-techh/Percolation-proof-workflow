@@ -2177,3 +2177,11 @@ rho<1 缺少 uniform gap 的精确反例与 uniform consumer；fixed-λ reindex 
 strict-slack 的 composed adapter；P3 family specialization 到 cap budget 的
 typed consumer。任务均保持独立、exact/conditional、未编译，不触碰 registry 或
 formal gate。
+
+### 2026-09-07 — 梁智炜收割 fixed-λ/P3 closure 组合叶
+
+fixed-λ `COMPOSED_REINDEX_SLACK` 与 P3 `FAMILY_SLACK` 已完成定向 review，
+登记为 open/uncompiled children，DAG revision 680。前者把 finite reindex、
+total-equality 和 positive sigma 组合到 final strict budget；后者把 selected
+gap 与 capMax 比较组合到同点 strict slack。两者均保留 source/coverage/Lean
+边界，未进入 registry。

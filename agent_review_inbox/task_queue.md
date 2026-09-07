@@ -2859,3 +2859,9 @@ body-6 Schur remainder review 已到达，现已登记 revision 679；下一步�
 - P3：family-to-point specialization 与 capMax strict budget 的 typed consumer。
 
 仍不运行大规模回归；只有 proof-attempt 与定向 review 成对到达后才登记 DAG。
+
+### 2026-09-07 — 本地收割补充
+
+fixed-λ `COMPOSED_REINDEX_SLACK` 和 P3 `FAMILY_SLACK` 已登记 revision 680，
+保持 `OPEN_UNCOMPILED`。下一轮优先收割 body-6 mixed-block binding 与 P4
+uniform contraction；若只得到缺失字段，则记录 obstruction 而不填入假数据。

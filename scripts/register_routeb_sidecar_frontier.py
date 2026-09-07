@@ -1521,6 +1521,32 @@ CHILDREN = [
             "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_SCHURREMAINDER20260907.review.md",
         ],
     },
+    {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.composed_strict_slack",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality",
+        "statement": "Finite reindex equality, explicit source/target/final total bindings, shared-lambda equality, and positive aggregate slack compose into a final strict weighted-load inequality.",
+        "proof_sketch": "Use the finite sum transport to identify total reserve with target load, use explicit margin and lambda equalities to identify final margin, then transport 0<sigma≤margin−load to load<margin while retaining every bridge as a typed premise.",
+        "lane": "lean_adapter",
+        "bottleneck": "source_semantics",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_COMPOSED_REINDEX_SLACK",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_COMPOSED_REINDEX_SLACK20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_COMPOSED_REINDEX_SLACK20260907.review.md",
+        ],
+    },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point",
+        "statement": "At one common domain point, a positive selected component gap, a quantitative gap lower bound, and a capMax-load comparison yield explicit weighted-load strict slack and a strict consumer bound.",
+        "proof_sketch": "Carry family point data and four-layer membership explicitly, consume selectedGap≤capLoad−weightedLoad and capLoad≤capMaxLoad, and conclude weightedLoad+selectedGap≤capMaxLoad and consumer<capMaxLoad without reconstructing the upstream gap or cap theorem.",
+        "lane": "source_semantics",
+        "bottleneck": "source_semantics",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_FAMILY_STRICT_SLACK",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_FAMILY_SLACK.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_FAMILY_SLACK_REVIEW.md",
+        ],
+    },
 ]
 
 
