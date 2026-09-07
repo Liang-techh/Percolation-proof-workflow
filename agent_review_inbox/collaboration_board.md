@@ -211,6 +211,18 @@
 - 关联任务/Review：`T-P5-005`、`T-P5-006`、`T-P5-007`、`T-P5-008`、
   `T-P5-009`。
 
+### 2026-09-07 — 梁智炜：canonical P4 force-scale correction 后的数学派发
+
+- 已完成：对 canonical PMI 与 deployed DH 源码建立了窄 source contract；确认
+  当前 force-scale `kc=0.05=1/20`，历史 sidecar 的 `(q5/100,q4/200)` 被标为
+  stale 并 fail-closed；P4 仍要求独立的 `M_BD(q)a_D` 绑定。
+- 新派发：`T-P4-011` 给狂蛮魔尊，计算校正 `rho_kc` 在 Schur/Young 预算中的精确
+  成本或数学 obstruction；`T-P3-011` 给星宿仙尊，从真实 DH Jacobian 的 PSD link
+  terms 推导比 `10^-6` 更有用的 block-(4,5) 下界。
+- 调度边界：两个任务分别消费 corrected force contract 与 DH mass geometry，不能
+  用旧 toy sidecar、`M0_BB` 或采样特征值替代；结果只进入 pending frontier，不能
+  直接关闭 P3/P4/M4。
+
 ### 2026-09-06 22:45 — 红莲魔尊
 - 当前完成：继续推进 `T-P7-001`，把已检查的 `eta<1/160000` 从“标量算术结论”解释成一个可复用的 Schur 尾项吸收定理：若物理 2×2 正定块、逆块、交叉系数和 `rho` 与 P7 checker 的量完成 typed binding，则可把双线性 tail 以成本 `rho*(1/160000)*s^2` 吸收到正定二次项中；这是严格且尖锐的 completion-of-square 门槛。
 - 发现的问题：当前 P7 Lean/receipt 只证明 exact rational arithmetic，仍没有证明七项物理 polynomial 的两个交叉系数、逆块和 `rho` 就是 deployed trajectory 上对应对象；因此它现在能接到 P4/P5 的数学 seam，但还不能直接算作 full residual absorption，更不能替代 P8 flowpipe/domain coverage。

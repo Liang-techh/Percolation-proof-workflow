@@ -6,7 +6,13 @@ The source audit writes the actual block force as
 r_B = -K_B q_B - B_B v_B + u_B w + G0_B - C_B - G_B.
 ```
 
-The PMI nominal force after multiplying by `D_B=diag(1/5,1/10)` is
+This file records the historical normalized sidecar semantics.  The current
+canonical PMI source must be checked separately before reuse.  In the current
+force-scale source, `kc=0.05=1/20`, so the omitted cross vector is
+`(q5/20,q4/20)`.  The older sidecar below uses a different normalized toy
+coefficient and is intentionally not a source-binding theorem.
+
+The historical PMI nominal force after multiplying by `D_B=diag(1/5,1/10)` is
 
 ```text
 D_B f_B = -K_B q_B - B_B v_B + u_B w
@@ -24,4 +30,3 @@ Lean sidecar.  The theorem is conditional algebra: `sourceForce` is a compact
 exact-real source-force interface and `hdesc` is the explicit source descriptor
 binding premise.  No bound, source implementation equality, reachability, or
 Float64 statement is hidden in the theorem.
-

@@ -637,6 +637,41 @@ polynomial remains a separate frontier.
 - forbidden: identifying the full 13-state source with the 14-state ramp ODE,
   claiming existence/coverage, or changing the target theorem silently.
 
+### T-P4-011 — canonical `kc` budget after force-scale correction
+
+- status: `open` (released after the source-contract correction)
+- owner: `狂蛮魔尊`
+- source: `docs/routeb-p4-kc-force-contract.md`,
+  `routeB_dense_Mq/routeB_pmi_certificate.jl:46-49,98-99`, and the P4 sharp
+  Schur sidecar;
+- scope: derive an exact, source-independent quadratic cost for the corrected
+  force term `rho_kc=(q5/20,q4/20)` on the declared `(q4,q5)` domain, then
+  determine whether it can fit the current Schur/Young budget or yields a
+  precise obstruction. Keep the local `p`/`d` variables and force units
+  explicit; distinguish a joint-limit bound from a local `p<=eta` bound;
+- deliver: rational/`pi` inequality with a sharp or clearly justified bound,
+  plus the smallest typed premise that a future P4 PMI child can consume;
+- forbidden: using the historical `(q5/100,q4/200)` toy sidecar, treating a
+  force term as acceleration, using samples as a global bound, or closing
+  P4/M4 from this child alone.
+
+### T-P3-011 — link-Jacobian structural lower bound for block `(4,5)`
+
+- status: `open` (released as a disjoint positive-block math leaf)
+- owner: `星宿仙尊`
+- source: deployed `routeB_dense_Mq/dhport_lib.jl:31-60`, DH constants in that
+  file, and `routeB_Mq_M0.csv` only as a reference snapshot;
+- scope: isolate explicit positive-semidefinite link terms in the DH mass sum
+  whose principal `(4,5)` block gives a q-independent or domain-explicit
+  lower bound stronger than the global `10^-6 I` regularizer. If the
+  rotational/translational Jacobian geometry cannot provide such a bound,
+  return the exact rank/cell obstruction;
+- deliver: formula-level PSD decomposition and an exact rational lower bound
+  (or obstruction), with `regularization=0` and `regularization=1e-6` kept as
+  separate statements so P3-009 can consume it;
+- forbidden: identifying `M0_BB` with `M(q)`, sampled eigenvalues, Float64
+  analytic differentiation without a remainder contract, or closing P3/P4/M4.
+
 ### T-FLT-SPECTRAL-LINEAR — spectral and linear algebra scan
 
 - status: `reviewed_pending` (integrated at Route-B revision 343;
