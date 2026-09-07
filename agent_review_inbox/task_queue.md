@@ -2501,3 +2501,18 @@ proof artifact/review，不改 state/registry/shared scripts。
 
 当前 state revision `631`，registry `0`，formal gate 仍关闭；这些均是
 source-independent/open/uncompiled 候选。
+### 2026-09-07 — 12:12 数学收割与继续派发
+
+- P5 T-P5-029 typed skeleton 已登记：`C=sym(BᵀEA)`、cone-domain envelope
+  identity、entrywise `C≤N` 扣减、旧 `S` 保留、18→36 lift 和 rank-one
+  correction 均保持显式前提。
+- P3 unified input 已登记：四层 radius 精确合并为单一 `mu/R` consumer。
+- fixed-λ canonical digest composition 已登记：union digest 需要外部 oracle
+  和 encoding equality，明确不假设 hash 可代数合成。
+- body-6 VGRAM 新叶完成定向 SymPy 检查：center/tail origin、18 个分解残差、
+  `(3,3)/(4,4)/(3,4)` velocity/mass Gram 全为 exact zero；review 尚待完成。
+- 下一步：body-6 继续处理 5×5 前部 Gram；P5 继续 T-P5-030 rational tube；
+  fixed-λ 继续 digest composition；P3 继续统一 radius 的 power consumer。
+
+当前 revision `631`，registry `0`，formal gate 关闭；GitHub 上次同步为
+`ffb3690`，本地数学提交保留到下一个 20 分钟窗口统一推送。

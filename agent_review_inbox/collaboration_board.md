@@ -1888,3 +1888,9 @@ union digest typed composition、P3 unified radius input。它们分别消除了
 
 仍需远端/授权环境验证 Lean kernel、实际 source/export、coverage 和后续
 flowpipe；本地继续只做数学叶和定向检查。
+### 2026-09-07 12:12 — 梁智炜继续推进
+
+本轮没有新的准入结论。已经把 P5 增量 SPN、P3 unified radius、fixed-λ
+digest composition 登记为 open leaves；body-6 正在从已闭合的轴点积继续进入
+前部 5×5 速度 Gram。所有线程仍以最小数学 seam 为单位，GitHub 同步留到
+12:20 收割窗口。
