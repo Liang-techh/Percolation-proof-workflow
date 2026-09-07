@@ -976,7 +976,7 @@ polynomial remains a separate frontier.
   source equality or coverage, whole-project regression, registry promotion,
   or treating a green sidecar compile as Route-B admission.
 
-### T-P3-008 — exact-real derivative-hull leaf admission probe
+### T-P3-012 — exact-real derivative-hull leaf admission probe
 
 - status: `open` (external artifact recorded locally at Route-B revision 396)
 - owner: `巨阳仙尊`;
@@ -991,7 +991,7 @@ polynomial remains a separate frontier.
 - forbidden: claiming concrete six-joint DH instantiation, Float64/libm
   rounding, interval coverage, flowpipe semantics, or P3 parent closure.
 
-### T-P3-009 — one concrete true-DH derivative-hull instantiation
+### T-P3-013 — one concrete true-DH derivative-hull instantiation
 
 - status: `open` (mathematical bottleneck released after abstract seam landed)
 - owner: `大爱仙尊`;
@@ -1008,7 +1008,7 @@ polynomial remains a separate frontier.
   finite differences as analytic derivatives, using solver status as proof,
   or claiming full P3/Route-B closure from one local instance.
 
-### T-P3-010 — directed trig leaf to source-binding bridge
+### T-P3-014 — directed trig leaf to source-binding bridge
 
 - status: `open` (abstract Lean leaf recorded at Route-B revision 397)
 - owner: `红莲魔尊` for the mathematical/source-boundary bridge;

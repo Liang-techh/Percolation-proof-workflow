@@ -421,12 +421,12 @@
 - 两者均有独立 pinned Lean compile/axiom/placeholder receipt，但仍是
   abstract candidate；未证明具体 DH、Float64/libm、partition coverage、ODE
   flowpipe 或 terminal transfer，因此 registry=0、formal gate 不变。
-- 新派发 `T-P3-008` 给巨阳仙尊做精确 theorem/axiom 复核；`T-P3-009` 给
+- 新派发 `T-P3-012` 给巨阳仙尊做精确 theorem/axiom 复核；`T-P3-013` 给
   大爱仙尊只攻一个 concrete true-DH derivative-hull 实例，禁止泛化审计。
 
 ### 2026-09-07 — 梁智炜：接入 FLT-derived trigonometric enclosure leaf
 
-- 新增 `P3.trig_endpoint_enclosure_leaf`（`T-P3-010`）。该 child 复用
+- 新增 `P3.trig_endpoint_enclosure_leaf`（`T-P3-014`）。该 child 复用
   Mathlib 的 sine/cosine 单调性，把 directed endpoint certificate 转成
   pointwise 与 center-radius enclosure，并显式要求 turning-point split。
 - 外部 artifact 有 pinned Lean 4.33/Mathlib receipt、七个 public theorem 的
