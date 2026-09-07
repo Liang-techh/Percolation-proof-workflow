@@ -95,3 +95,17 @@
 - 给其他 Agent 的建议：形式化层优先实现无除法版本 `4*delta*y <= epsilon^2` 与 `2*delta*y <= -delta^2*x^2 + epsilon^2`，都可由平方非负配合 `nlinarith` 完成；物理数学层应把主要精力转向给出同一目标域上的 coercivity 下界 `delta` 与 residual norm 上界 `epsilon`。
 - 建议的下一步：若能进一步证明状态相关残差 `||r|| <= rho||v||` 且 `rho<delta`，则立即得到 `E_dot <= -(delta-rho)||v||^2`，可从 ultimate-bound 提升到真正的耗散衰减结论。
 - 关联任务/Review：`T-P5-004`，`review-T-P5-004-kuangmanmozun-20260906T2153.md`，上游 `T-P5-002`。
+
+### 2026-09-06 22:06 — 柳冠一
+- 当前完成：完成 `T-P4-005` 的单通道 residual 接口数学推导。对 `Q=p*x^2+2*x*r+d*y^2` 证明了 sharp 条件：在 `p>0` 时，`Q` 对所有 `x` 非负当且仅当 `r^2<=p*d*y^2`。当前 block-4 的 `p*d=350003000000001/5000000000000000≈0.0700006`，所以现有 `r^2<=(1/100)^2 y^2` 比真正需要的条件保守约 700 倍（平方预算）。
+- 发现的问题：若 source residual 在某个允许的 `y=0` 状态上非零，则当前 universal PMI 从数学上就不可能成立；取 `x=-r/p` 会直接得到负值。这不是 provenance 问题，而是接口形状本身的 obstruction。
+- 给其他 Agent 的建议：苏梦辰/臭屁猪优先形式化 `schur_residual_nonnegative_iff`，并给 concrete block 加一个 `c=1/4` 的有理 corollary；source 数学层不必再死磕 `1/100`，先尝试证明单通道 `|l_i|<=(1/4)|y|`。如果 `y=0` 切片存在非零 bias，应停止强塞现有 envelope，改为带显式 slack/bias 的 PMI 接口。
+- 建议的下一步：把 force-side 分解 `l_i=m_i+remote_i+drift_i` 的三个分量分别做与 `|y|` 成比例的界，并使系数和不超过 `1/4`；这样即可通过 sharp Schur 条件接回现有 P4 quadratic，而不需要把 force residual 改名成 acceleration residual。
+- 关联任务/Review：`T-P4-005`，`review-T-P4-005-liuguanyi-20260906T2206.md`。
+
+### 2026-09-06 22:24 — 古月方源
+- 当前完成：完成 P8 ramp 尾部的纯数学重构：由 `w'=c`、`c'=0`、`w(0)=0`、`c(0)=c₀` 推出整个区间上 `c(t)=c₀`、`w(t)=c₀t`，因此在 `T=1` 自动得到 `w(1)=c₀`，并说明 14-state ramp 与 explicit-time first-12 formulation 在轨迹层面的等价条件。
+- 发现的问题：当前 deployed 13-state source 的第 13 个导数是 `du[13]=0`，因此对非零 `c₀` 不可能把它作为完整 13 坐标 ODE 与 ramp 轨迹绑定；正确接口必须只认证 source 的前 12 个 mechanical outputs，并由 adapter 单独提供 `w'=c,c'=0` 尾部。
+- 给其他 Agent 的建议：苏梦辰/臭屁猪优先形式化 interval-local 的 `c'=0 => c=c₀`、`w'=c => w=c₀t` 和 `T=1` terminal transfer；source binding Agent 不要再尝试证明 source 第 13 个导数等于 ramp 的 `w'`，否则会错误地把扰动族压成 `c₀=0`。
+- 建议的下一步：把 P8 的 `S1/S2` 明确拆开：`S1` 只负责 first-12 true-DH/source semantic binding，`S2` 负责 ramp-tail reconstruction 与 explicit-time projection；完成形式化后再进入 flowpipe/existence/coverage。
+- 关联任务/Review：`T-P8-006`，`review-T-P8-006-guyuefangyuan-20260906T2218.md`，父路线 `T-P8-005`。
