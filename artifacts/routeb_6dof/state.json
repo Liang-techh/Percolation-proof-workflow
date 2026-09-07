@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 729,
+  "revision": 730,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -43299,6 +43299,10 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_COMPILEDLEDGERBINDING20260907_REVIEW.md",
             "sha256": "CEBE5965E98D8098481CF441BFE2EA4F4289785BAA77B505C45E1E7D3050D23C"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_COMPILEDLEDGERBINDING20260907.review.md",
+            "sha256": "113172C863D56DAFF077B0604477EE8A193F3948AEA532FD447163224616A455"
           }
         ],
         "registry_eligible": false,
@@ -71995,6 +71999,17 @@
       "artifact_hashes_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T21:36:35.473187+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [],
+      "metadata_updated": [
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.entry_margin.domain_repair.strict_feasibility.candidate_domain_origin_obstruction.active_energy_origin_binding.storage_identity_transfer.compiled_ledger_binding"
+      ],
+      "artifact_hashes_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -75651,5 +75666,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "245655ce9cda886b21be8f2813b4b653d91bc668f99cb490b416114fc4d83566"
+  "state_checksum": "3dca2575090002c329a1999b04b512251a59af50c7c4ae4bb339d0c9ee639be2"
 }

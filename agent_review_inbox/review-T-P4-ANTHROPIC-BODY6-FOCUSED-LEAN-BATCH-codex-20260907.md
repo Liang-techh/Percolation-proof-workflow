@@ -13,7 +13,7 @@ no GitHub job was run, no comparator was executed, and no verified registry or
 workflow state was modified.
 
 The batch contains three disjoint focused work packages.  The BODY6 package
-contains two closely related source files.  One of the three packages is
+contains four separately receipted source files.  One of the three packages is
 explicitly assigned to the independent GitHub lane for 流川枫.
 
 ## Batch allocation
@@ -44,12 +44,16 @@ explicitly assigned to the independent GitHub lane for 流川枫.
   `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_STORAGEIDENTITY20260907.lean`
 - Additional target:
   `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_COMPILEDLEDGERBINDING20260907.lean`
+- Additional target:
+  `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_20260907.lean`
 - Review context:
   `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_ACTIVEENERGYORIGIN20260907.review.md`
   and
   `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_STORAGEIDENTITY20260907.review.md`,
   and
   `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_COMPILEDLEDGERBINDING20260907_REVIEW.md`
+  and the detailed field audit
+  `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_COMPILEDLEDGERBINDING20260907.review.md`
 - Focused declarations:
   `normalized_origin_attempt`, `offset_origin_attempt`,
   `raw_origin_attempt`, `shifted_origin_attempt`,
@@ -68,28 +72,39 @@ explicitly assigned to the independent GitHub lane for 流川枫.
   `initial_ledger_bound_attempt`, `path_ledger_barrier_attempt`,
   `existing_shifted_comparison_instance_attempt`, and
   `shifted_comparison_baseline_exceeds_45_attempt`.
+- Full-slice declarations:
+  `endpoint_to_center_attempt`, `source_linear_column_attempt`,
+  `source_angular_column_attempt`, `diagonal_inertia_attempt`,
+  `center_to_source_gram_attempt`, `sixth_velocity_attempt`,
+  `sixth_column_of_source_gram_attempt`, `source_sixth_column_attempt`,
+  `sixth_slice_seam_attempt`, `source_binding_seam_attempt`,
+  `source_zero_complement_attempt`, and `legacy_consumer_seam_attempt`.
 - Boundary: normalized/raw/shifted energy candidates remain distinct;
   active-domain membership requires the explicit `V(0,0)` source identity.
   Storage transfer additionally requires same-domain identity, initial-set
   inclusion, and path inclusion; it does not identify `V_eps` with `Vfull_DH`
   or close BODY6 source binding, full coverage, PSD, or flow validity.
 
-### 3. P4 BODY6 Schur-to-scalar adapter
+### 3. P4 actual-row missing-base obstruction
 
 - Lane: `LIUCHUANFENG_INDEPENDENT_GITHUB_LANE` (approximately 1/3 of batch)
 - Target:
-  `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_Body6SchurScalarAdapter.lean`
+  `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_ActualRowMissingBase.lean`
 - Review:
-  `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_Body6SchurScalarAdapter.review.md`
+  `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_ActualRowMissingBase.review.md`
 - Focused declarations:
-  `RouteBP4032Body6SchurScalarAdapter.toSchurPMIComparison`,
-  `RouteBP4032Body6SchurScalarAdapter.conditional_body6_scalar_margin`,
-  `RouteBP4032Body6SchurScalarAdapter.missing_comparison_witness`, and
-  `RouteBP4032Body6SchurScalarAdapter.negative_scale_witness`.
-- Boundary: the adapter consumes an externally supplied BODY6 remainder
-  margin and explicit same-domain normalization/target premises; it does not
-  identify the `Fin 3` front with a physical/P4 port, prove source binding,
-  coverage, PSD, or full P4 closure.
+  `RouteBP4032ActualRowMissingBase.exact_decimal_external_slack`,
+  `RouteBP4032ActualRowMissingBase.target_iff_base_allocation`,
+  `RouteBP4032ActualRowMissingBase.consume_base_allocation`,
+  `RouteBP4032ActualRowMissingBase.same_domain_consumer`,
+  `RouteBP4032ActualRowMissingBase.row_slack_does_not_close_full_budget`,
+  `RouteBP4032ActualRowMissingBase.row_counterexample_blocks_every_positive_target`,
+  `RouteBP4032ActualRowMissingBase.same_coefficients_opposite_target_results`,
+  and `RouteBP4032ActualRowMissingBase.zero_metric_no_positive_floor`.
+- Boundary: printed decimal arithmetic and the missing base allocation remain
+  explicit; this obstruction does not establish source/Float64 reification,
+  physical descriptor feasibility, P4 closure, comparator acceptance, or
+  registry admission.
 
 ## Shared focused receipt contract
 

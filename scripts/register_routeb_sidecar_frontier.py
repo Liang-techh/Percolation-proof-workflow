@@ -2293,6 +2293,7 @@ CHILDREN = [
         "artifacts": [
             "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_COMPILEDLEDGERBINDING20260907.lean",
             "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_COMPILEDLEDGERBINDING20260907_REVIEW.md",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_COMPILEDLEDGERBINDING20260907.review.md",
         ],
     },
     {
