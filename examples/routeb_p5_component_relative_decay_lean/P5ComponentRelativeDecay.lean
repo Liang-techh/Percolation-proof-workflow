@@ -84,8 +84,8 @@ theorem component_relative_decay_raw
             apply Finset.sum_congr rfl
             intro i _
             ring
-      _ = (∑ i, d i * v i ^ 2) - ∑ i, rho i * v i ^ 2 :=
-        Finset.sum_sub_distrib
+      _ = (∑ i, d i * v i ^ 2) - ∑ i, rho i * v i ^ 2 := by
+        rw [Finset.sum_sub_distrib]
   rw [hsplit]
   linarith
 
