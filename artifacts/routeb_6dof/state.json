@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 549,
+  "revision": 550,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -15217,7 +15217,15 @@
       "parent_id": "8337e024d8dc4463a3389b1e65a4a5e8",
       "status": "open",
       "proof_sketch": "Use M_DD*v+DeltaM_DB*a_B=0 and r_B-M_BD*v=0; preserve the minus sign and retain the explicit remote block term. This is conditional exact-real algebra, not Float64 source equivalence.",
-      "dependencies": [],
+      "dependencies": [
+        "0f4d65a33b964cf38110c0f4b93a34d4",
+        "5201cf1e229544a3815e7bc832ab23b7",
+        "86049b9800f44a878a81de2e79c3e1c5",
+        "0d44099d7b1e486792f27f4787edd73e",
+        "62f56aedfc16447181e2178e44a535eb",
+        "87f1bd9c1acd42369f8814bd10230091",
+        "3ad9bd4fa1d040da995906fc487913fd"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -16057,6 +16065,31 @@
           "h_body_proven": false,
           "source_binding_proven": false,
           "lean_compile_status": "UNCOMPILED_CANDIDATE",
+          "registry_promoted": false,
+          "formal_certificate_allowed": false
+        },
+        "o1_source_comparator_leaf_ids": [
+          "0f4d65a33b964cf38110c0f4b93a34d4",
+          "5201cf1e229544a3815e7bc832ab23b7",
+          "86049b9800f44a878a81de2e79c3e1c5",
+          "0d44099d7b1e486792f27f4787edd73e",
+          "62f56aedfc16447181e2178e44a535eb",
+          "87f1bd9c1acd42369f8814bd10230091",
+          "3ad9bd4fa1d040da995906fc487913fd"
+        ],
+        "o1_source_comparator_decomposition": {
+          "status": "OPEN_FRONTIER_MATERIALIZED",
+          "required_leaf_count": 7,
+          "h_aggregate_function_lift": "0f4d65a33b964cf38110c0f4b93a34d4",
+          "h_body_leaves": [
+            "5201cf1e229544a3815e7bc832ab23b7",
+            "86049b9800f44a878a81de2e79c3e1c5",
+            "0d44099d7b1e486792f27f4787edd73e",
+            "62f56aedfc16447181e2178e44a535eb",
+            "87f1bd9c1acd42369f8814bd10230091",
+            "3ad9bd4fa1d040da995906fc487913fd"
+          ],
+          "parent_closure_requires_all": true,
           "registry_promoted": false,
           "formal_certificate_allowed": false
         }
@@ -17196,6 +17229,167 @@
             "formal_certificate_allowed": false
           }
         ]
+      }
+    },
+    "0f4d65a33b964cf38110c0f4b93a34d4": {
+      "id": "0f4d65a33b964cf38110c0f4b93a34d4",
+      "name": "P4.O1.source_comparator.h_aggregate_function_lift",
+      "statement": "For the exact 610-row payload, lift finite-key aggregate equality to the real q-domain: csvAggregate massPayload q i j = ∑ body : Fin 6, fourierBody body q i j.",
+      "parent_id": "120deab092c243b6a43356e63c8b56f4",
+      "status": "open",
+      "proof_sketch": "Prove the finite-key equality and the real cos/sin evaluator lift under the exact q-cell; retain the payload and source hashes.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "research_stage": "P4",
+        "statement_status": "open_source_comparator_frontier",
+        "frontier_kind": "h_aggregate_function_lift",
+        "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+        "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "source_binding_proven": false,
+        "formal_certificate_allowed": false
+      }
+    },
+    "5201cf1e229544a3815e7bc832ab23b7": {
+      "id": "5201cf1e229544a3815e7bc832ab23b7",
+      "name": "P4.O1.source_comparator.h_body_1",
+      "statement": "For body 1, prove sourceBody 1 q i j = fourierBody body q i j for the exact DH source under the same source/state/mu/q contract.",
+      "parent_id": "120deab092c243b6a43356e63c8b56f4",
+      "status": "open",
+      "proof_sketch": "Expand the exact DH bodyMass/sourceBody definition for body 1, transport the coefficient identity to the real evaluator, and retain a pinned source-comparator receipt.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "research_stage": "P4",
+        "statement_status": "open_source_comparator_frontier",
+        "frontier_kind": "h_body_exact_dh",
+        "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+        "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "source_binding_proven": false,
+        "formal_certificate_allowed": false
+      }
+    },
+    "86049b9800f44a878a81de2e79c3e1c5": {
+      "id": "86049b9800f44a878a81de2e79c3e1c5",
+      "name": "P4.O1.source_comparator.h_body_2",
+      "statement": "For body 2, prove sourceBody 2 q i j = fourierBody body q i j for the exact DH source under the same source/state/mu/q contract.",
+      "parent_id": "120deab092c243b6a43356e63c8b56f4",
+      "status": "open",
+      "proof_sketch": "Expand the exact DH bodyMass/sourceBody definition for body 2, transport the coefficient identity to the real evaluator, and retain a pinned source-comparator receipt.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "research_stage": "P4",
+        "statement_status": "open_source_comparator_frontier",
+        "frontier_kind": "h_body_exact_dh",
+        "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+        "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "source_binding_proven": false,
+        "formal_certificate_allowed": false
+      }
+    },
+    "0d44099d7b1e486792f27f4787edd73e": {
+      "id": "0d44099d7b1e486792f27f4787edd73e",
+      "name": "P4.O1.source_comparator.h_body_3",
+      "statement": "For body 3, prove sourceBody 3 q i j = fourierBody body q i j for the exact DH source under the same source/state/mu/q contract.",
+      "parent_id": "120deab092c243b6a43356e63c8b56f4",
+      "status": "open",
+      "proof_sketch": "Expand the exact DH bodyMass/sourceBody definition for body 3, transport the coefficient identity to the real evaluator, and retain a pinned source-comparator receipt.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "research_stage": "P4",
+        "statement_status": "open_source_comparator_frontier",
+        "frontier_kind": "h_body_exact_dh",
+        "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+        "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "source_binding_proven": false,
+        "formal_certificate_allowed": false
+      }
+    },
+    "62f56aedfc16447181e2178e44a535eb": {
+      "id": "62f56aedfc16447181e2178e44a535eb",
+      "name": "P4.O1.source_comparator.h_body_4",
+      "statement": "For body 4, prove sourceBody 4 q i j = fourierBody body q i j for the exact DH source under the same source/state/mu/q contract.",
+      "parent_id": "120deab092c243b6a43356e63c8b56f4",
+      "status": "open",
+      "proof_sketch": "Expand the exact DH bodyMass/sourceBody definition for body 4, transport the coefficient identity to the real evaluator, and retain a pinned source-comparator receipt.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "research_stage": "P4",
+        "statement_status": "open_source_comparator_frontier",
+        "frontier_kind": "h_body_exact_dh",
+        "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+        "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "source_binding_proven": false,
+        "formal_certificate_allowed": false
+      }
+    },
+    "87f1bd9c1acd42369f8814bd10230091": {
+      "id": "87f1bd9c1acd42369f8814bd10230091",
+      "name": "P4.O1.source_comparator.h_body_5",
+      "statement": "For body 5, prove sourceBody 5 q i j = fourierBody body q i j for the exact DH source under the same source/state/mu/q contract.",
+      "parent_id": "120deab092c243b6a43356e63c8b56f4",
+      "status": "open",
+      "proof_sketch": "Expand the exact DH bodyMass/sourceBody definition for body 5, transport the coefficient identity to the real evaluator, and retain a pinned source-comparator receipt.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "research_stage": "P4",
+        "statement_status": "open_source_comparator_frontier",
+        "frontier_kind": "h_body_exact_dh",
+        "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+        "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "source_binding_proven": false,
+        "formal_certificate_allowed": false
+      }
+    },
+    "3ad9bd4fa1d040da995906fc487913fd": {
+      "id": "3ad9bd4fa1d040da995906fc487913fd",
+      "name": "P4.O1.source_comparator.h_body_6",
+      "statement": "For body 6, prove sourceBody 6 q i j = fourierBody body q i j for the exact DH source under the same source/state/mu/q contract.",
+      "parent_id": "120deab092c243b6a43356e63c8b56f4",
+      "status": "open",
+      "proof_sketch": "Expand the exact DH bodyMass/sourceBody definition for body 6, transport the coefficient identity to the real evaluator, and retain a pinned source-comparator receipt.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "research_stage": "P4",
+        "statement_status": "open_source_comparator_frontier",
+        "frontier_kind": "h_body_exact_dh",
+        "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+        "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "source_binding_proven": false,
+        "formal_certificate_allowed": false
       }
     }
   },
@@ -41556,6 +41750,73 @@
       "source_binding_proven": false,
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T15:12:13.247317+00:00",
+      "kind": "node_added",
+      "node_id": "0f4d65a33b964cf38110c0f4b93a34d4",
+      "parent_id": "120deab092c243b6a43356e63c8b56f4",
+      "name": "P4.O1.source_comparator.h_aggregate_function_lift"
+    },
+    {
+      "at": "2026-09-07T15:12:13.247375+00:00",
+      "kind": "node_added",
+      "node_id": "5201cf1e229544a3815e7bc832ab23b7",
+      "parent_id": "120deab092c243b6a43356e63c8b56f4",
+      "name": "P4.O1.source_comparator.h_body_1"
+    },
+    {
+      "at": "2026-09-07T15:12:13.247391+00:00",
+      "kind": "node_added",
+      "node_id": "86049b9800f44a878a81de2e79c3e1c5",
+      "parent_id": "120deab092c243b6a43356e63c8b56f4",
+      "name": "P4.O1.source_comparator.h_body_2"
+    },
+    {
+      "at": "2026-09-07T15:12:13.247404+00:00",
+      "kind": "node_added",
+      "node_id": "0d44099d7b1e486792f27f4787edd73e",
+      "parent_id": "120deab092c243b6a43356e63c8b56f4",
+      "name": "P4.O1.source_comparator.h_body_3"
+    },
+    {
+      "at": "2026-09-07T15:12:13.247417+00:00",
+      "kind": "node_added",
+      "node_id": "62f56aedfc16447181e2178e44a535eb",
+      "parent_id": "120deab092c243b6a43356e63c8b56f4",
+      "name": "P4.O1.source_comparator.h_body_4"
+    },
+    {
+      "at": "2026-09-07T15:12:13.247428+00:00",
+      "kind": "node_added",
+      "node_id": "87f1bd9c1acd42369f8814bd10230091",
+      "parent_id": "120deab092c243b6a43356e63c8b56f4",
+      "name": "P4.O1.source_comparator.h_body_5"
+    },
+    {
+      "at": "2026-09-07T15:12:13.247439+00:00",
+      "kind": "node_added",
+      "node_id": "3ad9bd4fa1d040da995906fc487913fd",
+      "parent_id": "120deab092c243b6a43356e63c8b56f4",
+      "name": "P4.O1.source_comparator.h_body_6"
+    },
+    {
+      "at": "2026-09-07T15:12:13.247449+00:00",
+      "kind": "routeb_o1_source_comparator_decomposed",
+      "parent_id": "120deab092c243b6a43356e63c8b56f4",
+      "leaf_ids": [
+        "0f4d65a33b964cf38110c0f4b93a34d4",
+        "5201cf1e229544a3815e7bc832ab23b7",
+        "86049b9800f44a878a81de2e79c3e1c5",
+        "0d44099d7b1e486792f27f4787edd73e",
+        "62f56aedfc16447181e2178e44a535eb",
+        "87f1bd9c1acd42369f8814bd10230091",
+        "3ad9bd4fa1d040da995906fc487913fd"
+      ],
+      "leaf_count": 7,
+      "parent_closure_requires_all": true,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -45212,5 +45473,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "b89ac78f42f475ec7e633b33f3b538338437ccc8009eadeb828a9599ff340de2"
+  "state_checksum": "ba03d293f471acfe1013b22443fa4d16f94559b5debcd190827164a33f237dbd"
 }

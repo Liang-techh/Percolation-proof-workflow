@@ -1968,6 +1968,9 @@ after integration; corrections should be a new result file.
 - 最新 comparator 已确认 data-level aggregate exact pass；下一 frontier 固定为
   610-row finite-key 到 real cos/sin lift，以及六个 exact DH body equalities，
   必须以 pinned Lean/source-comparator evidence 收口。
+- DAG 已将该 frontier 拆成 7 个独立 OPEN leaves；agent 应认领具体
+  `h_aggregate_function_lift` 或 `h_body_1..h_body_6`，并提交 source-bound
+  receipt 与编译/比较证据，不要只返回重复的数据级 equality。
 
 ### T-P4-036.2 — theta2 namespace hardening (2026-09-07)
 

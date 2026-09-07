@@ -1334,3 +1334,11 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   exact DH `h_body` 等式也未证明；状态保持 `OPEN_H_BODY_SOURCE_COMPARATOR`，
   不进入 source binding、formal certificate 或 registry。
 - 后续 O1 任务只攻 function lift 与 per-body `h_body`，不再重复 aggregate 数据审计。
+
+### 2026-09-07 — 梁智炜：O1 theorem-DAG decomposition
+
+- 已在 O1 parent 下物化 7 个 OPEN leaves：1 个 610-row finite-key 到 real
+  cos/sin 的 `h_aggregate_function_lift`，以及 body 1–6 的独立 exact-DH
+  `h_body` 等式；parent closure 明确要求全部叶子关闭。
+- 这使 scheduler 可以并行分派每个 body lemma，任何单叶完成都不会绕过
+  source-binding、Lean comparator 或 registry gate。
