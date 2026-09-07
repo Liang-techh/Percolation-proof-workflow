@@ -47,7 +47,7 @@ theorem weighted_completion_one
     (a0 x u s : ℝ) (ha0 : 0 < a0) :
     -2 * s * u * x ≤ a0 * x ^ 2 + (u ^ 2 / a0) * s ^ 2 := by
   have hmul :
-      a0 * (-2 * s * u * x - a0 * x ^ 2) ≤ u ^ 2 * s ^ 2 := by
+      (-2 * s * u * x - a0 * x ^ 2) * a0 ≤ u ^ 2 * s ^ 2 := by
     nlinarith [sq_nonneg (a0 * x + s * u)]
   have hdiv :
       -2 * s * u * x - a0 * x ^ 2 ≤ (u ^ 2 * s ^ 2) / a0 :=
@@ -190,7 +190,6 @@ theorem box_vertex_attains_of_neg_cross
         + r22 a0 d0 n12 n22 * (-H2) ^ 2 =
       boxCost a0 d0 n11 n12 n21 n22 H1 H2 := by
   simp [boxCost, abs_of_neg hcross]
-  ring
 
 /-- The rectangular-box upper bound is information-set sharp: one of two box
 vertices attains it. -/
