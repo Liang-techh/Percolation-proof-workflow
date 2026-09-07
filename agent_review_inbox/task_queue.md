@@ -2878,6 +2878,9 @@ uniform contraction；若只得到缺失字段，则记录 obstruction 而不填
 fixed-λ rational-to-real finite-sum cast 已登记 revision 681。P3 uniform-gap
 叶仍等待独立 review；未配对的草稿继续留在工作区，不进入 DAG。
 
+P3 finite-grid uniform gap 已完成成对 review 并登记 revision 683，状态保持
+`OPEN_UNCOMPILED`；有限网格 lower bound 仍不能外推到未覆盖连续域。
+
 P3 uniform-gap review 已到达并登记 revision 682，状态仍为 `OPEN_UNCOMPILED`；
 它把全域 uniformity 设为显式输入，保留 pointwise-only 的 exact obstruction。
 

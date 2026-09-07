@@ -1599,6 +1599,19 @@ CHILDREN = [
             "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_UNIFORM_SLACK_REVIEW.md",
         ],
     },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap",
+        "statement": "On an explicitly nonempty finite grid, pointwise positive exact-real gaps yield a positive attained uniform lower bound, while the result remains scoped to grid membership.",
+        "proof_sketch": "Use Finset.inf' membership and lower-bound lemmas to extract the finite minimum, then retain an omitted-point Bool counterexample showing that finite-grid positivity is not continuous-domain coverage.",
+        "lane": "source_semantics",
+        "bottleneck": "coverage",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_FINITE_UNIFORM_GAP",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_FINITE_UNIFORM_GAP.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_FINITE_UNIFORM_GAP_REVIEW.md",
+        ],
+    },
 ]
 
 
