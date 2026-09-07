@@ -1016,3 +1016,11 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   `REJECTED_STALE_SOURCE_OR_OLEAN_HASH`，没有把过期的 theorem child 当成新证据。
 - Hilbert 需要在源码稳定后重新生成 source/olean 成对 hash；在此之前 O2 只保留
   open frontier，不消耗 coverage、Float64/libm 或 registry gate。
+### 2026-09-07 — 梁智炜：收割 O1 typed binding 与 force source contract
+
+- O1 新 review 已把 `Matrix.nonsing_inv_mul` 的 API 层推进到两个最小 compiled
+  target：`typed_MDD_left_inverse` / `direct_same_key_left_inverse`；但 OLean、
+  canonical statement comparator、同键 source receipt 仍未提供，O1 保持 open。
+- force source review 给出一个可审计 zero-state `(E1,E2)` witness，但一般状态的
+  两个 source equalities 仍需 B-row export；当前 verifier hash 漂移，故 intake
+  标为 artifact-hash-drift/general-open，不把旧 runtime 回归提升为 source theorem。

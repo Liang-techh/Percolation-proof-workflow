@@ -1704,3 +1704,11 @@ after integration; corrections should be a new result file.
 - Re-run admission only after the agent produces a fresh pinned compile receipt
   whose source and OLean hashes match the current sidecar; the mathematical
   child remains conditional and does not close O2.
+### New harvest: O1 typed binding and force source contract (2026-09-07)
+
+- O1 may now consume the typed compile candidate only as an adapter artifact;
+  it still needs an OLean/canonical receipt plus same-key `M_DD`/`M_DD_inv`
+  source binding. Do not close `M_DD_left_inverse_witness` from the compile claim.
+- The force source contract has a zero-state witness but no general-state B-row
+  export. The next concrete task is to export `q_B,v_B,w,Cdq_B,Gq_B,G0_B,tau_B,
+  rhs_B,a_B,a_D,Mq_BB,Mq_BD` and both residual vectors under one hash manifest.

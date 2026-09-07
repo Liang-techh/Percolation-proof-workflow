@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 512,
+  "revision": 515,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13521,6 +13521,64 @@
           "deployed_tau_equivalence": "NOT_CLAIMED",
           "formal_certificate_allowed": false,
           "registry_promoted": false
+        },
+        "source_binding_contract_reviews": [
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-KC-COORDINATE-ADAPTER",
+            "source_agent": "codex-inbox",
+            "review_status": "AUDITABLE_ZERO_STATE_CONTRACT_PASS_ARTIFACT_HASH_DRIFT_GENERAL_OPEN",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-force-source-binding-contract-codex-20260907.md",
+              "sha256": "5202753CC8B5641968E6CEB4533C5C21AD1968441305C2B120198CFF8FC40F50"
+            },
+            "artifact_hashes_expected": {
+              "deployed_dhport": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936",
+              "interface_script": "D3D21705E5E904A080E4B86DC4C380788D2323C155570A8E7B40D62B11BB0A24",
+              "interface_csv": "ED10D0335DEBACD670A26871CAD9CE51FC871CB86F6AE956125AEAE3DEE00E24",
+              "verifier": "47E1C02EA4ADDD64EB8C11F3DBBDF7B414288A55E8AA625494C365FC9B3FCBB0",
+              "m0_table": "28D98AD71D1D6C2CBE830872CAD9077F2F7B4E2D932794217EB68868FD2E2B40"
+            },
+            "artifact_hashes_actual": {
+              "deployed_dhport": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936",
+              "interface_script": "D3D21705E5E904A080E4B86DC4C380788D2323C155570A8E7B40D62B11BB0A24",
+              "interface_csv": "ED10D0335DEBACD670A26871CAD9CE51FC871CB86F6AE956125AEAE3DEE00E24",
+              "verifier": "47E1C02EA4ADDD64E20963036DD22B7C414288A55E8AA625494C365FC9B3FCB0",
+              "m0_table": "28D98AD71D1D6C2CBE830872CAD9077F2F7B4E2D932794217EB68868FD2E2B40"
+            },
+            "artifact_hash_matches": {
+              "deployed_dhport": true,
+              "interface_script": true,
+              "interface_csv": true,
+              "verifier": false,
+              "m0_table": true
+            },
+            "zero_state_witness": "AUDITABLE_STATE_CONTRACT_PASS",
+            "general_source_force_binding": "OPEN",
+            "general_descriptor_binding": "OPEN",
+            "deployed_tau_equivalence": "NOT_CLAIMED",
+            "float64_to_real": "OPEN",
+            "formal_certificate_allowed": false,
+            "registry_promoted": false,
+            "admission_status": "source_contract_only_pending_general_state_export"
+          }
+        ],
+        "source_binding_contract": {
+          "status": "AUDITABLE_ZERO_STATE_CONTRACT_PASS_ARTIFACT_HASH_DRIFT_GENERAL_OPEN",
+          "review_sha256": "5202753CC8B5641968E6CEB4533C5C21AD1968441305C2B120198CFF8FC40F50",
+          "artifact_hash_matches": {
+            "deployed_dhport": true,
+            "interface_script": true,
+            "interface_csv": true,
+            "verifier": false,
+            "m0_table": true
+          },
+          "zero_state_witness": "AUDITABLE_STATE_CONTRACT_PASS",
+          "general_source_force_binding": "OPEN",
+          "general_descriptor_binding": "OPEN",
+          "deployed_tau_equivalence": "NOT_CLAIMED",
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
         }
       }
     },
@@ -14647,6 +14705,31 @@
             "formal_certificate_allowed": false,
             "registry_promoted": false,
             "admission_status": "pending_same_object_binding"
+          },
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-033-O1-binding-followup-2",
+            "source_agent": "Codex",
+            "review_status": "OPEN_SAME_OBJECT_BINDING_TWO_PATHS",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-033-O1-binding-followup-2-codex-20260907.md",
+              "sha256": "1124D4B59C2A85AEFDE3623231085AD0CE1F39A402987DFF911009F49C7F0045"
+            },
+            "binding_paths": {
+              "A": "h_MDD_def + h_inv_def + exact hdet",
+              "B": "h_MDD_def + direct exact h_left"
+            },
+            "required_key_equalities": [
+              "source_key",
+              "state_key",
+              "mu",
+              "q",
+              "block_order=(1,2,3,6)"
+            ],
+            "remaining_obstruction": "missing same-key typed receipt for M_DD and M_DD_inv",
+            "formal_certificate_allowed": false,
+            "registry_promoted": false,
+            "admission_status": "pending_same_object_binding"
           }
         ],
         "repair_attempts": [
@@ -14718,6 +14801,46 @@
             "block_order=(1,2,3,6)"
           ],
           "required_premise": "h_MDD_def"
+        },
+        "binding_compile_candidates": [
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-033-O1-binding-followup-2",
+            "source_agent": "codex-inbox",
+            "review_status": "COMPILED_CANDIDATE_OLEAN_AND_SOURCE_BINDING_PENDING",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-033-O1-binding-followup-2-codex-20260907.md",
+              "sha256": "1124D4B59C2A85AEFDE3623231085AD0CE1F39A402987DFF911009F49C7F0045"
+            },
+            "source_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_o1_left_inverse_binding_20260907\\TypedMDDLeftInverse.lean",
+              "sha256": "F41164C49C696FB5883C1A622234701E53897801B18B9C4F1B3494FAC84026A2"
+            },
+            "olean_artifact": "NOT_SUPPLIED",
+            "theorems": [
+              "typed_MDD_left_inverse",
+              "direct_same_key_left_inverse"
+            ],
+            "compiler_exit_code": 0,
+            "source_comparator_run": false,
+            "statement_comparator_run": false,
+            "canonical_receipt": false,
+            "same_key_source_binding": "OPEN",
+            "formal_certificate_allowed": false,
+            "registry_promoted": false
+          }
+        ],
+        "binding_compile_candidate": {
+          "status": "COMPILED_CANDIDATE_OLEAN_AND_SOURCE_BINDING_PENDING",
+          "source_sha256": "F41164C49C696FB5883C1A622234701E53897801B18B9C4F1B3494FAC84026A2",
+          "olean": "NOT_SUPPLIED",
+          "compiler_exit_code": 0,
+          "source_comparator": "OPEN",
+          "statement_comparator": "OPEN",
+          "canonical_receipt": false,
+          "same_key_source_binding": "OPEN",
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
         }
       }
     },
@@ -39480,6 +39603,36 @@
       "current_source_sha256": "F4088AEF30F99E3FC61B4B08122283E148AE5EFB1B24F56E91BFD4EC4433E6A0",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T13:38:04.486666+00:00",
+      "kind": "routeb_force_source_binding_contract_recorded",
+      "node_id": "203c45aac1d84022b69267c0cc31db06",
+      "review_status": "AUDITABLE_ZERO_STATE_CONTRACT_PASS_ARTIFACT_HASH_DRIFT_GENERAL_OPEN",
+      "zero_state_witness": "AUDITABLE_STATE_CONTRACT_PASS",
+      "artifact_hash_binding": "OPEN_STALE_HASH",
+      "general_source_binding": "OPEN",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T13:38:10.942832+00:00",
+      "kind": "routeb_o1_binding_followup_recorded",
+      "node_id": "120deab092c243b6a43356e63c8b56f4",
+      "review_status": "OPEN_SAME_OBJECT_BINDING_TWO_PATHS",
+      "admission_status": "pending_same_object_binding",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T13:39:13.003472+00:00",
+      "kind": "routeb_o1_binding_compile_candidate_recorded",
+      "node_id": "120deab092c243b6a43356e63c8b56f4",
+      "compiler_exit_code": 0,
+      "olean_supplied": false,
+      "source_comparator": "OPEN",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -43136,5 +43289,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "2641829883c87dd94b363b8aae939b45a79a73be45834006d4ded16005636c4b"
+  "state_checksum": "5fd12b75fea14929953af498ae7e66f2ea96202a76cac5af2f61c697fc45cdca"
 }

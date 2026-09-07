@@ -124,3 +124,51 @@ in particular the missing binding of the generic `M_DD` and named
 `M_DD_inv` to the same exact `(mu,q)` projected object. Until that receipt is
 present, keep `M_DD_left_inverse_witness = OPEN`; no O1 verified or registry
 status follows.
+
+## Minimal compiled binding target and receipt fields
+
+The exact target was materialized at:
+
+```text
+artifacts/task_routeb_o1_left_inverse_binding_20260907/TypedMDDLeftInverse.lean
+```
+
+It defines one `O1MDDBinding` carrying the fixed `Bidx = ![3,4]`,
+`Didx = ![0,1,2,5]`, one source function `M`, and one exact `mu,q`; its two
+compiled targets are:
+
+```text
+typed_MDD_left_inverse
+direct_same_key_left_inverse
+```
+
+The pinned Mathlib compile returned `exit_code = 0`; the temporary probe was
+deleted. This is a compile receipt for the typed adapter only, not a receipt
+that the current source evaluator has supplied its premises.
+
+The corresponding admission fields must remain explicit:
+
+```json
+{
+  "compiler_exit_code": 0,
+  "source_comparator_run": false,
+  "source_comparator_status": "PENDING_SAME_KEY_SOURCE_BINDING",
+  "statement_comparator_run": false,
+  "statement_comparator_status": "PENDING_CANONICAL_STATEMENT_BINDING",
+  "canonical_receipt": false,
+  "formal_certificate_allowed": false,
+  "registry_promoted": false
+}
+```
+
+The unique remaining premise gap is one authoritative same-key source receipt
+instantiating either:
+
+```text
+A: h_MDD_def + h_inv_def + exact hdet
+B: h_MDD_def + direct exact hleft
+```
+
+for the actual evaluator at the same exact `(mu,q)` and the same projected
+`M_DD45_at M mu q`. No additional port-identity premise is being requested by
+this follow-up.
