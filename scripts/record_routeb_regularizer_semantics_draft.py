@@ -13,6 +13,10 @@ ANALYTIC = ROUTE_B / "routeB_dense_Mq" / "routeB_fourier_lifted_descriptor_model
 sys.path.insert(0, str(ROOT / "src"))
 
 from percolation_workflow.store import StateStore  # noqa: E402
+from percolation_workflow.routeb_regularizer_semantics import (  # noqa: E402
+    FLOAT64_MU_BITS_HEX,
+    routeb_regularizer_fact,
+)
 
 
 def ref(path: Path) -> dict[str, str]:
@@ -35,17 +39,28 @@ def main() -> int:
     for path in (DEPLOYED, ANALYTIC):
         if not path.is_file():
             raise FileNotFoundError(path)
-    float_mu = Fraction.from_float(1e-6)
-    exact_mu = Fraction(1, 1_000_000)
+    fact = routeb_regularizer_fact()
+    float_mu = fact.mu_float64
+    exact_mu = fact.mu_exact_real
     difference = float_mu - exact_mu
     payload = {
         "schema_version": 1,
         "status": "OPEN_ROUNDING_INCLUSION_REQUIRED",
         "deployed_literal": "1e-6",
+        "bridge_schema": fact.schema,
+        "float64_bits_hex": FLOAT64_MU_BITS_HEX,
         "deployed_float64_exact_value": frac_text(float_mu),
         "analytic_exact_real_value": frac_text(exact_mu),
         "deployed_minus_analytic": frac_text(difference),
         "difference_sign": "negative",
+        "outward_interval": [frac_text(item) for item in fact.outward_interval],
+        "diagonal_propagation": {
+            "matrix_identity": "M_float = M_exact - delta*I under common unregularized-base binding",
+            "block_B": [4, 5],
+            "block_D": [1, 2, 3, 6],
+            "off_diagonal_shift": "0",
+            "inverse_and_port": "requires explicit exact-real resolvent premise",
+        },
         "source_artifacts": [ref(DEPLOYED), ref(ANALYTIC)],
         "known_fact": "the Float64 literal and exact rational are distinct real numbers",
         "decomposition": [
