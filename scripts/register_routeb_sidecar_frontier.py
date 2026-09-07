@@ -1820,6 +1820,19 @@ CHILDREN = [
             "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_TYPED_RECEIPT_AUDIT20260907_REVIEW.md",
         ],
     },
+    {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin",
+        "statement": "The candidate BODY6 front block is tied to the actual source Schur remainder only through all nine explicit coefficient equalities; source A symmetry and Y=Xᵀ can then supply R symmetry, but uniform margin cannot replace coefficient binding.",
+        "proof_sketch": "Define the entrywise source coefficient expression, prove its equivalence to the existing schurRemainder under SourceBlockBinding, package tail inverse/solve obligations separately, and retain an abstract I₃ versus 2I₃ counterexample showing equal margin and symmetry do not determine source coefficients.",
+        "lane": "source_semantics",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_BODY6_EXACT_SCHUR_COEFFICIENTS",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_EXACTSCHURCOEFF20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_EXACTSCHURCOEFF20260907.review.md",
+        ],
+    },
 ]
 
 

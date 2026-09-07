@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 694,
+  "revision": 695,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -41567,7 +41567,8 @@
       "status": "open",
       "proof_sketch": "Define the eliminated tail vector, prove tail residual zero and front residual R u under the solve-column identities, transfer an externally supplied RemainderMargin, and retain exact obligations for R equality and positive margin.",
       "dependencies": [
-        "f7bb30a531494081b72116b1c89de3ea"
+        "f7bb30a531494081b72116b1c89de3ea",
+        "660426580c9446db996dae2ccc301533"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -41873,6 +41874,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_TYPED_RECEIPT_AUDIT20260907_REVIEW.md",
             "sha256": "CB28DC5029B5A2A47D922D2D1A7B093C8DE30EBFC323FA4CD18BE7AE8279EDAE"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "660426580c9446db996dae2ccc301533": {
+      "id": "660426580c9446db996dae2ccc301533",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients",
+      "statement": "The candidate BODY6 front block is tied to the actual source Schur remainder only through all nine explicit coefficient equalities; source A symmetry and Y=Xᵀ can then supply R symmetry, but uniform margin cannot replace coefficient binding.",
+      "parent_id": "f333aa93b1224537b8e39797e06b91f5",
+      "status": "open",
+      "proof_sketch": "Define the entrywise source coefficient expression, prove its equivalence to the existing schurRemainder under SourceBlockBinding, package tail inverse/solve obligations separately, and retain an abstract I₃ versus 2I₃ counterexample showing equal margin and symmetry do not determine source coefficients.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_BODY6_EXACT_SCHUR_COEFFICIENTS",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_EXACTSCHURCOEFF20260907.lean",
+            "sha256": "0D48DC828BA8A025CA409DDC8DDC49FBD5450955A66BB060683EC1B3FA14A444"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_EXACTSCHURCOEFF20260907.review.md",
+            "sha256": "441E438B38A9038585EB247766488AD41B66B51512A3D3BEBB9F5FAEF567D35C"
           }
         ],
         "registry_eligible": false,
@@ -69812,6 +69848,23 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T20:22:44.294070+00:00",
+      "kind": "node_added",
+      "node_id": "660426580c9446db996dae2ccc301533",
+      "parent_id": "f333aa93b1224537b8e39797e06b91f5",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients"
+    },
+    {
+      "at": "2026-09-07T20:22:44.294093+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -73468,5 +73521,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "a1ee78113004e5b85b21af48a851db834ae1dc59edc2e6a7b0e281c595fb3859"
+  "state_checksum": "0698cd6f26d7fff4c775d04ce61322fa4e935c8e65b97dc4944e2f2fec951543"
 }
