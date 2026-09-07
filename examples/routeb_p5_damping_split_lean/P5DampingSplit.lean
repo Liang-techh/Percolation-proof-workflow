@@ -97,7 +97,13 @@ theorem damping_split_certificate
       _ < 4 * alpha ^ 2 * (1 - alpha) * g0 ^ 3 := hcert
       _ = (4 * ((1 - alpha) * g0)) * (alpha ^ 2 * g0 ^ 2) := by
         ring
-  exact (mul_lt_mul_left hden).mp hscaled
+  by_contra hnot
+  have hrev :
+      alpha ^ 2 * g0 ^ 2 ≤
+        (E + T * (Rbar / (4 * ((1 - alpha) * g0)))) * Q :=
+    le_of_not_gt hnot
+  have hmul := mul_le_mul_of_nonneg_left hrev (le_of_lt hden)
+  exact (not_lt_of_ge hmul) hscaled
 
 /-- The exact `alpha = 2/3` checker inequality is precisely strong enough to
 instantiate the generic division-free certificate. -/
