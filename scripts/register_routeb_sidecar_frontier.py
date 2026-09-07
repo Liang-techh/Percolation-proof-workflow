@@ -2119,6 +2119,32 @@ CHILDREN = [
             "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_STRICTFEASIBILITY20260907.review.md",
         ],
     },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.finite_box_uniform_margin.strict_export.endpoint_uniform_margin.taylor_remainder.c2c3_regularity.dh_coefficient_bridge.routeb_real_binding",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.radius_load_bridge.family_to_point.family_strict_slack.uniform_gap.finite_grid.box_coverage.interval_enclosure.interval_receipt_boundary.receipt_math_adapter.continuous_coverage.finite_box_uniform_margin.strict_export.endpoint_uniform_margin.taylor_remainder.c2c3_regularity.dh_coefficient_bridge",
+        "statement": "The Route-B Taylor consumer binds to the deployed six-DOF DH semantics only through an exact-real source contract recording M, potential, central finite-difference C/G, h=1/100000, regularization=1/1000000, and same-box/domain coefficient identity; Float64/libm and local candidate coverage remain insufficient.",
+        "proof_sketch": "Define typed Q6/state/source and per-box Taylor records, prove same-box function identity and the gap chain under explicit domain binding, and retain the mismatch between Float64/libm implementation and exact-real Lean equalities plus incomplete dynamics coverage as external obligations.",
+        "lane": "source_semantics",
+        "bottleneck": "coverage",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_ROUTEB_REAL_BINDING",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_ROUTEB_REAL_BINDING.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_ROUTEB_REAL_BINDING_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization.final_admission_contract.explicit_registry_promotion_gate.pinned_kernel_receipt.verified_registry_entry_invariant.append_only_registry_transition.parent_child_closure_event",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility.uniform_margin_budget.revised_bridge.strict_consumer.weighted_absorption.eta_partition.strict_budget.final_strict_export.strict_reserve_final_bridge.quantitative_lower_bound.aggregate_slack.two_row_index_equivalence.finite_reindex_sum_equality.rat_real_cast.real_final_strict_consumer.exact_statement_boundary.comparator_receipt_admission.typed_receipt_audit.canonical_digest_normalization.final_admission_contract.explicit_registry_promotion_gate.pinned_kernel_receipt.verified_registry_entry_invariant.append_only_registry_transition",
+        "statement": "An append-only registry event additionally requires parent closure in the current snapshot and a complete child receipt bound to the same parent, child, snapshot, closure, kernel, comparator, and external validation policy; missing, stale, unclosed, or incomplete evidence fails closed.",
+        "proof_sketch": "Wrap the existing append event with EventContext, ParentReady, BoundChildReceipt, ClosurePolicy, and ClosureApproved; construct an append request only from both ready proofs, prove missing/unclosed/stale/incomplete cases return none, and retain real registry concurrency, receipt validation, and closure semantics as external obligations.",
+        "lane": "lean_adapter",
+        "bottleneck": "admission",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_PARENT_CHILD_CLOSURE_EVENT",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_ADMISSION_ParentChildClosureEvent.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_ADMISSION_ParentChildClosureEvent.review.md",
+        ],
+    },
 ]
 
 

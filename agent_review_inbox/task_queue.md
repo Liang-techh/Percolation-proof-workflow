@@ -3028,3 +3028,9 @@ all-points cell cover 两条充分路径，并证明 strict→nonstrict；同时
 `p≤eta` 与 joint-limit 域能否精确给出 `0∈D`，并与 BODY6 q=0 的 exact
 source/null-vector obstruction 绑定。若连接成功，严格统一正 margin 路线应
 被明确拒绝；若连接缺字段，则只登记最小 domain/source interface 缺口。
+
+revision 716 收割并登记 P3 `ROUTEB_REAL_BINDING` 与 fixed-λ
+`PARENT_CHILD_CLOSURE_EVENT`。前者把当前 h=1e-5、mass regularization=1e-6
+的部署语义显式放入 exact-real interface，同时保留 Float64/libm 与 dynamics
+coverage 缺口；后者要求 parent 当前快照闭合及 child receipt 完整绑定后才能
+产生 append event。两者均为 `OPEN_UNCOMPILED`，不影响 registry=0。

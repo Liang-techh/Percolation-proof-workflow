@@ -2414,4 +2414,13 @@ revision 715 登记 BODY6 `STRICT_FEASIBILITY`。它把“存在共同正余量�
 新的最高优先级不是调参或宽回归，而是验证 Route-B 候选域是否包含零构型，
 并把它与 BODY6 q=0 的 exact null direction 接上。若真实 source binding
 也成立，则 strict positive uniform margin 是数学上不可行的路线；系统应
-保留该 obstruction，并转向非严格/删域/改残差结构，而不是继续盲目搜索。
+ 保留该 obstruction，并转向非严格/删域/改残差结构，而不是继续盲目搜索。
+
+### 2026-09-07 — 梁智炜收割 Route-B 真实绑定与 parent-child gate
+
+revision 716 接入两条新 frontier：P3 `ROUTEB_REAL_BINDING` 明确记录真实
+六自由度 DH/M/C/G 中心差分语义与 Taylor consumer 的同域绑定，但不把
+Float64/libm 或局部 interval 候选升级成 exact-real theorem；fixed-λ
+`PARENT_CHILD_CLOSURE_EVENT` 则把 parent 当前快照闭合、child receipt 完整
+绑定和 append-only event 串成 fail-closed gate。当前 registry 仍为 0，
+formal certificate 仍禁止。
