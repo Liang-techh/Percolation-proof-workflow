@@ -30,8 +30,12 @@ rho_kc^F(q_B) = diag(1/5,1/10) rho_kc^f(q_B)
 The existing `routeb_b45_5_residual_decomposition_lean` sidecar uses this
 force-scale form.  It is a useful algebraic candidate for the canonical force
 residual, while its source binding and global domain proof remain open.  The
-source-contract checker labels both coordinate systems explicitly and rejects
-only an unrecognised scale.
+source-contract checker labels both coordinate systems explicitly and now also
+recognises the compositional lifted form; absence of a literal `q5/100`/`q4/200`
+string is not evidence that the force-scale algebra is absent.
+
+This only establishes the conditional adapter child; deployed `tau` binding
+remains open.
 
 ## Deployed DH semantics
 

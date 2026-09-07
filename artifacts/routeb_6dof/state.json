@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 502,
+  "revision": 503,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13068,7 +13068,7 @@
         },
         "parent_receipts": {},
         "force_scale_contract": {
-          "status": "FORCE_SCALE_TERMS_UNSUPPORTED_IN_CURRENT_CANONICAL_SOURCES",
+          "status": "FORCE_SCALE_COMPOSITION_PRESENT_DEPLOYED_BINDING_OPEN",
           "force_descriptor_node": "P4.true_dh_force_descriptor_semantics",
           "requested_terms_found": {
             "deployed_dhport": {
@@ -13302,7 +13302,7 @@
         ],
         "force_scale_contract": {
           "schema_version": 1,
-          "status": "FORCE_SCALE_TERMS_UNSUPPORTED_IN_CURRENT_CANONICAL_SOURCES",
+          "status": "FORCE_SCALE_COMPOSITION_PRESENT_DEPLOYED_BINDING_OPEN",
           "scope": "static selected-source scan; no external source mutation",
           "blocks": {
             "B": [
@@ -13329,6 +13329,17 @@
               "q5_over_100": false,
               "q4_over_200": false
             }
+          },
+          "compositional_force_terms_found": {
+            "q5_over_100": true,
+            "q4_over_200": true
+          },
+          "force_scale_derivation": {
+            "status": "PRESENT_COMPOSITIONAL",
+            "normalized_term": "(q5/20,q4/20)",
+            "inertia_map": "diag(1/5,1/10)",
+            "exact_inertia_map_present": true,
+            "force_term": "(q5/100,q4/200)"
           },
           "controller_tau_source": {
             "deployed_expression_present": true,
@@ -13361,7 +13372,7 @@
             {
               "id": "F2",
               "name": "coefficient_normalization",
-              "status": "OPEN",
+              "status": "PENDING_TYPED_CHILD",
               "interface": "RouteB.Force.CoefficientNormalization"
             },
             {
@@ -38950,6 +38961,25 @@
       "admission_status": "pending_same_key_physical_receipt",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T13:03:51.532786+00:00",
+      "kind": "routeb_force_scale_contract_recorded",
+      "node_id": "203c45aac1d84022b69267c0cc31db06",
+      "parent_id": "6cebb66987f449f3b5ad8d0548dfdf83",
+      "status": "FORCE_SCALE_COMPOSITION_PRESENT_DEPLOYED_BINDING_OPEN",
+      "requested_terms_found": {
+        "deployed_dhport": {
+          "q5_over_100": false,
+          "q4_over_200": false
+        },
+        "lifted_descriptor": {
+          "q5_over_100": false,
+          "q4_over_200": false
+        }
+      },
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -42606,5 +42636,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "e394753701c9654a8de69d525cf29c9af3f522ee5cb1ae42406ee6d750c391ca"
+  "state_checksum": "a357fee896e668e63251a3903111144238841b7241af84fd39fd5c83ca68d089"
 }

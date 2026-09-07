@@ -939,3 +939,14 @@ rev 502，第二次执行前后 state hash 相同。
 source/state key、cell/domain、μ/FD/力尺度、metric/inverse、weighted
 baseline/perturbation、Schur normalization 和 `R_port a_B = r_B` proof
 receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 registry。
+
+最新收割的三份数学结果：
+
+- O0-R1/R2 仍无物理 receipt，但 exact `K/epsilon_A/dB/Br/Cf/dC` 到
+  weighted `rho_r/epsilon_R` 的同键接口已明确；平方候选不能冒充根界。
+- O2 `.2` 只条件关闭 12 行 exact-real trig/range-reduction child；Float64/libm、
+  D1/D2/D3 和全盒覆盖继续 open。
+- force-source child 纠正了一个 checker 误报：lifted 源的 `1/20` 项经
+  `diag(1/5,1/10)` 确实组合出 `(q5/100,q4/200)`。checker 现记录
+  `FORCE_SCALE_COMPOSITION_PRESENT_DEPLOYED_BINDING_OPEN`，不再把它报成
+  “系数不存在”；deployed `tau` 等价性仍未声称。

@@ -63,6 +63,18 @@ def main() -> int:
         "lifted_q5_cross_term": "Q(1, 20) * q[5]" in lifted,
         "lifted_q4_cross_term": "Q(1, 20) * q[4]" in lifted,
     }
+    exact_inertia_map_present = (
+        "Ival = Q[1, Q(3, 5), Q(7, 20), Q(1, 5), Q(1, 10), Q(1, 20)]"
+        in lifted
+    )
+    compositional_force_terms = {
+        "q5_over_100": all(
+            marker in lifted for marker in ("Q(1, 20) * q[5]",)
+        ) and exact_inertia_map_present,
+        "q4_over_200": all(
+            marker in lifted for marker in ("Q(1, 20) * q[4]",)
+        ) and exact_inertia_map_present,
+    }
     deployed_controller_semantics = (
         "tau = -Kp .* q - (Kd + b_fr) .* dq + G0v + (gw_coef .* I_val) .* w"
         in deployed
@@ -82,6 +94,8 @@ def main() -> int:
     status = (
         "FORCE_SCALE_CONTRACT_PRESENT_PENDING_BINDING"
         if requested_present
+        else "FORCE_SCALE_COMPOSITION_PRESENT_DEPLOYED_BINDING_OPEN"
+        if all(compositional_force_terms.values())
         else "FORCE_SCALE_TERMS_UNSUPPORTED_IN_CURRENT_CANONICAL_SOURCES"
     )
     audit = {
@@ -93,6 +107,18 @@ def main() -> int:
         "requested_terms_found": {
             "deployed_dhport": deployed_required,
             "lifted_descriptor": lifted_required,
+        },
+        "compositional_force_terms_found": compositional_force_terms,
+        "force_scale_derivation": {
+            "status": (
+                "PRESENT_COMPOSITIONAL"
+                if all(compositional_force_terms.values())
+                else "OPEN"
+            ),
+            "normalized_term": "(q5/20,q4/20)",
+            "inertia_map": "diag(1/5,1/10)",
+            "exact_inertia_map_present": exact_inertia_map_present,
+            "force_term": "(q5/100,q4/200)",
         },
         "controller_tau_source": {
             "deployed_expression_present": deployed_controller_semantics,
@@ -124,7 +150,11 @@ def main() -> int:
             {
                 "id": "F2",
                 "name": "coefficient_normalization",
-                "status": "OPEN" if not requested_present else "PENDING_BINDING",
+                "status": (
+                    "PENDING_TYPED_CHILD"
+                    if all(compositional_force_terms.values())
+                    else "OPEN" if not requested_present else "PENDING_BINDING"
+                ),
                 "interface": "RouteB.Force.CoefficientNormalization",
             },
             {

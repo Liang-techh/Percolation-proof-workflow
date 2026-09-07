@@ -1519,6 +1519,29 @@ polynomial remains a separate frontier.
 - `READY_FOR_COORDINATOR_ADMISSION` remains conditional input only; it cannot
   close O0 or promote the registry without the existing Lean/comparator gates.
 
+### New harvest: O0-R1/R2 exact keyed interface (2026-09-07)
+
+- review: `review-T-P4-033-O0-R1-R2-exact-keyed-bottleneck-codex-20260907.md`
+- no physical receipt is available. The next consumable child must bind exact
+  `K`, `epsilon_A`, `dB`, `Br`, `Cf`, `dC`, derived `K_f/DeltaK/U_R`, and the
+  same-key weighted `rho_r/epsilon_R`; a squared `rho_F^2` candidate is not a
+  root witness. `R_port*a_B=r_B` remains a separate physical prerequisite.
+
+### New harvest: O2 exact-real trig child (2026-09-07)
+
+- review: `review-T-P4-036.2-exact-real-child-codex-20260907.md`
+- conditional child `EXACT_REAL_TRIG_CELL_CLOSED_CONDITIONALLY` covers only the
+  declared 12 exact-real theta/alpha rows. Float64/libm binding, D1/D2/D3
+  composition, and all-box coverage remain open; it cannot close O2.
+
+### New harvest: force-scale compositional child (2026-09-07)
+
+- review: `review-T-P4-force-source-child-codex-20260907.md`
+- `P4.force_scale_adapter_q45` is the smallest exact algebraic child:
+  `diag(1/5,1/10)*(q5/20,q4/20)=(q5/100,q4/200)`. The static checker now
+  records this compositional witness separately while keeping deployed `tau`
+  equality and true-DH source binding open.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it
