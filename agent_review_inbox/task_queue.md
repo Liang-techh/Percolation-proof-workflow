@@ -1297,6 +1297,32 @@ polynomial remains a separate frontier.
   fixed lambda by a state-dependent parameter, mixing aggregate and per-cell
   metrics, or promoting this candidate to the registry/formal gate.
 
+### T-P4-029 — true-DH evaluator enclosure and port-map adapter
+
+- status: `open` (newly narrowed source-semantics bottleneck)
+- owner: `柳冠一` for the source/evaluator analysis; `臭屁猪` for the typed
+  adapter and pinned compile; `封不觉` only for independent receipt review.
+- scope: start from the recorded formula
+  `R(q)=M_BD(q)*M_DD(mu,q)^(-1)*(M_DB(q)-M0_DB)` with B=(4,5),
+  D=(1,2,3,6), `mu=1/1000000`, and prove the smallest useful bridge between
+  the exact-real/interval evaluator and deployed `dhport_lib.jl`.
+- required distinction: source-text consistency and pointwise regression are
+  insufficient. The target is a per-certified-box enclosure for the actual
+  Float64 `M,C_fd,G_fd,tau`/solve, or a justified change making exact-real
+  evaluation authoritative. Preserve the explicit `M_BD*a_D` term and the
+  force-scale `q5/100,q4/200`.
+- deliver: a source/provenance receipt, a typed Lean/source adapter target for
+  `R*a_B=r_B`, and an explicit list of primitive roundoff or transcendental
+  lemmas still needed. If no enclosure is available, return a fail-closed
+  obstruction rather than claiming the formula is proved.
+- current evidence: `P5_COMPACT_DH_FOURIER_SOURCE_SEMANTICS_AUDIT.md` records
+  source-level agreement; `P5_COMPACT_EXACT_REAL_MODEL_BOUNDARY.md` explicitly
+  says Float64 inclusion remains open; local state receipt is
+  `SOURCE_FORMULA_PRESENT_FLOAT64_ENCLOSURE_OPEN`.
+- forbidden: promoting the formula audit, BigFloat interval output, one-cell
+  checks, solver status, or source hash into a kernel-verified theorem or
+  registry entry.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it

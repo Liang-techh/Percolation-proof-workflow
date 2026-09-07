@@ -685,3 +685,18 @@
 - 该节点进入 `source_semantics/source_binding` frontier，等待 source/Lean
   agent 给出系数级 adapter、pinned compile 和 comparator receipt；在此
   之前 P4/M4 gate 不变。
+
+### 2026-09-07 — 梁智炜：收窄 true-DH 端口瓶颈到 evaluator enclosure
+
+- 新增 `scripts/record_routeb_true_dh_source_formula_audit.py`，读取并固定
+  `dhport_lib.jl`、analytic c/s mass、BI 分区探针、lifted descriptor、nominal
+  bridge 与 exact-real boundary 的 provenance/hash。
+- 机器审计确认：B=(4,5)、D=(1,2,3,6)，分区探针形成
+  `R=M_BD*M_DD(mu)^(-1)*(M_DB-M0_DB)`，且 nominal bridge 保留
+  `r_B-M_BD*v=0` 与 `M_DD*v+DeltaM_DB*a_B=0`；左侧 residual 输出方向没有
+  再发现公式级错误。
+- 仍明确保持 `SOURCE_FORMULA_PRESENT_FLOAT64_ENCLOSURE_OPEN`：解析/区间模型
+  与部署 `Float64` 求值之间的逐盒包含性、舍入误差、以及 typed Lean
+  `R*a_B=r_B` adapter 还未证明。该审计不关闭 theorem、registry 或 global gate。
+- state revision 推进到 449；当前主线应优先攻克 evaluator enclosure 与
+  typed adapter，不再重复做同一端口范数审计。

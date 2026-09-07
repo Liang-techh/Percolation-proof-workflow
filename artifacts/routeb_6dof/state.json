@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 448,
+  "revision": 449,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13028,6 +13028,22 @@
           "closure_rule": "true-DH port source binding closes only after all three semantic children are VERIFIED",
           "parallelism": "source semantics, block projection, and coefficient comparison may be investigated independently; no child is treated as proof of another",
           "promotion_boundary": "all children remain below registry until source, comparator, and global domain gates close"
+        },
+        "source_formula_audit": {
+          "status": "SOURCE_FORMULA_PRESENT_FLOAT64_ENCLOSURE_OPEN",
+          "formula": "R(q)=M_BD(q)*M_DD(mu,q)^(-1)*(M_DB(q)-M0_DB)",
+          "leaf": "P4.true_dh_residual_map_coefficient_binding",
+          "source_semantics_checks": {
+            "deployed_mass_and_fd_are_parameterized": true,
+            "interval_probe_declares_blocks": true,
+            "interval_probe_forms_source_R": true,
+            "interval_probe_preserves_remote_term": true,
+            "analytic_model_uses_same_regularizer": true,
+            "nominal_bridge_equations_present": true,
+            "source_semantics_consistency_recorded": true,
+            "float64_enclosure_obligation_explicit": true
+          },
+          "formal_certificate_allowed": false
         }
       }
     },
@@ -13156,7 +13172,87 @@
         "unresolved": [
           "pinned_lean_compile_receipt",
           "zero_sorry_and_allowed_axioms_receipt",
-          "statement_comparator_receipt"
+          "statement_comparator_receipt",
+          "exact_real_deployed_evaluator_enclosure",
+          "float64_roundoff_inclusion_for_R_source",
+          "typed_R_aB_equals_rB_adapter"
+        ],
+        "source_formula_audit": {
+          "schema_version": 1,
+          "status": "SOURCE_FORMULA_PRESENT_FLOAT64_ENCLOSURE_OPEN",
+          "formula": "R(q)=M_BD(q)*M_DD(mu,q)^(-1)*(M_DB(q)-M0_DB)",
+          "block_order": {
+            "B": [
+              4,
+              5
+            ],
+            "D": [
+              1,
+              2,
+              3,
+              6
+            ]
+          },
+          "findings": [
+            "the interval probe solves M_DD(mu,q)^(-1)*DeltaM_DB(q)",
+            "the residual output is formed by left multiplication with M_BD(q)",
+            "the nominal bridge retains r_B-M_BD(q)*v=0 and M_DD*v+DeltaM_DB*a_B=0",
+            "the analytic c/s model includes the same explicit mu=1/1000000 diagonal regularizer",
+            "the source semantics audit records matching DH parameters and h=1/100000 finite differences"
+          ],
+          "checks": {
+            "deployed_mass_and_fd_are_parameterized": true,
+            "interval_probe_declares_blocks": true,
+            "interval_probe_forms_source_R": true,
+            "interval_probe_preserves_remote_term": true,
+            "analytic_model_uses_same_regularizer": true,
+            "nominal_bridge_equations_present": true,
+            "source_semantics_consistency_recorded": true,
+            "float64_enclosure_obligation_explicit": true
+          },
+          "remaining_obligations": [
+            "prove the common exact-real domain identity between deployed source and analytic/interval evaluator",
+            "prove a roundoff-aware Float64 enclosure for M,C_fd,G_fd,tau and the solved RHS, or make exact-real evaluation authoritative",
+            "compile a typed Lean adapter for R*a_B=r_B with the same mu, force coordinates, and remote term",
+            "connect the source equality to coefficient-level residual absorption"
+          ],
+          "non_implications": [
+            "source formula presence is not a global interval bound",
+            "pointwise or BigFloat regression is not a Float64 enclosure theorem",
+            "the port budget and nominal bridge do not promote the registry"
+          ],
+          "formal_certificate_allowed": false,
+          "registry_eligible": false
+        },
+        "source_binding_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\dhport_lib.jl",
+            "sha256": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_port_bi_partition_probe.jl",
+            "sha256": "E609701D86A1301DCF94276D5C7AFA5F2F35254783E2FDB438434E7189783E93"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_fourier_lifted_descriptor_model.jl",
+            "sha256": "0FCF733144B3D7B1B08F328FE4AD24477057C56976F0EF53633C450D8FC4729D"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_NOMINAL_DESCRIPTOR_INTERFACE.md",
+            "sha256": "62A2500D51E3C8502824BBD0062C5CB8058D98C19DF2EAD3A165EC7F869A612E"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_DH_FOURIER_SOURCE_SEMANTICS_AUDIT.md",
+            "sha256": "F1A6A53645941FB1A25F8A4BFE768BC5E4F3A50B5E49D6799D3FBB303692953D"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_EXACT_REAL_MODEL_BOUNDARY.md",
+            "sha256": "33AF68226C691DAE568924FCD4501C01CB6C35571721AA2CF1CB85A9858B8313"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_analytic_mass_full_cs_polynomial.csv",
+            "sha256": "1A1DB0B737ABAC58AFAE06E95766D2DA91C12425FE1BE388364F1DCA7DB59451"
+          }
         ]
       }
     }
@@ -36201,6 +36297,21 @@
       ],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T10:32:22.888331+00:00",
+      "kind": "routeb_true_dh_source_formula_audit_recorded",
+      "node_id": "8337e024d8dc4463a3389b1e65a4a5e8",
+      "parent_id": "6cebb66987f449f3b5ad8d0548dfdf83",
+      "status": "SOURCE_FORMULA_PRESENT_FLOAT64_ENCLOSURE_OPEN",
+      "remaining_obligations": [
+        "prove the common exact-real domain identity between deployed source and analytic/interval evaluator",
+        "prove a roundoff-aware Float64 enclosure for M,C_fd,G_fd,tau and the solved RHS, or make exact-real evaluation authoritative",
+        "compile a typed Lean adapter for R*a_B=r_B with the same mu, force coordinates, and remote term",
+        "connect the source equality to coefficient-level residual absorption"
+      ],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -39857,5 +39968,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "99532caac5c984fcbeb86616857ddc0ba4bebe1a1c00d45fa263b02582dfc835"
+  "state_checksum": "1b47e99aac47631f8660f13d550ab2f13ecf4d1bc154e6d1371e5325557afb08"
 }
