@@ -2514,6 +2514,11 @@ normalization 接口。后者已按约三分之一比例交给流川枫做独立
 的声明级 Lean receipt。任务边界不重叠；流川枫继续负责 P4 packet 的约三分之一
 GitHub lane，梁智炜保留最终 integration 与 admission 决策。
 
+revision 737 已收割并登记 P3 endpoint-uniform consumer。该叶首次把 C2/C3
+source binding 的 covered-box 输出接到有限正 gap 的 common infimum 和严格
+consumer，但 Taylor remainder、rounded endpoint soundness、全域 coverage 与
+真实 DH 数值绑定仍是外部前提，状态保持 `OPEN_UNCOMPILED`。
+
 随后新增 `STORAGE_IDENTITY_TRANSFER` 叶：它要求 `V_eps=Vfull_DH` 在同一域
 上成立，且 barrier transfer 还需要整条 path 落在该域内；相同初始上界或相同
 导数都不足以完成固定阈值的 barrier 转移。该叶保持 open/uncompiled，交给

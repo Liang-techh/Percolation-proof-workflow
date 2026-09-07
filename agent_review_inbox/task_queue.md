@@ -3136,3 +3136,9 @@ source object，并保留 optional front factorization 的独立边界。两者�
 P3 将 C2/C3 source binding 接到 endpoint-uniform margin；Lean lane 只维护这四
 条叶的独立 receipt boundary，其中 P4 packet 继续由流川枫承担约三分之一的
 GitHub 任务。所有 proof-attempt 与 review 仍保持 `OPEN_UNCOMPILED`。
+
+revision 737 登记 P3 `C2C3_ENDPOINT_UNIFORM_CONSUMER`：它在同一 covered box
+上组合 source derivative hull、Taylor/remainder lower enclosure、endpoint/gap
+链与 cap/load 链，取有限正 gap 的 infimum 得到 common margin；DH identity 被
+保留为独立 conjunct，未从它反推出 coverage 或 remainder soundness。P4 packet
+review 的更正 hash 已同步到 provenance，仍未进入 registry。
