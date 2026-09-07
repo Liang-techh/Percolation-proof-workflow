@@ -1085,3 +1085,20 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   不消费 Schur margin；同时给出安全 exact-rational bound `2*epsilon_R/s`，
   其中因 `sqrt(2)<=2` 使用 factor 2。只有补齐 Fin 2 norm conversion 或直接
   生成 induced-2 source bound 后，才可进入 weighted Schur consumer。
+### 2026-09-07 — 梁智炜：把 O0 范数转换缺口固化为 fail-closed API
+
+- 新增 `convert_routeb_infinity_port_bound_to_weighted_l2`，显式要求
+  `output_norm_conversion_proven` 与 `metric_lower_bound_proven`；默认不会把
+  induced-∞ 界直接重命名为 weighted L2 界。
+- 对二维端口的安全有理转换使用显式 factor `2`，因此可得到 `2U/s`，而不是
+  未证明的 `U/s`。focused regularizer tests 当前 `27 passed`；没有跑大回归。
+### 2026-09-07 — 梁智炜：O0 corrected weighted child 与 O2 单叶 adapter 接入
+
+- O0 agent 已补齐二维输出范数转换：`||y||₂ ≤ 2||y||∞`，得到
+  `epsilon_R_2_weighted = 2*epsilon_R_infinity/s` 的 exact-rational child；
+  intake 已调用新的 fail-closed math API 并通过精确算术检查。
+- 该 child 仍只适用于 exact-Fourier one-cell，同键 metric 已有，但不消费
+  Schur margin，也不代表 deployed Float64/global coverage。
+- O2 的单叶 `cell_id=1` receipt→Lean adapter 已用真实 input/generator/source/olean
+  hash 接入，`receipt_leaf1_theta2_exact_real_interval` 编译退出 0、标准 axiom
+  集合已记录；实际 `InRectBox` witness 和 parent coverage 仍 open。

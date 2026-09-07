@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 518,
+  "revision": 520,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -14503,6 +14503,49 @@
           "schur_margin_consumed": false,
           "formal_certificate_allowed": false,
           "registry_promoted": false
+        },
+        "o0_weighted_output2norm_adapters": [
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-033",
+            "source_agent": "codex-inbox",
+            "review_status": "CONDITIONAL_WEIGHTED_OUTPUT_2NORM_ADAPTER_CONSTRUCTED",
+            "receipt_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\receipt-T-P4-033-O0-exact-fourier-cell-weighted-port-adapter-output-2norm-20260907.json",
+              "sha256": "8506F3FEDE09D3FCFB20C586213B0901BD065378E15492AC71BD1566BEB2120C"
+            },
+            "tuple_receipt_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\receipt-T-P4-033-O0-constructive-exact-fourier-cell-K-Br-Cf-20260907.json",
+              "sha256": "E570CFB418065503D9743B4496FC0902E45BF82DA4C265FD067BEA9952E821AD"
+            },
+            "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+            "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+            "input_norm": "induced_infinity",
+            "output_norm": "Euclidean_2",
+            "output_norm_factor": "2",
+            "metric_root_s": "1/5",
+            "epsilon_R_2_weighted": "10884976891854242252555776013990910667449238154978439/106656554159567228416987083730445236164580900447719948854959486481478400000",
+            "metric_proven": true,
+            "output_norm_conversion_proven": true,
+            "exact_fourier_one_cell_only": true,
+            "schur_margin_consumed": false,
+            "formal_certificate_allowed": false,
+            "registry_promoted": false,
+            "admission_status": "conditional_exact_fourier_weighted_child"
+          }
+        ],
+        "o0_weighted_output2norm_adapter": {
+          "status": "CONDITIONAL_WEIGHTED_OUTPUT_2NORM_ADAPTER_CONSTRUCTED",
+          "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+          "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+          "output_norm_factor": "2",
+          "metric_root_s": "1/5",
+          "epsilon_R_2_weighted": "10884976891854242252555776013990910667449238154978439/106656554159567228416987083730445236164580900447719948854959486481478400000",
+          "output_norm_conversion": "PROVED_BY_RECEIPT_PREMISE",
+          "exact_fourier_one_cell_only": true,
+          "schur_margin_consumed": false,
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
         }
       }
     },
@@ -15787,6 +15830,76 @@
           "coverage": "OPEN",
           "float64_binding": "OPEN",
           "libm_binding": "OPEN",
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
+        },
+        "o2_receipt_to_lean_children": [
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-036.2",
+            "source_agent": "codex-inbox",
+            "review_status": "COMPILED_SINGLE_LEAF_RECEIPT_TO_LEAN_CONDITIONAL",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-036.2-receipt-to-lean-single-leaf-codex-20260907.md",
+              "sha256": "30C70BAC8C236C5C825CC39E3B715E6EEDBF7F27C0622B01D77EE395135FF347"
+            },
+            "input_receipt": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\routeb_agent_p3_coverage_next_20260906T091543Z\\p3_coverage_bridge_audit.json",
+              "sha256": "87CF832BF5D9D266A532EEA4DC54B9365FF9E4A5E709031907C8E9A97BDDC7D6"
+            },
+            "generator": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\routeb_theta2_receipt_to_lean.py",
+              "sha256": "9675312237FEC4F69EE9B22D53E00B8ED9AFDD3F2C35AF445BD65D0E1ED52C39"
+            },
+            "generated_source": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\routeb_fd8_tensor_christoffel_enclosure_20260906\\mathlib\\DownstreamTest\\Theta2ReceiptAdapterGenerated.lean",
+              "sha256": "5B9AD6A95D2F8C18C5F48A91AA6852724DA36C52060EDFCF3F95300431D56112"
+            },
+            "generated_olean": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\routeb_fd8_tensor_christoffel_enclosure_20260906\\mathlib\\.lake\\build\\lib\\lean\\DownstreamTest\\Theta2ReceiptAdapterGenerated.olean",
+              "sha256": "DAE74AD000EC6153D7D03585A686C81915DC0506315AA33FF61A0A3EE996A3E9"
+            },
+            "leaf_id": 1,
+            "coordinate_order": [
+              "q1",
+              "q2",
+              "q3",
+              "q4",
+              "q5",
+              "q6",
+              "dq1",
+              "dq2",
+              "dq3",
+              "dq4",
+              "dq5",
+              "dq6",
+              "w"
+            ],
+            "compiler_exit_code": 0,
+            "axioms": [
+              "propext",
+              "Classical.choice",
+              "Quot.sound"
+            ],
+            "in_rectbox_actual_witness": "OPEN",
+            "coverage_completeness": "OPEN",
+            "float64_libm_dag": "OUT_OF_SCOPE",
+            "formal_certificate_allowed": false,
+            "registry_promoted": false,
+            "admission_status": "conditional_single_leaf_transport"
+          }
+        ],
+        "o2_receipt_to_lean_single_leaf": {
+          "status": "COMPILED_SINGLE_LEAF_RECEIPT_TO_LEAN_CONDITIONAL",
+          "task_id": "T-P4-036.2",
+          "leaf_id": 1,
+          "input_sha256": "87CF832BF5D9D266A532EEA4DC54B9365FF9E4A5E709031907C8E9A97BDDC7D6",
+          "generator_sha256": "9675312237FEC4F69EE9B22D53E00B8ED9AFDD3F2C35AF445BD65D0E1ED52C39",
+          "source_sha256": "5B9AD6A95D2F8C18C5F48A91AA6852724DA36C52060EDFCF3F95300431D56112",
+          "olean_sha256": "DAE74AD000EC6153D7D03585A686C81915DC0506315AA33FF61A0A3EE996A3E9",
+          "compiler_exit_code": 0,
+          "in_rectbox_actual_witness": "OPEN",
+          "coverage_completeness": "OPEN",
           "formal_certificate_allowed": false,
           "registry_promoted": false
         }
@@ -39824,6 +39937,28 @@
       "schur_margin_consumed": false,
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T13:50:32.160898+00:00",
+      "kind": "routeb_o0_weighted_output2norm_adapter_recorded",
+      "node_id": "43e3c1a23dc34d52a19b835a8a883cb7",
+      "review_status": "CONDITIONAL_WEIGHTED_OUTPUT_2NORM_ADAPTER_CONSTRUCTED",
+      "output_norm_factor": 2,
+      "exact_fourier_one_cell_only": true,
+      "schur_margin_consumed": false,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T13:51:37.029891+00:00",
+      "kind": "routeb_o2_receipt_to_lean_single_leaf_recorded",
+      "node_id": "0da99a7cef5e4f0b91c7cc06d9e7c010",
+      "leaf_id": 1,
+      "compiler_exit_code": 0,
+      "in_rectbox_actual_witness": "OPEN",
+      "coverage_completeness": "OPEN",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -43480,5 +43615,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "80c1a381a451cfa51a45b4685c5ca86996a45a40c49efebc53f294305937d868"
+  "state_checksum": "d637d5de767288327997cea02e5917713e0e5a9f98a7cea184134e2d23c4485b"
 }

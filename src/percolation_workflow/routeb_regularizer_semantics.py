@@ -215,6 +215,32 @@ class RouteBWeightedPortMetricConversion:
 
 
 @dataclass(frozen=True)
+class RouteBInfinityToL2WeightedConversion:
+    """Conditional conversion with an explicit output-norm factor.
+
+    A bound in induced infinity norm controls ``||R a||_infinity``.  For a
+    two-dimensional output it does not directly control ``||R a||_2``; a
+    proved factor (for example the safe rational factor ``2``) must be
+    supplied.  This separate type prevents the older scalar metric helper
+    from silently relabelling output norms.
+    """
+
+    status: str
+    unweighted_infinity_bound: Fraction | None
+    output_norm_factor: Fraction | None
+    sqrt_metric_lower_bound: Fraction | None
+    weighted_l2_bound: Fraction | None
+    source_key: str | None
+    errors: tuple[str, ...] = ()
+    output_dimension: int = 2
+    output_norm_conversion_proven: bool = False
+    metric_lower_bound_proven: bool = False
+    schur_margin_consumed: bool = False
+    formal_certificate_allowed: bool = False
+    registry_eligible: bool = False
+
+
+@dataclass(frozen=True)
 class RouteBRootWitness:
     """Exact root witness for a squared baseline candidate.
 
@@ -655,6 +681,89 @@ def convert_routeb_port_bound_to_weighted_metric(
     )
 
 
+def convert_routeb_infinity_port_bound_to_weighted_l2(
+    unweighted_infinity_bound: Fraction | int | None,
+    output_norm_factor: Fraction | int | None,
+    sqrt_metric_lower_bound: Fraction | int | None,
+    *,
+    source_key: str | None,
+    metric_source_key: str | None,
+    output_norm_conversion_proven: bool = False,
+    metric_lower_bound_proven: bool = False,
+    output_dimension: int = 2,
+) -> RouteBInfinityToL2WeightedConversion:
+    """Convert an induced-infinity bound only after an explicit norm proof.
+
+    If ``||R a||_infinity <= U ||a||_infinity`` and a proved factor ``c``
+    satisfies ``||y||_2 <= c ||y||_infinity`` on the output space, then the
+    weighted bound is ``c*U/s`` when ``s ||a||_2`` is controlled by the metric.
+    The default factor ``2`` is intentionally not itself a proof; callers must
+    set ``output_norm_conversion_proven=True`` after supplying that premise.
+    """
+    errors: list[str] = []
+    values: dict[str, Fraction | None] = {}
+    for name, value in (
+        ("unweighted_infinity_bound", unweighted_infinity_bound),
+        ("output_norm_factor", output_norm_factor),
+        ("sqrt_metric_lower_bound", sqrt_metric_lower_bound),
+    ):
+        try:
+            values[name] = _exact_scalar(value, name) if value is not None else None
+        except TypeError as error:
+            errors.append(str(error))
+            values[name] = None
+    infinity_bound = values["unweighted_infinity_bound"]
+    factor = values["output_norm_factor"]
+    root = values["sqrt_metric_lower_bound"]
+    if infinity_bound is None:
+        errors.append("unweighted_infinity_bound_missing")
+    elif infinity_bound < 0:
+        errors.append("unweighted_infinity_bound_negative")
+    if factor is None:
+        errors.append("output_norm_factor_missing")
+    elif factor <= 0:
+        errors.append("output_norm_factor_not_positive")
+    if root is None:
+        errors.append("sqrt_metric_lower_bound_missing")
+    elif root <= 0:
+        errors.append("sqrt_metric_lower_bound_not_positive")
+    if output_dimension != 2:
+        errors.append("output_dimension_not_supported")
+    if not source_key or not metric_source_key:
+        errors.append("metric_source_key_missing")
+    elif source_key != metric_source_key:
+        errors.append("metric_source_key_mismatch")
+    if not output_norm_conversion_proven:
+        errors.append("output_norm_conversion_not_authoritatively_supplied")
+    if not metric_lower_bound_proven:
+        errors.append("metric_lower_bound_not_authoritatively_supplied")
+    if errors:
+        return RouteBInfinityToL2WeightedConversion(
+            status="OPEN_FAIL_CLOSED",
+            unweighted_infinity_bound=infinity_bound,
+            output_norm_factor=factor,
+            sqrt_metric_lower_bound=root,
+            weighted_l2_bound=None,
+            source_key=source_key,
+            errors=tuple(dict.fromkeys(errors)),
+            output_dimension=output_dimension,
+            output_norm_conversion_proven=output_norm_conversion_proven,
+            metric_lower_bound_proven=metric_lower_bound_proven,
+        )
+    assert infinity_bound is not None and factor is not None and root is not None
+    return RouteBInfinityToL2WeightedConversion(
+        status="CONDITIONAL_INFINITY_TO_L2_WEIGHTED_BOUND",
+        unweighted_infinity_bound=infinity_bound,
+        output_norm_factor=factor,
+        sqrt_metric_lower_bound=root,
+        weighted_l2_bound=factor * infinity_bound / root,
+        source_key=source_key,
+        output_dimension=output_dimension,
+        output_norm_conversion_proven=True,
+        metric_lower_bound_proven=True,
+    )
+
+
 def derive_routeb_zero_shift_weighted_perturbation(
     delta: Fraction | int | None,
     inverse_bound: Fraction | int | None,
@@ -921,11 +1030,13 @@ __all__ = [
     "RouteBResolventPortPropagation",
     "RouteBGeneralResolventPortPropagation",
     "RouteBWeightedPortMetricConversion",
+    "RouteBInfinityToL2WeightedConversion",
     "RouteBRootWitness",
     "RouteBZeroShiftWeightedPerturbation",
     "RouteBSchurMarginConsumption",
     "audit_routeb_regularizer_inclusion",
     "convert_routeb_port_bound_to_weighted_metric",
+    "convert_routeb_infinity_port_bound_to_weighted_l2",
     "derive_routeb_root_witness",
     "derive_routeb_zero_shift_weighted_perturbation",
     "consume_routeb_schur_margin",

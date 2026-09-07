@@ -1,0 +1,61 @@
+{
+  "schema": "routeb-o0-exact-fourier-cell-weighted-port-adapter-output-2norm-v1",
+  "task": "T-P4-033",
+  "observed_state_revision": 508,
+  "status": "CONDITIONAL_WEIGHTED_OUTPUT_2NORM_ADAPTER_CONSTRUCTED",
+  "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+  "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+  "key_binding": {
+    "source_key_shared_with_input_receipt": true,
+    "state_key_shared_with_input_receipt": true,
+    "input_receipt": "receipt-T-P4-033-O0-exact-fourier-cell-weighted-port-adapter-20260907.json",
+    "input_norm": "induced_infinity",
+    "output_norm": "euclidean_2"
+  },
+  "metric": {
+    "B_up": [
+      ["1402217/12000000", "0"],
+      ["0", "200739/4000000"]
+    ],
+    "beta": "200739/4000000",
+    "s": "1/5",
+    "s_squared": "1/25",
+    "beta_minus_s_squared": "40739/4000000",
+    "B_up_ge_beta_I": true,
+    "s_squared_le_beta": true
+  },
+  "input_bound": {
+    "epsilon_R_infinity": "10884976891854242252555776013990910667449238154978439/1066565541595672284169870837304452361645809004477199488549594864814784000000",
+    "statement": "||R_delta a_B||_infinity <= epsilon_R_infinity * ||a_B||_infinity"
+  },
+  "exact_output_conversion": {
+    "dimension_output": 2,
+    "rational_factor": "2",
+    "factor_statement": "for y in R^2, ||y||_2 <= 2*||y||_infinity",
+    "factor_proof": "sqrt(y1^2+y2^2) <= sqrt(2)*max(|y1|,|y2|) <= 2*max(|y1|,|y2|)",
+    "input_metric_statement": "||a_B||_infinity <= ||a_B||_2 <= sqrt(a_B^T B_up a_B)/s",
+    "weighted_output_statement": "||R_delta a_B||_2 <= epsilon_R_2_weighted * sqrt(a_B^T B_up a_B)",
+    "epsilon_R_2_weighted": "10884976891854242252555776013990910667449238154978439/106656554159567228416987083730445236164580900447719948854959486481478400000",
+    "formula": "epsilon_R_2_weighted = 2*epsilon_R_infinity/s",
+    "arithmetic_exact": true
+  },
+  "derivation_chain": [
+    "||R_delta a_B||_2 <= 2||R_delta a_B||_infinity",
+    "<= 2*epsilon_R_infinity*||a_B||_infinity",
+    "<= (2*epsilon_R_infinity/s)*sqrt(a_B^T B_up a_B)"
+  ],
+  "boundary": {
+    "exact_fourier_one_cell_only": true,
+    "deployed_float64_q_nonzero_binding": false,
+    "global_coverage": false,
+    "schur_margin_consumed": false,
+    "rho_F_squared_used": false,
+    "formal_certificate_allowed": false,
+    "registry_eligible": false
+  },
+  "mutation": {
+    "main_state_modified": false,
+    "workflow_source_modified": false,
+    "lean_or_lake_run": false
+  }
+}

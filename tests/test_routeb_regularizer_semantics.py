@@ -8,6 +8,7 @@ from percolation_workflow.routeb_regularizer_semantics import (
     MU_DELTA,
     RouteBExactResolventPremise,
     audit_routeb_regularizer_inclusion,
+    convert_routeb_infinity_port_bound_to_weighted_l2,
     convert_routeb_port_bound_to_weighted_metric,
     consume_routeb_schur_margin,
     derive_routeb_root_witness,
@@ -161,6 +162,36 @@ def test_weighted_metric_conversion_rejects_unproven_or_mismatched_metric() -> N
 
     assert result.status == "OPEN_FAIL_CLOSED"
     assert result.weighted_port_bound is None
+    assert "metric_source_key_mismatch" in result.errors
+
+
+def test_infinity_to_l2_weighted_conversion_requires_explicit_output_norm_proof() -> None:
+    result = convert_routeb_infinity_port_bound_to_weighted_l2(
+        Fraction(3, 10), Fraction(2), Fraction(1, 5),
+        source_key="cell", metric_source_key="cell",
+    )
+    assert result.status == "OPEN_FAIL_CLOSED"
+    assert "output_norm_conversion_not_authoritatively_supplied" in result.errors
+    assert result.weighted_l2_bound is None
+
+    result = convert_routeb_infinity_port_bound_to_weighted_l2(
+        Fraction(3, 10), Fraction(2), Fraction(1, 5),
+        source_key="cell", metric_source_key="cell",
+        output_norm_conversion_proven=True, metric_lower_bound_proven=True,
+    )
+    assert result.status == "CONDITIONAL_INFINITY_TO_L2_WEIGHTED_BOUND"
+    assert result.weighted_l2_bound == Fraction(3)
+    assert result.formal_certificate_allowed is False
+    assert result.registry_eligible is False
+
+
+def test_infinity_to_l2_weighted_conversion_keeps_key_mismatch_fail_closed() -> None:
+    result = convert_routeb_infinity_port_bound_to_weighted_l2(
+        Fraction(1), Fraction(2), Fraction(1, 5),
+        source_key="cell-a", metric_source_key="cell-b",
+        output_norm_conversion_proven=True,
+    )
+    assert result.status == "OPEN_FAIL_CLOSED"
     assert "metric_source_key_mismatch" in result.errors
     assert "metric_lower_bound_not_authoritatively_supplied" in result.errors
 

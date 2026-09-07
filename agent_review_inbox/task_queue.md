@@ -1732,3 +1732,21 @@ after integration; corrections should be a new result file.
   Lean proof of the Fin-2 norm conversion or a direct induced-2 port receipt.
   Schur margin remains untouched until the weighted baseline, perturbation, and
   strict margin are all keyed and proved.
+### O0 norm-conversion API hardening (2026-09-07)
+
+- Use `convert_routeb_infinity_port_bound_to_weighted_l2` for any adapter that
+  starts with an induced-infinity port bound. It requires explicit proofs for
+  both the output norm factor and metric lower bound, and preserves same-key
+  checking.
+- The exact-Fourier weighted receipt remains a conditional metric child. Its
+  claimed bound is not consumable until the missing norm theorem is supplied;
+  the rational safe candidate is `2U/s`.
+### New harvest: corrected O0 weighted child and O2 leaf adapter (2026-09-07)
+
+- The corrected O0 output-2 norm receipt is consumable only as a conditional
+  one-cell weighted child. It explicitly uses rational factor `2` and exact
+  `epsilon_R_2_weighted=2U/s`; keep Schur margin and global Route-B gates open.
+- The O2 `cell_id=1` receipt-to-Lean adapter is compiled and hash-bound. The next
+  task is to supply the actual `InRectBox` witness from an authoritative leaf
+  record and then a parent/sibling coverage join; do not treat parsing alone as
+  coverage closure.
