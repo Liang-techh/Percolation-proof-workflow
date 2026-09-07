@@ -2,7 +2,7 @@
 
 This is a narrow mathematical/source seam, not a certificate closure.
 
-## Correct current-scale identity
+## Correct two-scale identity
 
 The canonical PMI source contains
 
@@ -12,18 +12,26 @@ f1 = ... + kc*q5 + ...
 f2 = ... + kc*q4 + ...
 ```
 
-Therefore, in the generalized-force coordinates used by the PMI source, the
-cross contribution is
+Therefore the cross contribution in the normalized `f` coordinates is
 
 ```text
-rho_kc(q_B) = (q5/20, q4/20).
+rho_kc^f(q_B) = (q5/20, q4/20).
 ```
 
-The older `routeb_b45_5_residual_decomposition_lean` sidecar uses the
-different normalized toy definition `(q5/100,q4/200)`.  Its algebra remains a
-historical candidate for the definitions written in that file, but it is not a
-binding theorem for the current canonical source.  The source-contract checker
-rejects that adapter instead of silently changing its coefficients.
+The canonical PMI code then multiplies `f1` by `I4=1/5` and `f2` by
+`I5=1/10` when forming the block force.  Thus the same cross term in force
+coordinates is
+
+```text
+rho_kc^F(q_B) = diag(1/5,1/10) rho_kc^f(q_B)
+              = (q5/100, q4/200).
+```
+
+The existing `routeb_b45_5_residual_decomposition_lean` sidecar uses this
+force-scale form.  It is a useful algebraic candidate for the canonical force
+residual, while its source binding and global domain proof remain open.  The
+source-contract checker labels both coordinate systems explicitly and rejects
+only an unrecognised scale.
 
 ## Deployed DH semantics
 

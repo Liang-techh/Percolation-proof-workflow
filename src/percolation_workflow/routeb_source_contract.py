@@ -6,12 +6,14 @@ semantic boundary before any Lean sidecar or numerical receipt consumes it:
 * the canonical PMI source uses ``kc = 0.05 = 1/20`` in force coordinates;
 * the deployed DH port has no matching ``kc`` torque term and solves
   ``M(q) a = tau - C dq - G``;
-* the omitted PMI term is therefore ``(q5/20, q4/20)`` at force scale;
+* the omitted PMI term is ``(q5/20, q4/20)`` in normalized ``f`` coordinates,
+  and ``(q5/100, q4/200)`` after restoring the source inertia factors;
 * the block split still requires an explicit ``M_BD(q) a_D`` binding.
 
-An old adapter with a different scale is reported as stale, never silently
-rewritten.  Passing this structural contract is evidence about source text,
-not a theorem, source-equivalence proof, or registry admission.
+An adapter must declare one of those coordinate systems; an unrecognised scale
+is rejected, never silently rewritten. Passing this structural contract is
+evidence about source text, not a theorem, source-equivalence proof, or
+registry admission.
 """
 from __future__ import annotations
 
@@ -25,7 +27,9 @@ class RouteBP4SourceContract:
     status: str
     kc: Fraction | None
     expected_rho_kc: tuple[str, str]
+    expected_force_rho_kc: tuple[str, str]
     observed_adapter_rho_kc: tuple[str, str] | None
+    observed_adapter_coordinate: str | None
     remote_term_required: str
     force_acceleration_separated: bool
     errors: tuple[str, ...] = ()
@@ -42,7 +46,7 @@ def _normalise(text: str) -> str:
 
 
 def _adapter_rho(text: str) -> tuple[str, str] | None:
-    """Recognise only the two historical/canonical exact shapes."""
+    """Recognise normalized f-scale and force-scale exact shapes."""
     normal = _normalise(text)
     if "q.2 / 20" in normal and "q.1 / 20" in normal:
         return ("q5/20", "q4/20")
@@ -89,7 +93,12 @@ def audit_routeb_p4_source_contract(
         errors.append("deployed_dh_source_contains_unexpected_kc")
 
     observed = _adapter_rho(adapter_source) if adapter_source is not None else None
-    if adapter_source is not None and observed != ("q5/20", "q4/20"):
+    coordinate: str | None = None
+    if observed == ("q5/20", "q4/20"):
+        coordinate = "normalized_f"
+    elif observed == ("q5/100", "q4/200"):
+        coordinate = "force"
+    if adapter_source is not None and coordinate is None:
         errors.append("adapter_kc_scale_mismatch")
     if adapter_source is None:
         warnings.append("no_adapter_source_supplied")
@@ -97,14 +106,18 @@ def audit_routeb_p4_source_contract(
     status = "SOURCE_CONTRACT_PASS"
     if errors:
         status = "OPEN_FAIL_CLOSED"
-    elif adapter_source is not None and observed == ("q5/20", "q4/20"):
-        status = "SOURCE_AND_ADAPTER_SCALE_PASS"
+    elif adapter_source is not None and coordinate == "normalized_f":
+        status = "SOURCE_AND_NORMALIZED_SCALE_PASS"
+    elif adapter_source is not None and coordinate == "force":
+        status = "SOURCE_AND_FORCE_SCALE_PASS"
 
     return RouteBP4SourceContract(
         status=status,
         kc=kc,
         expected_rho_kc=("q5/20", "q4/20"),
+        expected_force_rho_kc=("q5/100", "q4/200"),
         observed_adapter_rho_kc=observed,
+        observed_adapter_coordinate=coordinate,
         remote_term_required="M_BD(q) * a_D",
         force_acceleration_separated=True,
         errors=tuple(errors),

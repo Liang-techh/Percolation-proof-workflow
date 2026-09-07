@@ -21,18 +21,36 @@ def test_canonical_force_scale_and_descriptor_semantics_pass():
     assert result.status == "SOURCE_CONTRACT_PASS"
     assert result.kc == Fraction(1, 20)
     assert result.expected_rho_kc == ("q5/20", "q4/20")
+    assert result.expected_force_rho_kc == ("q5/100", "q4/200")
     assert result.remote_term_required == "M_BD(q) * a_D"
     assert result.force_acceleration_separated is True
     assert result.formal_certificate_allowed is False
 
 
-def test_historical_adapter_scale_is_rejected_not_rewritten():
+def test_force_scale_adapter_is_accepted_with_explicit_coordinate_label():
     result = audit_routeb_p4_source_contract(
         PMI, DH, "def rhoKc (q) := (q.2 / 100, q.1 / 200)"
     )
+    assert result.status == "SOURCE_AND_FORCE_SCALE_PASS"
+    assert result.errors == ()
+    assert result.observed_adapter_rho_kc == ("q5/100", "q4/200")
+    assert result.observed_adapter_coordinate == "force"
+
+
+def test_normalized_scale_adapter_is_also_accepted_explicitly():
+    result = audit_routeb_p4_source_contract(
+        PMI, DH, "def rhoKc (q) := (q.2 / 20, q.1 / 20)"
+    )
+    assert result.status == "SOURCE_AND_NORMALIZED_SCALE_PASS"
+    assert result.observed_adapter_coordinate == "normalized_f"
+
+
+def test_unknown_adapter_scale_is_rejected_fail_closed():
+    result = audit_routeb_p4_source_contract(
+        PMI, DH, "def rhoKc (q) := (q.2 / 99, q.1 / 99)"
+    )
     assert result.status == "OPEN_FAIL_CLOSED"
     assert "adapter_kc_scale_mismatch" in result.errors
-    assert result.observed_adapter_rho_kc == ("q5/100", "q4/200")
 
 
 def test_hidden_kc_in_deployed_torque_is_a_source_mismatch():

@@ -551,7 +551,8 @@ polynomial remains a separate frontier.
   `M_BD(q)a_D` and explicit `kc` residual terms, while the current PMI projection
   and acceleration-side D-row do not supply those bindings. With the deployed
   PMI source's `kc=0.05=1/20`, the concrete omitted cross term is the typed
-  vector `rho_kc(q_B)=(q5/20,q4/20)` (up to the documented sign convention);
+  vector `rho_kc^f(q_B)=(q5/20,q4/20)` in normalized f coordinates, and its
+  force-scale image `rho_kc^F(q_B)=(q5/100,q4/200)`;
 - deliver: a typed obstruction/countermodel identifying the missing bounded
   full-state or source-model contract, with the force-vs-acceleration units kept
   distinct, and an exact sign/index statement for `rho_kc`;
@@ -690,28 +691,29 @@ polynomial remains a separate frontier.
 - forbidden: identifying the full 13-state source with the 14-state ramp ODE,
   claiming existence/coverage, or changing the target theorem silently.
 
-### T-P4-011 — canonical `kc` budget after force-scale correction
+### T-P4-011 — canonical `kc` budget across normalized and force scales
 
 - status: `open` (released after the source-contract correction)
-- owner: `狂蛮魔尊`
+- owner: `幽魂魔尊`
 - source: `docs/routeb-p4-kc-force-contract.md`,
   `routeB_dense_Mq/routeB_pmi_certificate.jl:46-49,98-99`, and the P4 sharp
   Schur sidecar;
-- scope: derive an exact, source-independent quadratic cost for the corrected
-  force term `rho_kc=(q5/20,q4/20)` on the declared `(q4,q5)` domain, then
-  determine whether it can fit the current Schur/Young budget or yields a
-  precise obstruction. Keep the local `p`/`d` variables and force units
-  explicit; distinguish a joint-limit bound from a local `p<=eta` bound;
+- scope: derive an exact, source-independent quadratic cost for the normalized
+  term `rho_kc^f=(q5/20,q4/20)` and its force-scale image
+  `rho_kc^F=(q5/100,q4/200)` on the declared `(q4,q5)` domain, then determine
+  whether it can fit the current Schur/Young budget or yields a precise
+  obstruction. Keep the local `p`/`d` variables and force units explicit;
+  distinguish a joint-limit bound from a local `p<=eta` bound;
 - deliver: rational/`pi` inequality with a sharp or clearly justified bound,
   plus the smallest typed premise that a future P4 PMI child can consume;
-- forbidden: using the historical `(q5/100,q4/200)` toy sidecar, treating a
-  force term as acceleration, using samples as a global bound, or closing
-  P4/M4 from this child alone.
+- forbidden: treating either coordinate scale as the other without the
+  inertia map, using samples as a global bound, or closing P4/M4 from this
+  child alone.
 
 ### T-P3-011 — link-Jacobian structural lower bound for block `(4,5)`
 
 - status: `open` (released as a disjoint positive-block math leaf)
-- owner: `星宿仙尊`
+- owner: `大爱仙尊`
 - source: deployed `routeB_dense_Mq/dhport_lib.jl:31-60`, DH constants in that
   file, and `routeB_Mq_M0.csv` only as a reference snapshot;
 - scope: isolate explicit positive-semidefinite link terms in the DH mass sum
@@ -741,7 +743,7 @@ polynomial remains a separate frontier.
 ### T-FLT-QUOTIENT-SIDECAR — pinned quotient transport probe
 
 - status: `open` (released as the first direct-reuse FLT API probe)
-- owner: `臭屁猪`
+- owner: `巨阳仙尊`
 - source: `examples/anthropic_flt_quotient_transport_sidecar/`, with upstream
   `Definitions/Def_Mathlib_Topology_Algebra_Module_Quotient.lean:5-37`;
 - scope: run the focused sidecar in the pinned GitHub environment, check the

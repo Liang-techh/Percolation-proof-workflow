@@ -6,11 +6,12 @@ The source audit writes the actual block force as
 r_B = -K_B q_B - B_B v_B + u_B w + G0_B - C_B - G_B.
 ```
 
-This file records the historical normalized sidecar semantics.  The current
-canonical PMI source must be checked separately before reuse.  In the current
-force-scale source, `kc=0.05=1/20`, so the omitted cross vector is
-`(q5/20,q4/20)`.  The older sidecar below uses a different normalized toy
-coefficient and is intentionally not a source-binding theorem.
+This file records a force-coordinate sidecar.  The current canonical PMI
+source uses normalized `kc=0.05=1/20`, so its omitted cross vector in `f`
+coordinates is `(q5/20,q4/20)`.  Multiplying by the block inertia
+`diag(1/5,1/10)` gives the force-coordinate vector used below,
+`(q5/100,q4/200)`.  This remains a conditional algebraic candidate rather
+than a source-binding theorem.
 
 The historical PMI nominal force after multiplying by `D_B=diag(1/5,1/10)` is
 

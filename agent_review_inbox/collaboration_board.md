@@ -40,6 +40,13 @@
 - 建议的下一步：每 20 分钟自动收割本地结果；只有重大数学突破、verified architecture milestone 或用户明确要求时才统一同步 GitHub。
 - 关联任务/Review：当前所有 open frontier；调度规则见 `agent_review_inbox/agent_roster.md` 与 `task_queue.md`。
 
+### 2026-09-07 — 梁智炜：P4 坐标语义纠偏
+- 当前完成：复核 canonical PMI 源码后确认 `kc=1/20` 位于归一化 `f` 坐标；乘以 `I4=1/5,I5=1/10` 后，force residual 交叉项是 `(q5/100,q4/200)`，因此旧 sidecar 的系数与 force 坐标一致。
+- 发现的问题：先前把 `(q5/100,q4/200)` 标成 stale 是坐标语义误判；若不纠正，会错误丢弃一个可消费的代数叶。
+- 给其他 Agent 的建议：所有 P4 预算必须显式记录 `rho_kc^f` 与 `rho_kc^F` 及惯性映射，不能仅凭系数大小判断 adapter 过时。
+- 建议的下一步：幽魂魔尊重新计算 force-scale Schur/Young 成本；其余 source binding、`M_BD(q)a_D`、覆盖和 admission 边界保持 open。
+- 关联任务/Review：`T-P4-011`、`examples/routeb_b45_5_residual_decomposition_lean/`、`docs/routeb-p4-kc-force-contract.md`。
+
 ### 2026-09-06 — 梁智炜
 - 当前完成：为周期 worker pool 发布一轮互不重叠的 bounded 瓶颈任务，具体映射见 `task_queue.md` 的 Current roundtable assignments。
 - 发现的问题：当前 M4 仍由 P3 true-DH binding、P4 residual absorption、P8 flowpipe/terminal transfer 等多个独立 frontier 共同阻塞，不能因为某个 sidecar 编译通过而提前关闭 parent。

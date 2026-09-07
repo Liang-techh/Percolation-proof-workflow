@@ -2,7 +2,7 @@
 
 This is a focused source-semantic check, not a numerical or Lean proof.  It
 is intentionally cheap enough for the frontier loop and fails closed when an
-old scaled adapter is supplied as if it were current.
+adapter declares neither the normalized ``f`` scale nor the force scale.
 """
 from __future__ import annotations
 
@@ -51,7 +51,9 @@ def main() -> int:
         "status": result.status,
         "kc": str(result.kc) if result.kc is not None else None,
         "expected_rho_kc": result.expected_rho_kc,
+        "expected_force_rho_kc": result.expected_force_rho_kc,
         "observed_adapter_rho_kc": result.observed_adapter_rho_kc,
+        "observed_adapter_coordinate": result.observed_adapter_coordinate,
         "remote_term_required": result.remote_term_required,
         "force_acceleration_separated": result.force_acceleration_separated,
         "errors": result.errors,
@@ -62,7 +64,9 @@ def main() -> int:
     }
     print(json.dumps(payload, indent=2))
     return 0 if result.status in {
-        "SOURCE_CONTRACT_PASS", "SOURCE_AND_ADAPTER_SCALE_PASS"
+        "SOURCE_CONTRACT_PASS",
+        "SOURCE_AND_NORMALIZED_SCALE_PASS",
+        "SOURCE_AND_FORCE_SCALE_PASS",
     } else 2
 
 
