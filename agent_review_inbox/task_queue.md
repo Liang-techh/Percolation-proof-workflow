@@ -1712,3 +1712,14 @@ after integration; corrections should be a new result file.
 - The force source contract has a zero-state witness but no general-state B-row
   export. The next concrete task is to export `q_B,v_B,w,Cdq_B,Gq_B,G0_B,tau_B,
   rhs_B,a_B,a_D,Mq_BB,Mq_BD` and both residual vectors under one hash manifest.
+### New harvest: O0 exact-Fourier tuple and O2 typed theta2 transport (2026-09-07)
+
+- O0 has a consumable one-cell exact tuple under one source/state/norm key:
+  `K=1194377771728717533600000000/18430531027503268060090421`,
+  `Br=320646431/2400000000`, `Cf=1929397/4800000000`, with exact
+  `epsilon_R`. Use it only for the declared exact-Fourier cell; never widen it
+  to deployed Float64 or global coverage without a new binding receipt.
+- O2 now has a fresh pinned exact-real/typed-box child with matching source and
+  OLean hashes. The next mathematical target is a receipt-to-Lean adapter that
+  parses one authoritative leaf's rational bounds, coordinate order, and leaf
+  id into `RectBox13`/`InRectBox`, then feeds the existing theta2 transport.

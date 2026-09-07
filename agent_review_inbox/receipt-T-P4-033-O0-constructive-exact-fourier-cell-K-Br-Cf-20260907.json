@@ -1,0 +1,105 @@
+{
+  "schema": "routeb-o0-constructive-exact-fourier-cell-tuple-v1",
+  "task": "T-P4-033",
+  "observed_state_revision": 508,
+  "status": "CONDITIONAL_EXACT_RATIONAL_TUPLE_CONSTRUCTED",
+  "consumer_scope": "exact-Fourier one-cell child only",
+  "not_claimed": [
+    "deployed Float64 q-nonzero bridge",
+    "global admissible-domain coverage",
+    "Schur margin consumption",
+    "formal Route-B closure"
+  ],
+  "admission": {
+    "exact_fourier_cell_child_consumable": true,
+    "formal_certificate_allowed": false,
+    "registry_eligible": false,
+    "ledger_consumed": false,
+    "schur_margin_consumed": false
+  },
+  "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+  "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+  "source_binding": {
+    "mass_fourier_csv": "C:/Users/z5242/Desktop/重构版/6dof_sos_optimized/6dof_sos_optimized/routeB_dense_Mq/routeB_fourier_mass_full_rational.csv",
+    "mass_fourier_sha256": "a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8",
+    "source_numbers_receipt": "artifacts/routeb_agent_schur_fullq_next_20260906T091446Z/NUMBERS.json",
+    "source_numbers_sha256": "59C7E9BECA460DAB46B675F056BB3BAC147001A3FF1888EBC2CE0110611F7F3E",
+    "source_audit": "artifacts/routeb_agent_schur_fullq_next_20260906T091446Z/AUDIT.md",
+    "source_audit_sha256": "D24452D179CCF0275C096246A906CC8300159A4285CF8D7E825769C3CBEEF281",
+    "regularizer_exact_real": "1/1000000",
+    "cell": "q_i in [-1/1000,1/1000] for i=1..6"
+  },
+  "orientation_and_norm": {
+    "norm": "induced_infinity",
+    "M_DD": "rows D, columns D; 4x4",
+    "M_BD": "rows B, columns D; 2x4",
+    "DeltaM_DB_f": "M_DB,f(q)-M_DB,f(0); rows D, columns B; 4x2",
+    "B_one_based": [4, 5],
+    "D_one_based": [1, 2, 3, 6]
+  },
+  "exact_tuple": {
+    "K": {
+      "value": "1194377771728717533600000000/18430531027503268060090421",
+      "statement": "for every q in state_key, ||M_DD(q)^(-1)||_infinity <= K",
+      "construction": {
+        "X_norm": "497657404886965639000000/7939177742269731965639",
+        "DeltaMDD_norm": "1252861/2400000000",
+        "neumann_rho": "623495553944088657443179/19054026581447356717533600",
+        "neumann_guard": "rho < 1",
+        "formula": "K = X_norm/(1-rho)"
+      },
+      "exact_real_source_contract": true
+    },
+    "Br": {
+      "value": "320646431/2400000000",
+      "statement": "for every q in state_key, ||M_BD(q)||_infinity <= Br",
+      "construction": {
+        "MBD_at_q0": [
+          ["7/60", "0", "0", "1/60"],
+          ["-21/80000", "41827/800000", "8189/160000", "0"]
+        ],
+        "MBD_q0_norm": "2/15",
+        "DeltaMBD_norm": "215477/800000000",
+        "formula": "Br = 2/15 + 215477/800000000"
+      },
+      "exact_rational": true
+    },
+    "Cf": {
+      "value": "1929397/4800000000",
+      "statement": "for every q in state_key, ||DeltaM_DB_f(q)||_infinity <= Cf",
+      "construction": {
+        "source_entry_bound": "dMDB_inf_bound from the same exact Fourier cell contract",
+        "formula": "Cf = 1929397/4800000000"
+      },
+      "exact_rational": true
+    }
+  },
+  "regularizer_perturbation_check": {
+    "delta": "3339/73786976294838206464000000",
+    "delta_times_K": "124625855618818370146575/42497911125864490393738283215392884540833792",
+    "one_minus_delta_times_K": "42497911125864490393613657359774066170687217/42497911125864490393738283215392884540833792",
+    "delta_K_lt_one": true,
+    "epsilon_R_unweighted": "10884976891854242252555776013990910667449238154978439/1066565541595672284169870837304452361645809004477199488549594864814784000000",
+    "epsilon_R_decimal_check": "1.0205633378675816e-23",
+    "formula": "epsilon_R = Br*Cf*delta*K^2/(1-delta*K)"
+  },
+  "mathematical_justification": [
+    "The exact Fourier table is evaluated at q=0 by summing real coefficients, giving the displayed M_BD(0).",
+    "The same source receipt supplies the exact rational induced-infinity bound DeltaMBD_norm on the declared cell; triangle inequality gives Br.",
+    "The same source receipt supplies the exact rational induced-infinity bound dMDB_inf_bound on M_DB(q)-M_DB(0); this is Cf with the declared orientation.",
+    "The same source receipt supplies the exact Neumann enclosure for M_DD(q)^(-1), with rho<1; this is K under the same source/state/norm key.",
+    "All arithmetic in this receipt is rational; no Float64 candidate or rho_F^2 value is used."
+  ],
+  "remaining_contract_boundary": {
+    "deployed_float64_q_nonzero_binding": false,
+    "global_cell_coverage": false,
+    "physical_map_identity_Rport_aB_eq_rB": false,
+    "weighted_metric_conversion": false,
+    "reason": "The tuple is valid for the exact Fourier one-cell source contract only; the upstream artifact explicitly leaves q-nonzero deployed binding and global coverage open."
+  },
+  "mutation": {
+    "main_state_modified": false,
+    "workflow_source_modified": false,
+    "lean_or_lake_run": false
+  }
+}

@@ -1024,3 +1024,14 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - force source review 给出一个可审计 zero-state `(E1,E2)` witness，但一般状态的
   两个 source equalities 仍需 B-row export；当前 verifier hash 漂移，故 intake
   标为 artifact-hash-drift/general-open，不把旧 runtime 回归提升为 source theorem。
+### 2026-09-07 — 梁智炜：O0 首个同键 exact tuple child 接入
+
+- O0 已接入 `CONDITIONAL_EXACT_RATIONAL_TUPLE_CONSTRUCTED`：exact-Fourier
+  单 cell、`source_key/state_key` 固定、induced-∞ norm、B=(4,5)、D=(1,2,3,6)，
+  并精确校验了 Neumann `K`、`Br`、`Cf` 与 `epsilon_R` 的分数恒等式。
+- 该 child 仍不代表 deployed Float64 q-nonzero binding、全域 coverage、weighted
+  metric 或 Schur margin consumption；O0 parent 和 registry 继续 open。
+- O2 theta2 source 在源码稳定后已重新匹配 `8222…` / `02D0…` source/olean hash，
+  新 receipt 含 `q2_mem_theta2_domain` 与 `box_q2_theta2_exact_real_interval`，
+  因此 conditional exact-real transport child 已接入；coverage receipt parser
+  与 leaf-id provenance 仍是下一瓶颈。

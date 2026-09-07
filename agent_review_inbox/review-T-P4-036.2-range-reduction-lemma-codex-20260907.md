@@ -305,7 +305,40 @@ Therefore it cannot discharge T-P4-036.1 or `.3`, cannot close D1/D2/D3 in
 must add a separately evidenced machine-argument/libm enclosure before this
 row can feed a deployed finite-DAG propagation.
 
-## Fresh minimal Lean compile receipt
+## Smallest typed per-box transport row
+
+The newly compiled transport target is deliberately one-coordinate and one
+box only. Its exact premises are:
+
+```lean
+hx  : InRectBox B x
+hlo : -(3 / 20 : ℝ) ≤ B.lo q2Index
+hhi : B.hi q2Index ≤ (3 / 20 : ℝ)
+```
+
+The first theorem derives the child premise by order transitivity:
+
+```lean
+q2_mem_theta2_domain hx hlo hhi :
+  x q2Index ∈ Set.Icc (-(3 / 20 : ℝ)) (3 / 20)
+```
+
+The second theorem feeds exactly that premise into
+`theta2_exact_real_interval`. It does not inspect the other twelve coordinates,
+prove that `B` is a leaf, or prove that sibling boxes cover a parent. Hence the
+smallest externally closable row is one authoritative leaf record whose
+coordinate order binds index `1` to `q2`, together with exact endpoint facts
+`-3/20 ≤ box_lo[1]` and `box_hi[1] ≤ 3/20`.
+
+The remaining typed gap is precise: no current Lean declaration parses a
+coverage receipt's rational strings, validates its `coordinate_order`, and
+constructs `RectBox13` plus `InRectBox B x` for a particular leaf id. The
+Python receipt validator is structural accounting only and is not this proof.
+Until that receipt-to-Lean adapter supplies `hx`, `hlo`, and `hhi`, the
+compiled theorem is a conditional transport interface, not a per-box coverage
+receipt or coverage closure.
+
+## Fresh pinned Lean compile receipt (including typed box transport)
 
 The following standalone exact-real sidecar was compiled after adding only the
 required `noncomputable section` for `Real.pi`:
@@ -315,12 +348,12 @@ source:
   artifacts/routeb_fd8_tensor_christoffel_enclosure_20260906/mathlib/
   DownstreamTest/Theta2ExactRealApi.lean
 source_sha256:
-  5E5C064FDC2179FE966FED6DE298564F45F69998DCB675D9CDB0AA59172BADAF
+  8222FF6A386A8A915F08A3E46A6D49E643D6C3E11A4C8B23766D5E86ABDAF637
 olean:
   artifacts/routeb_fd8_tensor_christoffel_enclosure_20260906/mathlib/
   DownstreamTest/Theta2ExactRealApi.olean
 olean_sha256:
-  BAAD80B24C28639EF8C9E0453ED0D20D8C8CFCD12CF748EC8C178B8F3DEA413B
+  02D022F8E8B788885F78622459F89CCBE508543DE49501B294E52E1A69D06A2C
 toolchain:
   leanprover/lean4:v4.33.1
 Lean:
@@ -330,13 +363,63 @@ command:
   lake env lean -o DownstreamTest\Theta2ExactRealApi.olean
     DownstreamTest\Theta2ExactRealApi.lean
 exit_code: 0
-stdout_stderr: empty
+stdout_stderr: see declaration/axiom output below; no errors or warnings
 ```
 
 The compiled declarations are exactly `theta2_sin`, `theta2_cos`,
 `sin_linear_remainder`, `cos_quadratic_lower`, `cos_global_upper`, and
-`theta2_exact_real_interval`. The latter is the complete one-row exact-real
-child for `q ∈ [-3/20,3/20]`, including the rational endpoint propagation.
+`theta2_exact_real_interval`, `q2_mem_theta2_domain`, and
+`box_q2_theta2_exact_real_interval`. The last two are the new typed
+box-membership transport; the latter feeds the former exact-real child at
+coordinate `q2Index = ⟨1, by decide⟩`.
+
+The fresh `#check` output is:
+
+```text
+theta2_exact_real_interval {q : ℝ}
+  (hq : q ∈ Set.Icc (-(3 / 20)) (3 / 20)) :
+  theta2 q + Real.pi / 2 = q ∧
+    -1 ≤ Real.sin (theta2 q) ∧
+      Real.sin (theta2 q) ≤ -(791 / 800) ∧
+        -(2409 / 16000) ≤ Real.cos (theta2 q) ∧
+          Real.cos (theta2 q) ≤ 2409 / 16000
+
+q2_mem_theta2_domain {B : RectBox13} {x : State13}
+  (hx : InRectBox B x)
+  (hlo : -(3 / 20) ≤ B.lo q2Index)
+  (hhi : B.hi q2Index ≤ 3 / 20) :
+  x q2Index ∈ Set.Icc (-(3 / 20)) (3 / 20)
+
+box_q2_theta2_exact_real_interval {B : RectBox13} {x : State13}
+  (hx : InRectBox B x)
+  (hlo : -(3 / 20) ≤ B.lo q2Index)
+  (hhi : B.hi q2Index ≤ 3 / 20) :
+  theta2 (x q2Index) + Real.pi / 2 = x q2Index ∧
+    -1 ≤ Real.sin (theta2 (x q2Index)) ∧
+      Real.sin (theta2 (x q2Index)) ≤ -(791 / 800) ∧
+        -(2409 / 16000) ≤ Real.cos (theta2 (x q2Index)) ∧
+          Real.cos (theta2 (x q2Index)) ≤ 2409 / 16000
+```
+
+The fresh `#print axioms` output for all three theorems is identical:
+
+```text
+[propext, Classical.choice, Quot.sound]
+```
+
+The old `5E5C...`/`BAAD...` pair predates this typed transport and must not
+admit the current source. The live source examined in this run hashes to
+`8222...` and contains the transport proof plus the declaration probes; the
+matching `.olean` hashes to `02D0...`. Thus the observed drift is proof-source
+drift from this task, not an unrelated replacement. The `0E40...` value cited
+by intake was not the final live hash seen during this recompile; it is not
+used as evidence.
+
+The `#print axioms` list is an axiom dependency report, not a claim that the
+child is a physical or deployed theorem. Its statement is purely over exact
+`ℝ`, a typed rectangular box, and two exact endpoint inequalities. There is no
+coverage-receipt parser or leaf-id provenance in this sidecar: a future adapter
+must supply `hx`, `hlo`, and `hhi` from one authoritative per-box record.
 An initial attempt from outside the pinned Mathlib root was rejected before
 elaboration with the precise path error “input file ... must be contained in
 root directory”; it was not an API failure. The successful receipt above uses

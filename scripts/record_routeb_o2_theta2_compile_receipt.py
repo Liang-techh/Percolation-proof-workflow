@@ -48,8 +48,8 @@ def main() -> int:
     ):
         if phrase not in text:
             raise ValueError(f"theta2 receipt boundary missing: {phrase}")
-    expected_source = "5E5C064FDC2179FE966FED6DE298564F45F69998DCB675D9CDB0AA59172BADAF"
-    expected_olean = "BAAD80B24C28639EF8C9E0453ED0D20D8C8CFCD12CF748EC8C178B8F3DEA413B"
+    expected_source = "8222FF6A386A8A915F08A3E46A6D49E643D6C3E11A4C8B23766D5E86ABDAF637"
+    expected_olean = "02D022F8E8B788885F78622459F89CCBE508543DE49501B294E52E1A69D06A2C"
     store = StateStore(STATE)
     state = store.load()
     node = find(state, "P4.true_dh_float64_evaluator_enclosure")

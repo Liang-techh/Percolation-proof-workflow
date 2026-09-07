@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 515,
+  "revision": 517,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -14387,6 +14387,76 @@
           "same_key_tuple_found": false,
           "formal_certificate_allowed": false,
           "registry_promoted": false
+        },
+        "o0_exact_fourier_cell_tuples": [
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-033",
+            "source_agent": "codex-inbox",
+            "review_status": "CONDITIONAL_EXACT_RATIONAL_TUPLE_CONSTRUCTED",
+            "receipt_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\receipt-T-P4-033-O0-constructive-exact-fourier-cell-K-Br-Cf-20260907.json",
+              "sha256": "E570CFB418065503D9743B4496FC0902E45BF82DA4C265FD067BEA9952E821AD"
+            },
+            "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+            "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+            "norm": "induced_infinity",
+            "block_orientation": {
+              "B": [
+                4,
+                5
+              ],
+              "D": [
+                1,
+                2,
+                3,
+                6
+              ]
+            },
+            "K": "1194377771728717533600000000/18430531027503268060090421",
+            "Br": "320646431/2400000000",
+            "Cf": "1929397/4800000000",
+            "delta": "3339/73786976294838206464000000",
+            "epsilon_R": "10884976891854242252555776013990910667449238154978439/1066565541595672284169870837304452361645809004477199488549594864814784000000",
+            "source_artifacts": {
+              "mass_fourier_csv": {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_fourier_mass_full_rational.csv",
+                "sha256": "A986A208B62F585C6CA1B9C81B958710D2043E5BF786DDC930A6FA29F7A232B8"
+              },
+              "source_numbers_receipt": {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\routeb_agent_schur_fullq_next_20260906T091446Z\\NUMBERS.json",
+                "sha256": "59C7E9BECA460DAB46B675F056BB3BAC147001A3FF1888EBC2CE0110611F7F3E"
+              },
+              "source_audit": {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\routeb_agent_schur_fullq_next_20260906T091446Z\\AUDIT.md",
+                "sha256": "D24452D179CCF0275C096246A906CC8300159A4285CF8D7E825769C3CBEEF281"
+              }
+            },
+            "cell_scope": "exact-Fourier one-cell child only",
+            "deployed_float64_q_nonzero_binding": false,
+            "global_cell_coverage": false,
+            "weighted_metric_conversion": false,
+            "schur_margin_consumed": false,
+            "formal_certificate_allowed": false,
+            "registry_promoted": false,
+            "admission_status": "conditional_exact_fourier_cell_child"
+          }
+        ],
+        "o0_constructive_exact_tuple": {
+          "status": "CONDITIONAL_EXACT_RATIONAL_TUPLE_CONSTRUCTED",
+          "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+          "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+          "norm": "induced_infinity",
+          "K": "1194377771728717533600000000/18430531027503268060090421",
+          "Br": "320646431/2400000000",
+          "Cf": "1929397/4800000000",
+          "epsilon_R": "10884976891854242252555776013990910667449238154978439/1066565541595672284169870837304452361645809004477199488549594864814784000000",
+          "cell_scope": "exact-Fourier one-cell child only",
+          "global_coverage": false,
+          "weighted_metric_conversion": false,
+          "schur_margin_consumed": false,
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
         }
       }
     },
@@ -15621,16 +15691,56 @@
             "coverage": "OPEN",
             "formal_certificate_allowed": false,
             "registry_promoted": false
+          },
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-036.2",
+            "source_agent": "codex-local",
+            "review_status": "COMPILED_CONDITIONAL_EXACT_REAL_CHILD_FLOAT64_BINDING_OPEN",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-036.2-range-reduction-lemma-codex-20260907.md",
+              "sha256": "E6E9FCB05DD0E064A6A45E8AC46153EC54B1AF1E314DBA54565A20A4EAED4614"
+            },
+            "source_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\routeb_fd8_tensor_christoffel_enclosure_20260906\\mathlib\\DownstreamTest\\Theta2ExactRealApi.lean",
+              "sha256": "8222FF6A386A8A915F08A3E46A6D49E643D6C3E11A4C8B23766D5E86ABDAF637"
+            },
+            "olean_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\routeb_fd8_tensor_christoffel_enclosure_20260906\\mathlib\\DownstreamTest\\Theta2ExactRealApi.olean",
+              "sha256": "02D022F8E8B788885F78622459F89CCBE508543DE49501B294E52E1A69D06A2C"
+            },
+            "theorems": [
+              "theta2_sin",
+              "theta2_cos",
+              "sin_linear_remainder",
+              "cos_quadratic_lower",
+              "cos_global_upper",
+              "theta2_exact_real_interval"
+            ],
+            "toolchain": {
+              "lean": "4.33.1",
+              "lean_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6"
+            },
+            "compile_exit_code": 0,
+            "axiom_scan": "not supplied by this review",
+            "exact_real_scope": "link i=2, theta=q-pi/2, q in [-3/20,3/20]",
+            "coverage": "OPEN",
+            "float64_binding": "OPEN",
+            "libm_binding": "OPEN",
+            "formal_certificate_allowed": false,
+            "registry_promoted": false
           }
         ],
         "o2_theta2_exact_real_child": {
-          "status": "REJECTED_STALE_SOURCE_OR_OLEAN_HASH",
+          "status": "COMPILED_CONDITIONAL_EXACT_REAL_CHILD_FLOAT64_BINDING_OPEN",
           "task_id": "T-P4-036.2",
-          "expected_source_sha256": "5E5C064FDC2179FE966FED6DE298564F45F69998DCB675D9CDB0AA59172BADAF",
-          "current_source_sha256": "F4088AEF30F99E3FC61B4B08122283E148AE5EFB1B24F56E91BFD4EC4433E6A0",
-          "expected_olean_sha256": "BAAD80B24C28639EF8C9E0453ED0D20D8C8CFCD12CF748EC8C178B8F3DEA413B",
-          "current_olean_sha256": "BAAD80B24C28639EF8C9E0453ED0D20D8C8CFCD12CF748EC8C178B8F3DEA413B",
+          "theorem": "theta2_exact_real_interval",
+          "source_sha256": "8222FF6A386A8A915F08A3E46A6D49E643D6C3E11A4C8B23766D5E86ABDAF637",
+          "olean_sha256": "02D022F8E8B788885F78622459F89CCBE508543DE49501B294E52E1A69D06A2C",
+          "compile_exit_code": 0,
           "coverage": "OPEN",
+          "float64_binding": "OPEN",
+          "libm_binding": "OPEN",
           "formal_certificate_allowed": false,
           "registry_promoted": false
         }
@@ -39633,6 +39743,30 @@
       "source_comparator": "OPEN",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T13:40:47.506904+00:00",
+      "kind": "routeb_o0_constructive_exact_fourier_tuple_recorded",
+      "node_id": "43e3c1a23dc34d52a19b835a8a883cb7",
+      "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+      "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+      "child_scope": "exact-Fourier one-cell child only",
+      "exact_rational_K": true,
+      "exact_rational_Br": true,
+      "exact_rational_Cf": true,
+      "global_coverage": false,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T13:41:14.996883+00:00",
+      "kind": "routeb_o2_theta2_exact_real_child_recorded",
+      "node_id": "0da99a7cef5e4f0b91c7cc06d9e7c010",
+      "theorem": "theta2_exact_real_interval",
+      "review_status": "COMPILED_CONDITIONAL_EXACT_REAL_CHILD_FLOAT64_BINDING_OPEN",
+      "coverage": "OPEN",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -43289,5 +43423,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "5fd12b75fea14929953af498ae7e66f2ea96202a76cac5af2f61c697fc45cdca"
+  "state_checksum": "ab31484a184c7f3ce193f7a6628de196a63b4844577cb19064cda8c46f563707"
 }
