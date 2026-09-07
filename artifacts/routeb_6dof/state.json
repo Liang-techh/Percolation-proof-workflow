@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 442,
+  "revision": 443,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12371,6 +12371,33 @@
           "ledger_formula": "when gamma_cell_k > 0, lambda_upper_k = gamma_external_k / gamma_cell_k and candidate_margin_k = gamma_external_k - lambda_k*gamma_cell_k; strict admissibility is 1 < lambda_k < lambda_upper_k",
           "ledger_guard": "candidate rows with admissible_fixed_lambda=false are rejected even if another row has positive candidate_margin",
           "repair_candidate": "lambda=2 (theta=1) is a fixed rational witness for every declared row in both eta partitions when the ledger marks those rows admissible; this remains a candidate over the declared artifact only",
+          "uniform_pmi_instantiation": {
+            "lambda": "2",
+            "theta": "1",
+            "lower_right_block": "(1/2) I_2",
+            "port_charge": "2*rho*A_up",
+            "declared_partition_witnesses": {
+              "eta=2.7,lambda=2.0": {
+                "row_count": 256,
+                "distinct_boxes": 256,
+                "all_admissible": true,
+                "min_candidate_margin": "0.16040822007441496",
+                "min_candidate_margin_exact": "2005102750930187/12500000000000000",
+                "conservative_margin_lower_bound_1e-12": "80204110037/500000000000",
+                "proof_boundary": "declared ledger rows only; not global coverage"
+              },
+              "eta=5.6,lambda=2.0": {
+                "row_count": 321,
+                "distinct_boxes": 321,
+                "all_admissible": true,
+                "min_candidate_margin": "0.04301375542805658",
+                "min_candidate_margin_exact": "2150687771402829/50000000000000000",
+                "conservative_margin_lower_bound_1e-12": "10753438857/250000000000",
+                "proof_boundary": "declared ledger rows only; not global coverage"
+              }
+            },
+            "boundary": "finite declared ledger rows only; no true-DH coverage claim"
+          },
           "ledger_reconciliation": "do not mix aggregate routeB_compact_port_frobenius_ledger lambda bounds with per-cell combined_schur_partition_ledger bounds until their metric and PMI semantics are proven equivalent",
           "diagnostic_receipt": {
             "checker": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\check_routeb_fixed_lambda_ledger.py",
@@ -35536,6 +35563,14 @@
       "closure_rule": "fixed_cell_lambda_admissibility closes only after every child is VERIFIED and comparator-accepted",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T10:20:26.743003+00:00",
+      "kind": "routeb_fixed_cell_lambda_contract_refresh",
+      "node_id": "8cea6a84c5364384a723d88f00d9a516",
+      "parent_id": "35839e28b33e484f886081ddb6351c80",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -39192,5 +39227,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "faa1165def40bd4a44698b50478ba4553d112b7b436e37b37ee247db2bfc5c18"
+  "state_checksum": "484ace9237701439a42d6a0b262159abc85007c38df6a9f9d1ca08fd3527a964"
 }

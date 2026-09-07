@@ -44,6 +44,18 @@ def main() -> int:
         "formal_certificate_allowed": False,
         "proof_boundary": "diagnostic scalar contract only; no Lean, source, coverage, or registry admission",
     }
+    uniform_two = {
+        key: value for key, value in audit["uniform_lambda_witnesses"].items()
+        if key.endswith(",lambda=2.0")
+    }
+    uniform_pmi_instantiation = {
+        "lambda": "2",
+        "theta": "1",
+        "lower_right_block": "(1/2) I_2",
+        "port_charge": "2*rho*A_up",
+        "declared_partition_witnesses": uniform_two,
+        "boundary": "finite declared ledger rows only; no true-DH coverage claim",
+    }
     metadata = {
         "verification_domain": "lean",
         "research_stage": "P4",
@@ -69,6 +81,7 @@ def main() -> int:
             "ledger_formula": "when gamma_cell_k > 0, lambda_upper_k = gamma_external_k / gamma_cell_k and candidate_margin_k = gamma_external_k - lambda_k*gamma_cell_k; strict admissibility is 1 < lambda_k < lambda_upper_k",
             "ledger_guard": "candidate rows with admissible_fixed_lambda=false are rejected even if another row has positive candidate_margin",
             "repair_candidate": "lambda=2 (theta=1) is a fixed rational witness for every declared row in both eta partitions when the ledger marks those rows admissible; this remains a candidate over the declared artifact only",
+            "uniform_pmi_instantiation": uniform_pmi_instantiation,
             "ledger_reconciliation": "do not mix aggregate routeB_compact_port_frobenius_ledger lambda bounds with per-cell combined_schur_partition_ledger bounds until their metric and PMI semantics are proven equivalent",
             "diagnostic_receipt": diagnostic_receipt,
             "not_a_coverage_proof": True,
