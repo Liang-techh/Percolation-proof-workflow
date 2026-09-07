@@ -13,6 +13,8 @@ from percolation_workflow.scheduler import (
     rank_frontier,
     run_frontier_parallel,
 )
+from percolation_workflow.agent_bridge import prepare_requests
+from percolation_workflow.store import StateStore
 
 
 class MathBottleneckDispatchTests(unittest.TestCase):
@@ -94,6 +96,38 @@ class MathBottleneckDispatchTests(unittest.TestCase):
 
         self.assertEqual(rank_formalizable_frontier(state), [identity])
         self.assertNotIn(coverage, rank_formalizable_frontier(state))
+
+    def test_host_dispatch_uses_bottleneck_order_in_formalizable_policy(self):
+        state = WorkflowState()
+        coverage = state.add_node(
+            "legacy coverage", "global flowpipe coverage",
+            metadata={
+                "verification_domain": "lean",
+                "statement_status": "formalization_target",
+                "math_lane": "lean_adapter",
+                "frontier_repair_contract": {},
+            },
+        )
+        identity = state.add_node(
+            "identity", "O1",
+            metadata={
+                "verification_domain": "lean",
+                "statement_status": "formalization_target",
+                "math_lane": "lean_adapter",
+                "math_bottleneck": "coefficient_identity",
+                "frontier_repair_contract": {},
+            },
+        )
+        # This unit test only checks the durable request ordering; no host
+        # process or compiler is launched.
+        import tempfile
+        with tempfile.TemporaryDirectory() as directory:
+            path = __import__('pathlib').Path(directory) / 'state.json'
+            store = StateStore(path)
+            store.save(state)
+            requests = prepare_requests(store, limit=2, math_lane_policy='formalizable')
+            self.assertEqual([request['node_id'] for request in requests], [identity])
+            self.assertNotEqual(coverage, requests[0]['node_id'])
 
     def test_scheduler_uses_stable_math_order_but_never_relaxes_obstruction(self):
         state = WorkflowState()

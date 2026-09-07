@@ -169,10 +169,15 @@ def prepare_requests(store: StateStore, *, limit: int = 4,
         eligible[node.id] = lambda _: None
 
     requests = []
-    ordered = rank_frontier(state, eligible)
     if math_lane_policy == 'formalizable':
-        formalizable = set(rank_formalizable_frontier(state, eligible))
-        ordered = [node_id for node_id in ordered if node_id in formalizable]
+        # Do not sort with the ordinary scheduler and filter afterward: that
+        # would preserve the old order and could bury a high-value coefficient
+        # identity behind unrelated Lean-shaped leaves.  The formalizable
+        # projection already applies the obstruction gate and bottleneck-first
+        # ordering.
+        ordered = rank_formalizable_frontier(state, eligible)
+    else:
+        ordered = rank_frontier(state, eligible)
     for node_id in ordered:
         node = state.nodes[node_id]
         request_id = uuid.uuid4().hex
