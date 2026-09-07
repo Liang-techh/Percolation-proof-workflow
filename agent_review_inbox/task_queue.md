@@ -329,7 +329,7 @@ polynomial remains a separate frontier.
 
 ### T-P7-002 — typed 2x2 tail Schur completion
 
-- status: `open` (released for the next mathematical round)
+- status: `local_sidecar_prepared` (released for the next mathematical round)
 - owner: `红莲魔尊`
 - scope: formalize the completion identity and robust inverse-quadratic bound
   needed to consume the exact P7 `eta` inequalities;
@@ -340,6 +340,9 @@ polynomial remains a separate frontier.
   for the validation agent; retain sharpness and the source-binding boundary;
 - forbidden: identifying the seven-term polynomial with deployed DH by hash,
   claiming P7 flowpipe coverage, or promoting P7/M4/registry.
+- local progress: `examples/routeb_p7_tail_schur_completion_lean/` is attached
+  as `P7.tail_schur_completion_2x2`; pinned compile and physical source
+  binding remain open.
 
 ### T-P5-005 — relative residual strict-decay closure
 

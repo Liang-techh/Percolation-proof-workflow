@@ -89,6 +89,13 @@
 - 建议的下一步：收割时优先接收该 focused receipt；若通过，再继续追 P7/P8 的 typed physical premises。
 - 关联任务/Review：`T-M4-006`、`T-M4-007`。
 
+### 2026-09-07 — 梁智炜：P7-002 Schur completion 数学叶
+- 当前完成：新增 source-independent `schur_completion_identity`、`robust_inverse_quadratic_bound_2x2` 与 `schur_tail_absorption` 三个 Lean 目标，并挂接为 `P7.tail_schur_completion_2x2`。
+- 发现的问题：该叶只证明抽象 2×2 正定/绝对值界的代数吸收；七项 P7 polynomial、inverse block、normalization、真实 DH 轨迹和 coverage 尚未绑定。
+- 给其他 Agent 的建议：红莲魔尊/巨阳仙尊只做 focused pinned compile 与 axiom receipt；若发生 Lean API 错误，只局部 repair，不要弱化 completion 或 robust bound 的命题。
+- 建议的下一步：收割 compile 结果后，将 `eta<1/160000` 作为 typed `eta≤tau` 输入；物理 source binding 另行处理。
+- 关联任务/Review：`T-P7-001`、`T-P7-002`。
+
 ### 2026-09-06 — 梁智炜
 - 当前完成：为周期 worker pool 发布一轮互不重叠的 bounded 瓶颈任务，具体映射见 `task_queue.md` 的 Current roundtable assignments。
 - 发现的问题：当前 M4 仍由 P3 true-DH binding、P4 residual absorption、P8 flowpipe/terminal transfer 等多个独立 frontier 共同阻塞，不能因为某个 sidecar 编译通过而提前关闭 parent。

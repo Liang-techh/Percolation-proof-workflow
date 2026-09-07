@@ -90,6 +90,7 @@ TASK_TARGETS = {
     "T-M4-006": ("M4.block45_full_certificate", "pending_cross_branch_budget_transfer"),
     "T-M4-007": ("M4.cross_branch_budget_transfer", "pending_pure_budget_transfer_formalization"),
     "T-P7-001": ("P7.strict_tail_fallback", "pending_tail_obligation_audit"),
+    "T-P7-002": ("P7.tail_schur_completion_2x2", "pending_typed_tail_schur_completion"),
     "T-DAG-003": ("M4.block45_full_certificate", "pending_shared_lemma_projection"),
     "T-REPAIR-001": ("P3.strict_true_dh_bounds", "pending_repair_loop_audit"),
 }
