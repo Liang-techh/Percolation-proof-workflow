@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 546,
+  "revision": 547,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -16015,7 +16015,21 @@
           "schur_margin_consumed": false,
           "registry_promoted": false,
           "formal_certificate_allowed": false
-        }
+        },
+        "o0_same_key_baseline_bias_search": [
+          {
+            "status": "OBSTRUCTION",
+            "disposition": "NO_STRICT_SCHUR_CONSUMABLE_SAME_KEY_BASELINE_OR_AFFINE_BIAS_RECEIPT",
+            "receipt_sha256": "275CAE3C305F446A30C12C3C63FC0DD868E4445E5BFA2088A359E242BC7A70F3",
+            "review_sha256": "277D97E19CABB32FC309752E278A1F01BBBA4D1FE19686342381C9D3213A22A5",
+            "rejected_global_lower_as_L_base": "1/1000000",
+            "same_key_L_base": false,
+            "same_key_physical_residual": false,
+            "schur_margin_consumed": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
+          }
+        ]
       }
     },
     "0da99a7cef5e4f0b91c7cc06d9e7c010": {
@@ -17133,7 +17147,25 @@
           "parent_q2_subset_required": true,
           "registry_promoted": false,
           "formal_certificate_allowed": false
-        }
+        },
+        "o2_namespace_hash_binding_reviews": [
+          {
+            "status": "EXPORTER_NAMESPACE_AND_HASH_FILE_BOUND_REAL_TRIPLE_OPEN",
+            "review_sha256": "D1E14478EA44ADFE89C53A7148556BC840C7ABB999DEB1C0A6AF6AE3E25DF75C",
+            "branch_source_sha256": "A2BD89C923AB646BCB138372E4C74A5980AFE5D5906F21080B6781E03051869C",
+            "theta2_namespace_anchor": {
+              "coordinate": "q2",
+              "lo": "-3/20",
+              "hi": "3/20"
+            },
+            "hash_file_binding": true,
+            "real_triple_receipt_present": false,
+            "external_premises_present": false,
+            "global_coverage": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
+          }
+        ]
       }
     }
   },
@@ -41460,6 +41492,16 @@
       "schur_margin_consumed": false,
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T15:06:53.507951+00:00",
+      "kind": "routeb_latest_o0_o2_harvest",
+      "o0_status": "OBSTRUCTION",
+      "o0_schur_margin_consumed": false,
+      "o2_status": "EXPORTER_NAMESPACE_AND_HASH_FILE_BOUND_REAL_TRIPLE_OPEN",
+      "o2_real_triple_receipt_present": false,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -45116,5 +45158,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "7f29381bfdccb2cb0a49835a11e3162cdfcced0b85b814e031d31526155ab591"
+  "state_checksum": "61b83b9c289b63c8473571b86be7683d350947af44599a47ca4861f61a845be7"
 }
