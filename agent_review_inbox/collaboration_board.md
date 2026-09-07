@@ -1157,6 +1157,9 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   `debug_12n_symM.jl` 只有独立 `s_i,c_i` symbolic probe；二者都不能提供
   同键 exact `Matrix (Fin 6) (Fin 6) ℝ` 或 `M_DD45_at`。该 obstruction 已
   写入 state，O1 仍要求真实 typed source receipt。
+- O1 v2 进一步把最小缺口压缩为单一 typed projection identity
+  `h_MDD_def : M_DD = M_DD45_at M mu q`，并要求同键 `source_key/state_key/mu/q`
+  与 `4×4` block shape；已保留为新的 obstruction 记录，不重复旧审计。
 - force runner 已封装 fresh 输出目录、双 hash、Julia/Python 缺失状态和“不覆盖
   旧 artifact”策略；当前仍 `PENDING_JULIA_EXECUTION`，没有 CSV/receipt/PASS。
 

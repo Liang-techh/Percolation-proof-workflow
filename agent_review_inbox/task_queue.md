@@ -1814,6 +1814,13 @@ after integration; corrections should be a new result file.
 - 下一步只接受真实 `source_key/state_key/mu/q/block_order` typed export，
   然后走 Path A 或 Path B；该 obstruction 已登记，O1 不关闭。
 
+### T-P4-033-O1 — obstruction v2 minimal export (2026-09-07)
+
+- 已将 O1 缺口压缩为单一 `h_MDD_def` projection identity，加上同键
+  `source_key/state_key/mu/q`、固定 D 顺序和 `4×4` shape。
+- 不再重复 q=0、Float64 inverse 或 symbolic probe；下一步必须是真实 exact
+  typed evaluator export，或者明确证明 deployed source 无法提供该对象。
+
 ### T-P4-KC-COORDINATE-ADAPTER — force runner (2026-09-07)
 
 - fresh runner 已入库：Julia/Python 不可用时只返回 pending，已有输出目录不
