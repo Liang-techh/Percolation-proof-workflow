@@ -149,6 +149,14 @@ def verify_and_register(state: WorkflowState, node_id: str, project: str | Path,
                'comparator_stderr': stderr, 'config': 'comparator.json', 'statement_identity': identity,
                'source_files': list(declared_source_files),
                'artifact_aliases': [str(p) for p in (artifact_aliases or [])]}
+    required_ids = list(state.nodes[node_id].metadata.get('required_node_ids', []))
+    if required_ids:
+        receipt['required_input_registries'] = {
+            required_id: state.registry[required_id]['verification_receipt'].get(
+                'source_digest', required_id)
+            for required_id in required_ids
+            if required_id in state.registry
+        }
     if strict_result is not None:
         receipt['strict_admission'] = {
             'accepted': strict_result.accepted,

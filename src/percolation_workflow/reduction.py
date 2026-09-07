@@ -118,6 +118,14 @@ def close_verified_reductions(store: StateStore) -> list[str]:
                 },
                 'manifest': state.manifest or {},
             }
+            required_ids = list(parent.metadata.get('required_node_ids', []))
+            if required_ids:
+                receipt['required_input_registries'] = {
+                    required_id: state.registry[required_id]['verification_receipt'].get(
+                        'source_digest', required_id)
+                    for required_id in required_ids
+                    if required_id in state.registry
+                }
             state._register_verified(parent.id, str(project), receipt=receipt)
             store.save(state)
             closed.append(parent.id)
