@@ -1,0 +1,11 @@
+{
+  "review_file": "../review-T-P8-001-p8-audit.md",
+  "review_sha256": "2DF2E21A37B2DD3731329E1866371785B92E14531070478E6C15A2DB55B54010",
+  "task_id": "T-P8-001",
+  "integrated_at": "2026-09-06T20:12:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "target_node": "P8.independent_reachability",
+  "admission_effect": "none",
+  "classification": "blocked_current_contract_conditional_adapter",
+  "next_frontier": "P8_SOURCE_CONTRACT_BINDING_13_OR_14"
+}

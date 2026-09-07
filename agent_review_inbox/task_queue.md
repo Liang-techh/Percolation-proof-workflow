@@ -33,7 +33,7 @@ without an explicit scoped request.
 
 ### T-P8-001 — 13-state/14-state reachability contract
 
-- status: `open`
+- status: `reviewed_pending` (Codex, 2026-09-06; result integrated as pending)
 - scope: bind the deployed RHS to either the existing 14-state ramp parent or a
   formally defined explicit-time 13-state parent;
 - inspect: `docs/routeb-p8-flowpipe-binding-next.md`,
