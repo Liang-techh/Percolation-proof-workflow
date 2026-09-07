@@ -341,6 +341,17 @@ correction does not rewrite existing claims or review authorship.
 - forbidden: equating force and acceleration residuals, using a constant bias as
   a universal PSD witness, or closing P4/M4 from the abstract sharp child.
 
+### T-P4-006 — sharp Schur formalization sidecar
+
+- status: `reviewed_pending` (formalization result integrated at the next
+  Route-B revision; current Lean compile is environment-blocked)
+- scope: independently formalize the exact iff condition, the zero-slice
+  obstruction, and the concrete block-4 `c=1/4` absorption corollary;
+- deliver: focused pinned-Lean compile, `#print axioms`, and independent
+  validator review, without weakening the theorem statement;
+- forbidden: treating exact Python arithmetic as kernel evidence, binding the
+  source residual by hash alone, or closing P4/M4 from this abstract child.
+
 ### T-P8-006 — ramp reconstruction and terminal transfer
 
 - status: `reviewed_pending` (math result from 古月方源; formalization queued)

@@ -241,3 +241,13 @@ pinned Lean toolchain with only standard axioms. The child materially weakens
 the algebraic bottleneck, but source residual units, true-DH semantic binding,
 global cell coverage, and the P4/M4 join remain open. The verified registry
 remains empty and `formal_certificate_allowed` remains `false`.
+
+## 2026-09-07 / Route-B checkpoint revision 359
+
+`T-P4-006` was integrated as pending mathematical metadata. The independent
+formalization reproduces the sharp Schur iff theorem, the `y=0` zero-residual
+obstruction, and the exact block-4 `c=1/4` budget. Its runtime lacked Lean/Lake,
+so only shell syntax and exact Python rational replay were observed; no kernel
+compile or axiom admission is claimed. The previously compiled P4 child remains
+the available kernel artifact, while source binding and global coverage remain
+open.

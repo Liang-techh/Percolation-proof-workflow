@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 358,
+  "revision": 359,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -7648,6 +7648,19 @@
             "admission_effect": "none",
             "target_scope": "routeb_node",
             "source_commit": "56795d1b67cab6da1c8a0d8f8a4ee332905b1efb",
+            "admission_label": "pending"
+          },
+          {
+            "review_file": "agent_review_inbox/review-T-P4-006-sumengchen-20260906T2241.md",
+            "review_sha256": "A89B74AF5F2DBB0160884C8C51FD01256DF79D5F9A9994180A4D4765F6478FE4",
+            "task_id": "T-P4-006",
+            "source_agent": "苏梦辰",
+            "created_at": "2026-09-06T22:41:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_sharp_schur_formalization",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "820a8158f02e8efc8ba84ea7099d5b6b14e4571e",
             "admission_label": "pending"
           }
         ],
@@ -30184,6 +30197,18 @@
       "global_coverage": false,
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T04:39:29.187091+00:00",
+      "kind": "agent_review_integrated",
+      "review_file": "agent_review_inbox/review-T-P4-006-sumengchen-20260906T2241.md",
+      "review_sha256": "A89B74AF5F2DBB0160884C8C51FD01256DF79D5F9A9994180A4D4765F6478FE4",
+      "task_id": "T-P4-006",
+      "classification": "pending_sharp_schur_formalization",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e7b1df1835f4deba06b11a8182f6719"
     }
   ],
   "agent_requests": {},
@@ -33840,5 +33865,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "723fad44de4643e9e68e3ffd34724ddb9b8f8a5b16016274c26077146c638599"
+  "state_checksum": "7b583f099e93454221ed2f02f2371ce3fc127b1335929703d43ad659392c0ba6"
 }
