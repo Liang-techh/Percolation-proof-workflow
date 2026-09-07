@@ -120,9 +120,10 @@ theorem block45_joint_residual_metric (x4 x5 y4 y5 : ℝ) :
     dsimp [S]
     exact weighted_amgm_7_10 U N
   have hchain : 4*U*N ≤ T^2 := le_trans hamgm hsq
-  dsimp [T] at hchain
-  dsimp [U, N, Q]
-  nlinarith
+  have hfinal : 25*U*N ≤ 144*Q^2 := by
+    dsimp [T] at hchain
+    nlinarith
+  simpa [U, N, Q] using hfinal
 
 /-- Reusable square-to-absolute-value bridge. -/
 theorem abs_le_of_sq_le_sq_nonneg
@@ -221,7 +222,17 @@ theorem gain_improvement_exact :
 theorem half_gain_checker_constants (ell2 : ℝ) :
     (2720*ell2 ≤ 457*(1/2 : ℝ)^2 ↔ 10880*ell2 ≤ 457) ∧
     (144*ell2 ≤ 25*(1/2 : ℝ)^2 ↔ 576*ell2 ≤ 25) := by
-  constructor <;> constructor <;> nlinarith
+  constructor
+  · constructor
+    · intro h
+      nlinarith
+    · intro h
+      nlinarith
+  · constructor
+    · intro h
+      nlinarith
+    · intro h
+      nlinarith
 
 /-- Exact rational state `(x4,x5,y4,y5)=(0,15,0,14)` disproves the stronger
 universal constant `23/4`. -/
