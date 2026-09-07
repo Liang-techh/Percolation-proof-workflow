@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 683,
+  "revision": 684,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -41157,7 +41157,9 @@
       "parent_id": "c8f0fdf063d14aebb7c92f5aebda1d71",
       "status": "open",
       "proof_sketch": "Define explicit pointwise and uniform budget structures, replace rho(x) and bias(x) by uniform majorants, apply the division-free cap consumer, and preserve a dyadic exact-real family as a negative control for missing uniformity.",
-      "dependencies": [],
+      "dependencies": [
+        "7cabf129d5a145b69d65afef6a62dd16"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -41281,6 +41283,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_FINITE_UNIFORM_GAP_REVIEW.md",
             "sha256": "90801F1C3EE6EEB4F964FA20C4FC62B6AE0365208A64E9017EB6A45F679B0BBE"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "7cabf129d5a145b69d65afef6a62dd16": {
+      "id": "7cabf129d5a145b69d65afef6a62dd16",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge",
+      "statement": "Point-indexed relative/additive effective parameters and an explicit uniform rho/bias/cap allocation form a same-domain bridge to the existing uniform contraction consumer, with total base bias retained.",
+      "parent_id": "93ebd8fc6e374451aa01999cb646d7de",
+      "status": "open",
+      "proof_sketch": "Define ParameterField, LocalEvidence, and UniformParameters on one domain; include base+defect bias rather than dropping base, consume existing weighted and division-free interfaces, and retain a rhoEff≥1 obstruction without binding true-DH data.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coverage",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_P4_UNIFORM_PARAMETER_BRIDGE",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_UniformParameterBridge.lean",
+            "sha256": "B96D8E8704F6058DFB4580C1E1A63B9669E83D5B458DEFA63696A048B3D58FCA"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_UniformParameterBridge.review.md",
+            "sha256": "A5DF0208FFB4802B2FDEBA092A484CB571E825CCA56ECE15585A0EC2DE8B9999"
           }
         ],
         "registry_eligible": false,
@@ -68993,6 +69030,23 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T19:59:20.109160+00:00",
+      "kind": "node_added",
+      "node_id": "7cabf129d5a145b69d65afef6a62dd16",
+      "parent_id": "93ebd8fc6e374451aa01999cb646d7de",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge"
+    },
+    {
+      "at": "2026-09-07T19:59:20.109178+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -72649,5 +72703,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "520185ad315635c9554cdfdaef59d9c32555128f80f46ab46208e07544e74118"
+  "state_checksum": "e83b60d340a23f737c535096b9675441c077c0b11a73e28ac744dd7e51d7e9b7"
 }

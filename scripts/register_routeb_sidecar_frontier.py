@@ -1612,6 +1612,19 @@ CHILDREN = [
             "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_FINITE_UNIFORM_GAP_REVIEW.md",
         ],
     },
+    {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform",
+        "statement": "Point-indexed relative/additive effective parameters and an explicit uniform rho/bias/cap allocation form a same-domain bridge to the existing uniform contraction consumer, with total base bias retained.",
+        "proof_sketch": "Define ParameterField, LocalEvidence, and UniformParameters on one domain; include base+defect bias rather than dropping base, consume existing weighted and division-free interfaces, and retain a rhoEff≥1 obstruction without binding true-DH data.",
+        "lane": "lean_adapter",
+        "bottleneck": "coverage",
+        "status": "OPEN_UNCOMPILED_P4_UNIFORM_PARAMETER_BRIDGE",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_UniformParameterBridge.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_UniformParameterBridge.review.md",
+        ],
+    },
 ]
 
 

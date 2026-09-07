@@ -2870,7 +2870,11 @@ uniform contraction；若只得到缺失字段，则记录 obstruction 而不填
 
 - fixed-λ：有限 ℚ weighted-sum 的 ℚ→ℝ cast/reindex adapter；
 - P3：pointwise positive gap 不推出 global uniform slack 的 exact obstruction，
-  以及显式 uniform-gap consumer。
+以及显式 uniform-gap consumer。
+
+P4 `UNIFORM_PARAMETER_BRIDGE` 已成对审阅并登记 revision 684，保持
+`OPEN_UNCOMPILED`；它明确要求 total additive 为 `base+biasEff`，并把统一
+参数、feedback、coverage 作为显式前提。
 
 两项均要求 proof-attempt + 定向 review，暂不运行大回归或进入 registry。
 
