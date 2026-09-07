@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 365,
+  "revision": 366,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -7464,7 +7464,8 @@
       "status": "open",
       "proof_sketch": "Inject the residual, preserve its direction, and prove strict PSD on every covered cell.",
       "dependencies": [
-        "8f7df5df39a041d7a972078830dbcee7"
+        "8f7df5df39a041d7a972078830dbcee7",
+        "f1864c5a432948b7856a00bd365e5bed"
       ],
       "verified_artifact": null,
       "attempts": [
@@ -10481,6 +10482,54 @@
         "registry_eligible": false,
         "comparator_accepted": false,
         "physical_certificate": false
+      }
+    },
+    "f1864c5a432948b7856a00bd365e5bed": {
+      "id": "f1864c5a432948b7856a00bd365e5bed",
+      "name": "P4.remote_acceleration_budget",
+      "statement": "Under a same-key full-state dual premise, the remote acceleration block D=(1,2,3,6) satisfies ||a_D||^2 <= 90*mass and can feed an admissible M_BD a_D binding.",
+      "parent_id": null,
+      "status": "open",
+      "proof_sketch": "Restrict the compiled full-state scalar coercivity lemma to D; then bind the resulting mass budget and M_BD operator through the routeb.remote_binding.v1 contract.",
+      "dependencies": [
+        "e51122edf3d04fe49930bb71c53a68dd"
+      ],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "conditional-lean-plus-source-adapter",
+        "statement_status": "conditional_candidate",
+        "evidence_level": "compiled_candidate_arithmetic_seam",
+        "claim_status": "full_state_source_binding_open",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "binding_mode_candidates": [
+          "full_state",
+          "d_row_schur"
+        ],
+        "remote_coordinates": [
+          1,
+          2,
+          3,
+          6
+        ],
+        "euclidean_squared_coefficient": "90",
+        "conditional_budget_artifact": {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\src\\percolation_workflow\\routeb_remote_accel_budget.py",
+          "sha256": "8254690c1f555525d172c6db8c3fba298fccfaab8f0ea2e31210a0b49947f54a"
+        },
+        "typed_contract_artifact": {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\src\\percolation_workflow\\routeb_remote_contract.py",
+          "sha256": "974257b8d5081cfcc581600538d8aa13c4f9391f96683226706b4af6293eeecd"
+        },
+        "upstream_dual_node": "e51122edf3d04fe49930bb71c53a68dd",
+        "unresolved": [
+          "mass_is_same_deployed_full_state_kinetic_budget",
+          "MBD_operator_bound_on_covered_domain",
+          "descriptor_identity_or_exact_schur_elimination",
+          "true_DH_and_flowpipe_coverage"
+        ]
       }
     }
   },
@@ -30384,6 +30433,32 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6f06c8545bc24dc590b6e5ade85b684d"
+    },
+    {
+      "at": "2026-09-07T06:19:47.119988+00:00",
+      "kind": "node_added",
+      "node_id": "f1864c5a432948b7856a00bd365e5bed",
+      "parent_id": null,
+      "name": "P4.remote_acceleration_budget"
+    },
+    {
+      "at": "2026-09-07T06:19:47.120763+00:00",
+      "kind": "routeb_remote_contract_math_checkpoint",
+      "node_id": "f1864c5a432948b7856a00bd365e5bed",
+      "parent_id": "1e7b1df1835f4deba06b11a8182f6719",
+      "upstream_node": "e51122edf3d04fe49930bb71c53a68dd",
+      "budget_artifact": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\src\\percolation_workflow\\routeb_remote_accel_budget.py",
+        "sha256": "8254690c1f555525d172c6db8c3fba298fccfaab8f0ea2e31210a0b49947f54a"
+      },
+      "contract_artifact": {
+        "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\src\\percolation_workflow\\routeb_remote_contract.py",
+        "sha256": "974257b8d5081cfcc581600538d8aa13c4f9391f96683226706b4af6293eeecd"
+      },
+      "coefficient": "90",
+      "status": "conditional_candidate",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -34040,5 +34115,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "603e7a16508840727048ba80ea8e38f0303862c3f6e1e6e1c937b144361280e8"
+  "state_checksum": "6dfb2035f61f5a54df3fdbce5801fbe86dccfda2315e7125b751cabfc1375106"
 }
