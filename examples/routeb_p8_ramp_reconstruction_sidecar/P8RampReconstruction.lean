@@ -103,10 +103,66 @@ theorem state_terminal_one
   have h := (state_tail_reconstruction z c0 hw0 hc0 hc hw 1).2
   simpa using h
 
+/-! ### Interval-local endpoint seam
+
+The global `HasDerivAt` hypotheses above are convenient for the abstract
+candidate, but they are stronger than the deployed P8 obligation.  The next
+lemmas expose the exact interval-local seam needed by the eventual source
+binding: continuity on a closed interval, derivative data on its interior,
+and integrability of the derivative.  They deliberately leave the interval
+integral identity as an explicit premise, so this child does not smuggle in
+ODE existence, coverage, or a source-specific regularity theorem.
+-/
+
+/-- A zero derivative on an interval transfers the endpoint value. -/
+theorem endpoint_eq_of_zero_derivative_on_interval
+    (f : ℝ → ℝ) (a b : ℝ)
+    (hab : a ≤ b)
+    (hcont : ContinuousOn f (Set.Icc a b))
+    (hderiv : ∀ t ∈ Set.Ioo a b, HasDerivAt f 0 t)
+    (hzero : IntervalIntegrable (fun _ : ℝ => (0 : ℝ)) volume a b) :
+    f b = f a := by
+  have hfund := intervalIntegral.integral_eq_sub_of_hasDerivAt_of_le
+    hab hcont hderiv hzero
+  have hzero_int : (∫ t in a..b, (0 : ℝ)) = 0 := by
+    simp
+  rw [hzero_int] at hfund
+  linarith
+
+/--
+Interval-local ramp transfer.  The two integral identities are the explicit
+frontier assumptions to be discharged by the deployed P8 source/flowpipe
+agent; no global differentiability is inferred from them.
+-/
+theorem ramp_endpoint_on_interval
+    (w c : ℝ → ℝ) (c0 a b : ℝ)
+    (hab : a ≤ b)
+    (hc_a : c a = c0)
+    (hc_cont : ContinuousOn c (Set.Icc a b))
+    (hc_deriv : ∀ t ∈ Set.Ioo a b, HasDerivAt c 0 t)
+    (hzero : IntervalIntegrable (fun _ : ℝ => (0 : ℝ)) volume a b)
+    (hw_cont : ContinuousOn w (Set.Icc a b))
+    (hw_deriv : ∀ t ∈ Set.Ioo a b, HasDerivAt w (c t) t)
+    (hc_int : IntervalIntegrable c volume a b)
+    (hc_integral : (∫ t in a..b, c t) = c0 * (b - a)) :
+    c b = c0 ∧ w b = w a + c0 * (b - a) := by
+  have hc_b := endpoint_eq_of_zero_derivative_on_interval c a b hab
+    hc_cont hc_deriv hzero
+  have hw_fund := intervalIntegral.integral_eq_sub_of_hasDerivAt_of_le
+    hab hw_cont hw_deriv hc_int
+  rw [hc_integral] at hw_fund
+  constructor
+  · calc
+      c b = c a := hc_b
+      _ = c0 := hc_a
+  · linarith
+
 #print axioms ramp_c_constant
 #print axioms ramp_w_eq_mul
 #print axioms ramp_reconstruction
 #print axioms state_tail_reconstruction
 #print axioms state_terminal_one
+#print axioms endpoint_eq_of_zero_derivative_on_interval
+#print axioms ramp_endpoint_on_interval
 
 end RouteBP8RampReconstruction

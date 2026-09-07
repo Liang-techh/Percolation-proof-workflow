@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 393,
+  "revision": 395,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -8157,7 +8157,8 @@
       "proof_sketch": "Use the complete six-DOF RHS adapter only as an independent enclosure; bind it to the residual and terminal claims.",
       "dependencies": [
         "4236b22d4cd54fa4bd7cb66f458e8768",
-        "eaa4f6e504b8461c9bc2f0601f5d6cae"
+        "eaa4f6e504b8461c9bc2f0601f5d6cae",
+        "9235f42be838422089833e11fdfc7e0e"
       ],
       "verified_artifact": null,
       "attempts": [
@@ -11099,6 +11100,73 @@
             "sha256": "cddb3e870f7888aa23bf84ab0704f6ed2c0db4c79ee1656a0f7e16c8fae017a2"
           }
         ]
+      }
+    },
+    "9235f42be838422089833e11fdfc7e0e": {
+      "id": "9235f42be838422089833e11fdfc7e0e",
+      "name": "P8.interval_local_endpoint_adapter",
+      "statement": "The interval-local P8 calculus adapter transfers the ramp endpoint from closed-interval continuity, open-interval derivative data, and explicit integral identities.",
+      "parent_id": "edd8407c33f54c41867f03b46ec1e313",
+      "status": "open",
+      "proof_sketch": "Apply the interval fundamental theorem twice: zero derivative closes c, then the c-integral identity closes w. Keep source regularity, flowpipe coverage, and admission separate.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean-source-independent-adapter",
+        "statement_status": "open_frontier_pending_pinned_lean_compile",
+        "evidence_level": "local_source_sidecar_uncompiled",
+        "claim_status": "interval_local_adapter_open",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "preferred_route": true,
+        "unresolved": [
+          "p8_source_provider_continuity_on_closed_interval",
+          "p8_source_provider_derivative_on_open_interval",
+          "p8_interval_integral_identity_for_c",
+          "p8_flowpipe_coverage_and_terminal_binding",
+          "pinned_github_lean_compile_receipt"
+        ],
+        "theorem_names": [
+          "RouteBP8RampReconstruction.endpoint_eq_of_zero_derivative_on_interval",
+          "RouteBP8RampReconstruction.ramp_endpoint_on_interval"
+        ],
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p8_ramp_reconstruction_sidecar\\P8RampReconstruction.lean",
+            "sha256": "ee66994b7fb938f8debaa6a208280dab422b35566fa3ba7f91963f005f0e689b"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p8_ramp_reconstruction_sidecar\\README.md",
+            "sha256": "66faed366d7253daa37269b54dc2cd8f6a8216b38875bd5e4b2c4fdfe97ee7e3"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p8_ramp_reconstruction_sidecar\\lean-toolchain",
+            "sha256": "56a12c348c1fb7bb3e6475757349976a7e93e94fa2918bf92811b1b2e9634504"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p8_ramp_reconstruction_sidecar\\verify.sh",
+            "sha256": "cddb3e870f7888aa23bf84ab0704f6ed2c0db4c79ee1656a0f7e16c8fae017a2"
+          }
+        ],
+        "frontier_contract": {
+          "domain": "closed_interval_Icc_open_interior_Ioo",
+          "required_inputs": [
+            "ContinuousOn c Icc(a,b)",
+            "HasDerivAt c 0 on Ioo(a,b)",
+            "IntervalIntegrable zero and c",
+            "HasDerivAt w (c t) on Ioo(a,b)",
+            "integral c = c0*(b-a)"
+          ],
+          "output": "c(b)=c0 and w(b)=w(a)+c0*(b-a)",
+          "does_not_prove": [
+            "source_binding",
+            "ode_existence",
+            "flowpipe_coverage",
+            "routeb_admission"
+          ]
+        }
       }
     }
   },
@@ -32261,6 +32329,75 @@
       "status": "compiled_candidate_pending_registry",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T08:09:56.138156+00:00",
+      "kind": "node_added",
+      "node_id": "9235f42be838422089833e11fdfc7e0e",
+      "parent_id": "edd8407c33f54c41867f03b46ec1e313",
+      "name": "P8.interval_local_endpoint_adapter"
+    },
+    {
+      "at": "2026-09-07T08:09:56.138182+00:00",
+      "kind": "routeb_p8_interval_local_adapter_created",
+      "node_id": "9235f42be838422089833e11fdfc7e0e",
+      "parent_id": "edd8407c33f54c41867f03b46ec1e313",
+      "status": "open_frontier_pending_pinned_lean_compile",
+      "theorem_names": [
+        "RouteBP8RampReconstruction.endpoint_eq_of_zero_derivative_on_interval",
+        "RouteBP8RampReconstruction.ramp_endpoint_on_interval"
+      ],
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p8_ramp_reconstruction_sidecar\\P8RampReconstruction.lean",
+          "sha256": "fc7f2f18143b5c291d9137b5c52201fe827a7cd951130aae40700b527a1d1a7c"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p8_ramp_reconstruction_sidecar\\README.md",
+          "sha256": "66faed366d7253daa37269b54dc2cd8f6a8216b38875bd5e4b2c4fdfe97ee7e3"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p8_ramp_reconstruction_sidecar\\lean-toolchain",
+          "sha256": "56a12c348c1fb7bb3e6475757349976a7e93e94fa2918bf92811b1b2e9634504"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p8_ramp_reconstruction_sidecar\\verify.sh",
+          "sha256": "cddb3e870f7888aa23bf84ab0704f6ed2c0db4c79ee1656a0f7e16c8fae017a2"
+        }
+      ],
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T08:10:21.371694+00:00",
+      "kind": "routeb_p8_interval_local_adapter_refresh",
+      "node_id": "9235f42be838422089833e11fdfc7e0e",
+      "parent_id": "edd8407c33f54c41867f03b46ec1e313",
+      "status": "open_frontier_pending_pinned_lean_compile",
+      "theorem_names": [
+        "RouteBP8RampReconstruction.endpoint_eq_of_zero_derivative_on_interval",
+        "RouteBP8RampReconstruction.ramp_endpoint_on_interval"
+      ],
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p8_ramp_reconstruction_sidecar\\P8RampReconstruction.lean",
+          "sha256": "ee66994b7fb938f8debaa6a208280dab422b35566fa3ba7f91963f005f0e689b"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p8_ramp_reconstruction_sidecar\\README.md",
+          "sha256": "66faed366d7253daa37269b54dc2cd8f6a8216b38875bd5e4b2c4fdfe97ee7e3"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p8_ramp_reconstruction_sidecar\\lean-toolchain",
+          "sha256": "56a12c348c1fb7bb3e6475757349976a7e93e94fa2918bf92811b1b2e9634504"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p8_ramp_reconstruction_sidecar\\verify.sh",
+          "sha256": "cddb3e870f7888aa23bf84ab0704f6ed2c0db4c79ee1656a0f7e16c8fae017a2"
+        }
+      ],
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -35917,5 +36054,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "de973e83554bd9d115715f2f126249c0495a2cc05faad6c090fcac5c316b1acb"
+  "state_checksum": "fcbccd878cabd9ab8deb13a24aa4d4d62abebb3c53eaa59b670061972d6f447c"
 }

@@ -959,6 +959,23 @@ polynomial remains a separate frontier.
 - forbidden: tautological range identities, arithmetic FLT reuse, registry
   promotion, or declaring the original spectral sidecar verified.
 
+### T-P8-011 — interval-local ramp endpoint adapter
+
+- status: `open` (local interval seam added 2026-09-07; awaiting pinned compile)
+- owner: `巨阳仙尊` for the pinned Lean compile/axiom receipt; `红莲魔尊` or
+  `幽魂魔尊` may separately bind the source-side integral premise;
+- scope: inspect `examples/routeb_p8_ramp_reconstruction_sidecar/P8RampReconstruction.lean`,
+  especially `endpoint_eq_of_zero_derivative_on_interval` and
+  `ramp_endpoint_on_interval`; compile only this sidecar in the pinned GitHub
+  environment and report exact theorem statements, imports, `#print axioms`,
+  source hash, and any API repair needed;
+- mathematical deliverable: bind `ContinuousOn` on `Icc`, `HasDerivAt` on
+  `Ioo`, derivative integrability, and the exact identity
+  `∫ c = c0 * (b-a)` to the deployed P8 source/flowpipe contract;
+- forbidden: upgrading this adapter to P8 reachability, silently supplying
+  source equality or coverage, whole-project regression, registry promotion,
+  or treating a green sidecar compile as Route-B admission.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it

@@ -409,3 +409,15 @@
   有限加权 residual 的绝对值不超过系数 `l1` 和，以及正项分解的吸收。
 - 具体 Gram CSV、目标展开和 true-DH 绑定仍是独立 frontier；等待
   `巨阳仙尊` 给出 pinned Lean compile/axiom receipt 后再接入 DAG。
+
+### 2026-09-07 — 梁智炜：P8 interval-local endpoint seam
+
+- 新增 `T-P8-011` / `P8.interval_local_endpoint_adapter`。sidecar 现在把
+  全局 `HasDerivAt` 的 ramp candidate 进一步下沉为区间接口：`ContinuousOn`
+  在 `Icc`、`HasDerivAt` 在 `Ioo`、导数可积，以及显式的 `∫ c` 精确恒等式。
+- 该 child 只做 interval fundamental theorem 的 endpoint transfer：先关闭
+  `c(b)=c0`，再推出 `w(b)=w(a)+c0*(b-a)`。source equality、ODE existence、
+  flowpipe/coverage、terminal admission 仍保持独立 open。
+- 新任务交给 `巨阳仙尊` 做 pinned Lean compile/axiom receipt；数学 agent
+  可独立绑定 deployed source 的积分 premise。当前不改 registry、不打开
+  formal gate。
