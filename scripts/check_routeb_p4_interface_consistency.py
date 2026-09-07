@@ -7,11 +7,13 @@ consumer theorem.
 from __future__ import annotations
 
 from pathlib import Path
+import sys
 
+ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
 from percolation_workflow.store import StateStore
 
 
-ROOT = Path(__file__).resolve().parents[1]
 STATE = ROOT / "artifacts/routeb_6dof/state.json"
 
 
@@ -39,6 +41,7 @@ def audit_state() -> dict[str, object]:
     weighted_contract = weighted.metadata.get("mathematical_contract", {})
     combined_contract = combined.metadata.get("mathematical_contract", {})
     consumer = port.metadata.get("consumer_interface", {})
+    source_binding = port.metadata.get("source_binding_receipt", {})
 
     checks = {
         "weighted_rho_is_squared": "rho_F^2" in weighted_contract.get("rho_semantics", ""),
@@ -49,6 +52,18 @@ def audit_state() -> dict[str, object]:
         "port_uses_B_up_normalization": "B_up" in consumer.get("source_map", ""),
         "combined_is_consumed_by_residual_pmi": combined.id in pmi.dependencies,
         "port_does_not_wait_for_combined": combined.id not in port.dependencies,
+        "source_binding_receipt_is_fail_closed": (
+            source_binding.get("status") ==
+            "SOURCE_AND_NOMINAL_BRIDGE_PASS_BINDING_OPEN"
+            and source_binding.get("formal_certificate_allowed") is False
+            and source_binding.get("registry_eligible") is False
+        ),
+        "source_binding_preserves_force_kc_scale": (
+            source_binding.get("force_coordinate_kc") == ["q5/100", "q4/200"]
+        ),
+        "source_binding_requires_actual_remote_term": (
+            source_binding.get("required_remote_term") == "M_BD(q) * a_D"
+        ),
         "global_gate_closed_only_explicitly": state.global_closure_report()["formal_certificate_allowed"] is False,
     }
     errors.extend(f"failed:{name}" for name, ok in checks.items() if not ok)
