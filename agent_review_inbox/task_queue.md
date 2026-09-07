@@ -2158,6 +2158,23 @@ fetch during the intervening local mathematical work.
 These results are attached to the O1 candidate as conditional metadata only;
 the verified registry remains empty and `formal_certificate_allowed=false`.
 
+### Explicit sidecar frontier registration (2026-09-07)
+
+`scripts/register_routeb_sidecar_frontier.py` now materializes the five
+harvested mathematical sidecars as real open DAG children, rather than leaving
+them only in candidate metadata:
+
+- body-4 source Gram targets;
+- body-5 source/trace decomposition;
+- body-6 canonical export;
+- O0 H_acc semantic export;
+- P5-026 feasible-cone/SPN consumer.
+
+The registration is idempotent, checks every artifact hash/path, preserves the
+parent nodes as open, and never touches the verified registry. New children
+must still receive actual Lean/checker/source receipts before any parent can
+close.
+
 ### T-P5-026 — feasible-cone SPN consumer (harvested 2026-09-07)
 
 - status: `pending_math_child`; source-independent exact mathematics only;

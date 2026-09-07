@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 586,
+  "revision": 587,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -11040,7 +11040,9 @@
       "parent_id": "9a3a7eef35b34880b85423aac67ea015",
       "status": "open",
       "proof_sketch": "Bound each r_i*v_i by rho_i*v_i^2 using absolute values, sum the inequalities, and optionally lower-bound d_i-rho_i by a uniform lambda. Keep relative-bound source semantics separate.",
-      "dependencies": [],
+      "dependencies": [
+        "1e3f28c782d9485bb94b0bb1e3ae0383"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -23595,7 +23597,9 @@
       "parent_id": "120deab092c243b6a43356e63c8b56f4",
       "status": "open",
       "proof_sketch": "Expand the exact DH bodyMass/sourceBody definition for body 4, transport the coefficient identity to the real evaluator, and retain a pinned source-comparator receipt.",
-      "dependencies": [],
+      "dependencies": [
+        "ae18c1e30172442abb689b14be5bf225"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -25125,7 +25129,9 @@
       "parent_id": "120deab092c243b6a43356e63c8b56f4",
       "status": "open",
       "proof_sketch": "Expand the exact DH bodyMass/sourceBody definition for body 5, transport the coefficient identity to the real evaluator, and retain a pinned source-comparator receipt.",
-      "dependencies": [],
+      "dependencies": [
+        "f69865077c2e49e1aab82a291233f0e9"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -26655,7 +26661,9 @@
       "parent_id": "120deab092c243b6a43356e63c8b56f4",
       "status": "open",
       "proof_sketch": "Expand the exact DH bodyMass/sourceBody definition for body 6, transport the coefficient identity to the real evaluator, and retain a pinned source-comparator receipt.",
-      "dependencies": [],
+      "dependencies": [
+        "1ea06cbee9b54297913156cfb0b201ce"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -28185,7 +28193,9 @@
       "parent_id": "8337e024d8dc4463a3389b1e65a4a5e8",
       "status": "open",
       "proof_sketch": "Use the exact M_BB center and all-q enclosure, symmetry, and the weighted A_up comparison to derive L_base; keep every source/energy/residual binding premise explicit.",
-      "dependencies": [],
+      "dependencies": [
+        "1a908d878a3c45448eb039f9c1af37bb"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -28218,6 +28228,213 @@
           "registry_promoted": false,
           "formal_certificate_allowed": false
         }
+      }
+    },
+    "ae18c1e30172442abb689b14be5bf225": {
+      "id": "ae18c1e30172442abb689b14be5bf225",
+      "name": "P4.O1.source_comparator.h_body_4.source_gram_targets",
+      "statement": "Body-4 source frame, Jacobian, Gram, and exact piecewise mass targets imply the existing body-4 entry target.",
+      "parent_id": "62f56aedfc16447181e2178e44a535eb",
+      "status": "open",
+      "proof_sketch": "Expand slots 0..4 and parent axes, derive midpoint/Jv/Jw, reduce diagonal inertia and finite Gram entries, then discharge the exact trig identities.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "source_semantics",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_BODY4_SOURCE_GRAM_CHILD_TARGETS_UNCOMPILED",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1Body4SourceGramTargets.lean",
+            "sha256": "2D0D2794EDFE745D63A2970C36B53765F3B4BD747480107B1EAB51CF2E2C3CA9"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\check_routeb_o1_body4_source_gram.py",
+            "sha256": "C5340F28BD0A185ADB45FDFE06DBB1CABC30FC56948EDC710C547FD06656EC0A"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\O1_BODY_4_SOURCE_GRAM_TARGETS_RECEIPT.json",
+            "sha256": "47467B7BD336B8E28F9AF0B7910A63136E3CA1E887504F14EB569CB875287BB6"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-033-O1-body-4-source-gram-codex-20260907.md",
+            "sha256": "F9E542737915676A995103874361928C5EA6E7BAF08EE20F6A2A50015823396F"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "f69865077c2e49e1aab82a291233f0e9": {
+      "id": "f69865077c2e49e1aab82a291233f0e9",
+      "name": "P4.O1.source_comparator.h_body_5.source_trace_decomposition",
+      "statement": "Body-5 source geometry/Gram and exact tagged q3 finite-fold targets imply the existing body-5 entry target.",
+      "parent_id": "87f1bd9c1acd42369f8814bd10230091",
+      "status": "open",
+      "proof_sketch": "Prove G1-G3 source geometry and Gram first; independently prove F1-F4 row permutation, q3 product-to-sum, arbitrary-seed fold, and the final piecewise handoff.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "source_semantics",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNPROVEN_BODY5_SOURCE_TRACE_DECOMPOSITION",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1Body5SourceTraceTargets.lean",
+            "sha256": "AA314706EF2A42DCA2E73B8B5DED22DC2F598E395E775E860F993DA34739D9A9"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\O1_BODY_5_SOURCE_TRACE_DECOMPOSITION_RECEIPT_20260907_44fcccf7bd1a.json",
+            "sha256": "44FCCCF7BD1AA2184802D63D1808A14A3551AEEBC0EDC6C4F4BC167F3D1E80F0"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-033-O1-body-5-source-trace-decomposition-codex-20260907-a977fb4941f1.md",
+            "sha256": "A977FB4941F1D99D5A0D0ABAEE43048BC011DDAA6030323170C02482E6A259D8"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "1ea06cbee9b54297913156cfb0b201ce": {
+      "id": "1ea06cbee9b54297913156cfb0b201ce",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export",
+      "statement": "A canonical body-6 pre-accumulation export reifies the exact source body mass and connects to the existing trace evaluator.",
+      "parent_id": "3ad9bd4fa1d040da995906fc487913fd",
+      "status": "open",
+      "proof_sketch": "Bind the sixth endpoint and midpoint, prove the source Gram, reify all 610 signed rational atoms including zero complement, then prove canonical evaluator equals the existing body-6 evaluator.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "COEFFICIENT_REPLAY_MATCH_SOURCE_THEOREM_OPEN",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\RouteBO1Body6CanonicalExportTargets.lean",
+            "sha256": "24635BD0356E6C9A83B15EB0F616327B547CAF9257F8992F99B5FB1B7983CE2C"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\O1_BODY_6_CANONICAL_EXPORT_CONTRACT.json",
+            "sha256": "0E03EA7E7A216574F3F76AE433A0B3BEF1463675D490739DA94A5635ABA2EEB1"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\O1_BODY_6_CANONICAL_EXPORT_RECEIPT.json",
+            "sha256": "4271E4C75BF822E6DB99AD4919AA86235623357DE7C2587CF67E19EEEF816458"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\O1_BODY_6_CANONICAL_SLICE.csv",
+            "sha256": "46F59E5DB4D74A03D5106CEE4BD501090DBEEC51CC897EDCFD68E559AC939C7C"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-033-O1-body-6-canonical-export-codex-20260907.md",
+            "sha256": "0559712903B61235A5DEE4761D450F1683A99B26D41EA1B13D8A03D420C35391"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "1a908d878a3c45448eb039f9c1af37bb": {
+      "id": "1a908d878a3c45448eb039f9c1af37bb",
+      "name": "P4.O0.physical_baseline_factor.H_acc_semantic_export",
+      "statement": "The deployed Julia pre-regularizer accumulator is refined to an exact scalar DAG and, separately, to a sound runtime/interval contract.",
+      "parent_id": "35bcd3816acb4b2cadb9a64843839204",
+      "status": "open",
+      "proof_sketch": "Separate ideal rational-real, loaded Float64-decoded, and machine accumulator semantics; bind source spans and 36/216/216 roots before proving evaluator or interval soundness.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "evaluator_enclosure",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_H_ACC_SOURCE_REFINEMENT_AND_INTERVAL_SOUNDNESS",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_o0_h_acc_semantic_export\\OPEN_CONTRACT.json",
+            "sha256": "94A874EAF968C0EF065AF269068F6B228210AB4F287F58367764B73712B237CC"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_o0_h_acc_semantic_export\\RECEIPT.json",
+            "sha256": "21833A8A47CC6D53063204E2B03213B20D7C30FDB397E438CEA715D94554941D"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_o0_h_acc_semantic_export\\check_contract.py",
+            "sha256": "B442DB0FF9C7C05A8F452BDD63DA357AC15964BD193DA4CE4857CB7B97FA6A4B"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-033-O0-H-acc-evaluator-interval-contract-codex-20260907.md",
+            "sha256": "3C9622C871534B15CB621D9898B03AABCF0AEE5A3ECA6155A151B079CA6509E1"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "1e3f28c782d9485bb94b0bb1e3ae0383": {
+      "id": "1e3f28c782d9485bb94b0bb1e3ae0383",
+      "name": "P5.componentwise_relative_decay.feasible_cone_spn",
+      "statement": "The direct K_path centered small-gain inequality reduces exactly to 18 feasible cone certificates, with rational SPN as an orthant consumer.",
+      "parent_id": "4a9af66cdc4f4607857a5cf360f19eb7",
+      "status": "open",
+      "proof_sketch": "Prove six-cone one-channel cover, interleave two channels, establish orthant quadratic nonnegativity and SPN decomposition; bind concrete K_path only downstream.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "PENDING_MATH_CHILD",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P5-026-guyuefangyuan-20260907T1031.md",
+            "sha256": "3BFCBA88DFDD26E7AB6766BF3B5C97303F675AD422CBC237E72F020DF3C63F73"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\companion-T-P5-026-guyuefangyuan-20260907T1033.md",
+            "sha256": "DF49F6C359102B0D0B9C3DCD92DCB2C7D3345CF4529CC4AA3143885E5D551959"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
       }
     }
   },
@@ -53248,6 +53465,54 @@
       "p5_026_status": "pending_math_child",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T16:38:52.458260+00:00",
+      "kind": "node_added",
+      "node_id": "ae18c1e30172442abb689b14be5bf225",
+      "parent_id": "62f56aedfc16447181e2178e44a535eb",
+      "name": "P4.O1.source_comparator.h_body_4.source_gram_targets"
+    },
+    {
+      "at": "2026-09-07T16:38:52.460342+00:00",
+      "kind": "node_added",
+      "node_id": "f69865077c2e49e1aab82a291233f0e9",
+      "parent_id": "87f1bd9c1acd42369f8814bd10230091",
+      "name": "P4.O1.source_comparator.h_body_5.source_trace_decomposition"
+    },
+    {
+      "at": "2026-09-07T16:38:52.462908+00:00",
+      "kind": "node_added",
+      "node_id": "1ea06cbee9b54297913156cfb0b201ce",
+      "parent_id": "3ad9bd4fa1d040da995906fc487913fd",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export"
+    },
+    {
+      "at": "2026-09-07T16:38:52.464560+00:00",
+      "kind": "node_added",
+      "node_id": "1a908d878a3c45448eb039f9c1af37bb",
+      "parent_id": "35bcd3816acb4b2cadb9a64843839204",
+      "name": "P4.O0.physical_baseline_factor.H_acc_semantic_export"
+    },
+    {
+      "at": "2026-09-07T16:38:52.465353+00:00",
+      "kind": "node_added",
+      "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383",
+      "parent_id": "4a9af66cdc4f4607857a5cf360f19eb7",
+      "name": "P5.componentwise_relative_decay.feasible_cone_spn"
+    },
+    {
+      "at": "2026-09-07T16:38:52.465360+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.O1.source_comparator.h_body_4.source_gram_targets",
+        "P4.O1.source_comparator.h_body_5.source_trace_decomposition",
+        "P4.O1.source_comparator.h_body_6.canonical_export",
+        "P4.O0.physical_baseline_factor.H_acc_semantic_export",
+        "P5.componentwise_relative_decay.feasible_cone_spn"
+      ],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -56904,5 +57169,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "887c64ee7a1be981b1d320ffa132f62b6ea8ceb563a099d1158c8f82bc6899a4"
+  "state_checksum": "4083deb7422dae8fef5ce45b4438077199fe3acff8e52502fca85351a4711861"
 }

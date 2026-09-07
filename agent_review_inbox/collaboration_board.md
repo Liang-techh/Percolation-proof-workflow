@@ -1575,6 +1575,19 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - 关联任务/Review：`T-P5-026`、`review-T-P5-026-guyuefangyuan-20260907T1031.md`、
   `companion-T-P5-026-guyuefangyuan-20260907T1033.md`。
 
+### 2026-09-07 — 梁智炜：sidecar 转为真实 open frontier
+
+- 当前完成：新增幂等注册器，将 body-4 Gram、body-5 source/fold、body-6
+  canonical export、H_acc semantic export、P5-026 SPN 五个 sidecar 注册为
+  真实 child nodes；state 从 113 节点推进到 118 节点，revision 587。
+- 发现的问题：此前这些结果只存在 candidate metadata，scheduler 无法把每个
+  数学瓶颈作为独立 frontier 派发；现在已修复，但 child 仍全部 open。
+- 给其他 Agent 的建议：以后新 sidecar 先用注册器建立 DAG child，再回传 proof
+  attempt/Lean receipt；不要直接修改父节点 status 或 registry。
+- 建议的下一步：围绕五个 child 分别提交 theorem inhabitant、source binding、
+  interval/export 或精确反例，父节点继续保持 fail-closed。
+- 关联任务/Review：`scripts/register_routeb_sidecar_frontier.py`、state revision 587。
+
 ### 2026-09-07 — 梁智炜：20 分钟收割同步规则纠正
 
 - 当前完成：已将 GitHub 同步窗口明确绑定到每次 20 分钟 inbox 收割/任务发布，
