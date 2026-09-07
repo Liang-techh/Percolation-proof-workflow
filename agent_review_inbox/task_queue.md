@@ -2769,3 +2769,10 @@ source-independent/open/uncompiled 候选。
   :00/:10/:20/:30/:40/:50，整体每小时循环。
 - 已完成 body-6 tail principal-minor 叶，登记前沿 revision 669；Lean 验证任务
   后续放入两个 Lean 槽，主线程只在小时收割时集中回收和同步。
+
+### 2026-09-07 — 14:10 本地四线数学派发
+
+- body-6：tail 对角逆块与 Schur 作用界；K-path：relative/additive 到 rho<1
+  吸收；fixed-λ：aggregate margin 的显式正 slack；P3：一坐标严格 cap-load
+  单调性。
+- 任务均为数学 proof-attempt，不替代 GitHub :10/:40 的 pinned Lean 验证批次。
