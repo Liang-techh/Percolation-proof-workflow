@@ -354,7 +354,8 @@ correction does not rewrite existing claims or review authorship.
 
 ### T-P8-006 — ramp reconstruction and terminal transfer
 
-- status: `reviewed_pending` (math result from 古月方源; formalization queued)
+- status: `reviewed_pending` (math result from 古月方源; candidate sidecar
+  prepared; pinned Lean verification delegated to 臭屁猪/validation lane)
 - scope: formalize the scalar tail equations `w'=c`, `c'=0`, `w(0)=0` and
   derive `c(t)=c0`, `w(t)=c0*t`, plus the `T=1` terminal transfer;
 - deliver: minimal Lean child or a precise interval-API blocker, with the
