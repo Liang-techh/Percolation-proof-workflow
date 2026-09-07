@@ -11,6 +11,7 @@ STATE = ROOT / "artifacts/routeb_6dof/state.json"
 NODE_NAME = "P5.componentwise_relative_decay"
 P5_NODE = ROOT / "examples/routeb_p5_joint_centered_gain_lean"
 P5_024_REVIEW = ROOT / "agent_review_inbox/review-T-P5-024-kuangmanmozun-20260907T0945.md"
+P5_024_INDEPENDENT_REVIEW = ROOT / "agent_review_inbox/review-T-P5-024-juyangxianzun-20260907T1017.md"
 P5_025_REVIEW = ROOT / "agent_review_inbox/review-T-P5-025-liuguanyi-20260907T1020.md"
 
 sys.path.insert(0, str(ROOT / "src"))
@@ -33,7 +34,7 @@ def artifact(path: Path) -> dict[str, str]:
 
 
 def main() -> None:
-    files = [P5_024_REVIEW, P5_025_REVIEW, P5_NODE / "P5JointCenteredGain.lean",
+    files = [P5_024_REVIEW, P5_024_INDEPENDENT_REVIEW, P5_025_REVIEW, P5_NODE / "P5JointCenteredGain.lean",
              P5_NODE / "README.md", P5_NODE / "lean-toolchain", P5_NODE / "verify.sh"]
     for path in files:
         if not path.is_file():
@@ -45,6 +46,7 @@ def main() -> None:
         "integration_status": "pending_coordinator_admission",
         "admission_label": "compiled_candidate",
         "review_artifact": artifact(P5_024_REVIEW),
+        "independent_review_artifacts": [artifact(P5_024_INDEPENDENT_REVIEW)],
         "sidecar_artifacts": [artifact(P5_NODE / name) for name in
                               ("P5JointCenteredGain.lean", "README.md", "lean-toolchain", "verify.sh")],
         "source_independent": True,
@@ -52,7 +54,7 @@ def main() -> None:
         "path_or_coverage_binding": False,
         "registry_promoted": False,
         "formal_certificate_allowed": False,
-        "evidence_boundary": "review reports focused Lean CI, but coordinator has not independently rerun it",
+        "evidence_boundary": "two review reports describe focused Lean CI, but coordinator has not independently rerun it",
         "required_followups": [
             "independent final-agent audit",
             "statement comparator receipt",
