@@ -1905,3 +1905,8 @@ body-6 现在不仅有第六列轴点积，还新增了前部速度 Gram 的真�
 T-P5-030 已从 review 数学推进到独立 rational Lean skeleton：初值严格落在
 `1/12` tube 内，非零参数宽度下边界导数严格 inward。仍需 ODE/first-exit
 和真实 residual envelope 才能关闭 flowpipe，不改变正式准入状态。
+### 2026-09-07 12:17 — 梁智炜收割 fixed-λ feasibility
+
+fixed-λ 已从 selected-box 正性推进到整个 tagged sparse union 的统一参数
+可行性 witness。该层解决了“逐行 margin 如何形成共享 λ”的数学瓶颈，但仍
+不是 source/coverage 或 formal admission 证明。

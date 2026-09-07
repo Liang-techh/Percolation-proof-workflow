@@ -2534,3 +2534,11 @@ source-independent/open/uncompiled 候选。
 - 明确不把边界导数升级为 tube invariance；first-exit、ODE continuation、
   residual/source semantics 与 coverage 仍外置。已登记为
   `...incremental_moving_frame_parameter_tube.iss_boundary`，revision `633`。
+### 2026-09-07 — 12:17 fixed-λ uniform feasibility 收割
+
+- 新增 finite sparse-union feasibility leaf：对每个 union row 定义统一
+  `lambda` 的 strict lower/upper 与 positive margin，使用已有正分母 bridge
+  把全体 row 的正 margin 提升为一个共享 `lambda=2, theta=1` witness。
+- 非空 union、row data、digest/source/coverage 均保持为显式前提；未声称
+  577 行覆盖真实 DH 域。状态 `OPEN_UNCOMPILED_FIXED_LAMBDA_UNIFORM_FEASIBILITY`，
+  revision `634`。

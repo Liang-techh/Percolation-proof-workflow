@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 633,
+  "revision": 634,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -38411,7 +38411,9 @@
       "parent_id": "04654b90f0f64484bb248748ac8d7485",
       "status": "open",
       "proof_sketch": "Keep the union oracle result and concatenation equality as typed premises, project each partition's existing digest binding, and package the union token without pretending SHA256 hashes compose algebraically.",
-      "dependencies": [],
+      "dependencies": [
+        "21cd8dd890044d33bfda56b3ac343a24"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -38547,6 +38549,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P5_030_ISSBoundary_REVIEW.md",
             "sha256": "D73CC1FD2EE857F87808CC63021C3C25C71615DC41FA9360ED88EA9A58324CD2"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "21cd8dd890044d33bfda56b3ac343a24": {
+      "id": "21cd8dd890044d33bfda56b3ac343a24",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility",
+      "statement": "Positive margins or strict-upper premises on every row of the finite tagged eta union yield one shared lambda=2, theta=1 uniform feasibility witness.",
+      "parent_id": "ee9e3c418b394786a4dee8059e9948b3",
+      "status": "open",
+      "proof_sketch": "Define marginAt and uniform feasibility over the sparse union, use the existing positive-denominator bridge rowwise, and package nonemptiness plus the fixed parameter record without claiming domain completeness.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_FIXED_LAMBDA_UNIFORM_FEASIBILITY",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_UNIFORM_FEASIBILITY20260907.lean",
+            "sha256": "60CB5E1C73E428637AC8BC2603A3D2C093E9162B5408632432A96E207C665F35"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_UNIFORM_FEASIBILITY20260907_REVIEW.md",
+            "sha256": "51ECA7E9C7A769D60AF4488F1BA9A05B426218AB2B0A08C5E14645371059F5EB"
           }
         ],
         "registry_eligible": false,
@@ -65169,6 +65206,23 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T18:18:16.836910+00:00",
+      "kind": "node_added",
+      "node_id": "21cd8dd890044d33bfda56b3ac343a24",
+      "parent_id": "ee9e3c418b394786a4dee8059e9948b3",
+      "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility"
+    },
+    {
+      "at": "2026-09-07T18:18:16.861662+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -68825,5 +68879,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "85a252a577b83215ae65a17f58c0727c2e453b13edd202b54e5b6af4f5f2d147"
+  "state_checksum": "e0dcc1e93b0609f5531a03efb9a040a7aee622551351e18af04eb01b0ae932f7"
 }

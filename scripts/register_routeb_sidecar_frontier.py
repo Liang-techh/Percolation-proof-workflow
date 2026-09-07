@@ -470,6 +470,19 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition.uniform_feasibility",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union.digest_composition",
+        "statement": "Positive margins or strict-upper premises on every row of the finite tagged eta union yield one shared lambda=2, theta=1 uniform feasibility witness.",
+        "proof_sketch": "Define marginAt and uniform feasibility over the sparse union, use the existing positive-denominator bridge rowwise, and package nonemptiness plus the fixed parameter record without claiming domain completeness.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_UNIFORM_FEASIBILITY",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_UNIFORM_FEASIBILITY20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_UNIFORM_FEASIBILITY20260907_REVIEW.md",
+        ],
+    },
+    {
         "name": "P5.componentwise_relative_decay.feasible_cone_spn.nonnegative_gain_increment_reuse",
         "parent": "P5.componentwise_relative_decay.feasible_cone_spn",
         "statement": "A nonnegative component-gain increment can reuse an existing cone SPN witness when its symmetric cone correction is entrywise below the old nonnegative slack.",
