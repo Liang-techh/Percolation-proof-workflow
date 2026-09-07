@@ -93,7 +93,6 @@ theorem damping_split_certificate
           ((E + T * (Rbar / (4 * ((1 - alpha) * g0)))) * Q) =
           4 * Q * (1 - alpha) * g0 * E + Q * T * Rbar := by
             field_simp [hden_ne]
-            <;> ring
       _ < 4 * alpha ^ 2 * (1 - alpha) * g0 ^ 3 := hcert
       _ = (4 * ((1 - alpha) * g0)) * (alpha ^ 2 * g0 ^ 2) := by
         ring
