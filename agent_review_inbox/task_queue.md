@@ -89,6 +89,25 @@ without an explicit scoped request.
 - deliver: review result with deterministic node IDs, levels, and next frontier;
 - forbidden: status promotion, deletion of failed history, or broad regression.
 
+### T-P0-001 — reproducibility baseline re-audit
+
+- status: `claimed`
+- scope: existing P0 attempts, receipts, source hashes, and the smallest
+  reproducibility checker only;
+- deliver: whether P0 can enter `evidence_complete`, with missing gates and
+  exact evidence paths;
+- forbidden: broad reruns, status promotion, or registry mutation.
+
+### T-DAG-002 — explicit child-DAG refinement
+
+- status: `claimed`
+- scope: propose disjoint P3/P4/P5/P6/P8/M4 source-binding, algebra,
+  coverage, and terminal-transfer child nodes;
+- deliver: deterministic node names/dependencies, admission boundaries, and
+  migration risks;
+- forbidden: mutating the authoritative checkpoint or silently changing the
+  theorem statement.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it
