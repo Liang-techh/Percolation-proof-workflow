@@ -2918,6 +2918,10 @@ revision 687，继续保持 `OPEN_UNCOMPILED`。下一步优先检查 body-6 sou
 Schur-margin 叶和真实 interval payload；任何缺少 source/coverage 的结果只
 登记为 open obligation。
 
+当前新派发：body-6 uniform remainder margin；P4 SchurMargin→scalar PMI
+adapter；fixed-λ comparator receipt admission；P3 receipt→interval certificate。
+四项均保持 `OPEN_UNCOMPILED`，等待成对 review 后再进入 DAG。
+
 body-6 `SCHURMARGIN`：补配套 review 后再登记；P3：interval payload/receipt
 boundary，显式分离 source、rounding soundness、coverage 与 checker metadata。
 两项继续保持未编译、fail-closed。

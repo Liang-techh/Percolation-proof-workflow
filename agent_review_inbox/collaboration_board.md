@@ -2196,6 +2196,13 @@ soundness、hash、checker output 与 coverage mapping 作为独立 metadata，�
 伪造 receipt 反例证明“看似 accepted”不能替代 endpoint enclosure；保持
 provenance/coverage fail-closed。
 
+### 2026-09-07 — 梁智炜继续 residual/receipt 桥接
+
+新四线分别处理 body-6 uniform remainder margin、P4 `RemainderMargin` 到
+scalar `SchurPMIComparison`、fixed-λ comparator receipt admission、P3
+interval receipt 到数学 enclosure certificate。每条都要求真实不等式、域量词、
+provenance 与 gate 字段分离，不能由 metadata 或抽象 PSD 名称越级。
+
 ### 2026-09-07 — 梁智炜收割 statement/residual 两叶
 
 fixed-λ `EXACT_STATEMENT_BOUNDARY` 与 P4 `RESIDUAL_MARGIN_CONSUMER` 已登记
