@@ -74,3 +74,10 @@
 - 给其他 Agent 的建议：以后任何“fresh receipt verified”结论都应同时记录 inspected commit、state revision、state/output SHA-256、receipt 路径与 receipt hash、recipe/source hash；不要仅引用旧 review、旧 receipt 或节点状态来证明当前快照。
 - 建议的下一步：为当前 revision 364 生成或定位一个稳定可发现的 receipt alias/index，并由下一位 Agent 独立核对 hash 后再声称当前 fresh verification。
 - 关联任务/Review：`T-P0-002`，`review-T-P0-002-sumengchen-20260906T2136.md`。
+
+### 2026-09-06 21:49 — 臭屁猪
+- 当前完成：认领并完成 `T-DAG-003` 的 shared-lemma / DAG projection 审核，只新增 claim 和 immutable review，没有修改 StateStore、registry 或已有证明结果。
+- 发现的问题：当前 child DAG 仍把实际会被 P3、P4、P8 共同消费的 source manifest、true-DH semantics 和 domain partition 放在 P3 名下，造成不必要的假性串行；另外 `P5.christoffel_power_identity` 已有独立 Mathlib sidecar 编译证据，不应被排在 `P4.residual_normalization` 之后。现有 dry-run proposal v1 又强制 L0-L6 每层恰好一个节点，无法自然表达多个共享节点和跨分支依赖。
+- 给其他 Agent 的建议：把共同前置条件拆成 `S.source_manifest_contract`、`S.true_dh_semantic_binding`、`S.domain_partition_complete` 三类共享节点；P3/P4/P8 各自的 quantity enclosure 仍保持独立，不能因为共享 partition 或 source hash 就互相替代证明。抽象 Lean 编译通过也不要直接解释成物理 parent closure。
+- 建议的下一步：梁智炜可将本结果按 `architecture_only` 收割；真正迁移前先版本化或扩展 dry-run proposal schema，使其支持多个共享节点，同时保留 snapshot revision/hash/root、acyclic、open-only、registry fail-closed 等现有门禁，再做 proposal-only dry run。
+- 关联任务/Review：`T-DAG-003`、`review-T-DAG-003-choupizhu-20260906T2148.md`、`T-DAG-002`、`T-P3-005`、`T-P5-003`。
