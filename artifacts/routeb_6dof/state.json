@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 492,
+  "revision": 494,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13817,7 +13817,13 @@
           "next_agent_action": "compile the exact-real O1 theorem against the current pin, then return zero-sorry, allowed-axiom, statement-comparator, and source-binding receipts",
           "preserve_semantic_boundary": "keep the left-inverse algebra separate from block extraction, Float64 enclosure, norms, coverage, and physical source binding",
           "success_callback": "return pinned Lean/source comparator evidence; child remains open until coordinator admission",
-          "formal_boundary": "no global residual absorption or flowpipe closure"
+          "formal_boundary": "no global residual absorption or flowpipe closure",
+          "advisory_repairs": [
+            "import Mathlib.Tactic.Linarith",
+            "normalize hB_left with Matrix.mul_assoc or right-associated product",
+            "preserve explicit left inverse M_DD_inv * M_DD = 1"
+          ],
+          "repair_status": "PENDING_PINNED_LEAN_COMPILE"
         },
         "unresolved": [
           "pinned_lean_compile_receipt",
@@ -13964,6 +13970,38 @@
             "formal_certificate_allowed": false,
             "registry_promoted": false,
             "admission_status": "pending_coordinator_admission"
+          },
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-032",
+            "source_agent": "Codex",
+            "review_status": "ADVISORY_REPAIR_REQUIRED__UNCOMPILED",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-032-codex-20260907.md",
+              "sha256": "2AF2BAB1E262DF779C394FAB224F6DF303141AD4D92BEE7C52D40C98FF81617B"
+            },
+            "candidate_artifacts": [
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_o1_lean_api_audit_20260907\\RouteBO1PortIdentity.lean",
+                "sha256": "679FABCDBF99113ADAE3BD17DC80E769077C6105ED070AC280AD67483207F0A2"
+              },
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_o1_lean_api_audit_20260907\\REPORT.md",
+                "sha256": "69C2C58EB1EDB20C1C5D464FFCBAE58F1680EE14AB6E09B29EB5E526BE24BCA6"
+              },
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\task_routeb_o1_lean_api_audit_20260907\\RECEIPT.json",
+                "sha256": "A0FB40F177EBE2D776C9398C2A5E33E86C1312209E0BBF7529678F5E7742F36E"
+              }
+            ],
+            "repair_actions": [
+              "import Mathlib.Tactic.Linarith",
+              "normalize hB_left with Matrix.mul_assoc or right-associated product",
+              "preserve explicit left inverse M_DD_inv * M_DD = 1"
+            ],
+            "formal_certificate_allowed": false,
+            "registry_promoted": false,
+            "admission_status": "pending_pinned_lean_compile"
           }
         ]
       }
@@ -14227,6 +14265,41 @@
             "formal_certificate_allowed": false,
             "registry_eligible": false,
             "registry_promoted": false
+          },
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-036.4",
+            "source_agent": "01a07bbd-be84-7471-b20d-5b0b39fc5d40",
+            "review_status": "DAG_PROPAGATION_INTERFACE_DRAFT__UNCOMPILED_OPEN",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-036.4-dag-01a07bb4-be84-20260907.md",
+              "sha256": "85DD9E1DB9EE188A98A9363A195C65169654D9D44393ED9BDB7ADEF4CBF907CF"
+            },
+            "source_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\dhport_lib.jl",
+              "sha256": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936"
+            },
+            "line_contract": {
+              "fk_frames": "31-44",
+              "mass_matrix": "46-61",
+              "potential": "63-70",
+              "arm_MCG": "73-100",
+              "exact_ddq": "102-110"
+            },
+            "interfaces": [
+              "RouteB.P3.DHLinkFiniteDAGEnclosure",
+              "RouteB.P3.DHChainFiniteGeometryEnclosure",
+              "RouteB.P3.DHChainFloat64EvaluatorEnclosure"
+            ],
+            "runtime_requirements": [
+              "operation_schedule_hash",
+              "Julia/runtime/libm/BLAS/rounding/FMA/threading",
+              "per_box_input_output_and_coverage",
+              "finite_non_nan_no_overflow"
+            ],
+            "formal_certificate_allowed": false,
+            "registry_promoted": false,
+            "admission_status": "pending_pinned_runtime_and_lean_receipt"
           }
         ],
         "fd_step_semantics": {
@@ -14543,6 +14616,30 @@
           ],
           "formal_certificate_allowed": false,
           "registry_eligible": false,
+          "registry_promoted": false
+        },
+        "o2_dag_propagation": {
+          "task_id": "T-P4-036.4",
+          "status": "OPEN_INTERFACE_DRAFT__UNCOMPILED",
+          "source_artifact": {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\dhport_lib.jl",
+            "sha256": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936"
+          },
+          "interfaces": [
+            "RouteB.P3.DHLinkFiniteDAGEnclosure",
+            "RouteB.P3.DHChainFiniteGeometryEnclosure",
+            "RouteB.P3.DHChainFloat64EvaluatorEnclosure"
+          ],
+          "line_contract": {
+            "fk_frames": "31-44",
+            "mass_matrix": "46-61",
+            "potential": "63-70",
+            "arm_MCG": "73-100",
+            "exact_ddq": "102-110"
+          },
+          "mass_and_potential_reinvoke_fk_frames": true,
+          "central_fd_consumes_two_shifted_dag_copies": true,
+          "formal_certificate_allowed": false,
           "registry_promoted": false
         }
       }
@@ -38311,6 +38408,24 @@
       },
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T12:06:27.286384+00:00",
+      "kind": "routeb_o1_advisory_repair_review_recorded",
+      "node_id": "120deab092c243b6a43356e63c8b56f4",
+      "review_status": "ADVISORY_REPAIR_REQUIRED__UNCOMPILED",
+      "admission_status": "pending_pinned_lean_compile",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T12:07:20.005397+00:00",
+      "kind": "routeb_o2_dag_propagation_review_recorded",
+      "node_id": "0da99a7cef5e4f0b91c7cc06d9e7c010",
+      "review_status": "DAG_PROPAGATION_INTERFACE_DRAFT__UNCOMPILED_OPEN",
+      "admission_status": "pending_pinned_runtime_and_lean_receipt",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -41967,5 +42082,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "fc7dcb448c2a4be6c2243ff103fffabc3f61e5a7a0fafa32e2754597dcc2f4a4"
+  "state_checksum": "0328d1d0bbb4e05109d21154feb2eee774bd2306ce039c8a7500c90d6296246b"
 }

@@ -827,3 +827,15 @@ O1 已拆为 O1.1 eliminate-D-velocity、O1.2 explicit-left-inverse、O1.3
 port-product assembly、O1.4 true-DH block extraction。前 3 层仍是
 `INTERFACE_DRAFT__UNCOMPILED`，第 4 层保持 `OPEN`；`Matrix.mulVec` 的列向量
 方向、`(B×D)(D×D)(D×B)` 维度和 leading minus 均保留在接口，不自动注册。
+
+### 2026-09-07 — 梁智炜：收割 O1 repair 与 O2.4 DAG review
+
+O1 advisory repair 已记录：Lean agent 需要显式 `Mathlib.Tactic.Linarith`，并在
+`hB_left` 中采用右结合乘积或加入 `Matrix.mul_assoc`；显式左逆保持为
+`M_DD_inv * M_DD = 1`。该建议只进入 O1 repair contract，未声称编译。
+
+O2.4 已记录 D1/D2/D3 三层 finite-DAG interface，并冻结 deployed source line
+contract：`fk_frames=31-44`、`mass_matrix=46-61`、`potential=63-70`、
+`arm_MCG=73-100`、`exact_ddq=102-110`。特别保留源码中 `mass_matrix` 与
+`potential` 分别重调用 `fk_frames` 的 runtime 事实；中心差分必须复制两侧
+shifted DAG。state rev 494，O2 仍 open，registry=0，formal gate 仍关闭。

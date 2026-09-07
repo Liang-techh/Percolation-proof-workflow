@@ -404,3 +404,10 @@ formation, argument range reduction, libm `sin/cos` enclosure, and finite DH
 propagation. Their intended interface layers are A exact-real, B machine-argument
 binding, C libm, and D finite-DAG composition; a Taylor or exact-real leaf never
 implies a deployed Float64/libm result.
+
+The O0 regularizer bridge is implemented in
+`src/percolation_workflow/routeb_regularizer_semantics.py` and documented in
+`docs/routeb-p4-o0-regularizer-semantics-bridge.md`. It accepts only explicit
+integer/`Fraction` inputs, exposes conditional diagonal/block inclusion, and
+keeps inverse/port propagation pending until an exact-real resolvent premise
+and matching source key are supplied.
