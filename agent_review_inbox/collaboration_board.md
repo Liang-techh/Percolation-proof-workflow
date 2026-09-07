@@ -983,3 +983,12 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   `Matrix.nonsing_inv_mul` 可由同一 `M_DD45.det ≠ 0` 得 canonical inverse。
   若 candidate 保留独立 `M_DD_inv`，必须补
   `M_DD_inv = (M_DD45 M)⁻¹`；已写入 state rev 505，O1 仍 open。
+- force-scale 子定理收到 fresh pinned receipt：`forceScaleKc_eq_rhoKc`
+  已进入 `COMPILED_CANDIDATE_SOURCE_COMPARATOR_PENDING`（state rev 507）。
+  candidate/source hash、Lean 4.33.1、Mathlib pin、compile/theorem-check exit 0
+  和标准 axiom 集合均已记录；source comparator、deployed `tau` binding、
+  Float64 semantics 仍 open，不能进入 registry。
+- O0 最新 exact-bounds review 将 obstruction 精确拆成三个独立缺口：
+  authoritative exact `K`、`Br` 范数上界、`Cf` 范数上界；zero-shift 只说明
+  两侧块差为零，不说明块大小。已由
+  `record_routeb_o0_exact_bounds_obstruction.py` 接入 state rev 508。

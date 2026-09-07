@@ -305,11 +305,46 @@ Therefore it cannot discharge T-P4-036.1 or `.3`, cannot close D1/D2/D3 in
 must add a separately evidenced machine-argument/libm enclosure before this
 row can feed a deployed finite-DAG propagation.
 
+## Fresh minimal Lean compile receipt
+
+The following standalone exact-real sidecar was compiled after adding only the
+required `noncomputable section` for `Real.pi`:
+
+```text
+source:
+  artifacts/routeb_fd8_tensor_christoffel_enclosure_20260906/mathlib/
+  DownstreamTest/Theta2ExactRealApi.lean
+source_sha256:
+  F47E94BEB7F2A9B5B949C3CFB3E352C95CB38149C8A1812A7AF4E47CD5D7961B
+olean:
+  artifacts/routeb_fd8_tensor_christoffel_enclosure_20260906/mathlib/
+  DownstreamTest/Theta2ExactRealApi.olean
+olean_sha256:
+  9D3153AC10F26B05D06CB4AD64D7BF0FF03CD83234CB94DFDC11750CCCB80F54
+toolchain:
+  leanprover/lean4:v4.33.1
+Lean:
+  Lean (version 4.33.1, x86_64-w64-windows-gnu,
+  commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+command:
+  lake env lean -o DownstreamTest\Theta2ExactRealApi.olean
+    DownstreamTest\Theta2ExactRealApi.lean
+exit_code: 0
+stdout_stderr: empty
+```
+
+The compiled declarations are exactly `theta2_sin`, `theta2_cos`,
+`sin_linear_remainder`, `cos_quadratic_lower`, and `cos_global_upper`. An
+initial attempt from outside the pinned Mathlib root was rejected before
+elaboration with the precise path error “input file ... must be contained in
+root directory”; it was not an API failure. The successful receipt above uses
+the same source inside `DownstreamTest` and is the authoritative one.
+
 ## Review status
 
 ```text
 mathematical_scope: one exact-real theta row
-proof_draft: present, uncompiled
+proof_draft: minimal API sidecar compiled
 Float64_binding: OPEN
 libm_binding: OPEN
 D1_D2_D3: OPEN

@@ -1603,6 +1603,27 @@ polynomial remains a separate frontier.
   State records the adapter as conditionally compiled but open until the
   `(mu,q)`, block projection, and inverse-definition bindings are supplied.
 
+### New harvest: force-scale pinned compile receipt (2026-09-07)
+
+- receipt: `examples/routeb_b45_5_residual_decomposition_lean/COMPILE_RECEIPT_forceScaleKc_20260907.md`
+- coordinator intake: `scripts/record_routeb_force_scale_compile_receipt.py`.
+  `forceScaleKc_eq_rhoKc` is now recorded as
+  `COMPILED_CANDIDATE_SOURCE_COMPARATOR_PENDING` with fresh Lean/Mathlib pin,
+  compile exit 0, theorem-check exit 0, and standard axioms only.
+- source binding, statement comparator, Float64/deployed-`tau` semantics and
+  registry promotion remain explicitly open.
+
+### New harvest: O0 exact K/Br/Cf obstruction (2026-09-07)
+
+- review: `review-T-P4-033-O0-R1-R2-same-key-K-Br-Cf-obstruction-codex-20260907.md`
+- the remaining O0 reduction inputs are independently absent: exact-real
+  authoritative `K`, exact `Br = ||M_BD,r||` upper bound, and exact
+  `Cf = ||DeltaM_DB,f||` upper bound. Existing zero-shift facts do not provide
+  either norm magnitude, and artifact hashes do not prove same-key binding.
+- coordinator intake: `scripts/record_routeb_o0_exact_bounds_obstruction.py`;
+  state remains fail-closed and the next useful task is to produce this exact
+  keyed tuple, not to recompute candidate roots.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it
