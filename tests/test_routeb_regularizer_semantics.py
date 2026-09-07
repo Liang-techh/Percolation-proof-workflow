@@ -11,6 +11,7 @@ from percolation_workflow.routeb_regularizer_semantics import (
     convert_routeb_infinity_port_bound_to_weighted_l2,
     convert_routeb_port_bound_to_weighted_metric,
     consume_routeb_schur_margin,
+    consume_routeb_strict_schur_margin,
     derive_routeb_root_witness,
     derive_routeb_zero_shift_weighted_perturbation,
     derive_routeb_general_resolvent_port_propagation,
@@ -238,6 +239,19 @@ def test_schur_margin_consumer_rejects_unproven_numeric_bounds_by_default() -> N
     assert result.margin_consumed is False
     assert "baseline_port_bound_not_authoritatively_supplied" in result.errors
     assert "weighted_port_perturbation_not_authoritatively_supplied" in result.errors
+
+
+def test_strict_schur_margin_consumer_rejects_zero_leftover() -> None:
+    result = consume_routeb_strict_schur_margin(
+        Fraction(1), Fraction(1), Fraction(1), Fraction(6),
+        source_key="ledger", margin_source_key="ledger",
+        baseline_bound_proven=True, perturbation_bound_proven=True,
+    )
+
+    assert result.status == "OPEN_SCHUR_MARGIN_NOT_STRICT"
+    assert result.remaining_margin == 0
+    assert result.margin_consumed is False
+    assert "strict_remaining_schur_margin_not_positive" in result.errors
 
 
 def test_root_witness_keeps_squared_candidate_distinct_from_root() -> None:

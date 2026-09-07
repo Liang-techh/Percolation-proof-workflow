@@ -927,6 +927,7 @@ def consume_routeb_schur_margin(
     margin_source_key: str | None,
     baseline_bound_proven: bool = False,
     perturbation_bound_proven: bool = False,
+    require_strict_remaining: bool = False,
 ) -> RouteBSchurMarginConsumption:
     """Consume the exact Young charge caused by a weighted port perturbation.
 
@@ -1001,6 +1002,18 @@ def consume_routeb_schur_margin(
             source_key=source_key,
             errors=("young_charge_exceeds_remaining_schur_margin",),
         )
+    if require_strict_remaining and leftover == 0:
+        return RouteBSchurMarginConsumption(
+            status="OPEN_SCHUR_MARGIN_NOT_STRICT",
+            rho_baseline=rho,
+            epsilon_port=epsilon,
+            rho_rounded=rho_rounded,
+            theta=theta_value,
+            added_young_charge=charge,
+            remaining_margin=leftover,
+            source_key=source_key,
+            errors=("strict_remaining_schur_margin_not_positive",),
+        )
     return RouteBSchurMarginConsumption(
         status="CONDITIONAL_SCHUR_MARGIN_CONSUMED",
         rho_baseline=rho,
@@ -1012,6 +1025,31 @@ def consume_routeb_schur_margin(
         source_key=source_key,
         errors=(),
         margin_consumed=True,
+    )
+
+
+def consume_routeb_strict_schur_margin(
+    rho_baseline: Fraction | int | None,
+    epsilon_port: Fraction | int | None,
+    theta: Fraction | int | None,
+    remaining_schur_margin: Fraction | int | None,
+    *,
+    source_key: str | None,
+    margin_source_key: str | None,
+    baseline_bound_proven: bool = False,
+    perturbation_bound_proven: bool = False,
+) -> RouteBSchurMarginConsumption:
+    """Consume a Schur budget only when its leftover is strictly positive."""
+    return consume_routeb_schur_margin(
+        rho_baseline,
+        epsilon_port,
+        theta,
+        remaining_schur_margin,
+        source_key=source_key,
+        margin_source_key=margin_source_key,
+        baseline_bound_proven=baseline_bound_proven,
+        perturbation_bound_proven=perturbation_bound_proven,
+        require_strict_remaining=True,
     )
 
 

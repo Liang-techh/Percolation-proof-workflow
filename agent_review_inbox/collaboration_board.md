@@ -1175,3 +1175,11 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - O0-R3 仍因缺少同键 weighted baseline `rho_r`、正剩余 margin `m_r`、固定
   `theta` 和严格正 leftover 而 fail-closed；不能使用未绑定的 `rho_F²` 或旧
   ledger margin。该 obstruction 已写入 state，Schur margin 仍未消费。
+
+### 2026-09-07 — 梁智炜：strict Schur consumer API hardening
+
+- 新增 `consume_routeb_strict_schur_margin`，并让底层 helper 支持显式
+  `require_strict_remaining`；`leftover=0` 现在在 strict 路径返回
+  `OPEN_SCHUR_MARGIN_NOT_STRICT`，不会被误报为物理闭合。
+- 保留旧 helper 的非严格算术记账行为以兼容历史调用；物理/finite-horizon
+  admission 必须走 strict wrapper。聚焦 regularizer tests 已为 `28 passed`。

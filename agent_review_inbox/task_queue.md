@@ -1834,3 +1834,10 @@ after integration; corrections should be a new result file.
   `theta` 和严格 `leftover > 0`。
 - 下一步优先寻找真实 baseline receipt 或给出精确 obstruction；禁止消费
   未绑定的 `rho_F²`、旧 Float64 ledger 或未证明的 candidate margin。
+
+### Workflow hardening — strict Schur leftover (2026-09-07)
+
+- 物理/finite-horizon consumer 必须调用 `consume_routeb_strict_schur_margin`；
+  `leftover=0` 会返回 `OPEN_SCHUR_MARGIN_NOT_STRICT`。
+- legacy `consume_routeb_schur_margin` 保留用于非严格算术记账，不得作为最终
+  admission 的充分条件。新增聚焦测试后为 `28 passed`。
