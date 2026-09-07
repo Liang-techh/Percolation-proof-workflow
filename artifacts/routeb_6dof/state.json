@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 631,
+  "revision": 632,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -37557,7 +37557,8 @@
       "status": "open",
       "proof_sketch": "Derive the sixth DH body directly, reify all 610 tagged rational rows, isolate the 23-row sixth column, and prove endpoint/center/Gram/Fourier seams before connecting to the legacy evaluator.",
       "dependencies": [
-        "9c970ea58ffe47c4a81d0e9008642392"
+        "9c970ea58ffe47c4a81d0e9008642392",
+        "916c6109fe624ad3a9a3b3caef40271d"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -38425,6 +38426,90 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_fixed_lambda_fold\\NEW_FIXED_LAMBDA_ADMISSIBILITY_CANONICAL_DIGEST_COMPOSITION20260907_REVIEW.md",
             "sha256": "66A66EB1A5D474365B298E01FA5329B105FB166F960587CF3DB645E206E28C09"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "916c6109fe624ad3a9a3b3caef40271d": {
+      "id": "916c6109fe624ad3a9a3b3caef40271d",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.velocity_offset_and_tail_origins",
+      "statement": "The body-6 source velocity columns admit an exact COM-offset decomposition, and the two tail origins satisfy the pinned parent-frame identities needed for the front Gram block.",
+      "parent_id": "d5f2996878744cf9aa2c9f355c4243bb",
+      "status": "open",
+      "proof_sketch": "Keep all six joints active, use prevOrigin and source bodyJv semantics, prove c6=o5+(7/200)z5 and the two single-step origin relations, and retain the first-three lever arms as explicit targets.",
+      "dependencies": [
+        "b199cd15592044bb96fe1b8f335fa092"
+      ],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "source_semantics",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_BODY6_VELOCITY_OFFSET",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_VGRAM_Core20260907.lean",
+            "sha256": "CAB1F65F759215ABE1F79C33226E9F3C14FD610A84DAC69B1E2A054A5731C9B3"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_VGRAM_Source20260907.lean",
+            "sha256": "8DF1F68077D7651238295791D7AC56208E6D9A122CA3F3E9719D76AF37B229F6"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_VGRAM_20260907_REVIEW.md",
+            "sha256": "19CCE977D3240599766BB7DF85408F8D267804A0D257150A666458DECFDE39DC"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "b199cd15592044bb96fe1b8f335fa092": {
+      "id": "b199cd15592044bb96fe1b8f335fa092",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.velocity_offset_and_tail_origins.front_tail_gram",
+      "statement": "The zero-based body-6 front-tail indices 3,4 have exact velocity Gram values h² sin²(q4), h² and zero cross term, yielding the corresponding source mass 2×2 block.",
+      "parent_id": "916c6109fe624ad3a9a3b3caef40271d",
+      "status": "open",
+      "proof_sketch": "Use the source axis dot identities, shared COM-offset decomposition and mass=3/20 velocity Gram + 1/60 angular Gram; preserve the nonzero v4 fact and do not infer the result from the v5=0 column.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "source_semantics",
+        "math_lane": "source_semantics",
+        "math_bottleneck": "source_semantics",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_BODY6_FRONT_TAIL_GRAM",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_VGRAM_Tail20260907.lean",
+            "sha256": "1D54D6721C36C9689BF81EC08BA0914EB7B4EB7E0A58C83647F20E9800FB8C6F"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_VGRAM_Consumer20260907.lean",
+            "sha256": "72C1B3F28529C966560A894B5F0C99CF0FA8CF6602A721F69047AE2FDE2F7B53"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_VGRAM_check20260907.py",
+            "sha256": "010146D5C10C3AA1D7438E9BA00734A243773AA987CC16B2A2EDF504A95EB80F"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY6_SLICE_VGRAM_20260907_REVIEW.md",
+            "sha256": "19CCE977D3240599766BB7DF85408F8D267804A0D257150A666458DECFDE39DC"
           }
         ],
         "registry_eligible": false,
@@ -65005,6 +65090,31 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T18:14:35.864452+00:00",
+      "kind": "node_added",
+      "node_id": "916c6109fe624ad3a9a3b3caef40271d",
+      "parent_id": "d5f2996878744cf9aa2c9f355c4243bb",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.velocity_offset_and_tail_origins"
+    },
+    {
+      "at": "2026-09-07T18:14:35.866222+00:00",
+      "kind": "node_added",
+      "node_id": "b199cd15592044bb96fe1b8f335fa092",
+      "parent_id": "916c6109fe624ad3a9a3b3caef40271d",
+      "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.velocity_offset_and_tail_origins.front_tail_gram"
+    },
+    {
+      "at": "2026-09-07T18:14:35.869346+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.velocity_offset_and_tail_origins",
+        "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.velocity_offset_and_tail_origins.front_tail_gram"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -68661,5 +68771,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "344ca30468bb4e5b8eaed636d19c16f4120e89cad24aa37ce6417795e5e6c2ec"
+  "state_checksum": "35ed925264b341baa6f908f94df012bb614b94ff73cd760f1719c538e0f56baa"
 }
