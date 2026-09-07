@@ -2196,15 +2196,29 @@ registry, and shared adapters remain coordinator-owned.
 
 | agent lane | assigned bottleneck | write scope | acceptance boundary |
 |---|---|---|---|
-| Planck the 6th | body-4 Gram algebra repair | `examples/routeb_o1_body4_source_gram_proof_attempt/NEW_REPAIR_*.lean` + review | proof skeleton only until remote Lean receipt |
-| Averroes the 6th | body-5 G3/G4 Gram and trace fold | `examples/routeb_b45_source_comparator_lean/NEW_BODY5_*.lean` + review | preserve q3 support and source premises |
-| Volta the 6th | P5 feasible-cone/SPN lemma/checker refinement | `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_*` + review | no invented `K_path`, source, coverage, or Lean claim |
-| Einstein the 6th | H_acc source-refinement intake | `examples/routeb_o0_h_acc_source_refinement/NEW_*` + review | missing Julia export remains pending |
+| Sartre the 6th | body-4 source Jacobian bridge (`Jv/Jw`) | `examples/routeb_o1_body4_source_gram_proof_attempt/NEW_SOURCE_JACOBIAN_*.lean` + review | geometry skeleton only until remote Lean receipt; no source binding inferred |
+| Poincare the 6th | body-5 Lean API repair (`Perm`/`Finset`/q3 row code) | `examples/routeb_b45_source_comparator_lean/NEW_BODY5_API_REPAIR_*.lean` + review | API repair only; preserve q3 support and source premises |
+| Godel the 6th | H_acc source seam (translation/rotation/`M +=`) | `examples/routeb_o0_h_acc_source_refinement/NEW_SEAM_*` + review | source-location/protocol seam only; runtime export remains pending |
+| James the 6th | P5 cone index and 36→18 representative map | `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_CONE_INDEX_*` + review | preserve representative/sign/quadrant witnesses; no coverage or `K_path` claim |
 
 Harvest rule: collect completed sidecars roughly every 20 minutes, integrate
 fail-closed metadata, refresh the advisory overlay, and synchronize one batch
 to GitHub in that window. Between harvests continue local mathematical work;
 do not fetch/push merely because an agent has emitted an intermediate file.
+
+### Next disjoint mathematical frontier (queue after current round)
+
+These are queued in dependency order for the next available GitHub-agent
+slots.  They are deliberately disjoint from Sartre/Poincare/Godel/James and
+must remain mathematical or typed-interface work until the corresponding
+source/Lean receipts exist.
+
+| queued bottleneck | target | acceptance boundary |
+|---|---|---|
+| `T-P4-033-O1-body6-slice` | derive an independently emitted human body-6 Fourier slice and its `sourceBodyMass q 5` seam | the existing 610-row aggregate-shaped bucket is a negative control; no `h_body_6`, coverage, or registry claim |
+| `T-P4-fixed-lambda-admissibility` | formalize the exact two-row `lambda=2`, `theta=1` admissibility and margin consumer | declared-ledger theorem only; no source/coverage or parent closure |
+| `T-P5-026-Kpath-interface` | derive the minimal componentwise nonnegative `K_path` comparison interface consumed by the six-cone/SPN proof | do not invent or numerically substitute `K_path`; source binding and P8 remain open |
+| `T-P3-central-FD-hull` | formalize the exact central-FD-to-derivative-hull algebraic bridge and its remainder contract | source-independent typed bridge only; no deployed Float64, interval coverage, or admission |
 
 ### Harvested P5-026/P5-027 (2026-09-07)
 
