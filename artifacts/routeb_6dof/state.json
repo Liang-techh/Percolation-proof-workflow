@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 555,
+  "revision": 556,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -16137,12 +16137,33 @@
             "schur_margin_consumed": false,
             "registry_promoted": false,
             "formal_certificate_allowed": false
+          },
+          {
+            "status": "CONDITIONAL_EXACT_SAME_KEY_BASELINE_DERIVATION",
+            "receipt_path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\routeb_6dof\\o0_physical_baseline_derivation_20260907.json",
+            "receipt_sha256": "D4A8332A3D42B5A4004708CF5C2E3AFF0DF5ED7F884DA35D3CFF0D65B8F08A3C",
+            "checker_path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\routeb_6dof\\o0_physical_baseline_derivation_20260907.check.json",
+            "checker_sha256": "186E29AB7600D9114DA617EDDC5EC71586488FCEBE5DE2AE1CD13E38F1153918",
+            "checker_status": "PASS_CONDITIONAL_FAIL_CLOSED",
+            "review_sha256": "070B41EBC4C578975458D63A5CCEA5EB2CD3C273598A4631C34B84377A73280B",
+            "L_base": "120442959/280443400",
+            "mass_lower": "40147653/800000000",
+            "metric_upper": "1402217/12000000",
+            "baseline_bound_proven": false,
+            "physical_energy_identity_proven": false,
+            "physical_residual_binding_proven": false,
+            "schur_margin_consumed": false,
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
           }
         ],
         "o0_physical_baseline_derivation": {
           "status": "CONDITIONAL_EXACT_SAME_KEY_BASELINE_DERIVATION",
           "receipt_path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\routeb_6dof\\o0_physical_baseline_derivation_20260907.json",
           "receipt_sha256": "D4A8332A3D42B5A4004708CF5C2E3AFF0DF5ED7F884DA35D3CFF0D65B8F08A3C",
+          "checker_path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\routeb_6dof\\o0_physical_baseline_derivation_20260907.check.json",
+          "checker_sha256": "186E29AB7600D9114DA617EDDC5EC71586488FCEBE5DE2AE1CD13E38F1153918",
+          "checker_status": "PASS_CONDITIONAL_FAIL_CLOSED",
           "review_sha256": "070B41EBC4C578975458D63A5CCEA5EB2CD3C273598A4631C34B84377A73280B",
           "L_base": "120442959/280443400",
           "mass_lower": "40147653/800000000",
@@ -17667,6 +17688,9 @@
           "status": "CONDITIONAL_EXACT_SAME_KEY_BASELINE_DERIVATION",
           "receipt_path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\routeb_6dof\\o0_physical_baseline_derivation_20260907.json",
           "receipt_sha256": "D4A8332A3D42B5A4004708CF5C2E3AFF0DF5ED7F884DA35D3CFF0D65B8F08A3C",
+          "checker_path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\artifacts\\routeb_6dof\\o0_physical_baseline_derivation_20260907.check.json",
+          "checker_sha256": "186E29AB7600D9114DA617EDDC5EC71586488FCEBE5DE2AE1CD13E38F1153918",
+          "checker_status": "PASS_CONDITIONAL_FAIL_CLOSED",
           "review_sha256": "070B41EBC4C578975458D63A5CCEA5EB2CD3C273598A4631C34B84377A73280B",
           "L_base": "120442959/280443400",
           "mass_lower": "40147653/800000000",
@@ -42182,6 +42206,18 @@
       "schur_margin_consumed": false,
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T15:23:03.343916+00:00",
+      "kind": "routeb_o0_physical_baseline_derivation",
+      "status": "CONDITIONAL_EXACT_SAME_KEY_BASELINE_DERIVATION",
+      "baseline_leaf_id": "35bcd3816acb4b2cadb9a64843839204",
+      "L_base": "120442959/280443400",
+      "baseline_bound_proven": false,
+      "physical_energy_identity_proven": false,
+      "schur_margin_consumed": false,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -45838,5 +45874,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "aae4cf76d570f105124bb6d21594c28b53c223769b04b3303d39aabef017230d"
+  "state_checksum": "677e52f09b1540b19a2bc550c7cefa6b31c3f54086aea5ba08d18c65d5f37cb0"
 }

@@ -7,7 +7,9 @@ separate from the Lean verified-theorem registry.
 """
 from __future__ import annotations
 
+import hashlib
 from fractions import Fraction
+from pathlib import Path
 from typing import Any, Mapping
 
 
@@ -34,6 +36,11 @@ ACCEPTED_INTERVAL_MEMBERSHIP_STATUSES = frozenset({
     "PROVEN",
     "SOURCE_INTERVAL_MEMBERSHIP_PROVEN",
 })
+EXTERNAL_PREMISES_SCHEMA = "routeb-theta2-external-premises-v1"
+EXTERNAL_PREMISES_CLAIM_BOUNDARY = (
+    "source-bound receipt references only; no dynamics theorem, "
+    "Float64/libm claim, or CoverageJoin2 proof"
+)
 
 
 class CoverageReceiptError(ValueError):
@@ -67,6 +74,173 @@ def _canonical_triple_id(node: Mapping[str, Any], field: str) -> str:
     if not isinstance(value, str) or not value:
         raise CoverageReceiptError(f"{field} must be a nonempty string")
     return value
+
+
+def _external_receipt_path(value: Any, field: str, base_dir: Path | None) -> Path:
+    if not isinstance(value, str) or not value.strip():
+        raise CoverageReceiptError(f"{field} must be a nonempty file path")
+    path = Path(value)
+    if not path.is_absolute():
+        path = (base_dir or Path.cwd()) / path
+    try:
+        path = path.resolve()
+    except OSError as exc:
+        raise CoverageReceiptError(f"{field} cannot be resolved") from exc
+    if not path.is_file():
+        raise CoverageReceiptError(f"{field} does not identify an existing file")
+    return path
+
+
+def _external_only_keys(document: Mapping[str, Any], allowed: set[str], field: str) -> None:
+    unknown = set(document) - allowed
+    if unknown:
+        names = ", ".join(sorted(str(name) for name in unknown))
+        raise CoverageReceiptError(f"{field} contains unknown fields: {names}")
+
+
+def _bound_external_receipt(
+    document: Mapping[str, Any],
+    *,
+    path_field: str,
+    hash_field: str,
+    base_dir: Path | None,
+) -> dict[str, str]:
+    path = _external_receipt_path(document.get(path_field), path_field, base_dir)
+    expected = _sha256(document.get(hash_field), hash_field).lower()
+    actual = hashlib.sha256(path.read_bytes()).hexdigest()
+    if actual != expected:
+        raise CoverageReceiptError(
+            f"{hash_field} does not match file content at {path_field}"
+        )
+    return {"path": str(path), "sha256": expected}
+
+
+def validate_theta2_external_premises(
+    document: Mapping[str, Any],
+    *,
+    base_dir: Path | str | None = None,
+    canonical_triple: Mapping[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Validate source-bound O2 premise references without proving them.
+
+    The three referenced files must exist and match their declared SHA-256:
+    the canonical triple receipt, the source interval-membership receipt, and
+    the ``CoverageJoin2`` premise receipt.  If ``canonical_triple`` is
+    supplied, its structural validator is run and its three IDs must agree
+    with ``triple_ref``.  Neither mode turns receipt metadata into a dynamics
+    theorem or a Lean ``CoverageJoin2`` proof; those remain explicit inputs to
+    the typed Lean adapter.
+    """
+    if not isinstance(document, Mapping):
+        raise CoverageReceiptError("external premises receipt must be an object")
+    if document.get("schema") != EXTERNAL_PREMISES_SCHEMA:
+        raise CoverageReceiptError(
+            f"unsupported external premises schema: {document.get('schema')!r}"
+        )
+    if document.get("claim_boundary") != EXTERNAL_PREMISES_CLAIM_BOUNDARY:
+        raise CoverageReceiptError("external premises claim_boundary is not fail-closed")
+    _external_only_keys(
+        document,
+        {"schema", "claim_boundary", "namespace", "triple_ref",
+         "source_interval_membership", "coverage_join"},
+        "external premises",
+    )
+
+    namespace = document.get("namespace")
+    if not isinstance(namespace, Mapping) or namespace.get("name") != "theta2":
+        raise CoverageReceiptError("external premises namespace must identify theta2")
+    _external_only_keys(namespace, {"name", "anchor"}, "namespace")
+    anchor = namespace.get("anchor")
+    if (not isinstance(anchor, Mapping) or anchor.get("coordinate") != "q2"
+            or anchor.get("lo") != "-3/20" or anchor.get("hi") != "3/20"):
+        raise CoverageReceiptError("external premises namespace anchor is not q2=[-3/20,3/20]")
+    if isinstance(anchor, Mapping):
+        _external_only_keys(anchor, {"coordinate", "lo", "hi"}, "namespace.anchor")
+
+    triple_ref = document.get("triple_ref")
+    if not isinstance(triple_ref, Mapping):
+        raise CoverageReceiptError("triple_ref is missing")
+    _external_only_keys(
+        triple_ref,
+        {"parent_id", "child_id", "sibling_id", "triple_receipt_path", "triple_receipt_sha256"},
+        "triple_ref",
+    )
+    ids = {
+        field: _canonical_triple_id(triple_ref, field)
+        for field in ("parent_id", "child_id", "sibling_id")
+    }
+    if len(set(ids.values())) != 3:
+        raise CoverageReceiptError("triple_ref parent/child/sibling ids must be distinct")
+    root = Path(base_dir).resolve() if base_dir is not None else None
+    triple_receipt = _bound_external_receipt(
+        triple_ref,
+        path_field="triple_receipt_path",
+        hash_field="triple_receipt_sha256",
+        base_dir=root,
+    )
+
+    membership = document.get("source_interval_membership")
+    if not isinstance(membership, Mapping):
+        raise CoverageReceiptError("source_interval_membership is missing")
+    _external_only_keys(membership, {"status", "receipt_path", "receipt_sha256"},
+                         "source_interval_membership")
+    status = membership.get("status")
+    if status not in ACCEPTED_INTERVAL_MEMBERSHIP_STATUSES:
+        raise CoverageReceiptError("source interval membership status is not accepted")
+    membership_receipt = _bound_external_receipt(
+        membership,
+        path_field="receipt_path",
+        hash_field="receipt_sha256",
+        base_dir=root,
+    )
+
+    coverage_join = document.get("coverage_join")
+    if not isinstance(coverage_join, Mapping) or coverage_join.get("kind") != "CoverageJoin2":
+        raise CoverageReceiptError("coverage_join must identify CoverageJoin2")
+    _external_only_keys(
+        coverage_join,
+        {"kind", "premise_receipt_path", "premise_receipt_sha256"},
+        "coverage_join",
+    )
+    coverage_receipt = _bound_external_receipt(
+        coverage_join,
+        path_field="premise_receipt_path",
+        hash_field="premise_receipt_sha256",
+        base_dir=root,
+    )
+
+    structural = None
+    if canonical_triple is not None:
+        structural = validate_canonical_coverage_triple(canonical_triple)
+        expected_ids = {
+            "parent_id": structural["parent_id"],
+            "child_id": structural["child_id"],
+            "sibling_id": structural["sibling_id"],
+        }
+        if any(ids[field] != value for field, value in expected_ids.items()):
+            raise CoverageReceiptError("triple_ref ids do not match canonical triple")
+
+    return {
+        "schema": EXTERNAL_PREMISES_SCHEMA,
+        "namespace": "theta2",
+        "triple_ref": {**ids, "receipt": triple_receipt},
+        "source_interval_membership": {
+            "status": status,
+            "receipt": membership_receipt,
+        },
+        "coverage_join": {
+            "kind": "CoverageJoin2",
+            "premise_receipt": coverage_receipt,
+        },
+        "canonical_triple_structurally_validated": structural is not None,
+        "source_interval_membership_receipt_bound": True,
+        "coverage_join_premise_receipt_bound": True,
+        "structural_receipt_is_not_proof": True,
+        "dynamics_interval_membership_proven": False,
+        "coverage_join_theorem_proven": False,
+        "formal_certificate_allowed": False,
+        "registry_promoted": False,
+    }
 
 
 def validate_canonical_coverage_triple(document: Mapping[str, Any]) -> dict[str, Any]:
@@ -438,6 +612,8 @@ __all__ = [
     "CoverageReceiptError",
     "SCHEMA",
     "CANONICAL_TRIPLE_SCHEMA",
+    "EXTERNAL_PREMISES_SCHEMA",
     "validate_coverage_receipt",
     "validate_canonical_coverage_triple",
+    "validate_theta2_external_premises",
 ]

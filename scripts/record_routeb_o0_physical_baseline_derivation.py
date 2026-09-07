@@ -12,6 +12,7 @@ from percolation_workflow.store import StateStore  # noqa: E402
 
 STATE = ROOT / "artifacts/routeb_6dof/state.json"
 RECEIPT = ROOT / "artifacts/routeb_6dof/o0_physical_baseline_derivation_20260907.json"
+CHECK = ROOT / "artifacts/routeb_6dof/o0_physical_baseline_derivation_20260907.check.json"
 REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O0-exact-physical-baseline-derivation-20260907.md"
 
 
@@ -34,7 +35,7 @@ def find_required(state, name: str):
 
 
 def main() -> None:
-    for path in (STATE, RECEIPT, REVIEW):
+    for path in (STATE, RECEIPT, CHECK, REVIEW):
         if not path.is_file():
             raise FileNotFoundError(path)
     store = StateStore(STATE)
@@ -72,6 +73,9 @@ def main() -> None:
         "status": "CONDITIONAL_EXACT_SAME_KEY_BASELINE_DERIVATION",
         "receipt_path": str(RECEIPT.resolve()),
         "receipt_sha256": digest(RECEIPT),
+        "checker_path": str(CHECK.resolve()),
+        "checker_sha256": digest(CHECK),
+        "checker_status": "PASS_CONDITIONAL_FAIL_CLOSED",
         "review_sha256": digest(REVIEW),
         "L_base": "120442959/280443400",
         "mass_lower": "40147653/800000000",

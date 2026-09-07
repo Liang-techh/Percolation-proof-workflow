@@ -1371,3 +1371,7 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   physical energy identity 和 residual interface。
 - 该 child 只提供 conditional scalar derivation，不消费 Schur margin，不关闭
   parent，也不进入 registry。
+- 独立 checker 已重算 `L_base` 并生成
+  `o0_physical_baseline_derivation_20260907.check.json`；结果为
+  `PASS_CONDITIONAL_FAIL_CLOSED`，明确 baseline theorem 与 Schur consumption
+  仍为 false。
