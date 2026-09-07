@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 696,
+  "revision": 697,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -41824,7 +41824,9 @@
       "parent_id": "c46cf783c2a44426a891e50f63064cee",
       "status": "open",
       "proof_sketch": "Convert the existing ResidualAllowance into CapEvidence, absorb a nonnegative residualScale into the effective gain, construct SchurPMIComparison and MarginAllocation, and retain exact missing-qCap and negative-scale witnesses without asserting source identity or PSD.",
-      "dependencies": [],
+      "dependencies": [
+        "0b1c1a3b979b4fe38331b9aa5a8962f8"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -41946,6 +41948,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p3_central_fd_hull\\NEW_CENTRAL_FD_HULL_DERIVATIVE_ENDPOINT_REVIEW.md",
             "sha256": "E0F0B646E5F6B65178F64DFF04543EB094213F075DF8F4FE45600B0B3A78B0F5"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "0b1c1a3b979b4fe38331b9aa5a8962f8": {
+      "id": "0b1c1a3b979b4fe38331b9aa5a8962f8",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition",
+      "statement": "BODY6 front-quadratic scaling and residual-scalar scaling compose only as distinct same-domain factors with separate nonnegative and normalization evidence; neither scale may be silently reused at the other multiplication site.",
+      "parent_id": "748ca7b5809948c28313422855e763e4",
+      "status": "open",
+      "proof_sketch": "Use distinct FrontQuadraticScale and ResidualScalarScale wrappers, feed alpha into the quadratic lower-bound adapter and g*beta into residual comparison, preserve qCap/target allocation, and retain negative-scale and alpha-versus-beta identification counterexamples.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "normalization",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_P4_DUAL_SCALE_COMPOSITION",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_DualScaleComposition.lean",
+            "sha256": "4ED592F888CD705ED23A93DA924F492AB8ABB79FCF8A05E5B9910D2D9EC1F944"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_DualScaleComposition.review.md",
+            "sha256": "98610227213B8B09AFC1D1B463BF0E1CE9B7E61C62B0755CF2F0B799A7EBBC2D"
           }
         ],
         "registry_eligible": false,
@@ -69919,6 +69956,23 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T20:25:47.184475+00:00",
+      "kind": "node_added",
+      "node_id": "0b1c1a3b979b4fe38331b9aa5a8962f8",
+      "parent_id": "748ca7b5809948c28313422855e763e4",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition"
+    },
+    {
+      "at": "2026-09-07T20:25:47.184494+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -73575,5 +73629,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "c5bb423a5d37ba4e8e0373462bc24219bd8fc859f1fd947c410da4cdb9fe8b75"
+  "state_checksum": "f3094018f695478e7b82d012e07e735cfd69e4c41c5e560e69045465c08aa1b5"
 }

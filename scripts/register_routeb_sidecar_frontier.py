@@ -1846,6 +1846,19 @@ CHILDREN = [
             "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_DERIVATIVE_ENDPOINT_REVIEW.md",
         ],
     },
+    {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget",
+        "statement": "BODY6 front-quadratic scaling and residual-scalar scaling compose only as distinct same-domain factors with separate nonnegative and normalization evidence; neither scale may be silently reused at the other multiplication site.",
+        "proof_sketch": "Use distinct FrontQuadraticScale and ResidualScalarScale wrappers, feed alpha into the quadratic lower-bound adapter and g*beta into residual comparison, preserve qCap/target allocation, and retain negative-scale and alpha-versus-beta identification counterexamples.",
+        "lane": "lean_adapter",
+        "bottleneck": "normalization",
+        "status": "OPEN_UNCOMPILED_P4_DUAL_SCALE_COMPOSITION",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_DualScaleComposition.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_DualScaleComposition.review.md",
+        ],
+    },
 ]
 
 
