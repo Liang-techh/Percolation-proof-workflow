@@ -109,7 +109,10 @@ def main() -> int:
             "links": 6,
             "rows": len(rows),
             "atoms": ["theta", "alpha"],
-            "input_box": "q_i in [-3/20, 3/20]",
+            "input_partition": {
+                "theta": "q_i in [-3/20, 3/20]",
+                "alpha": "singleton q=0 (fixed DH offset)",
+            },
             "endpoint_encoding": "integer numerator/denominator pairs",
         },
         "source_artifacts": [ref(REPORT), ref(SOURCE)],
@@ -133,11 +136,98 @@ def main() -> int:
         "registry_promoted": False,
     }
 
+    artifact_refs = [ref(REPORT), ref(SOURCE)]
+    binding = {
+        "schema_version": 1,
+        "task_id": "T-P4-036",
+        "target_node": "P4.true_dh_float64_evaluator_enclosure",
+        "status": "OPEN_P3_CONDITIONAL_INPUT_ONLY",
+        "input_contract": {
+            "metadata_key": "trig_chain_contract",
+            "contract_id": "routeb-p3-trig-dh-chain-contract/v1",
+            "required_status": audit["status"],
+            "artifact_hashes": [item["sha256"] for item in artifact_refs],
+        },
+        "leaves": [
+            {"id": "T-P4-036.1", "kind": "pi_over_two_and_angle_formation_rounding", "status": "OPEN"},
+            {"id": "T-P4-036.2", "kind": "argument_range_reduction", "status": "OPEN"},
+            {"id": "T-P4-036.3", "kind": "float64_libm_sin_cos_enclosure", "status": "OPEN"},
+            {"id": "T-P4-036.4", "kind": "finite_dh_operation_propagation", "status": "OPEN"},
+        ],
+        "composition_gate": {
+            "required_leaf_ids": [f"T-P4-036.{i}" for i in range(1, 5)],
+            "all_required": True,
+            "per_box_coverage_required": True,
+            "status": "OPEN",
+        },
+        "source_binding": {
+            "angle_formulas": {
+                "theta": "q[ii] + DH[ii,1]",
+                "alpha": "DH[ii,4]",
+            },
+            "theta_phase_k_by_link": [0, -1, 1, 0, 0, 0],
+            "alpha_phase_k_by_link": [-1, 0, 1, -1, 1, 0],
+            "open_obligation_counts": {
+                "angle_formation_inclusion": 12,
+                "range_reduction_inclusion": 12,
+                "libm_sin_cos_enclosure": 12,
+                "finite_link_dag_propagation": 6,
+            },
+            "interface_targets": [
+                "RouteB.P3.DHThetaPhaseContract",
+                "RouteB.P3.DHAlphaPhaseContract",
+                "RouteB.P3.ExactRealTrigRangeReductionLeaf",
+                "RouteB.P3.Float64AngleFormationInclusion",
+                "RouteB.P3.Float64LibmSinCosEnclosure",
+                "RouteB.P3.DHLinkFiniteDAGEnclosure",
+                "RouteB.P3.DHChainFloat64EvaluatorEnclosure",
+            ],
+        },
+        "interface_layers": [
+            {
+                "id": "A_exact_real_interval_range_reduction",
+                "status": "INTERFACE_DRAFT__UNCOMPILED",
+                "theorems": [
+                    "RouteB.P3.ExactRealTrigRangeReductionLeaf",
+                    "RouteB.P3.ExactSinCosCellSound",
+                ],
+                "uses_machine_float": False,
+            },
+            {
+                "id": "B_float64_argument_binding",
+                "status": "OPEN",
+                "theorems": ["RouteB.P3.Float64AngleFormationInclusion"],
+                "requires": ["runtime/source pin", "binary64 decode", "addition-rounding bound"],
+            },
+            {
+                "id": "C_libm_enclosure",
+                "status": "OPEN",
+                "theorems": ["RouteB.P3.Float64LibmSinCosEnclosure"],
+                "requires": ["pinned runtime/libm", "finite/non-NaN assumptions", "actual call trace"],
+            },
+            {
+                "id": "D_finite_dh_propagation",
+                "status": "OPEN",
+                "theorems": [
+                    "RouteB.P3.DHLinkFiniteDAGEnclosure",
+                    "RouteB.P3.DHChainFloat64EvaluatorEnclosure",
+                ],
+                "requires": ["layers B/C", "operation schedule", "per-box coverage"],
+            },
+        ],
+        "formal_certificate_allowed": False,
+        "registry_eligible": False,
+        "registry_promoted": False,
+    }
+
     store = StateStore(STATE)
     state = store.load()
     node = find(state, "P4.true_dh_float64_evaluator_enclosure")
     changed = node.metadata.get("trig_chain_contract") != audit
     node.metadata["trig_chain_contract"] = audit
+    if node.metadata.get("o2_trig_binding") != binding:
+        node.metadata["o2_trig_binding"] = binding
+        changed = True
     unresolved = list(node.metadata.get("unresolved", []))
     for marker in (
         "dh_trig_chain_float64_argument_binding",

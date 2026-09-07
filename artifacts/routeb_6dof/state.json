@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 484,
+  "revision": 489,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13959,7 +13959,8 @@
           "Float64_pi_offset_outward_inclusion",
           "sin_cos_shift_taylor_leaf_float64_binding",
           "dh_trig_chain_float64_argument_binding",
-          "dh_trig_chain_libm_enclosure"
+          "dh_trig_chain_libm_enclosure",
+          "p3_alpha_singleton_q_zero_review_confirmed"
         ],
         "independent_static_reviews": [
           {
@@ -14083,6 +14084,96 @@
             "formal_certificate_allowed": false,
             "registry_promoted": false,
             "admission_status": "pending_coordinator_admission"
+          },
+          {
+            "schema_version": 1,
+            "source_agent": "01a07bb4-9206-7263-873e-f182a09a90c6",
+            "task_id": "T-P4-036",
+            "review_status": "EXACT_REAL_TRIG_LEAF_PRESENT__O2_FLOAT64_BINDING_OPEN",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-036-01a07bb4-920-20260907.md",
+              "sha256": "10F4214435398747A43BC10C436C0EEADBD353A73D88D9EC92913591D8D6D52F"
+            },
+            "source_artifacts": [
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P3_DH_TRIG_CHAIN_CONTRACT.md",
+                "sha256": "78E8AB5695BC47ED3347D6AA10F3BD7E2BC7B84D6C0A9120ADB31E277EC09CA1"
+              },
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_p3_dh_trig_chain_contract.csv",
+                "sha256": "87C326FD0E2F2A69EB330A562E30917521DB2C35C69E5A4AFECC6932998CA8E3"
+              }
+            ],
+            "evidence_level": "independent_static_review",
+            "claims": {
+              "conditional_exact_real_leaf": true,
+              "theta_box": "[-3/20,3/20]",
+              "alpha_input": "singleton q=0",
+              "float64_binding": false,
+              "libm_enclosure": false,
+              "registry_promoted": false,
+              "formal_certificate_allowed": false
+            },
+            "unresolved": [
+              "Float64_pi_offset_and_angle_formation",
+              "per_atom_libm_sin_cos_enclosure",
+              "finite_dh_evaluator_DAG_propagation",
+              "central_fd_and_linear_solve_enclosure",
+              "box_coverage_and_composition"
+            ],
+            "admission_status": "pending_coordinator_admission",
+            "registry_promoted": false,
+            "formal_certificate_allowed": false
+          },
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-036",
+            "source_agent": "01a07bb4-d8f2-7ba0-8258-8754bf2ea0f8",
+            "review_status": "SOURCE_BINDING_INTERFACE_REVIEW__OPEN",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-036-source-binding-01a07bb4-d8f2-20260907.md",
+              "sha256": "960A99497970374C6F07D0938C0A8270C165DA52804DEF04F433402AAED16849"
+            },
+            "source_artifacts": [
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P3_DH_TRIG_CHAIN_CONTRACT.md",
+                "sha256": "78E8AB5695BC47ED3347D6AA10F3BD7E2BC7B84D6C0A9120ADB31E277EC09CA1"
+              },
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_p3_dh_trig_chain_contract.csv",
+                "sha256": "87C326FD0E2F2A69EB330A562E30917521DB2C35C69E5A4AFECC6932998CA8E3"
+              }
+            ],
+            "evidence_level": "independent_static_review",
+            "admission_status": "pending_coordinator_admission",
+            "formal_certificate_allowed": false,
+            "registry_eligible": false,
+            "registry_promoted": false
+          },
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-036",
+            "source_agent": "01a07bb4-dc1c-7810-a164-f7a821ad0322",
+            "review_status": "LEAN_INTERFACE_LAYERS__UNCOMPILED_OPEN",
+            "review_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\review-T-P4-036-lean-layers-01a07bb4-dc1c-20260907.md",
+              "sha256": "FC087ED5C5F392A2680237C710696B5DFEF95519AA5751AD0BE36E7D3B355258"
+            },
+            "source_artifacts": [
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P3_DH_TRIG_CHAIN_CONTRACT.md",
+                "sha256": "78E8AB5695BC47ED3347D6AA10F3BD7E2BC7B84D6C0A9120ADB31E277EC09CA1"
+              },
+              {
+                "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_p3_dh_trig_chain_contract.csv",
+                "sha256": "87C326FD0E2F2A69EB330A562E30917521DB2C35C69E5A4AFECC6932998CA8E3"
+              }
+            ],
+            "evidence_level": "independent_static_review",
+            "admission_status": "pending_coordinator_admission",
+            "formal_certificate_allowed": false,
+            "registry_eligible": false,
+            "registry_promoted": false
           }
         ],
         "fd_step_semantics": {
@@ -14223,7 +14314,10 @@
               "theta",
               "alpha"
             ],
-            "input_box": "q_i in [-3/20, 3/20]",
+            "input_partition": {
+              "theta": "q_i in [-3/20, 3/20]",
+              "alpha": "singleton q=0 (fixed DH offset)"
+            },
             "endpoint_encoding": "integer numerator/denominator pairs"
           },
           "source_artifacts": [
@@ -14253,6 +14347,142 @@
             "compose per-box coverage with the O2 evaluator and residual leaves"
           ],
           "formal_certificate_allowed": false,
+          "registry_promoted": false
+        },
+        "o2_trig_binding": {
+          "schema_version": 1,
+          "task_id": "T-P4-036",
+          "target_node": "P4.true_dh_float64_evaluator_enclosure",
+          "status": "OPEN_P3_CONDITIONAL_INPUT_ONLY",
+          "input_contract": {
+            "metadata_key": "trig_chain_contract",
+            "contract_id": "routeb-p3-trig-dh-chain-contract/v1",
+            "required_status": "EXACT_REAL_DH_TRIG_CHAIN_CONTRACT_FLOAT64_BINDING_OPEN",
+            "artifact_hashes": [
+              "78E8AB5695BC47ED3347D6AA10F3BD7E2BC7B84D6C0A9120ADB31E277EC09CA1",
+              "87C326FD0E2F2A69EB330A562E30917521DB2C35C69E5A4AFECC6932998CA8E3"
+            ]
+          },
+          "leaves": [
+            {
+              "id": "T-P4-036.1",
+              "kind": "pi_over_two_and_angle_formation_rounding",
+              "status": "OPEN"
+            },
+            {
+              "id": "T-P4-036.2",
+              "kind": "argument_range_reduction",
+              "status": "OPEN"
+            },
+            {
+              "id": "T-P4-036.3",
+              "kind": "float64_libm_sin_cos_enclosure",
+              "status": "OPEN"
+            },
+            {
+              "id": "T-P4-036.4",
+              "kind": "finite_dh_operation_propagation",
+              "status": "OPEN"
+            }
+          ],
+          "composition_gate": {
+            "required_leaf_ids": [
+              "T-P4-036.1",
+              "T-P4-036.2",
+              "T-P4-036.3",
+              "T-P4-036.4"
+            ],
+            "all_required": true,
+            "per_box_coverage_required": true,
+            "status": "OPEN"
+          },
+          "source_binding": {
+            "angle_formulas": {
+              "theta": "q[ii] + DH[ii,1]",
+              "alpha": "DH[ii,4]"
+            },
+            "theta_phase_k_by_link": [
+              0,
+              -1,
+              1,
+              0,
+              0,
+              0
+            ],
+            "alpha_phase_k_by_link": [
+              -1,
+              0,
+              1,
+              -1,
+              1,
+              0
+            ],
+            "open_obligation_counts": {
+              "angle_formation_inclusion": 12,
+              "range_reduction_inclusion": 12,
+              "libm_sin_cos_enclosure": 12,
+              "finite_link_dag_propagation": 6
+            },
+            "interface_targets": [
+              "RouteB.P3.DHThetaPhaseContract",
+              "RouteB.P3.DHAlphaPhaseContract",
+              "RouteB.P3.ExactRealTrigRangeReductionLeaf",
+              "RouteB.P3.Float64AngleFormationInclusion",
+              "RouteB.P3.Float64LibmSinCosEnclosure",
+              "RouteB.P3.DHLinkFiniteDAGEnclosure",
+              "RouteB.P3.DHChainFloat64EvaluatorEnclosure"
+            ]
+          },
+          "interface_layers": [
+            {
+              "id": "A_exact_real_interval_range_reduction",
+              "status": "INTERFACE_DRAFT__UNCOMPILED",
+              "theorems": [
+                "RouteB.P3.ExactRealTrigRangeReductionLeaf",
+                "RouteB.P3.ExactSinCosCellSound"
+              ],
+              "uses_machine_float": false
+            },
+            {
+              "id": "B_float64_argument_binding",
+              "status": "OPEN",
+              "theorems": [
+                "RouteB.P3.Float64AngleFormationInclusion"
+              ],
+              "requires": [
+                "runtime/source pin",
+                "binary64 decode",
+                "addition-rounding bound"
+              ]
+            },
+            {
+              "id": "C_libm_enclosure",
+              "status": "OPEN",
+              "theorems": [
+                "RouteB.P3.Float64LibmSinCosEnclosure"
+              ],
+              "requires": [
+                "pinned runtime/libm",
+                "finite/non-NaN assumptions",
+                "actual call trace"
+              ]
+            },
+            {
+              "id": "D_finite_dh_propagation",
+              "status": "OPEN",
+              "theorems": [
+                "RouteB.P3.DHLinkFiniteDAGEnclosure",
+                "RouteB.P3.DHChainFloat64EvaluatorEnclosure"
+              ],
+              "requires": [
+                "layers B/C",
+                "operation schedule",
+                "per-box coverage"
+              ]
+            }
+          ],
+          "formal_certificate_allowed": false,
+          "registry_eligible": false,
           "registry_promoted": false
         }
       }
@@ -37940,6 +38170,52 @@
       "rows": 12,
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T11:56:01.546607+00:00",
+      "kind": "routeb_p3_trig_chain_contract_recorded",
+      "node_id": "0da99a7cef5e4f0b91c7cc06d9e7c010",
+      "status": "EXACT_REAL_DH_TRIG_CHAIN_CONTRACT_FLOAT64_BINDING_OPEN",
+      "rows": 12,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T11:56:44.584953+00:00",
+      "kind": "routeb_p3_independent_review_recorded",
+      "node_id": "0da99a7cef5e4f0b91c7cc06d9e7c010",
+      "source_agent": "01a07bb4-9206-7263-873e-f182a09a90c6",
+      "review_status": "EXACT_REAL_TRIG_LEAF_PRESENT__O2_FLOAT64_BINDING_OPEN",
+      "admission_status": "pending_coordinator_admission",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T11:57:39.998359+00:00",
+      "kind": "routeb_p3_trig_chain_contract_recorded",
+      "node_id": "0da99a7cef5e4f0b91c7cc06d9e7c010",
+      "status": "EXACT_REAL_DH_TRIG_CHAIN_CONTRACT_FLOAT64_BINDING_OPEN",
+      "rows": 12,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T11:58:11.603437+00:00",
+      "kind": "routeb_p3_trig_chain_contract_recorded",
+      "node_id": "0da99a7cef5e4f0b91c7cc06d9e7c010",
+      "status": "EXACT_REAL_DH_TRIG_CHAIN_CONTRACT_FLOAT64_BINDING_OPEN",
+      "rows": 12,
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T11:59:02.245544+00:00",
+      "kind": "routeb_p3_interface_reviews_recorded",
+      "node_id": "0da99a7cef5e4f0b91c7cc06d9e7c010",
+      "review_count": 2,
+      "admission_status": "pending_coordinator_admission",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -41596,5 +41872,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "3e0bc6955a5197b72b5adb422ec665eb95213bbce14a3477c5077f0d0a6db3fa"
+  "state_checksum": "caa146cf891f77725ee08b22c21ff21341c6df0a34a059e66d20438327de4c9f"
 }

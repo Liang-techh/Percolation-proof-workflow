@@ -792,7 +792,7 @@ Float64 evaluator proof。
 新 unresolved markers 为 `dh_trig_chain_float64_argument_binding` 和
 `dh_trig_chain_libm_enclosure`。仍需把 `pi/2` 与参数形成的舍入绑定到每个角度
 盒，证明实际 libm `sin/cos` 包围，并完成有限运算传播与逐盒 coverage composition；
-state rev 484、registry=0、`formal_certificate_allowed=false` 保持不变。
+  state rev 484、registry=0、`formal_certificate_allowed=false` 保持不变。
 
 ### 2026-09-07 — 梁智炜：拆出 T-P4-036 Float64 trig binding frontier
 
@@ -800,3 +800,15 @@ P3 exact-real 合同已经独立落盘，但其最关键的部署鸿沟仍是 Fl
 和 libm 输出。新增 `T-P4-036`，要求 agent 分别给出 `pi/2` 舍入、参数范围缩减、
 `sin/cos` enclosure、有限运算传播的接口与证据边界；允许未编译 interface draft，
 禁止借 Taylor-only 或采样结果关闭 O2。该任务与 P3 recorder disjoint，可并行推进。
+
+### 2026-09-07 — 梁智炜：收割 T-P4-036 三路独立回执
+
+数学、架构和 Lean 三路回执已整合到 O2。当前 `o2_trig_binding` 明确包含四个
+开放叶：angle formation、range reduction、Float64/libm `sin/cos`、finite DH
+operation propagation；并增加 A/B/C/D interface layers，其中 A 也只是未编译
+interface draft。source-binding 回执进一步固定 deployed 角度公式
+`th=q[ii]+DH[ii,1]`、`al=DH[ii,4]` 及两组 phase vector。
+
+这批回执只增加 provenance 和 frontier metadata，不新增 DAG child、不改变
+`required_node_ids`、不进入 registry；当前 state rev 489，O2/node status=open，
+`formal_certificate_allowed=false`。

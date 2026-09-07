@@ -398,3 +398,9 @@ rechecks the six-link theta/alpha rational-endpoint contract and preserves its
 conditional exact-real boundary. Float64 `pi/2`, argument formation, libm
 `sin/cos`, finite-DAG propagation, and per-box composition remain open; the
 recorder cannot promote the node or open the formal gate.
+
+The O2 metadata also keeps T-P4-036 as four disjoint open leaves: Float64 angle
+formation, argument range reduction, libm `sin/cos` enclosure, and finite DH
+propagation. Their intended interface layers are A exact-real, B machine-argument
+binding, C libm, and D finite-DAG composition; a Taylor or exact-real leaf never
+implies a deployed Float64/libm result.
