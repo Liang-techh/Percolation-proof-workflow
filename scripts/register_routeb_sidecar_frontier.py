@@ -729,6 +729,32 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.entrywise_upper",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load",
+        "statement": "Entrywise absolute bounds on a 2x2 residual matrix yield a proof-valued nonnegative quadratic upper bound without PSD or spectral assumptions.",
+        "proof_sketch": "Majorize diagonal and off-diagonal terms, apply Young's inequality to the absolute cross term, and package the resulting row-budget maximum or uniform 2s bound for the existing quadratic-load consumer.",
+        "lane": "lean_adapter",
+        "bottleneck": "source_semantics",
+        "status": "OPEN_UNCOMPILED_P4_ENTRYWISE_QUADRATIC_UPPER",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_EntrywiseQuadratic.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_EntrywiseQuadratic_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.cap_max_witness.minimality",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter.unified_input.monotonicity.scalar_budget.cap_max_witness",
+        "statement": "The explicit finite capMax witness is the least scalar upper bound and is unique across upper-plus-attainment witnesses for the same cap vector.",
+        "proof_sketch": "Use attainment to compare capMax with any candidate upper bound, derive equality when the candidate is attained, and prove witness scalar equivalence without claiming index uniqueness.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_CAP_MAX_MINIMALITY",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_CAPMAX_MINIMALITY.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_CAPMAX_MINIMALITY_REVIEW.md",
+        ],
+    },
+    {
         "name": "P5.componentwise_relative_decay.feasible_cone_spn.nonnegative_gain_increment_reuse",
         "parent": "P5.componentwise_relative_decay.feasible_cone_spn",
         "statement": "A nonnegative component-gain increment can reuse an existing cone SPN witness when its symmetric cone correction is entrywise below the old nonnegative slack.",
