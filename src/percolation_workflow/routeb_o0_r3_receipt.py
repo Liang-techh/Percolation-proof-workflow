@@ -318,6 +318,7 @@ def audit_routeb_o0_r3_canonical_receipt(
     rho = exact("weighted_baseline", "rho_r")
     epsilon = exact("weighted_perturbation", "epsilon_R")
     theta = exact("schur_baseline", "theta")
+    lambda_value = exact("schur_baseline", "lambda")
     margin = exact("schur_baseline", "remaining_margin_m_r")
     exact("metric", "beta")
     exact("metric", "s")
@@ -325,6 +326,10 @@ def audit_routeb_o0_r3_canonical_receipt(
     epsilon_a = exact("inverse", "epsilon_A", allow_null=True)
     if any(value is not None and value < 0 for value in (rho, epsilon, theta, margin, epsilon_a)):
         errors.append("canonical_exact_value_negative")
+    if theta is not None and theta <= 0:
+        errors.append("schur_baseline.theta_not_positive")
+    if theta is not None and lambda_value is not None and lambda_value != 1 + 1 / theta:
+        errors.append("schur_baseline.lambda_mismatch")
 
     proof_flags = (
         ("metric", "s_positive"), ("metric", "s_sq_le_beta"),
@@ -353,7 +358,7 @@ def audit_routeb_o0_r3_canonical_receipt(
             state_key=state_key, missing=tuple(dict.fromkeys(missing)),
             errors=tuple(dict.fromkeys(errors)),
         )
-    if missing or rho is None or epsilon is None or theta is None or margin is None:
+    if missing or rho is None or epsilon is None or theta is None or lambda_value is None or margin is None:
         return RouteBO0R3CanonicalReceiptAudit(
             status="PENDING_REQUIRED_FIELDS", receipt_id=receipt_id,
             source_key=source_key, state_key=state_key,
