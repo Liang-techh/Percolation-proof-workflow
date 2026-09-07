@@ -3045,3 +3045,9 @@ margin 绑定到同一源状态，并保留 F≤L、zero-floor、zero-front-test
 P3 已转入 Anthropic FLT 非数论 registry/graph 基础设施的最小 provenance-
 preserving 轻改接入。所有结果都要求 proof-attempt + review，并保持
 未编译/待验证边界。
+
+revision 718 接入 P0 `anthropic_flt_registry_graph_adapter`：源自固定
+Anthropic FLT commit 的 `extract→graphdata→render→selfcheck` 架构，分类为
+`light_adaptation`，不是纯数论 theorem 迁移。Manifest 记录 upstream paths、
+Apache-2.0、toolchain、graph edge kinds、hash 字段与 promotion boundary；
+当前只作 pending advisory，未修改 registry。

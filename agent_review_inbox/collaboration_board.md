@@ -2437,3 +2437,11 @@ coverage 与 Lean kernel 仍未关闭。
 不同矩阵对象的 typed separation，P3 处理 Anthropic FLT 中 registry/graph
 架构的最小 provenance-preserving 轻改。这样优先推进数学瓶颈，同时避免重复
 审计和把候选接口误标成 theorem。
+
+### 2026-09-07 — 接入 Anthropic FLT graph/registry 架构
+
+revision 718 登记 P0 `anthropic_flt_registry_graph_adapter`。筛选结果为
+“需轻度改造”：复刻 extract、graphdata、render、selfcheck 的分层和
+provenance/admission seam，但不复制纯数论 theorem，不把图元数据或渲染结果
+当作证明。manifest 固定 upstream commit、路径、许可证和工具链，状态保持
+pending，registry 与正式证书均未改变。

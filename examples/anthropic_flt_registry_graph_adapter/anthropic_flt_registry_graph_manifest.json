@@ -1,0 +1,45 @@
+{
+  "schema_version": 1,
+  "kind": "advisory_reuse_manifest",
+  "integration_status": "pending",
+  "classification": "light_adaptation",
+  "provenance": {
+    "repository": "upstream/anthropics-fermats-last-theorem",
+    "commit": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef",
+    "license": "Apache-2.0",
+    "upstream_toolchain": "Lean 4.33.1",
+    "upstream_mathlib_revision": "db584cd6d46c92f209a44c0f1c829460d327499d"
+  },
+  "selected_architecture": {
+    "name": "extract-graphdata-render-selfcheck",
+    "sources": [
+      "tools/docs-site/gen/extract.py",
+      "tools/docs-site/gen/graphdata.py",
+      "tools/docs-site/gen/render.py",
+      "tools/docs-site/gen/selfcheck.py"
+    ],
+    "classification_reason": "The pipeline shape is reusable, but local manifest, DAG, and registry schemas require adaptation."
+  },
+  "local_contract": {
+    "typed_interface": "AnthropicFLTRegistryGraphAdapter.GraphManifest",
+    "graph_node_fields": ["id", "stage", "landmark"],
+    "edge_kinds": ["citation", "statementHop", "definitionHop"],
+    "required_hashes": ["sourceSnapshotSha256", "graphSnapshotSha256", "selfcheckInputSha256"],
+    "registry_states": ["pending", "rejected", "verified"],
+    "formal_certificate_allowed_default": false
+  },
+  "admission_boundary": {
+    "metadata_is_not_proof": true,
+    "rendered_graph_is_not_verified": true,
+    "promotion_requires": [
+      "source_bound",
+      "graph_bound",
+      "final_check",
+      "comparator_accepted",
+      "verified_registry_state",
+      "formal_certificate_allowed=true"
+    ],
+    "state_mutation": false,
+    "registry_mutation": false
+  }
+}

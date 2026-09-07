@@ -2158,6 +2158,20 @@ CHILDREN = [
             "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SourcePositiveTargetBinding.review.md",
         ],
     },
+    {
+        "name": "P0.reproducibility_baseline.anthropic_flt_registry_graph_adapter",
+        "parent": "P0.reproducibility_baseline",
+        "statement": "The Anthropic FLT extract→graphdata→render→selfcheck architecture can be adapted as a provenance-preserving graph/registry intake layer, while metadata, rendered reachability, and selfcheck structure remain distinct from theorem proof and verified admission.",
+        "proof_sketch": "Record upstream repository commit, audited source paths, license, toolchain, graph node/edge types, snapshot hashes, registry states, and explicit promotion evidence in a typed advisory manifest; keep local DAG/frontier/comparator schemas separate and leave state/registry mutation disabled until independent proof and admission gates close.",
+        "lane": "workflow_infrastructure",
+        "bottleneck": "provenance",
+        "status": "PENDING_ADVISORY_LIGHT_ADAPTATION_ANTHROPIC_FLT_GRAPH_REGISTRY",
+        "artifacts": [
+            "examples/anthropic_flt_registry_graph_adapter/anthropic_flt_registry_graph_manifest.json",
+            "examples/anthropic_flt_registry_graph_adapter/AnthropicFLTRegistryGraphAdapter.lean",
+            "examples/anthropic_flt_registry_graph_adapter/REVIEW.md",
+        ],
+    },
 ]
 
 
