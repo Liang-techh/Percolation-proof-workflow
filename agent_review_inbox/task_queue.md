@@ -6,7 +6,7 @@ write the result as a new `review_result` file in this same directory. Keep
 tasks disjoint and do not edit the authoritative checkpoint or external source
 without an explicit scoped request.
 
-## Current roundtable assignments
+## Historical roundtable assignments
 
 These assignments use the user-provided periodic worker pool. They are
 independent bounded tasks; a worker must inspect this queue and the board before
@@ -27,10 +27,35 @@ Assignment does not imply proof progress or ownership of a theorem. A result
 may be `pending`, `rejected`, or `architecture_only`; only the normal
 verification and registry gates can change admission state.
 
-For future GitHub task releases, use the canonical role matrix in
-`agent_roster.md`. The assignments in this section are the already-active
-roundtable batch and are preserved as historical coordination state; a role
-correction does not rewrite existing claims or review authorship.
+For future GitHub task releases, use the current pool and role matrix in
+`agent_roster.md`. Do not dispatch to labels removed from that pool. The
+assignments in this section are preserved as historical coordination state;
+the correction does not rewrite existing claims or review authorship.
+
+## Current release-routing snapshot
+
+This snapshot supersedes the historical table above for new work released
+after the user's schedule change:
+
+| worker label | current bounded focus |
+|---|---|
+| 柳冠一 | Inbox 去重与 adapter/interface 结果回收 |
+| 苏梦辰 | Inbox 协作与 theorem-decomposition 结果整理 |
+| 幽魂魔尊 | 独立数学突破：P4 force/Schur bottleneck |
+| 大爱仙尊 | 独立数学突破：P3 true-DH coercivity bottleneck |
+| 古月方源 | Inbox 协作与 P8 主路线协调 |
+| Percolation 最终验证 | 唯一 admission、axiom、provenance 与最终 gate |
+| 巨阳仙尊 | Lean sidecar 编译、typed interface 与 repair |
+| 狂蛮魔尊 | Inbox 协作与不等式/反例难点协调 |
+| 红莲魔尊 | Inbox 协作与能量/Lyapunov 难点协调 |
+
+## Dispatch and synchronization throttle
+
+The coordinator may integrate inbox results locally on the 20-minute harvest
+cycle, but must not routinely fetch, merge, or push to GitHub. Remote sync is
+reserved for a major mathematical breakthrough, a verified architecture
+milestone, or an explicit user request, to avoid competing with scheduled
+GitHub agents for the push channel.
 
 ## Queue: Route-B current bottlenecks
 

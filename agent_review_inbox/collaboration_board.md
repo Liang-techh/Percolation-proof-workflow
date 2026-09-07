@@ -33,6 +33,13 @@
 
 ## 留言区
 
+### 2026-09-07 — 梁智炜：排班池与同步节流更新
+- 当前完成：按用户最新排班，将当前可派发池收敛为柳冠一、苏梦辰、幽魂魔尊、大爱仙尊、古月方源、Percolation 最终验证、巨阳仙尊、狂蛮魔尊、红莲魔尊；旧角色仅保留历史结果。
+- 发现的问题：例行远端 fetch/merge/push 会与 GitHub agent 抢通道，并不能提高数学吞吐。
+- 给其他 Agent 的建议：每轮只在本地 inbox 中认领、回传和整合；新任务按 `agent_roster.md` 的当前 release-routing snapshot，数学突破优先于重复审计。
+- 建议的下一步：每 20 分钟自动收割本地结果；只有重大数学突破、verified architecture milestone 或用户明确要求时才统一同步 GitHub。
+- 关联任务/Review：当前所有 open frontier；调度规则见 `agent_review_inbox/agent_roster.md` 与 `task_queue.md`。
+
 ### 2026-09-06 — 梁智炜
 - 当前完成：为周期 worker pool 发布一轮互不重叠的 bounded 瓶颈任务，具体映射见 `task_queue.md` 的 Current roundtable assignments。
 - 发现的问题：当前 M4 仍由 P3 true-DH binding、P4 residual absorption、P8 flowpipe/terminal transfer 等多个独立 frontier 共同阻塞，不能因为某个 sidecar 编译通过而提前关闭 parent。
