@@ -1,0 +1,341 @@
+{
+  "LEAN_VERIFIED": false,
+  "binding_conclusion": null,
+  "binding_status": "source-text-snapshot-only",
+  "candidate_id": "robot_final/full_dh_probe+dhport_lib",
+  "coordinate_mapping": [
+    {
+      "binding_status": "source-text-only",
+      "julia_full_rhs_input": "u[1]",
+      "julia_full_rhs_output": "du[1]",
+      "name": "q1",
+      "payload_index_one_based": 1,
+      "payload_index_zero_based": 0,
+      "role": "q"
+    },
+    {
+      "binding_status": "source-text-only",
+      "julia_full_rhs_input": "u[2]",
+      "julia_full_rhs_output": "du[2]",
+      "name": "q2",
+      "payload_index_one_based": 2,
+      "payload_index_zero_based": 1,
+      "role": "q"
+    },
+    {
+      "binding_status": "source-text-only",
+      "julia_full_rhs_input": "u[3]",
+      "julia_full_rhs_output": "du[3]",
+      "name": "q3",
+      "payload_index_one_based": 3,
+      "payload_index_zero_based": 2,
+      "role": "q"
+    },
+    {
+      "binding_status": "source-text-only",
+      "julia_full_rhs_input": "u[4]",
+      "julia_full_rhs_output": "du[4]",
+      "name": "q4",
+      "payload_index_one_based": 4,
+      "payload_index_zero_based": 3,
+      "role": "q"
+    },
+    {
+      "binding_status": "source-text-only",
+      "julia_full_rhs_input": "u[5]",
+      "julia_full_rhs_output": "du[5]",
+      "name": "q5",
+      "payload_index_one_based": 5,
+      "payload_index_zero_based": 4,
+      "role": "q"
+    },
+    {
+      "binding_status": "source-text-only",
+      "julia_full_rhs_input": "u[6]",
+      "julia_full_rhs_output": "du[6]",
+      "name": "q6",
+      "payload_index_one_based": 6,
+      "payload_index_zero_based": 5,
+      "role": "q"
+    },
+    {
+      "binding_status": "source-text-only",
+      "julia_full_rhs_input": "u[7]",
+      "julia_full_rhs_output": "du[7]",
+      "name": "v1",
+      "payload_index_one_based": 7,
+      "payload_index_zero_based": 6,
+      "role": "dq"
+    },
+    {
+      "binding_status": "source-text-only",
+      "julia_full_rhs_input": "u[8]",
+      "julia_full_rhs_output": "du[8]",
+      "name": "v2",
+      "payload_index_one_based": 8,
+      "payload_index_zero_based": 7,
+      "role": "dq"
+    },
+    {
+      "binding_status": "source-text-only",
+      "julia_full_rhs_input": "u[9]",
+      "julia_full_rhs_output": "du[9]",
+      "name": "v3",
+      "payload_index_one_based": 9,
+      "payload_index_zero_based": 8,
+      "role": "dq"
+    },
+    {
+      "binding_status": "source-text-only",
+      "julia_full_rhs_input": "u[10]",
+      "julia_full_rhs_output": "du[10]",
+      "name": "v4",
+      "payload_index_one_based": 10,
+      "payload_index_zero_based": 9,
+      "role": "dq"
+    },
+    {
+      "binding_status": "source-text-only",
+      "julia_full_rhs_input": "u[11]",
+      "julia_full_rhs_output": "du[11]",
+      "name": "v5",
+      "payload_index_one_based": 11,
+      "payload_index_zero_based": 10,
+      "role": "dq"
+    },
+    {
+      "binding_status": "source-text-only",
+      "julia_full_rhs_input": "u[12]",
+      "julia_full_rhs_output": "du[12]",
+      "name": "v6",
+      "payload_index_one_based": 12,
+      "payload_index_zero_based": 11,
+      "role": "dq"
+    },
+    {
+      "binding_status": "source-text-only",
+      "julia_full_rhs_input": "u[13]",
+      "julia_full_rhs_output": "du[13]",
+      "name": "w",
+      "payload_index_one_based": 13,
+      "payload_index_zero_based": 12,
+      "role": "w"
+    },
+    {
+      "binding_status": "OPEN",
+      "julia_full_rhs_input": null,
+      "julia_full_rhs_output": null,
+      "name": "c",
+      "payload_index_one_based": 14,
+      "payload_index_zero_based": 13,
+      "role": "c_sidecar"
+    }
+  ],
+  "coordinate_order": [
+    "q1",
+    "q2",
+    "q3",
+    "q4",
+    "q5",
+    "q6",
+    "v1",
+    "v2",
+    "v3",
+    "v4",
+    "v5",
+    "v6",
+    "w",
+    "c"
+  ],
+  "dimension": 14,
+  "formal_admission": "not_theorem",
+  "local_box": {
+    "hi": [
+      "0.01",
+      "0.01",
+      "0.01",
+      "0.01",
+      "0.01",
+      "0.01",
+      "0.01",
+      "0.01",
+      "0.01",
+      "0.01",
+      "0.01",
+      "0.01",
+      "0.01",
+      "2"
+    ],
+    "id": "p8-local-zero-cell-qv-w-1e-2-c-2",
+    "lo": [
+      "-0.01",
+      "-0.01",
+      "-0.01",
+      "-0.01",
+      "-0.01",
+      "-0.01",
+      "-0.01",
+      "-0.01",
+      "-0.01",
+      "-0.01",
+      "-0.01",
+      "-0.01",
+      "-0.01",
+      "-2"
+    ],
+    "meaning": "one explicit full-state box only; q/v/w are a small zero-centered cell and c uses the conservative P8 adapter range [-2,2]"
+  },
+  "note": "Template only. A concrete receipt must replace every null endpoint with exact decimal/rational text and provide authenticated outward rounding evidence.",
+  "parameters": {
+    "arithmetic": "IEEE-754 Float64 source arithmetic",
+    "disturbance_bound": "sqrt(3)",
+    "eta_star": "5.6",
+    "fd_step": "1e-5",
+    "horizon_T": "1",
+    "initial_radius": "0.15",
+    "mass_regularizer": "1e-6"
+  },
+  "receipt_status": "pending_endpoint_payload",
+  "rhs_endpoint_intervals": [
+    {
+      "coordinate": "q1",
+      "evidence": "OPEN_external_endpoint_evaluator_required",
+      "lower": null,
+      "upper": null
+    },
+    {
+      "coordinate": "q2",
+      "evidence": "OPEN_external_endpoint_evaluator_required",
+      "lower": null,
+      "upper": null
+    },
+    {
+      "coordinate": "q3",
+      "evidence": "OPEN_external_endpoint_evaluator_required",
+      "lower": null,
+      "upper": null
+    },
+    {
+      "coordinate": "q4",
+      "evidence": "OPEN_external_endpoint_evaluator_required",
+      "lower": null,
+      "upper": null
+    },
+    {
+      "coordinate": "q5",
+      "evidence": "OPEN_external_endpoint_evaluator_required",
+      "lower": null,
+      "upper": null
+    },
+    {
+      "coordinate": "q6",
+      "evidence": "OPEN_external_endpoint_evaluator_required",
+      "lower": null,
+      "upper": null
+    },
+    {
+      "coordinate": "v1",
+      "evidence": "OPEN_external_endpoint_evaluator_required",
+      "lower": null,
+      "upper": null
+    },
+    {
+      "coordinate": "v2",
+      "evidence": "OPEN_external_endpoint_evaluator_required",
+      "lower": null,
+      "upper": null
+    },
+    {
+      "coordinate": "v3",
+      "evidence": "OPEN_external_endpoint_evaluator_required",
+      "lower": null,
+      "upper": null
+    },
+    {
+      "coordinate": "v4",
+      "evidence": "OPEN_external_endpoint_evaluator_required",
+      "lower": null,
+      "upper": null
+    },
+    {
+      "coordinate": "v5",
+      "evidence": "OPEN_external_endpoint_evaluator_required",
+      "lower": null,
+      "upper": null
+    },
+    {
+      "coordinate": "v6",
+      "evidence": "OPEN_external_endpoint_evaluator_required",
+      "lower": null,
+      "upper": null
+    },
+    {
+      "coordinate": "w",
+      "evidence": "source_literal_du13_equals_zero",
+      "lower": "0",
+      "upper": "0"
+    },
+    {
+      "coordinate": "c",
+      "evidence": "OPEN_sidecar_not_consumed_by_full_rhs",
+      "lower": null,
+      "upper": null
+    }
+  ],
+  "rounding": {
+    "direction": "unspecified",
+    "endpoint_encoding": "exact_decimal_or_rational_text_required",
+    "endpoint_rounding": "not_authenticated",
+    "note": "source Float64 evaluation is provenance only; no outward-rounding claim is made by this generator",
+    "source_runtime": "Float64"
+  },
+  "schema": "routeb-p8-rhs-endpoint-receipt-v1",
+  "source_contract": {
+    "julia_state_dimension": 13,
+    "lifted_tail": {
+      "c": "sidecar parameter; not consumed by full_rhs!"
+    },
+    "payload_dimension": 14,
+    "ramp_binding": "OPEN",
+    "required_fragments_checked": [
+      "function full_rhs!(du, u, p, t)",
+      "q = u[1:6]",
+      "dq = u[7:12]",
+      "w = u[13]",
+      "du[i] = dq[i]",
+      "du[i + 6] = acc[i]",
+      "du[13] = z0",
+      "return du"
+    ],
+    "source_function": "full_rhs!",
+    "source_literal_tail": {
+      "c_rhs": "unbound",
+      "w_rhs": "0"
+    },
+    "source_state_order": [
+      "q1",
+      "q2",
+      "q3",
+      "q4",
+      "q5",
+      "q6",
+      "v1",
+      "v2",
+      "v3",
+      "v4",
+      "v5",
+      "v6",
+      "w"
+    ]
+  },
+  "source_hashes": [
+    {
+      "path": "robot_final/cross_validation/routeB_reachability_full_dh_probe.jl",
+      "sha256": "12292f8841ef79cfa58d07facbec4ca739e27346b11b6ec57e290638b7d8b93a"
+    },
+    {
+      "path": "robot_final/dhport_lib.jl",
+      "sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936"
+    }
+  ]
+}
