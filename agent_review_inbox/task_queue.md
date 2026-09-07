@@ -84,6 +84,19 @@ GitHub agents for the push channel.
 - forbidden: treating the composition as a proof of `M_BD`, mass/source
   equality, coverage, or P4/M4 closure.
 
+### T-P4-014 — vector remote action to PMI composition
+
+- status: `open` (isolated Lean seam added 2026-09-07)
+- owner: `巨阳仙尊`
+- source: `examples/routeb_remote_vector_pmi/RemoteVectorPMI.lean`;
+- scope: compile the division-free two-dimensional theorem that consumes one
+  squared-norm remote bound `‖r_B‖² <= K*mass`, an explicit `0 <= K`, one scale
+  bridge, and `K*beta² <= p*d`;
+- deliver: immutable Lean review with exact theorem statements, axioms,
+  pinned toolchain, and source/blob hashes;
+- forbidden: splitting or recharging the vector operator bound per component,
+  or claiming `M_BD` source binding, coverage, or P4/M4 closure.
+
 ## Queue: Route-B current bottlenecks
 
 ### T-P3-001 — single-entry true-DH source bridge

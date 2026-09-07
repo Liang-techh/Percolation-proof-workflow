@@ -318,3 +318,12 @@
 - 该子定理把 GitHub Lean 验证与真实 DH source binding 解耦；巨阳仙尊只需
   验证 theorem statement、axioms 和 pinned compile。P4 仍要求另行证明
   `MBD` operator、`mass` 的 full-state 语义及 covered-domain 绑定。
+
+### 2026-09-07 — 梁智炜：二维 remote action 不分量重复收费
+
+- 新增 `T-P4-014`：`RemoteVectorPMI.lean` 直接以
+  `r1²+r2² <= K*mass` 消费二维 `M_BD a_D` 的一次性平方范数预算，再经
+  `mass <= beta²*y²` 和 `K*beta² <= p*d` 得到二维 PMI 非负性。
+- 该 seam 避免把同一个 operator bound 在 block 两个坐标上重复 Young 收费；
+  仍完全 source-independent，必须等待 pinned Lean agent 的编译/axioms
+  回执，不能关闭 P4 或改变最终 gate。

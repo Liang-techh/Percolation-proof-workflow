@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 367,
+  "revision": 368,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -7466,7 +7466,8 @@
       "dependencies": [
         "8f7df5df39a041d7a972078830dbcee7",
         "f1864c5a432948b7856a00bd365e5bed",
-        "aa46ed7e78d649ef978baee4eca44885"
+        "aa46ed7e78d649ef978baee4eca44885",
+        "cce7ce18a5a147b9a20dc0c91119fdc1"
       ],
       "verified_artifact": null,
       "attempts": [
@@ -10568,6 +10569,45 @@
         "unresolved": [
           "pinned_lean_compile_and_axioms",
           "MBD_operator_source_bound",
+          "mass_to_PMI_scale_source_bridge"
+        ]
+      }
+    },
+    "cce7ce18a5a147b9a20dc0c91119fdc1": {
+      "id": "cce7ce18a5a147b9a20dc0c91119fdc1",
+      "name": "P4.vector_remote_budget_pmi_composition",
+      "statement": "A single squared-norm bound for the two-dimensional remote action, combined with a mass-to-scale bridge and K*beta^2 <= p*d, closes the vector P4 PMI quadratic without per-component recharging.",
+      "parent_id": null,
+      "status": "open",
+      "proof_sketch": "Use the sum of two completed squares and one exact residual budget; keep K nonnegative as an explicit adapter premise.",
+      "dependencies": [
+        "aa46ed7e78d649ef978baee4eca44885"
+      ],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean-source-independent",
+        "statement_status": "pending_pinned_compile",
+        "evidence_level": "isolated_lean_candidate",
+        "claim_status": "vector_physical_binding_open",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "upstream_node": "aa46ed7e78d649ef978baee4eca44885",
+        "p4_parent": "1e7b1df1835f4deba06b11a8182f6719",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_remote_vector_pmi\\RemoteVectorPMI.lean",
+            "sha256": "b2c5702ff26ade4dc57210ea3aa7769b3081a9a8376cf256431fd6941f01f79f"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_remote_vector_pmi\\README.md",
+            "sha256": "e12e2d5d19f9b7797523cfdd342c9d50f67d2a4762780f16feac6fbdbd0d6030"
+          }
+        ],
+        "unresolved": [
+          "pinned_lean_compile_and_axioms",
+          "K_is_a_covered_domain_MBD_squared_operator_bound",
           "mass_to_PMI_scale_source_bridge"
         ]
       }
@@ -30526,6 +30566,33 @@
       "status": "pending_pinned_compile",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T06:29:23.068144+00:00",
+      "kind": "node_added",
+      "node_id": "cce7ce18a5a147b9a20dc0c91119fdc1",
+      "parent_id": null,
+      "name": "P4.vector_remote_budget_pmi_composition"
+    },
+    {
+      "at": "2026-09-07T06:29:23.068918+00:00",
+      "kind": "routeb_vector_remote_pmi_checkpoint",
+      "node_id": "cce7ce18a5a147b9a20dc0c91119fdc1",
+      "parent_id": "1e7b1df1835f4deba06b11a8182f6719",
+      "upstream_node": "aa46ed7e78d649ef978baee4eca44885",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_remote_vector_pmi\\RemoteVectorPMI.lean",
+          "sha256": "b2c5702ff26ade4dc57210ea3aa7769b3081a9a8376cf256431fd6941f01f79f"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_remote_vector_pmi\\README.md",
+          "sha256": "e12e2d5d19f9b7797523cfdd342c9d50f67d2a4762780f16feac6fbdbd0d6030"
+        }
+      ],
+      "status": "pending_pinned_compile",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -34182,5 +34249,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "54aad1e9acc110c3e016ef0cec09043cf576942e92079b45de82dd758dbfc0d5"
+  "state_checksum": "dcf9ad128347cb9aef083d9852148e7b84b48280b1a90b04af58487a698af1ad"
 }
