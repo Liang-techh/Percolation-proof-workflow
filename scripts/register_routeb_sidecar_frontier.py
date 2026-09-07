@@ -684,6 +684,20 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.self_gram",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source",
+        "statement": "The first three body-6 source columns admit an exact 3x3 self axis/velocity Gram interface with all offset and off-diagonal terms retained.",
+        "proof_sketch": "Use the sparse local column templates and yaw isometry to derive six independent Gram entries plus symmetry, then connect the real source columns while keeping CenterOffsetTarget explicit.",
+        "lane": "source_semantics",
+        "bottleneck": "source_semantics",
+        "status": "OPEN_UNCOMPILED_BODY6_SELF3_GRAM",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_SELF3_Core20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_SELF3_Source20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_SELF3_20260907_REVIEW.md",
+        ],
+    },
+    {
         "name": "P5.componentwise_relative_decay.physical_gain_mu_nu_bridge",
         "parent": "P5.componentwise_relative_decay",
         "statement": "Source-supplied nonnegative physical incremental gains can be transported through the moving frame into a square-only rational mu/nu envelope for the P5 parameter tube.",
