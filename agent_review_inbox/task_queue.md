@@ -1179,6 +1179,17 @@ polynomial remains a separate frontier.
 - deliver: smallest pinned Lean theorem/receipt plus an explicit source
   binding contract; state whether square-root factors can be avoided by an
   equivalent PSD formulation;
+- factorization guard: `B_up` is rational diagonal, but a real factor `S` may
+  require non-rational square roots; do not invent a rational Cholesky factor.
+  If needed, deliver a square-root-free quadratic-form/PSD adapter as the
+  alternate theorem surface;
+- notation guard: `rho` in this theorem is `rho_F^2`, matching the squared
+  Frobenius hypothesis and the downstream raw-port budget;
+- workflow lint: `scripts/check_routeb_p4_interface_consistency.py` verifies
+  the cross-node notation, metric, and parent/consumer direction before a
+  receipt is attached; `record_routeb_p4_interface_consistency.py` persists
+  its checker hash and PASS as non-authoritative state; it cannot enter the
+  registry;
 - forbidden: treating this generic composition as proof of interval entries,
   equating it with robust-PMI `E_k`, using the positive ledger margin as a
   kernel result, or opening P4/M4 admission.
@@ -1193,6 +1204,11 @@ polynomial remains a separate frontier.
   `theta>0 ∧ ||r||₂²≤rho*A ∧ b≥(1+theta)||l||₂²+(1+1/theta)rho*A`
   `⇒ ||l+r||₂²≤b`. Consume `T-P4-023` only as the port-energy premise and
   bind `A=a_BᵀB_up a_B` in a separate Route-B adapter;
+- required equivalent interface: expose `lambda=1+1/theta>1` and the affine
+  PMI block `[[b_base-lambda*rho*A_up,l_baseᵀ],
+  [l_base,((lambda-1)/lambda)I₂]]`; its Schur condition is
+  `b_base≥lambda*rho*A_up+lambda/(lambda-1)||l_base||₂²`. `lambda` is a
+  fixed per-cell rational parameter, never state-dependent;
 - deliver: smallest pinned Lean theorem, exact statement identity, and a
   source-binding receipt showing which declared base residual and `B_up`
   energy are used;
@@ -1226,6 +1242,35 @@ polynomial remains a separate frontier.
   scalar positivity premise explicitly;
 - forbidden: absorbing the term with an unstated safety factor or claiming
   the Route-B residual/coverage gates are closed.
+
+### T-P4-027 — fixed per-cell lambda admissibility contract
+
+- status: `open` (new mathematical bottleneck from the compact Schur ledger)
+- owner: `大爱仙尊` for exact scalar interval/ledger reasoning; `狂蛮魔尊`
+  for the Schur-side strictness implications;
+- scope: formalize that each consumed cell chooses one fixed rational
+  `lambda_k` with `1<lambda_k<lambda_upper_k` and a nonnegative exact Schur
+  margin, and that the same value is used by the affine PMI;
+- scalar target: for `gamma_cell_k>0`, prove/instantiate
+  `lambda_upper_k=gamma_external_k/gamma_cell_k` and
+  `candidate_margin_k=gamma_external_k-lambda_k*gamma_cell_k`, with strict
+  positivity of the denominator and margin handling explicit;
+- deliver: a smallest pinned theorem or exact proof obligation plus a receipt
+  contract for the cell witness; explicitly reject state-dependent lambda;
+- local diagnostic helper: `scripts/check_routeb_fixed_lambda_ledger.py` checks
+  the two scalar relations with high-precision `Decimal` reconstruction and
+  explicit text-quantization tolerances; its PASS is only a contract
+  diagnostic and cannot enter the registry;
+- ledger warning: the current `eta=5.6` candidate grid contains rows with
+  `admissible_fixed_lambda=false` (for example `lambda=5` while the cell upper
+  bound is about `2.93`), so a positive margin elsewhere is not a universal
+  parameter certificate;
+- reconciliation warning: the aggregate `routeB_compact_port_frobenius_ledger`
+  currently marks `lambda=5` admissible for `eta=5.6`, while the per-cell
+  combined-Schur ledger rejects that value on some cells; agents must prove the
+  two bound metrics/PMI semantics equivalent before mixing their receipts;
+- forbidden: upgrading a ledger row, Float64 computation, or one-cell witness
+  into all-cell coverage, residual closure, or formal-certificate admission.
 
 ## Handoff format
 

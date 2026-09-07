@@ -90,6 +90,7 @@ TASK_TARGETS = {
     "T-P4-024": ("P4.combined_schur_port_energy_adapter", "pending_combined_schur_port_energy_adapter"),
     "T-P4-025": ("P4.real_norm_square_expansion", "pending_real_norm_square_expansion"),
     "T-P4-026": ("P4.young_cross_term_bound", "pending_young_cross_term_bound"),
+    "T-P4-027": ("P4.fixed_cell_lambda_admissibility", "pending_fixed_cell_lambda_contract"),
     "T-M4-008": ("M4.energy_to_schur_budget_bridge", "pending_conditional_energy_schur_bridge"),
     "T-P8-005": ("P8.independent_reachability", "pending_terminal_transfer_interface"),
     "T-P8-006": ("P8.ramp_reconstruction_compiled_candidate", "pending_ramp_reconstruction_child"),

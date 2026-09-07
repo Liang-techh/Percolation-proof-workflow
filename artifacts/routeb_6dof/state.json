@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 416,
+  "revision": 430,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -7477,7 +7477,8 @@
         "8976802ec6f946efac1182d2980b9790",
         "57e8ba91205a44fb91dcbbd509078b4a",
         "786c11f2dd6240518df51ac77617feff",
-        "33fdb01f3d0d4b53953680b32db11f9c"
+        "33fdb01f3d0d4b53953680b32db11f9c",
+        "35839e28b33e484f886081ddb6351c80"
       ],
       "verified_artifact": null,
       "attempts": [
@@ -10670,6 +10671,14 @@
             "sha256": "68bbc8d4b4455a547d6a251e67f0b3a075b32827541dbf7cec827b56d06a9487"
           },
           {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_DH_NOMINAL_DISTAL_BRIDGE_AUDIT.md",
+            "sha256": "9bf3121a53f326a46940a157371d907c2ad27896362937625791caec5aa48622"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_NOMINAL_DESCRIPTOR_INTERFACE.md",
+            "sha256": "62a2500d51e3c8502824bbd0062c5cb8058d98c19df2ead3a165ec7f869a612e"
+          },
+          {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_descriptor_bridge.csv",
             "sha256": "8313f4a7c6b580d480200b88ed7457e5a9acc3262925a5358f360be93fe6fccb"
           },
@@ -10695,15 +10704,30 @@
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\src\\percolation_workflow\\routeb_nominal_distal_contract.py",
-            "sha256": "77927f2425bbf0c70dfc94e0bcaf9112997da2e2c553669e69754906c0afb864"
+            "sha256": "a3f4965481f5491569cabd8bb0730963beff07ba5fe39402812048f61348cc89"
           }
         ],
         "unresolved": [
           "source_binding_of_nominal_and_reduced_DH_descriptors",
           "rational_tail_PMI_or_co-state_aware_Schur_certificate",
           "covered_domain_and_global_residual_absorption",
-          "pinned_lean_compile_and_comparator_receipt"
-        ]
+          "pinned_lean_compile_and_comparator_receipt",
+          "certified q-to-cs angle graph or external interval-to-polynomial adapter",
+          "raw Euclidean port gamma_k versus energy-normalized cross-term metric binding"
+        ],
+        "mathematical_contract": {
+          "descriptor_equations": [
+            "M_mu,DD(q)*v + (M_DB(q)-M0_DB)*a_B = 0",
+            "r_B - M_BD(q)*v = 0"
+          ],
+          "nominal_subtraction": "M_mu,DD*a_D^nom + M0_DB*a_B - b_D = 0",
+          "regularization": "M_mu(q)=M(q)+(1/1000000)I; no unregularized mass may be mixed into this branch",
+          "polynomial_boundary": "the descriptor identities are exact inverse-free algebraic equalities; they do not prove interval remainder, SOS positivity, flowpipe, or terminal transfer",
+          "port_semantics": "the compact PMI consumes raw Euclidean r_B^T*r_B with gamma_k >= rho_k^2; an energy-normalized two-sided metric needs a separate typed conversion",
+          "metric_orientation": "for W^(1/2) R B_up^(-1/2), W scales output rows on the left; old right-scaled weighted ledgers are not interchangeable",
+          "angle_bridge": "q-box interval bounds cannot be inserted into c/s SOS coefficients without a certified cos/sin graph or an explicit external robust-budget adapter",
+          "preferred_consumption": "combined Schur/Young on L_B=l_base+r_B; do not relabel the raw port bound as robust-PMI E_k"
+        }
       }
     },
     "8976802ec6f946efac1182d2980b9790": {
@@ -10771,7 +10795,7 @@
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\src\\percolation_workflow\\routeb_nominal_distal_contract.py",
-            "sha256": "77927f2425bbf0c70dfc94e0bcaf9112997da2e2c553669e69754906c0afb864"
+            "sha256": "a3f4965481f5491569cabd8bb0730963beff07ba5fe39402812048f61348cc89"
           },
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\check_routeb_physical_rational_tail.py",
@@ -10781,7 +10805,18 @@
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\check_routeb_rational_gram_payload.py",
             "sha256": "c41321cd6f74031603ac726682b23bf78980d49733d93f2023e59d8ef216a9d5"
           }
-        ]
+        ],
+        "candidate_tail_receipt": {
+          "status": "EXACT_RATIONAL_TAIL_CANDIDATE",
+          "artifact_sha256": "5bbb30c0fb3034eb4fab86fb338eb6f745e6087c9de400143c80a10ba41db4f2",
+          "source_sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936",
+          "scalar_terms": 27,
+          "scalar_max_total_cs_degree": 6,
+          "errors": [],
+          "formal_certificate_allowed": false,
+          "registry_eligible": false,
+          "proof_boundary": "exact descriptor/tail identity candidate only; nonnegativity, SOS, Lean, coverage, and flowpipe remain open"
+        }
       }
     },
     "57e8ba91205a44fb91dcbbd509078b4a": {
@@ -11834,8 +11869,7 @@
       "proof_sketch": "Replay the 5120-cell outward interval contract, reduce the Frobenius square bound to exact rational Young charges, and keep source semantics, residual PMI, coverage, and flowpipe as independent premises.",
       "dependencies": [
         "62cc80b1b0af492c80c957bf0a2c7224",
-        "ceb9767fdafe4ec18170010f6ddea215",
-        "35839e28b33e484f886081ddb6351c80"
+        "ceb9767fdafe4ec18170010f6ddea215"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -12019,6 +12053,8 @@
         },
         "mathematical_contract": {
           "indices": "finite real matrix spaces",
+          "typed_dimensions": "R : Matrix m n R, S : Matrix n n R, a : Fin n -> R",
+          "rho_semantics": "rho is the squared Frobenius budget rho_F^2, not the unsquared norm rho_F",
           "premises": [
             "B = S^T S",
             "S is invertible",
@@ -12029,12 +12065,19 @@
           "conclusion": "for every a, ||R a||_2^2 <= rho * (a^T B a)",
           "proof_route": "generic Frobenius operator bridge on z=S*a, then factor identity",
           "routeb_binding": "B is B_up and R is the declared port map",
+          "factorization_contract": {
+            "typed_dimensions": "R : Matrix m n R, S : Matrix n n R, a : Fin n -> R, B=SᵀS",
+            "core_identity": "(R*S⁻¹)*(S*a)=R*a and ||S*a||₂²=aᵀ*Sᵀ*S*a",
+            "routeb_factor": "B_up is a positive diagonal real form; do not claim its square-root factor S has rational entries",
+            "square_root_free_alternative": "a direct quadratic-form/PSD certificate may replace S if the pinned Lean API cannot carry Real.sqrt factors"
+          },
           "not_an_E_k_bridge": true
         },
         "unresolved": [
           "pinned_matrix_factor_api",
           "finite-dimensional_norm_and_transpose_statement_identity",
           "source_binding_of_R_and_B_up",
+          "B_up_positive_factor_or_square_root_free_PSD_adapter",
           "combined_schur_base_residual_premise"
         ]
       }
@@ -12043,12 +12086,13 @@
       "id": "35839e28b33e484f886081ddb6351c80",
       "name": "P4.combined_schur_port_energy_adapter",
       "statement": "If theta>0, ||r||₂²≤rho*A, and b≥(1+theta)||l||₂²+(1+1/theta)rho*A, then ||l+r||₂²≤b.",
-      "parent_id": "33fdb01f3d0d4b53953680b32db11f9c",
+      "parent_id": "1e7b1df1835f4deba06b11a8182f6719",
       "status": "open",
       "proof_sketch": "Use the exact norm-square expansion and Young's inequality for the cross term. Keep rho*A as the typed port-energy input supplied by the weighted Frobenius adapter; do not reinterpret it as robust-PMI E_k or claim global closure.",
       "dependencies": [
         "e1c831a58a2c4aeca7956b57861d68e2",
-        "6c0a93c749f24bb7b8b70d9610935680"
+        "6c0a93c749f24bb7b8b70d9610935680",
+        "8cea6a84c5364384a723d88f00d9a516"
       ],
       "verified_artifact": null,
       "attempts": [],
@@ -12081,6 +12125,20 @@
           "conclusion": "||l+r||_2^2 <= b",
           "proof_route": "expand the square, apply Young 2<l,r> <= theta||l||^2 + theta^(-1)||r||^2, then consume the weighted port-energy bound",
           "routeb_binding": "l is the declared base residual, A=A_up=a_B^T B_up a_B, and rho=rho_F^2; source binding remains an adapter obligation",
+          "equivalent_lambda_form": {
+            "substitution": "lambda = 1 + 1/theta",
+            "domain": "lambda > 1 (per-cell fixed rational decision parameter)",
+            "pmi_matrix": "[[b_base - lambda*rho*A_up, l_base^T], [l_base, ((lambda-1)/lambda) I_2]]",
+            "schur_condition": "b_base >= lambda*rho*A_up + lambda/(lambda-1)*||l_base||_2^2",
+            "interpretation": "the scalar Young budget is the Schur complement of the affine PMI; lambda must be fixed per cell, not state-dependent"
+          },
+          "source_reference": {
+            "document": "routeB_dense_Mq/P5_COMPACT_COMBINED_SCHUR_INTERFACE.md",
+            "interface": "compact residual L_B = l_base + r_B",
+            "upper_energy": "B_up = diag(1402217/12000000, 200739/4000000)",
+            "caution": "mass-weighted rho^2 probes using the old right-vs-left scaling are historical and not admissible evidence",
+            "parameter_selection": "choose lambda_k independently per cell with a strict feasible interval; a positive margin for one candidate grid row does not certify every cell"
+          },
           "not_an_E_k_bridge": true,
           "not_a_pmi_closure": true
         },
@@ -12089,7 +12147,28 @@
           "strict_positive_theta_division_api",
           "typed_binding_of_l_base_and_A_up",
           "residual_PMI_and_flowpipe_consumption"
-        ]
+        ],
+        "interface_consistency_receipt": {
+          "checker": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\check_routeb_p4_interface_consistency.py",
+          "checker_sha256": "919824d880d86e0a70d7ef06c1fa81ada153b88bdce5bce26537673fdacac976",
+          "status": "diagnostic_pass",
+          "state_revision_checked": 428,
+          "checks": {
+            "weighted_rho_is_squared": true,
+            "combined_rho_is_squared": true,
+            "combined_energy_is_A_up": true,
+            "weighted_binds_B_up": true,
+            "port_provides_squared_raw_budget": true,
+            "port_uses_B_up_normalization": true,
+            "combined_is_consumed_by_residual_pmi": true,
+            "port_does_not_wait_for_combined": true,
+            "global_gate_closed_only_explicitly": true
+          },
+          "registry": 0,
+          "registry_promoted": false,
+          "formal_certificate_allowed": false,
+          "proof_boundary": "workflow lint only; no Lean, source, coverage, or registry admission"
+        }
       }
     },
     "e1c831a58a2c4aeca7956b57861d68e2": {
@@ -12164,6 +12243,65 @@
         "unresolved": [
           "pinned Cauchy-Schwarz/Young lemma names",
           "strict positive theta division API"
+        ]
+      }
+    },
+    "8cea6a84c5364384a723d88f00d9a516": {
+      "id": "8cea6a84c5364384a723d88f00d9a516",
+      "name": "P4.fixed_cell_lambda_admissibility",
+      "statement": "For each Route-B cell, a fixed rational lambda_k must satisfy 1<lambda_k<lambda_upper_k and the exact Schur margin must be nonnegative before the affine PMI may consume it.",
+      "parent_id": "35839e28b33e484f886081ddb6351c80",
+      "status": "open",
+      "proof_sketch": "Formalize the strict parameter-domain side condition and keep the per-cell witness separate from all-cell coverage. Reject state-dependent lambda and any ledger row marked inadmissible.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "research_stage": "P4",
+        "statement_status": "formalization_target",
+        "claim_status": "fixed_cell_lambda_contract_open",
+        "evidence_level": "typed-parameter-domain-target",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "source_provenance": {
+          "origin": "new Route-B parameter-domain target; no upstream code copied",
+          "upstream_inspiration": "Route-B P5_COMPACT_COMBINED_SCHUR_INTERFACE.md",
+          "attribution_required": true
+        },
+        "mathematical_contract": {
+          "premises": [
+            "theta > 0 and lambda = 1 + 1/theta",
+            "lambda is fixed for the cell and rational, not state-dependent",
+            "the cell ledger supplies an exact strict upper admissibility bound lambda_upper_k"
+          ],
+          "conclusion": "accept only 1 < lambda_k < lambda_upper_k and a nonnegative exact Schur margin for every consumed cell",
+          "pmi_binding": "the same fixed lambda_k is used in the affine PMI and its Schur complement; changing lambda with state invalidates the affine certificate",
+          "ledger_formula": "when gamma_cell_k > 0, lambda_upper_k = gamma_external_k / gamma_cell_k and candidate_margin_k = gamma_external_k - lambda_k*gamma_cell_k; strict admissibility is 1 < lambda_k < lambda_upper_k",
+          "ledger_guard": "candidate rows with admissible_fixed_lambda=false are rejected even if another row has positive candidate_margin",
+          "ledger_reconciliation": "do not mix aggregate routeB_compact_port_frobenius_ledger lambda bounds with per-cell combined_schur_partition_ledger bounds until their metric and PMI semantics are proven equivalent",
+          "diagnostic_receipt": {
+            "checker": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\check_routeb_fixed_lambda_ledger.py",
+            "checker_sha256": "2a4810df5cda1032c82483c39cd63489ce54a22ba130a661c4439242a6e3f771",
+            "status": "diagnostic_pass_decimal_quantized",
+            "rows": 2885,
+            "max_upper_abs_error": "3.380281759650464803982865167055332399810852034026785663178654894E-13",
+            "max_margin_abs_error": "5E-17",
+            "upper_tolerance": "1E-12",
+            "margin_tolerance": "1E-15",
+            "registry_promoted": false,
+            "formal_certificate_allowed": false,
+            "proof_boundary": "diagnostic scalar contract only; no Lean, source, coverage, or registry admission"
+          },
+          "not_a_coverage_proof": true,
+          "not_a_residual_decomposition": true
+        },
+        "unresolved": [
+          "exact Lean statement for strict rational interval membership",
+          "typed connection from lambda_upper_k to the pinned cell ledger",
+          "all-cell witness/coverage receipt",
+          "reconciliation of aggregate and per-cell lambda admissibility ledgers"
         ]
       }
     }
@@ -34409,6 +34547,328 @@
       ],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T09:38:19.167018+00:00",
+      "kind": "routeb_combined_schur_adapter_target_refresh",
+      "node_id": "35839e28b33e484f886081ddb6351c80",
+      "parent_id": "33fdb01f3d0d4b53953680b32db11f9c",
+      "required_node_ids": [
+        "ceb9767fdafe4ec18170010f6ddea215"
+      ],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T09:41:13.144039+00:00",
+      "kind": "routeb_combined_schur_adapter_target_refresh",
+      "node_id": "35839e28b33e484f886081ddb6351c80",
+      "parent_id": "33fdb01f3d0d4b53953680b32db11f9c",
+      "required_node_ids": [
+        "ceb9767fdafe4ec18170010f6ddea215"
+      ],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T09:41:13.583093+00:00",
+      "kind": "node_added",
+      "node_id": "8cea6a84c5364384a723d88f00d9a516",
+      "parent_id": "35839e28b33e484f886081ddb6351c80",
+      "name": "P4.fixed_cell_lambda_admissibility"
+    },
+    {
+      "at": "2026-09-07T09:41:13.583114+00:00",
+      "kind": "routeb_fixed_cell_lambda_contract_added",
+      "node_id": "8cea6a84c5364384a723d88f00d9a516",
+      "parent_id": "35839e28b33e484f886081ddb6351c80",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T09:43:02.080936+00:00",
+      "kind": "routeb_fixed_cell_lambda_contract_refresh",
+      "node_id": "8cea6a84c5364384a723d88f00d9a516",
+      "parent_id": "35839e28b33e484f886081ddb6351c80",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T09:44:05.193302+00:00",
+      "kind": "routeb_combined_schur_adapter_target_refresh",
+      "node_id": "35839e28b33e484f886081ddb6351c80",
+      "parent_id": "1e7b1df1835f4deba06b11a8182f6719",
+      "required_node_ids": [
+        "ceb9767fdafe4ec18170010f6ddea215"
+      ],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T09:45:45.925029+00:00",
+      "kind": "routeb_nominal_distal_bridge_provenance_refresh",
+      "node_id": "5233ac4cfe4c492db8250ad9f3eda543",
+      "parent_id": "1e7b1df1835f4deba06b11a8182f6719",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_dh_nominal_distal_bridge_audit.csv",
+          "sha256": "43ebf83d9abfc39e58008fb9e012fefd9db712791e28aa8d718390229eb930c9"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_nominal_descriptor_interface.csv",
+          "sha256": "ab36538b5aa9ab9b62012d2ab90a1e20e3a226110b97f95d5e9d270f0b5a0375"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\dhport_lib.jl",
+          "sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P4_PHYSICAL_RATIONAL_DESCRIPTOR_BRIDGE.md",
+          "sha256": "68bbc8d4b4455a547d6a251e67f0b3a075b32827541dbf7cec827b56d06a9487"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_DH_NOMINAL_DISTAL_BRIDGE_AUDIT.md",
+          "sha256": "9bf3121a53f326a46940a157371d907c2ad27896362937625791caec5aa48622"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_NOMINAL_DESCRIPTOR_INTERFACE.md",
+          "sha256": "62a2500d51e3c8502824bbd0062c5cb8058d98c19df2ead3a165ec7f869a612e"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_descriptor_bridge.csv",
+          "sha256": "8313f4a7c6b580d480200b88ed7457e5a9acc3262925a5358f360be93fe6fccb"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_tail_pmi_scalar_meta.csv",
+          "sha256": "53efe6a1ffaa15b7a8eb8c08b220e5e9a0ee2f2166a0f6982de055b78bdec374"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_tail_pmi_scalar.csv",
+          "sha256": "6b00542155ff41339ab466138cb5d1612f7385f8abd158feea4630e30933e93e"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_tail_cs_polynomial.csv",
+          "sha256": "c3bc64b1274982ef7556fb5258685e1985f695d601029842d94b6a7d92bfd4ba"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_Mq_M0.csv",
+          "sha256": "28d98ad71d1d6c2cbe830872cad9077f2f7b4e2d932794217eb68868fd2e2b40"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\PROJECT_REFORM_TARGET.md",
+          "sha256": "439a7378bdbf8950445b91a66d917535ede341065ced8a548a176517d679138c"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\src\\percolation_workflow\\routeb_nominal_distal_contract.py",
+          "sha256": "a3f4965481f5491569cabd8bb0730963beff07ba5fe39402812048f61348cc89"
+        }
+      ],
+      "status": "pending_source_binding_and_pinned_compile",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T09:49:13.218139+00:00",
+      "kind": "routeb_fixed_cell_lambda_contract_refresh",
+      "node_id": "8cea6a84c5364384a723d88f00d9a516",
+      "parent_id": "35839e28b33e484f886081ddb6351c80",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T09:51:30.843798+00:00",
+      "kind": "routeb_fixed_cell_lambda_contract_refresh",
+      "node_id": "8cea6a84c5364384a723d88f00d9a516",
+      "parent_id": "35839e28b33e484f886081ddb6351c80",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T09:52:32.835042+00:00",
+      "kind": "routeb_fixed_cell_lambda_contract_refresh",
+      "node_id": "8cea6a84c5364384a723d88f00d9a516",
+      "parent_id": "35839e28b33e484f886081ddb6351c80",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T09:53:53.298324+00:00",
+      "kind": "routeb_weighted_frobenius_bridge_target_refresh",
+      "node_id": "ceb9767fdafe4ec18170010f6ddea215",
+      "parent_id": "33fdb01f3d0d4b53953680b32db11f9c",
+      "required_node_ids": [
+        "62cc80b1b0af492c80c957bf0a2c7224"
+      ],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T09:55:14.123877+00:00",
+      "kind": "routeb_weighted_frobenius_bridge_target_refresh",
+      "node_id": "ceb9767fdafe4ec18170010f6ddea215",
+      "parent_id": "33fdb01f3d0d4b53953680b32db11f9c",
+      "required_node_ids": [
+        "62cc80b1b0af492c80c957bf0a2c7224"
+      ],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T09:56:35.224195+00:00",
+      "kind": "routeb_nominal_tail_pmi_provenance_refresh",
+      "node_id": "8976802ec6f946efac1182d2980b9790",
+      "parent_id": "1e7b1df1835f4deba06b11a8182f6719",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_descriptor_bridge.csv",
+          "sha256": "8313f4a7c6b580d480200b88ed7457e5a9acc3262925a5358f360be93fe6fccb"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_tail_cs_polynomial.csv",
+          "sha256": "c3bc64b1274982ef7556fb5258685e1985f695d601029842d94b6a7d92bfd4ba"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_Mq_M0.csv",
+          "sha256": "28d98ad71d1d6c2cbe830872cad9077f2f7b4e2d932794217eb68868fd2e2b40"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_tail_pmi_scalar.csv",
+          "sha256": "6b00542155ff41339ab466138cb5d1612f7385f8abd158feea4630e30933e93e"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_tail_pmi_scalar_meta.csv",
+          "sha256": "53efe6a1ffaa15b7a8eb8c08b220e5e9a0ee2f2166a0f6982de055b78bdec374"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_tail_pmi_scalar_gram_rational_audit.csv",
+          "sha256": "b07c7c65dbfbaf1cee321dff433bae4a9d786c2a383d1ad5b17c8f12d004c901"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_tail_pmi_scalar_gram_rational.csv",
+          "sha256": "f39f9fbfe6ce2fce725a9a14024f622fda901ce05cd0899d33529fca5fdeb4bb"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_tail_pmi_scalar_gram_basis.csv",
+          "sha256": "caa65197131d3ff5acffd9396fa980bac91292f3d8d6453642bbcae6daf2c89c"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P4_PHYSICAL_RATIONAL_TAIL_PMI_SCALAR.md",
+          "sha256": "4823fb763d6815f8e03115140f497d998ab5ec5fb48b560b5b5006f9a8555be5"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\src\\percolation_workflow\\routeb_nominal_distal_contract.py",
+          "sha256": "a3f4965481f5491569cabd8bb0730963beff07ba5fe39402812048f61348cc89"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\check_routeb_physical_rational_tail.py",
+          "sha256": "d53177db3dac0e8327864e4de8a497b74b6cdb87ff278b7989bce04ed13b9f3f"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\check_routeb_rational_gram_payload.py",
+          "sha256": "c41321cd6f74031603ac726682b23bf78980d49733d93f2023e59d8ef216a9d5"
+        }
+      ],
+      "status": "pending_exact_tail_positivity_and_pinned_compile",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T10:00:04.704576+00:00",
+      "kind": "routeb_p4_interface_consistency_recorded",
+      "node_id": "35839e28b33e484f886081ddb6351c80",
+      "receipt": {
+        "checker": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\check_routeb_p4_interface_consistency.py",
+        "checker_sha256": "919824d880d86e0a70d7ef06c1fa81ada153b88bdce5bce26537673fdacac976",
+        "status": "diagnostic_pass",
+        "state_revision_checked": 428,
+        "checks": {
+          "weighted_rho_is_squared": true,
+          "combined_rho_is_squared": true,
+          "combined_energy_is_A_up": true,
+          "weighted_binds_B_up": true,
+          "port_provides_squared_raw_budget": true,
+          "port_uses_B_up_normalization": true,
+          "combined_is_consumed_by_residual_pmi": true,
+          "port_does_not_wait_for_combined": true,
+          "global_gate_closed_only_explicitly": true
+        },
+        "registry": 0,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_boundary": "workflow lint only; no Lean, source, coverage, or registry admission"
+      },
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T10:01:28.881316+00:00",
+      "kind": "routeb_nominal_tail_pmi_provenance_refresh",
+      "node_id": "8976802ec6f946efac1182d2980b9790",
+      "parent_id": "1e7b1df1835f4deba06b11a8182f6719",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_descriptor_bridge.csv",
+          "sha256": "8313f4a7c6b580d480200b88ed7457e5a9acc3262925a5358f360be93fe6fccb"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_tail_cs_polynomial.csv",
+          "sha256": "c3bc64b1274982ef7556fb5258685e1985f695d601029842d94b6a7d92bfd4ba"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_Mq_M0.csv",
+          "sha256": "28d98ad71d1d6c2cbe830872cad9077f2f7b4e2d932794217eb68868fd2e2b40"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_tail_pmi_scalar.csv",
+          "sha256": "6b00542155ff41339ab466138cb5d1612f7385f8abd158feea4630e30933e93e"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_physical_rational_tail_pmi_scalar_meta.csv",
+          "sha256": "53efe6a1ffaa15b7a8eb8c08b220e5e9a0ee2f2166a0f6982de055b78bdec374"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_tail_pmi_scalar_gram_rational_audit.csv",
+          "sha256": "b07c7c65dbfbaf1cee321dff433bae4a9d786c2a383d1ad5b17c8f12d004c901"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_tail_pmi_scalar_gram_rational.csv",
+          "sha256": "f39f9fbfe6ce2fce725a9a14024f622fda901ce05cd0899d33529fca5fdeb4bb"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_tail_pmi_scalar_gram_basis.csv",
+          "sha256": "caa65197131d3ff5acffd9396fa980bac91292f3d8d6453642bbcae6daf2c89c"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P4_PHYSICAL_RATIONAL_TAIL_PMI_SCALAR.md",
+          "sha256": "4823fb763d6815f8e03115140f497d998ab5ec5fb48b560b5b5006f9a8555be5"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\src\\percolation_workflow\\routeb_nominal_distal_contract.py",
+          "sha256": "a3f4965481f5491569cabd8bb0730963beff07ba5fe39402812048f61348cc89"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\check_routeb_physical_rational_tail.py",
+          "sha256": "d53177db3dac0e8327864e4de8a497b74b6cdb87ff278b7989bce04ed13b9f3f"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\scripts\\check_routeb_rational_gram_payload.py",
+          "sha256": "c41321cd6f74031603ac726682b23bf78980d49733d93f2023e59d8ef216a9d5"
+        }
+      ],
+      "candidate_tail_receipt": {
+        "status": "EXACT_RATIONAL_TAIL_CANDIDATE",
+        "artifact_sha256": "5bbb30c0fb3034eb4fab86fb338eb6f745e6087c9de400143c80a10ba41db4f2",
+        "source_sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936",
+        "scalar_terms": 27,
+        "scalar_max_total_cs_degree": 6,
+        "errors": [],
+        "formal_certificate_allowed": false,
+        "registry_eligible": false,
+        "proof_boundary": "exact descriptor/tail identity candidate only; nonnegativity, SOS, Lean, coverage, and flowpipe remain open"
+      },
+      "status": "pending_exact_tail_positivity_and_pinned_compile",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -38065,5 +38525,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "fdcf62e941bfedd7f015729fdcd27df17f164f36a462223fa07b6c8a28b713d8"
+  "state_checksum": "e747f30e95ca052b4a0169dda37909de384526cadab0e7c4da2c28346a06c611"
 }

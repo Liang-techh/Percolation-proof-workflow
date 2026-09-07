@@ -569,6 +569,13 @@
 - 等待狂蛮魔尊给出不等式闭合、柳冠一给出 `l_base/A_up` typed binding、
   巨阳仙尊补齐 pinned Lean norm-square API。
 
+- 2026-09-07 数学接口补充：根据 `P5_COMPACT_COMBINED_SCHUR_INTERFACE.md`，
+  `lambda=1+1/theta>1` 时，该 Young 预算等价于 affine PMI
+  `[[b_base-lambda*rho*A_up,l_baseᵀ],[l_base,((lambda-1)/lambda)I₂]]`；
+  Schur 条件为 `b_base≥lambda*rho*A_up+lambda/(lambda-1)||l_base||²`。
+  `lambda` 只能作为每 cell 固定的 rational 决策参数，不能随 state 变化；
+  旧的 mass-weighted 右/左缩放 probe 只保留为历史，不作为证据。
+
 ### 2026-09-07 — 梁智炜：细化 combined-Schur 的两个基础 lemma
 
 - 将 `T-P4-024` 拆成 `T-P4-025` 范数平方展开和 `T-P4-026` Young
@@ -576,3 +583,71 @@
 - `P4.combined_schur_port_energy_adapter` 现在需要这两个 lemma，再加上
   `P4.weighted_frobenius_port_energy_bridge`；这样 agent 可以并行给出
   pinned Lean receipt，且不会把 source binding 与纯代数证明混在一起。
+
+### 2026-09-07 — 梁智炜：抽出每 cell 固定 lambda 可行域瓶颈
+
+- 新增 `P4.fixed_cell_lambda_admissibility` / `T-P4-027`：每个 cell 必须
+  单独给出固定 rational `lambda_k`，满足严格区间和精确 Schur margin；
+  `lambda(state)` 不允许作为 affine PMI 参数。
+- 当前 ledger 的 `eta=5.6` 候选网格有 189 行不 admissible，故不能把某个
+  正 margin 行或统一 theta 网格当成全 cell 证据；该叶只负责参数域/见证，
+  不关闭 coverage、residual 或 P4 gate。
+- 追加边界：aggregate `routeB_compact_port_frobenius_ledger` 在
+  `eta=5.6` 标记 `lambda=5` admissible，而 per-cell combined-Schur ledger
+  对部分 cell 给出约 `2.93` 的上界并拒绝 `lambda=5`；在证明两者
+  metric/PMI 语义等价前，不能交叉消费这两类 receipt。
+- 进一步核对 2885 行 per-cell ledger：逐行满足
+  `lambda_upper≈gamma_external/gamma_cell` 与
+  `candidate_margin≈gamma_external-lambda*gamma_cell`；由于 CSV 是截断十进制，
+  高精度 Decimal 重算的最大绝对误差分别约为 `3.38e-13` 与 `5e-17`。
+  已将关系升级为 T-P4-027 的 scalar proof target，但不把文本舍入核对
+  当成 Lean 或 source coverage 证据。
+- 同步修正 theorem-tree 方向：`P4.combined_schur_port_energy_adapter` 已从
+  `P4.residual_port_frobenius_bound` 的 child 移到 `P4.residual_schur_pmi`
+  的消费子目标；端口上界不再错误地等待其下游 Schur 消费层。
+
+### 2026-09-07 — 梁智炜：固化 nominal distal source-binding 边界
+
+- `P4.nominal_distal_descriptor_bridge` 已补入当前 P5 文档 provenance 与
+  exact contract：`M_mu,DD*v+DeltaM_DB*a_B=0`、`r_B-M_BD*v=0`，保留
+  inverse-free descriptor 语义和 `M_mu=M+1e-6 I` 归一化。
+- 明确 raw `r_Bᵀr_B` 的 `gamma_k≥rho_k²` 与 energy-normalized cross-term
+  metric 是两条不同消费路线；q-box 到 c/s SOS 还必须有 angle graph 或
+  外部 interval adapter。该更新仍是 open source-binding 目标，不改变 gate。
+
+### 2026-09-07 — 梁智炜：刷新 nominal/Gram candidate receipts
+
+- focused checker 复核 nominal distal descriptor 与 14-block rational Gram
+  reconstruction 均无结构 errors；后者仍是 511 项 residual 的 candidate，
+  不是 kernel proof。
+- 已将当前 source provenance/unresolved frontier 写回 state revision 428；
+  descriptor、tail PMI、Gram reconstruction 均保持 open，registry 与 global
+  formal gate 不变。
+- `P4.nominal_distal_tail_pmi` 现额外挂载 exact-rational candidate receipt：
+  27 项、最高 c/s 总次数 6、恒等式 errors 为 0；receipt 明确不代表
+  tail 非负性、SOS、Lean kernel 或全域 coverage。
+
+### 2026-09-07 — 梁智炜：收紧 weighted Frobenius factorization contract
+
+- `T-P4-023` 现在明确矩阵维度与核心恒等式：
+  `(R*S⁻¹)(S*a)=R*a`、`||S*a||²=aᵀSᵀS*a`。
+- `B_up` 虽为 rational diagonal，但其 real square-root factor 不应被假设
+  为 rational；Lean agent 可选择 `Real.sqrt` 路线，或提交 square-root-free
+  quadratic-form/PSD adapter，避免伪造 Cholesky 来源。
+- 同时固定 T-P4-023 的符号：`rho` 表示 `rho_F^2`，矩阵类型为
+  `R : Matrix m n R`、`S : Matrix n n R`；不得把下游未平方的 Frobenius
+  norm 接入该二次能量预算。
+
+### 2026-09-07 — 梁智炜：加入 P4 interface consistency lint
+
+- 新增 `scripts/check_routeb_p4_interface_consistency.py`，针对当前 state
+  检查 `rho_F²`、`A_up`、`B_up`、raw-port metric 及 provider/consumer
+  parent 方向；9 项检查全部 PASS。
+- 该 lint 只防止 adapter 语义漂移，不构成 Lean/source/coverage 证明，
+  registry 仍为 0，global gate 仍关闭。
+- 已增加 recorder，将 9 项 PASS 与 checker hash 写入
+  `P4.combined_schur_port_energy_adapter` 的非权威 receipt；state revision
+  已推进到 429，仍不改变 theorem/registry admission。
+- combined-Schur recorder 现具备幂等迁移修复：重复运行时会主动清除历史
+  provider edge，避免旧 state 让 downstream consumer 重新污染 port provider
+  的 closure 方向。

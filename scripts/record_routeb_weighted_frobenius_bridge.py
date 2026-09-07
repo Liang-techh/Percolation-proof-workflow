@@ -40,6 +40,8 @@ def main() -> int:
         },
         "mathematical_contract": {
             "indices": "finite real matrix spaces",
+            "typed_dimensions": "R : Matrix m n R, S : Matrix n n R, a : Fin n -> R",
+            "rho_semantics": "rho is the squared Frobenius budget rho_F^2, not the unsquared norm rho_F",
             "premises": [
                 "B = S^T S",
                 "S is invertible",
@@ -50,12 +52,19 @@ def main() -> int:
             "conclusion": "for every a, ||R a||_2^2 <= rho * (a^T B a)",
             "proof_route": "generic Frobenius operator bridge on z=S*a, then factor identity",
             "routeb_binding": "B is B_up and R is the declared port map",
+            "factorization_contract": {
+                "typed_dimensions": "R : Matrix m n R, S : Matrix n n R, a : Fin n -> R, B=SᵀS",
+                "core_identity": "(R*S⁻¹)*(S*a)=R*a and ||S*a||₂²=aᵀ*Sᵀ*S*a",
+                "routeb_factor": "B_up is a positive diagonal real form; do not claim its square-root factor S has rational entries",
+                "square_root_free_alternative": "a direct quadratic-form/PSD certificate may replace S if the pinned Lean API cannot carry Real.sqrt factors",
+            },
             "not_an_E_k_bridge": True,
         },
         "unresolved": [
             "pinned_matrix_factor_api",
             "finite-dimensional_norm_and_transpose_statement_identity",
             "source_binding_of_R_and_B_up",
+            "B_up_positive_factor_or_square_root_free_PSD_adapter",
             "combined_schur_base_residual_premise",
         ],
     }

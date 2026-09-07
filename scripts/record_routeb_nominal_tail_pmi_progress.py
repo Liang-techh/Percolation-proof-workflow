@@ -11,6 +11,9 @@ TARGET = EXTERNAL / "routeB_dense_Mq"
 sys.path.insert(0, str(ROOT / "src"))
 
 from percolation_workflow.store import StateStore
+from percolation_workflow.routeb_nominal_distal_contract import (
+    audit_routeb_physical_rational_tail,
+)
 
 
 def ref(path: Path) -> dict[str, str]:
@@ -23,6 +26,38 @@ def find(state, name: str):
         if node.name == name:
             return node
     raise ValueError(f"missing node: {name}")
+
+
+def candidate_receipt() -> dict[str, object]:
+    payloads = (
+        TARGET / "routeB_physical_rational_descriptor_bridge.csv",
+        TARGET / "routeB_physical_rational_tail_cs_polynomial.csv",
+        TARGET / "routeB_physical_rational_tail_pmi_scalar.csv",
+        TARGET / "routeB_physical_rational_tail_pmi_scalar_meta.csv",
+        TARGET / "routeB_Mq_M0.csv",
+    )
+    result = audit_routeb_physical_rational_tail(
+        payloads[0].read_text(encoding="utf-8"),
+        payloads[3].read_text(encoding="utf-8"),
+        payloads[2].read_text(encoding="utf-8"),
+        tail_cs_csv_text=payloads[1].read_text(encoding="utf-8"),
+        m0_csv_text=payloads[4].read_text(encoding="utf-8"),
+        artifact_sha256=hashlib.sha256(
+            b"".join(path.read_bytes() for path in payloads)
+        ).hexdigest(),
+        source_sha256=hashlib.sha256((TARGET / "dhport_lib.jl").read_bytes()).hexdigest(),
+    )
+    return {
+        "status": result.status,
+        "artifact_sha256": result.artifact_sha256,
+        "source_sha256": result.source_sha256,
+        "scalar_terms": result.scalar_terms,
+        "scalar_max_total_cs_degree": result.scalar_max_total_cs_degree,
+        "errors": list(result.errors),
+        "formal_certificate_allowed": result.formal_certificate_allowed,
+        "registry_eligible": result.registry_eligible,
+        "proof_boundary": "exact descriptor/tail identity candidate only; nonnegativity, SOS, Lean, coverage, and flowpipe remain open",
+    }
 
 
 def main() -> int:
@@ -47,10 +82,16 @@ def main() -> int:
         ROOT / "scripts/check_routeb_physical_rational_tail.py",
         ROOT / "scripts/check_routeb_rational_gram_payload.py",
     )]
+    receipt = candidate_receipt()
+    if receipt["status"] != "EXACT_RATIONAL_TAIL_CANDIDATE":
+        raise ValueError(f"nominal tail candidate check failed: {receipt}")
 
     existing = next((n for n in state.nodes.values() if n.name == name), None)
     if existing is not None:
         changed = existing.metadata.get("source_artifacts") != source_artifacts
+        if existing.metadata.get("candidate_tail_receipt") != receipt:
+            existing.metadata["candidate_tail_receipt"] = receipt
+            changed = True
         required_unresolved = [
             "exact_nonnegativity_on_circle_identities_and_q_domain",
             "certified_gram_or_Lean_proof_of_27_term_scalar_polynomial",
@@ -67,6 +108,7 @@ def main() -> int:
                 "routeb_nominal_tail_pmi_provenance_refresh",
                 node_id=existing.id, parent_id=parent.id,
                 source_artifacts=source_artifacts,
+                candidate_tail_receipt=receipt,
                 status=existing.metadata.get("statement_status"),
                 formal_certificate_allowed=False, registry_promoted=False,
             )
@@ -112,6 +154,7 @@ def main() -> int:
                 "pinned_lean_compile_and_comparator_receipt",
             ],
             "source_artifacts": source_artifacts,
+            "candidate_tail_receipt": receipt,
         },
     )
     parent.dependencies.append(node_id)

@@ -20,7 +20,11 @@ def find(state, name: str):
 def main() -> int:
     store = StateStore(ROOT / "artifacts/routeb_6dof/state.json")
     state = store.load()
-    parent = find(state, "P4.residual_port_frobenius_bound")
+    # The port bound is an upstream provider.  The combined-Schur adapter is
+    # consumed by residual PMI, so attaching it under the port node would make
+    # the provider close over its downstream consumer and distort the DAG.
+    parent = find(state, "P4.residual_schur_pmi")
+    old_parent = find(state, "P4.residual_port_frobenius_bound")
     weighted = find(state, "P4.weighted_frobenius_port_energy_bridge")
     name = "P4.combined_schur_port_energy_adapter"
     metadata = {
@@ -50,6 +54,20 @@ def main() -> int:
             "conclusion": "||l+r||_2^2 <= b",
             "proof_route": "expand the square, apply Young 2<l,r> <= theta||l||^2 + theta^(-1)||r||^2, then consume the weighted port-energy bound",
             "routeb_binding": "l is the declared base residual, A=A_up=a_B^T B_up a_B, and rho=rho_F^2; source binding remains an adapter obligation",
+            "equivalent_lambda_form": {
+                "substitution": "lambda = 1 + 1/theta",
+                "domain": "lambda > 1 (per-cell fixed rational decision parameter)",
+                "pmi_matrix": "[[b_base - lambda*rho*A_up, l_base^T], [l_base, ((lambda-1)/lambda) I_2]]",
+                "schur_condition": "b_base >= lambda*rho*A_up + lambda/(lambda-1)*||l_base||_2^2",
+                "interpretation": "the scalar Young budget is the Schur complement of the affine PMI; lambda must be fixed per cell, not state-dependent",
+            },
+            "source_reference": {
+                "document": "routeB_dense_Mq/P5_COMPACT_COMBINED_SCHUR_INTERFACE.md",
+                "interface": "compact residual L_B = l_base + r_B",
+                "upper_energy": "B_up = diag(1402217/12000000, 200739/4000000)",
+                "caution": "mass-weighted rho^2 probes using the old right-vs-left scaling are historical and not admissible evidence",
+                "parameter_selection": "choose lambda_k independently per cell with a strict feasible interval; a positive margin for one candidate grid row does not certify every cell",
+            },
             "not_an_E_k_bridge": True,
             "not_a_pmi_closure": True,
         },
@@ -70,7 +88,9 @@ def main() -> int:
             parent_id=parent.id,
             proof_sketch=(
                 "Use the exact norm-square expansion and Young's inequality "
-                "for the cross term. Keep rho*A as the typed port-energy "
+                "for the cross term. The Route-B interface is equivalently "
+                "an affine PMI with lambda=1+1/theta and lower-right block "
+                "((lambda-1)/lambda)I. Keep rho*A as the typed port-energy "
                 "input supplied by the weighted Frobenius adapter; do not "
                 "reinterpret it as robust-PMI E_k or claim global closure."),
             metadata=metadata,
@@ -91,8 +111,16 @@ def main() -> int:
         if existing.metadata.get(key) != value:
             existing.metadata[key] = value
             changed = True
+    # Always remove the historical provider edge so repeated recorder runs
+    # repair a partially migrated state, not only a node whose parent_id still
+    # points at the old provider.
+    if existing.id in old_parent.dependencies:
+        old_parent.dependencies.remove(existing.id)
+        changed = True
     if existing.parent_id != parent.id:
         existing.parent_id = parent.id
+        if existing.id not in parent.dependencies:
+            parent.dependencies.append(existing.id)
         changed = True
     if changed:
         state.event(

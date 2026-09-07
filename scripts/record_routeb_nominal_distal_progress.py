@@ -37,6 +37,8 @@ def main() -> int:
     interface = TARGET / "routeB_compact_nominal_descriptor_interface.csv"
     source = TARGET / "dhport_lib.jl"
     design = TARGET / "P4_PHYSICAL_RATIONAL_DESCRIPTOR_BRIDGE.md"
+    dh_audit = TARGET / "P5_COMPACT_DH_NOMINAL_DISTAL_BRIDGE_AUDIT.md"
+    nominal_doc = TARGET / "P5_COMPACT_NOMINAL_DESCRIPTOR_INTERFACE.md"
     bridge_meta = TARGET / "routeB_physical_rational_descriptor_bridge.csv"
     tail_meta = TARGET / "routeB_physical_rational_tail_pmi_scalar_meta.csv"
     tail_scalar = TARGET / "routeB_physical_rational_tail_pmi_scalar.csv"
@@ -45,15 +47,43 @@ def main() -> int:
     reform = EXTERNAL / "PROJECT_REFORM_TARGET.md"
     contract = ROOT / "src/percolation_workflow/routeb_nominal_distal_contract.py"
     source_artifacts = [ref(path) for path in
-                        (audit, interface, source, design, bridge_meta, tail_meta,
+                        (audit, interface, source, design, dh_audit, nominal_doc,
+                         bridge_meta, tail_meta,
                          tail_scalar, tail_polynomial, m0, reform, contract)]
 
     existing = next((n for n in state.nodes.values() if n.name == name), None)
     p4 = find(state, "P4.residual_schur_pmi")
+    mathematical_contract = {
+        "descriptor_equations": [
+            "M_mu,DD(q)*v + (M_DB(q)-M0_DB)*a_B = 0",
+            "r_B - M_BD(q)*v = 0",
+        ],
+        "nominal_subtraction": "M_mu,DD*a_D^nom + M0_DB*a_B - b_D = 0",
+        "regularization": "M_mu(q)=M(q)+(1/1000000)I; no unregularized mass may be mixed into this branch",
+        "polynomial_boundary": "the descriptor identities are exact inverse-free algebraic equalities; they do not prove interval remainder, SOS positivity, flowpipe, or terminal transfer",
+        "port_semantics": "the compact PMI consumes raw Euclidean r_B^T*r_B with gamma_k >= rho_k^2; an energy-normalized two-sided metric needs a separate typed conversion",
+        "metric_orientation": "for W^(1/2) R B_up^(-1/2), W scales output rows on the left; old right-scaled weighted ledgers are not interchangeable",
+        "angle_bridge": "q-box interval bounds cannot be inserted into c/s SOS coefficients without a certified cos/sin graph or an explicit external robust-budget adapter",
+        "preferred_consumption": "combined Schur/Young on L_B=l_base+r_B; do not relabel the raw port bound as robust-PMI E_k",
+    }
+    extra_unresolved = [
+        "certified q-to-cs angle graph or external interval-to-polynomial adapter",
+        "raw Euclidean port gamma_k versus energy-normalized cross-term metric binding",
+    ]
     if existing is not None:
         changed = False
         if existing.metadata.get("source_artifacts") != source_artifacts:
             existing.metadata["source_artifacts"] = source_artifacts
+            changed = True
+        if existing.metadata.get("mathematical_contract") != mathematical_contract:
+            existing.metadata["mathematical_contract"] = mathematical_contract
+            changed = True
+        unresolved = list(existing.metadata.get("unresolved", []))
+        for item in extra_unresolved:
+            if item not in unresolved:
+                unresolved.append(item)
+        if unresolved != existing.metadata.get("unresolved"):
+            existing.metadata["unresolved"] = unresolved
             changed = True
         if existing.id not in p4.dependencies:
             p4.dependencies.append(existing.id)
@@ -102,11 +132,13 @@ def main() -> int:
                 "P4.vector_remote_budget_pmi_composition",
             ],
             "source_artifacts": source_artifacts,
+            "mathematical_contract": mathematical_contract,
             "unresolved": [
                 "source_binding_of_nominal_and_reduced_DH_descriptors",
                 "rational_tail_PMI_or_co-state_aware_Schur_certificate",
                 "covered_domain_and_global_residual_absorption",
                 "pinned_lean_compile_and_comparator_receipt",
+                *extra_unresolved,
             ],
         },
     )
