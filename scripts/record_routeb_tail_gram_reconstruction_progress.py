@@ -11,6 +11,9 @@ TARGET = EXTERNAL / "routeB_dense_Mq"
 sys.path.insert(0, str(ROOT / "src"))
 
 from percolation_workflow.store import StateStore
+from percolation_workflow.routeb_nominal_distal_contract import (
+    audit_routeb_physical_rational_gram_reconstruction,
+)
 
 
 def ref(path: Path) -> dict[str, str]:
@@ -23,6 +26,42 @@ def find(state, name: str):
         if node.name == name:
             return node
     raise ValueError(f"missing node: {name}")
+
+
+def candidate_receipt() -> dict[str, object]:
+    artifact_paths = (
+        TARGET / "routeB_tail_pmi_scalar_gram_probe.csv",
+        TARGET / "routeB_physical_rational_tail_pmi_scalar.csv",
+        TARGET / "routeB_tail_pmi_scalar_gram_rational.csv",
+        TARGET / "routeB_tail_pmi_scalar_gram_basis.csv",
+    )
+    result = audit_routeb_physical_rational_gram_reconstruction(
+        (TARGET / "routeB_tail_pmi_scalar_gram_probe.csv").read_text(
+            encoding="utf-8"),
+        (TARGET / "routeB_physical_rational_tail_pmi_scalar.csv").read_text(
+            encoding="utf-8"),
+        (TARGET / "routeB_tail_pmi_scalar_gram_rational.csv").read_text(
+            encoding="utf-8"),
+        (TARGET / "routeB_tail_pmi_scalar_gram_basis.csv").read_text(
+            encoding="utf-8"),
+        artifact_sha256=hashlib.sha256(
+            b"".join(path.read_bytes() for path in artifact_paths)
+        ).hexdigest(),
+    )
+    return {
+        "status": result.status,
+        "artifact_sha256": result.artifact_sha256,
+        "gram_blocks": result.gram_blocks,
+        "max_gram_dimension": result.max_gram_dimension,
+        "residual_l1": (str(result.residual_l1)
+                        if result.residual_l1 is not None else None),
+        "certified_original_scale_margin": (
+            str(result.certified_original_scale_margin)
+            if result.certified_original_scale_margin is not None else None),
+        "errors": list(result.errors),
+        "formal_certificate_allowed": result.formal_certificate_allowed,
+        "registry_eligible": result.registry_eligible,
+    }
 
 
 def main() -> int:
@@ -45,15 +84,17 @@ def main() -> int:
     )]
     unresolved = [
         "exact_opt_lower_bound_receipt",
-        "target_minus_opt_exact_monomial_expansion",
-        "rationalized_gram_residual_l1_bound",
         "pinned_lean_kernel_and_comparator_receipt",
     ]
+    receipt = candidate_receipt()
     existing = next((n for n in state.nodes.values() if n.name == name), None)
     if existing is not None:
         changed = existing.metadata.get("source_artifacts") != source_artifacts
         if existing.metadata.get("unresolved") != unresolved:
             existing.metadata["unresolved"] = unresolved
+            changed = True
+        if existing.metadata.get("candidate_reconstruction_receipt") != receipt:
+            existing.metadata["candidate_reconstruction_receipt"] = receipt
             changed = True
         if existing.id not in parent.dependencies:
             parent.dependencies.append(existing.id)
@@ -64,6 +105,7 @@ def main() -> int:
                 "routeb_tail_gram_reconstruction_provenance_refresh",
                 node_id=existing.id, parent_id=parent.id,
                 source_artifacts=source_artifacts,
+                candidate_reconstruction_receipt=receipt,
                 status=existing.metadata.get("statement_status"),
                 formal_certificate_allowed=False, registry_promoted=False,
             )
@@ -98,6 +140,7 @@ def main() -> int:
             "formal_certificate_allowed": False,
             "preferred_route": True,
             "unresolved": unresolved,
+            "candidate_reconstruction_receipt": receipt,
             "source_artifacts": source_artifacts,
         },
     )
@@ -106,6 +149,7 @@ def main() -> int:
         "routeb_tail_gram_reconstruction_checkpoint",
         node_id=node_id, parent_id=parent.id,
         source_artifacts=source_artifacts,
+        candidate_reconstruction_receipt=receipt,
         status="pending_exact_target_minus_opt_reconstruction",
         formal_certificate_allowed=False, registry_promoted=False,
     )
