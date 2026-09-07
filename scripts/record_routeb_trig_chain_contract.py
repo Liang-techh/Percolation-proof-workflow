@@ -101,6 +101,26 @@ def main() -> int:
             raise ValueError("sin interval is reversed")
         if rational(row, "cos_lower") > rational(row, "cos_upper"):
             raise ValueError("cos interval is reversed")
+        reduced = (rational(row, "reduced_lower"), rational(row, "reduced_upper"))
+        if reduced[0] < -1 or reduced[1] > 1:
+            raise ValueError("reduced angle escapes the stated Taylor domain")
+
+    expected_theta = [0, -1, 1, 0, 0, 0]
+    expected_alpha = [-1, 0, 1, -1, 1, 0]
+    for row in rows:
+        link = int(row["link"])
+        expected_k = (expected_theta if row["atom"] == "theta" else expected_alpha)[link - 1]
+        if int(row["phase_k"]) != expected_k:
+            raise ValueError(f"unexpected DH phase at link {link}/{row['atom']}")
+        center_table = {
+            0: (Fraction(0), Fraction(1)),
+            1: (Fraction(1), Fraction(0)),
+            2: (Fraction(0), Fraction(-1)),
+            3: (Fraction(-1), Fraction(0)),
+        }
+        expected_center = center_table[expected_k % 4]
+        if (rational(row, "center_sin"), rational(row, "center_cos")) != expected_center:
+            raise ValueError(f"unexpected quarter-turn center at link {link}/{row['atom']}")
 
     audit = {
         "schema_version": 1,
@@ -125,6 +145,13 @@ def main() -> int:
             "finite_operation_propagation": False,
             "formal_certificate_allowed": False,
             "registry_promoted": False,
+        },
+        "validated_invariants": {
+            "row_count_and_link_coverage": True,
+            "theta_alpha_input_partition": True,
+            "phase_vectors_and_quarter_turn_centers": True,
+            "reduced_angle_domain": "[-1,1]",
+            "interval_endpoint_order": True,
         },
         "remaining_obligations": [
             "bind Float64 pi/2 and argument formation to each certified angle box",
