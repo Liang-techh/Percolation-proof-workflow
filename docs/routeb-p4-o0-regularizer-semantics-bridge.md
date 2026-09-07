@@ -80,6 +80,14 @@ where `Kf = K/(1-epsilon_a*K)` and
 unweighted conditional bound. Conversion to the `B_up` energy metric and
 consumption of the Schur/Young margin remain separate O0-R2/O0-R3 premises.
 
+`convert_routeb_port_bound_to_weighted_metric` implements the O0-R2 scalar
+conversion when the caller supplies a proved `B_up >= beta I` witness through
+an exact rational `s` satisfying `s^2 <= beta`. It returns the conservative
+bound `unweighted_port_bound / s`, requires matching source keys, and rejects
+an unproven metric witness. It deliberately records
+`schur_margin_consumed=false`; O0-R3 must still prove the remaining budget
+inequality.
+
 The API and focused tests do not run Lean/Lake, Julia, SOS, trajectory checks,
 or broad regression, and all result objects keep
 `formal_certificate_allowed=False` and `registry_eligible=False`.

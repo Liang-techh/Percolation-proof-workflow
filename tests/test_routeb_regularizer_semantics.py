@@ -8,6 +8,7 @@ from percolation_workflow.routeb_regularizer_semantics import (
     MU_DELTA,
     RouteBExactResolventPremise,
     audit_routeb_regularizer_inclusion,
+    convert_routeb_port_bound_to_weighted_metric,
     derive_routeb_general_resolvent_port_propagation,
     derive_routeb_resolvent_port_propagation,
     propagate_routeb_regularizer_diagonal,
@@ -118,3 +119,25 @@ def test_general_resolvent_rejects_missing_epsilon_and_source_key_fail_closed() 
     assert result.port_difference_bound is None
     assert "epsilon_a_missing" in result.errors
     assert result.errors.count("coupling_source_key_missing") == 1
+
+
+def test_weighted_metric_conversion_requires_same_key_and_positive_root() -> None:
+    result = convert_routeb_port_bound_to_weighted_metric(
+        Fraction(3), Fraction(2), source_key="schur:B45", metric_source_key="schur:B45"
+    )
+
+    assert result.status == "CONDITIONAL_WEIGHTED_PORT_BOUND"
+    assert result.weighted_port_bound == Fraction(3, 2)
+    assert result.schur_margin_consumed is False
+
+
+def test_weighted_metric_conversion_rejects_unproven_or_mismatched_metric() -> None:
+    result = convert_routeb_port_bound_to_weighted_metric(
+        Fraction(3), Fraction(2), source_key="port:A", metric_source_key="metric:B",
+        metric_lower_bound_proven=False,
+    )
+
+    assert result.status == "OPEN_FAIL_CLOSED"
+    assert result.weighted_port_bound is None
+    assert "metric_source_key_mismatch" in result.errors
+    assert "metric_lower_bound_not_authoritatively_supplied" in result.errors

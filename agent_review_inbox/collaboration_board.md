@@ -903,3 +903,8 @@ registry=0，formal gate 保持关闭；回执、反例和未解决项均保留�
 `epsilon_A`、B/C 差异范数和 exact inverse premise，返回三项 unweighted port
 perturbation bound；仍强制 source-key 一致，并把 weighted metric / Schur margin
 留给 O0-R2/R3，避免把一般 rounded-base 情形错误等同于 common-base 特例。
+
+O0-R2 进一步落成 `convert_routeb_port_bound_to_weighted_metric`：只接受同源
+且已证明的 `B_up >= beta I` 下界平方根 witness，输出
+`unweighted/sqrt(beta)` 的保守 exact-rational bound；source-key 不一致或 metric
+证据未证明时 fail-closed，且明确不消费 O0-R3 Schur margin。

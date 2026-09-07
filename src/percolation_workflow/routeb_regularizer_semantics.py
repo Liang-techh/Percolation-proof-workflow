@@ -196,6 +196,22 @@ class RouteBGeneralResolventPortPropagation:
     registry_eligible: bool = False
 
 
+@dataclass(frozen=True)
+class RouteBWeightedPortMetricConversion:
+    """Conditional conversion from an unweighted port bound to a metric bound."""
+
+    status: str
+    unweighted_port_bound: Fraction | None
+    sqrt_metric_lower_bound: Fraction | None
+    weighted_port_bound: Fraction | None
+    source_key: str | None
+    errors: tuple[str, ...] = ()
+    metric_relation: str = "B_up >= beta I and sqrt_metric_lower_bound^2 <= beta"
+    schur_margin_consumed: bool = False
+    formal_certificate_allowed: bool = False
+    registry_eligible: bool = False
+
+
 def routeb_regularizer_fact() -> RouteBRegularizerFact:
     """Return the recorded scalar fact without evaluating deployed code."""
     if MU_DELTA <= 0 or FLOAT64_MU >= EXACT_MU:
@@ -520,6 +536,63 @@ def derive_routeb_general_resolvent_port_propagation(
     )
 
 
+def convert_routeb_port_bound_to_weighted_metric(
+    unweighted_port_bound: Fraction | int | None,
+    sqrt_metric_lower_bound: Fraction | int | None,
+    *,
+    source_key: str | None,
+    metric_source_key: str | None,
+    metric_lower_bound_proven: bool = True,
+) -> RouteBWeightedPortMetricConversion:
+    """Convert ``||R||`` to a conservative ``B_up``-weighted port bound.
+
+    The caller must supply an exact rational ``s > 0`` with a proved relation
+    ``s^2 <= beta`` and ``B_up >= beta I``.  Then ``||R B_up^(-1/2)||`` is at
+    most ``||R|| / s``.  This helper only performs that conditional arithmetic;
+    it does not prove the metric inequality or consume a Schur/Young margin.
+    """
+    errors: list[str] = []
+    try:
+        unweighted = (_exact_scalar(unweighted_port_bound, "unweighted_port_bound")
+                      if unweighted_port_bound is not None else None)
+        metric_root = (_exact_scalar(sqrt_metric_lower_bound, "sqrt_metric_lower_bound")
+                       if sqrt_metric_lower_bound is not None else None)
+    except TypeError as error:
+        errors.append(str(error))
+        unweighted = metric_root = None
+    if unweighted is None:
+        errors.append("unweighted_port_bound_missing")
+    elif unweighted < 0:
+        errors.append("unweighted_port_bound_negative")
+    if metric_root is None:
+        errors.append("sqrt_metric_lower_bound_missing")
+    elif metric_root <= 0:
+        errors.append("sqrt_metric_lower_bound_not_positive")
+    if not source_key or not metric_source_key:
+        errors.append("metric_source_key_missing")
+    elif source_key != metric_source_key:
+        errors.append("metric_source_key_mismatch")
+    if not metric_lower_bound_proven:
+        errors.append("metric_lower_bound_not_authoritatively_supplied")
+    if errors:
+        return RouteBWeightedPortMetricConversion(
+            status="OPEN_FAIL_CLOSED",
+            unweighted_port_bound=unweighted,
+            sqrt_metric_lower_bound=metric_root,
+            weighted_port_bound=None,
+            source_key=source_key,
+            errors=tuple(dict.fromkeys(errors)),
+        )
+    return RouteBWeightedPortMetricConversion(
+        status="CONDITIONAL_WEIGHTED_PORT_BOUND",
+        unweighted_port_bound=unweighted,
+        sqrt_metric_lower_bound=metric_root,
+        weighted_port_bound=unweighted / metric_root,
+        source_key=source_key,
+        errors=(),
+    )
+
+
 __all__ = [
     "DEFAULT_BLOCK_COORDS",
     "DEFAULT_REMOTE_COORDS",
@@ -534,7 +607,9 @@ __all__ = [
     "RouteBRegularizerInclusion",
     "RouteBResolventPortPropagation",
     "RouteBGeneralResolventPortPropagation",
+    "RouteBWeightedPortMetricConversion",
     "audit_routeb_regularizer_inclusion",
+    "convert_routeb_port_bound_to_weighted_metric",
     "derive_routeb_general_resolvent_port_propagation",
     "derive_routeb_resolvent_port_propagation",
     "propagate_routeb_regularizer_diagonal",
