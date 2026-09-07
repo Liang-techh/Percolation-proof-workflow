@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 509,
+  "revision": 511,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13471,6 +13471,56 @@
           "statement_comparator": "OPEN",
           "formal_certificate_allowed": false,
           "registry_promoted": false
+        },
+        "source_comparator_receipts": [
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-KC-COORDINATE-ADAPTER",
+            "source_agent": "codex-local",
+            "review_status": "ANCHOR_PASS_DH_EXECUTION_BINDING_OPEN",
+            "receipt_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_5_descriptor_terms_adapter_lean\\SOURCE_COMPARATOR_RECEIPT_forceScaleKc_20260907.md",
+              "sha256": "A1BCA8A0D2D1EAE5BB97E451610D480571D7B5EE49CC5B0BA835A715BD10BB65"
+            },
+            "comparator_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_5_descriptor_terms_adapter_lean\\source_contract_comparator.py",
+              "sha256": "278C89A39E5FB4D1E18DDAAEDF54F9764980ABD8A53899A7CC5AE05CB2428788"
+            },
+            "statement_comparator": "PASS",
+            "source_anchor_comparator": "PASS",
+            "source_binding": "OPEN",
+            "deployed_tau_equivalence": "NOT_CLAIMED",
+            "derived_force_coefficients": {
+              "pass": true,
+              "q4": "1/200",
+              "q5": "1/100"
+            },
+            "source_hashes": {
+              "adapter": "1455d987f899102e68346a7d8d074b8aa472d721151b6992d373f005a955750a",
+              "deployed": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936",
+              "lean": "3946389828b94aff3b258a4635b58a7ca1be6ff2ce4414e9bef9553e25653cc9",
+              "lifted": "0fcf733144b3d7b1b08f328fe4ad24477057c56976f0ef53633c450d8fc4729d"
+            },
+            "unresolved": [
+              "no sourceBlockForce = expectedSourceForce witness was produced for a concrete Julia runtime state",
+              "no sourceBlockForce = sourceDescriptorRhs witness was produced for the deployed solve",
+              "no Float64-to-real, finite-difference, or matrix-solve equivalence was claimed"
+            ],
+            "formal_certificate_allowed": false,
+            "registry_promoted": false,
+            "admission_status": "focused_anchor_receipt_only"
+          }
+        ],
+        "force_scale_source_comparator": {
+          "status": "ANCHOR_PASS_DH_EXECUTION_BINDING_OPEN",
+          "receipt_sha256": "A1BCA8A0D2D1EAE5BB97E451610D480571D7B5EE49CC5B0BA835A715BD10BB65",
+          "comparator_sha256": "278C89A39E5FB4D1E18DDAAEDF54F9764980ABD8A53899A7CC5AE05CB2428788",
+          "statement_comparator": "PASS",
+          "source_anchor_comparator": "PASS",
+          "source_binding": "OPEN",
+          "deployed_tau_equivalence": "NOT_CLAIMED",
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
         }
       }
     },
@@ -14232,6 +14282,51 @@
             "binding": "source_key/state_key/block orientation/norm"
           },
           "inherited_only": "delta and conditional off-diagonal zero-shift",
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
+        },
+        "o0_exact_bounds_receipts": [
+          {
+            "schema_version": 1,
+            "task_id": "T-P4-033",
+            "source_agent": "codex-inbox",
+            "review_status": "OBSTRUCTION_NO_AUTHORITATIVE_SAME_KEY_TUPLE",
+            "receipt_artifact": {
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\receipt-T-P4-033-O0-exact-K-Br-Cf-same-key-obstruction-20260907.json",
+              "sha256": "AEA1F32853E0B941C26AD2A80EC83E057EB4023C0014C1768A840030B91B3543"
+            },
+            "observed_state_revision": 508,
+            "missing_same_key_fields": [
+              "source_key",
+              "state_key",
+              "norm_convention",
+              "B/D orientation",
+              "exact-real authoritative K with proves_exact_real_bound=true",
+              "same-key exact Br bound",
+              "same-key exact Cf bound",
+              "receipt identity tying all three bounds to the same source/state"
+            ],
+            "constructive_bound_search": {
+              "result": "none_consumable",
+              "reason": "The available port artifacts expose aggregate rho2/rho_F candidates, not separate exact bounds for the D inverse, B_r block, and DeltaM_DB,f under one key.",
+              "rejected_substitutes": [
+                "rho_F^2",
+                "rho_27",
+                "rho_56",
+                "Float64 or interval numeric K candidate",
+                "zero off-diagonal shift"
+              ]
+            },
+            "formal_certificate_allowed": false,
+            "registry_promoted": false,
+            "admission_status": "obstruction_pending_exact_keyed_bounds"
+          }
+        ],
+        "o0_exact_bounds_receipt_intake": {
+          "status": "OBSTRUCTION_NO_AUTHORITATIVE_SAME_KEY_TUPLE",
+          "receipt_sha256": "AEA1F32853E0B941C26AD2A80EC83E057EB4023C0014C1768A840030B91B3543",
+          "observed_state_revision": 508,
+          "same_key_tuple_found": false,
           "formal_certificate_allowed": false,
           "registry_promoted": false
         }
@@ -39321,6 +39416,25 @@
       "admission_status": "pending_same_object_binding",
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T13:32:52.032837+00:00",
+      "kind": "routeb_force_scale_source_comparator_recorded",
+      "node_id": "203c45aac1d84022b69267c0cc31db06",
+      "review_status": "ANCHOR_PASS_DH_EXECUTION_BINDING_OPEN",
+      "statement_comparator": "PASS",
+      "source_binding": "OPEN",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T13:32:52.523421+00:00",
+      "kind": "routeb_o0_exact_bounds_receipt_ingested",
+      "node_id": "43e3c1a23dc34d52a19b835a8a883cb7",
+      "review_status": "OBSTRUCTION_NO_AUTHORITATIVE_SAME_KEY_TUPLE",
+      "admission_status": "obstruction_pending_exact_keyed_bounds",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -42977,5 +43091,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "a49c0d1647435f7ce6d4f89ae7d0dc30770d1b3a310ccf80d9bb3044064b7568"
+  "state_checksum": "f54402533145ae037bf68fbf2dc0e906ca8ad07bd6378176c72166e97efd34af"
 }

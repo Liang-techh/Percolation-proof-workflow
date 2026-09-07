@@ -1,0 +1,114 @@
+{
+  "schema": "routeb-o0-exact-k-br-cf-same-key-obstruction-v2",
+  "task": "T-P4-033",
+  "scope": "O0 exact K/Br/Cf search only",
+  "observed_state_revision": 508,
+  "status": "OBSTRUCTION_NO_AUTHORITATIVE_SAME_KEY_TUPLE",
+  "admission": {
+    "formal_certificate_allowed": false,
+    "registry_eligible": false,
+    "ledger_consumed": false,
+    "schur_margin_consumed": false
+  },
+  "key_contract": {
+    "source_key": null,
+    "state_key": null,
+    "norm_convention": null,
+    "block_partition": {
+      "B": [4, 5],
+      "D": [1, 2, 3, 6],
+      "orientation": null
+    },
+    "same_key_tuple_found": false
+  },
+  "tuple": {
+    "K": {
+      "value_exact_rational": null,
+      "statement_required": "||(M_DD^r)^(-1)||_norm <= K",
+      "authoritative_exact_real_receipt": false,
+      "missing": [
+        "exact rational K",
+        "inverse norm convention",
+        "same source_key/state_key binding",
+        "proves_exact_real_bound=true"
+      ]
+    },
+    "Br": {
+      "value_exact_rational": null,
+      "statement_required": "||M_BD,r||_norm <= Br",
+      "authoritative_exact_receipt": false,
+      "missing": [
+        "exact rational Br",
+        "same source_key/state_key binding",
+        "same norm convention as K",
+        "fixed B/D row-column orientation"
+      ]
+    },
+    "Cf": {
+      "value_exact_rational": null,
+      "statement_required": "||DeltaM_DB,f||_norm <= Cf",
+      "authoritative_exact_receipt": false,
+      "missing": [
+        "exact rational Cf",
+        "same source_key/state_key binding",
+        "same norm convention as K",
+        "fixed B/D row-column orientation"
+      ]
+    }
+  },
+  "constructive_bound_search": {
+    "result": "none_consumable",
+    "reason": "The available port artifacts expose aggregate rho2/rho_F candidates, not separate exact bounds for the D inverse, B_r block, and DeltaM_DB,f under one key.",
+    "rejected_substitutes": [
+      "rho_F^2",
+      "rho_27",
+      "rho_56",
+      "Float64 or interval numeric K candidate",
+      "zero off-diagonal shift"
+    ]
+  },
+  "evidence": [
+    {
+      "path": "src/percolation_workflow/routeb_regularizer_semantics.py:149-157",
+      "observation": "RouteBExactResolventPremise is caller-supplied and proves_exact_real_bound defaults to false."
+    },
+    {
+      "path": "src/percolation_workflow/routeb_regularizer_semantics.py:658-746",
+      "observation": "The zero-shift helper accepts K, Br, and Cf as conditional inputs; it does not derive any of them or prove the zero-shift premise."
+    },
+    {
+      "path": "artifacts/task_routeb_o0_rounding_bridge_audit_20260907/RECEIPT.json",
+      "observation": "The rounding bridge records M_BD_shift=0 and M_DB_shift=0, but M_DD_inverse_bound=false and R_port_bound=false."
+    },
+    {
+      "path": "C:/Users/z5242/Desktop/重构版/6dof_sos_optimized/6dof_sos_optimized/routeB_dense_Mq/routeB_compact_port_bi_partition_probe_left_frobenius_output.csv",
+      "observation": "The interval output has rho2 and norm aggregate columns but no K, Br, Cf, source_key, state_key, or authoritative receipt columns."
+    },
+    {
+      "path": "C:/Users/z5242/Desktop/重构版/6dof_sos_optimized/6dof_sos_optimized/routeB_dense_Mq/P5_COMPACT_COMPOSED_INTERVAL_PROBE.md",
+      "observation": "The composed interval port values are explicitly candidate evidence only."
+    }
+  ],
+  "zero_shift_boundary": {
+    "dB_equals_zero": true,
+    "dC_equals_zero": true,
+    "can_construct_Br": false,
+    "can_construct_Cf": false,
+    "explanation": "Zero off-diagonal shift identifies equality of the corresponding rounded/unrounded blocks; it supplies neither block magnitude nor perturbation-map norm."
+  },
+  "exact_missing_fields": [
+    "source_key",
+    "state_key",
+    "norm_convention",
+    "B/D orientation",
+    "exact-real authoritative K with proves_exact_real_bound=true",
+    "same-key exact Br bound",
+    "same-key exact Cf bound",
+    "receipt identity tying all three bounds to the same source/state"
+  ],
+  "mutation": {
+    "main_state_modified": false,
+    "workflow_source_modified": false,
+    "lean_or_lake_run": false
+  }
+}

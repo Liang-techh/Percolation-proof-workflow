@@ -1683,3 +1683,17 @@ after integration; corrections should be a new result file.
   `scripts/record_routeb_o2_runtime_receipt.py`; the script binds it to the
   current source/schedule hashes and records `PENDING_REQUIRED_FIELDS`,
   `REJECTED`, or `READY_FOR_COORDINATOR_ADMISSION` without changing O2 status.
+### New harvest: force-scale source comparator and O0 exact tuple obstruction (2026-09-07)
+
+- `examples/routeb_b45_5_descriptor_terms_adapter_lean/SOURCE_COMPARATOR_RECEIPT_forceScaleKc_20260907.md`
+  is admitted only as a focused anchor receipt. It passes statement/source
+  anchors and exact coefficient derivation, but leaves deployed execution binding
+  open; it cannot close `P4.true_dh_force_descriptor_semantics` or promote a
+  registry theorem.
+- `agent_review_inbox/receipt-T-P4-033-O0-exact-K-Br-Cf-same-key-obstruction-20260907.json`
+  is ingested as a fail-closed obstruction. The next useful O0 task is to find
+  one authoritative same-key exact-real tuple `(K, Br, Cf)` with fixed norm and
+  B/D orientation, or prove a constructive replacement from the actual source.
+- Do not spend the next cycle on broad regression. Prioritize fresh mathematical
+  bottleneck work: O0 keyed bounds, O1 typed inverse binding, O2 exact-real
+  coverage/transport, and force-scale deployed witness binding.

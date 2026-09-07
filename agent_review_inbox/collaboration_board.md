@@ -996,3 +996,16 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   authoritative exact `K`、`Br` 范数上界、`Cf` 范数上界；zero-shift 只说明
   两侧块差为零，不说明块大小。已由
   `record_routeb_o0_exact_bounds_obstruction.py` 接入 state rev 508。
+### 2026-09-07 — 梁智炜：收割 force-scale source comparator 与 O0 机器回执
+
+- 新收割的 `SOURCE_COMPARATOR_RECEIPT_forceScaleKc_20260907.md` 已通过本地只读
+  anchor comparator：Lean statement surface、DescriptorTermsAdapter premise surface、
+  lifted literal/inertia anchors、source hash binding 均为 `PASS`，并确认
+  `q5 -> 1/100`、`q4 -> 1/200`。
+- 该结果只提升到 `ANCHOR_PASS_DH_EXECUTION_BINDING_OPEN`；部署侧 `tau` 等价、
+  具体 runtime/state witness、Float64-to-ℝ 与 matrix-solve/DH execution binding
+  仍为 `OPEN`，不得进入 registry。
+- O0 新 JSON 回执确认没有同一 `source_key/state_key/norm/orientation` 下的
+  exact-real `K/Br/Cf` 三元组；`rho_F`、Float64 候选、zero-shift 不能替代它。
+  已写入 O0 intake，保持 `formal_certificate_allowed=false`、registry false。
+- 本轮只更新本地 state；不主动同步 GitHub，等待下一次 20 分钟收割或重大突破。

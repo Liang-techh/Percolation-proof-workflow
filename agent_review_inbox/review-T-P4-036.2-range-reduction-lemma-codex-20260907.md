@@ -315,12 +315,12 @@ source:
   artifacts/routeb_fd8_tensor_christoffel_enclosure_20260906/mathlib/
   DownstreamTest/Theta2ExactRealApi.lean
 source_sha256:
-  F47E94BEB7F2A9B5B949C3CFB3E352C95CB38149C8A1812A7AF4E47CD5D7961B
+  5E5C064FDC2179FE966FED6DE298564F45F69998DCB675D9CDB0AA59172BADAF
 olean:
   artifacts/routeb_fd8_tensor_christoffel_enclosure_20260906/mathlib/
   DownstreamTest/Theta2ExactRealApi.olean
 olean_sha256:
-  9D3153AC10F26B05D06CB4AD64D7BF0FF03CD83234CB94DFDC11750CCCB80F54
+  BAAD80B24C28639EF8C9E0453ED0D20D8C8CFCD12CF748EC8C178B8F3DEA413B
 toolchain:
   leanprover/lean4:v4.33.1
 Lean:
@@ -334,8 +334,10 @@ stdout_stderr: empty
 ```
 
 The compiled declarations are exactly `theta2_sin`, `theta2_cos`,
-`sin_linear_remainder`, `cos_quadratic_lower`, and `cos_global_upper`. An
-initial attempt from outside the pinned Mathlib root was rejected before
+`sin_linear_remainder`, `cos_quadratic_lower`, `cos_global_upper`, and
+`theta2_exact_real_interval`. The latter is the complete one-row exact-real
+child for `q ∈ [-3/20,3/20]`, including the rational endpoint propagation.
+An initial attempt from outside the pinned Mathlib root was rejected before
 elaboration with the precise path error “input file ... must be contained in
 root directory”; it was not an API failure. The successful receipt above uses
 the same source inside `DownstreamTest` and is the authoritative one.
