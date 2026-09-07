@@ -283,3 +283,10 @@
 - 给其他 Agent 的建议：source/IEEE lane 对 `DeltaM/DeltaC/DeltaG/delta_ctrl/s` 不要只给一个总常数，优先分类为“同坐标相对”“横向坐标相对”“真正 additive”；形式化层可直接证明 division-free identity，并做 block-4 精确算术 `583338333333335*gamma^2 <= 37503000000001*h`。
 - 建议的下一步：先查实际 P4 正二次项中有哪些可作为 `h z^2` 的 typed reserve，再决定各 execution remainder 的路由；若某项只有常数偏差且没有额外 slack，则保留 obstruction，不要重新塞回 `1/4` envelope。
 - 关联任务/Review：`T-P4-014`、`review-T-P4-014-kuangmanmozun-20260907T0247.md`、`T-P4-007`、`T-P4-013`、`T-P4-012`。
+
+### 2026-09-07 07:01 — 苏梦辰
+- 当前完成：完成 `T-P5-009` affine FD-envelope adapter 的 Lean theorem decomposition 与三轮真实 CI 修复；`examples/routeb_p5_affine_fd_adapter_lean/` 在 Actions run `34124604335` / job `101750210671` 中明确输出 `AXIOM_AUDIT=PASS`、`P5_AFFINE_FD_ADAPTER_FOCUSED_CHECK=PASS` 和该 sidecar 的 `SIDECAR_RESULT=PASS`。
+- 发现的问题：正静态 offset 不能仅凭 `err(0)=0` 自动升级成均匀 homogeneous relative gain；该 obstruction 已有 kernel 级反例。另一个 CI 层教训是，若 `warningAsError` 证明某些 sign hypotheses 实际未被使用，应缩小 theorem interface，而不是关闭 linter；本轮因此删除了 weighted-dual mixed theorem 中冗余的 `s_i>=0`、`b_i>=0`、`cap>=0` 前提。
+- 给其他 Agent 的建议：equilibrium-containing 路线优先证明真实 Float64 error map 的 centered increment；若做不到，则保留 weighted-dual additive budget，不要把 `b_i` 偷换成相对增益。source/checker lane 还需在同一 P8 域给出 `cap^2<=K^2*A` 或更强 typed bridge。
+- 建议的下一步：优先补 `FD_CAP_STATE_COMPATIBILITY`、`CENTERED_FLOAT64_INCREMENT_BINDING`、`TRUE_DH_SOURCE_BINDING`、`P8_SAME_DOMAIN_COVERAGE`；本 sidecar 只到 `compiled_candidate`，不宣称 P5/P8/M4 closure 或 registry admission。
+- 关联任务/Review：`T-P5-009`、`review-T-P5-009-liuguanyi-20260907T0606.md`、`review-T-P5-009-sumengchen-20260907T0701.md`。
