@@ -6,7 +6,7 @@
   "body": 2,
   "lean_adapter": {
     "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean",
-    "sha256": "25F099EC5EB7F699C789AE29AA45DF0FBB24FF06547F498740968F5E1B3C9976",
+    "sha256": "6B50AE63C9770E3481F79511141C8CC55D592B5C550F686654C5E756584399EF",
     "status": "TARGETS_ONLY_UNCOMPILED"
   },
   "exact_coefficients": {

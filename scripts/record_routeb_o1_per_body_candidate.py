@@ -29,8 +29,14 @@ BODY4_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-body-4-source-bridg
 BODY5_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_5_SOURCE_BRIDGE_RECEIPT.json"
 BODY5_CHECK = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_5_TARGET_CHECK.json"
 BODY5_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-body-5-source-bridge-codex-20260907.md"
+BODY4_FOLD_TARGET = ROOT / "examples/routeb_b45_source_comparator_lean/RouteBO1Body4TraceFoldTargets.lean"
+BODY4_FOLD_RECEIPT = ROOT / "examples/routeb_b45_source_comparator_lean/O1_BODY_4_TRACE_FOLD_TARGETS_RECEIPT.json"
+BODY4_FOLD_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O1-body-4-tagged-trace-fold-codex-20260907.md"
 O0_BODY3_RECEIPT = ROOT / "agent_review_inbox/receipt-T-P4-033-O0-P-NE-body3-geometry-targets-20260907.json"
 O0_BODY4_RECEIPT = ROOT / "agent_review_inbox/receipt-T-P4-033-O0-P-NE-body4-geometry-targets-20260907.json"
+O0_BODY5_RECEIPT = ROOT / "agent_review_inbox/receipt-T-P4-033-O0-P-NE-body5-geometry-source-20260907.json"
+O0_BODY5_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O0-P-NE-body5-geometry-source-20260907.md"
+HACC_REVIEW = ROOT / "agent_review_inbox/review-T-P4-033-O0-H-acc-source-semantic-export-20260907.md"
 KEYED_INTERFACE = ROOT / "artifacts/task_routeb_o1_keyed_regrouping_20260907/RouteBO1KeyedRegroupingInterface.lean"
 KEYED_RECEIPT = ROOT / "artifacts/task_routeb_o1_keyed_regrouping_20260907/interface_receipt.json"
 KEYED_CHECK = ROOT / "artifacts/task_routeb_o1_keyed_regrouping_20260907/interface_check.json"
@@ -74,14 +80,17 @@ def main() -> None:
                  BODY1_RECEIPT, BODY2_CHECK, BODY2_RECEIPT, BODY3_RECEIPT, BODY3_CHECK,
                  BODY4_RECEIPT, BODY4_CHECK, BODY4_REVIEW,
                  BODY5_RECEIPT, BODY5_CHECK, BODY5_REVIEW,
-                 O0_BODY3_RECEIPT, O0_BODY4_RECEIPT, KEYED_INTERFACE, KEYED_RECEIPT, KEYED_CHECK,
+                 BODY4_FOLD_TARGET, BODY4_FOLD_RECEIPT, BODY4_FOLD_REVIEW,
+                 O0_BODY3_RECEIPT, O0_BODY4_RECEIPT, O0_BODY5_RECEIPT, O0_BODY5_REVIEW,
+                 HACC_REVIEW, KEYED_INTERFACE, KEYED_RECEIPT, KEYED_CHECK,
                  KEYED_ORIENTATION_REVIEW, BODY6_SUPPORT, BODY6_REVIEW, PBUDGET_REVIEW,
                  REVIEW, AGENT_REVIEW):
         if not path.is_file():
             raise FileNotFoundError(path)
     adapter_sha256 = digest(ADAPTER)
     for receipt_path in (BODY1_RECEIPT, BODY2_RECEIPT, BODY3_RECEIPT, BODY4_RECEIPT,
-                         BODY5_RECEIPT, O0_BODY3_RECEIPT, O0_BODY4_RECEIPT):
+                         BODY5_RECEIPT, BODY4_FOLD_RECEIPT, O0_BODY3_RECEIPT,
+                         O0_BODY4_RECEIPT, O0_BODY5_RECEIPT):
         receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
         embedded = list(embedded_adapter_hashes(receipt))
         if embedded and any(value != adapter_sha256 for value in embedded):
@@ -141,6 +150,18 @@ def main() -> None:
         "body_5_target_check_status": "PASS_EXACT_BODY5_TARGET_COEFFICIENTS_FAIL_CLOSED",
         "body_5_target_coefficients_proven": False,
         "body_5_review_sha256": digest(BODY5_REVIEW),
+        "body_4_trace_fold_target_sha256": digest(BODY4_FOLD_TARGET),
+        "body_4_trace_fold_receipt_sha256": digest(BODY4_FOLD_RECEIPT),
+        "body_4_trace_fold_review_sha256": digest(BODY4_FOLD_REVIEW),
+        "body_4_trace_fold_status": "TARGETS_ONLY_UNPROVEN",
+        "body_4_trace_fold_proven": False,
+        "o0_body_5_geometry_receipt_sha256": digest(O0_BODY5_RECEIPT),
+        "o0_body_5_geometry_review_sha256": digest(O0_BODY5_REVIEW),
+        "o0_body_5_geometry_status": "CONDITIONAL_BODY5_GEOMETRY_DERIVATION",
+        "o0_body_5_geometry_proven": False,
+        "h_acc_review_sha256": digest(HACC_REVIEW),
+        "h_acc_status": "OPEN_H_ACC_NO_DEPLOYED_SEMANTIC_EXPORT",
+        "h_acc_proven": False,
         "o0_body_3_geometry_receipt_sha256": digest(O0_BODY3_RECEIPT),
         "o0_body_3_geometry_status": "CONDITIONAL_BODY3_GEOMETRY_DERIVATION",
         "o0_body_3_geometry_proven": False,

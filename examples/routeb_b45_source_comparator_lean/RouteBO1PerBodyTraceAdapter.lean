@@ -241,6 +241,121 @@ theorem h_body_3_of_entry_targets
         else 0) := h_source q i j
     _ = bodyTraceEvaluator 2 q i j := h_trace q i j
 
+/- Body-3 source-side decomposition.  These are typed propositions only: they
+   expose the exact prefix/axis, active Jacobian, Gram, and trigonometric
+   seams needed by a later source proof, but do not assert that any seam is
+   already proved. -/
+def h_body_3_prefix_slots_target : Prop :=
+  ∀ q,
+    (sourceContract q).origins (0 : Slot) =
+        ![(0 : ℝ), 0, 0] ∧
+    (sourceContract q).origins (1 : Slot) =
+        ![(2 / 25 : ℝ) * Real.cos (q (0 : Joint)),
+          (2 / 25 : ℝ) * Real.sin (q (0 : Joint)), 1 / 10] ∧
+    (fun a => (sourceContract q).origins (2 : Slot) a -
+        (sourceContract q).origins (1 : Slot) a) =
+        ![(21 / 100 : ℝ) * Real.sin (q (1 : Joint)) *
+            Real.cos (q (0 : Joint)),
+          (21 / 100 : ℝ) * Real.sin (q (1 : Joint)) *
+            Real.sin (q (0 : Joint)),
+          (21 / 100 : ℝ) * Real.cos (q (1 : Joint))] ∧
+    (fun a => (sourceContract q).origins (3 : Slot) a -
+        (sourceContract q).origins (2 : Slot) a) =
+        ![(-1 / 20 : ℝ) * Real.sin (q (0 : Joint)),
+          (1 / 20 : ℝ) * Real.cos (q (0 : Joint)), 0]
+
+def h_body_3_axes_target : Prop :=
+  ∀ q,
+    (sourceContract q).axes (0 : Joint) =
+        ![(0 : ℝ), 0, 1] ∧
+    (sourceContract q).axes (1 : Joint) =
+        ![-Real.sin (q (0 : Joint)),
+          Real.cos (q (0 : Joint)), 0] ∧
+    (sourceContract q).axes (2 : Joint) =
+        ![-Real.sin (q (0 : Joint)),
+          Real.cos (q (0 : Joint)), 0]
+
+def h_body_3_active_jacobian_target : Prop :=
+  ∀ q a,
+    bodyJv (sourceContract q).origins (sourceContract q).axes
+        (2 : Body) a (0 : Joint) =
+      cross3 ((sourceContract q).axes (0 : Joint)) (fun b =>
+        bodyCom (sourceContract q).origins (2 : Body) b -
+          (sourceContract q).origins (prevOrigin (0 : Joint)) b) a ∧
+    bodyJv (sourceContract q).origins (sourceContract q).axes
+        (2 : Body) a (1 : Joint) =
+      cross3 ((sourceContract q).axes (1 : Joint)) (fun b =>
+        bodyCom (sourceContract q).origins (2 : Body) b -
+          (sourceContract q).origins (prevOrigin (1 : Joint)) b) a ∧
+    bodyJv (sourceContract q).origins (sourceContract q).axes
+        (2 : Body) a (2 : Joint) =
+      cross3 ((sourceContract q).axes (2 : Joint)) (fun b =>
+        bodyCom (sourceContract q).origins (2 : Body) b -
+          (sourceContract q).origins (prevOrigin (2 : Joint)) b) a ∧
+    bodyJv (sourceContract q).origins (sourceContract q).axes
+        (2 : Body) a (3 : Joint) = 0 ∧
+    bodyJv (sourceContract q).origins (sourceContract q).axes
+        (2 : Body) a (4 : Joint) = 0 ∧
+    bodyJv (sourceContract q).origins (sourceContract q).axes
+        (2 : Body) a (5 : Joint) = 0 ∧
+    bodyJw (sourceContract q).axes (2 : Body) a (0 : Joint) =
+      (sourceContract q).axes (0 : Joint) a ∧
+    bodyJw (sourceContract q).axes (2 : Body) a (1 : Joint) =
+      (sourceContract q).axes (1 : Joint) a ∧
+    bodyJw (sourceContract q).axes (2 : Body) a (2 : Joint) =
+      (sourceContract q).axes (2 : Joint) a ∧
+    bodyJw (sourceContract q).axes (2 : Body) a (3 : Joint) = 0 ∧
+    bodyJw (sourceContract q).axes (2 : Body) a (4 : Joint) = 0 ∧
+    bodyJw (sourceContract q).axes (2 : Body) a (5 : Joint) = 0
+
+def body_3_translational_gram (q : Q6) (i j : Joint) : ℝ :=
+  ∑ a : Axis,
+    bodyJv (sourceContract q).origins (sourceContract q).axes
+      (2 : Body) a i *
+    bodyJv (sourceContract q).origins (sourceContract q).axes
+      (2 : Body) a j
+
+def body_3_angular_gram (q : Q6) (i j : Joint) : ℝ :=
+  ∑ a : Axis, ∑ b : Axis,
+    bodyJw (sourceContract q).axes (2 : Body) a i *
+      routeBInertia 2 a b *
+    bodyJw (sourceContract q).axes (2 : Body) b j
+
+def body_3_unexpanded_gram (q : Q6) (i j : Joint) : ℝ :=
+  routeBMass 2 * body_3_translational_gram q i j +
+    body_3_angular_gram q i j
+
+def h_body_3_bodyMass_to_unexpanded_gram_target : Prop :=
+  ∀ q i j,
+    sourceBodyMass q (2 : Body) i j = body_3_unexpanded_gram q i j
+
+def body_3_piecewise (q : Q6) (i j : Joint) : ℝ :=
+  if i = (0 : Joint) ∧ j = (0 : Joint) then
+    (80467 / 600000 : ℝ) +
+        (63 / 3125 : ℝ) * Real.sin (q (1 : Joint)) -
+        (1323 / 100000 : ℝ) * Real.cos (2 * q (1 : Joint))
+  else if i = (0 : Joint) ∧ j = (1 : Joint) then
+    (-63 / 20000 : ℝ) * Real.cos (q (1 : Joint))
+  else if i = (1 : Joint) ∧ j = (0 : Joint) then
+    (-63 / 20000 : ℝ) * Real.cos (q (1 : Joint))
+  else if i = (1 : Joint) ∧ j = (1 : Joint) then
+    (21469 / 150000 : ℝ)
+  else if i = (1 : Joint) ∧ j = (2 : Joint) then
+    (7 / 60 : ℝ)
+  else if i = (2 : Joint) ∧ j = (1 : Joint) then
+    (7 / 60 : ℝ)
+  else if i = (2 : Joint) ∧ j = (2 : Joint) then
+    (7 / 60 : ℝ)
+  else 0
+
+def h_body_3_unexpanded_gram_to_piecewise_target : Prop :=
+  ∀ q i j, body_3_unexpanded_gram q i j = body_3_piecewise q i j
+
+def h_body_3_minimal_trig_target : Prop :=
+  ∀ x : ℝ,
+    Real.sin x * Real.sin x + Real.cos x * Real.cos x = 1 ∧
+    Real.cos (2 * x) = 2 * Real.cos x * Real.cos x - 1
+
 /- Human body 4 is zero-based body 3.  Its exact trace uses q 1 and q 2. -/
 def body_4_piecewise (q : Q6) (i j : Joint) : ℝ :=
   if i = (0 : Joint) ∧ j = (0 : Joint) then

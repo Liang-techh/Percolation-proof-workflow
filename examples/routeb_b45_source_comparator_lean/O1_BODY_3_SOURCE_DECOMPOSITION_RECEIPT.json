@@ -1,0 +1,106 @@
+{
+  "schema": "routeb.o1.body_3.source_decomposition.v1",
+  "status": "OPEN_BODY_3_SOURCE_DECOMPOSITION_TARGETS_ONLY",
+  "body_label": 3,
+  "zero_based_body": 2,
+  "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+  "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+  "scope": [
+    "body-3 only",
+    "prefix slots 0..3 and parent axes 0..2",
+    "active Jv/Jw support for body 2",
+    "unexpanded translational and angular Gram",
+    "minimal exact real trig identities"
+  ],
+  "lean_target_file": {
+    "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean",
+    "sha256": "6B50AE63C9770E3481F79511141C8CC55D592B5C550F686654C5E756584399EF",
+    "status": "TARGETS_ONLY_UNCOMPILED",
+    "body_4_and_body_5_source_unchanged": true
+  },
+  "target_decomposition": {
+    "prefix_slots": {
+      "name": "h_body_3_prefix_slots_target",
+      "statement": "sourceContract q origins at slots 0 and 1, plus slot2-slot1 and slot3-slot2, equal the exact rational DH vectors",
+      "coefficients": ["2/25", "1/10", "21/100", "1/20"],
+      "status": "OPEN_NO_PROOF"
+    },
+    "axes": {
+      "name": "h_body_3_axes_target",
+      "statement": "axis0=(0,0,1), axis1=axis2=(-sin(q0),cos(q0),0)",
+      "status": "OPEN_NO_PROOF"
+    },
+    "active_jacobian": {
+      "name": "h_body_3_active_jacobian_target",
+      "statement": "Jv columns 0,1,2 use bodyJv_active_formula; columns 3,4,5 are zero; Jw columns 0,1,2 use bodyJw_active_formula; columns 3,4,5 are zero",
+      "status": "OPEN_NO_PROOF"
+    },
+    "unexpanded_gram": {
+      "definitions": [
+        "body_3_translational_gram",
+        "body_3_angular_gram",
+        "body_3_unexpanded_gram"
+      ],
+      "bridge_target": "h_body_3_bodyMass_to_unexpanded_gram_target",
+      "reduction_target": "h_body_3_unexpanded_gram_to_piecewise_target",
+      "mass": "routeBMass 2 = 3/5",
+      "inertia": "routeBInertia 2 is diagonal with scalar 7/60",
+      "status": "OPEN_NO_PROOF"
+    },
+    "trig": {
+      "name": "h_body_3_minimal_trig_target",
+      "identities": [
+        "sin(x)*sin(x)+cos(x)*cos(x)=1",
+        "cos(2*x)=2*cos(x)*cos(x)-1"
+      ],
+      "candidate_mathlib_lemmas": [
+        "Real.sin_sq_add_cos_sq",
+        "Real.cos_two_mul"
+      ],
+      "status": "OPEN_NO_PROOF"
+    }
+  },
+  "source_inputs": {
+    "body_trace_evaluator": {
+      "path": "examples/routeb_b45_source_comparator_lean/BodyTraceEvaluator.lean",
+      "sha256": "B9845D37B5DCD16E1F9E142CB2E4D0E5571452993E843C85AC8CD643F6BA5DEA"
+    },
+    "exact_source": {
+      "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyExactSource.lean",
+      "sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553"
+    },
+    "semantic_core": {
+      "path": "examples/routeb_body_semantic_core_lean/BodySemanticCore.lean",
+      "sha256": "FE15F6CA9993F55FC56E6D2C9CCA5FA8C7F6E9530B9B900A6F111ED96715149C"
+    },
+    "source_contract_adapter": {
+      "path": "examples/routeb_source_contract_adapter_lean/SourceContractAdapter.lean",
+      "sha256": "58C0B15B6FCEB1064F773ACDB9F684DC55A021AC69A030C13E1C8B46F7B9A8DC"
+    },
+    "frame_slot_accessor": {
+      "path": "examples/routeb_frame_slot_accessor_lean/FrameSlotAccessor.lean",
+      "sha256": "F497BD1F45FAE4DD385F4D0F46DF79252C92E5CD027B29D5DC55011F91525C31"
+    },
+    "real_dh_step": {
+      "path": "examples/routeb_real_dh_step_lean/RealDHStep.lean",
+      "sha256": "9C04DA5B9627EE749C53009733006934F95B2D33265E46CA59D0725AA453786A"
+    },
+    "frame_origin_axis": {
+      "path": "examples/routeb_frame_origin_axis_lean/FrameOriginAxis.lean",
+      "sha256": "8F8D3333C9D4FF2E5A4A3CF25FA1C11BA6C6C719B10598F8B0E03162C524EF39"
+    },
+    "fourier_normal_form": {
+      "path": "examples/routeb_b45_fourier_normal_form/FourierNormalForm.lean",
+      "sha256": "56EC2F2D29A22942BCB83A3BA98197AE1CE4D607340072B81C013B8D358D3218"
+    }
+  },
+  "verification": {
+    "lean_or_lake_run": false,
+    "lean_verified": false,
+    "source_bridge_proven": false,
+    "registry_eligible": false,
+    "comparator_accepted": false,
+    "formal_certificate_allowed": false
+  },
+  "next_action": "Compile the slot/axis targets first; instantiate active/inactive semantic lemmas; unfold the two Gram definitions; then prove the body-3 piecewise reduction by ring_nf plus the two exact trig identities. Keep every receipt under the same source_key/state_key; do not promote this target-only child."
+}

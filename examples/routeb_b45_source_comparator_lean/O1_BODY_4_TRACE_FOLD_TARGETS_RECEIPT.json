@@ -1,0 +1,75 @@
+{
+  "schema": "routeb.o1.body_4.trace_fold_targets.v1",
+  "status": "TARGETS_ONLY_UNPROVEN",
+  "scope": "exact body-4 tagged trace fold only",
+  "body_label": 4,
+  "zero_based_body": 3,
+  "carrier": {
+    "body": "Fin 6",
+    "row": "Fin 6",
+    "col": "Fin 6",
+    "frequency": "Fin 6 -> Int",
+    "coefficient": "RationalTag -> Rat -> Real"
+  },
+  "lean_target": {
+    "path": "examples/routeb_b45_source_comparator_lean/RouteBO1Body4TraceFoldTargets.lean",
+    "sha256": "63E6DA5F26FB4BAA8B1330F6A45E8B042ED825176905B8BD95F6D9C5E2826464",
+    "status": "TARGETS_ONLY_UNCOMPILED"
+  },
+  "review": {
+    "path": "agent_review_inbox/review-T-P4-033-O1-body-4-tagged-trace-fold-codex-20260907.md",
+    "sha256": "F5B4B0528DCD463D19BF3688A48F0F88C31E813E868B5AFC9426B41F19E3D73A"
+  },
+  "guard_targets": {
+    "Body4PartitionGuardTarget": "prefix rows 1-3 and suffix rows 5-6 have body != 3; bodyTraceRows4 has body = 3",
+    "Body4RowColFrequencyGuardTarget": "each bodyTraceRows4 row has body/row/col guard, frequency [0,nu2,nu3,0,0,0], and nonzero rational denominators",
+    "Body4PhaseReductionTarget": "guarded frequency reduces tracePhase to nu2*q1 + nu3*q2",
+    "Body4EntryGuardReductionTarget": "inside bodyTraceRows4, body guard reduces traceRowContribution to row/col guard",
+    "Body4OffBlockGuardReductionTarget": "outside body-4 block, body guard makes traceRowContribution zero"
+  },
+  "conjugate_targets": {
+    "ConjugateTaggedPairTarget": "same body/row/col; frequency negation; equal real tag lift; opposite imaginary tag lift; nonzero denominators",
+    "ConjugateAtomPairTarget": "ConjugateTaggedPairTarget plus exact-real traceAtom equality for every q",
+    "Body4ConjugatePairWitnessTarget": "both rows are members of bodyTraceRows4 and satisfy the pair target",
+    "Body4ConjugatePairCoverageTarget": "each body-4 row has a source-supplied partner; coverage alone does not assert disjointness"
+  },
+  "fold_targets": {
+    "body4BlockFold": "bodyTraceRows4.foldl (acc + traceRowContribution body=3) 0",
+    "Body4FullToBlockFoldTarget": "bodyTraceEvaluator 3 q i j = body4BlockFold q i j",
+    "Body4BlockFoldTarget": "body_4_piecewise q i j = body4BlockFold q i j",
+    "Body4FoldCompositionTarget": "FullToBlockFoldTarget and BlockFoldTarget",
+    "Body4TraceFoldHandoffTarget": "body_4_piecewise q i j = bodyTraceEvaluator 3 q i j"
+  },
+  "dependencies": {
+    "body_geometry": "not modified and not used as a proof premise here",
+    "body_4_piecewise": {
+      "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean",
+      "sha256": "6B50AE63C9770E3481F79511141C8CC55D592B5C550F686654C5E756584399EF"
+    },
+    "BodyTraceEvaluator": {
+      "path": "examples/routeb_b45_source_comparator_lean/BodyTraceEvaluator.lean",
+      "sha256": "B9845D37B5DCD16E1F9E142CB2E4D0E5571452993E843C85AC8CD643F6BA5DEA"
+    },
+    "existing_body4_target_check": {
+      "path": "examples/routeb_b45_source_comparator_lean/O1_BODY_4_TARGET_CHECK.json",
+      "sha256": "7D17E1A06FD3232DB65A1268B5AC451B4FF6FAC3A476020F9F8BC38A94166371"
+    }
+  },
+  "proof_boundary": {
+    "source_expansion_provided": false,
+    "tagged_trace_fold_provided": false,
+    "conjugate_pair_witnesses_provided": false,
+    "full_727_row_fold_provided": false,
+    "synthetic_data_created": false,
+    "source_geometry_modified": false,
+    "fold_theorem_claimed": false,
+    "float64_libm_or_dag_claimed": false,
+    "lean_or_lake_run": false
+  },
+  "static_checks": {
+    "performed": true,
+    "scope": "target symbol/path/hash and forbidden-token check only",
+    "csv_audit_repeated": false,
+    "full_regression": false
+  }
+}
