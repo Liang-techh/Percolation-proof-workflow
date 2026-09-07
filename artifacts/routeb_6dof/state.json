@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 541,
+  "revision": 543,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -13981,7 +13981,25 @@
           "runtime_receipt_present": false,
           "formal_certificate_allowed": false,
           "registry_promoted": false
-        }
+        },
+        "force_github_execution_blockers": [
+          {
+            "status": "BLOCKED_WORKFLOW_NOT_LANDED",
+            "review_sha256": "47DA236A659360612C88028A84C62320C8725FD1F6BBF816AD6AFD43F69C9A55",
+            "workflow_file_landed": false,
+            "runtime_receipt_present": false,
+            "registry_promoted": false
+          }
+        ],
+        "force_github_workflow_blockers": [
+          {
+            "status": "BLOCKED_WORKFLOW_NOT_LANDED",
+            "review_sha256": "47DA236A659360612C88028A84C62320C8725FD1F6BBF816AD6AFD43F69C9A55",
+            "workflow_file_landed": false,
+            "runtime_receipt_present": false,
+            "registry_promoted": false
+          }
+        ]
       }
     },
     "e7d759dcbf1c49cda5dfe9c1daf2cb1d": {
@@ -15943,7 +15961,17 @@
           "left_inverse_witness": "OPEN",
           "formal_certificate_allowed": false,
           "registry_promoted": false
-        }
+        },
+        "o1_partial_source_export_reviews": [
+          {
+            "status": "PARTIAL_SOURCE_EXPORT",
+            "review_sha256": "373657337E99E642EA7E26ACBCC37F9CBB90C1D9A082A561E834F4F939276DA0",
+            "canonical_typed_inhabitant": false,
+            "source_binding_theorem_present": false,
+            "required_binding": "h_source_mass or (h_aggregate and h_body)",
+            "registry_promoted": false
+          }
+        ]
       }
     },
     "0da99a7cef5e4f0b91c7cc06d9e7c010": {
@@ -17000,7 +17028,55 @@
             "global_coverage": false,
             "registry_promoted": false
           }
-        ]
+        ],
+        "o2_real_branch_export_plans": [
+          {
+            "status": "OPEN_REAL_THETA2_TRIPLE_RECEIPT_MISSING",
+            "review_sha256": "624C6D634E3CE9DA587881F0EFE253E1C6F22290C07D2CDA201BE71C670E685C",
+            "branch_source_before_patch_sha256": "C5349534FE1D01D87FB886BAE94EA05F373BCBE4E24B9A2C12411A31234C0590",
+            "branch_source_after_patch_sha256": "E4BA40D259AAC57CACCBB47A8EBA0A433B407DAAFBB30225E748E29CF532889C",
+            "backup_path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_interval_branch_bound.jl.bak_20260907_o2_triple",
+            "canonical_triple_receipt_present": false,
+            "external_premises_present": false,
+            "global_coverage": false,
+            "registry_promoted": false
+          }
+        ],
+        "o2_real_branch_export_plan": {
+          "status": "OPEN_REAL_THETA2_TRIPLE_RECEIPT_MISSING",
+          "review_sha256": "624C6D634E3CE9DA587881F0EFE253E1C6F22290C07D2CDA201BE71C670E685C",
+          "branch_source_after_patch_sha256": "E4BA40D259AAC57CACCBB47A8EBA0A433B407DAAFBB30225E748E29CF532889C",
+          "canonical_triple_receipt_present": false,
+          "external_premises_present": false,
+          "global_coverage": false,
+          "registry_promoted": false
+        },
+        "o2_triple_export_runtime_obstructions": [
+          {
+            "status": "BLOCKED_NO_JULIA_RUNTIME",
+            "review_sha256": "1493A198EA2CAD913ABD4F4CB6101A1C4BACE5972AB82774E9FE72ED7834D342",
+            "branch_source_sha256": "E4BA40D259AAC57CACCBB47A8EBA0A433B407DAAFBB30225E748E29CF532889C",
+            "backup_source_sha256": "C5349534FE1D01D87FB886BAE94EA05F373BCBE4E24B9A2C12411A31234C0590",
+            "julia_found": false,
+            "parse_verified": false,
+            "runtime_ready": false,
+            "external_premises_present": false,
+            "global_coverage": false,
+            "registry_promoted": false
+          }
+        ],
+        "o2_triple_export_runtime_obstruction": {
+          "status": "BLOCKED_NO_JULIA_RUNTIME",
+          "review_sha256": "1493A198EA2CAD913ABD4F4CB6101A1C4BACE5972AB82774E9FE72ED7834D342",
+          "branch_source_sha256": "E4BA40D259AAC57CACCBB47A8EBA0A433B407DAAFBB30225E748E29CF532889C",
+          "backup_source_sha256": "C5349534FE1D01D87FB886BAE94EA05F373BCBE4E24B9A2C12411A31234C0590",
+          "julia_found": false,
+          "parse_verified": false,
+          "runtime_ready": false,
+          "external_premises_present": false,
+          "global_coverage": false,
+          "registry_promoted": false
+        }
       }
     }
   },
@@ -41267,6 +41343,25 @@
       "schur_margin_consumed": false,
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T14:54:18.936312+00:00",
+      "kind": "routeb_latest_interface_reviews_recorded",
+      "o1_status": "PARTIAL_SOURCE_EXPORT",
+      "o2_status": "OPEN_REAL_THETA2_TRIPLE_RECEIPT_MISSING",
+      "force_status": "BLOCKED_WORKFLOW_NOT_LANDED",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T14:55:39.072535+00:00",
+      "kind": "routeb_latest_interface_reviews_recorded",
+      "o1_status": "PARTIAL_SOURCE_EXPORT",
+      "o2_status": "OPEN_REAL_THETA2_TRIPLE_RECEIPT_MISSING",
+      "o2_runtime_status": "BLOCKED_NO_JULIA_RUNTIME",
+      "force_status": "BLOCKED_WORKFLOW_NOT_LANDED",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -44923,5 +45018,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "0330afa6dd0ebf98f2d7136da97f42e938075003adc01cc8f19d86a10e01d21a"
+  "state_checksum": "107ec2503282cdb963439f1254c0991a91735f74d438689a3d409409ab086e31"
 }

@@ -1891,6 +1891,14 @@ after integration; corrections should be a new result file.
 - job 必须调用现有 runner、上传完整 output 和 job logs；缺 source 变量、hash
   drift、schema/residual/exit failure 均保持 `PENDING_RUNTIME_JULIA` 或 rejected。
 
+### T-P4-O2-BB-TRIPLE-EXPORT — Julia runtime obstruction (2026-09-07)
+
+- 当前没有 Julia，因此不声称 branch exporter syntax/runtime PASS；保持
+  `BLOCKED_NO_JULIA_RUNTIME`。
+- Julia-capable agent 只运行 parse-only 与显式 triple selector 最小路径，保存
+  driver/backup hash、premise hashes、Julia version、stdout/stderr/exit code；
+  缺字段或 hash mismatch 不得标记 READY。
+
 ### T-P4-036.2 — canonical 13D triple contract implemented (2026-09-07)
 
 - 新 validator 已可消费未来的 `routeb-theta2-canonical-coverage-v1`：只接受
@@ -1926,3 +1934,23 @@ after integration; corrections should be a new result file.
   `beta_bias` + root / `beta_abs` + additive reserve 的 affine interface。
 - `derive_routeb_affine_bias_gain` 已可验证 exact Young composition，但结果仍
   是 conditional；禁止把 bias 合并进 homogeneous `rho_r`，禁止关闭 Schur。
+
+### T-P4-036.2 — real branch triple exporter validation (2026-09-07)
+
+- 真实 branch driver 已增加 opt-in `P3_BB_TRIPLE_CELL_ID` sidecar；必须在
+  Julia 环境验证 syntax、shared endpoint orientation、pending external-premise
+  obstruction 和 canonical JSON 输出，不运行全量回归。
+- O2 只有收到同 namespace canonical triple 与 external membership/join receipt
+  后，才能进入 validator；当前仍不得实例化 coverage theorem。
+
+### T-P4-033-O1 — partial exact source export (2026-09-07)
+
+- 当前 Fourier/body export 只能作为 partial source evidence；执行 agent 需生成
+  同 key typed `M_exact`、projection、`h_MDD_def` 及 source binding theorem，
+  再走 pinned Lean/comparator intake。
+
+### T-P4-KC-COORDINATE-ADAPTER — GitHub workflow landing (2026-09-07)
+
+- force job 尚未出现在 Actions list，必须先落地
+  `.github/workflows/force-general-state-export.yml` 并设置 pinned source vars；
+  未落地前保持 `BLOCKED_WORKFLOW_NOT_LANDED`。

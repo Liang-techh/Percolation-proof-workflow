@@ -1284,3 +1284,24 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   `derive_routeb_affine_bias_gain` exact API，输出 `gamma_bias` 并 fail-closed。
 - 当前仍不消费 Schur margin；下一步只寻找同键 coercivity/reserve 或真实
   affine-bias receipt。
+
+### 2026-09-07 — 梁智炜：O1/O2/force interface review 与 branch patch 收割
+
+- O1 已确认现有 Fourier coefficient/body export 是 `PARTIAL_SOURCE_EXPORT`；
+  最小闭合面是同一运行生成 Lean `M_exact`、`h_MDD_def` 以及
+  `h_source_mass` 或 `(h_aggregate,h_body)`，当前 source binding 仍 false。
+- O2 已在真实 branch driver 创建备份后加入 opt-in canonical triple exporter，
+  要求 parent/child/sibling endpoints、split axis/cut 和五类 external hashes；
+  缺 premise 只输出 pending obstruction，不伪造 canonical receipt。Julia 验证待
+  执行 agent 完成，当前 coverage 仍 open。
+- force GitHub Actions 入口尚未落地，已登记 `BLOCKED_WORKFLOW_NOT_LANDED`；
+  不触发其他 workflow、不消费旧 CSV。
+
+### 2026-09-07 — 梁智炜：O2 triple exporter runtime obstruction 收割
+
+- 新执行审查确认 branch triple exporter 尚未经过 Julia parse 或最小运行：
+  `JULIA_FOUND=false`，没有 stdout/stderr/exit receipt，状态为
+  `BLOCKED_NO_JULIA_RUNTIME`。
+- 当前 source patch 与 pre-edit backup hash 已保留；后续执行必须显式提供
+  `P3_BB_TRIPLE_CELL_ID` 和全部 external premise hashes，只有实际 READY JSON
+  才能进入 canonical validator。
