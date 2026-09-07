@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "kind": "advisory_reuse_manifest",
+  "integration_status": "pending",
+  "classification": "direct_reuse",
+  "provenance": {
+    "repository": "upstream/anthropics-fermats-last-theorem",
+    "commit": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef",
+    "source_path": "Theorems/Thm_Algebra_exists_bijOn_eval_differentiableOn_pi_of_smooth_of_kaehlerDifferential.lean",
+    "source_blob": "258acd99b2b98065e948b27f966c410b91c8a263",
+    "license": "Apache-2.0",
+    "imports": ["Mathlib", "P2M.Util", "P2M.Sol.S_Algebra_exists_bijOn_eval_differentiableOn_pi_of_smooth_of_kaehlerDifferential"]
+  },
+  "theorem": {
+    "namespace": "Algebra",
+    "name": "exists_bijOn_eval_differentiableOn_pi_of_smooth_of_kaehlerDifferential",
+    "assumptions": [
+      "[CommRing S]",
+      "[IsDomain S]",
+      "[Algebra ℂ S]",
+      "[Algebra.FiniteType ℂ S]",
+      "Algebra.Smooth ℂ S",
+      "Module.rank S (KaehlerDifferential ℂ S) = n",
+      "σ₀ : S →ₐ[ℂ] ℂ",
+      "t : Fin n → S",
+      "Kähler differential generation condition hdt"
+    ],
+    "conclusion_shape": [
+      "positive radius and neighborhood around σ₀",
+      "Set.BijOn evaluation-coordinate map to a Metric.ball",
+      "DifferentiableOn factorization for every s : S",
+      "finite-support neighborhood stability"
+    ]
+  },
+  "target_adapter": {
+    "file": "AnthropicFLTDifferentiableCoordinateAdapter.lean",
+    "namespace": "AnthropicFLTDifferentiableCoordinateAdapter",
+    "status": "pending_api_candidate",
+    "routeB_or_pde_theorem": false,
+    "registry_promotion": false
+  },
+  "admission_boundary": {
+    "requires_pinned_upstream_compile": true,
+    "requires_target_ambient_check": true,
+    "does_not_prove_routeB_coverage": true,
+    "does_not_prove_flowpipe_or_interval_enclosure": true,
+    "does_not_promote_verified_registry": true
+  }
+}

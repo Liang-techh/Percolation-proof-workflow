@@ -3056,3 +3056,9 @@ revision 719 登记 BODY6 `CANDIDATE_DOMAIN_ORIGIN_OBSTRUCTION`。O1 cell 与
 delivery p_B≤28/5 的原点 witness 已有精确 proof-attempt；active V≤1 只在
 外部给出 V(0,0)≤1 时成立。该叶把零点 source binding 的最小反证接口固定下来，
 同时保留 active/domain identity、full regularized M 与 body-only Schur 的独立义务。
+
+revision 720 接入 Anthropic FLT `differentiable_coordinate_api`。该候选分类为
+`direct_reuse`（仅指 theorem shape/API），固定了 theorem path、source blob、
+commit 和 Kähler/complex algebra 假设，包装 BijOn evaluation coordinates、
+differentiable factorization 与 finite-support stability；target ambient、
+upstream compile 和 admission 仍是 pending。

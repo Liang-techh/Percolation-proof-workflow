@@ -2453,3 +2453,11 @@ Route-B 域混为一谈，而是分别记录 O1 consumer cell、delivery p_B≤2
 active V≤1 的原点 witness 条件；在最小 `0∈D` 与 `R(0)` source binding 下，
 BODY6 严格统一正 margin 被精确排除。active V 前提、full M/C/G、coverage 和
 body-only Schur 到完整证书的关系仍保持开放。
+
+### 2026-09-07 — 接入 Anthropic FLT calculus coordinate API
+
+revision 720 接入 `differentiable_coordinate_api`，分类为 `direct_reuse` 的
+非数论 theorem shape：有限维 smooth/Kähler differential 条件导出局部
+BijOn evaluation coordinates、逐元素 differentiable factorization 和
+finite-support stability。这里复用的是声明/API 形状，未复制 FLT 算术证明；
+当前仍是 pending advisory，不改变本地 verified registry。

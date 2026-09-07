@@ -2185,6 +2185,20 @@ CHILDREN = [
             "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_CANDIDATEDOMAIN20260907.review.md",
         ],
     },
+    {
+        "name": "P0.reproducibility_baseline.anthropic_flt_registry_graph_adapter.differentiable_coordinate_api",
+        "parent": "P0.reproducibility_baseline.anthropic_flt_registry_graph_adapter",
+        "statement": "The finite-dimensional smooth/Kähler differential evaluation-coordinate conclusion from the pinned Anthropic FLT theorem can be packaged as a reusable API witness, provided its CommRing/IsDomain/complex algebra, finite-type, smoothness, rank, evaluation, and differential-generation assumptions are supplied; packaging does not reprove or promote the upstream arithmetic theorem.",
+        "proof_sketch": "Record exact upstream theorem path/blob/commit and its conclusion shape, define a target-side SmoothEvalCoordinateWitness with positive radius, BijOn evaluation coordinates, differentiable factorization, and finite-support stability, and package an externally supplied conclusion under the full displayed hypotheses. Keep scalar/topology adaptation, pinned compile, source provenance, and registry admission separate.",
+        "lane": "workflow_infrastructure",
+        "bottleneck": "provenance",
+        "status": "PENDING_ADVISORY_DIRECT_REUSE_ANTHROPIC_FLT_CALCULUS_API",
+        "artifacts": [
+            "examples/anthropic_flt_differentiable_coordinate_adapter/anthropic_flt_differentiable_coordinate_manifest.json",
+            "examples/anthropic_flt_differentiable_coordinate_adapter/AnthropicFLTDifferentiableCoordinateAdapter.lean",
+            "examples/anthropic_flt_differentiable_coordinate_adapter/REVIEW.md",
+        ],
+    },
 ]
 
 
