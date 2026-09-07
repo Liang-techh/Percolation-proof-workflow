@@ -2474,3 +2474,14 @@ K_path `NEW_KPATH_INTERFACE_FinClosure.lean` 仍留在本地未提交，等待 r
 
 四条均由已完成的本地线程复用，继续不等待 GitHub 回执；每条只新增自己的
 proof artifact/review，不改 state/registry/shared scripts。
+### 2026-09-07 — 12:06 数学叶收割
+
+- fixed-λ 两 eta union：以 `EtaTag × Nat` 隔离局部 row index，在显式跨 eta
+  label 不相交前提下保留 one-row-per-box、`256+321=577` 和 selected-box
+  正 margin；状态 `OPEN_UNCOMPILED_FIXED_LAMBDA_TWO_ETA_UNION`。
+- P3 force adapter：将 machine/lift、central-FD、derivative-hull、export-center
+  四层 remainder 在同一 Christoffel contraction 下线性拆分，接到已有 Fin 6
+  weighted power consumer；状态 `OPEN_UNCOMPILED_CENTRAL_FD_FORCE_ADAPTER`。
+- 两叶均已登记为 pending DAG children；revision `628`，registry `0`，正式
+  certificate gate 继续关闭。仅做了 placeholder declaration 静态检查，未运行
+  Lean/Lake。

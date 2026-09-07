@@ -418,6 +418,32 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent.two_eta_union",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold.selected_box_parent",
+        "statement": "Tagged sparse eta=2.7 and eta=5.6 partitions combine under cross-eta label disjointness, preserving one-row-per-box, exact 256+321=577 accounting, and positive selected-box margins.",
+        "proof_sketch": "Use EtaTag×Nat row indices, explicit cross-eta label disjointness, local injectivity, cardinality addition, and the selected-box positive margin theorem; keep digest/source/coverage external.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_TWO_ETA_UNION",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_TWO_ETA_UNION20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_TWO_ETA_UNION20260907_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam.force_adapter",
+        "parent": "P3.central_fd_derivative_hull_composition.algebraic_interface.power_seam",
+        "statement": "Four derivative-first remainder layers split linearly under one Christoffel-to-force contraction and feed the existing Fin 6 weighted power consumer.",
+        "proof_sketch": "Name machine/lift, central-FD, derivative-hull, and export-center tensors; prove contraction additivity, force-error vector identity, and one-use radius triangle bound while leaving source/rounding/export/coverage as typed premises.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_CENTRAL_FD_FORCE_ADAPTER",
+        "artifacts": [
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_FORCE_ADAPTER.lean",
+            "examples/routeb_p3_central_fd_hull/NEW_CENTRAL_FD_HULL_FORCE_ADAPTER_REVIEW.md",
+        ],
+    },
+    {
         "name": "P5.componentwise_relative_decay.feasible_cone_spn.nonnegative_gain_increment_reuse",
         "parent": "P5.componentwise_relative_decay.feasible_cone_spn",
         "statement": "A nonnegative component-gain increment can reuse an existing cone SPN witness when its symmetric cone correction is entrywise below the old nonnegative slack.",

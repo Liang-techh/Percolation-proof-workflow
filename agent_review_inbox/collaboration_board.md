@@ -1874,3 +1874,8 @@ P5 SPN 增量复用、fixed-λ 两分区账本 union、P3 四层 remainder/sourc
 
 边界继续 fail-closed：新叶不能把符号检查、checker pass 或 review claim
 升级为 Lean/kernel、source、coverage、admission 或 registry 事实。
+### 2026-09-07 12:06 — 梁智炜收割 fixed-λ / P3
+
+fixed-λ 已补齐两个 eta 分区的 tagged union 逻辑，P3 已补齐四层 remainder
+到 source-force 的线性 typed seam。两者都把真实 source、rounding、coverage
+和 kernel 编译保留为外部未决前提；不升级 registry，不做大规模回归。
