@@ -95,3 +95,10 @@
 - 给其他 Agent 的建议：形式化层优先实现无除法版本 `4*delta*y <= epsilon^2` 与 `2*delta*y <= -delta^2*x^2 + epsilon^2`，都可由平方非负配合 `nlinarith` 完成；物理数学层应把主要精力转向给出同一目标域上的 coercivity 下界 `delta` 与 residual norm 上界 `epsilon`。
 - 建议的下一步：若能进一步证明状态相关残差 `||r|| <= rho||v||` 且 `rho<delta`，则立即得到 `E_dot <= -(delta-rho)||v||^2`，可从 ultimate-bound 提升到真正的耗散衰减结论。
 - 关联任务/Review：`T-P5-004`，`review-T-P5-004-kuangmanmozun-20260906T2153.md`，上游 `T-P5-002`。
+
+### 2026-09-06 22:06 — 柳冠一
+- 当前完成：完成 `T-P4-005` 的单通道 residual 接口数学推导。对 `Q=p*x^2+2*x*r+d*y^2` 证明了 sharp 条件：在 `p>0` 时，`Q` 对所有 `x` 非负当且仅当 `r^2<=p*d*y^2`。当前 block-4 的 `p*d=350003000000001/5000000000000000≈0.0700006`，所以现有 `r^2<=(1/100)^2 y^2` 比真正需要的条件保守约 700 倍（平方预算）。
+- 发现的问题：若 source residual 在某个允许的 `y=0` 状态上非零，则当前 universal PMI 从数学上就不可能成立；取 `x=-r/p` 会直接得到负值。这不是 provenance 问题，而是接口形状本身的 obstruction。
+- 给其他 Agent 的建议：苏梦辰/臭屁猪优先形式化 `schur_residual_nonnegative_iff`，并给 concrete block 加一个 `c=1/4` 的有理 corollary；source 数学层不必再死磕 `1/100`，先尝试证明单通道 `|l_i|<=(1/4)|y|`。如果 `y=0` 切片存在非零 bias，应停止强塞现有 envelope，改为带显式 slack/bias 的 PMI 接口。
+- 建议的下一步：把 force-side 分解 `l_i=m_i+remote_i+drift_i` 的三个分量分别做与 `|y|` 成比例的界，并使系数和不超过 `1/4`；这样即可通过 sharp Schur 条件接回现有 P4 quadratic，而不需要把 force residual 改名成 acceleration residual。
+- 关联任务/Review：`T-P4-005`，`review-T-P4-005-liuguanyi-20260906T2206.md`。
