@@ -1156,6 +1156,19 @@ CHILDREN = [
             "agent_review_inbox/claim-T-P4-032-defect-quadratic-liuguanyi-20260907T1258.md",
         ],
     },
+    {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.schur_elimination.defect_convention_adapter",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.schur_elimination",
+        "statement": "Force-side and O1 defect conventions are connected only through an explicit typed balance adapter, reference variables, and the shared left-inverse Schur identity.",
+        "proof_sketch": "Keep ForceSideDefects and O1Defects distinct, define the exact acceleration/block/reference transformation, prove balance equivalence and condensed residual equivalence, and expose the correction-only sign conditions without implicit defect renaming.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_P4_DEFECT_CONVENTION_ADAPTER",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_DefectConventionCore.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_DefectConvention_REVIEW.md",
+        ],
+    },
 ]
 
 

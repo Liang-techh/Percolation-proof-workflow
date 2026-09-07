@@ -2667,3 +2667,10 @@ source-independent/open/uncompiled 候选。
   仍保持 pending/open 数学边界。
 - 远端发布节奏已改为每小时；本地空闲 body-6 线追加 tail 2x2 质量/惯量加权任务，
   继续数学推进，不等待 GitHub 回执。
+
+### 2026-09-07 — 13:12 本轮收割收尾
+
+- Schur defect-convention adapter REVIEW 已到，已登记为
+  `schur_elimination.defect_convention_adapter`；ForceSideDefects/O1Defects 保持
+  不同类型，reference 变量和左逆条件均显式保留。
+- 本小时批次已合并并推送；下一次远端收割不早于一小时，期间只做本地数学推进。

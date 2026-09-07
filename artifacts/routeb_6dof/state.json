@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 659,
+  "revision": 660,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -39736,7 +39736,9 @@
       "parent_id": "ab976fc8bdab4889ac07ec5239e24215",
       "status": "open",
       "proof_sketch": "Use B=(4,5), D=(1,2,3,6) projections, retain multiplication order, apply only MDDinv*MDD=I, and derive both full-balance and blockwise forcing/defect forms without PSD or norm assumptions.",
-      "dependencies": [],
+      "dependencies": [
+        "b55f02671cc846ebb39773baa7106a81"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -39991,6 +39993,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\agent_review_inbox\\claim-T-P4-032-defect-quadratic-liuguanyi-20260907T1258.md",
             "sha256": "2BC493E71BC33638A3E7BC3BEAFC7077E3B06642C81E5D2DEF2000356BAD67DC"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "b55f02671cc846ebb39773baa7106a81": {
+      "id": "b55f02671cc846ebb39773baa7106a81",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.schur_elimination.defect_convention_adapter",
+      "statement": "Force-side and O1 defect conventions are connected only through an explicit typed balance adapter, reference variables, and the shared left-inverse Schur identity.",
+      "parent_id": "f4c94f0c5ac84d42b744cb310570561e",
+      "status": "open",
+      "proof_sketch": "Keep ForceSideDefects and O1Defects distinct, define the exact acceleration/block/reference transformation, prove balance equivalence and condensed residual equivalence, and expose the correction-only sign conditions without implicit defect renaming.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "coefficient_identity",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_P4_DEFECT_CONVENTION_ADAPTER",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_DefectConventionCore.lean",
+            "sha256": "151044C8B316E1E2119EEA029E0B3A71E79A78F90D180778A915A9BCA7D3E034"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_DefectConvention_REVIEW.md",
+            "sha256": "1ABEC63B9C94441997A114F4A321E321BDC44B6B32546227EB549EEA34E0EFCF"
           }
         ],
         "registry_eligible": false,
@@ -67207,6 +67244,23 @@
       "metadata_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T19:05:25.024822+00:00",
+      "kind": "node_added",
+      "node_id": "b55f02671cc846ebb39773baa7106a81",
+      "parent_id": "f4c94f0c5ac84d42b744cb310570561e",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.schur_elimination.defect_convention_adapter"
+    },
+    {
+      "at": "2026-09-07T19:05:25.024845+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.schur_elimination.defect_convention_adapter"
+      ],
+      "metadata_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -70863,5 +70917,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "d790d5de02af220be1dc928127ee5837ed23f04b23eb042f2fa35f620b8ee96c"
+  "state_checksum": "d7883736c2868dcecdfc0db5108fce6586b2b4e9102c1532215a682181cbfc91"
 }

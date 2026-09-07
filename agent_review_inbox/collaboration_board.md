@@ -2007,6 +2007,12 @@ weighted three-term 的独立数学链；只登记 open/pending，不触碰 regi
 收割改为 hourly 后，body-6 agent 继续处理 tail 2x2 质量/惯量加权，主线程不再频繁
 访问远端。
 
+### 2026-09-07 13:12 — 梁智炜收割收尾
+
+Schur defect convention 的 typed adapter 已审阅并登记，补上 force-side 与 O1
+残差约定之间缺失的变量转换层；本小时 GitHub 批次已完成同步。后续一小时内不再
+主动 fetch/push，继续由本地 agent 攻数学 frontier。
+
 ### 2026-09-07 12:32 — 梁智炜本地收割并派发
 
 本轮回收了四个已完成数学叶：P3 radius monotonicity、fixed-λ uniform
