@@ -83,6 +83,7 @@ TASK_TARGETS = {
     "T-P3-016": ("P3.m33_exact_lower_bound", "pending_m33_exact_lower_bound_compile"),
     "T-P3-017": ("P3.rotational_prefix_mass_lower_bound", "pending_rotational_mass_lower_bound_lift"),
     "T-P4-019": ("P4.block45_global_mass_geometry_schur", "pending_block45_global_geometry_schur_lift"),
+    "T-P4-020": ("P4.residual_schur_pmi", "pending_one_cell_residual_remainder_absorption"),
     "T-M4-008": ("M4.energy_to_schur_budget_bridge", "pending_conditional_energy_schur_bridge"),
     "T-P8-005": ("P8.independent_reachability", "pending_terminal_transfer_interface"),
     "T-P8-006": ("P8.ramp_reconstruction_compiled_candidate", "pending_ramp_reconstruction_child"),

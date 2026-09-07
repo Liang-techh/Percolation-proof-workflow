@@ -1105,6 +1105,26 @@ polynomial remains a separate frontier.
   the coarse scalar-tube failure as proof, using solver status, or opening the
   M4/formal gate without all upstream premises.
 
+### T-P4-020 — one-cell residual Schur remainder absorption
+
+- status: `open` (highest-value mathematical blocker after the robust PMI
+  structure audit)
+- owner: `狂蛮魔尊` for the sharp inequality/absorption derivation; `红莲魔尊`
+  may independently bind the energy-side beta contract;
+- scope: select one declared block-(4,5) certification cell and derive a
+  rigorous bound for the residual error coordinates `E_k` needed by the
+  5x5 robust Schur PMI. Use the existing descriptor/interval artifacts only
+  as source data, and state the exact norm, cell, rounding mode, polynomial
+  remainder, and resulting beta margin. Prefer a nontrivial successful cell;
+  if the bound fails, return the sharp counter-budget and the exact term that
+  causes failure so the partitioner can split that cell;
+- deliver: a machine-readable cell contract plus an independently replayable
+  exact/interval calculation, with the robust PMI matrix interface consumed
+  only conditionally;
+- forbidden: treating the assembly probe or solver `OPTIMAL` as a proof,
+  replacing all-domain coverage with sampled points, hiding the true-DH/
+  Float64 seam, claiming P4/M4 closure from one cell, or registry promotion.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it

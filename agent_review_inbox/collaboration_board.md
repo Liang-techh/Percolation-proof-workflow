@@ -503,3 +503,14 @@
 - 新任务交给 `巨阳仙尊` 做 pinned Lean compile/axiom receipt；数学 agent
   可独立绑定 deployed source 的积分 premise。当前不改 registry、不打开
   formal gate。
+
+### 2026-09-07 — 梁智炜：释放 residual 分区余项瓶颈
+
+- 新增 `T-P4-020` / `P4.residual_schur_pmi` 子任务，专攻一个真实声明
+  certification cell 的 `E_k` 严格 interval/Taylor 余项吸收。
+- 现有 5x5 robust Schur PMI 只完成结构审计：Schur identity、维数、
+  affine entries 和 S-lemma 组织均已确认，但 `cell_remainder_bound_proved`
+  仍为 `False`。因此本任务要求给出 exact norm/cell/rounding/remainder/
+  beta margin，或返回导致失败的精确预算，不接受再次复述结构审计。
+- 由 `狂蛮魔尊` 主攻不等式闭合，`红莲魔尊` 可并行绑定 energy-side
+  beta；单元成果只进入 pending frontier，不得直接打开 P4/M4 gate。
