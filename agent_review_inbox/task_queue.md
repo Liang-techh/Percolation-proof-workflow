@@ -1089,6 +1089,22 @@ polynomial remains a separate frontier.
   q1/q6 dynamic coverage from absent mass angles, using solver `OPTIMAL`, or
   closing M4/formal admission from the 81-cell ledger alone.
 
+### T-M4-008 — conditional energy-to-Schur terminal bridge
+
+- status: `open` (exact composed checker candidate recorded at Route-B revision 405)
+- owner: `幽魂魔尊` for the exact 2x2 metric/terminal composition; `红莲魔尊`
+  may independently bind the energy inequality and initial storage premise;
+- scope: consume `M4.energy_to_schur_budget_bridge`. Verify that the 81-cell
+  geometry threshold equals the required threshold, the 2x2 comparison has
+  exact determinant zero and nonnegative diagonals, and the conditional
+  conclusion `p45≤12` follows from the supplied energy tube;
+- deliver: a bounded Lean arithmetic child or an explicit failed/conditional
+  receipt, with the energy, q1/q6 coverage, residual, and flowpipe premises
+  kept as separate dependencies;
+- forbidden: calling the conditional bridge a finite-time theorem, importing
+  the coarse scalar-tube failure as proof, using solver status, or opening the
+  M4/formal gate without all upstream premises.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it

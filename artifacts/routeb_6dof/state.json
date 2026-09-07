@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 404,
+  "revision": 405,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -8401,7 +8401,8 @@
         "9a3a7eef35b34880b85423aac67ea015",
         "4236b22d4cd54fa4bd7cb66f458e8768",
         "edd8407c33f54c41867f03b46ec1e313",
-        "c6cbcccc9a444686ba1c732e6f4f8d32"
+        "c6cbcccc9a444686ba1c732e6f4f8d32",
+        "025eea7911654c6c8238565d46480322"
       ],
       "verified_artifact": null,
       "attempts": [
@@ -11731,6 +11732,87 @@
           "Lean_kernel_formalization_of_81_cell_ledger_or_certificates",
           "q1_q6_dynamic_and_flowpipe_coverage",
           "residual_absorption_and_terminal_budget_composition",
+          "coordinator_statement_and_comparator_receipt"
+        ]
+      }
+    },
+    "025eea7911654c6c8238565d46480322": {
+      "id": "025eea7911654c6c8238565d46480322",
+      "name": "M4.energy_to_schur_budget_bridge",
+      "statement": "The exact global mass-geometry Schur threshold composes with the 2x2 storage/output metric to give the conditional terminal bound p45 <= 12.",
+      "parent_id": "6f06c8545bc24dc590b6e5ade85b684d",
+      "status": "open",
+      "proof_sketch": "Check equality of geometry and required thresholds, verify the exact 2x2 PSD determinant and consume the conditional energy tube; retain dynamic and residual premises explicitly.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "exact-rational-conditional-energy-schur-candidate",
+        "statement_status": "conditional_terminal_bridge_pending_source_energy_and_flowpipe",
+        "evidence_level": "exact_checker_composed_geometry_budget",
+        "claim_status": "conditional_m4_terminal_bridge_open",
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "formal_certificate_allowed": false,
+        "physical_certificate_allowed": false,
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_energy_schur_budget_bridge.csv",
+            "sha256": "A4A929E976B2D5AF736EBAF3D4BAA06B020C5B70E9393D34CA0DD0E493E00927"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_ENERGY_SCHUR_BUDGET_BRIDGE.md",
+            "sha256": "326A2921720FC1B912E9D440328E599896FF68A270435D7104C58E4A0AA35372"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_energy_schur_budget_bridge.py",
+            "sha256": "C4B56424DD7FD3B718A58C8D91EE7359CAF413A0C7264C249F08B2BE04BD0C43"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\robot_final\\verify_compact_energy_schur_budget_bridge.py",
+            "sha256": "5C9EC57F596CC23C2CF599570542B098CDF831A568391153970967322B71D506"
+          }
+        ],
+        "metrics": {
+          "status": "ENERGY_SCHUR_BUDGET_BRIDGE",
+          "geometry_schur_threshold": "8228439564136788990170047498962311//245393314823307985274304000000000000",
+          "required_schur_threshold": "8228439564136788990170047498962311/245393314823307985274304000000000000",
+          "geometry_threshold_matches_required": "True",
+          "geometry_cells_certified": "81",
+          "geometry_min_pivot_lower": "0.05660524925142274630328868573073763690133970520072257116486170464127515223149287",
+          "full_2x2_kappa": "4780339200000000000/100014029109103883",
+          "full_2x2_a11": "246402579790128351/200028058218207766",
+          "full_2x2_a22": "11094374592580779614302755840000/8214571595896063015652169054162311",
+          "full_2x2_a12": "-4079407051137600/100014029109103883",
+          "full_2x2_determinant": "0",
+          "full_2x2_metric_psd": "True",
+          "conditional_terminal_p_bound": "12",
+          "conditional_terminal_target_met": "True",
+          "scalar_tube_budget_closes": "False",
+          "unit_supply_tube_budget_closes": "False",
+          "q1_q6_dynamic_coverage": "open",
+          "residual_flowpipe_closure": "False",
+          "finite_time_terminal_budget_closed": "False",
+          "formal_certificate_allowed": "False"
+        },
+        "contract": {
+          "geometry_cells": 81,
+          "threshold": "8228439564136788990170047498962311/245393314823307985274304000000000000",
+          "metric_psd": true,
+          "conditional_terminal_p_bound": "12",
+          "premises_still_required": [
+            "energy_inequality",
+            "initial_bound",
+            "q1_q6_dynamic_coverage",
+            "residual_absorption",
+            "flowpipe_inclusion"
+          ]
+        },
+        "unresolved": [
+          "source_energy_inequality_and_initial_storage_binding",
+          "q1_q6_dynamic_and_full_flowpipe_coverage",
+          "residual_absorption_and_terminal_transfer_semantics",
+          "Lean_kernel_formalization_of_exact_2x2_metric_bridge",
           "coordinator_statement_and_comparator_receipt"
         ]
       }
@@ -33544,6 +33626,42 @@
       "status": "exact_threshold_81_cell_candidate_pending_lean_and_source_review",
       "formal_certificate_allowed": false,
       "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T08:38:49.787574+00:00",
+      "kind": "node_added",
+      "node_id": "025eea7911654c6c8238565d46480322",
+      "parent_id": "6f06c8545bc24dc590b6e5ade85b684d",
+      "name": "M4.energy_to_schur_budget_bridge"
+    },
+    {
+      "at": "2026-09-07T08:38:49.787589+00:00",
+      "kind": "routeb_energy_schur_budget_bridge_recorded",
+      "node_id": "025eea7911654c6c8238565d46480322",
+      "parent_id": "6f06c8545bc24dc590b6e5ade85b684d",
+      "source_artifacts": [
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_energy_schur_budget_bridge.csv",
+          "sha256": "A4A929E976B2D5AF736EBAF3D4BAA06B020C5B70E9393D34CA0DD0E493E00927"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\P5_COMPACT_ENERGY_SCHUR_BUDGET_BRIDGE.md",
+          "sha256": "326A2921720FC1B912E9D440328E599896FF68A270435D7104C58E4A0AA35372"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\routeB_dense_Mq\\routeB_compact_energy_schur_budget_bridge.py",
+          "sha256": "C4B56424DD7FD3B718A58C8D91EE7359CAF413A0C7264C249F08B2BE04BD0C43"
+        },
+        {
+          "path": "C:\\Users\\z5242\\Desktop\\重构版\\6dof_sos_optimized\\6dof_sos_optimized\\robot_final\\verify_compact_energy_schur_budget_bridge.py",
+          "sha256": "5C9EC57F596CC23C2CF599570542B098CDF831A568391153970967322B71D506"
+        }
+      ],
+      "threshold": "8228439564136788990170047498962311/245393314823307985274304000000000000",
+      "conditional_terminal_p_bound": 12,
+      "status": "conditional_terminal_bridge_pending_source_energy_and_flowpipe",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -37200,5 +37318,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "8d51a6205fd48a7df5bcb1e1f6d3e5d67870af040bc1bb35b2d3f23895a6c4f7"
+  "state_checksum": "391cdc498436b604bf40147a501625ea2ffbf3a38174b2c9273532a9f8a6f57d"
 }

@@ -480,6 +480,18 @@
 - 幽魂魔尊攻 exact Schur/PMI 消费接口，巨阳仙尊可补 typed certificate
   surface；不得把 81-cell checker 直接升级为 P4/M4 admission。
 
+### 2026-09-07 — 梁智炜：接入 conditional energy-to-Schur terminal bridge
+
+- 新增 `M4.energy_to_schur_budget_bridge` / `T-M4-008`。该 exact checker
+  已确认 81-cell geometry threshold 与 required threshold 相等，2x2 metric
+  的 determinant 为 0、对角项非负，并在给定 energy tube 时推出条件性
+  `p45≤12`。
+- 这是 M4 的组成接口，不是有限时域定理：energy inequality、initial bound、
+  q1/q6 dynamic coverage、residual absorption 与 flowpipe inclusion 仍是
+  独立 open premises，formal gate 保持关闭。
+- 幽魂魔尊负责 exact metric composition，红莲魔尊可独立绑定 energy/initial
+  premise；所有结果继续按 fail-closed receipt 处理。
+
 ### 2026-09-07 — 梁智炜：P8 interval-local endpoint seam
 
 - 新增 `T-P8-011` / `P8.interval_local_endpoint_adapter`。sidecar 现在把
