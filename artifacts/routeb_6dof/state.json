@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 716,
+  "revision": 717,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -42635,7 +42635,9 @@
       "parent_id": "c156b0a680484258b2ed4b988e5d6657",
       "status": "open",
       "proof_sketch": "Define front credit, residual loss, and PositiveTargetBudget; prove the exact target-budget equivalences and positive-target existence without division, then transport a positive allocation to an actual scalar margin only through the existing same-domain composition and nominal-realization premises. Retain exact negative-target and missing-qCap counterexamples.",
-      "dependencies": [],
+      "dependencies": [
+        "6e4497ba15474fe89644dfbf7683cf92"
+      ],
       "verified_artifact": null,
       "attempts": [],
       "metadata": {
@@ -42794,6 +42796,41 @@
           {
             "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_ADMISSION_ParentChildClosureEvent.review.md",
             "sha256": "E553D0066AE3317BC042B7D5A48B87D147F866BC90B251AFAE1E93FD9BBF6867"
+          }
+        ],
+        "registry_eligible": false,
+        "comparator_accepted": false,
+        "registry_promoted": false,
+        "formal_certificate_allowed": false,
+        "proof_proven": false,
+        "source_binding_proven": false,
+        "lean_compiled": false
+      }
+    },
+    "6e4497ba15474fe89644dfbf7683cf92": {
+      "id": "6e4497ba15474fe89644dfbf7683cf92",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility.source_positive_target_binding",
+      "statement": "A positive target can be transported to a source-view scalar margin only with same-domain energy, residual, remainder, front, scale, gain, offset, nominal, and margin bindings; nonnegative signs, qCap labels, or an abstract SourceView do not supply the strict budget.",
+      "parent_id": "3f80bed3d9384675bf9ab25ece75b34a",
+      "status": "open",
+      "proof_sketch": "Define SourceView and SameDomainBinding, transport q≤qCap and the positive target bound through the existing composition consumer, and prove exact F≤L, zero-floor, zero-front-test, and exhausted-credit obstructions. Keep true-DH instantiation, normalization identity, coverage, and kernel verification external.",
+      "dependencies": [],
+      "verified_artifact": null,
+      "attempts": [],
+      "metadata": {
+        "verification_domain": "lean",
+        "math_lane": "lean_adapter",
+        "math_bottleneck": "normalization",
+        "statement_status": "indexed",
+        "evidence_status": "OPEN_UNCOMPILED_P4_SOURCE_POSITIVE_TARGET_BINDING",
+        "source_artifacts": [
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_SourcePositiveTargetBinding.lean",
+            "sha256": "932036401F17E4F07FD4BFC23D225224FEFA7DBA1127D43D807FA8CCC442F2C1"
+          },
+          {
+            "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_P4_032_SourcePositiveTargetBinding.review.md",
+            "sha256": "B0F803F50F8B4752FDD8FBB4DE6C55016D19C305F24630155520AA13D3B6A867"
           }
         ],
         "registry_eligible": false,
@@ -71244,6 +71281,24 @@
       "artifact_hashes_updated": [],
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T21:04:41.494964+00:00",
+      "kind": "node_added",
+      "node_id": "6e4497ba15474fe89644dfbf7683cf92",
+      "parent_id": "3f80bed3d9384675bf9ab25ece75b34a",
+      "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility.source_positive_target_binding"
+    },
+    {
+      "at": "2026-09-07T21:04:41.494981+00:00",
+      "kind": "routeb_sidecar_frontier_registered",
+      "child_names": [
+        "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility.source_positive_target_binding"
+      ],
+      "metadata_updated": [],
+      "artifact_hashes_updated": [],
+      "registry_promoted": false,
+      "formal_certificate_allowed": false
     }
   ],
   "agent_requests": {},
@@ -74900,5 +74955,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "d79483fb59cbc8b226ad1ad2f5782d75185b106fa186d52ad020c0a6e629a8d6"
+  "state_checksum": "fc4693102edb684192b99bcd8dd0e31aebb0231d7786fe5781b425f2d8db3d4c"
 }

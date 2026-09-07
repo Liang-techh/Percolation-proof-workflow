@@ -2424,3 +2424,11 @@ Float64/libm 或局部 interval 候选升级成 exact-real theorem；fixed-λ
 `PARENT_CHILD_CLOSURE_EVENT` 则把 parent 当前快照闭合、child receipt 完整
 绑定和 append-only event 串成 fail-closed gate。当前 registry 仍为 0，
 formal certificate 仍禁止。
+
+### 2026-09-07 — 梁智炜收割 P4 source positive-target binding
+
+revision 717 接入 `SOURCE_POSITIVE_TARGET_BINDING`。该叶确认正目标不能由
+非负符号、qCap 或抽象 SourceView 自动产生，必须有同源状态的 residual/
+normalization/nominal/credit 证据；它同时保留 exact F≤L、zero-floor 和
+zero-front-test obstruction。P4 的具体 Route-B 实例化、true-DH source、
+coverage 与 Lean kernel 仍未关闭。

@@ -3034,3 +3034,8 @@ revision 716 收割并登记 P3 `ROUTEB_REAL_BINDING` 与 fixed-λ
 的部署语义显式放入 exact-real interface，同时保留 Float64/libm 与 dynamics
 coverage 缺口；后者要求 parent 当前快照闭合及 child receipt 完整绑定后才能
 产生 append event。两者均为 `OPEN_UNCOMPILED`，不影响 registry=0。
+
+revision 717 登记 P4 `SOURCE_POSITIVE_TARGET_BINDING`。它把 source-view 的
+energy、force residual、BODY6/front、scale、gain、offset、nominal 与 scalar
+margin 绑定到同一源状态，并保留 F≤L、zero-floor、zero-front-test 等精确
+阻塞。当前没有具体 Route-B 正 target 证据，仍不得关闭 P4 parent。

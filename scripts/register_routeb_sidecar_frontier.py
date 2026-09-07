@@ -2145,6 +2145,19 @@ CHILDREN = [
             "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_ADMISSION_ParentChildClosureEvent.review.md",
         ],
     },
+    {
+        "name": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility.source_positive_target_binding",
+        "parent": "P4.true_dh_port_source_binding.typed_block_source_bridge.block_projection_defects.defect_norm_budget.quadratic_load.weighted_three_term.lean_proof_attempt.relative_additive_interface.schur_pmi_absorption.division_free_contraction.domain_uniform.uniform_parameter_bridge.residual_margin_consumer.body6_schur_scalar_adapter.residual_budget.dual_scale_composition.uniformization.split_allocation_obstruction.positive_target_feasibility",
+        "statement": "A positive target can be transported to a source-view scalar margin only with same-domain energy, residual, remainder, front, scale, gain, offset, nominal, and margin bindings; nonnegative signs, qCap labels, or an abstract SourceView do not supply the strict budget.",
+        "proof_sketch": "Define SourceView and SameDomainBinding, transport q≤qCap and the positive target bound through the existing composition consumer, and prove exact F≤L, zero-floor, zero-front-test, and exhausted-credit obstructions. Keep true-DH instantiation, normalization identity, coverage, and kernel verification external.",
+        "lane": "lean_adapter",
+        "bottleneck": "normalization",
+        "status": "OPEN_UNCOMPILED_P4_SOURCE_POSITIVE_TARGET_BINDING",
+        "artifacts": [
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SourcePositiveTargetBinding.lean",
+            "examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SourcePositiveTargetBinding.review.md",
+        ],
+    },
 ]
 
 
