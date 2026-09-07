@@ -2377,6 +2377,17 @@ coverage, admission, registry promotion, or local Lean verification.
 - 已注册到 central-FD algebraic interface，state revision `620`，registry 和
   formal admission 均未改变。
 
+### 2026-09-07 — body-6 step-6 / sparse digest fold harvest
+
+- body-6 step-6 leaf 已注册：末端 DH 列只展开一次，接出 endpoint→center→
+  `v5=0`，并将第六列压缩成 23-row 三角 Fourier fold；`SourceAxisDotTarget`、
+  全 36-entry Gram/Fourier seam 与零补集仍是明确外部前提。
+- fixed-λ sparse digest fold 已注册：任意 `Finset Nat` sparse rows、
+  one-row-per-box、非连续 label cardinality、256+321=577 accounting 和
+  canonical row encoding digest binding 均被类型化；SHA-256、CSV/source/
+  coverage 仍未在 Lean 内证明。
+- 两个结果均为 `OPEN_UNCOMPILED_*`，未改变 registry/admission；state revision `621`。
+
 ### 2026-09-07 — GitHub Lean harvest: P5-027 / P5-028
 
 - T-P5-027 的 `P5NearSharpCenteredGain.lean` 已有 GitHub CI 证据：Lean

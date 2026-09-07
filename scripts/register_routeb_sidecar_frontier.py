@@ -350,6 +350,19 @@ CHILDREN = [
         ],
     },
     {
+        "name": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge.sparse_digest_fold",
+        "parent": "P4.fixed_lambda_two_row_admissibility.typed_consumer.coefficient_bridge",
+        "statement": "A sparse Finset ledger fold preserves arbitrary global box labels, one-row-per-box membership, the 256+321=577 declared accounting, and the fixed-lambda margin bridge under an explicit digest binding premise.",
+        "proof_sketch": "Keep selected row indices and labels typed, prove label cardinality and row-wise strict-upper/margin equivalence, and bind the canonical row encoding to an external length-64 digest token without computing SHA-256 in Lean.",
+        "lane": "lean_adapter",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_FIXED_LAMBDA_SPARSE_DIGEST_FOLD",
+        "artifacts": [
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_SPARSE_DIGEST_FOLD20260907.lean",
+            "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_SPARSE_DIGEST_FOLD20260907_REVIEW.md",
+        ],
+    },
+    {
         "name": "P5.componentwise_relative_decay.feasible_cone_spn.k_path_interface",
         "parent": "P5.componentwise_relative_decay.feasible_cone_spn",
         "statement": "A typed interface composes the existing pathK transport, nonnegative componentwise gain comparison, cone-index lift, and 18 representative SPN witnesses into the conditional power consumer.",
@@ -439,6 +452,22 @@ CHILDREN = [
             "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_20260907Data.lean",
             "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_20260907.lean",
             "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_20260907_REVIEW.md",
+        ],
+    },
+    {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.endpoint_fourier_bridge",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice",
+        "statement": "The independent body-6 slice has a minimal endpoint-to-center-to-zero-linear-column bridge and a 23-row signed Fourier fold for the sixth column.",
+        "proof_sketch": "Expand only the final DH matrix column, derive the midpoint and v5=0, fold the three compressed phases into 23 exact real atoms, and leave SourceAxisDotTarget plus the full 36-entry seam explicit.",
+        "lane": "source_semantics",
+        "bottleneck": "source_semantics",
+        "status": "OPEN_UNCOMPILED_BODY6_ENDPOINT_FOURIER_BRIDGE",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_STEP6_Core20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_STEP6_Bridge20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_STEP6_DataLeaf20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_STEP6_check20260907.py",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_STEP6_20260907_REVIEW.md",
         ],
     },
     {

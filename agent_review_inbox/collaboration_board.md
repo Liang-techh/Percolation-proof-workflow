@@ -1790,6 +1790,15 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - 结果是 exact-real typed candidate，未实例化具体半径、Float64 误差、source
   语义或 coverage；已作为独立 DAG leaf 注册，state revision `620`。
 
+### 2026-09-07 — body-6 step-6 / fixed-λ sparse fold 收割
+
+- body-6 证明入口进一步收缩到最后一步 DH 的最小矩阵列和第六列 23-row
+  Fourier 折叠，避免重复前五步展开；review 明确 source axis 点积和全矩阵
+  接线尚未闭合。
+- fixed-λ ledger 进一步获得 sparse typed fold：保留真实全局 box label，
+  不假设 `1..N` 稠密编号，并把外部 digest 绑定作为显式 premise。
+- 两者都保持未编译候选，已进入 DAG；state revision `621`，registry=0。
+
 ### 2026-09-07 — GitHub P5 Lean sidecars 收割
 
 - 巨阳仙尊的 T-P5-027 near-sharp scalar child 已在 GitHub Actions 的 pinned
