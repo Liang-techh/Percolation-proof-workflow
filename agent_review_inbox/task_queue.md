@@ -1542,6 +1542,18 @@ polynomial remains a separate frontier.
   records this compositional witness separately while keeping deployed `tau`
   equality and true-DH source binding open.
 
+### New harvest: O1 exact port identity chain (2026-09-07)
+
+- review: `review-T-P4-033-O1-next-codex.md`
+- the reusable exact-real chain is
+  `eliminate_D -> schur_port_action -> routeB_port_identity`; its temporary
+  Mathlib probe reportedly compiled with exit 0, no `sorry`/`axiom`, but it is
+  not the canonical candidate receipt.
+- coordinator intake: `scripts/record_routeb_o1_exact_identity_review.py`.
+  The node remains open until determinant-to-left-inverse, true-DH block
+  extraction, projected `h_D/h_B`, same-`(mu,q)` inverse binding, and pinned
+  candidate/comparator receipts are supplied.
+
 ## Handoff format
 
 Use a filename such as `review-<task-id>-<agent>-<timestamp>.md` and begin it

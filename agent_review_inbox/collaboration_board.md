@@ -950,3 +950,9 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   `diag(1/5,1/10)` 确实组合出 `(q5/100,q4/200)`。checker 现记录
   `FORCE_SCALE_COMPOSITION_PRESENT_DEPLOYED_BINDING_OPEN`，不再把它报成
   “系数不存在”；deployed `tau` 等价性仍未声称。
+
+- O1 新 review 给出可复用的 exact 线性代数链
+  `eliminate_D → schur_port_action → routeB_port_identity`。临时 probe 在
+  pinned Mathlib 下报告编译通过，但 canonical candidate 尚无正式 receipt；
+  已由 `record_routeb_o1_exact_identity_review.py` 接入 state rev 504，O1
+  仍 open。下一步只攻左逆、block extraction 与 projected balance premises。
