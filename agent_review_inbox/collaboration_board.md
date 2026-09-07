@@ -195,6 +195,9 @@
   分离，先把“不可能从现有 PMI row 推出真实 P4”的边界写成 typed child。
 - 该叶的价值是阻止错误闭合：`l_F` 是 generalized-force residual，不是自动的
   acceleration residual；数值 Gram reconstruction error 也不能充当物理 residual。
+- 具体接口已钉死：PMI `kc=0.05=1/20` 对 block 顺序 `(4,5)` 产生缺失向量
+  `rho_kc=(q5/20,q4/20)`（符号按 residual 定义记录）；agent 必须同时绑定
+  `M_BD(q)a_D`，不能只报告“存在 mismatch”。
 - 关联任务：`T-P4-007`、`T-P4-008`、`T-P3-009`。
 
 ### 2026-09-07 — 梁智炜：P8 ramp sidecar 收割与分层门禁

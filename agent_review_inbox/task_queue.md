@@ -524,10 +524,12 @@ polynomial remains a separate frontier.
   `B45-5_kc_mismatch_and_mbd_obstruction` audit;
 - scope: formalize or sharply restate that the deployed block identity contains
   `M_BD(q)a_D` and explicit `kc` residual terms, while the current PMI projection
-  and acceleration-side D-row do not supply those bindings;
+  and acceleration-side D-row do not supply those bindings. With the deployed
+  PMI source's `kc=0.05=1/20`, the concrete omitted cross term is the typed
+  vector `rho_kc(q_B)=(q5/20,q4/20)` (up to the documented sign convention);
 - deliver: a typed obstruction/countermodel identifying the missing bounded
   full-state or source-model contract, with the force-vs-acceleration units kept
-  distinct;
+  distinct, and an exact sign/index statement for `rho_kc`;
 - forbidden: using the old comment `(M-M0)_BD a_D` as the current identity,
   treating the numerical Gram residual as physical error, or closing P4/M4.
 
