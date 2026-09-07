@@ -2,6 +2,11 @@
 
 from .model import EvidenceStage, NodeStatus, ProofNode, WorkflowState, status_is_closed
 from .store import StateStore
+from .coverage_receipt import (
+    CANONICAL_TRIPLE_SCHEMA,
+    CoverageReceiptError,
+    validate_canonical_coverage_triple,
+)
 from .comparator import CandidateReceiptAudit, build_comparator_manifest, validate_candidate_receipt
 from .dry_run_migrator import dry_run_migrate
 from .math_frontier import (build_frontier_cut, project_frontier_receipt,
@@ -98,6 +103,8 @@ from .merlean_plan_projection import (cycles as plan_cycles,
 __all__ = [
     "EvidenceStage", "NodeStatus", "ProofNode", "WorkflowState", "StateStore",
     "status_is_closed", "CandidateReceiptAudit", "validate_candidate_receipt",
+    "CoverageReceiptError", "CANONICAL_TRIPLE_SCHEMA",
+    "validate_canonical_coverage_triple",
     "build_comparator_manifest", "dry_run_migrate",
     "project_frontier_receipt",
     "project_virtual_frontier",

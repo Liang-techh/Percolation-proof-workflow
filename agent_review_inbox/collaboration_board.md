@@ -1225,6 +1225,17 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
   完整 CSV/receipt/stdout/stderr/exit-code 和 `MAX_E1/MAX_E2<=1e-12` 才能进入
   runtime candidate，不能关闭 Lean/DH/formal gate。
 
+### 2026-09-07 — 梁智炜：O2 canonical 13D triple validator 落地
+
+- 根据最新接口 review，在 `coverage_receipt.py` 增加
+  `validate_canonical_coverage_triple`：严格检查 13D exact-rational parent/
+  child/sibling boxes、`parent_id`、`BoxSubset`、split axis/cut、shared-face
+  覆盖、source hashes、interval-membership status 和 `CoverageJoin2` premise hash。
+- 该 validator 只证明结构性 receipt，不证明 dynamics interval membership 或
+  Lean `CoverageJoin2` theorem，也不会进入 registry；所有 gate 仍 fail-closed。
+- focused coverage tests 为 `20 passed`，后续真实 exporter receipt 可直接接入此
+  contract，避免再次手写或误读 GCN/geometry-only payload。
+
 ### 2026-09-07 — 梁智炜：O0/O1/O2 follow-up obstruction 批量收割
 
 - O0 新 JSON receipt 与此前结论一致：同键 `rho_r`、`m_r`、`theta` 均缺失，

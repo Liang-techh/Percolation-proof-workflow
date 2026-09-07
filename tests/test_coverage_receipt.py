@@ -2,7 +2,11 @@ from __future__ import annotations
 
 import pytest
 
-from percolation_workflow.coverage_receipt import CoverageReceiptError, validate_coverage_receipt
+from percolation_workflow.coverage_receipt import (
+    CoverageReceiptError,
+    validate_canonical_coverage_triple,
+    validate_coverage_receipt,
+)
 
 
 H = "a" * 64
@@ -152,3 +156,51 @@ def test_canonical_partial_effective_box_is_rejected():
     }
     with pytest.raises(CoverageReceiptError, match="effective box"):
         validate_coverage_receipt(canonical)
+
+
+def canonical_triple():
+    lo = ["0"] * 13
+    hi = ["1"] * 13
+    child_hi = hi.copy(); child_hi[0] = "1/2"
+    sibling_lo = lo.copy(); sibling_lo[0] = "1/2"
+    return {
+        "schema": "routeb-theta2-canonical-coverage-v1",
+        "coordinate_order": [f"x{i}" for i in range(13)],
+        "source": {
+            "receipt_sha256": H,
+            "generator_sha256": "b" * 64,
+            "interval_source_sha256": "c" * 64,
+        },
+        "parent": {"id": "p", "box_lo": lo, "box_hi": hi},
+        "child": {"id": "c", "parent_id": "p", "box_lo": lo, "box_hi": child_hi},
+        "sibling": {"id": "s", "parent_id": "p", "box_lo": sibling_lo, "box_hi": hi},
+        "linkage": {"split_axis": "x0", "split_cut": "1/2", "adjacency": "shared_face"},
+        "source_interval_membership": {"status": "ACCEPTED", "receipt_sha256": "d" * 64},
+        "coverage_join": {"kind": "CoverageJoin2", "premise_receipt_sha256": "e" * 64},
+    }
+
+
+def test_canonical_triple_validates_exact_split_and_keeps_theorem_gates_closed():
+    summary = validate_canonical_coverage_triple(canonical_triple())
+    assert summary["structural_box_subset"] is True
+    assert summary["structural_split_cover"] is True
+    assert summary["dynamics_interval_membership_proven"] is False
+    assert summary["coverage_join_theorem_proven"] is False
+    assert summary["formal_certificate_allowed"] is False
+
+
+@pytest.mark.parametrize("mutation", ["axis", "linkage", "parent", "membership", "hash"])
+def test_canonical_triple_fail_closed(mutation):
+    doc = canonical_triple()
+    if mutation == "axis":
+        doc["linkage"]["split_axis"] = "missing"
+    elif mutation == "linkage":
+        doc["child"]["parent_id"] = "wrong"
+    elif mutation == "parent":
+        doc["sibling"]["box_lo"][1] = "-1"
+    elif mutation == "membership":
+        doc["source_interval_membership"]["status"] = "PENDING"
+    else:
+        doc["coverage_join"]["premise_receipt_sha256"] = "bad"
+    with pytest.raises(CoverageReceiptError):
+        validate_canonical_coverage_triple(doc)

@@ -1884,6 +1884,14 @@ after integration; corrections should be a new result file.
 - 入口已 hash-bound；验收要求 16 rows、B/D 顺序、完整 schema、exit 0、四个
   E1/E2 residual 与 CSV/runtime/stdout/stderr hashes。缺任一项保持 pending/rejected。
 
+### T-P4-036.2 — canonical 13D triple contract implemented (2026-09-07)
+
+- 新 validator 已可消费未来的 `routeb-theta2-canonical-coverage-v1`：只接受
+  exact rational 13D endpoints、三方 linkage、split-cover 几何和 hash-bound
+  external premises。
+- 返回结果明确区分 structural box/split success 与 dynamics/coverage theorem
+  未证明；不会由 receipt validator 直接关闭 O2 或 registry。
+
 ### Follow-up harvest: O0/O1/O2 obstruction batch (2026-09-07)
 
 - O0：只收同键 strict-margin 三元组与 exact positive leftover；新 receipt

@@ -25,10 +25,137 @@ KNOWN_LEAF_CLASSIFICATIONS = frozenset({
     "INVERSE_GUARD_RESOLVED",
     "ERROR_DRIVER_EXCEPTION",
 })
+CANONICAL_TRIPLE_SCHEMA = "routeb-theta2-canonical-coverage-v1"
+CANONICAL_TRIPLE_DIMENSIONS = 13
+ACCEPTED_INTERVAL_MEMBERSHIP_STATUSES = frozenset({
+    "ACCEPTED",
+    "PROVEN",
+    "SOURCE_INTERVAL_MEMBERSHIP_PROVEN",
+})
 
 
 class CoverageReceiptError(ValueError):
     """Raised when a coverage receipt cannot be trusted structurally."""
+
+
+def _sha256(value: Any, field: str) -> str:
+    if (not isinstance(value, str) or len(value) != 64
+            or any(c not in "0123456789abcdefABCDEF" for c in value)):
+        raise CoverageReceiptError(f"{field} must be a sha256 hex string")
+    return value
+
+
+def _canonical_triple_box(node: Mapping[str, Any], name: str) -> tuple[tuple[Fraction, ...], tuple[Fraction, ...]]:
+    if not isinstance(node, Mapping):
+        raise CoverageReceiptError(f"{name} must be an object")
+    lo, hi = node.get("box_lo"), node.get("box_hi")
+    if not isinstance(lo, list) or not isinstance(hi, list):
+        raise CoverageReceiptError(f"{name}.box_lo/box_hi must be lists")
+    if len(lo) != CANONICAL_TRIPLE_DIMENSIONS or len(hi) != CANONICAL_TRIPLE_DIMENSIONS:
+        raise CoverageReceiptError(f"{name} must contain exactly {CANONICAL_TRIPLE_DIMENSIONS} endpoints")
+    lo_f = tuple(_fraction(value, f"{name}.box_lo[{i}]") for i, value in enumerate(lo))
+    hi_f = tuple(_fraction(value, f"{name}.box_hi[{i}]") for i, value in enumerate(hi))
+    if any(a > b for a, b in zip(lo_f, hi_f)):
+        raise CoverageReceiptError(f"{name} has box_lo > box_hi")
+    return lo_f, hi_f
+
+
+def _canonical_triple_id(node: Mapping[str, Any], field: str) -> str:
+    value = node.get(field)
+    if not isinstance(value, str) or not value:
+        raise CoverageReceiptError(f"{field} must be a nonempty string")
+    return value
+
+
+def validate_canonical_coverage_triple(document: Mapping[str, Any]) -> dict[str, Any]:
+    """Validate one exact parent/child/sibling export for the O2 adapter.
+
+    This is deliberately a structural receipt validator.  It proves neither
+    interval dynamics nor the referenced ``CoverageJoin2`` theorem; those
+    remain external/source-bound premises and are never promoted to the Lean
+    registry by this function.
+    """
+    if not isinstance(document, Mapping):
+        raise CoverageReceiptError("canonical coverage triple must be an object")
+    if document.get("schema") != CANONICAL_TRIPLE_SCHEMA:
+        raise CoverageReceiptError(f"unsupported canonical triple schema: {document.get('schema')!r}")
+    order = document.get("coordinate_order")
+    if (not isinstance(order, list) or len(order) != CANONICAL_TRIPLE_DIMENSIONS
+            or any(not isinstance(x, str) or not x for x in order)
+            or len(set(order)) != CANONICAL_TRIPLE_DIMENSIONS):
+        raise CoverageReceiptError("coordinate_order must contain 13 unique names")
+    source = document.get("source")
+    if not isinstance(source, Mapping):
+        raise CoverageReceiptError("source is missing")
+    source_hashes = {
+        key: _sha256(source.get(key), f"source.{key}")
+        for key in ("receipt_sha256", "generator_sha256", "interval_source_sha256")
+    }
+    parent = document.get("parent")
+    child = document.get("child")
+    sibling = document.get("sibling")
+    parent_id = _canonical_triple_id(parent, "id")
+    child_id = _canonical_triple_id(child, "id")
+    sibling_id = _canonical_triple_id(sibling, "id")
+    if len({parent_id, child_id, sibling_id}) != 3:
+        raise CoverageReceiptError("parent, child, and sibling ids must be distinct")
+    if child.get("parent_id") != parent_id or sibling.get("parent_id") != parent_id:
+        raise CoverageReceiptError("child/sibling parent_id linkage is inconsistent")
+    p_lo, p_hi = _canonical_triple_box(parent, "parent")
+    c_lo, c_hi = _canonical_triple_box(child, "child")
+    s_lo, s_hi = _canonical_triple_box(sibling, "sibling")
+    for name, lo, hi in (("child", c_lo, c_hi), ("sibling", s_lo, s_hi)):
+        if any(p_lo[i] > lo[i] or hi[i] > p_hi[i] for i in range(CANONICAL_TRIPLE_DIMENSIONS)):
+            raise CoverageReceiptError(f"{name} escapes parent box")
+    linkage = document.get("linkage")
+    if not isinstance(linkage, Mapping) or linkage.get("adjacency") != "shared_face":
+        raise CoverageReceiptError("linkage must declare shared_face adjacency")
+    axis_name = linkage.get("split_axis")
+    if axis_name not in order:
+        raise CoverageReceiptError("linkage.split_axis is not in coordinate_order")
+    axis = order.index(axis_name)
+    cut = _fraction(linkage.get("split_cut"), "linkage.split_cut")
+    def orientation_ok(low, high):
+        if low[0][axis] != p_lo[axis] or low[1][axis] != cut:
+            return False
+        if high[0][axis] != cut or high[1][axis] != p_hi[axis]:
+            return False
+        return all(i == axis or (
+            low[0][i] == p_lo[i] and low[1][i] == p_hi[i] and
+            high[0][i] == p_lo[i] and high[1][i] == p_hi[i])
+                   for i in range(CANONICAL_TRIPLE_DIMENSIONS))
+    if not (orientation_ok((c_lo, c_hi), (s_lo, s_hi))
+            or orientation_ok((s_lo, s_hi), (c_lo, c_hi))):
+        raise CoverageReceiptError("child and sibling do not split-cover parent at split_cut")
+    membership = document.get("source_interval_membership")
+    if not isinstance(membership, Mapping):
+        raise CoverageReceiptError("source_interval_membership is missing")
+    membership_status = membership.get("status")
+    if membership_status not in ACCEPTED_INTERVAL_MEMBERSHIP_STATUSES:
+        raise CoverageReceiptError("source interval membership is not accepted")
+    membership_hash = _sha256(membership.get("receipt_sha256"), "source_interval_membership.receipt_sha256")
+    coverage_join = document.get("coverage_join")
+    if not isinstance(coverage_join, Mapping) or coverage_join.get("kind") != "CoverageJoin2":
+        raise CoverageReceiptError("coverage_join must reference CoverageJoin2")
+    premise_hash = _sha256(coverage_join.get("premise_receipt_sha256"), "coverage_join.premise_receipt_sha256")
+    return {
+        "schema": CANONICAL_TRIPLE_SCHEMA,
+        "coordinate_count": CANONICAL_TRIPLE_DIMENSIONS,
+        "parent_id": parent_id,
+        "child_id": child_id,
+        "sibling_id": sibling_id,
+        "split_axis": axis_name,
+        "split_cut": cut,
+        "source_hashes": source_hashes,
+        "membership_receipt_sha256": membership_hash,
+        "coverage_join_premise_sha256": premise_hash,
+        "structural_box_subset": True,
+        "structural_split_cover": True,
+        "dynamics_interval_membership_proven": False,
+        "coverage_join_theorem_proven": False,
+        "formal_certificate_allowed": False,
+        "registry_promoted": False,
+    }
 
 
 def _fraction(value: Any, field: str) -> Fraction:
@@ -289,4 +416,10 @@ def validate_coverage_receipt(document: Mapping[str, Any]) -> dict[str, Any]:
     }
 
 
-__all__ = ["CoverageReceiptError", "SCHEMA", "validate_coverage_receipt"]
+__all__ = [
+    "CoverageReceiptError",
+    "SCHEMA",
+    "CANONICAL_TRIPLE_SCHEMA",
+    "validate_coverage_receipt",
+    "validate_canonical_coverage_triple",
+]
