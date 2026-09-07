@@ -214,6 +214,15 @@ def prepare_requests(store: StateStore, *, limit: int = 4,
                    },
                    'dependencies': [state.registry[d] for d in node.dependencies],
                    'required_node_ids': list(node.metadata.get('required_node_ids', [])),
+                   # Cross-branch inputs are deliberately separate from the
+                   # ordinary parent dependency list.  Include the exact
+                   # coordinator-owned receipts in the dispatch packet so an
+                   # agent can bind the already-verified input without
+                   # reconstructing it from a mutable global state file.
+                   'required_inputs': {
+                       required_id: state.registry[required_id]
+                       for required_id in node.metadata.get('required_node_ids', [])
+                   },
                    'diagnostics': diagnostics, 'status': 'awaiting_dispatch', 'agent_id': None}
         request['scheduler'] = {
             'obstruction_rank': obstruction_rank(node),

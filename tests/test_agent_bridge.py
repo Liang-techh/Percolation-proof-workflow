@@ -39,16 +39,20 @@ class BridgeTests(unittest.TestCase):
             state = WorkflowState()
             input_id = state.add_node('closed-input', 'theorem input : True')
             state.nodes[input_id].status = NodeStatus.VERIFIED
+            state.registry[input_id] = {'node_id': input_id, 'artifact': 'input.lean'}
             consumer_id = state.add_node(
                 'consumer', 'theorem consumer : True',
                 metadata={'statement_status': 'indexed',
                           'required_node_ids': [input_id]})
             store.save(state)
 
-            requests = prepare_requests(store, limit=4)
+            with patch('percolation_workflow.agent_bridge.audit_registry',
+                       return_value={input_id: {'status': 'current'}}):
+                requests = prepare_requests(store, limit=4)
 
             self.assertEqual([request['node_id'] for request in requests], [consumer_id])
             self.assertEqual(requests[0]['required_node_ids'], [input_id])
+            self.assertEqual(requests[0]['required_inputs'][input_id]['artifact'], 'input.lean')
 
     def test_prepare_requests_can_opt_into_formalizable_math_lanes(self):
         with tempfile.TemporaryDirectory() as directory:

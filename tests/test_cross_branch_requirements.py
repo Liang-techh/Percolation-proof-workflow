@@ -7,6 +7,7 @@ from percolation_workflow.model import NodeStatus, WorkflowState
 class CrossBranchRequirementTests(unittest.TestCase):
     def close(self, state, node_id):
         state.nodes[node_id].status = NodeStatus.VERIFIED
+        state.registry[node_id] = {"node_id": node_id, "artifact": f"{node_id}.lean"}
 
     def test_required_cross_branch_input_gates_frontier_and_cascade(self):
         state = WorkflowState()
@@ -28,10 +29,18 @@ class CrossBranchRequirementTests(unittest.TestCase):
         node_id = state.add_node("node", "N", metadata={"required_node_ids": ["missing"]})
         with self.assertRaisesRegex(ValueError, "required_node_ids"):
             state.validate()
-
         state.nodes[node_id].metadata["required_node_ids"] = [node_id]
         with self.assertRaisesRegex(ValueError, "required_node_ids"):
             state.validate()
+
+    def test_verified_flag_without_registry_receipt_does_not_open_consumer(self):
+        state = WorkflowState()
+        input_id = state.add_node("input", "I")
+        state.nodes[input_id].status = NodeStatus.VERIFIED
+        consumer_id = state.add_node(
+            "consumer", "C", metadata={"required_node_ids": [input_id]})
+
+        self.assertNotIn(consumer_id, {node.id for node in state.frontier()})
 
     def test_global_closure_reaches_cross_branch_inputs(self):
         state = WorkflowState()

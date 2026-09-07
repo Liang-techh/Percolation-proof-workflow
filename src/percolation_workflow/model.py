@@ -372,8 +372,12 @@ class WorkflowState:
             candidate.id for candidate in self.nodes.values()
             if node_is_closed(candidate)
         }
-        return all(node_id in self.nodes and node_id in closed_ids
-                   for node_id in required)
+        # A cross-branch edge consumes a theorem from the verified registry,
+        # not merely a mutable status flag.  Ordinary parent/child closure
+        # remains status-based, but a required input must carry coordinator-
+        # owned evidence before it can be dispatched or consumed.
+        return all(node_id in self.nodes and node_id in closed_ids and
+                   node_id in self.registry for node_id in required)
 
     def frontier_closability(self, node_id: str) -> int:
         """Count open ancestors that would close after this leaf is verified.
