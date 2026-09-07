@@ -144,6 +144,10 @@ _LANE_ORDER = {
 # physical Schur consumer, and local sign/FD diagnostics remain downstream.
 _BOTTLENECK_ORDER = {
     "coverage": 0,
+    # Exact-real algebra can close a useful conditional interface before the
+    # larger evaluator enclosure is available.  It shares the high priority
+    # band with the enclosure, but its Lean-adapter lane breaks the tie.
+    "coefficient_identity": 1,
     "evaluator_enclosure": 1,
     "source_semantics": 2,
     "physical_schur_binding": 3,
@@ -163,6 +167,9 @@ _BOTTLENECK_ALIASES = {
     "source_evaluator": "evaluator_enclosure",
     "float64_enclosure": "evaluator_enclosure",
     "roundoff_enclosure": "evaluator_enclosure",
+    "coefficient_identity": "coefficient_identity",
+    "exact_real_coefficient_identity": "coefficient_identity",
+    "port_coefficient_identity": "coefficient_identity",
     "physical_schur": "physical_schur_binding",
     "physical_schur_binding": "physical_schur_binding",
     "schur_binding": "physical_schur_binding",

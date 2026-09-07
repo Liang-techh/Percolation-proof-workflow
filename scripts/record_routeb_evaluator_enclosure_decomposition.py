@@ -29,7 +29,7 @@ CHILDREN = (
         "P4.true_dh_exact_real_coefficient_identity",
         "Under the common exact-real descriptor equations and det(M_DD) != 0, prove R_port*a_B=r_B for R_port=-M_BD*M_DD^(-1)*(M_DB-M0_DB).",
         "Use M_DD*v+DeltaM_DB*a_B=0 and r_B-M_BD*v=0; preserve the minus sign and retain the explicit remote block term. This is conditional exact-real algebra, not Float64 source equivalence.",
-        "source_binding",
+        "coefficient_identity",
         "lean_adapter",
     ),
     (
@@ -118,6 +118,12 @@ def main() -> int:
             changed = True
         elif child.parent_id != parent.id:
             raise ValueError(f"existing child contract mismatch: {name}")
+        if child.metadata.get("math_bottleneck") != bottleneck:
+            child.metadata["math_bottleneck"] = bottleneck
+            changed = True
+        if child.metadata.get("math_lane") != lane:
+            child.metadata["math_lane"] = lane
+            changed = True
         if child.id not in parent.dependencies:
             parent.dependencies.append(child.id)
             changed = True
