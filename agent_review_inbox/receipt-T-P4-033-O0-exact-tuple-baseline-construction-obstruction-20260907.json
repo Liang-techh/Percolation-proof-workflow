@@ -1,0 +1,72 @@
+{
+  "schema": "routeb.o0.exact_fourier.baseline_construction_obstruction.v1",
+  "status": "CONDITIONAL_RHO_AND_THETA_CONSTRUCTED_MR_BLOCKED",
+  "task": "T-P4-033-O0",
+  "scope": "exact-Fourier one-cell mathematical core; no registration or Schur consumption",
+  "main_state_modified": false,
+  "registry_promoted": false,
+  "schur_margin_consumed": false,
+  "canonical_key": {
+    "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+    "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+    "metric_orientation": "left_output",
+    "source_bound_norm": "induced_infinity",
+    "metric_output_norm": "euclidean_2"
+  },
+  "tuple_inputs": {
+    "tuple_receipt": "agent_review_inbox/receipt-T-P4-033-O0-constructive-exact-fourier-cell-K-Br-Cf-20260907.json",
+    "tuple_receipt_sha256": "E570CFB418065503D9743B4496FC0902E45BF82DA4C265FD067BEA9952E821AD",
+    "Br": "320646431/2400000000",
+    "K": "1194377771728717533600000000/18430531027503268060090421",
+    "Cf": "1929397/4800000000",
+    "exact_real_K_authority_required": true,
+    "port_map_identity_required": "R_r=-M_BD*M_DD(mu_exact)^(-1)*DeltaM_DB",
+    "off_diagonal_shift_identity_required": "C_r=C_f"
+  },
+  "constructed_baseline": {
+    "unweighted_U_r": "307877874565159207113609223771373/88466548932015686688434020800000000",
+    "formula_U_r": "Br*K*Cf",
+    "weighted_rho_r": "307877874565159207113609223771373/8846654893201568668843402080000000",
+    "formula_rho_r": "2*U_r/(1/5)=10*U_r",
+    "statement": "forall q,a_B, ||R_r(q)*a_B||_2 <= rho_r*sqrt(a_B^T*B_up*a_B)",
+    "status": "CONDITIONAL_ON_TYPED_MAP_AND_EXACT_REAL_K"
+  },
+  "constructed_theta": {
+    "theta": "1",
+    "lambda": "2",
+    "status": "EXACT_RATIONAL_CHOICE"
+  },
+  "conditional_unit_margin_branch": {
+    "additional_premise": "normalized baseline budget L_base=1 with no other uncharged baseline term",
+    "m_r_unit": "39036862614056869268384562327979703376965752490585807296058625694871/39131651399703629175019294625928027986209692974274163200000000000000",
+    "m_r_unit_formula": "1-2*rho_r^2",
+    "strict_post_charge_leftover": "44803170958565974244104611264818695759805381025392128881467231870512947837498295972583918816113/44911961416709949048557505500291830721283968962590630715724431652772514650274717400445556640625",
+    "strict_post_charge_formula": "1-2*(rho_r+epsilon_R)^2",
+    "strict_post_charge_positive": true,
+    "receipt_status": "NOT_CONSUMABLE_WITHOUT_ADDITIONAL_PREMISE"
+  },
+  "obstruction": {
+    "missing": [
+      "same-key normalized baseline coercivity/budget L_base or direct authoritative m_r",
+      "proof that m_r is the actual baseline Schur reserve in the same normalization",
+      "typed physical identity R_port*a_B=r_B for physical use"
+    ],
+    "reason": "The tuple provides Br,K,Cf and hence a conditional port gain, but contains no energy-side baseline budget from which m_r can be derived. Setting L_base=1 would be an invented normalization.",
+    "strict_consumer_condition": "m_r > (1+1/theta)*((rho_r+epsilon_R)^2-rho_r^2)",
+    "current_strict_check": "BLOCKED_MR_NOT_DEFINED"
+  },
+  "relative_or_bias_rewrite": {
+    "affine_interface": "r_B=R_r*a_B+b_r",
+    "homogeneous_obstruction": "b_r != 0 and a_B=0 makes ||r_B||_2 <= rho*sqrt(A_up) false",
+    "young_bound": "||r_B||_2^2 <= (1+tau)*rho_rel^2*A_up + (1+1/tau)*||b_r||_2^2 for tau>0",
+    "relative_bias_premise": "||b_r||_2^2 <= beta_bias*A_up",
+    "effective_gain": "rho_eff^2=(1+tau)*rho_rel^2+(1+1/tau)*beta_bias",
+    "explicit_bias_rule": "without the relative_bias_premise, retain ||b_r||_2^2 as an additive budget; do not rename it rho_r^2*A_up"
+  },
+  "evidence_boundary": {
+    "rho_F_squared_used": false,
+    "old_ledger_used": false,
+    "deployed_float64_global_claim": false,
+    "formal_certificate_allowed": false
+  }
+}

@@ -1900,3 +1900,15 @@ after integration; corrections should be a new result file.
   不再重复 determinant/q=0/Float64 检查。
 - O2：只收同一 theta2 namespace 的 canonical 13D parent/sibling records 和
   typed join；GCN-F1/F2 仅作 rejected candidate 对照。
+
+### T-P4-033-O0 — conditional baseline child (2026-09-07)
+
+- 已记录 exact `rho_r`, `theta=1`, `m_r^unit`, `m_f^unit` 的构造与算术检查；
+  它依赖额外 `L_base=1` premise，不能消费 Schur margin。
+- 下一步只寻找真实同键 baseline coercivity/reserve 或 affine-bias cap，禁止
+  用 unit normalization、旧 ledger、`rho_F²` 代替。
+
+### T-P4-033-O1 — source inhabitant search (2026-09-07)
+
+- 当前 exact typed source inhabitant 未找到；必须补 canonical source receipt
+  才能实例化既有 Path A/B inverse chain，`M_DD_left_inverse_witness` 保持 open。

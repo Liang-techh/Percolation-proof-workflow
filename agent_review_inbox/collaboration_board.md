@@ -1245,3 +1245,22 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - O2 同 namespace 搜索仍没有 canonical 13D parent/sibling、linkage 或
   `CoverageJoin2`；GCN 候选和 topology metadata 均不具 authority。三项均已
   接入 state，未改变 registry/formal gate。
+
+### 2026-09-07 — 梁智炜：O0 conditional baseline construction 收割
+
+- 同键 exact-Fourier tuple 现在给出条件性 `U_r=Br*K*Cf`、weighted `rho_r`
+  和 `theta=1`；在额外假设 normalized `L_base=1` 时，exact `m_r` 与
+  post-charge `m_f` 均严格为正，算术已独立重放并接入 state。
+- 该结果仍不是可消费 Schur receipt：`L_base=1` 尚无真实 baseline coercivity/
+  reserve 证明，且 physical `R_port*a_B=r_B` 与 typed exact-K 仍未绑定；
+  因此 `schur_margin_consumed=false`、registry/formal gate 不变。
+- 若 source 存在 affine bias，后续必须提供 `beta_bias` 或显式 additive budget，
+  不得把 bias 重命名为 homogeneous `rho_r`。
+
+### 2026-09-07 — 梁智炜：O1 source-inhabitant obstruction 收割
+
+- 新搜索确认 deployed source 与 exact artifacts 都没有同键的
+  `M : Mu → Q → Matrix (Fin 6) (Fin 6) ℝ`、`M_DD45_at` 和 `h_MDD_def`；
+  O1 继续保持 `OPEN`，不是 algebra proof failure。
+- 下一步只接受 exact source/state/mu/q、D=[1,2,3,6] / Lean=[0,1,2,5]、
+  projection identity 的 canonical typed receipt；不再重复 determinant 或 q=0。

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 537,
+  "revision": 539,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -15081,7 +15081,37 @@
             "schur_margin_consumed": false,
             "registry_promoted": false
           }
-        ]
+        ],
+        "o0_conditional_baseline_constructions": [
+          {
+            "status": "CONDITIONAL_RHO_AND_THETA_CONSTRUCTED_MR_BLOCKED",
+            "receipt_sha256": "B3354C0F20AB4963BFFFF89E557495BD8041F8BFEDE5189F1D200240FBD9A87E",
+            "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+            "state_key": "routeb-qcell:center=(0,0,0,0,0,0)|radius=1/1000|B=(4,5)|D=(1,2,3,6)|orientation=M_BD[B,D],DeltaM_DB[D,B]|norm=induced_infinity",
+            "unweighted_U_r": "307877874565159207113609223771373/88466548932015686688434020800000000",
+            "weighted_rho_r": "307877874565159207113609223771373/8846654893201568668843402080000000",
+            "theta": "1",
+            "lambda": "2",
+            "conditional_baseline_premise": "normalized baseline budget L_base=1 with no other uncharged baseline term",
+            "conditional_m_r": "39036862614056869268384562327979703376965752490585807296058625694871/39131651399703629175019294625928027986209692974274163200000000000000",
+            "conditional_m_f": "44803170958565974244104611264818695759805381025392128881467231870512947837498295972583918816113/44911961416709949048557505500291830721283968962590630715724431652772514650274717400445556640625",
+            "typed_map_and_exact_real_K_required": true,
+            "physical_R_port_identity_required": true,
+            "schur_margin_consumed": false,
+            "formal_certificate_allowed": false,
+            "registry_promoted": false
+          }
+        ],
+        "o0_conditional_baseline_construction": {
+          "status": "CONDITIONAL_RHO_AND_THETA_CONSTRUCTED_MR_BLOCKED",
+          "receipt_sha256": "B3354C0F20AB4963BFFFF89E557495BD8041F8BFEDE5189F1D200240FBD9A87E",
+          "conditional_baseline_premise": "normalized baseline budget L_base=1 with no other uncharged baseline term",
+          "conditional_m_r": "39036862614056869268384562327979703376965752490585807296058625694871/39131651399703629175019294625928027986209692974274163200000000000000",
+          "conditional_m_f": "44803170958565974244104611264818695759805381025392128881467231870512947837498295972583918816113/44911961416709949048557505500291830721283968962590630715724431652772514650274717400445556640625",
+          "schur_margin_consumed": false,
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
+        }
       }
     },
     "120deab092c243b6a43356e63c8b56f4": {
@@ -15805,7 +15835,37 @@
             "required_binding": "M_DD = M_DD45_at M mu q with exact same source/state/mu/q and D=(1,2,3,6)",
             "registry_promoted": false
           }
-        ]
+        ],
+        "o1_source_inhabitant_obstructions": [
+          {
+            "status": "OPEN_SOURCE_TYPED_INHABITANT_NOT_FOUND",
+            "review_sha256": "A35E04FF25C9B92E6CBADE215D77F484F20FC1DA3508E01939524D58C8B1135F",
+            "missing_object": "M_DD45_at M mu q : Matrix (Fin 4) (Fin 4) ℝ",
+            "missing_binding": "h_MDD_def : M_DD = M_DD45_at M mu q",
+            "required_source_fields": [
+              "source_key",
+              "state_key",
+              "exact mu",
+              "exact q or uniform cell",
+              "M : Mu → Q → Matrix (Fin 6) (Fin 6) ℝ",
+              "block_order_one_based=[1,2,3,6]",
+              "didx_zero_based=[0,1,2,5]",
+              "source artifact hash"
+            ],
+            "canonical_receipt_present": false,
+            "left_inverse_witness": "OPEN",
+            "formal_certificate_allowed": false,
+            "registry_promoted": false
+          }
+        ],
+        "o1_source_inhabitant_obstruction": {
+          "status": "OPEN_SOURCE_TYPED_INHABITANT_NOT_FOUND",
+          "review_sha256": "A35E04FF25C9B92E6CBADE215D77F484F20FC1DA3508E01939524D58C8B1135F",
+          "canonical_receipt_present": false,
+          "left_inverse_witness": "OPEN",
+          "formal_certificate_allowed": false,
+          "registry_promoted": false
+        }
       }
     },
     "0da99a7cef5e4f0b91c7cc06d9e7c010": {
@@ -41091,6 +41151,26 @@
       "runtime_receipt_present": false,
       "registry_promoted": false,
       "formal_certificate_allowed": false
+    },
+    {
+      "at": "2026-09-07T14:41:36.215101+00:00",
+      "kind": "routeb_o0_conditional_baseline_construction_recorded",
+      "node_id": "43e3c1a23dc34d52a19b835a8a883cb7",
+      "status": "CONDITIONAL_RHO_AND_THETA_CONSTRUCTED_MR_BLOCKED",
+      "strict_post_charge_positive": true,
+      "schur_margin_consumed": false,
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
+    },
+    {
+      "at": "2026-09-07T14:42:31.826856+00:00",
+      "kind": "routeb_o1_source_inhabitant_obstruction_recorded",
+      "node_id": "120deab092c243b6a43356e63c8b56f4",
+      "status": "OPEN_SOURCE_TYPED_INHABITANT_NOT_FOUND",
+      "canonical_receipt_present": false,
+      "left_inverse_witness": "OPEN",
+      "formal_certificate_allowed": false,
+      "registry_promoted": false
     }
   ],
   "agent_requests": {},
@@ -44747,5 +44827,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "022beac7aa86e5ebd532801ebd8e2dff5f48bcc2f8bad680bd5e45c877f80ab5"
+  "state_checksum": "1a813c826b9d1fd43161366ed8145a431c5381164e6c22f17e803613951b2051"
 }
