@@ -1350,3 +1350,12 @@ receipt；即使返回 `READY_FOR_COORDINATOR_ADMISSION` 也不会晋级 O0 或 
 - 文件仍是 `UNCOMPILED_TYPED_CANDIDATE`：`TypedFourierBodyExport` 把 `h_body`
   作为输入字段，未证明六个 body 等式，也未完成 610-row function lift；不改变
   source binding、formal 或 registry 状态。
+
+### 2026-09-07 — 梁智炜：O1/O2 typed interface 收割
+
+- O1 `O1_PER_BODY_COMPARATOR_RECEIPT.json` 已绑定到 source comparator parent：
+  concrete body expansion 存在，但 `fourierBody` 仍是缺失定义，`h_body` 仍为
+  typed premise，candidate 未编译。
+- O2 新 external-premises schema 与 `Theta2ExternalPremisesAdapter.lean` 已接入
+  O2 节点：membership proof 和 `CoverageJoin2` proof 都必须由调用方显式提供；
+  schema/hash 不能替代 theorem，real triple 仍不存在。
