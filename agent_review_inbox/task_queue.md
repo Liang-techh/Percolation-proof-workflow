@@ -2696,3 +2696,12 @@ source-independent/open/uncompiled 候选。
   OPEN_UNCOMPILED_P4_WEIGHTED_THREE_TERM_LEAN，未进入 verified registry。
 - fixed-λ finite reserve aggregation 与 P3 radius-to-cap-load order consumer 已有
   新文件，先审阅其数学边界，再决定是否追加 child；本轮不做远端同步。
+
+### 2026-09-07 — 13:25 继续本地派发
+
+- body-6 线接收 tail weighted Gram 的 PSD/最小对角下界叶；K-path 接收
+  `rho_eff * energy + B_eff` 参数重排叶。
+- fixed-λ 线转向“有限非空族中的严格 reserve 聚合”与 parent strict consumer
+  adapter；P3 线转向从非负 weight/velocity 构造 assembled-load 非负 witness。
+- 四条线均保持数学瓶颈优先；新叶不重复已登记的 Cauchy、total aggregation、
+  capMax 或 source/coverage/registry 层。
