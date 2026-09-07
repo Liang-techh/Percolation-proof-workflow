@@ -1885,6 +1885,19 @@ CHILDREN = [
             "examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_CANONICAL_DIGEST_NORMALIZATION20260907_REVIEW.md",
         ],
     },
+    {
+        "name": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients.tail_solve_certificate",
+        "parent": "P4.O1.source_comparator.h_body_6.canonical_export.independent_exact_slice.first_three_lever_source.tail_self_gram.mass_weighted.tail_psd_lower_bound.tail_principal_minors.tail_inverse.typed_schur_adapter.schur_remainder.source_block_binding.self3_mass.schur_margin.exact_schur_coefficients",
+        "statement": "BODY6 tail elimination is valid only with same-parameter sourceTail/inverseTail binding, positive denominators, two-sided B·D=I₂ evidence, and explicit solvedRight=D·Y column equations; selected-column solves alone do not certify an inverse.",
+        "proof_sketch": "Package B=sourceTail q, D=inverseTail(q4,offset,m,kappa), and V=D·Y with fixed dimensions and parameter identities; consume existing two-sided inverse/column-solve fields and retain zero-denominator, wrong-D, and zero-column counterexamples.",
+        "lane": "source_semantics",
+        "bottleneck": "coefficient_identity",
+        "status": "OPEN_UNCOMPILED_BODY6_TAIL_SOLVE_CERTIFICATE",
+        "artifacts": [
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_TAILSOLVECERT20260907.lean",
+            "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_TAILSOLVECERT20260907.review.md",
+        ],
+    },
 ]
 
 
