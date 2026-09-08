@@ -26,14 +26,14 @@ if grep -nE '\b(sorry|admit)\b' "$TARGET"; then
 fi
 echo "PLACEHOLDER_SCAN=PASS"
 
-BUILD_DIR="$(mktemp -d)"
+# Lean 4.32 rejects -o compilation when the input source is outside the Lake
+# package root.  Stage the BODY6 local-import chain inside the pinned local_fkg
+# root, compile it into an isolated cache, and remove the staging directory on
+# exit.  No repository source file or Lake manifest is modified.
+BUILD_DIR="$(mktemp -d "$LAKE_ROOT/.aligned-consumer-audit.XXXXXX")"
 OUT="$(mktemp)"
 trap 'rm -rf "$BUILD_DIR"; rm -f "$OUT"' EXIT
 
-# The BODY6 slices are intentionally stored outside the local_fkg Lake package.
-# Compile the local import chain into an isolated cache, then prepend that cache
-# to Lake's own LEAN_PATH.  This keeps the verifier portable and leaves the
-# repository workspace untouched.
 run_lean() {
   (
     cd "$LAKE_ROOT"
@@ -49,8 +49,10 @@ run_lean() {
 compile_local_module() {
   local module="$1"
   local source="$SRC_ROOT/$module.lean"
+  local staged="$BUILD_DIR/$module.lean"
   [[ -f "$source" ]] || { echo "local import missing: $source" >&2; exit 2; }
-  run_lean -DwarningAsError=true -o="$BUILD_DIR/$module.olean" "$source"
+  cp "$source" "$staged"
+  run_lean -DwarningAsError=true -o="$BUILD_DIR/$module.olean" "$staged"
 }
 
 compile_local_module NEW_BODY6_SLICE_ACTUALSTORAGEALIGN20260907
