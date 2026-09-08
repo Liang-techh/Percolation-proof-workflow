@@ -134,6 +134,9 @@ TASK_TARGETS = {
     "T-P4-ACTUAL-ROW-MISSING-BASE": (
         "P4.true_dh_port_source_binding",
         "pending_actual_row_missing_base_takeover"),
+    "T-P4-ACTIVE-ENERGY-ORIGIN": (
+        "P4.true_dh_port_source_binding",
+        "pending_active_energy_origin_normalization"),
     "GH-LEAN-BODY6-PATHREASSIGNED-COMPILE": (
         "P4.O1.source_comparator.h_body_6.canonical_export",
         "pending_reassigned_body6_compile"),

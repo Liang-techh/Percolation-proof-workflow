@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-ACTIVE-ENERGY-ORIGIN-source-normalization-codex-20260908T0840.md",
+  "record_kind": "review_result",
+  "review_sha256": "BC1855C6BB33145E85E4FCDE1237592BA3DFEFEB66844B57CBD20F8B966E4A93",
+  "task_id": "T-P4-ACTIVE-ENERGY-ORIGIN",
+  "source_agent": "codex-active-energy-math-lane",
+  "created_at": "2026-09-08T08:40:03-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_active_energy_origin_normalization",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "76160eda3cb3d701d3b44e9a3740249b7678569f",
+  "review_file": "agent_review_inbox/review-T-P4-ACTIVE-ENERGY-ORIGIN-source-normalization-codex-20260908T0840.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T14:44:34.835183+00:00"
+}
