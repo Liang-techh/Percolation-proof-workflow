@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 807,
+  "revision": 808,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -16091,6 +16091,36 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-JOINT6-DEFECT-ELIMINATION-codex-20260908T110434.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTUAL-CELL-PACKET-LOCAL-20260908T170741Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "49D0132F864D8EF2B93B61A1B1731906BE3BE63085FB130F4E901727546D9CB0",
+            "task_id": "GH-MATH-P4-ACTUAL-CELL-PACKET",
+            "source_agent": "codex-half-active-packet-audit",
+            "created_at": "2026-09-08T17:07:41Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_actual_cell_source_packet",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-ACTUAL-CELL-PACKET-LOCAL-20260908T170741Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-JOINT6-WEIGHTED-CONSTRAINTS-codex-20260908T110743.md",
+            "record_kind": "review_result",
+            "review_sha256": "26628E5A9E7DFFA08D0293068F19E1EA80382D6785CF7D565338B9957629715C",
+            "task_id": "GH-MATH-P4-JOINT6-WEIGHTED-CONSTRAINTS",
+            "source_agent": "codex-actual-weighted-consumption-audit",
+            "created_at": "2026-09-08T11:07:43-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_joint6_weighted_constraints",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-JOINT6-WEIGHTED-CONSTRAINTS-codex-20260908T110743.md",
             "admission_label": "pending"
           }
         ]
@@ -78867,6 +78897,32 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T17:09:43.200773+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTUAL-CELL-PACKET-LOCAL-20260908T170741Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "49D0132F864D8EF2B93B61A1B1731906BE3BE63085FB130F4E901727546D9CB0",
+      "task_id": "GH-MATH-P4-ACTUAL-CELL-PACKET",
+      "classification": "pending_actual_cell_source_packet",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T17:09:43.201224+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-JOINT6-WEIGHTED-CONSTRAINTS-codex-20260908T110743.md",
+      "record_kind": "review_result",
+      "review_sha256": "26628E5A9E7DFFA08D0293068F19E1EA80382D6785CF7D565338B9957629715C",
+      "task_id": "GH-MATH-P4-JOINT6-WEIGHTED-CONSTRAINTS",
+      "classification": "pending_joint6_weighted_constraints",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -82523,5 +82579,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "84278350b15be745ee68b24e4f9e3e8cfa326608ed5a99066e2a7c9342d4d1fe"
+  "state_checksum": "55a58455fc0fd6311ae6208c1be3038327bc3b2429384ca569b1038f1b1db6b6"
 }

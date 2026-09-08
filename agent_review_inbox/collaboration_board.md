@@ -3006,3 +3006,15 @@ Sartre 与 Poincare 继续处理 affine defect chart 和 BODY6 pinned contract�
 接手 active initial value-level envelope，James 接手 joint6 exact defect/elimination。
 这两个新增 lane 只消费现有 obstruction，不重做 origin/Hessian、rank 或 Young
 推导，且不改变 `registry=0` 与 `formal_certificate_allowed=false`。
+
+### 梁智炜 · revision 808：actual-cell 与 weighted recovery 收割
+
+Actual-cell review 确认既有 half-active domain 只有 analytic intervals、X 和
+contraction 数据，没有同源 actual physical row、selected determinant lower、
+完整 signed numerator、observable 或 metric gate。Weighted review 则给出可消费的
+公式：`z_A,B=e0+de`，其中 `de` 同时承载 model/solve/measurement defect；随后
+principal RHS 必须保留远端和 joint6 acceleration。它不能由 nominal port、lift 坐标、
+或单独的 preconditioned row6 代替。
+
+因此 revision=808 的剩余硬缺口已收缩为同次 runtime/refinement source witness，
+registry=0、formal certificate gate 继续关闭；不再重复 rank 或 generic Young。

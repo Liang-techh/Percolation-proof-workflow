@@ -3725,3 +3725,18 @@ Poincare 空闲后补充一条外部复用 lane：
 
 该 lane 只服务通用 theorem/infrastructure intake；不搬纯数论，不把编译候选
 或上游 machine-checked 结果直接写入 Route-B verified registry。
+
+## 2026-09-08 — post-revision-808 actual packet disposition
+
+actual-cell 与 weighted-constraint 两条 lane 已收割，结论一致：weighted recovery
+的代数接口可消费 `y_A=Xz_A`，但当前没有同源 actual `y_A`、physical rows、
+det/numerator、observable 或 metric packet。因此下一轮只保留以下执行性缺口：
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-MATH-P4-VANIS2-RUNTIME-REFINEMENT` | James the 6th / runtime lane | 同次目标配置 capture 或明确无法从现有 artifact 得到的字段级 obstruction |
+| `GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART` | Sartre the 6th | actual `d=A y+b` 与 dual/D bounds 的同源绑定或 obstruction |
+| `GH-MATH-P4-ACTUAL-CELL-PACKET` | Godel the 6th | 仅在 actual source 到位后消费 det/numerator/observable；否则不重复 cell 搜索 |
+| `GH-MATH-P4-JOINT6-WEIGHTED-CONSTRAINTS` | James the 6th | 保留 `y_A`、model/solve defect 与 joint6 coupling 的一次性传播 |
+
+不允许用 nominal/analytic payload 填补 runtime actual packet；不做全量回归或本机 Lean。
