@@ -3249,3 +3249,11 @@ path membership、configuration projection、initial-only membership 和 shift
 accounting 分开；P4 `NORMALIZEDTARGETGUARD` 明确 common guard 只产生 `nu*t`，
 requested target 还必须满足 `requested ≤ nu*t`，并保留 gain*beta 与 nominal
 方向的 exact counterexamples。两者均未编译、未进入 registry。
+
+## revision 749 — target/path boundary harvest
+
+本轮收割 `T-P4-032` normalized-target review 与 BODY6 path-domain projection
+review。它们分别确认 common rational guard 只提供 `nu*t`，以及 full-state
+path membership 必须经显式 projection 才能消费 configuration-domain identity；
+initial membership 不推出 whole-path membership，shift B 也不可重复计费。所有
+结论仍为 pending/open，未改变 registry 或 formal gate。

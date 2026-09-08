@@ -2597,3 +2597,10 @@ source-domain、shift budget 或 concrete DH inequality 的候选都不能关闭
 `compiled_candidate`。新 BODY6 path-domain projection 和 P4 normalized-target
 guard 作为数学接口继续保持 `OPEN_UNCOMPILED`；尤其保留“初始点不推出全路径”、
 “shift 不可重复计费”和“`nu*t` 不自动等于旧 target”三个阻塞边界。
+
+### 梁智炜 · revision 749
+
+已整合 target-transfer 与 path-projection 两个边界结果，依赖链现在明确为：
+同源 source charges → shared rational guard → `nu*t` floor → requested-target
+transfer，同时另行要求 full-state path → source-domain projection。任何省略
+其中一层的候选继续留在 `OPEN_UNCOMPILED/pending`。

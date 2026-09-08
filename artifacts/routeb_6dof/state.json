@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 748,
+  "revision": 749,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -14700,6 +14700,21 @@
             "target_scope": "routeb_node",
             "source_commit": "be2fe41ccfd46f6361dd2f58adaa367ea9351029",
             "review_file": "agent_review_inbox/review-T-P4-032-exact-cell-lambda-codex-20260907T232742.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P4-032-normalized-target-codex-20260907T233242.md",
+            "record_kind": "review_result",
+            "review_sha256": "720FD41A0B1CC76601DC1292C185CEA90001ECDB161F4CCE4B0AF1564DA54390",
+            "task_id": "T-P4-032",
+            "source_agent": "Codex-P4-math-lane",
+            "created_at": "2026-09-07T23:32:42-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_typed_block_source_bridge",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "138c90d84546f2037eb2fae8e71023033e383c1e",
+            "review_file": "agent_review_inbox/review-T-P4-032-normalized-target-codex-20260907T233242.md",
             "admission_label": "pending"
           }
         ]
@@ -38368,6 +38383,21 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-actual-storage-align-20260908T052659Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-path-domain-projection-20260908T053453Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "514FEA4214D024EBC85A44D257E7670A295015FA3E7966B0925443A0B1D5BFA9",
+            "task_id": "T-P4-033-O1-body6-slice",
+            "source_agent": "codex-body6-math-lane",
+            "created_at": "2026-09-08T05:34:53Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_independent_body6_source_slice",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-path-domain-projection-20260908T053453Z.md",
             "admission_label": "pending"
           }
         ]
@@ -75483,6 +75513,32 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "b88c2ed6186d442f84b9b652de48a125"
+    },
+    {
+      "at": "2026-09-08T05:36:13.958469+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-032-normalized-target-codex-20260907T233242.md",
+      "record_kind": "review_result",
+      "review_sha256": "720FD41A0B1CC76601DC1292C185CEA90001ECDB161F4CCE4B0AF1564DA54390",
+      "task_id": "T-P4-032",
+      "classification": "pending_typed_block_source_bridge",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T05:36:13.959511+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-path-domain-projection-20260908T053453Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "514FEA4214D024EBC85A44D257E7670A295015FA3E7966B0925443A0B1D5BFA9",
+      "task_id": "T-P4-033-O1-body6-slice",
+      "classification": "pending_independent_body6_source_slice",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1ea06cbee9b54297913156cfb0b201ce"
     }
   ],
   "agent_requests": {},
@@ -79139,5 +79195,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "cf4f53376ed1d79c6bbf7bd9f30098c1df3398ce34f724448370c3cde34d33b2"
+  "state_checksum": "d2d0c8852a63a15e69fe36e05f4c3de21fa3faa2e6245a21c332b626583377ab"
 }
