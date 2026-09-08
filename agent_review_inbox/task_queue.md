@@ -3545,6 +3545,22 @@ actual-cell source witness 或 pinned Lean receipt。
 本轮不做全项目回归、不运行本机 Lean，并继续保持 `registry=0` 与
 `formal_certificate_allowed=false`。
 
+## 2026-09-08 — post-revision-790 source-closure batch
+
+当前四条本地 lane 已再次分工，目标是把已有 obstruction 转成可执行的最小
+source contract，而不是继续扩展候选数量：
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-MATH-P4-ALL6-SOURCE-ROWS` | Sartre the 6th | 检查 rows 1–6 是否存在同源实际等式，重点补齐 1/2/3/6；缺失则逐项 obstruction |
+| `GH-LEAN-P4-ROWSPACE-MINIMAL-CONSUMER` | Poincare the 6th | finite-matrix row-recovery consumer 与带 defect 接口；不实例化 DH source |
+| `GH-MATH-P4-ACTIVE-V-BINDING-CONTRACT` | Godel the 6th | 在 `Vfull_DH`/`Vshift_DH` 中选择或拒绝 active target，并绑定阈值/initial bound |
+| `GH-MATH-P4-JOINT6-WEIGHTED-CONSTRAINTS` | James the 6th | 两条 signed weighted source constraints 与 principal packet 的 exact 接线 |
+
+这些任务都继承 fail-closed 边界：无 source equality、coverage、actual defect、
+Lean receipt 和 comparator 就不改变 P4/M4 closure；只保留新的 review/sidecar
+和 provenance。
+
 ## 2026-09-08 — post-revision-788 bottleneck split
 
 本轮消费接管结果后，将 source-critical frontier 进一步拆成四条互不重复的

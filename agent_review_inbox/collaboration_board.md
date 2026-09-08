@@ -2815,3 +2815,11 @@ obstruction，不是物理轨迹反例。
 互换。`GH-MATH-P4-JOINT6-DEFECT-ELIMINATION` 固定 principal route 保留
 joint-6 coupling，并明确 Schur route 还需 row6、`d≠0`、effective RHS/defect
 和投影 metric 的同源证据。三项均保持 pending，P4 gate 未改变。
+
+### 梁智炜 · revision 790 后续 source-closure batch
+
+下一批已派发：Sartre 核对完整六条 source rows，Poincare 缩小 row-recovery
+finite-matrix consumer，Godel 绑定或拒绝 active `V` 候选，James 处理两条
+signed weighted constraints 与 joint-6 principal packet 的接线。它们分别消费
+现有 obstruction，不重复 domain、joint-threshold 或 Schur 标量推导；所有结果
+仍只进入 pending frontier。

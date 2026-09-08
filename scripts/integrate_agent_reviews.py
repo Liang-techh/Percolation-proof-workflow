@@ -242,6 +242,18 @@ TASK_TARGETS = {
     "GH-MATH-P4-JOINT6-DEFECT-ELIMINATION": (
         "P4.true_dh_port_source_binding",
         "pending_joint6_defect_elimination"),
+    "GH-MATH-P4-ALL6-SOURCE-ROWS": (
+        "P4.true_dh_port_source_binding",
+        "pending_all6_source_rows"),
+    "GH-LEAN-P4-ROWSPACE-MINIMAL-CONSUMER": (
+        "P4.true_dh_port_source_binding",
+        "pending_rowspace_minimal_consumer"),
+    "GH-MATH-P4-ACTIVE-V-BINDING-CONTRACT": (
+        "P4.true_dh_port_source_binding",
+        "pending_active_v_binding_contract"),
+    "GH-MATH-P4-JOINT6-WEIGHTED-CONSTRAINTS": (
+        "P4.true_dh_port_source_binding",
+        "pending_joint6_weighted_constraints"),
     # New GitHub proof lanes use descriptive uppercase suffixes.  Route them
     # to existing DAG parents as pending metadata only; no admission path is
     # implied by these aliases.
