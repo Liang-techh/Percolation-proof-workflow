@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 776,
+  "revision": 777,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -15505,6 +15505,21 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-Q6-RAY-SOURCE-BINDING-20260908T152743Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-LEAN-P4-Q6-GRAPH-EXCLUSION-REPAIR-LOCAL-codex-20260908T093620.md",
+            "record_kind": "review_result",
+            "review_sha256": "43BFD9B0ADAD7AFAFE0858CB1A7A8E80815FFB23F389E5DB1E950A9A26F98BA9",
+            "task_id": "GH-LEAN-P4-Q6-GRAPH-EXCLUSION-REPAIR",
+            "source_agent": "codex-local-static-interface-review",
+            "created_at": "2026-09-08T09:36:20-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_q6_graph_exclusion_generic_lean_repair",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "6509984f9a045c441df64e088b704ee341a1316d",
+            "review_file": "agent_review_inbox/review-GH-LEAN-P4-Q6-GRAPH-EXCLUSION-REPAIR-LOCAL-codex-20260908T093620.md",
             "admission_label": "pending"
           }
         ]
@@ -77532,6 +77547,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T15:38:24.747220+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-LEAN-P4-Q6-GRAPH-EXCLUSION-REPAIR-LOCAL-codex-20260908T093620.md",
+      "record_kind": "review_result",
+      "review_sha256": "43BFD9B0ADAD7AFAFE0858CB1A7A8E80815FFB23F389E5DB1E950A9A26F98BA9",
+      "task_id": "GH-LEAN-P4-Q6-GRAPH-EXCLUSION-REPAIR",
+      "classification": "pending_q6_graph_exclusion_generic_lean_repair",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -81188,5 +81216,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "535cd0f00959f9d56e98bf89a72d5364beefca29cf63389431b0dcbdfd2251dc"
+  "state_checksum": "6251bc0753375765e8fb2c617c39761b7844fb254087c3bd444755646e9a9d90"
 }

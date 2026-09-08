@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-LEAN-P4-Q6-GRAPH-EXCLUSION-REPAIR-LOCAL-codex-20260908T093620.md",
+  "record_kind": "review_result",
+  "review_sha256": "43BFD9B0ADAD7AFAFE0858CB1A7A8E80815FFB23F389E5DB1E950A9A26F98BA9",
+  "task_id": "GH-LEAN-P4-Q6-GRAPH-EXCLUSION-REPAIR",
+  "source_agent": "codex-local-static-interface-review",
+  "created_at": "2026-09-08T09:36:20-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_q6_graph_exclusion_generic_lean_repair",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "6509984f9a045c441df64e088b704ee341a1316d",
+  "review_file": "agent_review_inbox/review-GH-LEAN-P4-Q6-GRAPH-EXCLUSION-REPAIR-LOCAL-codex-20260908T093620.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T15:38:24.747220+00:00"
+}
