@@ -64,6 +64,16 @@ theorem projected_accel_bound (a b c f1 f2 u1 u2 ell1 ell2 delta R upper : ℝ)
   abs_bound_of_positive_multiplier (det2 a b c) delta _ _ R upper
     hdelta hdet (projected_identity a b c f1 f2 u1 u2 ell1 ell2 h1 h2) hnum hgate
 
+theorem coordinate_accel_bounds (a b c f1 f2 u1 u2 delta R1 R2 Q1 Q2 : ℝ)
+    (h1 : a * u1 + b * u2 = f1) (h2 : b * u1 + c * u2 = f2)
+    (hdelta : 0 < delta) (hdet : delta ≤ det2 a b c)
+    (hN1 : |numerator1 b c f1 f2| ≤ R1) (hN2 : |numerator2 a b f1 f2| ≤ R2)
+    (hg1 : R1 ≤ delta * Q1) (hg2 : R2 ≤ delta * Q2) :
+    |u1| ≤ Q1 ∧ |u2| ≤ Q2 := by
+  obtain ⟨hc1, hc2⟩ := cramer_identity a b c f1 f2 u1 u2 h1 h2
+  exact ⟨abs_bound_of_positive_multiplier _ delta u1 _ R1 Q1 hdelta hdet hc1 hN1 hg1,
+    abs_bound_of_positive_multiplier _ delta u2 _ R2 Q2 hdelta hdet hc2 hN2 hg2⟩
+
 structure RationalPacket where
   delta : ℚ
   numeratorUpper : ℚ
@@ -118,7 +128,13 @@ theorem cancellation_family (t : ℝ) :
     (1 : ℝ) * 0 + t * 1 = t ∧
     t * 0 + (1 + t^2) * 1 = 1 + t^2 ∧
     projectedNumerator 1 t (1 + t^2) t (1 + t^2) 1 0 = 0 := by
-  norm_num [det2, projectedNumerator, numerator1, numerator2] <;> ring
+  refine ⟨?_, ?_, ?_, ?_⟩
+  · dsimp [det2]
+    ring
+  · ring
+  · ring
+  · dsimp [projectedNumerator, numerator1, numerator2]
+    ring
 
 theorem positive_box_loss (T : ℝ) (hT : 0 < T) : 0 < 2 * T * (1 + T^2) := by
   positivity

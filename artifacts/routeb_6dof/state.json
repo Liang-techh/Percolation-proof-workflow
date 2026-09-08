@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 758,
+  "revision": 759,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -15147,6 +15147,21 @@
             "target_scope": "routeb_node",
             "source_commit": "1f7592f29f9bec8e29b689db30c416b6655dcff6",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-DESCRIPTOR-PUPPER-source-binding-codex-20260908T081829.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-ADJUGATE-ACCEL-codex-20260908T082413.md",
+            "record_kind": "review_result",
+            "review_sha256": "B337B05CF863A9DF7DB9074A399CB65BF81B9D46689609D1F2D417F53A7E08C7",
+            "task_id": "GH-MATH-P4-ADJUGATE-ACCEL",
+            "source_agent": "Codex-P4-math-lane",
+            "created_at": "2026-09-08T08:24:13-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_adjugate_acceleration_bridge",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "ef85d45a4cdf3b62de723fd3a8e2fc646749d0fc",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-ADJUGATE-ACCEL-codex-20260908T082413.md",
             "admission_label": "pending"
           }
         ]
@@ -38936,6 +38951,36 @@
             "source_commit": "8c9756b28d64dab099da31a4c09229a9e6a2ef35",
             "review_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-lean-receipt-codex-20260908T082220.md",
             "admission_label": "compiled_candidate"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-aligned-path-cap-consumer-lean-codex-20260908T082551.md",
+            "record_kind": "review_result",
+            "review_sha256": "66C5CBDEE15F9ECDA6DB2917104892BB61409AC56CA7BB6AB787029FC5C3F016",
+            "task_id": "T-P4-033-O1-body6-slice",
+            "source_agent": "Codex",
+            "created_at": "2026-09-08T08:25:51-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_independent_body6_source_slice",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-aligned-path-cap-consumer-lean-codex-20260908T082551.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-path-contract-20260908T142518Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "5CDBA6CC3A9215E2D08499ADB8D3AF4D354A7BC119D9A3972E5E884F6BC7226B",
+            "task_id": "T-P4-033-O1-body6-slice",
+            "source_agent": "codex-body6-math-lane",
+            "created_at": "2026-09-08T14:25:18Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_independent_body6_source_slice",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-path-contract-20260908T142518Z.md",
+            "admission_label": "pending"
           }
         ]
       }
@@ -76722,6 +76767,45 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "1ea06cbee9b54297913156cfb0b201ce"
+    },
+    {
+      "at": "2026-09-08T14:30:38.881642+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-ADJUGATE-ACCEL-codex-20260908T082413.md",
+      "record_kind": "review_result",
+      "review_sha256": "B337B05CF863A9DF7DB9074A399CB65BF81B9D46689609D1F2D417F53A7E08C7",
+      "task_id": "GH-MATH-P4-ADJUGATE-ACCEL",
+      "classification": "pending_adjugate_acceleration_bridge",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T14:30:38.882073+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-aligned-path-cap-consumer-lean-codex-20260908T082551.md",
+      "record_kind": "review_result",
+      "review_sha256": "66C5CBDEE15F9ECDA6DB2917104892BB61409AC56CA7BB6AB787029FC5C3F016",
+      "task_id": "T-P4-033-O1-body6-slice",
+      "classification": "pending_independent_body6_source_slice",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1ea06cbee9b54297913156cfb0b201ce"
+    },
+    {
+      "at": "2026-09-08T14:30:38.882404+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-path-contract-20260908T142518Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "5CDBA6CC3A9215E2D08499ADB8D3AF4D354A7BC119D9A3972E5E884F6BC7226B",
+      "task_id": "T-P4-033-O1-body6-slice",
+      "classification": "pending_independent_body6_source_slice",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1ea06cbee9b54297913156cfb0b201ce"
     }
   ],
   "agent_requests": {},
@@ -80378,5 +80462,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "973a5aa6e37222790d50361cf8b21d32f6f73f567f8dc1facb4dc4b8356bea6b"
+  "state_checksum": "1ebcdd53cf45419a76c7966b9db600172f8c7c86c897d8824079048608f10217"
 }

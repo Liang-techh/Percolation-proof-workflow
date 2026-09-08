@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-ADJUGATE-ACCEL-codex-20260908T082413.md",
+  "record_kind": "review_result",
+  "review_sha256": "B337B05CF863A9DF7DB9074A399CB65BF81B9D46689609D1F2D417F53A7E08C7",
+  "task_id": "GH-MATH-P4-ADJUGATE-ACCEL",
+  "source_agent": "Codex-P4-math-lane",
+  "created_at": "2026-09-08T08:24:13-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_adjugate_acceleration_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "ef85d45a4cdf3b62de723fd3a8e2fc646749d0fc",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-ADJUGATE-ACCEL-codex-20260908T082413.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T14:30:38.881642+00:00"
+}
