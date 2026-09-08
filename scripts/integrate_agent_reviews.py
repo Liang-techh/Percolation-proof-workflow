@@ -492,6 +492,9 @@ TASK_TARGETS = {
     "T-P5-CONCRETE-KPATH-PACKET": (
         "P5.componentwise_relative_decay.feasible_cone_spn",
         "pending_concrete_kpath_packet_obstruction"),
+    "GH-P5-P4-SAME-CELL-JET-JOIN": (
+        "P5.componentwise_relative_decay",
+        "pending_same_cell_jet_join_contract"),
     "GH-LEAN-P4-EVALV-ONE-SIDED-RECEIPT": (
         "P4.true_dh_port_source_binding",
         "pending_evalv_one_sided_receipt"),

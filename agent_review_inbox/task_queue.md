@@ -4157,3 +4157,10 @@ parser/lowering/lifetime/consumer receipt 出现前，禁止消耗任何 one-sid
 证书精确限制为 `E=0`；后续若有实际增量，优先尝试 `S_r⪰δ_r I` 的 PSD-slack
 容量多面体，并绑定真实 `K_path`、chart/source、`μ/Q`、18 个 certificate 与
 consumer。该构造尚未产生实际 `δ/t` 或 source-indexed packet，仍保持 pending。
+
+## 2026-09-08 — revision 857 same-cell jet join
+
+`GH-P5-P4-SAME-CELL-JET-JOIN` 已收割。下一步可复用同一 DH damping 的
+controller/RHS identity，但必须先固定 residual/carrier/anchor、13→4 projection、
+segment-domain、Hjac/Scoord 与 force equality；不得从 6×13 jet 单独推出 K-path，
+也不得把 conditional `b/Db` branch 当作 runtime/flowpipe proof。

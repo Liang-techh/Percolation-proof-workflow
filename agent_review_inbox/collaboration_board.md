@@ -3447,3 +3447,11 @@ Poincare 证明当前 toy 固定 `N`-slack 更新对任意非零非负增量 `E`
 以 `S_r ⪰ δ_r I` 消耗 PSD slack 的 18×4 有理容量多面体构造，但尚未计算实际
 `δ/t`，也没有 actual `K_path`、source binding 或 18 个 source-indexed certificates。
 因此 P5 仍 pending，registry=0，formal gate 关闭。
+
+### 梁智炜 · revision 857：same-cell jet join
+
+James 确认当前 slab producer 与 jet extractor 使用同一 DH damping，并提出一个
+条件性的 `b/Db` analytic bridge；更重要的是明确 13→4 的 K-path seam 必须同时
+绑定 residual、anchor/fiber、segment-domain、Hjac/Scoord 与 force identity，不能
+从 6×13 acceleration jet 自动得到。该 join 仍缺 actual source/metric/consumer packet，
+所以 P4/P5 均保持 pending，registry=0，formal gate 关闭。

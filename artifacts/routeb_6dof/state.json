@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 856,
+  "revision": 857,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12904,6 +12904,21 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/NEW_REVIEW_P5_GRAPH_JET_IFT_AND_INVERSE_FREE_HCAP_20260908.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-P5-P4-SAME-CELL-JET-JOIN-james-20260908T132637.md",
+            "record_kind": "review_result",
+            "review_sha256": "63724213CD4E7FD944935BAF35D2184AC628EB17B99558712B1B68CB4C51D49D",
+            "task_id": "GH-P5-P4-SAME-CELL-JET-JOIN",
+            "source_agent": "James",
+            "created_at": "2026-09-08T13:26:37-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_same_cell_jet_join_contract",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "769590f5f704a658607040739a90945ea5b5a6ec",
+            "review_file": "agent_review_inbox/review-GH-P5-P4-SAME-CELL-JET-JOIN-james-20260908T132637.md",
             "admission_label": "pending"
           }
         ]
@@ -81317,6 +81332,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383"
+    },
+    {
+      "at": "2026-09-08T19:31:19.105365+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-P5-P4-SAME-CELL-JET-JOIN-james-20260908T132637.md",
+      "record_kind": "review_result",
+      "review_sha256": "63724213CD4E7FD944935BAF35D2184AC628EB17B99558712B1B68CB4C51D49D",
+      "task_id": "GH-P5-P4-SAME-CELL-JET-JOIN",
+      "classification": "pending_same_cell_jet_join_contract",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "4a9af66cdc4f4607857a5cf360f19eb7"
     }
   ],
   "agent_requests": {},
@@ -84973,5 +85001,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "5532fd8ffe939667421ec68755c38f3ae2d8cad881d6c57f152d94cff61c6afb"
+  "state_checksum": "b6875e317ecc4df648399782f25680716976e03036fa5a9e9cb41993a7fb54d5"
 }
