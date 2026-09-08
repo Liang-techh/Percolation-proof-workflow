@@ -3226,3 +3226,13 @@ path inclusion 与 cap+B≤bar 仍是调用方前提。该叶保持 `OPEN_UNCOMP
 当前状态 revision 745、registry=0、formal gate=false；本地 proof lanes 继续
 分别推进 storage identity、P4 source binding、rational-lambda receipt 和
 C2/C3 true-DH bridge。
+
+## revision 746–747 — exact-cell consumer integration
+
+BODY6 的标准 review 已补齐并收割：`ACTUALSTORAGEALIGN` 只证明显式
+Alignment fields 下的 unshifted value identity，并以 exact origin counterexample
+锁定 ActualShift 的常数 B 和 path-cap 转移条件。P4 `EXACT_CELL_LAMBDA_CONSUMER`
+也已收割：它把同源 cell cover、A/P/D rational charges、shared rational s 和
+target reservation 接到 scalar floor；`A_up`、port charge、source residual 和
+真实 DH domain 仍保持不同对象。两者均为 `OPEN_UNCOMPILED/pending`，无 registry
+或 formal gate 变化。

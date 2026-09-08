@@ -2583,3 +2583,10 @@ binding、T-P4-040 Lean receipt、以及 P3 endpoint margin 到 true-DH coeffici
 的 ActualStorage/ActualShift alignment。它们都只增加显式前提下的条件性接口，
 并保留了 derivative-level binding、path inclusion、shift budget、coverage 和
 true-DH 的独立 open leaves；没有任何 registry 晋级。
+
+### 梁智炜 · revision 746–747
+
+BODY6 alignment 与 P4 exact-cell/shared-lambda consumer 已进入 StateStore 的
+pending provenance/event。新结果形成了一条更精确的依赖链：先证明同源 source
+envelope 与 target reservation，再消费共同 rational parameter；任何缺少
+source-domain、shift budget 或 concrete DH inequality 的候选都不能关闭 parent。
