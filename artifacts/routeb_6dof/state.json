@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 827,
+  "revision": 829,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12823,6 +12823,28 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/NEW_REVIEW_SARTRE_P5_SAME_TUBE_SOURCE_PACKET_20260908.md"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P5-026-SIGNED-COVER-CONSUMER-james-20260908.md",
+            "record_kind": "review_result",
+            "review_sha256": "2F646426CC8B763C990A20669A0E15102740AE408CD304D53A01F0A57BDCCAC5",
+            "task_id": "T-P5-026-SIGNED-COVER-CONSUMER",
+            "source_agent": "James the 6th",
+            "created_at": "2026-09-08T12:03:49-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "architecture_only_signed_cover_consumer",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "artifact_binding_audit": {
+              "status": "REJECTED",
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_CONE_INDEX_SignedCoverConsumer.lean",
+              "declared_sha256": "PENDING",
+              "actual_sha256": "EA9A87281E096CAF2E3B082A31DD0FBB00EFC85016376DBD8AD735B39D41F4B8",
+              "reason": "artifact_sha256_mismatch"
+            },
+            "admission_label": "architecture_only",
+            "review_file": "agent_review_inbox/review-T-P5-026-SIGNED-COVER-CONSUMER-james-20260908.md"
           }
         ]
       }
@@ -40465,6 +40487,27 @@
             "target_scope": "routeb_node",
             "source_commit": "97ce842068a036050fced394494403c2d133126d",
             "review_file": "agent_review_inbox/review-GH-LEAN-BODY5-API-REPAIR-LOCAL-20260908T094207.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-LEAN-BODY5-API-REPAIR-SLICE-PENDING-poincare-20260908.md",
+            "record_kind": "review_result",
+            "review_sha256": "8B88986B1EDF248E1FED2B5F36F08C8A4BBF3B13E5627CDDA67C8761D1D41889",
+            "task_id": "GH-LEAN-BODY5-API-REPAIR-SLICE-PENDING",
+            "source_agent": "Poincare the 6th",
+            "created_at": "2026-09-08T12:08:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_body5_q3_slice_api_repair",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "artifact_binding_audit": {
+              "status": "BOUND",
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_BODY5_API_REPAIR_Q3FromFull20260908.lean",
+              "declared_sha256": "36C2A7C3CE4852441605C972F3F71B86C6D03833EE2A8C1AC6E41BB87E41B9DA",
+              "actual_sha256": "36C2A7C3CE4852441605C972F3F71B86C6D03833EE2A8C1AC6E41BB87E41B9DA"
+            },
+            "review_file": "agent_review_inbox/review-GH-LEAN-BODY5-API-REPAIR-SLICE-PENDING-poincare-20260908.md",
             "admission_label": "pending"
           }
         ]
@@ -80419,6 +80462,34 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "4a9af66cdc4f4607857a5cf360f19eb7"
+    },
+    {
+      "at": "2026-09-08T18:04:47.454876+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P5-026-SIGNED-COVER-CONSUMER-james-20260908.md",
+      "record_kind": "review_result",
+      "review_sha256": "2F646426CC8B763C990A20669A0E15102740AE408CD304D53A01F0A57BDCCAC5",
+      "task_id": "T-P5-026-SIGNED-COVER-CONSUMER",
+      "classification": "architecture_only_signed_cover_consumer",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "artifact_binding_status": "REJECTED",
+      "node_id": "4a9af66cdc4f4607857a5cf360f19eb7"
+    },
+    {
+      "at": "2026-09-08T18:05:44.594491+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-LEAN-BODY5-API-REPAIR-SLICE-PENDING-poincare-20260908.md",
+      "record_kind": "review_result",
+      "review_sha256": "8B88986B1EDF248E1FED2B5F36F08C8A4BBF3B13E5627CDDA67C8761D1D41889",
+      "task_id": "GH-LEAN-BODY5-API-REPAIR-SLICE-PENDING",
+      "classification": "pending_body5_q3_slice_api_repair",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "artifact_binding_status": "BOUND",
+      "node_id": "f69865077c2e49e1aab82a291233f0e9"
     }
   ],
   "agent_requests": {},
@@ -84075,5 +84146,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "e3be51466db5345e2611d33217dd9680c6ee971aa955e39558882dbd7d8eb6ac"
+  "state_checksum": "91d552a4bff09c0120bc42b12c9848504ef69d11c59ccb251f927866ef3739b8"
 }

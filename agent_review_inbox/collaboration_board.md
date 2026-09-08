@@ -3144,3 +3144,10 @@ analytic slab 与 descriptor bound 均明确为 `formal=false`；缺口是同源
 `F/DF/W/Wt/DW/b/Db/e`、source identity 与 coverage，且 P5-092 还需要
 Euler-chord/Hessian。该结果已收割为 pending obstruction，防止把 Neumann
 contraction guard 或 descriptor remainder 错当作 Lie/variational defect。
+
+### 梁智炜 · revision 829：Body-5 q3 slice API repair
+
+Poincare 的新 candidate 已收入 inbox：它从完整 `List.Perm` 编码推导 q3 slice，
+保持 partner 重数并显式保留 filter-empty、q3 binding、G1/G2 等未完成义务。
+该候选为 `OPEN_UNCOMPILED` pending Lean interface，尚无 source closure、kernel
+receipt 或 registry admission。

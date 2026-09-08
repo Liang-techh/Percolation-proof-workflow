@@ -1,0 +1,23 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-026-SIGNED-COVER-CONSUMER-james-20260908.md",
+  "record_kind": "review_result",
+  "review_sha256": "2F646426CC8B763C990A20669A0E15102740AE408CD304D53A01F0A57BDCCAC5",
+  "task_id": "T-P5-026-SIGNED-COVER-CONSUMER",
+  "source_agent": "James the 6th",
+  "created_at": "2026-09-08T12:03:49-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "architecture_only_signed_cover_consumer",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "artifact_binding_audit": {
+    "status": "REJECTED",
+    "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p5_feasible_cone_spn_proof_attempt\\NEW_CONE_INDEX_SignedCoverConsumer.lean",
+    "declared_sha256": "PENDING",
+    "actual_sha256": "EA9A87281E096CAF2E3B082A31DD0FBB00EFC85016376DBD8AD735B39D41F4B8",
+    "reason": "artifact_sha256_mismatch"
+  },
+  "admission_label": "architecture_only",
+  "review_file": "agent_review_inbox/review-T-P5-026-SIGNED-COVER-CONSUMER-james-20260908.md",
+  "integrated_at": "2026-09-08T18:04:47.454876+00:00"
+}

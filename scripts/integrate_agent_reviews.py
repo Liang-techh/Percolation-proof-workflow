@@ -359,6 +359,12 @@ TASK_TARGETS = {
     "T-P5-093-BASE-FLOW-LIE-DEFECT": (
         "P5.componentwise_relative_decay",
         "pending_base_flow_lie_defect_same_tube_binding"),
+    "T-P5-026-SIGNED-COVER-CONSUMER": (
+        "P5.componentwise_relative_decay",
+        "architecture_only_signed_cover_consumer"),
+    "GH-LEAN-BODY5-API-REPAIR-SLICE-PENDING": (
+        "P4.O1.source_comparator.h_body_5.source_trace_decomposition",
+        "pending_body5_q3_slice_api_repair"),
     "SARTRE-P5-SAME-TUBE-SOURCE-PACKET": (
         "P5.componentwise_relative_decay",
         "pending_same_tube_source_packet_obstruction"),

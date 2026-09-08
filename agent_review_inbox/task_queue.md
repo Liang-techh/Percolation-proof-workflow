@@ -3867,3 +3867,11 @@ Sartre 的定向结果已确认：`half_active_vanis2_domain_probe` 与 descript
 `F, DF, W, Wt, DW, b, Db, e` 及同 tube coverage；P5-092 另需 Euler chord/Hessian
 绑定。不得把 contraction-matrix 的 Neumann guard 当作 `DFᵀW+WDF`，也不得把
 descriptor acceleration remainder 当作 variational defect。
+
+### Lean interface follow-up: `GH-LEAN-BODY5-API-REPAIR-SLICE-PENDING`
+
+Poincare 的新 bounded candidate 从完整 `List.Perm` 编码推导 q3 slice，保留
+重复 partner 的 multiplicity，且不把部分表格升级成完整 source witness。候选和
+`SliceCore` 已收入 inbox，当前 `OPEN_UNCOMPILED`；下一步交给 Lean lane 在精确
+pin 下编译，随后仍需 actual bodyTraceRows5、filter-empty、q3 binding 与 G1/G2
+obligations，不能直接关闭 body-5。
