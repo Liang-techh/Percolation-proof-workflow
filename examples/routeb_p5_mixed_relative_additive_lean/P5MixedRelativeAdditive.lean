@@ -27,7 +27,11 @@ def A5 (rho5 : ℝ) : ℝ := 1 - 6 * rho5
 
 /-- Absolute value preserves squares over the reals. -/
 theorem abs_sq_eq (x : ℝ) : |x| ^ 2 = x ^ 2 := by
-  rw [pow_two, ← abs_mul, abs_of_nonneg (mul_self_nonneg x)]
+  calc
+    |x| ^ 2 = |x| * |x| := by ring
+    _ = |x * x| := by rw [abs_mul]
+    _ = x * x := abs_of_nonneg (mul_self_nonneg x)
+    _ = x ^ 2 := by ring
 
 /-- Convert a mixed componentwise residual bound into the corresponding power bound. -/
 theorem residual_power_bound
@@ -38,8 +42,13 @@ theorem residual_power_bound
   rw [abs_mul] at hsign
   have hscale : |u| * |l| ≤ |u| * (rho * |u| + b) :=
     mul_le_mul_of_nonneg_left hres (abs_nonneg u)
-  have habs := abs_sq_eq u
-  nlinarith
+  have hrewrite : |u| * (rho * |u| + b) = rho * u ^ 2 + b * |u| := by
+    rw [← abs_sq_eq u]
+    ring
+  calc
+    -u * l ≤ |u| * |l| := hsign
+    _ ≤ |u| * (rho * |u| + b) := hscale
+    _ = rho * u ^ 2 + b * |u| := hrewrite
 
 /--
 Division-free sharp square completion.  This identity-derived inequality is valid
