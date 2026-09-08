@@ -61,7 +61,7 @@ hr : rCross ≤ rhoR*U
 
 修复 commit：
 
-`e557726db388ede4985394cdcf3e0a42e3ae8bd9`
+`6f668768eb6fcc331a4b5b4d126ab0724ba0d11e`
 
 只在 `lifted_base_storage_robust_collar` 内增加显式两阶段 rate transport：
 
@@ -94,7 +94,7 @@ nlinarith [hscaled, hsquare, hQd]
 
 - run: `34284576083`
 - job: `102257057169`
-- checkout head: `e557726db388ede4985394cdcf3e0a42e3ae8bd9`
+- checkout head: `6f668768eb6fcc331a4b5b4d126ab0724ba0d11e`
 - pinned Lean: `4.32.0`
 
 本 sidecar 在该真实 job 中已经完整执行并得到：
