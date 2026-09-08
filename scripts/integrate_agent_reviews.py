@@ -230,6 +230,18 @@ TASK_TARGETS = {
     "GH-MIXED-FLOWCHUANFENG-BODY6-PATH": (
         "P4.O1.source_comparator.h_body_6.canonical_export",
         "pending_reassigned_body6_path_review"),
+    "GH-MATH-P4-ROWSPACE-RECOVERY-MINIMAL": (
+        "P4.true_dh_port_source_binding",
+        "pending_minimal_rowspace_recovery"),
+    "GH-LEAN-P4-ROWSPACE-RECOVERY": (
+        "P4.true_dh_port_source_binding",
+        "pending_rowspace_recovery_lean_receipt"),
+    "GH-MATH-P4-ACTIVE-V-TARGET-DEFINITION": (
+        "P4.true_dh_port_source_binding",
+        "pending_active_target_storage_definition"),
+    "GH-MATH-P4-JOINT6-DEFECT-ELIMINATION": (
+        "P4.true_dh_port_source_binding",
+        "pending_joint6_defect_elimination"),
     # New GitHub proof lanes use descriptive uppercase suffixes.  Route them
     # to existing DAG parents as pending metadata only; no admission path is
     # implied by these aliases.

@@ -3544,3 +3544,19 @@ actual-cell source witness 或 pinned Lean receipt。
 旧 review/claim 的作者标签不改写；新结果按上述 replacement owner 收割。
 本轮不做全项目回归、不运行本机 Lean，并继续保持 `registry=0` 与
 `formal_certificate_allowed=false`。
+
+## 2026-09-08 — post-revision-788 bottleneck split
+
+本轮消费接管结果后，将 source-critical frontier 进一步拆成四条互不重复的
+窄 lane：
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-MATH-P4-ROWSPACE-RECOVERY-MINIMAL` | Sartre the 6th | 当前 X 的物理 row recovery 所需 rank/dual-row-span 条件与 exact obstruction |
+| `GH-LEAN-P4-ROWSPACE-RECOVERY` | Poincare the 6th | source-independent row-space recovery theorem seam；物理 X/source/domain 外置 |
+| `GH-MATH-P4-ACTIVE-V-TARGET-DEFINITION` | Godel the 6th | active target V 的值级定义、normalization、regularizer/cross-term/offset 同源绑定或 obstruction |
+| `GH-MATH-P4-JOINT6-DEFECT-ELIMINATION` | James the 6th | 保留 joint-6 coupling 的 principal/Schur exact defect 接口；不重复 joint threshold |
+
+所有结果必须使用新的 immutable review envelope；即使 Lean 候选编译成功，
+也只登记 compiled candidate/pending，不改变 source admission、registry 或
+formal gate。不得重新搜索 domain、运行全回归或静默修正 controller mismatch。

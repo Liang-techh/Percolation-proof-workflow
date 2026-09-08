@@ -2783,3 +2783,12 @@ source witness，Poincare 接 BODY6 typed path sidecar，James 接 Schur/PMI
 absorption，Godel 接 active-energy origin normalization。四条 lane 只交窄的
 immutable review；不做全回归、不改 registry、不把 source-independent 候选升级
 为物理证书。
+
+### 梁智炜 · revision 788 后续分解
+
+接管结果已把下一步收缩为四个独立瓶颈：Sartre 负责当前预条件器的最小
+row-space recovery 条件，Poincare 负责其 source-independent Lean seam，Godel
+负责 active target storage 的值级定义，James 负责保留 joint-6 coupling 的
+principal/Schur defect 接线。四条 lane 不重复已完成的 Cramer、joint-threshold
+或 domain 搜索；仍保持 `registry=0`、`formal_certificate_allowed=false`，并把
+所有缺证据结果记录为 pending/obstruction。
