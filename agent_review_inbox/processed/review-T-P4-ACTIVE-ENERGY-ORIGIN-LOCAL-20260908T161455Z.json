@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-ACTIVE-ENERGY-ORIGIN-LOCAL-20260908T161455Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "9542842C3260413777573E341AD9CCADCF83FAF43C64A499A31576DF07EEBD14",
+  "task_id": "T-P4-ACTIVE-ENERGY-ORIGIN",
+  "source_agent": "codex-active-energy-origin-takeover",
+  "created_at": "2026-09-08T16:14:55Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_active_energy_origin_normalization",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-ACTIVE-ENERGY-ORIGIN-LOCAL-20260908T161455Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T16:18:18.788101+00:00"
+}

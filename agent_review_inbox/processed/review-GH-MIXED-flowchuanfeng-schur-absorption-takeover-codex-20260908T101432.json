@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MIXED-flowchuanfeng-schur-absorption-takeover-codex-20260908T101432.md",
+  "record_kind": "review_result",
+  "review_sha256": "565F536CF93EA26B3125CC46418CD6C1593E236538A1C3F129CBB37A550A37DE",
+  "task_id": "GH-MIXED-flowchuanfeng-schur-absorption",
+  "source_agent": "codex-schur-absorption-takeover",
+  "created_at": "2026-09-08T10:14:32-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_reassigned_schur_absorption_review",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MIXED-flowchuanfeng-schur-absorption-takeover-codex-20260908T101432.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T16:18:18.787600+00:00"
+}

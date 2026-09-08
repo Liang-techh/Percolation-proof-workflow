@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MIXED-FLOWCHUANFENG-ADJUGATE-LOCAL-20260908T101508.md",
+  "record_kind": "review_result",
+  "review_sha256": "26FEE83738B6F8CCAA8FD3DFC88535E5002E936DDBD08F39D15DAB779DC37F59",
+  "task_id": "GH-MIXED-FLOWCHUANFENG-ADJUGATE",
+  "source_agent": "Codex-source-witness-only",
+  "created_at": "2026-09-08T10:15:08-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_adjugate_contract_review",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "218f8f45a05b4146951810d99e6ce6fb3badb825",
+  "review_file": "agent_review_inbox/review-GH-MIXED-FLOWCHUANFENG-ADJUGATE-LOCAL-20260908T101508.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T16:18:18.785868+00:00"
+}
