@@ -43,6 +43,10 @@ for theorem in \
   antitone_abs_coercivity \
   negative_feedback_scalar_budget \
   nested_variation_budget \
+  negative_feedback_parameter_transport_x1 \
+  negative_feedback_parameter_transport_x2 \
+  cleared_negative_feedback_parameter_transport_x1 \
+  cleared_negative_feedback_parameter_transport_x2 \
   strictMono_zero_le_of_nonneg_sample \
   strictMono_le_zero_of_nonpos_sample \
   same_orientation_unit_gain_obstruction \
@@ -60,6 +64,10 @@ fi
 
 echo "AXIOM_AUDIT=PASS"
 echo "P5_SIGNED_TWO_CYCLE_FOCUSED_CHECK=PASS"
+echo "COMPANION_OWNER=巨阳仙尊"
+echo "MAIN_T_P5_071_FORMALIZATION_OWNER=苏梦辰"
+echo "BASE_PARAMETER_D_TRANSPORT=true"
+echo "SOURCE_CLEARED_NEGATIVE_FEEDBACK_NO_DELTA=true"
 echo "UNSIGNED_SMALL_GAIN_BRANCH=true"
 echo "NEGATIVE_FEEDBACK_NO_SMALL_GAIN_BRANCH=true"
 echo "FAIL_BOTH_BRANCHES_IS_NOT_APPLICABLE=true"
