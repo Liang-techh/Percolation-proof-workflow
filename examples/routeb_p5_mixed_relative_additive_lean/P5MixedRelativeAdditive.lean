@@ -27,15 +27,11 @@ def A5 (rho5 : ℝ) : ℝ := 1 - 6 * rho5
 
 /-- Absolute value preserves squares over the reals. -/
 theorem abs_sq_eq (x : ℝ) : |x| ^ 2 = x ^ 2 := by
-  have h : |x * x| = x * x := abs_of_nonneg (mul_self_nonneg x)
-  rw [abs_mul] at h
-  simpa [pow_two] using h
+  rw [pow_two, ← abs_mul, abs_of_nonneg (mul_self_nonneg x)]
 
 /-- Convert a mixed componentwise residual bound into the corresponding power bound. -/
 theorem residual_power_bound
     (u l rho b : ℝ)
-    (hrho : 0 ≤ rho)
-    (hb : 0 ≤ b)
     (hres : |l| ≤ rho * |u| + b) :
     -u * l ≤ rho * u ^ 2 + b * |u| := by
   have hsign : -(u * l) ≤ |u * l| := neg_le_abs (u * l)
@@ -51,9 +47,13 @@ without assuming `t > 0`; positivity is needed only when dividing by `4*t`.
 -/
 theorem mixed_square_completion_cleared (t u b : ℝ) :
     4 * t * (-t * u ^ 2 + b * |u|) ≤ b ^ 2 := by
+  have hid :
+      4 * t * (-t * u ^ 2 + b * |u|)
+          + (2 * t * |u| - b) ^ 2 = b ^ 2 := by
+    rw [← abs_sq_eq u]
+    ring
   have hsquare : 0 ≤ (2 * t * |u| - b) ^ 2 := sq_nonneg (2 * t * |u| - b)
-  have habs := abs_sq_eq u
-  nlinarith
+  linarith
 
 /-- Sharp one-channel additive-bias charge for a strictly positive reserve. -/
 theorem mixed_square_completion
@@ -83,8 +83,6 @@ makes no claim that deployed residuals satisfy the component contracts.
 -/
 theorem block45_pareto_mixed_residual_decay
     (r V Q Vdot u4 u5 l4 l5 rho4 rho5 b4 b5 : ℝ)
-    (hrho4 : 0 ≤ rho4) (hrho5 : 0 ≤ rho5)
-    (hb4 : 0 ≤ b4) (hb5 : 0 ≤ b5)
     (hQ : decayRate r * V + a4 r * u4 ^ 2 + a5 * u5 ^ 2 ≤ Q)
     (hVdot : Vdot = -Q - u4 * l4 - u5 * l5)
     (hres4 : |l4| ≤ rho4 * |u4| + b4)
@@ -94,8 +92,8 @@ theorem block45_pareto_mixed_residual_decay
     Vdot ≤ -decayRate r * V
       + b4 ^ 2 / (4 * reserve4 r rho4)
       + b5 ^ 2 / (4 * reserve5 rho5) := by
-  have hp4 := residual_power_bound u4 l4 rho4 b4 hrho4 hb4 hres4
-  have hp5 := residual_power_bound u5 l5 rho5 b5 hrho5 hb5 hres5
+  have hp4 := residual_power_bound u4 l4 rho4 b4 hres4
+  have hp5 := residual_power_bound u5 l5 rho5 b5 hres5
   have hraw :
       Vdot ≤ -decayRate r * V
         + (-reserve4 r rho4 * u4 ^ 2 + b4 * |u4|)
@@ -109,13 +107,12 @@ theorem block45_pareto_mixed_residual_decay
 
 /--
 The T-P5-040 polynomial quarter-barrier gate is exactly the cross-multiplied
-charge inequality in the positive reserve variables; no square roots or
-state-dependent Young parameters are introduced.
+charge inequality in the reserve variables; no square roots or state-dependent
+Young parameters are introduced.  Positivity is needed only by consumers that
+subsequently divide by the reserves.
 -/
 theorem block45_pareto_quarter_gate_cross
     (r rho4 rho5 B4 B5 : ℝ)
-    (hA4 : 0 < A4 r rho4)
-    (hA5 : 0 < A5 rho5)
     (hgate :
       300000 * B4 * A5 rho5 + 1200 * B5 * A4 r rho4
         < (109 - r) * A4 r rho4 * A5 rho5) :
@@ -131,8 +128,6 @@ additive witnesses.
 -/
 theorem block45_pareto_bias_first_exit_gate
     (r V Q Vdot u4 u5 l4 l5 rho4 rho5 b4 b5 B4 B5 : ℝ)
-    (hrho4 : 0 ≤ rho4) (hrho5 : 0 ≤ rho5)
-    (hb4 : 0 ≤ b4) (hb5 : 0 ≤ b5)
     (hQ : decayRate r * V + a4 r * u4 ^ 2 + a5 * u5 ^ 2 ≤ Q)
     (hVdot : Vdot = -Q - u4 * l4 - u5 * l5)
     (hres4 : |l4| ≤ rho4 * |u4| + b4)
@@ -148,8 +143,8 @@ theorem block45_pareto_bias_first_exit_gate
     Vdot < 0 := by
   have ht4 : 0 < reserve4 r rho4 := (reserve4_pos_iff r rho4).2 hA4
   have ht5 : 0 < reserve5 rho5 := (reserve5_pos_iff rho5).2 hA5
-  have hp4 := residual_power_bound u4 l4 rho4 b4 hrho4 hb4 hres4
-  have hp5 := residual_power_bound u5 l5 rho5 b5 hrho5 hb5 hres5
+  have hp4 := residual_power_bound u4 l4 rho4 b4 hres4
+  have hp5 := residual_power_bound u5 l5 rho5 b5 hres5
   have hraw :
       Vdot ≤ -decayRate r * V
         + (-reserve4 r rho4 * u4 ^ 2 + b4 * |u4|)
@@ -175,7 +170,7 @@ theorem block45_pareto_bias_first_exit_gate
             + (-reserve5 rho5 * u5 ^ 2 + b5 * |u5|))
         ≤ B4 * reserve5 rho5 + B5 * reserve4 r rho4 := by
     nlinarith [hm4, hm5]
-  have hcross := block45_pareto_quarter_gate_cross r rho4 rho5 B4 B5 hA4 hA5 hgate
+  have hcross := block45_pareto_quarter_gate_cross r rho4 rho5 B4 B5 hgate
   have hscaled :
       4 * (reserve4 r rho4 * reserve5 rho5) *
           ((-reserve4 r rho4 * u4 ^ 2 + b4 * |u4|)
@@ -187,8 +182,16 @@ theorem block45_pareto_bias_first_exit_gate
       (-reserve4 r rho4 * u4 ^ 2 + b4 * |u4|)
           + (-reserve5 rho5 * u5 ^ 2 + b5 * |u5|)
         < decayRate r / 4 := by
-    exact (mul_lt_mul_left hden).mp hscaled
-  nlinarith [hraw, hcharge, hVstar]
+    by_contra hnot
+    have hge :
+        decayRate r / 4 ≤
+          (-reserve4 r rho4 * u4 ^ 2 + b4 * |u4|)
+            + (-reserve5 rho5 * u5 ^ 2 + b5 * |u5|) := le_of_not_gt hnot
+    have hm := mul_le_mul_of_nonneg_left hge (le_of_lt hden)
+    exact (not_le_of_gt hscaled) hm
+  rw [hVstar] at hraw
+  have hcancel : -decayRate r * (1 / 4 : ℝ) + decayRate r / 4 = 0 := by ring
+  linarith
 
 /-- The zero-relative specialization is exactly the earlier T-P5-039 additive gate. -/
 theorem block45_zero_relative_gate_reduces (r B4 B5 : ℝ) :
@@ -209,8 +212,6 @@ cross-multiplied statement corresponding to
 -/
 theorem block45_pareto_incremental_gate_cross
     (r rho4 rho5 G4 G5 : ℝ)
-    (hA4 : 0 < A4 r rho4)
-    (hA5 : 0 < A5 rho5)
     (hgate :
       900000 * G4 * A5 rho5 + 3600 * G5 * A4 r rho4
         < (109 - r) * A4 r rho4 * A5 rho5) :
