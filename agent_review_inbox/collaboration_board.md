@@ -2969,6 +2969,19 @@ registry=0、formal certificate gate 关闭。
 下一轮把 source/refinement 分成 affine defect chart 与 vanis2 runtime packet 两条
 主线，Poincare/Godel 分别维护已有 Lean path 与 value-level envelope 边界。
 
+### 梁智炜 · revision 805–806：执行边界与 initial value 继续开放
+
+四份 revision-805 review 已整合：BODY6 probe 只有待执行的 pinned receipt 清单；
+active-energy 给出 `|T-W| <= 2 gamma r + |eps| m r^2/2` 的条件 envelope，未提供
+同源 `m/gamma`；Schur affine chart 没找到 actual `d=A y+b` 或 dual/D bounds；
+vanis2 没找到同次 `M_R/F_R/ahat` capture。Godel 随后确认
+`initial_storage_upper` 仍不是同一 raw `Vfull_DH/Vshift_DH` 在 X0 上的函数级
+uniform bound，且已有 scalar 的 cross-term allowance 不能替代 raw anchor/linear
+项证明。
+
+revision=806、registry=0、formal certificate gate 继续关闭。下一步明确分为
+GitHub Lean probe receipt 与外部同次 runtime/source capture 两条证据边界。
+
 ### 梁智炜 · revision 804 auxiliary bottleneck dispatch
 
 Sartre 与 Poincare 继续处理 affine defect chart 和 BODY6 pinned contract；Godel

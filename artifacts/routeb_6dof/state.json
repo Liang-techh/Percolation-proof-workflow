@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 804,
+  "revision": 806,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -8325,6 +8325,21 @@
             "source_commit": "03ef9a97394449967e2b29fbc984ebd3d565e957",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-BUDGET-CLOSURE-20260908T105720.md",
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART-20260908T110210.md",
+            "record_kind": "review_result",
+            "review_sha256": "D28B545555034CDDCE591B07299BE07FC51D339459B37747507745398406E43F",
+            "task_id": "GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART",
+            "source_agent": "Codex-signed-affine-source-audit",
+            "created_at": "2026-09-08T11:02:10-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_signed_affine_defect_chart",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "c7ab49a3c55c002076ae18f325eedc8a146ac9bd",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART-20260908T110210.md",
+            "admission_label": "pending"
           }
         ],
         "conditional_children": [
@@ -16016,6 +16031,51 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-SOURCE-SEMANTICS-HALF-ACTIVE-codex-20260908T1100.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-ENERGY-NORMALIZATION-20260908T170235Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "01FA475EA8904A0667EBCF480A5ED91796E14A117409CDB07E04D6D9E7E01336",
+            "task_id": "GH-MATH-P4-ACTIVE-ENERGY-NORMALIZATION",
+            "source_agent": "codex-block-ball-envelope-lane",
+            "created_at": "2026-09-08T17:02:35Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_active_energy_normalization",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-ENERGY-NORMALIZATION-20260908T170235Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-VANIS2-RUNTIME-REFINEMENT-codex-20260908T110215.md",
+            "record_kind": "review_result",
+            "review_sha256": "DDF425345CC97A58BA1AE5F5FA24CABFD0B7F72F64DCB7353D27216F77841286",
+            "task_id": "GH-MATH-P4-VANIS2-RUNTIME-REFINEMENT",
+            "source_agent": "codex-vanis2-runtime-receipt-lane",
+            "created_at": "2026-09-08T11:02:15-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_vanis2_runtime_refinement",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-VANIS2-RUNTIME-REFINEMENT-codex-20260908T110215.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-INITIAL-BOUND-BINDING-LOCAL-20260908T170434Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "458A131A25E63CE7DDAB16E939372A65CC3E61CA7781B1D4B99A826839A1BDAA",
+            "task_id": "GH-MATH-P4-ACTIVE-INITIAL-BOUND-BINDING",
+            "source_agent": "codex-minimal-initial-binding-audit",
+            "created_at": "2026-09-08T17:04:34Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_active_initial_bound_binding",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-INITIAL-BOUND-BINDING-LOCAL-20260908T170434Z.md",
             "admission_label": "pending"
           }
         ]
@@ -39961,6 +40021,27 @@
               "actual_sha256": "FF5E2DFBCF0375D96CCE232C739E0098381CE5B1828F7142DAE23AC3E86A68FC"
             },
             "review_file": "agent_review_inbox/review-GH-LEAN-BODY6-PATHCONTRACT-RECEIPT-20260908T105755.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-LEAN-BODY6-PATHCONTRACT-RECEIPT-20260908T110208.md",
+            "record_kind": "review_result",
+            "review_sha256": "7DF903AA41CE5191DE359051687AEB78929876F4B75760A855AE2FF7EE8A7EC0",
+            "task_id": "GH-LEAN-BODY6-PATHCONTRACT-RECEIPT",
+            "source_agent": "codex-local",
+            "created_at": "2026-09-08T11:02:08-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_body6_pathcontract_receipt",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "c7ab49a3c55c002076ae18f325eedc8a146ac9bd",
+            "artifact_binding_audit": {
+              "status": "BOUND",
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_PATHCONTRACT_REASSIGNED_20260908.lean",
+              "declared_sha256": "FF5E2DFBCF0375D96CCE232C739E0098381CE5B1828F7142DAE23AC3E86A68FC",
+              "actual_sha256": "FF5E2DFBCF0375D96CCE232C739E0098381CE5B1828F7142DAE23AC3E86A68FC"
+            },
+            "review_file": "agent_review_inbox/review-GH-LEAN-BODY6-PATHCONTRACT-RECEIPT-20260908T110208.md",
             "admission_label": "pending"
           }
         ]
@@ -78692,6 +78773,72 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T17:05:05.710223+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-LEAN-BODY6-PATHCONTRACT-RECEIPT-20260908T110208.md",
+      "record_kind": "review_result",
+      "review_sha256": "7DF903AA41CE5191DE359051687AEB78929876F4B75760A855AE2FF7EE8A7EC0",
+      "task_id": "GH-LEAN-BODY6-PATHCONTRACT-RECEIPT",
+      "classification": "pending_body6_pathcontract_receipt",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "artifact_binding_status": "BOUND",
+      "node_id": "1ea06cbee9b54297913156cfb0b201ce"
+    },
+    {
+      "at": "2026-09-08T17:05:05.710685+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-ENERGY-NORMALIZATION-20260908T170235Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "01FA475EA8904A0667EBCF480A5ED91796E14A117409CDB07E04D6D9E7E01336",
+      "task_id": "GH-MATH-P4-ACTIVE-ENERGY-NORMALIZATION",
+      "classification": "pending_active_energy_normalization",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T17:05:05.710898+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART-20260908T110210.md",
+      "record_kind": "review_result",
+      "review_sha256": "D28B545555034CDDCE591B07299BE07FC51D339459B37747507745398406E43F",
+      "task_id": "GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART",
+      "classification": "pending_signed_affine_defect_chart",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e7b1df1835f4deba06b11a8182f6719"
+    },
+    {
+      "at": "2026-09-08T17:05:05.711287+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-VANIS2-RUNTIME-REFINEMENT-codex-20260908T110215.md",
+      "record_kind": "review_result",
+      "review_sha256": "DDF425345CC97A58BA1AE5F5FA24CABFD0B7F72F64DCB7353D27216F77841286",
+      "task_id": "GH-MATH-P4-VANIS2-RUNTIME-REFINEMENT",
+      "classification": "pending_vanis2_runtime_refinement",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T17:05:29.792920+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-INITIAL-BOUND-BINDING-LOCAL-20260908T170434Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "458A131A25E63CE7DDAB16E939372A65CC3E61CA7781B1D4B99A826839A1BDAA",
+      "task_id": "GH-MATH-P4-ACTIVE-INITIAL-BOUND-BINDING",
+      "classification": "pending_active_initial_bound_binding",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -82348,5 +82495,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "ff07fab04fb5448a6bf86ead54f209e9a90ba6e0fcf0cd61f33d1d179d07b4e7"
+  "state_checksum": "ee3ca41e0f05760cebc8dacd02e0e6b2ea82721e55b2d5bbee60faf132924d6f"
 }

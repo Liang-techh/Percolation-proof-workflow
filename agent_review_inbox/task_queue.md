@@ -3686,3 +3686,18 @@ revision 804 将主瓶颈收缩为两个互不重复的 source/refinement 方向
 
 不允许把 historical single-point sanity、analytic remainder 或 conditional Schur
 阈值重命名为 vanis2 actual evidence；不做全量回归或本机 Lean。
+
+## 2026-09-08 — post-revision-806 execution-boundary split
+
+本轮收割把剩余工作分成“可由 GitHub Lean agent 执行的 probe”和“必须取得外部
+同次运行数据的 source capture”两类：
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-LEAN-BODY6-PATHCONTRACT-RECEIPT` | Poincare the 6th / GitHub Lean lane | 对 candidate+probe 返回 pinned compile/OLean/axiom receipt；编译成功也不提供 physical inhabitant |
+| `GH-MATH-P4-VANIS2-RUNTIME-REFINEMENT` | James the 6th / GitHub runtime lane | 取得显式 mu=1e-6、h=1e-5 的同次 M_R/F_R/ahat bits 与 exact decoded residual |
+| `GH-MATH-P4-ACTIVE-INITIAL-BOUND-BINDING` | Godel the 6th | 绑定 raw storage 到 initial_storage_upper 的同函数、同 anchor、同 threshold 证明 |
+| `GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART` | Sartre the 6th | 绑定 d=A y+b 与 signed dual/D bounds；旧 analytic absolute remainder 禁止重命名 |
+
+没有实际 capture、raw storage inequality 或 source inhabitant 时，所有候选继续
+保持 pending；不运行全量回归或本机 Lean。
