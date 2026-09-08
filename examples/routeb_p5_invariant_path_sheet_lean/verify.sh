@@ -48,10 +48,11 @@ for theorem in \
   endpoint_counter_midpoint_exits_unit_box \
   zero_tangent_energy_everywhere \
   zero_tangent_energy_does_not_certify_base_box; do
-  grep -F "'RouteBP5InvariantPathSheetCoverage.$theorem' depends on axioms:" "$OUT" >/dev/null || {
+  if ! grep -F "'RouteBP5InvariantPathSheetCoverage.$theorem' depends on axioms:" "$OUT" >/dev/null \
+      && ! grep -F "'RouteBP5InvariantPathSheetCoverage.$theorem' does not depend on any axioms" "$OUT" >/dev/null; then
     echo "missing axiom report for $theorem" >&2
     exit 3
-  }
+  fi
 done
 
 if grep -F "sorryAx" "$OUT" >/dev/null; then
