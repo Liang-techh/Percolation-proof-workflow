@@ -1,0 +1,81 @@
+{
+  "schema": "quotient-clm-execution-receipt-v1",
+  "task_id": "GH-LEAN-FLT-QUOTIENT-CLM-COMPARATOR-HANDOFF",
+  "status": "OPEN_UNCOMPILED",
+  "admission": "external_catalog_pending",
+  "executed": false,
+  "run": {
+    "repository": null,
+    "checkout_sha": null,
+    "workflow_sha": null,
+    "actions_shas": [],
+    "run_url": null,
+    "job_id": null,
+    "attempt": null,
+    "runner": null,
+    "started_at": null,
+    "finished_at": null
+  },
+  "pins": {
+    "source_repository": "https://github.com/anthropics/fermats-last-theorem",
+    "source_commit": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef",
+    "source_blob": "eab66288efedd1e634203abb927805413a716aa7",
+    "source_sha256": "a8c1204b32f3b539ef31d59190ae195cc802bfa453e18e53eaea565898ebb4e2",
+    "source_mathlib": "db584cd6d46c92f209a44c0f1c829460d327499d",
+    "target_lean": "leanprover/lean4:v4.33.1",
+    "target_mathlib": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "actual_lean_version_output": null,
+    "actual_target_mathlib": null,
+    "lock_hashes": []
+  },
+  "inputs": {
+    "candidate_sha256": "777d4ae6cd3fa60fb0f988f5b1e263e2cb07536f7ed83113f99aa102615e9e97",
+    "probe_sha256": "159ddb493ca734675fc6f211e021ca05addb3cb442e6dab5ef71e7c6bd8c936b",
+    "actual_compiled_hashes": [],
+    "overlay_manifest_sha256": null,
+    "static_import_index_sha256": "f420a9d0549e5538e7122ff3cac36bedf773441483f53982ed61605d42549da7",
+    "compiler_import_manifest_sha256": null,
+    "static_vs_compiler_reconciled": false,
+    "normalization_notes": null,
+    "license_notice_hashes": []
+  },
+  "compile": {
+    "status": "NOT_RUN",
+    "commands": [],
+    "olean_artifacts": [],
+    "cache_provenance": null
+  },
+  "audit": {
+    "status": "NOT_RUN",
+    "declaration_types": [],
+    "axiom_outputs": [],
+    "sorry_scan_log": null,
+    "dependency_axioms_accepted": false
+  },
+  "comparator": {
+    "status": "MISSING",
+    "tool": null,
+    "version_or_sha": null,
+    "source_target_statement_map": [],
+    "command": null,
+    "cwd": null,
+    "exit_code": null,
+    "stdout_artifact": null,
+    "stderr_artifact": null,
+    "acceptance_output": null,
+    "cross_pin_method": null
+  },
+  "failure": {
+    "classification": null,
+    "details": null
+  },
+  "application": {
+    "physical_source_bound": false,
+    "domain_witness": false,
+    "coverage": false
+  },
+  "registry_mutated": false,
+  "verified": false,
+  "receipt_sha256": null,
+  "self_hash_canonicalization": null
+}

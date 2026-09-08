@@ -3783,3 +3783,18 @@ Lean receipt 时保持 pending。禁止全量回归、重复旧 rank/Young/omiss
 
 流川枫永久退役，不再向其派发或等待回执。禁止全量回归、改阈值捷径、用 synthetic
 point 替代 actual source，或把 exact candidate 直接写入 verified registry。
+
+补充派工：James the 6th 已接手流川枫遗留的
+`GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART`，只寻找同配置 actual/source 的
+`d=A y+b`、dual projection 与 quadratic `D` witness；没有 packet 时回传字段级
+obstruction，不重复既有 Schur/Young 审计。
+
+FLT 执行包现已冻结，下一次 GitHub Lean 排班优先执行
+`GH-LEAN-FLT-QUOTIENT-CLM-COMPARATOR-HANDOFF`：只在 pinned isolated overlay 中
+编译 candidate/probe，记录真实 import manifest、OLean、axiom/sorry 扫描和
+comparator 状态；静态 2877-module closure 不得冒充编译成功，也不得触发 registry
+promotion。若 comparator 未获批准，明确返回 `COMPARATOR_MISSING`。
+
+H_acc seam 也已纳入 DAG：后续只在出现真实 source export 时补
+`SEAM_SOURCE/EVAL/ARRAY/ALIAS/BODY/FOLD` witness；当前保持 `OPEN_H_ACC`，不得用
+occurrence line/hash、synthetic evaluator 或 Float64 摘要代替语义证明。

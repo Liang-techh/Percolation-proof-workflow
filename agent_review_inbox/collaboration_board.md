@@ -3064,3 +3064,20 @@ joint6 physical recovery 同时冻结了 principal exact contract
 `A u+h v=p+z_B` 及完整 signed adjugate numerator；synthetic Fraction checks
 通过且负控拒绝，但没有 actual `ahat/z_B`、det lower、N bound 或 runtime receipt。
 revision=813 后仍为 `registry=0`、`formal_certificate_allowed=false`。
+
+### 梁智炜 · revision 814：FLT Lean 执行包冻结
+
+FLT quotient/CLM handoff 已形成下一次 GitHub Lean 排班所需的隔离包：修正后的
+Lean-header 静态扫描 closure 含 2877 个模块，`missing/ambiguous/unparsed=0`，并
+冻结 source/target pin、依赖锁、overlay、编译命令、axiom/sorry/comparator receipt
+模板及失败分类。该静态清单不是 Lean parser 或编译 receipt；下一步只需 GitHub
+agent 在精确环境执行两个 candidate/probe 模块并回传证据。当前仍为
+`OPEN_UNCOMPILED`、external catalog pending，Route-B registry=0、formal gate 关闭。
+
+### 梁智炜 · revision 815：H_acc source seam 细化
+
+额外收割到 H_acc lane 的 instance-indexed source seam：它把 scalar DAG、array
+mapping、source use occurrence、六步 `M +=` fold 和 target bridge 分离成六类
+必须同源的 witness。当前 source export、array mapping、source updates、runtime
+observation、interval candidate 全部缺失，checker exit=3；该结果帮助明确
+percolation frontier，但不产生 H_acc theorem，也不改变 Route-B gate。

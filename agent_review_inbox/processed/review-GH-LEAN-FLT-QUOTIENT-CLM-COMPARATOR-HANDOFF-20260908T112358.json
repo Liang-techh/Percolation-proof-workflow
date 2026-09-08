@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-LEAN-FLT-QUOTIENT-CLM-COMPARATOR-HANDOFF-20260908T112358.md",
+  "record_kind": "review_result",
+  "review_sha256": "1CE68C43CE7C8A536D91171B92FFEC35EB63C4393BAFD98C33E7A9AEAF6AE0BF",
+  "task_id": "GH-LEAN-FLT-QUOTIENT-CLM-COMPARATOR-HANDOFF",
+  "source_agent": "codex-local",
+  "created_at": "2026-09-08T11:23:58-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_quotient_clm_comparator_handoff",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "f911265cd533c174efbf84085991ffd9d802aa9b",
+  "review_file": "agent_review_inbox/review-GH-LEAN-FLT-QUOTIENT-CLM-COMPARATOR-HANDOFF-20260908T112358.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:27:31.819253+00:00"
+}
