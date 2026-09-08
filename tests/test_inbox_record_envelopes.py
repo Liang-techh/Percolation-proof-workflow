@@ -136,3 +136,22 @@ def test_longest_known_task_prefix_wins(tmp_path):
         encoding="utf-8",
     )
     assert resolve_task_id(review, record_header(review)) == "T-P4-033-O1-body6-slice"
+
+
+def test_known_handoff_task_id_date_suffix_normalizes(tmp_path):
+    review = tmp_path / "handoff-T-FLT-S1-AVERAGING-CLM-20270101.md"
+    review.write_text(
+        "---\nkind: handoff\ntask_id: T-FLT-S1-AVERAGING-CLM-HANDOFF-20270101\n"
+        "review_id: H-FLT-S1-20270101\n---\n",
+        encoding="utf-8",
+    )
+    assert resolve_task_id(review, record_header(review)) == "T-FLT-S1-AVERAGING-CLM"
+
+
+def test_unknown_handoff_task_id_remains_unrouted(tmp_path):
+    review = tmp_path / "handoff-T-UNKNOWN-20270101.md"
+    review.write_text(
+        "---\nkind: handoff\ntask_id: T-UNKNOWN-HANDOFF-20270101\n---\n",
+        encoding="utf-8",
+    )
+    assert resolve_task_id(review, record_header(review)) == "T-UNKNOWN-HANDOFF-20270101"

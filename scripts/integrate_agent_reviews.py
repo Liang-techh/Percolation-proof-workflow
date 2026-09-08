@@ -660,6 +660,14 @@ def resolve_task_id(path: Path, header: dict[str, str]) -> str:
     """
     explicit = str(header.get("task_id", "")).strip()
     if explicit:
+        if explicit in TASK_TARGETS:
+            return explicit
+        # Handoff envelopes may carry a bounded date suffix in their explicit
+        # task id.  Normalize only the exact canonical-id + HANDOFF + YYYYMMDD
+        # form; arbitrary explicit ids remain authoritative and unrouted.
+        match = re.fullmatch(r"(.+)-HANDOFF-(\d{8})", explicit)
+        if match and match.group(1) in TASK_TARGETS:
+            return match.group(1)
         return explicit
     candidates: list[str] = []
     for raw in (header.get("review_id", ""), path.stem):
