@@ -254,6 +254,18 @@ TASK_TARGETS = {
     "GH-MATH-P4-JOINT6-WEIGHTED-CONSTRAINTS": (
         "P4.true_dh_port_source_binding",
         "pending_joint6_weighted_constraints"),
+    "GH-MATH-P4-DH-CONTROLLER-SOURCE-CORRECTION": (
+        "P4.true_dh_port_source_binding",
+        "pending_dh_controller_source_correction"),
+    "GH-LEAN-FLT-QUOTIENT-CLM-PINNED-HANDOFF": (
+        None,
+        "flt_quotient_clm_pinned_handoff"),
+    "GH-MATH-P4-ACTIVE-INITIAL-BOUND-BINDING": (
+        "P4.true_dh_port_source_binding",
+        "pending_active_initial_bound_binding"),
+    "GH-MATH-P4-SOURCE-ROWS-WEIGHTED-PACKET": (
+        "P4.true_dh_port_source_binding",
+        "pending_source_rows_weighted_packet"),
     # New GitHub proof lanes use descriptive uppercase suffixes.  Route them
     # to existing DAG parents as pending metadata only; no admission path is
     # implied by these aliases.

@@ -3561,6 +3561,18 @@ source contract，而不是继续扩展候选数量：
 Lean receipt 和 comparator 就不改变 P4/M4 closure；只保留新的 review/sidecar
 和 provenance。
 
+## 2026-09-08 — post-revision-794 mixed source/FLT batch
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-MATH-P4-DH-CONTROLLER-SOURCE-CORRECTION` | Sartre the 6th | 完整 `X*tau` controller source equation 与当前 builder 缺项的精确修复/obstruction |
+| `GH-LEAN-FLT-QUOTIENT-CLM-PINNED-HANDOFF` | Poincare the 6th | FLT quotient continuous-linear sidecar 的 current-pin handoff，保留 typeclass/provenance |
+| `GH-MATH-P4-ACTIVE-INITIAL-BOUND-BINDING` | Godel the 6th | active initial scalar 到同一 value-level V/X0/threshold 的绑定或 obstruction |
+| `GH-MATH-P4-SOURCE-ROWS-WEIGHTED-PACKET` | James the 6th | complete rows 与 signed weighted packet 的同源接线，保留 mismatch/physical-row 边界 |
+
+该批不修改外部项目，不运行本机 Lean 或全回归；FLT 结果即使形成可编译
+sidecar，也只进入 external catalog/pending，不进入 Route-B verified registry。
+
 ## 2026-09-08 — post-revision-788 bottleneck split
 
 本轮消费接管结果后，将 source-critical frontier 进一步拆成四条互不重复的

@@ -2845,3 +2845,11 @@ review 给出两条 signed measurements `w4/w5`、带 defect 的恢复式、保�
 `w4=w5=0` 仍需实际 source/configuration witness；定义 weighted rows 不能凭空
 生成 source equality，且 measurement mismatch 必须显式保留。P4/M4 继续
 fail-closed。
+
+### 梁智炜 · revision 794 后续 mixed source/FLT batch
+
+下一批已派发：Sartre 攻 DH controller 完整 source equation，Poincare 处理
+Anthropic FLT quotient/continuous-linear current-pin handoff，Godel 核对 active
+initial-bound binding，James 核对 complete rows 与 signed weighted packet。
+四条 lane 分别覆盖主线 source、外部复用、存储值绑定和 residual 接线，结果
+继续经过 artifact hash/provenance audit，保持 fail-closed。
