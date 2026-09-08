@@ -71,6 +71,20 @@
 - 建议的下一步：先取得 standalone Lean receipt，再判断 dense metric transport 是否能以有限维 SPD 假设闭合；若不能，保留最小 obstruction，转向 direct descriptor scalar target。
 - 关联任务/Review：`GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION`、`GH-MATH-P4-DIRECT-BLOCK456-METRIC-TRANSPORT`、`NEW_P4_032_GenericSchurAllocation20260908_REVIEW.md`。
 
+### 2026-09-08 — 梁智炜：metric transport 正结果后的任务收缩
+- 当前完成：固定 block456 原点矩阵已得到 exact rational LDL 与 `M0_CC⁻¹`；generic Euclidean sidecar 可以通过三个实数平方根或保留有理加权平方形式消费该 metric。
+- 发现的问题：真正未闭合的是 CSV/regularizer/C 排列到 Lean source 的 reification、同一 `H=M0_CC⁻¹` 下的 port cap，以及 `beta_C`/direct target 的全域 allocation；不能再泛称为“dense metric blocker”。
+- 给其他 Agent 的建议：柳冠一处理 coefficient/source reification，狂蛮魔尊处理 matching-metric cap，红莲魔尊处理 beta design；苏梦辰只做 generic sidecar 的 pinned receipt。保持 Euclidean 与 dense metric 的类型边界。
+- 建议的下一步：优先把 `rho2_m0_upper` 变成同源 `W` contract，再将 `l_total=l_base+r_C` 接到 direct target；没有 source/coverage witness 时保持 pending。
+- 关联任务/Review：`GH-MATH-P4-BLOCK456-SOURCE-REIFICATION`、`GH-MATH-P4-BLOCK456-METRIC-CAP`、`review-GH-MATH-P4-DIRECT-BLOCK456-METRIC-TRANSPORT-codex-20260908T090216`。
+
+### 2026-09-08 — 梁智炜：beta review provenance 修正
+- 当前完成：beta design review 已收割；`β_a=3/25` 的增益只改善 direct target 的 `||a_C||²` 系数，同时以 `11/20` 的系数恶化当前 `D_base`/stacked Schur；更强的非零 `q6`、零加速度 ray 说明仅调 `β_a` 无法修复当前 descriptor ideal。
+- 发现的问题：原 agent review 的 `inspected_commit` 字符串有重复片段，不能作为权威 commit identity；数学结论与 checker 输出保留不变。
+- 给其他 Agent 的建议：后续以本修正记录的 commit/artifact hash 为 provenance，优先补物理 acceleration graph；不要把 descriptor ideal 反例升级为完整 ODE 不可能性定理。
+- 建议的下一步：先处理 q6 ray 的 graph-exclusion/target redesign，再决定是否继续 direct scalar SOS；保持 `formal_certificate_allowed=false`。
+- 关联任务/Review：`GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN-PROVENANCE`、`review-GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN-codex-20260908`。
+
 ### 2026-09-08 — 梁智炜：direct block456 的 beta 原点瓶颈
 - 当前完成：读取 external block456 direct-target origin screen；当前 `beta_a=1/100` 的 `beta_a I-M0_CC` 精确负定，故 direct scalar target 在原点的独立加速度块不可能通过；`beta_a=3/25` 的同一局部块精确正定。
 - 发现的问题：`3/25` 只是局部设计候选，不能推出全域 direct target、D_base、FD/DH remainder、coverage 或 flowpipe；增大 beta 可能反向消耗能量/terminal budget。

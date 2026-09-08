@@ -180,8 +180,11 @@ Schur closure 的数学 sidecar 已收割为 pending；下一批只消费这一�
 | task | owner | target | bounded deliverable |
 |---|---|---|---|
 | `GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION` | 苏梦辰 | `NEW_P4_032_GenericSchurAllocation20260908.lean` | standalone pinned compile/repair；逐条 `#print axioms`、placeholder scan、import closure；不做 source/admission |
+| `GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION-REPAIR` | 苏梦辰 | `NEW_P4_032_GenericSchurAllocation20260908.lean` | 仅消费最新 equality-to-inequality repair；以当前候选 hash 做 focused receipt，保留原始失败/旧 hash，不做 source/admission |
 | `GH-MATH-P4-DIRECT-BLOCK456-METRIC-TRANSPORT` | 古月方源 | block456 direct target 与 generic Euclidean sidecar | 只研究 `M0_CC⁻¹` dense metric 到 Euclidean/linear-map 形式的最小 exact transport；若缺 SPD/square-root witness，提交 obstruction |
 | `GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN` | 红莲魔尊 | `routeB_compact_block456_direct_target_origin_beta_audit.csv` 与 direct scalar target | 以原点必要条件 `beta_a I-M0_CC ⪰ 0` 为起点，研究 `beta_a=3/25` 的全域预算/能量代价；若不能闭合，提交精确参数 obstruction，不重复原点审计 |
+| `GH-MATH-P4-BLOCK456-SOURCE-REIFICATION` | 柳冠一 | metric review 中的 `M0_CC`、regularizer、C 排列和 CSV provenance | 只构造固定原点 `M0_CC/M0_CC⁻¹` 的 exact source-to-rational reification contract；不得把 CSV 算术直接当 Lean theorem 或 source closure |
+| `GH-MATH-P4-BLOCK456-METRIC-CAP` | 狂蛮魔尊 | `routeB_compact_block456_port_bi_partition_probe.jl` 的 `rho2_m0_upper` 语义 | 只检查同一 `M0_CC⁻¹` metric 下 `r_CᵀH r_C≤W` 的最小 typed budget；区分 `rho2_upper`、`rho2_bchol_upper` 与 matching metric，不跑全回归 |
 
 上述两个任务承接数学瓶颈，不替代既有完整 PATHCONTRACT 或 Schur source-binding
 任务；所有结果保持 `pending`，不得把 standalone compile 当作 physical closure。

@@ -161,12 +161,24 @@ TASK_TARGETS = {
     "GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION": (
         "P4.residual_schur_pmi",
         "pending_generic_finite_dimensional_schur_allocation_receipt"),
+    "GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION-REPAIR": (
+        "P4.residual_schur_pmi",
+        "pending_generic_schur_allocation_repair_receipt"),
     "GH-MATH-P4-DIRECT-BLOCK456-METRIC-TRANSPORT": (
         "P4.true_dh_port_source_binding",
         "pending_direct_block456_metric_transport"),
     "GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN": (
         "P4.residual_schur_pmi",
         "pending_direct_block456_beta_design"),
+    "GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN-PROVENANCE": (
+        "P4.residual_schur_pmi",
+        "pending_direct_block456_beta_design_provenance_correction"),
+    "GH-MATH-P4-BLOCK456-SOURCE-REIFICATION": (
+        "P4.true_dh_port_source_binding",
+        "pending_block456_metric_source_reification"),
+    "GH-MATH-P4-BLOCK456-METRIC-CAP": (
+        "P4.true_dh_port_source_binding",
+        "pending_block456_matching_metric_cap"),
     # New GitHub proof lanes use descriptive uppercase suffixes.  Route them
     # to existing DAG parents as pending metadata only; no admission path is
     # implied by these aliases.

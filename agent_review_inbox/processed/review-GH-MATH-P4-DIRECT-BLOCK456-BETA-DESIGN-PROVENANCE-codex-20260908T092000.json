@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN-PROVENANCE-codex-20260908T092000.md",
+  "record_kind": "review_result",
+  "review_sha256": "BE126815DE807875F1176F347169A07DD7443DECF04F36B655DFD6542B2FBFF8",
+  "task_id": "GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN-PROVENANCE",
+  "source_agent": "梁智炜",
+  "created_at": "2026-09-08T09:20:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_direct_block456_beta_design_provenance_correction",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "29fc6330213f11f34e618d3857a599c44d7c17c2",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN-PROVENANCE-codex-20260908T092000.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T15:09:45.643678+00:00"
+}

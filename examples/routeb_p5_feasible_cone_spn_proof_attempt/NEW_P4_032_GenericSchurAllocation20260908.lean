@@ -101,9 +101,12 @@ theorem relaxed_target_le_exact_total
     unfold schurNumerator
     field_simp [hden]
     ring
+  have halloc : 0 ≤ schurNumerator
+      beta (beta - lam * W - lam / (lam - 1) * sq ell) lam W ell :=
+    le_of_eq hzero.symm
   exact combined_of_port_budget beta
     (beta - lam * W - lam / (lam - 1) * sq ell) lam W ell r hlam hport
-    hzero
+    halloc
 
 /-- If the relaxed allocation is nonnegative, it also supplies the exact
 total-residual floor without any extra port debit. -/

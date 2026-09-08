@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 769,
+  "revision": 772,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -8154,6 +8154,67 @@
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION-codex-20260908T090500.md",
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION-REPAIR-codex-20260908T091500.md",
+            "record_kind": "review_result",
+            "review_sha256": "19115DBAC9D209906F60515ECA2E1A9F77484F257E6432D79AE20A402A30FFE3",
+            "task_id": "GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION-REPAIR",
+            "source_agent": "梁智炜",
+            "created_at": "2026-09-08T09:15:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_generic_schur_allocation_repair_receipt",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION-REPAIR-codex-20260908T091500.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN-codex-20260908.md",
+            "record_kind": "review_result",
+            "review_sha256": "93B050562CDBE088825C6C2DF59D7B477A6CB1241903AE116B3611C5799A6DEA",
+            "task_id": "GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN",
+            "source_agent": "codex-block456-beta-math-lane",
+            "created_at": "2026-09-08",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_direct_block456_beta_design",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN-codex-20260908.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN-codex-20260908.md",
+            "record_kind": "review_result",
+            "review_sha256": "EA7E916B772347EFAB65D800FAB09B06CAB006BF89B3D17EBD4650027B0B653D",
+            "task_id": "GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN",
+            "source_agent": "codex-block456-beta-math-lane",
+            "created_at": "2026-09-08",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_direct_block456_beta_design_revision",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "29fc6330213f11f34e618d3857a599c44d7c17c2",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN-codex-20260908.md",
+            "admission_label": "pending",
+            "correction_of_sha256": "93B050562CDBE088825C6C2DF59D7B477A6CB1241903AE116B3611C5799A6DEA"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN-PROVENANCE-codex-20260908T092000.md",
+            "record_kind": "review_result",
+            "review_sha256": "BE126815DE807875F1176F347169A07DD7443DECF04F36B655DFD6542B2FBFF8",
+            "task_id": "GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN-PROVENANCE",
+            "source_agent": "梁智炜",
+            "created_at": "2026-09-08T09:20:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_direct_block456_beta_design_provenance_correction",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "29fc6330213f11f34e618d3857a599c44d7c17c2",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN-PROVENANCE-codex-20260908T092000.md",
+            "admission_label": "pending"
           }
         ],
         "conditional_children": [
@@ -15339,6 +15400,21 @@
             "target_scope": "routeb_node",
             "source_commit": "154a11ebc578c93d4e4f670d2d4c414b00ac6eb7",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-SOURCE-ELLIPSOID-BINDING-codex-20260908T084123.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-METRIC-TRANSPORT-codex-20260908T090216.md",
+            "record_kind": "review_result",
+            "review_sha256": "3A6A5C87109CD54BEEB71FFFCA70FDE9876EBF05186A09160A86DAA0CD520EEA",
+            "task_id": "GH-MATH-P4-DIRECT-BLOCK456-METRIC-TRANSPORT",
+            "source_agent": "Codex-block456-metric-research",
+            "created_at": "2026-09-08T09:02:16.1036156-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_direct_block456_metric_transport",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "29fc6330213f11f34e618d3857a599c44d7c17c2",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-METRIC-TRANSPORT-codex-20260908T090216.md",
             "admission_label": "pending"
           }
         ]
@@ -77223,6 +77299,71 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "1e7b1df1835f4deba06b11a8182f6719"
+    },
+    {
+      "at": "2026-09-08T15:07:41.440187+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION-REPAIR-codex-20260908T091500.md",
+      "record_kind": "review_result",
+      "review_sha256": "19115DBAC9D209906F60515ECA2E1A9F77484F257E6432D79AE20A402A30FFE3",
+      "task_id": "GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION-REPAIR",
+      "classification": "pending_generic_schur_allocation_repair_receipt",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e7b1df1835f4deba06b11a8182f6719"
+    },
+    {
+      "at": "2026-09-08T15:07:41.440502+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-METRIC-TRANSPORT-codex-20260908T090216.md",
+      "record_kind": "review_result",
+      "review_sha256": "3A6A5C87109CD54BEEB71FFFCA70FDE9876EBF05186A09160A86DAA0CD520EEA",
+      "task_id": "GH-MATH-P4-DIRECT-BLOCK456-METRIC-TRANSPORT",
+      "classification": "pending_direct_block456_metric_transport",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T15:08:58.340735+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN-codex-20260908.md",
+      "record_kind": "review_result",
+      "review_sha256": "93B050562CDBE088825C6C2DF59D7B477A6CB1241903AE116B3611C5799A6DEA",
+      "task_id": "GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN",
+      "classification": "pending_direct_block456_beta_design",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e7b1df1835f4deba06b11a8182f6719"
+    },
+    {
+      "at": "2026-09-08T15:09:45.643410+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN-codex-20260908.md",
+      "record_kind": "review_result",
+      "review_sha256": "EA7E916B772347EFAB65D800FAB09B06CAB006BF89B3D17EBD4650027B0B653D",
+      "task_id": "GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN",
+      "classification": "pending_direct_block456_beta_design_revision",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e7b1df1835f4deba06b11a8182f6719"
+    },
+    {
+      "at": "2026-09-08T15:09:45.643678+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN-PROVENANCE-codex-20260908T092000.md",
+      "record_kind": "review_result",
+      "review_sha256": "BE126815DE807875F1176F347169A07DD7443DECF04F36B655DFD6542B2FBFF8",
+      "task_id": "GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN-PROVENANCE",
+      "classification": "pending_direct_block456_beta_design_provenance_correction",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e7b1df1835f4deba06b11a8182f6719"
     }
   ],
   "agent_requests": {},
@@ -80879,5 +81020,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "aa6b1190d7d469173a068b401c02048331b4169be9ba9d086e4be110f4a472a1"
+  "state_checksum": "f44d19cfd597d0bc8c3ebfadc919d6b9245a803cc11a82a6da67160085b28440"
 }
