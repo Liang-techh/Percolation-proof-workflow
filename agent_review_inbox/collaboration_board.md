@@ -2768,3 +2768,18 @@ equation witness 成为下一阶段唯一主瓶颈。
 同时派发一个独立 Lean-prep seam：形式化三维块方程前两行到二维 principal
 restriction 的 typed projection，保持 `a6` coupling/defect 外置；它只推进
 theorem decomposition，不改变 physical admission。
+
+### 梁智炜 · revision 787：source-semantics 收割与流川枫任务再分配
+
+`GH-MATH-P4-SOURCE-SEMANTICS-HALF-ACTIVE` 已整合。review 确认当前主要缺口
+不是再算 controller 系数，而是同一 decoded input/configuration 下的 source
+binding、FD/solve defect，以及实际 rows 4/5/6 的 `M*a=F+e` witness；旧
+factorized damping 与 `dhport_lib.jl` 还存在精确系数差异，不能静默修补。该叶
+保持 `CONTROLLER_CORRECTION_IDENTIFIED_ACTUAL_BALANCE_UNPROVEN`、pending，
+`registry=0`、`formal_certificate_allowed=false`。
+
+流川枫已不可用，本轮将遗留方向分给现役本地 agent：Sartre 接 adjugate
+source witness，Poincare 接 BODY6 typed path sidecar，James 接 Schur/PMI
+absorption，Godel 接 active-energy origin normalization。四条 lane 只交窄的
+immutable review；不做全回归、不改 registry、不把 source-independent 候选升级
+为物理证书。

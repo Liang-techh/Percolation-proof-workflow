@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 786,
+  "revision": 787,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -15639,6 +15639,21 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-ACTUAL-THREE-ROW-WITNESS-LOCAL-20260908T160325Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-SOURCE-SEMANTICS-HALF-ACTIVE-LOCAL-20260908T160907Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "2D1C6AB7031791661132A1363C3BCBED6C62E3EC0BE2262EB1C813F7EFBE4126",
+            "task_id": "GH-MATH-P4-SOURCE-SEMANTICS-HALF-ACTIVE",
+            "source_agent": "codex-half-active-semantics-lane",
+            "created_at": "2026-09-08T16:09:07Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_half_active_source_semantics",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-SOURCE-SEMANTICS-HALF-ACTIVE-LOCAL-20260908T160907Z.md",
             "admission_label": "pending"
           }
         ]
@@ -77870,6 +77885,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T16:13:31.580515+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-SOURCE-SEMANTICS-HALF-ACTIVE-LOCAL-20260908T160907Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "2D1C6AB7031791661132A1363C3BCBED6C62E3EC0BE2262EB1C813F7EFBE4126",
+      "task_id": "GH-MATH-P4-SOURCE-SEMANTICS-HALF-ACTIVE",
+      "classification": "pending_half_active_source_semantics",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -81526,5 +81554,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "e50c2f0e3d46712ae1d31a083eaeb44f119cb734c67a6eb5edd9d6bdf51104a5"
+  "state_checksum": "d46a66cdad0c84b002aa37e49cf8e742cda4b7ca2f825f82a299ed379f47aaef"
 }

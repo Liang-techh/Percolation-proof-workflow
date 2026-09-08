@@ -221,6 +221,15 @@ TASK_TARGETS = {
     "GH-MATH-P4-ACTUAL-THREE-ROW-WITNESS": (
         "P4.true_dh_port_source_binding",
         "pending_actual_three_row_source_witness"),
+    "GH-MATH-P4-SOURCE-SEMANTICS-HALF-ACTIVE": (
+        "P4.true_dh_port_source_binding",
+        "pending_half_active_source_semantics"),
+    "GH-MIXED-flowchuanfeng-schur-absorption": (
+        "P4.residual_schur_pmi",
+        "pending_reassigned_schur_absorption_review"),
+    "GH-MIXED-FLOWCHUANFENG-BODY6-PATH": (
+        "P4.O1.source_comparator.h_body_6.canonical_export",
+        "pending_reassigned_body6_path_review"),
     # New GitHub proof lanes use descriptive uppercase suffixes.  Route them
     # to existing DAG parents as pending metadata only; no admission path is
     # implied by these aliases.

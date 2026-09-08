@@ -3528,3 +3528,19 @@ factorized descriptor 或 `exact_ddq` 名称当作 runtime exactness。
 
 该候选只服务于 theorem decomposition，不能实例化真实 DH rows，也不能替代
 actual-cell source witness 或 pinned Lean receipt。
+
+## 2026-09-08 — post-revision-787 Flowchuanfeng replacement dispatch
+
+流川枫已从现役队列永久移除。本轮把其未完成方向交给现有本地 agent，按独立
+瓶颈拆分，结果仍须写 immutable `review_result`，不直接修改 state/registry：
+
+| lane | replacement owner | bounded deliverable |
+|---|---|---|
+| `GH-MIXED-FLOWCHUANFENG-ADJUGATE` | Sartre the 6th | signed projected-adjugate 与真实 descriptor/determinant/observable source witness；没有同源 witness 就提交 obstruction |
+| `GH-MIXED-FLOWCHUANFENG-BODY6-PATH` | Poincare the 6th | BODY6 typed path/interface sidecar；保留 path-domain/source 前提外置，不重复主编译 |
+| `GH-MIXED-flowchuanfeng-schur-absorption` | James the 6th | Schur/PMI 单次 debit、margin floor 与 opposite-base 反例；不重复 cone-index 泛化 |
+| `T-P4-ACTIVE-ENERGY-ORIGIN` | Godel the 6th | active-energy source identity、origin normalization 与 additive target storage；缺证据则 exact obstruction |
+
+旧 review/claim 的作者标签不改写；新结果按上述 replacement owner 收割。
+本轮不做全项目回归、不运行本机 Lean，并继续保持 `registry=0` 与
+`formal_certificate_allowed=false`。
