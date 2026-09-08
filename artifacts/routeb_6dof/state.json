@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 743,
+  "revision": 746,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12313,6 +12313,23 @@
           "concrete_interval_payload_and_partition_coverage",
           "ODE_flowpipe_and_terminal_transfer",
           "coordinator_statement_identity_and_comparator_receipt"
+        ],
+        "agent_review_refs": [
+          {
+            "record_file": "agent_review_inbox/review-T-P3-central-FD-hull-c2c3-dh-evaluator-codex-20260907T2324.md",
+            "record_kind": "review_result",
+            "review_sha256": "E668662C7D9E1F669FB08486A12F6BCC3AB7268BF70CE83D584EC3D9116025F6",
+            "task_id": "T-P3-central-FD-hull",
+            "source_agent": "Codex",
+            "created_at": "2026-09-07T23:24:51-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_exact_central_fd_derivative_hull_bridge",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-T-P3-central-FD-hull-c2c3-dh-evaluator-codex-20260907T2324.md",
+            "admission_label": "pending"
+          }
         ]
       }
     },
@@ -38291,7 +38308,39 @@
         "formal_certificate_allowed": false,
         "proof_proven": false,
         "source_binding_proven": false,
-        "lean_compiled": false
+        "lean_compiled": false,
+        "agent_review_refs": [
+          {
+            "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-actualstoragealign-codex-20260908T0425.md",
+            "record_kind": "review_result",
+            "review_sha256": "C05B3B97629601DADECC6C4CC4FBEAB1B9E3809235626F0C5D32BB64BABBC5A8",
+            "task_id": "T-P4-033-O1-body6-slice",
+            "source_agent": "Codex-BODY6-local-lane",
+            "created_at": "2026-09-08T04:25:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_independent_body6_source_slice",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-actualstoragealign-codex-20260908T0425.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-actual-storage-align-20260908T052659Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "76D0ED46076944A8724B91B17DF824D1D3BA28A866868FC075DE0681287741FE",
+            "task_id": "T-P4-033-O1-body6-slice",
+            "source_agent": "codex-body6-math-lane",
+            "created_at": "2026-09-08T05:26:59Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_independent_body6_source_slice",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-actual-storage-align-20260908T052659Z.md",
+            "admission_label": "pending"
+          }
+        ]
       }
     },
     "1a908d878a3c45448eb039f9c1af37bb": {
@@ -75339,6 +75388,45 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383"
+    },
+    {
+      "at": "2026-09-08T05:25:51.643542+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P3-central-FD-hull-c2c3-dh-evaluator-codex-20260907T2324.md",
+      "record_kind": "review_result",
+      "review_sha256": "E668662C7D9E1F669FB08486A12F6BCC3AB7268BF70CE83D584EC3D9116025F6",
+      "task_id": "T-P3-central-FD-hull",
+      "classification": "pending_exact_central_fd_derivative_hull_bridge",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "d039d2c007b348349f022a77a369392e"
+    },
+    {
+      "at": "2026-09-08T05:27:21.180975+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-actualstoragealign-codex-20260908T0425.md",
+      "record_kind": "review_result",
+      "review_sha256": "C05B3B97629601DADECC6C4CC4FBEAB1B9E3809235626F0C5D32BB64BABBC5A8",
+      "task_id": "T-P4-033-O1-body6-slice",
+      "classification": "pending_independent_body6_source_slice",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1ea06cbee9b54297913156cfb0b201ce"
+    },
+    {
+      "at": "2026-09-08T05:28:40.653764+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-actual-storage-align-20260908T052659Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "76D0ED46076944A8724B91B17DF824D1D3BA28A866868FC075DE0681287741FE",
+      "task_id": "T-P4-033-O1-body6-slice",
+      "classification": "pending_independent_body6_source_slice",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1ea06cbee9b54297913156cfb0b201ce"
     }
   ],
   "agent_requests": {},
@@ -78995,5 +79083,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "14bd5bf7397b50282e9c54c3a09a1bb7900609fbb847168177325f17d3e19798"
+  "state_checksum": "47080dd6e1b955fa13e7b53604c0aa4d2eb129b1f884146bc16f73a427a2753c"
 }

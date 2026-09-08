@@ -53,12 +53,14 @@ theorem young_feasible_of_rational_radius
     (hdisc : radius^2 ≤ G^2 - 4 * A * P)
     (hcenter : (2 * A * theta - G)^2 ≤ radius^2) :
     A * theta^2 - G * theta + P ≤ 0 := by
+  have htheta_nonneg : 0 ≤ theta := le_of_lt htheta
+  have hradius_sq : 0 ≤ radius^2 := sq_nonneg radius
   have hscale : 0 ≤ 4 * A := by positivity
   have hcompleted :
       4 * A * (A * theta^2 - G * theta + P) ≤ 0 := by
     rw [young_completed_square_identity]
-    linarith
-  nlinarith
+    nlinarith [htheta_nonneg, hradius_sq]
+  nlinarith [hscale, htheta_nonneg, hradius_sq]
 
 /-- The inner rational interval, written without endpoint divisions. -/
 theorem young_inner_interval_feasible
@@ -69,14 +71,17 @@ theorem young_inner_interval_feasible
     (hlower : G - radius ≤ 2 * A * theta)
     (hupper : 2 * A * theta ≤ G + radius) :
     A * theta^2 - G * theta + P ≤ 0 := by
+  have hG_nonneg : 0 ≤ G := le_of_lt hG
+  have hP_nonneg : 0 ≤ P := hP
   have hleft : 0 ≤ radius - (2 * A * theta - G) := by
     linarith
   have hright : 0 ≤ radius + (2 * A * theta - G) := by
     linarith
   have hcenter : (2 * A * theta - G)^2 ≤ radius^2 := by
     nlinarith [mul_nonneg hleft hright]
-  exact young_feasible_of_rational_radius
+  have hq := young_feasible_of_rational_radius
     A G P theta radius hA htheta hradius hdisc hcenter
+  nlinarith [hG_nonneg, hP_nonneg, hq]
 
 /-- One shared positive `theta` consumes all supplied inner-bound rows. -/
 theorem young_common_parameter_of_inner_bounds
