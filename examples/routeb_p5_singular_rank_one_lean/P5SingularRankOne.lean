@@ -96,10 +96,10 @@ theorem rank_one_incompatible_no_uniform_upper_bound
   have ht : t * d = -(C + 1) := by
     dsimp [t]
     exact div_mul_cancel₀ (-(C + 1)) hd
+  have ht' : t * (p * b5 - q * b4) = -(C + 1) := by
+    simpa [d] using ht
   have h := hC t
-  rw [hq, hb] at h
-  change -(t * d) ≤ C at h
-  rw [ht] at h
+  rw [hq, hb, ht'] at h
   linarith
 
 /--
