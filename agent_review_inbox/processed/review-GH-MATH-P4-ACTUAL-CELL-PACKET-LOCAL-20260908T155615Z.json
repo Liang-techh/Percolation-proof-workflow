@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTUAL-CELL-PACKET-LOCAL-20260908T155615Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "422DEF58079888605E681A219FDA11AD2B24995FAC6AF229B913D6A4B43BA62F",
+  "task_id": "GH-MATH-P4-ACTUAL-CELL-PACKET",
+  "source_agent": "codex-actual-cell-source-lane",
+  "created_at": "2026-09-08T15:56:15Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_actual_cell_source_packet",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-ACTUAL-CELL-PACKET-LOCAL-20260908T155615Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T15:58:56.662035+00:00"
+}

@@ -216,6 +216,14 @@ Cramer、Young 或 box 半径算术。Lean lane 只消费已有抽象候选并�
 这两项消费 revision 782 的新结果，不重复既有反例；均不得改变 registry 或
 formal gate，也不得把抽象联合阈值当成真实 DH 证书。
 
+## 2026-09-08 — post-revision-784 next evidence request
+
+实际 cell 搜索已确认当前最小缺口不是继续优化标量常数，而是一个同源 source
+packet。下一轮只接受：固定 cell/block/reduction、同一 H、actual residual defect、
+observable/units、两行 descriptor、正 determinant 下界及 signed projected numerator
+的可追踪证据；否则返回 obstruction。Lean lane 继续独立验证联合阈值，不得将其
+与未绑定的物理数据合并。
+
 ### 2026-09-08 — generic Schur allocation follow-up
 
 本地数学推进新增任意有限维 Euclidean Schur allocation sidecar，用于统一

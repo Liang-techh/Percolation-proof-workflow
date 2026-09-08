@@ -212,6 +212,9 @@ TASK_TARGETS = {
     "GH-LEAN-P4-SCHUR-JOINT-THRESHOLD": (
         "P4.residual_schur_pmi",
         "pending_schur_joint_threshold_receipt"),
+    "GH-MATH-P4-ACTUAL-CELL-PACKET": (
+        "P4.true_dh_port_source_binding",
+        "pending_actual_cell_source_packet"),
     # New GitHub proof lanes use descriptive uppercase suffixes.  Route them
     # to existing DAG parents as pending metadata only; no admission path is
     # implied by these aliases.

@@ -2723,6 +2723,14 @@ projected numerator、observable binding 与 source provenance；target-caps rev
 `beta >= L+2c+max(E_A,t+Q)`，并区分 direct-margin 与旧 absorption 两条路线。
 这些结果均为 pending mathematics；registry 仍为 0，formal gate 仍关闭。
 
+### 梁智炜 · revision 783–784：联合阈值与实际 cell 搜索
+
+联合阈值 Lean 候选已登记为 source-independent pending leaf；actual-cell 搜索
+只找到 `(eta=5.6, depth=3, box_id=83)` 的部分几何/port 锚点，未找到可填入
+二维 adjugate packet 的同源 row、determinant、signed numerator、observable 与
+actual-defect 证据。三维 block456 producer 与二维 SameCellEvidence 不可直接
+拼接；因此 P4/M4 仍保持 fail-closed。
+
 ### 梁智炜 · revision 782 后续
 
 已将联合阈值分成两个正交推进方向：Lean lane 负责 source-independent scalar
