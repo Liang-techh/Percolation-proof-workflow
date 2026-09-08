@@ -42,7 +42,7 @@ trap 'rm -f "$OUT"' EXIT
 for theorem in \
   cyclePhi_antitone_of_monotone_antitone \
   cyclePhi_antitone_of_antitone_monotone \
-  sub_antitone_strongMono_one \
+  sub_antitone_strict_mono_one \
   sub_antitone_abs_coercive_one \
   sub_antitone_injective \
   coercive_inverse_perturbation \
