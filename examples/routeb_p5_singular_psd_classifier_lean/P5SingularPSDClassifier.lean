@@ -198,12 +198,16 @@ theorem singular_incompatible_unbounded
   let t : ℝ := (C + 1) / adjNumerator p q s b4 b5
   refine ⟨-t * k4 q s b4 b5, -t * k5 p q b4 b5, ?_⟩
   have hq := singular_adjugate_kernel_ray_quadratic p q s b4 b5 (-t) hdet
-  have hb0 := adjugate_kernel_bias p q s b4 b5
   have hb :
       bias b4 b5 (-t * k4 q s b4 b5) (-t * k5 p q b4 b5) =
         -t * adjNumerator p q s b4 b5 := by
-    dsimp [bias] at hb0 ⊢
-    nlinarith
+    calc
+      bias b4 b5 (-t * k4 q s b4 b5) (-t * k5 p q b4 b5) =
+          -t * bias b4 b5 (k4 q s b4 b5) (k5 p q b4 b5) := by
+            dsimp [bias]
+            ring
+      _ = -t * adjNumerator p q s b4 b5 := by
+            rw [adjugate_kernel_bias p q s b4 b5]
   have ht : t * adjNumerator p q s b4 b5 = C + 1 := by
     dsimp [t]
     exact div_mul_cancel₀ (C + 1) hNne
@@ -293,7 +297,8 @@ theorem singular_psd_finite_upper_bound_iff
         linarith
       exact ⟨htau, hk4, hk5⟩
     · right
-      have hzero := zero_matrix_of_psd_singular_trace_zero p q s hp hs hdet htau
+      have htau0 : trace2 p s = 0 := htau.symm
+      have hzero := zero_matrix_of_psd_singular_trace_zero p q s hp hs hdet htau0
       rcases hzero with ⟨hp0, hq0, hs0⟩
       have hb4 : b4 = 0 := by
         by_contra hb4ne
@@ -309,7 +314,7 @@ theorem singular_psd_finite_upper_bound_iff
         rw [hp0, hq0, hs0] at hle
         dsimp [residual, quad] at hle
         linarith
-      exact ⟨htau, hb4, hb5⟩
+      exact ⟨htau0, hb4, hb5⟩
   · intro hclass
     rcases hclass with hcompat | hzero
     · rcases hcompat with ⟨htau, hk4, hk5⟩
