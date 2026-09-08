@@ -2692,3 +2692,17 @@ descriptor/flowpipe 对 acceleration 的绑定，而不是继续优化无约束�
 - 未完成：q6 source/runtime binding、Float64/central-FD error、全域 residual/coverage、flowpipe 和 terminal transfer 仍未证明；结果不是物理 ODE 不可能性或 M4 证书。
 - 给下一轮的建议：Lean 槽只形式化抽象块方程 exclusion；数学槽补 R1–R3 source witness、producer provenance 和 q6 exact-real/runtime contract；禁止重新开展 beta 原点扫描。
 - 关联 review：`review-GH-MATH-P4-DIRECT-BLOCK456-Q6-RAY-GRAPH-EXCLUSION-20260908T152042Z`。
+
+### 梁智炜 · revision 778–780：流川枫任务接管与 source seam 收割
+
+流川枫已退出；新任务只进入现役 agent ring。Schur/source-binding review
+将瓶颈精确化为额外的 `E_A ≤ β-L-2ell^T H r` 预算与真实 residual/source
+绑定，不能由 generic Young 下界自动推出。q6 graph Lean repair 预审建议先对
+原候选做 pinned compile，不凭静态文本预修；Body-5 API repair 提供 14 个
+source-independent 候选，仍无 Lean receipt。
+
+H_acc seam 进一步固定了非循环 source witness contract：必须同一 bundle 绑定
+scalar graph、occurrence mapping、六次 source update、evaluator/lowering 与
+loop-state invariant；当前 intake 仍为空，因此保持 `OPEN_H_ACC/pending`。
+本轮 revision 780、registry=0、`formal_certificate_allowed=false`；没有任何
+候选升级为 VERIFIED，也没有在非发布窗口同步 GitHub。

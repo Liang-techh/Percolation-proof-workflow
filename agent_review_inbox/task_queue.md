@@ -169,6 +169,24 @@ Schur closure 的数学 sidecar 已收割为 pending；下一批只消费这一�
 新一轮结果仍必须使用 immutable `review_result` envelope，并由梁智炜统一
 整合；所有任务均不得派给已退出的流川枫。
 
+## 2026-09-08 — post-reassignment local harvest (revision 780)
+
+流川枫遗留 lane 已由现役队列和本地协作 lane 接管。新一轮只推进独立
+数学瓶颈和窄接口，不做全回归：
+
+| lane | owner | bounded deliverable |
+|---|---|---|
+| Schur/source binding | 狂蛮魔尊 / 本地数学 lane | 将 `SchurPMIBinding` 的 `E_A ≤ β-L-2ℓᵀHr` 与实际 residual/source witness 对齐；缺失时提交 obstruction |
+| target caps | 古月方源 / 本地数学 lane | 检查真实 DH target-domain 到 A/port cap 的 inclusion；不得用 `V≤1` 或 JSON 替代 coverage |
+| adjugate witness | 红莲魔尊 / 本地数学 lane | 追踪 signed projected-adjugate 与真实 descriptor/determinant source witness，保留 cancellation |
+| q6 Lean repair | 巨阳仙尊 / Lean lane | 先对 hash-bound 抽象候选做 pinned compile，再按首个诊断做最小 repair |
+| Body-5 API receipt | 苏梦辰 / Lean lane | 对新增 API repair 候选做独立 pinned receipt；不关闭 source-trace parent |
+
+最新收割结论：generic Schur allocation 本身成立，但当前 physical binding
+仍缺额外预算；q6 候选和 Body-5 候选均为 `OPEN_UNCOMPILED`。所有新结果必须
+带 candidate/source SHA、inspected commit、实际命令与 admission label；不得派给
+流川枫，不得直接写 registry。
+
 ### 2026-09-08 — generic Schur allocation follow-up
 
 本地数学推进新增任意有限维 Euclidean Schur allocation sidecar，用于统一
