@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # CI_PORTABLE=1
-# focused branch CI replay for 巨阳仙尊 / T-P4-034
+# focused branch CI replay after Lean repair for 巨阳仙尊 / T-P4-034
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
