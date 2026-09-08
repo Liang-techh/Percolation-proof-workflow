@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-P5-TARGET-REPAIR-MINIMAL-20260908-Sartre.md",
+  "record_kind": "review_result",
+  "review_sha256": "6FB8F0F98883E762F99CFA70C047B6E42D407419EC3428A11C15423770BA580B",
+  "task_id": "P5-TARGET-REPAIR-MINIMAL-20260908",
+  "source_agent": "Sartre",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_p5_target_repair_minimal",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-P5-TARGET-REPAIR-MINIMAL-20260908-Sartre.md",
+  "integrated_at": "2026-09-08T20:07:37.433737+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-P5-SOURCE-KPATH-REPAIR-BOUNDARY-20260908T200217Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "81014B2EDA017EEA15A3C8ADF39860163EA1C852F96B1102CD0E8B4D1769144F",
+  "task_id": "P5-SOURCE-KPATH-REPAIR-BOUNDARY-20260908",
+  "source_agent": "Codex-source-kpath-contract",
+  "created_at": "2026-09-08T20:02:17Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_p5_source_kpath_repair_boundary",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "b68cb241619b2fe1710b8500c8173fc98dd550c3",
+  "review_file": "agent_review_inbox/review-P5-SOURCE-KPATH-REPAIR-BOUNDARY-20260908T200217Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T20:06:26.521814+00:00"
+}

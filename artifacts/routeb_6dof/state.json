@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 864,
+  "revision": 867,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -41594,6 +41594,50 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-P5-K7-ACTUAL-Q-DELTA-PACKET-20260908-Sartre.md"
+          },
+          {
+            "record_file": "agent_review_inbox/review-P5-SOURCE-KPATH-REPAIR-BOUNDARY-20260908T200217Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "81014B2EDA017EEA15A3C8ADF39860163EA1C852F96B1102CD0E8B4D1769144F",
+            "task_id": "P5-SOURCE-KPATH-REPAIR-BOUNDARY-20260908",
+            "source_agent": "Codex-source-kpath-contract",
+            "created_at": "2026-09-08T20:02:17Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_p5_source_kpath_repair_boundary",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "b68cb241619b2fe1710b8500c8173fc98dd550c3",
+            "review_file": "agent_review_inbox/review-P5-SOURCE-KPATH-REPAIR-BOUNDARY-20260908T200217Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-P5-TARGET-REPAIR-MINIMAL-20260908-Sartre.md",
+            "record_kind": "review_result",
+            "review_sha256": "6FB8F0F98883E762F99CFA70C047B6E42D407419EC3428A11C15423770BA580B",
+            "task_id": "P5-TARGET-REPAIR-MINIMAL-20260908",
+            "source_agent": "Sartre",
+            "created_at": "unknown",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_p5_target_repair_minimal",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-P5-TARGET-REPAIR-MINIMAL-20260908-Sartre.md"
+          },
+          {
+            "record_file": "agent_review_inbox/review-P5-CENTERED-ANCHOR-INSTANTIATION-20260908T200937Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "AD847DC2B2AC822A4BCE1C2388EE32E211A22A665E7ED456966FED58B365C2EB",
+            "task_id": "P5-CENTERED-ANCHOR-INSTANTIATION-20260908",
+            "source_agent": "Codex-centered-anchor-source",
+            "created_at": "2026-09-08T20:09:37Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_p5_centered_anchor_instantiation",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "ce7163d1f6ca10435136894d4484ac78de1fb68d",
+            "review_file": "agent_review_inbox/review-P5-CENTERED-ANCHOR-INSTANTIATION-20260908T200937Z.md",
+            "admission_label": "pending"
           }
         ]
       }
@@ -81581,6 +81625,71 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383"
+    },
+    {
+      "at": "2026-09-08T20:06:26.521814+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-P5-SOURCE-KPATH-REPAIR-BOUNDARY-20260908T200217Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "81014B2EDA017EEA15A3C8ADF39860163EA1C852F96B1102CD0E8B4D1769144F",
+      "task_id": "P5-SOURCE-KPATH-REPAIR-BOUNDARY-20260908",
+      "classification": "pending_p5_source_kpath_repair_boundary",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383"
+    },
+    {
+      "at": "2026-09-08T20:06:26.522178+00:00",
+      "kind": "external_reuse_agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-FLT-CALCULUS-CHAIN-RULE-ADAPTER-20260908T200328Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "7325701E343362A34E25956E9575250B76344BEDADC21654AD4ADB22240FD627",
+      "task_id": "T-FLT-CALCULUS-CHAIN-RULE-ADAPTER-20260908",
+      "classification": "flt_calculus_chain_rule_adapter_scan",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "catalog": "anthropic-fermats-last-theorem"
+    },
+    {
+      "at": "2026-09-08T20:07:37.433737+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-P5-TARGET-REPAIR-MINIMAL-20260908-Sartre.md",
+      "record_kind": "review_result",
+      "review_sha256": "6FB8F0F98883E762F99CFA70C047B6E42D407419EC3428A11C15423770BA580B",
+      "task_id": "P5-TARGET-REPAIR-MINIMAL-20260908",
+      "classification": "pending_p5_target_repair_minimal",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383"
+    },
+    {
+      "at": "2026-09-08T20:12:42.431194+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-P5-CENTERED-ANCHOR-INSTANTIATION-20260908T200937Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "AD847DC2B2AC822A4BCE1C2388EE32E211A22A665E7ED456966FED58B365C2EB",
+      "task_id": "P5-CENTERED-ANCHOR-INSTANTIATION-20260908",
+      "classification": "pending_p5_centered_anchor_instantiation",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383"
+    },
+    {
+      "at": "2026-09-08T20:12:42.431502+00:00",
+      "kind": "external_reuse_agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-FLT-CALCULUS-PINNED-ADAPTER-CONTRACT-20260908T200928Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "240E7EB2D13015688D9A34D08157ADC93DEF693335F96116E793BA0A3A56C67C",
+      "task_id": "T-FLT-CALCULUS-PINNED-ADAPTER-CONTRACT-20260908",
+      "classification": "flt_calculus_pinned_adapter_contract",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "catalog": "anthropic-fermats-last-theorem"
     }
   ],
   "agent_requests": {},
@@ -85237,5 +85346,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "a96518dcb446a7ab711886c38cc8be46dd7a3f010581f02d02c2e017e425af8e"
+  "state_checksum": "f3945d126ed012e2da9f8475dff18bcb4955bd5622b55183223cc91850648507"
 }

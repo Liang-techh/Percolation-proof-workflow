@@ -594,6 +594,21 @@ TASK_TARGETS = {
     "T-FLT-CALCULUS-CHAIN-RULE-ADAPTER-20260908": (
         None,
         "flt_calculus_chain_rule_adapter_scan"),
+    "P5-CENTERED-ANCHOR-INSTANTIATION-20260908": (
+        "P5.componentwise_relative_decay.feasible_cone_spn",
+        "pending_p5_centered_anchor_instantiation"),
+    "T-FLT-CALCULUS-PINNED-ADAPTER-CONTRACT-20260908": (
+        None,
+        "flt_calculus_pinned_adapter_contract"),
+    "P5-PARAMETER-FEASIBILITY-ENVELOPE-20260908": (
+        "P5.componentwise_relative_decay.feasible_cone_spn",
+        "pending_p5_parameter_feasibility_envelope"),
+    "P5-ANCHOR-DOMAIN-INCLUSION-20260908": (
+        "P5.componentwise_relative_decay.feasible_cone_spn",
+        "pending_p5_anchor_domain_inclusion"),
+    "T-FLT-NONNUMBER-API-SCAN-20260908": (
+        None,
+        "flt_nonnumber_api_scan"),
 }
 
 REVIEW_ID_ALIASES = {

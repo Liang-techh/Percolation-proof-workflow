@@ -4281,3 +4281,73 @@ Q 搜索，改派四个互不重复的数学问题：
 
 这四项均禁止修改 state/registry/shared scripts、禁止 toy 数值和本机 Lean；结果必须以
 immutable review 回传，formal_certificate_allowed 继续为 false。
+
+## 2026-09-08 — revision 865 harvest: minimal source contract and chain rule boundary
+
+`P5-SOURCE-KPATH-REPAIR-BOUNDARY-20260908` 已收割。Poincare 将 actual comparison
+压缩为一个可复用的 typed seam：对已归一化的完整 centered force 可取单段
+`A=I2,Scoord=I4,dxi=z,de=rc`，此时 `K_path=H`，真正缺口只剩同域八项 H bounds
+与同一 G-family；但 nominal descriptor reference 与 z=0 centering anchor 不可混同，
+fullForce、rc、bias、otherForce 必须分别保留。当前仍 `0/8`、source-bound=false。
+
+`T-FLT-CALCULUS-CHAIN-RULE-ADAPTER-20260908` 已收割为 event-only。选定
+Mathlib `HasFDerivWithinAt.comp` + `congr'`，抽象分类 1、Route-B adapter 分类 2；
+它保留 `MapsTo`、`EqOn`、域成员和可选 `UniqueDiffWithinAt`，不会伪造 source equality、
+Float64 derivative、moving-time terms 或 flowpipe。FLT pin 4.33.1 与 local_fkg 4.32.0
+仍不可混写，未编译、未进入 registry。
+
+Sartre/James 的 target-repair 与 domain-point join 仍在运行；P4/P5、registry=0、
+formal_certificate_allowed=false 保持不变。
+
+## 2026-09-08 — revision 866 next narrow lanes
+
+基于 revision 865 的 contract 收窄，新增两条不与现有 target-repair/domain-join 重叠的
+任务：
+
+| owner | task id | bounded deliverable |
+|---|---|---|
+| Poincare | `P5-CENTERED-ANCHOR-INSTANTIATION-20260908` | 检查真实 source 是否能构造 z=0 centering anchor，明确 eta/context 与重新求解 graph 的条件 |
+| Godel | `T-FLT-CALCULUS-PINNED-ADAPTER-CONTRACT-20260908` | 将 `HasFDerivWithinAt.comp+congr'` 固化为可交给 GitHub Lean agent 的 pinned handoff/comparator contract |
+
+二者均不修改 state/registry/shared scripts、不跑本机 Lean；缺 source 或 pin receipt 时只保留
+pending/event-only。
+
+## 2026-09-08 — revision 866 harvest: target repair is a statement decision
+
+`P5-TARGET-REPAIR-MINIMAL-20260908` 已收割。Sartre 将同一点的 deficit 分成
+`G=h-b`（intrinsic exact-target）、`Gamma=2h-b`（lambda=2 且 Delta=0）和
+`Gamma_old=2h-b+2d`（保留旧 global cap），并给出 exact beta/target 修正阈值。
+仅调整 residual split 无法消除 `b<h`；提高 beta 或降低 target 会改变 theorem statement，
+而 recenter 必须同步扣回 force/target correction。原 `beta_a=3/25` 只在改进 cap 时
+点态足够，保留旧 cap 时被拒绝。该结果是 pointwise design candidate，未形成全域 proof；
+下一步应先获得 statement/budget 选择，不再为冻结 target 搜索 Q。
+
+## 2026-09-08 — revision 867 harvest：conditional anchor and pinned calculus handoff
+
+`P5-CENTERED-ANCHOR-INSTANTIATION-20260908` 已收割。真实
+`routeB_descriptor_residual_interface.evaluate` 可作为同源 full-residual evaluator：
+将 B block 替换为 nominal position/velocity、保持 remote/context 后重算完整 6D
+acceleration graph；在 exact-real Gram+正 regularizer 重解释下 graph 唯一，但这不认证
+Float64 assembly/solve。`z=0` 只表示 tracking error 为零，不一般表示物理原点。
+最小剩余 seam 为 actual reference/state identity、source interpretation/error bridge、
+以及 hybrid anchor 的 domain/path inclusion；仍 source-bound=false、registry=0。
+
+`T-FLT-CALCULUS-PINNED-ADAPTER-CONTRACT-20260908` 已收割为冻结的两声明 handoff，
+目标 Lean 4.32.0 + Mathlib commit `81a5d257c8e410db227a6665ed08f64fea08e997`，
+payload hash 已固定，但 runner 尚未派发，comparator/compile/axiom/negative-control
+证据均为空。它不是 compiled candidate，也没有 Route-B DAG binding；FLT 4.33.1 provenance
+继续仅作 context，不与 local_fkg pin 混用。
+
+## 2026-09-08 — revision 867 next bottleneck split
+
+为避免在 frozen target 上继续无效扩大 Q，派发四条互不重复的窄线：
+
+| owner | task id | bounded deliverable |
+|---|---|---|
+| Sartre | `P5-PARAMETER-FEASIBILITY-ENVELOPE-20260908` | Fraction 级 beta/target/residual budget 可行域与 statement 代价 |
+| 苏梦辰 | `P5-ANCHOR-DOMAIN-INCLUSION-20260908` | 实际 source 的 hybrid-anchor 域/路径包含 typed seam |
+| Godel | `T-FLT-NONNUMBER-API-SCAN-20260908` | 避开既有两项的 FLT 非数论 calculus/linear-map API 复用扫描 |
+| James | `P4-DOMAIN-POINT-JOIN-20260908` | 判断 q=0,v=0,w=1 witness 的 intended-domain/flowpipe 归属 |
+
+所有新输出仅 immutable review，禁止修改 state/registry/shared scripts，Lean 仅交给远端
+排班 agent；Flowchuan/流川枫不再接收任务。

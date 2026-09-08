@@ -2185,6 +2185,12 @@ P3 quantitative gap 叶已接入 DAG revision 673，为严格 cap-load 提供显
 的 selected-coordinate gap 下界；仍为 uncompiled candidate，正式 gate 和 registry
 保持不变。
 
+### 梁智炜 · revision 866：next narrow lanes
+
+在已明确 frozen target obstruction 与最小 K-path contract 后，Poincare 转向真实
+centering-anchor 是否可构造的 source seam，Godel 转向把 within-set chain rule 固化为
+远端 Lean 可执行的 pinned handoff。两条线仍不触碰 registry 或本机 Lean。
+
 ### 2026-09-07 13:55 — 梁智炜收割 fixed-λ 定量 reserve
 
 fixed-λ quantitative reserve lower-bound 叶已登记到 DAG revision 668，提供显式
@@ -3538,3 +3544,36 @@ target/beta/decomposition 的最小修正，James 核对 exact 反例与 intende
 Poincare 固化 actual K-path comparison 的最小 typed source contract，Godel 补充
 `HasFDerivAt.comp`/pullback 的 FLT 非数论适配。四条线均保持 pending-only 边界，
 不把任何修正设计提前当成 theorem closure。
+
+### 梁智炜 · revision 865 harvest：minimal source contract and chain rule boundary
+
+Poincare 把实际 K-path 缺口压缩成单段 centered-full-force contract：若 source、anchor、
+normalization 已独立证明，则 `A=I2,Scoord=I4,dxi=z,de=rc` 只需交付八项 H bound；
+但 nominal reference 不能冒充 z=0 anchor，bias/otherForce 不能从 full power 中消失。
+Godel 选定 `HasFDerivWithinAt.comp` + `congr'` 作为 FLT 非数论 calculus adapter，
+保留 MapsTo/EqOn/域与唯一切空间条件；仍是未编译、非物理 source proof 的 event-only
+候选。两项收割后 registry=0，formal gate 关闭。
+
+### 梁智炜 · revision 866 harvest：target repair is a statement decision
+
+Sartre 将 exact deficit 分成 intrinsic `G=h-b`、lambda=2 sharp-cap `Gamma=2h-b` 和
+旧 global-cap `Gamma_old=2h-b+2d`，证明单纯重分 residual split 不能修复 `b<h`。
+可行的 beta 增量、target floor 或 recenter 都会改变 statement 或需要独立预算；旧
+`beta_a=3/25` 在保留旧 cap 时仍被精确拒绝。因此下一步是 source/domain/statement 选择，
+而不是继续扩大 Q；P4/P5、registry 和 formal gate 继续关闭。
+
+### 梁智炜 · revision 867 harvest：conditional anchor and pinned calculus handoff
+
+P5 centered anchor 已从实际 residual evaluator 构造成条件式同-context graph：B block
+替换后必须完整重算 M/C/G/R/a/l；exact-real 正 regularizer 只给唯一性，不给 Float64
+source/solve 认证。tracking `z=0` 不等于物理 origin，anchor-domain/path inclusion 仍开。
+FLT calculus handoff 已冻结为两声明、Lean 4.32.0、Mathlib pinned payload；未编译、未比较、
+未派发 runner，不产生 registry 或 Route-B closure。
+
+### 梁智炜 · revision 867 active lanes
+
+Sartre 攻 `P5-PARAMETER-FEASIBILITY-ENVELOPE-20260908`，苏梦辰攻
+`P5-ANCHOR-DOMAIN-INCLUSION-20260908`，Godel 攻
+`T-FLT-NONNUMBER-API-SCAN-20260908`，James 继续攻
+`P4-DOMAIN-POINT-JOIN-20260908`。这轮只收数学边界与 typed seam，避免回归测试；
+formal_certificate_allowed=false、registry=0 不变。

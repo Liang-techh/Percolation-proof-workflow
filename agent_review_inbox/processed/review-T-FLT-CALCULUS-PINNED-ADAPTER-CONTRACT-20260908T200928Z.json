@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-FLT-CALCULUS-PINNED-ADAPTER-CONTRACT-20260908T200928Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "240E7EB2D13015688D9A34D08157ADC93DEF693335F96116E793BA0A3A56C67C",
+  "task_id": "T-FLT-CALCULUS-PINNED-ADAPTER-CONTRACT-20260908",
+  "source_agent": "Codex-pinned-adapter-contract",
+  "created_at": "2026-09-08T20:09:28Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_calculus_pinned_adapter_contract",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "81a5d257c8e410db227a6665ed08f64fea08e997",
+  "review_file": "agent_review_inbox/review-T-FLT-CALCULUS-PINNED-ADAPTER-CONTRACT-20260908T200928Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T20:12:42.431502+00:00"
+}
