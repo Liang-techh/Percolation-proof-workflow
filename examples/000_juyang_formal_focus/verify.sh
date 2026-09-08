@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # CI_PORTABLE=1
+# Focused early lane: surface owned compile results before unrelated shared lanes.
 set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
