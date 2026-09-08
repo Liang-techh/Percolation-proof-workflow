@@ -22,9 +22,11 @@ theorem affine_envelope_from_bias_factor
     (hb : |b| ≤ β)
     (hq : |q| ≤ κ) :
     |R| ≤ β + κ * |v| := by
+  have htri : |b + v * q| ≤ |b| + |v * q| := by
+    simpa [Real.norm_eq_abs] using norm_add_le b (v * q)
   calc
     |R| = |b + v * q| := by rw [hdef]
-    _ ≤ |b| + |v * q| := abs_add _ _
+    _ ≤ |b| + |v * q| := htri
     _ = |b| + |v| * |q| := by rw [abs_mul]
     _ ≤ β + |v| * κ :=
       add_le_add hb (mul_le_mul_of_nonneg_left hq (abs_nonneg v))
@@ -34,7 +36,6 @@ theorem affine_envelope_from_bias_factor
 theorem affine_offset_gap_absorption
     (R β κ q δ v : ℝ)
     (hqk : κ ≤ q)
-    (hδ : 0 ≤ δ)
     (hgap : δ ≤ |v|)
     (henv : |R| ≤ β + κ * |v|)
     (hbudget : β ≤ (q - κ) * δ) :
@@ -44,14 +45,13 @@ theorem affine_offset_gap_absorption
   have hb : β ≤ (q - κ) * |v| := le_trans hbudget hscale
   calc
     |R| ≤ β + κ * |v| := henv
-    _ ≤ (q - κ) * |v| + κ * |v| := add_le_add_right hb (κ * |v|)
+    _ ≤ (q - κ) * |v| + κ * |v| := by nlinarith
     _ = q * |v| := by ring
 
 /-- The sharp strict gate `β < (1-κ)δ` yields strict decay on `|v| ≥ δ`. -/
 theorem affine_offset_gap_strict_decay
     (R β κ δ v : ℝ)
     (hκ : κ < 1)
-    (hδ : 0 < δ)
     (hgap : δ ≤ |v|)
     (henv : |R| ≤ β + κ * |v|)
     (hbudget : β < (1 - κ) * δ) :
@@ -62,7 +62,7 @@ theorem affine_offset_gap_strict_decay
   have hb : β < (1 - κ) * |v| := lt_of_lt_of_le hbudget hscale
   calc
     |R| ≤ β + κ * |v| := henv
-    _ < (1 - κ) * |v| + κ * |v| := add_lt_add_right hb (κ * |v|)
+    _ < (1 - κ) * |v| + κ * |v| := by nlinarith
     _ = |v| := by ring
 
 /-- Componentwise nonnegative matrix envelope plus a strict radius budget closes a finite box. -/
@@ -81,9 +81,9 @@ theorem box_envelope_strict_invariant
     apply Finset.sum_le_sum
     intro j _
     exact mul_le_mul_of_nonneg_left (hv j) (hA i j)
-  exact lt_of_le_of_lt
-    (le_trans (henv i) (add_le_add_left hsum (β i)))
-    (hgate i)
+  have henv' : |R i| ≤ β i + ∑ j, A i j * r j :=
+    le_trans (henv i) (add_le_add (le_refl _) hsum)
+  exact lt_of_le_of_lt henv' (hgate i)
 
 /-- The scalar strict-box consumer is the one-dimensional form of the matrix budget. -/
 theorem scalar_affine_box_strict_invariant
@@ -94,9 +94,9 @@ theorem scalar_affine_box_strict_invariant
     (hgate : β + κ * r < r) :
     |R| < r := by
   have hscale : κ * |v| ≤ κ * r := mul_le_mul_of_nonneg_left hv hκ
-  exact lt_of_le_of_lt
-    (le_trans henv (add_le_add_left hscale β))
-    hgate
+  have henv' : |R| ≤ β + κ * r :=
+    le_trans henv (add_le_add (le_refl _) hscale)
+  exact lt_of_le_of_lt henv' hgate
 
 /-- A strict box budget is exactly positivity of its division-free reserve. -/
 theorem box_budget_iff_positive_reserve
