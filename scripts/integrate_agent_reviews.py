@@ -95,6 +95,8 @@ TASK_TARGETS = {
                              "pending_exact_central_fd_derivative_hull_bridge"),
     "GH-MATH-P3-FD-REMAINDER": ("P3.central_fd_derivative_hull_composition",
                                  "pending_exact_central_fd_remainder_interface"),
+    "GH-MATH-P4-ADJUGATE-ACCEL": ("P4.true_dh_port_source_binding",
+                                   "pending_adjugate_acceleration_bridge"),
     # New GitHub proof lanes use descriptive uppercase suffixes.  Route them
     # to existing DAG parents as pending metadata only; no admission path is
     # implied by these aliases.

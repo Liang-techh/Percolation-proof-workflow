@@ -92,6 +92,7 @@ verified。约三分之一批次分配给流川枫。
 | `GH-MATH-P4-DESCRIPTOR-PUPPER` | 古月方源 | `NEW_P4_032_DescriptorPUpper.lean` | 从真实 DH source 找同源 `mu,H_i,K_i` 或证明其缺失；只提交 exact interface/obstruction，不臆造绝对 `P_upper` |
 | `GH-MATH-P3-FD-REMAINDER` | 红莲魔尊 | `NEW_CENTRAL_FD_HULL_C2C3_CENTRAL_FD_REMAINDER.lean` | 明确 C3/step/shifted-region 与 residual budget 的最小数学接口，并保留 `x^3` 反例；不宣称 evaluator source binding |
 | `GH-MIXED-FLOWCHUANFENG-BODY6-PATH` | 流川枫 | `NEW_BODY6_SLICE_PATHDOMAINPROJECTION20260907.lean` + receipt | 约三分之一批次：独立检查 repair 是否改变 theorem contract，并给出 typed interface/sidecar 建议；不得重复苏梦辰的编译任务 |
+| `GH-MATH-P4-ADJUGATE-ACCEL` | 柳冠一 | `T-P4-DESCRIPTOR-ACCEL-BRIDGE` review | 将 2x2 Cramer/adjugate-force 与 affine observable 投影写成最小 exact-real/rational theorem；优先保留 signed cancellation，不能把 source binding 当作已完成 |
 
 发布纪律：以上任务必须写入新的 `review_result` envelope，带 inspected
 commit、精确命令/证据和 admission label；未知 task 留在 inbox，历史失败
