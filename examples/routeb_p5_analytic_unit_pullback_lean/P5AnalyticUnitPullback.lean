@@ -50,7 +50,6 @@ theorem worked_unit_pullback_identity
     ((3 - z) * z ^ 2) / ((2 + z) * z) = workedUnit z * z := by
   dsimp [workedUnit]
   field_simp [hz, hu]
-  <;> ring
 
 /-- On the certified half-box, the worked-example denominator stays strictly positive. -/
 theorem worked_unit_den_pos
@@ -73,7 +72,7 @@ theorem worked_unit_lower
 theorem worked_unit_upper
     (z : ℝ)
     (hlow : -(1 / 2 : ℝ) ≤ z)
-    (hupp : z ≤ (1 / 2 : ℝ)) :
+    (_hupp : z ≤ (1 / 2 : ℝ)) :
     workedUnit z ≤ (7 / 3 : ℝ) := by
   have hden : 0 < 2 + z := worked_unit_den_pos z hlow
   dsimp [workedUnit]
@@ -88,15 +87,15 @@ theorem worked_unit_difference_identity
       5 * (w - z) / ((2 + z) * (2 + w)) := by
   dsimp [workedUnit]
   field_simp [hz, hw]
-  <;> ring
+  ring
 
 /-- The worked unit has the fully rational Lipschitz bound `20/9` on the certified box. -/
 theorem worked_unit_lipschitz
     (z w : ℝ)
     (hzlow : -(1 / 2 : ℝ) ≤ z)
-    (hzup : z ≤ (1 / 2 : ℝ))
+    (_hzup : z ≤ (1 / 2 : ℝ))
     (hwlow : -(1 / 2 : ℝ) ≤ w)
-    (hwup : w ≤ (1 / 2 : ℝ)) :
+    (_hwup : w ≤ (1 / 2 : ℝ)) :
     |workedUnit z - workedUnit w| ≤ (20 / 9 : ℝ) * |z - w| := by
   have hzpos : 0 < 2 + z := worked_unit_den_pos z hzlow
   have hwpos : 0 < 2 + w := worked_unit_den_pos w hwlow
@@ -119,7 +118,7 @@ theorem triple_product_abs_bound
     (U P R BU BP MR : ℝ)
     (hBU : 0 ≤ BU)
     (hBP : 0 ≤ BP)
-    (hMR : 0 ≤ MR)
+    (_hMR : 0 ≤ MR)
     (hU : |U| ≤ BU)
     (hP : |P| ≤ BP)
     (hR : |R| ≤ MR) :
@@ -175,9 +174,9 @@ theorem unit_contact_times_reduced_lipschitz
   calc
     |(U - U') * P * R + U' * (P - P') * R + U' * P' * (R - R')| ≤
         |(U - U') * P * R + U' * (P - P') * R| + |U' * P' * (R - R')| :=
-      abs_add _ _
+      abs_add_le _ _
     _ ≤ (|(U - U') * P * R| + |U' * (P - P') * R|) + |U' * P' * (R - R')| := by
-      exact add_le_add_right (abs_add _ _) _
+      exact add_le_add_right (abs_add_le _ _) _
     _ ≤ ((LU * d) * BP * MR + BU * (LP * d) * MR) + BU * BP * (LR * d) := by
       exact add_le_add (add_le_add hA hB) hC
     _ = (LU * BP * MR + BU * LP * MR + BU * BP * LR) * d := by ring
