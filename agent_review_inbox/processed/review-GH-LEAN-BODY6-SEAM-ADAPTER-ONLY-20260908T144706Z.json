@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-LEAN-BODY6-SEAM-ADAPTER-ONLY-20260908T144706Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "D99C89397167595FF158BC3DA39651B9490EDFADE15F46A06ABE8DBB46D29DC5",
+  "task_id": "GH-LEAN-BODY6-SEAM-ADAPTER-ONLY",
+  "source_agent": "codex-body6-seam-receipt-organizer",
+  "created_at": "2026-09-08T14:47:06Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_body6_seam_adapter_receipt",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "8c9756b28d64dab099da31a4c09229a9e6a2ef35",
+  "review_file": "agent_review_inbox/review-GH-LEAN-BODY6-SEAM-ADAPTER-ONLY-20260908T144706Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T14:48:32.166362+00:00"
+}

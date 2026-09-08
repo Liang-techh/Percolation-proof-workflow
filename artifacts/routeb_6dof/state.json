@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 767,
+  "revision": 768,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -39173,6 +39173,21 @@
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-T-P4-033-O1-body6-aligned-path-cap-consumer-pinned-block-codex-20260908T083415.md",
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-LEAN-BODY6-SEAM-ADAPTER-ONLY-20260908T144706Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "D99C89397167595FF158BC3DA39651B9490EDFADE15F46A06ABE8DBB46D29DC5",
+            "task_id": "GH-LEAN-BODY6-SEAM-ADAPTER-ONLY",
+            "source_agent": "codex-body6-seam-receipt-organizer",
+            "created_at": "2026-09-08T14:47:06Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_body6_seam_adapter_receipt",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "8c9756b28d64dab099da31a4c09229a9e6a2ef35",
+            "review_file": "agent_review_inbox/review-GH-LEAN-BODY6-SEAM-ADAPTER-ONLY-20260908T144706Z.md",
+            "admission_label": "pending"
           }
         ]
       }
@@ -77167,6 +77182,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T14:48:32.166362+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-LEAN-BODY6-SEAM-ADAPTER-ONLY-20260908T144706Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "D99C89397167595FF158BC3DA39651B9490EDFADE15F46A06ABE8DBB46D29DC5",
+      "task_id": "GH-LEAN-BODY6-SEAM-ADAPTER-ONLY",
+      "classification": "pending_body6_seam_adapter_receipt",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1ea06cbee9b54297913156cfb0b201ce"
     }
   ],
   "agent_requests": {},
@@ -80823,5 +80851,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "6326cda371c84b89ef6b4ceccb67750b965a7d536fbd4fbfbc134627071b3d12"
+  "state_checksum": "248b07112fa573a7379c75e516e3aac3a8c2eb2dbf1440863aa0797c297170bd"
 }
