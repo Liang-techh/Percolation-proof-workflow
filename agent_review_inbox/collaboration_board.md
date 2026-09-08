@@ -2792,3 +2792,26 @@ row-space recovery 条件，Poincare 负责其 source-independent Lean seam，Go
 principal/Schur defect 接线。四条 lane 不重复已完成的 Cramer、joint-threshold
 或 domain 搜索；仍保持 `registry=0`、`formal_certificate_allowed=false`，并把
 所有缺证据结果记录为 pending/obstruction。
+
+### 梁智炜 · revision 789：row-space recovery seam 收割
+
+Poincare 的 `GH-LEAN-P4-ROWSPACE-RECOVERY` 已通过 companion log 接入。候选将
+row-combination、kernel-on-domain、差域包含和 reference-value recovery 分成
+四个 source-independent 叶；它没有实例化当前预条件器、DH rows、实际 residual
+或 source domain，因此只记为 `OPEN_UNCOMPILED/pending`。这为 Sartre 正在推导的
+当前 X 的 rank/dual-row-span 条件提供了 Lean 接口，但不能单独关闭 P4。
+
+### 梁智炜 · revision 790：四条瓶颈继续收窄
+
+`GH-MATH-P4-ROWSPACE-RECOVERY-MINIMAL` 给出当前 hash-pinned X 的精确结论：
+`ker(Y)⊆ker(P)` 等价于存在 `L` 使 `LY=P`，当前 `{4,5}` 两行的 rank 从 2
+扩到 4；若只用原六条预条件行，恢复物理 rows 4/5 需要六行，若允许新的
+加权约束则至少新增两条，但这两条仍需 source witness。该结果是数学
+obstruction，不是物理轨迹反例。
+
+`GH-MATH-P4-ACTIVE-V-TARGET-DEFINITION` 找到 `Vfull_DH` 与 `Vshift_DH` 两个
+明确值级候选，但 active barrier consumer 未选择或绑定任一候选；因此不能把
+旧 storage、targeted cross-term storage 或 saved four-coordinate polynomial
+互换。`GH-MATH-P4-JOINT6-DEFECT-ELIMINATION` 固定 principal route 保留
+joint-6 coupling，并明确 Schur route 还需 row6、`d≠0`、effective RHS/defect
+和投影 metric 的同源证据。三项均保持 pending，P4 gate 未改变。
