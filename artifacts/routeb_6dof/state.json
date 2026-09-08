@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 759,
+  "revision": 760,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -15162,6 +15162,21 @@
             "target_scope": "routeb_node",
             "source_commit": "ef85d45a4cdf3b62de723fd3a8e2fc646749d0fc",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-ADJUGATE-ACCEL-codex-20260908T082413.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MIXED-ADJUGATE-REASSIGNED-codex-20260908T0830.md",
+            "record_kind": "review_result",
+            "review_sha256": "2CA3E8F8C1F5EA2509E7E1B11E51B9B0C8033F9E3024AF856DF3353FD7515AE7",
+            "task_id": "GH-MIXED-ADJUGATE-REASSIGNED",
+            "source_agent": "Codex",
+            "created_at": "2026-09-08T08:30:49-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_reassigned_adjugate_review",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MIXED-ADJUGATE-REASSIGNED-codex-20260908T0830.md",
             "admission_label": "pending"
           }
         ]
@@ -76806,6 +76821,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "1ea06cbee9b54297913156cfb0b201ce"
+    },
+    {
+      "at": "2026-09-08T14:31:53.109208+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MIXED-ADJUGATE-REASSIGNED-codex-20260908T0830.md",
+      "record_kind": "review_result",
+      "review_sha256": "2CA3E8F8C1F5EA2509E7E1B11E51B9B0C8033F9E3024AF856DF3353FD7515AE7",
+      "task_id": "GH-MIXED-ADJUGATE-REASSIGNED",
+      "classification": "pending_reassigned_adjugate_review",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -80462,5 +80490,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "1ebcdd53cf45419a76c7966b9db600172f8c7c86c897d8824079048608f10217"
+  "state_checksum": "4790a6f6377563c2cb67da7968911321966419f3f006981296f99d950da5060a"
 }
