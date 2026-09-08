@@ -7,14 +7,21 @@ LAKE_ROOT="${LAKE_ROOT:-$ROOT/../local_fkg}"
 LEAN_FILE="$ROOT/P4RationalLambdaGuard.lean"
 EXPECTED_TOOLCHAIN="$(tr -d '\r\n' < "$ROOT/lean-toolchain")"
 
-command -v lake >/dev/null 2>&1 || {
-  echo "lake not found on PATH" >&2
-  exit 2
-}
-command -v lean >/dev/null 2>&1 || {
-  echo "lean not found on PATH" >&2
-  exit 2
-}
+LAKE_BIN="${LAKE_BIN:-lake}"
+if ! command -v "$LAKE_BIN" >/dev/null 2>&1; then
+  command -v lake.exe >/dev/null 2>&1 && LAKE_BIN=lake.exe || {
+    echo "lake/lake.exe not found on PATH" >&2
+    exit 2
+  }
+fi
+
+LEAN_BIN="${LEAN_BIN:-lean}"
+if ! command -v "$LEAN_BIN" >/dev/null 2>&1; then
+  command -v lean.exe >/dev/null 2>&1 && LEAN_BIN=lean.exe || {
+    echo "lean/lean.exe not found on PATH" >&2
+    exit 2
+  }
+fi
 
 if [[ ! -d "$LAKE_ROOT" ]]; then
   echo "local_fkg Lake environment not found at $LAKE_ROOT" >&2
@@ -37,9 +44,14 @@ echo "PLACEHOLDER_SCAN=PASS"
 OUT="$(mktemp)"
 trap 'rm -f "$OUT"' EXIT
 
+LEAN_INPUT="$LEAN_FILE"
+if [[ "$LAKE_BIN" == *.exe ]]; then
+  command -v wslpath >/dev/null 2>&1 && LEAN_INPUT="$(wslpath -w "$LEAN_FILE")"
+fi
+
 (
   cd "$LAKE_ROOT"
-  lake env lean -DwarningAsError=true "$LEAN_FILE"
+  "$LAKE_BIN" env "$LEAN_BIN" -DwarningAsError=true "$LEAN_INPUT"
 ) 2>&1 | tee "$OUT"
 
 for theorem in \
