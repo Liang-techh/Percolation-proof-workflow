@@ -194,6 +194,12 @@ TASK_TARGETS = {
     "GH-MATH-P4-DIRECT-BLOCK456-Q6-RAY-SOURCE-BINDING": (
         "P4.true_dh_port_source_binding",
         "pending_direct_block456_q6_ray_source_binding"),
+    "GH-LEAN-P4-Q6-GRAPH-EXCLUSION": (
+        "P4.true_dh_port_source_binding",
+        "pending_q6_graph_exclusion_generic_lean"),
+    "GH-LEAN-P4-Q6-GRAPH-EXCLUSION-REPAIR": (
+        "P4.true_dh_port_source_binding",
+        "pending_q6_graph_exclusion_generic_lean_repair"),
     # New GitHub proof lanes use descriptive uppercase suffixes.  Route them
     # to existing DAG parents as pending metadata only; no admission path is
     # implied by these aliases.

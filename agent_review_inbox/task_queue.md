@@ -212,6 +212,13 @@ q6 graph exclusion 已形成条件性正结果后，下一轮只消费其缺口�
 | `GH-MATH-P4-BLOCK456-METRIC-PRODUCER-PROVENANCE` | James | 追查 probe 当前源码与保存 CSV 的 producer SHA 不一致；只交历史 commit/版本缺口和 rounding/RESOLVED 边界 |
 | `GH-MATH-P4-DIRECT-BLOCK456-Q6-RAY-SOURCE-BINDING` | Godel | 将 q6 exact-real graph exclusion 与真实 DH、central-FD/Float64 runtime error premises 分层绑定 |
 
+下一轮 Lean 槽可直接消费上述图论结果，但只验证抽象线性代数叶：
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-LEAN-P4-Q6-GRAPH-EXCLUSION` | 苏梦辰 | pinned Lean generic theorem：`M_DD` 可逆、块方程 `M_DD α_D + M_DC α_C = R_D` 与 `M_CD α_D + M_CC α_C = R_C`、`R_D=0`、`α_C=0` 推出 `R_C=0`；记录 axioms/placeholder，禁止 source admission |
+| `GH-LEAN-P4-Q6-GRAPH-EXCLUSION-REPAIR` | 巨阳仙尊 | 仅修复上述 generic theorem 的类型/矩阵接口；不导入 Float64、DH CSV、controller 或物理 reachability |
+
 ### 2026-09-07 — active-energy / topology frontier batch
 
 - `T-P4-ACTIVE-ENERGY-ORIGIN`: verify the source identity and additive
