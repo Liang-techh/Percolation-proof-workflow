@@ -2684,3 +2684,11 @@ P4 analytic A-upper child 已进入 pending DAG：现在有一条可消费的保
 `A_upper` 构造，但其前提明确要求同 cell acceleration cap。acceleration ray
 反例阻止了从 p45/block geometry 直接推导该 cap；后续应优先寻找真实 DH
 descriptor/flowpipe 对 acceleration 的绑定，而不是继续优化无约束多项式常数。
+
+### 2026-09-08 — 梁智炜：revision 775 q6 graph exclusion 收割
+
+- 当前完成：Godel 的 q6-ray review 已整合为 pending；它证明旧 compact descriptor ideal 允许的非零 q6/零 `a_C` assignment，在加入同源六行质量方程、`M_DD` 可逆和真实 `R_C=-(2/5)s e_3` 后被排除。
+- 数学意义：这把“任何 beta 都修不好”的结论收缩为“旧 ideal 缺少 physical acceleration graph”；在 graph lift 上 direct target 的单 ray exact 表计算对 `b≥0` 为正。
+- 未完成：q6 source/runtime binding、Float64/central-FD error、全域 residual/coverage、flowpipe 和 terminal transfer 仍未证明；结果不是物理 ODE 不可能性或 M4 证书。
+- 给下一轮的建议：Lean 槽只形式化抽象块方程 exclusion；数学槽补 R1–R3 source witness、producer provenance 和 q6 exact-real/runtime contract；禁止重新开展 beta 原点扫描。
+- 关联 review：`review-GH-MATH-P4-DIRECT-BLOCK456-Q6-RAY-GRAPH-EXCLUSION-20260908T152042Z`。
