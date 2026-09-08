@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-093-base-flow-lie-defect-honglianmozun-20260908T1758Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "F8F0380C6512D2F9095ACADD81A2252CD484621EC83B4B32C6CC9395A45F72F5",
+  "task_id": "T-P5-093-BASE-FLOW-LIE-DEFECT",
+  "source_agent": "红莲魔尊",
+  "created_at": "2026-09-08T17:58:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_base_flow_lie_defect_same_tube_binding",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "110ab12ef25c33893b80a87aa8b13ef983366cfb",
+  "review_file": "agent_review_inbox/review-T-P5-093-base-flow-lie-defect-honglianmozun-20260908T1758Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:53:08.925253+00:00"
+}

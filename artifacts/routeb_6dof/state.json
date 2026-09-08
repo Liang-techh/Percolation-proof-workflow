@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 824,
+  "revision": 825,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12466,6 +12466,21 @@
             "target_scope": "routeb_node",
             "source_commit": "8dbc4a18df37cea150aac42191ffb2837e8ba6d1",
             "review_file": "agent_review_inbox/review-T-P5-079-similarity-normalization-sumengchen-20260908T0824.md"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P5-093-base-flow-lie-defect-honglianmozun-20260908T1758Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "F8F0380C6512D2F9095ACADD81A2252CD484621EC83B4B32C6CC9395A45F72F5",
+            "task_id": "T-P5-093-BASE-FLOW-LIE-DEFECT",
+            "source_agent": "红莲魔尊",
+            "created_at": "2026-09-08T17:58:00Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_base_flow_lie_defect_same_tube_binding",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "110ab12ef25c33893b80a87aa8b13ef983366cfb",
+            "review_file": "agent_review_inbox/review-T-P5-093-base-flow-lie-defect-honglianmozun-20260908T1758Z.md",
+            "admission_label": "pending"
           }
         ]
       }
@@ -79737,6 +79752,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "4a9af66cdc4f4607857a5cf360f19eb7"
+    },
+    {
+      "at": "2026-09-08T17:53:08.925253+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P5-093-base-flow-lie-defect-honglianmozun-20260908T1758Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "F8F0380C6512D2F9095ACADD81A2252CD484621EC83B4B32C6CC9395A45F72F5",
+      "task_id": "T-P5-093-BASE-FLOW-LIE-DEFECT",
+      "classification": "pending_base_flow_lie_defect_same_tube_binding",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "4a9af66cdc4f4607857a5cf360f19eb7"
     }
   ],
   "agent_requests": {},
@@ -83393,5 +83421,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "a93de2cb1a96a06fda3886de926414b33bed6baf88a1ee0b14bea103f0f63862"
+  "state_checksum": "e0151f3cc77286164bd0be7570500790f44c13c6975442fcd19cab7d24cc0a4e"
 }

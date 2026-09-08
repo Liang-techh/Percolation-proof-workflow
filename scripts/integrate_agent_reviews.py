@@ -332,6 +332,9 @@ TASK_TARGETS = {
         "P5.componentwise_relative_decay", "pending_similarity_normalization"),
     "T-P5-080-CORRELATION-AWARE-MIXED-DEFECT": (
         "P5.componentwise_relative_decay", "pending_correlated_mixed_defect"),
+    "T-P5-093-BASE-FLOW-LIE-DEFECT": (
+        "P5.componentwise_relative_decay",
+        "pending_base_flow_lie_defect_same_tube_binding"),
     # External FLT scans are deliberately event-only: they are advisory
     # catalog evidence, not Route-B theorem nodes or registry entries.
     "T-FLT-DERIV-CALC": (None, "flt_derivation_calculus_scan"),

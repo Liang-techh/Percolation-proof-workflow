@@ -3117,3 +3117,8 @@ theorem。当前仍 `registry=0`、`formal_certificate_allowed=false`，没有 G
 柳冠一负责 joint6 actual residual。流川枫永久退役，不接收新任务；历史 provenance
 不改写。当前仍 `registry=0`、`formal_certificate_allowed=false`，本批只允许
 pending provenance/compiled-candidate/external-pending，禁止自动 promotion。
+
+随后收到远端 `T-P5-093-BASE-FLOW-LIE-DEFECT`：红莲魔尊的数学结果为
+`CONDITIONAL_PASS`，有助于把 P5 frontier 从“是否存在 Lie-defect identity”
+收窄为同一 tube 上 `b/D b/D W` 的实际 source 绑定。已加入 integrator routing，
+但仍不关闭 parent、不进入 registry；Lean sidecar 等待 source contract。

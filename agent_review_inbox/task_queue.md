@@ -3835,3 +3835,12 @@ verified theorem。
 本批允许 GitHub agent 继续小型工作；主线程本地只在出现新 receipt、实际 source
 witness 或重大数学突破时收割与同步。所有结果先进入 pending provenance，registry
 和 `formal_certificate_allowed` 保持 fail-closed。
+
+### Newly observed frontier: `T-P5-093-BASE-FLOW-LIE-DEFECT`
+
+红莲魔尊提交了 nominal moving-metric contraction 下 base-flow Lie-defect 的
+条件通过结果。它明确指出下一步不是重复 T-P5-090 的 contraction identity，
+而是把同一 tube 上的 `b`、`D b`、`D W` 与 defect consumer 做 source-level
+绑定；当前仍是 pending，不能把“条件通过”当成完整 closure。由柳冠一或红莲
+魔尊继续补同源 packet，苏梦辰/巨阳仙尊仅在 source contract 冻结后提供最小
+Lean sidecar。
