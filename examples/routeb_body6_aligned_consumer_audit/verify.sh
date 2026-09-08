@@ -4,7 +4,8 @@ set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 LAKE_ROOT="${LAKE_ROOT:-$ROOT/../local_fkg}"
-TARGET="$ROOT/../routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_ALIGNEDPATHCAPCONSUMER20260908.lean"
+SRC_ROOT="$ROOT/../routeb_b45_source_comparator_lean"
+TARGET="$SRC_ROOT/NEW_BODY6_SLICE_ALIGNEDPATHCAPCONSUMER20260908.lean"
 EXPECTED_TOOLCHAIN="$(tr -d '\r\n' < "$ROOT/lean-toolchain")"
 
 command -v lake >/dev/null 2>&1 || { echo "lake not found on PATH" >&2; exit 2; }
@@ -25,20 +26,47 @@ if grep -nE '\b(sorry|admit)\b' "$TARGET"; then
 fi
 echo "PLACEHOLDER_SCAN=PASS"
 
-TMP="$(mktemp --suffix=.lean)"
+BUILD_DIR="$(mktemp -d)"
 OUT="$(mktemp)"
-trap 'rm -f "$TMP" "$OUT"' EXIT
-cat "$TARGET" > "$TMP"
-cat >> "$TMP" <<'EOF'
+trap 'rm -rf "$BUILD_DIR"; rm -f "$OUT"' EXIT
+
+# The BODY6 slices are intentionally stored outside the local_fkg Lake package.
+# Compile the local import chain into an isolated cache, then prepend that cache
+# to Lake's own LEAN_PATH.  This keeps the verifier portable and leaves the
+# repository workspace untouched.
+run_lean() {
+  (
+    cd "$LAKE_ROOT"
+    lake env bash -c '
+      build_dir="$1"
+      shift
+      export LEAN_PATH="$build_dir${LEAN_PATH:+:$LEAN_PATH}"
+      exec lean "$@"
+    ' _ "$BUILD_DIR" "$@"
+  )
+}
+
+compile_local_module() {
+  local module="$1"
+  local source="$SRC_ROOT/$module.lean"
+  [[ -f "$source" ]] || { echo "local import missing: $source" >&2; exit 2; }
+  run_lean -DwarningAsError=true -o="$BUILD_DIR/$module.olean" "$source"
+}
+
+compile_local_module NEW_BODY6_SLICE_ACTUALSTORAGEALIGN20260907
+compile_local_module NEW_BODY6_SLICE_PATHDOMAINPROJECTION20260907
+compile_local_module NEW_BODY6_SLICE_INITIALPATHCAPS20260907
+echo "LOCAL_IMPORT_BOOTSTRAP=PASS"
+
+AUDIT="$BUILD_DIR/AlignedConsumerAudit.lean"
+cat "$TARGET" > "$AUDIT"
+cat >> "$AUDIT" <<'EOF'
 
 #print axioms NEW_BODY6_SLICE_ALIGNEDPATHCAPCONSUMER20260908.consume_aligned_path_cap_attempt
 #print axioms NEW_BODY6_SLICE_ALIGNEDPATHCAPCONSUMER20260908.source_full_cap_does_not_pay_shift_attempt
 EOF
 
-(
-  cd "$LAKE_ROOT"
-  lake env lean -DwarningAsError=true "$TMP"
-) 2>&1 | tee "$OUT"
+run_lean -DwarningAsError=true "$AUDIT" 2>&1 | tee "$OUT"
 
 for theorem in \
   consume_aligned_path_cap_attempt \
