@@ -117,9 +117,16 @@ theorem lifted_base_storage_robust_collar
     (hsquare : 2*nu*dCross ≤ nu^2*U + Qd)
     (hQd : Qd ≤ Ebar) :
     nu*Udot ≤ -(nu^2)*U + Ebar := by
-  have hrate : Udot ≤ -2*nu*U + 2*dCross := by
+  have hrateRaw :
+      Udot ≤ -2*mu*U + 2*rhoB*U + 2*rhoR*U + 2*dCross := by
     rw [hUdot]
-    nlinarith
+    linarith
+  have hrate : Udot ≤ -2*nu*U + 2*dCross := by
+    calc
+      Udot ≤ -2*mu*U + 2*rhoB*U + 2*rhoR*U + 2*dCross := hrateRaw
+      _ = -2*nu*U + 2*dCross := by
+        rw [hnu]
+        ring
   have hscaled := mul_le_mul_of_nonneg_left hrate (le_of_lt hnuPos)
   nlinarith [hscaled, hsquare, hQd]
 
