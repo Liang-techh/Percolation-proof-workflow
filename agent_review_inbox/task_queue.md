@@ -4418,6 +4418,24 @@ source 下的 `y=X z_A`、`d=A y+b`、`H=M0_CC^-1` 及分离的 Schur 输出。�
 和 sidecar，不是 review/receipt；保持 pending，禁止把 Lean 文件或 claim 直接升级为
 source/coverage/admission 证明。
 
+## 2026-09-08 — revision 874 harvest：Mref found, reference context still open
+
+`P5-098-ANCHOR-BUDGET-INSTANTIATION` 已收割：真实 `Mref` CSV token、source
+evaluator、full-state ellipsoid 与初始球条件均已定位。若 nominal/actual 初值同一，
+可条件推出 `pD(actual(0))+pB(nominal(0))<=27/800<28/5`，余量为 `4453/800`；
+但当前没有同 context 的 `qbarB,vbarB,referenceKey,lbar`，也没有一般时刻 remote
+八坐标或 `pD` 上界。因此该结果是 conditional arithmetic，不是 actual anchor budget
+verification；不得填 0、混用 Mref 与 domain weight、或把 exporter q-only 表当 flowpipe。
+
+## 2026-09-08 — revision 874 next narrow lane
+
+| owner | task id | bounded deliverable |
+|---|---|---|
+| 柳冠一 | `P5-103-ACTUAL-REFERENCE-CONTEXT-BINDING` | 从真实 source/outputs 找同 context 的 qbar/vbar/referenceKey/lbar；找不到则给 exact missing-field report |
+
+该任务只处理 reference identity，不重复 anchor domain 代数；仍禁止修改 registry/shared
+state，缺字段时保持 pending。
+
 ## 2026-09-08 — revision 873 harvest：joint6 rational residual bridge pending CI
 
 `T-P4-JOINT6-RATIONAL-RESIDUAL-BRIDGE` 已收割并路由到

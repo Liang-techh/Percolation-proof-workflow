@@ -3599,6 +3599,12 @@ collar 数学，苏梦辰与巨阳仙尊分别负责窄 Lean sidecar。所有新
 接口与 division-free algebra leaves 已形成，但 portable-sidecars 当时仍在运行，实际
 source CSE、Float64 semantics、P4 admission 和 registry 仍未闭合，当前不升级状态。
 
+### 梁智炜 · revision 874 harvest：Mref found, reference context missing
+
+P5-098 已确认真实 Mref 与椭球权重，但没有同 context 的 nominal block/reference
+实例；初始 `27/800` 预算只是“同初值”条件式算术。下一条只攻 reference identity，
+不把 domain arithmetic 误报成 actual source closure。
+
 ### 梁智炜 · revision 870–871 harvest：exact domain and budget decisions
 
 Anchor-domain review 已把真实 hybrid inclusion 收窄为单一 `pD+pB<=rho` budget，

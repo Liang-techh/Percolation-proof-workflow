@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 873,
+  "revision": 874,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -41828,6 +41828,21 @@
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-P5-PARAMETER-FEASIBILITY-ENVELOPE-20260908-Sartre.md",
             "correction_of_sha256": "A388A447EAFEAA4DBF20B5605CE4D6A22029D822FCA32B6A1E6BAC1ED1347E6B"
+          },
+          {
+            "record_file": "agent_review_inbox/review-P5-098-ANCHOR-BUDGET-INSTANTIATION-20260908T202703Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "81E50FC3A40332450029BC6C336B0D58B0420F88231A7BD1BD0F3800C34C9637",
+            "task_id": "P5-098-ANCHOR-BUDGET-INSTANTIATION",
+            "source_agent": "Codex-source-audit",
+            "created_at": "2026-09-08T20:27:03Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_p5_anchor_budget_instantiation",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "2b1e03aa23cb28c462bfc3c9b67616fae38d827c",
+            "review_file": "agent_review_inbox/review-P5-098-ANCHOR-BUDGET-INSTANTIATION-20260908T202703Z.md",
+            "admission_label": "pending"
           }
         ]
       }
@@ -82118,6 +82133,19 @@
       "formal_certificate_allowed": false,
       "artifact_binding_status": "PENDING",
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T20:29:35.499149+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-P5-098-ANCHOR-BUDGET-INSTANTIATION-20260908T202703Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "81E50FC3A40332450029BC6C336B0D58B0420F88231A7BD1BD0F3800C34C9637",
+      "task_id": "P5-098-ANCHOR-BUDGET-INSTANTIATION",
+      "classification": "pending_p5_anchor_budget_instantiation",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383"
     }
   ],
   "agent_requests": {},
@@ -85774,5 +85802,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "61f34f8d895c6b4edae47c4e1dc57df00c42b57425f6f93d8d8bf56862f17397"
+  "state_checksum": "2139a5f5b1c0030ac1ffe803a44ec52edb62c7d2ac34e6661b1b898370aeb2e1"
 }

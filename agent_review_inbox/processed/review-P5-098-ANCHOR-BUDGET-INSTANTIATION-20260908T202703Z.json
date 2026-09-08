@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-P5-098-ANCHOR-BUDGET-INSTANTIATION-20260908T202703Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "81E50FC3A40332450029BC6C336B0D58B0420F88231A7BD1BD0F3800C34C9637",
+  "task_id": "P5-098-ANCHOR-BUDGET-INSTANTIATION",
+  "source_agent": "Codex-source-audit",
+  "created_at": "2026-09-08T20:27:03Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_p5_anchor_budget_instantiation",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "2b1e03aa23cb28c462bfc3c9b67616fae38d827c",
+  "review_file": "agent_review_inbox/review-P5-098-ANCHOR-BUDGET-INSTANTIATION-20260908T202703Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T20:29:35.499149+00:00"
+}

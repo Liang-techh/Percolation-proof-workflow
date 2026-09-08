@@ -642,6 +642,9 @@ TASK_TARGETS = {
     "T-P4-JOINT6-RATIONAL-RESIDUAL-BRIDGE": (
         "P4.true_dh_port_source_binding",
         "pending_p4_joint6_rational_residual_bridge"),
+    "P5-103-ACTUAL-REFERENCE-CONTEXT-BINDING": (
+        "P5.componentwise_relative_decay.feasible_cone_spn",
+        "pending_p5_actual_reference_context_binding"),
 }
 
 REVIEW_ID_ALIASES = {
