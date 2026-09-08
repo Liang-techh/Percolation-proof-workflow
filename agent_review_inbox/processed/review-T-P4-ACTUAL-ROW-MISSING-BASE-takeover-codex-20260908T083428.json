@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-ACTUAL-ROW-MISSING-BASE-takeover-codex-20260908T083428.md",
+  "record_kind": "review_result",
+  "review_sha256": "3348EA4AC2DEA29F5E993F63A0449C3AAC8DA3D90D36506CBF518403E4F71D49",
+  "task_id": "T-P4-ACTUAL-ROW-MISSING-BASE",
+  "source_agent": "Codex-P4-math-lane",
+  "created_at": "2026-09-08T08:34:28-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_actual_row_missing_base_takeover",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "272340bf92ebd939d54626bfa1f9e4e886a9c467",
+  "review_file": "agent_review_inbox/review-T-P4-ACTUAL-ROW-MISSING-BASE-takeover-codex-20260908T083428.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T14:37:26.767114+00:00"
+}

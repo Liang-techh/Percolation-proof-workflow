@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 762,
+  "revision": 764,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -8109,6 +8109,21 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-T-P4-020E-energy-beta-honglianmozun-20260908T0804.md"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MIXED-schur-absorption-reassigned-codex-20260908T083428.md",
+            "record_kind": "review_result",
+            "review_sha256": "5274CACFAEC501E5544CFCB314C15872A91AD9BDCA0093E6A46C0038450C3BBC",
+            "task_id": "GH-MIXED-schur-absorption-reassigned",
+            "source_agent": "Codex-P4-math-lane",
+            "created_at": "2026-09-08T08:34:28-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_reassigned_schur_absorption_review",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "272340bf92ebd939d54626bfa1f9e4e886a9c467",
+            "review_file": "agent_review_inbox/review-GH-MIXED-schur-absorption-reassigned-codex-20260908T083428.md",
+            "admission_label": "pending"
           }
         ],
         "conditional_children": [
@@ -15192,6 +15207,36 @@
             "target_scope": "routeb_node",
             "source_commit": "82b257d62178940d024708570dc66f6e953919ae",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-TARGET-CAPS-codex-20260908T083041.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P4-ACTUAL-ROW-MISSING-BASE-liuchuanafeng-20260907T1615.md",
+            "record_kind": "review_result",
+            "review_sha256": "BFD20BEAAC09FE737D9AD8E562DE3836CF05D7B4E2F919F9C7A8626729601118",
+            "task_id": "T-P4-ACTUAL-ROW-MISSING-BASE",
+            "source_agent": "流川枫",
+            "created_at": "2026-09-07T16:15:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_actual_row_missing_base_takeover",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "5036a3b88c4d2e03b7dfce91649ea69aa63cc464",
+            "review_file": "agent_review_inbox/review-T-P4-ACTUAL-ROW-MISSING-BASE-liuchuanafeng-20260907T1615.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P4-ACTUAL-ROW-MISSING-BASE-takeover-codex-20260908T083428.md",
+            "record_kind": "review_result",
+            "review_sha256": "3348EA4AC2DEA29F5E993F63A0449C3AAC8DA3D90D36506CBF518403E4F71D49",
+            "task_id": "T-P4-ACTUAL-ROW-MISSING-BASE",
+            "source_agent": "Codex-P4-math-lane",
+            "created_at": "2026-09-08T08:34:28-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_actual_row_missing_base_takeover",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "272340bf92ebd939d54626bfa1f9e4e886a9c467",
+            "review_file": "agent_review_inbox/review-T-P4-ACTUAL-ROW-MISSING-BASE-takeover-codex-20260908T083428.md",
             "admission_label": "pending"
           }
         ]
@@ -76918,6 +76963,45 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "1ea06cbee9b54297913156cfb0b201ce"
+    },
+    {
+      "at": "2026-09-08T14:36:58.784286+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MIXED-schur-absorption-reassigned-codex-20260908T083428.md",
+      "record_kind": "review_result",
+      "review_sha256": "5274CACFAEC501E5544CFCB314C15872A91AD9BDCA0093E6A46C0038450C3BBC",
+      "task_id": "GH-MIXED-schur-absorption-reassigned",
+      "classification": "pending_reassigned_schur_absorption_review",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e7b1df1835f4deba06b11a8182f6719"
+    },
+    {
+      "at": "2026-09-08T14:37:26.766831+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-ACTUAL-ROW-MISSING-BASE-liuchuanafeng-20260907T1615.md",
+      "record_kind": "review_result",
+      "review_sha256": "BFD20BEAAC09FE737D9AD8E562DE3836CF05D7B4E2F919F9C7A8626729601118",
+      "task_id": "T-P4-ACTUAL-ROW-MISSING-BASE",
+      "classification": "pending_actual_row_missing_base_takeover",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T14:37:26.767114+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-ACTUAL-ROW-MISSING-BASE-takeover-codex-20260908T083428.md",
+      "record_kind": "review_result",
+      "review_sha256": "3348EA4AC2DEA29F5E993F63A0449C3AAC8DA3D90D36506CBF518403E4F71D49",
+      "task_id": "T-P4-ACTUAL-ROW-MISSING-BASE",
+      "classification": "pending_actual_row_missing_base_takeover",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -80574,5 +80658,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "e5abcd2cb9c0e9d66daad171c983e517e732d7a50955d96eb56f2b52734d8051"
+  "state_checksum": "dfa6e65599a8003d1be3bcfc41363d6af8a1851955a5538ddd29d48da5b76f5b"
 }

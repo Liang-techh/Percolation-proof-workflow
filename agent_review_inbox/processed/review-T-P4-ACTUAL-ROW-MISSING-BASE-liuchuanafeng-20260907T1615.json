@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-ACTUAL-ROW-MISSING-BASE-liuchuanafeng-20260907T1615.md",
+  "record_kind": "review_result",
+  "review_sha256": "BFD20BEAAC09FE737D9AD8E562DE3836CF05D7B4E2F919F9C7A8626729601118",
+  "task_id": "T-P4-ACTUAL-ROW-MISSING-BASE",
+  "source_agent": "流川枫",
+  "created_at": "2026-09-07T16:15:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_actual_row_missing_base_takeover",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "5036a3b88c4d2e03b7dfce91649ea69aa63cc464",
+  "review_file": "agent_review_inbox/review-T-P4-ACTUAL-ROW-MISSING-BASE-liuchuanafeng-20260907T1615.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T14:37:26.766831+00:00"
+}

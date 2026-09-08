@@ -131,6 +131,9 @@ TASK_TARGETS = {
     "GH-MATH-P4-SCHUR-BUDGET-CLOSURE": (
         "P4.residual_schur_pmi",
         "pending_schur_budget_closure"),
+    "T-P4-ACTUAL-ROW-MISSING-BASE": (
+        "P4.true_dh_port_source_binding",
+        "pending_actual_row_missing_base_takeover"),
     "GH-LEAN-BODY6-PATHREASSIGNED-COMPILE": (
         "P4.O1.source_comparator.h_body_6.canonical_export",
         "pending_reassigned_body6_compile"),

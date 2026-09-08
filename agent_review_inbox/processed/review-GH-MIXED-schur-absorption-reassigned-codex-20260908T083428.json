@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MIXED-schur-absorption-reassigned-codex-20260908T083428.md",
+  "record_kind": "review_result",
+  "review_sha256": "5274CACFAEC501E5544CFCB314C15872A91AD9BDCA0093E6A46C0038450C3BBC",
+  "task_id": "GH-MIXED-schur-absorption-reassigned",
+  "source_agent": "Codex-P4-math-lane",
+  "created_at": "2026-09-08T08:34:28-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_reassigned_schur_absorption_review",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "272340bf92ebd939d54626bfa1f9e4e886a9c467",
+  "review_file": "agent_review_inbox/review-GH-MIXED-schur-absorption-reassigned-codex-20260908T083428.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T14:36:58.784286+00:00"
+}
