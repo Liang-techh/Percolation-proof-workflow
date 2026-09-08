@@ -3455,3 +3455,20 @@ James 确认当前 slab producer 与 jet extractor 使用同一 DH damping，并
 绑定 residual、anchor/fiber、segment-domain、Hjac/Scoord 与 force identity，不能
 从 6×13 acceleration jet 自动得到。该 join 仍缺 actual source/metric/consumer packet，
 所以 P4/P5 均保持 pending，registry=0，formal gate 关闭。
+
+### 梁智炜 · revision 858：exact rational PSD schema
+
+Sartre 将 inverse-free H-cap 固化为可实例化 schema：`Q` 只需对称，核心
+`K` 为 7×7 对称 PSD；有理函数必须统一正因子清分母，并提供 exact identity、
+matrix-SOS/LDL witness、cell/lift coverage 与独立 consumer allocation。该 schema
+确认现有 generic additive consumer 可消费 scalar `Delta`，但没有产生实际 `Q/Delta`
+或 full-cell source witness，故仍为 pending，registry=0，formal gate 关闭。
+
+### 梁智炜 · revision 859：exact toy PSD-capacity witness
+
+Poincare 的 capacity 脚本实际构造了 source-independent exact toy witness：对 18 个
+representatives 生成 shifted PSD factors，验证 72 条容量不等式，得到
+`t_cap=32553/4000000`、可选 `t=1/1000`，更新后的 36-label geometry/legacy checks
+保持 arithmetic-valid。这证明 PSD-slack 方法能绕开固定-N 的 `E=0` 障碍，但所有
+`K/Q/L/证书/t` 仍属于 toy fixture；没有 actual `K_path`、source binding 或 Lean
+kernel receipt，因此 P5、registry 与 formal gate 不变。

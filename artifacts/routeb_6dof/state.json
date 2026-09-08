@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 857,
+  "revision": 859,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12919,6 +12919,21 @@
             "target_scope": "routeb_node",
             "source_commit": "769590f5f704a658607040739a90945ea5b5a6ec",
             "review_file": "agent_review_inbox/review-GH-P5-P4-SAME-CELL-JET-JOIN-james-20260908T132637.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/NEW_REVIEW_P5_EXACT_RATIONAL_PSD_SCHEMA_ADDITIVE_HCAP_20260908.md",
+            "record_kind": "review_result",
+            "review_sha256": "25D6E5962C455F2B8874C4C3DD69B9B61204B6D04C8AC36F9722BE84120A7262",
+            "task_id": "P5-EXACT-RATIONAL-PSD-SCHEMA-ADDITIVE-HCAP",
+            "source_agent": "Sartre",
+            "created_at": "unknown",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_exact_rational_psd_schema_additive_hcap",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/NEW_REVIEW_P5_EXACT_RATIONAL_PSD_SCHEMA_ADDITIVE_HCAP_20260908.md",
             "admission_label": "pending"
           }
         ]
@@ -41474,6 +41489,21 @@
             "target_scope": "routeb_node",
             "source_commit": "769590f5f704a658607040739a90945ea5b5a6ec",
             "review_file": "agent_review_inbox/review-T-P5-CONCRETE-KPATH-PACKET-20260908T192454Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P5-PSD-CAPACITY-WITNESS-20260908T193241Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "36D1DE1DAAC3A1A261596DCDA510C116A5C0DB04A30DD09175FCF76A683328CF",
+            "task_id": "T-P5-PSD-CAPACITY-WITNESS",
+            "source_agent": "Poincare",
+            "created_at": "2026-09-08T19:32:41Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_exact_toy_psd_capacity_witness",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-T-P5-PSD-CAPACITY-WITNESS-20260908T193241Z.md",
             "admission_label": "pending"
           }
         ]
@@ -81345,6 +81375,32 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "4a9af66cdc4f4607857a5cf360f19eb7"
+    },
+    {
+      "at": "2026-09-08T19:33:14.135805+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/NEW_REVIEW_P5_EXACT_RATIONAL_PSD_SCHEMA_ADDITIVE_HCAP_20260908.md",
+      "record_kind": "review_result",
+      "review_sha256": "25D6E5962C455F2B8874C4C3DD69B9B61204B6D04C8AC36F9722BE84120A7262",
+      "task_id": "P5-EXACT-RATIONAL-PSD-SCHEMA-ADDITIVE-HCAP",
+      "classification": "pending_exact_rational_psd_schema_additive_hcap",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "4a9af66cdc4f4607857a5cf360f19eb7"
+    },
+    {
+      "at": "2026-09-08T19:35:44.874867+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P5-PSD-CAPACITY-WITNESS-20260908T193241Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "36D1DE1DAAC3A1A261596DCDA510C116A5C0DB04A30DD09175FCF76A683328CF",
+      "task_id": "T-P5-PSD-CAPACITY-WITNESS",
+      "classification": "pending_exact_toy_psd_capacity_witness",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383"
     }
   ],
   "agent_requests": {},
@@ -85001,5 +85057,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "b6875e317ecc4df648399782f25680716976e03036fa5a9e9cb41993a7fb54d5"
+  "state_checksum": "0b3984fd774ac6e17c4044db5eb34f4f694e72bc8717949dc701ddb6954540bb"
 }

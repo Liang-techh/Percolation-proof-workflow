@@ -4164,3 +4164,17 @@ consumer。该构造尚未产生实际 `δ/t` 或 source-indexed packet，仍保
 controller/RHS identity，但必须先固定 residual/carrier/anchor、13→4 projection、
 segment-domain、Hjac/Scoord 与 force equality；不得从 6×13 jet 单独推出 K-path，
 也不得把 conditional `b/Db` branch 当作 runtime/flowpipe proof。
+
+## 2026-09-08 — revision 858 exact rational PSD schema
+
+`P5-EXACT-RATIONAL-PSD-SCHEMA-ADDITIVE-HCAP` 已收割。后续若补实际同源
+`M,R,L,d0,H,Q,Delta`，优先按 7×7 `K` 的 exact rational/SOS/LDL schema 验证，
+并单独提交 metric transport、allocation、cell/lift coverage；没有这些字段时，
+schema 本身不能关闭 P5 或进入 registry。
+
+## 2026-09-08 — revision 859 exact toy PSD-capacity witness
+
+`T-P5-PSD-CAPACITY-WITNESS` 已收割。该 witness 仅证明 source-independent toy
+中存在非零 PSD-slack 增量（`t=1/1000`，容量上限 `32553/4000000`），不能迁移为
+真实 DH `K_path`。下一步仍优先绑定 actual path/source/chart/hash 与 18 个真实
+certificate；远端 Lean agent 可并行做 standalone receipt，但不得改变 admission label。

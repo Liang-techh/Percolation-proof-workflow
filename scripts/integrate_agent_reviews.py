@@ -419,6 +419,9 @@ TASK_TARGETS = {
     "P5-GRAPH-JET-IFT-INVERSE-FREE-HCAP": (
         "P5.componentwise_relative_decay",
         "pending_graph_jet_ift_inverse_free_hcap"),
+    "P5-EXACT-RATIONAL-PSD-SCHEMA-ADDITIVE-HCAP": (
+        "P5.componentwise_relative_decay",
+        "pending_exact_rational_psd_schema_additive_hcap"),
     # External FLT scans are deliberately event-only: they are advisory
     # catalog evidence, not Route-B theorem nodes or registry entries.
     "T-FLT-DERIV-CALC": (None, "flt_derivation_calculus_scan"),
@@ -492,6 +495,9 @@ TASK_TARGETS = {
     "T-P5-CONCRETE-KPATH-PACKET": (
         "P5.componentwise_relative_decay.feasible_cone_spn",
         "pending_concrete_kpath_packet_obstruction"),
+    "T-P5-PSD-CAPACITY-WITNESS": (
+        "P5.componentwise_relative_decay.feasible_cone_spn",
+        "pending_exact_toy_psd_capacity_witness"),
     "GH-P5-P4-SAME-CELL-JET-JOIN": (
         "P5.componentwise_relative_decay",
         "pending_same_cell_jet_join_contract"),
