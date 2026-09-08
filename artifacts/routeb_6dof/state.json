@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 826,
+  "revision": 827,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12809,6 +12809,20 @@
             "source_commit": "cd628dbef95b7d7e32a618003c6b2947b9f92576",
             "review_file": "agent_review_inbox/review-T-P5-092-finite-step-storage-taylor-kuangmanmozun-20260908T1740Z.md",
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/NEW_REVIEW_SARTRE_P5_SAME_TUBE_SOURCE_PACKET_20260908.md",
+            "record_kind": "review_result",
+            "review_sha256": "CB35A52317E0BD747AAA437D2E3A7885436B3E6B2BF43F37AAA650098BC50C2D",
+            "task_id": "SARTRE-P5-SAME-TUBE-SOURCE-PACKET",
+            "source_agent": "unknown",
+            "created_at": "unknown",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_same_tube_source_packet_obstruction",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/NEW_REVIEW_SARTRE_P5_SAME_TUBE_SOURCE_PACKET_20260908.md"
           }
         ]
       }
@@ -80392,6 +80406,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "4a9af66cdc4f4607857a5cf360f19eb7"
+    },
+    {
+      "at": "2026-09-08T18:02:06.473262+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/NEW_REVIEW_SARTRE_P5_SAME_TUBE_SOURCE_PACKET_20260908.md",
+      "record_kind": "review_result",
+      "review_sha256": "CB35A52317E0BD747AAA437D2E3A7885436B3E6B2BF43F37AAA650098BC50C2D",
+      "task_id": "SARTRE-P5-SAME-TUBE-SOURCE-PACKET",
+      "classification": "pending_same_tube_source_packet_obstruction",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "4a9af66cdc4f4607857a5cf360f19eb7"
     }
   ],
   "agent_requests": {},
@@ -84048,5 +84075,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "e161f63e699d4cac308f59d9c62dd944cc2c9a4e843e5b2de9ddd71a25129c30"
+  "state_checksum": "e3be51466db5345e2611d33217dd9680c6ee971aa955e39558882dbd7d8eb6ac"
 }
