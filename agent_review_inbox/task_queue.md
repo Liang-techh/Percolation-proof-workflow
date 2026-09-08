@@ -4460,3 +4460,17 @@ P4 source admission 与 P8/path coverage。即使 CI 通过，先只能是 compi
 已新增 open frontier：`P8-105-REACHABLE-SET-NEGATIVE-SEPARATOR`，要求构造真实
 full-X0/ramp reachable-set 排除负值邻域的 typed contract；若证据不足，必须返回
 明确 negative/pending，而不是修改 domain 标签或 target。
+
+## 2026-09-08 — revision 876 harvest：sidecar candidates normalized into inbox
+
+两份本地 agent 产出已通过 coordinator wrapper 纳入标准 inbox：
+
+1. `T-BODY5-API-REPAIR-SLICE-BOUNDARY`：Body5 的 `List.Perm`/seeded-fold、
+   `flatMap`、RowCode left-inverse、q3 guard 与 zero-fold API 候选，分类 abstract 1 /
+   Route-B adapter 2；未编译，CodedFilterCore/concrete support/conjugate identity 仍 open。
+2. `T-HACC-PHASE-INVARIANT-SEAM`：H_acc occurrence-cut 的 FK completed-step、active
+   Jacobian prefix、source-state/graph-value 分离 seam，分类 architecture/adapter 2–3；
+   source export、footprint、semantic reification 与 runtime evidence 仍缺。
+
+原始 artifact 路径与 SHA-256 保存在对应 intake review 中；wrapper 不是 GitHub receipt，
+不改变 `registry=0` 或 `formal_certificate_allowed=false`。

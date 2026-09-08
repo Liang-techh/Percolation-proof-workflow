@@ -3621,3 +3621,8 @@ Schur binding；目前仅有认领与 sidecar，未有独立 review/receipt，�
 P5-099 确认现有 analytic/static domain 不能排除 exact witness；ramp 仅排除早时段的
 `w=1`，full-X0 flowpipe 仍无完整 exclusion receipt。新增 P8-105 专门处理 reachable-set
 negative separator，保持原 block45 trajectory theorem 未决，不偷换结论。
+
+### 梁智炜 · revision 876 harvest：sidecar candidates normalized
+
+Body5 API repair 与 H_acc phase-invariant seam 已转成标准 inbox intake，保留原 artifact
+hash 和未编译边界；它们增加可复用接口，但没有 source/kernel/registry 证明。

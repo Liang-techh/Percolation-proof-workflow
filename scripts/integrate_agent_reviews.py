@@ -648,6 +648,12 @@ TASK_TARGETS = {
     "P8-105-REACHABLE-SET-NEGATIVE-SEPARATOR": (
         "P8.independent_reachability",
         "pending_p8_reachable_set_negative_separator"),
+    "T-BODY5-API-REPAIR-SLICE-BOUNDARY": (
+        "P5.componentwise_relative_decay",
+        "pending_body5_api_repair_slice_boundary"),
+    "T-HACC-PHASE-INVARIANT-SEAM": (
+        "P0.reproducibility_baseline",
+        "pending_hacc_phase_invariant_seam"),
 }
 
 REVIEW_ID_ALIASES = {

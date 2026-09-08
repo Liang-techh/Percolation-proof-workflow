@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-BODY5-API-REPAIR-SLICE-BOUNDARY-20260908.md",
+  "record_kind": "review_result",
+  "review_sha256": "ABA1C89686826A3E16BA899FCDD4C2B3614E04CABF531ED1D813E669C28EE2A3",
+  "task_id": "T-BODY5-API-REPAIR-SLICE-BOUNDARY",
+  "source_agent": "local-agent-sidecar-intake",
+  "created_at": "2026-09-08T20:32:30Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_body5_api_repair_slice_boundary",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-BODY5-API-REPAIR-SLICE-BOUNDARY-20260908.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T20:35:08.231364+00:00"
+}

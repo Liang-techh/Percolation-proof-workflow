@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-HACC-PHASE-INVARIANT-SEAM-20260908.md",
+  "record_kind": "review_result",
+  "review_sha256": "8282DA6345B6A5CDF91FF1CD15D3BBE443EAC982B70D8B6528A4BF96C1A5079C",
+  "task_id": "T-HACC-PHASE-INVARIANT-SEAM",
+  "source_agent": "local-agent-sidecar-intake",
+  "created_at": "2026-09-08T20:32:36Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_hacc_phase_invariant_seam",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-HACC-PHASE-INVARIANT-SEAM-20260908.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T20:35:08.231614+00:00"
+}
