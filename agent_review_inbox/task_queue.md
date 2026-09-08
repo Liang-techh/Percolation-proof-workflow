@@ -201,6 +201,17 @@ review envelope 回收，并按现有 admission gate 处理：
 | `LOCAL-MATH-P4-MATCHING-METRIC-BUDGET` | James：同一 `H=M0_CC⁻¹` 下 `r_CᵀHr_C≤W` 与 `rho2_m0_upper` 的 typed budget 接线 | 区分 `rho2_upper`、`rho2_bchol_upper` 和 matching metric；不跑全覆盖/全回归 |
 | `LOCAL-MATH-P4-Q6-GRAPH-EXCLUSION` | Godel：研究 q6 非零/零加速度 descriptor ray 如何由真实 DH acceleration graph 排除或确认 | 只给 conditional interface/obstruction；不得升级为物理 ODE 不可能性 |
 
+### 2026-09-08 — post-q6-graph follow-up lanes
+
+q6 graph exclusion 已形成条件性正结果后，下一轮只消费其缺口，不重复 beta
+扫描或 descriptor-ideal 反例：
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-MATH-P4-BLOCK456-SOURCE-REIFICATION` (R1-R3 follow-up) | Sartre | 完整 C×C 七行、原点九项 fold、一次 `mu` 与 C/Lean 索引绑定；没有 witness 时提交 exact obstruction |
+| `GH-MATH-P4-BLOCK456-METRIC-PRODUCER-PROVENANCE` | James | 追查 probe 当前源码与保存 CSV 的 producer SHA 不一致；只交历史 commit/版本缺口和 rounding/RESOLVED 边界 |
+| `GH-MATH-P4-DIRECT-BLOCK456-Q6-RAY-SOURCE-BINDING` | Godel | 将 q6 exact-real graph exclusion 与真实 DH、central-FD/Float64 runtime error premises 分层绑定 |
+
 ### 2026-09-07 — active-energy / topology frontier batch
 
 - `T-P4-ACTIVE-ENERGY-ORIGIN`: verify the source identity and additive
