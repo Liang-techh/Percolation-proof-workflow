@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-TARGET-DEFINITION-LOCAL-20260908T162002Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "02222605252D247D924C25528607CB72A3D561587D46FF268B5D4787D5A0AD52",
+  "task_id": "GH-MATH-P4-ACTIVE-V-TARGET-DEFINITION",
+  "source_agent": "codex-active-v-definition-source-lane",
+  "created_at": "2026-09-08T16:20:02Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_active_target_storage_definition",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-TARGET-DEFINITION-LOCAL-20260908T162002Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T16:23:23.939157+00:00"
+}
