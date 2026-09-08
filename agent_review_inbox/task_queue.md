@@ -3644,3 +3644,18 @@ configuration 和运行证据时必须保持 pending，Lean/registry gate 不变
 
 这批只推进数学接线与 Lean theorem seam，不做重复 omission/rank 审计、全回归或
 本机 Lean；所有未具备同源 source/receipt 的结果保持 pending。
+
+## 2026-09-08 — post-revision-803 value/path binding follow-up
+
+已收割 BODY6 path contract 与 active-energy normalization；下一轮保留两条尚未
+返回的 source lane，并把已发现的精确差异转成消费条件：
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-MATH-P4-SCHUR-BUDGET-CLOSURE` | Sartre the 6th | 将 signed defect gates 接到同源 residual/metric，或提交 source obstruction |
+| `GH-MATH-P4-SOURCE-SEMANTICS-HALF-ACTIVE` | James the 6th | half-active actual source/rows456/runtime packet，保留 joint6 与 solve defect |
+| `GH-LEAN-BODY6-PATHCONTRACT-RECEIPT` | Poincare the 6th | 仅在具备 pinned source/Lean receipt 后继续；当前 contract 保持 pending |
+| `GH-MATH-P4-ACTIVE-ENERGY-NORMALIZATION` | Godel the 6th | 针对 `DeltaQ`、`g^Tq`、`eps q^TMv` 给出同一配置的值级 envelope，禁止 origin shortcut |
+
+未交付的 source、domain、configuration 和 runtime evidence 不得由 theorem seam
+自动补齐；不做全量回归或本机 Lean。

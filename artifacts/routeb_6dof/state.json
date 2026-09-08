@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 802,
+  "revision": 803,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -15971,6 +15971,21 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-MIXED-ADJUGATE-REASSIGNED-20260908T165153Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-ENERGY-NORMALIZATION-20260908T165726Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "DDFEF47AF70C8C8F120F76531D82965CD8128C9282476526FBB231BF3A6EF5DF",
+            "task_id": "GH-MATH-P4-ACTIVE-ENERGY-NORMALIZATION",
+            "source_agent": "codex-active-energy-normalization",
+            "created_at": "2026-09-08T16:57:26Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_active_energy_normalization",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-ENERGY-NORMALIZATION-20260908T165726Z.md",
             "admission_label": "pending"
           }
         ]
@@ -39895,6 +39910,27 @@
             "target_scope": "routeb_node",
             "source_commit": "335ac7556da34fc9084c82c6261bda381af7738a",
             "review_file": "agent_review_inbox/review-GH-MIXED-BODY6-PATH-REASSIGNED-20260908T105201.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-LEAN-BODY6-PATHCONTRACT-RECEIPT-20260908T105755.md",
+            "record_kind": "review_result",
+            "review_sha256": "B6A7A368F069213438B5DD62CCF2845F20F6C3FA524AD10127187A9833D858A0",
+            "task_id": "GH-LEAN-BODY6-PATHCONTRACT-RECEIPT",
+            "source_agent": "codex-local",
+            "created_at": "2026-09-08T10:57:55-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_body6_pathcontract_receipt",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "a4adf0ebc4f2b708df2873ff0fb6da4cde9ba744",
+            "artifact_binding_audit": {
+              "status": "BOUND",
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_PATHCONTRACT_REASSIGNED_20260908.lean",
+              "declared_sha256": "FF5E2DFBCF0375D96CCE232C739E0098381CE5B1828F7142DAE23AC3E86A68FC",
+              "actual_sha256": "FF5E2DFBCF0375D96CCE232C739E0098381CE5B1828F7142DAE23AC3E86A68FC"
+            },
+            "review_file": "agent_review_inbox/review-GH-LEAN-BODY6-PATHCONTRACT-RECEIPT-20260908T105755.md",
             "admission_label": "pending"
           }
         ]
@@ -78573,6 +78609,33 @@
       "formal_certificate_allowed": false,
       "artifact_binding_status": "BOUND",
       "node_id": "1e7b1df1835f4deba06b11a8182f6719"
+    },
+    {
+      "at": "2026-09-08T16:59:27.109722+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-LEAN-BODY6-PATHCONTRACT-RECEIPT-20260908T105755.md",
+      "record_kind": "review_result",
+      "review_sha256": "B6A7A368F069213438B5DD62CCF2845F20F6C3FA524AD10127187A9833D858A0",
+      "task_id": "GH-LEAN-BODY6-PATHCONTRACT-RECEIPT",
+      "classification": "pending_body6_pathcontract_receipt",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "artifact_binding_status": "BOUND",
+      "node_id": "1ea06cbee9b54297913156cfb0b201ce"
+    },
+    {
+      "at": "2026-09-08T16:59:27.110216+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-ENERGY-NORMALIZATION-20260908T165726Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "DDFEF47AF70C8C8F120F76531D82965CD8128C9282476526FBB231BF3A6EF5DF",
+      "task_id": "GH-MATH-P4-ACTIVE-ENERGY-NORMALIZATION",
+      "classification": "pending_active_energy_normalization",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -82229,5 +82292,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "6b64f31f4441d6dd0f856ef53de414cd07bd482cdb43e7f2357908c5cd750988"
+  "state_checksum": "362b176ec72bbeb18156b15e259730fe84df737ce9fd73d8461b981562724806"
 }

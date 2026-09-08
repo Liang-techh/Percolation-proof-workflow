@@ -2942,3 +2942,16 @@ physical embedding/domain/path typed contract；Godel 负责 active-energy value
 normalization 与 initial storage；James 负责 half-active 的 actual source/rows456
 semantic packet。该轮继续保留 `registry=0` 与 `formal_certificate_allowed=false`，
 不把 conditional algebra、单列候选或 lift 坐标关系升级为证明。
+
+### 梁智炜 · revision 803：path contract 与 value normalization 收割
+
+BODY6 lane 产生了 `SixthColumnPathContract` 及 physical-row cap transport 两个
+组合 theorem 候选，明确 projection、path inclusion、physicalIdentity、sourceIdentity
+和 canonicalCap 五项前提；它没有实例化任何 physical path 或 cap，也没有 Lean receipt。
+Active-energy lane 则精确对齐了 `W=Vfull_DH`、`Z=Vshift_DH` 与目标 `T` 的差异：
+`T-W = 1/2 q^T DeltaQ q - 2 g^T q + eps q^T Mv`。因此 origin value equality
+不能推出 active initial uniform bound，且正则化/线性/交叉项必须继续保留。
+
+revision=803、registry=0、formal certificate gate 继续 fail-closed。Sartre 与
+James 的 Schur/source semantics lane 仍在运行，下一轮只消费同源 residual 与
+value-level envelope。

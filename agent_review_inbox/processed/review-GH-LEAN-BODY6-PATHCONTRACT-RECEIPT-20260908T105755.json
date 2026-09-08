@@ -1,0 +1,22 @@
+{
+  "record_file": "agent_review_inbox/review-GH-LEAN-BODY6-PATHCONTRACT-RECEIPT-20260908T105755.md",
+  "record_kind": "review_result",
+  "review_sha256": "B6A7A368F069213438B5DD62CCF2845F20F6C3FA524AD10127187A9833D858A0",
+  "task_id": "GH-LEAN-BODY6-PATHCONTRACT-RECEIPT",
+  "source_agent": "codex-local",
+  "created_at": "2026-09-08T10:57:55-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_body6_pathcontract_receipt",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "a4adf0ebc4f2b708df2873ff0fb6da4cde9ba744",
+  "artifact_binding_audit": {
+    "status": "BOUND",
+    "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_b45_source_comparator_lean\\NEW_PATHCONTRACT_REASSIGNED_20260908.lean",
+    "declared_sha256": "FF5E2DFBCF0375D96CCE232C739E0098381CE5B1828F7142DAE23AC3E86A68FC",
+    "actual_sha256": "FF5E2DFBCF0375D96CCE232C739E0098381CE5B1828F7142DAE23AC3E86A68FC"
+  },
+  "review_file": "agent_review_inbox/review-GH-LEAN-BODY6-PATHCONTRACT-RECEIPT-20260908T105755.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T16:59:27.109722+00:00"
+}

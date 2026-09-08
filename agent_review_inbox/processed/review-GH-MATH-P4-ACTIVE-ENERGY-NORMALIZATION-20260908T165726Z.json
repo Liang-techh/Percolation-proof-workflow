@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-ENERGY-NORMALIZATION-20260908T165726Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "DDFEF47AF70C8C8F120F76531D82965CD8128C9282476526FBB231BF3A6EF5DF",
+  "task_id": "GH-MATH-P4-ACTIVE-ENERGY-NORMALIZATION",
+  "source_agent": "codex-active-energy-normalization",
+  "created_at": "2026-09-08T16:57:26Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_active_energy_normalization",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-ENERGY-NORMALIZATION-20260908T165726Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T16:59:27.110216+00:00"
+}
