@@ -44,13 +44,13 @@ theorem finite_sum_path_energy_contraction
     {ι : Type*} [DecidableEq ι]
     (s : Finset ι) (A B : ℝ) (qOut qIn : ι → ℝ)
     (hpoint : ∀ i ∈ s, A * qOut i ≤ B * qIn i) :
-    A * (∑ i in s, qOut i) ≤ B * (∑ i in s, qIn i) := by
+    A * s.sum qOut ≤ B * s.sum qIn := by
   calc
-    A * (∑ i in s, qOut i) = ∑ i in s, A * qOut i := by
+    A * s.sum qOut = s.sum (fun i => A * qOut i) := by
       rw [Finset.mul_sum]
-    _ ≤ ∑ i in s, B * qIn i := by
+    _ ≤ s.sum (fun i => B * qIn i) := by
       exact Finset.sum_le_sum fun i hi => hpoint i hi
-    _ = B * (∑ i in s, qIn i) := by
+    _ = B * s.sum qIn := by
       rw [Finset.mul_sum]
 
 /--
@@ -86,7 +86,7 @@ theorem two_sample_secant_packet
 def normalizedMap (z : ℝ) : ℝ := 2 * z
 
 /-- Pullback of the constant physical metric through `T(z)=1/z`. -/
-def pullbackMetric (z : ℝ) : ℝ := 1 / z^4
+noncomputable def pullbackMetric (z : ℝ) : ℝ := 1 / z^4
 
 /-- Raw Euclidean chord squared expands by exactly four under `Psi(z)=2z`. -/
 theorem raw_normalized_chord_sq_expands (z1 z2 : ℝ) :
@@ -103,7 +103,7 @@ theorem pullback_tangent_contracts (z v : ℝ) (hz : z ≠ 0) :
       (1 / 4 : ℝ) * pullbackMetric z * v^2 := by
   simp only [pullbackMetric, normalizedMap]
   field_simp [hz]
-  <;> ring
+  all_goals ring
 
 /-- Concrete unit-point sanity check for the nonlinear-chart packet. -/
 theorem nonlinear_chart_unit_packet :
