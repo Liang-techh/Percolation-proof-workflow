@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MIXED-BODY6-PATH-REASSIGNED-20260908T143002Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "2F07BAEAEF4B1ADCC13FB50A52865B9DB4BFBBCEC4FF20D85351C1CAC170AF7B",
+  "task_id": "GH-MIXED-BODY6-PATH-REASSIGNED",
+  "source_agent": "codex-body6-reassigned-path-lane",
+  "created_at": "2026-09-08T14:30:02Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_reassigned_body6_path_review",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MIXED-BODY6-PATH-REASSIGNED-20260908T143002Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T14:32:34.247077+00:00"
+}
