@@ -1,15 +1,16 @@
 {
   "record_file": "agent_review_inbox/review-P5-PARAMETER-FEASIBILITY-ENVELOPE-20260908-Sartre.md",
   "record_kind": "review_result",
-  "review_sha256": "A388A447EAFEAA4DBF20B5605CE4D6A22029D822FCA32B6A1E6BAC1ED1347E6B",
+  "review_sha256": "62839A3212DD9BDF16A3C4684071C084B4DA86B380822C3D4F7CEC9E868FEC22",
   "task_id": "P5-PARAMETER-FEASIBILITY-ENVELOPE-20260908",
   "source_agent": "unknown",
   "created_at": "unknown",
   "integration_status": "integrated_as_pending_metadata",
-  "classification": "pending_p5_parameter_feasibility_envelope",
+  "classification": "pending_p5_parameter_feasibility_envelope_revision",
   "admission_effect": "none",
   "target_scope": "routeb_node",
   "source_commit": "unknown",
   "review_file": "agent_review_inbox/review-P5-PARAMETER-FEASIBILITY-ENVELOPE-20260908-Sartre.md",
-  "integrated_at": "2026-09-08T20:19:43.860826+00:00"
+  "correction_of_sha256": "A388A447EAFEAA4DBF20B5605CE4D6A22029D822FCA32B6A1E6BAC1ED1347E6B",
+  "integrated_at": "2026-09-08T20:25:50.604277+00:00"
 }
