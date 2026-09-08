@@ -107,6 +107,18 @@ TASK_TARGETS = {
     "GH-MIXED-FLOWCHUANFENG-ADJUGATE": (
         "P4.true_dh_port_source_binding",
         "pending_adjugate_contract_review"),
+    # Reassigned lanes after 流川枫 retirement.  Keep the historical aliases
+    # above for late receipts, while routing all new envelopes to the same
+    # fail-closed DAG parents under their replacement task IDs.
+    "GH-MIXED-schur-absorption-reassigned": (
+        "P4.residual_schur_pmi",
+        "pending_reassigned_schur_absorption_review"),
+    "GH-MIXED-BODY6-PATH-REASSIGNED": (
+        "P4.O1.source_comparator.h_body_6.canonical_export",
+        "pending_reassigned_body6_path_review"),
+    "GH-MIXED-ADJUGATE-REASSIGNED": (
+        "P4.true_dh_port_source_binding",
+        "pending_reassigned_adjugate_review"),
     # New GitHub proof lanes use descriptive uppercase suffixes.  Route them
     # to existing DAG parents as pending metadata only; no admission path is
     # implied by these aliases.

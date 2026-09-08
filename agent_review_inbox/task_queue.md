@@ -35,7 +35,8 @@ the correction does not rewrite existing claims or review authorship.
 ## Current release-routing snapshot
 
 This snapshot supersedes the historical table above for new work released
-after the user's latest six-agent ring plus the 流川枫 proportional lane:
+after the user's latest six-agent ring. 流川枫已不可用；所有新任务必须只派给
+下列六名现役 agent。
 
 | worker label | slot | current bounded focus |
 |---|---:|---|
@@ -45,7 +46,6 @@ after the user's latest six-agent ring plus the 流川枫 proportional lane:
 | 狂蛮魔尊 | :30 | 数学证明：不等式 closure、强攻难点与反例辅助 |
 | 巨阳仙尊 | :40 | Lean 编译修复、typed interface 与 sidecar |
 | 红莲魔尊 | :50 | 数学证明：能量法、Lyapunov 与非线性恒等式 |
-| 流川枫 | batch share | 约三分之一 GitHub 批次；按任务承接数学或 Lean 独立工作 |
 
 ## Dispatch and synchronization throttle
 
@@ -70,7 +70,7 @@ integration gates are satisfied.
 | `GH-LEAN-P4-032-relative-additive` | 巨阳仙尊 | `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_RelativeAdditive.lean` | compile/repair only; verify `rho_eff/B_eff` statements and no sqrt/source admission |
 | `GH-LEAN-fixed-lambda-reserve` | 苏梦辰 | `examples/routeb_fixed_lambda_fold/NEW_FIXED_LAMBDA_ADMISSIBILITY_STRICT_RESERVE_FINAL_BRIDGE20260907.lean` | compile/repair only; explicit shared-lambda/total equalities must remain |
 | `GH-LEAN-body6-tail-minors` | 巨阳仙尊 | `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_TAILMINORS20260907.lean` | compile/repair only; tail subblock only, no full-body PSD/eigenvalue claim |
-| `GH-MIXED-flowchuanfeng-schur-absorption` | 流川枫 | `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SchurPMIAbsorption.lean` | one proportional batch share; may compile/repair or inspect theorem boundary, never promote registry |
+| `GH-MIXED-schur-absorption-reassigned` | 狂蛮魔尊 | `examples/routeb_p5_feasible_cone_spn_proof_attempt/NEW_P4_032_SchurPMIAbsorption.lean` | 接替历史流川枫任务；只审查不等式/PMI closure 边界，不提升 registry |
 
 ### 2026-09-07 — 14:24 流川枫扩展 lane
 
@@ -83,7 +83,7 @@ integration gates are satisfied.
 
 本批只发布可独立回收的窄任务，优先修复已观测的 Lean 接口错误和推进真实
 source binding；不跑全项目回归，不把 compiled candidate 或数学接口升级为
-verified。约三分之一批次分配给流川枫。
+verified。
 
 | task | owner | target | bounded deliverable |
 |---|---|---|---|
@@ -91,7 +91,7 @@ verified。约三分之一批次分配给流川枫。
 | `GH-LEAN-BODY6-CAP-CONSUMER` | 苏梦辰 | `NEW_BODY6_SLICE_ALIGNEDPATHCAPCONSUMER20260908.lean` | 仅编译/修复 PATHDOMAINPROJECTION 之后的最小 consumer；不得声称 path inclusion、DH 或 admission 已完成 |
 | `GH-MATH-P4-DESCRIPTOR-PUPPER` | 古月方源 | `NEW_P4_032_DescriptorPUpper.lean` | 从真实 DH source 找同源 `mu,H_i,K_i` 或证明其缺失；只提交 exact interface/obstruction，不臆造绝对 `P_upper` |
 | `GH-MATH-P3-FD-REMAINDER` | 红莲魔尊 | `NEW_CENTRAL_FD_HULL_C2C3_CENTRAL_FD_REMAINDER.lean` | 明确 C3/step/shifted-region 与 residual budget 的最小数学接口，并保留 `x^3` 反例；不宣称 evaluator source binding |
-| `GH-MIXED-FLOWCHUANFENG-BODY6-PATH` | 流川枫 | `NEW_BODY6_SLICE_PATHDOMAINPROJECTION20260907.lean` + receipt | 约三分之一批次：独立检查 repair 是否改变 theorem contract，并给出 typed interface/sidecar 建议；不得重复苏梦辰的编译任务 |
+| `GH-MIXED-BODY6-PATH-REASSIGNED` | 巨阳仙尊 | `NEW_BODY6_SLICE_PATHDOMAINPROJECTION20260907.lean` + receipt | 接替历史流川枫任务：独立检查 repair 是否改变 theorem contract，并给出 typed interface/sidecar 建议；不得重复主编译任务 |
 | `GH-MATH-P4-ADJUGATE-ACCEL` | 柳冠一 | `T-P4-DESCRIPTOR-ACCEL-BRIDGE` review | 将 2x2 Cramer/adjugate-force 与 affine observable 投影写成最小 exact-real/rational theorem；优先保留 signed cancellation，不能把 source binding 当作已完成 |
 
 发布纪律：以上任务必须写入新的 `review_result` envelope，带 inspected
@@ -107,10 +107,33 @@ receipt，下一批只消费这一新事实，不重复其编译：
 |---|---|---|---|
 | `GH-LEAN-BODY6-ALIGNED-CONSUMER` | 巨阳仙尊 | `NEW_BODY6_SLICE_ALIGNEDPATHCAPCONSUMER20260908.lean` | 以已成功的两个依赖为基础做 dependency-aware focused compile；记录完整 receipt，保持 source/path/growth 前提外置 |
 | `GH-MATH-P4-TARGET-CAPS` | 古月方源 | `combined_descriptor_remainder_v1.json` 与真实 DH target-domain 定义 | 只研究 `|q|≤5/2, |v|≤15, |w|≤2` 的同源 target-cell 绑定；若只能由 `V≤1` 推出，给出精确 inclusion theorem，否则给出 obstruction |
-| `GH-MIXED-FLOWCHUANFENG-ADJUGATE` | 流川枫 | `NEW_P4_032_AdjugateAcceleration.lean` | 约三分之一批次：独立检查 projected adjugate theorem 的 signed-cancellation contract 与 source-binding边界；不得重复 Lean 编译 lane |
+| `GH-MIXED-ADJUGATE-REASSIGNED` | 红莲魔尊 | `NEW_P4_032_AdjugateAcceleration.lean` | 接替历史流川枫任务：独立检查 projected adjugate theorem 的 signed-cancellation contract 与 source-binding 边界；不得重复 Lean 编译 lane |
 
 这三个任务不关闭 P4/P5 parent；只有 source equality、domain coverage、相应
 receipt 和最终 comparator 全部满足时才允许进一步向 parent 传播。
+
+### 2026-09-08 — 流川枫 lane retirement and reassignment
+
+根据用户指令，流川枫不再可用。以下是当前仍可能产生新结果的未完成任务的
+明确接管关系；旧 claim/review/companion 中的作者标签不改写，只将后续
+执行权转交现役 agent：
+
+| 原任务 | 新 owner | 接管边界 |
+|---|---|---|
+| `GH-MIXED-flowchuanfeng-schur-absorption` | 狂蛮魔尊 | Schur/PMI 不等式 closure 与反例；不做全回归 |
+| `GH-MIXED-FLOWCHUANFENG-BODY6-PATH` | 巨阳仙尊 | BODY6 typed interface/sidecar 独立审查；不重复主 Lean 编译 |
+| `GH-MIXED-FLOWCHUANFENG-ADJUGATE` | 红莲魔尊 | adjugate signed-cancellation 数学边界；不做 source admission |
+| `T-P4-ACTIVE-ENERGY-ORIGIN` | 红莲魔尊 | source identity 与 additive normalization；只交 exact binding/obstruction |
+| `T-P0-COUNTABLE-COVER-API` | 苏梦辰 | pinned Lean theorem/axiom/placeholder receipt；不升级为物理 coverage |
+| `T-P0-INT-CONTINUOUS-LINEAR-API` | 柳冠一 | additive-linear adapter 的接口边界；不升级线性标量域 |
+| `T-P0-PI-SUBTYPE-TRANSPORT` | 柳冠一 | subtype restriction/merge transport；保留空因子边界 |
+| `T-P4-ACTUAL-ROW-MISSING-BASE` | 狂蛮魔尊 | fixed-coefficient opposite-base obstruction；不当作 source reification |
+| `T-P0-FLT-CLASSIFICATION-MATRIX` | 柳冠一 | FLT 通用 adapter/intake 分类；保留 provenance，不进入 Route-B registry |
+| `T-P4-042` | 柳冠一 | shared-theta typed bridge；不得降级为 rowwise witness |
+
+从本节之后发布的 GitHub batch 不再使用流川枫作为 owner 或 proportional
+share。若旧分支稍后回传结果，仍按原作者保存 provenance，再由新 owner 的
+当前任务继续验证，不产生双重 closure。
 
 ### 2026-09-07 — active-energy / topology frontier batch
 
