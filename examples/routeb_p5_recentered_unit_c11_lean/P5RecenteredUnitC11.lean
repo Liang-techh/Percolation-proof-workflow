@@ -93,12 +93,14 @@ theorem segment_average_lipschitz_twice
         (g (r + t * (x - r)) - g (r + t * (y - r)))) ≤
         ∫ t in (0 : ℝ)..1, L2 * t * abs (x - y) := by
     simpa [Real.norm_eq_abs] using
-      (intervalIntegral.norm_integral_le_of_norm_le zero_le_one
-        (show ∀ᵐ t ∂MeasureTheory.volume.restrict (Set.uIoc (0 : ℝ) 1),
-            ‖g (r + t * (x - r)) - g (r + t * (y - r))‖ ≤
-              L2 * t * abs (x - y) by
-          filter_upwards with t ht
-          have ht0 : 0 ≤ t := ht.1.le
+      (intervalIntegral.norm_integral_le_of_norm_le
+        (μ := volume)
+        (f := fun t : ℝ =>
+          g (r + t * (x - r)) - g (r + t * (y - r)))
+        zero_le_one
+        (Filter.Eventually.of_forall fun t => by
+          intro ht
+          have ht0 : 0 ≤ t := le_of_lt ht.1
           calc
             ‖g (r + t * (x - r)) - g (r + t * (y - r))‖ =
                 abs (g (r + t * (x - r)) - g (r + t * (y - r))) := by
@@ -151,7 +153,6 @@ piecewise divided difference is exactly the canonical segment average.
 -/
 theorem recentered_unit_eq_segmentAverage_of_increment
     (h g : ℝ → ℝ) (r x : ℝ)
-    (hroot : h r = 0)
     (hincrement : h x = (x - r) * segmentAverage g r x) :
     recenteredUnit h g r x = segmentAverage g r x := by
   by_cases hx : x = r
@@ -169,11 +170,12 @@ theorem root_graph_division_free_to_lipschitz
     (hroot : mu * abs (r1 - r2) ≤ Lp * d)
     (hchoice : Lp ≤ mu * Lr) :
     abs (r1 - r2) ≤ Lr * d := by
-  apply (mul_le_mul_left hmu).mp
-  calc
-    mu * abs (r1 - r2) ≤ Lp * d := hroot
-    _ ≤ (mu * Lr) * d := mul_le_mul_of_nonneg_right hchoice hd
-    _ = mu * (Lr * d) := by ring
+  have hscaled : mu * abs (r1 - r2) ≤ mu * (Lr * d) := by
+    calc
+      mu * abs (r1 - r2) ≤ Lp * d := hroot
+      _ ≤ (mu * Lr) * d := mul_le_mul_of_nonneg_right hchoice hd
+      _ = mu * (Lr * d) := by ring
+  nlinarith
 
 /-- Pointwise triangular-chart distance estimate before averaging. -/
 theorem parameterized_segment_argument_bound
