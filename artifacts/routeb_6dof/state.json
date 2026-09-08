@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 872,
+  "revision": 873,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -17246,6 +17246,25 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-BLOCK456-METRIC-CAP-kuangmanmozun-20260908T1935Z.md"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P4-JOINT6-RATIONAL-RESIDUAL-BRIDGE-sumengchen-20260908T2022Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "E3AD21B06C81550F98D69EE1207FD04C85D30C3FA1B924CC4F900EB1F7C5D90F",
+            "task_id": "T-P4-JOINT6-RATIONAL-RESIDUAL-BRIDGE",
+            "source_agent": "苏梦辰",
+            "created_at": "2026-09-08T20:22:00Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_p4_joint6_rational_residual_bridge",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "196aa849e029c84327b6acfcba19c945a74753c9",
+            "artifact_binding_audit": {
+              "status": "PENDING",
+              "reason": "missing_artifact_sha256",
+              "path": "examples/routeb_p4_joint6_rational_residual_bridge_lean/"
+            },
+            "review_file": "agent_review_inbox/review-T-P4-JOINT6-RATIONAL-RESIDUAL-BRIDGE-sumengchen-20260908T2022Z.md"
           }
         ]
       }
@@ -82085,6 +82104,20 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383"
+    },
+    {
+      "at": "2026-09-08T20:28:16.839309+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-JOINT6-RATIONAL-RESIDUAL-BRIDGE-sumengchen-20260908T2022Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "E3AD21B06C81550F98D69EE1207FD04C85D30C3FA1B924CC4F900EB1F7C5D90F",
+      "task_id": "T-P4-JOINT6-RATIONAL-RESIDUAL-BRIDGE",
+      "classification": "pending_p4_joint6_rational_residual_bridge",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "artifact_binding_status": "PENDING",
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -85741,5 +85774,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "33df4c6a57b11c337dd37084ccd1db6404cf072c20ad6d01b8b218aea7c30d4b"
+  "state_checksum": "61f34f8d895c6b4edae47c4e1dc57df00c42b57425f6f93d8d8bf56862f17397"
 }

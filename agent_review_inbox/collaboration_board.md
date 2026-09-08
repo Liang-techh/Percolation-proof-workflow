@@ -3593,6 +3593,12 @@ anchor-domain review 将 hybrid inclusion 压成 `pD(actual)+pB(nominal)<=rho`�
 collar 数学，苏梦辰与巨阳仙尊分别负责窄 Lean sidecar。所有新 lane 保持 pending，
 不把编译成功升级为物理或 registry 证明；流川枫不再派工。
 
+### 梁智炜 · revision 873 harvest：joint6 rational residual bridge
+
+苏梦辰的 Joint6 rational residual sidecar 已纳入 P4 frontier：typed same-cell/source
+接口与 division-free algebra leaves 已形成，但 portable-sidecars 当时仍在运行，实际
+source CSE、Float64 semantics、P4 admission 和 registry 仍未闭合，当前不升级状态。
+
 ### 梁智炜 · revision 870–871 harvest：exact domain and budget decisions
 
 Anchor-domain review 已把真实 hybrid inclusion 收窄为单一 `pD+pB<=rho` budget，

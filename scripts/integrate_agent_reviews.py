@@ -639,6 +639,9 @@ TASK_TARGETS = {
     "GH-MATH-P4-SCHUR-ACTUAL-SOURCE-NEXT": (
         "P4.true_dh_port_source_binding",
         "pending_p4_schur_actual_source_next"),
+    "T-P4-JOINT6-RATIONAL-RESIDUAL-BRIDGE": (
+        "P4.true_dh_port_source_binding",
+        "pending_p4_joint6_rational_residual_bridge"),
 }
 
 REVIEW_ID_ALIASES = {

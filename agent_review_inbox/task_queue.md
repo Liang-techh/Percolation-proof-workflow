@@ -4417,3 +4417,16 @@ Route-B 适配 2 候选，可为 compact smooth family 提供统一有限阶导�
 source 下的 `y=X z_A`、`d=A y+b`、`H=M0_CC^-1` 及分离的 Schur 输出。当前只有 claim
 和 sidecar，不是 review/receipt；保持 pending，禁止把 Lean 文件或 claim 直接升级为
 source/coverage/admission 证明。
+
+## 2026-09-08 — revision 873 harvest：joint6 rational residual bridge pending CI
+
+`T-P4-JOINT6-RATIONAL-RESIDUAL-BRIDGE` 已收割并路由到
+`P4.true_dh_port_source_binding`。sidecar 的 dependently typed `cell/source` 接口、
+有理分式 cross-mismatch、signed quotient split、division-free sup/Lipschitz gates
+已形成 source-independent formal leaves；但真实 GitHub Actions 的 portable-sidecars
+job 在本 review 写回时仍 `in progress`，因此 compile/axiom/comparator 结果均未知。
+
+该 child 仍缺 principal `Joint6_GetStarTheta/zd6` actual CSE、同 marker contract CSE、
+同 observable/sign convention、真实 denominator/error constants、Float64/FD/solve、
+P4 source admission 与 P8/path coverage。即使 CI 通过，先只能是 compiled_candidate，
+必须等待封不觉独立验证与梁智炜最终整合；registry=0、formal gate=false。

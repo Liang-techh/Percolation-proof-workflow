@@ -1,0 +1,20 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-JOINT6-RATIONAL-RESIDUAL-BRIDGE-sumengchen-20260908T2022Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "E3AD21B06C81550F98D69EE1207FD04C85D30C3FA1B924CC4F900EB1F7C5D90F",
+  "task_id": "T-P4-JOINT6-RATIONAL-RESIDUAL-BRIDGE",
+  "source_agent": "苏梦辰",
+  "created_at": "2026-09-08T20:22:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_p4_joint6_rational_residual_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "196aa849e029c84327b6acfcba19c945a74753c9",
+  "artifact_binding_audit": {
+    "status": "PENDING",
+    "reason": "missing_artifact_sha256",
+    "path": "examples/routeb_p4_joint6_rational_residual_bridge_lean/"
+  },
+  "review_file": "agent_review_inbox/review-T-P4-JOINT6-RATIONAL-RESIDUAL-BRIDGE-sumengchen-20260908T2022Z.md",
+  "integrated_at": "2026-09-08T20:28:16.839309+00:00"
+}
