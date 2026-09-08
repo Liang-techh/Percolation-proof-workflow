@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-ACTIVE-V-EXACT-SOURCE-MAP-20260908T180822Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "A6D3E0D8FE71D65445E33C597DDBAFEBB7E8ACECCE448BFDE6F87C91E0751FD7",
+  "task_id": "GH-ACTIVE-V-FUNCTION-IDENTITY",
+  "source_agent": "Godel the 6th",
+  "created_at": "2026-09-08T18:08:22Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_active_v_function_identity",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-ACTIVE-V-EXACT-SOURCE-MAP-20260908T180822Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T18:13:51.892660+00:00"
+}

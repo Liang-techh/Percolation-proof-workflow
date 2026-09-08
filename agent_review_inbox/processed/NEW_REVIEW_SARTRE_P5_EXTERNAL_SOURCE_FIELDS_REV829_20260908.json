@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/NEW_REVIEW_SARTRE_P5_EXTERNAL_SOURCE_FIELDS_REV829_20260908.md",
+  "record_kind": "review_result",
+  "review_sha256": "49EF172E97A70E99833B0AFB1BD5E2B6D9FE33B75EA88AF07C2C942AA023B76D",
+  "task_id": "SARTRE-P5-EXTERNAL-SOURCE-FIELDS-REV829",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_external_source_jet_packet_obstruction",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/NEW_REVIEW_SARTRE_P5_EXTERNAL_SOURCE_FIELDS_REV829_20260908.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T18:13:37.520739+00:00"
+}

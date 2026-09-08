@@ -3875,3 +3875,22 @@ Poincare 的新 bounded candidate 从完整 `List.Perm` 编码推导 q3 slice，
 `SliceCore` 已收入 inbox，当前 `OPEN_UNCOMPILED`；下一步交给 Lean lane 在精确
 pin 下编译，随后仍需 actual bodyTraceRows5、filter-empty、q3 binding 与 G1/G2
 obligations，不能直接关闭 body-5。
+
+## 2026-09-08 — 流川枫退出后的任务接管（revision 830–831）
+
+流川枫永久不可用，禁止新派发。历史 claim/review 保留原 provenance；所有
+未完成任务改由下列现役 agent 接管，且每项保持独立 receipt：
+
+| reassigned lane | owner | bounded next deliverable |
+|---|---|---|
+| P4 active-V function identity | 红莲魔尊（数学主责） | 绑定实际 `V` consumer 与同一 `initial_storage_upper` 的函数索引；没有 identity 时回传反例/缺口 |
+| P4 Schur actual-source packet | 狂蛮魔尊 | 寻找同配置 `y=Xz_A`、`d=A y+b`、`H`、`u/s/D` witness；缺失则字段级 obstruction |
+| P4 joint6 actual residual | 柳冠一 | 绑定 `ahat/z_B`、det lower、signed numerator 与 observable 的同源 packet |
+| P5 same-tube jet | 古月方源、红莲魔尊 | 只寻找同 tube 的 `F/DF/W/Wt/DW/b/Db/e` 与 coverage，不重复条件 identity |
+| Lean sidecar/receipt | 苏梦辰、巨阳仙尊 | 在各自 pinned 环境做最小编译、repair、axiom/comparator receipt，不宣称 registry promotion |
+
+本轮已收割并登记：`SARTRE-P5-EXTERNAL-SOURCE-FIELDS-REV829`、
+`GH-ACTIVE-V-FUNCTION-IDENTITY`、`T-FLT-P2M-QUOTIENT-MINIMAL-CONTRACT`。
+它们分别进入 pending P5/P4 或 event-only FLT catalog；revision=831，registry
+仍为 0，formal gate 继续关闭。下一轮按数学瓶颈优先，只有出现真实 source witness
+或 pinned Lean receipt 才安排进一步整合。

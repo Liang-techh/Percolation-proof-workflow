@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 829,
+  "revision": 831,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12845,6 +12845,21 @@
             },
             "admission_label": "architecture_only",
             "review_file": "agent_review_inbox/review-T-P5-026-SIGNED-COVER-CONSUMER-james-20260908.md"
+          },
+          {
+            "record_file": "agent_review_inbox/NEW_REVIEW_SARTRE_P5_EXTERNAL_SOURCE_FIELDS_REV829_20260908.md",
+            "record_kind": "review_result",
+            "review_sha256": "49EF172E97A70E99833B0AFB1BD5E2B6D9FE33B75EA88AF07C2C942AA023B76D",
+            "task_id": "SARTRE-P5-EXTERNAL-SOURCE-FIELDS-REV829",
+            "source_agent": "unknown",
+            "created_at": "unknown",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_external_source_jet_packet_obstruction",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/NEW_REVIEW_SARTRE_P5_EXTERNAL_SOURCE_FIELDS_REV829_20260908.md",
+            "admission_label": "pending"
           }
         ]
       }
@@ -16786,6 +16801,21 @@
             "source_commit": "61dc6639c45bfa558305974e153340b2a27758f1",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-TARGET-CAPS-guyuefangyuan-20260908T1438Z.md",
             "format_warning": "missing_opening_yaml_delimiter"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-ACTIVE-V-EXACT-SOURCE-MAP-20260908T180822Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "A6D3E0D8FE71D65445E33C597DDBAFEBB7E8ACECCE448BFDE6F87C91E0751FD7",
+            "task_id": "GH-ACTIVE-V-FUNCTION-IDENTITY",
+            "source_agent": "Godel the 6th",
+            "created_at": "2026-09-08T18:08:22Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_active_v_function_identity",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-ACTIVE-V-EXACT-SOURCE-MAP-20260908T180822Z.md",
+            "admission_label": "pending"
           }
         ]
       }
@@ -80490,6 +80520,46 @@
       "formal_certificate_allowed": false,
       "artifact_binding_status": "BOUND",
       "node_id": "f69865077c2e49e1aab82a291233f0e9"
+    },
+    {
+      "at": "2026-09-08T18:13:37.520739+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/NEW_REVIEW_SARTRE_P5_EXTERNAL_SOURCE_FIELDS_REV829_20260908.md",
+      "record_kind": "review_result",
+      "review_sha256": "49EF172E97A70E99833B0AFB1BD5E2B6D9FE33B75EA88AF07C2C942AA023B76D",
+      "task_id": "SARTRE-P5-EXTERNAL-SOURCE-FIELDS-REV829",
+      "classification": "pending_external_source_jet_packet_obstruction",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "4a9af66cdc4f4607857a5cf360f19eb7"
+    },
+    {
+      "at": "2026-09-08T18:13:37.521866+00:00",
+      "kind": "external_reuse_agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-FLT-P2M-QUOTIENT-MINIMAL-CONTRACT-poincare-20260908.md",
+      "record_kind": "review_result",
+      "review_sha256": "90740F3877409A544ACB09D9642EFDEF29444A6E7C7AE81E7BA19A8F036600F9",
+      "task_id": "T-FLT-P2M-QUOTIENT-MINIMAL-CONTRACT",
+      "classification": "flt_p2m_quotient_minimal_contract",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "artifact_binding_status": "BOUND",
+      "catalog": "anthropic-fermats-last-theorem"
+    },
+    {
+      "at": "2026-09-08T18:13:51.892660+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-ACTIVE-V-EXACT-SOURCE-MAP-20260908T180822Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "A6D3E0D8FE71D65445E33C597DDBAFEBB7E8ACECCE448BFDE6F87C91E0751FD7",
+      "task_id": "GH-ACTIVE-V-FUNCTION-IDENTITY",
+      "classification": "pending_active_v_function_identity",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -84146,5 +84216,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "91d552a4bff09c0120bc42b12c9848504ef69d11c59ccb251f927866ef3739b8"
+  "state_checksum": "152de266a1c3ab68c2d029590f71106ffa59629070890dafe039e1f063266eb0"
 }

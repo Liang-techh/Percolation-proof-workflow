@@ -296,6 +296,12 @@ TASK_TARGETS = {
     "GH-MATH-P4-ACTIVE-V-FUNCTION-ENVELOPE": (
         "P4.true_dh_port_source_binding",
         "pending_active_v_function_envelope"),
+    "GH-MATH-P4-ACTIVE-V-FUNCTION-IDENTITY": (
+        "P4.true_dh_port_source_binding",
+        "pending_active_v_function_identity"),
+    "GH-ACTIVE-V-FUNCTION-IDENTITY": (
+        "P4.true_dh_port_source_binding",
+        "pending_active_v_function_identity"),
     "GH-MATH-P4-JOINT6-PHYSICAL-RECOVERY": (
         "P4.true_dh_port_source_binding",
         "pending_joint6_physical_recovery"),
@@ -368,6 +374,9 @@ TASK_TARGETS = {
     "SARTRE-P5-SAME-TUBE-SOURCE-PACKET": (
         "P5.componentwise_relative_decay",
         "pending_same_tube_source_packet_obstruction"),
+    "SARTRE-P5-EXTERNAL-SOURCE-FIELDS-REV829": (
+        "P5.componentwise_relative_decay",
+        "pending_external_source_jet_packet_obstruction"),
     # External FLT scans are deliberately event-only: they are advisory
     # catalog evidence, not Route-B theorem nodes or registry entries.
     "T-FLT-DERIV-CALC": (None, "flt_derivation_calculus_scan"),
@@ -378,6 +387,9 @@ TASK_TARGETS = {
     "T-FLT-SPECTRAL-SIDECAR": (None, "flt_spectral_sidecar"),
     "T-FLT-SPECTRAL-PREDICATE": (None, "flt_spectral_predicate_sidecar"),
     "T-FLT-QUOTIENT-SIDECAR": (None, "flt_quotient_transport_sidecar"),
+    "T-FLT-P2M-QUOTIENT-MINIMAL-CONTRACT": (
+        None,
+        "flt_p2m_quotient_minimal_contract"),
     "T-P4-KC-COORDINATE-ADAPTER": ("P4.residual_schur_pmi", "pending_kc_coordinate_adapter"),
     "T-P4-MBD-PROJECTION": ("P4.residual_schur_pmi", "pending_mbd_projection_obstruction"),
     "T-P4-012": ("P4.residual_schur_pmi", "pending_typed_remote_binding_contract"),

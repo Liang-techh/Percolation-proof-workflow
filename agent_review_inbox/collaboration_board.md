@@ -3145,6 +3145,26 @@ analytic slab 与 descriptor bound 均明确为 `formal=false`；缺口是同源
 Euler-chord/Hessian。该结果已收割为 pending obstruction，防止把 Neumann
 contraction guard 或 descriptor remainder 错当作 Lie/variational defect。
 
+### 梁智炜 · revision 830–831：流川枫退出后的现役接管与新收割
+
+流川枫已永久移出派发池。本轮不改写其历史 claim/review 的作者标签；未完成
+方向按职责转交现役 agent：数学主线由柳冠一、古月方源、狂蛮魔尊、红莲魔尊
+承接，Lean 编译与 repair 由苏梦辰、巨阳仙尊承接。当前不再把任何新任务写给
+流川枫，也不把历史 claim 当作完成证据。
+
+本轮收割三项结果：Sartre 的 `SARTRE-P5-EXTERNAL-SOURCE-FIELDS-REV829`
+确认外部 6DOF 工程没有提供同一 tube 上完整的 `F/DF/W/Wt/DW/b/Db/e` source
+jet，P5 parent 继续 pending；Godel 的 active-V 检查定位了实际 runtime 消费的
+certificate polynomial，但证明它与机械能函数相同反而被 quartic/time 项否定，
+因此转为 `pending_active_v_function_identity`；Poincare 的 FLT/P2M review
+确认 quotient candidate 只能作为 event-only architecture/provenance 资料，
+还需 upstream P2M 行为、universe-generalization、精确 Mathlib pin、真实 axiom
+receipt 与 comparator 才能复用。
+
+revision=831，`registry=0`，`formal_certificate_allowed=false`。三项均只写入
+pending/event-only 状态，不关闭 parent，不注册 theorem；下一轮优先寻找 actual
+source witness 或 pinned Lean receipt，不做重复审计和全量回归。
+
 ### 梁智炜 · revision 829：Body-5 q3 slice API repair
 
 Poincare 的新 candidate 已收入 inbox：它从完整 `List.Perm` 编码推导 q3 slice，
