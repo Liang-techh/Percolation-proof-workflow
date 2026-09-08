@@ -19,6 +19,9 @@ This coordinator wrapper records a local mathematical seam; it is not a source
 export, runtime receipt, or verified theorem. The original artifact is
 `examples/routeb_o0_h_acc_source_refinement/NEW_SEAM_PHASE_INVARIANTS_20260908T2030Z.md`,
 SHA-256 `3C574CC694E92DBD96872E80984C321B81D0E74C2397D9167B08F1A5E912D0AA`.
+Its companion obligation manifest is
+`examples/routeb_o0_h_acc_source_refinement/NEW_SEAM_PHASE_INVARIANTS_20260908T2030Z.json`,
+SHA-256 `86BD3724674B3C4C08D0C3AA8DD20FC970DCA8DD34E926008E46552F84FF0F4A`.
 
 The seam separates graph scalar evaluation from an independently interpreted
 source state and proposes FK completed-step and active-prefix Jacobian

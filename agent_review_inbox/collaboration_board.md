@@ -3622,6 +3622,12 @@ P5-099 确认现有 analytic/static domain 不能排除 exact witness；ramp 仅
 `w=1`，full-X0 flowpipe 仍无完整 exclusion receipt。新增 P8-105 专门处理 reachable-set
 negative separator，保持原 block45 trajectory theorem 未决，不偷换结论。
 
+### 梁智炜 · revision 877–878 harvest：domain join and H_acc seam
+
+James 已确认静态域包含与真实 ramp flow 归属必须分开；没有 flowpipe exclusion receipt。
+H_acc phase-invariant seam 的 companion manifest 已纳入 provenance，但仍是 pending
+source reification/footprint 架构候选，不进入 registry。
+
 ### 梁智炜 · revision 876 harvest：sidecar candidates normalized
 
 Body5 API repair 与 H_acc phase-invariant seam 已转成标准 inbox intake，保留原 artifact

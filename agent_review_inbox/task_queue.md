@@ -4461,6 +4461,17 @@ P4 source admission 与 P8/path coverage。即使 CI 通过，先只能是 compi
 full-X0/ramp reachable-set 排除负值邻域的 typed contract；若证据不足，必须返回
 明确 negative/pending，而不是修改 domain 标签或 target。
 
+## 2026-09-08 — revision 877–878 harvest：domain join and H_acc seam intake
+
+`P4-DOMAIN-POINT-JOIN-20260908` 已收割：analytic measurable domain 与 full-state
+椭球均包含 `q=v=0,w=1`，ramp 初始点在早时段排除该输入值，但全时域静态 input
+图仍允许它；现有 full-X0 contract/partial chain 没有 actual flowpipe exclusion。
+这只是 domain/source join 的 pending 结果，不否定原 block45 trajectory theorem。
+
+`T-HACC-PHASE-INVARIANT-SEAM` 的 correction 已收割：新增 companion obligation
+manifest hash，继续保持 source export、semantic footprint、runtime 与 Lean 证据为空。
+它只增加 FK/Jacobian occurrence-cut 的架构 seam，不改变 H_acc admission。
+
 ## 2026-09-08 — revision 876 harvest：sidecar candidates normalized into inbox
 
 两份本地 agent 产出已通过 coordinator wrapper 纳入标准 inbox：

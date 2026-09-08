@@ -1,0 +1,191 @@
+{
+  "kind": "authored_source_seam_obligation_manifest_not_export_or_proof_receipt",
+  "status": "pending",
+  "theorem_status": "OPEN_H_ACC",
+  "review": "NEW_SEAM_PHASE_INVARIANTS_20260908T2030Z.md",
+  "inspection_date_utc": "2026-09-08",
+  "inspected_git_head": "b590a3b1dd4720fd4e252efd06ca2d7459420382",
+  "bindings": {
+    "source": {
+      "path": "examples/routeb_source_binding_audit/snapshots/original_target/dhport_lib.jl",
+      "sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936"
+    },
+    "local_files_sha256": {
+      "NEW_REVIEW.md": "665d88bc8debc92ee45c8eac607049ff69744c5bafcd4075d24f7164f8ae3c66",
+      "NEW_INTAKE_SCHEMA.json": "3f65af693f3eac3aa015ac3f982fefdb1f846b9ea27fb648fb2b301318f1572b",
+      "NEW_source_intake.py": "002006705173ff5d0a9d93453a3070d95b9c30421d4c1afd074711a3d92f6d6b",
+      "check_refinement.py": "b265b3fc396524db093c6385ba6dff7bf9a352a57d01e2db8db21199986d780f",
+      "NEW_INTAKE.json": "01c09711ff776b80cedbe38c8cac4c03e88253348a0c90524c2d90df890c0c36",
+      "NEW_SEAM_source.py": "83f832905ad04ce91593484abec2d630e86e631d4ed34432211d33e1569cde56",
+      "NEW_SEAM_OCCURRENCE_CUT.md": "763eaca5c323ffba8607ad3c6ffbf9a44deea7826c012e578a0d12a916f8f1b6",
+      "NEW_SEAM_CONTRACT_PLAN.md": "511ccae15a7e4e47719cfd5518410d5729da4a70e101fdebe1e362870acb9680"
+    },
+    "source_export_sha256": null,
+    "array_mapping_sha256": null,
+    "source_updates_sha256": null,
+    "real_evaluator_definition": null,
+    "source_idealization_definition": null,
+    "independent_target_definition": null,
+    "semantic_environment_definition": null,
+    "verified_dependency_bundle": null
+  },
+  "intake_observation": {
+    "command": "python -B examples/routeb_o0_h_acc_source_refinement/NEW_source_intake.py",
+    "native_exit_code": 3,
+    "status": "pending",
+    "expression": "NOT_RUN_NO_SOURCE_EXPORT",
+    "array_mapping": "NOT_RUN_ABSENT",
+    "source_updates": "NOT_RUN_ABSENT",
+    "runtime_observation": "NOT_RUN_ABSENT",
+    "interval_candidate": "NOT_RUN_ABSENT",
+    "scope": "this intake only, not an exhaustive export search"
+  },
+  "site_offset_convention": "zero_based_half_open_raw_utf8_bytes",
+  "source_sites": {
+    "axis_parent": {
+      "line": 36,
+      "byte_range": [1303, 1329],
+      "fragment_sha256": "4eb09327aa56fb85775190e6551aba78b074746116f44d99171dc220cc98b2e9",
+      "phase": "FK iteration j, pre-push read and post-copy value"
+    },
+    "rotation_alias": {
+      "line": 51,
+      "byte_range": [1830, 1853],
+      "fragment_sha256": "92ebe5bfea0a466c2d37086ecf298c8e548eb6bae0b2b7d03c1a299bcd348f41",
+      "phase": "body b, post-slice, preserved to RHS"
+    },
+    "angular_alias": {
+      "line": 56,
+      "byte_range": [2046, 2066],
+      "fragment_sha256": "0e8f3fead661858c48b7673dfbb24e00e16a394684fe3e06764c80067a7947fc",
+      "phase": "body b, completed inner step j<=b, preserved to RHS"
+    },
+    "linear_initial": {
+      "line": 53,
+      "byte_range": [1919, 1935],
+      "fragment_sha256": "df8dc2160863a824ad59bce734d9e5b26471b2231b09c11bfc6fd452ce56eb68",
+      "phase": "body b fresh Jv allocation; no assignment for j>b"
+    },
+    "angular_initial": {
+      "line": 53,
+      "byte_range": [1937, 1953],
+      "fragment_sha256": "18b208bcc1795265e772544ef13ccc3ca45557a77ec989435d44ac93fc79085c",
+      "phase": "body b fresh Jw allocation; no assignment for j>b"
+    },
+    "translation": {
+      "line": 58,
+      "byte_range": [2088, 2107],
+      "fragment_sha256": "cef2f3fd1be22213d278099e26fb94fe93999fefcca820a2aa4dc308714ce892",
+      "phase": "body b RHS after complete inner loop"
+    },
+    "rotation": {
+      "line": 58,
+      "byte_range": [2110, 2136],
+      "fragment_sha256": "16c3d09974d1649bc6b3b23078520aa63d537051c915ddec2997225ee050475c",
+      "phase": "same body and RHS environment as translation"
+    },
+    "body_sum": {
+      "line": 58,
+      "byte_range": [2088, 2136],
+      "fragment_sha256": "f07ee0e862d6b4a700f1af7e6795afef1dee677d4169830a6bd4fd52d15c0046",
+      "phase": "ordered translation plus rotation RHS"
+    },
+    "accumulator_update": {
+      "line": 58,
+      "byte_range": [2083, 2136],
+      "fragment_sha256": "eaa3ef241e86a08438c0fc600e0ccf0b75d18646f3b5f7506dce9a7017801ff6",
+      "phase": "distinct pre-update M and post-update M values"
+    }
+  },
+  "obligation_counts_not_observations": {
+    "z": 18,
+    "Ri": 54,
+    "Jw_active": 63,
+    "Jw_inactive": 45,
+    "Jv_inactive": 45,
+    "body_coordinates": 216,
+    "accumulator_coordinates": 216,
+    "final_coordinates": 36,
+    "source_updates": 6
+  },
+  "proposed_producers": [
+    {
+      "id": "SOURCE_MODEL",
+      "requires": [],
+      "contract": "Independent source idealization and transition/footprint semantics, fixed input/globals and bound target/evaluator definitions",
+      "artifact": null,
+      "verified": false
+    },
+    {
+      "id": "FK_PREFIX",
+      "requires": ["SOURCE_MODEL"],
+      "contract": "DH/A lowering; k completed iterations give k+1 preserved frames, parent z and current origins; transport through return/call",
+      "artifact": null,
+      "verified": false
+    },
+    {
+      "id": "JACOBIAN_PREFIX",
+      "requires": ["SOURCE_MODEL", "FK_PREFIX"],
+      "contract": "Fresh arrays per body; completed k inner steps give active columns through k and zero columns thereafter, preserving Ri/COM/Ii and returned arrays",
+      "artifact": null,
+      "verified": false
+    },
+    {
+      "id": "EVAL_AND_ARRAY_REFINEMENT",
+      "requires": ["SOURCE_MODEL", "FK_PREFIX", "JACOBIAN_PREFIX"],
+      "contract": "Nine Real evaluator equations and genuine G/O consistency; frame, COM, cross, Ii lowerings; same-ID value transport plus source preservation",
+      "artifact": null,
+      "verified": false
+    },
+    {
+      "id": "OPERANDS_AND_BODY",
+      "requires": ["EVAL_AND_ARRAY_REFINEMENT"],
+      "contract": "Both unsimplified line-58 scalar lowerings in the same body RHS state; checked B=add(translation,rotation)",
+      "artifact": null,
+      "verified": false
+    },
+    {
+      "id": "SOURCE_M_TRANSITION",
+      "requires": ["SOURCE_MODEL"],
+      "contract": "Msrc_0=0; Msrc_b=Msrc_(b-1)+(Lsrc_b+Rsrc_b); six-step loop exit before line 60",
+      "artifact": null,
+      "verified": false
+    },
+    {
+      "id": "GRAPH_SOURCE_FOLD",
+      "requires": ["OPERANDS_AND_BODY", "SOURCE_M_TRANSITION"],
+      "contract": "G/O/U same bundle; dense ordered S0/Sb/final aliases; coordinate induction yields E_star=Msrc_6",
+      "artifact": null,
+      "verified": false
+    },
+    {
+      "id": "INDEPENDENT_TARGET_BRIDGE",
+      "requires": ["SOURCE_MODEL", "FK_PREFIX", "JACOBIAN_PREFIX", "SOURCE_M_TRANSITION"],
+      "contract": "Prove Msrc_6=M_NE^0 for an independently specified target; not a renaming or definition through G",
+      "artifact": null,
+      "verified": false
+    },
+    {
+      "id": "H_ACC_EXPR",
+      "requires": ["GRAPH_SOURCE_FOLD", "INDEPENDENT_TARGET_BRIDGE"],
+      "contract": "Compose same-input matrix equalities, conditional on verified matching premises",
+      "artifact": null,
+      "verified": false
+    }
+  ],
+  "admission": {
+    "status": "pending",
+    "source_binding_proven": false,
+    "h_acc_expr_proven": false,
+    "h_acc_round_proven": false,
+    "registry_eligible": false,
+    "formal_certificate_allowed": false
+  },
+  "generated_source_export": null,
+  "generated_constant_values": null,
+  "generated_runtime_observation": null,
+  "generated_error_bounds": null,
+  "julia_execution": false,
+  "lean_lake_execution": false,
+  "installs_schema_or_admission_rules": false
+}

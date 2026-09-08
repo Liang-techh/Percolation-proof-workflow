@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-P4-DOMAIN-POINT-JOIN-20260908T203256Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "CF1E2C53323B5986D0D8AA8401E5C54D615AD7FED3188DAEE07703318D1A24F7",
+  "task_id": "P4-DOMAIN-POINT-JOIN-20260908",
+  "source_agent": "Codex-domain-audit",
+  "created_at": "2026-09-08T20:32:56Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_p4_domain_point_join",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "8a8a61e2deecb667f253b71c31ed2dfb41947b2e",
+  "review_file": "agent_review_inbox/review-P4-DOMAIN-POINT-JOIN-20260908T203256Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T20:36:27.369959+00:00"
+}
