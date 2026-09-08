@@ -3813,3 +3813,25 @@ FLT quotient CLM 三个隔离 packet；数学 agent 继续只寻找 active-V 的
 Schur 的 `y=Xz_A/d=A y+b` 同源 source witness，以及 joint6 actual residual。
 不同 Lean pin 不得混用；所有成功仍只进入 compiled-candidate/external-pending，
 不得自动 promotion。
+
+## 2026-09-08 — GitHub handoff batch before local pause
+
+本批是当前本地状态 revision=823 后交给 GitHub 排班的 bounded 工作。流川枫已
+永久退役，本批只使用 `agent_roster.md` 的六名现役 agent；每个任务只消费自己
+的输入包，结果写成 immutable `review_result`/Lean receipt，不能覆盖别人的
+sidecar。数学 agent 继续优先攻破实际 source/runtime 瓶颈，Lean agent 只做
+隔离 pinned 编译、最小 repair 与 receipt，不把静态 closure 或编译候选升级为
+verified theorem。
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-LEAN-BODY4-FINITE-SUM-RECEIPT-HANDOFF` | 苏梦辰 | 按 `examples/routeb_o1_body4_source_gram_proof_attempt/NEW_FINITE_SUM_20260908_COMPILE_HANDOFF.json` 的 Lean 4.33.1/Mathlib pin 编译 candidate；回传真实 stdout/stderr、OLean、axiom/sorry receipt；失败保留首诊断，不得宣称关闭 O1 |
+| `GH-LEAN-BODY6-PATHCONTRACT-RECEIPT` | 巨阳仙尊 | 按 `NEW_BODY6_PATHCONTRACT_HANDOFF_Execute20260908.md` 的 Lean 4.32.0/Mathlib pin 执行 path-contract 最小包；回传真实 receipt 或最小 repair，禁止混入 physical source identity |
+| `GH-LEAN-FLT-QUOTIENT-CLM-COMPARATOR-HANDOFF` | 苏梦辰 | 在隔离 overlay 执行 quotient/continuous-linear-equivalence candidate 与 comparator；记录 import/OLean/axiom/sorry/statement receipt，缺 comparator 时明确 `COMPARATOR_MISSING` |
+| `GH-MATH-P4-ACTIVE-V-FUNCTION-IDENTITY` | 红莲魔尊 | 从实际 runtime/source 找到 active V 的函数身份、anchor/shift convention 与同次 `initial_storage_upper` 绑定；不得重复已知 ideal raw obstruction，不得改阈值 |
+| `GH-MATH-P4-SCHUR-ACTUAL-SOURCE-PACKET` | 狂蛮魔尊 | 找到同配置 `y=Xz_A`、`d=A y+b`、`H=M0_CC^-1` 以及 `u/s/D` 的 source witness；若缺失只回传字段级 obstruction，不能用 synthetic helper 结果代替 |
+| `GH-MATH-P4-JOINT6-ACTUAL-RESIDUAL` | 柳冠一 | 沿 `A u+h v=p+z_B` 寻找实际 `ahat/z_B`、det lower、signed numerator 与 observable 的同源 packet；不得混用 lift/preconditioned row6 |
+
+本批允许 GitHub agent 继续小型工作；主线程本地只在出现新 receipt、实际 source
+witness 或重大数学突破时收割与同步。所有结果先进入 pending provenance，registry
+和 `formal_certificate_allowed` 保持 fail-closed。

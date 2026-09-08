@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/claim-T-P4-034-honglianmozun-20260908T0550.md",
+  "record_kind": "review_result",
+  "review_sha256": "96C0C73BADCB0D15CDA4316E5A4AAF6A3AB08B4878A9F75CA732D7273E33D507",
+  "task_id": "T-P4-034",
+  "source_agent": "红莲魔尊",
+  "created_at": "2026-09-08",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_o2_energy_consumer",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/claim-T-P4-034-honglianmozun-20260908T0550.md",
+  "integrated_at": "2026-09-08T17:43:39.943758+00:00"
+}

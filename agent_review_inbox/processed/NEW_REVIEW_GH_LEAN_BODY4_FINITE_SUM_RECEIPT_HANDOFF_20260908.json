@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/NEW_REVIEW_GH_LEAN_BODY4_FINITE_SUM_RECEIPT_HANDOFF_20260908.md",
+  "record_kind": "review_result",
+  "review_sha256": "750248A00A362D319C943B98E8BB00259CC65546BB9E300813A64495D61FFCA6",
+  "task_id": "GH-LEAN-BODY4-FINITE-SUM-RECEIPT-HANDOFF",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_body4_finite_sum_compile_handoff",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+  "review_file": "agent_review_inbox/NEW_REVIEW_GH_LEAN_BODY4_FINITE_SUM_RECEIPT_HANDOFF_20260908.md",
+  "integrated_at": "2026-09-08T17:43:39.943982+00:00"
+}

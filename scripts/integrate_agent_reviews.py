@@ -470,6 +470,15 @@ def record_kind(path: Path, header: dict[str, str]) -> str | None:
         return kind
     if kind:
         return None
+    # Some agents use a descriptive ``NEW_REVIEW_*`` filename and omit the
+    # kind field.  A bounded task envelope with review-specific status fields
+    # is still a review record; do not infer from arbitrary prose or from a
+    # bare task_id, so planning/claim documents remain excluded.
+    if (header.get("task_id") and
+            (header.get("review_id") or header.get("proof_status") or
+             header.get("admission_label") or
+             path.name.lower().startswith("new_review"))):
+        return "review_result"
     # A filename convention is a narrow compatibility fallback for old agent
     # envelopes that omitted ``kind``; it does not scan the mathematical body.
     name = path.name.lower()
@@ -483,8 +492,71 @@ def record_kind(path: Path, header: dict[str, str]) -> str | None:
 
 
 def inbox_records(inbox: Path) -> list[Path]:
-    """Return unique root-level record paths in deterministic order."""
-    return sorted({path for pattern in RECORD_GLOBS for path in inbox.glob(pattern)})
+    """Return envelope-recognized root-level records in deterministic order.
+
+    Filename globs remain a compatibility fast path, while all root-level
+    Markdown/JSON envelopes are inspected so descriptive ``NEW_REVIEW_*``
+    records cannot be silently missed.  ``record_kind`` remains the sole
+    admission to this list, keeping planning and claim files out.
+    """
+    paths = {path for pattern in RECORD_GLOBS for path in inbox.glob(pattern)}
+    paths.update(inbox.glob("*.md"))
+    paths.update(inbox.glob("*.json"))
+    return sorted(path for path in paths
+                  if record_kind(path, record_header(path)) is not None)
+
+
+def reconcile_inferred_claim_records(state, inbox: Path) -> list[str]:
+    """Reclassify claims admitted by the pre-fix broad envelope inference.
+
+    The historical integration events and processed markers are retained.  We
+    only repair the attached reference, and append an explicit no-admission
+    correction event, so the state remains auditable and the repair is
+    idempotent.
+    """
+    repaired: list[str] = []
+    for node in state.nodes.values():
+        refs = node.metadata.get("agent_review_refs", [])
+        if not isinstance(refs, list):
+            continue
+        for ref in refs:
+            if not isinstance(ref, dict) or ref.get("record_kind") != "review_result":
+                continue
+            record_file = str(ref.get("record_file", ""))
+            if not record_file.startswith("agent_review_inbox/claim-"):
+                continue
+            path = (ROOT / Path(record_file)).resolve()
+            try:
+                path.relative_to(inbox)
+            except ValueError:
+                continue
+            if not path.is_file():
+                continue
+            header = record_header(path)
+            if header.get("kind") or header.get("status") != "claimed":
+                continue
+            task_id = str(ref.get("task_id", ""))
+            ref.update({
+                "record_kind": "claim",
+                "integration_status": "reclassified_not_record",
+                "classification": "claim_not_review",
+                "invalidated_reason": "bounded-envelope-inference-repair",
+                "admission_label": "ignored",
+            })
+            state.event(
+                "agent_record_reclassified",
+                record_file=record_file,
+                record_kind="claim",
+                previous_record_kind="review_result",
+                reason="bounded inference incorrectly accepted status=claimed",
+                task_id=task_id,
+                admission_effect="none",
+                registry_promoted=False,
+                formal_certificate_allowed=False,
+                node_id=node.id,
+            )
+            repaired.append(record_file)
+    return repaired
 
 
 def resolve_task_id(path: Path, header: dict[str, str]) -> str:
@@ -629,6 +701,14 @@ def main() -> int:
     processed = inbox / "processed"
     processed.mkdir(parents=True, exist_ok=True)
 
+    store = StateStore(state_path)
+    state = store.load()
+    if state.project != "routeb-6dof-external":
+        raise ValueError(f"unexpected project: {state.project!r}")
+    repaired_claims = reconcile_inferred_claim_records(state, inbox)
+    if repaired_claims:
+        store.save(state)
+
     candidates = []
     for path in inbox_records(inbox):
         header = record_header(path)
@@ -658,13 +738,10 @@ def main() -> int:
         candidates.append((path, header, kind, digest, marker, previous))
 
     if not candidates:
-        print(json.dumps({"integrated": [], "state_revision": StateStore(state_path).load().revision}))
+        print(json.dumps({"integrated": [], "reclassified_claims": repaired_claims,
+                          "state_revision": store.load().revision}))
         return 0
 
-    store = StateStore(state_path)
-    state = store.load()
-    if state.project != "routeb-6dof-external":
-        raise ValueError(f"unexpected project: {state.project!r}")
     if any(node.status.value == "in_progress" for node in state.nodes.values()):
         raise ValueError("refuse inbox integration while a node is in progress")
 

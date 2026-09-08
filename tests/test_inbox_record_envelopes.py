@@ -87,6 +87,29 @@ def test_planning_and_claim_files_are_not_records(tmp_path):
     assert inbox_records(tmp_path) == []
 
 
+def test_descriptive_new_review_is_discovered_from_bounded_envelope(tmp_path):
+    review = tmp_path / "NEW_REVIEW_T-P4-012_20260908.md"
+    review.write_text(
+        "---\ntask_id: T-P4-012\nstatus: OPEN_UNCOMPILED\n"
+        "admission: pending\n---\nbody text\n",
+        encoding="utf-8",
+    )
+    assert inbox_records(tmp_path) == [review]
+    assert record_kind(review, record_header(review)) == "review_result"
+
+
+def test_bare_task_id_without_review_fields_is_not_inferred(tmp_path):
+    claim = tmp_path / "NEW_TASK_T-P4-012.md"
+    claim.write_text("---\ntask_id: T-P4-012\n---\n", encoding="utf-8")
+    assert inbox_records(tmp_path) == []
+
+
+def test_claim_status_without_kind_is_not_inferred(tmp_path):
+    claim = tmp_path / "claim-T-P4-012-agent.md"
+    claim.write_text("---\ntask_id: T-P4-012\nstatus: claimed\n---\n", encoding="utf-8")
+    assert inbox_records(tmp_path) == []
+
+
 def test_record_id_recovers_known_task_without_scanning_body(tmp_path):
     review = tmp_path / "review-T-P4-038-agent-20260907T1558.md"
     review.write_text(

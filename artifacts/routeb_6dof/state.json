@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 821,
+  "revision": 823,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12971,6 +12971,22 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-T-P3-014-honglianmozun-20260908T0508.md"
+          },
+          {
+            "record_file": "agent_review_inbox/claim-T-P3-014-honglianmozun-20260908T0500.md",
+            "record_kind": "claim",
+            "review_sha256": "EF8868E35BB8430CC09F09424665BA61E76EA122BD72387338692B0565CF5106",
+            "task_id": "T-P3-014",
+            "source_agent": "红莲魔尊",
+            "created_at": "2026-09-08",
+            "integration_status": "reclassified_not_record",
+            "classification": "claim_not_review",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/claim-T-P3-014-honglianmozun-20260908T0500.md",
+            "invalidated_reason": "bounded-envelope-inference-repair",
+            "admission_label": "ignored"
           }
         ]
       }
@@ -16272,6 +16288,38 @@
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-CONVENTION-FORK-20260908T173635Z.md",
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/claim-T-P4-030-honglianmozun-20260908T0255.md",
+            "record_kind": "claim",
+            "review_sha256": "83E678EC5D24BBB95E1A9B24BFBD181207EA49EAB984F1313EB2AA02990AB49D",
+            "task_id": "T-P4-030",
+            "source_agent": "红莲魔尊",
+            "created_at": "2026-09-08",
+            "integration_status": "reclassified_not_record",
+            "classification": "claim_not_review",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/claim-T-P4-030-honglianmozun-20260908T0255.md",
+            "invalidated_reason": "bounded-envelope-inference-repair",
+            "admission_label": "ignored"
+          },
+          {
+            "record_file": "agent_review_inbox/claim-T-P4-034-honglianmozun-20260908T0550.md",
+            "record_kind": "claim",
+            "review_sha256": "96C0C73BADCB0D15CDA4316E5A4AAF6A3AB08B4878A9F75CA732D7273E33D507",
+            "task_id": "T-P4-034",
+            "source_agent": "红莲魔尊",
+            "created_at": "2026-09-08",
+            "integration_status": "reclassified_not_record",
+            "classification": "claim_not_review",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/claim-T-P4-034-honglianmozun-20260908T0550.md",
+            "invalidated_reason": "bounded-envelope-inference-repair",
+            "admission_label": "ignored"
           }
         ]
       }
@@ -39856,6 +39904,20 @@
               "actual_sha256": "A7144407F5AA2C5F8BC4F30D2327B39CB22F1A587A0F0A141B5E22605A344B8E"
             },
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/NEW_REVIEW_GH_LEAN_BODY4_FINITE_SUM_RECEIPT_HANDOFF_20260908.md",
+            "record_kind": "review_result",
+            "review_sha256": "750248A00A362D319C943B98E8BB00259CC65546BB9E300813A64495D61FFCA6",
+            "task_id": "GH-LEAN-BODY4-FINITE-SUM-RECEIPT-HANDOFF",
+            "source_agent": "unknown",
+            "created_at": "unknown",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_body4_finite_sum_compile_handoff",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+            "review_file": "agent_review_inbox/NEW_REVIEW_GH_LEAN_BODY4_FINITE_SUM_RECEIPT_HANDOFF_20260908.md"
           }
         ]
       }
@@ -79419,6 +79481,97 @@
       "formal_certificate_allowed": false,
       "artifact_binding_status": "BOUND",
       "node_id": "ae18c1e30172442abb689b14be5bf225"
+    },
+    {
+      "at": "2026-09-08T17:43:39.943236+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/claim-T-P3-014-honglianmozun-20260908T0500.md",
+      "record_kind": "review_result",
+      "review_sha256": "EF8868E35BB8430CC09F09424665BA61E76EA122BD72387338692B0565CF5106",
+      "task_id": "T-P3-014",
+      "classification": "pending_concrete_trig_source_binding",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "d318754f0d30438ea53a10a43987f57a"
+    },
+    {
+      "at": "2026-09-08T17:43:39.943527+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/claim-T-P4-030-honglianmozun-20260908T0255.md",
+      "record_kind": "review_result",
+      "review_sha256": "83E678EC5D24BBB95E1A9B24BFBD181207EA49EAB984F1313EB2AA02990AB49D",
+      "task_id": "T-P4-030",
+      "classification": "pending_port_sign_propagation",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T17:43:39.943758+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/claim-T-P4-034-honglianmozun-20260908T0550.md",
+      "record_kind": "review_result",
+      "review_sha256": "96C0C73BADCB0D15CDA4316E5A4AAF6A3AB08B4878A9F75CA732D7273E33D507",
+      "task_id": "T-P4-034",
+      "classification": "pending_o2_energy_consumer",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T17:43:39.943982+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/NEW_REVIEW_GH_LEAN_BODY4_FINITE_SUM_RECEIPT_HANDOFF_20260908.md",
+      "record_kind": "review_result",
+      "review_sha256": "750248A00A362D319C943B98E8BB00259CC65546BB9E300813A64495D61FFCA6",
+      "task_id": "GH-LEAN-BODY4-FINITE-SUM-RECEIPT-HANDOFF",
+      "classification": "pending_body4_finite_sum_compile_handoff",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "ae18c1e30172442abb689b14be5bf225"
+    },
+    {
+      "at": "2026-09-08T17:47:03.112227+00:00",
+      "kind": "agent_record_reclassified",
+      "record_file": "agent_review_inbox/claim-T-P3-014-honglianmozun-20260908T0500.md",
+      "record_kind": "claim",
+      "previous_record_kind": "review_result",
+      "reason": "bounded inference incorrectly accepted status=claimed",
+      "task_id": "T-P3-014",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "d318754f0d30438ea53a10a43987f57a"
+    },
+    {
+      "at": "2026-09-08T17:47:03.112656+00:00",
+      "kind": "agent_record_reclassified",
+      "record_file": "agent_review_inbox/claim-T-P4-030-honglianmozun-20260908T0255.md",
+      "record_kind": "claim",
+      "previous_record_kind": "review_result",
+      "reason": "bounded inference incorrectly accepted status=claimed",
+      "task_id": "T-P4-030",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T17:47:03.112950+00:00",
+      "kind": "agent_record_reclassified",
+      "record_file": "agent_review_inbox/claim-T-P4-034-honglianmozun-20260908T0550.md",
+      "record_kind": "claim",
+      "previous_record_kind": "review_result",
+      "reason": "bounded inference incorrectly accepted status=claimed",
+      "task_id": "T-P4-034",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -83075,5 +83228,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "ee9e15825b0a51e6eab7de220da60480af89e69e08f3e1af8dd4ec0508b56c3b"
+  "state_checksum": "0c597ba54ad003905fff64ba1a0ad6f162d2ddd7a0df99ed5bac5b2a7e649002"
 }

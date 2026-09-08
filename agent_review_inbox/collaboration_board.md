@@ -3103,3 +3103,17 @@ O1 finite-sum 与 BODY6 path contract 均已冻结 GitHub Lean execution packet�
 保持 Lean 4.33.1/Mathlib `0df444...` 与 Lean 4.32.0/Mathlib `81a5...` 环境隔离；
 两者都没有执行 receipt，不能由静态 import closure 或 typed contract 关闭 source
 theorem。当前仍 `registry=0`、`formal_certificate_allowed=false`，没有 GitHub push。
+
+### 梁智炜 · revision 823：claimed 误分类修复与 GitHub handoff batch
+
+收割器的 bounded envelope inference 已收窄：`status: claimed` 的无 kind 文件
+不再进入 review records；3 个历史误收 claim 已保留原事件与 marker，并追加
+`agent_record_reclassified` 更正事件，引用状态改为 `claim_not_review`，不产生
+任何 admission effect。新增 10 项 focused envelope tests 全部通过。
+
+本地暂停前发布六条互不重复的 GitHub bounded lane：苏梦辰执行 BODY4 finite-sum
+与 FLT quotient/CLM 的 pinned receipt，巨阳仙尊执行 BODY6 path-contract receipt；
+红莲魔尊负责 active-V 实际函数身份，狂蛮魔尊负责 Schur actual-source packet，
+柳冠一负责 joint6 actual residual。流川枫永久退役，不接收新任务；历史 provenance
+不改写。当前仍 `registry=0`、`formal_certificate_allowed=false`，本批只允许
+pending provenance/compiled-candidate/external-pending，禁止自动 promotion。
