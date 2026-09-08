@@ -101,8 +101,7 @@ theorem scaled_adjugate_bias_le_box
     (hp0 : 0 ≤ p) (hs0 : 0 ≤ s)
     (hpU : p ≤ pU) (hsU : s ≤ sU)
     (hQ : |sigma| ≤ Q)
-    (hb4 : |b4| ≤ beta4) (hb5 : |b5| ≤ beta5)
-    (hbeta4 : 0 ≤ beta4) (hbeta5 : 0 ≤ beta5) :
+    (hb4 : |b4| ≤ beta4) (hb5 : |b5| ≤ beta5) :
     s*b4^2 - sigma*b4*b5 + p*b5^2 ≤
       sU*beta4^2 + Q*beta4*beta5 + pU*beta5^2 := by
   have hb4sq : b4^2 ≤ beta4^2 := square_le_square_of_abs_le b4 beta4 hb4
@@ -118,6 +117,7 @@ theorem scaled_adjugate_bias_le_box
     mul_le_mul_of_nonneg_right hpU (sq_nonneg beta5)
   have hpdiag : p*b5^2 ≤ pU*beta5^2 := le_trans hpdiag1 hpdiag2
   have hQ0 : 0 ≤ Q := le_trans (abs_nonneg sigma) hQ
+  have hbeta4 : 0 ≤ beta4 := le_trans (abs_nonneg b4) hb4
   have hsb1 : |sigma| * |b4| ≤ Q * beta4 := by
     exact mul_le_mul hQ hb4 (abs_nonneg b4) hQ0
   have hQbeta4 : 0 ≤ Q*beta4 := mul_nonneg hQ0 hbeta4
