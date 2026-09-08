@@ -110,7 +110,7 @@ theorem mul_abs_cap
 theorem det2_add_lower_of_abs_bounds
     (a m c e11 e12 e22 M11 M12 M22 eta11 eta12 eta22 : ℝ)
     (hM11 : 0 ≤ M11) (hM12 : 0 ≤ M12) (hM22 : 0 ≤ M22)
-    (heta11 : 0 ≤ eta11) (heta12 : 0 ≤ eta12) (heta22 : 0 ≤ eta22)
+    (heta11 : 0 ≤ eta11)
     (ha : |a| ≤ M11) (hm : |m| ≤ M12) (hc : |c| ≤ M22)
     (he11 : |e11| ≤ eta11) (he12 : |e12| ≤ eta12)
     (he22 : |e22| ≤ eta22) :
@@ -189,7 +189,6 @@ theorem branchfree_packet_error_entries
 theorem branchfree_packet_error_abs_bounds
     (kappa b4hat b5hat ep es esigma e4 e5 dp ds dsigma d4 d5 B4 B5 : ℝ)
     (hkappa : 0 ≤ kappa)
-    (hdp : 0 ≤ dp) (hds : 0 ≤ ds) (hdsigma : 0 ≤ dsigma)
     (hd4 : 0 ≤ d4) (hd5 : 0 ≤ d5)
     (hB4 : 0 ≤ B4) (hB5 : 0 ≤ B5)
     (hep : |ep| ≤ dp) (hes : |es| ≤ ds) (hesigma : |esigma| ≤ dsigma)
@@ -385,7 +384,7 @@ theorem branchfree_of_nominal_entry_radius_reserve
     (hNomTrace : Treserve ≤ trace2 a c)
     (hNomDet : Dreserve ≤ det2 a m c)
     (hM11 : 0 ≤ M11) (hM12 : 0 ≤ M12) (hM22 : 0 ≤ M22)
-    (heta11 : 0 ≤ eta11) (heta12 : 0 ≤ eta12) (heta22 : 0 ≤ eta22)
+    (heta11 : 0 ≤ eta11)
     (ha : |a| ≤ M11) (hm : |m| ≤ M12) (hc : |c| ≤ M22)
     (he11 : |e11| ≤ eta11) (he12 : |e12| ≤ eta12)
     (he22 : |e22| ≤ eta22)
@@ -397,7 +396,7 @@ theorem branchfree_of_nominal_entry_radius_reserve
   have hdet :=
     det2_add_lower_of_abs_bounds
       a m c e11 e12 e22 M11 M12 M22 eta11 eta12 eta22
-      hM11 hM12 hM22 heta11 heta12 heta22 ha hm hc he11 he12 he22
+      hM11 hM12 hM22 heta11 ha hm hc he11 he12 he22
   have hActualDet0 : 0 ≤ det2 (a + e11) (m + e12) (c + e22) := by linarith
   apply affine_energy_le_of_packet_trace_det kappa p s sigma b4 b5 x y hkappa
   · rw [hg11, hg22]
