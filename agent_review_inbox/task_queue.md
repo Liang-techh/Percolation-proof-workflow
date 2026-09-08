@@ -4059,3 +4059,15 @@ bijectivity 前提，不得自动生成 spectral gap、energy positivity 或 flo
 不能与 block45/current-q/Euclidean metric 混同；`GH-MATH-P4-INITIAL-WITNESS-EVALV-RUNTIME-BRIDGE`
 给出理想多项式到 runtime 的最小 one-sided epsilon contract。两者均仍需真实
 source identity、执行语义和 consumer binding，不能提升 registry 或 formal gate。
+
+## Active follow-up lanes after revision 850
+
+| owner | bounded task | boundary |
+|---|---|---|
+| Godel | 构造 parser/operation-level exact epsilon budget，或证明当前 runtime semantics 不足以产生有限 epsilon | 不运行 Julia；不把设计值当 receipt |
+| Sartre | 将 `G0/G1` graph contract 继续推进到同源 invertibility/regularity 与 additive-cap witness | 不伪造 alpha/Y，不混入 metric/coverage |
+| Poincare | 将 SP eigenspace theorem 做 block456 specialization contract | 不声称 spectral gap、ODE invariance 或 flowpipe |
+| James | 完成 analytic-vs-literal `M0` source reification 与 tiny decimal mismatch contract | 不重复 metric/remote forcing 审计 |
+
+这些任务由现有本地 agent 并行推进；完成后必须写 immutable review_result，主线程
+再执行收割和 revision 更新。
