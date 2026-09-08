@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 803,
+  "revision": 804,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -8310,6 +8310,21 @@
             },
             "review_file": "agent_review_inbox/review-GH-MIXED-schur-absorption-reassigned-20260908T105121.md",
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-BUDGET-CLOSURE-20260908T105720.md",
+            "record_kind": "review_result",
+            "review_sha256": "4A7B5D054F53BEF37D920D70682B3769D97AB19076622A0BDD5A0A4C19FE476F",
+            "task_id": "GH-MATH-P4-SCHUR-BUDGET-CLOSURE",
+            "source_agent": "Codex-signed-source-packet-audit",
+            "created_at": "2026-09-08T10:57:20-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_schur_budget_closure",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "03ef9a97394449967e2b29fbc984ebd3d565e957",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-BUDGET-CLOSURE-20260908T105720.md",
+            "admission_label": "pending"
           }
         ],
         "conditional_children": [
@@ -15986,6 +16001,21 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-ENERGY-NORMALIZATION-20260908T165726Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-SOURCE-SEMANTICS-HALF-ACTIVE-codex-20260908T1100.md",
+            "record_kind": "review_result",
+            "review_sha256": "F04AA854206A046B5429C9381CA69B8775BD6ECCFEC6E82417CB10077620D408",
+            "task_id": "GH-MATH-P4-SOURCE-SEMANTICS-HALF-ACTIVE",
+            "source_agent": "codex-half-active-invocation-semantics-lane",
+            "created_at": "2026-09-08",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_half_active_source_semantics",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-SOURCE-SEMANTICS-HALF-ACTIVE-codex-20260908T1100.md",
             "admission_label": "pending"
           }
         ]
@@ -78636,6 +78666,32 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T17:00:46.841752+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-BUDGET-CLOSURE-20260908T105720.md",
+      "record_kind": "review_result",
+      "review_sha256": "4A7B5D054F53BEF37D920D70682B3769D97AB19076622A0BDD5A0A4C19FE476F",
+      "task_id": "GH-MATH-P4-SCHUR-BUDGET-CLOSURE",
+      "classification": "pending_schur_budget_closure",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e7b1df1835f4deba06b11a8182f6719"
+    },
+    {
+      "at": "2026-09-08T17:00:46.842277+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-SOURCE-SEMANTICS-HALF-ACTIVE-codex-20260908T1100.md",
+      "record_kind": "review_result",
+      "review_sha256": "F04AA854206A046B5429C9381CA69B8775BD6ECCFEC6E82417CB10077620D408",
+      "task_id": "GH-MATH-P4-SOURCE-SEMANTICS-HALF-ACTIVE",
+      "classification": "pending_half_active_source_semantics",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -82292,5 +82348,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "362b176ec72bbeb18156b15e259730fe84df737ce9fd73d8461b981562724806"
+  "state_checksum": "ff07fab04fb5448a6bf86ead54f209e9a90ba6e0fcf0cd61f33d1d179d07b4e7"
 }

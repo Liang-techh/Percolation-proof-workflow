@@ -2955,3 +2955,16 @@ Active-energy lane 则精确对齐了 `W=Vfull_DH`、`Z=Vshift_DH` 与目标 `T`
 revision=803、registry=0、formal certificate gate 继续 fail-closed。Sartre 与
 James 的 Schur/source semantics lane 仍在运行，下一轮只消费同源 residual 与
 value-level envelope。
+
+### 梁智炜 · revision 804：同源 affine defect 与 vanis2 runtime 绑定
+
+Schur budget closure review 没有找到完整 packet，但把最小补口明确为同一配置下
+`d=A y+b`、两条 dual projection enclosure，以及独立的二次 `D` 界；旧的五个
+analytic domains 和 `(I-C)^-1|X|` 分解不含 half-active vanis2，不能静默移植。
+Half-active semantics review 找到 `verify_dynamics_semantics.jl` 的历史 exact_ddq，
+但其调用使用 `mass_regularization=0.0`，并且只记录单点摘要，不是目标
+`mu=10^-6` 的同次 runtime residual/refinement。两条 review 均保持 pending，
+registry=0、formal certificate gate 关闭。
+
+下一轮把 source/refinement 分成 affine defect chart 与 vanis2 runtime packet 两条
+主线，Poincare/Godel 分别维护已有 Lean path 与 value-level envelope 边界。

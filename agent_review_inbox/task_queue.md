@@ -3659,3 +3659,17 @@ configuration 和运行证据时必须保持 pending，Lean/registry gate 不变
 
 未交付的 source、domain、configuration 和 runtime evidence 不得由 theorem seam
 自动补齐；不做全量回归或本机 Lean。
+
+## 2026-09-08 — post-revision-804 source/refinement split
+
+revision 804 将主瓶颈收缩为两个互不重复的 source/refinement 方向：
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART` | Sartre the 6th | 仅核对同一配置下 `d=A y+b` 与 dual covector/二次 D 界；缺 actual y bounds 则 exact obstruction |
+| `GH-MATH-P4-VANIS2-RUNTIME-REFINEMENT` | James the 6th | 核对 mu=1e-6、FD h=1e-5 的同次 `M_R/F_R/ahat` refinement packet；不得使用 mu=0 sanity run |
+| `GH-LEAN-BODY6-PATHCONTRACT-RECEIPT` | Poincare the 6th | 等待 pinned Lean/source receipt；若无 receipt，只维护 prep provenance |
+| `GH-MATH-P4-ACTIVE-ENERGY-NORMALIZATION` | Godel the 6th | 只补值级 envelope 所需的同配置参数，保留 DeltaQ、linear 与 cross terms |
+
+不允许把 historical single-point sanity、analytic remainder 或 conditional Schur
+阈值重命名为 vanis2 actual evidence；不做全量回归或本机 Lean。

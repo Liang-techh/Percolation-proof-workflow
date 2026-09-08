@@ -131,6 +131,12 @@ TASK_TARGETS = {
     "GH-MATH-P4-SCHUR-BUDGET-CLOSURE": (
         "P4.residual_schur_pmi",
         "pending_schur_budget_closure"),
+    "GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART": (
+        "P4.residual_schur_pmi",
+        "pending_signed_affine_defect_chart"),
+    "GH-MATH-P4-VANIS2-RUNTIME-REFINEMENT": (
+        "P4.true_dh_port_source_binding",
+        "pending_vanis2_runtime_refinement"),
     "T-P4-ACTUAL-ROW-MISSING-BASE": (
         "P4.true_dh_port_source_binding",
         "pending_actual_row_missing_base_takeover"),

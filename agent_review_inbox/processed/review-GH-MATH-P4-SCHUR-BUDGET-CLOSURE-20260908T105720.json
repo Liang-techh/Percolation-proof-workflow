@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-BUDGET-CLOSURE-20260908T105720.md",
+  "record_kind": "review_result",
+  "review_sha256": "4A7B5D054F53BEF37D920D70682B3769D97AB19076622A0BDD5A0A4C19FE476F",
+  "task_id": "GH-MATH-P4-SCHUR-BUDGET-CLOSURE",
+  "source_agent": "Codex-signed-source-packet-audit",
+  "created_at": "2026-09-08T10:57:20-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_schur_budget_closure",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "03ef9a97394449967e2b29fbc984ebd3d565e957",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-BUDGET-CLOSURE-20260908T105720.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:00:46.841752+00:00"
+}

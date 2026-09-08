@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-SOURCE-SEMANTICS-HALF-ACTIVE-codex-20260908T1100.md",
+  "record_kind": "review_result",
+  "review_sha256": "F04AA854206A046B5429C9381CA69B8775BD6ECCFEC6E82417CB10077620D408",
+  "task_id": "GH-MATH-P4-SOURCE-SEMANTICS-HALF-ACTIVE",
+  "source_agent": "codex-half-active-invocation-semantics-lane",
+  "created_at": "2026-09-08",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_half_active_source_semantics",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-SOURCE-SEMANTICS-HALF-ACTIVE-codex-20260908T1100.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:00:46.842277+00:00"
+}
