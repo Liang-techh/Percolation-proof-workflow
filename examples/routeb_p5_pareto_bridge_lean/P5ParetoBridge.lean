@@ -83,6 +83,36 @@ theorem anisotropic_margin_beats_scalar_iff
   constructor <;> intro h <;> nlinarith
 
 /--
+Exact cleared square-completion identity for the two residual channels of the
+Pareto family.  It avoids square roots and division by the variable coefficient
+`250 + 53 r`.
+-/
+theorem pareto_residual_completion_identity
+    (u4 u5 l4 l5 r : ℝ) :
+    (250 + 53 * r) *
+          (((250 + 53 * r) / 1500) * u4 ^ 2 + u4 * l4
+            + (1 / 6 : ℝ) * u5 ^ 2 + u5 * l5)
+        + 375 * l4 ^ 2
+        + (3 / 2 : ℝ) * (250 + 53 * r) * l5 ^ 2
+      = ((250 + 53 * r) * u4 + 750 * l4) ^ 2 / 1500
+        + (250 + 53 * r) * (u5 + 3 * l5) ^ 2 / 6 := by
+  ring
+
+/-- The cleared residual-completion remainder is nonnegative on `r ≥ 0`. -/
+theorem pareto_residual_completion_nonneg
+    (u4 u5 l4 l5 r : ℝ) (hr0 : 0 ≤ r) :
+    0 ≤
+      (250 + 53 * r) *
+          (((250 + 53 * r) / 1500) * u4 ^ 2 + u4 * l4
+            + (1 / 6 : ℝ) * u5 ^ 2 + u5 * l5)
+        + 375 * l4 ^ 2
+        + (3 / 2 : ℝ) * (250 + 53 * r) * l5 ^ 2 := by
+  rw [pareto_residual_completion_identity]
+  have hd : 0 ≤ 250 + 53 * r := by
+    nlinarith
+  positivity
+
+/--
 A fully division-free first-exit consumer for the Pareto family.  It assumes
 only the abstract Pareto certificate, the exact derivative identity, and
 same-domain componentwise squared residual caps.  No source or trajectory
@@ -107,21 +137,29 @@ theorem quarter_first_exit_inward_of_pareto
   have hd : 0 < 250 + 53 * r := by
     nlinarith
   have hParetoScaled := mul_le_mul_of_nonneg_left hPareto (le_of_lt hd)
-  have hs4 : 0 ≤ ((250 + 53 * r) * u4 + 750 * l4) ^ 2 := sq_nonneg _
-  have hy4 :
-      -(375 : ℝ) * l4 ^ 2 ≤
-        (250 + 53 * r) *
-          (((250 + 53 * r) / 1500) * u4 ^ 2 + u4 * l4) := by
-    nlinarith [hs4]
-  have hs5 : 0 ≤ (u5 + 3 * l5) ^ 2 := sq_nonneg _
-  have hy5base :
-      0 ≤ (1 / 6 : ℝ) * u5 ^ 2 + u5 * l5 + (3 / 2 : ℝ) * l5 ^ 2 := by
-    nlinarith [hs5]
-  have hy5 := mul_nonneg (le_of_lt hd) hy5base
-  have hE5Scaled := mul_le_mul_of_nonneg_left hE5 (le_of_lt hd)
+  have hCompletion := pareto_residual_completion_nonneg u4 u5 l4 l5 r hr0
+  have hbase :
+      (250 + 53 * r) * ((109 - r) / 200) * V ≤
+        (250 + 53 * r) * (Q + u4 * l4 + u5 * l5)
+          + 375 * l4 ^ 2
+          + (3 / 2 : ℝ) * (250 + 53 * r) * l5 ^ 2 := by
+    nlinarith [hParetoScaled, hCompletion]
+  have hE4Scaled : 375 * l4 ^ 2 ≤ 375 * E4 := by
+    nlinarith
+  have hE5Scaled :
+      (3 / 2 : ℝ) * (250 + 53 * r) * l5 ^ 2 ≤
+        (3 / 2 : ℝ) * (250 + 53 * r) * E5 := by
+    have hfactor : 0 ≤ (3 / 2 : ℝ) * (250 + 53 * r) := by
+      positivity
+    exact mul_le_mul_of_nonneg_left hE5 hfactor
+  have hGatePositive :
+      375 * E4 + (3 / 2 : ℝ) * (250 + 53 * r) * E5 <
+        (250 + 53 * r) * ((109 - r) / 200) * (1 / 4 : ℝ) := by
+    nlinarith
+  rw [hBoundary] at hbase
   have hposScaled :
       0 < (250 + 53 * r) * (Q + u4 * l4 + u5 * l5) := by
-    nlinarith [hParetoScaled, hy4, hy5, hE4, hE5Scaled]
+    nlinarith [hbase, hE4Scaled, hE5Scaled, hGatePositive]
   have hcore : 0 < Q + u4 * l4 + u5 * l5 := by
     by_contra hnot
     have hnonpos : Q + u4 * l4 + u5 * l5 ≤ 0 := le_of_not_gt hnot
@@ -136,6 +174,8 @@ theorem quarter_first_exit_inward_of_pareto
 #print axioms quarter_checker_r0_reduces
 #print axioms quarter_checker_r1_reduces
 #print axioms anisotropic_margin_beats_scalar_iff
+#print axioms pareto_residual_completion_identity
+#print axioms pareto_residual_completion_nonneg
 #print axioms quarter_first_exit_inward_of_pareto
 
 end RouteBP5ParetoBridge
