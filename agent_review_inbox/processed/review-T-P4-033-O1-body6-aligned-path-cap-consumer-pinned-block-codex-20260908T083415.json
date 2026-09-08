@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-aligned-path-cap-consumer-pinned-block-codex-20260908T083415.md",
+  "record_kind": "review_result",
+  "review_sha256": "E74257D108064607DB403E040BD58AAD21D4826E3E887E044F9D418D88264AAF",
+  "task_id": "T-P4-033-O1-body6-slice",
+  "source_agent": "Codex",
+  "created_at": "2026-09-08T08:34:15-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_independent_body6_source_slice",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-033-O1-body6-aligned-path-cap-consumer-pinned-block-codex-20260908T083415.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T14:35:14.211119+00:00"
+}

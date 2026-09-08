@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 761,
+  "revision": 762,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -39026,6 +39026,21 @@
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-MIXED-BODY6-PATH-REASSIGNED-20260908T143002Z.md",
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-aligned-path-cap-consumer-pinned-block-codex-20260908T083415.md",
+            "record_kind": "review_result",
+            "review_sha256": "E74257D108064607DB403E040BD58AAD21D4826E3E887E044F9D418D88264AAF",
+            "task_id": "T-P4-033-O1-body6-slice",
+            "source_agent": "Codex",
+            "created_at": "2026-09-08T08:34:15-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_independent_body6_source_slice",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-T-P4-033-O1-body6-aligned-path-cap-consumer-pinned-block-codex-20260908T083415.md",
+            "admission_label": "pending"
           }
         ]
       }
@@ -76890,6 +76905,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "1ea06cbee9b54297913156cfb0b201ce"
+    },
+    {
+      "at": "2026-09-08T14:35:14.211119+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-aligned-path-cap-consumer-pinned-block-codex-20260908T083415.md",
+      "record_kind": "review_result",
+      "review_sha256": "E74257D108064607DB403E040BD58AAD21D4826E3E887E044F9D418D88264AAF",
+      "task_id": "T-P4-033-O1-body6-slice",
+      "classification": "pending_independent_body6_source_slice",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1ea06cbee9b54297913156cfb0b201ce"
     }
   ],
   "agent_requests": {},
@@ -80546,5 +80574,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "c89edd046f527e4b2b29f05dbdb75749f8892b13021400c5e7c4f617ab47c5e7"
+  "state_checksum": "e5abcd2cb9c0e9d66daad171c983e517e732d7a50955d96eb56f2b52734d8051"
 }
