@@ -4085,3 +4085,11 @@ source identity、执行语义和 consumer binding，不能提升 registry 或 f
 `-1/20` margin 在满足局部 rounding/parser/lifetime 前提时足够，但没有实际
 epsilon。下一步只接受 parser bits、exponent table、operation lowering、finite
 range 和 one-sided error receipt；不得将 `kappa` 设计参数当作 Julia 已验证属性。
+
+## Active local takeover after revision 852
+
+流川枫已永久退出，原有未完成 lane 不再等待其回执。Poincare 接替一个独立
+的 FLT→block456 target-adapter 瓶颈：只提取最小 theorem/API、精确 assumptions、
+index/projector bridge 与 no-go 判据；不得修改 shared state/registry，不得把
+未编译 Lean 草稿或 generic theorem 当作 Route-B 已验证结果。该 lane 完成后才
+进入下一次收割；在此之前保持 `pending`。
