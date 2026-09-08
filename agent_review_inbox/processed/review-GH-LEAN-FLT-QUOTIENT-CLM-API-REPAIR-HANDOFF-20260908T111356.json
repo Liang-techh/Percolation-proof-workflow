@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-LEAN-FLT-QUOTIENT-CLM-API-REPAIR-HANDOFF-20260908T111356.md",
+  "record_kind": "review_result",
+  "review_sha256": "849F5ECDD278A5BFFC5A84E8FE0B4D71DE93DE40843F166A18A8F53FEE95B723",
+  "task_id": "GH-LEAN-FLT-QUOTIENT-CLM-API-REPAIR",
+  "source_agent": "codex-local",
+  "created_at": "2026-09-08T11:13:56-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_quotient_clm_api_repair",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "8fd0f132c2e4cf4ac99438aa8dc295a7f6592b1b",
+  "review_file": "agent_review_inbox/review-GH-LEAN-FLT-QUOTIENT-CLM-API-REPAIR-HANDOFF-20260908T111356.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:20:55.166582+00:00"
+}

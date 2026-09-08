@@ -3029,3 +3029,19 @@ source mass/Gram/trace 和 Lean receipt 均缺失，故只挂到 body-4 source-g
 FLT quotient probe 则对两个 continuous-linear-equivalence API 做了显式 binders
 核对，并区分 compile receipt 与 source/path inhabitant。候选仍未编译，只进入
 external catalog pending；Route-B registry 与 formal gate 不变。
+
+### 梁智炜 · revision 810：active-V 与 runtime capture 的字段级收敛
+
+`GH-MATH-P4-ACTIVE-V-BINDING-CONTRACT` 已整合为 pending。它把当前消费者真正
+需要的最小接口冻结为同一配置 `K`、同一 raw candidate `W_K`、同一 `embed_K`、
+函数级 `W_K(embed_K(x)) <= u_recorded`，以及未改变的
+`u_recorded < bar_active` 阈值链；现有 `initial_storage_upper`、origin equality
+或 centered bound 均不能代替该接口。`GH-MATH-P4-VANIS2-RUNTIME-REFINEMENT`
+也已整合为 pending：目标必须是同次 `mu=10^-6`、`h=10^-5` 的
+`M_R/F_R/ahat` 与 residual capture，历史 `mu=0` 单点摘要不被重命名为目标证据。
+
+FLT quotient CLM handoff 已补齐 immutable pin、direct-import hash、overlay、
+OLean/axiom/comparator receipt 字段，但尚未执行，因此只进入 external catalog
+pending。O1 body-4 lane 的最新方向进一步收缩为 step-3 三行有限和与
+`F4=F3*T3` 的 exact source witness；现有 frame/Gram 候选仍无 inhabitant。全局
+`registry=0`、`formal_certificate_allowed=false`，本轮没有 GitHub push。

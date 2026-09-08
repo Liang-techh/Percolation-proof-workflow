@@ -287,6 +287,18 @@ TASK_TARGETS = {
     "GH-MATH-P4-CORRECTED-ACTUAL-ROWS": (
         "P4.true_dh_port_source_binding",
         "pending_corrected_actual_rows"),
+    "GH-MATH-P4-O1-BODY4-FINITE-SUM-WITNESS": (
+        "P4.O1.source_comparator.h_body_4.source_gram_targets",
+        "pending_body4_finite_sum_source_witness"),
+    "GH-MATH-P4-ACTIVE-V-FUNCTION-ENVELOPE": (
+        "P4.true_dh_port_source_binding",
+        "pending_active_v_function_envelope"),
+    "GH-MATH-P4-JOINT6-PHYSICAL-RECOVERY": (
+        "P4.true_dh_port_source_binding",
+        "pending_joint6_physical_recovery"),
+    "GH-LEAN-FLT-QUOTIENT-CLM-COMPARATOR-HANDOFF": (
+        None,
+        "flt_quotient_clm_comparator_handoff"),
     # New GitHub proof lanes use descriptive uppercase suffixes.  Route them
     # to existing DAG parents as pending metadata only; no admission path is
     # implied by these aliases.

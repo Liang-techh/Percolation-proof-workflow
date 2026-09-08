@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-VANIS2-RUNTIME-REFINEMENT-capture-spec-codex-20260908T111359.md",
+  "record_kind": "review_result",
+  "review_sha256": "F34C007041D3A3461034CF53C18D107294307482117D9E6E23338887B3EB2E72",
+  "task_id": "GH-MATH-P4-VANIS2-RUNTIME-REFINEMENT",
+  "source_agent": "codex-single-call-capture-spec",
+  "created_at": "2026-09-08T11:13:59-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_vanis2_runtime_refinement",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-VANIS2-RUNTIME-REFINEMENT-capture-spec-codex-20260908T111359.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:15:31.071280+00:00"
+}

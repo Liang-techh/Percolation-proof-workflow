@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 809,
+  "revision": 811,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -16121,6 +16121,36 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-JOINT6-WEIGHTED-CONSTRAINTS-codex-20260908T110743.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-BINDING-CONTRACT-20260908T171354Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "8D0A137AA404A40C28D06973984268F492FA3E4D821322E4B41205E5B100C0C2",
+            "task_id": "GH-MATH-P4-ACTIVE-V-BINDING-CONTRACT",
+            "source_agent": "codex-active-binding-minimal-contract",
+            "created_at": "2026-09-08T17:13:54Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_active_v_binding_contract",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-BINDING-CONTRACT-20260908T171354Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-VANIS2-RUNTIME-REFINEMENT-capture-spec-codex-20260908T111359.md",
+            "record_kind": "review_result",
+            "review_sha256": "F34C007041D3A3461034CF53C18D107294307482117D9E6E23338887B3EB2E72",
+            "task_id": "GH-MATH-P4-VANIS2-RUNTIME-REFINEMENT",
+            "source_agent": "codex-single-call-capture-spec",
+            "created_at": "2026-09-08T11:13:59-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_vanis2_runtime_refinement",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-VANIS2-RUNTIME-REFINEMENT-capture-spec-codex-20260908T111359.md",
             "admission_label": "pending"
           }
         ]
@@ -39657,6 +39687,20 @@
               "declared_sha256": "8EBF458E0812B63A911EE4EB64A5A621D6F1ACA074EB7950D7746BEA09A64512",
               "actual_sha256": "8EBF458E0812B63A911EE4EB64A5A621D6F1ACA074EB7950D7746BEA09A64512"
             },
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/companion-GH-MATH-P4-O1-BODY4-FRAME-SOURCE-AUDIT-20260908.md",
+            "record_kind": "companion_log",
+            "review_sha256": "8E44BA03C7058515869FE65863B91E2FE29AE04A4D82430DAB515F42A28B59D8",
+            "task_id": "GH-MATH-P4-O1-BODY4-FRAME-HANDOFF",
+            "source_agent": "Sartre the 6th",
+            "created_at": "2026-09-08",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_body4_frame_source_jacobian_handoff",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
             "admission_label": "pending"
           }
         ]
@@ -78973,6 +79017,58 @@
       "formal_certificate_allowed": false,
       "artifact_binding_status": "BOUND",
       "catalog": "anthropic-fermats-last-theorem"
+    },
+    {
+      "at": "2026-09-08T17:15:31.070811+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-BINDING-CONTRACT-20260908T171354Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "8D0A137AA404A40C28D06973984268F492FA3E4D821322E4B41205E5B100C0C2",
+      "task_id": "GH-MATH-P4-ACTIVE-V-BINDING-CONTRACT",
+      "classification": "pending_active_v_binding_contract",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T17:15:31.071280+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-VANIS2-RUNTIME-REFINEMENT-capture-spec-codex-20260908T111359.md",
+      "record_kind": "review_result",
+      "review_sha256": "F34C007041D3A3461034CF53C18D107294307482117D9E6E23338887B3EB2E72",
+      "task_id": "GH-MATH-P4-VANIS2-RUNTIME-REFINEMENT",
+      "classification": "pending_vanis2_runtime_refinement",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T17:20:55.166270+00:00",
+      "kind": "agent_companion_integrated",
+      "record_file": "agent_review_inbox/companion-GH-MATH-P4-O1-BODY4-FRAME-SOURCE-AUDIT-20260908.md",
+      "record_kind": "companion_log",
+      "review_sha256": "8E44BA03C7058515869FE65863B91E2FE29AE04A4D82430DAB515F42A28B59D8",
+      "task_id": "GH-MATH-P4-O1-BODY4-FRAME-HANDOFF",
+      "classification": "pending_body4_frame_source_jacobian_handoff",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "ae18c1e30172442abb689b14be5bf225"
+    },
+    {
+      "at": "2026-09-08T17:20:55.166582+00:00",
+      "kind": "external_reuse_agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-LEAN-FLT-QUOTIENT-CLM-API-REPAIR-HANDOFF-20260908T111356.md",
+      "record_kind": "review_result",
+      "review_sha256": "849F5ECDD278A5BFFC5A84E8FE0B4D71DE93DE40843F166A18A8F53FEE95B723",
+      "task_id": "GH-LEAN-FLT-QUOTIENT-CLM-API-REPAIR",
+      "classification": "flt_quotient_clm_api_repair",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "catalog": "anthropic-fermats-last-theorem"
     }
   ],
   "agent_requests": {},
@@ -82629,5 +82725,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "549149420620db92b5997ba08fd5fe3e7ad9f5bef4614a68c47d3cbd8b6ce02c"
+  "state_checksum": "14d7944a09c7f581fc746f2cafb4245d5092de07744230fdb4226a8c0aae6b74"
 }

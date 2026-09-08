@@ -3752,3 +3752,18 @@ det/numerator、observable 或 metric packet。因此下一轮只保留以下执
 
 O1 新候选不能替代 source mass/Gram/trace witness；FLT candidate 不能绕过目标
 环境、provenance、statement identity 和 admission gate。
+
+## 2026-09-08 — post-revision-810 active-V/runtime/O1 math lanes
+
+revision=810 的收割已将硬缺口压缩到可实例化的函数值、同次 runtime residual 和
+O1 source finite-sum 三个方向。流川枫不再接收任何任务；空闲 lane 改派如下：
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-MATH-P4-O1-BODY4-FINITE-SUM-WITNESS` | Sartre the 6th | 从已匹配 generator/DH snapshot 中抽取 step-3 列与 `F4=F3*T3` 的 exact 三行有限和；给出 source hash/字段映射或最小缺失 witness，不重复 frame 泛审计 |
+| `GH-MATH-P4-ACTIVE-V-FUNCTION-ENVELOPE` | Godel the 6th | 在同一 `K,X0` 下把 `Vfull_DH` 或 `Vshift_DH` 绑定到 `initial_storage_upper`，优先给出可消费的 exact inequality；不能用 origin/CSV/scalar shortcut |
+| `GH-MATH-P4-JOINT6-PHYSICAL-RECOVERY` | James the 6th | 沿 principal route 固定 `A u+h v=p+z_B`，推导 physical rows→numerator/determinant 的 exact contract，并检查已有 source 是否能实例化；不能混用 lift/preconditioned row6 |
+| `GH-LEAN-FLT-QUOTIENT-CLM-COMPARATOR-HANDOFF` | Poincare the 6th | 生成给 GitHub Lean lane 的最小 overlay/comparator job packet，明确 source/target pin、完整 import closure、OLean/axiom receipt；不在本机运行 Lean，不把 pending 变成 VERIFIED |
+
+各 lane 只写自己的新 sidecar/review；没有 source inhabitant、同次 capture 或
+Lean receipt 时保持 pending。禁止全量回归、重复旧 rank/Young/omission 审计。
