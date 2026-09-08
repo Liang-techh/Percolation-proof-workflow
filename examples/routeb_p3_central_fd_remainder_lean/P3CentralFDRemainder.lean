@@ -51,7 +51,9 @@ theorem rawDefect_abs_le_third (p : TaylorPair) :
   have hrp := abs_le.mp p.rplus_abs
   have hrm := abs_le.mp p.rminus_abs
   apply abs_le.mpr
-  constructor <;> linarith [hrp.1, hrp.2, hrm.1, hrm.2]
+  constructor
+  · linarith [hrp.1, hrp.2, hrm.1, hrm.2]
+  · linarith [hrp.1, hrp.2, hrm.1, hrm.2]
 
 /-- Preferred division-free checker form from the mathematical handoff. -/
 theorem central_fd_raw_defect_le_of_taylor_pair (p : TaylorPair) :
@@ -97,7 +99,9 @@ theorem shifted_stencil_contained
     (hx_lo : a ≤ x) (hx_hi : x ≤ b)
     (h_le : h ≤ hmax) :
     a - hmax ≤ x - h ∧ x + h ≤ b + hmax := by
-  constructor <;> linarith
+  constructor
+  · linarith
+  · linarith
 
 /-- Once a `TaylorPair` is supplied at a step `h ≤ hmax`, the sharp pointwise
 bound immediately gives the uniform `M hmax^2 / 6` envelope. -/
@@ -121,7 +125,8 @@ theorem central_fd_error_uniform_of_step_cap
 theorem central_fd_x_cube_sharp (x h : ℝ) (h_ne : h ≠ 0) :
     centralFD ((x + h) ^ 3) ((x - h) ^ 3) h - 3 * x ^ 2 = h ^ 2 := by
   unfold centralFD
-  field_simp [h_ne] <;> ring
+  field_simp [h_ne]
+  ring
 
 /-- Division-free version of the same cubic sharpness regression. -/
 theorem raw_defect_x_cube_sharp (x h : ℝ) :
@@ -149,7 +154,8 @@ theorem cubic_family_center_fd_error (A x0 h : ℝ) (h_ne : h ≠ 0) :
         (cubicFamily A x0 (x0 - h)) h
       = A * h ^ 2 := by
   unfold centralFD cubicFamily
-  field_simp [h_ne] <;> ring
+  field_simp [h_ne]
+  ring
 
 /-- Minimal two-term linear residual handoff.  It deliberately assumes the
 caller has already source-bound the exact decomposition `e=e1+e2`; this theorem
@@ -166,7 +172,9 @@ theorem central_fd_two_term_linear_residual_budget
   have he2 := abs_le.mp h2'
   have hab : |e1 + e2| ≤ (B1 + B2) / 6 := by
     apply abs_le.mpr
-    constructor <;> linarith [he1.1, he1.2, he2.1, he2.2]
+    constructor
+    · linarith [he1.1, he1.2, he2.1, he2.2]
+    · linarith [he1.1, he1.2, he2.1, he2.2]
   rw [hdecomp]
   linarith
 
