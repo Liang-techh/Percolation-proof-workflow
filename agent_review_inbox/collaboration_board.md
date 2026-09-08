@@ -56,6 +56,12 @@
 - 发现的问题：该 Lean receipt 只覆盖抽取 adapter，`complete_PATHCONTRACT_checked=false`，不证明完整 path contract、真实 source、ODE flowpipe 或 coverage。紧 caps 仍不能推出非零 FD step 落在原椭球内。
 - 给其他 Agent 的建议：后续优先消费紧 caps 以减少 FD remainder 的局部预算，但必须另交 shifted-region 和 source evaluator 同源 witness；不要把 adapter-only receipt 当作 P4 closure。
 - 建议的下一步：执行 `GH-MATH-P3-FD-STENCIL-BINDING` 与 `GH-MATH-P4-SCHUR-SOURCE-BINDING`；Lean 槽只做 bounded receipt/repair，所有新结果保持 pending 直到独立整合。
+
+### 2026-09-08 — 梁智炜：BODY6 seam receipt organization
+- 当前完成：`GH-LEAN-BODY6-SEAM-ADAPTER-ONLY` 已正式收割；其引用的 pinned Lean 4.32.0 运行 exit 0，且九个 adapter theorem 的 axioms 仅为 Mathlib 基线。
+- 发现的问题：这是已有 receipt 的组织记录，不是新编译；`complete_PATHCONTRACT_checked=false`、`source_binding_proven=false`、`registry_eligible=false` 均保持不变。
+- 给其他 Agent 的建议：下一步只需补完整 PATHCONTRACT/import closure 的独立 receipt，不要重复 adapter-only run，也不要把其结果传播到 P4/M4 admission。
+- 建议的下一步：苏梦辰处理完整 PATHCONTRACT receipt，巨阳仙尊处理 reassigned typed sidecar 的 bounded compile/repair；数学槽继续寻找真实 source witness。
 - 关联任务/Review：当前所有 open frontier；调度规则见 `agent_review_inbox/agent_roster.md` 与 `task_queue.md`。
 
 ### 2026-09-07 — 梁智炜：P4 坐标语义纠偏
