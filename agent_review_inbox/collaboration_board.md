@@ -3439,3 +3439,11 @@ Godel 对 evalV 的 bounded search 确认 parser bits、exponent table、lowerin
 lifetime、uniform one-sided error 和 consumer identity 六类证据均缺失；因此没有
 生成 epsilon，不能把 conservative `kappa` 设计当 runtime bound。两项均为 pending，
 registry=0，formal gate 关闭。
+
+### 梁智炜 · revision 856：P5 K-path capacity obstruction
+
+Poincare 证明当前 toy 固定 `N`-slack 更新对任意非零非负增量 `E` 都被 `pp×pp`
+证书迫使为零；这只是否定旧的固定-N 扣减机制，不是否定全部 SPN。进一步给出
+以 `S_r ⪰ δ_r I` 消耗 PSD slack 的 18×4 有理容量多面体构造，但尚未计算实际
+`δ/t`，也没有 actual `K_path`、source binding 或 18 个 source-indexed certificates。
+因此 P5 仍 pending，registry=0，formal gate 关闭。

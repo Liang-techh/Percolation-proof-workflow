@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-CONCRETE-KPATH-PACKET-20260908T192454Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "8388A30F190C749CC82406CFD1FB8CAA13F7BDFA02297041F676C448D37A4E62",
+  "task_id": "T-P5-CONCRETE-KPATH-PACKET",
+  "source_agent": "Codex-P5-mathematical-packet-lane",
+  "created_at": "2026-09-08T19:24:54Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_concrete_kpath_packet_obstruction",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "769590f5f704a658607040739a90945ea5b5a6ec",
+  "review_file": "agent_review_inbox/review-T-P5-CONCRETE-KPATH-PACKET-20260908T192454Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T19:28:38.816632+00:00"
+}

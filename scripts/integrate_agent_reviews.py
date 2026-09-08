@@ -489,6 +489,9 @@ TASK_TARGETS = {
     "GH-MATH-P5-CERTIFICATE-KPATH-NEXT": (
         "P5.componentwise_relative_decay.feasible_cone_spn",
         "pending_certificate_indexed_kpath_next"),
+    "T-P5-CONCRETE-KPATH-PACKET": (
+        "P5.componentwise_relative_decay.feasible_cone_spn",
+        "pending_concrete_kpath_packet_obstruction"),
     "GH-LEAN-P4-EVALV-ONE-SIDED-RECEIPT": (
         "P4.true_dh_port_source_binding",
         "pending_evalv_one_sided_receipt"),

@@ -4150,3 +4150,10 @@ certificate；不需要先生成 alpha/Y 数值，但不得用 generic graph 方
 `GH-MATH-P4-EVALV-ACTUAL-ERROR-BOTTLENECK` 已收割为严格 obstruction：在实际
 parser/lowering/lifetime/consumer receipt 出现前，禁止消耗任何 one-sided epsilon。
 当前 revision=855、registry=0；两条线都继续保持 pending。
+
+## 2026-09-08 — revision 856 P5 K-path capacity obstruction
+
+`T-P5-CONCRETE-KPATH-PACKET` 已收割。当前 toy 的固定 `N`-slack 更新被 `pp×pp`
+证书精确限制为 `E=0`；后续若有实际增量，优先尝试 `S_r⪰δ_r I` 的 PSD-slack
+容量多面体，并绑定真实 `K_path`、chart/source、`μ/Q`、18 个 certificate 与
+consumer。该构造尚未产生实际 `δ/t` 或 source-indexed packet，仍保持 pending。
