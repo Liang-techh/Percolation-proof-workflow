@@ -1,0 +1,22 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MIXED-schur-absorption-reassigned-20260908T105121.md",
+  "record_kind": "review_result",
+  "review_sha256": "13DFD890298527FDF5D6AC36B72C8AB3B99161622FB575B72D90E43E407D61C7",
+  "task_id": "GH-MIXED-schur-absorption-reassigned",
+  "source_agent": "Codex-actual-defect-schur-lane",
+  "created_at": "2026-09-08T10:51:21-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_reassigned_schur_absorption_review",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "335ac7556da34fc9084c82c6261bda381af7738a",
+  "artifact_binding_audit": {
+    "status": "BOUND",
+    "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_p4_schur_joint_threshold_lean\\NEW_REASSIGNED_20260908_ACTUAL_DEFECT_GATES.lean",
+    "declared_sha256": "91A3A598BA6C6FB0278A127C8B94A34839F74EB3CD88D46B6D2CA4D4169C5BA7",
+    "actual_sha256": "91A3A598BA6C6FB0278A127C8B94A34839F74EB3CD88D46B6D2CA4D4169C5BA7"
+  },
+  "review_file": "agent_review_inbox/review-GH-MIXED-schur-absorption-reassigned-20260908T105121.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T16:55:08.561857+00:00"
+}

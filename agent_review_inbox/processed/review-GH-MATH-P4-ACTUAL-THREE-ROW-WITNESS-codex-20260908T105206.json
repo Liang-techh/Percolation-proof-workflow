@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTUAL-THREE-ROW-WITNESS-codex-20260908T105206.md",
+  "record_kind": "review_result",
+  "review_sha256": "A69099FC606C32FD7C2B4761E6B7CD73F30092641E6A7E217902DD93E2E838C4",
+  "task_id": "GH-MATH-P4-ACTUAL-THREE-ROW-WITNESS",
+  "source_agent": "codex-actual-three-row-refresh",
+  "created_at": "2026-09-08T10:52:06-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_actual_three_row_source_witness",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-ACTUAL-THREE-ROW-WITNESS-codex-20260908T105206.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T16:55:08.558889+00:00"
+}

@@ -2918,3 +2918,18 @@ weighted constraints 才能恢复 physical rows4/5。结论是缺 witness 的 pe
 James 负责 actual three-row witness。任务分别为 Schur-PMI actual absorption、
 BODY6 canonical path、adjugate/principal-vs-joint6 接线、以及 rows4/5/6 与
 solve defect 的同源证据；不重复旧审计，不修改历史 provenance。
+
+### 梁智炜 · revision 802：signed defect gates 与 actual-row closure 仍开放
+
+四份 replacement review 已整合。Schur lane 新增了
+`r_actual=r0+d` 下的两个 signed gates（binding 与 target）及固定中心全球 defect
+半径的 sharp conditional threshold；这只说明 future source packet 应该提供哪些
+投影界，未提供 DH/runtime defect。BODY6 lane 确认第六列候选已消除部分 axis 参数，
+但仍没有 full-matrix alignment、physical embedding/domain/path 实例。Adjugate lane
+确认 numerator/determinant 只能在 complete measurements 与 `L_B Y=P_B` 同源后消费。
+Actual-three-row lane 刷新确认当前 rows456 仍无 decoded runtime witness，且 lift 的
+第六坐标、physical row6、preconditioned row6 必须分开。
+
+所有结果为 pending/conditional；revision=802、registry=0、formal certificate gate
+保持关闭。下一轮继续按同源 residual、domain、configuration 和 runtime witness
+拆分，不把 conditional algebra 当作物理证书。

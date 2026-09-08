@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MIXED-ADJUGATE-REASSIGNED-20260908T165153Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "4DFDA7F217731F776CA856CC67AC8A3A9C2E9F426058E2FC323E60FD62A7902D",
+  "task_id": "GH-MIXED-ADJUGATE-REASSIGNED",
+  "source_agent": "codex-adjugate-reassigned-source-lane",
+  "created_at": "2026-09-08T16:51:53Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_reassigned_adjugate_review",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MIXED-ADJUGATE-REASSIGNED-20260908T165153Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T16:55:08.559939+00:00"
+}

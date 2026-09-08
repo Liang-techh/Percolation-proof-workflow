@@ -3616,3 +3616,17 @@ formal gate。不得重新搜索 domain、运行全回归或静默修正 control
 
 本批优先攻数学瓶颈，不做重复审计或全项目回归；没有同源 source、domain、
 configuration 和运行证据时必须保持 pending，Lean/registry gate 不变。
+
+## 2026-09-08 — post-revision-802 signed-defect harvest follow-up
+
+本轮收割后，四条 replacement lane 的下一步只围绕缺失的同源 witness：
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-MIXED-schur-absorption-reassigned` | Sartre the 6th | 保留 signed actual-defect gates；若不能绑定 DH residual，则精确记录 source/metric obstruction，不再扩大 Young 推导 |
+| `GH-MIXED-BODY6-PATH-REASSIGNED` | Poincare the 6th | 把第六列候选绑定到固定 physical embedding、Omega/domain 与 path cap；不把单列提升为 full Alignment.sameMass |
+| `GH-MIXED-ADJUGATE-REASSIGNED` | Godel the 6th | 只有在 complete measurements 到位后继续 numerator/det recovery；否则提交 conditional seam，不重复 rank 算术 |
+| `GH-MATH-P4-ACTUAL-THREE-ROW-WITNESS` | James the 6th | 继续寻找同一调用的 decoded solve/refinement packet，严格区分 preconditioned row6、physical row6 与 lift coordinate |
+
+不得把本轮 conditional Schur threshold 或单列 BODY6 theorem 当作 source closure；
+不运行本机 Lean/Lake 或全回归，保持 fail-closed。
