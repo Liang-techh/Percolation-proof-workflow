@@ -3257,3 +3257,12 @@ review。它们分别确认 common rational guard 只提供 `nu*t`，以及 full
 path membership 必须经显式 projection 才能消费 configuration-domain identity；
 initial membership 不推出 whole-path membership，shift B 也不可重复计费。所有
 结论仍为 pending/open，未改变 registry 或 formal gate。
+
+## revision 750 — derivative-level source binding
+
+P3 新增并收割 `C2C3_DERIVATIVE_BINDING`：在同一 covered box/region 上显式
+绑定 Taylor first/second/third derivative fields 到抽象 exact-real DH
+derivative evaluators，再由既有 source equalities 得到 source derivative
+equality。value identity 单独不能推出 derivative identity，侧栏保留了精确
+Bool obstruction。该叶仍为 `OPEN_UNCOMPILED/pending`，不涉及 Float64、central-FD
+误差、coverage、flowpipe、residual absorption 或 registry。

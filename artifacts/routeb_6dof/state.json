@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 749,
+  "revision": 750,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12328,6 +12328,21 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-T-P3-central-FD-hull-c2c3-dh-evaluator-codex-20260907T2324.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P3-central-FD-hull-c2c3-derivative-binding-codex-20260907T2339.md",
+            "record_kind": "review_result",
+            "review_sha256": "2489242C4786541C02B27FA589A452BB9DD4D7F19874EAB8BDD2B1D0E6117F7C",
+            "task_id": "T-P3-central-FD-hull",
+            "source_agent": "Codex",
+            "created_at": "2026-09-07T23:39:17-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_exact_central_fd_derivative_hull_bridge",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-T-P3-central-FD-hull-c2c3-derivative-binding-codex-20260907T2339.md",
             "admission_label": "pending"
           }
         ]
@@ -75539,6 +75554,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "1ea06cbee9b54297913156cfb0b201ce"
+    },
+    {
+      "at": "2026-09-08T05:40:17.895168+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P3-central-FD-hull-c2c3-derivative-binding-codex-20260907T2339.md",
+      "record_kind": "review_result",
+      "review_sha256": "2489242C4786541C02B27FA589A452BB9DD4D7F19874EAB8BDD2B1D0E6117F7C",
+      "task_id": "T-P3-central-FD-hull",
+      "classification": "pending_exact_central_fd_derivative_hull_bridge",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "d039d2c007b348349f022a77a369392e"
     }
   ],
   "agent_requests": {},
@@ -79195,5 +79223,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "d2d0c8852a63a15e69fe36e05f4c3de21fa3faa2e6245a21c332b626583377ab"
+  "state_checksum": "ffd389b1bd378261d5092d40f5ea0dca9a10d372b1f5523dfe97b95e313143e1"
 }

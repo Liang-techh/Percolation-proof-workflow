@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P3-central-FD-hull-c2c3-derivative-binding-codex-20260907T2339.md",
+  "record_kind": "review_result",
+  "review_sha256": "2489242C4786541C02B27FA589A452BB9DD4D7F19874EAB8BDD2B1D0E6117F7C",
+  "task_id": "T-P3-central-FD-hull",
+  "source_agent": "Codex",
+  "created_at": "2026-09-07T23:39:17-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_exact_central_fd_derivative_hull_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P3-central-FD-hull-c2c3-derivative-binding-codex-20260907T2339.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T05:40:17.895168+00:00"
+}

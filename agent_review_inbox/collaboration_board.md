@@ -2604,3 +2604,10 @@ guard 作为数学接口继续保持 `OPEN_UNCOMPILED`；尤其保留“初始�
 同源 source charges → shared rational guard → `nu*t` floor → requested-target
 transfer，同时另行要求 full-state path → source-domain projection。任何省略
 其中一层的候选继续留在 `OPEN_UNCOMPILED/pending`。
+
+### 梁智炜 · revision 750
+
+P3 derivative-level DH binding 已登记为独立 pending child。它补上了 value-level
+equality 与 derivative-level equality 之间的逻辑断层，但仍把 concrete
+exact-real derivative evaluator 当作外部输入；后续需要独立的 Float64/FD/source
+receipt，不能由当前 lemma 自动关闭。
