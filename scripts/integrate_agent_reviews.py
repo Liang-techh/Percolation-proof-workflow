@@ -425,6 +425,9 @@ TASK_TARGETS = {
     "P5-K7-REAL-BLOCK456-INSTANTIATION": (
         "P4.true_dh_port_source_binding",
         "pending_k7_real_block456_instantiation"),
+    "GH-P4-BLOCK456-AFFINE-PORT-REFERENCE-JOIN": (
+        "P4.true_dh_port_source_binding",
+        "pending_block456_affine_port_reference_join"),
     # External FLT scans are deliberately event-only: they are advisory
     # catalog evidence, not Route-B theorem nodes or registry entries.
     "T-FLT-DERIV-CALC": (None, "flt_derivation_calculus_scan"),

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 861,
+  "revision": 862,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -17088,6 +17088,21 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/NEW_REVIEW_P5_K7_REAL_BLOCK456_INSTANTIATION_20260908.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-P4-BLOCK456-AFFINE-PORT-REFERENCE-JOIN-james-20260908T134244.md",
+            "record_kind": "review_result",
+            "review_sha256": "FDA18B43636B7C2C84FF858E46130228148AACC7CEB4C3BE01D6BACE0AD87FB5",
+            "task_id": "GH-P4-BLOCK456-AFFINE-PORT-REFERENCE-JOIN",
+            "source_agent": "James",
+            "created_at": "2026-09-08T13:42:44-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_block456_affine_port_reference_join",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "9e6c4bc04cbcbfc7a2a213a642d7ac615218a671",
+            "review_file": "agent_review_inbox/review-GH-P4-BLOCK456-AFFINE-PORT-REFERENCE-JOIN-james-20260908T134244.md",
             "admission_label": "pending"
           }
         ]
@@ -81457,6 +81472,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T19:47:07.318359+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-P4-BLOCK456-AFFINE-PORT-REFERENCE-JOIN-james-20260908T134244.md",
+      "record_kind": "review_result",
+      "review_sha256": "FDA18B43636B7C2C84FF858E46130228148AACC7CEB4C3BE01D6BACE0AD87FB5",
+      "task_id": "GH-P4-BLOCK456-AFFINE-PORT-REFERENCE-JOIN",
+      "classification": "pending_block456_affine_port_reference_join",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -85113,5 +85141,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "0ec960cf7891bc9ce0f1335893f48a938da384422ed942d21bfda274a061f4b8"
+  "state_checksum": "bdb904b5b10dc8650f49b042caba4feb135e2430ec33dbf672a2e1ca15cb1fcd"
 }

@@ -4205,3 +4205,11 @@ adjugate-cleared nominal-subtracted route，并提交 `MDD/MDC/MCD/M0DC/RD` 的 
 identity、`det/adjugate` 与 scaled-port 证明；不得把 `vD` 重命名为 graph `alpha_D`，
 也不得在新增三个 `eta` 未处理时继续声称是 7×7。真实 `Q/Delta/K`、metric、allocation
 和 coverage 仍是独立 frontier。
+
+## 2026-09-08 — revision 862 affine port/reference mismatch
+
+`GH-P4-BLOCK456-AFFINE-PORT-REFERENCE-JOIN` 已收割。必须把 symbolic rational
+regularizer 与 producer binary64 literal 分成不同 source keys；先选择并证明
+`rC` 或 `lT` 的真实 affine identity，再绑定同一 dense `H`、scalar `Delta`、metric
+transport 与 allocation。旧 upper-mass join 被精确 mismatch 否定，不能靠名称或
+维数继续复用。

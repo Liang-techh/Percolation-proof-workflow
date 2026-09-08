@@ -3489,3 +3489,12 @@ direct-port 与保留旧 residual 的 adjugate-cleared 两条路线；后者用
 `delta=det(MDD)`、`J=adj(MDD)` 构造 scaled port，且保留 remote forcing 常数项。
 这修正了关键变量语义，但 actual source equality、同 cell 可逆性、`Q/Delta/K` PSD、
 metric/allocation/coverage 仍缺失，故 P4/P5、registry 与 formal gate 不变。
+
+### 梁智炜 · revision 862：affine port/reference mismatch
+
+James 找到真实 affine reduced-descriptor identity，并确认当前 dense nominal `H`
+与 scalar cap 的形状；同时发现 symbolic `1/1000000` 与 interval producer 的
+binary64 `1e-6` 不相同，且一个 stored upper entry 严格低于 symbolic regularized
+mass 对应项。因此原 exact reference/upper-mass join 必须拒绝或另证比较；实际
+affine cap、同 cell source/metric、allocation 与 consumer identity 仍未闭合。
+P4、registry 与 formal gate 保持关闭。
