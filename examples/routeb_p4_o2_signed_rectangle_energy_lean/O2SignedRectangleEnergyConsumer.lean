@@ -184,20 +184,38 @@ theorem dual_quadratic_rectangle_le_corners
     (hUL : dualQuadratic p q s U4 L5 ≤ K)
     (hUU : dualQuadratic p q s U4 U5 ≤ K) :
     dualQuadratic p q s e4 e5 ≤ K := by
-  have hleft : dualQuadratic p q s L4 e5 ≤ K := by
+  have hleftPoly :
+      p * e5 ^ 2 + (-2 * q * L4) * e5 + s * L4 ^ 2 ≤ K := by
     apply quadratic_interval_le_endpoints p (-2 * q * L4) (s * L4 ^ 2)
       L5 U5 e5 K hp he5L he5U
-    · nlinarith [hLL]
-    · nlinarith [hLU]
-  have hright : dualQuadratic p q s U4 e5 ≤ K := by
+    · simp only [dualQuadratic] at hLL
+      nlinarith [hLL]
+    · simp only [dualQuadratic] at hLU
+      nlinarith [hLU]
+  have hleft : dualQuadratic p q s L4 e5 ≤ K := by
+    simp only [dualQuadratic]
+    nlinarith [hleftPoly]
+  have hrightPoly :
+      p * e5 ^ 2 + (-2 * q * U4) * e5 + s * U4 ^ 2 ≤ K := by
     apply quadratic_interval_le_endpoints p (-2 * q * U4) (s * U4 ^ 2)
       L5 U5 e5 K hp he5L he5U
-    · nlinarith [hUL]
-    · nlinarith [hUU]
-  apply quadratic_interval_le_endpoints s (-2 * q * e5) (p * e5 ^ 2)
-    L4 U4 e4 K hs he4L he4U
-  · nlinarith [hleft]
-  · nlinarith [hright]
+    · simp only [dualQuadratic] at hUL
+      nlinarith [hUL]
+    · simp only [dualQuadratic] at hUU
+      nlinarith [hUU]
+  have hright : dualQuadratic p q s U4 e5 ≤ K := by
+    simp only [dualQuadratic]
+    nlinarith [hrightPoly]
+  have hfinalPoly :
+      s * e4 ^ 2 + (-2 * q * e5) * e4 + p * e5 ^ 2 ≤ K := by
+    apply quadratic_interval_le_endpoints s (-2 * q * e5) (p * e5 ^ 2)
+      L4 U4 e4 K hs he4L he4U
+    · simp only [dualQuadratic] at hleft
+      nlinarith [hleft]
+    · simp only [dualQuadratic] at hright
+      nlinarith [hright]
+  simp only [dualQuadratic]
+  nlinarith [hfinalPoly]
 
 /--
 Portable exact-real O2 consumer.  The four corner obligations are deliberately
@@ -309,20 +327,18 @@ theorem absolute_bias_small_scale_identity
   ring
 
 /--
-If a fixed nonzero bias is allowed and `t*D_H(e) < |e|^2`, the affine power
-beats quadratic dissipation at the scaled state `u=-t e`.
+Under an explicit small-scale gap `t*D_H(e) < |e|^2`, the affine power from a
+fixed evaluator bias beats quadratic dissipation at the scaled state `u=-t e`.
 -/
 theorem absolute_evaluator_bias_blocks_homogeneous_decay
     (p q s e4 e5 t : ℝ)
-    (hD : 0 < energyQuadratic p q s e4 e5)
-    (hnorm : 0 < e4 ^ 2 + e5 ^ 2)
     (ht : 0 < t)
     (hsmall : t * energyQuadratic p q s e4 e5 < e4 ^ 2 + e5 ^ 2) :
     0 < -energyQuadratic p q s (-t * e4) (-t * e5) +
       errorPower e4 e5 (-t * e4) (-t * e5) := by
   rw [absolute_bias_small_scale_identity]
-  have hgap : 0 < e4 ^ 2 + e5 ^ 2 - t * energyQuadratic p q s e4 e5 := by
-    linarith
+  have hgap : 0 < e4 ^ 2 + e5 ^ 2 - t * energyQuadratic p q s e4 e5 :=
+    sub_pos.mpr hsmall
   have hprod : 0 < t *
       (e4 ^ 2 + e5 ^ 2 - t * energyQuadratic p q s e4 e5) :=
     mul_pos ht hgap
