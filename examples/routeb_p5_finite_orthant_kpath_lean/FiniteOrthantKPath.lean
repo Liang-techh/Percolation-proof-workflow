@@ -71,7 +71,8 @@ theorem component_envelope_power_bound
     |residualPower r x4 x5 y4 y5| =
         |(x4 + y4) * r.ch4 + (x5 + y5) * r.ch5| := by
           rfl
-    _ ≤ |(x4 + y4) * r.ch4| + |(x5 + y5) * r.ch5| := abs_add _ _
+    _ ≤ |(x4 + y4) * r.ch4| + |(x5 + y5) * r.ch5| := by
+          exact abs_add_le _ _
     _ = |x4 + y4| * |r.ch4| + |x5 + y5| * |r.ch5| := by
           rw [abs_mul, abs_mul]
     _ ≤ |x4 + y4| * row4Envelope K x4 x5 y4 y5 +
