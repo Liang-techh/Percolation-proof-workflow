@@ -3600,3 +3600,6 @@ Anchor-domain review 已把真实 hybrid inclusion 收窄为单一 `pD+pB<=rho` 
 smooth-family 的存在性导数上界，不能直接生成数值 remainder。Sartre 的 Fraction envelope
 则确认 frozen target 的 `Bavail<h` 是结构性 pointwise obstruction：Q 搜索和 residual
 重分不足以修复，必须取得 statement/domain 选择或新的真实上游预算。
+
+远端新 claim `GH-MATH-P4-SCHUR-ACTUAL-SOURCE-NEXT` 继续推进 P4 actual-source
+Schur binding；目前仅有认领与 sidecar，未有独立 review/receipt，因此仍是 open frontier。

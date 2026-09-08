@@ -636,6 +636,9 @@ TASK_TARGETS = {
     "T-P5-102-SHEET-COVERAGE-LEAN": (
         "P5.componentwise_relative_decay",
         "pending_p5_sheet_coverage_lean"),
+    "GH-MATH-P4-SCHUR-ACTUAL-SOURCE-NEXT": (
+        "P4.true_dh_port_source_binding",
+        "pending_p4_schur_actual_source_next"),
 }
 
 REVIEW_ID_ALIASES = {

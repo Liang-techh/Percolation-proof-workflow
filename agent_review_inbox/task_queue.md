@@ -4412,3 +4412,8 @@ Route-B 适配 2 候选，可为 compact smooth family 提供统一有限阶导�
 或引入真实 defect budget 都会改变 statement/上游义务；单点阈值不能升级为全域 theorem。
 
 上述结果均已写入 state revision 871，registry=0、formal gate=false。
+
+`GH-MATH-P4-SCHUR-ACTUAL-SOURCE-NEXT` 已由古月方源在远端认领：目标是同配置 actual
+source 下的 `y=X z_A`、`d=A y+b`、`H=M0_CC^-1` 及分离的 Schur 输出。当前只有 claim
+和 sidecar，不是 review/receipt；保持 pending，禁止把 Lean 文件或 claim 直接升级为
+source/coverage/admission 证明。
