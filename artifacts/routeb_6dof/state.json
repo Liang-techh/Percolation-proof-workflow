@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 747,
+  "revision": 748,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -14131,6 +14131,21 @@
             "source_commit": "577ace22b54d7f71b60cf8b071e3c6604ba296ad",
             "review_file": "agent_review_inbox/review-T-P4-COMPILED-LEDGER-BINDING-liuchuanafeng-20260907T1714.md",
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P4-039-rational-lambda-guard-lean-codex-20260907T1815.md",
+            "record_kind": "review_result",
+            "review_sha256": "BB89776CC70C553217215DF51CE06C015A1093B56FA0A2A09EC814B62AAE3B94",
+            "task_id": "T-P4-039",
+            "source_agent": "Codex",
+            "created_at": "2026-09-07T18:15:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_common_lambda_feasibility_formalization",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "7c218f3325e8a1bacd4fc44540701c95cde281a9",
+            "review_file": "agent_review_inbox/review-T-P4-039-rational-lambda-guard-lean-codex-20260907T1815.md",
+            "admission_label": "compiled_candidate"
           }
         ]
       }
@@ -75455,6 +75470,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T05:34:34.831473+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-039-rational-lambda-guard-lean-codex-20260907T1815.md",
+      "record_kind": "review_result",
+      "review_sha256": "BB89776CC70C553217215DF51CE06C015A1093B56FA0A2A09EC814B62AAE3B94",
+      "task_id": "T-P4-039",
+      "classification": "pending_common_lambda_feasibility_formalization",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "b88c2ed6186d442f84b9b652de48a125"
     }
   ],
   "agent_requests": {},
@@ -79111,5 +79139,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "6e43aec3ebb8230957639b01c9cfbfacc64c75f11eef6d6d85df6a38f83fe2aa"
+  "state_checksum": "cf4f53376ed1d79c6bbf7bd9f30098c1df3398ce34f724448370c3cde34d33b2"
 }

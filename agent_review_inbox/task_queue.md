@@ -3236,3 +3236,16 @@ Alignment fields 下的 unshifted value identity，并以 exact origin counterex
 target reservation 接到 scalar floor；`A_up`、port charge、source residual 和
 真实 DH domain 仍保持不同对象。两者均为 `OPEN_UNCOMPILED/pending`，无 registry
 或 formal gate 变化。
+
+## revision 748 — Lean receipt and next normalization seams
+
+`T-P4-039` 的独立 Lean lane receipt 已到达：四个 division-free `Real` leaves
+通过 pinned Lean 4.32 sidecar 的 focused check，报告仅有普通 kernel baseline
+axioms；该结果仍是 `compiled_candidate`，不等于独立 GitHub receipt、comparator
+acceptance 或 registry admission。
+
+随后新增两个数学 open leaves：BODY6 `PATHDOMAINPROJECTION` 将 full-state
+path membership、configuration projection、initial-only membership 和 shift
+accounting 分开；P4 `NORMALIZEDTARGETGUARD` 明确 common guard 只产生 `nu*t`，
+requested target 还必须满足 `requested ≤ nu*t`，并保留 gain*beta 与 nominal
+方向的 exact counterexamples。两者均未编译、未进入 registry。

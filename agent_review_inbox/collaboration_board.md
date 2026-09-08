@@ -2590,3 +2590,10 @@ BODY6 alignment 与 P4 exact-cell/shared-lambda consumer 已进入 StateStore �
 pending provenance/event。新结果形成了一条更精确的依赖链：先证明同源 source
 envelope 与 target reservation，再消费共同 rational parameter；任何缺少
 source-domain、shift budget 或 concrete DH inequality 的候选都不能关闭 parent。
+
+### 梁智炜 · revision 748
+
+`T-P4-039` 已收到 Lean focused receipt，但按 admission 规则仍只标记
+`compiled_candidate`。新 BODY6 path-domain projection 和 P4 normalized-target
+guard 作为数学接口继续保持 `OPEN_UNCOMPILED`；尤其保留“初始点不推出全路径”、
+“shift 不可重复计费”和“`nu*t` 不自动等于旧 target”三个阻塞边界。
