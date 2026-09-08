@@ -107,7 +107,8 @@ theorem two_scaled_sqrt_lt_iff_signed_square
       (u + v) ^ 2 = u ^ 2 + v ^ 2 + 2 * u * v := by ring
       _ = A ^ 2 * X + B ^ 2 * Y + 2 * u * v := by rw [hu2, hv2]
   have huv0 : 0 ≤ u * v := mul_nonneg hu0 hv0
-  have hw0 : 0 ≤ 2 * u * v := mul_nonneg (by norm_num) huv0
+  have hw0 : 0 ≤ 2 * u * v := by
+    nlinarith [huv0]
   have hw2 :
       (2 * u * v) ^ 2 = 4 * A ^ 2 * B ^ 2 * X * Y := by
     calc
@@ -122,6 +123,7 @@ theorem two_scaled_sqrt_lt_iff_signed_square
   · intro hlt
     have hz0 : 0 ≤ u + v := add_nonneg hu0 hv0
     have hT : 0 < T := lt_of_le_of_lt hz0 hlt
+    refine ⟨hT, ?_⟩
     have hdiff : 0 < T - (u + v) := sub_pos.mpr hlt
     have hsum : 0 < T + (u + v) := by nlinarith
     have hprod : 0 < (T - (u + v)) * (T + (u + v)) :=
@@ -205,7 +207,6 @@ theorem ee_direct_gate_iff
       (P4 * P5) * (N4 / P4 + N5 / P5 - L)
         = N4 * P5 + N5 * P4 - L * P4 * P5 := by
     field_simp [hP4ne, hP5ne]
-    <;> ring
   constructor
   · intro hcost
     have hdiff : N4 / P4 + N5 / P5 - L < 0 := by linarith
@@ -238,7 +239,7 @@ theorem ie_cost_scaled_iff
       (m * P) * ((2 / m) * (Real.sqrt D - d) + N / P - L)
         = 2 * P * Real.sqrt D - (2 * P * d + m * (L * P - N)) := by
     field_simp [hmne, hPne]
-    <;> ring
+    ring
   constructor
   · intro hcost
     have hdiff : (2 / m) * (Real.sqrt D - d) + N / P - L < 0 := by
@@ -286,7 +287,7 @@ theorem ii_cost_scaled_iff
         = 2 * m5 * Real.sqrt D4 + 2 * m4 * Real.sqrt D5
           - (L * m4 * m5 + 2 * m5 * d4 + 2 * m4 * d5) := by
     field_simp [hm4ne, hm5ne]
-    <;> ring
+    ring
   constructor
   · intro hcost
     have hdiff :
