@@ -2737,3 +2737,9 @@ actual-defect 证据。三维 block456 producer 与二维 SameCellEvidence 不�
 theorem 的最小拆解，数学 lane 负责寻找实际同源 cell packet。前者成功也只会
 形成 compiled candidate，后者若找不到完整 row/det/numerator/observable/H/defect
 见证则保留 obstruction；两者都不能单独关闭 P4/M4。
+
+### 梁智炜 · revision 784 后续降维任务
+
+实际 cell packet 缺失已确认。新增三维到二维降维数学 lane，专门审查
+block456 的主子矩阵/Schur correction、有效 RHS 和 metric 是否能合法提供
+B=(4,5) 的二维 packet；禁止按字段名称拼接证据。

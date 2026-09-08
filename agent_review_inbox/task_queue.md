@@ -3478,3 +3478,12 @@ P4 `DHAnalyticAUpper` 已收割：基于现有 compact-DH 转录式得到
 `P_upper`、`D_lower`、cover 或 normalization。acceleration-ray exact obstruction
 表明仅凭 block geometry 不能产生有限 A cap；真实 DH descriptor/domain bound
 仍是下一瓶颈。结果保持 `OPEN_UNCOMPILED/pending`。
+
+## 2026-09-08 — dimensional reduction follow-up
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-MATH-P4-3D-TO-2D-RESTRICTION` | 古月方源 / local math lane | 审查 block456 三维 producer 到 B=(4,5) 二维 packet 的主子矩阵/Schur reduction；保留 `M_BD a_D` 与同源 metric |
+
+该任务只接受 exact interface 或 missing-witness obstruction；不得按字段名称
+互换三维 `rho2_m0_upper`、二维 determinant 或 nominal residual。
