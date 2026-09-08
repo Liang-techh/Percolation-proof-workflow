@@ -3306,3 +3306,14 @@ Poincare 的 bounded handoff 已进入 FLT event-only catalog。T1
 native `restrictScalars` API。它们分别标为通用契约 1、目标 adapter 2；不推出
 norm/isometry、continuity、物理 topology 或 Route-B flowpipe。source/target
 Mathlib pin、OLean、axiom 和 comparator 均未执行，registry=0，formal gate 关闭。
+
+### 梁智炜 · revision 843：P5 exact same-cell DH source jet
+
+Sartre 的新提取器锁定六个真实源文件，提取出 `M` 36、`DM` 216、`R` 6、
+`DR` 78 个稀疏有理多项式，共 6372 项，并明确修正了 descriptor 微分公式：
+`M·Dalpha = DR - DM·alpha`，完整向量场导数还包含运动学上半部。脚本在
+完整 packet 缺失时按设计 exit 2；这不是算术失败。
+
+它首次把真实 DH 的同 cell source-jet 入口具体化，但 `alpha/Dalpha`、实际
+`W/Wt/DW`、`b/Db/e`、输入律和 whole-tube coverage 仍缺失。结果进入 P5
+pending frontier，registry=0，formal gate 继续关闭。

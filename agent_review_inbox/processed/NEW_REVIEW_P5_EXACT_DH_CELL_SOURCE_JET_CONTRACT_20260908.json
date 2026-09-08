@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/NEW_REVIEW_P5_EXACT_DH_CELL_SOURCE_JET_CONTRACT_20260908.md",
+  "record_kind": "review_result",
+  "review_sha256": "6FA010EA7532E7CD78DFB0CAFA95734CCA89789A9664E0875D910667DBC67C69",
+  "task_id": "P5-EXACT-DH-SAME-CELL-SOURCE-JET",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_exact_dh_same_cell_source_jet",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/NEW_REVIEW_P5_EXACT_DH_CELL_SOURCE_JET_CONTRACT_20260908.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T18:56:34.903295+00:00"
+}

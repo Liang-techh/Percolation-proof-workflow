@@ -4003,3 +4003,12 @@ budget。若再次收到同 hash handoff，只保留 provenance event，不创�
 只需在目标 pinned 环境验证 universe/binder 和 target-native `restrictScalars`
 接口；不得重复复制 FLT proof，也不得把 topology/scalar transport 升级为物理
 范数、能量或 flowpipe 结论。该 lane 由苏梦辰/巨阳仙尊在数学契约稳定后处理。
+
+## 2026-09-08 — revision 843 P5 exact source jet
+
+`P5-EXACT-DH-SAME-CELL-SOURCE-JET` 已收割并绑定到
+`P5.componentwise_relative_decay` pending frontier。Sartre 的 336 个 jet
+多项式和 canonical coefficient digest 可作为后续 `alpha/Y` graph witness 的
+输入，但不能直接当作 `Dalpha`、metric jet、variational defect 或 full source
+semantics。下一步由柳冠一/狂蛮魔尊推进 exact graph/invertibility contract，
+由苏梦辰/巨阳仙尊在 contract 稳定后处理 Lean sidecar；不重复运行旧轨迹审计。

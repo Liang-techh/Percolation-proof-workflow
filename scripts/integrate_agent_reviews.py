@@ -389,6 +389,9 @@ TASK_TARGETS = {
     "SARTRE-P5-EXTERNAL-SOURCE-FIELDS-REV829": (
         "P5.componentwise_relative_decay",
         "pending_external_source_jet_packet_obstruction"),
+    "P5-EXACT-DH-SAME-CELL-SOURCE-JET": (
+        "P5.componentwise_relative_decay",
+        "pending_exact_dh_same_cell_source_jet"),
     # External FLT scans are deliberately event-only: they are advisory
     # catalog evidence, not Route-B theorem nodes or registry entries.
     "T-FLT-DERIV-CALC": (None, "flt_derivation_calculus_scan"),

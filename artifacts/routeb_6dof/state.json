@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 842,
+  "revision": 843,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12859,6 +12859,21 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/NEW_REVIEW_SARTRE_P5_EXTERNAL_SOURCE_FIELDS_REV829_20260908.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/NEW_REVIEW_P5_EXACT_DH_CELL_SOURCE_JET_CONTRACT_20260908.md",
+            "record_kind": "review_result",
+            "review_sha256": "6FA010EA7532E7CD78DFB0CAFA95734CCA89789A9664E0875D910667DBC67C69",
+            "task_id": "P5-EXACT-DH-SAME-CELL-SOURCE-JET",
+            "source_agent": "unknown",
+            "created_at": "unknown",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_exact_dh_same_cell_source_jet",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/NEW_REVIEW_P5_EXACT_DH_CELL_SOURCE_JET_CONTRACT_20260908.md",
             "admission_label": "pending"
           }
         ]
@@ -80957,6 +80972,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "catalog": "anthropic-fermats-last-theorem"
+    },
+    {
+      "at": "2026-09-08T18:56:34.903295+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/NEW_REVIEW_P5_EXACT_DH_CELL_SOURCE_JET_CONTRACT_20260908.md",
+      "record_kind": "review_result",
+      "review_sha256": "6FA010EA7532E7CD78DFB0CAFA95734CCA89789A9664E0875D910667DBC67C69",
+      "task_id": "P5-EXACT-DH-SAME-CELL-SOURCE-JET",
+      "classification": "pending_exact_dh_same_cell_source_jet",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "4a9af66cdc4f4607857a5cf360f19eb7"
     }
   ],
   "agent_requests": {},
@@ -84613,5 +84641,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "bbb15db5d1e7a396cb4960fbb3884aaab6b039c6f66b2678487d7e885598dd5a"
+  "state_checksum": "fceba57ba50dd56090912192c0bdb727b950e29742636cf323f3bd794135d40d"
 }
