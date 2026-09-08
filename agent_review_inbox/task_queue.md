@@ -4461,6 +4461,19 @@ P4 source admission 与 P8/path coverage。即使 CI 通过，先只能是 compi
 full-X0/ramp reachable-set 排除负值邻域的 typed contract；若证据不足，必须返回
 明确 negative/pending，而不是修改 domain 标签或 target。
 
+## 2026-09-08 — revision 879 harvest：independent target obstruction corroboration
+
+狂蛮魔尊的 `P5-099-TARGET-DOMAIN-DECISION` 独立 review 已收割。它确认 broad
+`GrowthCaps/fullP/w^2` domain 严格包含 `q=0,v=0,w=1`，且当前 exact target 为
+`P*=b-h=-G<0`；ramp algebra、FD halo、path cover 或 cap label 不能暗中排除该点。
+因此在 broad domain 上原 `P>=0` 目标为 rejected；最小 intrinsic beta/target 修正是
+`g>=G`，保留原 `lambda=2` split 则需 `g>=Gamma=2h-b`，旧 global cap 还需更大
+`Gamma+2d`。这与 Sartre 参数 envelope 独立收敛，但仍是 pointwise necessity，
+不是全域 sufficiency，也不否定原 block45 trajectory theorem。
+
+远端同时修复了 Joint6 sidecar 的 Lean 源码，但本轮没有新的可信 CI/axiom/comparator
+receipt；继续保持 compiled status pending，不能因修复 commit 直接注册。
+
 ## 2026-09-08 — revision 877–878 harvest：domain join and H_acc seam intake
 
 `P4-DOMAIN-POINT-JOIN-20260908` 已收割：analytic measurable domain 与 full-state

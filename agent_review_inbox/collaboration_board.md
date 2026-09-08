@@ -3622,6 +3622,12 @@ P5-099 确认现有 analytic/static domain 不能排除 exact witness；ramp 仅
 `w=1`，full-X0 flowpipe 仍无完整 exclusion receipt。新增 P8-105 专门处理 reachable-set
 negative separator，保持原 block45 trajectory theorem 未决，不偷换结论。
 
+### 梁智炜 · revision 879 harvest：independent obstruction corroboration
+
+狂蛮魔尊独立复核 broad-domain witness 与 Sartre 结论一致：原 target 在该域上 rejected，
+beta/target 修正阈值分为 intrinsic `G`、原 split `Gamma`、旧 cap `Gamma+2d`。远端
+Joint6 修复尚缺可信 CI receipt；当前不做 statement 选择、不改 registry。
+
 ### 梁智炜 · revision 877–878 harvest：domain join and H_acc seam
 
 James 已确认静态域包含与真实 ramp flow 归属必须分开；没有 flowpipe exclusion receipt。

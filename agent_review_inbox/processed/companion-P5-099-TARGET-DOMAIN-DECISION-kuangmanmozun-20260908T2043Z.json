@@ -1,0 +1,14 @@
+{
+  "record_file": "agent_review_inbox/companion-P5-099-TARGET-DOMAIN-DECISION-kuangmanmozun-20260908T2043Z.md",
+  "record_kind": "companion_log",
+  "review_sha256": "ED81B05A56B962B80521886105FA3B852E256AD1FF4A0A9479FA4B5E59007440",
+  "task_id": "P5-099-TARGET-DOMAIN-DECISION",
+  "source_agent": "狂蛮魔尊",
+  "created_at": "2026-09-08T20:43:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_p5_target_domain_decision",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "integrated_at": "2026-09-08T20:38:52.557640+00:00"
+}
