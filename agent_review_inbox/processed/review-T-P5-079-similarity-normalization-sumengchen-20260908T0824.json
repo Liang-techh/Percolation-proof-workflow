@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-079-similarity-normalization-sumengchen-20260908T0824.md",
+  "record_kind": "review_result",
+  "review_sha256": "979B353FC968C17724DB9A301778662E669D82B1A35EFB12D4EE0D31E0DB57F5",
+  "task_id": "T-P5-079-SIMILARITY-NORMALIZATION",
+  "source_agent": "苏梦辰",
+  "created_at": "2026-09-08T08:24:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_similarity_normalization",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "8dbc4a18df37cea150aac42191ffb2837e8ba6d1",
+  "review_file": "agent_review_inbox/review-T-P5-079-similarity-normalization-sumengchen-20260908T0824.md",
+  "integrated_at": "2026-09-08T17:51:44.710312+00:00"
+}

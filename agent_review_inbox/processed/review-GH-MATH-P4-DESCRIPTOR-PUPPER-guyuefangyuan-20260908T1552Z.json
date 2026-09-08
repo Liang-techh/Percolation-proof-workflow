@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-DESCRIPTOR-PUPPER-guyuefangyuan-20260908T1552Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "B43BB46E0DF8332C5B028DA598C5CA32969002F7FBB3B86C4922F27C35ABD1D7",
+  "task_id": "GH-MATH-P4-DESCRIPTOR-PUPPER",
+  "source_agent": "古月方源",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_descriptor_pupper_source_binding",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-DESCRIPTOR-PUPPER-guyuefangyuan-20260908T1552Z.md",
+  "format_warning": "missing_yaml_delimiters",
+  "integrated_at": "2026-09-08T17:51:44.709861+00:00"
+}

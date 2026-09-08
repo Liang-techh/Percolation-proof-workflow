@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-TARGET-CAPS-guyuefangyuan-20260908T1438Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "00EBC4814E72DCD94DE2A9FB3C9EE491EFD821856B13B199B80DE61869B12C22",
+  "task_id": "GH-MATH-P4-TARGET-CAPS",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_target_cell_coordinate_caps",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "61dc6639c45bfa558305974e153340b2a27758f1",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-TARGET-CAPS-guyuefangyuan-20260908T1438Z.md",
+  "format_warning": "missing_opening_yaml_delimiter",
+  "integrated_at": "2026-09-08T17:51:44.710093+00:00"
+}

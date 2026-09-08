@@ -1,0 +1,17 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P3-FD-REMAINDER-honglianmozun-20260908T1507Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "5537074D3FF645A19475A725028103A8B688922B278729DFFFE859498788574E",
+  "task_id": "GH-MATH-P3-FD-REMAINDER",
+  "source_agent": "红莲魔尊",
+  "created_at": "2026-09-08T15:07:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_exact_central_fd_remainder_interface",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "141e4005b5d31421c416fcd0399010224b5c0ebf",
+  "review_file": "agent_review_inbox/review-GH-MATH-P3-FD-REMAINDER-honglianmozun-20260908T1507Z.md",
+  "admission_label": "pending",
+  "format_warning": "missing_yaml_delimiters",
+  "integrated_at": "2026-09-08T17:51:44.709429+00:00"
+}
