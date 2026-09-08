@@ -23,22 +23,22 @@ def vEnergy (x : SplitState) : ℝ :=
   (∑ i, (x.vD i) ^ 2) + ∑ i, (x.vB i) ^ 2
 
 /-- Remote-coordinate part of the P5-098 weighted budget. -/
-def pD (x : SplitState) : ℝ :=
+noncomputable def pD (x : SplitState) : ℝ :=
   (3 / 2 : ℝ) * ∑ i, (x.qD i) ^ 2 +
     (4 / 5 : ℝ) * ∑ i, (x.vD i) ^ 2
 
 /-- Two-channel block part of the weighted budget. -/
-def pB (q v : Vec2) : ℝ :=
+noncomputable def pB (q v : Vec2) : ℝ :=
   (3 / 2 : ℝ) * ∑ i, (q i) ^ 2 +
     (4 / 5 : ℝ) * ∑ i, (v i) ^ 2
 
 /-- Ordinary full-state budget expressed through the same explicit partition. -/
-def pFull (x : SplitState) : ℝ :=
+noncomputable def pFull (x : SplitState) : ℝ :=
   (3 / 2 : ℝ) * qEnergy x + (4 / 5 : ℝ) * vEnergy x
 
 /-- Hybrid budget: keep the actual D coordinates and replace only the B block
 by the selected nominal reference coordinates. -/
-def hybridBudget (x : SplitState) (qbar vbar : Vec2) : ℝ :=
+noncomputable def hybridBudget (x : SplitState) (qbar vbar : Vec2) : ℝ :=
   pD x + pB qbar vbar
 
 theorem qEnergy_nonneg (x : SplitState) : 0 ≤ qEnergy x := by
@@ -68,7 +68,7 @@ theorem hybridBudget_eq_full_of_block_match
 /-- Pure scalar arithmetic for the already-recorded initial ball. -/
 theorem weighted_initial_ball_bound
     (Q V : ℝ)
-    (hQ : 0 ≤ Q) (hV : 0 ≤ V)
+    (_hQ : 0 ≤ Q) (hV : 0 ≤ V)
     (hball : Q + V ≤ (9 / 400 : ℝ)) :
     (3 / 2 : ℝ) * Q + (4 / 5 : ℝ) * V ≤ (27 / 800 : ℝ) := by
   nlinarith
@@ -161,7 +161,7 @@ theorem centeredResidual_eq_zero_of_initial_match
 /-- Initial anchor equality does not by itself set the reference residual to
 zero: the bias remains `obs x - lbar` until a separate nominal graph theorem
 identifies `lbar`. -/
-def anchorBias
+noncomputable def anchorBias
     {Remote Block Graph : Type*}
     (graph : Remote → Block → Block → Graph)
     (obs : AnchoredState Remote Block Graph → ℝ)
@@ -196,7 +196,7 @@ theorem nominalResidual_eq_zero_of_graph
 
 /-- Scalar pointwise model used only to make the missing-acceleration boundary
 explicit. -/
-def scalarNominalResidual
+noncomputable def scalarNominalResidual
     (q v a w M D B g : ℝ) : ℝ :=
   g * w - (M * a + D * v + B * q)
 
