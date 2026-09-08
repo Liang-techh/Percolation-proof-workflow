@@ -4185,3 +4185,15 @@ certificate；远端 Lean agent 可并行做 standalone receipt，但不得改�
 18 个 shifted PSD factors 和 `t=1/1000` 已保存为 exact JSON；它只证明当前
 source-independent toy 的 PSD-slack 构造。下一步必须把同一算法重新实例化到
 actual `K_path`/source packet，不能复用 toy 的 `G/Q/L/μ` 数值。
+
+## Active local lanes after revision 860
+
+| owner | next bounded task | boundary |
+|---|---|---|
+| Sartre | exact rational 7×7 `K`-PSD certificate schema → existing additive consumer | 不制造实际 `Q/Delta`，缺 source 保持 pending |
+| Poincare | actual `K_path≤G` 的 8 项 exact-rational comparison join | toy `G` 不得迁移为 physical bound |
+| James | block456 actual `L,d0,H,Delta` signed-port/source binding | 不重复 Schur `y/d/u/s/D`，不假设 bias 为零 |
+| Godel | FLT derivation/calculus theorem scan for graph regularity and pullback adapters | 不搬纯数论，不把 generic theorem 当 Route-B proof |
+
+主线程继续按 immutable review_result 收割；本机不运行整仓 Lean，GitHub Lean lane
+负责 pinned standalone/import/axiom/comparator receipts。
