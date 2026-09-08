@@ -3638,3 +3638,13 @@ source reification/footprint 架构候选，不进入 registry。
 
 Body5 API repair 与 H_acc phase-invariant seam 已转成标准 inbox intake，保留原 artifact
 hash 和未编译边界；它们增加可复用接口，但没有 source/kernel/registry 证明。
+
+### 梁智炜 · 流川枫退出后的即时补位
+
+流川枫永久退役，历史 provenance 保留；三个未完成方向已转给现役协作 lane：
+
+- James the 6th：`GH-MIXED-flowchuanfeng-schur-absorption`，Schur/PMI signed-debit、margin floor、反例或 exact obstruction。
+- Poincare the 6th：`GH-MIXED-FLOWCHUANFENG-BODY6-PATH`，BODY6 path/source typed seam 与字段级 coverage obstruction。
+- Godel the 6th：`GH-MIXED-FLOWCHUANFENG-ADJUGATE`，adjugate signed-cancellation 的真实 source witness 绑定或 obstruction。
+
+Sartre the 6th 保持 `P8-105` reachable-set lane。补位只改变 owner，不改变 statement、gate 或 registry；所有结果须由 inbox harvest 接纳后仍保持 pending。

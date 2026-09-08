@@ -49,6 +49,9 @@ TASK_TARGETS = {
     "T-P5-009": ("P5.sparse_disjunctive_sos", "pending_fd_relative_scaling_obstruction"),
     "T-P5-026": ("P5.componentwise_relative_decay.feasible_cone_spn.proof_attempt",
                  "compiled_candidate_source_independent_feasible_cone_spn"),
+    "T-P5-026-CONE-INDEX-INVERSE-COVER": (
+        "P5.componentwise_relative_decay.feasible_cone_spn.proof_attempt",
+        "compiled_candidate_concrete_cone_index_inverse_cover"),
     "T-P5-027": ("P5.componentwise_relative_decay",
                  "near_sharp_exact_rational_scalar_fallback"),
     "T-P5-028": ("P5.componentwise_relative_decay.moving_frame_parameter_transport",

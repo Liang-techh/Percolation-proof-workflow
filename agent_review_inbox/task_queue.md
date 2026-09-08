@@ -4485,6 +4485,18 @@ receipt；继续保持 compiled status pending，不能因修复 commit 直接�
 manifest hash，继续保持 source export、semantic footprint、runtime 与 Lean 证据为空。
 它只增加 FK/Jacobian occurrence-cut 的架构 seam，不改变 H_acc admission。
 
+## 2026-09-08 — 流川枫退出后的即时补位派工
+
+流川枫已永久不可用。本轮不再等待其历史 claim，也不把历史作者标签改写；将仍有价值的三个未完成方向直接分给现役本地协作 agent，结果仍须经过 inbox bounded envelope 和独立 provenance 检查：
+
+| owner | task id | bounded deliverable |
+|---|---|---|
+| James the 6th | `GH-MIXED-flowchuanfeng-schur-absorption` | 同一 Route-B source/configuration 下 Schur/PMI signed-debit、margin floor、opposite-base 反例或 exact missing-witness obstruction；不重复 cone-index、不做全量回归 |
+| Poincare the 6th | `GH-MIXED-FLOWCHUANFENG-BODY6-PATH` | BODY6 path-domain/source 的窄 typed interface/sidecar 审查；无真实 source/coverage 时提交字段级 obstruction；不在本机声称 Lean 验证 |
+| Godel the 6th | `GH-MIXED-FLOWCHUANFENG-ADJUGATE` | projected adjugate signed-cancellation 与真实 block-(4,5) descriptor/determinant/observable witness 的绑定或最小 exact obstruction；不把 synthetic identity 当 source theorem |
+
+Sartre the 6th 继续处理 `P8-105-REACHABLE-SET-NEGATIVE-SEPARATOR`，不重复上述三条 lane。以上派工只改变 owner，不改变 theorem statement、admission gate 或 registry；所有新结果保持 pending，直到收割器接纳 review_result。
+
 ## 2026-09-08 — revision 876 harvest：sidecar candidates normalized into inbox
 
 两份本地 agent 产出已通过 coordinator wrapper 纳入标准 inbox：

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 879,
+  "revision": 881,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -9253,6 +9253,20 @@
             "source_commit": "fe954e09ba082c742a5299b2373e813b8653c513",
             "review_file": "agent_review_inbox/review-T-P8-002-liuchuanafeng-20260907T1335.md",
             "admission_label": "architecture_only"
+          },
+          {
+            "record_file": "agent_review_inbox/review-P8-105-REACHABLE-SET-NEGATIVE-SEPARATOR-20260908-Sartre.md",
+            "record_kind": "review_result",
+            "review_sha256": "E68B9EC508CE649BDD9FF43644E9F3A188BA34D6E679FF27282CF4736C6D24CA",
+            "task_id": "P8-105-REACHABLE-SET-NEGATIVE-SEPARATOR",
+            "source_agent": "unknown",
+            "created_at": "unknown",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_p8_reachable_set_negative_separator",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-P8-105-REACHABLE-SET-NEGATIVE-SEPARATOR-20260908-Sartre.md"
           }
         ]
       }
@@ -42167,6 +42181,21 @@
             "source_commit": "282de6327682b3c6aca64dfd310e9b05be163e71",
             "review_file": "agent_review_inbox/review-T-P5-026-concrete-consumer-20260908.md",
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P5-026-CONE-INDEX-INVERSE-COVER-20260908-James.md",
+            "record_kind": "review_result",
+            "review_sha256": "74A0CDE3CDB9FFDA24D0195F5BA4A3BE5D0407BAE6FE9B084FC703AC9DBA1ABB",
+            "task_id": "T-P5-026-CONE-INDEX-INVERSE-COVER",
+            "source_agent": "James the 6th",
+            "created_at": "2026-09-08",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "compiled_candidate_concrete_cone_index_inverse_cover",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-T-P5-026-CONE-INDEX-INVERSE-COVER-20260908-James.md",
+            "format_warning": "missing_yaml_delimiters"
           }
         ]
       }
@@ -82340,6 +82369,32 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383"
+    },
+    {
+      "at": "2026-09-08T20:40:09.677736+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-P8-105-REACHABLE-SET-NEGATIVE-SEPARATOR-20260908-Sartre.md",
+      "record_kind": "review_result",
+      "review_sha256": "E68B9EC508CE649BDD9FF43644E9F3A188BA34D6E679FF27282CF4736C6D24CA",
+      "task_id": "P8-105-REACHABLE-SET-NEGATIVE-SEPARATOR",
+      "classification": "pending_p8_reachable_set_negative_separator",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "edd8407c33f54c41867f03b46ec1e313"
+    },
+    {
+      "at": "2026-09-08T20:45:16.173232+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P5-026-CONE-INDEX-INVERSE-COVER-20260908-James.md",
+      "record_kind": "review_result",
+      "review_sha256": "74A0CDE3CDB9FFDA24D0195F5BA4A3BE5D0407BAE6FE9B084FC703AC9DBA1ABB",
+      "task_id": "T-P5-026-CONE-INDEX-INVERSE-COVER",
+      "classification": "compiled_candidate_concrete_cone_index_inverse_cover",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "4e7586a2f5b048f19443d4c406afb7aa"
     }
   ],
   "agent_requests": {},
@@ -85996,5 +86051,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "f86752224cbcf98dc29a97f3e853b119fcdd207bcc3de324db286188bc4dc9a1"
+  "state_checksum": "d2114b3140a7a553ac5a63035e31bacd84293a7f224346f9783257cb47c2fe6e"
 }

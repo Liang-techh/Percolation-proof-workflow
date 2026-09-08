@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-P8-105-REACHABLE-SET-NEGATIVE-SEPARATOR-20260908-Sartre.md",
+  "record_kind": "review_result",
+  "review_sha256": "E68B9EC508CE649BDD9FF43644E9F3A188BA34D6E679FF27282CF4736C6D24CA",
+  "task_id": "P8-105-REACHABLE-SET-NEGATIVE-SEPARATOR",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_p8_reachable_set_negative_separator",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-P8-105-REACHABLE-SET-NEGATIVE-SEPARATOR-20260908-Sartre.md",
+  "integrated_at": "2026-09-08T20:40:09.677736+00:00"
+}
