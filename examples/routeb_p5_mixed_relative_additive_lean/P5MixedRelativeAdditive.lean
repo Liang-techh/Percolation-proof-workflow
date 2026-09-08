@@ -46,7 +46,7 @@ theorem residual_power_bound
     rw [← abs_sq_eq u]
     ring
   calc
-    -u * l ≤ |u| * |l| := hsign
+    -u * l ≤ |u| * |l| := by simpa only [neg_mul] using hsign
     _ ≤ |u| * (rho * |u| + b) := hscale
     _ = rho * u ^ 2 + b * |u| := hrewrite
 
