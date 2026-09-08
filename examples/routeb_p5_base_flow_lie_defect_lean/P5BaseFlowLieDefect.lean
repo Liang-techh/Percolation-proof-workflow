@@ -101,7 +101,10 @@ theorem base_flow_mixed_defect_invariant_boundary
   have hmul : nu*dV ≤ nu*0 := by
     rw [hboundary] at hmain
     nlinarith
-  exact (mul_le_mul_left hnu_pos).mp hmul
+  by_contra hnot
+  have hdV_pos : 0 < dV := lt_of_not_ge hnot
+  have hprod_pos : 0 < nu*dV := mul_pos hnu_pos hdV_pos
+  nlinarith
 
 /-- Constant Euclidean metric: a skew base Jacobian has zero Lie-defect cost. -/
 theorem constant_metric_skew_base_defect_zero (k x y : ℝ) :
