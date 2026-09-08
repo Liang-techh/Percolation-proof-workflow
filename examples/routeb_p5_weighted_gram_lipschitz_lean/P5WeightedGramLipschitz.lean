@@ -21,7 +21,10 @@ theorem signed_cross_term_le
       2 * h * x * y ≤ |2 * h * x * y| := le_abs_self _
       _ = 2 * |h| * |x * y| := by simp [abs_mul]; ring
   have hh : 2 * |h| * |x * y| ≤ 2 * c * |x * y| := by
-    have hm := mul_le_mul_of_nonneg_right hc (mul_nonneg (by norm_num) (abs_nonneg (x * y)))
+    have hnonneg : (0 : ℝ) ≤ 2 * |x * y| :=
+      mul_nonneg (by norm_num) (abs_nonneg (x * y))
+    have hm : |h| * (2 * |x * y|) ≤ c * (2 * |x * y|) :=
+      mul_le_mul_of_nonneg_right hc hnonneg
     simpa [mul_assoc, mul_left_comm, mul_comm] using hm
   have hscale : 2 * c * |x * y| ≤ c * (x ^ 2 + y ^ 2) := by
     have hm := mul_le_mul_of_nonneg_left hxy hc0
