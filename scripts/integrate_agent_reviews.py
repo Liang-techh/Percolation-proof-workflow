@@ -686,6 +686,9 @@ def resolve_task_id(path: Path, header: dict[str, str]) -> str:
         match = re.fullmatch(r"(.+)-HANDOFF-(\d{8})", explicit)
         if match and match.group(1) in TASK_TARGETS:
             return match.group(1)
+        match = re.fullmatch(r"(.+)-(\d{8})", explicit)
+        if match and match.group(1) in TASK_TARGETS:
+            return match.group(1)
         return explicit
     candidates: list[str] = []
     for raw in (header.get("review_id", ""), path.stem):

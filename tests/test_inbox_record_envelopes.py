@@ -155,3 +155,13 @@ def test_unknown_handoff_task_id_remains_unrouted(tmp_path):
         encoding="utf-8",
     )
     assert resolve_task_id(review, record_header(review)) == "T-UNKNOWN-HANDOFF-20270101"
+
+
+def test_known_date_suffixed_task_id_normalizes(tmp_path):
+    review = tmp_path / "handoff-T-FLT-T1-L1-MINIMAL-ADAPTER-20270101.md"
+    review.write_text(
+        "---\nkind: handoff\ntask_id: T-FLT-T1-L1-MINIMAL-ADAPTER-20270101\n"
+        "review_id: H-FLT-T1-L1-20270101\n---\n",
+        encoding="utf-8",
+    )
+    assert resolve_task_id(review, record_header(review)) == "T-FLT-T1-L1-MINIMAL-ADAPTER"
