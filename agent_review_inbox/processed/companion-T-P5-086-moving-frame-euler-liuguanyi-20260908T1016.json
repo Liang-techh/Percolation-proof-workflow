@@ -1,0 +1,14 @@
+{
+  "record_file": "agent_review_inbox/companion-T-P5-086-moving-frame-euler-liuguanyi-20260908T1016.md",
+  "record_kind": "companion_log",
+  "review_sha256": "8E29BDAB448F098926E26BE988F74DD53E0E6519B052F8061FF4B06F3143C3B5",
+  "task_id": "T-P5-086-MOVING-FRAME-EULER",
+  "source_agent": "柳冠一",
+  "created_at": "2026-09-08T10:16:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_moving_frame_euler",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "840da2bf43efd3d37cdccd2c6bff24d788621913",
+  "integrated_at": "2026-09-08T17:54:39.279703+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "record_file": "agent_review_inbox/companion-T-P5-087-guyuefangyuan-20260908T1636Z.md",
+  "record_kind": "companion_log",
+  "review_sha256": "CBC9B9EC84A86378BABFB7291DB2CC03632DD0BD20D8D4C3F171CE88F9AE45F1",
+  "task_id": "T-P5-087-MOVING-METRIC-KERNEL-TRANSPORT",
+  "source_agent": "古月方源",
+  "created_at": "2026-09-08T16:36:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_moving_metric_kernel_transport",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "integrated_at": "2026-09-08T17:54:39.279864+00:00"
+}

@@ -332,6 +332,30 @@ TASK_TARGETS = {
         "P5.componentwise_relative_decay", "pending_similarity_normalization"),
     "T-P5-080-CORRELATION-AWARE-MIXED-DEFECT": (
         "P5.componentwise_relative_decay", "pending_correlated_mixed_defect"),
+    "T-P5-081-MOVING-AFFINE-CHART": (
+        "P5.componentwise_relative_decay", "pending_moving_affine_chart"),
+    "T-P5-082-NONLINEAR-CHART-PULLBACK": (
+        "P5.componentwise_relative_decay", "pending_nonlinear_chart_pullback"),
+    "T-P5-083-NONLINEAR-STEP-SEGMENT-COVERAGE": (
+        "P5.componentwise_relative_decay", "pending_nonlinear_step_segment_coverage"),
+    "T-P5-084-NONLINEAR-CHART-SECANT-GEOMETRY": (
+        "P5.componentwise_relative_decay", "pending_nonlinear_chart_secant_geometry"),
+    "T-P5-085-DESCRIPTOR-RELATIVE-RATE": (
+        "P5.componentwise_relative_decay", "pending_descriptor_relative_rate"),
+    "T-P5-086-MOVING-FRAME-EULER": (
+        "P5.componentwise_relative_decay", "pending_moving_frame_euler"),
+    "T-P5-087-MOVING-METRIC-KERNEL-TRANSPORT": (
+        "P5.componentwise_relative_decay", "pending_moving_metric_kernel_transport"),
+    "T-P5-088-STATE-DEPENDENT-STORAGE-DERIVATIVE": (
+        "P5.componentwise_relative_decay", "pending_state_dependent_storage_derivative"),
+    "T-P5-089-MECHANICAL-SKEW-ENERGY-CANCELLATION": (
+        "P5.componentwise_relative_decay", "pending_mechanical_skew_energy_cancellation"),
+    "T-P5-090-MOVING-METRIC-CONTRACTION-CONGRUENCE": (
+        "P5.componentwise_relative_decay", "pending_moving_metric_contraction_congruence"),
+    "T-P5-091-VARIATIONAL-DEFECT-ROBUST-CONTRACTION": (
+        "P5.componentwise_relative_decay", "pending_variational_defect_robust_contraction"),
+    "T-P5-092-FINITE-STEP-STORAGE-TAYLOR-CLOSURE": (
+        "P5.componentwise_relative_decay", "pending_finite_step_storage_taylor_closure"),
     "T-P5-093-BASE-FLOW-LIE-DEFECT": (
         "P5.componentwise_relative_decay",
         "pending_base_flow_lie_defect_same_tube_binding"),

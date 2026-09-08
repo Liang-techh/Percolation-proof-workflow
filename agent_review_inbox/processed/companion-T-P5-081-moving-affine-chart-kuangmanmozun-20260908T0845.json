@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/companion-T-P5-081-moving-affine-chart-kuangmanmozun-20260908T0845.md",
+  "record_kind": "companion_log",
+  "review_sha256": "134F4EBB533255E622056C12BC813DDC87D514B6EAA40C4DDE8956573A67B9BD",
+  "task_id": "T-P5-081-MOVING-AFFINE-CHART",
+  "source_agent": "狂蛮魔尊",
+  "created_at": "2026-09-08T08:45:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_moving_affine_chart",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:54:39.278984+00:00"
+}

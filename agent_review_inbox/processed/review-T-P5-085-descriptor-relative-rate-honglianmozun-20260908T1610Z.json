@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-085-descriptor-relative-rate-honglianmozun-20260908T1610Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "D6C7F22C3E41B7832BBFA4330E0FA4809D6E71D3251419950FFEB2939171CBC5",
+  "task_id": "T-P5-085-DESCRIPTOR-RELATIVE-RATE",
+  "source_agent": "红莲魔尊",
+  "created_at": "2026-09-08T16:10:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_descriptor_relative_rate",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "0d2211e574a1499755ccc26839f1efa79113e01c",
+  "review_file": "agent_review_inbox/review-T-P5-085-descriptor-relative-rate-honglianmozun-20260908T1610Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:54:39.281073+00:00"
+}

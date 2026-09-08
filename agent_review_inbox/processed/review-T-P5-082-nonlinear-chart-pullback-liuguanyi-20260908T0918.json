@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-082-nonlinear-chart-pullback-liuguanyi-20260908T0918.md",
+  "record_kind": "review_result",
+  "review_sha256": "4AA18CD8580B923944F70D0795644ED1477397D39EE4960835309059FE487F51",
+  "task_id": "T-P5-082-NONLINEAR-CHART-PULLBACK",
+  "source_agent": "柳冠一",
+  "created_at": "2026-09-08T09:18:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_nonlinear_chart_pullback",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "b36f7d743f5ae2bee4db946b384a7364b96aeddc",
+  "review_file": "agent_review_inbox/review-T-P5-082-nonlinear-chart-pullback-liuguanyi-20260908T0918.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:54:39.280731+00:00"
+}

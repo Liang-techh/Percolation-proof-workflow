@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-089-mechanical-skew-energy-honglianmozun-20260908T1104.md",
+  "record_kind": "review_result",
+  "review_sha256": "59957916666C22342B8B7FCBB25B1279597E9495D79AC86BE705CE2076E51B41",
+  "task_id": "T-P5-089-MECHANICAL-SKEW-ENERGY-CANCELLATION",
+  "source_agent": "红莲魔尊",
+  "created_at": "2026-09-08T11:04:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_mechanical_skew_energy_cancellation",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "87a4574f6232c973edc18855468e5a603e4c640c",
+  "review_file": "agent_review_inbox/review-T-P5-089-mechanical-skew-energy-honglianmozun-20260908T1104.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:54:39.281636+00:00"
+}

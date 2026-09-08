@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-088-state-dependent-storage-kuangmanmozun-20260908T1046.md",
+  "record_kind": "review_result",
+  "review_sha256": "A17C78E3E0191930A7A14CC206FBF1C0EFAC22940CFE002349852CB809249E83",
+  "task_id": "T-P5-088-STATE-DEPENDENT-STORAGE-DERIVATIVE",
+  "source_agent": "狂蛮魔尊",
+  "created_at": "2026-09-08T10:46:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_state_dependent_storage_derivative",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "a30a8f5c96be386736f665d0627e95f05f781294",
+  "review_file": "agent_review_inbox/review-T-P5-088-state-dependent-storage-kuangmanmozun-20260908T1046.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:54:39.281519+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-090-moving-metric-contraction-congruence-liuguanyi-20260908T1710Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "DEE6BFF1A3086739B8D8C2074CCD8D72916FB1757A3DF85D62C3CBBB00BF1CFE",
+  "task_id": "T-P5-090-MOVING-METRIC-CONTRACTION-CONGRUENCE",
+  "source_agent": "柳冠一",
+  "created_at": "2026-09-08T17:10:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_moving_metric_contraction_congruence",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "a54235c628c33607d6456417370ee259916df9d5",
+  "review_file": "agent_review_inbox/review-T-P5-090-moving-metric-contraction-congruence-liuguanyi-20260908T1710Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:54:39.281752+00:00"
+}

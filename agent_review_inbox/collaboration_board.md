@@ -3122,3 +3122,17 @@ pending provenance/compiled-candidate/external-pending，禁止自动 promotion�
 `CONDITIONAL_PASS`，有助于把 P5 frontier 从“是否存在 Lie-defect identity”
 收窄为同一 tube 上 `b/D b/D W` 的实际 source 绑定。已加入 integrator routing，
 但仍不关闭 parent、不进入 registry；Lean sidecar 等待 source contract。
+
+### 梁智炜 · revision 826：P5 条件接口批量收割
+
+已新增 13 个 P5 task routing，并收割 23 条 review/companion 结果。它们覆盖
+moving-affine/nonlinear chart、segment coverage、descriptor rate、moving-frame
+Euler、moving-metric kernel transport、state-dependent storage、mechanical skew、
+variational defect 与 finite-step Taylor 等方向。结果的共同有效信息是：数学
+identity/接口可以独立形式化，但真正关闭仍需要同一真实 tube 的 source、domain、
+residual 和 continuation 绑定；多 agent 结果保持分开，避免把条件通过拼成完整
+证书。
+
+当前 revision=826、registry=0、`formal_certificate_allowed=false`。下一步只
+消费能补齐 actual source packet 的任务，其余保留 open frontier；本轮不做全量
+回归、不推送 GitHub。

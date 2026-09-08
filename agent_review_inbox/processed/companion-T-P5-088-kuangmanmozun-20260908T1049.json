@@ -1,0 +1,14 @@
+{
+  "record_file": "agent_review_inbox/companion-T-P5-088-kuangmanmozun-20260908T1049.md",
+  "record_kind": "companion_log",
+  "review_sha256": "6051DFB78F8373435EA0C3D313EC2A2B1CE55AC20D9CBA59FABF1D134B10BCF0",
+  "task_id": "T-P5-088-STATE-DEPENDENT-STORAGE-DERIVATIVE",
+  "source_agent": "狂蛮魔尊",
+  "created_at": "2026-09-08T10:49:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_state_dependent_storage_derivative",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "integrated_at": "2026-09-08T17:54:39.280032+00:00"
+}

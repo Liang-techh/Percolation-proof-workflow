@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-083-nonlinear-step-segment-coverage-guyuefangyuan-20260908T1532Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "388940594DC720B17E9E6FB48683A6713EFC7CD98D1B98FFB7A45538CA1000CD",
+  "task_id": "T-P5-083-NONLINEAR-STEP-SEGMENT-COVERAGE",
+  "source_agent": "古月方源",
+  "created_at": "2026-09-08T15:32:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_nonlinear_step_segment_coverage",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "b7ca7f986e9bc2da3721b1e19414a50928d0aacd",
+  "review_file": "agent_review_inbox/review-T-P5-083-nonlinear-step-segment-coverage-guyuefangyuan-20260908T1532Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:54:39.280847+00:00"
+}

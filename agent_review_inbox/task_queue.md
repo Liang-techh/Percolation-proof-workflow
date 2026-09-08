@@ -3844,3 +3844,17 @@ witness 或重大数学突破时收割与同步。所有结果先进入 pending 
 绑定；当前仍是 pending，不能把“条件通过”当成完整 closure。由柳冠一或红莲
 魔尊继续补同源 packet，苏梦辰/巨阳仙尊仅在 source contract 冻结后提供最小
 Lean sidecar。
+
+## 2026-09-08 — P5 frontier harvest revision 826
+
+本轮已为远端新一批 P5 结果补齐 bounded routing，并收割 moving-affine chart、
+nonlinear pullback/secant/segment coverage、descriptor relative rate、moving-frame
+Euler、kernel transport、state-dependent storage、mechanical skew cancellation、
+variational defect 和 finite-step Taylor closure。它们共同把可复用的数学接口
+前移，但都仍要求同一真实 tube/source 的绑定；多 agent 对同一 task 的结果保留为
+独立 provenance，不合并成单一证明。
+
+后续派工只针对缺口：优先把这些条件接口与真实 DH residual/source packet 对齐，
+再安排苏梦辰或巨阳仙尊做最小 Lean sidecar。禁止继续优化已知 source-independent
+常数、禁止用 compiled_candidate 代替 kernel receipt，也不改变 M4 的 fail-closed
+状态。

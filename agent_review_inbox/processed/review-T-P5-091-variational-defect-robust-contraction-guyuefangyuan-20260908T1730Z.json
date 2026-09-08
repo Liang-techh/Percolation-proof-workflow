@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-091-variational-defect-robust-contraction-guyuefangyuan-20260908T1730Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "073957850570C558E767D5BF164760D992347EB85810189F06D35E12DDC30C5A",
+  "task_id": "T-P5-091-VARIATIONAL-DEFECT-ROBUST-CONTRACTION",
+  "source_agent": "古月方源",
+  "created_at": "2026-09-08T17:30:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_variational_defect_robust_contraction",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "6a3f2d914199b662e03e7e4fae91fd5e26ef3441",
+  "review_file": "agent_review_inbox/review-T-P5-091-variational-defect-robust-contraction-guyuefangyuan-20260908T1730Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:54:39.281868+00:00"
+}

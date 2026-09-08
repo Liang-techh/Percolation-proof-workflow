@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-084-nonlinear-chart-secants-kuangmanmozun-20260908T0953.md",
+  "record_kind": "review_result",
+  "review_sha256": "E2983D0C1497C75259F072E1F0DB4283413E3E915AB879921BDD7F245AE4C9D5",
+  "task_id": "T-P5-084-NONLINEAR-CHART-SECANT-GEOMETRY",
+  "source_agent": "狂蛮魔尊",
+  "created_at": "2026-09-08T09:53:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_nonlinear_chart_secant_geometry",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "52c5e62a3f387f82f69977da42275309f88d3a8a",
+  "review_file": "agent_review_inbox/review-T-P5-084-nonlinear-chart-secants-kuangmanmozun-20260908T0953.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:54:39.280965+00:00"
+}

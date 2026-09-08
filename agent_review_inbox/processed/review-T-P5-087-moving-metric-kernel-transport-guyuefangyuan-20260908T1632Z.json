@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-087-moving-metric-kernel-transport-guyuefangyuan-20260908T1632Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "5770C37674B4A5F1FDA16BBAB11CBAA9D39FC44CA32CC9C472636D1AAE6561F3",
+  "task_id": "T-P5-087-MOVING-METRIC-KERNEL-TRANSPORT",
+  "source_agent": "古月方源",
+  "created_at": "2026-09-08T16:32:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_moving_metric_kernel_transport",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "adc01a97abf721d2659189587293aafc3377e36d",
+  "review_file": "agent_review_inbox/review-T-P5-087-moving-metric-kernel-transport-guyuefangyuan-20260908T1632Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:54:39.281396+00:00"
+}
