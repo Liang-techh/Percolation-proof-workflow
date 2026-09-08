@@ -49,30 +49,26 @@ theorem young_completed_square_identity
 /-- A division-free rational-radius certificate for one Young row. -/
 theorem young_feasible_of_rational_radius
     (A G P theta radius : ℝ)
-    (hA : 0 < A) (htheta : 0 < theta) (hradius : 0 ≤ radius)
+    (hA : 0 < A) (_htheta : 0 < theta) (_hradius : 0 ≤ radius)
     (hdisc : radius^2 ≤ G^2 - 4 * A * P)
     (hcenter : (2 * A * theta - G)^2 ≤ radius^2) :
     A * theta^2 - G * theta + P ≤ 0 := by
-  have htheta_nonneg : 0 ≤ theta := le_of_lt htheta
-  have hradius_sq : 0 ≤ radius^2 := sq_nonneg radius
   have hscale : 0 ≤ 4 * A := by positivity
   have hcompleted :
       4 * A * (A * theta^2 - G * theta + P) ≤ 0 := by
     rw [young_completed_square_identity]
-    nlinarith [htheta_nonneg, hradius_sq]
-  nlinarith [hscale, htheta_nonneg, hradius, hradius_sq]
+    linarith
+  nlinarith [hscale]
 
 /-- The inner rational interval, written without endpoint divisions. -/
 theorem young_inner_interval_feasible
     (A G P theta radius : ℝ)
-    (hA : 0 < A) (hG : 0 < G) (hP : 0 ≤ P)
+    (hA : 0 < A) (_hG : 0 < G) (_hP : 0 ≤ P)
     (htheta : 0 < theta) (hradius : 0 ≤ radius)
     (hdisc : radius^2 ≤ G^2 - 4 * A * P)
     (hlower : G - radius ≤ 2 * A * theta)
     (hupper : 2 * A * theta ≤ G + radius) :
     A * theta^2 - G * theta + P ≤ 0 := by
-  have hG_nonneg : 0 ≤ G := le_of_lt hG
-  have hP_nonneg : 0 ≤ P := hP
   have hleft : 0 ≤ radius - (2 * A * theta - G) := by
     linarith
   have hright : 0 ≤ radius + (2 * A * theta - G) := by
@@ -81,7 +77,7 @@ theorem young_inner_interval_feasible
     nlinarith [mul_nonneg hleft hright]
   have hq := young_feasible_of_rational_radius
     A G P theta radius hA htheta hradius hdisc hcenter
-  nlinarith [hG_nonneg, hP_nonneg, hq]
+  exact hq
 
 /-- One shared positive `theta` consumes all supplied inner-bound rows. -/
 theorem young_common_parameter_of_inner_bounds
