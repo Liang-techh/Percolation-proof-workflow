@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION-codex-20260908T090500.md",
+  "record_kind": "review_result",
+  "review_sha256": "C5557F15EDD15A85FDB74A6D8698C1DF6C79A1132B915EF56BCB1AC7E4162065",
+  "task_id": "GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION",
+  "source_agent": "梁智炜",
+  "created_at": "2026-09-08T09:05:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_generic_finite_dimensional_schur_allocation_receipt",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION-codex-20260908T090500.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T14:59:02.403364+00:00"
+}

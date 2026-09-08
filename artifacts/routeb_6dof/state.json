@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 768,
+  "revision": 769,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -8138,6 +8138,21 @@
             "target_scope": "routeb_node",
             "source_commit": "b943b5adfec512c15ef0b099bb25c54354ad4d03",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-BUDGET-CLOSURE-codex-20260908T084204.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION-codex-20260908T090500.md",
+            "record_kind": "review_result",
+            "review_sha256": "C5557F15EDD15A85FDB74A6D8698C1DF6C79A1132B915EF56BCB1AC7E4162065",
+            "task_id": "GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION",
+            "source_agent": "梁智炜",
+            "created_at": "2026-09-08T09:05:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_generic_finite_dimensional_schur_allocation_receipt",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION-codex-20260908T090500.md",
             "admission_label": "pending"
           }
         ],
@@ -77195,6 +77210,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "1ea06cbee9b54297913156cfb0b201ce"
+    },
+    {
+      "at": "2026-09-08T14:59:02.403364+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION-codex-20260908T090500.md",
+      "record_kind": "review_result",
+      "review_sha256": "C5557F15EDD15A85FDB74A6D8698C1DF6C79A1132B915EF56BCB1AC7E4162065",
+      "task_id": "GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION",
+      "classification": "pending_generic_finite_dimensional_schur_allocation_receipt",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e7b1df1835f4deba06b11a8182f6719"
     }
   ],
   "agent_requests": {},
@@ -80851,5 +80879,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "248b07112fa573a7379c75e516e3aac3a8c2eb2dbf1440863aa0797c297170bd"
+  "state_checksum": "aa6b1190d7d469173a068b401c02048331b4169be9ba9d086e4be110f4a472a1"
 }

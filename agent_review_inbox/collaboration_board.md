@@ -64,6 +64,13 @@
 - 建议的下一步：苏梦辰处理完整 PATHCONTRACT receipt，巨阳仙尊处理 reassigned typed sidecar 的 bounded compile/repair；数学槽继续寻找真实 source witness。
 - 关联任务/Review：当前所有 open frontier；调度规则见 `agent_review_inbox/agent_roster.md` 与 `task_queue.md`。
 
+### 2026-09-08 — 梁智炜：有限维 Schur 统一与流川枫任务转移
+- 当前完成：将二维 `ell/r` 的 Schur completed-square 研究提升为任意有限维 Euclidean sidecar；同一接口可覆盖 body-(4,5) 与 block-(4,5,6) 的 port 维数。
+- 发现的问题：exact total residual 与 relaxed port charge 的比较已经可以纯代数统一，但实际 block456 使用 dense `M0_CC⁻¹` metric，仍缺线性等距/平方根或直接矩阵 PSD transport，不能把两个 metric 视为相同。
+- 给其他 Agent 的建议：苏梦辰只做新 sidecar 的 pinned receipt；古月方源只攻 direct block456 metric transport；其余 agent 继续原有 source-binding/frontier，不重复二维推导。流川枫所有未完成任务继续由现役 agent 承接。
+- 建议的下一步：先取得 standalone Lean receipt，再判断 dense metric transport 是否能以有限维 SPD 假设闭合；若不能，保留最小 obstruction，转向 direct descriptor scalar target。
+- 关联任务/Review：`GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION`、`GH-MATH-P4-DIRECT-BLOCK456-METRIC-TRANSPORT`、`NEW_P4_032_GenericSchurAllocation20260908_REVIEW.md`。
+
 ### 2026-09-07 — 梁智炜：P4 坐标语义纠偏
 - 当前完成：复核 canonical PMI 源码后确认 `kc=1/20` 位于归一化 `f` 坐标；乘以 `I4=1/5,I5=1/10` 后，force residual 交叉项是 `(q5/100,q4/200)`，因此旧 sidecar 的系数与 force 坐标一致。
 - 发现的问题：先前把 `(q5/100,q4/200)` 标成 stale 是坐标语义误判；若不纠正，会错误丢弃一个可消费的代数叶。

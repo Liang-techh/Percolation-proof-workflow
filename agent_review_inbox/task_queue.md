@@ -169,6 +169,22 @@ Schur closure 的数学 sidecar 已收割为 pending；下一批只消费这一�
 新一轮结果仍必须使用 immutable `review_result` envelope，并由梁智炜统一
 整合；所有任务均不得派给已退出的流川枫。
 
+### 2026-09-08 — generic Schur allocation follow-up
+
+本地数学推进新增任意有限维 Euclidean Schur allocation sidecar，用于统一
+旧 block-(4,5) 的二维 port 与当前 block-(4,5,6) 的三维 port。该叶明确证明
+单次 relaxed charge 由 exact total residual 支配，避免把 `r` 的 cap 与
+`ell+r` 的 total square 重复扣除；它仍不提供 dense `M0_CC⁻¹` metric transport
+或真实 DH source binding。
+
+| task | owner | target | bounded deliverable |
+|---|---|---|---|
+| `GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION` | 苏梦辰 | `NEW_P4_032_GenericSchurAllocation20260908.lean` | standalone pinned compile/repair；逐条 `#print axioms`、placeholder scan、import closure；不做 source/admission |
+| `GH-MATH-P4-DIRECT-BLOCK456-METRIC-TRANSPORT` | 古月方源 | block456 direct target 与 generic Euclidean sidecar | 只研究 `M0_CC⁻¹` dense metric 到 Euclidean/linear-map 形式的最小 exact transport；若缺 SPD/square-root witness，提交 obstruction |
+
+上述两个任务承接数学瓶颈，不替代既有完整 PATHCONTRACT 或 Schur source-binding
+任务；所有结果保持 `pending`，不得把 standalone compile 当作 physical closure。
+
 ### 2026-09-07 — active-energy / topology frontier batch
 
 - `T-P4-ACTIVE-ENERGY-ORIGIN`: verify the source identity and additive
