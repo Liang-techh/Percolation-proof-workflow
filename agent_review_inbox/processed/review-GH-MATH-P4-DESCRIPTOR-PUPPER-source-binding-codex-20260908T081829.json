@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-DESCRIPTOR-PUPPER-source-binding-codex-20260908T081829.md",
+  "record_kind": "review_result",
+  "review_sha256": "D4279EF961EED2B45D5FB62DBF5AFB4C165414201A0D4E9B7004974B975B46B6",
+  "task_id": "GH-MATH-P4-DESCRIPTOR-PUPPER",
+  "source_agent": "Codex-P4-math-lane",
+  "created_at": "2026-09-08T08:18:29-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_descriptor_pupper_source_binding",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "1f7592f29f9bec8e29b689db30c416b6655dcff6",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-DESCRIPTOR-PUPPER-source-binding-codex-20260908T081829.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T14:22:51.256588+00:00"
+}

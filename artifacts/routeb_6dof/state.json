@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 757,
+  "revision": 758,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -15133,6 +15133,21 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-T-P4-DESCRIPTOR-ACCEL-BRIDGE-liuguanyi-20260908T1212.md"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-DESCRIPTOR-PUPPER-source-binding-codex-20260908T081829.md",
+            "record_kind": "review_result",
+            "review_sha256": "D4279EF961EED2B45D5FB62DBF5AFB4C165414201A0D4E9B7004974B975B46B6",
+            "task_id": "GH-MATH-P4-DESCRIPTOR-PUPPER",
+            "source_agent": "Codex-P4-math-lane",
+            "created_at": "2026-09-08T08:18:29-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_descriptor_pupper_source_binding",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "1f7592f29f9bec8e29b689db30c416b6655dcff6",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-DESCRIPTOR-PUPPER-source-binding-codex-20260908T081829.md",
+            "admission_label": "pending"
           }
         ]
       }
@@ -38906,6 +38921,21 @@
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-one-shift-repair-review-20260908T141830Z.md",
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-lean-receipt-codex-20260908T082220.md",
+            "record_kind": "review_result",
+            "review_sha256": "3D1E109D7E7ED306292F8FD5633E8A9137F76D5D3447371A1C8A57C101EC6433",
+            "task_id": "T-P4-033-O1-body6-slice",
+            "source_agent": "Codex",
+            "created_at": "2026-09-08T08:22:20-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_independent_body6_source_slice",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "8c9756b28d64dab099da31a4c09229a9e6a2ef35",
+            "review_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-lean-receipt-codex-20260908T082220.md",
+            "admission_label": "compiled_candidate"
           }
         ]
       }
@@ -76666,6 +76696,32 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "1ea06cbee9b54297913156cfb0b201ce"
+    },
+    {
+      "at": "2026-09-08T14:22:51.256588+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-DESCRIPTOR-PUPPER-source-binding-codex-20260908T081829.md",
+      "record_kind": "review_result",
+      "review_sha256": "D4279EF961EED2B45D5FB62DBF5AFB4C165414201A0D4E9B7004974B975B46B6",
+      "task_id": "GH-MATH-P4-DESCRIPTOR-PUPPER",
+      "classification": "pending_descriptor_pupper_source_binding",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T14:22:51.256910+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-lean-receipt-codex-20260908T082220.md",
+      "record_kind": "review_result",
+      "review_sha256": "3D1E109D7E7ED306292F8FD5633E8A9137F76D5D3447371A1C8A57C101EC6433",
+      "task_id": "T-P4-033-O1-body6-slice",
+      "classification": "pending_independent_body6_source_slice",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1ea06cbee9b54297913156cfb0b201ce"
     }
   ],
   "agent_requests": {},
@@ -80322,5 +80378,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "6c9099784c06ebd7901878c556e1241fcdfeb70b790a10a34befd55da94f7660"
+  "state_checksum": "973a5aa6e37222790d50361cf8b21d32f6f73f567f8dc1facb4dc4b8356bea6b"
 }

@@ -97,6 +97,8 @@ TASK_TARGETS = {
                                  "pending_exact_central_fd_remainder_interface"),
     "GH-MATH-P4-ADJUGATE-ACCEL": ("P4.true_dh_port_source_binding",
                                    "pending_adjugate_acceleration_bridge"),
+    "GH-MATH-P4-DESCRIPTOR-PUPPER": ("P4.true_dh_port_source_binding",
+                                      "pending_descriptor_pupper_source_binding"),
     # New GitHub proof lanes use descriptive uppercase suffixes.  Route them
     # to existing DAG parents as pending metadata only; no admission path is
     # implied by these aliases.
