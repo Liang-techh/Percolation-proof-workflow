@@ -176,7 +176,11 @@ theorem unit_contact_times_reduced_lipschitz
         |(U - U') * P * R + U' * (P - P') * R| + |U' * P' * (R - R')| :=
       abs_add_le _ _
     _ ≤ (|(U - U') * P * R| + |U' * (P - P') * R|) + |U' * P' * (R - R')| := by
-      exact add_le_add_right (abs_add_le _ _) _
+      have hpair :
+          |(U - U') * P * R + U' * (P - P') * R| ≤
+            |(U - U') * P * R| + |U' * (P - P') * R| :=
+        abs_add_le _ _
+      exact add_le_add_right hpair |U' * P' * (R - R')|
     _ ≤ ((LU * d) * BP * MR + BU * (LP * d) * MR) + BU * BP * (LR * d) := by
       exact add_le_add (add_le_add hA hB) hC
     _ = (LU * BP * MR + BU * LP * MR + BU * BP * LR) * d := by ring
