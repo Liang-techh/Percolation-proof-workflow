@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART-codex-20260908T112909.md",
+  "record_kind": "review_result",
+  "review_sha256": "6F16A88CB6827CE7CD25E842F198822A269EBC833255A418A5442F782E48C1E8",
+  "task_id": "GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART",
+  "source_agent": "codex-signed-affine-chart-interface",
+  "created_at": "2026-09-08T11:29:09-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_signed_affine_defect_chart",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART-codex-20260908T112909.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:31:09.753055+00:00"
+}
