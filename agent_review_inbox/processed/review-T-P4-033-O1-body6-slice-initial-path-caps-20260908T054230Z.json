@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-initial-path-caps-20260908T054230Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "9E8EC6FCAB8DE681EDDCA20AA61CC6238620F6BE6138072837E078D5608574EA",
+  "task_id": "T-P4-033-O1-body6-slice",
+  "source_agent": "codex-body6-math-lane",
+  "created_at": "2026-09-08T05:42:30Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_independent_body6_source_slice",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-initial-path-caps-20260908T054230Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T05:43:44.505217+00:00"
+}

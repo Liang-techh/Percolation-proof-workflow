@@ -2611,3 +2611,9 @@ P3 derivative-level DH binding 已登记为独立 pending child。它补上了 v
 equality 与 derivative-level equality 之间的逻辑断层，但仍把 concrete
 exact-real derivative evaluator 当作外部输入；后续需要独立的 Float64/FD/source
 receipt，不能由当前 lemma 自动关闭。
+
+### 梁智炜 · revision 751
+
+BODY6 initial-to-full-path cap seam 已进入 StateStore。它将当前阻塞精确化为
+`initial receipt + integrated growth + full-state projection + shift budget` 的
+四段依赖；任何一段缺失都不能推出 ActualShift 的全路径 barrier。

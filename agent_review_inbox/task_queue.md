@@ -3266,3 +3266,11 @@ derivative evaluators，再由既有 source equalities 得到 source derivative
 equality。value identity 单独不能推出 derivative identity，侧栏保留了精确
 Bool obstruction。该叶仍为 `OPEN_UNCOMPILED/pending`，不涉及 Float64、central-FD
 误差、coverage、flowpipe、residual absorption 或 registry。
+
+## revision 751 — initial/full-path cap separation
+
+BODY6 `INITIALPATHCAPS` 已收割并写入 pending provenance：它把 initial-set
+cap、initial-path cap、full-path cap、integrated growth 和 shift budget 分成
+独立 predicates，给出 growth→full-cap 的纯消费者，并以 smooth hump 反例证明
+初始上界、非负性和 terminal zero 不能替代全路径增长/continuation 证明。当前
+ActualShift 的 `B` 仍必须单独计入，所有结果保持 `OPEN_UNCOMPILED/pending`。
