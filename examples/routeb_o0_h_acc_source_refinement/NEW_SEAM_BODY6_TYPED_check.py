@@ -6,6 +6,7 @@ PATHCONTRACT module when its aligned import is unavailable. No admission path.
 """
 from __future__ import annotations
 
+import argparse
 from hashlib import sha256
 import json
 import os
@@ -104,19 +105,28 @@ def environment():
     return env
 
 
-def check(name, arguments, env, source=None):
+def check(name, arguments, env, source=None, timeout=50):
     command = [str(LEAN), "-DwarningAsError=true", *arguments]
     try:
         run = subprocess.run(command, input=source, encoding="utf-8", capture_output=True,
-                             cwd=ROOT, env=env, timeout=50, check=False)
+                             cwd=ROOT, env=env, timeout=timeout, check=False)
         return {"name": name, "command": command, "exit_code": run.returncode,
                 "stdout": run.stdout, "stderr": run.stderr,
                 "stdin_sha256": sha256(source.encode()).hexdigest() if source else None}
-    except subprocess.TimeoutExpired:
-        return {"name": name, "command": command, "exit_code": None, "status": "TIMEOUT"}
+    except subprocess.TimeoutExpired as exc:
+        def partial(value):
+            return value.decode("utf-8", errors="replace") if isinstance(value, bytes) else value
+        return {"name": name, "command": command, "exit_code": None, "status": "TIMEOUT",
+                "timeout_seconds": timeout, "stdout": partial(exc.stdout),
+                "stderr": partial(exc.stderr),
+                "stdin_sha256": sha256(source.encode()).hexdigest() if source else None}
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--adapters-only", action="store_true")
+    parser.add_argument("--timeout", type=int, default=50)
+    args = parser.parse_args()
     original = CONTRACT.read_text(encoding="utf-8")
     start = original.index("structure PathContract ")
     end = original.index("/- The existing domain and alignment fields", start)
@@ -127,11 +137,13 @@ def main():
              "open NEW_BODY6_SLICE_INITIALPATHCAPS20260907\n" + fragment +
              "\nend\nend NEW_BODY6_SLICE_PATHCONTRACT20260908\n" + ADAPTERS)
     env = environment()
-    runs = [check("full_PATHCONTRACT_import_check", [str(CONTRACT)], env),
-            check("full_PATHREASSIGNED_plus_extracted_generic_contract_and_adapters",
-                  ["--stdin"], env, stdin)]
+    runs = []
+    if not args.adapters_only:
+        runs.append(check("full_PATHCONTRACT_import_check", [str(CONTRACT)], env))
+    runs.append(check("full_PATHREASSIGNED_plus_extracted_generic_contract_and_adapters",
+                      ["--stdin"], env, stdin, args.timeout))
     report = {"schema": "routeb.body6.typed_interface_audit.v1", "status": "pending",
-              "scope": "two_bounded_Lean_invocations_no_dependency_rebuild",
+              "scope": "bounded_Lean_invocations_no_dependency_rebuild",
               "runs": runs, "lean_path": env["LEAN_PATH"],
               "toolchain": (PIN / "lean-toolchain").read_text().strip(),
               "input_hashes": {path.relative_to(ROOT).as_posix(): digest(path) for path in
@@ -142,11 +154,12 @@ def main():
                    Path(__file__))},
               "generic_fragment_sha256": sha256(fragment.encode()).hexdigest(),
               "files_written_by_checker": 0, "dependencies_recompiled": False,
-              "complete_PATHCONTRACT_checked": runs[0]["exit_code"] == 0,
-              "adapter_Lean_check_passed": runs[1]["exit_code"] == 0,
+              "complete_PATHCONTRACT_checked": any(r["name"] == "full_PATHCONTRACT_import_check"
+                                                     and r["exit_code"] == 0 for r in runs),
+              "adapter_Lean_check_passed": runs[-1]["exit_code"] == 0,
               "registry_eligible": False, "source_binding_proven": False,
               "concrete_path_contract_inhabited": False}
-    print(json.dumps(report, ensure_ascii=False, indent=2))
+    print(json.dumps(report, ensure_ascii=True, indent=2))
     return 3  # Diagnostics never authorize admission, including successful Lean checks.
 
 

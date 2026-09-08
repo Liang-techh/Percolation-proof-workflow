@@ -106,8 +106,7 @@ theorem ignored_gain_counterexample :
 has true margin zero, but no finite lambda>1 certifies this Schur form. -/
 theorem fixed_lambda_zero_radius_obstruction (lam : ℝ) :
     schurNumerator 1 0 lam 0 ![1, 0] = -1 := by
-  norm_num [schurNumerator, sq2]
-  ring
+  norm_num [schurNumerator, sq2] <;> ring
 
 theorem zero_radius_true_margin :
     (1 : ℝ) - sq2 (fun i => (![1, 0] : Vec2) i + (![0, 0] : Vec2) i) = 0 := by
