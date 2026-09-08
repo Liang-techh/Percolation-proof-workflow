@@ -3418,3 +3418,12 @@ Poincare 接替流川枫遗留方向，给出一个坐标 selector/projector 的
 selector 只证明辅助坐标结构；没有 actual `S/A`、域内 source identity 或 cross-zero
 witness，就不能接入物理 Route-B，更不能声称 mass spectral gap、invariance、flowpipe
 或 registry proof。当前记录为 FLT event-only metadata，registry=0，formal gate 关闭。
+
+### 梁智炜 · revision 854：P5-026 concrete ConeIndex consumer
+
+Poincare 补齐了 36 个 feasible ConeIndex 到 generic SignedCoverConsumer 的 typed
+adapter：保留 representative/orientation、边界多重覆盖与全局 sign covariance，
+并完成 source-bundle Lean pass；七个新声明只有标准 `propext/choice/Quot.sound`。
+该 pass 不是 standalone Lake/OLean/import receipt，也没有 concrete `K_path`、18 个
+SPN certificates、source binding、P5 closure 或 registry eligibility，因此只登记为
+source-independent compiled candidate，formal gate 继续关闭。

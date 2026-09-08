@@ -4101,3 +4101,12 @@ event-only metadata。后续只接受 actual operator `S/A`、矩阵 convention�
 cross-block exact-zero witness 与 target-pinned adapter receipt；坐标 projector 的
 对称性/compactness/eigenspace 计划不能替代真实 mass/dynamics source，也不能关闭
 Route-B frontier。
+
+## 2026-09-08 — revision 854 P5-026 concrete consumer
+
+`T-P5-026` 已收割：新增 concrete ConeIndex/SignedCoverConsumer typed adapter，
+source-bundle Lean pass 成功，且保留 36-label/18-representative 的 orientation 与
+边界语义。它仍缺 standalone Lake/OLean receipt、concrete `K_path`、SPN certificate、
+source/Float64/flowpipe binding；不得据此关闭 P5、写入 verified registry 或替代物理
+source proof。下一步只接收 target-pinned import/axiom/comparator receipt，或真实
+certificate-indexed K-path packet。

@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-026-concrete-consumer-20260908.md",
+  "record_kind": "review_result",
+  "review_sha256": "FFDA93600DAF410ACCC13A266F466A9BC08C297B00985738D327B6AB64D589EE",
+  "task_id": "T-P5-026",
+  "source_agent": "unknown",
+  "created_at": "2026-09-08",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "compiled_candidate_source_independent_feasible_cone_spn",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "282de6327682b3c6aca64dfd310e9b05be163e71",
+  "review_file": "agent_review_inbox/review-T-P5-026-concrete-consumer-20260908.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T19:23:11.750101+00:00"
+}
