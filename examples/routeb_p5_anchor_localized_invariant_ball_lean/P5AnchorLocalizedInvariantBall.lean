@@ -11,12 +11,14 @@ theorem anchor_root_localization_division_free
     (mu V0 ip qFc B0 : ℝ)
     (hmu : 0 < mu)
     (hV0 : 0 ≤ V0)
+    (hqFc : 0 ≤ qFc)
     (hmon : mu * V0 ≤ ip)
     (hcauchy : ip ^ 2 ≤ qFc * V0)
     (hbudget : qFc ≤ B0) :
     mu ^ 2 * V0 ≤ B0 := by
   by_cases hz : V0 = 0
-  · simp [hz]
+  · have hB0 : 0 ≤ B0 := le_trans hqFc hbudget
+    simpa [hz] using hB0
   have hVpos : 0 < V0 := lt_of_le_of_ne hV0 (Ne.symm hz)
   have hmuV : 0 ≤ mu * V0 := by positivity
   have hip : 0 ≤ ip := le_trans hmuV hmon
@@ -36,19 +38,19 @@ theorem anchor_inside_sublevel_of_budget
   have hmu2 : 0 < mu ^ 2 := by positivity
   nlinarith
 
-/-- Radical-free two-square envelope.  It is the polynomial form of
-    `sqrt A + sqrt C <= sqrt T`, but requires no square root in the checker. -/
+/-- Radical-free two-square envelope. It is the polynomial form of
+    `sqrt A + sqrt C <= sqrt T`, but requires no square root in the checker.
+    Nonnegativity of `C` is derivable from `hb` and `K > 0`, so it is not
+    duplicated as a theorem hypothesis. -/
 theorem scaled_two_square_sum_gate
     (K A C T a b : ℝ)
     (hK : 0 < K)
     (hA : 0 ≤ A)
-    (hC : 0 ≤ C)
     (ha : K * a ^ 2 ≤ A)
     (hb : K * b ^ 2 ≤ C)
     (hreserve : 0 ≤ T - A - C)
     (hcross : 4 * A * C ≤ (T - A - C) ^ 2) :
     K * (a + b) ^ 2 ≤ T := by
-  have hKa : 0 ≤ K * a ^ 2 := mul_nonneg (le_of_lt hK) (sq_nonneg a)
   have hKb : 0 ≤ K * b ^ 2 := mul_nonneg (le_of_lt hK) (sq_nonneg b)
   have hprod : (K * a ^ 2) * (K * b ^ 2) ≤ A * C :=
     mul_le_mul ha hb hKb hA
@@ -66,13 +68,11 @@ theorem scaled_two_square_sum_gate_strict
     (K A C T a b : ℝ)
     (hK : 0 < K)
     (hA : 0 ≤ A)
-    (hC : 0 ≤ C)
     (ha : K * a ^ 2 ≤ A)
     (hb : K * b ^ 2 ≤ C)
     (hreserve : 0 < T - A - C)
     (hcross : 4 * A * C < (T - A - C) ^ 2) :
     K * (a + b) ^ 2 < T := by
-  have hKa : 0 ≤ K * a ^ 2 := mul_nonneg (le_of_lt hK) (sq_nonneg a)
   have hKb : 0 ≤ K * b ^ 2 := mul_nonneg (le_of_lt hK) (sq_nonneg b)
   have hprod : (K * a ^ 2) * (K * b ^ 2) ≤ A * C :=
     mul_le_mul ha hb hKb hA
@@ -93,7 +93,6 @@ theorem coordinate_source_interval_of_radical_free_gate
     (hw : 0 < w)
     (hH : 0 ≤ H)
     (hVstar : 0 ≤ Vstar)
-    (hB0 : 0 ≤ B0)
     (hstate : w * (x - xstar) ^ 2 ≤ Vstar)
     (hroot : mu ^ 2 * w * (xstar - c) ^ 2 ≤ B0)
     (hreserve : 0 ≤ mu ^ 2 * w * H ^ 2 - mu ^ 2 * Vstar - B0)
@@ -112,11 +111,16 @@ theorem coordinate_source_interval_of_radical_free_gate
     (T := mu ^ 2 * w * H ^ 2)
     (a := x - xstar)
     (b := xstar - c)
-    hK (mul_nonneg hmu2 hVstar) hB0 ha hroot hreserve hcross
+    hK (mul_nonneg hmu2 hVstar) ha hroot hreserve hcross
   have hscaled : (mu ^ 2 * w) * (x - c) ^ 2 ≤ (mu ^ 2 * w) * H ^ 2 := by
     nlinarith [hsum]
-  have hsq : (x - c) ^ 2 ≤ H ^ 2 :=
-    (mul_le_mul_left hK).mp hscaled
+  have hsq : (x - c) ^ 2 ≤ H ^ 2 := by
+    by_contra hnot
+    have hgt : H ^ 2 < (x - c) ^ 2 := lt_of_not_ge hnot
+    have hmulgt :
+        (mu ^ 2 * w) * H ^ 2 < (mu ^ 2 * w) * (x - c) ^ 2 :=
+      mul_lt_mul_of_pos_left hgt hK
+    exact (not_lt_of_ge hscaled) hmulgt
   have hupper : x - c ≤ H := by nlinarith
   have hlower : -H ≤ x - c := by nlinarith
   exact (abs_le).2 ⟨hlower, hupper⟩
@@ -131,7 +135,6 @@ theorem finite_source_box_containment
     (hw : ∀ i, 0 < w i)
     (hH : ∀ i, 0 ≤ H i)
     (hVstar : 0 ≤ Vstar)
-    (hB0 : 0 ≤ B0)
     (hstate : ∀ i, w i * (x i - xstar i) ^ 2 ≤ Vstar)
     (hroot : ∀ i, mu ^ 2 * w i * (xstar i - c i) ^ 2 ≤ B0)
     (hreserve : ∀ i, 0 ≤ mu ^ 2 * w i * H i ^ 2 - mu ^ 2 * Vstar - B0)
@@ -141,7 +144,7 @@ theorem finite_source_box_containment
   intro i
   exact coordinate_source_interval_of_radical_free_gate
     mu (w i) (H i) Vstar B0 (x i) (xstar i) (c i)
-    hmu (hw i) (hH i) hVstar hB0
+    hmu (hw i) (hH i) hVstar
     (hstate i) (hroot i) (hreserve i) (hcross i)
 
 /-- Boundary equality gives zero reserve: it is containment at best, not a strict-interior certificate. -/
