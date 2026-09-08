@@ -46,3 +46,7 @@ def test_p2m_util_remains_architecture_only():
     assert util.classification == 3
     assert util.reuse_mode == "architecture-only"
     assert util.admission_status == "pending"
+    contract = snapshot.architecture["p2m_contract"]
+    assert contract["required_behavior"]["clear_aux_decls_instead_of_revert"] is True
+    assert contract["required_behavior"]["universe_generalization_check"] is True
+    assert contract["registry_promotion"] is False

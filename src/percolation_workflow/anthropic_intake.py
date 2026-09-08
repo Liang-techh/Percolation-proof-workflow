@@ -306,6 +306,23 @@ def scan_fermats_repo(repo: str | Path) -> FermatSnapshot:
             "explicit_in_repo": False,
             "recommended_projection": "preserve every failed comparator/checker attempt as a DAG event; never infer proof from artifact presence",
         },
+        "p2m_contract": {
+            "source": "P2M/Util.lean",
+            "required_behavior": {
+                "preserve_order": True,
+                "clear_aux_decls_instead_of_revert": True,
+                "universe_generalization_check": True,
+            },
+            "required_receipts": [
+                "exact Lean toolchain and Mathlib pin",
+                "positive and expected-failure probe exit codes",
+                "OLean output",
+                "declaration-level #print axioms",
+                "statement comparator result",
+            ],
+            "admission": "event_only_until_pinned_compile_and_comparator",
+            "registry_promotion": False,
+        },
         "source_hashes": {
             "NOTICE": _sha_text(_blob(root, "NOTICE")),
             "ATTRIBUTION.md": _sha_text(_blob(root, "ATTRIBUTION.md")),
