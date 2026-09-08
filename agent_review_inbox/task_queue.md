@@ -3714,3 +3714,14 @@ joint6 review 已确认 principal route 是较少前提的路线，但仍需完�
 
 Sartre/Poincare 的 affine/runtime 与 Lean probe lane 继续独立运行。没有同一
 source/configuration/domain 的 actual witness 时，principal 与 Schur 均保持 pending。
+
+## 2026-09-08 — parallel FLT infrastructure probe
+
+Poincare 空闲后补充一条外部复用 lane：
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-LEAN-FLT-QUOTIENT-CLM-API-REPAIR` | Poincare the 6th | Anthropic quotient/continuous-linear-map candidate 的显式 binders、最小 import 与 pinned receipt checklist |
+
+该 lane 只服务通用 theorem/infrastructure intake；不搬纯数论，不把编译候选
+或上游 machine-checked 结果直接写入 Route-B verified registry。

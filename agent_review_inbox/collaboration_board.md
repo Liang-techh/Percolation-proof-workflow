@@ -2980,6 +2980,13 @@ Joint6 defect review 没有发现 actual elimination 或同源 numerator packet�
 下一轮由 Godel 搜索 actual-cell determinant/numerator packet，James 核对 signed
 weighted constraints 的 actual `y=Xz` 消费；不重复 rank 算术。
 
+### 梁智炜 · revision 807 parallel FLT infrastructure probe
+
+Poincare 另行接手 Anthropic FLT quotient/continuous-linear-map API repair，目标是
+给出显式 binders、最小 import、typeclass 和 pinned receipt 清单。该结果只进入
+external catalog/pending，不影响 Route-B 的 source admission、registry 或 formal gate，
+也不引入纯数论 theorem。
+
 ### 梁智炜 · revision 805–806：执行边界与 initial value 继续开放
 
 四份 revision-805 review 已整合：BODY6 probe 只有待执行的 pinned receipt 清单；
