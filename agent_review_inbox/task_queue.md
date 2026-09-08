@@ -3858,3 +3858,12 @@ variational defect 和 finite-step Taylor closure。它们共同把可复用的�
 再安排苏梦辰或巨阳仙尊做最小 Lean sidecar。禁止继续优化已知 source-independent
 常数、禁止用 compiled_candidate 代替 kernel receipt，也不改变 M4 的 fail-closed
 状态。
+
+### New obstruction closure: `SARTRE-P5-SAME-TUBE-SOURCE-PACKET`
+
+Sartre 的定向结果已确认：`half_active_vanis2_domain_probe` 与 descriptor bound
+虽在同一 analytic slab，但仍是 `formal=false`，不能实例化 P5-090/091/093 的
+真实 source packet。下一次数学任务只补最小 exact jet/source witness
+`F, DF, W, Wt, DW, b, Db, e` 及同 tube coverage；P5-092 另需 Euler chord/Hessian
+绑定。不得把 contraction-matrix 的 Neumann guard 当作 `DFᵀW+WDF`，也不得把
+descriptor acceleration remainder 当作 variational defect。

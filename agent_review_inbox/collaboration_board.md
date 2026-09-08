@@ -3136,3 +3136,11 @@ residual 和 continuation 绑定；多 agent 结果保持分开，避免把条�
 当前 revision=826、registry=0、`formal_certificate_allowed=false`。下一步只
 消费能补齐 actual source packet 的任务，其余保留 open frontier；本轮不做全量
 回归、不推送 GitHub。
+
+### 梁智炜 · revision 827：同 tube source packet obstruction
+
+Sartre 的定向检查没有发现能同时实例化 P5-090/091/093 的真实 packet。最接近的
+analytic slab 与 descriptor bound 均明确为 `formal=false`；缺口是同源的
+`F/DF/W/Wt/DW/b/Db/e`、source identity 与 coverage，且 P5-092 还需要
+Euler-chord/Hessian。该结果已收割为 pending obstruction，防止把 Neumann
+contraction guard 或 descriptor remainder 错当作 Lie/variational defect。

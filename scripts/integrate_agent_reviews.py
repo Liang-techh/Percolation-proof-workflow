@@ -359,6 +359,9 @@ TASK_TARGETS = {
     "T-P5-093-BASE-FLOW-LIE-DEFECT": (
         "P5.componentwise_relative_decay",
         "pending_base_flow_lie_defect_same_tube_binding"),
+    "SARTRE-P5-SAME-TUBE-SOURCE-PACKET": (
+        "P5.componentwise_relative_decay",
+        "pending_same_tube_source_packet_obstruction"),
     # External FLT scans are deliberately event-only: they are advisory
     # catalog evidence, not Route-B theorem nodes or registry entries.
     "T-FLT-DERIV-CALC": (None, "flt_derivation_calculus_scan"),

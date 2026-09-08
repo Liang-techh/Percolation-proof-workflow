@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/NEW_REVIEW_SARTRE_P5_SAME_TUBE_SOURCE_PACKET_20260908.md",
+  "record_kind": "review_result",
+  "review_sha256": "CB35A52317E0BD747AAA437D2E3A7885436B3E6B2BF43F37AAA650098BC50C2D",
+  "task_id": "SARTRE-P5-SAME-TUBE-SOURCE-PACKET",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_same_tube_source_packet_obstruction",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/NEW_REVIEW_SARTRE_P5_SAME_TUBE_SOURCE_PACKET_20260908.md",
+  "integrated_at": "2026-09-08T18:02:06.473262+00:00"
+}
