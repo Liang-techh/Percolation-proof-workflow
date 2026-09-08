@@ -2871,6 +2871,14 @@ builder 的 controller 展开存在两重缺项：数组 key 固定为 `i+1` 且
 与当前 payload 静默拼接。该 review 未修改外部项目、未运行 Lean/Julia，保持
 source admission pending、P4/M4 fail-closed。
 
+### 梁智炜 · revision 798 后续 corrected-source batch
+
+已启动下一批四条 lane：Sartre 负责 corrected builder 的 versioned specification
+与 checker invariants，Poincare 负责 FLT quotient-only API repair handoff，Godel
+负责 `Vfull_DH` value anchor，James 负责 corrected chart 下的实际 rows4/5
+witness。它们不覆盖旧 payload、不重复 omission 算术或阈值推导，所有结果仍需
+经过 artifact hash/provenance audit。
+
 ### 梁智炜 · revision 797–798：source packet 与 FLT quotient handoff
 
 `GH-MATH-P4-SOURCE-ROWS-WEIGHTED-PACKET` 已整合。它将 builder omission、

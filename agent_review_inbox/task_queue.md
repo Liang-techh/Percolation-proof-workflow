@@ -3573,6 +3573,18 @@ Lean receipt 和 comparator 就不改变 P4/M4 closure；只保留新的 review/
 该批不修改外部项目，不运行本机 Lean 或全回归；FLT 结果即使形成可编译
 sidecar，也只进入 external catalog/pending，不进入 Route-B verified registry。
 
+## 2026-09-08 — post-revision-798 corrected-source batch
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-MATH-P4-CORRECTED-BUILDER-SPEC` | Sartre the 6th | versioned corrected builder 的 signed controller specification 与 support/coefficient checker invariants |
+| `GH-LEAN-FLT-QUOTIENT-CLM-API-REPAIR` | Poincare the 6th | quotient-only typed handoff，修复 undeclared-parameter 风险并保留 pin/provenance |
+| `GH-MATH-P4-VFULL-DH-ANCHOR` | Godel the 6th | `Vfull_DH` 的 origin/linear/regularizer value anchor 或 exact obstruction |
+| `GH-MATH-P4-CORRECTED-ACTUAL-ROWS` | James the 6th | corrected chart 下同一 X/z/configuration 的 physical rows4/5 witness 检查 |
+
+本批只读外部源或生成隔离 sidecar；不覆盖旧 payload，不运行本机 Lean/全回归，
+不改变 P4/M4 gate、registry 或 historical provenance。
+
 ## 2026-09-08 — post-revision-788 bottleneck split
 
 本轮消费接管结果后，将 source-critical frontier 进一步拆成四条互不重复的

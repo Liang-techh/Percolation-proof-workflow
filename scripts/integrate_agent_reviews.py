@@ -266,6 +266,18 @@ TASK_TARGETS = {
     "GH-MATH-P4-SOURCE-ROWS-WEIGHTED-PACKET": (
         "P4.true_dh_port_source_binding",
         "pending_source_rows_weighted_packet"),
+    "GH-MATH-P4-CORRECTED-BUILDER-SPEC": (
+        "P4.true_dh_port_source_binding",
+        "pending_corrected_builder_spec"),
+    "GH-LEAN-FLT-QUOTIENT-CLM-API-REPAIR": (
+        None,
+        "flt_quotient_clm_api_repair"),
+    "GH-MATH-P4-VFULL-DH-ANCHOR": (
+        "P4.true_dh_port_source_binding",
+        "pending_vfull_dh_value_anchor"),
+    "GH-MATH-P4-CORRECTED-ACTUAL-ROWS": (
+        "P4.true_dh_port_source_binding",
+        "pending_corrected_actual_rows"),
     # New GitHub proof lanes use descriptive uppercase suffixes.  Route them
     # to existing DAG parents as pending metadata only; no admission path is
     # implied by these aliases.
