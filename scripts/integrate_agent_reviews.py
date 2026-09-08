@@ -99,6 +99,14 @@ TASK_TARGETS = {
                                    "pending_adjugate_acceleration_bridge"),
     "GH-MATH-P4-DESCRIPTOR-PUPPER": ("P4.true_dh_port_source_binding",
                                       "pending_descriptor_pupper_source_binding"),
+    "GH-LEAN-BODY6-ALIGNED-CONSUMER": (
+        "P4.O1.source_comparator.h_body_6.canonical_export",
+        "pending_aligned_path_cap_consumer_receipt"),
+    "GH-MATH-P4-TARGET-CAPS": ("P4.true_dh_port_source_binding",
+                                "pending_target_cell_coordinate_caps"),
+    "GH-MIXED-FLOWCHUANFENG-ADJUGATE": (
+        "P4.true_dh_port_source_binding",
+        "pending_adjugate_contract_review"),
     # New GitHub proof lanes use descriptive uppercase suffixes.  Route them
     # to existing DAG parents as pending metadata only; no admission path is
     # implied by these aliases.

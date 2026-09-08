@@ -98,6 +98,20 @@ verified。约三分之一批次分配给流川枫。
 commit、精确命令/证据和 admission label；未知 task 留在 inbox，历史失败
 不得删除。协调者在下一次收割时统一整合并决定是否同步远端。
 
+### 2026-09-08 — post-BODY6-compile follow-up
+
+`PATHDOMAINPROJECTION` 与 `INITIALPATHCAPS` 已有 focused `compiled_candidate`
+receipt，下一批只消费这一新事实，不重复其编译：
+
+| task | owner | target | bounded deliverable |
+|---|---|---|---|
+| `GH-LEAN-BODY6-ALIGNED-CONSUMER` | 巨阳仙尊 | `NEW_BODY6_SLICE_ALIGNEDPATHCAPCONSUMER20260908.lean` | 以已成功的两个依赖为基础做 dependency-aware focused compile；记录完整 receipt，保持 source/path/growth 前提外置 |
+| `GH-MATH-P4-TARGET-CAPS` | 古月方源 | `combined_descriptor_remainder_v1.json` 与真实 DH target-domain 定义 | 只研究 `|q|≤5/2, |v|≤15, |w|≤2` 的同源 target-cell 绑定；若只能由 `V≤1` 推出，给出精确 inclusion theorem，否则给出 obstruction |
+| `GH-MIXED-FLOWCHUANFENG-ADJUGATE` | 流川枫 | `NEW_P4_032_AdjugateAcceleration.lean` | 约三分之一批次：独立检查 projected adjugate theorem 的 signed-cancellation contract 与 source-binding边界；不得重复 Lean 编译 lane |
+
+这三个任务不关闭 P4/P5 parent；只有 source equality、domain coverage、相应
+receipt 和最终 comparator 全部满足时才允许进一步向 parent 传播。
+
 ### 2026-09-07 — active-energy / topology frontier batch
 
 - `T-P4-ACTIVE-ENERGY-ORIGIN`: verify the source identity and additive
