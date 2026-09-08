@@ -10,7 +10,7 @@ structure ResidualCSE (α CellKey SourceKey : Type)
   num : α → ℝ
   den : α → ℝ
 
-def residualValue
+noncomputable def residualValue
     {α CellKey SourceKey : Type} {cell : CellKey} {source : SourceKey}
     (r : ResidualCSE α CellKey SourceKey cell source) (x : α) : ℝ :=
   r.num x / r.den x
@@ -37,7 +37,6 @@ theorem rational_residual_sub_eq_cross_mul_div
     (Na Da Nc Dc : ℝ) (hDa : Da ≠ 0) (hDc : Dc ≠ 0) :
     Na / Da - Nc / Dc = (Na * Dc - Nc * Da) / (Da * Dc) := by
   field_simp [hDa, hDc]
-  <;> ring
 
 /-- Equality of rational residuals follows from the signed cross mismatch `Q = 0`. -/
 theorem rational_residual_eq_of_cross_mul
@@ -72,7 +71,7 @@ theorem abs_div_le_of_abs_num_le
 /-- Separate same-cell denominator lower bounds multiply without any sign choice. -/
 theorem abs_den_product_lower
     (Da Dc deltaA deltaC : ℝ)
-    (hdeltaA : 0 < deltaA) (hdeltaC : 0 < deltaC)
+    (_hdeltaA : 0 < deltaA) (hdeltaC : 0 < deltaC)
     (hDa : deltaA ≤ |Da|) (hDc : deltaC ≤ |Dc|) :
     deltaA * deltaC ≤ |Da * Dc| := by
   rw [abs_mul]
@@ -142,7 +141,7 @@ theorem quotient_difference_split
     Qx / Px - Qy / Py =
       (Qx - Qy) / Px + Qy * (Py - Px) / (Px * Py) := by
   field_simp [hPx, hPy]
-  <;> ring
+  ring
 
 /-- Pairwise Lipschitz-style mismatch bound.  `r` is an abstract same-cell
 point distance supplied by the downstream metric/domain layer. -/
@@ -174,7 +173,7 @@ theorem rational_residual_pair_lipschitz_of_cross_mul_packet
   rw [quotient_difference_split Qx Qy Px Py hPx0 hPy0]
   calc
     |(Qx - Qy) / Px + Qy * (Py - Px) / (Px * Py)| ≤
-        |(Qx - Qy) / Px| + |Qy * (Py - Px) / (Px * Py)| := abs_add _ _
+        |(Qx - Qy) / Px| + |Qy * (Py - Px) / (Px * Py)| := abs_add_le _ _
     _ ≤ (LQ * r) / delta + (E * (LP * r)) / delta^2 :=
       add_le_add hfirst hsecond
     _ = (LQ / delta + E * LP / delta^2) * r := by ring
@@ -198,7 +197,6 @@ theorem division_free_residual_lipschitz_gate
       LQ / delta + E * LP / delta^2 =
         (delta * LQ + E * LP) / delta^2 := by
     field_simp [hdelta0]
-    <;> ring
   have hcoeff : LQ / delta + E * LP / delta^2 ≤ L := by
     rw [hcoeff_identity]
     exact (div_le_iff₀ hdelta_sq).2 hgate
