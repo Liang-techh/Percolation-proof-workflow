@@ -3191,6 +3191,13 @@ FLT intake 已新增机器可读的 P2M contract：扫描结果显式要求
 Anthropic 与第三方 FLT/Mathlib ownership，并强制 `advisory_only`/pending 边界。
 这项基础设施不改变 Route-B 数学结论，不写 registry，也不把 P2M 候选标为 VERIFIED。
 
+### Scheduler invariant：retired-agent fail-closed
+
+收割器现在识别 `流川`/`flowchuan` 标签。任何新的 review/handoff/companion 即使
+task 可路由，也只写 `agent_record_rejected_retired_agent` 事件和 processed marker，
+不挂 theorem node、不产生 admission effect；未知 task 的退休 agent 回执也会被
+终结处理，避免永久重扫。历史文件和历史 provenance 不改写。
+
 ### 梁智炜 · revision 834：完整 envelope 补收
 
 Godel 的第二份 immutable review 绑定了 certificate CSV、obstruction checker、

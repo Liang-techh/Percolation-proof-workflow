@@ -464,6 +464,7 @@ RECORD_GLOBS = (
     "companion-*.md", "companion-*.json",
 )
 RECORD_KINDS = {"review_result", "handoff", "companion_log"}
+RETIRED_AGENT_TOKENS = ("流川", "flowchuan")
 
 
 def sha256(path: Path) -> str:
@@ -546,6 +547,13 @@ def record_kind(path: Path, header: dict[str, str]) -> str | None:
     if name.startswith("companion-"):
         return "companion_log"
     return None
+
+
+def is_retired_agent(header: dict[str, str]) -> bool:
+    """Recognize retired-agent labels without rewriting their provenance."""
+    labels = (header.get("source_agent", ""), header.get("agent", ""))
+    normalized = " ".join(str(label).casefold() for label in labels)
+    return any(token.casefold() in normalized for token in RETIRED_AGENT_TOKENS)
 
 
 def inbox_records(inbox: Path) -> list[Path]:
@@ -774,9 +782,10 @@ def main() -> int:
             continue
         if header.get("integration_status") == "integrated":
             continue
+        retired = is_retired_agent(header)
         task_id = resolve_task_id(path, header) or REVIEW_ID_ALIASES.get(
             header.get("review_id", ""), "")
-        if task_id not in TASK_TARGETS:
+        if task_id not in TASK_TARGETS and not retired:
             continue
         digest = sha256(path)
         marker = processed / path.with_suffix(".json").name
@@ -792,7 +801,7 @@ def main() -> int:
             # to overwrite history.  Keep the old hash in the new provenance
             # record and require a second, explicit integration event.
             previous = old
-        candidates.append((path, header, kind, digest, marker, previous))
+        candidates.append((path, header, kind, digest, marker, previous, retired))
 
     if not candidates:
         print(json.dumps({"integrated": [], "reclassified_claims": repaired_claims,
@@ -803,10 +812,13 @@ def main() -> int:
         raise ValueError("refuse inbox integration while a node is in progress")
 
     integrated = []
-    for path, header, kind, digest, marker, previous in candidates:
+    for path, header, kind, digest, marker, previous, retired in candidates:
         task_id = resolve_task_id(path, header) or REVIEW_ID_ALIASES.get(
             header.get("review_id", ""), "")
-        target_name, classification = TASK_TARGETS[task_id]
+        if task_id in TASK_TARGETS:
+            target_name, classification = TASK_TARGETS[task_id]
+        else:
+            target_name, classification = None, "retired_agent_unrouted_record"
         record_file = str(path.relative_to(ROOT)).replace("\\", "/")
         ref = {
             "record_file": record_file,
@@ -821,6 +833,28 @@ def main() -> int:
             "target_scope": "routeb_node" if target_name else "external_reuse_catalog",
             "source_commit": source_commit(path, header),
         }
+        if retired:
+            ref.update({
+                "integration_status": "rejected_retired_agent",
+                "classification": "retired_agent_record",
+                "admission_effect": "none",
+                "retired_agent": True,
+                "rejection_reason": "agent_removed_from_current_roster",
+            })
+            state.event(
+                "agent_record_rejected_retired_agent",
+                record_file=record_file,
+                record_kind=kind,
+                review_sha256=digest,
+                task_id=task_id,
+                source_agent=header.get("source_agent", header.get("agent", "unknown")),
+                admission_effect="none",
+                registry_promoted=False,
+                formal_certificate_allowed=False,
+                rejection_reason="agent_removed_from_current_roster",
+            )
+            integrated.append((path, marker, ref, state.events[-1]["at"]))
+            continue
         artifact_audit = artifact_binding_audit(header)
         if artifact_audit is not None:
             ref["artifact_binding_audit"] = artifact_audit

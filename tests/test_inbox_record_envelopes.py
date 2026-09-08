@@ -7,6 +7,7 @@ from scripts.integrate_agent_reviews import (
     record_header,
     record_kind,
     resolve_task_id,
+    is_retired_agent,
 )
 
 
@@ -108,6 +109,12 @@ def test_claim_status_without_kind_is_not_inferred(tmp_path):
     claim = tmp_path / "claim-T-P4-012-agent.md"
     claim.write_text("---\ntask_id: T-P4-012\nstatus: claimed\n---\n", encoding="utf-8")
     assert inbox_records(tmp_path) == []
+
+
+def test_retired_agent_labels_are_rejected_without_rewriting_history():
+    assert is_retired_agent({"source_agent": "流川枫"}) is True
+    assert is_retired_agent({"agent": "Flowchuanfeng"}) is True
+    assert is_retired_agent({"source_agent": "Poincare the 6th"}) is False
 
 
 def test_record_id_recovers_known_task_without_scanning_body(tmp_path):

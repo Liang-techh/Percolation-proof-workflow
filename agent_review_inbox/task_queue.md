@@ -3912,6 +3912,12 @@ event-only catalog，Route-B 项只写 pending obstruction。
 canonical source、历史别名、逐项 ownership/hash、P2M 行为检查和 pending admission；
 validator 不能写 registry。聚焦测试 19/19 通过，未运行全量 FLT/Lean 回归。
 
+## Scheduler invariant — retired-agent guard
+
+`integrate_agent_reviews.py` 已加入退休 agent 拒收边界：流川枫的新回执会保留原文件
+并记录 `rejected_retired_agent` marker/event，绝不进入 DAG、registry 或 formal gate；
+不认识的 task 也不会卡住周期收割。历史 claim/review 仍保持原作者标签。
+
 ## 2026-09-08 — revision 834 完整 receipt 补收
 
 | task | owner | receipt boundary | next action |
