@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-one-shift-repair-review-20260908T141830Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "29D253034B2D0F0FFD279B88512FFE4FB00E1EB32FBEF0B0F78FDF8A423348C4",
+  "task_id": "T-P4-033-O1-body6-slice",
+  "source_agent": "codex-body6-math-lane",
+  "created_at": "2026-09-08T14:18:30Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_independent_body6_source_slice",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-one-shift-repair-review-20260908T141830Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T14:19:44.103480+00:00"
+}
