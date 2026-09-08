@@ -1,0 +1,21 @@
+{
+  "record_file": "agent_review_inbox/companion-GH-LEAN-FLT-QUOTIENT-CLM-PINNED-HANDOFF-20260908.md",
+  "record_kind": "companion_log",
+  "review_sha256": "B950F0B31C5777B60EC0668D229BB291AC45821B533A5D8573736375DAEED3C8",
+  "task_id": "GH-LEAN-FLT-QUOTIENT-CLM-PINNED-HANDOFF",
+  "source_agent": "Poincare the 6th",
+  "created_at": "2026-09-08",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_quotient_clm_pinned_handoff",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef",
+  "artifact_binding_audit": {
+    "status": "BOUND",
+    "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\anthropic_flt_quotient_transport_sidecar\\AnthropicFLTQuotientTransport.lean",
+    "declared_sha256": "2CF01E45D41E4E66EB1221A08B4426E04891C5E092FC4F7FBB5153D9D3EF72D8",
+    "actual_sha256": "2CF01E45D41E4E66EB1221A08B4426E04891C5E092FC4F7FBB5153D9D3EF72D8"
+  },
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T16:40:19.723565+00:00"
+}

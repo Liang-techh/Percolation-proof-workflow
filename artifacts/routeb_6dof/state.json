@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 796,
+  "revision": 798,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -15861,6 +15861,21 @@
             "target_scope": "routeb_node",
             "source_commit": "d9aee5bb2e4f08526947c2a712821472bd73862a",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-DH-CONTROLLER-SOURCE-CORRECTION-LOCAL-20260908T103544.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-SOURCE-ROWS-WEIGHTED-PACKET-LOCAL-codex-20260908T103648.md",
+            "record_kind": "review_result",
+            "review_sha256": "666DC13F3BDED7ECB3BED3F438EA3E3034137A3C8486EA6DE82C5EAECC4D10E3",
+            "task_id": "GH-MATH-P4-SOURCE-ROWS-WEIGHTED-PACKET",
+            "source_agent": "codex-source-rows-weighted-packet-lane",
+            "created_at": "2026-09-08T10:36:48-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_source_rows_weighted_packet",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-SOURCE-ROWS-WEIGHTED-PACKET-LOCAL-codex-20260908T103648.md",
             "admission_label": "pending"
           }
         ]
@@ -78315,6 +78330,33 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T16:39:51.691838+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-SOURCE-ROWS-WEIGHTED-PACKET-LOCAL-codex-20260908T103648.md",
+      "record_kind": "review_result",
+      "review_sha256": "666DC13F3BDED7ECB3BED3F438EA3E3034137A3C8486EA6DE82C5EAECC4D10E3",
+      "task_id": "GH-MATH-P4-SOURCE-ROWS-WEIGHTED-PACKET",
+      "classification": "pending_source_rows_weighted_packet",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T16:40:19.723565+00:00",
+      "kind": "external_reuse_agent_companion_integrated",
+      "record_file": "agent_review_inbox/companion-GH-LEAN-FLT-QUOTIENT-CLM-PINNED-HANDOFF-20260908.md",
+      "record_kind": "companion_log",
+      "review_sha256": "B950F0B31C5777B60EC0668D229BB291AC45821B533A5D8573736375DAEED3C8",
+      "task_id": "GH-LEAN-FLT-QUOTIENT-CLM-PINNED-HANDOFF",
+      "classification": "flt_quotient_clm_pinned_handoff",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "artifact_binding_status": "BOUND",
+      "catalog": "anthropic-fermats-last-theorem"
     }
   ],
   "agent_requests": {},
@@ -81971,5 +82013,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "0dbaf4ad2b6bd845cc7c97431b1474f5edf4653f3006b9a2635511184b3fbaaa"
+  "state_checksum": "9094cd96f2f22ce455d6a21e7f2ee6d07d0274b98d049226bed5e679a2aeee5a"
 }

@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-SOURCE-ROWS-WEIGHTED-PACKET-LOCAL-codex-20260908T103648.md",
+  "record_kind": "review_result",
+  "review_sha256": "666DC13F3BDED7ECB3BED3F438EA3E3034137A3C8486EA6DE82C5EAECC4D10E3",
+  "task_id": "GH-MATH-P4-SOURCE-ROWS-WEIGHTED-PACKET",
+  "source_agent": "codex-source-rows-weighted-packet-lane",
+  "created_at": "2026-09-08T10:36:48-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_source_rows_weighted_packet",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-SOURCE-ROWS-WEIGHTED-PACKET-LOCAL-codex-20260908T103648.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T16:39:51.691838+00:00"
+}

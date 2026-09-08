@@ -2870,3 +2870,16 @@ builder 的 controller 展开存在两重缺项：数组 key 固定为 `i+1` 且
 `a+1` 并移除门控；只做一项仍不正确。相邻 DH centered builder 保留六项，不能
 与当前 payload 静默拼接。该 review 未修改外部项目、未运行 Lean/Julia，保持
 source admission pending、P4/M4 fail-closed。
+
+### 梁智炜 · revision 797–798：source packet 与 FLT quotient handoff
+
+`GH-MATH-P4-SOURCE-ROWS-WEIGHTED-PACKET` 已整合。它将 builder omission、
+measurement mismatch 和 physical residual 分成三层，并给出 weighted packet
+的同源接线；当前仍没有 actual `y=Xz`、signed constraints、det/numerator 或
+observable witness。
+
+`GH-LEAN-FLT-QUOTIENT-CLM-PINNED-HANDOFF` 已进入 external catalog。两个
+Anthropic/Imperial FLT quotient continuous-linear-equivalence 定义保留其
+typeclass、有限性和 Apache provenance，但现有 sidecar 有 undeclared-parameter
+风险，smoke 的 relative path dependency 也未形成可移植 pin。本轮没有 Lean
+编译或 registry promotion；Route-B gate 保持关闭。
