@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-026-CONE-INDEX-INVERSE-COVER-20260908-James.md",
+  "record_kind": "review_result",
+  "review_sha256": "74A0CDE3CDB9FFDA24D0195F5BA4A3BE5D0407BAE6FE9B084FC703AC9DBA1ABB",
+  "task_id": "T-P5-026-CONE-INDEX-INVERSE-COVER",
+  "source_agent": "James the 6th",
+  "created_at": "2026-09-08",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "compiled_candidate_concrete_cone_index_inverse_cover",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P5-026-CONE-INDEX-INVERSE-COVER-20260908-James.md",
+  "format_warning": "missing_yaml_delimiters",
+  "integrated_at": "2026-09-08T20:45:16.173232+00:00"
+}
