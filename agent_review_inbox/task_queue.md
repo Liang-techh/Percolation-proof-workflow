@@ -4206,6 +4206,7 @@ identity、`det/adjugate` 与 scaled-port 证明；不得把 `vD` 重命名为 g
 也不得在新增三个 `eta` 未处理时继续声称是 7×7。真实 `Q/Delta/K`、metric、allocation
 和 coverage 仍是独立 frontier。
 
+
 ## 2026-09-08 — revision 862 affine port/reference mismatch
 
 `GH-P4-BLOCK456-AFFINE-PORT-REFERENCE-JOIN` 已收割。必须把 symbolic rational
@@ -4213,3 +4214,18 @@ regularizer 与 producer binary64 literal 分成不同 source keys；先选择�
 `rC` 或 `lT` 的真实 affine identity，再绑定同一 dense `H`、scalar `Delta`、metric
 transport 与 allocation。旧 upper-mass join 被精确 mismatch 否定，不能靠名称或
 维数继续复用。
+
+## 2026-09-08 — revision 863 replacement math batch
+
+上一轮本地四条 lane 已完成，现重新派发互不重叠的窄任务；流川枫已永久退休，
+不再接收任何任务：
+
+| owner | task id | bounded deliverable | boundary |
+|---|---|---|---|
+| Sartre | `P5-K7-ACTUAL-Q-DELTA-PACKET-20260908` | 将 7×7 K-PSD schema 绑定到真实 block456 的 `Q/L/d0/Delta`，或给出最小 source obstruction | 不复用 toy PSD 数值，不改 state/registry，不跑 Lean |
+| Poincare | `P5-ACTUAL-KPATH-G-COMPARISON-20260908` | actual `K_path≤G` 的 8-entry/36-label exact comparison 与 source/hash mapping | 不把 toy K/G 或采样当 physical bound |
+| James | `P4-ACTUAL-BLOCK456-AFFINE-METRIC-DELTA-20260908` | 修正 binary64/rational reference 后追到实际 metric、Delta、allocation 或严格 no-go | 不重复 generic affine 解释，不假设 bias=0 |
+| Godel | `T-FLT-CALCULUS-DERIVATION-ADAPTER-20260908` | FLT 非数论 derivation/calculus 最小可迁移 theorem/API，附 provenance 与 1/2/3 分类 | 不搬纯数论，不把 generic theorem 当 Route-B proof |
+
+所有结果必须以 immutable review 写入 `agent_review_inbox/`；未编译或缺 source
+binding 的结果只能进入 pending/event-only，不能关闭 P4/P5 或进入 registry。

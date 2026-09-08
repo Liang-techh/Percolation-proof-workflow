@@ -570,6 +570,18 @@ TASK_TARGETS = {
     "T-P7-002": ("P7.tail_schur_completion_2x2", "pending_typed_tail_schur_completion"),
     "T-DAG-003": ("M4.block45_full_certificate", "pending_shared_lemma_projection"),
     "T-REPAIR-001": ("P3.strict_true_dh_bounds", "pending_repair_loop_audit"),
+    "P5-K7-ACTUAL-Q-DELTA-PACKET-20260908": (
+        "P5.componentwise_relative_decay.feasible_cone_spn",
+        "pending_actual_k7_q_delta_packet"),
+    "P5-ACTUAL-KPATH-G-COMPARISON-20260908": (
+        "P5.componentwise_relative_decay.feasible_cone_spn",
+        "pending_actual_kpath_g_comparison"),
+    "P4-ACTUAL-BLOCK456-AFFINE-METRIC-DELTA-20260908": (
+        "P4.true_dh_port_source_binding",
+        "pending_actual_block456_affine_metric_delta"),
+    "T-FLT-CALCULUS-DERIVATION-ADAPTER-20260908": (
+        None,
+        "flt_calculus_derivation_adapter_scan"),
 }
 
 REVIEW_ID_ALIASES = {

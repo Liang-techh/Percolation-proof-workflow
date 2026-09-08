@@ -3498,3 +3498,12 @@ binary64 `1e-6` 不相同，且一个 stored upper entry 严格低于 symbolic r
 mass 对应项。因此原 exact reference/upper-mass join 必须拒绝或另证比较；实际
 affine cap、同 cell source/metric、allocation 与 consumer identity 仍未闭合。
 P4、registry 与 formal gate 保持关闭。
+
+### 梁智炜 · revision 863：replacement math batch
+
+四个本地 agent 已完成上一轮，按瓶颈重新分工：Sartre 只处理真实 block456
+`K/Q/Delta` 实例化，Poincare 只处理 actual `K_path≤G` 的 8-entry consumer
+比较，James 只处理 binary64/rational mismatch 后的 affine metric/Delta/allocation
+绑定，Godel 只处理 FLT 非数论 derivation/calculus adapter。流川枫保持永久退休。
+本轮结果尚未收割；所有未编译或无 source binding 的输出继续是 pending，registry=0，
+formal gate 关闭。
