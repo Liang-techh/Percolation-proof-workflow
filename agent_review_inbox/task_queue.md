@@ -135,6 +135,24 @@ receipt 和最终 comparator 全部满足时才允许进一步向 parent 传播�
 share。若旧分支稍后回传结果，仍按原作者保存 provenance，再由新 owner 的
 当前任务继续验证，不产生双重 closure。
 
+### 2026-09-08 — reassigned six-slot frontier batch
+
+本批按现役六人环各派一个互不重叠的窄瓶颈；所有结果必须写入新的
+`review_result` envelope，携带 inspected commit、精确证据和 admission label。
+本批不做全项目回归，不直接改变 registry 或 formal gate。
+
+| slot | task | owner | bounded deliverable |
+|---:|---|---|---|
+| :00 | `GH-MATH-P4-ACTIVE-ENERGY-NORMALIZATION` | 柳冠一 | 追踪 active-energy 的同源定义、additive normalization 与 target storage；给出 exact binding 或最小 obstruction |
+| :10 | `GH-LEAN-BODY6-PATHCONTRACT-RECEIPT` | 苏梦辰 | 对 PATHCONTRACT consumer 做 dependency-aware pinned receipt；记录 exit、axioms、placeholder，保持 source/path 前提外置 |
+| :20 | `GH-MATH-P4-SOURCE-ELLIPSOID-BINDING` | 古月方源 | 将 full ellipsoid/local-box inclusion 与真实 DH target cell 同源绑定；不得把 JSON 或 V<=1 当 coverage |
+| :30 | `GH-MATH-P4-SCHUR-BUDGET-CLOSURE` | 狂蛮魔尊 | 闭合 Schur/PMI 的单次 debit、margin floor 和 opposite-base 反例；明确能否连接 actual residual |
+| :40 | `GH-LEAN-BODY6-PATHREASSIGNED-COMPILE` | 巨阳仙尊 | 只验证 reassigned PATHREASSIGNED typed sidecar 的最小编译/repair，不重复主 consumer 或全回归 |
+| :50 | `GH-MATH-P4-ADJUGATE-PROJECTION-PACKET` | 红莲魔尊 | 推进 signed projected-adjugate packet 与 observable binding；保留 cancellation，不宣称 source admission |
+
+这些 task ID 已接入 `scripts/integrate_agent_reviews.py`。迟到的旧 Flowchuan
+结果仍按历史 ID 收割；本批新 owner 不得写成流川枫，也不得覆盖旧 provenance。
+
 ### 2026-09-07 — active-energy / topology frontier batch
 
 - `T-P4-ACTIVE-ENERGY-ORIGIN`: verify the source identity and additive
