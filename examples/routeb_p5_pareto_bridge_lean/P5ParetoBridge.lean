@@ -121,7 +121,7 @@ coverage is asserted here.
 theorem quarter_first_exit_inward_of_pareto
     (Q V Vdot u4 u5 l4 l5 E4 E5 r : ℝ)
     (hr0 : 0 ≤ r)
-    (hr1 : r ≤ 1)
+    (_hr1 : r ≤ 1)
     (hPareto :
       ((109 - r) / 200) * V
           + ((250 + 53 * r) / 1500) * u4 ^ 2
