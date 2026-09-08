@@ -395,6 +395,9 @@ TASK_TARGETS = {
     "GH-MATH-P4-PHYSICAL-SCHUR-REMOTE-CONTRACT": (
         "P4.true_dh_port_source_binding",
         "pending_physical_schur_remote_contract"),
+    "GH-MATH-P4-ADDITIVE-PORT-CONSUMER": (
+        "P4.true_dh_port_source_binding",
+        "pending_additive_port_consumer"),
     # External FLT scans are deliberately event-only: they are advisory
     # catalog evidence, not Route-B theorem nodes or registry entries.
     "T-FLT-DERIV-CALC": (None, "flt_derivation_calculus_scan"),
@@ -441,6 +444,9 @@ TASK_TARGETS = {
     "T-FLT-T1-L1-MINIMAL-ADAPTER-20260908": (
         None,
         "flt_t1_l1_minimal_adapter"),
+    "T-FLT-QUOTIENT-CLME-EXACT-CONTRACT": (
+        None,
+        "flt_quotient_clme_exact_contract"),
     "T-P4-KC-COORDINATE-ADAPTER": ("P4.residual_schur_pmi", "pending_kc_coordinate_adapter"),
     "T-P4-MBD-PROJECTION": ("P4.residual_schur_pmi", "pending_mbd_projection_obstruction"),
     "T-P4-012": ("P4.residual_schur_pmi", "pending_typed_remote_binding_contract"),

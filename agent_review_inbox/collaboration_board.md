@@ -3329,3 +3329,24 @@ James 找到并复跑了现有 full-state analytic first-slab checker，输出
 `M_BD a_D` 的界；还给出了 bounded-forcing 反例。结果绑定到
 `P4.true_dh_port_source_binding` 的 pending frontier，registry=0，formal gate
 继续关闭。
+
+### 梁智炜 · revision 845：quotient continuous-linear-equivalence intake
+
+Poincare 的 quotient handoff 已进入 FLT event-only catalog。Q1
+`Submodule.Quotient.continuousLinearEquiv` 要求精确的
+`map e.toLinearMap G' = H'`；Q2 `quotientPiContinuousLinearEquiv` 要求
+Fintype/DecidableEq 和逐分量 `Submodule.pi Set.univ p`。两者均保留 universe、
+topology 与 attribution 边界，分类为 generic 1、target adapter 2、Route-B
+consumer 3。尚无 Lean/OLean/axiom/comparator receipt，registry=0，formal gate
+关闭。
+
+### 梁智炜 · revision 846：additive-port consumer contract
+
+James 定位到现有 `combined_of_port_budget` additive consumer：它直接接受
+`sq r ≤ W`，因此允许真实远端项作为 additive cap，不必伪装成 homogeneous gain。
+review 同时固定了 signed source decomposition、同一 H-metric transport、
+`lambda>1` allocation 以及 `M_BD a_D` 与 `L g_D` 两种互斥 port identity。
+
+这只是可消费接口，尚未绑定实际 source coefficients、cell、metric 或 residual
+target；不修改旧 homogeneous consumer，也不改变 registry。P4/M4 继续
+fail-closed。

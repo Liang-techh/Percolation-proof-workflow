@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/handoff-T-FLT-QUOTIENT-CLME-EXACT-CONTRACT-20260908T185959Z.md",
+  "record_kind": "handoff",
+  "review_sha256": "8F5A545EB383169D6EC2E7176797F8219B354740FBA5C3A2787343D023DD6A0F",
+  "task_id": "T-FLT-QUOTIENT-CLME-EXACT-CONTRACT",
+  "source_agent": "Codex-FLT-quotient-interface-lane",
+  "created_at": "2026-09-08T18:59:59Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_quotient_clme_exact_contract",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "93792eb9312837d5a47421fcff116f131b1ebbe5",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T19:02:24.990983+00:00"
+}

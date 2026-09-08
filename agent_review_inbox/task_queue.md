@@ -4020,3 +4020,20 @@ semantics。下一步由柳冠一/狂蛮魔尊推进 exact graph/invertibility c
 并在同一 cell 绑定 `M_BD/M_DD/F_D/z/H/residual`；狂蛮魔尊检查 additive
 forcing 与 homogeneous gain 的边界。不得把 analytic slab checker 的 exit 0
 升级为 true-DH、coverage 或 M4 证书。
+
+## 2026-09-08 — revision 845 quotient CLM adapter
+
+`T-FLT-QUOTIENT-CLME-EXACT-CONTRACT` 已收割为 event-only metadata。下一步由
+苏梦辰/巨阳仙尊验证目标 namespace、完整 universe/binder 和代表元规则；只有
+实际 gauge/null 子模、坐标等价及 map equality 绑定后，才可作为 Route-B transport
+consumer。不得从连续线性等价自动推出 norm/isometry、energy preservation 或
+flowpipe。
+
+## 2026-09-08 — revision 846 additive-port consumer
+
+`GH-MATH-P4-ADDITIVE-PORT-CONSUMER` 已收割并绑定 P4 pending frontier。后续
+优先把 P5 source-jet 或 full-state Schur 数据接入一个独立的 same-cell additive
+packet，字段必须包含 `port_kind`、signed identity、H-metric cap、allocation、
+consumer binding 和 source hashes。不得覆盖 `ExplicitResidualEnclosure.sq_le`，
+不得把 additive bias 记为零，也不得将 generic Lean consumer 的存在当作物理
+source theorem。

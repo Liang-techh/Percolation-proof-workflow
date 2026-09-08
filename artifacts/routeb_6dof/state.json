@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 845,
+  "revision": 846,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -16938,6 +16938,21 @@
             "target_scope": "routeb_node",
             "source_commit": "dc0e6b77c1c9eb8162517198e1ccc0dd62451059",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-PHYSICAL-SCHUR-REMOTE-CONTRACT-james-20260908T125352.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-ADDITIVE-PORT-CONSUMER-james-20260908T130041.md",
+            "record_kind": "review_result",
+            "review_sha256": "1F6782C98089776E95BC4B51A7DF27381DF96B2B1B574EEDFB637423CD29A3A7",
+            "task_id": "GH-MATH-P4-ADDITIVE-PORT-CONSUMER",
+            "source_agent": "James-local-takeover",
+            "created_at": "2026-09-08T13:00:41-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_additive_port_consumer",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "93792eb9312837d5a47421fcff116f131b1ebbe5",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-ADDITIVE-PORT-CONSUMER-james-20260908T130041.md",
             "admission_label": "pending"
           }
         ]
@@ -81026,6 +81041,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "catalog": "anthropic-fermats-last-theorem"
+    },
+    {
+      "at": "2026-09-08T19:03:51.984658+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-ADDITIVE-PORT-CONSUMER-james-20260908T130041.md",
+      "record_kind": "review_result",
+      "review_sha256": "1F6782C98089776E95BC4B51A7DF27381DF96B2B1B574EEDFB637423CD29A3A7",
+      "task_id": "GH-MATH-P4-ADDITIVE-PORT-CONSUMER",
+      "classification": "pending_additive_port_consumer",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -84682,5 +84710,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "37774486702f051d94848074d25d3601dcad4b86d0c1837b17d1c0b1f178cd40"
+  "state_checksum": "e65fc9c11f630e7dae7e7068754bf98bfce85d4e6fcd66e9ec13bfd1ea83ba4d"
 }
