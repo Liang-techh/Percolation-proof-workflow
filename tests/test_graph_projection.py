@@ -102,7 +102,7 @@ class ProjectionTests(unittest.TestCase):
         self.assertEqual(set(ids), {'P.root', 'P.instance_leaf'})
         self.assertEqual(state.nodes[ids['P.instance_leaf']].metadata['is_instance'], False)
         artifact = state.graph_artifacts[0]
-        self.assertEqual(artifact['algorithm'], 'import_decl_graph/v2')
+        self.assertEqual(artifact['algorithm'], 'import_decl_graph/v3')
         self.assertEqual(artifact['instance_roots'], ['P.instBox'])
         self.assertEqual(artifact['constructor_expansions'], ['P.Box.mk'])
         self.assertIn('P.Box', artifact['supporting_declarations'])

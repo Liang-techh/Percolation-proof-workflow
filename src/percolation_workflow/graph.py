@@ -4,9 +4,39 @@ import json
 import copy
 import hashlib
 from pathlib import Path
-from collections.abc import Iterable
+from collections.abc import Callable, Iterable
 from .statements import StatementRecord
 from .model import WorkflowState
+
+
+def _project_edge_origins(root: str, declarations: dict, selected: set[str],
+                          deps: Callable[[str], set[str]],
+                          edge_origins: Callable[[str, str], set[str]]) -> list[dict]:
+    """Union origin labels along all helper walks to the next selected theorem.
+
+    Revisiting a shared helper is necessary when a later path adds an origin.
+    The finite label set (type/value/constructor) grows monotonically, so helper
+    cycles terminate without enumerating paths. Labels describe provenance,
+    not independent proof obligations, source authentication or admission.
+    """
+    projected: dict[str, set[str]] = {}
+    seen: dict[str, set[str]] = {}
+    work = [(dep, edge_origins(root, dep)) for dep in sorted(deps(root))]
+    while work:
+        dep, origins = work.pop()
+        if dep not in declarations or dep == root:
+            continue
+        if dep in seen and origins <= seen[dep]:
+            continue
+        seen.setdefault(dep, set()).update(origins)
+        accumulated = seen[dep]
+        if dep in selected:
+            projected.setdefault(dep, set()).update(accumulated)
+        else:
+            work.extend((child, accumulated | edge_origins(dep, child))
+                        for child in sorted(deps(dep)))
+    return [{'name': dep, 'origins': sorted(origins)}
+            for dep, origins in sorted(projected.items())]
 
 
 def merge_reachable_graph(state: WorkflowState, path: str | Path,
@@ -75,27 +105,16 @@ def merge_reachable_graph(state: WorkflowState, path: str | Path,
             origins.add('type')
         if child in row.get('valueDeps', []):
             origins.add('value')
+        if (row.get('kind') == 'inductive'
+                and declarations.get(child, {}).get('kind') == 'ctor'
+                and child.startswith(parent + '.')):
+            origins.add('constructor')
         return origins
 
     edge_provenance = {}
     for name in sorted(selected):
-        projected: dict[str, set[str]] = {}
-        work = [(dep, edge_origins(name, dep)) for dep in deps(name)]
-        visited = set()
-        while work:
-            dep, origins = work.pop()
-            if dep in visited or dep not in declarations:
-                continue
-            visited.add(dep)
-            if dep in selected and dep != name:
-                projected.setdefault(dep, set()).update(origins)
-            else:
-                work.extend((child, origins | edge_origins(dep, child))
-                            for child in deps(dep))
-        edge_provenance[name] = [
-            {'name': dep, 'origins': sorted(origins)}
-            for dep, origins in sorted(projected.items())
-        ]
+        edge_provenance[name] = _project_edge_origins(
+            name, declarations, selected, deps, edge_origins)
     for name in sorted(selected):
         found, visited = set(), set()
         work = list(deps(name))
@@ -117,7 +136,7 @@ def merge_reachable_graph(state: WorkflowState, path: str | Path,
     candidate.validate()
     graph_record = {
         'schema_version': 1,
-        'algorithm': 'merge_reachable_graph/v1',
+        'algorithm': 'merge_reachable_graph/v2',
         'graph_sha256': digest,
         'roots': roots,
         'instance_roots': instance_roots,
@@ -130,6 +149,7 @@ def merge_reachable_graph(state: WorkflowState, path: str | Path,
                                           if name not in selected),
     }
     if not any(record.get('graph_sha256') == digest and record.get('roots') == roots
+               and record.get('algorithm') == graph_record['algorithm']
                for record in candidate.graph_artifacts):
         candidate.graph_artifacts.append(graph_record)
     candidate.event('reachable_graph_merged', graph_sha256=digest, roots=roots,
@@ -214,37 +234,24 @@ def import_decl_graph(state: WorkflowState, path: str | Path, *, project_prefix:
             origins.add('type')
         if child in row.get('valueDeps', []):
             origins.add('value')
-        if row.get('kind') == 'inductive' and child in deps(parent):
+        if (row.get('kind') == 'inductive'
+                and declarations.get(child, {}).get('kind') == 'ctor'
+                and child.startswith(parent + '.')):
             origins.add('constructor')
         return origins
 
     edge_provenance = {}
     for name in sorted(selected):
-        projected: dict[str, set[str]] = {}
-        work = [(dep, edge_origins(name, dep)) for dep in deps(name)]
-        visited = set()
-        while work:
-            dep, origins = work.pop()
-            if dep in visited or dep not in declarations:
-                continue
-            visited.add(dep)
-            if dep in selected and dep != name:
-                projected.setdefault(dep, set()).update(origins)
-            else:
-                work.extend((child, origins | edge_origins(dep, child))
-                            for child in deps(dep))
-        edge_provenance[name] = [
-            {'name': dep, 'origins': sorted(origins)}
-            for dep, origins in sorted(projected.items())
-        ]
+        edge_provenance[name] = _project_edge_origins(
+            name, declarations, selected, deps, edge_origins)
         node = candidate.nodes[by_name[name]]
-        found = {by_name[dep] for dep in projected if dep in by_name and dep != name}
+        found = {by_name[entry['name']] for entry in edge_provenance[name]}
         node.dependencies = sorted(set(node.dependencies) | found)
 
     candidate.validate()
     graph_record = {
         'schema_version': 1,
-        'algorithm': 'import_decl_graph/v2',
+        'algorithm': 'import_decl_graph/v3',
         'graph_sha256': digest,
         'roots': [],
         'instance_roots': instance_roots,
