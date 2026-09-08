@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 788,
+  "revision": 789,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -15714,6 +15714,20 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-T-P4-ACTIVE-ENERGY-ORIGIN-LOCAL-20260908T161455Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/companion-GH-LEAN-P4-ROWSPACE-RECOVERY-20260908.md",
+            "record_kind": "companion_log",
+            "review_sha256": "7F88D79AAE41ED212F32E53CDF212D44A76C5605A60CEED865E870C9D980683B",
+            "task_id": "GH-LEAN-P4-ROWSPACE-RECOVERY",
+            "source_agent": "Poincare the 6th",
+            "created_at": "2026-09-08",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_rowspace_recovery_lean_receipt",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
             "admission_label": "pending"
           }
         ]
@@ -78038,6 +78052,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T16:22:07.615030+00:00",
+      "kind": "agent_companion_integrated",
+      "record_file": "agent_review_inbox/companion-GH-LEAN-P4-ROWSPACE-RECOVERY-20260908.md",
+      "record_kind": "companion_log",
+      "review_sha256": "7F88D79AAE41ED212F32E53CDF212D44A76C5605A60CEED865E870C9D980683B",
+      "task_id": "GH-LEAN-P4-ROWSPACE-RECOVERY",
+      "classification": "pending_rowspace_recovery_lean_receipt",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -81694,5 +81721,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "9d9436470ae64b76ff748e14efc8908be9372429a883466a174fefeff9680740"
+  "state_checksum": "009abdbd2f0440e06e5b0821e3d8f20b200547464046418ba8d1e229b5ab0df0"
 }
