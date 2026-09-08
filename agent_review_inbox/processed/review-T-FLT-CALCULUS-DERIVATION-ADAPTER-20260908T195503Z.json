@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-FLT-CALCULUS-DERIVATION-ADAPTER-20260908T195503Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "B54BE2C2E2536EF4CD9B50ECD4D1F7B0EB22521FDAEF604D746B5B8926BD230C",
+  "task_id": "T-FLT-CALCULUS-DERIVATION-ADAPTER-20260908",
+  "source_agent": "Codex-FLT-derivation-adapter",
+  "created_at": "2026-09-08T19:55:03Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_calculus_derivation_adapter_scan",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef",
+  "review_file": "agent_review_inbox/review-T-FLT-CALCULUS-DERIVATION-ADAPTER-20260908T195503Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T19:58:41.562067+00:00"
+}

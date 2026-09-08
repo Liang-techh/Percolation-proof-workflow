@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-P4-ACTUAL-BLOCK456-AFFINE-METRIC-DELTA-james-20260908T135717.md",
+  "record_kind": "review_result",
+  "review_sha256": "8C881691CCE558C0796EB821D4E411838EC232B6F80CF8E7AA818B30F20DD874",
+  "task_id": "P4-ACTUAL-BLOCK456-AFFINE-METRIC-DELTA-20260908",
+  "source_agent": "James",
+  "created_at": "2026-09-08T13:57:17-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_actual_block456_affine_metric_delta",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "ad5f9de1593dedac3b969cd6ab4f3eb8bdad3e78",
+  "review_file": "agent_review_inbox/review-P4-ACTUAL-BLOCK456-AFFINE-METRIC-DELTA-james-20260908T135717.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T20:00:37.146384+00:00"
+}

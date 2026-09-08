@@ -4229,3 +4229,55 @@ transport 与 allocation。旧 upper-mass join 被精确 mismatch 否定，不�
 
 所有结果必须以 immutable review 写入 `agent_review_inbox/`；未编译或缺 source
 binding 的结果只能进入 pending/event-only，不能关闭 P4/P5 或进入 registry。
+
+## 2026-09-08 — revision 863 harvest: actual K-path obstruction and FLT adapter
+
+`P5-ACTUAL-KPATH-G-COMPARISON-20260908` 已收割。真实 producer 的 `MBD` 虽是
+2×4，但列语义为 distal acceleration correction `(1,2,3,6)`，不是 consumer 的
+`z=(x4,x5,y4,y5)`；当前 source 只有 `MDD*v+DeltaMDB*aB=0`、`rB=MBD*v`、
+`lTotal=lBase+rB`，缺少同域 centered residual 的 `A/Hjac/Scoord` 或八项 gain。
+因此实际比较为 `0/8`、label discharge 为 `0/36`，不是负反例；P5 保持 pending。
+
+`T-FLT-CALCULUS-DERIVATION-ADAPTER-20260908` 已收割为 FLT event-only catalog。
+最佳候选是 Anthropic commit `aa2d8b34692b16c70f699536de0d8e75b9a3e9ef` 的
+`Algebra.PointDerivations.map_comp`：抽象 API 分类 1，Route-B cotangent specialization
+分类 2。它只传输已有 point derivation 的 value map，不构造 `fderiv`、chart chain rule
+或物理 source binding；当前只完成 source/blob/provenance 静态核对，未编译、未 comparator、
+未进入 registry。注意该 FLT pin 是 Lean 4.33.1，而当前 local_fkg target 是 Lean 4.32.0，
+不能混写 receipt。
+
+Poincare 和 Godel 两条线已关闭本轮；Sartre 的真实 `Q/Delta/K`、James 的实际 affine
+metric/Delta 仍在运行，formal_certificate_allowed=false、registry=0 保持不变。
+
+## 2026-09-08 — revision 864 harvest: exact current-target obstruction
+
+`P5-K7-ACTUAL-Q-DELTA-PACKET-20260908` 与
+`P4-ACTUAL-BLOCK456-AFFINE-METRIC-DELTA-20260908` 已收割。两份独立 exact Fraction
+检查在真实 mass CSV、真实 source graph 和同一 block456 metric 上收敛到同一个关键结论：
+在 `q=0, v=0, w=1` 的 full analytic graph 点，`M alpha=G_wI` 逐行成立，且
+`vD=0,r=0`；但当前 `beta` 与 `lBase^T H lBase` 使固定 `lambda=2,target>=0`
+的 allocation 严格为负（给出的 exact bound 为 `< -31/100`）。因此若目标域包含该点，
+当前 beta/descriptor target 组合应标记 rejected；继续扩大 Q 或寻找更紧的 port cap 不能修复
+一个在 `Delta=0` 时已经失败的 allocation。这不是对所有 P5 目标、所有输入律或所有轨迹的否定。
+
+同时保留一个 source-indexed K 候选：`Lbar=-MCD*adj(MDD)*(MDC-M0DC)*EC`、
+`Qs=F^T H F`、`Delta_s=R^T Qs R+p`，其 graph-ideal 形式给出 `K_s=diag(0,p)`；
+它仍未展开、未做 cell denominator/coverage/source proof，不能当作 certificate。
+下一步禁止对冻结 target 盲目搜索 Q：先独立决定该反例是否在 intended domain；若在，重设计
+beta/storage/target 并保留 full source obligations；若不在，提交 domain inclusion/exclusion
+证明。registry=0，formal_certificate_allowed=false。
+
+## 2026-09-08 — revision 865 next bottleneck split
+
+由于 revision 864 暴露的是 frozen target/domain 的 exact obstruction，下一轮不再扩大
+Q 搜索，改派四个互不重复的数学问题：
+
+| owner | task id | bounded deliverable |
+|---|---|---|
+| Sartre | `P5-TARGET-REPAIR-MINIMAL-20260908` | 比较提高 beta、改变 target baseline、改变 residual/port decomposition 的最小精确修正及 theorem-scope 代价 |
+| James | `P4-DOMAIN-POINT-JOIN-20260908` | 用已有 source/hash 判断 `q=v=0,w=1` 是否在 intended P4/P8 domain；缺证据则给最小 domain seam |
+| Poincare | `P5-SOURCE-KPATH-REPAIR-BOUNDARY-20260908` | 把 actual residual/anchor/A/Hjac/Scoord/normalization/G-family 的八项 comparison 输入压成最小 typed contract |
+| Godel | `T-FLT-CALCULUS-CHAIN-RULE-ADAPTER-20260908` | 在 PointDerivations 之后筛选 `HasFDerivAt.comp`/pullback 的最小可迁移 API 与精确 assumptions |
+
+这四项均禁止修改 state/registry/shared scripts、禁止 toy 数值和本机 Lean；结果必须以
+immutable review 回传，formal_certificate_allowed 继续为 false。

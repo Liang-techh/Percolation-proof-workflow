@@ -3507,3 +3507,34 @@ P4、registry 与 formal gate 保持关闭。
 绑定，Godel 只处理 FLT 非数论 derivation/calculus adapter。流川枫保持永久退休。
 本轮结果尚未收割；所有未编译或无 source binding 的输出继续是 pending，registry=0，
 formal gate 关闭。
+
+### 梁智炜 · revision 863 harvest：actual K-path obstruction and FLT adapter
+
+Poincare 已确认真实 producer 的 `MBD` 不能按 2×4 形状接成 consumer `K_path`：其列是
+distal acceleration `(1,2,3,6)`，而目标列是 `(x4,x5,y4,y5)`；实际 source 还缺同域
+centered residual 的 `A/Hjac/Scoord`、八项 gain、`G` 族和 source-indexed labels。八项
+比较为 `0/8`、36 个 label 为 `0/36`，这是接口缺口而非反例，P5 继续 pending。
+
+Godel 的 FLT 非数论 scan 选出 `Algebra.PointDerivations.map_comp`：generic API 为分类 1，
+cotangent/Route-B 适配为分类 2。该 theorem 只做 point derivation value-map composition，
+不替代 `HasFDerivAt` chain rule、移动 chart 项或真实 source；source pin/provenance 已固定，
+但没有 Lean receipt，且 FLT Lean 4.33.1 与 local_fkg Lean 4.32.0 不兼容混用。两项均已
+写入 event/pending，registry=0，formal gate 关闭。
+
+### 梁智炜 · revision 864：exact current-target obstruction
+
+Sartre 与 James 分别从 source-indexed K 构造和 affine metric/regularizer 路线得到同一
+个可复核瓶颈：真实 full graph 的 `q=v=0,w=1` 点满足 `M alpha=G_wI`、`vD=r=0`，
+但当前固定 beta/descriptor target 在 `lambda=2,target>=0` 下 allocation `<-31/100`。
+只要 intended domain 包含该点，当前 target 直接 rejected，不能靠更大的 Q、det/adjugate
+或更紧的 port cap 修复；若 intended domain 排除该点，则必须给出排除/轨迹域证明。Sartre
+提出的 `Qs/Lbar/Delta_s` 仅是 source-indexed candidate，仍无展开系数、cell coverage、
+source 或 Lean receipt。P4/P5、registry 与 formal gate 保持关闭。
+
+### 梁智炜 · revision 865：next bottleneck split
+
+revision 864 已证明继续搜索更大的 Q 不是当前最短路径，因此下一轮改为：Sartre 推导
+target/beta/decomposition 的最小修正，James 核对 exact 反例与 intended domain 的关系，
+Poincare 固化 actual K-path comparison 的最小 typed source contract，Godel 补充
+`HasFDerivAt.comp`/pullback 的 FLT 非数论适配。四条线均保持 pending-only 边界，
+不把任何修正设计提前当成 theorem closure。

@@ -582,6 +582,18 @@ TASK_TARGETS = {
     "T-FLT-CALCULUS-DERIVATION-ADAPTER-20260908": (
         None,
         "flt_calculus_derivation_adapter_scan"),
+    "P5-TARGET-REPAIR-MINIMAL-20260908": (
+        "P5.componentwise_relative_decay.feasible_cone_spn",
+        "pending_p5_target_repair_minimal"),
+    "P4-DOMAIN-POINT-JOIN-20260908": (
+        "P4.true_dh_port_source_binding",
+        "pending_p4_domain_point_join"),
+    "P5-SOURCE-KPATH-REPAIR-BOUNDARY-20260908": (
+        "P5.componentwise_relative_decay.feasible_cone_spn",
+        "pending_p5_source_kpath_repair_boundary"),
+    "T-FLT-CALCULUS-CHAIN-RULE-ADAPTER-20260908": (
+        None,
+        "flt_calculus_chain_rule_adapter_scan"),
 }
 
 REVIEW_ID_ALIASES = {

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 862,
+  "revision": 864,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -17103,6 +17103,21 @@
             "target_scope": "routeb_node",
             "source_commit": "9e6c4bc04cbcbfc7a2a213a642d7ac615218a671",
             "review_file": "agent_review_inbox/review-GH-P4-BLOCK456-AFFINE-PORT-REFERENCE-JOIN-james-20260908T134244.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-P4-ACTUAL-BLOCK456-AFFINE-METRIC-DELTA-james-20260908T135717.md",
+            "record_kind": "review_result",
+            "review_sha256": "8C881691CCE558C0796EB821D4E411838EC232B6F80CF8E7AA818B30F20DD874",
+            "task_id": "P4-ACTUAL-BLOCK456-AFFINE-METRIC-DELTA-20260908",
+            "source_agent": "James",
+            "created_at": "2026-09-08T13:57:17-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_actual_block456_affine_metric_delta",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "ad5f9de1593dedac3b969cd6ab4f3eb8bdad3e78",
+            "review_file": "agent_review_inbox/review-P4-ACTUAL-BLOCK456-AFFINE-METRIC-DELTA-james-20260908T135717.md",
             "admission_label": "pending"
           }
         ]
@@ -41550,6 +41565,35 @@
             "source_commit": "3697b2f18a93892eb8dcb39c095e6acad704eb07",
             "review_file": "agent_review_inbox/review-T-P5-TOY-PSD-SLACK-CAPACITY-WITNESS-20260908T193242Z.md",
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-P5-ACTUAL-KPATH-G-COMPARISON-20260908T195508Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "D4A9FA3A38AE01751EA3472B86CE11D848809BAB365DB5B74190EF9EB9C85BC8",
+            "task_id": "P5-ACTUAL-KPATH-G-COMPARISON-20260908",
+            "source_agent": "Codex-actual-kpath-comparison",
+            "created_at": "2026-09-08T19:55:08Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_actual_kpath_g_comparison",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "ad5f9de1593dedac3b969cd6ab4f3eb8bdad3e78",
+            "review_file": "agent_review_inbox/review-P5-ACTUAL-KPATH-G-COMPARISON-20260908T195508Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-P5-K7-ACTUAL-Q-DELTA-PACKET-20260908-Sartre.md",
+            "record_kind": "review_result",
+            "review_sha256": "95F4913696A909364F907664CD22D28024568A3E28B9382917C9438600420E05",
+            "task_id": "P5-K7-ACTUAL-Q-DELTA-PACKET-20260908",
+            "source_agent": "Sartre",
+            "created_at": "unknown",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_actual_k7_q_delta_packet",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-P5-K7-ACTUAL-Q-DELTA-PACKET-20260908-Sartre.md"
           }
         ]
       }
@@ -81485,6 +81529,58 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T19:58:41.561592+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-P5-ACTUAL-KPATH-G-COMPARISON-20260908T195508Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "D4A9FA3A38AE01751EA3472B86CE11D848809BAB365DB5B74190EF9EB9C85BC8",
+      "task_id": "P5-ACTUAL-KPATH-G-COMPARISON-20260908",
+      "classification": "pending_actual_kpath_g_comparison",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383"
+    },
+    {
+      "at": "2026-09-08T19:58:41.562067+00:00",
+      "kind": "external_reuse_agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-FLT-CALCULUS-DERIVATION-ADAPTER-20260908T195503Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "B54BE2C2E2536EF4CD9B50ECD4D1F7B0EB22521FDAEF604D746B5B8926BD230C",
+      "task_id": "T-FLT-CALCULUS-DERIVATION-ADAPTER-20260908",
+      "classification": "flt_calculus_derivation_adapter_scan",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "catalog": "anthropic-fermats-last-theorem"
+    },
+    {
+      "at": "2026-09-08T20:00:37.146384+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-P4-ACTUAL-BLOCK456-AFFINE-METRIC-DELTA-james-20260908T135717.md",
+      "record_kind": "review_result",
+      "review_sha256": "8C881691CCE558C0796EB821D4E411838EC232B6F80CF8E7AA818B30F20DD874",
+      "task_id": "P4-ACTUAL-BLOCK456-AFFINE-METRIC-DELTA-20260908",
+      "classification": "pending_actual_block456_affine_metric_delta",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T20:00:37.147180+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-P5-K7-ACTUAL-Q-DELTA-PACKET-20260908-Sartre.md",
+      "record_kind": "review_result",
+      "review_sha256": "95F4913696A909364F907664CD22D28024568A3E28B9382917C9438600420E05",
+      "task_id": "P5-K7-ACTUAL-Q-DELTA-PACKET-20260908",
+      "classification": "pending_actual_k7_q_delta_packet",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383"
     }
   ],
   "agent_requests": {},
@@ -85141,5 +85237,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "bdb904b5b10dc8650f49b042caba4feb135e2430ec33dbf672a2e1ca15cb1fcd"
+  "state_checksum": "a96518dcb446a7ab711886c38cc8be46dd7a3f010581f02d02c2e017e425af8e"
 }

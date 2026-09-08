@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-P5-K7-ACTUAL-Q-DELTA-PACKET-20260908-Sartre.md",
+  "record_kind": "review_result",
+  "review_sha256": "95F4913696A909364F907664CD22D28024568A3E28B9382917C9438600420E05",
+  "task_id": "P5-K7-ACTUAL-Q-DELTA-PACKET-20260908",
+  "source_agent": "Sartre",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_actual_k7_q_delta_packet",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-P5-K7-ACTUAL-Q-DELTA-PACKET-20260908-Sartre.md",
+  "integrated_at": "2026-09-08T20:00:37.147180+00:00"
+}

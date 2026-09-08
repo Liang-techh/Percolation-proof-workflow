@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-P5-ACTUAL-KPATH-G-COMPARISON-20260908T195508Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "D4A9FA3A38AE01751EA3472B86CE11D848809BAB365DB5B74190EF9EB9C85BC8",
+  "task_id": "P5-ACTUAL-KPATH-G-COMPARISON-20260908",
+  "source_agent": "Codex-actual-kpath-comparison",
+  "created_at": "2026-09-08T19:55:08Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_actual_kpath_g_comparison",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "ad5f9de1593dedac3b969cd6ab4f3eb8bdad3e78",
+  "review_file": "agent_review_inbox/review-P5-ACTUAL-KPATH-G-COMPARISON-20260908T195508Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T19:58:41.561592+00:00"
+}
