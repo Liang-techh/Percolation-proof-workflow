@@ -413,6 +413,12 @@ TASK_TARGETS = {
     "GH-MATH-P4-EVALV-CONSERVATIVE-ERROR-BUDGET-DESIGN": (
         "P4.true_dh_port_source_binding",
         "pending_evalv_conservative_error_budget_design"),
+    "GH-MATH-P4-EVALV-ACTUAL-ERROR-BOTTLENECK": (
+        "P4.true_dh_port_source_binding",
+        "pending_evalv_actual_error_bottleneck"),
+    "P5-GRAPH-JET-IFT-INVERSE-FREE-HCAP": (
+        "P5.componentwise_relative_decay",
+        "pending_graph_jet_ift_inverse_free_hcap"),
     # External FLT scans are deliberately event-only: they are advisory
     # catalog evidence, not Route-B theorem nodes or registry entries.
     "T-FLT-DERIV-CALC": (None, "flt_derivation_calculus_scan"),
@@ -926,7 +932,8 @@ def main() -> int:
             "record_kind": kind,
             "review_sha256": digest,
             "task_id": task_id,
-            "source_agent": header.get("source_agent", "unknown"),
+            "source_agent": header.get("source_agent") or
+                            header.get("agent", "unknown"),
             "created_at": header.get("created_at", "unknown"),
             "integration_status": "integrated_as_pending_metadata",
             "classification": classification,

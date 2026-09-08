@@ -4140,3 +4140,13 @@ review_result/receipt，不直接修改 shared state 或 registry。
 
 Lean 任务不得把 source-independent compile candidate 升格为 verified theorem；
 数学任务不得用采样、Float64 近似或 solver 状态代替 universal/source proof。
+
+## 2026-09-08 — revision 855 graph/epsilon harvest
+
+`P5-GRAPH-JET-IFT-INVERSE-FREE-HCAP` 已收割：下一步优先寻找同 cell 的可逆性
+contract 与真实 `L,d0,H,Q,Delta`，利用 7×7 `K`-PSD 恒等式形成 additive-cap
+certificate；不需要先生成 alpha/Y 数值，但不得用 generic graph 方程替代 source。
+
+`GH-MATH-P4-EVALV-ACTUAL-ERROR-BOTTLENECK` 已收割为严格 obstruction：在实际
+parser/lowering/lifetime/consumer receipt 出现前，禁止消耗任何 one-sided epsilon。
+当前 revision=855、registry=0；两条线都继续保持 pending。

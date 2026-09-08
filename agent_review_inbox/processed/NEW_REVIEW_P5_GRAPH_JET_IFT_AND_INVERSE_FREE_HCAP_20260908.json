@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/NEW_REVIEW_P5_GRAPH_JET_IFT_AND_INVERSE_FREE_HCAP_20260908.md",
+  "record_kind": "review_result",
+  "review_sha256": "D8DF21475E1EF5710AAB1C227B0427DB59ADDEB98B590193489036778EDC41F6",
+  "task_id": "P5-GRAPH-JET-IFT-INVERSE-FREE-HCAP",
+  "source_agent": "Sartre",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_graph_jet_ift_inverse_free_hcap",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/NEW_REVIEW_P5_GRAPH_JET_IFT_AND_INVERSE_FREE_HCAP_20260908.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T19:27:41.763459+00:00"
+}

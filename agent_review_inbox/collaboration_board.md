@@ -3427,3 +3427,15 @@ adapter：保留 representative/orientation、边界多重覆盖与全局 sign c
 该 pass 不是 standalone Lake/OLean/import receipt，也没有 concrete `K_path`、18 个
 SPN certificates、source binding、P5 closure 或 registry eligibility，因此只登记为
 source-independent compiled candidate，formal gate 继续关闭。
+
+### 梁智炜 · revision 855：graph IFT / inverse-free H-cap 与 evalV obstruction
+
+Sartre 将 `G0/G1` 的 84 维未知量 Jacobian 化为 14 个同源 `M` 对角块，得到
+`det(D_uG)=(det M)^14`，并明确方程本身不蕴含可逆性或非空唯一 graph；同时给出
+无需显式 `M⁻¹` 的 7×7 对称 multiplier 恒等式，若同 cell 的 `K` 为 PSD 即可推出
+真实 graph 的 additive H-cap。该结果仍缺真实 `M/L/d0/H/Q/Delta` source packet。
+
+Godel 对 evalV 的 bounded search 确认 parser bits、exponent table、lowering、
+lifetime、uniform one-sided error 和 consumer identity 六类证据均缺失；因此没有
+生成 epsilon，不能把 conservative `kappa` 设计当 runtime bound。两项均为 pending，
+registry=0，formal gate 关闭。
