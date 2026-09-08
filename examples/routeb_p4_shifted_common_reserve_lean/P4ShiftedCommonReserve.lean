@@ -46,7 +46,15 @@ theorem quadratic_below_endpoint_chord
       (b - a) * (A * t ^ 2 - G * t + P)
         ≤ (b - a) * (-A0 * (t - a) * (b - t)) := by
     nlinarith
-  exact (mul_le_mul_left hwidth).mp hscaled
+  by_contra hnot
+  have hstrict :
+      -A0 * (t - a) * (b - t) < A * t ^ 2 - G * t + P :=
+    lt_of_not_ge hnot
+  have hpositive :
+      0 < (b - a) *
+        ((A * t ^ 2 - G * t + P) - (-A0 * (t - a) * (b - t))) :=
+    mul_pos hwidth (sub_pos.mpr hstrict)
+  nlinarith
 
 /-- Exact square-completion identity for the theta-weighted reserve. -/
 theorem shifted_charge_complete_square
@@ -161,10 +169,20 @@ theorem shifted_witness_mem_interval
   have h2A : 0 < 2 * A0 := by nlinarith
   have hleftScaled : (2 * A0) * a ≤ (2 * A0) * t := by
     nlinarith
-  have hta : a ≤ t := (mul_le_mul_left h2A).mp hleftScaled
+  have hta : a ≤ t := by
+    by_contra hnot
+    have hstrict : t < a := lt_of_not_ge hnot
+    have hpositive : 0 < (2 * A0) * (a - t) :=
+      mul_pos h2A (sub_pos.mpr hstrict)
+    nlinarith
   have hrightScaled : (2 * A0) * t ≤ (2 * A0) * ((a + b) / 2) := by
     nlinarith
-  have htMid : t ≤ (a + b) / 2 := (mul_le_mul_left h2A).mp hrightScaled
+  have htMid : t ≤ (a + b) / 2 := by
+    by_contra hnot
+    have hstrict : (a + b) / 2 < t := lt_of_not_ge hnot
+    have hpositive : 0 < (2 * A0) * (t - (a + b) / 2) :=
+      mul_pos h2A (sub_pos.mpr hstrict)
+    nlinarith
   have hmidb : (a + b) / 2 < b := by nlinarith
   exact ⟨lt_of_lt_of_le ha hta, hta, lt_of_le_of_lt htMid hmidb⟩
 
