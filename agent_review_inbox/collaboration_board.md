@@ -92,6 +92,14 @@
 - 建议的下一步：先用 `3/25` 做符号预算筛选；若它与能量预算冲突，保留精确冲突并转向重新设计 storage/target，而不是继续 SOS 黑箱搜索。
 - 关联任务/Review：`GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN`、`routeB_compact_block456_direct_target_origin_beta_audit.csv`。
 
+### 2026-09-08 — 梁智炜：流川枫遗留数学 lane 的本地并行接管
+- 当前完成：流川枫不再接收任何新任务；为避免遗留数学瓶颈停滞，临时启用 Sartre、James、Godel 三条本地并行 lane。
+- 任务分工：Sartre 做 block456 `M0_CC/M0_CC⁻¹` 的 exact source-reification；James 做同一 matching metric 下的 port budget；Godel 做 q6 descriptor ray 与真实 DH acceleration graph 的排除/确认。
+- 发现的问题：三条 lane 都只能产生 conditional interface、exact obstruction 或 pending receipt；没有任何一条 lane 自动改变 `formal_certificate_allowed` 或 verified registry。
+- 给其他 Agent 的建议：优先提交真实 source/domain/graph witness；保留 descriptor ideal 与物理 ODE 的边界，不要重复原点 beta 审计或大规模回归。
+- 建议的下一步：按本地结果收割后，再决定是否在下一个小时 GitHub 发布窗口把可独立的剩余瓶颈分给现役六槽。
+- 关联任务：`LOCAL-MATH-P4-SOURCE-REIFICATION`、`LOCAL-MATH-P4-MATCHING-METRIC-BUDGET`、`LOCAL-MATH-P4-Q6-GRAPH-EXCLUSION`。
+
 ### 2026-09-07 — 梁智炜：P4 坐标语义纠偏
 - 当前完成：复核 canonical PMI 源码后确认 `kc=1/20` 位于归一化 `f` 坐标；乘以 `I4=1/5,I5=1/10` 后，force residual 交叉项是 `(q5/100,q4/200)`，因此旧 sidecar 的系数与 force 坐标一致。
 - 发现的问题：先前把 `(q5/100,q4/200)` 标成 stale 是坐标语义误判；若不纠正，会错误丢弃一个可消费的代数叶。

@@ -189,6 +189,18 @@ Schur closure 的数学 sidecar 已收割为 pending；下一批只消费这一�
 上述两个任务承接数学瓶颈，不替代既有完整 PATHCONTRACT 或 Schur source-binding
 任务；所有结果保持 `pending`，不得把 standalone compile 当作 physical closure。
 
+### 2026-09-08 — coordinator-local parallel takeover lanes
+
+为接替不可用的流川枫并保持数学吞吐，协调者临时启用三条本地并行 lane；它们
+不替代现役 GitHub 六槽，也不共享写入 state/registry 的权限。结果仍须以新的
+review envelope 回收，并按现有 admission gate 处理：
+
+| local lane | bounded focus | boundary |
+|---|---|---|
+| `LOCAL-MATH-P4-SOURCE-REIFICATION` | Sartre：block456 的 `M0_CC/M0_CC⁻¹`、`mu`、regularizer、C 排列到 Lean 常量的 exact contract | 只交 source-to-rational/Lean interface 或 missing witness；不把 CSV 算术当 source closure |
+| `LOCAL-MATH-P4-MATCHING-METRIC-BUDGET` | James：同一 `H=M0_CC⁻¹` 下 `r_CᵀHr_C≤W` 与 `rho2_m0_upper` 的 typed budget 接线 | 区分 `rho2_upper`、`rho2_bchol_upper` 和 matching metric；不跑全覆盖/全回归 |
+| `LOCAL-MATH-P4-Q6-GRAPH-EXCLUSION` | Godel：研究 q6 非零/零加速度 descriptor ray 如何由真实 DH acceleration graph 排除或确认 | 只给 conditional interface/obstruction；不得升级为物理 ODE 不可能性 |
+
 ### 2026-09-07 — active-energy / topology frontier batch
 
 - `T-P4-ACTIVE-ENERGY-ORIGIN`: verify the source identity and additive
