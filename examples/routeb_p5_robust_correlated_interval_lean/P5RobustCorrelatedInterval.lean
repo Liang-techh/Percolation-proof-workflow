@@ -80,8 +80,7 @@ theorem scaled_adjugate_bias_le_box
     (hsigma : |sigma| ≤ Q)
     (hb4 : |b4| ≤ beta4)
     (hb5 : |b5| ≤ beta5)
-    (hbeta4 : 0 ≤ beta4)
-    (hbeta5 : 0 ≤ beta5) :
+    (hbeta4 : 0 ≤ beta4) :
     scaledBias p s sigma b4 b5 ≤ boxBias pU sU Q beta4 beta5 := by
   have hQ : 0 ≤ Q := le_trans (abs_nonneg sigma) hsigma
   have hpU0 : 0 ≤ pU := le_trans hp0 hpU
@@ -230,7 +229,6 @@ theorem correlated_quarter_gate_from_cell_box
     (hb4 : |b4| ≤ beta4)
     (hb5 : |b5| ≤ beta5)
     (hbeta4 : 0 ≤ beta4)
-    (hbeta5 : 0 ≤ beta5)
     (hr : r ≤ rU)
     (hrU : rU < 109)
     (hgate :
@@ -244,7 +242,7 @@ theorem correlated_quarter_gate_from_cell_box
   have hsigmaAbs : |sigma| ≤ Q := abs_le.mpr ⟨hsigmaL, hsigmaU⟩
   have hbias :=
     scaled_adjugate_bias_le_box p s sigma b4 b5 pU sU Q beta4 beta5
-      (le_of_lt hppos) (le_of_lt hspos) hpU hsU hsigmaAbs hb4 hb5 hbeta4 hbeta5
+      (le_of_lt hppos) (le_of_lt hspos) hpU hsU hsigmaAbs hb4 hb5 hbeta4
   exact correlated_quarter_gate_of_interval_box
     r rU (scaledBias p s sigma b4 b5) (boxBias pU sU Q beta4 beta5)
       (scaledDet p s sigma) (detLower pL sL Q)
