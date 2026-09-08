@@ -3390,3 +3390,22 @@ CSV reader 的 coefficient bits/exponents、Float64 operation semantics、有限
 并证明同一 `X0` 上 `Decode(evalV_fast)-P*≤epsilon` 且
 `epsilon≤u+1/20`。当前没有 epsilon、parser execution receipt 或 consumer
 identity，因此 initial witness 仍只是 conditional，P4/M4 与 registry 不变。
+
+### 梁智炜 · revision 851：SP block456 specialization
+
+Poincare 将 spectral preservation 候选具体化为 block456 条件接口：标准
+`EuclideanSpace 𝕜 (Fin 6)`、zero-based `I456={3,4,5}`、坐标子模 `W456`，
+并要求明确的 `T/S/μ`、对称性、commutation 与 `W456=eigenspace T μ`。
+review 特别排除了把“块保持”误写成单一 eigenspace，也指出 nominal mass 的
+off-diagonal 会破坏未经证明的 alignment。该 specialization 仍是 generic 1、
+target adapter 2、Route-B 语义 3；registry=0，formal gate 关闭。
+
+### 梁智炜 · revision 852：conservative evalV error-budget design
+
+Godel 证明了一个有意义的条件性算术设计：若 parser、exponent、power、
+乘法、累加和 lifetime 均满足明确的局部误差 cap `kappa=2^-20`，则 46 行
+总误差可被保守控制在 `46·53·kappa < 1/20`，足以消耗 ideal witness margin。
+
+该结果没有生成 certified epsilon，也没有验证 Julia 的实际 operation graph、
+rounding/subnormal/fusion 或 mutable-array lifetime；因此仍是 P4 pending contract，
+不改变 runtime_initial_bound、registry 或 formal gate。

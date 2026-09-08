@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/handoff-T-FLT-SP-BLOCK456-SPECIALIZATION-20260908T191254Z.md",
+  "record_kind": "handoff",
+  "review_sha256": "4C1B80F1A38AE6F84AB05B843361B814BADD695D4EB6A206F60114AD144A9517",
+  "task_id": "T-FLT-SP-BLOCK456-SPECIALIZATION",
+  "source_agent": "Codex-FLT-block456-spectral-specialization",
+  "created_at": "2026-09-08T19:12:54Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_sp_block456_specialization",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "389460cecf76b3a21741eab1a77a9c56d67113f7",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T19:15:14.924189+00:00"
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 850,
+  "revision": 852,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -16998,6 +16998,21 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-P4-INITIAL-EVALV-RUNTIME-BRIDGE-20260908T190719Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-P4-EVALV-CONSERVATIVE-BUDGET-DESIGN-20260908T191317Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "ADCC4BA4A6A4AFDB5C3730D09FDF37C5A944B115CF92989A4EB829A121514E25",
+            "task_id": "GH-MATH-P4-EVALV-CONSERVATIVE-ERROR-BUDGET-DESIGN",
+            "source_agent": "Godel the 6th",
+            "created_at": "2026-09-08T19:13:17Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_evalv_conservative_error_budget_design",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-P4-EVALV-CONSERVATIVE-BUDGET-DESIGN-20260908T191317Z.md",
             "admission_label": "pending"
           }
         ]
@@ -81151,6 +81166,32 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T19:15:14.924189+00:00",
+      "kind": "external_reuse_agent_handoff_integrated",
+      "record_file": "agent_review_inbox/handoff-T-FLT-SP-BLOCK456-SPECIALIZATION-20260908T191254Z.md",
+      "record_kind": "handoff",
+      "review_sha256": "4C1B80F1A38AE6F84AB05B843361B814BADD695D4EB6A206F60114AD144A9517",
+      "task_id": "T-FLT-SP-BLOCK456-SPECIALIZATION",
+      "classification": "flt_sp_block456_specialization",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "catalog": "anthropic-fermats-last-theorem"
+    },
+    {
+      "at": "2026-09-08T19:16:10.186930+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-P4-EVALV-CONSERVATIVE-BUDGET-DESIGN-20260908T191317Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "ADCC4BA4A6A4AFDB5C3730D09FDF37C5A944B115CF92989A4EB829A121514E25",
+      "task_id": "GH-MATH-P4-EVALV-CONSERVATIVE-ERROR-BUDGET-DESIGN",
+      "classification": "pending_evalv_conservative_error_budget_design",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -84807,5 +84848,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "1ae3466346d2d3751d9329621c2df9f4de64278e4080a67790fd342603515de1"
+  "state_checksum": "fad35391babc9b179f7f82cce12dc890b8821a0cd5435d5641a9d725e5091f7f"
 }

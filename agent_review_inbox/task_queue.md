@@ -4071,3 +4071,17 @@ source identity、执行语义和 consumer binding，不能提升 registry 或 f
 
 这些任务由现有本地 agent 并行推进；完成后必须写 immutable review_result，主线程
 再执行收割和 revision 更新。
+
+## 2026-09-08 — revision 851 SP block456 specialization
+
+`T-FLT-SP-BLOCK456-SPECIALIZATION-20260908` 已收割为 event-only metadata。后续
+若继续该线，必须先证明真实 `W456=eigenspace(T,μ)` 与 `S.comp T=T.comp S`；
+若采用 coordinate projector 路线，也只能证明辅助 projector 的 block-diagonal
+性质，不能冒充 mass/dynamics spectral decomposition 或 flowpipe。
+
+## 2026-09-08 — revision 852 evalV conservative budget
+
+`GH-MATH-P4-EVALV-CONSERVATIVE-ERROR-BUDGET-DESIGN` 已收割。该设计显示
+`-1/20` margin 在满足局部 rounding/parser/lifetime 前提时足够，但没有实际
+epsilon。下一步只接受 parser bits、exponent table、operation lowering、finite
+range 和 one-sided error receipt；不得将 `kappa` 设计参数当作 Julia 已验证属性。

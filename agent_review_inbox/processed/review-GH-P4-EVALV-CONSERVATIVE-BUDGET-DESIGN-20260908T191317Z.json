@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-P4-EVALV-CONSERVATIVE-BUDGET-DESIGN-20260908T191317Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "ADCC4BA4A6A4AFDB5C3730D09FDF37C5A944B115CF92989A4EB829A121514E25",
+  "task_id": "GH-MATH-P4-EVALV-CONSERVATIVE-ERROR-BUDGET-DESIGN",
+  "source_agent": "Godel the 6th",
+  "created_at": "2026-09-08T19:13:17Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_evalv_conservative_error_budget_design",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-P4-EVALV-CONSERVATIVE-BUDGET-DESIGN-20260908T191317Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T19:16:10.186930+00:00"
+}
