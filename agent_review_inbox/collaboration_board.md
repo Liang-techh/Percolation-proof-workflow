@@ -2764,3 +2764,7 @@ equation witness 成为下一阶段唯一主瓶颈。
 
 下一条 source lane 已聚焦 half-active slab 的 controller/damping 对齐和实际
 `M*a=F+e` rows witness；不再扩展 domain 搜索，不能对 mismatch 做静默修正。
+
+同时派发一个独立 Lean-prep seam：形式化三维块方程前两行到二维 principal
+restriction 的 typed projection，保持 `a6` coupling/defect 外置；它只推进
+theorem decomposition，不改变 physical admission。

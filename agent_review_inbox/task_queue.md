@@ -3519,3 +3519,12 @@ det/numerator/observable 以及 FD/solve defect。若因 controller mismatch 或
 
 该任务消费 revision 786 的缺口，不重新搜索 domain、不生成数值、不把
 factorized descriptor 或 `exact_ddq` 名称当作 runtime exactness。
+
+## 2026-09-08 — principal restriction Lean seam
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-LEAN-P4-3D-TO-2D-RESTRICTION` | 苏梦辰 / local Lean-prep lane | 形式化 `T*a=g` 前两行到 `A*u=p-h*v` 的 typed projection；保留 coupling/defect 外置 |
+
+该候选只服务于 theorem decomposition，不能实例化真实 DH rows，也不能替代
+actual-cell source witness 或 pinned Lean receipt。
