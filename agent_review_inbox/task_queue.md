@@ -4012,3 +4012,11 @@ budget。若再次收到同 hash handoff，只保留 provenance event，不创�
 输入，但不能直接当作 `Dalpha`、metric jet、variational defect 或 full source
 semantics。下一步由柳冠一/狂蛮魔尊推进 exact graph/invertibility contract，
 由苏梦辰/巨阳仙尊在 contract 稳定后处理 Lean sidecar；不重复运行旧轨迹审计。
+
+## 2026-09-08 — revision 844 physical Schur remote contract
+
+`GH-MATH-P4-PHYSICAL-SCHUR-REMOTE-CONTRACT` 已收割。下一步由柳冠一/古月方源
+选择 direct `a_D` bound、full-state elimination 或 centered `g_D` 路线之一，
+并在同一 cell 绑定 `M_BD/M_DD/F_D/z/H/residual`；狂蛮魔尊检查 additive
+forcing 与 homogeneous gain 的边界。不得把 analytic slab checker 的 exit 0
+升级为 true-DH、coverage 或 M4 证书。

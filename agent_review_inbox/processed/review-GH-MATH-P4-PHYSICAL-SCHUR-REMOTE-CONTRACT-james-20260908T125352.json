@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-PHYSICAL-SCHUR-REMOTE-CONTRACT-james-20260908T125352.md",
+  "record_kind": "review_result",
+  "review_sha256": "A991187ECE5D66AE585957778B6AB31BDA173F79048FB1FFC92439CD708A70C1",
+  "task_id": "GH-MATH-P4-PHYSICAL-SCHUR-REMOTE-CONTRACT",
+  "source_agent": "James-local-takeover",
+  "created_at": "2026-09-08T12:53:52-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_physical_schur_remote_contract",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "dc0e6b77c1c9eb8162517198e1ccc0dd62451059",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-PHYSICAL-SCHUR-REMOTE-CONTRACT-james-20260908T125352.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T18:58:39.617227+00:00"
+}

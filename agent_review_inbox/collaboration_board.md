@@ -3317,3 +3317,15 @@ Sartre 的新提取器锁定六个真实源文件，提取出 `M` 36、`DM` 216�
 它首次把真实 DH 的同 cell source-jet 入口具体化，但 `alpha/Dalpha`、实际
 `W/Wt/DW`、`b/Db/e`、输入律和 whole-tube coverage 仍缺失。结果进入 P5
 pending frontier，registry=0，formal gate 继续关闭。
+
+### 梁智炜 · revision 844：physical Schur remote contract
+
+James 找到并复跑了现有 full-state analytic first-slab checker，输出
+`INDEPENDENT_ANALYTIC_FIRST_SLAB_CHECK_OK 1/512`。它给出真实解析模型下的
+质量/力/加速度区间和 weighted contraction，但不证明 runtime FD source。
+
+更重要的是，review 明确了 P4 的 condensed RHS：远端 forcing 以
+`L(F_D+z_D)` 进入，不能把已有 homogeneous `R a_B` budget 当作任意
+`M_BD a_D` 的界；还给出了 bounded-forcing 反例。结果绑定到
+`P4.true_dh_port_source_binding` 的 pending frontier，registry=0，formal gate
+继续关闭。

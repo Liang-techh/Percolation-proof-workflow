@@ -392,6 +392,9 @@ TASK_TARGETS = {
     "P5-EXACT-DH-SAME-CELL-SOURCE-JET": (
         "P5.componentwise_relative_decay",
         "pending_exact_dh_same_cell_source_jet"),
+    "GH-MATH-P4-PHYSICAL-SCHUR-REMOTE-CONTRACT": (
+        "P4.true_dh_port_source_binding",
+        "pending_physical_schur_remote_contract"),
     # External FLT scans are deliberately event-only: they are advisory
     # catalog evidence, not Route-B theorem nodes or registry entries.
     "T-FLT-DERIV-CALC": (None, "flt_derivation_calculus_scan"),
