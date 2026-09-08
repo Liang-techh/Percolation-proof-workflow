@@ -3209,3 +3209,20 @@ integrator 已将这些记录写入 StateStore 的 pending provenance/events；r
 743、registry=0、formal_certificate_allowed=false。下一轮优先回收 shared-
 lambda 的独立 Lean receipt，以及 P5 两个 SOS sidecar 的精确 checker 边界，
 不做宽泛回归。
+
+## revision 744–745 — value-level source seams
+
+P3 新增 `C2C3_DH_EVALUATOR_CONJUNCT`：在既有 covered point 上以显式
+`dhEvaluator = sourceM + sourceC + sourceG` 前提得到 source-function value
+identity，并独立复用 endpoint-uniform margin。它不把 value equality 偷换成
+derivative equality，也不关闭 Float64、coverage、flowpipe 或 residual。
+
+BODY6 新增 `ACTUALSTORAGEALIGN`：在明确 `f=1,h=0` specialization、same-mass
+和 normalized-potential/quadratic-compensation fields 下，证明 unshifted
+`ActualStorage = encodedBase`，再显式加入 `B=4079979/400000` 才能转到
+`ActualShift`。origin exact counterexample 证明省略 B 会破坏固定 cap transfer；
+path inclusion 与 cap+B≤bar 仍是调用方前提。该叶保持 `OPEN_UNCOMPILED/pending`。
+
+当前状态 revision 745、registry=0、formal gate=false；本地 proof lanes 继续
+分别推进 storage identity、P4 source binding、rational-lambda receipt 和
+C2/C3 true-DH bridge。

@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-actualstoragealign-codex-20260908T0425.md",
+  "record_kind": "review_result",
+  "review_sha256": "C05B3B97629601DADECC6C4CC4FBEAB1B9E3809235626F0C5D32BB64BABBC5A8",
+  "task_id": "T-P4-033-O1-body6-slice",
+  "source_agent": "Codex-BODY6-local-lane",
+  "created_at": "2026-09-08T04:25:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_independent_body6_source_slice",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-actualstoragealign-codex-20260908T0425.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T05:27:21.180975+00:00"
+}

@@ -2576,3 +2576,10 @@ formal gate 变化。
 下一轮由本地 lane 分别追踪 BODY6 storage/path identity、P4 line-9 source
 binding、T-P4-040 Lean receipt、以及 P3 endpoint margin 到 true-DH coefficient
 的最小桥接；流川枫继续承担约三分之一的独立 lane。
+
+### 梁智炜 · revision 744–745
+
+新收割的两个 value-level seam 已登记：P3 的 DH evaluator equality 与 BODY6
+的 ActualStorage/ActualShift alignment。它们都只增加显式前提下的条件性接口，
+并保留了 derivative-level binding、path inclusion、shift budget、coverage 和
+true-DH 的独立 open leaves；没有任何 registry 晋级。

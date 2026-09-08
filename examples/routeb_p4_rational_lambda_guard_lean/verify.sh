@@ -43,6 +43,10 @@ trap 'rm -f "$OUT"' EXIT
 ) 2>&1 | tee "$OUT"
 
 for theorem in \
+  young_completed_square_identity \
+  young_feasible_of_rational_radius \
+  young_inner_interval_feasible \
+  young_common_parameter_of_inner_bounds \
   quadratic_chord_identity \
   convex_quadratic_endpoint_interval \
   convex_quadratic_on_interval \

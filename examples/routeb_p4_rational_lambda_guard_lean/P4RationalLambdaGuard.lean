@@ -4,7 +4,9 @@ import Mathlib.Tactic
 /-!
 # Route-B P4 rational common-lambda interval guard
 
-Source-independent Lean decomposition of
+Source-independent Lean decomposition of the T-P4-039 common-parameter
+algebra and the T-P4-040 implementation-rounding adapter:
+`agent_review_inbox/review-T-P4-039-liuguanyi-20260907T1616.md` and
 `agent_review_inbox/review-T-P4-040-rational-lambda-guard-kuangmanmozun-20260907T1642.md`.
 
 The sidecar proves the exact quadratic chord identity, endpoint certification
@@ -27,6 +29,71 @@ noncomputable section
 /-- Checker-facing quadratic in `s = lambda - 1`. -/
 def quadratic (P G A s : ℝ) : ℝ :=
   P * s^2 - G * s + A
+
+/-! ### T-P4-039 division-free algebraic leaves
+
+The trusted-facing statements below use `Real`, with rational certificates
+instantiated by coercion.  Interval membership is expressed by the two
+cross-multiplied inequalities
+`G - radius ≤ 2*A*theta` and `2*A*theta ≤ G + radius`; no inverse or
+division occurs in any of these four theorem statements.
+-/
+
+/-- Completed-square identity for the scalar Young quadratic. -/
+theorem young_completed_square_identity
+    (A G P theta : ℝ) :
+    4 * A * (A * theta^2 - G * theta + P) =
+      (2 * A * theta - G)^2 - (G^2 - 4 * A * P) := by
+  ring
+
+/-- A division-free rational-radius certificate for one Young row. -/
+theorem young_feasible_of_rational_radius
+    (A G P theta radius : ℝ)
+    (hA : 0 < A) (htheta : 0 < theta) (hradius : 0 ≤ radius)
+    (hdisc : radius^2 ≤ G^2 - 4 * A * P)
+    (hcenter : (2 * A * theta - G)^2 ≤ radius^2) :
+    A * theta^2 - G * theta + P ≤ 0 := by
+  have hscale : 0 ≤ 4 * A := by positivity
+  have hcompleted :
+      4 * A * (A * theta^2 - G * theta + P) ≤ 0 := by
+    rw [young_completed_square_identity]
+    linarith
+  nlinarith
+
+/-- The inner rational interval, written without endpoint divisions. -/
+theorem young_inner_interval_feasible
+    (A G P theta radius : ℝ)
+    (hA : 0 < A) (hG : 0 < G) (hP : 0 ≤ P)
+    (htheta : 0 < theta) (hradius : 0 ≤ radius)
+    (hdisc : radius^2 ≤ G^2 - 4 * A * P)
+    (hlower : G - radius ≤ 2 * A * theta)
+    (hupper : 2 * A * theta ≤ G + radius) :
+    A * theta^2 - G * theta + P ≤ 0 := by
+  have hleft : 0 ≤ radius - (2 * A * theta - G) := by
+    linarith
+  have hright : 0 ≤ radius + (2 * A * theta - G) := by
+    linarith
+  have hcenter : (2 * A * theta - G)^2 ≤ radius^2 := by
+    nlinarith [mul_nonneg hleft hright]
+  exact young_feasible_of_rational_radius
+    A G P theta radius hA htheta hradius hdisc hcenter
+
+/-- One shared positive `theta` consumes all supplied inner-bound rows. -/
+theorem young_common_parameter_of_inner_bounds
+    {ι : Type*}
+    (A G P radius : ι → ℝ) (theta : ℝ)
+    (hA : ∀ i, 0 < A i) (hG : ∀ i, 0 < G i) (hP : ∀ i, 0 ≤ P i)
+    (htheta : 0 < theta)
+    (hradius : ∀ i, 0 ≤ radius i)
+    (hdisc : ∀ i, (radius i)^2 ≤ (G i)^2 - 4 * A i * P i)
+    (hlower : ∀ i, G i - radius i ≤ 2 * A i * theta)
+    (hupper : ∀ i, 2 * A i * theta ≤ G i + radius i) :
+    ∀ i, A i * theta^2 - G i * theta + P i ≤ 0 := by
+  intro i
+  exact young_inner_interval_feasible
+    (A i) (G i) (P i) theta (radius i)
+    (hA i) (hG i) (hP i) htheta (hradius i) (hdisc i)
+    (hlower i) (hupper i)
 
 /-- Exact chord identity for a scalar quadratic. -/
 theorem quadratic_chord_identity
@@ -241,6 +308,11 @@ theorem negative_shift_envelope_failure :
 #print axioms concave_endpoint_failure
 #print axioms midpoint_margin_not_global
 #print axioms negative_shift_envelope_failure
+
+#print axioms young_completed_square_identity
+#print axioms young_feasible_of_rational_radius
+#print axioms young_inner_interval_feasible
+#print axioms young_common_parameter_of_inner_bounds
 
 end
 

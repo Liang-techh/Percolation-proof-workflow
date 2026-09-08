@@ -1,7 +1,18 @@
 # Route-B P4 rational common-lambda guard Lean sidecar
 
-This portable sidecar formalizes the source-independent mathematical child from
-`agent_review_inbox/review-T-P4-040-rational-lambda-guard-kuangmanmozun-20260907T1642.md`.
+This portable sidecar formalizes the source-independent mathematical children
+from `T-P4-039` and `T-P4-040`:
+
+- `agent_review_inbox/review-T-P4-039-liuguanyi-20260907T1616.md`;
+- `agent_review_inbox/review-T-P4-040-rational-lambda-guard-kuangmanmozun-20260907T1642.md`.
+
+The T-P4-039 lane has four explicit Lean-facing leaves:
+`young_completed_square_identity`, `young_feasible_of_rational_radius`,
+`young_inner_interval_feasible`, and
+`young_common_parameter_of_inner_bounds`. Their statements are division-free:
+the interval is represented by cross-multiplied inequalities in `Real`; a
+rational checker witness is supplied by coercion, not by an inverse in the
+trusted theorem statement.
 
 It proves:
 

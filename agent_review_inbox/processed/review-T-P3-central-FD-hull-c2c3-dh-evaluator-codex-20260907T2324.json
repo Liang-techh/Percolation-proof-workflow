@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P3-central-FD-hull-c2c3-dh-evaluator-codex-20260907T2324.md",
+  "record_kind": "review_result",
+  "review_sha256": "E668662C7D9E1F669FB08486A12F6BCC3AB7268BF70CE83D584EC3D9116025F6",
+  "task_id": "T-P3-central-FD-hull",
+  "source_agent": "Codex",
+  "created_at": "2026-09-07T23:24:51-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_exact_central_fd_derivative_hull_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P3-central-FD-hull-c2c3-dh-evaluator-codex-20260907T2324.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T05:25:51.643542+00:00"
+}
