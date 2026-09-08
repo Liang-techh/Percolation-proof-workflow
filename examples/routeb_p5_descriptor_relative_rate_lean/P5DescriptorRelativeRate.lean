@@ -70,7 +70,9 @@ theorem relative_additive_power_absorption
     mul_le_mul_of_nonneg_right hdiss hRscaled
   have h2 :
       d * mu ^ 2 * (U * R) ≤ D * (mu ^ 2 * R) := by
-    convert h2raw using 1 <;> ring
+    calc
+      d * mu ^ 2 * (U * R) = (d * U) * (mu ^ 2 * R) := by ring
+      _ ≤ D * (mu ^ 2 * R) := h2raw
   have h3 : D * (mu ^ 2 * R) ≤ D * (Krel * V + Kabs) :=
     mul_le_mul_of_nonneg_left hres hD
   have hrelV :
