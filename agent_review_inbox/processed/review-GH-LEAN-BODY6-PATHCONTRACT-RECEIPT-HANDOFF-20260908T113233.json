@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-LEAN-BODY6-PATHCONTRACT-RECEIPT-HANDOFF-20260908T113233.md",
+  "record_kind": "review_result",
+  "review_sha256": "2D148A12DE193C18E9DE2C2DF6597E9F9D375C6298B47910612D99C4A4BACD08",
+  "task_id": "GH-LEAN-BODY6-PATHCONTRACT-RECEIPT",
+  "source_agent": "codex-local",
+  "created_at": "2026-09-08T11:32:33-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_body6_pathcontract_receipt",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "b4f4f35093c375615dfe024cb40bf51ee70a07b1",
+  "review_file": "agent_review_inbox/review-GH-LEAN-BODY6-PATHCONTRACT-RECEIPT-HANDOFF-20260908T113233.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:35:35.361712+00:00"
+}

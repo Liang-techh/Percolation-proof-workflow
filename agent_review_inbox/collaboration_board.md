@@ -3090,3 +3090,16 @@ James 的 Schur lane 交付 exact `Fraction` affine-box helper，分别计算
 “两条 dual projection 可为零而 `D>0`”的负控，防止把 projection 信息误当作
 quadratic defect 界。当前仍无同配置 actual `A,y,b,H` source packet，故仅是
 Schur 数学接口，`registry=0`、formal gate 继续关闭。
+
+### 梁智炜 · revision 817–821：source packet 缺口与 Lean handoff 分层
+
+Schur actual-source follow-up 对 `configuration/Omega`、`X`、`z_A/ahat`、`y=Xz_A`、
+`A,b,H`、`ell/r0`、`u/s/D` 和 gate normalization 做了字段级矩阵，确认现有
+payload 不能合法拼出 helper 输入；尤其同维 `S_metric` 不等于目标 `M0_CC⁻¹`。
+active-V convention fork 则确认 centered `F=W-a` 仅在理想表达式上可满足初始
+上界，raw/shifted/cross 均不满足，实际 active function 身份仍未绑定。
+
+O1 finite-sum 与 BODY6 path contract 均已冻结 GitHub Lean execution packet，分别
+保持 Lean 4.33.1/Mathlib `0df444...` 与 Lean 4.32.0/Mathlib `81a5...` 环境隔离；
+两者都没有执行 receipt，不能由静态 import closure 或 typed contract 关闭 source
+theorem。当前仍 `registry=0`、`formal_certificate_allowed=false`，没有 GitHub push。

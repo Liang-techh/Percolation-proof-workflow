@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 816,
+  "revision": 821,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -8375,6 +8375,21 @@
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART-codex-20260908T112909.md",
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART-source-followup-codex-20260908T113235.md",
+            "record_kind": "review_result",
+            "review_sha256": "346F931B651C544B3EEDF8F529E4BF2F2B8C4920B524DD74CCE94BBF9DCEB25C",
+            "task_id": "GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART",
+            "source_agent": "codex-affine-actual-source-field-audit",
+            "created_at": "2026-09-08T11:32:35-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_signed_affine_defect_chart",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART-source-followup-codex-20260908T113235.md",
+            "admission_label": "pending"
           }
         ],
         "conditional_children": [
@@ -16221,6 +16236,41 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-JOINT6-PHYSICAL-RECOVERY-codex-20260908T112021.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/companion-GH-MATH-P4-ACTIVE-V-CONVENTION-FORK-20260908.md",
+            "record_kind": "companion_log",
+            "review_sha256": "AC7F5F79FEFD0416B3EEDA52D1FC2B9BB8BA6E2DDE01ECE3E5AF12B0B47463BD",
+            "task_id": "GH-MATH-P4-ACTIVE-V-FUNCTION-ENVELOPE",
+            "source_agent": "Godel the 6th",
+            "created_at": "2026-09-08",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_active_v_function_envelope",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "artifact_binding_audit": {
+              "status": "BOUND",
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_active_v_function_envelope\\NEW_CONVENTION_check.py",
+              "declared_sha256": "3D8181CA125ED3925F85467CD7DE793DE3044C329C078AB3810EAF8F441B4337",
+              "actual_sha256": "3D8181CA125ED3925F85467CD7DE793DE3044C329C078AB3810EAF8F441B4337"
+            },
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-CONVENTION-FORK-20260908T173635Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "C622F8083A9C9DA6B48EBFC0BCB13EB10BE077EAF400BF784E6A88DF95639C4A",
+            "task_id": "GH-MATH-P4-ACTIVE-V-FUNCTION-ENVELOPE",
+            "source_agent": "codex-active-v-convention-fork",
+            "created_at": "2026-09-08T17:36:35Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_active_v_function_envelope",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-CONVENTION-FORK-20260908T173635Z.md",
             "admission_label": "pending"
           }
         ]
@@ -39786,6 +39836,26 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-O1-BODY4-FINITE-SUM-WITNESS-20260908.md"
+          },
+          {
+            "record_file": "agent_review_inbox/companion-GH-LEAN-BODY4-FINITE-SUM-RECEIPT-HANDOFF-20260908.md",
+            "record_kind": "companion_log",
+            "review_sha256": "3141B3C1B449B89ADCA8C906CEFD6093566F3178702551C1ED4DE8FC551E4E26",
+            "task_id": "GH-LEAN-BODY4-FINITE-SUM-RECEIPT-HANDOFF",
+            "source_agent": "Sartre the 6th",
+            "created_at": "2026-09-08",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_body4_finite_sum_compile_handoff",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "artifact_binding_audit": {
+              "status": "BOUND",
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_o1_body4_source_gram_proof_attempt\\NEW_FINITE_SUM_20260908_STEP3_TRANSLATION.lean",
+              "declared_sha256": "A7144407F5AA2C5F8BC4F30D2327B39CB22F1A587A0F0A141B5E22605A344B8E",
+              "actual_sha256": "A7144407F5AA2C5F8BC4F30D2327B39CB22F1A587A0F0A141B5E22605A344B8E"
+            },
+            "admission_label": "pending"
           }
         ]
       }
@@ -40237,6 +40307,21 @@
               "actual_sha256": "FF5E2DFBCF0375D96CCE232C739E0098381CE5B1828F7142DAE23AC3E86A68FC"
             },
             "review_file": "agent_review_inbox/review-GH-LEAN-BODY6-PATHCONTRACT-RECEIPT-20260908T110208.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-LEAN-BODY6-PATHCONTRACT-RECEIPT-HANDOFF-20260908T113233.md",
+            "record_kind": "review_result",
+            "review_sha256": "2D148A12DE193C18E9DE2C2DF6597E9F9D375C6298B47910612D99C4A4BACD08",
+            "task_id": "GH-LEAN-BODY6-PATHCONTRACT-RECEIPT",
+            "source_agent": "codex-local",
+            "created_at": "2026-09-08T11:32:33-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_body6_pathcontract_receipt",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "b4f4f35093c375615dfe024cb40bf51ee70a07b1",
+            "review_file": "agent_review_inbox/review-GH-LEAN-BODY6-PATHCONTRACT-RECEIPT-HANDOFF-20260908T113233.md",
             "admission_label": "pending"
           }
         ]
@@ -79267,6 +79352,73 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "1e7b1df1835f4deba06b11a8182f6719"
+    },
+    {
+      "at": "2026-09-08T17:34:25.602100+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART-source-followup-codex-20260908T113235.md",
+      "record_kind": "review_result",
+      "review_sha256": "346F931B651C544B3EEDF8F529E4BF2F2B8C4920B524DD74CCE94BBF9DCEB25C",
+      "task_id": "GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART",
+      "classification": "pending_signed_affine_defect_chart",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e7b1df1835f4deba06b11a8182f6719"
+    },
+    {
+      "at": "2026-09-08T17:35:35.361712+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-LEAN-BODY6-PATHCONTRACT-RECEIPT-HANDOFF-20260908T113233.md",
+      "record_kind": "review_result",
+      "review_sha256": "2D148A12DE193C18E9DE2C2DF6597E9F9D375C6298B47910612D99C4A4BACD08",
+      "task_id": "GH-LEAN-BODY6-PATHCONTRACT-RECEIPT",
+      "classification": "pending_body6_pathcontract_receipt",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1ea06cbee9b54297913156cfb0b201ce"
+    },
+    {
+      "at": "2026-09-08T17:36:33.652943+00:00",
+      "kind": "agent_companion_integrated",
+      "record_file": "agent_review_inbox/companion-GH-MATH-P4-ACTIVE-V-CONVENTION-FORK-20260908.md",
+      "record_kind": "companion_log",
+      "review_sha256": "AC7F5F79FEFD0416B3EEDA52D1FC2B9BB8BA6E2DDE01ECE3E5AF12B0B47463BD",
+      "task_id": "GH-MATH-P4-ACTIVE-V-FUNCTION-ENVELOPE",
+      "classification": "pending_active_v_function_envelope",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "artifact_binding_status": "BOUND",
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T17:37:30.764357+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-CONVENTION-FORK-20260908T173635Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "C622F8083A9C9DA6B48EBFC0BCB13EB10BE077EAF400BF784E6A88DF95639C4A",
+      "task_id": "GH-MATH-P4-ACTIVE-V-FUNCTION-ENVELOPE",
+      "classification": "pending_active_v_function_envelope",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T17:38:02.051371+00:00",
+      "kind": "agent_companion_integrated",
+      "record_file": "agent_review_inbox/companion-GH-LEAN-BODY4-FINITE-SUM-RECEIPT-HANDOFF-20260908.md",
+      "record_kind": "companion_log",
+      "review_sha256": "3141B3C1B449B89ADCA8C906CEFD6093566F3178702551C1ED4DE8FC551E4E26",
+      "task_id": "GH-LEAN-BODY4-FINITE-SUM-RECEIPT-HANDOFF",
+      "classification": "pending_body4_finite_sum_compile_handoff",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "artifact_binding_status": "BOUND",
+      "node_id": "ae18c1e30172442abb689b14be5bf225"
     }
   ],
   "agent_requests": {},
@@ -82923,5 +83075,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "200389feeab278ac47ce30ee89ab5a3005daea3fc65760104aa5454682840a2c"
+  "state_checksum": "ee9e15825b0a51e6eab7de220da60480af89e69e08f3e1af8dd4ec0508b56c3b"
 }

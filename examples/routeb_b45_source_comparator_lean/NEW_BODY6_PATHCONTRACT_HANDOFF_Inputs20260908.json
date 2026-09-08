@@ -1,0 +1,164 @@
+{
+  "schema": "body6-pathcontract-inputs-v1",
+  "source_checkout": "b4f4f35093c375615dfe024cb40bf51ee70a07b1",
+  "target": {
+    "lean": "leanprover/lean4:v4.32.0",
+    "mathlib": "81a5d257c8e410db227a6665ed08f64fea08e997"
+  },
+  "execution": "NOT_RUN",
+  "source_receipt": "MISSING_PHYSICAL_INSTANCE",
+  "modules": [
+    {
+      "module": "NEW_PATHCONTRACT_REASSIGNED_Probe20260908",
+      "path": "examples/routeb_b45_source_comparator_lean/NEW_PATHCONTRACT_REASSIGNED_Probe20260908.lean",
+      "sha256": "78cd395e47fc5edc7e781ba1574562ddcb8fa41135c0c3e8613cdcbfd7e98206",
+      "imports": [
+        "NEW_PATHCONTRACT_REASSIGNED_20260908"
+      ]
+    },
+    {
+      "module": "NEW_PATHCONTRACT_REASSIGNED_20260908",
+      "path": "examples/routeb_b45_source_comparator_lean/NEW_PATHCONTRACT_REASSIGNED_20260908.lean",
+      "sha256": "ff5e2dfbcf0375d96cce232c739e0098381ce5b1828f7142dae23ac3e86a68fc",
+      "imports": [
+        "RouteBO1Body6CanonicalExportTargets"
+      ]
+    },
+    {
+      "module": "RouteBO1Body6CanonicalExportTargets",
+      "path": "examples/routeb_b45_source_comparator_lean/RouteBO1Body6CanonicalExportTargets.lean",
+      "sha256": "24635bd0356e6c9a83b15eb0f616327b547caf9257f8992f99b5fb1b7983ce2c",
+      "imports": [
+        "RouteBO1PerBodyExactSource",
+        "BodyTraceEvaluator"
+      ]
+    },
+    {
+      "module": "RouteBO1PerBodyExactSource",
+      "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyExactSource.lean",
+      "sha256": "c09b84677adef121488b3ceb53e886d0ef0b028c7979d91f8a7f9ba0fbfcd553",
+      "imports": [
+        "SourceBodyMassExtensionalProbe",
+        "SourceContractIndexAdapter",
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "BodyTraceEvaluator",
+      "path": "examples/routeb_b45_source_comparator_lean/BodyTraceEvaluator.lean",
+      "sha256": "b9845d37b5dcd16e1f9e142cb2e4d0e5571452993e843c85ac8cd643f6ba5dea",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "SourceBodyMassExtensionalProbe",
+      "path": "examples/routeb_b45_source_comparator_lean/SourceBodyMassExtensionalProbe.lean",
+      "sha256": "bc2a2136576ac0a726f168492789a24703642d44865c1cce6ae9eef57955f76b",
+      "imports": [
+        "SourceContractAdapter"
+      ]
+    },
+    {
+      "module": "SourceContractIndexAdapter",
+      "path": "examples/routeb_source_contract_index_adapter_lean/SourceContractIndexAdapter.lean",
+      "sha256": "2a18c7b6733af6245f3e5ba6dedd714a9ec7f28fd010122c0258611ce7aac452",
+      "imports": [
+        "SourceContractAdapter"
+      ]
+    },
+    {
+      "module": "SourceContractAdapter",
+      "path": "examples/routeb_source_contract_adapter_lean/SourceContractAdapter.lean",
+      "sha256": "58c0b15b6fceb1064f773acdb9f684dc55a021ac69a030c13e1c8b46f7b9a8dc",
+      "imports": [
+        "FrameSlotAccessor",
+        "BodyContractCore"
+      ]
+    },
+    {
+      "module": "FrameSlotAccessor",
+      "path": "examples/routeb_frame_slot_accessor_lean/FrameSlotAccessor.lean",
+      "sha256": "f497bd1f45fae4dd385f4d0f46df79252c92e5cd027b29d5dc55011f91525c31",
+      "imports": [
+        "FramePrefixIndex"
+      ]
+    },
+    {
+      "module": "BodyContractCore",
+      "path": "examples/routeb_body_contract_core_lean/BodyContractCore.lean",
+      "sha256": "525e564bdbb57976f0c8a119a6e4bf9294d979dbfcc35ca705bf12a7ad95a4db",
+      "imports": [
+        "BodySemanticCore"
+      ]
+    },
+    {
+      "module": "FramePrefixIndex",
+      "path": "examples/routeb_frame_prefix_index_lean/FramePrefixIndex.lean",
+      "sha256": "6a834b585e14286bf2ba1042493955c065b8a1ba2dd82b5b942a09ce9c2181a5",
+      "imports": [
+        "FrameOriginAxis"
+      ]
+    },
+    {
+      "module": "BodySemanticCore",
+      "path": "examples/routeb_body_semantic_core_lean/BodySemanticCore.lean",
+      "sha256": "fe15f6ca9993f55fc56e6d2c9cca5fa8c7f6e9530b9b900a6f111ed96715149c",
+      "imports": [
+        "Mathlib"
+      ]
+    },
+    {
+      "module": "FrameOriginAxis",
+      "path": "examples/routeb_frame_origin_axis_lean/FrameOriginAxis.lean",
+      "sha256": "8f8d3333c9d4ff2e5a4a3cf25fa1c11ba6c6c719b10598f8b0e03162c524ef39",
+      "imports": [
+        "RealDHStep"
+      ]
+    },
+    {
+      "module": "RealDHStep",
+      "path": "examples/routeb_real_dh_step_lean/RealDHStep.lean",
+      "sha256": "9c04da5b9627ee749c53009733006934f95b2d33265e46ca59d0725aa453786a",
+      "imports": [
+        "FrameRecursion"
+      ]
+    },
+    {
+      "module": "FrameRecursion",
+      "path": "examples/routeb_b45_frame_recursion/FrameRecursion.lean",
+      "sha256": "3361f2353b44052e6426e6b41e9f009cf4e5b3c6675a846ab856c1b82616cf10",
+      "imports": [
+        "FourierNormalForm"
+      ]
+    },
+    {
+      "module": "FourierNormalForm",
+      "path": "examples/routeb_b45_fourier_normal_form/FourierNormalForm.lean",
+      "sha256": "56ec2f2d29a22942bcb83a3ba98197ae1ce4d607340072b81c013b8d358d3218",
+      "imports": [
+        "Mathlib"
+      ]
+    }
+  ],
+  "issues": [],
+  "scope": "Static project closure; Mathlib and implicit Lean closure delegated to pinned runner",
+  "project_compile_order": [
+    "FourierNormalForm",
+    "FrameRecursion",
+    "RealDHStep",
+    "FrameOriginAxis",
+    "FramePrefixIndex",
+    "FrameSlotAccessor",
+    "BodySemanticCore",
+    "BodyContractCore",
+    "SourceContractAdapter",
+    "SourceBodyMassExtensionalProbe",
+    "SourceContractIndexAdapter",
+    "RouteBO1PerBodyExactSource",
+    "BodyTraceEvaluator",
+    "RouteBO1Body6CanonicalExportTargets",
+    "NEW_PATHCONTRACT_REASSIGNED_20260908",
+    "NEW_PATHCONTRACT_REASSIGNED_Probe20260908"
+  ]
+}

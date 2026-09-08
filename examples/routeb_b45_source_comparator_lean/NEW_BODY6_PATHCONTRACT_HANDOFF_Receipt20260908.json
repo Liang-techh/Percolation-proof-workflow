@@ -1,0 +1,75 @@
+{
+  "schema": "body6-pathcontract-receipt-v1",
+  "task_id": "GH-LEAN-BODY6-PATHCONTRACT-RECEIPT",
+  "proof_status": "OPEN_UNCOMPILED",
+  "executed": false,
+  "admission": "pending",
+  "execution": {
+    "repository": null,
+    "checkout_sha": null,
+    "overlay_sha256": null,
+    "workflow_sha": null,
+    "actions_shas": [],
+    "run_url": null,
+    "job": null,
+    "attempt": null,
+    "runner": null,
+    "started_at": null,
+    "finished_at": null
+  },
+  "pins": {
+    "expected_lean": "leanprover/lean4:v4.32.0",
+    "expected_mathlib": "81a5d257c8e410db227a6665ed08f64fea08e997",
+    "actual_lean_version": null,
+    "actual_mathlib_revision": null,
+    "lock_hashes": []
+  },
+  "imports": {
+    "project_manifest_sha256": null,
+    "actual_closure_manifest_sha256": null,
+    "static_compiler_reconciled": false,
+    "overrides": [],
+    "cache_identity": null
+  },
+  "compile": {
+    "status": "NOT_RUN",
+    "commands": [],
+    "fresh_olean_artifacts": []
+  },
+  "audit": {
+    "status": "NOT_RUN",
+    "declaration_types": [],
+    "axiom_outputs": [],
+    "sorry_scan_artifacts": [],
+    "approved_axioms": null
+  },
+  "comparator": {
+    "status": "MISSING",
+    "tool": null,
+    "tool_sha256": null,
+    "statement_map": [],
+    "command": null,
+    "cwd": null,
+    "exit_code": null,
+    "log_artifacts": [],
+    "acceptance_output": null
+  },
+  "physical_instance": {
+    "status": "MISSING",
+    "parameters_manifest": null,
+    "projection_witness": null,
+    "inclusion_witness": null,
+    "physicalIdentity_witness": null,
+    "sourceIdentity_witness": null,
+    "canonicalCap_witness": null,
+    "raw_provenance_receipt": null
+  },
+  "failure": {
+    "classification": null,
+    "details": null
+  },
+  "registry_mutated": false,
+  "verified": false,
+  "receipt_sha256": null,
+  "self_hash_rule": null
+}

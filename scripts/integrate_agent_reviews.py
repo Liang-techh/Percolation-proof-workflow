@@ -290,6 +290,9 @@ TASK_TARGETS = {
     "GH-MATH-P4-O1-BODY4-FINITE-SUM-WITNESS": (
         "P4.O1.source_comparator.h_body_4.source_gram_targets",
         "pending_body4_finite_sum_source_witness"),
+    "GH-LEAN-BODY4-FINITE-SUM-RECEIPT-HANDOFF": (
+        "P4.O1.source_comparator.h_body_4.source_gram_targets",
+        "pending_body4_finite_sum_compile_handoff"),
     "GH-MATH-P4-ACTIVE-V-FUNCTION-ENVELOPE": (
         "P4.true_dh_port_source_binding",
         "pending_active_v_function_envelope"),

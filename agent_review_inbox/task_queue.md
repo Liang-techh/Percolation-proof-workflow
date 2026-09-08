@@ -3807,3 +3807,9 @@ occurrence line/hash、synthetic evaluator 或 Float64 摘要代替语义证明�
 Schur helper 已收割为 pending。下一次只寻找同配置 actual `A,y,b,H` 与 box/domain
 绑定，消费 `u/s/D` 三个分离输出；不得从 `u,s` 反推 `D`，不得把 synthetic
 Fraction self-test 当成 source/runtime evidence。
+
+下一次收割优先级：GitHub Lean agent 执行 O1 finite-sum、BODY6 path-contract 与
+FLT quotient CLM 三个隔离 packet；数学 agent 继续只寻找 active-V 的实际函数身份、
+Schur 的 `y=Xz_A/d=A y+b` 同源 source witness，以及 joint6 actual residual。
+不同 Lean pin 不得混用；所有成功仍只进入 compiled-candidate/external-pending，
+不得自动 promotion。

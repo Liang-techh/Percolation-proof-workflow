@@ -1,0 +1,204 @@
+{
+  "schema": "routeb.body4.finite_sum.compile_handoff.v1",
+  "task_id": "GH-LEAN-BODY4-FINITE-SUM-RECEIPT-HANDOFF",
+  "status": "NOT_RUN",
+  "admission": "pending",
+  "repo_head_observed": "b4f4f35093c375615dfe024cb40bf51ee70a07b1",
+  "pin": {
+    "lean_toolchain": "leanprover/lean4:v4.33.1",
+    "lean_commit": "819816b2e0a3bf405af45ae5c7af2491d8f5bee6",
+    "mathlib_repository": "https://github.com/leanprover-community/mathlib4.git",
+    "mathlib_commit": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "policy": "Verify mathlib lean-toolchain agrees before building; fail on mismatch. Resolve all external imports through this checkout and its committed lake-manifest.json, not local_fkg or historical oleans. Record lockfile bytes/hash and resolved transitive package revisions in the run receipt."
+  },
+  "repo_modules_topological": [
+    {
+      "module": "FourierNormalForm",
+      "path": "examples/routeb_b45_fourier_normal_form/FourierNormalForm.lean",
+      "imports": [
+        "Mathlib"
+      ],
+      "sha256": "56EC2F2D29A22942BCB83A3BA98197AE1CE4D607340072B81C013B8D358D3218"
+    },
+    {
+      "module": "FrameRecursion",
+      "path": "examples/routeb_b45_frame_recursion/FrameRecursion.lean",
+      "imports": [
+        "FourierNormalForm"
+      ],
+      "sha256": "3361F2353B44052E6426E6B41E9F009CF4E5B3C6675A846AB856C1B82616CF10"
+    },
+    {
+      "module": "RealDHStep",
+      "path": "examples/routeb_real_dh_step_lean/RealDHStep.lean",
+      "imports": [
+        "FrameRecursion"
+      ],
+      "sha256": "9C04DA5B9627EE749C53009733006934F95B2D33265E46CA59D0725AA453786A"
+    },
+    {
+      "module": "FrameOriginAxis",
+      "path": "examples/routeb_frame_origin_axis_lean/FrameOriginAxis.lean",
+      "imports": [
+        "RealDHStep"
+      ],
+      "sha256": "8F8D3333C9D4FF2E5A4A3CF25FA1C11BA6C6C719B10598F8B0E03162C524EF39"
+    },
+    {
+      "module": "FramePrefixIndex",
+      "path": "examples/routeb_frame_prefix_index_lean/FramePrefixIndex.lean",
+      "imports": [
+        "FrameOriginAxis"
+      ],
+      "sha256": "6A834B585E14286BF2BA1042493955C065B8A1BA2DD82B5B942A09CE9C2181A5"
+    },
+    {
+      "module": "FrameSlotAccessor",
+      "path": "examples/routeb_frame_slot_accessor_lean/FrameSlotAccessor.lean",
+      "imports": [
+        "FramePrefixIndex"
+      ],
+      "sha256": "F497BD1F45FAE4DD385F4D0F46DF79252C92E5CD027B29D5DC55011F91525C31"
+    },
+    {
+      "module": "BodySemanticCore",
+      "path": "examples/routeb_body_semantic_core_lean/BodySemanticCore.lean",
+      "imports": [
+        "Mathlib"
+      ],
+      "sha256": "FE15F6CA9993F55FC56E6D2C9CCA5FA8C7F6E9530B9B900A6F111ED96715149C"
+    },
+    {
+      "module": "BodyContractCore",
+      "path": "examples/routeb_body_contract_core_lean/BodyContractCore.lean",
+      "imports": [
+        "BodySemanticCore"
+      ],
+      "sha256": "525E564BDBB57976F0C8A119A6E4BF9294D979DBFCC35CA705BF12A7AD95A4DB"
+    },
+    {
+      "module": "SourceContractAdapter",
+      "path": "examples/routeb_source_contract_adapter_lean/SourceContractAdapter.lean",
+      "imports": [
+        "FrameSlotAccessor",
+        "BodyContractCore"
+      ],
+      "sha256": "58C0B15B6FCEB1064F773ACDB9F684DC55A021AC69A030C13E1C8B46F7B9A8DC"
+    },
+    {
+      "module": "SourceBodyMassExtensionalProbe",
+      "path": "examples/routeb_b45_source_comparator_lean/SourceBodyMassExtensionalProbe.lean",
+      "imports": [
+        "SourceContractAdapter"
+      ],
+      "sha256": "BC2A2136576AC0A726F168492789A24703642D44865C1CCE6AE9EEF57955F76B"
+    },
+    {
+      "module": "SourceContractIndexAdapter",
+      "path": "examples/routeb_source_contract_index_adapter_lean/SourceContractIndexAdapter.lean",
+      "imports": [
+        "SourceContractAdapter"
+      ],
+      "sha256": "2A18C7B6733AF6245F3E5BA6DEDD714A9EC7F28FD010122C0258611CE7AAC452"
+    },
+    {
+      "module": "RouteBO1PerBodyExactSource",
+      "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyExactSource.lean",
+      "imports": [
+        "SourceBodyMassExtensionalProbe",
+        "SourceContractIndexAdapter",
+        "Mathlib"
+      ],
+      "sha256": "C09B84677ADEF121488B3CEB53E886D0EF0B028C7979D91F8A7F9BA0FBFCD553"
+    },
+    {
+      "module": "BodyTraceEvaluator",
+      "path": "examples/routeb_b45_source_comparator_lean/BodyTraceEvaluator.lean",
+      "imports": [
+        "Mathlib"
+      ],
+      "sha256": "B9845D37B5DCD16E1F9E142CB2E4D0E5571452993E843C85AC8CD643F6BA5DEA"
+    },
+    {
+      "module": "RouteBO1PerBodyTraceAdapter",
+      "path": "examples/routeb_b45_source_comparator_lean/RouteBO1PerBodyTraceAdapter.lean",
+      "imports": [
+        "RouteBO1PerBodyExactSource",
+        "BodyTraceEvaluator"
+      ],
+      "sha256": "6B50AE63C9770E3481F79511141C8CC55D592B5C550F686654C5E756584399EF"
+    },
+    {
+      "module": "RouteBO1Body4SourceGramTargets",
+      "path": "examples/routeb_b45_source_comparator_lean/RouteBO1Body4SourceGramTargets.lean",
+      "imports": [
+        "RouteBO1PerBodyTraceAdapter",
+        "SourceContractIndexAdapter"
+      ],
+      "sha256": "2D0D2794EDFE745D63A2970C36B53765F3B4BD747480107B1EAB51CF2E2C3CA9"
+    },
+    {
+      "module": "NEW_FINITE_SUM_20260908_STEP3_TRANSLATION",
+      "path": "examples/routeb_o1_body4_source_gram_proof_attempt/NEW_FINITE_SUM_20260908_STEP3_TRANSLATION.lean",
+      "imports": [
+        "RouteBO1Body4SourceGramTargets"
+      ],
+      "sha256": "A7144407F5AA2C5F8BC4F30D2327B39CB22F1A587A0F0A141B5E22605A344B8E"
+    }
+  ],
+  "external_import_roots": [
+    "Mathlib"
+  ],
+  "external_closure_policy": "Repository source imports enumerated completely by static import-line traversal. Mathlib and Lean core closure is identified by pinned commits and committed package lock, not enumerated or kernel-verified here. Receipt must inventory external source revisions/build roots and reject dirty/mismatched caches.",
+  "snapshots": [
+    {
+      "path": "artifacts/task_routeb_body_trace_sink_current/source_snapshot/routeB_fourier_rational_probe.py",
+      "sha256": "9460181770E47BE0ECBDE43A8A29EF285DA1168C3121FAB18D5378C671401A7B"
+    },
+    {
+      "path": "artifacts/task_routeb_body_trace_sink_current/source_snapshot/dhport_lib.jl",
+      "sha256": "AEBE6DB09B2D943448C5D701631109DBA8F5EEB070CC66593E5DBACA26485936"
+    },
+    {
+      "path": "artifacts/task_routeb_body_trace_sink_current/source_snapshot/routeB_fourier_mass_full_rational.csv",
+      "sha256": "A986A208B62F585C6CA1B9C81B958710D2043E5BF786DDC930A6FA29F7A232B8"
+    }
+  ],
+  "source_key": "routeb-exact-fourier-mass:a986a208b62f585c6ca1b9c81b958710d2043e5bf786ddc930a6fa29f7a232b8|mu=1/1000000|contract=exp(i*nu*q)",
+  "required_theorems": [
+    "RouteBO1Body4FiniteSum20260908.step3_column",
+    "RouteBO1Body4FiniteSum20260908.slot4_product",
+    "RouteBO1Body4FiniteSum20260908.product_column_four_terms",
+    "RouteBO1Body4FiniteSum20260908.source_row_four_terms",
+    "RouteBO1Body4FiniteSum20260908.source_row_translation",
+    "RouteBO1Body4FiniteSum20260908.spatial_translation_fields",
+    "RouteBO1Body4FiniteSum20260908.slot4_translation_attempt"
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "failure_statuses": [
+    "NOT_RUN",
+    "INPUT_HASH_MISMATCH",
+    "ENV_PIN_MISMATCH",
+    "EXTERNAL_DEPENDENCY_UNAVAILABLE",
+    "IMPORT_CLOSURE_MISMATCH",
+    "SOURCE_RESTRICTION_FLAG",
+    "DEPENDENCY_COMPILE_FAILED",
+    "CANDIDATE_COMPILE_FAILED",
+    "TIMEOUT",
+    "RESOURCE_FAILURE",
+    "AXIOM_AUDIT_FAILED",
+    "RECEIPT_INCOMPLETE",
+    "COMPILED_CANDIDATE_PENDING_REVIEW"
+  ],
+  "scope_exclusions": [
+    "FRAME_HANDOFF closure",
+    "PrefixColumnsTarget",
+    "source Gram/mass/trace",
+    "Julia Float64 refinement",
+    "registry admission"
+  ]
+}

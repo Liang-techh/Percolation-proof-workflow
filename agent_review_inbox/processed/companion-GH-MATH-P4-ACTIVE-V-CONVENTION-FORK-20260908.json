@@ -1,0 +1,21 @@
+{
+  "record_file": "agent_review_inbox/companion-GH-MATH-P4-ACTIVE-V-CONVENTION-FORK-20260908.md",
+  "record_kind": "companion_log",
+  "review_sha256": "AC7F5F79FEFD0416B3EEDA52D1FC2B9BB8BA6E2DDE01ECE3E5AF12B0B47463BD",
+  "task_id": "GH-MATH-P4-ACTIVE-V-FUNCTION-ENVELOPE",
+  "source_agent": "Godel the 6th",
+  "created_at": "2026-09-08",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_active_v_function_envelope",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "artifact_binding_audit": {
+    "status": "BOUND",
+    "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_active_v_function_envelope\\NEW_CONVENTION_check.py",
+    "declared_sha256": "3D8181CA125ED3925F85467CD7DE793DE3044C329C078AB3810EAF8F441B4337",
+    "actual_sha256": "3D8181CA125ED3925F85467CD7DE793DE3044C329C078AB3810EAF8F441B4337"
+  },
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:36:33.652943+00:00"
+}

@@ -1,0 +1,21 @@
+{
+  "record_file": "agent_review_inbox/companion-GH-LEAN-BODY4-FINITE-SUM-RECEIPT-HANDOFF-20260908.md",
+  "record_kind": "companion_log",
+  "review_sha256": "3141B3C1B449B89ADCA8C906CEFD6093566F3178702551C1ED4DE8FC551E4E26",
+  "task_id": "GH-LEAN-BODY4-FINITE-SUM-RECEIPT-HANDOFF",
+  "source_agent": "Sartre the 6th",
+  "created_at": "2026-09-08",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_body4_finite_sum_compile_handoff",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "artifact_binding_audit": {
+    "status": "BOUND",
+    "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_o1_body4_source_gram_proof_attempt\\NEW_FINITE_SUM_20260908_STEP3_TRANSLATION.lean",
+    "declared_sha256": "A7144407F5AA2C5F8BC4F30D2327B39CB22F1A587A0F0A141B5E22605A344B8E",
+    "actual_sha256": "A7144407F5AA2C5F8BC4F30D2327B39CB22F1A587A0F0A141B5E22605A344B8E"
+  },
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:38:02.051371+00:00"
+}
