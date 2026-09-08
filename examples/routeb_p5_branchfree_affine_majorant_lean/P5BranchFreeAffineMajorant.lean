@@ -47,7 +47,7 @@ theorem sym2_scaled_qf_nonneg_of_trace_det4
     subst m
     have hc : 0 ≤ c := by
       simpa using htrace
-    exact mul_nonneg hc (sq_nonneg y)
+    simpa using (mul_nonneg hc (sq_nonneg y))
   · rcases le_or_gt a 0 with ha_nonpos | ha_pos
     · have ha_neg : a < 0 := lt_of_le_of_ne ha_nonpos ha0
       have hac : 0 ≤ a * c := by
