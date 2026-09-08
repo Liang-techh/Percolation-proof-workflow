@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 780,
+  "revision": 781,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -15535,6 +15535,36 @@
             "target_scope": "routeb_node",
             "source_commit": "6509984f9a045c441df64e088b704ee341a1316d",
             "review_file": "agent_review_inbox/review-GH-LEAN-P4-Q6-GRAPH-EXCLUSION-REPAIR-LOCAL-codex-20260908T093620.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-ADJUGATE-PROJECTION-PACKET-LOCAL-20260908T094933.md",
+            "record_kind": "review_result",
+            "review_sha256": "E24FB3089FF58F460C7C4142D1A67873F4BA273EBF96754DA42F1E0C3390C1AC",
+            "task_id": "GH-MATH-P4-ADJUGATE-PROJECTION-PACKET",
+            "source_agent": "Codex-independent-adjugate-packet-lane",
+            "created_at": "2026-09-08T09:49:33-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_adjugate_projection_packet",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "9ac591a4222f2d41f8bdf689c8f7bf202f32d7bf",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-ADJUGATE-PROJECTION-PACKET-LOCAL-20260908T094933.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-TARGET-CAPS-LOCAL-20260908T094956.md",
+            "record_kind": "review_result",
+            "review_sha256": "D087597BE156CE60427A4E9E0BCF7DA450075DDEAD99780049F088B477342ABD",
+            "task_id": "GH-MATH-P4-TARGET-CAPS",
+            "source_agent": "codex-local",
+            "created_at": "2026-09-08T09:49:56-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_target_cell_coordinate_caps",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "a370eff67b6d694a7387525a3a53ea94c85bd582",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-TARGET-CAPS-LOCAL-20260908T094956.md",
             "admission_label": "pending"
           }
         ]
@@ -77675,6 +77705,32 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "f69865077c2e49e1aab82a291233f0e9"
+    },
+    {
+      "at": "2026-09-08T15:52:24.671285+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-ADJUGATE-PROJECTION-PACKET-LOCAL-20260908T094933.md",
+      "record_kind": "review_result",
+      "review_sha256": "E24FB3089FF58F460C7C4142D1A67873F4BA273EBF96754DA42F1E0C3390C1AC",
+      "task_id": "GH-MATH-P4-ADJUGATE-PROJECTION-PACKET",
+      "classification": "pending_adjugate_projection_packet",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T15:52:24.671650+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-TARGET-CAPS-LOCAL-20260908T094956.md",
+      "record_kind": "review_result",
+      "review_sha256": "D087597BE156CE60427A4E9E0BCF7DA450075DDEAD99780049F088B477342ABD",
+      "task_id": "GH-MATH-P4-TARGET-CAPS",
+      "classification": "pending_target_cell_coordinate_caps",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -81331,5 +81387,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "cff888515ef8e7a88123f93e3aa5339e68a33ba5e2a20abdaa02b58a288dcfeb"
+  "state_checksum": "9920b14d265038c6b527ba575f5bfb976d0cc7b9bf3543b2d2deefba2f5ecb3b"
 }
