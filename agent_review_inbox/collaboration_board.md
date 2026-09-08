@@ -2753,3 +2753,11 @@ source 仍缺三行 balance 和 observable witness，故只登记 pending interf
 
 下一条 source-critical lane 已派发给古月方源：只寻找一个真实 full-state cell
 的三行 balance 与完整 packet；若仍不存在则逐项记录缺失证据，不重复维度审计。
+
+### 梁智炜 · revision 786：actual three-row witness
+
+已定位一个真实 full-state analytic slab `half_active_vanis2`，但未找到同源的
+实际 DH rows 4/5/6、FD/solve defect、principal-restriction determinant/signed
+numerator 或 observable/units binding。factorized source 的 joint-6 damping 还与
+`dhport_lib.jl` 不一致。域存在性已不再是主要阻塞，source semantics 与 row
+equation witness 成为下一阶段唯一主瓶颈。

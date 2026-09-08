@@ -3503,3 +3503,10 @@ numerator、observable/units 和 actual defect。若缺任一项，保留 obstru
 
 这是 revision 785 的唯一 source-critical follow-up；不接受只含 nominal row、
 单点 CSV、三维 port norm 或未绑定 observable 的替代物。
+
+## 2026-09-08 — post-revision-786 source-semantics handoff
+
+下一轮不再搜索新的 domain box。只推进 `half_active_vanis2` 上的实际 source
+semantics：固定 `M*a=F+e`、rows 4/5（及必要的 row 6）、effective RHS、同一
+det/numerator/observable 以及 FD/solve defect。若因 controller mismatch 或
+缺少 runtime/source refinement 无法闭合，原样保留 exact obstruction。
