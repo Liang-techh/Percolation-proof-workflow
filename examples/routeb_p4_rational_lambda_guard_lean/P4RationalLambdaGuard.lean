@@ -60,7 +60,7 @@ theorem young_feasible_of_rational_radius
       4 * A * (A * theta^2 - G * theta + P) ≤ 0 := by
     rw [young_completed_square_identity]
     nlinarith [htheta_nonneg, hradius_sq]
-  nlinarith [hscale, htheta_nonneg, hradius_sq]
+  nlinarith [hscale, htheta_nonneg, hradius, hradius_sq]
 
 /-- The inner rational interval, written without endpoint divisions. -/
 theorem young_inner_interval_feasible

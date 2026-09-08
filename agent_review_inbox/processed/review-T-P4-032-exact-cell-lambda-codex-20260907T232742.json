@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-032-exact-cell-lambda-codex-20260907T232742.md",
+  "record_kind": "review_result",
+  "review_sha256": "63ECE098FEBF0E69FCA7314B09B3835A87D25EFD92F06078B5B88CDEDF3B5AF3",
+  "task_id": "T-P4-032",
+  "source_agent": "Codex-P4-math-lane",
+  "created_at": "2026-09-07T23:27:42-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_typed_block_source_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "be2fe41ccfd46f6361dd2f58adaa367ea9351029",
+  "review_file": "agent_review_inbox/review-T-P4-032-exact-cell-lambda-codex-20260907T232742.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T05:29:43.792550+00:00"
+}
