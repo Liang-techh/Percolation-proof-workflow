@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-TARGET-CAPS-codex-20260908T083041.md",
+  "record_kind": "review_result",
+  "review_sha256": "8634A24E026C159794EA5FC92C23DD76DC25C39EB3F5AFD389181A5022E6A485",
+  "task_id": "GH-MATH-P4-TARGET-CAPS",
+  "source_agent": "Codex-P4-math-lane",
+  "created_at": "2026-09-08T08:30:41-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_target_cell_coordinate_caps",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "82b257d62178940d024708570dc66f6e953919ae",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-TARGET-CAPS-codex-20260908T083041.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T14:32:34.246655+00:00"
+}

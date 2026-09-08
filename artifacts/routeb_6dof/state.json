@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 760,
+  "revision": 761,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -15177,6 +15177,21 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-MIXED-ADJUGATE-REASSIGNED-codex-20260908T0830.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-TARGET-CAPS-codex-20260908T083041.md",
+            "record_kind": "review_result",
+            "review_sha256": "8634A24E026C159794EA5FC92C23DD76DC25C39EB3F5AFD389181A5022E6A485",
+            "task_id": "GH-MATH-P4-TARGET-CAPS",
+            "source_agent": "Codex-P4-math-lane",
+            "created_at": "2026-09-08T08:30:41-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_target_cell_coordinate_caps",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "82b257d62178940d024708570dc66f6e953919ae",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-TARGET-CAPS-codex-20260908T083041.md",
             "admission_label": "pending"
           }
         ]
@@ -38995,6 +39010,21 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-path-contract-20260908T142518Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MIXED-BODY6-PATH-REASSIGNED-20260908T143002Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "2F07BAEAEF4B1ADCC13FB50A52865B9DB4BFBBCEC4FF20D85351C1CAC170AF7B",
+            "task_id": "GH-MIXED-BODY6-PATH-REASSIGNED",
+            "source_agent": "codex-body6-reassigned-path-lane",
+            "created_at": "2026-09-08T14:30:02Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_reassigned_body6_path_review",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MIXED-BODY6-PATH-REASSIGNED-20260908T143002Z.md",
             "admission_label": "pending"
           }
         ]
@@ -76834,6 +76864,32 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T14:32:34.246655+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-TARGET-CAPS-codex-20260908T083041.md",
+      "record_kind": "review_result",
+      "review_sha256": "8634A24E026C159794EA5FC92C23DD76DC25C39EB3F5AFD389181A5022E6A485",
+      "task_id": "GH-MATH-P4-TARGET-CAPS",
+      "classification": "pending_target_cell_coordinate_caps",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T14:32:34.247077+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MIXED-BODY6-PATH-REASSIGNED-20260908T143002Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "2F07BAEAEF4B1ADCC13FB50A52865B9DB4BFBBCEC4FF20D85351C1CAC170AF7B",
+      "task_id": "GH-MIXED-BODY6-PATH-REASSIGNED",
+      "classification": "pending_reassigned_body6_path_review",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1ea06cbee9b54297913156cfb0b201ce"
     }
   ],
   "agent_requests": {},
@@ -80490,5 +80546,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "4790a6f6377563c2cb67da7968911321966419f3f006981296f99d950da5060a"
+  "state_checksum": "c89edd046f527e4b2b29f05dbdb75749f8892b13021400c5e7c4f617ab47c5e7"
 }
