@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-Q6-RAY-SOURCE-BINDING-20260908T152743Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "8E1DB4CD3A3984C0E9E6B66AE456198F269329A1D6E345DCE865864A197A0769",
+  "task_id": "GH-MATH-P4-DIRECT-BLOCK456-Q6-RAY-SOURCE-BINDING",
+  "source_agent": "codex-q6-ray-source-runtime-contract",
+  "created_at": "2026-09-08T15:27:43Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_direct_block456_q6_ray_source_binding",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-Q6-RAY-SOURCE-BINDING-20260908T152743Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T15:30:31.186274+00:00"
+}

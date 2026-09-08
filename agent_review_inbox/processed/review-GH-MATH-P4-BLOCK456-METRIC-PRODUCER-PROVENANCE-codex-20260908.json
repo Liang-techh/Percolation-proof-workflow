@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-BLOCK456-METRIC-PRODUCER-PROVENANCE-codex-20260908.md",
+  "record_kind": "review_result",
+  "review_sha256": "938036F5B8F2EEFF7DCCDB7D897D8B4D471E4A740125AA04BC861C38C1A2CFF9",
+  "task_id": "GH-MATH-P4-BLOCK456-METRIC-PRODUCER-PROVENANCE",
+  "source_agent": "codex-producer-provenance-lane",
+  "created_at": "2026-09-08T09:27:11-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_block456_metric_producer_provenance",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "ce3e6e614de2ea6f5276b9bb4803fba6c411e51a",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-BLOCK456-METRIC-PRODUCER-PROVENANCE-codex-20260908.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T15:30:31.185423+00:00"
+}

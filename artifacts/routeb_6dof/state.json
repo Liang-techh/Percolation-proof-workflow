@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 775,
+  "revision": 776,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -15475,6 +15475,36 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-Q6-RAY-GRAPH-EXCLUSION-20260908T152042Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-BLOCK456-METRIC-PRODUCER-PROVENANCE-codex-20260908.md",
+            "record_kind": "review_result",
+            "review_sha256": "938036F5B8F2EEFF7DCCDB7D897D8B4D471E4A740125AA04BC861C38C1A2CFF9",
+            "task_id": "GH-MATH-P4-BLOCK456-METRIC-PRODUCER-PROVENANCE",
+            "source_agent": "codex-producer-provenance-lane",
+            "created_at": "2026-09-08T09:27:11-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_block456_metric_producer_provenance",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "ce3e6e614de2ea6f5276b9bb4803fba6c411e51a",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-BLOCK456-METRIC-PRODUCER-PROVENANCE-codex-20260908.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-Q6-RAY-SOURCE-BINDING-20260908T152743Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "8E1DB4CD3A3984C0E9E6B66AE456198F269329A1D6E345DCE865864A197A0769",
+            "task_id": "GH-MATH-P4-DIRECT-BLOCK456-Q6-RAY-SOURCE-BINDING",
+            "source_agent": "codex-q6-ray-source-runtime-contract",
+            "created_at": "2026-09-08T15:27:43Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_direct_block456_q6_ray_source_binding",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-Q6-RAY-SOURCE-BINDING-20260908T152743Z.md",
             "admission_label": "pending"
           }
         ]
@@ -77476,6 +77506,32 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T15:30:31.185423+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-BLOCK456-METRIC-PRODUCER-PROVENANCE-codex-20260908.md",
+      "record_kind": "review_result",
+      "review_sha256": "938036F5B8F2EEFF7DCCDB7D897D8B4D471E4A740125AA04BC861C38C1A2CFF9",
+      "task_id": "GH-MATH-P4-BLOCK456-METRIC-PRODUCER-PROVENANCE",
+      "classification": "pending_block456_metric_producer_provenance",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T15:30:31.186274+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-Q6-RAY-SOURCE-BINDING-20260908T152743Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "8E1DB4CD3A3984C0E9E6B66AE456198F269329A1D6E345DCE865864A197A0769",
+      "task_id": "GH-MATH-P4-DIRECT-BLOCK456-Q6-RAY-SOURCE-BINDING",
+      "classification": "pending_direct_block456_q6_ray_source_binding",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -81132,5 +81188,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "8fc7d67b25fe1f58297b5e484fe077889963ed20ca1975d70f6c3e1be6dd368d"
+  "state_checksum": "535cd0f00959f9d56e98bf89a72d5364beefca29cf63389431b0dcbdfd2251dc"
 }
