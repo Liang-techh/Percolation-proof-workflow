@@ -52,13 +52,13 @@ theorem transfer_inputs_to_algebraic_path_contract {X C : Type*}
   refine ⟨le_rfl, ?_, ?_, ?_⟩
   · intro t ht
     have hs := h.sourceCap t ht
-    dsimp
+    change F t (path t) ≤ F 0 (path 0) + (cap - F 0 (path 0))
     linarith
   · intro t ht
     exact h.value t ht (path t) (h.projection t ht (path t) (h.wholePath t ht))
   · intro t ht
     have hb := h.budget
-    dsimp
+    change (F 0 (path 0) + (cap - F 0 (path 0))) + B ≤ bar
     linarith
 
 /- A pointwise budget itself gives the uniform source cap bar-B. What
