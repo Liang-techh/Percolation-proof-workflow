@@ -2968,3 +2968,10 @@ registry=0、formal certificate gate 关闭。
 
 下一轮把 source/refinement 分成 affine defect chart 与 vanis2 runtime packet 两条
 主线，Poincare/Godel 分别维护已有 Lean path 与 value-level envelope 边界。
+
+### 梁智炜 · revision 804 auxiliary bottleneck dispatch
+
+Sartre 与 Poincare 继续处理 affine defect chart 和 BODY6 pinned contract；Godel
+接手 active initial value-level envelope，James 接手 joint6 exact defect/elimination。
+这两个新增 lane 只消费现有 obstruction，不重做 origin/Hessian、rank 或 Young
+推导，且不改变 `registry=0` 与 `formal_certificate_allowed=false`。

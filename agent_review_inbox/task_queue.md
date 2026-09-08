@@ -3660,6 +3660,19 @@ configuration 和运行证据时必须保持 pending，Lean/registry gate 不变
 未交付的 source、domain、configuration 和 runtime evidence 不得由 theorem seam
 自动补齐；不做全量回归或本机 Lean。
 
+## 2026-09-08 — post-revision-804 auxiliary bottleneck dispatch
+
+Godel 与 James 完成上一轮后，本轮补充两个未关闭的数学叶；Sartre/Poincare 的
+source/refinement lane 继续独立运行：
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-MATH-P4-ACTIVE-INITIAL-BOUND-BINDING` | Godel the 6th | 同一 V/X0/参数下的 value-level initial envelope，或精确缺口 |
+| `GH-MATH-P4-JOINT6-DEFECT-ELIMINATION` | James the 6th | 保留 joint6 coupling 的 exact defect/elimination interface，或 actual source obstruction |
+
+两条新 lane 不得重复 origin/Hessian 或 rank/Young 审计；没有同源 source、实际
+residual、domain 和 configuration 证据时保持 pending。
+
 ## 2026-09-08 — post-revision-804 source/refinement split
 
 revision 804 将主瓶颈收缩为两个互不重复的 source/refinement 方向：
