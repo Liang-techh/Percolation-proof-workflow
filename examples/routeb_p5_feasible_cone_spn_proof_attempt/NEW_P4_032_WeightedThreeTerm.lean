@@ -32,7 +32,6 @@ theorem reciprocal_iff_polynomial (lu lD lB : ℝ)
   have hclear : (1 / lu + 1 / lD + 1 / lB) * (lu * lD * lB) =
       lD * lB + lu * lB + lu * lD := by
     field_simp [ne_of_gt hu, ne_of_gt hD, ne_of_gt hB]
-    <;> ring
   constructor
   · intro h
     have hm := mul_le_mul_of_nonneg_right h hp.le
