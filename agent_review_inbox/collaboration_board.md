@@ -2722,3 +2722,10 @@ projected numerator、observable binding 与 source provenance；target-caps rev
 `|A z|+D`。Schur closure review 给出联合阈值
 `beta >= L+2c+max(E_A,t+Q)`，并区分 direct-margin 与旧 absorption 两条路线。
 这些结果均为 pending mathematics；registry 仍为 0，formal gate 仍关闭。
+
+### 梁智炜 · revision 782 后续
+
+已将联合阈值分成两个正交推进方向：Lean lane 负责 source-independent scalar
+theorem 的最小拆解，数学 lane 负责寻找实际同源 cell packet。前者成功也只会
+形成 compiled candidate，后者若找不到完整 row/det/numerator/observable/H/defect
+见证则保留 obstruction；两者都不能单独关闭 P4/M4。

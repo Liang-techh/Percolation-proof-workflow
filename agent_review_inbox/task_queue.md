@@ -206,6 +206,16 @@ residual defect、`ell`/observable 和 beta allocation。若拿不到该 packet�
 应提交缺失 witness 或 graph-exclusion obstruction；不得继续重复 source-independent
 Cramer、Young 或 box 半径算术。Lean lane 只消费已有抽象候选并返回 pinned receipt。
 
+## 2026-09-08 — joint-threshold formalization and actual-cell search
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-LEAN-P4-SCHUR-JOINT-THRESHOLD` | 苏梦辰 / local Lean-prep lane | 将 revision-782 联合阈值拆成最小 Real/平方 theorem；只交候选与 review，待 GitHub pinned compile |
+| `GH-MATH-P4-ACTUAL-CELL-PACKET` | 古月方源 / local source lane | 搜索同一 cell 的 row/det/numerator/observable/H/actual-defect packet；缺失则交 obstruction |
+
+这两项消费 revision 782 的新结果，不重复既有反例；均不得改变 registry 或
+formal gate，也不得把抽象联合阈值当成真实 DH 证书。
+
 ### 2026-09-08 — generic Schur allocation follow-up
 
 本地数学推进新增任意有限维 Euclidean Schur allocation sidecar，用于统一
