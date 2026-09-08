@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 841,
+  "revision": 842,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -80944,6 +80944,19 @@
       "formal_certificate_allowed": false,
       "artifact_binding_status": "BOUND",
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T18:54:46.787798+00:00",
+      "kind": "external_reuse_agent_handoff_integrated",
+      "record_file": "agent_review_inbox/handoff-T-FLT-T1-L1-MINIMAL-ADAPTER-20260908T185222Z.md",
+      "record_kind": "handoff",
+      "review_sha256": "6651438704D409108F0F46B0F76E2AA3BC6781ED3B427A4F15C6C341411E5588",
+      "task_id": "T-FLT-T1-L1-MINIMAL-ADAPTER-20260908",
+      "classification": "flt_t1_l1_minimal_adapter",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "catalog": "anthropic-fermats-last-theorem"
     }
   ],
   "agent_requests": {},
@@ -84600,5 +84613,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "8af8a26686c0b140c0f7f01e4375e29689e2f7c16fa057c4511b14b88a11ec38"
+  "state_checksum": "bbb15db5d1e7a396cb4960fbb3884aaab6b039c6f66b2678487d7e885598dd5a"
 }

@@ -3297,3 +3297,12 @@ Godel 随后补交了 immutable handoff；candidate/result SHA-256 与 revision 
 重复创建 theorem、attempt 或 registry 条目。它补强了交接 provenance，但没有
 新增 runtime evaluator、Julia decoding、consumer identity 或 kernel 证据；
 formal gate 继续关闭。
+
+### 梁智炜 · revision 842：T1/L1 target-native adapter intake
+
+Poincare 的 bounded handoff 已进入 FLT event-only catalog。T1
+`Topology.IsInducing.topologicalModule` 保留完整 universe、`IsInducing` 与
+连续 module 结构；L1 `changeScalars` 明确 `IsBiscalar`，并优先指出 target
+native `restrictScalars` API。它们分别标为通用契约 1、目标 adapter 2；不推出
+norm/isometry、continuity、物理 topology 或 Route-B flowpipe。source/target
+Mathlib pin、OLean、axiom 和 comparator 均未执行，registry=0，formal gate 关闭。

@@ -3996,3 +3996,10 @@ agent 都不得修改 registry 或把该 witness 标成 VERIFIED。
 candidate/result hash 完全相同，已按同一 node 追加历史事件。无需重复数学审计；
 后续资源转向 evaluator decoding、consumer function identity 和 runtime error
 budget。若再次收到同 hash handoff，只保留 provenance event，不创建新 frontier。
+
+## 2026-09-08 — revision 842 T1/L1 adapter intake
+
+`T-FLT-T1-L1-MINIMAL-ADAPTER-20260908` 已收割为 event-only metadata。下一步
+只需在目标 pinned 环境验证 universe/binder 和 target-native `restrictScalars`
+接口；不得重复复制 FLT proof，也不得把 topology/scalar transport 升级为物理
+范数、能量或 flowpipe 结论。该 lane 由苏梦辰/巨阳仙尊在数学契约稳定后处理。
