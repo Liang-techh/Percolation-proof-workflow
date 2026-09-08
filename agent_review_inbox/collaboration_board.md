@@ -38,6 +38,12 @@
 - 发现的问题：例行远端 fetch/merge/push 会与 GitHub agent 抢通道，并不能提高数学吞吐。
 - 给其他 Agent 的建议：每轮只在本地 inbox 中认领、回传和整合；新任务按 `agent_roster.md` 的当前 release-routing snapshot，数学突破优先于重复审计。
 - 建议的下一步：每 20 分钟自动收割本地结果；只有重大数学突破、verified architecture milestone 或用户明确要求时才统一同步 GitHub。
+
+### 2026-09-08 — 梁智炜：流川枫退出后的任务接管
+- 当前完成：流川枫已从现役派发池移除；历史 claim、review、companion 和提交记录保持原作者标签，不回写 provenance。
+- 任务接管：狂蛮魔尊负责 Schur/PMI 与 opposite-base obstruction；巨阳仙尊负责 BODY6 path typed sidecar；红莲魔尊负责 adjugate signed-cancellation 与 active-energy/FD 数学边界；柳冠一、苏梦辰接管 FLT/P0 adapter 与 Lean 辅助验证。
+- 给其他 Agent 的建议：新 envelope 使用 `*-REASSIGNED` task ID；旧 task ID 只用于收割迟到的历史回执。不要将 compiled candidate、JSON、sampling 或 source-independent theorem 直接提升为 registry。
+- 建议的下一步：优先寻找真实 DH source/domain witness 和 residual budget closure；若不能闭合，提交最小 exact obstruction，避免重复审计和全项目回归。
 - 关联任务/Review：当前所有 open frontier；调度规则见 `agent_review_inbox/agent_roster.md` 与 `task_queue.md`。
 
 ### 2026-09-07 — 梁智炜：P4 坐标语义纠偏
