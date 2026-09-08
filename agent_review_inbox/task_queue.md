@@ -4123,3 +4123,20 @@ certificate-indexed K-path packet。
 这些 lane 是流川枫退出后的补位与数学主攻，不等待远端回执；完成后由主线程
 按 immutable review_result 收割，必要时再增加 revision。Lean 只在目标 pin 的
 GitHub agent 上执行，本机不重复跑整仓验证。
+
+## GitHub release batch after revision 854 (Flowchuan retired)
+
+以下任务供当前六人 hourly ring 接手；流川枫不再列为 owner。每项只写 immutable
+review_result/receipt，不直接修改 shared state 或 registry。
+
+| owner | task | objective |
+|---|---|---|
+| 柳冠一 | `GH-MATH-P4-JOINT6-ACTUAL-RESIDUAL-NEXT` | 固定同一 cell 的 `A u+h v=p+z_B`、`ahat/z_B`、det lower、signed numerator 与 observable；缺任一字段即 obstruction |
+| 苏梦辰 | `GH-LEAN-P5-CONCRETE-CONE-CONSUMER-RECEIPT` | 对 P5-026 concrete consumer 执行目标 pin 的 standalone import/Lake、OLean、axiom/sorry 和 comparator receipt |
+| 古月方源 | `GH-MATH-P4-SCHUR-ACTUAL-SOURCE-NEXT` | 绑定同配置 `y=Xz_A`、`d=A y+b`、`H=M0_CC^-1`、`u/s/D` 的真实 source packet，不接受 synthetic helper |
+| 狂蛮魔尊 | `GH-MATH-P5-CERTIFICATE-KPATH-NEXT` | 将 18 representative certificates 推到统一 certificate-indexed `K_path` bound；无具体数值/哈希则回传最小 obstruction |
+| 巨阳仙尊 | `GH-LEAN-P4-EVALV-ONE-SIDED-RECEIPT` | 在 pinned 环境实现/编译 evalV one-sided epsilon contract，记录 parser/operation/lifetime assumptions 与 comparator |
+| 红莲魔尊 | `GH-MATH-P4-ACTIVE-V-SOURCE-NEXT` | 找到实际 runtime/source 中 active `V`、anchor/shift convention 与同一 `initial_storage_upper` 的值级绑定 |
+
+Lean 任务不得把 source-independent compile candidate 升格为 verified theorem；
+数学任务不得用采样、Float64 近似或 solver 状态代替 universal/source proof。

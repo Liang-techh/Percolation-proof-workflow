@@ -471,6 +471,24 @@ TASK_TARGETS = {
     "T-FLT-BLOCK456-PROJECTOR-API-PLAN": (
         None,
         "flt_block456_projector_api_plan"),
+    "GH-MATH-P4-JOINT6-ACTUAL-RESIDUAL-NEXT": (
+        "P4.true_dh_port_source_binding",
+        "pending_joint6_actual_residual_next"),
+    "GH-LEAN-P5-CONCRETE-CONE-CONSUMER-RECEIPT": (
+        "P5.componentwise_relative_decay.feasible_cone_spn.proof_attempt",
+        "pending_p5_concrete_cone_consumer_receipt"),
+    "GH-MATH-P4-SCHUR-ACTUAL-SOURCE-NEXT": (
+        "P4.residual_schur_pmi",
+        "pending_schur_actual_source_next"),
+    "GH-MATH-P5-CERTIFICATE-KPATH-NEXT": (
+        "P5.componentwise_relative_decay.feasible_cone_spn",
+        "pending_certificate_indexed_kpath_next"),
+    "GH-LEAN-P4-EVALV-ONE-SIDED-RECEIPT": (
+        "P4.true_dh_port_source_binding",
+        "pending_evalv_one_sided_receipt"),
+    "GH-MATH-P4-ACTIVE-V-SOURCE-NEXT": (
+        "P4.true_dh_port_source_binding",
+        "pending_active_v_source_next"),
     "T-P4-KC-COORDINATE-ADAPTER": ("P4.residual_schur_pmi", "pending_kc_coordinate_adapter"),
     "T-P4-MBD-PROJECTION": ("P4.residual_schur_pmi", "pending_mbd_projection_obstruction"),
     "T-P4-012": ("P4.residual_schur_pmi", "pending_typed_remote_binding_contract"),
