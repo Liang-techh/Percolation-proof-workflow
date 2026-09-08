@@ -179,6 +179,12 @@ TASK_TARGETS = {
     "GH-MATH-P4-BLOCK456-METRIC-CAP": (
         "P4.true_dh_port_source_binding",
         "pending_block456_matching_metric_cap"),
+    "GH-MATH-P4-BLOCK456-MATCHING-METRIC-BUDGET": (
+        "P4.true_dh_port_source_binding",
+        "pending_block456_matching_metric_budget"),
+    "GH-MATH-P4-BLOCK456-MATCHING-METRIC-BUDGET-PROVENANCE": (
+        "P4.true_dh_port_source_binding",
+        "pending_block456_matching_metric_budget_provenance_correction"),
     # New GitHub proof lanes use descriptive uppercase suffixes.  Route them
     # to existing DAG parents as pending metadata only; no admission path is
     # implied by these aliases.

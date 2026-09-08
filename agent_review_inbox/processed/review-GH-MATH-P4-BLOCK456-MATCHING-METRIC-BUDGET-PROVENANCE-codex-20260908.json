@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-BLOCK456-MATCHING-METRIC-BUDGET-PROVENANCE-codex-20260908.md",
+  "record_kind": "review_result",
+  "review_sha256": "8E92186D6A224A9FA7C961D6872D8EC1DF12291A2DFADEDF7E5EF330B0029570",
+  "task_id": "GH-MATH-P4-BLOCK456-MATCHING-METRIC-BUDGET-PROVENANCE",
+  "source_agent": "coordinator",
+  "created_at": "2026-09-08",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_block456_matching_metric_budget_provenance_correction",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-BLOCK456-MATCHING-METRIC-BUDGET-PROVENANCE-codex-20260908.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T15:23:32.098636+00:00"
+}

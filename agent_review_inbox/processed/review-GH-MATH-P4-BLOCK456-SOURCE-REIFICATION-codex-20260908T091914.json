@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-BLOCK456-SOURCE-REIFICATION-codex-20260908T091914.md",
+  "record_kind": "review_result",
+  "review_sha256": "0DD4A86256E69C5C4C814A15E6D0B116A457B0D41983D412B4C631FA3136A1FA",
+  "task_id": "GH-MATH-P4-BLOCK456-SOURCE-REIFICATION",
+  "source_agent": "Codex-block456-source-reification",
+  "created_at": "2026-09-08T09:19:14.9673679-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_block456_metric_source_reification",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "f907e960361438942831cfd7ff0661b0d3314b40",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-BLOCK456-SOURCE-REIFICATION-codex-20260908T091914.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T15:23:32.098964+00:00"
+}
