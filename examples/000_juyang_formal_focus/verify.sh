@@ -5,6 +5,7 @@
 set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+bash "$ROOT/../routeb_p5_initial_reference_bridge_lean/verify.sh"
 bash "$ROOT/../routeb_p5_invariant_path_sheet_lean/verify.sh"
 bash "$ROOT/../routeb_p5_target_domain_obstruction_lean/verify.sh"
 
