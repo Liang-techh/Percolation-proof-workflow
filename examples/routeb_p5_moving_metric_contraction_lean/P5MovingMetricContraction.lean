@@ -95,9 +95,13 @@ theorem physical_variation_rate_identity
       - symJacobianQ2 wa wb wc a11 a12 a21 a22 x y) :
     dV = - physicalContractionQ2
       wa wb wc lfa lfb lfc a11 a12 a21 a22 x y := by
-  rw [hdV]
-  simp [physicalContractionQ2]
-  ring
+  calc
+    dV = qform2 lfa lfb lfc x y
+      - symJacobianQ2 wa wb wc a11 a12 a21 a22 x y := hdV
+    _ = -(symJacobianQ2 wa wb wc a11 a12 a21 a22 x y
+      - qform2 lfa lfb lfc x y) := by ring
+    _ = - physicalContractionQ2
+      wa wb wc lfa lfb lfc a11 a12 a21 a22 x y := by rfl
 
 /-- Main T-P5-090 algebraic kernel. If the moving-frame connection acts on the
 current variational vector as `Kη = J(Bη) - A(Jη)`, then the complete normalized
