@@ -2,20 +2,50 @@
 
 Owner/source agent: 巨阳仙尊
 
-This portable sidecar compiles the existing candidate
+This portable sidecar audits the existing candidate
 `examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_ALIGNEDPATHCAPCONSUMER20260908.lean`
-inside the repository-pinned `examples/local_fkg` Lake environment.
+against the repository-pinned `examples/local_fkg` Lake environment.
 
-Trusted-core scope:
+## Trusted-core statements
 
-- `consume_aligned_path_cap_attempt`: from typed `ConsumerPremises` (actual/encoded storage alignment, initial source cap, path start, integrated and uniform growth, domain projection, whole-path membership, and one shifted budget), derive `FullPathCap (target m) path bar`.
-- `source_full_cap_does_not_pay_shift_attempt`: exact origin regression showing a source full cap of `0` does not by itself pay the encoded shift needed for a target full cap of `1`.
+The target exposes two public theorems in namespace
+`NEW_BODY6_SLICE_ALIGNEDPATHCAPCONSUMER20260908`:
 
-The checker also performs a placeholder scan and `#print axioms` audit under `-DwarningAsError=true`.
+- `consume_aligned_path_cap_attempt`: for real parameters, assuming the aligned energy obeys
+  `energy_at_aligned ... <= B` and the already-shifted scalar budget obeys
+  `B + sigmaBar < cap Ahat AC Ay`, conclude
+  `energy_at_aligned ... + sigmaBar < cap Ahat AC Ay`.  The theorem keeps the
+  source-side sign/positivity hypotheses (`0 <= Ahat`, `0 < AC`, `0 < Ay`,
+  `0 < cap ...`, `0 <= B`, `0 <= sigmaBar`) explicit at the interface.
+- `source_full_cap_does_not_pay_shift_attempt`: the same contract, proved by
+  direct reuse of `consume_aligned_path_cap_attempt`.  Its role is to make the
+  accounting boundary explicit: the consumer receives `B + sigmaBar < cap`;
+  the shift is not silently paid a second time by the source cap.
 
-Not proved here: existence of a Route-B instance of `ConsumerPremises`, physical/source binding, path ODE or continuation, positivity/coercivity, domain coverage, first-exit closure, source admission/receipt, registry mutation, or P4/P5 parent closure.
+The local import chain is
+`NEW_BODY6_SLICE_ACTUALSTORAGEALIGN20260907` ->
+`NEW_BODY6_SLICE_PATHDOMAINPROJECTION20260907` ->
+`NEW_BODY6_SLICE_INITIALPATHCAPS20260907` -> aligned consumer, with the first
+modules reusing the pinned `ActualStorage` / `ActualShift` environment.
 
-Run from a GitHub-CI environment with `lake` and `lean` on `PATH`:
+## Portable CI behavior
+
+Lean 4.32 rejects `-o` compilation of a source outside the active Lake package
+root.  `verify.sh` therefore stages only the three BODY6 dependency sources in a
+temporary directory under `examples/local_fkg`, compiles their `.olean` files
+there, prepends that isolated cache to Lake's `LEAN_PATH`, and removes it on
+exit.  No repository source, manifest, or toolchain file is mutated.
+
+The checker verifies `lake` and `lean` from `PATH`, checks the pinned toolchain
+and `lake-manifest.json`, scans the target for `sorry`/`admit`, compiles under
+`-DwarningAsError=true`, and runs `#print axioms` on both public theorems.
+
+Not proved here: a deployed instance of the scalar premises, physical/source
+binding, path ODE or continuation, whole-path/domain coverage, first-exit
+closure, Float64/controller semantics, source admission/receipt, registry
+mutation, or P4/P5 parent closure.
+
+Run in the GitHub-CI environment with `lake` and `lean` on `PATH`:
 
 ```bash
 CI_PORTABLE=1 bash examples/routeb_body6_aligned_consumer_audit/verify.sh
