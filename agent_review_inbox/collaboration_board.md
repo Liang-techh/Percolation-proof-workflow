@@ -3350,3 +3350,43 @@ review 同时固定了 signed source decomposition、同一 H-metric transport�
 这只是可消费接口，尚未绑定实际 source coefficients、cell、metric 或 residual
 target；不修改旧 homogeneous consumer，也不改变 registry。P4/M4 继续
 fail-closed。
+
+### 梁智炜 · revision 848：P5 same-cell graph jet contract
+
+Sartre 将 source-jet 推进为可消费的 graph contract：固定
+`z=(q,v,w)`、`alpha` 与 `Y=Dalpha`，要求同一点的 `G0=M alpha-R=0` 六行和
+`G1=M Y-DR+DM alpha=0` 78 行，并以同域可逆性、C1 正则性和 IFT/唯一性排除
+空 graph 与 vacuous inequality。
+
+graph 可绑定 direct remote port 和 additive H-cap，再接现有 generic Schur
+consumer；但实际 `alpha/Y` graph、signed source、H/T、`b/Db/e` 和 coverage
+仍未提供。结果保持 P5 pending，registry=0，formal gate 关闭。
+
+### 梁智炜 · revision 847：spectral/pairing transport intake
+
+Poincare 的 FLT 非数论扫描新增两条 bounded 候选。SP
+`ContinuousLinearMap.map_eigenspace_orthogonal_le_of_commute` 在完整
+RCLike、complete inner-product、compact symmetric operator 和 commute 前提下，
+给出 eigenspace 与正交补的 map containment；PT
+`TransportGlue.exists_pairing_of_linearEquiv` 在显式 scalar map/surjectivity、
+balanced pairing 和 algebraic-dual bijectivity 下运输 perfect pairing。
+两者均分类 generic 1、target adapter 2、Route-B consumer 3；没有自动得到
+projection、spectral gap、energy positivity、ODE invariance 或 flowpipe。当前
+只进入 event-only catalog，尚无 target Lean/OLean/axiom/comparator receipt。
+
+### 梁智炜 · revision 849：metric reference identity
+
+James 确认 block456 的 `H456=M0_CC⁻¹` 存在 exact LDL/factor transport，
+但它与 block45 inverse、current-q metric、Euclidean ledger 和 remote acceleration
+metric 不是同一对象。尤其 inverse 与 principal-block restriction 不交换，不能
+通过补零 joint6 把 block45 证据升级为 block456。该结果只关闭“纯线性代数 factor
+未知”这一局部疑点，source/reference reification、同一 H 的 T-map 和 residual
+binding 仍 open；registry=0，formal gate 关闭。
+
+### 梁智炜 · revision 850：evalV runtime bridge
+
+Godel 固定了 ideal polynomial 到 Julia `evalV_fast` 的最小单侧误差契约：需绑定
+CSV reader 的 coefficient bits/exponents、Float64 operation semantics、有限性，
+并证明同一 `X0` 上 `Decode(evalV_fast)-P*≤epsilon` 且
+`epsilon≤u+1/20`。当前没有 epsilon、parser execution receipt 或 consumer
+identity，因此 initial witness 仍只是 conditional，P4/M4 与 registry 不变。

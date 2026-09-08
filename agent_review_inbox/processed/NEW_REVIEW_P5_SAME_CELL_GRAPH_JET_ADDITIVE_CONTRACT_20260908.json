@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/NEW_REVIEW_P5_SAME_CELL_GRAPH_JET_ADDITIVE_CONTRACT_20260908.md",
+  "record_kind": "review_result",
+  "review_sha256": "AF371673AB2526D7B572B55696E2F52CF52C115D207FA09A091F83408608846B",
+  "task_id": "P5-SAME-CELL-GRAPH-JET-ADDITIVE-CONTRACT",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_same_cell_graph_jet_additive_contract",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/NEW_REVIEW_P5_SAME_CELL_GRAPH_JET_ADDITIVE_CONTRACT_20260908.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T19:08:15.287620+00:00"
+}

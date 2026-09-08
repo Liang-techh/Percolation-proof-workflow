@@ -4037,3 +4037,25 @@ packet，字段必须包含 `port_kind`、signed identity、H-metric cap、alloc
 consumer binding 和 source hashes。不得覆盖 `ExplicitResidualEnclosure.sq_le`，
 不得把 additive bias 记为零，也不得将 generic Lean consumer 的存在当作物理
 source theorem。
+
+## 2026-09-08 — revision 848 same-cell graph jet
+
+`P5-SAME-CELL-GRAPH-JET-ADDITIVE-CONTRACT` 已收割。下一步优先构造同源
+invertibility/regularity witness 与 graph positivity；不得凭 alpha/Y 的 box
+约束制造 vacuous proof，也不得把 `G0/G1` 等式本身当成实际解已被 source 绑定。
+完成 graph 后，再由 Lean lane 编译独立 adapter；metric、signed port、variational
+defect 和 whole-tube coverage 仍是单独 frontier。
+
+## 2026-09-08 — revision 847 spectral/pairing transport
+
+`T-FLT-SPECTRAL-PAIRING-TRANSPORT-20260908` 已进入 FLT event-only catalog。
+SP 只提供 eigenspace/orthogonal-complement containment，PT 只运输 balanced
+perfect pairing；后续 Lean lane 需保持完整 RCLike/complete 或 algebraic-dual
+bijectivity 前提，不得自动生成 spectral gap、energy positivity 或 flowpipe。
+
+## 2026-09-08 — revisions 849–850 metric/evalv bridges
+
+`GH-MATH-P4-METRIC-REFERENCE-IDENTITY` 确认 block456 exact factor 可构造，但
+不能与 block45/current-q/Euclidean metric 混同；`GH-MATH-P4-INITIAL-WITNESS-EVALV-RUNTIME-BRIDGE`
+给出理想多项式到 runtime 的最小 one-sided epsilon contract。两者均仍需真实
+source identity、执行语义和 consumer binding，不能提升 registry 或 formal gate。

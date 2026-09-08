@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 846,
+  "revision": 850,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12875,6 +12875,21 @@
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/NEW_REVIEW_P5_EXACT_DH_CELL_SOURCE_JET_CONTRACT_20260908.md",
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/NEW_REVIEW_P5_SAME_CELL_GRAPH_JET_ADDITIVE_CONTRACT_20260908.md",
+            "record_kind": "review_result",
+            "review_sha256": "AF371673AB2526D7B572B55696E2F52CF52C115D207FA09A091F83408608846B",
+            "task_id": "P5-SAME-CELL-GRAPH-JET-ADDITIVE-CONTRACT",
+            "source_agent": "unknown",
+            "created_at": "unknown",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_same_cell_graph_jet_additive_contract",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/NEW_REVIEW_P5_SAME_CELL_GRAPH_JET_ADDITIVE_CONTRACT_20260908.md",
+            "admission_label": "pending"
           }
         ]
       }
@@ -16953,6 +16968,36 @@
             "target_scope": "routeb_node",
             "source_commit": "93792eb9312837d5a47421fcff116f131b1ebbe5",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-ADDITIVE-PORT-CONSUMER-james-20260908T130041.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-METRIC-REFERENCE-IDENTITY-james-20260908T130629.md",
+            "record_kind": "review_result",
+            "review_sha256": "C6EBC0A38508A3EB5A68C47F5F293F0474DFC111A2E3771B3CF0002F0B117288",
+            "task_id": "GH-MATH-P4-METRIC-REFERENCE-IDENTITY",
+            "source_agent": "James-local-takeover",
+            "created_at": "2026-09-08T13:06:29-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_metric_reference_identity",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "a21f4dcd88d8efeb075f9e23e861a347528f126e",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-METRIC-REFERENCE-IDENTITY-james-20260908T130629.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-P4-INITIAL-EVALV-RUNTIME-BRIDGE-20260908T190719Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "523276F979F0FE34849623A9E0C9B1642CBFA9237906DC01E6108872B467743F",
+            "task_id": "GH-MATH-P4-INITIAL-WITNESS-EVALV-RUNTIME-BRIDGE",
+            "source_agent": "Godel the 6th",
+            "created_at": "2026-09-08T19:07:19Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_initial_witness_evalv_runtime_bridge",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-P4-INITIAL-EVALV-RUNTIME-BRIDGE-20260908T190719Z.md",
             "admission_label": "pending"
           }
         ]
@@ -81054,6 +81099,58 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T19:07:28.272549+00:00",
+      "kind": "external_reuse_agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-FLT-SPECTRAL-PAIRING-TRANSPORT-20260908T190522Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "178C73ED55C8C21C0A60E652820F194C9104475372D5D7008EAF15AD61BBACE3",
+      "task_id": "T-FLT-SPECTRAL-PAIRING-TRANSPORT",
+      "classification": "flt_spectral_pairing_transport",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "catalog": "anthropic-fermats-last-theorem"
+    },
+    {
+      "at": "2026-09-08T19:08:15.287620+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/NEW_REVIEW_P5_SAME_CELL_GRAPH_JET_ADDITIVE_CONTRACT_20260908.md",
+      "record_kind": "review_result",
+      "review_sha256": "AF371673AB2526D7B572B55696E2F52CF52C115D207FA09A091F83408608846B",
+      "task_id": "P5-SAME-CELL-GRAPH-JET-ADDITIVE-CONTRACT",
+      "classification": "pending_same_cell_graph_jet_additive_contract",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "4a9af66cdc4f4607857a5cf360f19eb7"
+    },
+    {
+      "at": "2026-09-08T19:10:23.918323+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-METRIC-REFERENCE-IDENTITY-james-20260908T130629.md",
+      "record_kind": "review_result",
+      "review_sha256": "C6EBC0A38508A3EB5A68C47F5F293F0474DFC111A2E3771B3CF0002F0B117288",
+      "task_id": "GH-MATH-P4-METRIC-REFERENCE-IDENTITY",
+      "classification": "pending_metric_reference_identity",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T19:11:09.047687+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-P4-INITIAL-EVALV-RUNTIME-BRIDGE-20260908T190719Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "523276F979F0FE34849623A9E0C9B1642CBFA9237906DC01E6108872B467743F",
+      "task_id": "GH-MATH-P4-INITIAL-WITNESS-EVALV-RUNTIME-BRIDGE",
+      "classification": "pending_initial_witness_evalv_runtime_bridge",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -84710,5 +84807,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "e65fc9c11f630e7dae7e7068754bf98bfce85d4e6fcd66e9ec13bfd1ea83ba4d"
+  "state_checksum": "1ae3466346d2d3751d9329621c2df9f4de64278e4080a67790fd342603515de1"
 }

@@ -392,12 +392,24 @@ TASK_TARGETS = {
     "P5-EXACT-DH-SAME-CELL-SOURCE-JET": (
         "P5.componentwise_relative_decay",
         "pending_exact_dh_same_cell_source_jet"),
+    "P5-SAME-CELL-GRAPH-JET-ADDITIVE-CONTRACT": (
+        "P5.componentwise_relative_decay",
+        "pending_same_cell_graph_jet_additive_contract"),
     "GH-MATH-P4-PHYSICAL-SCHUR-REMOTE-CONTRACT": (
         "P4.true_dh_port_source_binding",
         "pending_physical_schur_remote_contract"),
     "GH-MATH-P4-ADDITIVE-PORT-CONSUMER": (
         "P4.true_dh_port_source_binding",
         "pending_additive_port_consumer"),
+    "GH-MATH-P4-METRIC-REFERENCE-IDENTITY": (
+        "P4.true_dh_port_source_binding",
+        "pending_metric_reference_identity"),
+    "GH-P4-INITIAL-EVALV-RUNTIME-BRIDGE": (
+        "P4.true_dh_port_source_binding",
+        "pending_initial_evalv_runtime_bridge"),
+    "GH-MATH-P4-INITIAL-WITNESS-EVALV-RUNTIME-BRIDGE": (
+        "P4.true_dh_port_source_binding",
+        "pending_initial_witness_evalv_runtime_bridge"),
     # External FLT scans are deliberately event-only: they are advisory
     # catalog evidence, not Route-B theorem nodes or registry entries.
     "T-FLT-DERIV-CALC": (None, "flt_derivation_calculus_scan"),
@@ -447,6 +459,9 @@ TASK_TARGETS = {
     "T-FLT-QUOTIENT-CLME-EXACT-CONTRACT": (
         None,
         "flt_quotient_clme_exact_contract"),
+    "T-FLT-SPECTRAL-PAIRING-TRANSPORT": (
+        None,
+        "flt_spectral_pairing_transport"),
     "T-P4-KC-COORDINATE-ADAPTER": ("P4.residual_schur_pmi", "pending_kc_coordinate_adapter"),
     "T-P4-MBD-PROJECTION": ("P4.residual_schur_pmi", "pending_mbd_projection_obstruction"),
     "T-P4-012": ("P4.residual_schur_pmi", "pending_typed_remote_binding_contract"),
