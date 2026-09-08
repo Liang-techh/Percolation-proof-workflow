@@ -98,8 +98,15 @@ theorem relative_additive_power_absorption
       _ ≤ D * (Krel * V + Kabs) := h3
       _ ≤ D * (4 * lambda * d * mu ^ 2 * (alpha * V + beta)) := h4
       _ = (d * mu ^ 2) * (4 * lambda * D * (alpha * V + beta)) := by ring
-  have hsq : P ^ 2 ≤ 4 * lambda * D * (alpha * V + beta) :=
-    (mul_le_mul_left hdm).mp hscaled
+  have hsq : P ^ 2 ≤ 4 * lambda * D * (alpha * V + beta) := by
+    by_contra hnot
+    have hgt : 4 * lambda * D * (alpha * V + beta) < P ^ 2 :=
+      lt_of_not_ge hnot
+    have hmulgt :
+        (d * mu ^ 2) * (4 * lambda * D * (alpha * V + beta)) <
+          (d * mu ^ 2) * P ^ 2 :=
+      mul_lt_mul_of_pos_left hgt hdm
+    exact (not_lt_of_ge hscaled) hmulgt
   exact square_packet_absorption P lambda D alpha V beta
     hlambda hD halpha hV hbeta hsq
 
@@ -112,12 +119,11 @@ theorem lyapunov_rate_bias_ledger
     Vdot ≤ -(c - alpha) * V - (1 - lambda) * D + beta := by
   nlinarith
 
-/-- Pure relative forcing preserves a homogeneous decay inequality when no
-additive charge is present. -/
+/-- Once the pure-relative branch has already produced its ledger inequality,
+the nonnegative dissipation remainder may be dropped whenever `lambda ≤ 1`. -/
 theorem homogeneous_relative_decay
     (Vdot c alpha V D lambda : ℝ)
-    (hV : 0 ≤ V) (hD : 0 ≤ D)
-    (hlambda : lambda ≤ 1) (halpha : alpha < c)
+    (hD : 0 ≤ D) (hlambda : lambda ≤ 1)
     (hledger : Vdot ≤ -(c - alpha) * V - (1 - lambda) * D) :
     Vdot ≤ -(c - alpha) * V := by
   have hcoef : 0 ≤ 1 - lambda := by linarith
@@ -156,7 +162,8 @@ theorem nonzero_rhs_blocks_pure_relative
     ∀ Hrel : ℝ, ¬ rhsSq ≤ Hrel * V := by
   intro Hrel h
   subst V
-  simpa using (not_le_of_gt hrhs0 h)
+  have hzero : rhsSq ≤ 0 := by simpa using h
+  exact (not_le_of_gt hrhs0) hzero
 
 /-- Exact equality case showing that the generic coefficient four cannot be
 reduced when only the squared Cauchy packet, dissipation packet and relative
