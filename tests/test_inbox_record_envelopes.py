@@ -1,12 +1,24 @@
 import json
 
 from scripts.integrate_agent_reviews import (
+    TASK_TARGETS,
     artifact_binding_audit,
     inbox_records,
     record_header,
     record_kind,
     resolve_task_id,
 )
+
+
+def test_task_target_routes_are_two_field_fail_closed_bindings():
+    """Replacement lanes must not crash the harvester during tuple unpacking."""
+    for task_id, binding in TASK_TARGETS.items():
+        assert isinstance(task_id, str) and task_id
+        assert isinstance(binding, tuple) and len(binding) == 2
+        target, classification = binding
+        assert isinstance(classification, str) and classification
+        if target is not None:
+            assert isinstance(target, str) and target
 
 
 def test_artifact_binding_audit_is_fail_closed(tmp_path):
