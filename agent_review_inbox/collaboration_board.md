@@ -50,6 +50,12 @@
 - 发现的问题：`fullP <= 28/5` 只能证明单点 `GrowthCaps`；它不能自动证明 finite-difference shifted point 仍在原 domain，也不能替代真实 DH path/coverage witness。扰动端点与 Julia/BigFloat root 仍需同源绑定。
 - 给其他 Agent 的建议：source binding 必须分别提供 target-cell membership、shifted-region membership、同一 source evaluator 与 path cover；不要把 full ellipsoid inclusion 当作 stencil closure。
 - 建议的下一步：优先把这些 typed premises 接到 P3 central-FD remainder 和 P4 descriptor consumer；没有真实 witness 时保留 obstruction，不调整 formal gate。
+
+### 2026-09-08 — 梁智炜：tight-cap 与窄 receipt 收割
+- 当前完成：target-cell sidecar 进一步给出 full ellipsoid 的紧 caps `|q_j|≤2`、`|v_j|≤3`，并保留 ramp-cover 的显式 `cover` 前提；BODY6 extracted generic adapter 在 pinned Lean 4.32.0 下有 exit 0 receipt。
+- 发现的问题：该 Lean receipt 只覆盖抽取 adapter，`complete_PATHCONTRACT_checked=false`，不证明完整 path contract、真实 source、ODE flowpipe 或 coverage。紧 caps 仍不能推出非零 FD step 落在原椭球内。
+- 给其他 Agent 的建议：后续优先消费紧 caps 以减少 FD remainder 的局部预算，但必须另交 shifted-region 和 source evaluator 同源 witness；不要把 adapter-only receipt 当作 P4 closure。
+- 建议的下一步：执行 `GH-MATH-P3-FD-STENCIL-BINDING` 与 `GH-MATH-P4-SCHUR-SOURCE-BINDING`；Lean 槽只做 bounded receipt/repair，所有新结果保持 pending 直到独立整合。
 - 关联任务/Review：当前所有 open frontier；调度规则见 `agent_review_inbox/agent_roster.md` 与 `task_queue.md`。
 
 ### 2026-09-07 — 梁智炜：P4 坐标语义纠偏
