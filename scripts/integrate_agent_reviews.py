@@ -473,6 +473,47 @@ def source_commit(path: Path, header: dict[str, str]) -> str:
     return match.group(0) if match else "unknown"
 
 
+def artifact_binding_audit(header: dict[str, str], root: Path = ROOT) -> dict[str, str] | None:
+    """Audit an explicitly declared candidate/artifact path and SHA.
+
+    This is provenance-only.  A matching hash does not mean that the artifact
+    compiled or is admissible; missing evidence remains pending and a mismatch
+    is rejected without deleting or rewriting the inbox record.
+    """
+    raw_path = str(header.get("candidate_path", "") or
+                  header.get("artifact_path", "")).strip()
+    declared = str(header.get("candidate_sha256", "") or
+                   header.get("artifact_sha256", "")).strip().upper()
+    if not raw_path and not declared:
+        return None
+    if not raw_path:
+        return {"status": "PENDING", "reason": "missing_artifact_path"}
+    if not declared:
+        return {"status": "PENDING", "reason": "missing_artifact_sha256",
+                "path": raw_path}
+
+    candidate = Path(raw_path)
+    if not candidate.is_absolute():
+        candidate = root / candidate
+    try:
+        resolved = candidate.resolve(strict=False)
+        resolved.relative_to(root.resolve())
+    except (OSError, ValueError):
+        return {"status": "PENDING", "reason": "artifact_outside_workspace",
+                "path": raw_path}
+    if not resolved.is_file():
+        return {"status": "PENDING", "reason": "artifact_missing",
+                "path": raw_path}
+
+    actual = sha256(resolved)
+    result = {"status": "BOUND" if actual == declared else "REJECTED",
+              "path": str(resolved), "declared_sha256": declared,
+              "actual_sha256": actual}
+    if actual != declared:
+        result["reason"] = "artifact_sha256_mismatch"
+    return result
+
+
 def node_by_name(state, name: str):
     for node in state.nodes.values():
         if node.name == name:
@@ -598,6 +639,12 @@ def main() -> int:
             "target_scope": "routeb_node" if target_name else "external_reuse_catalog",
             "source_commit": source_commit(path, header),
         }
+        artifact_audit = artifact_binding_audit(header)
+        if artifact_audit is not None:
+            ref["artifact_binding_audit"] = artifact_audit
+            if (artifact_audit["status"] == "REJECTED" and
+                    "admission_label" not in ref):
+                ref["admission_label"] = "rejected"
         if kind == "review_result":
             # Keep the legacy field stable for downstream reports and old
             # processed markers while exposing the generic record envelope.
@@ -638,6 +685,8 @@ def main() -> int:
             formal_certificate_allowed=False,
             **({"residual_l1_receipt_status": ref["residual_l1_receipt_audit"]["status"]}
                if "residual_l1_receipt_audit" in ref else {}),
+            **({"artifact_binding_status": ref["artifact_binding_audit"]["status"]}
+               if "artifact_binding_audit" in ref else {}),
             **({"node_id": node.id} if target_name else {
                 "catalog": "anthropic-fermats-last-theorem",
             }),

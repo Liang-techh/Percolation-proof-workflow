@@ -1,11 +1,51 @@
 import json
 
 from scripts.integrate_agent_reviews import (
+    artifact_binding_audit,
     inbox_records,
     record_header,
     record_kind,
     resolve_task_id,
 )
+
+
+def test_artifact_binding_audit_is_fail_closed(tmp_path):
+    artifact = tmp_path / "candidate.lean"
+    artifact.write_text("theorem candidate : True := True.intro\n", encoding="utf-8")
+    import hashlib
+    digest = hashlib.sha256(artifact.read_bytes()).hexdigest().upper()
+
+    bound = artifact_binding_audit(
+        {"candidate_path": "candidate.lean", "candidate_sha256": digest},
+        root=tmp_path,
+    )
+    assert bound["status"] == "BOUND"
+    assert bound["actual_sha256"] == digest
+
+    rejected = artifact_binding_audit(
+        {"candidate_path": "candidate.lean", "candidate_sha256": "0" * 64},
+        root=tmp_path,
+    )
+    assert rejected["status"] == "REJECTED"
+    assert rejected["reason"] == "artifact_sha256_mismatch"
+
+
+def test_artifact_binding_audit_keeps_missing_or_external_evidence_pending(tmp_path):
+    missing = artifact_binding_audit(
+        {"candidate_path": "missing.lean", "candidate_sha256": "a" * 64},
+        root=tmp_path,
+    )
+    assert missing == {
+        "status": "PENDING", "reason": "artifact_missing", "path": "missing.lean"
+    }
+
+    outside = artifact_binding_audit(
+        {"candidate_path": str(tmp_path.parent / "outside.lean"),
+         "candidate_sha256": "a" * 64},
+        root=tmp_path,
+    )
+    assert outside["status"] == "PENDING"
+    assert outside["reason"] == "artifact_outside_workspace"
 
 
 def test_md_handoff_and_json_companion_are_discoverable(tmp_path):
