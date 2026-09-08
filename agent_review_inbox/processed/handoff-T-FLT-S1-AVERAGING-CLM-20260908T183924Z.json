@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/handoff-T-FLT-S1-AVERAGING-CLM-20260908T183924Z.md",
+  "record_kind": "handoff",
+  "review_sha256": "E2BA585C3748535B533A7913422E61D3596753BB354157EACBE9901E460F2EAA",
+  "task_id": "T-FLT-S1-AVERAGING-CLM-HANDOFF-20260908",
+  "source_agent": "Codex-FLT-spectral-topology-lane",
+  "created_at": "2026-09-08T18:39:24Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_s1_averaging_clm",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "dd1892785dcfa0f1f342090a8811b462ee5cada0",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T18:44:15.000508+00:00"
+}

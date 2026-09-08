@@ -3264,3 +3264,15 @@ Poincare 的第二条 FLT 非数论扫描已进入 event-only catalog。S1
 `IsInducing.topologicalModule` 与 L1 `changeScalars` 也是分类 1/2 的 typed
 adapter 入口，不能自动升级为 norm/isometry/flowpipe。没有运行 Lean/Lake，所有
 结果仍 pending，revision=838，registry=0，formal gate 关闭。
+
+### 梁智炜 · revision 839：S1/F1 metadata handoff 收割与流川枫任务迁移
+
+已收割两个独立的 FLT reusable-API handoff：S1 加权 averaging CLM 与 F1
+AddChar Fourier CLM。两者均是 metadata-only pending adapter，保留 upstream
+commit/blob、完整 assumptions、normalization/measure 边界和 target receipt
+清单；没有 proof body、Lean/Lake 编译、axiom 审计或 comparator 接受，因此
+registry=0，formal gate 继续关闭。
+
+流川枫已从接收器、路由器和派发计划中永久退休；其未完成的数学/Lean 小任务
+改由柳冠一、苏梦辰、古月方源、狂蛮魔尊、巨阳仙尊、红莲魔尊按 lane 分担。
+本次仅更新本地状态与任务队列，不做 GitHub 同步，不做全量回归。

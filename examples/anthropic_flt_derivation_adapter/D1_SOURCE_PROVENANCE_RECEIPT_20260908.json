@@ -1,0 +1,29 @@
+{
+  "schema_version": "flt-source-provenance-receipt-v1",
+  "task_id": "T-FLT-D1-POINT-DERIVATION-ADAPTER",
+  "status": "SOURCE_BOUND_NOT_COMPILED",
+  "repository": "https://github.com/anthropics/fermats-last-theorem",
+  "snapshot_path": "artifacts/anthropic_fermats_last_theorem",
+  "commit": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef",
+  "source_file": "Definitions/Def_Algebra_PointDerivations.lean",
+  "git_blob_sha1": "a6a95f7e3170eb079c42c30deaa06a562d42f53d",
+  "declarations_found": [
+    "Algebra.PointDerivations.map",
+    "Algebra.PointDerivations.map_comp",
+    "Algebra.PointDerivations.map_id",
+    "Algebra.PointDerivations.map_apply_coe"
+  ],
+  "checks": {
+    "git_head_match": true,
+    "git_blob_match": true,
+    "declaration_text_presence": true,
+    "lean_run": false,
+    "lake_run": false,
+    "kernel_checked": false,
+    "axioms_checked": false,
+    "comparator_accepted": false,
+    "registry_eligible": false,
+    "formal_certificate_allowed": false
+  },
+  "provenance_note": "Source identity is bound to the local Git snapshot; this receipt does not establish theorem truth or target-pin compatibility."
+}

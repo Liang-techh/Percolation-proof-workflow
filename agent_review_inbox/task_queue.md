@@ -3964,3 +3964,16 @@ metadata。优先候选是 S1 averaging CLM 与 F1 additive-character Fourier CL
 后续需做 exact target-pin/import/axiom/comparator receipt。T1 inducing topology
 和 L1 changeScalars 先做目标 API 去重；不得把 algebra/topology adapter 当作
 物理域、范数保持、谱投影或 Route-B flowpipe 证明。revision=838，registry=0。
+
+## 2026-09-08 — revision 839 S1/F1 handoff 与任务迁移
+
+| task | owner | deliverable |
+|---|---|---|
+| `T-FLT-S1-AVERAGING-CLM-HANDOFF-20260908` | 巨阳仙尊（Lean） | 按 handoff 建立 target-pinned isolated adapter；核对 Haar/probability、强连续、CLM 输出四项、import/OLean/#print axioms/comparator receipt；不得声称 projection/PSD |
+| `T-FLT-F1-ADDCHAR-FOURIER-CLM-HANDOFF-20260908` | 苏梦辰（Lean） | 建立 Fourier CLM target receipt；保留 Circle covering lift、基点、精确 2π normalization 与 source/target pin 分栏；不得直接推广到 AddCircle/torus |
+| `T-FLT-D1-POINT-DERIVATION-ADAPTER` | 苏梦辰、巨阳仙尊 | 接替流川枫遗留的 Lean 适配 lane；优先完成 PointDerivations 精确 binder/namespace/import probe，再决定是否提交 receipt |
+| `T-P4-CERTIFICATE-INDEXED-INITIAL-BINDING` | 古月方源、红莲魔尊 | 接替流川枫遗留的 Route-B 数学瓶颈；继续寻找同一 K/X0/t0 下的 certificate-indexed initial witness 与 producer→consumer hash chain |
+| `T-P5-SAME-TUBE-SOURCE-JET` | 柳冠一、狂蛮魔尊 | 接替流川枫遗留的源动力学 lane；集中构造同 cell 的 M/DM/a/Da→DF→W/DW→b/Db/e 证据，不重复审计旧数值轨迹 |
+
+以上任务按“数学瓶颈优先、Lean 验证随后”的顺序排队；metadata handoff 只进
+event-only catalog，任何编译成功仍须经过独立 comparator、axiom 和 admission gate。

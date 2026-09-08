@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/handoff-T-FLT-F1-ADDCHAR-FOURIER-CLM-20260908T183924Z.md",
+  "record_kind": "handoff",
+  "review_sha256": "BC42F4AAC54C4F1B80F9F99948DD78097C4572958F4385793302E1363901B2D6",
+  "task_id": "T-FLT-F1-ADDCHAR-FOURIER-CLM-HANDOFF-20260908",
+  "source_agent": "Codex-FLT-spectral-topology-lane",
+  "created_at": "2026-09-08T18:39:24Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_f1_addchar_fourier_clm",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "dd1892785dcfa0f1f342090a8811b462ee5cada0",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T18:44:15.000258+00:00"
+}

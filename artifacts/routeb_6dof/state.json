@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 838,
+  "revision": 839,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -80848,6 +80848,32 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "catalog": "anthropic-fermats-last-theorem"
+    },
+    {
+      "at": "2026-09-08T18:44:15.000258+00:00",
+      "kind": "external_reuse_agent_handoff_integrated",
+      "record_file": "agent_review_inbox/handoff-T-FLT-F1-ADDCHAR-FOURIER-CLM-20260908T183924Z.md",
+      "record_kind": "handoff",
+      "review_sha256": "BC42F4AAC54C4F1B80F9F99948DD78097C4572958F4385793302E1363901B2D6",
+      "task_id": "T-FLT-F1-ADDCHAR-FOURIER-CLM-HANDOFF-20260908",
+      "classification": "flt_f1_addchar_fourier_clm",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "catalog": "anthropic-fermats-last-theorem"
+    },
+    {
+      "at": "2026-09-08T18:44:15.000508+00:00",
+      "kind": "external_reuse_agent_handoff_integrated",
+      "record_file": "agent_review_inbox/handoff-T-FLT-S1-AVERAGING-CLM-20260908T183924Z.md",
+      "record_kind": "handoff",
+      "review_sha256": "E2BA585C3748535B533A7913422E61D3596753BB354157EACBE9901E460F2EAA",
+      "task_id": "T-FLT-S1-AVERAGING-CLM-HANDOFF-20260908",
+      "classification": "flt_s1_averaging_clm",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "catalog": "anthropic-fermats-last-theorem"
     }
   ],
   "agent_requests": {},
@@ -84504,5 +84530,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "87a8e3988f5182f397484095f04ed2820ce1806206a5d5540a679938b025131b"
+  "state_checksum": "4a2ea19c13b21b4e93b4e8f3e4e1b77986887f16951435b3ea1355ea48ecf5d9"
 }

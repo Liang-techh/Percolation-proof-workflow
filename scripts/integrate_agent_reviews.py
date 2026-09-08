@@ -411,6 +411,18 @@ TASK_TARGETS = {
     "T-FLT-AVERAGING-FOURIER-TOPOLOGY-SCAN-20260908": (
         None,
         "flt_averaging_fourier_topology_scan"),
+    "T-FLT-S1-AVERAGING-CLM": (
+        None,
+        "flt_s1_averaging_clm"),
+    "T-FLT-S1-AVERAGING-CLM-HANDOFF-20260908": (
+        None,
+        "flt_s1_averaging_clm"),
+    "T-FLT-F1-ADDCHAR-FOURIER-CLM": (
+        None,
+        "flt_f1_addchar_fourier_clm"),
+    "T-FLT-F1-ADDCHAR-FOURIER-CLM-HANDOFF-20260908": (
+        None,
+        "flt_f1_addchar_fourier_clm"),
     "T-P4-KC-COORDINATE-ADAPTER": ("P4.residual_schur_pmi", "pending_kc_coordinate_adapter"),
     "T-P4-MBD-PROJECTION": ("P4.residual_schur_pmi", "pending_mbd_projection_obstruction"),
     "T-P4-012": ("P4.residual_schur_pmi", "pending_typed_remote_binding_contract"),
