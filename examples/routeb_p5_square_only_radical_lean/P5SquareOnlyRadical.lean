@@ -153,11 +153,10 @@ theorem square_difference_abs_bound
     (hJ : |J| ≤ MJ) (hJ0 : |J0| ≤ MJ)
     (hdJ : |J - J0| ≤ dJ) :
     |J ^ 2 - J0 ^ 2| ≤ 2 * MJ * dJ := by
-  have hMJ : 0 ≤ MJ := le_trans (abs_nonneg J) hJ
   have hdJ0 : 0 ≤ dJ := le_trans (abs_nonneg (J - J0)) hdJ
   have hsum : |J + J0| ≤ 2 * MJ := by
     calc
-      |J + J0| ≤ |J| + |J0| := abs_add J J0
+      |J + J0| ≤ |J| + |J0| := abs_add_le J J0
       _ ≤ MJ + MJ := add_le_add hJ hJ0
       _ = 2 * MJ := by ring
   have hprod : |J - J0| * |J + J0| ≤ dJ * (2 * MJ) :=
@@ -198,6 +197,7 @@ theorem balanced_odd_centered_signed_jump
   have heps0 : eps ≠ 0 := ne_of_gt heps
   rw [abs_of_pos heps, abs_neg, abs_of_pos heps]
   field_simp [heps0]
+  norm_num
 
 /-- Yet the corresponding pointwise-square variation is exactly zero. -/
 theorem balanced_odd_square_variation_zero
@@ -207,6 +207,7 @@ theorem balanced_odd_square_variation_zero
   have hneg0 : -eps ≠ 0 := neg_ne_zero.mpr heps0
   rw [balanced_odd_pointwise_square_constant eps heps0,
       balanced_odd_pointwise_square_constant (-eps) hneg0]
+  norm_num
 
 #print axioms RouteBP5SquareOnlyRadical.pointwise_square_is_square_only_admissible
 #print axioms RouteBP5SquareOnlyRadical.centered_signed_is_not_square_only_admissible
