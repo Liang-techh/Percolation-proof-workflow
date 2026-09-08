@@ -4110,3 +4110,16 @@ source-bundle Lean pass 成功，且保留 36-label/18-representative 的 orient
 source/Float64/flowpipe binding；不得据此关闭 P5、写入 verified registry 或替代物理
 source proof。下一步只接收 target-pinned import/axiom/comparator receipt，或真实
 certificate-indexed K-path packet。
+
+## Active local math lanes after revision 854
+
+| owner | bounded bottleneck | admission boundary |
+|---|---|---|
+| Sartre | `G0/G1` same-cell graph → invertibility/regularity/alpha-Y graph → additive H-cap | 不伪造 graph values；缺 source witness 就回传 obstruction |
+| Godel | evalV parser/operation/lifetime 到实际 one-sided epsilon receipt | 不把 `kappa` 设计参数或理想多项式当 runtime proof |
+| Poincare | concrete 18-cone certificate-indexed `K_path` packet | 不把 source-independent consumer 当 P5 closure |
+| James | same-cell `M/DM/a/Da` → `DF/W/DW/b/Db/e` physical consumer bridge | 保留 source/hash/metric/port identity，缺字段即 pending |
+
+这些 lane 是流川枫退出后的补位与数学主攻，不等待远端回执；完成后由主线程
+按 immutable review_result 收割，必要时再增加 revision。Lean 只在目标 pin 的
+GitHub agent 上执行，本机不重复跑整仓验证。
