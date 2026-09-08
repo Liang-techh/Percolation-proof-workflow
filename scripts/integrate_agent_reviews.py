@@ -209,6 +209,9 @@ TASK_TARGETS = {
     "GH-LEAN-BODY5-API-REPAIR": (
         "P4.O1.source_comparator.h_body_5.source_trace_decomposition",
         "pending_body5_api_repair_receipt"),
+    "GH-LEAN-P4-SCHUR-JOINT-THRESHOLD": (
+        "P4.residual_schur_pmi",
+        "pending_schur_joint_threshold_receipt"),
     # New GitHub proof lanes use descriptive uppercase suffixes.  Route them
     # to existing DAG parents as pending metadata only; no admission path is
     # implied by these aliases.

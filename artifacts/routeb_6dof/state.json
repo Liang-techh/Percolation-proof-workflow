@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 782,
+  "revision": 783,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -8244,6 +8244,20 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-BUDGET-CLOSURE-LOCAL-codex-20260908T094926.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/companion-GH-LEAN-P4-SCHUR-JOINT-THRESHOLD-20260908.md",
+            "record_kind": "companion_log",
+            "review_sha256": "24909EB3997EA99B62CF532CF1CC5433EBDE5209295D25645AD362C9097EDD74",
+            "task_id": "GH-LEAN-P4-SCHUR-JOINT-THRESHOLD",
+            "source_agent": "codex-schur-joint-threshold-local",
+            "created_at": "2026-09-08",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_schur_joint_threshold_receipt",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
             "admission_label": "pending"
           }
         ],
@@ -77759,6 +77773,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "1e7b1df1835f4deba06b11a8182f6719"
+    },
+    {
+      "at": "2026-09-08T15:57:05.871217+00:00",
+      "kind": "agent_companion_integrated",
+      "record_file": "agent_review_inbox/companion-GH-LEAN-P4-SCHUR-JOINT-THRESHOLD-20260908.md",
+      "record_kind": "companion_log",
+      "review_sha256": "24909EB3997EA99B62CF532CF1CC5433EBDE5209295D25645AD362C9097EDD74",
+      "task_id": "GH-LEAN-P4-SCHUR-JOINT-THRESHOLD",
+      "classification": "pending_schur_joint_threshold_receipt",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e7b1df1835f4deba06b11a8182f6719"
     }
   ],
   "agent_requests": {},
@@ -81415,5 +81442,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "833914fc17c136ee044f041c7aa384a7a261186b8e6375219df816432d393a6e"
+  "state_checksum": "fc8bcf85ab4e90eabde48c90498c73234a4117ef0168b618cb22a3f0f23f06d6"
 }

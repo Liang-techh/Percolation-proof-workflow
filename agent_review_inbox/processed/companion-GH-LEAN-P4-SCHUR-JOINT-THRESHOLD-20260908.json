@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/companion-GH-LEAN-P4-SCHUR-JOINT-THRESHOLD-20260908.md",
+  "record_kind": "companion_log",
+  "review_sha256": "24909EB3997EA99B62CF532CF1CC5433EBDE5209295D25645AD362C9097EDD74",
+  "task_id": "GH-LEAN-P4-SCHUR-JOINT-THRESHOLD",
+  "source_agent": "codex-schur-joint-threshold-local",
+  "created_at": "2026-09-08",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_schur_joint_threshold_receipt",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T15:57:05.871217+00:00"
+}
