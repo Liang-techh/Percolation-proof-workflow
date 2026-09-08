@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 881,
+  "revision": 883,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -17340,6 +17340,21 @@
             "source_commit": "8a8a61e2deecb667f253b71c31ed2dfb41947b2e",
             "review_file": "agent_review_inbox/review-P4-DOMAIN-POINT-JOIN-20260908T203256Z.md",
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P4-JOINT6-RATIONAL-RESIDUAL-BRIDGE-sumengchen-20260908T2048Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "50ED047F9FA35E0A8E9D3FEA0AE21A45AF1CB7B9F4E1EA01A679CB660660B204",
+            "task_id": "T-P4-JOINT6-RATIONAL-RESIDUAL-BRIDGE",
+            "source_agent": "苏梦辰",
+            "created_at": "2026-09-08T20:48:00Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_p4_joint6_rational_residual_bridge",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "190b98044bd5effd691b6c4a577283adad7741e8",
+            "review_file": "agent_review_inbox/review-T-P4-JOINT6-RATIONAL-RESIDUAL-BRIDGE-sumengchen-20260908T2048Z.md",
+            "admission_label": "compiled_candidate"
           }
         ]
       }
@@ -41425,6 +41440,21 @@
             "target_scope": "routeb_node",
             "source_commit": "b4f4f35093c375615dfe024cb40bf51ee70a07b1",
             "review_file": "agent_review_inbox/review-GH-LEAN-BODY6-PATHCONTRACT-RECEIPT-HANDOFF-20260908T113233.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MIXED-FLOWCHUANFENG-BODY6-PATH-SOURCE-OBSTRUCTION-20260908T204422Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "4075E3C2010FD35C75B5B57FD5C86AFCE2797F6DAF25734A1E3B9E41C25B1B04",
+            "task_id": "GH-MIXED-FLOWCHUANFENG-BODY6-PATH",
+            "source_agent": "codex-body5-interface-lane-takeover",
+            "created_at": "2026-09-08T20:44:22Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_reassigned_body6_path_review",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "ea2354fa764390d8a0ba8acb925fde8974b51c37",
+            "review_file": "agent_review_inbox/review-GH-MIXED-FLOWCHUANFENG-BODY6-PATH-SOURCE-OBSTRUCTION-20260908T204422Z.md",
             "admission_label": "pending"
           }
         ]
@@ -82395,6 +82425,32 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "4e7586a2f5b048f19443d4c406afb7aa"
+    },
+    {
+      "at": "2026-09-08T20:46:41.766846+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-JOINT6-RATIONAL-RESIDUAL-BRIDGE-sumengchen-20260908T2048Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "50ED047F9FA35E0A8E9D3FEA0AE21A45AF1CB7B9F4E1EA01A679CB660660B204",
+      "task_id": "T-P4-JOINT6-RATIONAL-RESIDUAL-BRIDGE",
+      "classification": "pending_p4_joint6_rational_residual_bridge",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T20:47:28.241041+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MIXED-FLOWCHUANFENG-BODY6-PATH-SOURCE-OBSTRUCTION-20260908T204422Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "4075E3C2010FD35C75B5B57FD5C86AFCE2797F6DAF25734A1E3B9E41C25B1B04",
+      "task_id": "GH-MIXED-FLOWCHUANFENG-BODY6-PATH",
+      "classification": "pending_reassigned_body6_path_review",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1ea06cbee9b54297913156cfb0b201ce"
     }
   ],
   "agent_requests": {},
@@ -86051,5 +86107,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "d2114b3140a7a553ac5a63035e31bacd84293a7f224346f9783257cb47c2fe6e"
+  "state_checksum": "bc424df47ab8f1c3d3cdda9c196afb30d6af321f26a7c78d8ac2d3e43490afb3"
 }

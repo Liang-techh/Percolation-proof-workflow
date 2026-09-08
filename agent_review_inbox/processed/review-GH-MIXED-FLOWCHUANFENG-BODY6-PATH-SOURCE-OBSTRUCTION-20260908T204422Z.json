@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MIXED-FLOWCHUANFENG-BODY6-PATH-SOURCE-OBSTRUCTION-20260908T204422Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "4075E3C2010FD35C75B5B57FD5C86AFCE2797F6DAF25734A1E3B9E41C25B1B04",
+  "task_id": "GH-MIXED-FLOWCHUANFENG-BODY6-PATH",
+  "source_agent": "codex-body5-interface-lane-takeover",
+  "created_at": "2026-09-08T20:44:22Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_reassigned_body6_path_review",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "ea2354fa764390d8a0ba8acb925fde8974b51c37",
+  "review_file": "agent_review_inbox/review-GH-MIXED-FLOWCHUANFENG-BODY6-PATH-SOURCE-OBSTRUCTION-20260908T204422Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T20:47:28.241041+00:00"
+}

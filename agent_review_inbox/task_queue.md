@@ -4497,6 +4497,23 @@ manifest hash，继续保持 source export、semantic footprint、runtime 与 Le
 
 Sartre the 6th 继续处理 `P8-105-REACHABLE-SET-NEGATIVE-SEPARATOR`，不重复上述三条 lane。以上派工只改变 owner，不改变 theorem statement、admission gate 或 registry；所有新结果保持 pending，直到收割器接纳 review_result。
 
+## 2026-09-08 — revision 882 harvest：Joint6 Lean repair closeout
+
+远端收割到苏梦辰的 `T-P4-JOINT6-RATIONAL-RESIDUAL-BRIDGE` closeout。Lean 4.32
+focused job 在取消前已完成 `verify.sh`，输出 placeholder scan、axiom audit、signed
+cross-mismatch、same-cell/source typing、division-free sup/Lipschitz gates 全部 PASS；
+12 个 exported theorem 仅依赖 `propext`、`Classical.choice`、`Quot.sound`。由于后续
+sidecar push 触发 cancel-in-progress，整轮 Action 的最终状态为 cancelled，但这不属于
+该 sidecar 的 compile blocker，因此分类为 `compiled_candidate`，不是 VERIFIED。
+
+仍 OPEN 的关键边界：principal compact Joint6 的真实 CSE packet、deployed source binding、
+Float64/FD/controller/solve semantics、P8 ODE/path coverage 与 registry mutation。故该
+结果只关闭 exact-real rational residual algebra/interface child，不关闭 P4 parent 或
+formal certificate gate。
+
+同轮 `P5-099-TARGET-DOMAIN-LEAN` 只有巨阳仙尊的 task claim，未产生 review_result；继续
+按 claim 噪声处理，不计入证明进展。
+
 ## 2026-09-08 — revision 876 harvest：sidecar candidates normalized into inbox
 
 两份本地 agent 产出已通过 coordinator wrapper 纳入标准 inbox：

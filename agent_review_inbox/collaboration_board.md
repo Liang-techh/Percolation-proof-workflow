@@ -3648,3 +3648,13 @@ hash 和未编译边界；它们增加可复用接口，但没有 source/kernel/
 - Godel the 6th：`GH-MIXED-FLOWCHUANFENG-ADJUGATE`，adjugate signed-cancellation 的真实 source witness 绑定或 obstruction。
 
 Sartre the 6th 保持 `P8-105` reachable-set lane。补位只改变 owner，不改变 statement、gate 或 registry；所有结果须由 inbox harvest 接纳后仍保持 pending。
+
+### 梁智炜 · revision 882 harvest：Joint6 Lean repair closeout
+
+Joint6 rational residual bridge 的 Lean 4.32 focused verify 在取消前已完成并 PASS：
+12 个 theorem 的 axiom audit 仅含允许基础 axioms，signed cross-mismatch、same-cell/source
+typed interface、division-free sup/Lipschitz gate 均闭合。由于后续 sidecar push 触发
+cancel-in-progress，workflow 最终 cancelled 只表示外层调度状态，不覆盖该 focused PASS。
+principal actual CSE/source packet、部署绑定、Float64/FD、P8 coverage 与 registry 仍 OPEN，
+因此状态是 compiled_candidate，不能注册或关闭 P4 parent。P5-099 的 Lean 方向目前只有
+巨阳仙尊 claim，未当作 receipt。
