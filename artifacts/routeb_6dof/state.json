@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 752,
+  "revision": 753,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12344,6 +12344,21 @@
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-T-P3-central-FD-hull-c2c3-derivative-binding-codex-20260907T2339.md",
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P3-central-FD-hull-c2c3-central-fd-remainder-codex-20260908T0519.md",
+            "record_kind": "review_result",
+            "review_sha256": "D5F2493743902E61321B891C19AAB87EE61D42223F2752D63308172AFBF8A302",
+            "task_id": "T-P3-central-FD-hull",
+            "source_agent": "Codex",
+            "created_at": "2026-09-08T05:19:08-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_exact_central_fd_derivative_hull_bridge",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-T-P3-central-FD-hull-c2c3-central-fd-remainder-codex-20260908T0519.md",
+            "admission_label": "pending"
           }
         ]
       }
@@ -14745,6 +14760,21 @@
             "target_scope": "routeb_node",
             "source_commit": "d7f5af8fa96d7345a5370979e5f91d54b8e3f848",
             "review_file": "agent_review_inbox/review-T-P4-032-dh-analytic-A-upper-codex-20260907T234239.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P4-032-descriptor-P-upper-codex-20260908T052243.md",
+            "record_kind": "review_result",
+            "review_sha256": "63739E99F1D3E0102EEB4FC43B48742765BD70E8DB2E4561A7855FCDDC328FF5",
+            "task_id": "T-P4-032",
+            "source_agent": "Codex-P4-math-lane",
+            "created_at": "2026-09-08T05:22:43-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_typed_block_source_bridge",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "943bd5b1713c88ba10a2965d3ce809449eac67fb",
+            "review_file": "agent_review_inbox/review-T-P4-032-descriptor-P-upper-codex-20260908T052243.md",
             "admission_label": "pending"
           }
         ]
@@ -38458,6 +38488,36 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-initial-path-caps-codex-20260908T0545.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-aligned-path-cap-consumer-20260908T112016Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "23571AA738C693A993B36D859BD43DCDC919FCBE3EA1C3841C91C3DF011BBF57",
+            "task_id": "T-P4-033-O1-body6-slice",
+            "source_agent": "codex-body6-math-lane",
+            "created_at": "2026-09-08T11:20:16Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_independent_body6_source_slice",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-aligned-path-cap-consumer-20260908T112016Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-lean-receipt-codex-20260908T052153.md",
+            "record_kind": "review_result",
+            "review_sha256": "59A88B4D7ABCE373D93AA08891679CF223C2724D785B26480F6ACC691F211858",
+            "task_id": "T-P4-033-O1-body6-slice",
+            "source_agent": "Codex",
+            "created_at": "2026-09-08T05:21:53-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_independent_body6_source_slice",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-lean-receipt-codex-20260908T052153.md",
             "admission_label": "pending"
           }
         ]
@@ -75651,6 +75711,58 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T11:38:14.082187+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P3-central-FD-hull-c2c3-central-fd-remainder-codex-20260908T0519.md",
+      "record_kind": "review_result",
+      "review_sha256": "D5F2493743902E61321B891C19AAB87EE61D42223F2752D63308172AFBF8A302",
+      "task_id": "T-P3-central-FD-hull",
+      "classification": "pending_exact_central_fd_derivative_hull_bridge",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "d039d2c007b348349f022a77a369392e"
+    },
+    {
+      "at": "2026-09-08T11:38:14.082460+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-032-descriptor-P-upper-codex-20260908T052243.md",
+      "record_kind": "review_result",
+      "review_sha256": "63739E99F1D3E0102EEB4FC43B48742765BD70E8DB2E4561A7855FCDDC328FF5",
+      "task_id": "T-P4-032",
+      "classification": "pending_typed_block_source_bridge",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T11:38:14.082775+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-aligned-path-cap-consumer-20260908T112016Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "23571AA738C693A993B36D859BD43DCDC919FCBE3EA1C3841C91C3DF011BBF57",
+      "task_id": "T-P4-033-O1-body6-slice",
+      "classification": "pending_independent_body6_source_slice",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1ea06cbee9b54297913156cfb0b201ce"
+    },
+    {
+      "at": "2026-09-08T11:38:14.083091+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-lean-receipt-codex-20260908T052153.md",
+      "record_kind": "review_result",
+      "review_sha256": "59A88B4D7ABCE373D93AA08891679CF223C2724D785B26480F6ACC691F211858",
+      "task_id": "T-P4-033-O1-body6-slice",
+      "classification": "pending_independent_body6_source_slice",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1ea06cbee9b54297913156cfb0b201ce"
     }
   ],
   "agent_requests": {},
@@ -79307,5 +79419,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "f1afebd83b5dcf0a5c74669a990bca1f1234d1c446238e7f375eed1f519756c6"
+  "state_checksum": "859fbc6135a09509e82cfe712aa75145edfa07321df14dcdb2ea5376ac4886bb"
 }

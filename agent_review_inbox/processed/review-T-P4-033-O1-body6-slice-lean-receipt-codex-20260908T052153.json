@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-lean-receipt-codex-20260908T052153.md",
+  "record_kind": "review_result",
+  "review_sha256": "59A88B4D7ABCE373D93AA08891679CF223C2724D785B26480F6ACC691F211858",
+  "task_id": "T-P4-033-O1-body6-slice",
+  "source_agent": "Codex",
+  "created_at": "2026-09-08T05:21:53-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_independent_body6_source_slice",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-lean-receipt-codex-20260908T052153.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T11:38:14.083091+00:00"
+}

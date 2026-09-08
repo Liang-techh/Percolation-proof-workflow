@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-aligned-path-cap-consumer-20260908T112016Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "23571AA738C693A993B36D859BD43DCDC919FCBE3EA1C3841C91C3DF011BBF57",
+  "task_id": "T-P4-033-O1-body6-slice",
+  "source_agent": "codex-body6-math-lane",
+  "created_at": "2026-09-08T11:20:16Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_independent_body6_source_slice",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-033-O1-body6-slice-aligned-path-cap-consumer-20260908T112016Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T11:38:14.082775+00:00"
+}
