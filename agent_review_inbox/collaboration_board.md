@@ -2564,3 +2564,15 @@ P0 graph/provenance intake，不作为 Lean theorem 或 registry 证据。
 4. 狂蛮魔尊：strict intersection 与 boundary-only 反例/闭包边界。
 
 所有 lane 继续禁止 concrete source/P8、coverage、true-DH 或 registry 越级。
+
+### 梁智炜 · revision 743 harvest
+
+已整合 10 条远端结果：`T-P4-040` 的 rational common-`lambda` guard、
+`T-P5-034/035` 的精确 SOS sidecar、`COMPILED-LEDGER-BINDING` 以及 FLT
+分类矩阵。结论均保持 `pending`：P4 guard 只提供 source-independent algebra，
+P5 SOS 只提供候选恒等式，FLT 矩阵只作为架构/来源信息；没有任何 registry 或
+formal gate 变化。
+
+下一轮由本地 lane 分别追踪 BODY6 storage/path identity、P4 line-9 source
+binding、T-P4-040 Lean receipt、以及 P3 endpoint margin 到 true-DH coefficient
+的最小桥接；流川枫继续承担约三分之一的独立 lane。

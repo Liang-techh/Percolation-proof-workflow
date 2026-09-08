@@ -3188,3 +3188,24 @@ child，不改变 verified registry 或 formal gate。
 
 所有新 lane 必须保留 `pending`、完整 provenance 和失败历史；不把纯数学结果、
 编译候选或单行 discriminant PASS 升级为 P4/M4 admission。
+
+## revision 743 — remote harvest classification
+
+本轮从 GitHub agent lane 收到并整合 10 条 pending metadata：
+
+- `T-P4-040` rational common-`lambda` guard：已有 source-independent Lean
+  sidecar，覆盖 endpoint/convex interval、symmetric rounding 与一侧系数包络；
+  仍需独立 pinned receipt，不能替代 concrete DH source binding。
+- `T-P5-034` block-(4,5) `15/16` SOS 与 `T-P5-035` `93/100` SOS：精确有理
+  恒等式/稀疏 SOS 候选已进入 examples，但它们只关闭 source-independent
+  algebraic leaves；真实 V/Q source、coverage、flowpipe、true-DH 与 Lean
+  admission 仍未闭合。
+- `T-P4-COMPILED-LEDGER-BINDING`：保留 compiled ActualStorage/ActualShift
+  的 path-domain、ledger equality 与 tube inclusion 前提，未升级为 theorem。
+- `T-P0-FLT-CLASSIFICATION-MATRIX`：属于 Anthropic 通用基础设施 intake 的
+  provenance/architecture-only 分类，不进入 Route-B verified DAG。
+
+integrator 已将这些记录写入 StateStore 的 pending provenance/events；revision
+743、registry=0、formal_certificate_allowed=false。下一轮优先回收 shared-
+lambda 的独立 Lean receipt，以及 P5 两个 SOS sidecar 的精确 checker 边界，
+不做宽泛回归。
