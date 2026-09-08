@@ -164,6 +164,9 @@ TASK_TARGETS = {
     "GH-MATH-P4-DIRECT-BLOCK456-METRIC-TRANSPORT": (
         "P4.true_dh_port_source_binding",
         "pending_direct_block456_metric_transport"),
+    "GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN": (
+        "P4.residual_schur_pmi",
+        "pending_direct_block456_beta_design"),
     # New GitHub proof lanes use descriptive uppercase suffixes.  Route them
     # to existing DAG parents as pending metadata only; no admission path is
     # implied by these aliases.

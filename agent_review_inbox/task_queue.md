@@ -181,6 +181,7 @@ Schur closure 的数学 sidecar 已收割为 pending；下一批只消费这一�
 |---|---|---|---|
 | `GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION` | 苏梦辰 | `NEW_P4_032_GenericSchurAllocation20260908.lean` | standalone pinned compile/repair；逐条 `#print axioms`、placeholder scan、import closure；不做 source/admission |
 | `GH-MATH-P4-DIRECT-BLOCK456-METRIC-TRANSPORT` | 古月方源 | block456 direct target 与 generic Euclidean sidecar | 只研究 `M0_CC⁻¹` dense metric 到 Euclidean/linear-map 形式的最小 exact transport；若缺 SPD/square-root witness，提交 obstruction |
+| `GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN` | 红莲魔尊 | `routeB_compact_block456_direct_target_origin_beta_audit.csv` 与 direct scalar target | 以原点必要条件 `beta_a I-M0_CC ⪰ 0` 为起点，研究 `beta_a=3/25` 的全域预算/能量代价；若不能闭合，提交精确参数 obstruction，不重复原点审计 |
 
 上述两个任务承接数学瓶颈，不替代既有完整 PATHCONTRACT 或 Schur source-binding
 任务；所有结果保持 `pending`，不得把 standalone compile 当作 physical closure。

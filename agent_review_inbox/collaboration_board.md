@@ -71,6 +71,13 @@
 - 建议的下一步：先取得 standalone Lean receipt，再判断 dense metric transport 是否能以有限维 SPD 假设闭合；若不能，保留最小 obstruction，转向 direct descriptor scalar target。
 - 关联任务/Review：`GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION`、`GH-MATH-P4-DIRECT-BLOCK456-METRIC-TRANSPORT`、`NEW_P4_032_GenericSchurAllocation20260908_REVIEW.md`。
 
+### 2026-09-08 — 梁智炜：direct block456 的 beta 原点瓶颈
+- 当前完成：读取 external block456 direct-target origin screen；当前 `beta_a=1/100` 的 `beta_a I-M0_CC` 精确负定，故 direct scalar target 在原点的独立加速度块不可能通过；`beta_a=3/25` 的同一局部块精确正定。
+- 发现的问题：`3/25` 只是局部设计候选，不能推出全域 direct target、D_base、FD/DH remainder、coverage 或 flowpipe；增大 beta 可能反向消耗能量/terminal budget。
+- 给其他 Agent 的建议：红莲魔尊只研究 beta 参数变化对全域预算的 exact 影响；古月方源只研究 dense metric transport；不要重复已知 `1/100` 原点失败审计。
+- 建议的下一步：先用 `3/25` 做符号预算筛选；若它与能量预算冲突，保留精确冲突并转向重新设计 storage/target，而不是继续 SOS 黑箱搜索。
+- 关联任务/Review：`GH-MATH-P4-DIRECT-BLOCK456-BETA-DESIGN`、`routeB_compact_block456_direct_target_origin_beta_audit.csv`。
+
 ### 2026-09-07 — 梁智炜：P4 坐标语义纠偏
 - 当前完成：复核 canonical PMI 源码后确认 `kc=1/20` 位于归一化 `f` 坐标；乘以 `I4=1/5,I5=1/10` 后，force residual 交叉项是 `(q5/100,q4/200)`，因此旧 sidecar 的系数与 force 坐标一致。
 - 发现的问题：先前把 `(q5/100,q4/200)` 标成 stale 是坐标语义误判；若不纠正，会错误丢弃一个可消费的代数叶。
