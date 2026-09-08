@@ -14,7 +14,7 @@ validation candidate.
 | Adapter | Classification | Theorem-DAG role | Main contract | Value / limiting boundary | Next action |
 |---|---|---|---|---|---|
 | `Submodule.Quotient.continuousLinearEquiv`, `Submodule.quotientPiContinuousLinearEquiv` | `direct_reuse` | finite quotient and coordinate-product transport | ring/module structure, finite-index product, topological additive groups | highest structural reuse for quotient/projected-state interfaces; no coverage, residual, or flowpipe result | pinned compile and exact source/adapter audit |
-| `Algebra.exists_bijOn_eval_differentiableOn_pi_of_smooth_of_kaehlerDifferential` | `direct_reuse` | local coordinate and differentiable-factorization node | complex finite-type smooth domain, Kähler-differential rank/generation, evaluation hom, coordinate family | closest to an analytic theorem-DAG boundary; does not yield a real/PDE chart without separate scalar, domain, and regularity obligations | recommended single candidate for 流川枫 |
+| `Algebra.exists_bijOn_eval_differentiableOn_pi_of_smooth_of_kaehlerDifferential` | `direct_reuse` | local coordinate and differentiable-factorization node | complex finite-type smooth domain, Kähler-differential rank/generation, evaluation hom, coordinate family | closest to an analytic theorem-DAG boundary; does not yield a real/PDE chart without separate scalar, domain, and regularity obligations | current Lean lane: 苏梦辰 / 巨阳仙尊 (`T-FLT-D1-POINT-DERIVATION-ADAPTER`); historical Flowchuan assignment is retired |
 | `TopologicalSpace.secondCountableTopology_of_countable_cover'` | `direct_reuse` | topological bookkeeping side condition | countable index, second-countable source fibers, open embeddings, point-hit witness | useful for chart topology; a hit witness is not quantitative domain coverage | keep pending; no priority verification |
 | `ContinuousAddEquiv.toIntContinuousLinearEquiv` | `light_adaptation` | additive transport seam | additive commutative groups, topologies, additive homeomorphism | output is only `M ≃L[ℤ] M₂`; it is not polymorphic real/complex-linear PDE transport | retain as scalar-boundary reference |
 
@@ -29,10 +29,12 @@ remain unresolved.
 
 ## Verification priority
 
-The single best candidate to hand to 流川枫 is the
+The single best candidate for the current Lean lane is the
 differentiable-coordinate adapter.  It has the strongest nontrivial analytic
 interface among the four and can serve as a typed local-coordinate node in a
-theorem DAG.  The handoff must remain fail-closed:
+theorem DAG.  The historical Flowchuan assignment is retained only in old
+provenance; all new work is routed to 苏梦辰 / 巨阳仙尊.  The handoff must
+remain fail-closed:
 
 1. check the pinned commit, source blob, imports, and exact declaration type;
 2. compile only the isolated sidecar or a minimal source-derived probe;
