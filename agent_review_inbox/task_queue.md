@@ -3905,6 +3905,13 @@ obligations，不能直接关闭 body-5。
 本轮不新增流川枫任务。revision=833、registry=0、formal gate 关闭；FLT 项只写
 event-only catalog，Route-B 项只写 pending obstruction。
 
+## Workflow infrastructure — commit `b69670c`
+
+已将 P2M 行为契约与 provenance 约束固化到 `anthropic_intake` 和独立
+`flt_provenance` validator。后续 FLT 候选在进入 pinned Lean lane 前，必须有
+canonical source、历史别名、逐项 ownership/hash、P2M 行为检查和 pending admission；
+validator 不能写 registry。聚焦测试 19/19 通过，未运行全量 FLT/Lean 回归。
+
 ## 2026-09-08 — revision 834 完整 receipt 补收
 
 | task | owner | receipt boundary | next action |

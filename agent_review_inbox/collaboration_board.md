@@ -3182,6 +3182,15 @@ revision=833，registry=0，`formal_certificate_allowed=false`。两类结果分
 P4 pending obstruction 与 FLT event-only catalog；继续优先处理真实 source witness
 和 pinned Lean receipt，不把裸 `.lean` 文件、静态 hash 或预期结果当成验证成功。
 
+### 梁智炜 · workflow milestone `b69670c`
+
+FLT intake 已新增机器可读的 P2M contract：扫描结果显式要求
+`preserveOrder`、`clearAuxDeclsInsteadOfRevert`、universe-generalization、
+精确 Lean/Mathlib pin、正负 probe、OLean、`#print axioms` 与 comparator receipt。
+同时新增独立 provenance validator，区分 canonical upstream URL、历史别名、
+Anthropic 与第三方 FLT/Mathlib ownership，并强制 `advisory_only`/pending 边界。
+这项基础设施不改变 Route-B 数学结论，不写 registry，也不把 P2M 候选标为 VERIFIED。
+
 ### 梁智炜 · revision 834：完整 envelope 补收
 
 Godel 的第二份 immutable review 绑定了 certificate CSV、obstruction checker、
