@@ -3494,3 +3494,12 @@ P4 `DHAnalyticAUpper` 已收割：基于现有 compact-DH 转录式得到
 两条降维路线之一；必须同时提供 effective RHS、同源 metric、determinant、signed
 numerator、observable/units 和 actual defect。若缺任一项，保留 obstruction，不再
 重复三维/二维字段语义审计。
+
+## 2026-09-08 — actual three-row witness lane
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-MATH-P4-ACTUAL-THREE-ROW-WITNESS` | 古月方源 / local source lane | 为选定降维路线寻找一个真实 full-state cell 的三行 balance 与 complete packet；缺失则提交逐项 obstruction |
+
+这是 revision 785 的唯一 source-critical follow-up；不接受只含 nominal row、
+单点 CSV、三维 port norm 或未绑定 observable 的替代物。

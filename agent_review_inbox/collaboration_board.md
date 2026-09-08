@@ -2750,3 +2750,6 @@ B=(4,5) 的二维 packet；禁止按字段名称拼接证据。
 `d≠0` 下先做 joint-6 Schur elimination。两条路线都必须保留完整有效 RHS、
 `h*a6`/defect、同一 descriptor 的 determinant 与 signed numerator；当前真实
 source 仍缺三行 balance 和 observable witness，故只登记 pending interface。
+
+下一条 source-critical lane 已派发给古月方源：只寻找一个真实 full-state cell
+的三行 balance 与完整 packet；若仍不存在则逐项记录缺失证据，不重复维度审计。
