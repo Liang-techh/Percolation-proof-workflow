@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 774,
+  "revision": 775,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -15460,6 +15460,21 @@
             "target_scope": "routeb_node",
             "source_commit": "f907e960361438942831cfd7ff0661b0d3314b40",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-BLOCK456-SOURCE-REIFICATION-codex-20260908T091914.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-Q6-RAY-GRAPH-EXCLUSION-20260908T152042Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "4BF6B2529BBCE744F884945F7D8074FB64C0754CF71B5BD909AE71C7C5D3A4BE",
+            "task_id": "GH-MATH-P4-DIRECT-BLOCK456-Q6-RAY-GRAPH-EXCLUSION",
+            "source_agent": "codex-q6-ray-source-contract-lane",
+            "created_at": "2026-09-08T15:20:42Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_direct_block456_q6_ray_graph_exclusion",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-Q6-RAY-GRAPH-EXCLUSION-20260908T152042Z.md",
             "admission_label": "pending"
           }
         ]
@@ -77448,6 +77463,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T15:24:39.247895+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-DIRECT-BLOCK456-Q6-RAY-GRAPH-EXCLUSION-20260908T152042Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "4BF6B2529BBCE744F884945F7D8074FB64C0754CF71B5BD909AE71C7C5D3A4BE",
+      "task_id": "GH-MATH-P4-DIRECT-BLOCK456-Q6-RAY-GRAPH-EXCLUSION",
+      "classification": "pending_direct_block456_q6_ray_graph_exclusion",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -81104,5 +81132,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "8388ee4bae9403e44d3c883fef9ff5c0a2ebd8ec0bdd2dfb6214d87dae1cfb83"
+  "state_checksum": "8fc7d67b25fe1f58297b5e484fe077889963ed20ca1975d70f6c3e1be6dd368d"
 }
