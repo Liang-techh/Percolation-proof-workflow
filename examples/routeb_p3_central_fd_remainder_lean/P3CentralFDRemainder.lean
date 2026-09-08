@@ -4,7 +4,7 @@ namespace RouteBP3CentralFDRemainder
 
 /-- Symmetric centered finite-difference quotient, parameterized only by the
 already evaluated forward/backward samples. -/
-def centralFD (fplus fminus h : ℝ) : ℝ :=
+noncomputable def centralFD (fplus fminus h : ℝ) : ℝ :=
   (fplus - fminus) / (2 * h)
 
 /-- Division-free centered finite-difference defect relative to a proposed
@@ -48,14 +48,10 @@ raw centered defect bound `M h^3 / 3`. -/
 theorem rawDefect_abs_le_third (p : TaylorPair) :
     |rawDefect p.fplus p.fminus p.h p.d| ≤ p.M * p.h ^ 3 / 3 := by
   rw [rawDefect_eq_remainder_diff p]
-  calc
-    |p.rplus - p.rminus|
-        = |p.rplus + (-p.rminus)| := by ring_nf
-    _ ≤ |p.rplus| + |-p.rminus| := abs_add _ _
-    _ = |p.rplus| + |p.rminus| := by rw [abs_neg]
-    _ ≤ p.M * p.h ^ 3 / 6 + p.M * p.h ^ 3 / 6 :=
-      add_le_add p.rplus_abs p.rminus_abs
-    _ = p.M * p.h ^ 3 / 3 := by ring
+  have hrp := abs_le.mp p.rplus_abs
+  have hrm := abs_le.mp p.rminus_abs
+  apply abs_le.mpr
+  constructor <;> linarith [hrp.1, hrp.2, hrm.1, hrm.2]
 
 /-- Preferred division-free checker form from the mathematical handoff. -/
 theorem central_fd_raw_defect_le_of_taylor_pair (p : TaylorPair) :
@@ -70,27 +66,36 @@ theorem centralFD_error_eq_raw_div (p : TaylorPair) :
       = rawDefect p.fplus p.fminus p.h p.d / (2 * p.h) := by
   unfold centralFD rawDefect
   field_simp [ne_of_gt p.h_pos]
-  ring
 
 /-- Sharp normalized centered-FD error bound `M h^2 / 6`, obtained purely from
 `TaylorPair`; the analytic production of such a pair remains a separate leaf. -/
 theorem central_fd_error_le_sixth_third_deriv (p : TaylorPair) :
     |centralFD p.fplus p.fminus p.h - p.d| ≤ p.M * p.h ^ 2 / 6 := by
-  have hden : 0 < 2 * p.h := by positivity
-  rw [centralFD_error_eq_raw_div p, abs_div, abs_of_pos hden]
-  apply (div_le_iff₀ hden).2
-  calc
-    |rawDefect p.fplus p.fminus p.h p.d|
-        ≤ p.M * p.h ^ 3 / 3 := rawDefect_abs_le_third p
-    _ = (p.M * p.h ^ 2 / 6) * (2 * p.h) := by ring
+  have hden : 0 < 2 * p.h := by nlinarith [p.h_pos]
+  have hraw := rawDefect_abs_le_third p
+  have hb := abs_le.mp hraw
+  apply abs_le.mpr
+  constructor
+  · rw [centralFD_error_eq_raw_div p]
+    apply (le_div_iff₀ hden).2
+    calc
+      -(p.M * p.h ^ 2 / 6) * (2 * p.h)
+          = -(p.M * p.h ^ 3 / 3) := by ring
+      _ ≤ rawDefect p.fplus p.fminus p.h p.d := hb.1
+  · rw [centralFD_error_eq_raw_div p]
+    apply (div_le_iff₀ hden).2
+    calc
+      rawDefect p.fplus p.fminus p.h p.d
+          ≤ p.M * p.h ^ 3 / 3 := hb.2
+      _ = (p.M * p.h ^ 2 / 6) * (2 * p.h) := by ring
 
 /-- Pure interval arithmetic needed by the source-facing shifted-region
-contract: every centered stencil from `[a,b]` with `0 ≤ h ≤ hmax` lies inside
+contract: every centered stencil from `[a,b]` with `h ≤ hmax` lies inside
 `[a-hmax,b+hmax]`. -/
 theorem shifted_stencil_contained
     (a b hmax x h : ℝ)
     (hx_lo : a ≤ x) (hx_hi : x ≤ b)
-    (h_nonneg : 0 ≤ h) (h_le : h ≤ hmax) :
+    (h_le : h ≤ hmax) :
     a - hmax ≤ x - h ∧ x + h ≤ b + hmax := by
   constructor <;> linarith
 
@@ -99,23 +104,24 @@ bound immediately gives the uniform `M hmax^2 / 6` envelope. -/
 theorem central_fd_error_uniform_of_step_cap
     (p : TaylorPair) (hmax : ℝ) (h_le : p.h ≤ hmax) :
     |centralFD p.fplus p.fminus p.h - p.d| ≤ p.M * hmax ^ 2 / 6 := by
-  have hmax_nonneg : 0 ≤ hmax := le_trans (le_of_lt p.h_pos) h_le
-  have hsquares : p.h ^ 2 ≤ hmax ^ 2 := by
-    nlinarith [sq_nonneg (hmax - p.h)]
+  have hmax_nonneg : 0 ≤ hmax := by linarith [p.h_pos, h_le]
+  have hdiff : 0 ≤ hmax - p.h := sub_nonneg.mpr h_le
+  have hsum : 0 ≤ hmax + p.h := by linarith [p.h_pos, hmax_nonneg]
+  have hprod : 0 ≤ (hmax - p.h) * (hmax + p.h) := mul_nonneg hdiff hsum
+  have hsquares : p.h ^ 2 ≤ hmax ^ 2 := by nlinarith [hprod]
   have hmul : p.M * p.h ^ 2 ≤ p.M * hmax ^ 2 :=
     mul_le_mul_of_nonneg_left hsquares p.M_nonneg
   calc
     |centralFD p.fplus p.fminus p.h - p.d|
         ≤ p.M * p.h ^ 2 / 6 := central_fd_error_le_sixth_third_deriv p
-    _ ≤ p.M * hmax ^ 2 / 6 := by linarith
+    _ ≤ p.M * hmax ^ 2 / 6 := by linarith [hmul]
 
 /-- Exact `x^3` regression: centered FD differs from the true derivative
 `3*x^2` by exactly `h^2`, so the constant `1/6` is attained when `M=6`. -/
 theorem central_fd_x_cube_sharp (x h : ℝ) (h_ne : h ≠ 0) :
     centralFD ((x + h) ^ 3) ((x - h) ^ 3) h - 3 * x ^ 2 = h ^ 2 := by
   unfold centralFD
-  field_simp [h_ne]
-  ring
+  field_simp [h_ne] <;> ring
 
 /-- Division-free version of the same cubic sharpness regression. -/
 theorem raw_defect_x_cube_sharp (x h : ℝ) :
@@ -127,9 +133,9 @@ theorem raw_defect_x_cube_sharp (x h : ℝ) :
 def cubicFamily (A x0 t : ℝ) : ℝ :=
   A * (t - x0) ^ 3
 
-/-- Every member of `A*(t-x0)^3` has the same algebraic value/first-/second-
-jet formulas at the center.  This is the finite-dimensional regression behind
-the information-boundary argument. -/
+/-- Every member of `A*(t-x0)^3` has the same algebraic value and identical
+first- and second-order jet formulas at the center.  This is the finite-
+dimensional regression behind the information-boundary argument. -/
 theorem cubic_family_same_center_two_jet (A x0 : ℝ) :
     cubicFamily A x0 x0 = 0
       ∧ 3 * A * (x0 - x0) ^ 2 = 0
@@ -143,8 +149,7 @@ theorem cubic_family_center_fd_error (A x0 h : ℝ) (h_ne : h ≠ 0) :
         (cubicFamily A x0 (x0 - h)) h
       = A * h ^ 2 := by
   unfold centralFD cubicFamily
-  field_simp [h_ne]
-  ring
+  field_simp [h_ne] <;> ring
 
 /-- Minimal two-term linear residual handoff.  It deliberately assumes the
 caller has already source-bound the exact decomposition `e=e1+e2`; this theorem
@@ -155,10 +160,15 @@ theorem central_fd_two_term_linear_residual_budget
     (h1 : 6 * |e1| ≤ B1)
     (h2 : 6 * |e2| ≤ B2) :
     6 * |e| ≤ B1 + B2 := by
-  have htri : |e| ≤ |e1| + |e2| := by
-    rw [hdecomp]
-    exact abs_add e1 e2
-  nlinarith
+  have h1' : |e1| ≤ B1 / 6 := by linarith
+  have h2' : |e2| ≤ B2 / 6 := by linarith
+  have he1 := abs_le.mp h1'
+  have he2 := abs_le.mp h2'
+  have hab : |e1 + e2| ≤ (B1 + B2) / 6 := by
+    apply abs_le.mpr
+    constructor <;> linarith [he1.1, he1.2, he2.1, he2.2]
+  rw [hdecomp]
+  linarith
 
 #print axioms rawDefect_eq_remainder_diff
 #print axioms rawDefect_abs_le_third
