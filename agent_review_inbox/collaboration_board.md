@@ -2761,3 +2761,6 @@ source 仍缺三行 balance 和 observable witness，故只登记 pending interf
 numerator 或 observable/units binding。factorized source 的 joint-6 damping 还与
 `dhport_lib.jl` 不一致。域存在性已不再是主要阻塞，source semantics 与 row
 equation witness 成为下一阶段唯一主瓶颈。
+
+下一条 source lane 已聚焦 half-active slab 的 controller/damping 对齐和实际
+`M*a=F+e` rows witness；不再扩展 domain 搜索，不能对 mismatch 做静默修正。

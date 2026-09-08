@@ -3510,3 +3510,12 @@ numerator、observable/units 和 actual defect。若缺任一项，保留 obstru
 semantics：固定 `M*a=F+e`、rows 4/5（及必要的 row 6）、effective RHS、同一
 det/numerator/observable 以及 FD/solve defect。若因 controller mismatch 或
 缺少 runtime/source refinement 无法闭合，原样保留 exact obstruction。
+
+## 2026-09-08 — half-active source semantics lane
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-MATH-P4-SOURCE-SEMANTICS-HALF-ACTIVE` | 古月方源 / local source lane | 对齐或拒绝 factorized source 与 `dhport_lib.jl` 的 controller/damping 语义，并固定 `M*a=F+e` rows witness contract |
+
+该任务消费 revision 786 的缺口，不重新搜索 domain、不生成数值、不把
+factorized descriptor 或 `exact_ddq` 名称当作 runtime exactness。
