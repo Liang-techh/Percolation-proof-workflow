@@ -198,6 +198,34 @@ def _candidates(paths: set[str]) -> tuple[ReuseCandidate, ...]:
         "Anthropic FLT P2M/Sol source; Apache-2.0; exact file attribution must be checked against ATTRIBUTION.md",
     )
     add(
+        "Definitions/Def_Algebra_PointDerivations.lean",
+        "point-derivation-linear-map", 1, "recompile-and-admit",
+        "Defines the PointDerivations submodule and the linear post-composition API map/map_comp/map_id/map_apply_coe. It is a generic Leibniz-derivation interface, not a physical derivative identity.",
+        "Highest-value derivation adapter: compose a separately proved Route-B observable/jet derivation with a fixed linear output map. Requires a fresh real-algebra evaluation and Leibniz-law binding.",
+        "FLT derivation scan review 20260908; upstream NOTICE/ATTRIBUTION and Mathlib ownership must be retained",
+    )
+    add(
+        "Theorems/Thm_ContinuousMap_ae_eq_zero_of_forall_mem_starSubalgebra_integral_mul_eq_zero.lean",
+        "continuous-residual-ae-uniqueness", 2, "adapt-and-recompile",
+        "Uses compact T2 Borel measure, a finite measure, a point-separating star subalgebra, and all test-function integral identities to derive a.e. zero residual.",
+        "Potential residual uniqueness leaf for a function-space fallback; it does not provide pointwise zero, finite-sample coverage, PSD, or a DH flowpipe.",
+        "FLT derivation scan review 20260908; upstream NOTICE/ATTRIBUTION and Mathlib ownership must be retained",
+    )
+    add(
+        "Theorems/Thm_AlgebraicCurve_Differential_pullbackAlong_comp.lean",
+        "kaehler-differential-pullback-composition", 3, "architecture-only",
+        "Composes Kähler differential pullbacks through algebra morphisms. The generator/span-induction proof shape is reusable, but the theorem is not a real smooth chain rule.",
+        "Architecture reference for separating generator identities from span extension in a future coordinate-change adapter; no Route-B theorem node is implied.",
+        "FLT derivation scan review 20260908; upstream NOTICE/ATTRIBUTION and Mathlib ownership must be retained",
+    )
+    add(
+        "Theorems/Thm_ContinuousMap_exists_continuous_monoidHom_forall_sum_eq_zero_of_compactSpace.lean",
+        "compact-character-relation", 3, "architecture-only",
+        "A compact-commutative-group character existence wrapper with exact finite relations; the current scan did not establish its import/solution closure.",
+        "Only a structural reference for organizing shift relations; ordinary Route-B phase space is not assumed to be a compact commutative group.",
+        "FLT derivation scan review 20260908; upstream NOTICE/ATTRIBUTION and Mathlib ownership must be retained",
+    )
+    add(
         "Definitions/Def_Mathlib_IsModuleTopology.lean",
         "mathlib-adapter", 2, "adapt-and-recompile",
         "Propagates topological-module structure through inducing linear maps, submodules, Pi types and a biscalar interface; a compact adapter pattern for typed continuous dynamics.",

@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-042-liuchuanafeng-20260907T1813.md",
+  "record_kind": "review_result",
+  "review_sha256": "FB93F9F11C0A6B7AACFE1E427C595DF07B15E1D010DBF1A2660775DD17B055DD",
+  "task_id": "T-P4-042",
+  "source_agent": "流川枫",
+  "created_at": "2026-09-07T18:13:00-06:00",
+  "integration_status": "rejected_retired_agent",
+  "classification": "retired_agent_record",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "9d19b9b400398aa3c8b290c90bf376e8370c6799",
+  "retired_agent": true,
+  "rejection_reason": "agent_removed_from_current_roster",
+  "integrated_at": "2026-09-08T18:29:40.146554+00:00"
+}

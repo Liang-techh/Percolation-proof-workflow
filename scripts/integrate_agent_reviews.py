@@ -399,6 +399,9 @@ TASK_TARGETS = {
     "T-FLT-P2M-PINNED-API-REPAIR-20260908": (
         None,
         "flt_p2m_pinned_api_repair"),
+    "T-FLT-DERIVATION-CALCULUS-SCAN-20260908": (
+        None,
+        "flt_derivation_calculus_scan"),
     "T-P4-KC-COORDINATE-ADAPTER": ("P4.residual_schur_pmi", "pending_kc_coordinate_adapter"),
     "T-P4-MBD-PROJECTION": ("P4.residual_schur_pmi", "pending_mbd_projection_obstruction"),
     "T-P4-012": ("P4.residual_schur_pmi", "pending_typed_remote_binding_contract"),

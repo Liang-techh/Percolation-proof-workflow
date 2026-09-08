@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P0-PI-SUBTYPE-TRANSPORT-liuchuanafeng-20260907T1928.md",
+  "record_kind": "review_result",
+  "review_sha256": "60A78703D0399900371DF59574EE5A1EDC49F19154E447C0ADA48A1C8EC031EA",
+  "task_id": "T-P0-PI-SUBTYPE-TRANSPORT",
+  "source_agent": "流川枫",
+  "created_at": "2026-09-07T19:28:00-06:00",
+  "integration_status": "rejected_retired_agent",
+  "classification": "retired_agent_record",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "0523a5728730bab39172ed608384d7e2397553ad",
+  "retired_agent": true,
+  "rejection_reason": "agent_removed_from_current_roster",
+  "integrated_at": "2026-09-08T18:29:40.146330+00:00"
+}

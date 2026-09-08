@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-DH-PRODUCER-BASE-BRIDGE-liuchuanafeng-20260908T0208.md",
+  "record_kind": "review_result",
+  "review_sha256": "05AED3F13E5CCAFCCFA5DB8AC177640F1A9F9CC2875D03D928314E6C254F4B0E",
+  "task_id": "T-P4-DH-PRODUCER-BASE-BRIDGE",
+  "source_agent": "流川枫",
+  "created_at": "2026-09-08T02:08:00-06:00",
+  "integration_status": "rejected_retired_agent",
+  "classification": "retired_agent_record",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "8e033f07b4923709499ef39b7e22379f600742fa",
+  "retired_agent": true,
+  "rejection_reason": "agent_removed_from_current_roster",
+  "integrated_at": "2026-09-08T18:29:40.146832+00:00"
+}

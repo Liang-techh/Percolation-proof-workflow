@@ -3220,3 +3220,15 @@ Poincare 的新 candidate 已收入 inbox：它从完整 `List.Perm` 编码推�
 保持 partner 重数并显式保留 filter-empty、q3 binding、G1/G2 等未完成义务。
 该候选为 `OPEN_UNCOMPILED` pending Lean interface，尚无 source closure、kernel
 receipt 或 registry admission。
+
+### 梁智炜 · revision 835：退休回执清理与 derivation/calculus 收割
+
+本轮收割器幂等重跑确认没有重复事件。它将 9 个历史遗留的流川枫 review envelope
+记为 `agent_record_rejected_retired_agent`，保留原文件、原作者和 hash，不挂 DAG
+节点、不产生 admission effect；其中一个无 task_id 的历史文件也已终止重扫。
+
+Poincare 的 derivation/calculus scan 已进入 Anthropic FLT event-only catalog：
+`Algebra.PointDerivations.map/map_comp/map_id` 标为 1（需当前 pin 重编译），
+连续 residual 的 Stone–Weierstrass a.e.-zero 结果标为 2（需完整测度契约），
+Kähler pullback、compact-character 和 algebraic chart 只标为 3 架构参考；正特征
+derivation 明确不接入实数 Route-B。revision=835，registry=0，formal gate 继续关闭。

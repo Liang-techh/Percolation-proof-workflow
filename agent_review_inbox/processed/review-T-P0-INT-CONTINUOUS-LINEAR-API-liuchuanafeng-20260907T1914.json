@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P0-INT-CONTINUOUS-LINEAR-API-liuchuanafeng-20260907T1914.md",
+  "record_kind": "review_result",
+  "review_sha256": "76C8D58D02806A04C859C490DE30A59AC3BBCB9CB9C5843081FD3DCA60076A32",
+  "task_id": "T-P0-INT-CONTINUOUS-LINEAR-API",
+  "source_agent": "流川枫",
+  "created_at": "2026-09-07T19:14:00-06:00",
+  "integration_status": "rejected_retired_agent",
+  "classification": "retired_agent_record",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "a790f7b005747c72902d4e46b22688cb1af8b699",
+  "retired_agent": true,
+  "rejection_reason": "agent_removed_from_current_roster",
+  "integrated_at": "2026-09-08T18:29:40.146169+00:00"
+}

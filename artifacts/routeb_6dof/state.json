@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 834,
+  "revision": 835,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -80650,6 +80650,149 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "catalog": "anthropic-fermats-last-theorem"
+    },
+    {
+      "at": "2026-09-08T18:29:40.145178+00:00",
+      "kind": "agent_record_rejected_retired_agent",
+      "record_file": "agent_review_inbox/review-GH-LEAN-body6-tail-minors-liuchuanafeng-20260907T2304.md",
+      "record_kind": "review_result",
+      "review_sha256": "E5E2BF20A87681C9E6A338486021A082B217C244EEDC1EA6B692EA8761F0625C",
+      "task_id": "GH-LEAN-body6-tail-minors",
+      "source_agent": "流川枫",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "rejection_reason": "agent_removed_from_current_roster"
+    },
+    {
+      "at": "2026-09-08T18:29:40.145410+00:00",
+      "kind": "agent_record_rejected_retired_agent",
+      "record_file": "agent_review_inbox/review-GH-LEAN-fixed-lambda-reserve-liuchuanafeng-20260907T2215.md",
+      "record_kind": "review_result",
+      "review_sha256": "3E0F69C5BE34C1B1D1BB73C611CBFECD532F1BA09A772DDEFD643E8D6CF3B71A",
+      "task_id": "GH-LEAN-fixed-lambda-reserve",
+      "source_agent": "流川枫",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "rejection_reason": "agent_removed_from_current_roster"
+    },
+    {
+      "at": "2026-09-08T18:29:40.145602+00:00",
+      "kind": "agent_record_rejected_retired_agent",
+      "record_file": "agent_review_inbox/review-GH-LEAN-P4-032-relative-additive-liuchuanafeng-20260908T0306.md",
+      "record_kind": "review_result",
+      "review_sha256": "9C3C65FB824B8D8F14FEDB9E674E692A27970406C97315EA53DD5293CA4C3B4B",
+      "task_id": "GH-LEAN-P4-032-relative-additive",
+      "source_agent": "流川枫",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "rejection_reason": "agent_removed_from_current_roster"
+    },
+    {
+      "at": "2026-09-08T18:29:40.145806+00:00",
+      "kind": "external_reuse_agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-FLT-DERIVATION-CALCULUS-SCAN-20260908T182536Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "E9A82BF0983025E5E0DCAA6AC3D18C13A85C49DACE1CFE9277F9C9BDD9014143",
+      "task_id": "T-FLT-DERIVATION-CALCULUS-SCAN-20260908",
+      "classification": "flt_derivation_calculus_scan",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "catalog": "anthropic-fermats-last-theorem"
+    },
+    {
+      "at": "2026-09-08T18:29:40.145995+00:00",
+      "kind": "agent_record_rejected_retired_agent",
+      "record_file": "agent_review_inbox/review-T-P0-COUNTABLE-COVER-API-liuchuanafeng-20260907T1921.md",
+      "record_kind": "review_result",
+      "review_sha256": "52E829CA62E13E74811D472A951480AC92D1E28317E9A6BAF2DC28D0BA664418",
+      "task_id": "T-P0-COUNTABLE-COVER-API",
+      "source_agent": "流川枫",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "rejection_reason": "agent_removed_from_current_roster"
+    },
+    {
+      "at": "2026-09-08T18:29:40.146169+00:00",
+      "kind": "agent_record_rejected_retired_agent",
+      "record_file": "agent_review_inbox/review-T-P0-INT-CONTINUOUS-LINEAR-API-liuchuanafeng-20260907T1914.md",
+      "record_kind": "review_result",
+      "review_sha256": "76C8D58D02806A04C859C490DE30A59AC3BBCB9CB9C5843081FD3DCA60076A32",
+      "task_id": "T-P0-INT-CONTINUOUS-LINEAR-API",
+      "source_agent": "流川枫",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "rejection_reason": "agent_removed_from_current_roster"
+    },
+    {
+      "at": "2026-09-08T18:29:40.146330+00:00",
+      "kind": "agent_record_rejected_retired_agent",
+      "record_file": "agent_review_inbox/review-T-P0-PI-SUBTYPE-TRANSPORT-liuchuanafeng-20260907T1928.md",
+      "record_kind": "review_result",
+      "review_sha256": "60A78703D0399900371DF59574EE5A1EDC49F19154E447C0ADA48A1C8EC031EA",
+      "task_id": "T-P0-PI-SUBTYPE-TRANSPORT",
+      "source_agent": "流川枫",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "rejection_reason": "agent_removed_from_current_roster"
+    },
+    {
+      "at": "2026-09-08T18:29:40.146554+00:00",
+      "kind": "agent_record_rejected_retired_agent",
+      "record_file": "agent_review_inbox/review-T-P4-042-liuchuanafeng-20260907T1813.md",
+      "record_kind": "review_result",
+      "review_sha256": "FB93F9F11C0A6B7AACFE1E427C595DF07B15E1D010DBF1A2660775DD17B055DD",
+      "task_id": "T-P4-042",
+      "source_agent": "流川枫",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "rejection_reason": "agent_removed_from_current_roster"
+    },
+    {
+      "at": "2026-09-08T18:29:40.146832+00:00",
+      "kind": "agent_record_rejected_retired_agent",
+      "record_file": "agent_review_inbox/review-T-P4-DH-PRODUCER-BASE-BRIDGE-liuchuanafeng-20260908T0208.md",
+      "record_kind": "review_result",
+      "review_sha256": "05AED3F13E5CCAFCCFA5DB8AC177640F1A9F9CC2875D03D928314E6C254F4B0E",
+      "task_id": "T-P4-DH-PRODUCER-BASE-BRIDGE",
+      "source_agent": "流川枫",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "rejection_reason": "agent_removed_from_current_roster"
+    },
+    {
+      "at": "2026-09-08T18:29:40.147044+00:00",
+      "kind": "agent_record_rejected_retired_agent",
+      "record_file": "agent_review_inbox/review-T-P4-SAME-SOURCE-CONSUMER-PACKET-liuchuanafeng-20260908T0315.md",
+      "record_kind": "review_result",
+      "review_sha256": "A44B7852BA75005287BDF92B8D5CB5A55FC628A3E42445B5849C260EEF9835B7",
+      "task_id": "T-P4-SAME-SOURCE-CONSUMER-PACKET",
+      "source_agent": "流川枫",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "rejection_reason": "agent_removed_from_current_roster"
+    },
+    {
+      "at": "2026-09-08T18:29:40.147275+00:00",
+      "kind": "agent_record_rejected_retired_agent",
+      "record_file": "agent_review_inbox/review-T-P4-STORAGE-IDENTITY-TRANSFER-liuchuanafeng-20260907T1618.md",
+      "record_kind": "review_result",
+      "review_sha256": "B2A39D0A39FA806907B6B3A6C375E70175E54B51BA13D07BC5EB9CFA994441B7",
+      "task_id": "",
+      "source_agent": "流川枫",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "rejection_reason": "agent_removed_from_current_roster"
     }
   ],
   "agent_requests": {},
@@ -84306,5 +84449,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "d8c2c7bff1286fbbf41759bd13e9cac8ed4f9fa2a8265068112472d4e3551de3"
+  "state_checksum": "b69d54191ec172aaa2a24ed50ee739669a05bcc3b7bdf812c0ff4e49466a2407"
 }

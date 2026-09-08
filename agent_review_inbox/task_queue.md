@@ -3927,3 +3927,11 @@ validator 不能写 registry。聚焦测试 19/19 通过，未运行全量 FLT/L
 
 revision=834，registry=0，formal gate 关闭。两项新 envelope 已整合，后续只消费
 真实 pinned compile、axiom、comparator 或 source witness，不消费静态预期输出。
+
+## 2026-09-08 — revision 835 收割确认
+
+收割器幂等重跑结果为 `integrated=[]`、revision=835。新增事件中，9 个历史流川枫
+review 被明确拒收并写入 marker；其余有效新结果是 Poincare 的 FLT derivation/
+calculus scan，已进入 event-only catalog。当前优先级调整为：将 D1 PointDerivations
+交给 Lean pinned lane 尝试最小 adapter，将 C1 residual uniqueness 保持轻改 pending，
+并继续寻找 Route-B 的同源 source witness；不做全量回归或 GitHub 同步。
