@@ -168,7 +168,6 @@ theorem undercancelled_product_exact_rescue
     (hx : x ≠ 0) :
     ((a₁ * x ^ 2) * (a₂ * x)) / x ^ 2 = (a₁ * a₂) * x := by
   field_simp [hx]
-  ring
 
 /-- Zero-net-order regression: the aggregate is finite even though each quotient need not be inspected separately. -/
 theorem zero_net_order_exact_example
@@ -176,7 +175,6 @@ theorem zero_net_order_exact_example
     (hx : x ≠ 0) :
     ((a₁ * x ^ 2) * (a₂ * x)) / x ^ 3 = a₁ * a₂ := by
   field_simp [hx]
-  ring
 
 /-- Negative-net-order regression: two first-order factors over a third-order denominator leave a pole. -/
 theorem negative_net_order_exact_example
@@ -184,7 +182,6 @@ theorem negative_net_order_exact_example
     (hx : x ≠ 0) :
     ((a₁ * x) * (a₂ * x)) / x ^ 3 = (a₁ * a₂) / x := by
   field_simp [hx]
-  ring
 
 /-- Monomial pullback transports contact exponents multiplicatively. -/
 theorem monomial_pullback_exponent_transport
@@ -242,7 +239,6 @@ theorem exact_vanishing_atom_rescue
     (hkappa : kappa ≠ 0) :
     (kappa ^ 2) ^ 2 / kappa = kappa ^ 3 := by
   field_simp [hkappa]
-  ring
 
 #print axioms net_order_nonnegative_iff
 #print axioms net_order_negative_iff
