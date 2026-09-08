@@ -100,7 +100,7 @@ theorem trace2_add_exact
 /-- Product interval consequence used by the radius fallback. -/
 theorem mul_abs_cap
     (x y X Y : ℝ)
-    (hX : 0 ≤ X) (hY : 0 ≤ Y)
+    (hX : 0 ≤ X)
     (hx : |x| ≤ X) (hy : |y| ≤ Y) :
     |x * y| ≤ X * Y := by
   rw [abs_mul]
@@ -117,13 +117,13 @@ theorem det2_add_lower_of_abs_bounds
     det2 a m c - entryPenalty M11 M12 M22 eta11 eta12 eta22 ≤
       det2 (a + e11) (m + e12) (c + e22) := by
   have hceAbs : |c * e11| ≤ M22 * eta11 :=
-    mul_abs_cap c e11 M22 eta11 hM22 heta11 hc he11
+    mul_abs_cap c e11 M22 eta11 hM22 hc he11
   have haeAbs : |a * e22| ≤ M11 * eta22 :=
-    mul_abs_cap a e22 M11 eta22 hM11 heta22 ha he22
+    mul_abs_cap a e22 M11 eta22 hM11 ha he22
   have hmeAbs : |m * e12| ≤ M12 * eta12 :=
-    mul_abs_cap m e12 M12 eta12 hM12 heta12 hm he12
+    mul_abs_cap m e12 M12 eta12 hM12 hm he12
   have heeAbs : |e11 * e22| ≤ eta11 * eta22 :=
-    mul_abs_cap e11 e22 eta11 eta22 heta11 heta22 he11 he22
+    mul_abs_cap e11 e22 eta11 eta22 heta11 he11 he22
   have hceLo : -(M22 * eta11) ≤ c * e11 := (abs_le.mp hceAbs).1
   have haeLo : -(M11 * eta22) ≤ a * e22 := (abs_le.mp haeAbs).1
   have hmeHi : m * e12 ≤ M12 * eta12 := (abs_le.mp hmeAbs).2
@@ -155,8 +155,9 @@ theorem abs_sub_sub_le (u v w : ℝ) :
     |u - v - w| ≤ |u - v| + |w| := by
       simpa [sub_eq_add_neg] using (abs_add_le (u - v) (-w))
     _ ≤ (|u| + |v|) + |w| := by
-      exact add_le_add_right
-        (by simpa [sub_eq_add_neg] using (abs_add_le u (-v))) |w|
+      exact add_le_add
+        (by simpa [sub_eq_add_neg] using (abs_add_le u (-v)))
+        (le_refl |w|)
     _ = |u| + |v| + |w| := by ring
 
 /-- Four-term triangle helper. -/
@@ -165,8 +166,8 @@ theorem abs_sub_sub_sub_le (u v w z : ℝ) :
   calc
     |u - v - w - z| ≤ |u - v - w| + |z| := by
       simpa [sub_eq_add_neg] using (abs_add_le (u - v - w) (-z))
-    _ ≤ (|u| + |v| + |w|) + |z| :=
-      add_le_add_right (abs_sub_sub_le u v w) |z|
+    _ ≤ (|u| + |v| + |w|) + |z| := by
+      exact add_le_add (abs_sub_sub_le u v w) (le_refl |z|)
     _ = |u| + |v| + |w| + |z| := by ring
 
 /-- Exact source-variable to packet-error entries. -/
@@ -218,27 +219,25 @@ theorem branchfree_packet_error_abs_bounds
         rw [abs_mul, abs_of_nonneg hk2]
       _ ≤ (2 * kappa) * dsigma := mul_le_mul_of_nonneg_left hesigma hk2
   have hb4e4 : |b4hat * e4| ≤ B4 * d4 :=
-    mul_abs_cap b4hat e4 B4 d4 hB4 hd4 hb4 he4
+    mul_abs_cap b4hat e4 B4 d4 hB4 hb4 he4
   have hb5e5 : |b5hat * e5| ≤ B5 * d5 :=
-    mul_abs_cap b5hat e5 B5 d5 hB5 hd5 hb5 he5
+    mul_abs_cap b5hat e5 B5 d5 hB5 hb5 he5
   have hb4e5 : |b4hat * e5| ≤ B4 * d5 :=
-    mul_abs_cap b4hat e5 B4 d5 hB4 hd5 hb4 he5
+    mul_abs_cap b4hat e5 B4 d5 hB4 hb4 he5
   have hb5e4 : |b5hat * e4| ≤ B5 * d4 :=
-    mul_abs_cap b5hat e4 B5 d4 hB5 hd4 hb5 he4
+    mul_abs_cap b5hat e4 B5 d4 hB5 hb5 he4
   have he4e5 : |e4 * e5| ≤ d4 * d5 :=
-    mul_abs_cap e4 e5 d4 d5 hd4 hd5 he4 he5
+    mul_abs_cap e4 e5 d4 d5 hd4 he4 he5
   have h2b4e4 : |2 * b4hat * e4| ≤ 2 * B4 * d4 := by
     calc
       |2 * b4hat * e4| = 2 * |b4hat * e4| := by
-        rw [abs_mul, abs_mul]
-        norm_num
+        simp [abs_mul, mul_assoc]
       _ ≤ 2 * (B4 * d4) := mul_le_mul_of_nonneg_left hb4e4 (by norm_num)
       _ = 2 * B4 * d4 := by ring
   have h2b5e5 : |2 * b5hat * e5| ≤ 2 * B5 * d5 := by
     calc
       |2 * b5hat * e5| = 2 * |b5hat * e5| := by
-        rw [abs_mul, abs_mul]
-        norm_num
+        simp [abs_mul, mul_assoc]
       _ ≤ 2 * (B5 * d5) := mul_le_mul_of_nonneg_left hb5e5 (by norm_num)
       _ = 2 * B5 * d5 := by ring
   have he4sq : |e4 ^ 2| ≤ d4 ^ 2 := by
@@ -412,7 +411,6 @@ theorem rank_one_correlated_error_regression
     det2 1 t (t ^ 2) = 0 ∧
     detCorrection 1 0 0 0 t (t ^ 2) = 0 := by
   simp [det2, detCorrection]
-  constructor <;> ring
 
 /-- Independent entry radii lose `2*eps^2` determinant reserve on the same family. -/
 theorem rank_one_entry_radius_penalty
