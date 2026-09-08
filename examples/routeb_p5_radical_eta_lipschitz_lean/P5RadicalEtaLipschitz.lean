@@ -137,9 +137,9 @@ theorem weighted_two_term_square_identity
       (theta * a - b) ^ 2 := by
   ring
 
-/-- The corresponding weighted two-term square bound for nonnegative `theta`. -/
+/-- The corresponding weighted two-term square bound, valid for every real `theta`. -/
 theorem weighted_two_term_square_bound
-    (theta a b : ℝ) (htheta : 0 ≤ theta) :
+    (theta a b : ℝ) :
     theta * (a + b) ^ 2 ≤
       (1 + theta) * (theta * a ^ 2 + b ^ 2) := by
   have hid := weighted_two_term_square_identity theta a b
@@ -157,7 +157,7 @@ theorem normalized_radical_sq_from_atomic_charges
     4 * theta * m ^ 3 * (a + b) ^ 2 ≤
       (1 + theta) *
         (4 * theta * m ^ 2 * DG ^ 2 + MG ^ 2 * DA ^ 2) * deta ^ 2 := by
-  have hw := weighted_two_term_square_bound theta a b htheta
+  have hw := weighted_two_term_square_bound theta a b
   have hscale : 0 ≤ 4 * m ^ 3 := by positivity
   have hwscaled :
       (4 * m ^ 3) * (theta * (a + b) ^ 2) ≤
