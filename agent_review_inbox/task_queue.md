@@ -3701,3 +3701,16 @@ revision 804 将主瓶颈收缩为两个互不重复的 source/refinement 方向
 
 没有实际 capture、raw storage inequality 或 source inhabitant 时，所有候选继续
 保持 pending；不运行全量回归或本机 Lean。
+
+## 2026-09-08 — post-revision-807 principal packet split
+
+joint6 review 已确认 principal route 是较少前提的路线，但仍需完整 actual defect
+与 numerator/determinant 绑定。本轮空闲 agent 继续攻两个具体数学叶：
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-MATH-P4-ACTUAL-CELL-PACKET` | Godel the 6th | 在既有 half-active/actual-cell 配置中寻找同源 det、numerator、observable 与 metric packet，或精确缺口 |
+| `GH-MATH-P4-JOINT6-WEIGHTED-CONSTRAINTS` | James the 6th | 核对 signed weighted constraints 是否能消费 actual `y=Xz` 并保留 joint6 defect；不重做 rank 算术 |
+
+Sartre/Poincare 的 affine/runtime 与 Lean probe lane 继续独立运行。没有同一
+source/configuration/domain 的 actual witness 时，principal 与 Schur 均保持 pending。

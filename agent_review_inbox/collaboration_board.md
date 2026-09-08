@@ -2969,6 +2969,17 @@ registry=0、formal certificate gate 关闭。
 下一轮把 source/refinement 分成 affine defect chart 与 vanis2 runtime packet 两条
 主线，Poincare/Godel 分别维护已有 Lean path 与 value-level envelope 边界。
 
+### 梁智炜 · revision 807：principal route 保留 joint6 defect
+
+Joint6 defect review 没有发现 actual elimination 或同源 numerator packet，但明确了
+最小 principal 接口：`A u+h v=p+z_B`，observable numerator 必须使用与自身
+`det(A)` 配对的完整 RHS；若走 Schur，则必须改用 `det(S)` 和相应 `f_sc`，不能
+混用两条路线的分母/分子。lift 第三坐标、preconditioned row6 和 physical row6
+仍然是三个不同对象。结论 pending，registry=0，formal gate 关闭。
+
+下一轮由 Godel 搜索 actual-cell determinant/numerator packet，James 核对 signed
+weighted constraints 的 actual `y=Xz` 消费；不重复 rank 算术。
+
 ### 梁智炜 · revision 805–806：执行边界与 initial value 继续开放
 
 四份 revision-805 review 已整合：BODY6 probe 只有待执行的 pinned receipt 清单；

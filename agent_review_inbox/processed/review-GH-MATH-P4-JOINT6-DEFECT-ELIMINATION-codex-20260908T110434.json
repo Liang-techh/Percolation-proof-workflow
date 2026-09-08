@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-JOINT6-DEFECT-ELIMINATION-codex-20260908T110434.md",
+  "record_kind": "review_result",
+  "review_sha256": "A276D3247BAC7C8833FC238B1B90C238F8F2AE7EF0C3E2B7E0B881A28AF97A6A",
+  "task_id": "GH-MATH-P4-JOINT6-DEFECT-ELIMINATION",
+  "source_agent": "codex-joint6-actual-numerator-audit",
+  "created_at": "2026-09-08T11:04:34-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_joint6_defect_elimination",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-JOINT6-DEFECT-ELIMINATION-codex-20260908T110434.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:06:44.067933+00:00"
+}
