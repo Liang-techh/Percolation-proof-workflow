@@ -302,6 +302,12 @@ TASK_TARGETS = {
     "GH-ACTIVE-V-FUNCTION-IDENTITY": (
         "P4.true_dh_port_source_binding",
         "pending_active_v_function_identity"),
+    "GH-ACTIVE-V-FUNCTION-IDENTITY-TAKEOVER": (
+        "P4.true_dh_port_source_binding",
+        "pending_active_v_function_identity_obstruction"),
+    "GH-MATH-P4-ACTIVE-V-FUNCTION-IDENTITY-OBSTRUCTION-20260908": (
+        "P4.true_dh_port_source_binding",
+        "pending_active_v_function_identity_obstruction"),
     "GH-MATH-P4-JOINT6-PHYSICAL-RECOVERY": (
         "P4.true_dh_port_source_binding",
         "pending_joint6_physical_recovery"),
@@ -390,6 +396,9 @@ TASK_TARGETS = {
     "T-FLT-P2M-QUOTIENT-MINIMAL-CONTRACT": (
         None,
         "flt_p2m_quotient_minimal_contract"),
+    "T-FLT-P2M-PINNED-API-REPAIR-20260908": (
+        None,
+        "flt_p2m_pinned_api_repair"),
     "T-P4-KC-COORDINATE-ADAPTER": ("P4.residual_schur_pmi", "pending_kc_coordinate_adapter"),
     "T-P4-MBD-PROJECTION": ("P4.residual_schur_pmi", "pending_mbd_projection_obstruction"),
     "T-P4-012": ("P4.residual_schur_pmi", "pending_typed_remote_binding_contract"),

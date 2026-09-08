@@ -1,0 +1,22 @@
+{
+  "record_file": "agent_review_inbox/review-T-FLT-P2M-PINNED-API-REPAIR-poincare-20260908.md",
+  "record_kind": "review_result",
+  "review_sha256": "4E3B3771CD5789A7EA76056594E5F33A654C159F2C2A1C079D5A7A7EED131D07",
+  "task_id": "T-FLT-P2M-PINNED-API-REPAIR-20260908",
+  "source_agent": "Poincare the 6th",
+  "created_at": "2026-09-08T18:20:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_p2m_pinned_api_repair",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "unknown",
+  "artifact_binding_audit": {
+    "status": "BOUND",
+    "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\anthropic_flt_reusable_lean\\NEW_P2M_PINNED_API_20260908.lean",
+    "declared_sha256": "2E65DE0017DAFE65660B24B9F783B5571C074FF5F4DC183F5C64F2AC217A656B",
+    "actual_sha256": "2E65DE0017DAFE65660B24B9F783B5571C074FF5F4DC183F5C64F2AC217A656B"
+  },
+  "review_file": "agent_review_inbox/review-T-FLT-P2M-PINNED-API-REPAIR-poincare-20260908.md",
+  "admission_label": "architecture_only",
+  "integrated_at": "2026-09-08T18:21:01.275192+00:00"
+}

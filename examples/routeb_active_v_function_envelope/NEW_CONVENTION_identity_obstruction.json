@@ -1,0 +1,60 @@
+{
+  "status": "pending",
+  "source_binding_proven": false,
+  "scope": "finite exact algebra on pinned certificate; energy slice is an external source premise",
+  "certificate_sha256": "cab4a5182981bccbde18ace2d26ece5c0d7b7d3c3cf4a5a7e02e7fcda9b80601",
+  "row_count": 46,
+  "slice": "t=0, q4=s, every other q/v coordinate zero",
+  "points": [
+    "-3/20",
+    "-3/40",
+    "0",
+    "3/40",
+    "3/20"
+  ],
+  "weights": [
+    1,
+    -4,
+    6,
+    -4,
+    1
+  ],
+  "moments_degree_0_through_4": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "243/320000"
+  ],
+  "witnesses": {
+    "decimal_token_real": {
+      "restricted_coefficients": {
+        "0": "-5852960231758441/50000000000000000",
+        "1": "-12384156435701339/5000000000000000000000000000000000",
+        "2": "1254729429091023/500000000000000",
+        "3": "-2295120292019633/50000000000000000000000000000000",
+        "4": "7549816188904203/125000000000000000"
+      },
+      "fourth_difference": "1834605333903721329/40000000000000000000000",
+      "cannot_agree_with_any_degree_le_2_polynomial_at_all_five_points": true
+    },
+    "python_binary64_decoded_real": {
+      "restricted_coefficients": {
+        "0": "-8435004646003727/72057594037927936",
+        "1": "-6430221655669593/2596148429267413814265248164610048",
+        "2": "2825399494652563/1125899906842624",
+        "3": "-7448091176383173/162259276829213363391578010288128",
+        "4": "8704345440016565/144115188075855872"
+      },
+      "fourth_difference": "423031188384805059/9223372036854775808000",
+      "cannot_agree_with_any_degree_le_2_polynomial_at_all_five_points": true
+    }
+  },
+  "consumer_rule": "Given the same-K energy slice degree <=2, reject its exact sameStorage edge to this certificate; do not reject unrelated initial inequalities.",
+  "same_run_initial_upper_binding": null,
+  "julia_execution": false,
+  "lean_lake_execution": false,
+  "runtime_evaluation_observation": null,
+  "registry_eligible": false,
+  "formal_certificate_allowed": false
+}

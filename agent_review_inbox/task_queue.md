@@ -3894,3 +3894,23 @@ obligations，不能直接关闭 body-5。
 它们分别进入 pending P5/P4 或 event-only FLT catalog；revision=831，registry
 仍为 0，formal gate 继续关闭。下一轮按数学瓶颈优先，只有出现真实 source witness
 或 pinned Lean receipt 才安排进一步整合。
+
+## 2026-09-08 — revision 832–833 新回执
+
+| task | owner | result / next action |
+|---|---|---|
+| `GH-ACTIVE-V-FUNCTION-IDENTITY-TAKEOVER` | Godel the 6th | 五点 exact finite-difference obstruction 已收割；same-run initial witness 与 actual consumer 仍 open，禁止升级为证书否定或 registry |
+| `T-FLT-P2M-PINNED-API-REPAIR-20260908` | Poincare the 6th | Lean-only API/probe packet 已封装为 `OPEN_UNCOMPILED`；交给 Lean agent 按 exact pin 编译并保存真实 receipt，负例独立运行 |
+
+本轮不新增流川枫任务。revision=833、registry=0、formal gate 关闭；FLT 项只写
+event-only catalog，Route-B 项只写 pending obstruction。
+
+## 2026-09-08 — revision 834 完整 receipt 补收
+
+| task | owner | receipt boundary | next action |
+|---|---|---|---|
+| `GH-MATH-P4-ACTIVE-V-FUNCTION-IDENTITY-OBSTRUCTION-20260908` | Godel the 6th | exact rational five-point obstruction，绑定 CSV/checker/result hash；不是 initial-bound/runtime/Lean 证明 | 保持 same-run consumer binding open，禁止扩展为 certificate failure |
+| `T-FLT-P2M-PINNED-API-REPAIR-20260908` | Codex-P2M-interface-lane | 五文件 Lean-only light-adaptation packet，状态 `OPEN_UNCOMPILED`，含 expected-failure 矩阵 | 交给苏梦辰或巨阳仙尊在 exact Lean pin 执行真实 receipt |
+
+revision=834，registry=0，formal gate 关闭。两项新 envelope 已整合，后续只消费
+真实 pinned compile、axiom、comparator 或 source witness，不消费静态预期输出。

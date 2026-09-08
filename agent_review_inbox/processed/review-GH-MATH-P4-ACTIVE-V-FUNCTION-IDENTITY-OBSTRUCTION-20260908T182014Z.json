@@ -1,0 +1,22 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-FUNCTION-IDENTITY-OBSTRUCTION-20260908T182014Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "082672A19E13EDBDF70BAA4659EB9C5EF75467156BD10B21984B6421B9316201",
+  "task_id": "GH-MATH-P4-ACTIVE-V-FUNCTION-IDENTITY-OBSTRUCTION-20260908",
+  "source_agent": "Godel the 6th",
+  "created_at": "2026-09-08T18:20:14Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_active_v_function_identity_obstruction",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "artifact_binding_audit": {
+    "status": "BOUND",
+    "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_active_v_function_envelope\\NEW_CONVENTION_identity_obstruction.py",
+    "declared_sha256": "A9101A8F05F48C3EFAE97F6CF74A9F43B09F926A833BE6FB44F73E7A04FC5B62",
+    "actual_sha256": "A9101A8F05F48C3EFAE97F6CF74A9F43B09F926A833BE6FB44F73E7A04FC5B62"
+  },
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-FUNCTION-IDENTITY-OBSTRUCTION-20260908T182014Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T18:22:33.812583+00:00"
+}

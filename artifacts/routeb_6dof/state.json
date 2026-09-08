@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 831,
+  "revision": 834,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -16815,6 +16815,42 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-ACTIVE-V-EXACT-SOURCE-MAP-20260908T180822Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-ACTIVE-V-IDENTITY-OBSTRUCTION-20260908T181807Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "EE47D032AC010FF5CBCADF39E680DB9DB83B236336951AFADF15C9103857D1C4",
+            "task_id": "GH-ACTIVE-V-FUNCTION-IDENTITY-TAKEOVER",
+            "source_agent": "Godel the 6th",
+            "created_at": "2026-09-08T18:18:07Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_active_v_function_identity_obstruction",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-ACTIVE-V-IDENTITY-OBSTRUCTION-20260908T181807Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-FUNCTION-IDENTITY-OBSTRUCTION-20260908T182014Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "082672A19E13EDBDF70BAA4659EB9C5EF75467156BD10B21984B6421B9316201",
+            "task_id": "GH-MATH-P4-ACTIVE-V-FUNCTION-IDENTITY-OBSTRUCTION-20260908",
+            "source_agent": "Godel the 6th",
+            "created_at": "2026-09-08T18:20:14Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_active_v_function_identity_obstruction",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "artifact_binding_audit": {
+              "status": "BOUND",
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_active_v_function_envelope\\NEW_CONVENTION_identity_obstruction.py",
+              "declared_sha256": "A9101A8F05F48C3EFAE97F6CF74A9F43B09F926A833BE6FB44F73E7A04FC5B62",
+              "actual_sha256": "A9101A8F05F48C3EFAE97F6CF74A9F43B09F926A833BE6FB44F73E7A04FC5B62"
+            },
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-FUNCTION-IDENTITY-OBSTRUCTION-20260908T182014Z.md",
             "admission_label": "pending"
           }
         ]
@@ -80560,6 +80596,60 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T18:20:34.380766+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-ACTIVE-V-IDENTITY-OBSTRUCTION-20260908T181807Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "EE47D032AC010FF5CBCADF39E680DB9DB83B236336951AFADF15C9103857D1C4",
+      "task_id": "GH-ACTIVE-V-FUNCTION-IDENTITY-TAKEOVER",
+      "classification": "pending_active_v_function_identity_obstruction",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T18:21:01.275192+00:00",
+      "kind": "external_reuse_agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-FLT-P2M-PINNED-API-REPAIR-poincare-20260908.md",
+      "record_kind": "review_result",
+      "review_sha256": "4E3B3771CD5789A7EA76056594E5F33A654C159F2C2A1C079D5A7A7EED131D07",
+      "task_id": "T-FLT-P2M-PINNED-API-REPAIR-20260908",
+      "classification": "flt_p2m_pinned_api_repair",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "artifact_binding_status": "BOUND",
+      "catalog": "anthropic-fermats-last-theorem"
+    },
+    {
+      "at": "2026-09-08T18:22:33.812583+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-FUNCTION-IDENTITY-OBSTRUCTION-20260908T182014Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "082672A19E13EDBDF70BAA4659EB9C5EF75467156BD10B21984B6421B9316201",
+      "task_id": "GH-MATH-P4-ACTIVE-V-FUNCTION-IDENTITY-OBSTRUCTION-20260908",
+      "classification": "pending_active_v_function_identity_obstruction",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "artifact_binding_status": "BOUND",
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T18:22:33.812874+00:00",
+      "kind": "external_reuse_agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-FLT-P2M-PINNED-API-REPAIR-20260908T182019Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "E5C778EE114FD465CE14B816D8E972423D2BB3F29E1E9828EF771FC77068405F",
+      "task_id": "T-FLT-P2M-PINNED-API-REPAIR-20260908",
+      "classification": "flt_p2m_pinned_api_repair",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "catalog": "anthropic-fermats-last-theorem"
     }
   ],
   "agent_requests": {},
@@ -84216,5 +84306,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "152de266a1c3ab68c2d029590f71106ffa59629070890dafe039e1f063266eb0"
+  "state_checksum": "d8c2c7bff1286fbbf41759bd13e9cac8ed4f9fa2a8265068112472d4e3551de3"
 }

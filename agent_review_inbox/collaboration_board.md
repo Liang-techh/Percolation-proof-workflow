@@ -3165,6 +3165,39 @@ revision=831，`registry=0`，`formal_certificate_allowed=false`。三项均只�
 pending/event-only 状态，不关闭 parent，不注册 theorem；下一轮优先寻找 actual
 source witness 或 pinned Lean receipt，不做重复审计和全量回归。
 
+### 梁智炜 · revision 832–833：active-V obstruction 与 P2M pinned API
+
+Godel 的接管 lane 交付了五点有限差分 witness：在固定 `K/X0` 的 q4 slice 上，
+certificate polynomial 的非零四阶项不能与任何 degree≤2 的能量 slice 相同。
+这只关闭错误的 sameStorage identity edge；同一运行的 `initial_storage_upper`
+仍未绑定，certificate 自身的初始不等式不受此 obstruction 否定。该结果保持
+`pending_active_v_function_identity_obstruction`，不写 registry。
+
+Poincare 交付了新的 Lean-only P2M API/probe packet，保留 upstream 的
+`preserveOrder`、`clearAuxDeclsInsteadOfRevert` 和 universe generality boundary，
+另有三个预期失败 probe。它们目前 `OPEN_UNCOMPILED`，负例不得进入默认全成功
+build；必须在精确 Lean pin 下记录真实 exit/stdout/stderr/OLean/axiom receipt。
+
+revision=833，registry=0，`formal_certificate_allowed=false`。两类结果分别进入
+P4 pending obstruction 与 FLT event-only catalog；继续优先处理真实 source witness
+和 pinned Lean receipt，不把裸 `.lean` 文件、静态 hash 或预期结果当成验证成功。
+
+### 梁智炜 · revision 834：完整 envelope 补收
+
+Godel 的第二份 immutable review 绑定了 certificate CSV、obstruction checker、
+JSON result 和 predecessor review 的逐项 SHA-256，明确这是 conditional exact
+finite-sameStorage obstruction，不是 initial-bound、runtime 或 Lean receipt。
+它只拒绝错误的 certificate-to-energy identity edge，仍不能说明 certificate
+自身的初始不等式失败。
+
+Poincare 的正式 P2M pinned API envelope 补齐了五个 Lean 文件和 handoff report
+的逐项字节 hash，并把正例、三个预期失败 probe、Lean pin、OLean/axiom/exit
+receipt 要求分开。当前 `OPEN_UNCOMPILED`，不能把预期诊断当作实际编译结果。
+
+revision=834，registry=0，`formal_certificate_allowed=false`。重复 envelope
+只作为独立 provenance 保留，不合并成 VERIFIED；两个历史 `.olean` 缓存继续不纳入
+提交。
+
 ### 梁智炜 · revision 829：Body-5 q3 slice API repair
 
 Poincare 的新 candidate 已收入 inbox：它从完整 `List.Perm` 编码推导 q3 slice，
