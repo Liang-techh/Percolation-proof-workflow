@@ -3409,3 +3409,12 @@ Godel 证明了一个有意义的条件性算术设计：若 parser、exponent�
 该结果没有生成 certified epsilon，也没有验证 Julia 的实际 operation graph、
 rounding/subnormal/fusion 或 mutable-array lifetime；因此仍是 P4 pending contract，
 不改变 runtime_initial_bound、registry 或 formal gate。
+
+### 梁智炜 · revision 853：block456 projector API takeover
+
+Poincare 接替流川枫遗留方向，给出一个坐标 selector/projector 的最小条件接口：
+`EuclideanSpace 𝕜 (Fin 6)`、`embed456/include456/extract456/project456`、
+`W456/W123`，以及 `A P - P A` 等价于两组 cross-block exact zero。该结果明确
+selector 只证明辅助坐标结构；没有 actual `S/A`、域内 source identity 或 cross-zero
+witness，就不能接入物理 Route-B，更不能声称 mass spectral gap、invariance、flowpipe
+或 registry proof。当前记录为 FLT event-only metadata，registry=0，formal gate 关闭。

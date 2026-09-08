@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-FLT-BLOCK456-PROJECTOR-API-PLAN-20260908T191944Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "AFB8C301092ADE78158BBCFBDFD608E3BB0D70136E6C2E8F0703A59A2C16E18F",
+  "task_id": "T-FLT-BLOCK456-PROJECTOR-API-PLAN",
+  "source_agent": "Codex-FLT-block456-projector-interface-lane",
+  "created_at": "2026-09-08T19:19:44Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_block456_projector_api_plan",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "282de6327682b3c6aca64dfd310e9b05be163e71",
+  "review_file": "agent_review_inbox/review-T-FLT-BLOCK456-PROJECTOR-API-PLAN-20260908T191944Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T19:22:10.686170+00:00"
+}

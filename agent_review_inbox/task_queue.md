@@ -4093,3 +4093,11 @@ range 和 one-sided error receipt；不得将 `kappa` 设计参数当作 Julia �
 index/projector bridge 与 no-go 判据；不得修改 shared state/registry，不得把
 未编译 Lean 草稿或 generic theorem 当作 Route-B 已验证结果。该 lane 完成后才
 进入下一次收割；在此之前保持 `pending`。
+
+## 2026-09-08 — revision 853 block456 projector takeover
+
+`T-FLT-BLOCK456-PROJECTOR-API-PLAN-20260908` 已由 Poincare 接替并收割为
+event-only metadata。后续只接受 actual operator `S/A`、矩阵 convention、域内
+cross-block exact-zero witness 与 target-pinned adapter receipt；坐标 projector 的
+对称性/compactness/eigenspace 计划不能替代真实 mass/dynamics source，也不能关闭
+Route-B frontier。
