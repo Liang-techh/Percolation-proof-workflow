@@ -187,7 +187,9 @@ theorem quad_left_controls_nonneg
       0 ≤ (b0 + 2 * b1 + b2) / 4 := by
   constructor
   · exact h0
-  constructor <;> nlinarith
+  constructor
+  · nlinarith
+  · nlinarith
 
 /-- Nonnegative quadratic controls remain nonnegative after right-half subdivision. -/
 theorem quad_right_controls_nonneg
@@ -212,7 +214,11 @@ theorem cubic_left_controls_nonneg
       0 ≤ (g0 + 3 * g1 + 3 * g2 + g3) / 8 := by
   constructor
   · exact h0
-  constructor <;> nlinarith
+  constructor
+  · nlinarith
+  constructor
+  · nlinarith
+  · nlinarith
 
 /-- Nonnegative cubic controls remain nonnegative after right-half subdivision. -/
 theorem cubic_right_controls_nonneg
@@ -224,7 +230,11 @@ theorem cubic_right_controls_nonneg
       0 ≤ g3 := by
   constructor
   · nlinarith
-  constructor <;> nlinarith
+  constructor
+  · nlinarith
+  constructor
+  · nlinarith
+  · exact h3
 
 /-- Endpoint positivity alone is unsound for a correlated polynomial cell gate. -/
 theorem endpoint_only_unsound_regression :
