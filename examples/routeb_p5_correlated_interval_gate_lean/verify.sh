@@ -20,6 +20,10 @@ if [[ ! -d "$LAKE_ROOT" ]]; then
   echo "local_fkg Lake environment not found at $LAKE_ROOT" >&2
   exit 2
 fi
+if [[ ! -f "$LAKE_ROOT/lake-manifest.json" ]]; then
+  echo "pinned lake-manifest.json missing at $LAKE_ROOT" >&2
+  exit 2
+fi
 
 ACTUAL_TOOLCHAIN="$(tr -d '\r\n' < "$LAKE_ROOT/lean-toolchain")"
 if [[ "$ACTUAL_TOOLCHAIN" != "$EXPECTED_TOOLCHAIN" ]]; then
@@ -42,17 +46,11 @@ trap 'rm -f "$OUT"' EXIT
 ) 2>&1 | tee "$OUT"
 
 for theorem in \
-  scaled_correlated_invariants \
   signed_sum_interval_transport \
-  square_le_square_of_abs_le \
-  scaled_symmetric_det_lower_of_interval \
-  scaled_adjugate_bias_le_box \
-  scaled_adjugate_bias_le_cross_cap \
-  correlated_quarter_gate_of_interval_box \
-  correlated_one_twelfth_parameter_gate_of_interval_box \
-  whole_cell_quarter_integer_gate_iff \
-  whole_cell_one_twelfth_integer_gate_iff; do
-  grep -F "'RouteBP5CorrelatedIntervalGate.$theorem' depends on axioms:" "$OUT" >/dev/null || {
+  signed_sum_abs_transport \
+  skew_family_signed_sum_zero \
+  skew_family_signed_sum_abs_zero; do
+  grep -F "'RouteBP5SignedSumIntervalTransport.$theorem' depends on axioms:" "$OUT" >/dev/null || {
     echo "missing axiom report for $theorem" >&2
     exit 4
   }
@@ -64,11 +62,11 @@ if grep -F "sorryAx" "$OUT" >/dev/null; then
 fi
 
 echo "AXIOM_AUDIT=PASS"
-echo "P5_CORRELATED_INTERVAL_GATE_FOCUSED_CHECK=PASS"
-echo "SOURCE_SIGNED_JACOBIAN_EXPORTER=OPEN"
-echo "SOURCE_COMPONENT_OR_CORRELATED_BIAS_BOUNDS=OPEN"
-echo "SOURCE_PARAMETER_SENSITIVITY_BOUNDS=OPEN"
-echo "SOURCE_FLOAT64_CONTROLLER_SOLVE_SEMANTICS=OPEN"
+echo "P5_SIGNED_SUM_INTERVAL_TRANSPORT_FOCUSED_CHECK=PASS"
+echo "SIGNED_INTERVAL_ADDITION_BEFORE_ABS=true"
+echo "SKEW_COORDINATE_CHARGED=false"
+echo "MAIN_T_P5_045_FORMALIZATION_OWNER=苏梦辰"
+echo "SOURCE_BINDING=OPEN"
 echo "P8_SAME_DOMAIN_COVERAGE=OPEN"
 echo "P5_P8_M4_FINAL_INTEGRATION=false"
 echo "REGISTRY_MUTATION=false"
