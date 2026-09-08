@@ -1,8 +1,8 @@
 import NEW_P4_032_WeightedThreeTerm
 
 /-!
-UNCOMPILED source-independent relative-plus-additive budget skeleton.
-No Lean/Lake run, sqrt, concrete parameters, source/coverage/admission claim.
+Focused source-independent relative-plus-additive budget skeleton.
+No sqrt, concrete parameters, source/coverage/admission claim.
 Consumes the existing weighted theorem; does not repeat Cauchy or a defect
 convention adapter. All parameters below belong to one compatible budget.
 -/
@@ -86,7 +86,7 @@ theorem weighted_budget_le_relative_additive (p : Parameters) (energy ED EB : �
     weightedBudget p energy ED EB ≤
         weightedBudget p energy (p.kappaD * energy + p.biasD)
           (p.kappaB * energy + p.biasB) :=
-      add_le_add (add_le_add_left hd (p.weights.value 0 * (p.rhoA * energy))) hb
+      add_le_add (add_le_add_right hd (p.weights.value 0 * (p.rhoA * energy))) hb
     _ = _ := affine_budget_identity p energy
 
 theorem relative_additive_budget_nonnegative (p : Parameters) (energy ED EB : ℝ)
@@ -138,10 +138,10 @@ theorem zero_bias_corollary (p : Parameters) (q energy : ℝ)
 
 end
 
--- Future audit commands only; NOT executed in this round.
 #print axioms effective_coefficients_nonnegative
 #print axioms affine_budget_identity
 #print axioms weighted_budget_le_relative_additive
+#print axioms relative_additive_budget_nonnegative
 #print axioms consume_weighted_budget
 #print axioms force_relative_additive
 #print axioms accel_relative_additive

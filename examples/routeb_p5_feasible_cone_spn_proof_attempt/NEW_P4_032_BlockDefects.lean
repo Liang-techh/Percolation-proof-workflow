@@ -2,6 +2,11 @@ import Mathlib.Data.Matrix.Basic
 import Mathlib.Data.Matrix.Mul
 import Mathlib.Tactic
 
+-- Lean 4.32 / pinned Mathlib no longer exports the legacy matrix-vector notation
+-- used by this source-independent skeleton. Restore it locally without changing
+-- any matrix/vector semantics.
+infixl:72 " *ᵥ " => Matrix.mulVec
+
 /-!
 T-P4-032 -- UNCOMPILED SOURCE-INDEPENDENT TYPED SKELETON.
 No Lean/Lake execution, deployed solve identity, source binding or coverage.
@@ -43,7 +48,7 @@ def blockDD (M : Mat6) : DD := fun i j => M (dIdx i) (dIdx j)
 theorem sum_partition (f : Fin 6 → ℝ) :
     (∑ k, f k) = (∑ j : Fin 4, f (dIdx j)) + (∑ i : Fin 2, f (bIdx i)) := by
   simp [Fin.sum_univ_succ, bIdx, dIdx]
-  <;> ring
+  ring
 
 noncomputable section
 

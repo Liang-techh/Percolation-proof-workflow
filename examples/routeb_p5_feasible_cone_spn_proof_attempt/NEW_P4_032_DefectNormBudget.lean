@@ -24,7 +24,7 @@ theorem norm2_nonnegative {n : ℕ} (v : Fin n → ℝ) : 0 ≤ norm2 v := norm_
 theorem norm2_add {n : ℕ} (v w : Fin n → ℝ) :
     norm2 (v + w) ≤ norm2 v + norm2 w := by
   simpa only [norm2, WithLp.toLp_add] using
-    norm_add (WithLp.toLp 2 v : EuclideanSpace ℝ (Fin n)) (WithLp.toLp 2 w)
+    norm_add_le (WithLp.toLp 2 v : EuclideanSpace ℝ (Fin n)) (WithLp.toLp 2 w)
 
 /-- First seam: keep all three actual force terms, with no zero-defect premise. -/
 theorem defect_triangle (R : BB) (T : BD) (aB rB eB : BVec) (eD : DVec)
@@ -32,7 +32,7 @@ theorem defect_triangle (R : BB) (T : BD) (aB rB eB : BVec) (eD : DVec)
     norm2 rB ≤ norm2 (R *ᵥ aB) + norm2 (T *ᵥ eD) + norm2 eB := by
   rw [identity]
   exact (norm2_add (R *ᵥ aB + T *ᵥ eD) eB).trans
-    (add_le_add_right (norm2_add (R *ᵥ aB) (T *ᵥ eD)) (norm2 eB))
+    (add_le_add (norm2_add (R *ᵥ aB) (T *ᵥ eD)) (le_refl (norm2 eB)))
 
 /-- Direct scalar caps on the three force terms; caps are external evidence. -/
 theorem direct_budget (R : BB) (T : BD) (aB rB eB : BVec) (eD : DVec)

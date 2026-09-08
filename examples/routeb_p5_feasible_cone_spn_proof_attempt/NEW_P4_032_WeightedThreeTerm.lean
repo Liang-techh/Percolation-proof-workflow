@@ -32,14 +32,16 @@ theorem reciprocal_iff_polynomial (lu lD lB : ℝ)
   have hclear : (1 / lu + 1 / lD + 1 / lB) * (lu * lD * lB) =
       lD * lB + lu * lB + lu * lD := by
     field_simp [ne_of_gt hu, ne_of_gt hD, ne_of_gt hB]
-    <;> ring
   constructor
   · intro h
     have hm := mul_le_mul_of_nonneg_right h hp.le
     simpa only [hclear, one_mul] using hm
   · intro h
-    apply (mul_le_mul_right hp).mp
-    simpa only [hclear, one_mul] using h
+    have hm : (1 / lu + 1 / lD + 1 / lB) * (lu * lD * lB) ≤
+        1 * (lu * lD * lB) := by
+      rw [hclear, one_mul]
+      exact h
+    exact le_of_mul_le_mul_right hm hp
 
 def ofReciprocal (lu lD lB : ℝ) (hu : 0 < lu) (hD : 0 < lD) (hB : 0 < lB)
     (hrec : 1 / lu + 1 / lD + 1 / lB ≤ 1) : Weights where
@@ -73,7 +75,6 @@ theorem weighted_scalar (weights : Weights) (x : Fin 3 → ℝ) :
       have hi : weights.value i ≠ 0 := ne_of_gt (weights.positive i)
       have hid : (x i)^2 = (weights.value i * (x i)^2) * (1 / weights.value i) := by
         field_simp [hi]
-        <;> ring
       exact hid.le
   exact hc.trans (by simpa only [mul_one] using
     mul_le_mul_of_nonneg_left weights.reciprocal hE)
