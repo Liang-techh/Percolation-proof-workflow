@@ -3081,3 +3081,12 @@ mapping、source use occurrence、六步 `M +=` fold 和 target bridge 分离成
 必须同源的 witness。当前 source export、array mapping、source updates、runtime
 observation、interval candidate 全部缺失，checker exit=3；该结果帮助明确
 percolation frontier，但不产生 H_acc theorem，也不改变 Route-B gate。
+
+### 梁智炜 · revision 816：Schur signed-cap helper 与独立 D 界
+
+James 的 Schur lane 交付 exact `Fraction` affine-box helper，分别计算
+`u=<ell,d>_H`、`s=<ell+r0,d>_H` 的 signed intervals 和独立 quadratic
+`D=(Ay+b)^T H(Ay+b)` 顶点 cap。synthetic self-test 通过，并保留了
+“两条 dual projection 可为零而 `D>0`”的负控，防止把 projection 信息误当作
+quadratic defect 界。当前仍无同配置 actual `A,y,b,H` source packet，故仅是
+Schur 数学接口，`registry=0`、formal gate 继续关闭。

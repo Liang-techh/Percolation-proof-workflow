@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 815,
+  "revision": 816,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -8339,6 +8339,41 @@
             "target_scope": "routeb_node",
             "source_commit": "c7ab49a3c55c002076ae18f325eedc8a146ac9bd",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART-20260908T110210.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/companion-GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART-20260908.md",
+            "record_kind": "companion_log",
+            "review_sha256": "B9722BBED694860765F169586E1B68F8EFE5981B83E9D5AA80A0FF457FABB573",
+            "task_id": "GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART",
+            "source_agent": "James the 6th",
+            "created_at": "2026-09-08",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_signed_affine_defect_chart",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "artifact_binding_audit": {
+              "status": "BOUND",
+              "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_schur_signed_affine_chart\\NEW_affine_box_caps.py",
+              "declared_sha256": "BE2D7535ED9CAF3C04FFEB8200472998B95100AA3A5C0BD9A0ACEF548F9FD917",
+              "actual_sha256": "BE2D7535ED9CAF3C04FFEB8200472998B95100AA3A5C0BD9A0ACEF548F9FD917"
+            },
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART-codex-20260908T112909.md",
+            "record_kind": "review_result",
+            "review_sha256": "6F16A88CB6827CE7CD25E842F198822A269EBC833255A418A5442F782E48C1E8",
+            "task_id": "GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART",
+            "source_agent": "codex-signed-affine-chart-interface",
+            "created_at": "2026-09-08T11:29:09-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_signed_affine_defect_chart",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART-codex-20260908T112909.md",
             "admission_label": "pending"
           }
         ],
@@ -79205,6 +79240,33 @@
       "formal_certificate_allowed": false,
       "artifact_binding_status": "BOUND",
       "node_id": "1a908d878a3c45448eb039f9c1af37bb"
+    },
+    {
+      "at": "2026-09-08T17:31:09.752609+00:00",
+      "kind": "agent_companion_integrated",
+      "record_file": "agent_review_inbox/companion-GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART-20260908.md",
+      "record_kind": "companion_log",
+      "review_sha256": "B9722BBED694860765F169586E1B68F8EFE5981B83E9D5AA80A0FF457FABB573",
+      "task_id": "GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART",
+      "classification": "pending_signed_affine_defect_chart",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "artifact_binding_status": "BOUND",
+      "node_id": "1e7b1df1835f4deba06b11a8182f6719"
+    },
+    {
+      "at": "2026-09-08T17:31:09.753055+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART-codex-20260908T112909.md",
+      "record_kind": "review_result",
+      "review_sha256": "6F16A88CB6827CE7CD25E842F198822A269EBC833255A418A5442F782E48C1E8",
+      "task_id": "GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART",
+      "classification": "pending_signed_affine_defect_chart",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e7b1df1835f4deba06b11a8182f6719"
     }
   ],
   "agent_requests": {},
@@ -82861,5 +82923,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "610f56502f3c2e2cb08f667cdb8e3015ad45ac3cfa5476ed16a06d032fd94a50"
+  "state_checksum": "200389feeab278ac47ce30ee89ab5a3005daea3fc65760104aa5454682840a2c"
 }

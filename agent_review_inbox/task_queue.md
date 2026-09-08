@@ -3798,3 +3798,7 @@ promotion。若 comparator 未获批准，明确返回 `COMPARATOR_MISSING`。
 H_acc seam 也已纳入 DAG：后续只在出现真实 source export 时补
 `SEAM_SOURCE/EVAL/ARRAY/ALIAS/BODY/FOLD` witness；当前保持 `OPEN_H_ACC`，不得用
 occurrence line/hash、synthetic evaluator 或 Float64 摘要代替语义证明。
+
+Schur helper 已收割为 pending。下一次只寻找同配置 actual `A,y,b,H` 与 box/domain
+绑定，消费 `u/s/D` 三个分离输出；不得从 `u,s` 反推 `D`，不得把 synthetic
+Fraction self-test 当成 source/runtime evidence。

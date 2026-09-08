@@ -1,0 +1,21 @@
+{
+  "record_file": "agent_review_inbox/companion-GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART-20260908.md",
+  "record_kind": "companion_log",
+  "review_sha256": "B9722BBED694860765F169586E1B68F8EFE5981B83E9D5AA80A0FF457FABB573",
+  "task_id": "GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART",
+  "source_agent": "James the 6th",
+  "created_at": "2026-09-08",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_signed_affine_defect_chart",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "artifact_binding_audit": {
+    "status": "BOUND",
+    "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_schur_signed_affine_chart\\NEW_affine_box_caps.py",
+    "declared_sha256": "BE2D7535ED9CAF3C04FFEB8200472998B95100AA3A5C0BD9A0ACEF548F9FD917",
+    "actual_sha256": "BE2D7535ED9CAF3C04FFEB8200472998B95100AA3A5C0BD9A0ACEF548F9FD917"
+  },
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:31:09.752609+00:00"
+}
