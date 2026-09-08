@@ -2743,3 +2743,10 @@ theorem 的最小拆解，数学 lane 负责寻找实际同源 cell packet。前
 实际 cell packet 缺失已确认。新增三维到二维降维数学 lane，专门审查
 block456 的主子矩阵/Schur correction、有效 RHS 和 metric 是否能合法提供
 B=(4,5) 的二维 packet；禁止按字段名称拼接证据。
+
+### 梁智炜 · revision 785：3D→2D restriction
+
+降维审计给出两条合法路线：保留 joint-6 的 principal-row restriction，或在
+`d≠0` 下先做 joint-6 Schur elimination。两条路线都必须保留完整有效 RHS、
+`h*a6`/defect、同一 descriptor 的 determinant 与 signed numerator；当前真实
+source 仍缺三行 balance 和 observable witness，故只登记 pending interface。

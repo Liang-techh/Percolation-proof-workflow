@@ -3487,3 +3487,10 @@ P4 `DHAnalyticAUpper` 已收割：基于现有 compact-DH 转录式得到
 
 该任务只接受 exact interface 或 missing-witness obstruction；不得按字段名称
 互换三维 `rho2_m0_upper`、二维 determinant 或 nominal residual。
+
+## 2026-09-08 — post-revision-785 source witness request
+
+下一轮只寻找一个固定 full-state cell 的实际三行 balance witness，并选择上述
+两条降维路线之一；必须同时提供 effective RHS、同源 metric、determinant、signed
+numerator、observable/units 和 actual defect。若缺任一项，保留 obstruction，不再
+重复三维/二维字段语义审计。

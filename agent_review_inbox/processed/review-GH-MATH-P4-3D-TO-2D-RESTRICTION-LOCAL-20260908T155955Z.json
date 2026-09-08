@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-3D-TO-2D-RESTRICTION-LOCAL-20260908T155955Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "30CD6EDD6A283DD875531420B6EDBA4C0D6810EF429ED5EDB9CDC609B0EC666E",
+  "task_id": "GH-MATH-P4-3D-TO-2D-RESTRICTION",
+  "source_agent": "codex-restriction-math-lane",
+  "created_at": "2026-09-08T15:59:55Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_3d_to_2d_restriction_interface",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-3D-TO-2D-RESTRICTION-LOCAL-20260908T155955Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T16:02:28.635985+00:00"
+}

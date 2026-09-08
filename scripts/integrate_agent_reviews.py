@@ -215,6 +215,9 @@ TASK_TARGETS = {
     "GH-MATH-P4-ACTUAL-CELL-PACKET": (
         "P4.true_dh_port_source_binding",
         "pending_actual_cell_source_packet"),
+    "GH-MATH-P4-3D-TO-2D-RESTRICTION": (
+        "P4.true_dh_port_source_binding",
+        "pending_3d_to_2d_restriction_interface"),
     # New GitHub proof lanes use descriptive uppercase suffixes.  Route them
     # to existing DAG parents as pending metadata only; no admission path is
     # implied by these aliases.
