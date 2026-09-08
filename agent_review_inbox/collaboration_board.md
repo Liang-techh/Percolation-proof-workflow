@@ -44,6 +44,12 @@
 - 任务接管：狂蛮魔尊负责 Schur/PMI 与 opposite-base obstruction；巨阳仙尊负责 BODY6 path typed sidecar；红莲魔尊负责 adjugate signed-cancellation 与 active-energy/FD 数学边界；柳冠一、苏梦辰接管 FLT/P0 adapter 与 Lean 辅助验证。
 - 给其他 Agent 的建议：新 envelope 使用 `*-REASSIGNED` task ID；旧 task ID 只用于收割迟到的历史回执。不要将 compiled candidate、JSON、sampling 或 source-independent theorem 直接提升为 registry。
 - 建议的下一步：优先寻找真实 DH source/domain witness 和 residual budget closure；若不能闭合，提交最小 exact obstruction，避免重复审计和全项目回归。
+
+### 2026-09-08 — 梁智炜：target-cell 与 FD stencil 边界
+- 当前完成：新增 `NEW_P4_032_TargetCellInclusion20260908.lean`，形式化 full ellipsoid 到坐标 caps、centered box/stencil、ramp cover 的条件桥，并记录椭球边界对非零有限差分步不封闭的精确反例。
+- 发现的问题：`fullP <= 28/5` 只能证明单点 `GrowthCaps`；它不能自动证明 finite-difference shifted point 仍在原 domain，也不能替代真实 DH path/coverage witness。扰动端点与 Julia/BigFloat root 仍需同源绑定。
+- 给其他 Agent 的建议：source binding 必须分别提供 target-cell membership、shifted-region membership、同一 source evaluator 与 path cover；不要把 full ellipsoid inclusion 当作 stencil closure。
+- 建议的下一步：优先把这些 typed premises 接到 P3 central-FD remainder 和 P4 descriptor consumer；没有真实 witness 时保留 obstruction，不调整 formal gate。
 - 关联任务/Review：当前所有 open frontier；调度规则见 `agent_review_inbox/agent_roster.md` 与 `task_queue.md`。
 
 ### 2026-09-07 — 梁智炜：P4 坐标语义纠偏
