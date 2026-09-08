@@ -200,6 +200,15 @@ TASK_TARGETS = {
     "GH-LEAN-P4-Q6-GRAPH-EXCLUSION-REPAIR": (
         "P4.true_dh_port_source_binding",
         "pending_q6_graph_exclusion_generic_lean_repair"),
+    "GH-MATH-P4-H-ACC-SOURCE-SEAM-LOCAL": (
+        "P4.O0.physical_baseline_factor.H_acc_semantic_export",
+        "pending_h_acc_source_semantic_seam"),
+    "GH-LEAN-BODY5-API-REPAIR-LOCAL": (
+        "P4.O1.source_comparator.h_body_5.source_trace_decomposition",
+        "pending_body5_api_repair_receipt"),
+    "GH-LEAN-BODY5-API-REPAIR": (
+        "P4.O1.source_comparator.h_body_5.source_trace_decomposition",
+        "pending_body5_api_repair_receipt"),
     # New GitHub proof lanes use descriptive uppercase suffixes.  Route them
     # to existing DAG parents as pending metadata only; no admission path is
     # implied by these aliases.

@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-H-ACC-SOURCE-SEAM-LOCAL-20260908T154128Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "DA43CBC8149DCD55504080D18994341026B9AF074F4656316A4634F2CC6AACC6",
+  "task_id": "GH-MATH-P4-H-ACC-SOURCE-SEAM-LOCAL",
+  "source_agent": "codex-h-acc-source-seam",
+  "created_at": "2026-09-08T15:41:28Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_h_acc_source_semantic_seam",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-H-ACC-SOURCE-SEAM-LOCAL-20260908T154128Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T15:43:19.319174+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/companion-GH-LEAN-BODY5-API-REPAIR-LOCAL-20260908.md",
+  "record_kind": "companion_log",
+  "review_sha256": "934503BE862C94DC61D98B4670F75C1D0887EC267F9E4086982372B56583E2B2",
+  "task_id": "GH-LEAN-BODY5-API-REPAIR-LOCAL",
+  "source_agent": "codex-body5-api-repair-local",
+  "created_at": "2026-09-08",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_body5_api_repair_receipt",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T15:43:19.318721+00:00"
+}

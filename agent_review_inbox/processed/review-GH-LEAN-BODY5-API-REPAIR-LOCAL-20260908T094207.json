@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-LEAN-BODY5-API-REPAIR-LOCAL-20260908T094207.md",
+  "record_kind": "review_result",
+  "review_sha256": "B38D9CBBC85A0F693471A89ECE61CCAC0F0AE3CD8F6ED924502C0077B0D06A76",
+  "task_id": "GH-LEAN-BODY5-API-REPAIR",
+  "source_agent": "codex-local",
+  "created_at": "2026-09-08T09:42:07-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_body5_api_repair_receipt",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "97ce842068a036050fced394494403c2d133126d",
+  "review_file": "agent_review_inbox/review-GH-LEAN-BODY5-API-REPAIR-LOCAL-20260908T094207.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T15:44:23.013252+00:00"
+}
