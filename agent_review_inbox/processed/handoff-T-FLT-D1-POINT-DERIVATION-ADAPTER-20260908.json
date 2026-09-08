@@ -1,0 +1,20 @@
+{
+  "record_file": "agent_review_inbox/handoff-T-FLT-D1-POINT-DERIVATION-ADAPTER-20260908.md",
+  "record_kind": "handoff",
+  "review_sha256": "B9544939F6BC12C2884F8C2DE629620E239A29197DCE1228BB790CB8BBD95022",
+  "task_id": "T-FLT-D1-POINT-DERIVATION-ADAPTER",
+  "source_agent": "梁智炜",
+  "created_at": "2026-09-08T18:40:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_point_derivation_adapter",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef",
+  "artifact_binding_audit": {
+    "status": "PENDING",
+    "reason": "missing_artifact_sha256",
+    "path": "examples/anthropic_flt_derivation_adapter/D1_POINT_DERIVATION_HANDOFF.json"
+  },
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T18:34:14.929567+00:00"
+}

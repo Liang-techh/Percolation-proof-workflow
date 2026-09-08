@@ -308,6 +308,9 @@ TASK_TARGETS = {
     "GH-MATH-P4-ACTIVE-V-FUNCTION-IDENTITY-OBSTRUCTION-20260908": (
         "P4.true_dh_port_source_binding",
         "pending_active_v_function_identity_obstruction"),
+    "GH-ACTIVE-V-CERTIFICATE-INDEXED-INITIAL-BINDING": (
+        "P4.true_dh_port_source_binding",
+        "pending_certificate_indexed_initial_binding"),
     "GH-MATH-P4-JOINT6-PHYSICAL-RECOVERY": (
         "P4.true_dh_port_source_binding",
         "pending_joint6_physical_recovery"),
@@ -402,6 +405,12 @@ TASK_TARGETS = {
     "T-FLT-DERIVATION-CALCULUS-SCAN-20260908": (
         None,
         "flt_derivation_calculus_scan"),
+    "T-FLT-D1-POINT-DERIVATION-ADAPTER": (
+        None,
+        "flt_point_derivation_adapter"),
+    "T-FLT-AVERAGING-FOURIER-TOPOLOGY-SCAN-20260908": (
+        None,
+        "flt_averaging_fourier_topology_scan"),
     "T-P4-KC-COORDINATE-ADAPTER": ("P4.residual_schur_pmi", "pending_kc_coordinate_adapter"),
     "T-P4-MBD-PROJECTION": ("P4.residual_schur_pmi", "pending_mbd_projection_obstruction"),
     "T-P4-012": ("P4.residual_schur_pmi", "pending_typed_remote_binding_contract"),

@@ -3935,3 +3935,32 @@ review 被明确拒收并写入 marker；其余有效新结果是 Poincare 的 F
 calculus scan，已进入 event-only catalog。当前优先级调整为：将 D1 PointDerivations
 交给 Lean pinned lane 尝试最小 adapter，将 C1 residual uniqueness 保持轻改 pending，
 并继续寻找 Route-B 的同源 source witness；不做全量回归或 GitHub 同步。
+
+## 2026-09-08 — revision 836 D1 handoff
+
+| task | owner | deliverable |
+|---|---|---|
+| `T-FLT-D1-POINT-DERIVATION-ADAPTER` | 苏梦辰或巨阳仙尊 | 按 `examples/anthropic_flt_derivation_adapter/D1_POINT_DERIVATION_HANDOFF.json` 建立隔离 pinned Lean receipt；记录 import、OLean、`#print axioms`、comparator，禁止 registry promotion |
+
+D1 是分类 1 的通用 derivation API 候选，但当前仍为 pending。必须先证明目标
+环境中的精确类型和 assumptions；不能把 `PointDerivations` 成员律自动当作真实
+DH 导数，也不能把 adapter receipt 当作 Route-B closure。
+
+## 2026-09-08 — revision 837 initial-binding contract
+
+Godel 的 `GH-ACTIVE-V-CERTIFICATE-INDEXED-INITIAL-BINDING` 已收割为 P4 pending
+obstruction。下一步只接受 certificate-indexed exact initial witness、函数选择、
+同一 `K/X0/t0` 和 producer→consumer event chain；复制同一个 rational upper、
+同名 V 或 manifest timestamp 均不算绑定。
+
+新增 `src/percolation_workflow/initial_binding_contract.py` 作为结构层 validator，
+并配套 5 项测试。它故意始终保持 registry=false/formal gate=false，只有将来的
+exact finite checker、source semantics、runner receipt 和 admission gate 才能继续。
+
+## 2026-09-08 — revision 838 averaging/Fourier/topology
+
+`T-FLT-AVERAGING-FOURIER-TOPOLOGY-SCAN-20260908` 已收割为 FLT event-only
+metadata。优先候选是 S1 averaging CLM 与 F1 additive-character Fourier CLM；
+后续需做 exact target-pin/import/axiom/comparator receipt。T1 inducing topology
+和 L1 changeScalars 先做目标 API 去重；不得把 algebra/topology adapter 当作
+物理域、范数保持、谱投影或 Route-B flowpipe 证明。revision=838，registry=0。

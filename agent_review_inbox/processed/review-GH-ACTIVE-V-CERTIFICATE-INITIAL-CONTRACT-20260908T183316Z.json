@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-ACTIVE-V-CERTIFICATE-INITIAL-CONTRACT-20260908T183316Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "F8854202B1830CD819D456A763D0E433B76441F4B2A28E618E0AF67A298E82F0",
+  "task_id": "GH-ACTIVE-V-CERTIFICATE-INDEXED-INITIAL-BINDING",
+  "source_agent": "Godel the 6th",
+  "created_at": "2026-09-08T18:33:16Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_certificate_indexed_initial_binding",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-ACTIVE-V-CERTIFICATE-INITIAL-CONTRACT-20260908T183316Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T18:35:09.891555+00:00"
+}

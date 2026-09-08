@@ -1,0 +1,53 @@
+{
+  "schema_version": "flt-adapter-handoff-v1",
+  "task_id": "T-FLT-D1-POINT-DERIVATION-ADAPTER",
+  "status": "pending",
+  "classification": 1,
+  "admission_status": "pending",
+  "registry_eligible": false,
+  "formal_certificate_allowed": false,
+  "source": {
+    "repository": "https://github.com/anthropics/fermats-last-theorem",
+    "commit": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef",
+    "file": "Definitions/Def_Algebra_PointDerivations.lean",
+    "git_blob_sha1": "a6a95f7e3170eb079c42c30deaa06a562d42f53d",
+    "license": "Apache-2.0; preserve upstream NOTICE/ATTRIBUTION and Mathlib ownership"
+  },
+  "declarations": [
+    "Algebra.PointDerivations.map",
+    "Algebra.PointDerivations.map_comp",
+    "Algebra.PointDerivations.map_id",
+    "Algebra.PointDerivations.map_apply_coe"
+  ],
+  "source_contract": {
+    "k": "Type u with Field k",
+    "A": "Type v with CommRing A and Algebra k A",
+    "evaluation": "ev : A →+* k",
+    "modules": "AddCommGroup and Module k for M, M', M''",
+    "derivation_member_law": "D(a*b) = ev(a) • D(b) + ev(b) • D(a)",
+    "ev_smul_extra_assumption": "ev.comp(algebraMap k A) = RingHom.id k is required only by ev_smul, not by map/map_comp/map_id"
+  },
+  "routeb_adapter_boundary": {
+    "intended_use": "post-compose a separately proved real-algebra observable/jet derivation with a fixed linear output map",
+    "must_prove_separately": [
+      "real algebra and evaluation choice",
+      "k-linearity of the physical derivative/jet",
+      "evaluation-Leibniz law",
+      "identification with the physical observable derivative"
+    ],
+    "not_supplied": [
+      "continuity or norm bound",
+      "time-varying map derivative term",
+      "finite-difference remainder",
+      "DH residual semantics",
+      "flowpipe or coverage"
+    ]
+  },
+  "required_receipts": [
+    "exact target Lean/Mathlib pin",
+    "fresh import manifest",
+    "source SHA-256 and upstream Git blob identity",
+    "compiled declaration and #print axioms output",
+    "statement comparator result"
+  ]
+}

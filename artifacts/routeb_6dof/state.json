@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 835,
+  "revision": 838,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -16851,6 +16851,21 @@
               "actual_sha256": "A9101A8F05F48C3EFAE97F6CF74A9F43B09F926A833BE6FB44F73E7A04FC5B62"
             },
             "review_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-FUNCTION-IDENTITY-OBSTRUCTION-20260908T182014Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-ACTIVE-V-CERTIFICATE-INITIAL-CONTRACT-20260908T183316Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "F8854202B1830CD819D456A763D0E433B76441F4B2A28E618E0AF67A298E82F0",
+            "task_id": "GH-ACTIVE-V-CERTIFICATE-INDEXED-INITIAL-BINDING",
+            "source_agent": "Godel the 6th",
+            "created_at": "2026-09-08T18:33:16Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_certificate_indexed_initial_binding",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-ACTIVE-V-CERTIFICATE-INITIAL-CONTRACT-20260908T183316Z.md",
             "admission_label": "pending"
           }
         ]
@@ -80793,6 +80808,46 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "rejection_reason": "agent_removed_from_current_roster"
+    },
+    {
+      "at": "2026-09-08T18:34:14.929567+00:00",
+      "kind": "external_reuse_agent_handoff_integrated",
+      "record_file": "agent_review_inbox/handoff-T-FLT-D1-POINT-DERIVATION-ADAPTER-20260908.md",
+      "record_kind": "handoff",
+      "review_sha256": "B9544939F6BC12C2884F8C2DE629620E239A29197DCE1228BB790CB8BBD95022",
+      "task_id": "T-FLT-D1-POINT-DERIVATION-ADAPTER",
+      "classification": "flt_point_derivation_adapter",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "artifact_binding_status": "PENDING",
+      "catalog": "anthropic-fermats-last-theorem"
+    },
+    {
+      "at": "2026-09-08T18:35:09.891555+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-ACTIVE-V-CERTIFICATE-INITIAL-CONTRACT-20260908T183316Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "F8854202B1830CD819D456A763D0E433B76441F4B2A28E618E0AF67A298E82F0",
+      "task_id": "GH-ACTIVE-V-CERTIFICATE-INDEXED-INITIAL-BINDING",
+      "classification": "pending_certificate_indexed_initial_binding",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T18:37:34.517236+00:00",
+      "kind": "external_reuse_agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-FLT-AVERAGING-FOURIER-TOPOLOGY-SCAN-20260908T183253Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "F58BC2A08F8A5D491ABB5951329267FB711215058EF1055EFF43DC7E59A04659",
+      "task_id": "T-FLT-AVERAGING-FOURIER-TOPOLOGY-SCAN-20260908",
+      "classification": "flt_averaging_fourier_topology_scan",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "catalog": "anthropic-fermats-last-theorem"
     }
   ],
   "agent_requests": {},
@@ -84449,5 +84504,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "b69d54191ec172aaa2a24ed50ee739669a05bcc3b7bdf812c0ff4e49466a2407"
+  "state_checksum": "87a8e3988f5182f397484095f04ed2820ce1806206a5d5540a679938b025131b"
 }

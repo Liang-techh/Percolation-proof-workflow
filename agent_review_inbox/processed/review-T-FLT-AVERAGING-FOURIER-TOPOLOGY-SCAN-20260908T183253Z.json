@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-FLT-AVERAGING-FOURIER-TOPOLOGY-SCAN-20260908T183253Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "F58BC2A08F8A5D491ABB5951329267FB711215058EF1055EFF43DC7E59A04659",
+  "task_id": "T-FLT-AVERAGING-FOURIER-TOPOLOGY-SCAN-20260908",
+  "source_agent": "Codex-FLT-spectral-topology-lane",
+  "created_at": "2026-09-08T18:32:53Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_averaging_fourier_topology_scan",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "855a2107de07a692fbeef1cb0af5061e219769a3",
+  "review_file": "agent_review_inbox/review-T-FLT-AVERAGING-FOURIER-TOPOLOGY-SCAN-20260908T183253Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T18:37:34.517236+00:00"
+}

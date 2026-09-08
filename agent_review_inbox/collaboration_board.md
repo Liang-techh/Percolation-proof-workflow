@@ -3232,3 +3232,35 @@ Poincare 的 derivation/calculus scan 已进入 Anthropic FLT event-only catalog
 连续 residual 的 Stone–Weierstrass a.e.-zero 结果标为 2（需完整测度契约），
 Kähler pullback、compact-character 和 algebraic chart 只标为 3 架构参考；正特征
 derivation 明确不接入实数 Route-B。revision=835，registry=0，formal gate 继续关闭。
+
+### 梁智炜 · revision 836：D1 PointDerivations pinned handoff
+
+已将 Poincare 扫描出的最高价值 D1 候选固化为 metadata-only handoff：
+`Algebra.PointDerivations.map/map_comp/map_id/map_apply_coe`，绑定 upstream
+commit/blob、精确模块假设、Route-B 适配边界和所需 Lean/comparator receipt。
+该 packet 不复制 proof body，不声称已编译，且不提供物理 derivative、连续性、
+residual、coverage 或 flowpipe 结论。它进入 FLT event-only catalog，等待苏梦辰
+或巨阳仙尊的 pinned Lean 执行；revision=836，registry=0，formal gate 关闭。
+
+### 梁智炜 · revision 837：certificate-indexed initial binding obstruction
+
+Godel 的 bounded source search 没有找到 certificate polynomial、
+`initial_storage_upper`、producer/consumer 和同一 `K/X0/t0` 的真实绑定。该结果
+明确区分了独立标量上界、同名 `V`、Float64/采样 `pinit` 与真正的初始 SOS witness；
+它没有重算 obstruction，也没有声称历史文件之外绝对不存在该链。P4 新 frontier
+为 `pending_certificate_indexed_initial_binding`，formal gate 和 registry 不变。
+
+同时新增 `initial_binding_contract` 结构验证器：它检查函数变量顺序、精确有理
+上界、唯一 selector、SOS witness 字段以及 producer-output 到 consumer-input 的
+hash 相等性；结构一致仍只返回 `PENDING`，不执行多项式语义、不写 registry。
+该 validator 的 5 项测试通过，revision=837，registry=0，formal gate 关闭。
+
+### 梁智炜 · revision 838：averaging/Fourier/topology scan
+
+Poincare 的第二条 FLT 非数论扫描已进入 event-only catalog。S1
+`ContinuousLinearMap.exists_forall_apply_eq_integral_smul_apply...` 与 F1
+`AddChar.exists_continuousLinearMap_fourierChar_eq` 是分类 1/2 的候选，但必须
+保留 Haar/probability、强连续、Fourier normalization 和 covering-lift 假设；T1
+`IsInducing.topologicalModule` 与 L1 `changeScalars` 也是分类 1/2 的 typed
+adapter 入口，不能自动升级为 norm/isometry/flowpipe。没有运行 Lean/Lake，所有
+结果仍 pending，revision=838，registry=0，formal gate 关闭。
