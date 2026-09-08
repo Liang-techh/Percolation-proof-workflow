@@ -3630,3 +3630,17 @@ configuration 和运行证据时必须保持 pending，Lean/registry gate 不变
 
 不得把本轮 conditional Schur threshold 或单列 BODY6 theorem 当作 source closure；
 不运行本机 Lean/Lake 或全回归，保持 fail-closed。
+
+## 2026-09-08 — post-revision-802 next frontier dispatch
+
+本轮四个本地 lane 已空闲并重新派发，全部消费 revision 802 的新缺口：
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-MATH-P4-SCHUR-BUDGET-CLOSURE` | Sartre the 6th | 将 signed-defect Schur gates 绑定到同一 source/configuration packet，或提交 exact obstruction |
+| `GH-LEAN-BODY6-PATHCONTRACT-RECEIPT` | Poincare the 6th | BODY6 physical embedding/domain/path/cap 的最小 typed contract sidecar |
+| `GH-MATH-P4-ACTIVE-ENERGY-NORMALIZATION` | Godel the 6th | `Vfull_DH`/`Vshift_DH`/`Ugrav_DH` 与 active initial storage 的值级 normalization identity 或缺口 |
+| `GH-MATH-P4-SOURCE-SEMANTICS-HALF-ACTIVE` | James the 6th | half-active 同源 actual source/acceleration/rows456/runtime semantic packet 或 obstruction |
+
+这批只推进数学接线与 Lean theorem seam，不做重复 omission/rank 审计、全回归或
+本机 Lean；所有未具备同源 source/receipt 的结果保持 pending。

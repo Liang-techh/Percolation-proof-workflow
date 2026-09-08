@@ -2933,3 +2933,12 @@ Actual-three-row lane 刷新确认当前 rows456 仍无 decoded runtime witness�
 所有结果为 pending/conditional；revision=802、registry=0、formal certificate gate
 保持关闭。下一轮继续按同源 residual、domain、configuration 和 runtime witness
 拆分，不把 conditional algebra 当作物理证书。
+
+### 梁智炜 · revision 802 后续 frontier 派发
+
+在四条 replacement lane 收割后，下一轮改为四个互不重复的窄目标：Sartre 负责
+将 signed-defect Schur gates 接到同源 source packet；Poincare 负责 BODY6 的
+physical embedding/domain/path typed contract；Godel 负责 active-energy value
+normalization 与 initial storage；James 负责 half-active 的 actual source/rows456
+semantic packet。该轮继续保留 `registry=0` 与 `formal_certificate_allowed=false`，
+不把 conditional algebra、单列候选或 lift 坐标关系升级为证明。
