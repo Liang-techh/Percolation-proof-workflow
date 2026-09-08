@@ -2713,3 +2713,12 @@ loop-state invariant；当前 intake 仍为空，因此保持 `OPEN_H_ACC/pendin
 adjugate projection packet、真实 DH target caps、Schur budget closure。
 三条 lane 均只写新的 review envelope；没有新的 pinned Lean/kernel 证据前，
 不改变 registry、parent closure 或 formal gate。
+
+### 梁智炜 · revision 781–782：adjugate / target cap / Schur closure
+
+adjugate review 将最小 physical packet 固定为同一 cell 的 row、determinant、
+projected numerator、observable binding 与 source provenance；target-caps review
+确认五个 analytic boxes 不是 path cover，且 remainder 只能和完整线性项组成
+`|A z|+D`。Schur closure review 给出联合阈值
+`beta >= L+2c+max(E_A,t+Q)`，并区分 direct-margin 与旧 absorption 两条路线。
+这些结果均为 pending mathematics；registry 仍为 0，formal gate 仍关闭。

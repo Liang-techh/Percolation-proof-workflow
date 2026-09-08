@@ -199,6 +199,13 @@ Schur closure 的数学 sidecar 已收割为 pending；下一批只消费这一�
 通过 inbox envelope 收割，且保持 pending，不能绕过 source、coverage、Lean
 和 comparator gates。
 
+## 2026-09-08 — post-revision-782 routing
+
+下一轮优先寻找一份实际同源 cell packet：固定 block 顺序、同一 H、actual
+residual defect、`ell`/observable 和 beta allocation。若拿不到该 packet，agent
+应提交缺失 witness 或 graph-exclusion obstruction；不得继续重复 source-independent
+Cramer、Young 或 box 半径算术。Lean lane 只消费已有抽象候选并返回 pinned receipt。
+
 ### 2026-09-08 — generic Schur allocation follow-up
 
 本地数学推进新增任意有限维 Euclidean Schur allocation sidecar，用于统一
