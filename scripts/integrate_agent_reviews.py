@@ -140,6 +140,21 @@ TASK_TARGETS = {
     "GH-MATH-P4-ADJUGATE-PROJECTION-PACKET": (
         "P4.true_dh_port_source_binding",
         "pending_adjugate_projection_packet"),
+    "GH-LEAN-P4-SCHUR-CLOSURE-RECEIPT": (
+        "P4.residual_schur_pmi",
+        "pending_schur_closure_receipt"),
+    "GH-MATH-P4-SCHUR-SOURCE-BINDING": (
+        "P4.residual_schur_pmi",
+        "pending_schur_source_binding"),
+    "GH-MATH-P4-ADJUGATE-SOURCE-WITNESS": (
+        "P4.true_dh_port_source_binding",
+        "pending_adjugate_source_witness"),
+    "GH-MATH-P3-FD-STENCIL-BINDING": (
+        "P3.central_fd_derivative_hull_composition",
+        "pending_fd_stencil_source_binding"),
+    "GH-LEAN-BODY6-SEAM-ADAPTER-ONLY": (
+        "P4.O1.source_comparator.h_body_6.canonical_export",
+        "pending_body6_seam_adapter_receipt"),
     # New GitHub proof lanes use descriptive uppercase suffixes.  Route them
     # to existing DAG parents as pending metadata only; no admission path is
     # implied by these aliases.

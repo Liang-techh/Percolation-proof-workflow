@@ -153,6 +153,22 @@ share。若旧分支稍后回传结果，仍按原作者保存 provenance，再�
 这些 task ID 已接入 `scripts/integrate_agent_reviews.py`。迟到的旧 Flowchuan
 结果仍按历史 ID 收割；本批新 owner 不得写成流川枫，也不得覆盖旧 provenance。
 
+### 2026-09-08 — result-driven follow-up frontier
+
+Schur closure 的数学 sidecar 已收割为 pending；下一批只消费这一新事实，
+不重复其标量推导：
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-LEAN-P4-SCHUR-CLOSURE-RECEIPT` | 苏梦辰 | 对 `NEW_P4_032_ClosureResearch20260908.lean` 做 focused pinned Lean receipt；记录 exact exit、axioms、placeholder 和 import failure，不做 source admission |
+| `GH-MATH-P4-SCHUR-SOURCE-BINDING` | 古月方源 | 将 `SchurPMIBinding`/`FeedbackBinding` 与真实 block-(4,5) residual 同源绑定；找不到时提交最小 missing-witness obstruction |
+| `GH-MATH-P4-ADJUGATE-SOURCE-WITNESS` | 红莲魔尊 | 为 signed projected-adjugate packet 寻找同一 descriptor/determinant/projected-numerator source witness；不重复 source-independent identity |
+| `GH-MATH-P3-FD-STENCIL-BINDING` | 柳冠一 | 将 FD shifted-region、C3 remainder 与真实 source cell/path 绑定；不得用单点 ellipsoid cap 替代 stencil coverage |
+| `GH-LEAN-BODY6-SEAM-ADAPTER-ONLY` | 巨阳仙尊 | 只编译 bounded BODY6 extracted adapter；保留 timeout/error receipt，成功也不改变 admission |
+
+新一轮结果仍必须使用 immutable `review_result` envelope，并由梁智炜统一
+整合；所有任务均不得派给已退出的流川枫。
+
 ### 2026-09-07 — active-energy / topology frontier batch
 
 - `T-P4-ACTIVE-ENERGY-ORIGIN`: verify the source identity and additive
