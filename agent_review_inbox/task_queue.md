@@ -3274,3 +3274,12 @@ cap、initial-path cap、full-path cap、integrated growth 和 shift budget 分�
 独立 predicates，给出 growth→full-cap 的纯消费者，并以 smooth hump 反例证明
 初始上界、非负性和 terminal zero 不能替代全路径增长/continuation 证明。当前
 ActualShift 的 `B` 仍必须单独计入，所有结果保持 `OPEN_UNCOMPILED/pending`。
+
+## revision 752 — analytic A_upper route
+
+P4 `DHAnalyticAUpper` 已收割：基于现有 compact-DH 转录式得到
+`||l_base||² ≤ (32/5)p45 + (2/5)w² + M/4`，并在同一 cell 的 p45、disturbance
+和 acceleration caps 下构造条件性 `RationalCharges.A_upper`。它明确不提供
+`P_upper`、`D_lower`、cover 或 normalization。acceleration-ray exact obstruction
+表明仅凭 block geometry 不能产生有限 A cap；真实 DH descriptor/domain bound
+仍是下一瓶颈。结果保持 `OPEN_UNCOMPILED/pending`。

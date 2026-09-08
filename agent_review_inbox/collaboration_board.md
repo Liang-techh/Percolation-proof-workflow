@@ -2617,3 +2617,10 @@ receipt，不能由当前 lemma 自动关闭。
 BODY6 initial-to-full-path cap seam 已进入 StateStore。它将当前阻塞精确化为
 `initial receipt + integrated growth + full-state projection + shift budget` 的
 四段依赖；任何一段缺失都不能推出 ActualShift 的全路径 barrier。
+
+### 梁智炜 · revision 752
+
+P4 analytic A-upper child 已进入 pending DAG：现在有一条可消费的保守
+`A_upper` 构造，但其前提明确要求同 cell acceleration cap。acceleration ray
+反例阻止了从 p45/block geometry 直接推导该 cap；后续应优先寻找真实 DH
+descriptor/flowpipe 对 acceleration 的绑定，而不是继续优化无约束多项式常数。
