@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-SOURCE-ELLIPSOID-BINDING-codex-20260908T084123.md",
+  "record_kind": "review_result",
+  "review_sha256": "D9679EDAE6BF2C515E2844CCFF5DC8FA8A660C864311412182BBA95B41F9B067",
+  "task_id": "GH-MATH-P4-SOURCE-ELLIPSOID-BINDING",
+  "source_agent": "Codex-P4-target-cell-inclusion",
+  "created_at": "2026-09-08T08:41:23-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_source_ellipsoid_binding",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "154a11ebc578c93d4e4f670d2d4c414b00ac6eb7",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-SOURCE-ELLIPSOID-BINDING-codex-20260908T084123.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T14:45:26.328215+00:00"
+}

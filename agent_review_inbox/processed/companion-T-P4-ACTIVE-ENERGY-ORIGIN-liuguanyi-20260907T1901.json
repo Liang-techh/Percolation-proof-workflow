@@ -1,0 +1,14 @@
+{
+  "record_file": "agent_review_inbox/companion-T-P4-ACTIVE-ENERGY-ORIGIN-liuguanyi-20260907T1901.md",
+  "record_kind": "companion_log",
+  "review_sha256": "2AEA72ECD9F70CAD348F5B4FEE7D9816B728CA326203E732BEF8F79BC08B8ED9",
+  "task_id": "T-P4-ACTIVE-ENERGY-ORIGIN",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_active_energy_origin_normalization",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "integrated_at": "2026-09-08T14:44:34.834378+00:00"
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 766,
+  "revision": 767,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -15309,6 +15309,21 @@
             "target_scope": "routeb_node",
             "source_commit": "76160eda3cb3d701d3b44e9a3740249b7678569f",
             "review_file": "agent_review_inbox/review-T-P4-ACTIVE-ENERGY-ORIGIN-source-normalization-codex-20260908T0840.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-SOURCE-ELLIPSOID-BINDING-codex-20260908T084123.md",
+            "record_kind": "review_result",
+            "review_sha256": "D9679EDAE6BF2C515E2844CCFF5DC8FA8A660C864311412182BBA95B41F9B067",
+            "task_id": "GH-MATH-P4-SOURCE-ELLIPSOID-BINDING",
+            "source_agent": "Codex-P4-target-cell-inclusion",
+            "created_at": "2026-09-08T08:41:23-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_source_ellipsoid_binding",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "154a11ebc578c93d4e4f670d2d4c414b00ac6eb7",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-SOURCE-ELLIPSOID-BINDING-codex-20260908T084123.md",
             "admission_label": "pending"
           }
         ]
@@ -77139,6 +77154,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T14:45:26.328215+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-SOURCE-ELLIPSOID-BINDING-codex-20260908T084123.md",
+      "record_kind": "review_result",
+      "review_sha256": "D9679EDAE6BF2C515E2844CCFF5DC8FA8A660C864311412182BBA95B41F9B067",
+      "task_id": "GH-MATH-P4-SOURCE-ELLIPSOID-BINDING",
+      "classification": "pending_source_ellipsoid_binding",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -80795,5 +80823,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "a15041894fcf2075eaaf37ca171e8f61266776d189de1904caf00d1a2b67652f"
+  "state_checksum": "6326cda371c84b89ef6b4ceccb67750b965a7d536fbd4fbfbc134627071b3d12"
 }

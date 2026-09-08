@@ -1,0 +1,38 @@
+{
+  "schema": "routeb.body6.typed_interface_audit.v1",
+  "status": "pending",
+  "scope": "bounded_Lean_invocations_no_dependency_rebuild",
+  "runs": [
+    {
+      "name": "full_PATHREASSIGNED_plus_extracted_generic_contract_and_adapters",
+      "command": [
+        "C:\\Users\\z5242\\.elan\\toolchains\\leanprover--lean4---v4.32.0\\bin\\lean.exe",
+        "-DwarningAsError=true",
+        "--stdin"
+      ],
+      "exit_code": 0,
+      "stdout": "'NEW_BODY6_SLICE_PATHREASSIGNED20260908.repaired_contract_adapter_attempt' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'NEW_BODY6_SLICE_PATHREASSIGNED20260908.pullback_projection_attempt' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'NEW_BODY6_SLICE_PATHREASSIGNED20260908.pullback_membership_iff_attempt' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'NEW_BODY6_SLICE_PATHREASSIGNED20260908.fixed_domain_supplies_pullback_attempt' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'NEW_BODY6_SLICE_PATHREASSIGNED20260908.projected_membership_does_not_certify_fixed_domain_attempt' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'NEW_BODY6_SLICE_PATHCONTRACT20260908.consume_path_contract_attempt' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'NEW_SEAM_BODY6_TYPED.initial_growth_to_transfer_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]\n'NEW_SEAM_BODY6_TYPED.transfer_inputs_to_algebraic_path_contract' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n'NEW_SEAM_BODY6_TYPED.path_contract_to_transfer_inputs_with_domain' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]\n",
+      "stderr": "",
+      "stdin_sha256": "0b000d73a8ea905ed2342a5efb260467e4d76c05e1d2a7f4c8ae72468d28795a"
+    }
+  ],
+  "lean_path": "C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\routeb_b45_source_comparator_lean;C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\local_fkg\\.lake\\build\\lib\\lean;C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\local_fkg\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean;C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\local_fkg\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean;C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\local_fkg\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean;C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\local_fkg\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean;C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\local_fkg\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean;C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\local_fkg\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean;C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\local_fkg\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean;C:\\Users\\z5242\\Desktop\\\u91cd\u6784\u7248\\\u5de5\u4f5c\u6d41\\examples\\local_fkg\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean",
+  "toolchain": "leanprover/lean4:v4.32.0",
+  "input_hashes": {
+    "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_PATHCONTRACT20260908.lean": "bd96b283accae86e695a180bfe9223e9b396b6efdd0178dac380394eac6321f2",
+    "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_PATHREASSIGNED20260908.lean": "2343ca9a6ad775643e344d2e78d66f4dd7960fa0c10a910fdb9864da1fa402ec",
+    "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_INITIALPATHCAPS20260907.lean": "5cad04f2e8b0af13c8d8a099455812fe1f6d17a66a0d567be5b85963252d224f",
+    "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_INITIALPATHCAPS20260907.olean": "7eb98f01e40d17bd73a32c5d90c9072e364cd6cbf8d161161525c36c2e5cc64a",
+    "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_PATHDOMAINPROJECTION20260907.lean": "f55de2b76ed401e7962b1494d02826c8fc2f951d7137f02461edeb56d5757d62",
+    "examples/routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_PATHDOMAINPROJECTION20260907.olean": "16ec01cbb6b88ac0b928ccc2d7649539b52f95171bc94dda634ccd2db7d1b8d5",
+    "examples/routeb_o0_h_acc_source_refinement/NEW_SEAM_BODY6_TYPED_check.py": "78c0b72f06d227ae6b0c1b4ede62395e39f039fa55aca5aaea7c96797e7427d9"
+  },
+  "generic_fragment_sha256": "cdc80bf6417229630975f6f1c7c5bcef287ce629dbc1fcbce9e30d53e6b683af",
+  "files_written_by_checker": 0,
+  "dependencies_recompiled": false,
+  "complete_PATHCONTRACT_checked": false,
+  "adapter_Lean_check_passed": true,
+  "registry_eligible": false,
+  "source_binding_proven": false,
+  "concrete_path_contract_inhabited": false
+}

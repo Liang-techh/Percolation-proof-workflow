@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-ACTIVE-ENERGY-ORIGIN-liuchuanafeng-20260907T1932.md",
+  "record_kind": "review_result",
+  "review_sha256": "78789B4731B16031E7CB9067C2C58A4D717BC739208C44EFCCE8DDC3B2147175",
+  "task_id": "T-P4-ACTIVE-ENERGY-ORIGIN",
+  "source_agent": "流川枫",
+  "created_at": "2026-09-07T19:32:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_active_energy_origin_normalization",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "eb83ab1d9c90f9a9423d4d8724bf576bf45f9dfb",
+  "review_file": "agent_review_inbox/review-T-P4-ACTIVE-ENERGY-ORIGIN-liuchuanafeng-20260907T1932.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T14:44:34.834713+00:00"
+}
