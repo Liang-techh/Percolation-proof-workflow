@@ -4178,3 +4178,10 @@ schema 本身不能关闭 P5 或进入 registry。
 中存在非零 PSD-slack 增量（`t=1/1000`，容量上限 `32553/4000000`），不能迁移为
 真实 DH `K_path`。下一步仍优先绑定 actual path/source/chart/hash 与 18 个真实
 certificate；远端 Lean agent 可并行做 standalone receipt，但不得改变 admission label。
+
+## 2026-09-08 — revision 860 toy PSD-slack witness detail
+
+`T-P5-TOY-PSD-SLACK-CAPACITY-WITNESS` 已收割。18 个 `δ_r`、72 条容量约束、
+18 个 shifted PSD factors 和 `t=1/1000` 已保存为 exact JSON；它只证明当前
+source-independent toy 的 PSD-slack 构造。下一步必须把同一算法重新实例化到
+actual `K_path`/source packet，不能复用 toy 的 `G/Q/L/μ` 数值。

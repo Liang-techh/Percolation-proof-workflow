@@ -498,6 +498,9 @@ TASK_TARGETS = {
     "T-P5-PSD-CAPACITY-WITNESS": (
         "P5.componentwise_relative_decay.feasible_cone_spn",
         "pending_exact_toy_psd_capacity_witness"),
+    "T-P5-TOY-PSD-SLACK-CAPACITY-WITNESS": (
+        "P5.componentwise_relative_decay.feasible_cone_spn",
+        "pending_toy_psd_slack_capacity_witness"),
     "GH-P5-P4-SAME-CELL-JET-JOIN": (
         "P5.componentwise_relative_decay",
         "pending_same_cell_jet_join_contract"),

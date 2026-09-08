@@ -3472,3 +3472,11 @@ representatives 生成 shifted PSD factors，验证 72 条容量不等式，得�
 保持 arithmetic-valid。这证明 PSD-slack 方法能绕开固定-N 的 `E=0` 障碍，但所有
 `K/Q/L/证书/t` 仍属于 toy fixture；没有 actual `K_path`、source binding 或 Lean
 kernel receipt，因此 P5、registry 与 formal gate 不变。
+
+### 梁智炜 · revision 860：toy PSD-slack capacity witness detail
+
+Poincare 补充了 18 个代表元的完整有理 `δ_r` 表、72×8 capacity rows、shifted
+PSD factors，并重新读取 UpdatedToySPN 做 targeted geometry/legacy 检查。全一方向
+得到 `t_cap=32553/4000000`、`t=1/1000`；这使 PSD-slack 的非零增量成为可复核
+的 toy witness，而不再只是 schema。它仍不绑定真实 DH `K_path`、source/domain、
+Lean kernel 或 consumer，故 P5、registry、formal gate 均不变。

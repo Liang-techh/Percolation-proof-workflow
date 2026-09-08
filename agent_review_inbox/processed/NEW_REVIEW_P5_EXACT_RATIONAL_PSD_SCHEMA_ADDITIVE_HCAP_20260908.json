@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/NEW_REVIEW_P5_EXACT_RATIONAL_PSD_SCHEMA_ADDITIVE_HCAP_20260908.md",
+  "record_kind": "review_result",
+  "review_sha256": "25D6E5962C455F2B8874C4C3DD69B9B61204B6D04C8AC36F9722BE84120A7262",
+  "task_id": "P5-EXACT-RATIONAL-PSD-SCHEMA-ADDITIVE-HCAP",
+  "source_agent": "Sartre",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_exact_rational_psd_schema_additive_hcap",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/NEW_REVIEW_P5_EXACT_RATIONAL_PSD_SCHEMA_ADDITIVE_HCAP_20260908.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T19:33:14.135805+00:00"
+}
