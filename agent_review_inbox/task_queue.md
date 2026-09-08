@@ -3989,3 +3989,10 @@ event 或 consumer identity。
 狂蛮魔尊检查 `-1/20` margin 是否能与实际 runtime error budget 合并；
 苏梦辰/巨阳仙尊仅在数学 contract 固定后准备 pinned Lean adapter。所有
 agent 都不得修改 registry 或把该 witness 标成 VERIFIED。
+
+## 2026-09-08 — revision 841 handoff refresh
+
+`GH-MATH-P4-CERTIFICATE-INDEXED-INITIAL-WITNESS` 的第二份 handoff 与上一份
+candidate/result hash 完全相同，已按同一 node 追加历史事件。无需重复数学审计；
+后续资源转向 evaluator decoding、consumer function identity 和 runtime error
+budget。若再次收到同 hash handoff，只保留 provenance event，不创建新 frontier。

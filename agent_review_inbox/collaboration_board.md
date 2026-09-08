@@ -3289,3 +3289,11 @@ Godel 提交了一个新的 exact conditional witness：对固定 block-only
 consumer function identity 和 runtime initial bound 尚未绑定，故 registry=0、
 formal gate 继续关闭。下一步是补齐 source/runtime evaluator contract，不能把
 ideal witness 直接当成历史执行 receipt。
+
+### 梁智炜 · revision 841：initial witness handoff provenance refresh
+
+Godel 随后补交了 immutable handoff；candidate/result SHA-256 与 revision 840
+完全一致。收割器将它记录为同一 P4 node 的第二个 agent-history event，没有
+重复创建 theorem、attempt 或 registry 条目。它补强了交接 provenance，但没有
+新增 runtime evaluator、Julia decoding、consumer identity 或 kernel 证据；
+formal gate 继续关闭。
