@@ -14,17 +14,16 @@ theorem same_monomial_exact_factorization
   ring
 
 /--
-The signed unit packet survives an additive normalized remainder whose absolute
-charge is strictly smaller than the certified unit margin.  `abs sigma = 1`
-is the typed replacement for the informal `sigma ∈ {+1,-1}` convention.
+The signed unit packet transports an additive normalized remainder whose
+absolute charge is at most `eps`.  Strictness of the new margin is intentionally
+kept in a separate consumer theorem.
 -/
 theorem same_monomial_remainder_absorption
     (sigma u e m M eps : ℝ)
     (hsigma : abs sigma = 1)
     (hlower : m ≤ sigma * u)
     (hupper : sigma * u ≤ M)
-    (heps : abs e ≤ eps)
-    (hgate : eps < m) :
+    (heps : abs e ≤ eps) :
     m - eps ≤ sigma * (u + e) ∧
       sigma * (u + e) ≤ M + eps := by
   have hscaled : abs (sigma * e) ≤ eps := by
@@ -44,11 +43,10 @@ theorem same_monomial_remainder_absorption
       sigma * (u + e) = sigma * u + sigma * e := by ring
       _ ≤ M + eps := by linarith
 
-/-- Strict positivity of the perturbed signed unit margin. -/
+/-- Strict positivity of the perturbed signed unit margin under `eps < m`. -/
 theorem absorbed_unit_has_strict_sign
     (sigma u e m M eps : ℝ)
     (hsigma : abs sigma = 1)
-    (hm : 0 < m)
     (hlower : m ≤ sigma * u)
     (hupper : sigma * u ≤ M)
     (heps : abs e ≤ eps)
@@ -56,7 +54,7 @@ theorem absorbed_unit_has_strict_sign
     0 < sigma * (u + e) := by
   have hbounds :=
     same_monomial_remainder_absorption
-      sigma u e m M eps hsigma hlower hupper heps hgate
+      sigma u e m M eps hsigma hlower hupper heps
   linarith
 
 /--
@@ -83,7 +81,6 @@ produces the exact new unit margin `m - B*Hcharge > 0`.
 theorem higher_order_remainder_unit_margin
     (sigma u monS v m M B Hcharge : ℝ)
     (hsigma : abs sigma = 1)
-    (hm : 0 < m)
     (hlower : m ≤ sigma * u)
     (hupper : sigma * u ≤ M)
     (hH : 0 ≤ Hcharge)
@@ -100,13 +97,12 @@ theorem higher_order_remainder_unit_margin
   · exact
       same_monomial_remainder_absorption
         sigma u (monS * v) m M (B * Hcharge)
-        hsigma hlower hupper hcharge hgate
+        hsigma hlower hupper hcharge
 
 /-- Relative remainder below 100% is strictly smaller than the nominal factor. -/
 theorem relative_remainder_abs_lt
     (g r alpha : ℝ)
     (hg : g ≠ 0)
-    (halpha0 : 0 ≤ alpha)
     (halpha1 : alpha < 1)
     (hrel : abs r ≤ alpha * abs g) :
     abs r < abs g := by
@@ -122,12 +118,11 @@ strictly positive product, hence the same nonzero sign on the punctured domain.
 theorem relative_remainder_same_sign
     (g r alpha : ℝ)
     (hg : g ≠ 0)
-    (halpha0 : 0 ≤ alpha)
     (halpha1 : alpha < 1)
     (hrel : abs r ≤ alpha * abs g) :
     0 < (g + r) * g := by
   have hrlt : abs r < abs g :=
-    relative_remainder_abs_lt g r alpha hg halpha0 halpha1 hrel
+    relative_remainder_abs_lt g r alpha hg halpha1 hrel
   have hrlower : -abs g < r := (abs_lt.mp hrlt).1
   have hrupper : r < abs g := (abs_lt.mp hrlt).2
   by_cases hgpos : 0 < g
@@ -185,8 +180,7 @@ theorem source_family_same_monomial_absorption
     (hsigma : ∀ z, D z → abs (sigma z) = 1)
     (hlower : ∀ z, D z → m ≤ sigma z * u z)
     (hupper : ∀ z, D z → sigma z * u z ≤ M)
-    (heps : ∀ z, D z → abs (e z) ≤ eps)
-    (hgate : eps < m) :
+    (heps : ∀ z, D z → abs (e z) ≤ eps) :
     ∀ z, D z →
       m - eps ≤ sigma z * (u z + e z) ∧
         sigma z * (u z + e z) ≤ M + eps := by
@@ -194,7 +188,7 @@ theorem source_family_same_monomial_absorption
   exact
     same_monomial_remainder_absorption
       (sigma z) (u z) (e z) m M eps
-      (hsigma z hz) (hlower z hz) (hupper z hz) (heps z hz) hgate
+      (hsigma z hz) (hlower z hz) (hupper z hz) (heps z hz)
 
 #print axioms same_monomial_exact_factorization
 #print axioms same_monomial_remainder_absorption
