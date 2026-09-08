@@ -1,0 +1,14 @@
+{
+  "record_file": "agent_review_inbox/companion-T-P5-078-kuangmanmozun-20260908T0755.md",
+  "record_kind": "companion_log",
+  "review_sha256": "B5BAE517857D9EE533531F5BB8D57E4FF934D7B4764A35D8C429DE5B5449908C",
+  "task_id": "T-P5-078-MIXED-RELATIVE-ADDITIVE-CORRECTOR",
+  "source_agent": "狂蛮魔尊",
+  "created_at": "2026-09-08T07:55:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_mixed_additive_corrector",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "f0d1df5605088ee79b7416d61af04cf78c2d2f65",
+  "integrated_at": "2026-09-08T14:14:38.045680+00:00"
+}

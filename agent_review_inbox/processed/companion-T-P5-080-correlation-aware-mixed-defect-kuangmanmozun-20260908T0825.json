@@ -1,0 +1,14 @@
+{
+  "record_file": "agent_review_inbox/companion-T-P5-080-correlation-aware-mixed-defect-kuangmanmozun-20260908T0825.md",
+  "record_kind": "companion_log",
+  "review_sha256": "FA998195DA122AD6D87372594092A3FAAEFC018D49B4FE573B433905D1A3B9BE",
+  "task_id": "T-P5-080-CORRELATION-AWARE-MIXED-DEFECT",
+  "source_agent": "狂蛮魔尊",
+  "created_at": "2026-09-08T08:25:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_correlated_mixed_defect",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "91b6d1064d8f63a9ce8374006815cb39e07ccc8a",
+  "integrated_at": "2026-09-08T14:14:38.045882+00:00"
+}

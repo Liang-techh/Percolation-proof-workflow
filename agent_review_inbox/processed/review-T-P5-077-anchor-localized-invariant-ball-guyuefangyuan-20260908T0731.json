@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-077-anchor-localized-invariant-ball-guyuefangyuan-20260908T0731.md",
+  "record_kind": "review_result",
+  "review_sha256": "EF1196C6E60630DD7D5F20066DDA6139D0F846F8853C2A22868FA8644E069A16",
+  "task_id": "T-P5-077-ANCHOR-LOCALIZED-INVARIANT-BALL",
+  "source_agent": "古月方源",
+  "created_at": "2026-09-08T07:31:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_anchor_invariant_ball",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "4685230405c524bb9f2af5f6c7eebbde95430b36",
+  "review_file": "agent_review_inbox/review-T-P5-077-anchor-localized-invariant-ball-guyuefangyuan-20260908T0731.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T14:14:38.049497+00:00"
+}

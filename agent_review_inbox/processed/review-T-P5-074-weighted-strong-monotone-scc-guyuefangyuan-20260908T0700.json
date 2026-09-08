@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-074-weighted-strong-monotone-scc-guyuefangyuan-20260908T0700.md",
+  "record_kind": "review_result",
+  "review_sha256": "06F9D6A233A777CBA3031C383F1541CFF34138A18A0BB78A29B33C4F2E6424ED",
+  "task_id": "T-P5-074-WEIGHTED-STRONG-MONOTONE-SCC",
+  "source_agent": "古月方源",
+  "created_at": "2026-09-08T07:00:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_weighted_monotone_scc",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "91520c945f9a6ba4f5ea8a01b5435bbb9787fad2",
+  "review_file": "agent_review_inbox/review-T-P5-074-weighted-strong-monotone-scc-guyuefangyuan-20260908T0700.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T14:14:38.048704+00:00"
+}

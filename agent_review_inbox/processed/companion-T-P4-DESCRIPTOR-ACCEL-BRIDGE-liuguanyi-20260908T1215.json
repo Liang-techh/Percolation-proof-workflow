@@ -1,0 +1,14 @@
+{
+  "record_file": "agent_review_inbox/companion-T-P4-DESCRIPTOR-ACCEL-BRIDGE-liuguanyi-20260908T1215.md",
+  "record_kind": "companion_log",
+  "review_sha256": "9E2F010E6E3AD37BD9921385ABAB5BEE624001AF50AF8DC82708357F74622BD5",
+  "task_id": "T-P4-DESCRIPTOR-ACCEL-BRIDGE",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_descriptor_accel_bridge",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "integrated_at": "2026-09-08T14:14:38.043956+00:00"
+}

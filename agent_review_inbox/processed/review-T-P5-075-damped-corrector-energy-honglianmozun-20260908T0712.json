@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-075-damped-corrector-energy-honglianmozun-20260908T0712.md",
+  "record_kind": "review_result",
+  "review_sha256": "4EAC1F76D6B201C8B4EC6E979FC73973F0231289E6DE831EE12DE992003E5A99",
+  "task_id": "T-P5-075-DAMPED-CORRECTOR-ENERGY",
+  "source_agent": "红莲魔尊",
+  "created_at": "2026-09-08T07:12:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_damped_corrector_energy",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "c9cd94b7c907133ec74b3b305c34f48bb6a9ba97",
+  "review_file": "agent_review_inbox/review-T-P5-075-damped-corrector-energy-honglianmozun-20260908T0712.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T14:14:38.048916+00:00"
+}

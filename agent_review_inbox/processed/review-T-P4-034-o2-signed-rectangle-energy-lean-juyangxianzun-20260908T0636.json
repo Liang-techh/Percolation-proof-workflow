@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-034-o2-signed-rectangle-energy-lean-juyangxianzun-20260908T0636.md",
+  "record_kind": "review_result",
+  "review_sha256": "EBB23D1E069C3A220527B62973F6C974AACEDFDA27BB8109946BBCCBDAAF0420",
+  "task_id": "T-P4-034",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_o2_energy_consumer",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "386af4afa98643e34d23aadbf1fd9b02b834bae9",
+  "review_file": "agent_review_inbox/review-T-P4-034-o2-signed-rectangle-energy-lean-juyangxianzun-20260908T0636.md",
+  "integrated_at": "2026-09-08T14:14:38.047278+00:00"
+}

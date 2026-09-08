@@ -50,8 +50,9 @@ theorem projected_shift_cap_transfer_attempt {X C : Type*} (project : X → C)
     ∀ t ∈ Set.Icc (0 : ℝ) 1, G t (path t) ≤ bar := by
   intro t ht
   rw [hIdentity t ht (path t) (project_whole_path_attempt project D Q path hProjection hPath t ht)]
-  have hBudget' : B + cap ≤ bar := by simpa [add_comm] using hBudget
-  exact (add_le_add_right (hCap t ht) B).trans hBudget'
+  have hCap' : F t (path t) + B ≤ cap + B := by
+    simpa [add_comm] using (add_le_add_right (hCap t ht) B)
+  exact hCap'.trans hBudget
 
 /- If the supplied cap ALREADY bounds F+B, no second shift is charged. -/
 theorem already_shifted_cap_transfer_attempt {X C : Type*} (project : X → C)

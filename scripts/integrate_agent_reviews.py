@@ -93,6 +93,38 @@ TASK_TARGETS = {
                                  "pending_concrete_k_path_comparison_interface"),
     "T-P3-central-FD-hull": ("P3.central_fd_derivative_hull_composition",
                              "pending_exact_central_fd_derivative_hull_bridge"),
+    "GH-MATH-P3-FD-REMAINDER": ("P3.central_fd_derivative_hull_composition",
+                                 "pending_exact_central_fd_remainder_interface"),
+    # New GitHub proof lanes use descriptive uppercase suffixes.  Route them
+    # to existing DAG parents as pending metadata only; no admission path is
+    # implied by these aliases.
+    "T-P4-020E-ENERGY-BETA": ("P4.residual_schur_pmi",
+                               "pending_energy_beta_consumer"),
+    "T-P4-DESCRIPTOR-ACCEL-BRIDGE": ("P4.true_dh_port_source_binding",
+                                      "pending_descriptor_accel_bridge"),
+    "T-P4-034": ("P4.true_dh_port_source_binding",
+                  "pending_o2_energy_consumer"),
+    "T-P5-071": ("P5.componentwise_relative_decay.feasible_cone_spn",
+                  "pending_signed_two_cycle_contact"),
+    "T-P5-072-SIGNED-SIMPLE-CYCLE-CONTACT": (
+        "P5.componentwise_relative_decay.feasible_cone_spn",
+        "pending_signed_simple_cycle_contact"),
+    "T-P5-073-AFFINE-OFFSET-RELATIVE-DECAY": (
+        "P5.componentwise_relative_decay", "pending_affine_offset_decay"),
+    "T-P5-074-WEIGHTED-STRONG-MONOTONE-SCC": (
+        "P5.componentwise_relative_decay", "pending_weighted_monotone_scc"),
+    "T-P5-075-DAMPED-CORRECTOR-ENERGY": (
+        "P5.componentwise_relative_decay", "pending_damped_corrector_energy"),
+    "T-P5-076-WEIGHTED-GRAM-LIPSCHITZ": (
+        "P5.componentwise_relative_decay", "pending_weighted_gram_lipschitz"),
+    "T-P5-077-ANCHOR-LOCALIZED-INVARIANT-BALL": (
+        "P5.componentwise_relative_decay", "pending_anchor_invariant_ball"),
+    "T-P5-078-MIXED-RELATIVE-ADDITIVE-CORRECTOR": (
+        "P5.componentwise_relative_decay", "pending_mixed_additive_corrector"),
+    "T-P5-079-SIMILARITY-NORMALIZATION": (
+        "P5.componentwise_relative_decay", "pending_similarity_normalization"),
+    "T-P5-080-CORRELATION-AWARE-MIXED-DEFECT": (
+        "P5.componentwise_relative_decay", "pending_correlated_mixed_defect"),
     # External FLT scans are deliberately event-only: they are advisory
     # catalog evidence, not Route-B theorem nodes or registry entries.
     "T-FLT-DERIV-CALC": (None, "flt_derivation_calculus_scan"),

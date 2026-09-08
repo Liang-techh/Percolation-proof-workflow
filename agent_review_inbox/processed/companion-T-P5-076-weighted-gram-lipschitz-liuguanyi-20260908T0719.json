@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/companion-T-P5-076-weighted-gram-lipschitz-liuguanyi-20260908T0719.md",
+  "record_kind": "companion_log",
+  "review_sha256": "A57F9D9D053A79D38F64EE3FC2F7AB9319492A3A991F5A41B42EB1A779062716",
+  "task_id": "T-P5-076-WEIGHTED-GRAM-LIPSCHITZ",
+  "source_agent": "柳冠一",
+  "created_at": "2026-09-08T07:19:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_weighted_gram_lipschitz",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T14:14:38.045240+00:00"
+}

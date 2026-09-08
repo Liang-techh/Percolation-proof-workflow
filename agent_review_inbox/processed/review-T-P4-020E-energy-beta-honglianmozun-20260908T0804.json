@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-020E-energy-beta-honglianmozun-20260908T0804.md",
+  "record_kind": "review_result",
+  "review_sha256": "DF8883755AFF1660FDF8CBFACDE9AF60C02E0221635FAAB907D7376D24FA6951",
+  "task_id": "T-P4-020E-ENERGY-BETA",
+  "source_agent": "红莲魔尊",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_energy_beta_consumer",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-T-P4-020E-energy-beta-honglianmozun-20260908T0804.md",
+  "integrated_at": "2026-09-08T14:14:38.046490+00:00"
+}

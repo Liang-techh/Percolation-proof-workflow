@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/companion-T-P5-074-guyuefangyuan-20260908T0703.md",
+  "record_kind": "companion_log",
+  "review_sha256": "301556E485104C98505FA72B2C556EE35A2AA628A6D02C01C036D15CCBD274C5",
+  "task_id": "T-P5-074-WEIGHTED-STRONG-MONOTONE-SCC",
+  "source_agent": "古月方源",
+  "created_at": "2026-09-08T07:03:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_weighted_monotone_scc",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "48c78207c758636227a8bb3f5be2e1f6c247e6c4",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T14:14:38.044973+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-073-affine-offset-relative-decay-kuangmanmozun-20260908T0655.md",
+  "record_kind": "review_result",
+  "review_sha256": "A2A0B2E9603A28AFEDAC2CEDD95635916B47C17A04F5F291243965EF56C33CFF",
+  "task_id": "T-P5-073-AFFINE-OFFSET-RELATIVE-DECAY",
+  "source_agent": "狂蛮魔尊",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_affine_offset_decay",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "077c9f5927c904823c4dceed069050b9c32846a1",
+  "review_file": "agent_review_inbox/review-T-P5-073-affine-offset-relative-decay-kuangmanmozun-20260908T0655.md",
+  "integrated_at": "2026-09-08T14:14:38.048413+00:00"
+}

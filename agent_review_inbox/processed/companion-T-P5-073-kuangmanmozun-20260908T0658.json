@@ -1,0 +1,14 @@
+{
+  "record_file": "agent_review_inbox/companion-T-P5-073-kuangmanmozun-20260908T0658.md",
+  "record_kind": "companion_log",
+  "review_sha256": "8F11E48C120EF2473D53A0F97C23A3488CBEBC17F0EF7D7773672A6D8A0DEE23",
+  "task_id": "T-P5-073-AFFINE-OFFSET-RELATIVE-DECAY",
+  "source_agent": "狂蛮魔尊",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_affine_offset_decay",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "18618ab0213677d83867b347a3b3acd7c9857b98",
+  "integrated_at": "2026-09-08T14:14:38.044746+00:00"
+}

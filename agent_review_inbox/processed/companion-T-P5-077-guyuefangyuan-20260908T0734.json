@@ -1,0 +1,14 @@
+{
+  "record_file": "agent_review_inbox/companion-T-P5-077-guyuefangyuan-20260908T0734.md",
+  "record_kind": "companion_log",
+  "review_sha256": "F54E516BA21BB17ACBBF20F7ECCA7CCE3BF210037BDC4365D5AC55356358FC55",
+  "task_id": "T-P5-077-ANCHOR-LOCALIZED-INVARIANT-BALL",
+  "source_agent": "古月方源",
+  "created_at": "2026-09-08T07:34:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_anchor_invariant_ball",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "integrated_at": "2026-09-08T14:14:38.045493+00:00"
+}

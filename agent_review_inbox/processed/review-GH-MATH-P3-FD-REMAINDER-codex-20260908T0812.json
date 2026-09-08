@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P3-FD-REMAINDER-codex-20260908T0812.md",
+  "record_kind": "review_result",
+  "review_sha256": "287EFA589609102CB354CE0D4C7E2E1E87BB59E4675144C0B2BE916255BE1AC6",
+  "task_id": "GH-MATH-P3-FD-REMAINDER",
+  "source_agent": "Codex",
+  "created_at": "2026-09-08T08:12:20-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_exact_central_fd_remainder_interface",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MATH-P3-FD-REMAINDER-codex-20260908T0812.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T14:15:46.147162+00:00"
+}
