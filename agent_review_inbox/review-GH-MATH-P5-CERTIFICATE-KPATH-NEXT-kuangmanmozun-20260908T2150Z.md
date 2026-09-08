@@ -31,7 +31,7 @@ for all eight `(force row,state slot)` entries: any nonnegative `K_path` with ev
 
 The mathematical conclusion below uses only the following already-existing source-independent artifacts.
 
-- `NEW_KPATH_INTERFACE_REVIEW.md`, blob `36...?` not used as provenance; semantic point only: actual source gain `K` is consumed through componentwise `K <= G`, and the larger certified gain `G` gives the power envelope.
+- `NEW_KPATH_INTERFACE_REVIEW.md`, blob `0a914cc5c9eaabed0ed7ee723bccf374a6af9b4f`: semantic point only; actual source gain `K` is consumed through componentwise `K <= G`, and the larger certified gain `G` gives the power envelope.
 - `NEW_KPATH_INTERFACE_Comparison_REVIEW.md`, blob `6e740f024cce54cdb73bac19201474fabcf8071a`: no concrete `K_path` values are supplied; exact comparison is eight rational inequalities.
 - `NEW_KPATH_PACKET_ObstructionAndCapacity20260908.md`, blob `9b293f149e69d71335b809faa0a0f0eb8b24f018`: fixed-`N` increment is obstructed, while PSD slack yields 18×4 rational capacity inequalities.
 - `NEW_KPATH_PACKET_PSDCapacity20260908.py`, blob `a4154d9e29dc5d59436acbff3788599239192e8f`: constructs the rational capacity rows and the all-ones ray minimum.
