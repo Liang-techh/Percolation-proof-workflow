@@ -21,7 +21,7 @@ theorem cyclePhi_antitone_of_monotone_antitone
     Antitone (cyclePhi outer inner eta) := by
   intro s t hst
   apply hOuter
-  exact add_le_add_left (hInner hst) eta
+  exact add_le_add_right (hInner hst) eta
 
 /-- Decreasing outer root graph composed with an increasing inner graph is antitone. -/
 theorem cyclePhi_antitone_of_antitone_monotone
@@ -32,14 +32,15 @@ theorem cyclePhi_antitone_of_antitone_monotone
     Antitone (cyclePhi outer inner eta) := by
   intro s t hst
   apply hOuter
-  exact add_le_add_left (hInner hst) eta
+  exact add_le_add_right (hInner hst) eta
 
-/-- `Id - Phi` is strongly monotone whenever `Phi` is antitone. -/
-theorem sub_antitone_strongMono_one
+/-- `Id - Phi` is strictly increasing whenever `Phi` is antitone. -/
+theorem sub_antitone_strict_mono_one
     (Phi : ℝ → ℝ)
-    (hanti : Antitone Phi) :
-    StrongMono (fun x => x - Phi x) := by
-  intro s t hst
+    (hanti : Antitone Phi)
+    {s t : ℝ}
+    (hst : s < t) :
+    s - Phi s < t - Phi t := by
   have hPhi : Phi t ≤ Phi s := hanti (le_of_lt hst)
   linarith
 
@@ -67,8 +68,16 @@ theorem sub_antitone_abs_coercive_one
 theorem sub_antitone_injective
     (Phi : ℝ → ℝ)
     (hanti : Antitone Phi) :
-    Function.Injective (fun x => x - Phi x) :=
-  (sub_antitone_strongMono_one Phi hanti).injective
+    Function.Injective (fun x => x - Phi x) := by
+  intro s t hEq
+  rcases lt_trichotomy s t with hlt | heq | hgt
+  · have hStrict := sub_antitone_strict_mono_one Phi hanti hlt
+    exfalso
+    linarith
+  · exact heq
+  · have hStrict := sub_antitone_strict_mono_one Phi hanti hgt
+    exfalso
+    linarith
 
 /--
 A generic inverse perturbation lemma: unit coercivity plus a pointwise change in
@@ -93,7 +102,10 @@ theorem coercive_inverse_perturbation
     simpa [hx, hx'] using hAdd
   have hPert' : |G' x' - G x'| ≤ E := by
     simpa [abs_sub_comm] using hpert
-  exact hCoer.trans (hTri.trans (add_le_add_left hPert' _))
+  have hSum :
+      |xi - xi'| + |G' x' - G x'| ≤ |xi - xi'| + E := by
+    linarith
+  exact hCoer.trans (hTri.trans hSum)
 
 /--
 One-coordinate negative-feedback inverse estimate.  The outer Lipschitz charge
@@ -124,7 +136,6 @@ theorem negative_feedback_coordinate_bound
         cycleG outer inner eta x' - cycleG outer inner eta' x' =
           outer (eta' + inner x') - outer (eta + inner x') := by
       simp [cycleG, cyclePhi]
-      ring
     rw [hEq]
     simpa [abs_sub_comm] using hLip
   exact coercive_inverse_perturbation
@@ -326,7 +337,7 @@ theorem small_gain_near_boundary_sharp_99_100 :
 
 #print axioms cyclePhi_antitone_of_monotone_antitone
 #print axioms cyclePhi_antitone_of_antitone_monotone
-#print axioms sub_antitone_strongMono_one
+#print axioms sub_antitone_strict_mono_one
 #print axioms sub_antitone_abs_coercive_one
 #print axioms sub_antitone_injective
 #print axioms coercive_inverse_perturbation

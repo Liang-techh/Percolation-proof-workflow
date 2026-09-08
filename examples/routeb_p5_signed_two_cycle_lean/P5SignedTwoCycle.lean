@@ -29,7 +29,7 @@ theorem unsigned_two_cycle_budget_x2
 /-- The strict unsigned small-gain reserve turns the two cleared inequalities into uniqueness. -/
 theorem unsigned_two_cycle_injective_zero_budget
     (a b X1 X2 : ℝ)
-    (ha : 0 ≤ a) (hb : 0 ≤ b)
+    (ha : 0 ≤ a)
     (hX1 : 0 ≤ X1) (hX2 : 0 ≤ X2)
     (h1 : X1 ≤ a * X2)
     (h2 : X2 ≤ b * X1)
@@ -127,29 +127,75 @@ theorem negative_feedback_scalar_budget
     (hR : |phi x' - phi' x'| ≤ R) :
     |x - x'| ≤ |xi - xi'| + R := by
   have hco := antitone_abs_coercivity phi hphi x' x
+  have hxrev : x - phi x = xi := hx.symm
+  have hx'rev : x' - phi' x' = xi' := hx'.symm
   have hrewrite :
       (x - phi x) - (x' - phi x') =
-        (xi - xi') + (phi' x' - phi x') := by
-    rw [← hx, ← hx']
-    ring
+        (xi - xi') + (phi x' - phi' x') := by
+    calc
+      (x - phi x) - (x' - phi x') =
+          (x - phi x) - (x' - phi' x') + (phi x' - phi' x') := by ring
+      _ = (xi - xi') + (phi x' - phi' x') := by rw [hxrev, hx'rev]
   have htri :
       |(x - phi x) - (x' - phi x')| ≤
-        |xi - xi'| + |phi' x' - phi x'| := by
+        |xi - xi'| + |phi x' - phi' x'| := by
     rw [hrewrite]
     exact abs_add_le _ _
-  have hR' : |phi' x' - phi x'| ≤ R := by
-    simpa [abs_sub_comm] using hR
-  linarith
+  exact hco.trans (htri.trans (add_le_add_right hR _))
 
 /-- Nested root-map variation produces the numerator from T-P5-071 without division. -/
 theorem nested_variation_budget
     (a p q U Z D : ℝ)
     (ha : 0 ≤ a)
-    (hinner : U ≤ Z + q * D)
-    (houter : 0 ≤ U)
-    (hbound : 0 ≤ a * U + p * D) :
+    (hinner : U ≤ Z + q * D) :
     a * U + p * D ≤ a * Z + (p + a * q) * D := by
   have hm := mul_le_mul_of_nonneg_left hinner ha
+  nlinarith
+
+/-- Companion seam: combine opposite-orientation unit coercivity with outer/inner parameter charges for coordinate 1. -/
+theorem negative_feedback_parameter_transport_x1
+    (a p q X1 Z1 Z2 D E U : ℝ)
+    (ha : 0 ≤ a)
+    (hcoer : X1 ≤ Z1 + E)
+    (houter : E ≤ a * U + p * D)
+    (hinner : U ≤ Z2 + q * D) :
+    X1 ≤ Z1 + a * Z2 + (p + a * q) * D := by
+  have hm := mul_le_mul_of_nonneg_left hinner ha
+  nlinarith
+
+/-- Companion seam: symmetric opposite-orientation parameter transport for coordinate 2. -/
+theorem negative_feedback_parameter_transport_x2
+    (b p q X2 Z1 Z2 D E U : ℝ)
+    (hb : 0 ≤ b)
+    (hcoer : X2 ≤ Z2 + E)
+    (houter : E ≤ b * U + q * D)
+    (hinner : U ≤ Z1 + p * D) :
+    X2 ≤ b * Z1 + Z2 + (q + b * p) * D := by
+  have hm := mul_le_mul_of_nonneg_left hinner hb
+  nlinarith
+
+/-- Source-cleared negative-feedback parameter transport for coordinate 1, with no determinant reserve. -/
+theorem cleared_negative_feedback_parameter_transport_x1
+    (mu1 mu2 C12 L1 L2 X1 U Z1 Z2 D : ℝ)
+    (hmu2 : 0 ≤ mu2) (hC12 : 0 ≤ C12)
+    (hcoer : mu1 * X1 ≤ mu1 * Z1 + C12 * U + L1 * D)
+    (hinner : mu2 * U ≤ mu2 * Z2 + L2 * D) :
+    mu1 * mu2 * X1 ≤
+      mu1 * mu2 * Z1 + C12 * mu2 * Z2 + (mu2 * L1 + C12 * L2) * D := by
+  have hc := mul_le_mul_of_nonneg_left hcoer hmu2
+  have hi := mul_le_mul_of_nonneg_left hinner hC12
+  nlinarith
+
+/-- Source-cleared negative-feedback parameter transport for coordinate 2, with no determinant reserve. -/
+theorem cleared_negative_feedback_parameter_transport_x2
+    (mu1 mu2 C21 L1 L2 X2 U Z1 Z2 D : ℝ)
+    (hmu1 : 0 ≤ mu1) (hC21 : 0 ≤ C21)
+    (hcoer : mu2 * X2 ≤ mu2 * Z2 + C21 * U + L2 * D)
+    (hinner : mu1 * U ≤ mu1 * Z1 + L1 * D) :
+    mu1 * mu2 * X2 ≤
+      C21 * mu1 * Z1 + mu1 * mu2 * Z2 + (C21 * L1 + mu1 * L2) * D := by
+  have hc := mul_le_mul_of_nonneg_left hcoer hmu1
+  have hi := mul_le_mul_of_nonneg_left hinner hC21
   nlinarith
 
 /-- A source fiber that is strictly increasing locates a zero to the left of any nonnegative sample. -/
@@ -214,6 +260,10 @@ theorem negative_feedback_linear_injective
 #print axioms antitone_abs_coercivity
 #print axioms negative_feedback_scalar_budget
 #print axioms nested_variation_budget
+#print axioms negative_feedback_parameter_transport_x1
+#print axioms negative_feedback_parameter_transport_x2
+#print axioms cleared_negative_feedback_parameter_transport_x1
+#print axioms cleared_negative_feedback_parameter_transport_x2
 #print axioms strictMono_zero_le_of_nonneg_sample
 #print axioms strictMono_le_zero_of_nonpos_sample
 #print axioms same_orientation_unit_gain_obstruction
