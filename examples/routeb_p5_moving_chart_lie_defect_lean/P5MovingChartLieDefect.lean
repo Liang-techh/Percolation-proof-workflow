@@ -173,6 +173,7 @@ theorem moving_chart_base_lie_defect_quadratic_congruence
   simp only [normalizedBaseLieDefectCombinedQ2, baseLieDefectQ2,
     symJacobianQ2]
   rw [hcov1, hcov2]
+  ring
 
 /-- Any physical same-metric signed relative bound transports to the pulled
 metric with exactly the same scalar `rho`; this is just quadratic substitution
