@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-INITIAL-BOUND-BINDING-LOCAL-20260908T163551Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "A142755E5E7B57EEE6EB7D5E599F886077FCB7FD76AE53E13312A6874506608C",
+  "task_id": "GH-MATH-P4-ACTIVE-INITIAL-BOUND-BINDING",
+  "source_agent": "codex-initial-bound-source-lane",
+  "created_at": "2026-09-08T16:35:51Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_active_initial_bound_binding",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-INITIAL-BOUND-BINDING-LOCAL-20260908T163551Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T16:37:21.103734+00:00"
+}

@@ -2853,3 +2853,11 @@ Anthropic FLT quotient/continuous-linear current-pin handoff，Godel 核对 acti
 initial-bound binding，James 核对 complete rows 与 signed weighted packet。
 四条 lane 分别覆盖主线 source、外部复用、存储值绑定和 residual 接线，结果
 继续经过 artifact hash/provenance audit，保持 fail-closed。
+
+### 梁智炜 · revision 795：active initial-bound obstruction
+
+`GH-MATH-P4-ACTIVE-INITIAL-BOUND-BINDING` 已整合。`initial_storage_upper` 的
+来源、block-only `X0` 与状态布局均已定位，但该标量仍来自 targeted cross-term
+storage 的局部 envelope，未绑定到 `Vfull_DH` 或 `Vshift_DH` 的函数值、归一化、
+同一配置和阈值。Hessian/quadratic 上界也不能替代 value/linear anchor；因此
+active initial inclusion 仍未证明，P4/M4 gate 和 registry 不变。
