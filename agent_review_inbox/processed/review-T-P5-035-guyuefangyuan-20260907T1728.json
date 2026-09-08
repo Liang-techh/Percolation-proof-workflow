@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-035-guyuefangyuan-20260907T1728.md",
+  "record_kind": "review_result",
+  "review_sha256": "807DA1E7D2348310ED3EC97E9819916D6134BE1A9F84E37D2184EAB47095FD7B",
+  "task_id": "T-P5-035",
+  "source_agent": "古月方源",
+  "created_at": "2026-09-07T17:28:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_block45_ninety_three_sos_sidecar",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "205fb1a54112cbbf19424a3a61500780b2ba0159",
+  "review_file": "agent_review_inbox/review-T-P5-035-guyuefangyuan-20260907T1728.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T11:59:44.464612+00:00"
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 753,
+  "revision": 754,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12432,6 +12432,22 @@
           "concrete_directed_endpoint_evaluator",
           "turning_point_cell_partition_coverage",
           "DH_source_and_rounding_binding"
+        ],
+        "agent_review_refs": [
+          {
+            "record_file": "agent_review_inbox/review-T-P3-014-honglianmozun-20260908T0508.md",
+            "record_kind": "review_result",
+            "review_sha256": "10C17E046F0A0896526DD3BB8121CA265A8F6569A5F89676C85EF7BF2A990059",
+            "task_id": "T-P3-014",
+            "source_agent": "红莲魔尊",
+            "created_at": "2026-09-08",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_concrete_trig_source_binding",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-T-P3-014-honglianmozun-20260908T0508.md"
+          }
         ]
       }
     },
@@ -14176,6 +14192,35 @@
             "source_commit": "7c218f3325e8a1bacd4fc44540701c95cde281a9",
             "review_file": "agent_review_inbox/review-T-P4-039-rational-lambda-guard-lean-codex-20260907T1815.md",
             "admission_label": "compiled_candidate"
+          },
+          {
+            "record_file": "agent_review_inbox/companion-T-P4-040-divfree-liuguanyi-20260907T1819.md",
+            "record_kind": "companion_log",
+            "review_sha256": "1A4A25DB3F5025261BCF08D2B3D6A8F4B2B55E6AB0D2CFEBD96AC3D8C999094D",
+            "task_id": "T-P4-040",
+            "source_agent": "柳冠一",
+            "created_at": "2026-09-07T18:19:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_common_rational_lambda_guard",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P4-040-divfree-liuguanyi-20260907T1816.md",
+            "record_kind": "review_result",
+            "review_sha256": "376E4C90AD5961654472D7BD4379E28CDA863F0C88ADB127834180A03FAFAFBF",
+            "task_id": "T-P4-040",
+            "source_agent": "柳冠一",
+            "created_at": "2026-09-07T18:16:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_common_rational_lambda_guard",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "ef81e9d0f507af8cb1b815c5fd5846892a5c2c64",
+            "review_file": "agent_review_inbox/review-T-P4-040-divfree-liuguanyi-20260907T1816.md",
+            "admission_label": "pending"
           }
         ]
       }
@@ -14776,6 +14821,20 @@
             "source_commit": "943bd5b1713c88ba10a2965d3ce809449eac67fb",
             "review_file": "agent_review_inbox/review-T-P4-032-descriptor-P-upper-codex-20260908T052243.md",
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P4-030-honglianmozun-20260908T0301.md",
+            "record_kind": "review_result",
+            "review_sha256": "3F589EB8BBF9804ACBE88CC9C047614A9BE190BBA41E690479F5CFEB2806A058",
+            "task_id": "T-P4-030",
+            "source_agent": "红莲魔尊",
+            "created_at": "2026-09-08",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_port_sign_propagation",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-T-P4-030-honglianmozun-20260908T0301.md"
           }
         ]
       }
@@ -38709,6 +38768,64 @@
             "target_scope": "routeb_node",
             "source_commit": "8e7c19582ab77d1f0939af5567c3b54f1aee38e2",
             "review_file": "agent_review_inbox/review-T-P5-035-liuguanyi-20260907T1714.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/companion-T-P5-035-guyuefangyuan-20260907T1730.md",
+            "record_kind": "companion_log",
+            "review_sha256": "BC5AE86F19EAC7BE56C3701C3769299808F132CFD5292A946618941194C8759B",
+            "task_id": "T-P5-035",
+            "source_agent": "古月方源",
+            "created_at": "2026-09-07T17:30:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_block45_ninety_three_sos_sidecar",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P5-034-sumengchen-20260907T1724.md",
+            "record_kind": "review_result",
+            "review_sha256": "8A592931371414A0055A2598924B1855CAC367874166386175D8BDD33C4D89E3",
+            "task_id": "T-P5-034",
+            "source_agent": "苏梦辰",
+            "created_at": "2026-09-07T17:24:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_block45_fifteen_sixteen_sos_sidecar",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "fb21ff7351a5f9fb64e23103f4317488ff9fed52",
+            "review_file": "agent_review_inbox/review-T-P5-034-sumengchen-20260907T1724.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P5-035-guyuefangyuan-20260907T1728.md",
+            "record_kind": "review_result",
+            "review_sha256": "807DA1E7D2348310ED3EC97E9819916D6134BE1A9F84E37D2184EAB47095FD7B",
+            "task_id": "T-P5-035",
+            "source_agent": "古月方源",
+            "created_at": "2026-09-07T17:28:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_block45_ninety_three_sos_sidecar",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "205fb1a54112cbbf19424a3a61500780b2ba0159",
+            "review_file": "agent_review_inbox/review-T-P5-035-guyuefangyuan-20260907T1728.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P5-035-honglianmozun-20260907T1801.md",
+            "record_kind": "review_result",
+            "review_sha256": "2FC821D2F003DE1E7E8A130935B44F7FCBDCD3378D006966E34B12E3A9ABB220",
+            "task_id": "T-P5-035",
+            "source_agent": "红莲魔尊",
+            "created_at": "2026-09-07T18:01:00-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_block45_ninety_three_sos_sidecar",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "ef81e9d0f507af8cb1b815c5fd5846892a5c2c64",
+            "review_file": "agent_review_inbox/review-T-P5-035-honglianmozun-20260907T1801.md",
             "admission_label": "pending"
           }
         ]
@@ -75763,6 +75880,110 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "1ea06cbee9b54297913156cfb0b201ce"
+    },
+    {
+      "at": "2026-09-08T11:59:44.462288+00:00",
+      "kind": "agent_companion_integrated",
+      "record_file": "agent_review_inbox/companion-T-P4-040-divfree-liuguanyi-20260907T1819.md",
+      "record_kind": "companion_log",
+      "review_sha256": "1A4A25DB3F5025261BCF08D2B3D6A8F4B2B55E6AB0D2CFEBD96AC3D8C999094D",
+      "task_id": "T-P4-040",
+      "classification": "pending_common_rational_lambda_guard",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "b88c2ed6186d442f84b9b652de48a125"
+    },
+    {
+      "at": "2026-09-08T11:59:44.462802+00:00",
+      "kind": "agent_companion_integrated",
+      "record_file": "agent_review_inbox/companion-T-P5-035-guyuefangyuan-20260907T1730.md",
+      "record_kind": "companion_log",
+      "review_sha256": "BC5AE86F19EAC7BE56C3701C3769299808F132CFD5292A946618941194C8759B",
+      "task_id": "T-P5-035",
+      "classification": "pending_block45_ninety_three_sos_sidecar",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383"
+    },
+    {
+      "at": "2026-09-08T11:59:44.463380+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P3-014-honglianmozun-20260908T0508.md",
+      "record_kind": "review_result",
+      "review_sha256": "10C17E046F0A0896526DD3BB8121CA265A8F6569A5F89676C85EF7BF2A990059",
+      "task_id": "T-P3-014",
+      "classification": "pending_concrete_trig_source_binding",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "d318754f0d30438ea53a10a43987f57a"
+    },
+    {
+      "at": "2026-09-08T11:59:44.463850+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-030-honglianmozun-20260908T0301.md",
+      "record_kind": "review_result",
+      "review_sha256": "3F589EB8BBF9804ACBE88CC9C047614A9BE190BBA41E690479F5CFEB2806A058",
+      "task_id": "T-P4-030",
+      "classification": "pending_port_sign_propagation",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T11:59:44.464116+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-040-divfree-liuguanyi-20260907T1816.md",
+      "record_kind": "review_result",
+      "review_sha256": "376E4C90AD5961654472D7BD4379E28CDA863F0C88ADB127834180A03FAFAFBF",
+      "task_id": "T-P4-040",
+      "classification": "pending_common_rational_lambda_guard",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "b88c2ed6186d442f84b9b652de48a125"
+    },
+    {
+      "at": "2026-09-08T11:59:44.464356+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P5-034-sumengchen-20260907T1724.md",
+      "record_kind": "review_result",
+      "review_sha256": "8A592931371414A0055A2598924B1855CAC367874166386175D8BDD33C4D89E3",
+      "task_id": "T-P5-034",
+      "classification": "pending_block45_fifteen_sixteen_sos_sidecar",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383"
+    },
+    {
+      "at": "2026-09-08T11:59:44.464612+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P5-035-guyuefangyuan-20260907T1728.md",
+      "record_kind": "review_result",
+      "review_sha256": "807DA1E7D2348310ED3EC97E9819916D6134BE1A9F84E37D2184EAB47095FD7B",
+      "task_id": "T-P5-035",
+      "classification": "pending_block45_ninety_three_sos_sidecar",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383"
+    },
+    {
+      "at": "2026-09-08T11:59:44.464828+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P5-035-honglianmozun-20260907T1801.md",
+      "record_kind": "review_result",
+      "review_sha256": "2FC821D2F003DE1E7E8A130935B44F7FCBDCD3378D006966E34B12E3A9ABB220",
+      "task_id": "T-P5-035",
+      "classification": "pending_block45_ninety_three_sos_sidecar",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383"
     }
   ],
   "agent_requests": {},
@@ -79419,5 +79640,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "859fbc6135a09509e82cfe712aa75145edfa07321df14dcdb2ea5376ac4886bb"
+  "state_checksum": "8f3f8a9931a26d9a11a0b7d2b8c3abb63168186084fb6b81536451271cebbf16"
 }

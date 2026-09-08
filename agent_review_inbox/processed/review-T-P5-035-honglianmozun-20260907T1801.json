@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-035-honglianmozun-20260907T1801.md",
+  "record_kind": "review_result",
+  "review_sha256": "2FC821D2F003DE1E7E8A130935B44F7FCBDCD3378D006966E34B12E3A9ABB220",
+  "task_id": "T-P5-035",
+  "source_agent": "红莲魔尊",
+  "created_at": "2026-09-07T18:01:00-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_block45_ninety_three_sos_sidecar",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "ef81e9d0f507af8cb1b815c5fd5846892a5c2c64",
+  "review_file": "agent_review_inbox/review-T-P5-035-honglianmozun-20260907T1801.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T11:59:44.464828+00:00"
+}
