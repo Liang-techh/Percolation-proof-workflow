@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 795,
+  "revision": 796,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -15846,6 +15846,21 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-INITIAL-BOUND-BINDING-LOCAL-20260908T163551Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-DH-CONTROLLER-SOURCE-CORRECTION-LOCAL-20260908T103544.md",
+            "record_kind": "review_result",
+            "review_sha256": "DAAE87A16D13A735DFC0394D74DC66B916E1F9D46BA9C582A5C3F0AE6AD0FFF5",
+            "task_id": "GH-MATH-P4-DH-CONTROLLER-SOURCE-CORRECTION",
+            "source_agent": "Codex-controller-polynomial-readonly-audit",
+            "created_at": "2026-09-08T10:35:44-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_dh_controller_source_correction",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "d9aee5bb2e4f08526947c2a712821472bd73862a",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-DH-CONTROLLER-SOURCE-CORRECTION-LOCAL-20260908T103544.md",
             "admission_label": "pending"
           }
         ]
@@ -78287,6 +78302,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T16:38:44.191718+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-DH-CONTROLLER-SOURCE-CORRECTION-LOCAL-20260908T103544.md",
+      "record_kind": "review_result",
+      "review_sha256": "DAAE87A16D13A735DFC0394D74DC66B916E1F9D46BA9C582A5C3F0AE6AD0FFF5",
+      "task_id": "GH-MATH-P4-DH-CONTROLLER-SOURCE-CORRECTION",
+      "classification": "pending_dh_controller_source_correction",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -81943,5 +81971,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "9174be9cec8b3874e31f78f918855bd53e81e4feda21140d8686c38f8f202e4d"
+  "state_checksum": "0dbaf4ad2b6bd845cc7c97431b1474f5edf4653f3006b9a2635511184b3fbaaa"
 }

@@ -2861,3 +2861,12 @@ initial-bound binding，James 核对 complete rows 与 signed weighted packet。
 storage 的局部 envelope，未绑定到 `Vfull_DH` 或 `Vshift_DH` 的函数值、归一化、
 同一配置和阈值。Hessian/quadratic 上界也不能替代 value/linear anchor；因此
 active initial inclusion 仍未证明，P4/M4 gate 和 registry 不变。
+
+### 梁智炜 · revision 796：DH controller source correction
+
+`GH-MATH-P4-DH-CONTROLLER-SOURCE-CORRECTION` 已整合。当前 preconditioned
+builder 的 controller 展开存在两重缺项：数组 key 固定为 `i+1` 且又以 `a==i`
+门控，导致远端 `X_ij(Kp_j q_j+damp_j dq_j)` 全部丢失。最小修复必须同时改为
+`a+1` 并移除门控；只做一项仍不正确。相邻 DH centered builder 保留六项，不能
+与当前 payload 静默拼接。该 review 未修改外部项目、未运行 Lean/Julia，保持
+source admission pending、P4/M4 fail-closed。

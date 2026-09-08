@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-DH-CONTROLLER-SOURCE-CORRECTION-LOCAL-20260908T103544.md",
+  "record_kind": "review_result",
+  "review_sha256": "DAAE87A16D13A735DFC0394D74DC66B916E1F9D46BA9C582A5C3F0AE6AD0FFF5",
+  "task_id": "GH-MATH-P4-DH-CONTROLLER-SOURCE-CORRECTION",
+  "source_agent": "Codex-controller-polynomial-readonly-audit",
+  "created_at": "2026-09-08T10:35:44-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_dh_controller_source_correction",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "d9aee5bb2e4f08526947c2a712821472bd73862a",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-DH-CONTROLLER-SOURCE-CORRECTION-LOCAL-20260908T103544.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T16:38:44.191718+00:00"
+}
