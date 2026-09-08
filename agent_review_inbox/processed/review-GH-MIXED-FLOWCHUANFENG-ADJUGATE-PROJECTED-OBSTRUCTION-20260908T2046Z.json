@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MIXED-FLOWCHUANFENG-ADJUGATE-PROJECTED-OBSTRUCTION-20260908T2046Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "1E1235E5A4CF5487234148B8347497B408F44B0DAD3A8EC124423AF5FC92908A",
+  "task_id": "GH-MIXED-FLOWCHUANFENG-ADJUGATE",
+  "source_agent": "Codex-adjugate-takeover",
+  "created_at": "2026-09-08T20:46:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_adjugate_contract_review",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "f75237a764fee61cb88b3bd99ae2386142cc5647",
+  "review_file": "agent_review_inbox/review-GH-MIXED-FLOWCHUANFENG-ADJUGATE-PROJECTED-OBSTRUCTION-20260908T2046Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T20:49:04.778516+00:00"
+}

@@ -4514,6 +4514,32 @@ formal certificate gate。
 同轮 `P5-099-TARGET-DOMAIN-LEAN` 只有巨阳仙尊的 task claim，未产生 review_result；继续
 按 claim 噪声处理，不计入证明进展。
 
+## 2026-09-08 — revision 884 harvest：adjugate lane exact obstruction
+
+已收割 `GH-MIXED-FLOWCHUANFENG-ADJUGATE` 的现役接管结果。它证明：当前导出的两条
+preconditioned row 单独不能决定或有限包围任何一个支撑在 `(4,5)` 上的非零 physical
+residual projection；因此把目标降成单个 signed `ell^T adj(S)` projection 也不能绕过
+真实 determinant/numerator/observable source packet。该结果是 exact stored-X projection
+obstruction，不是 source theorem，也没有 Lean/Julia/runtime 证明。
+
+保留下一跳：需要同一 source/cell 的 projected residual 与 determinant/observable witness，
+或接受该 source-bound acceleration cap 暂不能构造。revision 884 后 registry 仍为 0、
+formal certificate gate 仍关闭；不改变原 block45 trajectory theorem 的结论。
+
+## 2026-09-08 — revision 885 harvest：Schur/PMI 全方向 obstruction
+
+已收割 `GH-MIXED-flowchuanfeng-schur-absorption` 的 James 接管结果。对同一 block456
+理想解析 source/configuration 的 `q=v=w=0`、`r_C=0`，旧 direct interface 对全部
+非零 `a_C` 给出统一有理上界 `P_direct <= -(1/256)*||a_C||²`，并且任意有限
+`lambda>1` 的 Young 分配也不能把该 slice 独自产生为非负 direct target。完整原点
+方程的精确矩阵只允许实际 `a_C=0`，所以真正缺口是同源完整 force/acceleration graph
+与 `a_C` 投影身份，而不是继续搜索 Young 参数。
+
+该结果使用的是冻结理想解析配置，不是 DH runtime、Float64/FD、可达状态或部署模型的
+反例；没有 Lean/Julia/runtime receipt，也没有 P5/P4 closure。revision 885 继续保持
+registry=0、formal_certificate_allowed=false，下一跳是补交同源 acceleration/residual
+packet，或记录该 source-bound cap 的不可构造性。
+
 ## 2026-09-08 — revision 876 harvest：sidecar candidates normalized into inbox
 
 两份本地 agent 产出已通过 coordinator wrapper 纳入标准 inbox：

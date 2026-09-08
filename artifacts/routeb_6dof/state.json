@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 883,
+  "revision": 885,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -8420,6 +8420,21 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-SIGNED-AFFINE-CHART-source-followup-codex-20260908T113235.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MIXED-flowchuanfeng-schur-absorption-20260908T204645Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "19971DE04A575361B1A131B9141C3743D79C6EC8F2FB0760F7D44EDB572B7DD7",
+            "task_id": "GH-MIXED-flowchuanfeng-schur-absorption",
+            "source_agent": "Codex-schur-source-obstruction",
+            "created_at": "2026-09-08T20:46:45Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_reassigned_schur_absorption_review",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "0046469d6c31918d50991fe27f36cd1c84c749bf",
+            "review_file": "agent_review_inbox/review-GH-MIXED-flowchuanfeng-schur-absorption-20260908T204645Z.md",
             "admission_label": "pending"
           }
         ],
@@ -17355,6 +17370,21 @@
             "source_commit": "190b98044bd5effd691b6c4a577283adad7741e8",
             "review_file": "agent_review_inbox/review-T-P4-JOINT6-RATIONAL-RESIDUAL-BRIDGE-sumengchen-20260908T2048Z.md",
             "admission_label": "compiled_candidate"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MIXED-FLOWCHUANFENG-ADJUGATE-PROJECTED-OBSTRUCTION-20260908T2046Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "1E1235E5A4CF5487234148B8347497B408F44B0DAD3A8EC124423AF5FC92908A",
+            "task_id": "GH-MIXED-FLOWCHUANFENG-ADJUGATE",
+            "source_agent": "Codex-adjugate-takeover",
+            "created_at": "2026-09-08T20:46:00Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_adjugate_contract_review",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "f75237a764fee61cb88b3bd99ae2386142cc5647",
+            "review_file": "agent_review_inbox/review-GH-MIXED-FLOWCHUANFENG-ADJUGATE-PROJECTED-OBSTRUCTION-20260908T2046Z.md",
+            "admission_label": "pending"
           }
         ]
       }
@@ -82451,6 +82481,32 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "1ea06cbee9b54297913156cfb0b201ce"
+    },
+    {
+      "at": "2026-09-08T20:49:04.778516+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MIXED-FLOWCHUANFENG-ADJUGATE-PROJECTED-OBSTRUCTION-20260908T2046Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "1E1235E5A4CF5487234148B8347497B408F44B0DAD3A8EC124423AF5FC92908A",
+      "task_id": "GH-MIXED-FLOWCHUANFENG-ADJUGATE",
+      "classification": "pending_adjugate_contract_review",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T20:49:39.395997+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MIXED-flowchuanfeng-schur-absorption-20260908T204645Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "19971DE04A575361B1A131B9141C3743D79C6EC8F2FB0760F7D44EDB572B7DD7",
+      "task_id": "GH-MIXED-flowchuanfeng-schur-absorption",
+      "classification": "pending_reassigned_schur_absorption_review",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e7b1df1835f4deba06b11a8182f6719"
     }
   ],
   "agent_requests": {},
@@ -86107,5 +86163,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "bc424df47ab8f1c3d3cdda9c196afb30d6af321f26a7c78d8ac2d3e43490afb3"
+  "state_checksum": "ff4e1f267c0048960ffbee3df44ae5a265319413d50a49f822808986987c74ab"
 }

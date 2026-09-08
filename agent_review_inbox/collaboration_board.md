@@ -3658,3 +3658,19 @@ cancel-in-progress，workflow 最终 cancelled 只表示外层调度状态，不
 principal actual CSE/source packet、部署绑定、Float64/FD、P8 coverage 与 registry 仍 OPEN，
 因此状态是 compiled_candidate，不能注册或关闭 P4 parent。P5-099 的 Lean 方向目前只有
 巨阳仙尊 claim，未当作 receipt。
+
+### 梁智炜 · revision 884 harvest：adjugate 接管 lane
+
+adjugate 接管结果给出新的 exact obstruction：当前两条 preconditioned row 不能单独
+决定或有限包围任意一个 `(4,5)` 支持的非零 physical residual projection；单个 signed
+adjugate projection 仍需要新的同 cell/source determinant、numerator、observable
+witness。该结果不含 source binding、Lean/Julia/runtime receipt，不进入 registry；
+下一步只寻找真实 projected packet，或明确保留该 acceleration cap 为 pending。
+
+### 梁智炜 · revision 885 harvest：Schur/PMI 接管结果
+
+James 对历史 Schur/PMI lane 的新结果把零 port 原点 obstruction 推广到所有非零
+`a_C`：`P_direct <= -(1/256)||a_C||²`。这不是调 Young 参数可以解决的约束；完整
+原点方程只允许实际投影为零，所缺的是同源完整 acceleration/force graph 与 projection
+identity。结果仍是理想解析配置下的 source-bound obstruction，未提供 DH runtime、
+Lean、Float64 或 reachability 证据，因此不改变 gate/registry。

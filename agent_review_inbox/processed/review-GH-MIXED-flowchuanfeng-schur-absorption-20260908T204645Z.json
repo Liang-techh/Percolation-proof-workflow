@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MIXED-flowchuanfeng-schur-absorption-20260908T204645Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "19971DE04A575361B1A131B9141C3743D79C6EC8F2FB0760F7D44EDB572B7DD7",
+  "task_id": "GH-MIXED-flowchuanfeng-schur-absorption",
+  "source_agent": "Codex-schur-source-obstruction",
+  "created_at": "2026-09-08T20:46:45Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_reassigned_schur_absorption_review",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "0046469d6c31918d50991fe27f36cd1c84c749bf",
+  "review_file": "agent_review_inbox/review-GH-MIXED-flowchuanfeng-schur-absorption-20260908T204645Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T20:49:39.395997+00:00"
+}
