@@ -43,6 +43,8 @@ for theorem in \
   quarter_checker_r0_reduces \
   quarter_checker_r1_reduces \
   anisotropic_margin_beats_scalar_iff \
+  pareto_residual_completion_identity \
+  pareto_residual_completion_nonneg \
   quarter_first_exit_inward_of_pareto; do
   grep -F "'RouteBP5ParetoBridge.$theorem' depends on axioms:" "$OUT" >/dev/null || {
     echo "missing axiom report for $theorem" >&2
