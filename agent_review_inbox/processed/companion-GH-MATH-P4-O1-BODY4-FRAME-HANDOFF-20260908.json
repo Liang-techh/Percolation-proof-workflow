@@ -1,0 +1,21 @@
+{
+  "record_file": "agent_review_inbox/companion-GH-MATH-P4-O1-BODY4-FRAME-HANDOFF-20260908.md",
+  "record_kind": "companion_log",
+  "review_sha256": "1283CC0F0C6B754E28430937540E1928433D716076B7A5EF72C7E5351F29CDF0",
+  "task_id": "GH-MATH-P4-O1-BODY4-FRAME-HANDOFF",
+  "source_agent": "Sartre the 6th",
+  "created_at": "2026-09-08",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_body4_frame_source_jacobian_handoff",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "artifact_binding_audit": {
+    "status": "BOUND",
+    "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\routeb_o1_body4_source_gram_proof_attempt\\NEW_SOURCE_JACOBIAN_20260908_FRAME_HANDOFF.lean",
+    "declared_sha256": "8EBF458E0812B63A911EE4EB64A5A621D6F1ACA074EB7950D7746BEA09A64512",
+    "actual_sha256": "8EBF458E0812B63A911EE4EB64A5A621D6F1ACA074EB7950D7746BEA09A64512"
+  },
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:12:01.225393+00:00"
+}

@@ -3740,3 +3740,15 @@ det/numerator、observable 或 metric packet。因此下一轮只保留以下执
 | `GH-MATH-P4-JOINT6-WEIGHTED-CONSTRAINTS` | James the 6th | 保留 `y_A`、model/solve defect 与 joint6 coupling 的一次性传播 |
 
 不允许用 nominal/analytic payload 填补 runtime actual packet；不做全量回归或本机 Lean。
+
+## 2026-09-08 — post-revision-809 O1 and FLT intake
+
+本轮新增两个隔离候选：
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-MATH-P4-O1-BODY4-FRAME-HANDOFF` | Sartre the 6th | body-4 frame→source Jacobian 条件接线；两个 frame targets 的 inhabitant 与 Lean receipt 仍外置 |
+| `GH-LEAN-FLT-QUOTIENT-CLM-API-REPAIR` | Poincare the 6th | quotient CLM candidate/probe 的 pinned compile 与 axiom receipt，仍只进入 external catalog pending |
+
+O1 新候选不能替代 source mass/Gram/trace witness；FLT candidate 不能绕过目标
+环境、provenance、statement identity 和 admission gate。

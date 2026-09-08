@@ -3018,3 +3018,14 @@ principal RHS 必须保留远端和 joint6 acceleration。它不能由 nominal p
 
 因此 revision=808 的剩余硬缺口已收缩为同次 runtime/refinement source witness，
 registry=0、formal certificate gate 继续关闭；不再重复 rank 或 generic Young。
+
+### 梁智炜 · revision 809：O1 frame handoff 与 FLT quotient probe
+
+O1 body-4 新 sidecar 建立了条件链
+`frame targets → source axes/COM/displacements → SourceGeometry → Jv/Jw`，并给出
+只依赖 slot-4 translation 的 joint-3 线性列零条件；但 frame target inhabitant、
+source mass/Gram/trace 和 Lean receipt 均缺失，故只挂到 body-4 source-gram pending leaf。
+
+FLT quotient probe 则对两个 continuous-linear-equivalence API 做了显式 binders
+核对，并区分 compile receipt 与 source/path inhabitant。候选仍未编译，只进入
+external catalog pending；Route-B registry 与 formal gate 不变。

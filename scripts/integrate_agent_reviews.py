@@ -221,6 +221,9 @@ TASK_TARGETS = {
     "GH-MATH-P4-ACTUAL-CELL-PACKET": (
         "P4.true_dh_port_source_binding",
         "pending_actual_cell_source_packet"),
+    "GH-MATH-P4-O1-BODY4-FRAME-HANDOFF": (
+        "P4.O1.source_comparator.h_body_4.source_gram_targets",
+        "pending_body4_frame_source_jacobian_handoff"),
     "GH-MATH-P4-3D-TO-2D-RESTRICTION": (
         "P4.true_dh_port_source_binding",
         "pending_3d_to_2d_restriction_interface"),

@@ -1,0 +1,22 @@
+{
+  "record_file": "agent_review_inbox/review-GH-LEAN-FLT-QUOTIENT-CLM-API-REPAIR-20260908T110832.md",
+  "record_kind": "review_result",
+  "review_sha256": "B0F9AD3A6CAB47CA408B895BD04678BBBAC98F19566DBE6C551538532A54AB69",
+  "task_id": "GH-LEAN-FLT-QUOTIENT-CLM-API-REPAIR",
+  "source_agent": "codex-local",
+  "created_at": "2026-09-08T11:08:32-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_quotient_clm_api_repair",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "113ae2a079a29641b7e3c6906cf25100c01883da",
+  "artifact_binding_audit": {
+    "status": "BOUND",
+    "path": "C:\\Users\\z5242\\Desktop\\重构版\\工作流\\examples\\anthropic_flt_quotient_transport_sidecar\\NEW_QUOTIENT_CLM_API_REPAIR_20260908.lean",
+    "declared_sha256": "777D4AE6CD3FA60FB0F988F5B1E263E2CB07536F7ED83113F99AA102615E9E97",
+    "actual_sha256": "777D4AE6CD3FA60FB0F988F5B1E263E2CB07536F7ED83113F99AA102615E9E97"
+  },
+  "review_file": "agent_review_inbox/review-GH-LEAN-FLT-QUOTIENT-CLM-API-REPAIR-20260908T110832.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:12:01.226488+00:00"
+}
