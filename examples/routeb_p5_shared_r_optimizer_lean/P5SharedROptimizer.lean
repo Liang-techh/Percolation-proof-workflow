@@ -63,7 +63,6 @@ theorem scaled_difference_at_vertex_one
       2 * d * (A1 - A2) + (B1 - B2) * B1 := by
   rw [same_curvature_difference_affine]
   field_simp [hd]
-  ring
 
 /-- Symmetric division-free difference formula at gate 2's formal vertex. -/
 theorem scaled_difference_at_vertex_two
@@ -74,7 +73,6 @@ theorem scaled_difference_at_vertex_two
       2 * d * (A1 - A2) + (B1 - B2) * B2 := by
   rw [same_curvature_difference_affine]
   field_simp [hd]
-  ring
 
 /-- Active interior vertex of gate 1 is a valid shared strict witness. -/
 theorem shared_positive_of_active_vertex_one
@@ -89,7 +87,6 @@ theorem shared_positive_of_active_vertex_one
       0 < gate A1 B1 d r ∧ 0 < gate A2 B2 d r := by
   let r : ℝ := B1 / (2 * d)
   have h2d : 0 < 2 * d := by positivity
-  have hden : 2 * d ≠ 0 := ne_of_gt h2d
   have hscale : (2 * d) * r = B1 := by
     dsimp [r]
     field_simp
@@ -201,6 +198,7 @@ theorem crossover_gate_equality
   have hzero :
       (A1 - A2) + (B1 - B2) * (-(A1 - A2) / (B1 - B2)) = 0 := by
     field_simp [hq]
+    ring
   nlinarith
 
 /-- The exact crossover candidate is a valid shared strict witness whenever the
@@ -219,9 +217,10 @@ theorem shared_positive_of_crossover
   let q : ℝ := B1 - B2
   have hq : q ≠ 0 := by
     intro hq0
-    have hsquare : 0 ≤ c^2 := sq_nonneg c
     have hsign' : c * (c + q) < 0 := by
       simpa [c, q] using hsign
+    rw [hq0] at hsign'
+    have hsquare : 0 ≤ c^2 := sq_nonneg c
     nlinarith
   have hrange : 0 < -c / q ∧ -c / q < 1 := by
     apply crossover_inside_of_endpoint_sign_change c q
@@ -255,8 +254,7 @@ theorem separated_regression_each_passes
     (eps : ℝ) (heps : 0 < eps) :
     (0 < eps - (((1 : ℝ) / 4) - (1 / 4))^2) ∧
     (0 < eps - (((3 : ℝ) / 4) - (3 / 4))^2) := by
-  norm_num
-  exact ⟨heps, heps⟩
+  simpa using And.intro heps heps
 
 /-- If both shifted-square regression gates are strictly positive at one shared
 `r`, then necessarily `eps > 1/16`. -/
