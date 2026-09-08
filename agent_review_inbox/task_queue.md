@@ -4448,3 +4448,15 @@ job 在本 review 写回时仍 `in progress`，因此 compile/axiom/comparator �
 同 observable/sign convention、真实 denominator/error constants、Float64/FD/solve、
 P4 source admission 与 P8/path coverage。即使 CI 通过，先只能是 compiled_candidate，
 必须等待封不觉独立验证与梁智炜最终整合；registry=0、formal gate=false。
+
+## 2026-09-08 — revision 875 harvest：static-domain target remains rejected
+
+`P5-099-TARGET-DOMAIN-DECISION` 已收割。现有 analytic measurable-input domain
+包含 exact witness；原 full-X0 ramp 只排除早时段 `w=1`，在全时域仍有合法静态组合
+（例如 `t=3/4,c=4/3,w=1`），而当前 full-X0 flowpipe contract 与 partial chain
+不足以证明 reachable-set exclusion。故包含该静态域时 frozen target 继续 rejected；
+这不是对原 block45 trajectory theorem 的否定。
+
+已新增 open frontier：`P8-105-REACHABLE-SET-NEGATIVE-SEPARATOR`，要求构造真实
+full-X0/ramp reachable-set 排除负值邻域的 typed contract；若证据不足，必须返回
+明确 negative/pending，而不是修改 domain 标签或 target。

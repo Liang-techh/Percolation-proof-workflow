@@ -645,6 +645,9 @@ TASK_TARGETS = {
     "P5-103-ACTUAL-REFERENCE-CONTEXT-BINDING": (
         "P5.componentwise_relative_decay.feasible_cone_spn",
         "pending_p5_actual_reference_context_binding"),
+    "P8-105-REACHABLE-SET-NEGATIVE-SEPARATOR": (
+        "P8.independent_reachability",
+        "pending_p8_reachable_set_negative_separator"),
 }
 
 REVIEW_ID_ALIASES = {

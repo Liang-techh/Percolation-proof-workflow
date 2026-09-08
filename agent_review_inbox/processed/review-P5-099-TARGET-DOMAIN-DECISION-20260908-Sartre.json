@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-P5-099-TARGET-DOMAIN-DECISION-20260908-Sartre.md",
+  "record_kind": "review_result",
+  "review_sha256": "D868D10670AFC6B935532A96F13B35B2BDA82A3CDA88926221DC84690D542E10",
+  "task_id": "P5-099-TARGET-DOMAIN-DECISION",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_p5_target_domain_decision",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-P5-099-TARGET-DOMAIN-DECISION-20260908-Sartre.md",
+  "integrated_at": "2026-09-08T20:31:45.709382+00:00"
+}

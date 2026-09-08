@@ -3615,3 +3615,9 @@ smooth-family 的存在性导数上界，不能直接生成数值 remainder。Sa
 
 远端新 claim `GH-MATH-P4-SCHUR-ACTUAL-SOURCE-NEXT` 继续推进 P4 actual-source
 Schur binding；目前仅有认领与 sidecar，未有独立 review/receipt，因此仍是 open frontier。
+
+### 梁智炜 · revision 875 harvest：static-domain target remains rejected
+
+P5-099 确认现有 analytic/static domain 不能排除 exact witness；ramp 仅排除早时段的
+`w=1`，full-X0 flowpipe 仍无完整 exclusion receipt。新增 P8-105 专门处理 reachable-set
+negative separator，保持原 block45 trajectory theorem 未决，不偷换结论。
