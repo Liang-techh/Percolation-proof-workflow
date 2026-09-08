@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-ADJUGATE-SOURCE-WITNESS-honglianmozun-20260908T1957Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "1ABF56945E32EDF7295ACBDADC268164FF19F623D62EC28AFAD3E6FDCFF4F857",
+  "task_id": "GH-MATH-P4-ADJUGATE-SOURCE-WITNESS",
+  "source_agent": "红莲魔尊",
+  "created_at": "2026-09-08T19:57:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_adjugate_source_witness",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "36defb1faf7c24cb7fcb79a862be3c8f7ac40f23",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-ADJUGATE-SOURCE-WITNESS-honglianmozun-20260908T1957Z.md",
+  "integrated_at": "2026-09-08T20:17:01.677691+00:00"
+}

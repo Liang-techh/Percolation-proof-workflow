@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 867,
+  "revision": 871,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -12935,6 +12935,77 @@
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/NEW_REVIEW_P5_EXACT_RATIONAL_PSD_SCHEMA_ADDITIVE_HCAP_20260908.md",
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P5-093-base-flow-lie-defect-sumengchen-20260908T1816Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "7AE7329E6711080219BB1CD388BA9A18D69282135E1794379D6802D0D1DF9428",
+            "task_id": "T-P5-093-BASE-FLOW-LIE-DEFECT",
+            "source_agent": "苏梦辰",
+            "created_at": "2026-09-08T18:16:00Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_base_flow_lie_defect_same_tube_binding",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "1cf30783136aa73ccb8e76f7aeea5be5e54abb8e",
+            "review_file": "agent_review_inbox/review-T-P5-093-base-flow-lie-defect-sumengchen-20260908T1816Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/companion-T-P5-094-variational-to-secant-path-energy-guyuefangyuan-20260908T1835Z.md",
+            "record_kind": "companion_log",
+            "review_sha256": "B628B247CB6ACC958C035B5A9F068F778FA4659378C0DF52C3689363AEA7D789",
+            "task_id": "T-P5-094-VARIATIONAL-TO-SECANT-PATH-ENERGY",
+            "source_agent": "古月方源",
+            "created_at": "2026-09-08T18:35:00Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_p5_variational_to_secant_path_energy",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown"
+          },
+          {
+            "record_file": "agent_review_inbox/companion-T-P5-096-invariant-path-sheet-coverage-guyuefangyuan-20260908T1935Z.md",
+            "record_kind": "companion_log",
+            "review_sha256": "D23D82B664B960882CEB410B2F070774C530C9ECBDB41E83A3E38795736C9635",
+            "task_id": "T-P5-096-INVARIANT-PATH-SHEET-COVERAGE",
+            "source_agent": "古月方源",
+            "created_at": "2026-09-08T19:35:00Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_p5_invariant_path_sheet_coverage",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "9bee8636e0e086472bd3ff460d104d1eac843f72"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P5-094-variational-to-secant-path-energy-guyuefangyuan-20260908T1832Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "89F554D80F51B9DF6314F5BFA11E4F075124AF53052A378B6D1862F6F765E00D",
+            "task_id": "T-P5-094-VARIATIONAL-TO-SECANT-PATH-ENERGY",
+            "source_agent": "古月方源",
+            "created_at": "2026-09-08T18:32:00Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_p5_variational_to_secant_path_energy",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "f2e1d45f915504f239f704a66e9c2bc0c2c936b3",
+            "review_file": "agent_review_inbox/review-T-P5-094-variational-to-secant-path-energy-guyuefangyuan-20260908T1832Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P5-096-invariant-path-sheet-coverage-guyuefangyuan-20260908T1932Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "0B46F5D9DC5BA61290517C8CB885509A398C5B8727F7CF16EFD6AC5397C3304E",
+            "task_id": "T-P5-096-INVARIANT-PATH-SHEET-COVERAGE",
+            "source_agent": "古月方源",
+            "created_at": "2026-09-08T19:32:00Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_p5_invariant_path_sheet_coverage",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "742d6101cf1c84b04b2f9058f5a44ea04551f360",
+            "review_file": "agent_review_inbox/review-T-P5-096-invariant-path-sheet-coverage-guyuefangyuan-20260908T1932Z.md",
+            "admission_label": "pending"
           }
         ]
       }
@@ -17119,6 +17190,62 @@
             "source_commit": "ad5f9de1593dedac3b969cd6ab4f3eb8bdad3e78",
             "review_file": "agent_review_inbox/review-P4-ACTUAL-BLOCK456-AFFINE-METRIC-DELTA-james-20260908T135717.md",
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/companion-GH-MATH-P4-BLOCK456-METRIC-CAP-kuangmanmozun-20260908T1938Z.md",
+            "record_kind": "companion_log",
+            "review_sha256": "9F4C9416FB0ED48D7BB0C5F7D77277621ED8162D2DB4C6E7E0A28EE9E1261CC3",
+            "task_id": "GH-MATH-P4-BLOCK456-METRIC-CAP",
+            "source_agent": "狂蛮魔尊",
+            "created_at": "2026-09-08T19:38:00Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_block456_matching_metric_cap",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-FUNCTION-IDENTITY-honglianmozun-20260908T1856Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "FACCDE64E41E4DADA5F1B5D544BE48BE25FE45B567A044FA48961BCE032D53AB",
+            "task_id": "GH-MATH-P4-ACTIVE-V-FUNCTION-IDENTITY",
+            "source_agent": "红莲魔尊",
+            "created_at": "2026-09-08T18:56:00Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_active_v_function_identity",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "8db1006308600abfd1c962607e0881df0f102f4f",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-FUNCTION-IDENTITY-honglianmozun-20260908T1856Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-ADJUGATE-SOURCE-WITNESS-honglianmozun-20260908T1957Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "1ABF56945E32EDF7295ACBDADC268164FF19F623D62EC28AFAD3E6FDCFF4F857",
+            "task_id": "GH-MATH-P4-ADJUGATE-SOURCE-WITNESS",
+            "source_agent": "红莲魔尊",
+            "created_at": "2026-09-08T19:57:00Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_adjugate_source_witness",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "36defb1faf7c24cb7fcb79a862be3c8f7ac40f23",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-ADJUGATE-SOURCE-WITNESS-honglianmozun-20260908T1957Z.md"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-BLOCK456-METRIC-CAP-kuangmanmozun-20260908T1935Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "AC4891E145B4918E8A580ABAB72903A454C82E8D913283D63626A071B24340DB",
+            "task_id": "GH-MATH-P4-BLOCK456-METRIC-CAP",
+            "source_agent": "狂蛮魔尊",
+            "created_at": "2026-09-08T19:35:00Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_block456_matching_metric_cap",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-BLOCK456-METRIC-CAP-kuangmanmozun-20260908T1935Z.md"
           }
         ]
       }
@@ -41638,6 +41765,35 @@
             "source_commit": "ce7163d1f6ca10435136894d4484ac78de1fb68d",
             "review_file": "agent_review_inbox/review-P5-CENTERED-ANCHOR-INSTANTIATION-20260908T200937Z.md",
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-P5-ANCHOR-DOMAIN-INCLUSION-20260908T201509Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "B4838D514846244073E708CA98B970A2C5DBF8FAEC2E908B0E747212323B620C",
+            "task_id": "P5-ANCHOR-DOMAIN-INCLUSION-20260908",
+            "source_agent": "Codex-anchor-domain",
+            "created_at": "2026-09-08T20:15:09Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_p5_anchor_domain_inclusion",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "ce7163d1f6ca10435136894d4484ac78de1fb68d",
+            "review_file": "agent_review_inbox/review-P5-ANCHOR-DOMAIN-INCLUSION-20260908T201509Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-P5-PARAMETER-FEASIBILITY-ENVELOPE-20260908-Sartre.md",
+            "record_kind": "review_result",
+            "review_sha256": "A388A447EAFEAA4DBF20B5605CE4D6A22029D822FCA32B6A1E6BAC1ED1347E6B",
+            "task_id": "P5-PARAMETER-FEASIBILITY-ENVELOPE-20260908",
+            "source_agent": "unknown",
+            "created_at": "unknown",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_p5_parameter_feasibility_envelope",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-P5-PARAMETER-FEASIBILITY-ENVELOPE-20260908-Sartre.md"
           }
         ]
       }
@@ -42083,6 +42239,35 @@
             "target_scope": "routeb_node",
             "source_commit": "15672d6f25c6098d681d9ab8b26a45b89b95bec3",
             "review_file": "agent_review_inbox/review-T-P5-028-sumengchen-20260907T1149.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/companion-T-P5-095-moving-chart-base-lie-defect-liuguanyi-20260908T1906Z.md",
+            "record_kind": "companion_log",
+            "review_sha256": "B4CF60489A27DD36B8E398D77C592CEF638CE75BC796767F18B81C39D23664E1",
+            "task_id": "T-P5-095-MOVING-CHART-BASE-LIE-DEFECT",
+            "source_agent": "柳冠一",
+            "created_at": "2026-09-08T19:06:00Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_p5_moving_chart_base_lie_defect",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P5-095-moving-chart-base-lie-defect-liuguanyi-20260908T1905Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "EE21854CB4B990F59AAC39C22E666DBD2891FD1EBA333AD676B6C2BDAD074AC3",
+            "task_id": "T-P5-095-MOVING-CHART-BASE-LIE-DEFECT",
+            "source_agent": "柳冠一",
+            "created_at": "2026-09-08T19:05:00Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_p5_moving_chart_base_lie_defect",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "7087a79cde0c1ac802b79860dc84b26a93bbdee9",
+            "review_file": "agent_review_inbox/review-T-P5-095-moving-chart-base-lie-defect-liuguanyi-20260908T1905Z.md",
             "admission_label": "pending"
           }
         ]
@@ -81690,6 +81875,188 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "catalog": "anthropic-fermats-last-theorem"
+    },
+    {
+      "at": "2026-09-08T20:17:01.677001+00:00",
+      "kind": "agent_companion_integrated",
+      "record_file": "agent_review_inbox/companion-GH-MATH-P4-BLOCK456-METRIC-CAP-kuangmanmozun-20260908T1938Z.md",
+      "record_kind": "companion_log",
+      "review_sha256": "9F4C9416FB0ED48D7BB0C5F7D77277621ED8162D2DB4C6E7E0A28EE9E1261CC3",
+      "task_id": "GH-MATH-P4-BLOCK456-METRIC-CAP",
+      "classification": "pending_block456_matching_metric_cap",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T20:17:01.677308+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-FUNCTION-IDENTITY-honglianmozun-20260908T1856Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "FACCDE64E41E4DADA5F1B5D544BE48BE25FE45B567A044FA48961BCE032D53AB",
+      "task_id": "GH-MATH-P4-ACTIVE-V-FUNCTION-IDENTITY",
+      "classification": "pending_active_v_function_identity",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T20:17:01.677691+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-ADJUGATE-SOURCE-WITNESS-honglianmozun-20260908T1957Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "1ABF56945E32EDF7295ACBDADC268164FF19F623D62EC28AFAD3E6FDCFF4F857",
+      "task_id": "GH-MATH-P4-ADJUGATE-SOURCE-WITNESS",
+      "classification": "pending_adjugate_source_witness",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T20:17:01.678285+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-BLOCK456-METRIC-CAP-kuangmanmozun-20260908T1935Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "AC4891E145B4918E8A580ABAB72903A454C82E8D913283D63626A071B24340DB",
+      "task_id": "GH-MATH-P4-BLOCK456-METRIC-CAP",
+      "classification": "pending_block456_matching_metric_cap",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T20:17:01.678557+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P5-093-base-flow-lie-defect-sumengchen-20260908T1816Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "7AE7329E6711080219BB1CD388BA9A18D69282135E1794379D6802D0D1DF9428",
+      "task_id": "T-P5-093-BASE-FLOW-LIE-DEFECT",
+      "classification": "pending_base_flow_lie_defect_same_tube_binding",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "4a9af66cdc4f4607857a5cf360f19eb7"
+    },
+    {
+      "at": "2026-09-08T20:18:05.139237+00:00",
+      "kind": "agent_companion_integrated",
+      "record_file": "agent_review_inbox/companion-T-P5-094-variational-to-secant-path-energy-guyuefangyuan-20260908T1835Z.md",
+      "record_kind": "companion_log",
+      "review_sha256": "B628B247CB6ACC958C035B5A9F068F778FA4659378C0DF52C3689363AEA7D789",
+      "task_id": "T-P5-094-VARIATIONAL-TO-SECANT-PATH-ENERGY",
+      "classification": "pending_p5_variational_to_secant_path_energy",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "4a9af66cdc4f4607857a5cf360f19eb7"
+    },
+    {
+      "at": "2026-09-08T20:18:05.139538+00:00",
+      "kind": "agent_companion_integrated",
+      "record_file": "agent_review_inbox/companion-T-P5-095-moving-chart-base-lie-defect-liuguanyi-20260908T1906Z.md",
+      "record_kind": "companion_log",
+      "review_sha256": "B4CF60489A27DD36B8E398D77C592CEF638CE75BC796767F18B81C39D23664E1",
+      "task_id": "T-P5-095-MOVING-CHART-BASE-LIE-DEFECT",
+      "classification": "pending_p5_moving_chart_base_lie_defect",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "c6515e9480464cd0ac05240059345647"
+    },
+    {
+      "at": "2026-09-08T20:18:05.139737+00:00",
+      "kind": "agent_companion_integrated",
+      "record_file": "agent_review_inbox/companion-T-P5-096-invariant-path-sheet-coverage-guyuefangyuan-20260908T1935Z.md",
+      "record_kind": "companion_log",
+      "review_sha256": "D23D82B664B960882CEB410B2F070774C530C9ECBDB41E83A3E38795736C9635",
+      "task_id": "T-P5-096-INVARIANT-PATH-SHEET-COVERAGE",
+      "classification": "pending_p5_invariant_path_sheet_coverage",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "4a9af66cdc4f4607857a5cf360f19eb7"
+    },
+    {
+      "at": "2026-09-08T20:18:05.139954+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-P5-ANCHOR-DOMAIN-INCLUSION-20260908T201509Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "B4838D514846244073E708CA98B970A2C5DBF8FAEC2E908B0E747212323B620C",
+      "task_id": "P5-ANCHOR-DOMAIN-INCLUSION-20260908",
+      "classification": "pending_p5_anchor_domain_inclusion",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383"
+    },
+    {
+      "at": "2026-09-08T20:18:05.140163+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P5-094-variational-to-secant-path-energy-guyuefangyuan-20260908T1832Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "89F554D80F51B9DF6314F5BFA11E4F075124AF53052A378B6D1862F6F765E00D",
+      "task_id": "T-P5-094-VARIATIONAL-TO-SECANT-PATH-ENERGY",
+      "classification": "pending_p5_variational_to_secant_path_energy",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "4a9af66cdc4f4607857a5cf360f19eb7"
+    },
+    {
+      "at": "2026-09-08T20:18:05.140396+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P5-095-moving-chart-base-lie-defect-liuguanyi-20260908T1905Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "EE21854CB4B990F59AAC39C22E666DBD2891FD1EBA333AD676B6C2BDAD074AC3",
+      "task_id": "T-P5-095-MOVING-CHART-BASE-LIE-DEFECT",
+      "classification": "pending_p5_moving_chart_base_lie_defect",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "c6515e9480464cd0ac05240059345647"
+    },
+    {
+      "at": "2026-09-08T20:18:05.140605+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P5-096-invariant-path-sheet-coverage-guyuefangyuan-20260908T1932Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "0B46F5D9DC5BA61290517C8CB885509A398C5B8727F7CF16EFD6AC5397C3304E",
+      "task_id": "T-P5-096-INVARIANT-PATH-SHEET-COVERAGE",
+      "classification": "pending_p5_invariant_path_sheet_coverage",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "4a9af66cdc4f4607857a5cf360f19eb7"
+    },
+    {
+      "at": "2026-09-08T20:19:30.233084+00:00",
+      "kind": "external_reuse_agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-FLT-NONNUMBER-API-SCAN-20260908T201536Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "86B5C757B738DF494C9D8472C302FA664335D5A33685444F9A328C78AE463D65",
+      "task_id": "T-FLT-NONNUMBER-API-SCAN-20260908",
+      "classification": "flt_nonnumber_api_scan",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "catalog": "anthropic-fermats-last-theorem"
+    },
+    {
+      "at": "2026-09-08T20:19:43.860826+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-P5-PARAMETER-FEASIBILITY-ENVELOPE-20260908-Sartre.md",
+      "record_kind": "review_result",
+      "review_sha256": "A388A447EAFEAA4DBF20B5605CE4D6A22029D822FCA32B6A1E6BAC1ED1347E6B",
+      "task_id": "P5-PARAMETER-FEASIBILITY-ENVELOPE-20260908",
+      "classification": "pending_p5_parameter_feasibility_envelope",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383"
     }
   ],
   "agent_requests": {},
@@ -85346,5 +85713,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "f3945d126ed012e2da9f8475dff18bcb4955bd5622b55183223cc91850648507"
+  "state_checksum": "ac241f53599a7e9165242eac429cc2fc62490f40a61d0bfab72ab5c1f3e2a3a9"
 }

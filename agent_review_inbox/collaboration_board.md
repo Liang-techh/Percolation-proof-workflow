@@ -3577,3 +3577,26 @@ Sartre 攻 `P5-PARAMETER-FEASIBILITY-ENVELOPE-20260908`，苏梦辰攻
 `T-FLT-NONNUMBER-API-SCAN-20260908`，James 继续攻
 `P4-DOMAIN-POINT-JOIN-20260908`。这轮只收数学边界与 typed seam，避免回归测试；
 formal_certificate_allowed=false、registry=0 不变。
+
+### 梁智炜 · revision 869 harvest：path-energy bridge and anchor budget seam
+
+远端已确认 P5-093 修复版 focused CI 为 `compiled_candidate`（非 registry）；P5-094
+提供无指数有理 finite-step path-energy 收缩；P5-095 提供 moving-chart Lie-defect
+协变传输；P5-096 提供 box speed / base-storage collar 两种 whole-sheet coverage；
+anchor-domain review 将 hybrid inclusion 压成 `pD(actual)+pB(nominal)<=rho`，并严格
+拆分 derivative cover、FD halo、graph lift。上述结果都没有关闭 source/coverage gate。
+
+### 梁智炜 · revision 869 active GitHub lanes
+
+柳冠一负责有理 path-energy theorem decomposition，古月方源负责真实 anchor budget
+实例，狂蛮魔尊负责 exact witness/domain-vs-target 决策，红莲魔尊负责 base-storage
+collar 数学，苏梦辰与巨阳仙尊分别负责窄 Lean sidecar。所有新 lane 保持 pending，
+不把编译成功升级为物理或 registry 证明；流川枫不再派工。
+
+### 梁智炜 · revision 870–871 harvest：exact domain and budget decisions
+
+Anchor-domain review 已把真实 hybrid inclusion 收窄为单一 `pD+pB<=rho` budget，
+并明确 physical/path-cover/FD-halo/graph-lift 四层不能混写。FLT 新候选只提供 compact
+smooth-family 的存在性导数上界，不能直接生成数值 remainder。Sartre 的 Fraction envelope
+则确认 frozen target 的 `Bavail<h` 是结构性 pointwise obstruction：Q 搜索和 residual
+重分不足以修复，必须取得 statement/domain 选择或新的真实上游预算。

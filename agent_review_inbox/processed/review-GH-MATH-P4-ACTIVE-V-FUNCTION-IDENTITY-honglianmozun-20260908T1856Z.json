@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-FUNCTION-IDENTITY-honglianmozun-20260908T1856Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "FACCDE64E41E4DADA5F1B5D544BE48BE25FE45B567A044FA48961BCE032D53AB",
+  "task_id": "GH-MATH-P4-ACTIVE-V-FUNCTION-IDENTITY",
+  "source_agent": "红莲魔尊",
+  "created_at": "2026-09-08T18:56:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_active_v_function_identity",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "8db1006308600abfd1c962607e0881df0f102f4f",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-FUNCTION-IDENTITY-honglianmozun-20260908T1856Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T20:17:01.677308+00:00"
+}

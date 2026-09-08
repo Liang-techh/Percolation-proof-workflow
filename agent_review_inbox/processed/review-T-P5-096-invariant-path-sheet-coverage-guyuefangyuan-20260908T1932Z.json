@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-096-invariant-path-sheet-coverage-guyuefangyuan-20260908T1932Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "0B46F5D9DC5BA61290517C8CB885509A398C5B8727F7CF16EFD6AC5397C3304E",
+  "task_id": "T-P5-096-INVARIANT-PATH-SHEET-COVERAGE",
+  "source_agent": "古月方源",
+  "created_at": "2026-09-08T19:32:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_p5_invariant_path_sheet_coverage",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "742d6101cf1c84b04b2f9058f5a44ea04551f360",
+  "review_file": "agent_review_inbox/review-T-P5-096-invariant-path-sheet-coverage-guyuefangyuan-20260908T1932Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T20:18:05.140605+00:00"
+}

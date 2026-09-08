@@ -609,6 +609,33 @@ TASK_TARGETS = {
     "T-FLT-NONNUMBER-API-SCAN-20260908": (
         None,
         "flt_nonnumber_api_scan"),
+    "T-P5-094-VARIATIONAL-TO-SECANT-PATH-ENERGY": (
+        "P5.componentwise_relative_decay",
+        "pending_p5_variational_to_secant_path_energy"),
+    "T-P5-095-MOVING-CHART-BASE-LIE-DEFECT": (
+        "P5.componentwise_relative_decay.moving_frame_parameter_transport",
+        "pending_p5_moving_chart_base_lie_defect"),
+    "T-P5-096-INVARIANT-PATH-SHEET-COVERAGE": (
+        "P5.componentwise_relative_decay",
+        "pending_p5_invariant_path_sheet_coverage"),
+    "T-P5-097-RATIONAL-PATH-ENERGY-LEAF": (
+        "P5.componentwise_relative_decay",
+        "pending_p5_rational_path_energy_leaf"),
+    "P5-098-ANCHOR-BUDGET-INSTANTIATION": (
+        "P5.componentwise_relative_decay.feasible_cone_spn",
+        "pending_p5_anchor_budget_instantiation"),
+    "P5-099-TARGET-DOMAIN-DECISION": (
+        "P5.componentwise_relative_decay.feasible_cone_spn",
+        "pending_p5_target_domain_decision"),
+    "T-P5-100-BASE-STORAGE-COLLAR-MATH": (
+        "P5.componentwise_relative_decay",
+        "pending_p5_base_storage_collar_math"),
+    "T-P5-101-RATIONAL-PATH-ENERGY-LEAN": (
+        "P5.componentwise_relative_decay",
+        "pending_p5_rational_path_energy_lean"),
+    "T-P5-102-SHEET-COVERAGE-LEAN": (
+        "P5.componentwise_relative_decay",
+        "pending_p5_sheet_coverage_lean"),
 }
 
 REVIEW_ID_ALIASES = {

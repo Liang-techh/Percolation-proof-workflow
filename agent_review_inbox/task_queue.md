@@ -4351,3 +4351,64 @@ payload hash 已固定，但 runner 尚未派发，comparator/compile/axiom/nega
 
 所有新输出仅 immutable review，禁止修改 state/registry/shared scripts，Lean 仅交给远端
 排班 agent；Flowchuan/流川枫不再接收任务。
+
+## 2026-09-08 — revision 869 harvest：path-energy bridge and anchor budget seam
+
+远端数学/Lean lane 已带回并收割以下结果：
+
+1. `T-P5-093-BASE-FLOW-LIE-DEFECT` 的修复版 sidecar 在真实 GitHub CI focused job
+   通过，8 个 theorem 无 `sorryAx`，但仍只是 exact-real 2×2 algebraic-energy
+   `compiled_candidate`；deployed source、Float64/FD/controller、P8 coverage 与
+   registry gate 仍 OPEN。
+2. `T-P5-094-VARIATIONAL-TO-SECANT-PATH-ENERGY` 给出无指数的有理 finite-step
+   decay：`(N+2*mu*h)^N D_h <= N^N D_0`，并证明 moving metric 下应使用
+   path-energy；raw nonlinear-chart Euclidean chord 不能替代它。仍需 whole flowed
+   path-sheet coverage、path lifting 与 source binding。
+3. `T-P5-095-MOVING-CHART-BASE-LIE-DEFECT` 将 signed base-flow Lie defect 按正确
+   vector-field covariance 做 chart-pullback；不能把 perturbation 当 scalar，也不能
+   把 `Db=0` 当作 metric-transport 缺失。实际 chart/source/regularity 仍 open。
+4. `T-P5-096-INVARIANT-PATH-SHEET-COVERAGE` 给出 Route-A box speed bootstrap 与
+   Route-B base-storage collar；明确 endpoint flowpipe 不足以推出 flowed connector
+   sheet，且 base-state storage 不得冒充 variational energy。
+5. `P5-ANCHOR-DOMAIN-INCLUSION-20260908` 把 hybrid anchor 的 physical inclusion
+   精确压成 `pD(actual)+pB(nominal)<=rho`，再以二次恒等式闭合 local segment；同时
+   分离 physical domain、derivative cover、FD halo、reference halo、graph lift。
+
+这些均为 conditional/pending 或 compiled-candidate，不改变 `registry=0` 与
+`formal_certificate_allowed=false`。
+
+## 2026-09-08 — revision 869 GitHub handoff lanes
+
+下一批交给现役六人环，保持数学优先、Lean 只做窄 sidecar：
+
+| owner | task id | bounded deliverable |
+|---|---|---|
+| 柳冠一 | `T-P5-097-RATIONAL-PATH-ENERGY-LEAF` | 有理 finite-step/path-energy 的最小 theorem decomposition 与 source-independent contract |
+| 古月方源 | `P5-098-ANCHOR-BUDGET-INSTANTIATION` | 真实 qbar/vbar/reference context 的 hybrid budget 实例，不能只给抽象 predicate |
+| 狂蛮魔尊 | `P5-099-TARGET-DOMAIN-DECISION` | exact witness 是否可由 intended domain 排除；若不能，给 target/beta 必要修正阈值 |
+| 红莲魔尊 | `T-P5-100-BASE-STORAGE-COLLAR-MATH` | Route-B base-storage collar 与现有 energy/defect 的不混淆 typed 数学接口 |
+| 苏梦辰 | `T-P5-101-RATIONAL-PATH-ENERGY-LEAN` | 固定 pin 下的有理 decay/path-energy 最小 Lean sidecar handoff |
+| 巨阳仙尊 | `T-P5-102-SHEET-COVERAGE-LEAN` | box/collar sheet coverage 最小 typed sidecar；仅远端 Lean 验证 |
+
+所有任务需 immutable review/receipt；不得直接改 registry。远端 Lean agent 必须回传
+实际 pin、native exit、axiom、comparator 与 raw artifact hash；本机不跑 Lean。
+
+## 2026-09-08 — revision 870–871 harvest：anchor seam and exact budget envelope
+
+`P5-ANCHOR-DOMAIN-INCLUSION-20260908` 已收割：在实际 12 维椭球域下，hybrid
+anchor 的 physical inclusion 精确等价于 `pD(actual)+pB(nominal)<=rho`，再加 nominal
+joint-limit membership 即可用二次恒等式闭合 local straight segment；但 derivative
+cover、FD halo、reference halo、完整 graph lift 与 actual-flow coverage 仍分别待证。
+
+`T-FLT-NONNUMBER-API-SCAN-20260908` 已收割：FLT 的
+`ContDiff.exists_forall_norm_iteratedDeriv_slice_le_of_isCompact` 是新的抽象 1 /
+Route-B 适配 2 候选，可为 compact smooth family 提供统一有限阶导数存在性上界；但
+常数不可计算、未编译，且没有 actual DH reification、FD remainder、Float64 或轨迹覆盖。
+
+`P5-PARAMETER-FEASIBILITY-ENVELOPE-20260908` 已收割：统一预算判据为
+`Bavail >= h + L_lambda*(theta-1/lambda)^2*h + L_lambda*eta + lambda*epsilon`；
+最宽自由 split 的必要下界仍是 `Bavail>=h`，而 frozen `Bavail=b<h`，所以不能靠继续
+扩大 Q、改变 lambda 或单纯重分 residual 修复。提高 beta、降低 target、改变 baseline
+或引入真实 defect budget 都会改变 statement/上游义务；单点阈值不能升级为全域 theorem。
+
+上述结果均已写入 state revision 871，registry=0、formal gate=false。

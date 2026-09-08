@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-094-variational-to-secant-path-energy-guyuefangyuan-20260908T1832Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "89F554D80F51B9DF6314F5BFA11E4F075124AF53052A378B6D1862F6F765E00D",
+  "task_id": "T-P5-094-VARIATIONAL-TO-SECANT-PATH-ENERGY",
+  "source_agent": "古月方源",
+  "created_at": "2026-09-08T18:32:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_p5_variational_to_secant_path_energy",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "f2e1d45f915504f239f704a66e9c2bc0c2c936b3",
+  "review_file": "agent_review_inbox/review-T-P5-094-variational-to-secant-path-energy-guyuefangyuan-20260908T1832Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T20:18:05.140163+00:00"
+}

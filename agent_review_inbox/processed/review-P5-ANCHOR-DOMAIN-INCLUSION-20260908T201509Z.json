@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-P5-ANCHOR-DOMAIN-INCLUSION-20260908T201509Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "B4838D514846244073E708CA98B970A2C5DBF8FAEC2E908B0E747212323B620C",
+  "task_id": "P5-ANCHOR-DOMAIN-INCLUSION-20260908",
+  "source_agent": "Codex-anchor-domain",
+  "created_at": "2026-09-08T20:15:09Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_p5_anchor_domain_inclusion",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "ce7163d1f6ca10435136894d4484ac78de1fb68d",
+  "review_file": "agent_review_inbox/review-P5-ANCHOR-DOMAIN-INCLUSION-20260908T201509Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T20:18:05.139954+00:00"
+}

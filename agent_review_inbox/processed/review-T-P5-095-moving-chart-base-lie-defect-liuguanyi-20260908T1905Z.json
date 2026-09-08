@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-095-moving-chart-base-lie-defect-liuguanyi-20260908T1905Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "EE21854CB4B990F59AAC39C22E666DBD2891FD1EBA333AD676B6C2BDAD074AC3",
+  "task_id": "T-P5-095-MOVING-CHART-BASE-LIE-DEFECT",
+  "source_agent": "柳冠一",
+  "created_at": "2026-09-08T19:05:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_p5_moving_chart_base_lie_defect",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "7087a79cde0c1ac802b79860dc84b26a93bbdee9",
+  "review_file": "agent_review_inbox/review-T-P5-095-moving-chart-base-lie-defect-liuguanyi-20260908T1905Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T20:18:05.140396+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-FLT-NONNUMBER-API-SCAN-20260908T201536Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "86B5C757B738DF494C9D8472C302FA664335D5A33685444F9A328C78AE463D65",
+  "task_id": "T-FLT-NONNUMBER-API-SCAN-20260908",
+  "source_agent": "Codex-independent-nonnumber-scan",
+  "created_at": "2026-09-08T20:15:36Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "flt_nonnumber_api_scan",
+  "admission_effect": "none",
+  "target_scope": "external_reuse_catalog",
+  "source_commit": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef",
+  "review_file": "agent_review_inbox/review-T-FLT-NONNUMBER-API-SCAN-20260908T201536Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T20:19:30.233084+00:00"
+}
