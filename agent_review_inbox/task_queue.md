@@ -79,6 +79,24 @@ integration gates are satisfied.
 - 已将 P4 Schur/PMI absorption 作为其首个混合验证任务；数学与 Lean receipt
   仍必须保持分层，不能直接改变 registry。
 
+### 2026-09-08 — focused repair/frontier batch
+
+本批只发布可独立回收的窄任务，优先修复已观测的 Lean 接口错误和推进真实
+source binding；不跑全项目回归，不把 compiled candidate 或数学接口升级为
+verified。约三分之一批次分配给流川枫。
+
+| task | owner | target | bounded deliverable |
+|---|---|---|---|
+| `GH-LEAN-BODY6-PATHDOMAIN-REPAIR` | 巨阳仙尊 | `NEW_BODY6_SLICE_PATHDOMAINPROJECTION20260907.lean` | 验证已提交的 `cap+B`/`B+cap` 修复；返回 pinned command、exit code、stdout/stderr、`#print axioms` 与 placeholder scan；失败则保留精确诊断 |
+| `GH-LEAN-BODY6-CAP-CONSUMER` | 苏梦辰 | `NEW_BODY6_SLICE_ALIGNEDPATHCAPCONSUMER20260908.lean` | 仅编译/修复 PATHDOMAINPROJECTION 之后的最小 consumer；不得声称 path inclusion、DH 或 admission 已完成 |
+| `GH-MATH-P4-DESCRIPTOR-PUPPER` | 古月方源 | `NEW_P4_032_DescriptorPUpper.lean` | 从真实 DH source 找同源 `mu,H_i,K_i` 或证明其缺失；只提交 exact interface/obstruction，不臆造绝对 `P_upper` |
+| `GH-MATH-P3-FD-REMAINDER` | 红莲魔尊 | `NEW_CENTRAL_FD_HULL_C2C3_CENTRAL_FD_REMAINDER.lean` | 明确 C3/step/shifted-region 与 residual budget 的最小数学接口，并保留 `x^3` 反例；不宣称 evaluator source binding |
+| `GH-MIXED-FLOWCHUANFENG-BODY6-PATH` | 流川枫 | `NEW_BODY6_SLICE_PATHDOMAINPROJECTION20260907.lean` + receipt | 约三分之一批次：独立检查 repair 是否改变 theorem contract，并给出 typed interface/sidecar 建议；不得重复苏梦辰的编译任务 |
+
+发布纪律：以上任务必须写入新的 `review_result` envelope，带 inspected
+commit、精确命令/证据和 admission label；未知 task 留在 inbox，历史失败
+不得删除。协调者在下一次收割时统一整合并决定是否同步远端。
+
 ### 2026-09-07 — active-energy / topology frontier batch
 
 - `T-P4-ACTIVE-ENERGY-ORIGIN`: verify the source identity and additive
