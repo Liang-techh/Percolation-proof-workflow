@@ -1,0 +1,39 @@
+{
+  "schema_version": "flt-reuse-provenance-v1",
+  "status": "pending_review",
+  "registry_eligible": false,
+  "repository": {
+    "canonical": "https://github.com/anthropics/fermats-last-theorem",
+    "historical_aliases": [
+      "https://github.com/anthropics/anthropic-fermats-last-theorem"
+    ],
+    "commit": "aa2d8b34692b16c70f699536de0d8e75b9a3e9ef"
+  },
+  "source_files": [
+    {
+      "path": "P2M/Util.lean",
+      "git_blob_sha1": "0a73367f78bc165bb5d35e42ca14f5055252e7f6",
+      "ownership": "Anthropic FLT repository; Apache-2.0"
+    },
+    {
+      "path": "FLT/Mathlib/Topology/Algebra/Module/Quotient.lean",
+      "git_blob_sha1": "eab66288efedd1e634203abb927805413a716aa7",
+      "ownership": "third-party FLT/Mathlib material; Salvatore Mercuri, Kevin Buzzard, Pietro Monticone"
+    }
+  ],
+  "p2m_contract": {
+    "preserve_order": true,
+    "clear_aux_decls_instead_of_revert": true,
+    "universe_generalization_check": true,
+    "comparator_receipt": true,
+    "required_lean_toolchain": "leanprover/lean4:v4.33.1",
+    "required_mathlib_revision": "db584cd6d46c92f209a44c0f1c829460d327499d"
+  },
+  "candidate": {
+    "path": "examples/anthropic_flt_reusable_lean/AnthropicFLTReusable.lean",
+    "sha256": "481d8ebe4c3077d071231795a013e4b6d2cc90675c795ccbfb77b45a40c3d3ca",
+    "classification": 3,
+    "admission_status": "pending",
+    "notes": "Architecture/provenance candidate only; not a theorem registry entry."
+  }
+}
