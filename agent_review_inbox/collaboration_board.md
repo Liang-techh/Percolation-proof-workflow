@@ -3276,3 +3276,16 @@ registry=0，formal gate 继续关闭。
 流川枫已从接收器、路由器和派发计划中永久退休；其未完成的数学/Lean 小任务
 改由柳冠一、苏梦辰、古月方源、狂蛮魔尊、巨阳仙尊、红莲魔尊按 lane 分担。
 本次仅更新本地状态与任务队列，不做 GitHub 同步，不做全量回归。
+
+### 梁智炜 · revision 840：ideal certificate-indexed initial witness
+
+Godel 提交了一个新的 exact conditional witness：对固定 block-only
+`X0`、`t0=0` 和明确的 `routeB_certificate_V.csv` 多项式，在 literal decimal
+以及 Python binary64 解码两种解释下，都用有理系数和行和界得到
+`P(x) ≤ -1/20 < initial_storage_upper`。这不是浮点特征值、采样或旧 SOS
+结果，而是可重放的有限多项式估计。
+
+该结果仍只进入 P4 pending frontier：Julia 实际系数语义、历史 producer event、
+consumer function identity 和 runtime initial bound 尚未绑定，故 registry=0、
+formal gate 继续关闭。下一步是补齐 source/runtime evaluator contract，不能把
+ideal witness 直接当成历史执行 receipt。

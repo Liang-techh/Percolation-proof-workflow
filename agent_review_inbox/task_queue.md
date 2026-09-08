@@ -3977,3 +3977,15 @@ metadata。优先候选是 S1 averaging CLM 与 F1 additive-character Fourier CL
 
 以上任务按“数学瓶颈优先、Lean 验证随后”的顺序排队；metadata handoff 只进
 event-only catalog，任何编译成功仍须经过独立 comparator、axiom 和 admission gate。
+
+## 2026-09-08 — revision 840 ideal initial witness
+
+`GH-MATH-P4-CERTIFICATE-INDEXED-INITIAL-WITNESS` 已由 Godel 收割并绑定到
+`P4.true_dh_port_source_binding` 的 pending frontier。它提供两种精确系数
+解释下的全 `X0` 有理上界，但不提供 Julia runtime decoding、历史 producer
+event 或 consumer identity。
+
+下一轮分工：柳冠一/古月方源攻击 evaluator semantics 与 source binding；
+狂蛮魔尊检查 `-1/20` margin 是否能与实际 runtime error budget 合并；
+苏梦辰/巨阳仙尊仅在数学 contract 固定后准备 pinned Lean adapter。所有
+agent 都不得修改 registry 或把该 witness 标成 VERIFIED。

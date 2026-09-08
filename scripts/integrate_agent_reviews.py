@@ -311,6 +311,9 @@ TASK_TARGETS = {
     "GH-ACTIVE-V-CERTIFICATE-INDEXED-INITIAL-BINDING": (
         "P4.true_dh_port_source_binding",
         "pending_certificate_indexed_initial_binding"),
+    "GH-MATH-P4-CERTIFICATE-INDEXED-INITIAL-WITNESS": (
+        "P4.true_dh_port_source_binding",
+        "pending_certificate_indexed_initial_witness"),
     "GH-MATH-P4-JOINT6-PHYSICAL-RECOVERY": (
         "P4.true_dh_port_source_binding",
         "pending_joint6_physical_recovery"),
