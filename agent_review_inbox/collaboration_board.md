@@ -3045,3 +3045,22 @@ OLean/axiom/comparator receipt 字段，但尚未执行，因此只进入 extern
 pending。O1 body-4 lane 的最新方向进一步收缩为 step-3 三行有限和与
 `F4=F3*T3` 的 exact source witness；现有 frame/Gram 候选仍无 inhabitant。全局
 `registry=0`、`formal_certificate_allowed=false`，本轮没有 GitHub push。
+
+### 梁智炜 · revision 812–813：O1 translation closure 与 active-V obstruction
+
+O1 finite-sum lane 已提交唯一候选：从同源 exact source 定义归约
+`T3[:,3]=(0,0,19/100,1)`，显式展开 `F4=F3*T3` 的四项有限和，并得到原
+`Body4Slot4TranslationTarget` 的 candidate。它可作为后续 `joint3_linear_of_translation`
+的输入，但尚未编译、无 axiom/Lean receipt，因此仍不能关闭 O1 source leaf。
+
+active-V function-envelope lane 则在固定 ideal-real `Vfull_DH`、同一 block-only
+`X0` 和 `r=3/20` 上给出 exact rational uniform obstruction：
+`32462895903/6400000000 > 492033745203/25600000000000`，严格差为
+`129359549866797/25600000000000`。这说明现有 raw candidate 与记录初始上界在
+整个 X0 上不相容；尚未证明 active runtime object 等于该 ideal expression，故只
+登记 pending obstruction，不改阈值、不选 V、不写 registry。
+
+joint6 physical recovery 同时冻结了 principal exact contract
+`A u+h v=p+z_B` 及完整 signed adjugate numerator；synthetic Fraction checks
+通过且负控拒绝，但没有 actual `ahat/z_B`、det lower、N bound 或 runtime receipt。
+revision=813 后仍为 `registry=0`、`formal_certificate_allowed=false`。

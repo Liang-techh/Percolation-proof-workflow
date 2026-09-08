@@ -3767,3 +3767,19 @@ O1 source finite-sum 三个方向。流川枫不再接收任何任务；空闲 l
 
 各 lane 只写自己的新 sidecar/review；没有 source inhabitant、同次 capture 或
 Lean receipt 时保持 pending。禁止全量回归、重复旧 rank/Young/omission 审计。
+
+## 2026-09-08 — post-revision-813 obstruction-aware follow-up
+
+本轮不再把 active-V 当作单纯缺 bound：固定 ideal raw `Vfull_DH` 已出现严格上界
+冲突，下一步必须确认 active runtime/source convention，或明确更换 candidate/threshold
+的授权边界。四个 lane 继续如下：
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-MATH-P4-ACTIVE-V-FUNCTION-ENVELOPE` | Godel the 6th | 对 obstruction 做 source convention 分叉：核对 Vfull/Vshift、cross-term/anchor 与消费者阈值是否同一 K；不重跑已确认的 rational envelope |
+| `GH-MATH-P4-JOINT6-PHYSICAL-RECOVERY` | James the 6th | 只寻找 actual `ahat/z_B` 或同域 det/N witness；若不存在提交字段级 obstruction，不再重复 synthetic self-test |
+| `GH-MATH-P4-O1-BODY4-FINITE-SUM-WITNESS` | Sartre the 6th | 将 finite-sum candidate 准备成 GitHub Lean compile handoff，记录 import/source/axiom receipt 字段；本机不编译 |
+| `GH-LEAN-FLT-QUOTIENT-CLM-COMPARATOR-HANDOFF` | Poincare the 6th | 完成 overlay job packet 与 source→candidate comparator mapping，交给 GitHub Lean 排班执行；pending 仍留在 external catalog |
+
+流川枫永久退役，不再向其派发或等待回执。禁止全量回归、改阈值捷径、用 synthetic
+point 替代 actual source，或把 exact candidate 直接写入 verified registry。

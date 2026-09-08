@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-JOINT6-PHYSICAL-RECOVERY-codex-20260908T112021.md",
+  "record_kind": "review_result",
+  "review_sha256": "3C1CCAD16B43A8CA5D2C5DBD1939121F2C0432F88462E758E565AAFB6C7EB402",
+  "task_id": "GH-MATH-P4-JOINT6-PHYSICAL-RECOVERY",
+  "source_agent": "codex-principal-physical-recovery-interface",
+  "created_at": "2026-09-08T11:20:21-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_joint6_physical_recovery",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-JOINT6-PHYSICAL-RECOVERY-codex-20260908T112021.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T17:23:44.177073+00:00"
+}
