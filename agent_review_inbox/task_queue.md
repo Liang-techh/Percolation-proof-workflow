@@ -187,6 +187,18 @@ Schur closure 的数学 sidecar 已收割为 pending；下一批只消费这一�
 带 candidate/source SHA、inspected commit、实际命令与 admission label；不得派给
 流川枫，不得直接写 registry。
 
+## 2026-09-08 — next local bottleneck batch after revision 780
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-MATH-P4-ADJUGATE-PROJECTION-PACKET` | 柳冠一 / local lane | signed projected-adjugate 与 descriptor/source witness；保留 cancellation |
+| `GH-MATH-P4-TARGET-CAPS` | 苏梦辰 / local math lane | target-domain inclusion 到 A/port cap；只交 exact witness 或 obstruction |
+| `GH-MATH-P4-SCHUR-BUDGET-CLOSURE` | 狂蛮魔尊 / local lane | 单次 debit、margin floor、`E_A` budget 与 actual residual 的闭合条件 |
+
+这些任务是流川枫遗留方向的现役接管，不重复已完成的 q6/body5 预审；结果必须
+通过 inbox envelope 收割，且保持 pending，不能绕过 source、coverage、Lean
+和 comparator gates。
+
 ### 2026-09-08 — generic Schur allocation follow-up
 
 本地数学推进新增任意有限维 Euclidean Schur allocation sidecar，用于统一

@@ -2706,3 +2706,10 @@ scalar graph、occurrence mapping、六次 source update、evaluator/lowering �
 loop-state invariant；当前 intake 仍为空，因此保持 `OPEN_H_ACC/pending`。
 本轮 revision 780、registry=0、`formal_certificate_allowed=false`；没有任何
 候选升级为 VERIFIED，也没有在非发布窗口同步 GitHub。
+
+### 梁智炜 · revision 780 后续派发
+
+上一批本地 lane 已完成并回收。当前继续由现役 agent 接管流川枫遗留方向：
+adjugate projection packet、真实 DH target caps、Schur budget closure。
+三条 lane 均只写新的 review envelope；没有新的 pinned Lean/kernel 证据前，
+不改变 registry、parent closure 或 formal gate。
