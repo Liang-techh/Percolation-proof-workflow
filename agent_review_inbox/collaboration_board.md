@@ -2823,3 +2823,25 @@ finite-matrix consumer，Godel 绑定或拒绝 active `V` 候选，James 处理�
 signed weighted constraints 与 joint-6 principal packet 的接线。它们分别消费
 现有 obstruction，不重复 domain、joint-threshold 或 Schur 标量推导；所有结果
 仍只进入 pending frontier。
+
+### 梁智炜 · revision 793–794：row recovery consumer 与 source rows 审计
+
+Poincare 的 `GH-LEAN-P4-ROWSPACE-MINIMAL-CONSUMER` 已作为新的 pending
+source-independent consumer 接入：固定 `L.comp Y=P`，显式传播观测误差，且不
+把 `|e|` 偷换成 `|Le|`。它没有物理 factorization 或 Lean receipt。
+
+Sartre 的 `GH-MATH-P4-ALL6-SOURCE-ROWS` 已以 companion log 收割。当前各类
+payload 都只暴露 rows 4/5；更重要的是 DH preconditioned builder 只加入本行
+controller 项，而完整 `X*tau` 应含远端六维项，故同名 bridge 与 preconditioned
+payload 不能直接拼接。rows 1/2/3/6、rows 4/5 的 actual valuation 以及
+Float64 solve defect 仍缺失。该结果是 source-binding obstruction，不是物理
+反例；P4/M4 gate 与 registry 均不变。
+
+### 梁智炜 · revision 792：weighted constraint packet 收割
+
+`GH-MATH-P4-JOINT6-WEIGHTED-CONSTRAINTS` 已整合。基于当前 X 的 rank defect=2，
+review 给出两条 signed measurements `w4/w5`、带 defect 的恢复式、保留 joint-6
+的 principal RHS，以及同一 metric 下的 signed numerator 接线。它明确指出
+`w4=w5=0` 仍需实际 source/configuration witness；定义 weighted rows 不能凭空
+生成 source equality，且 measurement mismatch 必须显式保留。P4/M4 继续
+fail-closed。

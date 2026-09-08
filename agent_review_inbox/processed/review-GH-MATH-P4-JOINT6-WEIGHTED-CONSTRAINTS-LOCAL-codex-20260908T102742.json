@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-JOINT6-WEIGHTED-CONSTRAINTS-LOCAL-codex-20260908T102742.md",
+  "record_kind": "review_result",
+  "review_sha256": "792C6CC3839A82AFC4F12ECF0D63E137567E4B464CD1B0762AE15C3696F22E42",
+  "task_id": "GH-MATH-P4-JOINT6-WEIGHTED-CONSTRAINTS",
+  "source_agent": "codex-joint6-weighted-source-lane",
+  "created_at": "2026-09-08T10:27:42-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_joint6_weighted_constraints",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-JOINT6-WEIGHTED-CONSTRAINTS-LOCAL-codex-20260908T102742.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T16:30:25.846971+00:00"
+}

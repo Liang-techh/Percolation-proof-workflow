@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/companion-GH-MATH-P4-ALL6-SOURCE-ROWS-20260908.md",
+  "record_kind": "companion_log",
+  "review_sha256": "F42314A9756CB2C4DB06790A093548909AA8FCBDE2EF5C5B1518EAEC6D41DFB5",
+  "task_id": "GH-MATH-P4-ALL6-SOURCE-ROWS",
+  "source_agent": "Sartre the 6th",
+  "created_at": "2026-09-08",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_all6_source_rows",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "353e03fb9574812e9f02754b3fc7ff7462c0892a",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T16:31:57.413975+00:00"
+}

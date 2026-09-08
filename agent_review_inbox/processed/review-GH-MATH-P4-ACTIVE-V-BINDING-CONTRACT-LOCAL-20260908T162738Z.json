@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-BINDING-CONTRACT-LOCAL-20260908T162738Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "961D1D4EBC47F8F7C6A7A6C28A6050FE7748CF7FC2F30BB74193D25C081A6B49",
+  "task_id": "GH-MATH-P4-ACTIVE-V-BINDING-CONTRACT",
+  "source_agent": "codex-active-v-binding-contract",
+  "created_at": "2026-09-08T16:27:38Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_active_v_binding_contract",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-BINDING-CONTRACT-LOCAL-20260908T162738Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T16:29:50.738999+00:00"
+}
