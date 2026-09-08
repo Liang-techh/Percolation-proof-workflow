@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-SOURCE-BINDING-LOCAL-20260908T093715.md",
+  "record_kind": "review_result",
+  "review_sha256": "64844EBC45C1AB45BDD8A7D45BDB8661801AAC176505887AEE76172E54762241",
+  "task_id": "GH-MATH-P4-SCHUR-SOURCE-BINDING",
+  "source_agent": "Codex-independent-schur-source-lane",
+  "created_at": "2026-09-08T09:37:15-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_schur_source_binding",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "5ce2f4582bca68ceac53dff49627e00c22f7e31d",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-SOURCE-BINDING-LOCAL-20260908T093715.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T15:40:10.896685+00:00"
+}
