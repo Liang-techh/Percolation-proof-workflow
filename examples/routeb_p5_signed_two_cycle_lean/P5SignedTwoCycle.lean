@@ -141,7 +141,7 @@ theorem negative_feedback_scalar_budget
         |xi - xi'| + |phi x' - phi' x'| := by
     rw [hrewrite]
     exact abs_add_le _ _
-  exact hco.trans (htri.trans (add_le_add_left hR _))
+  exact hco.trans (htri.trans (add_le_add_right hR _))
 
 /-- Nested root-map variation produces the numerator from T-P5-071 without division. -/
 theorem nested_variation_budget
