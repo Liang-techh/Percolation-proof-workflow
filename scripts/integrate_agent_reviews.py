@@ -422,6 +422,9 @@ TASK_TARGETS = {
     "P5-EXACT-RATIONAL-PSD-SCHEMA-ADDITIVE-HCAP": (
         "P5.componentwise_relative_decay",
         "pending_exact_rational_psd_schema_additive_hcap"),
+    "P5-K7-REAL-BLOCK456-INSTANTIATION": (
+        "P4.true_dh_port_source_binding",
+        "pending_k7_real_block456_instantiation"),
     # External FLT scans are deliberately event-only: they are advisory
     # catalog evidence, not Route-B theorem nodes or registry entries.
     "T-FLT-DERIV-CALC": (None, "flt_derivation_calculus_scan"),

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 860,
+  "revision": 861,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -17073,6 +17073,21 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-P4-EVALV-MINIMAL-EPSILON-RECEIPT-20260908T192513Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/NEW_REVIEW_P5_K7_REAL_BLOCK456_INSTANTIATION_20260908.md",
+            "record_kind": "review_result",
+            "review_sha256": "962A2A711342A93F716578D625EA022AE8CF1E5A8F0314C8BE8B4AFD21B768A1",
+            "task_id": "P5-K7-REAL-BLOCK456-INSTANTIATION",
+            "source_agent": "Sartre",
+            "created_at": "unknown",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_k7_real_block456_instantiation",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/NEW_REVIEW_P5_K7_REAL_BLOCK456_INSTANTIATION_20260908.md",
             "admission_label": "pending"
           }
         ]
@@ -81429,6 +81444,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383"
+    },
+    {
+      "at": "2026-09-08T19:45:47.341327+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/NEW_REVIEW_P5_K7_REAL_BLOCK456_INSTANTIATION_20260908.md",
+      "record_kind": "review_result",
+      "review_sha256": "962A2A711342A93F716578D625EA022AE8CF1E5A8F0314C8BE8B4AFD21B768A1",
+      "task_id": "P5-K7-REAL-BLOCK456-INSTANTIATION",
+      "classification": "pending_k7_real_block456_instantiation",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -85085,5 +85113,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "be9477797ca2a5d951831515ef58b9e21e2d8e07bdd360f945c50e0a9eba5161"
+  "state_checksum": "0ec960cf7891bc9ce0f1335893f48a938da384422ed942d21bfda274a061f4b8"
 }

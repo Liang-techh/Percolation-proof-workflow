@@ -3480,3 +3480,12 @@ PSD factors，并重新读取 UpdatedToySPN 做 targeted geometry/legacy 检查�
 得到 `t_cap=32553/4000000`、`t=1/1000`；这使 PSD-slack 的非零增量成为可复核
 的 toy witness，而不再只是 schema。它仍不绑定真实 DH `K_path`、source/domain、
 Lean kernel 或 consumer，故 P5、registry、formal gate 均不变。
+
+### 梁智炜 · revision 861：real block456 K7 instantiation
+
+Sartre 将真实 descriptor 语义接入 K7 设计：明确 `rC=MCD*vD` 是
+nominal-subtracted remote difference，不能误设为完整 graph 的 `alpha_D`。提供
+direct-port 与保留旧 residual 的 adjugate-cleared 两条路线；后者用
+`delta=det(MDD)`、`J=adj(MDD)` 构造 scaled port，且保留 remote forcing 常数项。
+这修正了关键变量语义，但 actual source equality、同 cell 可逆性、`Q/Delta/K` PSD、
+metric/allocation/coverage 仍缺失，故 P4/P5、registry 与 formal gate 不变。

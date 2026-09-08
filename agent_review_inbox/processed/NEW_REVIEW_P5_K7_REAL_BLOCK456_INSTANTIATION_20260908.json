@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/NEW_REVIEW_P5_K7_REAL_BLOCK456_INSTANTIATION_20260908.md",
+  "record_kind": "review_result",
+  "review_sha256": "962A2A711342A93F716578D625EA022AE8CF1E5A8F0314C8BE8B4AFD21B768A1",
+  "task_id": "P5-K7-REAL-BLOCK456-INSTANTIATION",
+  "source_agent": "Sartre",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_k7_real_block456_instantiation",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/NEW_REVIEW_P5_K7_REAL_BLOCK456_INSTANTIATION_20260908.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T19:45:47.341327+00:00"
+}

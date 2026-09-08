@@ -4197,3 +4197,11 @@ actual `K_path`/source packet，不能复用 toy 的 `G/Q/L/μ` 数值。
 
 主线程继续按 immutable review_result 收割；本机不运行整仓 Lean，GitHub Lean lane
 负责 pinned standalone/import/axiom/comparator receipts。
+
+## 2026-09-08 — revision 861 real block456 K7 instantiation
+
+`P5-K7-REAL-BLOCK456-INSTANTIATION` 已收割。下一步必须先选择 direct-port 或
+adjugate-cleared nominal-subtracted route，并提交 `MDD/MDC/MCD/M0DC/RD` 的 source
+identity、`det/adjugate` 与 scaled-port 证明；不得把 `vD` 重命名为 graph `alpha_D`，
+也不得在新增三个 `eta` 未处理时继续声称是 7×7。真实 `Q/Delta/K`、metric、allocation
+和 coverage 仍是独立 frontier。
