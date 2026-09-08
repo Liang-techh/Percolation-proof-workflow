@@ -59,10 +59,11 @@ for theorem in \
   balanced_odd_pointwise_square_constant \
   balanced_odd_centered_signed_jump \
   balanced_odd_square_variation_zero; do
-  grep -F "'RouteBP5SquareOnlyRadical.$theorem' depends on axioms:" "$OUT" >/dev/null || {
+  if ! grep -F "'RouteBP5SquareOnlyRadical.$theorem' depends on axioms:" "$OUT" >/dev/null && \
+     ! grep -F "'RouteBP5SquareOnlyRadical.$theorem' does not depend on any axioms" "$OUT" >/dev/null; then
     echo "missing axiom report for $theorem" >&2
     exit 3
-  }
+  fi
 done
 
 if grep -F "sorryAx" "$OUT" >/dev/null; then
