@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 778,
+  "revision": 779,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -39124,7 +39124,23 @@
         "formal_certificate_allowed": false,
         "proof_proven": false,
         "source_binding_proven": false,
-        "lean_compiled": false
+        "lean_compiled": false,
+        "agent_review_refs": [
+          {
+            "record_file": "agent_review_inbox/companion-GH-LEAN-BODY5-API-REPAIR-LOCAL-20260908.md",
+            "record_kind": "companion_log",
+            "review_sha256": "934503BE862C94DC61D98B4670F75C1D0887EC267F9E4086982372B56583E2B2",
+            "task_id": "GH-LEAN-BODY5-API-REPAIR-LOCAL",
+            "source_agent": "codex-body5-api-repair-local",
+            "created_at": "2026-09-08",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_body5_api_repair_receipt",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "admission_label": "pending"
+          }
+        ]
       }
     },
     "1ea06cbee9b54297913156cfb0b201ce": {
@@ -39449,7 +39465,24 @@
         "formal_certificate_allowed": false,
         "proof_proven": false,
         "source_binding_proven": false,
-        "lean_compiled": false
+        "lean_compiled": false,
+        "agent_review_refs": [
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-H-ACC-SOURCE-SEAM-LOCAL-20260908T154128Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "DA43CBC8149DCD55504080D18994341026B9AF074F4656316A4634F2CC6AACC6",
+            "task_id": "GH-MATH-P4-H-ACC-SOURCE-SEAM-LOCAL",
+            "source_agent": "codex-h-acc-source-seam",
+            "created_at": "2026-09-08T15:41:28Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_h_acc_source_semantic_seam",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-H-ACC-SOURCE-SEAM-LOCAL-20260908T154128Z.md",
+            "admission_label": "pending"
+          }
+        ]
       }
     },
     "1e3f28c782d9485bb94b0bb1e3ae0383": {
@@ -77588,6 +77621,32 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "1e7b1df1835f4deba06b11a8182f6719"
+    },
+    {
+      "at": "2026-09-08T15:43:19.318721+00:00",
+      "kind": "agent_companion_integrated",
+      "record_file": "agent_review_inbox/companion-GH-LEAN-BODY5-API-REPAIR-LOCAL-20260908.md",
+      "record_kind": "companion_log",
+      "review_sha256": "934503BE862C94DC61D98B4670F75C1D0887EC267F9E4086982372B56583E2B2",
+      "task_id": "GH-LEAN-BODY5-API-REPAIR-LOCAL",
+      "classification": "pending_body5_api_repair_receipt",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "f69865077c2e49e1aab82a291233f0e9"
+    },
+    {
+      "at": "2026-09-08T15:43:19.319174+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-H-ACC-SOURCE-SEAM-LOCAL-20260908T154128Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "DA43CBC8149DCD55504080D18994341026B9AF074F4656316A4634F2CC6AACC6",
+      "task_id": "GH-MATH-P4-H-ACC-SOURCE-SEAM-LOCAL",
+      "classification": "pending_h_acc_source_semantic_seam",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1a908d878a3c45448eb039f9c1af37bb"
     }
   ],
   "agent_requests": {},
@@ -81244,5 +81303,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "6ada44d742388516bcac73ea64c4081ed4bf3f76e8c2ea0e4964d30b94febc68"
+  "state_checksum": "db71b44ef329143f8e32d5ee439a2e19fa2926b048337221eac831938af86a21"
 }
