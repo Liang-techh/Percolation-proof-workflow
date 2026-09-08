@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-CORRECTED-ACTUAL-ROWS-LOCAL-codex-20260908T104515.md",
+  "record_kind": "review_result",
+  "review_sha256": "671076DF787D72B460DCB6D154E46238CD6B0BE1EA638AC592FB34DCBC170007",
+  "task_id": "GH-MATH-P4-CORRECTED-ACTUAL-ROWS",
+  "source_agent": "codex-corrected-actual-rows-lane",
+  "created_at": "2026-09-08T10:45:15-06:00",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_corrected_actual_rows",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-CORRECTED-ACTUAL-ROWS-LOCAL-codex-20260908T104515.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T16:49:44.873853+00:00"
+}

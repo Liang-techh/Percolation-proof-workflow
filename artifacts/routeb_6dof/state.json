@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 798,
+  "revision": 801,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -15876,6 +15876,50 @@
             "target_scope": "routeb_node",
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-GH-MATH-P4-SOURCE-ROWS-WEIGHTED-PACKET-LOCAL-codex-20260908T103648.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/companion-GH-MATH-P4-CORRECTED-BUILDER-SPEC-20260908.md",
+            "record_kind": "companion_log",
+            "review_sha256": "69922AE831810FCF92ED5E36381C56B7746252008383B35CBB7B72B68347C09B",
+            "task_id": "GH-MATH-P4-CORRECTED-BUILDER-SPEC",
+            "source_agent": "Sartre the 6th",
+            "created_at": "2026-09-08",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_corrected_builder_spec",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "b1195fdbec00c647c3e19adecfc6acc672871ca0",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-VFULL-DH-ANCHOR-LOCAL-20260908T164337Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "5A5248A084FBAC05EAFFEFF9D6105E0234CAAEEBA9F4F8B061104D51AC3FF3CF",
+            "task_id": "GH-MATH-P4-VFULL-DH-ANCHOR",
+            "source_agent": "codex-vfull-anchor-source-lane",
+            "created_at": "2026-09-08T16:43:37Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_vfull_dh_value_anchor",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-VFULL-DH-ANCHOR-LOCAL-20260908T164337Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-GH-MATH-P4-CORRECTED-ACTUAL-ROWS-LOCAL-codex-20260908T104515.md",
+            "record_kind": "review_result",
+            "review_sha256": "671076DF787D72B460DCB6D154E46238CD6B0BE1EA638AC592FB34DCBC170007",
+            "task_id": "GH-MATH-P4-CORRECTED-ACTUAL-ROWS",
+            "source_agent": "codex-corrected-actual-rows-lane",
+            "created_at": "2026-09-08T10:45:15-06:00",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_corrected_actual_rows",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown",
+            "review_file": "agent_review_inbox/review-GH-MATH-P4-CORRECTED-ACTUAL-ROWS-LOCAL-codex-20260908T104515.md",
             "admission_label": "pending"
           }
         ]
@@ -78357,6 +78401,59 @@
       "formal_certificate_allowed": false,
       "artifact_binding_status": "BOUND",
       "catalog": "anthropic-fermats-last-theorem"
+    },
+    {
+      "at": "2026-09-08T16:45:17.785120+00:00",
+      "kind": "agent_companion_integrated",
+      "record_file": "agent_review_inbox/companion-GH-MATH-P4-CORRECTED-BUILDER-SPEC-20260908.md",
+      "record_kind": "companion_log",
+      "review_sha256": "69922AE831810FCF92ED5E36381C56B7746252008383B35CBB7B72B68347C09B",
+      "task_id": "GH-MATH-P4-CORRECTED-BUILDER-SPEC",
+      "classification": "pending_corrected_builder_spec",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T16:45:17.785670+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-VFULL-DH-ANCHOR-LOCAL-20260908T164337Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "5A5248A084FBAC05EAFFEFF9D6105E0234CAAEEBA9F4F8B061104D51AC3FF3CF",
+      "task_id": "GH-MATH-P4-VFULL-DH-ANCHOR",
+      "classification": "pending_vfull_dh_value_anchor",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-08T16:46:48.274488+00:00",
+      "kind": "external_reuse_agent_companion_integrated",
+      "record_file": "agent_review_inbox/companion-GH-LEAN-FLT-QUOTIENT-CLM-API-REPAIR-20260908.md",
+      "record_kind": "companion_log",
+      "review_sha256": "6A7BB4F3DB1C14EE46BF575A40AEADC8655EAF6D9374F19187E244817987B1A4",
+      "task_id": "GH-LEAN-FLT-QUOTIENT-CLM-API-REPAIR",
+      "classification": "flt_quotient_clm_api_repair",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "artifact_binding_status": "BOUND",
+      "catalog": "anthropic-fermats-last-theorem"
+    },
+    {
+      "at": "2026-09-08T16:49:44.873853+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-GH-MATH-P4-CORRECTED-ACTUAL-ROWS-LOCAL-codex-20260908T104515.md",
+      "record_kind": "review_result",
+      "review_sha256": "671076DF787D72B460DCB6D154E46238CD6B0BE1EA638AC592FB34DCBC170007",
+      "task_id": "GH-MATH-P4-CORRECTED-ACTUAL-ROWS",
+      "classification": "pending_corrected_actual_rows",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -82013,5 +82110,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "9094cd96f2f22ce455d6a21e7f2ee6d07d0274b98d049226bed5e679a2aeee5a"
+  "state_checksum": "6e32dd8faec50e3cf6c4dd486dfd951aab1af3e9bd6abff9ccc064702d9ff558"
 }

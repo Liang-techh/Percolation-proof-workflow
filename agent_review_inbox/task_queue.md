@@ -3600,3 +3600,19 @@ sidecar，也只进入 external catalog/pending，不进入 Route-B verified reg
 所有结果必须使用新的 immutable review envelope；即使 Lean 候选编译成功，
 也只登记 compiled candidate/pending，不改变 source admission、registry 或
 formal gate。不得重新搜索 domain、运行全回归或静默修正 controller mismatch。
+
+## 2026-09-08 — post-revision-801 Flowchuanfeng replacement math batch
+
+流川枫已永久退出现役队列；其三条独立数学方向本轮重新分配给现有 agent，
+并新增一条 actual-source 瓶颈 lane。每条只提交 immutable review/隔离 sidecar，
+不直接改 state 或 registry：
+
+| task | owner | bounded deliverable |
+|---|---|---|
+| `GH-MIXED-schur-absorption-reassigned` | Sartre the 6th | actual residual/metric 同源的 Schur-PMI absorption 条件，或严格 conditional obstruction |
+| `GH-MIXED-BODY6-PATH-REASSIGNED` | Poincare the 6th | BODY6 canonical path/domain projection 的 typed source/path witness 或最小缺口 |
+| `GH-MIXED-ADJUGATE-REASSIGNED` | Godel the 6th | principal restriction/Joint-6 elimination 的 adjugate、det、numerator 与 physical-row 接线或 obstruction |
+| `GH-MATH-P4-ACTUAL-THREE-ROW-WITNESS` | James the 6th | 同配置下 actual rows 4/5/6、signed constraints 与 solve/assembly defect 的 source witness 或 obstruction |
+
+本批优先攻数学瓶颈，不做重复审计或全项目回归；没有同源 source、domain、
+configuration 和运行证据时必须保持 pending，Lean/registry gate 不变。

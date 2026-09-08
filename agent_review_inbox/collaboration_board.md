@@ -2891,3 +2891,30 @@ Anthropic/Imperial FLT quotient continuous-linear-equivalence 定义保留其
 typeclass、有限性和 Apache provenance，但现有 sidecar 有 undeclared-parameter
 风险，smoke 的 relative path dependency 也未形成可移植 pin。本轮没有 Lean
 编译或 registry promotion；Route-B gate 保持关闭。
+
+### 梁智炜 · revision 799–800：corrected builder 与 FLT API repair
+
+`GH-MATH-P4-CORRECTED-BUILDER-SPEC` 已收割为 pending companion。它冻结了
+v2 producer/checker/payload 的完整 signed controller map、one-based key、
+source/config/domain/X hashes 与旧 v1 的 semantic rejection 规则；未修改外部
+项目，不能继承旧 receipt。
+
+`GH-MATH-P4-VFULL-DH-ANCHOR` 找到 raw `Vfull_DH(0)=Ugrav_DH(0)` 及 block-only
+初始集上的 symbolic restriction，但仍缺函数值级 uniform initial envelope。
+`GH-LEAN-FLT-QUOTIENT-CLM-API-REPAIR` 新增显式 binders 的 quotient-only
+candidate，修复旧 undeclared-parameter 风险；它尚未编译，保留 Imperial/Anthropic
+provenance，只进入 external catalog pending。P4/M4 gate 与 registry 不变。
+
+### 梁智炜 · revision 801：actual-row obstruction 与 Flowchuanfeng replacement
+
+`GH-MATH-P4-CORRECTED-ACTUAL-ROWS` 已整合。修正版 centered controller 恒等式
+仍不是 actual acceleration substitution；physical lift、analytic/FD/runtime 三种
+目标没有同一配置下的 residual 绑定，旧 interval cap 也不能反推出 runtime equation。
+即使测量 rows4/5 已知，当前 rank-defect=2 仍要求完整 balance 或两条同源 signed
+weighted constraints 才能恢复 physical rows4/5。结论是缺 witness 的 pending，
+不是物理反例；registry=0，formal certificate 继续关闭。
+
+流川枫已永久退出现役，本轮将其三条方向重新交给 Sartre、Poincare、Godel，
+James 负责 actual three-row witness。任务分别为 Schur-PMI actual absorption、
+BODY6 canonical path、adjugate/principal-vs-joint6 接线、以及 rows4/5/6 与
+solve defect 的同源证据；不重复旧审计，不修改历史 provenance。

@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/companion-GH-MATH-P4-CORRECTED-BUILDER-SPEC-20260908.md",
+  "record_kind": "companion_log",
+  "review_sha256": "69922AE831810FCF92ED5E36381C56B7746252008383B35CBB7B72B68347C09B",
+  "task_id": "GH-MATH-P4-CORRECTED-BUILDER-SPEC",
+  "source_agent": "Sartre the 6th",
+  "created_at": "2026-09-08",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_corrected_builder_spec",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "b1195fdbec00c647c3e19adecfc6acc672871ca0",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T16:45:17.785120+00:00"
+}

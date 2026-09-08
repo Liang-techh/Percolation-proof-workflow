@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-VFULL-DH-ANCHOR-LOCAL-20260908T164337Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "5A5248A084FBAC05EAFFEFF9D6105E0234CAAEEBA9F4F8B061104D51AC3FF3CF",
+  "task_id": "GH-MATH-P4-VFULL-DH-ANCHOR",
+  "source_agent": "codex-vfull-anchor-source-lane",
+  "created_at": "2026-09-08T16:43:37Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_vfull_dh_value_anchor",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-VFULL-DH-ANCHOR-LOCAL-20260908T164337Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-08T16:45:17.785670+00:00"
+}
