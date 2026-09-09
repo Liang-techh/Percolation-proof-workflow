@@ -4,7 +4,9 @@ task_id: T-P5-145-CANONICAL-RANGE-DUAL-DESCENT
 source_agent: 柳冠一
 claimed_at: 2026-09-09T10:06:00Z
 inspected_commit: 39889bbfd45bbc9bd541a7a8c51f0005a60b0881
-status: claimed
+status: completed
+review_commit: d5adca58a70ff24d658275d6cbd3c5f0d9e261c3
+companion_commit: 7c72fab684d79636aca343c6a77997e603d2bf10
 ---
 
 # Claim — T-P5-145 canonical range-dual descent bridge
