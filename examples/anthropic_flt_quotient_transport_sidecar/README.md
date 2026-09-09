@@ -30,9 +30,24 @@ Lean `4.33.1`, with Mathlib revision
 `db584cd6d46c92f209a44c0f1c829460d327499d` recorded in that repository's
 `lake-manifest.json`.
 
-Portable CI deliberately replays this probe from the pinned Anthropic FLT
-project root, not from a raw checkout of the Mathlib dependency.  This matters
-because the FLT project pins Lean `4.33.1` while that Mathlib revision's own
-standalone `lean-toolchain` file says Lean `4.33.0`; the FLT project manifest is
-the authoritative environment for this imported candidate.  `verify.sh` checks
-the FLT commit, toolchain, and recorded Mathlib revision before compiling.
+The upstream FLT README explicitly states that its Lean `4.33.1` build has no
+matching prebuilt Mathlib cache and that Mathlib is compiled from source.  That
+full replay requires resources far beyond this repository's portable GitHub
+sidecar lane, so CI must not pretend that `lake exe cache get` at the FLT root
+is a valid bootstrap.
+
+Portable CI therefore separates **source provenance** from **compatibility
+compilation**.  It checks out the exact FLT commit and verifies its Lean
+`4.33.1` toolchain plus pinned Mathlib revision, then independently checks out
+that exact Mathlib revision and compiles this extracted API using the Mathlib
+revision's own Lean `4.33.0` toolchain and official cache.  `verify.sh` requires
+both `SOURCE_ROOT` (the pinned FLT checkout) and `LAKE_ROOT` (the pinned Mathlib
+checkout), preserves placeholder and `#print axioms` gates, and prints the two
+toolchains separately.
+
+A green portable compile is therefore only a **Mathlib-4.33.0 compatibility
+receipt for the extracted theorem statements**, not an exact replay of the
+upstream FLT Lean-4.33.1 source-built environment and not a registry admission.
+Any claim that specifically depends on the Lean-4.33.1 replay still requires a
+separate appropriately resourced source build or equivalent independent
+receipt.
