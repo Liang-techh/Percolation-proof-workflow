@@ -5,13 +5,13 @@ agent: 柳冠一
 source_agent: 柳冠一
 claimed_at: '2026-09-09T22:58:00Z'
 lease_expires_at: '2026-09-09T23:58:00Z'
-completed_at: null
+completed_at: '2026-09-09T23:03:00Z'
 unique_valid_claim: true
 replacement_for: none
 derived_from: '[T-P5-190-FINITE-DOMAIN-TANGENT-LP-DERIVATIVE, T-P5-191-METZLER-LIFT-FINITE-CONE-VIABILITY, T-P5-192-CONE-SELECTOR-LYAPUNOV-MARGIN]'
-status: claimed
-result_path: null
-result_commit: null
+status: completed
+result_path: agent_review_inbox/review-T-P5-193-AFFINE-BOX-DEFECT-BRIDGE-liuguanyi-20260909T2301Z.md
+result_commit: d412e3deb9d63b72685ccf3ac202665863b5525d
 companion_path: null
 companion_commit: null
 ---
@@ -24,4 +24,4 @@ Close one narrow source-to-math seam left after T-P5-191/192. Assume the externa
 Do not redo T-P5-191's affine Metzler theorem, T-P5-192's selector/KKT fan, the fixed copositivity checker, source provenance/admission, Lean compilation, or physical trajectory coverage. Preserve the distinction between an exact independent box differential inclusion and a merely outer box enclosure of a correlated source residual.
 
 ## Intended deliverable
-A minimal theorem package giving: (1) the exact identity `inf_{|rho|<=h} n·rho = -|n|·h`; (2) a robust cone-viability certificate `N A - |N| H = Lambda N`, `Lambda` Metzler, `N c >= |N| h0`; (3) an exact sign-sector formula for `sup rho^T G e`; (4) pullback of the resulting quadratic/linear robust Lyapunov gates to finite cone generators; and (5) exact counterexamples pinning the absolute-value and correlation boundaries.
+An exact finite-dimensional theorem package: the box support identity, the modified Metzler lift for robust finite-value-cone viability, the selector-gradient sign-fan reduction, finite generator pullback to copositivity and linear sign gates, the constant-defect origin obstruction, and exact counterexamples pinning absolute-value and correlation semantics.
