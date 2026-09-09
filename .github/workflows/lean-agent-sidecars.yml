@@ -36,6 +36,7 @@ jobs:
     env:
       ELAN_VERSION: v4.2.3
       ELAN_SHA256: df0b2b3a439961ffcbb3985214365ffe40f49bc871df04dff268c7d8e21ca8b2
+      FLT_REPO_SHA: aa2d8b34692b16c70f699536de0d8e75b9a3e9ef
       FLT_MATHLIB_SHA: db584cd6d46c92f209a44c0f1c829460d327499d
     steps:
       - name: Check out repository
@@ -54,16 +55,16 @@ jobs:
           path: upstream/formal-math
           persist-credentials: false
 
-      # The Anthropic FLT quotient transport probe is intentionally pinned to
-      # Lean 4.33.1 / Mathlib db584c..., not the Route-B local-FKG Lean 4.32.0
-      # environment. Keep that environment isolated rather than silently
-      # compiling the probe under the wrong toolchain.
-      - name: Check out pinned Mathlib for FLT quotient sidecar
+      # The Anthropic FLT quotient transport probe must be replayed from the
+      # upstream FLT project root.  That project pins Lean 4.33.1 while its
+      # Mathlib dependency commit's standalone lean-toolchain says 4.33.0, so a
+      # raw Mathlib checkout is not an equivalent build environment.
+      - name: Check out pinned Anthropic FLT environment
         uses: actions/checkout@v4
         with:
-          repository: leanprover-community/mathlib4
-          ref: db584cd6d46c92f209a44c0f1c829460d327499d
-          path: upstream/mathlib-flt-quotient
+          repository: anthropics/fermats-last-theorem
+          ref: aa2d8b34692b16c70f699536de0d8e75b9a3e9ef
+          path: upstream/anthropic-flt
           persist-credentials: false
 
       - name: Install checksum-verified Elan
@@ -87,12 +88,15 @@ jobs:
           lake update
           lake build
 
-      - name: Bootstrap pinned FLT Mathlib environment
+      - name: Bootstrap pinned Anthropic FLT Lake environment
         run: |
           set -euo pipefail
-          cd upstream/mathlib-flt-quotient
-          test "$(git rev-parse HEAD)" = "$FLT_MATHLIB_SHA"
-          echo "FLT_MATHLIB_TOOLCHAIN=$(cat lean-toolchain)"
+          cd upstream/anthropic-flt
+          test "$(git rev-parse HEAD)" = "$FLT_REPO_SHA"
+          test "$(tr -d '\r\n' < lean-toolchain)" = "leanprover/lean4:v4.33.1"
+          grep -F "\"rev\": \"$FLT_MATHLIB_SHA\"" lake-manifest.json >/dev/null
+          echo "FLT_TOOLCHAIN=$(cat lean-toolchain)"
+          echo "FLT_MATHLIB_SHA=$FLT_MATHLIB_SHA"
           lake --version
           lake exe cache get
 
@@ -106,7 +110,7 @@ jobs:
             if grep -q 'CI_PORTABLE=1' "$script"; then
               echo "::group::Running $script"
               if [[ "$script" == "examples/anthropic_flt_quotient_transport_sidecar/verify.sh" ]]; then
-                if LAKE_ROOT="$GITHUB_WORKSPACE/upstream/mathlib-flt-quotient" bash "$script"; then
+                if LAKE_ROOT="$GITHUB_WORKSPACE/upstream/anthropic-flt" bash "$script"; then
                   echo "SIDECAR_RESULT=PASS path=$script"
                 else
                   code=$?
@@ -144,9 +148,10 @@ jobs:
             echo "local_fkg toolchain: $(cat lean-toolchain)"
             echo "local_fkg lake: $(lake --version 2>&1 || true)"
             echo "local_fkg lean: $(lean --version 2>&1 || true)"
-            cd "$GITHUB_WORKSPACE/upstream/mathlib-flt-quotient"
-            echo "flt mathlib sha: $(git rev-parse HEAD 2>&1 || true)"
+            cd "$GITHUB_WORKSPACE/upstream/anthropic-flt"
+            echo "flt repo sha: $(git rev-parse HEAD 2>&1 || true)"
             echo "flt toolchain: $(cat lean-toolchain 2>&1 || true)"
+            echo "flt mathlib sha: $FLT_MATHLIB_SHA"
             echo "flt lake: $(lake --version 2>&1 || true)"
             echo "flt lean: $(lean --version 2>&1 || true)"
           } | tee "$RUNNER_TEMP/lean-agent-environment.txt"
