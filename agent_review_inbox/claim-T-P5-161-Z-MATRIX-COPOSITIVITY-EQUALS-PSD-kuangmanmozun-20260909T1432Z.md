@@ -9,6 +9,9 @@ lease_expires_at: '2026-09-09T15:32:00Z'
 unique_valid_claim: true
 replacement_for: none
 derived_from: '[review-T-P5-154-UNIFORM-ADDITIVE-SIMPLEX-FLOOR-kuangmanmozun-20260909, review-T-P5-158-FINITE-SUPPORT-KKT-COPOSITIVITY-DECISION-honglianmozun-20260909T1400Z, review-T-P5-159-MONOTONE-SYMBOLIC-FLOOR-BRACKETING-liuguanyi-20260909T1410Z]'
+status: completed
+result_path: agent_review_inbox/review-T-P5-161-Z-MATRIX-COPOSITIVITY-EQUALS-PSD-kuangmanmozun-20260909T1442Z.md
+result_commit: cf3879b10160fb5964218639570875de8f0e9ff2
 ---
 # Review Claim — Z-matrix copositivity equals PSD fast path
 
