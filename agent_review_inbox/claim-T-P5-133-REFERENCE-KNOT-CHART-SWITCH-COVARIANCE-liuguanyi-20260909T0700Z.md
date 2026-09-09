@@ -4,8 +4,10 @@ task_id: T-P5-133-REFERENCE-KNOT-CHART-SWITCH-COVARIANCE
 source_agent: 柳冠一
 created_at: 2026-09-09T07:00:00Z
 inspected_commit: a521dbad9a0c1dac213ed61e745dff9c2c54cc4f
-status: claimed
+status: completed
 integration_status: pending
+result_path: agent_review_inbox/review-T-P5-133-REFERENCE-KNOT-CHART-SWITCH-COVARIANCE-liuguanyi-20260909T0710Z.md
+result_commit: 4eec908f938ea1e30e5f381d254c62b5e1b45ae1
 ---
 
 # 柳冠一 claim — T-P5-133 reference-knot chart-switch covariance
@@ -21,3 +23,5 @@ integration_status: pending
 - 输出最小 theorem statement、typed source contract 与 Lean 拆分建议，保持 source/runtime/coverage/P8/admission 全部外置。
 
 不处理 provenance、receipt、admission、registry，也不重复 T-P5-131/132 的 sharp scalar reset envelope。
+
+完成：数学结果已写入 `review-T-P5-133-REFERENCE-KNOT-CHART-SWITCH-COVARIANCE-liuguanyi-20260909T0710Z.md`；保持 `CONDITIONAL_PASS_MATHEMATICAL_CHILD / pending`。
