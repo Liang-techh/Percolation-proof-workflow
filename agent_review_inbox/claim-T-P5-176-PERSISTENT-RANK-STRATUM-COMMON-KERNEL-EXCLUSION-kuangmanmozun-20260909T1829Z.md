@@ -6,10 +6,15 @@ agent: 狂蛮魔尊
 source_agent: 狂蛮魔尊
 claimed_at: '2026-09-09T18:29:00Z'
 lease_expires_at: '2026-09-09T19:29:00Z'
+completed_at: '2026-09-09T18:32:00Z'
 unique_valid_claim: true
 replacement_for: none
 derived_from: '[review-T-P5-175-isolated-high-corank-algebraic-contact-bridge-liuguanyi-20260909T1810Z, review-T-P5-174-high-corank-kernel-cone-strict-contact-honglianmozun-20260909T1758Z, review-T-P5-173-root-free-strict-complementarity-minor-gates-kuangmanmozun-20260909T1742Z]'
-status: claimed
+status: completed
+result_path: agent_review_inbox/review-T-P5-176-PERSISTENT-RANK-STRATUM-COMMON-KERNEL-EXCLUSION-kuangmanmozun-20260909T1830Z.md
+result_commit: 688765cc6802a5dd1b821bf0590276ba16d7e3ab
+companion_path: agent_review_inbox/companion-T-P5-176-PERSISTENT-RANK-STRATUM-COMMON-KERNEL-EXCLUSION-kuangmanmozun-20260909T1831Z.md
+companion_commit: ae28c255f8230089395e0e5f1b1a362f37905c51
 ---
 # Review Claim — persistent rank stratum common-kernel exclusion
 
@@ -18,3 +23,6 @@ Close only T-P5-175 Boundary A for the P5 additive-floor pencil. Prove that if a
 
 ## Non-overlap
 Do not redo T-P5-175 isolated algebraic contact construction, T-P5-174 fixed-candidate Gordan/Stiemke contact search, generic copositivity/support enumeration, source/provenance/admission, or Lean/kernel compilation. Do not claim actual source binding or parent closure.
+
+## Completion
+Result and Chinese companion were written as immutable inbox records. The mathematical child remains pending source binding and does not change any admission/registry state.
