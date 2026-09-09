@@ -9,6 +9,9 @@ lease_expires_at: '2026-09-09T16:19:00Z'
 unique_valid_claim: true
 replacement_for: none
 derived_from: '[review-T-P5-153-HOMOTHETIC-SIMPLEX-SLACK-COUPLING-guyuefangyuan-20260909T1228Z, review-T-P5-154-UNIFORM-ADDITIVE-SIMPLEX-FLOOR-kuangmanmozun-20260909T1237Z, review-T-P5-157-SINGLE-BAD-EDGE-SHARP-UNIFORM-FLOOR-guyuefangyuan-20260909T1337Z, review-T-P5-158-FINITE-SUPPORT-KKT-COPOSITIVITY-DECISION-honglianmozun-20260909T1357Z, review-T-P5-160-DEGENERATE-SUPPORT-KERNEL-BRANCH-guyuefangyuan-20260909T1432Z, review-T-P5-162-TANGENT-PD-AFFINE-SUPPORT-CONTINUATION-honglianmozun-20260909T1502Z]'
+status: completed
+result_path: agent_review_inbox/review-T-P5-164-NEGATIVE-STAR-EDGE-DECOMPOSITION-guyuefangyuan-20260909T1521Z.md
+result_commit: 492a93d2678a4b1d56dae8844299d32de37ab897
 ---
 # Review Claim — negative-star edge decomposition
 
