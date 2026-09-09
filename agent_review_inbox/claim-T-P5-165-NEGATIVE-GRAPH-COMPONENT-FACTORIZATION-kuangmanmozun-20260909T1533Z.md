@@ -9,6 +9,9 @@ lease_expires_at: '2026-09-09T16:33:00Z'
 unique_valid_claim: true
 replacement_for: none
 derived_from: '[review-T-P5-154-UNIFORM-ADDITIVE-SIMPLEX-FLOOR-kuangmanmozun-20260909T1233Z, review-T-P5-158-FINITE-SUPPORT-KKT-COPOSITIVITY-DECISION-honglianmozun-20260909T1357Z, review-T-P5-159-MONOTONE-SYMBOLIC-FLOOR-BRACKETING-liuguanyi-20260909T1405Z, review-T-P5-161-Z-MATRIX-COPOSITIVITY-EQUALS-PSD-kuangmanmozun-20260909T1437Z, review-T-P5-164-NEGATIVE-STAR-EDGE-DECOMPOSITION-guyuefangyuan-20260909T1521Z]'
+status: completed
+result_path: agent_review_inbox/review-T-P5-165-NEGATIVE-GRAPH-COMPONENT-FACTORIZATION-kuangmanmozun-20260909T1540Z.md
+result_commit: f1c26726dcc54201ced3886d51fe0d5f40102ad4
 ---
 # Review Claim — negative-graph component factorization
 
