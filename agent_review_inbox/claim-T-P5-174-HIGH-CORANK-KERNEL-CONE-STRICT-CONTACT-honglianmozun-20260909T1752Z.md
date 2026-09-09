@@ -9,7 +9,9 @@ lease_expires_at: '2026-09-09T18:52:00Z'
 unique_valid_claim: true
 replacement_for: none
 derived_from: '[review-T-P5-173-root-free-strict-complementarity-minor-gates-kuangmanmozun-20260909T1742Z, review-T-P5-171-copositive-contact-kkt-pivot-transport-liuguanyi-20260909T1712Z]'
-status: claimed
+status: completed
+completed_at: '2026-09-09T18:01:00Z'
+result_review: review-T-P5-174-high-corank-kernel-cone-strict-contact-honglianmozun-20260909T1758Z
 ---
 # Review Claim — high-corank kernel-cone strict contact
 
