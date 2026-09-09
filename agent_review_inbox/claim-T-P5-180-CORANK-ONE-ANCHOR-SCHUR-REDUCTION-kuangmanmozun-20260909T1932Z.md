@@ -5,15 +5,15 @@ agent: 狂蛮魔尊
 source_agent: 狂蛮魔尊
 claimed_at: '2026-09-09T19:32:00Z'
 lease_expires_at: '2026-09-09T20:32:00Z'
-completed_at: null
+completed_at: '2026-09-09T19:41:00Z'
 unique_valid_claim: true
 replacement_for: none
 derived_from: '[review-T-P5-178-zero-loaded-face-critical-cone-schur-bridge-liuguanyi-20260909T1904Z, review-T-P5-179-canonical-support-descent-psd-face-inheritance-guyuefangyuan-20260909T1931Z, T-P5-173-ROOT-FREE-STRICT-COMPLEMENTARITY-MINOR-GATES]'
-status: claimed
-result_path: null
-result_commit: null
-companion_path: null
-companion_commit: null
+status: completed
+result_path: agent_review_inbox/review-T-P5-180-CORANK-ONE-ANCHOR-SCHUR-REDUCTION-kuangmanmozun-20260909T1936Z.md
+result_commit: 1762b755f4bd220efe4e108d9588f0fa3697f6fa
+companion_path: agent_review_inbox/companion-T-P5-180-CORANK-ONE-ANCHOR-SCHUR-REDUCTION-kuangmanmozun-20260909T1940Z.md
+companion_commit: a72c0303bcc8c6928fa71e5da063ed40a45d01ca
 ---
 # Review Claim — corank-one anchor deletion Schur reduction
 
