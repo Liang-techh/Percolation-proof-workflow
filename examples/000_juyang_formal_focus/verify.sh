@@ -11,5 +11,6 @@ bash "$ROOT/../routeb_p5_sharp_reference_jump_lean/verify.sh"
 bash "$ROOT/../routeb_p5_initial_reference_bridge_lean/verify.sh"
 bash "$ROOT/../routeb_p5_invariant_path_sheet_lean/verify.sh"
 bash "$ROOT/../routeb_p5_target_domain_obstruction_lean/verify.sh"
+bash "$ROOT/../routeb_p5_center_bias_mixed_small_gain_lean/verify.sh"
 
 echo "JUYANG_OWNED_FOCUSED_CHECK=PASS"
