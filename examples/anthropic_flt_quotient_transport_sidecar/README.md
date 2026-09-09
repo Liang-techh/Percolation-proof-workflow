@@ -25,7 +25,14 @@ and kernel/admission gates remain separate.
 
 Provenance: Anthropic FLT repository commit
 `aa2d8b34692b16c70f699536de0d8e75b9a3e9ef`, source
-`Definitions/Def_Mathlib_Topology_Algebra_Module_Quotient.lean:5-37`, Lean
-`4.33.1`, Mathlib revision
-`db584cd6d46c92f209a44c0f1c829460d327499d`.  The upstream staging and Apache
-attribution boundaries are recorded in the repository's FLT intake reports.
+`Definitions/Def_Mathlib_Topology_Algebra_Module_Quotient.lean:5-37`, upstream
+Lean `4.33.1`, with Mathlib revision
+`db584cd6d46c92f209a44c0f1c829460d327499d` recorded in that repository's
+`lake-manifest.json`.
+
+Portable CI deliberately replays this probe from the pinned Anthropic FLT
+project root, not from a raw checkout of the Mathlib dependency.  This matters
+because the FLT project pins Lean `4.33.1` while that Mathlib revision's own
+standalone `lean-toolchain` file says Lean `4.33.0`; the FLT project manifest is
+the authoritative environment for this imported candidate.  `verify.sh` checks
+the FLT commit, toolchain, and recorded Mathlib revision before compiling.
