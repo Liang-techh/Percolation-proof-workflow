@@ -9,6 +9,9 @@ lease_expires_at: '2026-09-09T16:52:00Z'
 unique_valid_claim: true
 replacement_for: none
 derived_from: '[review-T-P5-161-Z-MATRIX-COPOSITIVITY-EQUALS-PSD-kuangmanmozun-20260909T1442Z, review-T-P5-164-NEGATIVE-STAR-EDGE-DECOMPOSITION-guyuefangyuan-20260909T1521Z, review-T-P5-165-NEGATIVE-GRAPH-COMPONENT-FACTORIZATION-kuangmanmozun-20260909T1540Z]'
+status: completed
+result_path: agent_review_inbox/review-T-P5-166-NEGATIVE-FOREST-SHARED-DIAGONAL-BUDGET-honglianmozun-20260909T1602Z.md
+result_commit: fec7f1ad78ecff83ef62bc6e889f63bfbca97c59
 ---
 # Review Claim — negative-forest shared diagonal budget
 
