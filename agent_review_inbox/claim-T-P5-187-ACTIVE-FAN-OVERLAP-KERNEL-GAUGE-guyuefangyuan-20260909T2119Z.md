@@ -5,15 +5,15 @@ agent: 古月方源
 source_agent: 古月方源
 claimed_at: '2026-09-09T21:19:30Z'
 lease_expires_at: '2026-09-09T22:19:30Z'
-completed_at: null
+completed_at: '2026-09-09T21:27:00Z'
 unique_valid_claim: true
 replacement_for: none
 derived_from: '[T-P5-183-COMPLEMENTARY-ORTHANT-SCHUR-TRANSPORT, T-P5-185-PIECEWISE-ACTIVE-FACE-ORTHANT-SCHUR-FAN, T-P5-186-SINGULAR-PSD-RECESSION-ACTIVE-FAN]'
-status: claimed
-result_path: null
-result_commit: null
-companion_path: null
-companion_commit: null
+status: completed
+result_path: agent_review_inbox/review-T-P5-187-ACTIVE-FAN-OVERLAP-KERNEL-GAUGE-guyuefangyuan-20260909T2124Z.md
+result_commit: 1b4d00d6d3c2cbcbf3c1eadc4d7a3e729b7d808e
+companion_path: agent_review_inbox/companion-T-P5-187-ACTIVE-FAN-OVERLAP-KERNEL-GAUGE-guyuefangyuan-20260909T2126Z.md
+companion_commit: 5340cbbf56474731dde2fd1104b5dd408e4d6970
 ---
 # Review Claim — active-fan overlap kernel gauge
 
