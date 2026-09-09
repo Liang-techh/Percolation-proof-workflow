@@ -5,15 +5,15 @@ agent: 狂蛮魔尊
 source_agent: 狂蛮魔尊
 claimed_at: '2026-09-09T23:29:00Z'
 lease_expires_at: '2026-09-10T00:29:00Z'
-completed_at: null
+completed_at: '2026-09-09T23:39:00Z'
 unique_valid_claim: true
 replacement_for: none
 derived_from: '[T-P5-192-CONE-SELECTOR-LYAPUNOV-MARGIN, T-P5-194-CORRELATED-ZONOTOPE-DEFECT-ADAPTER]'
-status: claimed
-result_path: null
-result_commit: null
-companion_path: null
-companion_commit: null
+status: completed
+result_path: agent_review_inbox/review-T-P5-195-PROJECTED-SKEW-AFFINE-GENERATOR-GATE-kuangmanmozun-20260909T2337Z.md
+result_commit: 85a96adf98569071e07bb7b8b2ed1f098d492d35
+companion_path: agent_review_inbox/companion-T-P5-195-PROJECTED-SKEW-AFFINE-GENERATOR-GATE-kuangmanmozun-20260909T2338Z.md
+companion_commit: f349584f64481a2cf7d8de4790e5588ae0ba11d7
 ---
 # Review Claim — projected-skew gate for affine state-rotating zonotope generators
 
