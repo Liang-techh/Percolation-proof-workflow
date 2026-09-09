@@ -44,13 +44,18 @@ theorem sq_sub_smul {n : ℕ} (x y : Vec n) (a : ℝ) :
   unfold sq dot
   calc
     (∑ i, (x i - a * y i) ^ 2) =
-        ∑ i, (x i ^ 2 - 2 * a * (x i * y i) + a ^ 2 * y i ^ 2) := by
+        ∑ i, ((x i ^ 2 - 2 * a * (x i * y i)) + a ^ 2 * y i ^ 2) := by
           apply Finset.sum_congr rfl
           intro i _
           ring
+    _ = (∑ i, (x i ^ 2 - 2 * a * (x i * y i))) +
+          (∑ i, a ^ 2 * y i ^ 2) := by
+          rw [Finset.sum_add_distrib]
+    _ = ((∑ i, x i ^ 2) - (∑ i, 2 * a * (x i * y i))) +
+          (∑ i, a ^ 2 * y i ^ 2) := by
+          rw [Finset.sum_sub_distrib]
     _ = (∑ i, x i ^ 2) - 2 * a * (∑ i, x i * y i) +
           a ^ 2 * (∑ i, y i ^ 2) := by
-          rw [Finset.sum_sub_distrib, Finset.sum_add_distrib]
           rw [← Finset.mul_sum, ← Finset.mul_sum]
 
 /-- Exact completed-square identity. `W` is only a cap for `sq r`; it is not
@@ -115,7 +120,6 @@ theorem exact_total_floor_of_relaxed_nonnegative
 theorem zero_radius_boundary_not_finite_witness (lam : ℝ) :
     schurNumerator 1 0 lam 0 (![1, 0] : Vec 2) = -1 := by
   norm_num [schurNumerator, sq]
-  ring
 
 #print axioms sq_nonnegative
 #print axioms sq_add
