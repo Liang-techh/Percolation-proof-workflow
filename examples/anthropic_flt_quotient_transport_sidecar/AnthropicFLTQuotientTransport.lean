@@ -61,7 +61,11 @@ def quotientPiContinuousLinearEquiv {R ι : Type*} [CommRing R]
     apply Continuous.quotient_lift
       (Continuous.comp continuous_quot_mk (continuous_single _))
 
-theorem quotient_transport_mk (g : G) :
+theorem quotient_transport_mk {R G H : Type*} [Ring R]
+    [AddCommGroup G] [Module R G] [AddCommGroup H] [Module R H]
+    [TopologicalSpace G] [TopologicalSpace H]
+    (G' : Submodule R G) (H' : Submodule R H) (e : G ≃L[R] H)
+    (h : Submodule.map e.toLinearMap G' = H') (g : G) :
     quotientContinuousLinearEquiv G' H' e h (Submodule.Quotient.mk' g) =
       Submodule.Quotient.mk' (e g) := by
   rfl
