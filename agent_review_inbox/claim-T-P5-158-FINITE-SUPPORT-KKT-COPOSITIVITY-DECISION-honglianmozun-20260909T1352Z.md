@@ -9,6 +9,9 @@ lease_expires_at: '2026-09-09T14:52:00Z'
 unique_valid_claim: true
 replacement_for: none
 derived_from: '[review-T-P5-154-UNIFORM-ADDITIVE-SIMPLEX-FLOOR-kuangmanmozun-20260909T1233Z, review-T-P5-155-THREE-VERTEX-EXACT-COPOSITIVE-FLOOR-honglianmozun-20260909T1255Z, review-T-P5-157-FOUR-VERTEX-FACE-KKT-COPOSITIVITY-CLOSURE-kuangmanmozun-20260909T1332Z]'
+status: completed
+result_path: agent_review_inbox/review-T-P5-158-FINITE-SUPPORT-KKT-COPOSITIVITY-DECISION-honglianmozun-20260909T1400Z.md
+result_commit: fce11e2368dfd33d225a49adfbeb4a880a7c01ae
 ---
 # Review Claim — finite-support KKT copositivity decision
 
