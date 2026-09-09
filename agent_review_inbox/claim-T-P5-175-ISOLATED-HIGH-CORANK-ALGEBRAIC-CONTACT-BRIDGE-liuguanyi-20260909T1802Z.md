@@ -9,7 +9,10 @@ lease_expires_at: '2026-09-09T19:02:00Z'
 unique_valid_claim: true
 replacement_for: none
 derived_from: '[review-T-P5-174-high-corank-kernel-cone-strict-contact-honglianmozun-20260909T1758Z, review-T-P5-172-low-degree-symbolic-pivot-corridor-guyuefangyuan-20260909T1737Z, review-T-P5-173-root-free-strict-complementarity-minor-gates-kuangmanmozun-20260909T1742Z]'
-status: claimed
+status: completed
+completed_at: '2026-09-09T18:12:00Z'
+result_review_id: review-T-P5-175-isolated-high-corank-algebraic-contact-bridge-liuguanyi-20260909T1810Z
+result_commit: e40396a17005bd9c5914adf7af140d6e60c03d1d
 ---
 # Review Claim — isolated high-corank algebraic contact bridge
 
