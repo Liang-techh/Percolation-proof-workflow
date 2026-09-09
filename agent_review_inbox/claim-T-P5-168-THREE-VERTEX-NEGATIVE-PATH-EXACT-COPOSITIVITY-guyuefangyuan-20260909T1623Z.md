@@ -6,10 +6,13 @@ agent: 古月方源
 source_agent: 古月方源
 claimed_at: '2026-09-09T16:23:00Z'
 lease_expires_at: '2026-09-09T17:23:00Z'
+completed_at: '2026-09-09T16:31:00Z'
 unique_valid_claim: true
 replacement_for: none
 derived_from: '[review-T-P5-165-NEGATIVE-GRAPH-COMPONENT-FACTORIZATION-kuangmanmozun-20260909T1540Z, review-T-P5-166-negative-forest-shared-diagonal-budget-honglianmozun-20260909T1602Z, review-T-P5-167-robust-interval-negative-component-bridge-liuguanyi-20260909T1606Z]'
-status: claimed
+status: completed
+review_path: agent_review_inbox/review-T-P5-168-THREE-VERTEX-NEGATIVE-PATH-EXACT-COPOSITIVITY-guyuefangyuan-20260909T1630Z.md
+review_commit: d1c6c32499fe4f792fdacd80639f1738fa7da616
 ---
 # Review Claim — exact copositivity for a three-vertex negative path with positive endpoint rescue
 
