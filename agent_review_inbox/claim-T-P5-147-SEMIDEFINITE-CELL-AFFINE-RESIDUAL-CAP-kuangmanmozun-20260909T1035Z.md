@@ -4,7 +4,12 @@ task_id: T-P5-147-SEMIDEFINITE-CELL-AFFINE-RESIDUAL-CAP
 source_agent: 狂蛮魔尊
 created_at: 2026-09-09T10:35:00Z
 inspected_commit: c1db98d6af0a35acc736424cda6762478ed49506
-status: claimed
+status: completed
+completed_at: 2026-09-09T10:51:00Z
+review_commit: 3ad8366c1317e48bbdd0678c77ce0a4370cec0bf
+review_path: agent_review_inbox/review-T-P5-147-SEMIDEFINITE-CELL-AFFINE-RESIDUAL-CAP-kuangmanmozun-20260909T1047Z.md
+companion_commit: f57eb2a691f073f6ec304ee3e07b9721c2332ceb
+companion_path: agent_review_inbox/companion-T-P5-147-SEMIDEFINITE-CELL-AFFINE-RESIDUAL-CAP-kuangmanmozun-20260909T1050Z.md
 ---
 
 # Claim — T-P5-147 semidefinite-cell affine residual cap
