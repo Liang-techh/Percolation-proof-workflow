@@ -36,6 +36,7 @@ jobs:
     env:
       ELAN_VERSION: v4.2.3
       ELAN_SHA256: df0b2b3a439961ffcbb3985214365ffe40f49bc871df04dff268c7d8e21ca8b2
+      FLT_MATHLIB_SHA: db584cd6d46c92f209a44c0f1c829460d327499d
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -51,6 +52,18 @@ jobs:
           repository: anthropics/formal-math
           ref: 795efb86f191735c5481675763537cfb4ff37e55
           path: upstream/formal-math
+          persist-credentials: false
+
+      # The Anthropic FLT quotient transport probe is intentionally pinned to
+      # Lean 4.33.1 / Mathlib db584c..., not the Route-B local-FKG Lean 4.32.0
+      # environment. Keep that environment isolated rather than silently
+      # compiling the probe under the wrong toolchain.
+      - name: Check out pinned Mathlib for FLT quotient sidecar
+        uses: actions/checkout@v4
+        with:
+          repository: leanprover-community/mathlib4
+          ref: db584cd6d46c92f209a44c0f1c829460d327499d
+          path: upstream/mathlib-flt-quotient
           persist-credentials: false
 
       - name: Install checksum-verified Elan
@@ -74,6 +87,15 @@ jobs:
           lake update
           lake build
 
+      - name: Bootstrap pinned FLT Mathlib environment
+        run: |
+          set -euo pipefail
+          cd upstream/mathlib-flt-quotient
+          test "$(git rev-parse HEAD)" = "$FLT_MATHLIB_SHA"
+          echo "FLT_MATHLIB_TOOLCHAIN=$(cat lean-toolchain)"
+          lake --version
+          lake exe cache get
+
       - name: Run portable agent sidecars
         run: |
           set -euo pipefail
@@ -83,7 +105,16 @@ jobs:
           for script in "${scripts[@]}"; do
             if grep -q 'CI_PORTABLE=1' "$script"; then
               echo "::group::Running $script"
-              if bash "$script"; then
+              if [[ "$script" == "examples/anthropic_flt_quotient_transport_sidecar/verify.sh" ]]; then
+                if LAKE_ROOT="$GITHUB_WORKSPACE/upstream/mathlib-flt-quotient" bash "$script"; then
+                  echo "SIDECAR_RESULT=PASS path=$script"
+                else
+                  code=$?
+                  echo "SIDECAR_RESULT=FAIL path=$script exit_code=$code"
+                  echo "::error title=Portable sidecar failed::$script exited with $code"
+                  failed=1
+                fi
+              elif bash "$script"; then
                 echo "SIDECAR_RESULT=PASS path=$script"
               else
                 code=$?
@@ -110,9 +141,14 @@ jobs:
           {
             echo "elan: $(elan --version 2>&1 || true)"
             cd examples/local_fkg
-            echo "toolchain: $(cat lean-toolchain)"
-            echo "lake: $(lake --version 2>&1 || true)"
-            echo "lean: $(lean --version 2>&1 || true)"
+            echo "local_fkg toolchain: $(cat lean-toolchain)"
+            echo "local_fkg lake: $(lake --version 2>&1 || true)"
+            echo "local_fkg lean: $(lean --version 2>&1 || true)"
+            cd "$GITHUB_WORKSPACE/upstream/mathlib-flt-quotient"
+            echo "flt mathlib sha: $(git rev-parse HEAD 2>&1 || true)"
+            echo "flt toolchain: $(cat lean-toolchain 2>&1 || true)"
+            echo "flt lake: $(lake --version 2>&1 || true)"
+            echo "flt lean: $(lean --version 2>&1 || true)"
           } | tee "$RUNNER_TEMP/lean-agent-environment.txt"
 
       - name: Upload Lean environment log
