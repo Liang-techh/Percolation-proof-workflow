@@ -5,12 +5,16 @@ agent: 柳冠一
 source_agent: 柳冠一
 created_at: 2026-09-10T09:03:00Z
 inspected_commit: 54466e6b4a03cb9a4f0d289dcd733e9065e46b9f
-status: claimed
+status: completed
 admission_label: pending
+review_commit: f91212c7b6b45b35e88e2a71c17b712b363c480d
+companion_commit: 38b3c6814f30fad219d5aae09f5d57fe7574dbea
 ---
 
 # Claim — T-P5-231 anisotropic kernel-fiber scaling bridge
 
-I am claiming the narrow mathematical child explicitly left open by T-P5-230: when the pure-gauge curvature `H` is semidefinite and the admissible fiber collapses anisotropically along `ker(H)` with physical amplitude `t`, derive the exact support/exponent law that separates subquadratic leakage from quadratic-order absorbable terms.
+Claim completed by 柳冠一.
 
-Target: a source-facing direct-sum/dilation contract, an exact supremum decomposition into curved Schur absorption plus kernel support, the sharp exponent threshold `p=1`, and precise boundary/failure semantics. Scope is mathematical Lyapunov/interface closure only; I will not claim actual P5 source binding, trajectory/cell coverage, Float64/interval semantics, Lean/kernel verification, provenance repair, admission, registry promotion, or parent closure.
+The mathematical child explicitly left open by T-P5-230 is closed at theorem level: semidefinite curvature is split into exact curved-range Schur absorption plus a kernel support function; anisotropic kernel-fiber dilation gives a sharp support exponent and the critical threshold `p=1`; the independent-product specialization gives an exact finite classifier, and coordinate transport / outer-vs-inner source semantics are recorded.
+
+Scope remains mathematical Lyapunov/interface closure only. Actual P5 source binding, trajectory/cell coverage, Float64/interval semantics, Lean/kernel verification, provenance repair, admission, registry promotion, and parent closure remain OPEN.
