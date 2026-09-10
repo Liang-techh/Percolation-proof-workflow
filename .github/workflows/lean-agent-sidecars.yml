@@ -123,6 +123,7 @@ jobs:
       - name: Run portable agent sidecars
         run: |
           set -euo pipefail
+          exec > >(tee "$RUNNER_TEMP/portable-sidecars.log") 2>&1
           mapfile -t scripts < <(find examples -type f -name verify.sh -print | sort)
           ran=0
           failed=0
@@ -186,6 +187,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: lean-agent-environment
-          path: ${{ runner.temp }}/lean-agent-environment.txt
+          path: |
+            ${{ runner.temp }}/lean-agent-environment.txt
+            ${{ runner.temp }}/portable-sidecars.log
           if-no-files-found: error
           retention-days: 14
