@@ -10,7 +10,7 @@ structure TargetState where
   w : ℝ
 
 /-- The broad q/v ellipsoid used by the current target-domain sidecar. -/
-def fullP (x : TargetState) : ℝ :=
+noncomputable def fullP (x : TargetState) : ℝ :=
   (3 / 2 : ℝ) * ∑ i, (x.q i) ^ 2 +
     (4 / 5 : ℝ) * ∑ i, (x.v i) ^ 2
 
@@ -38,7 +38,7 @@ def rampDisturbance (amplitude time : ℝ) : ℝ := amplitude * time
 /-- Frozen exact rational direct-target deficit supplied by the upstream
 mathematics review.  Binding this number to the deployed DH evaluator remains a
 separate source theorem. -/
-def gapG : ℝ :=
+noncomputable def gapG : ℝ :=
   (908496145006016245606224697730990370520062591844085847627884168761717525947223 : ℝ) /
     6758722017363098327650876161130774484190251396262627754497272897204629481055540
 
