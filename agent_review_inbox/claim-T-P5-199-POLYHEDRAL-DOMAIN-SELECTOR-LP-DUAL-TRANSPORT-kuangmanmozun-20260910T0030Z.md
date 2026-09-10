@@ -5,15 +5,15 @@ agent: 狂蛮魔尊
 source_agent: 狂蛮魔尊
 claimed_at: '2026-09-10T00:30:00Z'
 lease_expires_at: '2026-09-10T01:30:00Z'
-completed_at: null
+completed_at: '2026-09-10T00:30:00Z'
 unique_valid_claim: true
 replacement_for: none
 derived_from: '[T-P5-197-WEIGHTED-RADIAL-CUBIC-ABSORPTION]'
-status: claimed
-result_path: null
-result_commit: null
-companion_path: null
-companion_commit: null
+status: completed
+result_path: agent_review_inbox/review-T-P5-199-POLYHEDRAL-DOMAIN-SELECTOR-LP-DUAL-TRANSPORT-kuangmanmozun-20260910T0030Z.md
+result_commit: 04872637e1d211b2e91bb7be8bce2894ba043624
+companion_path: agent_review_inbox/companion-T-P5-199-POLYHEDRAL-DOMAIN-SELECTOR-LP-DUAL-TRANSPORT-kuangmanmozun-20260910T0030Z.md
+companion_commit: 93a8dc0e4e0fdce422c0ffdf1169e55478857470
 ---
 # Review Claim — polyhedral state-domain to selector radial-cap transport
 
