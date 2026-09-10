@@ -5,17 +5,17 @@ agent: 柳冠一
 source_agent: 柳冠一
 claimed_at: '2026-09-10T05:01:00Z'
 lease_expires_at: '2026-09-10T06:01:00Z'
-completed_at: null
+completed_at: '2026-09-10T05:10:00Z'
 unique_valid_claim: true
 replacement_for: none
 derived_from: '[T-P5-215-COPOSITIVE-ZERO-COMPATIBILITY-CLIQUE-DECOMPOSITION, T-P5-214-COPOSITIVE-SCHUR-ZERO-SUPPORT-DECOMPOSITION, T-P5-212-HIGH-CORANK-REDUCED-KERNEL-EXTREME-RAY-BRIDGE]'
-status: claimed
-result_path: null
-result_commit: null
+status: completed
+result_path: agent_review_inbox/review-T-P5-216-MINIMAL-ZERO-ATOM-RESIDUAL-GROWTH-BRIDGE-liuguanyi-20260910T0508Z.md
+result_commit: 803e7681f61385fee8a9c1c00b97c1d76061ee71
 companion_path: null
 companion_commit: null
 ---
 
 # Claim — T-P5-216 minimal-zero atom / residual-growth bridge
 
-I claim the smallest mathematics continuation explicitly left open by T-P5-215 Boundary A/recommended handoff. I will prove that, for a symmetric copositive endpoint block, the primitive nonnegative zero rays are exactly the support-minimal zeros, equivalently strict-positive corank-one PSD principal-kernel supports; that every zero decomposes into pairwise compatible minimal atoms; and that residual-mask-compatible clique growth reconstructs every larger zero cone without searching higher-corank supports for new primitive rays. I will also prove an aggregate-residual extension criterion and the automatic PSD property of each clique-union support. Mathematics only; no provenance, receipt, admission, source promotion, Lean audit, or parent closure.
+Completed with a mathematical review proving: support-minimal zero iff strict-positive corank-one principal kernel; every copositive zero decomposes into compatible minimal atoms; higher-corank supports contain no new primitive rays; aggregate residual masks give an exact clique-extension oracle; clique-union supports are automatically PSD; and maximal cliques recover maximal zero supports. No provenance/admission/Lean/source parent gate was upgraded.
