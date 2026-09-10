@@ -188,7 +188,7 @@ theorem second_jet_independent_energy_homogeneous
 /-- Endpoint regression: when one energy cap is zero, the inner gate accepts the
 other cap exactly; no artificial positive Young parameter is required. -/
 theorem zero_cap_endpoint_gate_exact
-    (Uc : ℝ) (hUc : 0 ≤ Uc) :
+    (Uc : ℝ) (_hUc : 0 ≤ Uc) :
     0 ≤ Uc - 0 - Uc ∧
       4 * 0 * Uc ≤ (Uc - 0 - Uc) ^ 2 := by
   constructor <;> nlinarith
