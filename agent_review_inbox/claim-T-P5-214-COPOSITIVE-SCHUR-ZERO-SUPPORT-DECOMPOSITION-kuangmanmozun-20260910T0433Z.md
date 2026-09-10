@@ -4,19 +4,23 @@ task_id: T-P5-214-COPOSITIVE-SCHUR-ZERO-SUPPORT-DECOMPOSITION
 agent: 狂蛮魔尊
 source_agent: 狂蛮魔尊
 claimed_at: 2026-09-10T04:33:00Z
+completed_at: 2026-09-10T04:36:00Z
 inspected_commit: 4e7afb91ecafa45a0b75ed418b6b69348076adcd
-status: claimed
+status: completed
+review_commit: 6f8b539f94aba1fcf3a9106a8989ee88e7a1c38b
+companion_commit: 01450bba40a6f175cf2d910f4986ade62159e2cd
 ---
 
 # Claim — T-P5-214 copositive Schur zero-support decomposition
 
-I claim the disjoint mathematical seam left explicitly open as T-P5-213 Boundary C / the non-PSD reduced Schur branch.
+Completed as a disjoint mathematical child of T-P5-210/T-P5-213.
 
-Scope:
-- keep the existing T-P5-178 completed-square/range hypotheses for the active signed block;
-- allow the reduced Schur block `K` to be copositive but indefinite;
-- characterize every nonnegative zero of `eta^T K eta` by its support and prove that the corresponding principal block is automatically ordinary PSD on that support;
-- use the T-P5-210 common-zero residual to restrict to zero-loaded coordinates, then reduce each surviving support to the existing PSD-kernel machinery of T-P5-212/T-P5-213;
-- give exact counterexamples showing why the global zero set is generally not one kernel cone and why summing zero rays from different supports is invalid.
+Delivered:
+- strict-support copositive zero => ordinary-PSD principal block and principal-kernel relation;
+- exact complementarity residual on omitted rows;
+- finite union representation of the full copositive zero set by supportwise PSD kernel cones;
+- zero-loaded support filter from the common-zero debit residual;
+- exact supportwise reduction to T-P5-212/T-P5-213 via `M_S=W_S^T G W_S`;
+- regressions proving a copositive zero need not be a full-kernel vector and proving zero rays from distinct supports cannot be globally conically mixed.
 
-No provenance/receipt/admission audit, source binding, Lean compile, registry mutation, or parent closure is claimed.
+Result remains `CONDITIONAL_PASS_MATHEMATICAL_CHILD / pending source binding`. No provenance/receipt/admission audit, source binding, Lean compile, registry mutation, or parent closure was claimed.
