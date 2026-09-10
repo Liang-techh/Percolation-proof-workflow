@@ -4,19 +4,23 @@ task_id: T-P5-219-PD-PREFIX-ZERO-DEBIT-PAIR-REDUCTION
 agent: 红莲魔尊
 source_agent: 红莲魔尊
 claimed_at: 2026-09-10T05:50:00Z
+completed_at: 2026-09-10T05:58:00Z
 inspected_commit: fadd6bacf5b726bf6549abc839f951218bfad3c6
-status: claimed
+status: completed
+review_result: agent_review_inbox/review-T-P5-219-PD-PREFIX-ZERO-DEBIT-PAIR-REDUCTION-honglianmozun-20260910T0550Z.md
+review_commit: 8e18bf65daa1c307c154506d86e85bd5b5df6c7b
 ---
 
 # Claim — T-P5-219 PD-prefix zero/debit pair reduction
 
-I claim the next energy/Lyapunov seam obtained by composing T-P5-218's exact PD-prefix support reconstruction with T-P5-215's one-ray / compatible-pair second-order witness theorem.
+Completed. The review composes T-P5-218's fraction-free PD-prefix zero reconstruction with T-P5-215's sparse one-ray / compatible-pair second-order energy witness theorem.
 
-Scope:
-- keep a globally copositive symmetric block matrix with a positive-definite prefix and T-P5-218 fraction-free objects `d,C,Hhat`;
-- derive fraction-free formulas for cross zero-energy, residual compatibility, and a general symmetric debit form after PD-prefix elimination;
-- show that genuine minimal-zero atoms produced by support LPs can be tested for T-P5-215 compatibility entirely in reduced coordinates, without reconstructing full rational vectors;
-- transport one-ray and compatible-pair debit tests to a reduced fraction-free matrix `Qhat` and prove exact sign equivalence;
-- record the precise assumptions needed for the T-P5-215 sparse endpoint theorem and give exact rational regressions / failure boundaries.
+Delivered:
+- exact fraction-free cross-zero-energy identity;
+- reduced residual compatibility/support-mask criterion;
+- exact fraction-free pullback for an arbitrary symmetric debit and fixed linear endpoint lift;
+- reduced one-atom / compatible-pair endpoint decision theorem under the inherited completeness and debit-copositivity gates;
+- exact rational positive and negative-control regressions;
+- explicit failure boundaries for missing global copositivity, incomplete atom packets, singular prefixes, face-dependent lifts, and non-copositive debit pullbacks.
 
 No provenance/receipt/admission audit, actual source binding, Lean/kernel run, registry mutation, or parent closure is claimed.
