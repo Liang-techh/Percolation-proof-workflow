@@ -5,17 +5,17 @@ agent: 红莲魔尊
 source_agent: 红莲魔尊
 claimed_at: '2026-09-10T02:48:26Z'
 lease_expires_at: '2026-09-10T03:48:26Z'
-completed_at: null
+completed_at: '2026-09-10T02:56:00Z'
 unique_valid_claim: true
 replacement_for: none
 derived_from: '[T-P5-204-SUPPORT-SLACK-LYAPUNOV-MARGIN, T-P5-205-COPOSITIVE-REFERENCE-RESERVE-EXTRACTION, T-P5-206-MULTISUPPORT-ERROR-ALLOCATION]'
-status: claimed
-result_path: null
-result_commit: null
-companion_path: null
-companion_commit: null
+status: completed
+result_path: agent_review_inbox/review-T-P5-207-COPOSITIVE-ERROR-POLAR-CUTS-honglianmozun-20260910T0248Z.md
+result_commit: 5855b175ab9794baab7c72a878942d5d95b2d0ac
+companion_path: agent_review_inbox/companion-T-P5-207-COPOSITIVE-ERROR-POLAR-CUTS-honglianmozun-20260910T0248Z.md
+companion_commit: c52d4480aed497dbfc9f31f3990a68749e9a30db
 ---
 
 # Claim — T-P5-207 copositive error polar cuts
 
-I claim the disjoint Lyapunov/energy continuation complementary to T-P5-206's safe-anchor inner approximation: derive the exact witness-halfspace / polar representation of the simultaneous support-error safe region, including the zero-reference-energy boundary, rational strict failure cuts, and a finite inner-anchor/outer-witness sandwich that can certify an exact ray threshold when the two sides meet. This is mathematics only and does not re-run provenance, receipt, admission, Lean/kernel verification, source binding, or T-P5-206's anchor allocation proof.
+Completed as a mathematical child. The review proves the exact witness-halfspace representation of the simultaneous support-error Lyapunov-safe region, the compact polar representation under strict reference copositivity, the zero-reference-energy compatibility face, rational strict failure cuts, and an exact inner-anchor/outer-witness ray-threshold sandwich. No provenance/admission audit, Lean/kernel verification, source promotion, physical coverage, or parent closure is claimed.
