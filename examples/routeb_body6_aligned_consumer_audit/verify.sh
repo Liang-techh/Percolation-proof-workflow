@@ -27,12 +27,11 @@ if grep -nE '\b(sorry|admit)\b' "$TARGET"; then
 fi
 echo "PLACEHOLDER_SCAN=PASS"
 
-# Lean imports resolve compiled modules, not arbitrary sibling .lean files.  The
+# Lean imports resolve compiled modules, not arbitrary sibling .lean files. The
 # BODY6 consumer reaches several source modules owned by other example
 # sidecars (for example ActualStorage and ActualShift), so stage and compile
 # the repository-local import closure in one isolated module cache before the
-# consumer audit.  This keeps the source graph exact while avoiding committed
-# output/ receipt directories and hard-coded developer paths.
+# consumer audit. Snapshot/output trees are evidence, not authoritative source.
 BUILD_DIR="$(mktemp -d "$LAKE_ROOT/.aligned-consumer-audit.XXXXXX")"
 OUT="$(mktemp)"
 trap 'rm -rf "$BUILD_DIR"; rm -f "$OUT"' EXIT
@@ -64,6 +63,7 @@ find_repo_module_source() {
   mapfile -t matches < <(
     find "$REPO_ROOT/examples" \
       -path '*/output/*' -prune -o \
+      -path '*/snapshots/*' -prune -o \
       -path '*/.lake/*' -prune -o \
       -type f -path "*/$rel.lean" -print | sort
   )
@@ -74,7 +74,7 @@ find_repo_module_source() {
   if ((${#matches[@]} != 1)); then
     echo "ambiguous repository module source for $module:" >&2
     printf '  %s\n' "${matches[@]}" >&2
-    exit 2
+    return 2
   fi
   printf '%s\n' "${matches[0]}"
 }
@@ -84,17 +84,21 @@ compile_repo_module() {
   [[ -n "${COMPILED_MODULES[$module]:-}" ]] && return 0
   if [[ -n "${VISITING_MODULES[$module]:-}" ]]; then
     echo "repository module import cycle at $module" >&2
-    exit 2
+    return 2
   fi
 
-  local source
-  if ! source="$(find_repo_module_source "$module")"; then
-    # Mathlib/Std/Init and any package-owned modules are supplied by the pinned
-    # Lake environment.  If such an import is actually unavailable, Lean will
-    # fail at the importing source with the real module-resolution diagnostic.
-    echo "EXTERNAL_IMPORT=$module"
-    return 0
-  fi
+  local source rc=0
+  source="$(find_repo_module_source "$module")" || rc=$?
+  case "$rc" in
+    0) ;;
+    1)
+      # Mathlib/Std/Init and package-owned modules are supplied by the pinned
+      # Lake environment. Lean reports a real missing import if one is absent.
+      echo "EXTERNAL_IMPORT=$module"
+      return 0
+      ;;
+    *) return "$rc" ;;
+  esac
 
   VISITING_MODULES[$module]=1
   local dep
@@ -110,7 +114,7 @@ compile_repo_module() {
   mkdir -p "$(dirname "$staged")"
   cp "$source" "$staged"
   echo "COMPILE_REPO_MODULE=$module source=${source#$REPO_ROOT/}"
-  run_lean -DwarningAsError=true -o="$olean" "$staged"
+  run_lean -DwarningAsError=true -o "$olean" "$staged"
   COMPILED_MODULES[$module]=1
   unset 'VISITING_MODULES[$module]'
 }
