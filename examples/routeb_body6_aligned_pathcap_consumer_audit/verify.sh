@@ -28,7 +28,7 @@ fi
 echo "PLACEHOLDER_SCAN=PASS"
 
 # The target imports repository-local BODY6 modules which in turn reach
-# ActualStorage/ActualShift and other sidecar-owned sources.  Compile that
+# ActualStorage/ActualShift and other sidecar-owned sources. Compile that
 # source import closure under this audit's pinned Lake environment instead of
 # relying on stale committed receipts or developer-machine .olean files.
 BUILD_DIR="$(mktemp -d "$LAKE_ROOT/.aligned-pathcap-audit.XXXXXX")"
@@ -118,16 +118,16 @@ AUDIT="$BUILD_DIR/AlignedPathcapConsumerAudit.lean"
 cat "$TARGET" > "$AUDIT"
 cat >> "$AUDIT" <<'EOF'
 
-#print axioms RouteBAlignedPathcapConsumerProof.actualStorageEqualsBRplusB_at_aligned_pathcap
-#print axioms RouteBAlignedPathcapConsumerProof.actualStorageDefect_nonneg_at_aligned_pathcap
+#print axioms NEW_BODY6_SLICE_ALIGNEDPATHCAPCONSUMER20260908.consume_aligned_path_cap_attempt
+#print axioms NEW_BODY6_SLICE_ALIGNEDPATHCAPCONSUMER20260908.source_full_cap_does_not_pay_shift_attempt
 EOF
 
 run_lean -DwarningAsError=true "$AUDIT" 2>&1 | tee "$OUT"
 
 for theorem in \
-  actualStorageEqualsBRplusB_at_aligned_pathcap \
-  actualStorageDefect_nonneg_at_aligned_pathcap; do
-  grep -F "RouteBAlignedPathcapConsumerProof.$theorem" "$OUT" >/dev/null || {
+  consume_aligned_path_cap_attempt \
+  source_full_cap_does_not_pay_shift_attempt; do
+  grep -F "NEW_BODY6_SLICE_ALIGNEDPATHCAPCONSUMER20260908.$theorem" "$OUT" >/dev/null || {
     echo "missing #print axioms report for $theorem" >&2
     exit 3
   }
@@ -140,7 +140,9 @@ fi
 
 echo "AXIOM_AUDIT=PASS"
 echo "BODY6_ALIGNED_PATHCAP_CONSUMER_FOCUSED_CHECK=PASS"
-echo "ALIGNED_PATHCAP_STORAGE_GATE=true"
+echo "ALIGNED_PATHCAP_CONSUMER=true"
+echo "UNPAID_SHIFT_COUNTEREXAMPLE=true"
+echo "CONSUMER_PREMISES_INSTANCE_PROVED=false"
 echo "WHOLE_PATH_INCLUSION_PROVED=false"
 echo "PHYSICAL_DH_SOURCE_BINDING=OPEN"
 echo "ODE_CONTINUATION_COVERAGE=OPEN"
