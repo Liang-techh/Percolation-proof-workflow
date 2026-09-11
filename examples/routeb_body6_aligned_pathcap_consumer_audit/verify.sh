@@ -31,6 +31,7 @@ echo "PLACEHOLDER_SCAN=PASS"
 # ActualStorage/ActualShift and other sidecar-owned sources. Compile that
 # source import closure under this audit's pinned Lake environment instead of
 # relying on stale committed receipts or developer-machine .olean files.
+# Snapshot/output trees are evidence, not authoritative source.
 BUILD_DIR="$(mktemp -d "$LAKE_ROOT/.aligned-pathcap-audit.XXXXXX")"
 OUT="$(mktemp)"
 trap 'rm -rf "$BUILD_DIR"; rm -f "$OUT"' EXIT
@@ -62,6 +63,7 @@ find_repo_module_source() {
   mapfile -t matches < <(
     find "$REPO_ROOT/examples" \
       -path '*/output/*' -prune -o \
+      -path '*/snapshots/*' -prune -o \
       -path '*/.lake/*' -prune -o \
       -type f -path "*/$rel.lean" -print | sort
   )
@@ -72,7 +74,7 @@ find_repo_module_source() {
   if ((${#matches[@]} != 1)); then
     echo "ambiguous repository module source for $module:" >&2
     printf '  %s\n' "${matches[@]}" >&2
-    exit 2
+    return 2
   fi
   printf '%s\n' "${matches[0]}"
 }
@@ -82,14 +84,19 @@ compile_repo_module() {
   [[ -n "${COMPILED_MODULES[$module]:-}" ]] && return 0
   if [[ -n "${VISITING_MODULES[$module]:-}" ]]; then
     echo "repository module import cycle at $module" >&2
-    exit 2
+    return 2
   fi
 
-  local source
-  if ! source="$(find_repo_module_source "$module")"; then
-    echo "EXTERNAL_IMPORT=$module"
-    return 0
-  fi
+  local source rc=0
+  source="$(find_repo_module_source "$module")" || rc=$?
+  case "$rc" in
+    0) ;;
+    1)
+      echo "EXTERNAL_IMPORT=$module"
+      return 0
+      ;;
+    *) return "$rc" ;;
+  esac
 
   VISITING_MODULES[$module]=1
   local dep
@@ -105,7 +112,7 @@ compile_repo_module() {
   mkdir -p "$(dirname "$staged")"
   cp "$source" "$staged"
   echo "COMPILE_REPO_MODULE=$module source=${source#$REPO_ROOT/}"
-  run_lean -DwarningAsError=true -o="$olean" "$staged"
+  run_lean -DwarningAsError=true -o "$olean" "$staged"
   COMPILED_MODULES[$module]=1
   unset 'VISITING_MODULES[$module]'
 }
