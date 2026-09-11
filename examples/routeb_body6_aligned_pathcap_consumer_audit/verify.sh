@@ -3,8 +3,10 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$ROOT/../.." && pwd)"
 LAKE_ROOT="${LAKE_ROOT:-$ROOT/../local_fkg}"
-TARGET="$ROOT/../routeb_b45_source_comparator_lean/NEW_BODY6_SLICE_ALIGNEDPATHCAPCONSUMER20260908.lean"
+SRC_ROOT="$ROOT/../routeb_b45_source_comparator_lean"
+TARGET="$SRC_ROOT/NEW_BODY6_SLICE_ALIGNEDPATHCAPCONSUMER20260908.lean"
 EXPECTED_TOOLCHAIN="$(tr -d '\r\n' < "$ROOT/lean-toolchain")"
 
 command -v lake >/dev/null 2>&1 || { echo "lake not found on PATH" >&2; exit 2; }
@@ -25,20 +27,102 @@ if grep -nE '\b(sorry|admit)\b' "$TARGET"; then
 fi
 echo "PLACEHOLDER_SCAN=PASS"
 
-TMP="$(mktemp --suffix=.lean)"
+# The target imports repository-local BODY6 modules which in turn reach
+# ActualStorage/ActualShift and other sidecar-owned sources.  Compile that
+# source import closure under this audit's pinned Lake environment instead of
+# relying on stale committed receipts or developer-machine .olean files.
+BUILD_DIR="$(mktemp -d "$LAKE_ROOT/.aligned-pathcap-audit.XXXXXX")"
 OUT="$(mktemp)"
-trap 'rm -f "$TMP" "$OUT"' EXIT
-cat "$TARGET" > "$TMP"
-cat >> "$TMP" <<'EOF'
+trap 'rm -rf "$BUILD_DIR"; rm -f "$OUT"' EXIT
+
+run_lean() {
+  (
+    cd "$LAKE_ROOT"
+    lake env bash -c '
+      build_dir="$1"
+      shift
+      export LEAN_PATH="$build_dir${LEAN_PATH:+:$LEAN_PATH}"
+      exec lean "$@"
+    ' _ "$BUILD_DIR" "$@"
+  )
+}
+
+declare -A COMPILED_MODULES=()
+declare -A VISITING_MODULES=()
+
+module_relpath() {
+  printf '%s' "${1//./\/}"
+}
+
+find_repo_module_source() {
+  local module="$1"
+  local rel
+  rel="$(module_relpath "$module")"
+  local -a matches=()
+  mapfile -t matches < <(
+    find "$REPO_ROOT/examples" \
+      -path '*/output/*' -prune -o \
+      -path '*/.lake/*' -prune -o \
+      -type f -path "*/$rel.lean" -print | sort
+  )
+
+  if ((${#matches[@]} == 0)); then
+    return 1
+  fi
+  if ((${#matches[@]} != 1)); then
+    echo "ambiguous repository module source for $module:" >&2
+    printf '  %s\n' "${matches[@]}" >&2
+    exit 2
+  fi
+  printf '%s\n' "${matches[0]}"
+}
+
+compile_repo_module() {
+  local module="$1"
+  [[ -n "${COMPILED_MODULES[$module]:-}" ]] && return 0
+  if [[ -n "${VISITING_MODULES[$module]:-}" ]]; then
+    echo "repository module import cycle at $module" >&2
+    exit 2
+  fi
+
+  local source
+  if ! source="$(find_repo_module_source "$module")"; then
+    echo "EXTERNAL_IMPORT=$module"
+    return 0
+  fi
+
+  VISITING_MODULES[$module]=1
+  local dep
+  while read -r dep; do
+    [[ -z "$dep" ]] && continue
+    compile_repo_module "$dep"
+  done < <(awk '/^[[:space:]]*import[[:space:]]+/ { for (i = 2; i <= NF; ++i) print $i }' "$source")
+
+  local rel staged olean
+  rel="$(module_relpath "$module")"
+  staged="$BUILD_DIR/$rel.lean"
+  olean="$BUILD_DIR/$rel.olean"
+  mkdir -p "$(dirname "$staged")"
+  cp "$source" "$staged"
+  echo "COMPILE_REPO_MODULE=$module source=${source#$REPO_ROOT/}"
+  run_lean -DwarningAsError=true -o="$olean" "$staged"
+  COMPILED_MODULES[$module]=1
+  unset 'VISITING_MODULES[$module]'
+}
+
+compile_repo_module NEW_BODY6_SLICE_INITIALPATHCAPS20260907
+compile_repo_module NEW_BODY6_SLICE_ACTUALSTORAGEALIGN20260907
+echo "LOCAL_IMPORT_BOOTSTRAP=PASS"
+
+AUDIT="$BUILD_DIR/AlignedPathcapConsumerAudit.lean"
+cat "$TARGET" > "$AUDIT"
+cat >> "$AUDIT" <<'EOF'
 
 #print axioms RouteBAlignedPathcapConsumerProof.actualStorageEqualsBRplusB_at_aligned_pathcap
 #print axioms RouteBAlignedPathcapConsumerProof.actualStorageDefect_nonneg_at_aligned_pathcap
 EOF
 
-(
-  cd "$LAKE_ROOT"
-  lake env lean -DwarningAsError=true "$TMP"
-) 2>&1 | tee "$OUT"
+run_lean -DwarningAsError=true "$AUDIT" 2>&1 | tee "$OUT"
 
 for theorem in \
   actualStorageEqualsBRplusB_at_aligned_pathcap \
