@@ -50,6 +50,14 @@ run_lean() {
 
 declare -A COMPILED_MODULES=()
 declare -A VISITING_MODULES=()
+# Two independent sidecars currently publish a top-level ChristoffelPower.lean.
+# SignedGap imports RouteBChristoffelPower.christoffelTwoChannelBound, so its
+# dependency is specifically the routeb_christoffel_power source, not the P5
+# sidecar with namespace RouteBP5ChristoffelPower. Keep all other duplicate
+# module names hard failures instead of silently choosing one.
+declare -A REPO_MODULE_SOURCE_OVERRIDES=(
+  [ChristoffelPower]="$REPO_ROOT/examples/routeb_christoffel_power/ChristoffelPower.lean"
+)
 
 module_relpath() {
   printf '%s' "${1//./\/}"
@@ -57,6 +65,16 @@ module_relpath() {
 
 find_repo_module_source() {
   local module="$1"
+  local override="${REPO_MODULE_SOURCE_OVERRIDES[$module]:-}"
+  if [[ -n "$override" ]]; then
+    [[ -f "$override" ]] || {
+      echo "repository module override missing for $module: $override" >&2
+      return 2
+    }
+    printf '%s\n' "$override"
+    return 0
+  fi
+
   local rel
   rel="$(module_relpath "$module")"
   local -a matches=()
