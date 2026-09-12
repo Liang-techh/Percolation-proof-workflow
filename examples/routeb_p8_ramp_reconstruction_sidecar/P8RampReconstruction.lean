@@ -25,6 +25,8 @@ namespace RouteBP8RampReconstruction
 
 set_option autoImplicit false
 
+open MeasureTheory
+
 /-- A scalar function with zero derivative everywhere is fixed by its value at zero. -/
 theorem ramp_c_constant
     (c : ℝ → ℝ) (c0 : ℝ)
