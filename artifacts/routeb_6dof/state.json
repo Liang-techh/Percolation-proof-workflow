@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 892,
+  "revision": 893,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -42600,6 +42600,21 @@
             "source_commit": "53e497f9d09de120db0f16da87b7d6e07e0e6e00",
             "review_file": "agent_review_inbox/review-T-P5-026-CONE-INDEX-ORBIT-FIBER-20260914T211830Z.md",
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P5-026-ORBITFIBER-SPN-DAG-20260914T212915Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "5B53196405C48C71EF8DEAFDC29E718C4F66352DB315CDACFA7962FBE78083E5",
+            "task_id": "T-P5-026",
+            "source_agent": "Codex",
+            "created_at": "2026-09-14T21:29:15Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "compiled_candidate_source_independent_feasible_cone_spn",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "e5f3f7ec984511e5eec1fc17ff9cb17a652e00ec",
+            "review_file": "agent_review_inbox/review-T-P5-026-ORBITFIBER-SPN-DAG-20260914T212915Z.md",
+            "admission_label": "pending"
           }
         ]
       }
@@ -83163,6 +83178,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "ae18c1e30172442abb689b14be5bf225"
+    },
+    {
+      "at": "2026-09-14T22:09:54.788595+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P5-026-ORBITFIBER-SPN-DAG-20260914T212915Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "5B53196405C48C71EF8DEAFDC29E718C4F66352DB315CDACFA7962FBE78083E5",
+      "task_id": "T-P5-026",
+      "classification": "compiled_candidate_source_independent_feasible_cone_spn",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "4e7586a2f5b048f19443d4c406afb7aa"
     }
   ],
   "agent_requests": {},
@@ -86819,5 +86847,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "8a888f244554c40395ff18d73e8fe0b5a0bcab0152acff12a87722d784ea038b"
+  "state_checksum": "3845adcc0eb66b51f250bf15e626c12b32d9d19ebb834105ebb38b4a9dbb787a"
 }

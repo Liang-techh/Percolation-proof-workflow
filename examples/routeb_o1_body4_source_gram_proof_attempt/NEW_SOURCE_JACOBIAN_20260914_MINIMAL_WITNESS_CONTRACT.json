@@ -1,0 +1,243 @@
+{
+  "kind": "proposed_minimal_transverse_witness_contract_not_export",
+  "task_id": "T-P4-BODY4-SOURCE-JACOBIAN-BRIDGE",
+  "status": "pending",
+  "inspected_commit": "d2a2b8836700ef49883f3169c244447363c40d63",
+  "bindings": {
+    "julia_source_path": "artifacts/task_routeb_body_trace_sink_current/source_snapshot/dhport_lib.jl",
+    "julia_source_sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936",
+    "target_path": "examples/routeb_b45_source_comparator_lean/RouteBO1Body4SourceGramTargets.lean",
+    "target_sha256": "2d0d2794edfe745d63a2970c36b53765f3b4bd747480107b1eab51cf2e2c3ca9",
+    "prior_inventory_sha256": "3f1a237368e735667588e4de5c2a1d29677876b75858cfa670df6454ec93f101",
+    "idealization_definition": null,
+    "input_interpretation": null,
+    "frame_coordinate_definition": null,
+    "domain_definition": null,
+    "export_content_sha256": null,
+    "source_interpretation_proof": null
+  },
+  "indices": {
+    "body_index": 3,
+    "human_body": 4,
+    "active_joint_indices": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "active_human_joints": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "parallel_zero_joint_index": 3,
+    "parallel_zero_human_joint": 4,
+    "inactive_joint_indices": [
+      4,
+      5
+    ],
+    "inactive_human_joints": [
+      5,
+      6
+    ]
+  },
+  "axes": [
+    {
+      "joint_index": 0,
+      "parent_frame_slot": 0,
+      "julia_axis_column": 1,
+      "target": "prefixZ(q,j)",
+      "source_assignment_line": 36,
+      "source_readout_root": null,
+      "source_preservation_witness": null,
+      "vector_equality_proof": null
+    },
+    {
+      "joint_index": 1,
+      "parent_frame_slot": 1,
+      "julia_axis_column": 2,
+      "target": "prefixZ(q,j)",
+      "source_assignment_line": 36,
+      "source_readout_root": null,
+      "source_preservation_witness": null,
+      "vector_equality_proof": null
+    },
+    {
+      "joint_index": 2,
+      "parent_frame_slot": 2,
+      "julia_axis_column": 3,
+      "target": "prefixZ(q,j)",
+      "source_assignment_line": 36,
+      "source_readout_root": null,
+      "source_preservation_witness": null,
+      "vector_equality_proof": null
+    },
+    {
+      "joint_index": 3,
+      "parent_frame_slot": 3,
+      "julia_axis_column": 4,
+      "target": "prefixZ(q,j)",
+      "source_assignment_line": 36,
+      "source_readout_root": null,
+      "source_preservation_witness": null,
+      "vector_equality_proof": null
+    }
+  ],
+  "transverse_scalars": [
+    {
+      "joint_index": 0,
+      "human_joint": 1,
+      "lhs": "radial",
+      "rhs": "aa(q)",
+      "source_quantity": "L_q_inverse(COM_body4-parent_origin_j)",
+      "source_expression_root": null,
+      "source_equality_witness": null,
+      "target_equality_proof": null
+    },
+    {
+      "joint_index": 0,
+      "human_joint": 1,
+      "lhs": "tangential",
+      "rhs": "d",
+      "source_quantity": "L_q_inverse(COM_body4-parent_origin_j)",
+      "source_expression_root": null,
+      "source_equality_witness": null,
+      "target_equality_proof": null
+    },
+    {
+      "joint_index": 1,
+      "human_joint": 2,
+      "lhs": "radial",
+      "rhs": "qq(q)",
+      "source_quantity": "L_q_inverse(COM_body4-parent_origin_j)",
+      "source_expression_root": null,
+      "source_equality_witness": null,
+      "target_equality_proof": null
+    },
+    {
+      "joint_index": 1,
+      "human_joint": 2,
+      "lhs": "vertical",
+      "rhs": "pp(q)",
+      "source_quantity": "L_q_inverse(COM_body4-parent_origin_j)",
+      "source_expression_root": null,
+      "source_equality_witness": null,
+      "target_equality_proof": null
+    },
+    {
+      "joint_index": 2,
+      "human_joint": 3,
+      "lhs": "radial",
+      "rhs": "e*sin(phi(q))",
+      "source_quantity": "L_q_inverse(COM_body4-parent_origin_j)",
+      "source_expression_root": null,
+      "source_equality_witness": null,
+      "target_equality_proof": null
+    },
+    {
+      "joint_index": 2,
+      "human_joint": 3,
+      "lhs": "vertical",
+      "rhs": "e*cos(phi(q))",
+      "source_quantity": "L_q_inverse(COM_body4-parent_origin_j)",
+      "source_expression_root": null,
+      "source_equality_witness": null,
+      "target_equality_proof": null
+    },
+    {
+      "joint_index": 3,
+      "human_joint": 4,
+      "lhs": "tangential",
+      "rhs": "0",
+      "source_quantity": "L_q_inverse(COM_body4-parent_origin_j)",
+      "source_expression_root": null,
+      "source_equality_witness": null,
+      "target_equality_proof": null
+    },
+    {
+      "joint_index": 3,
+      "human_joint": 4,
+      "lhs": "cos(phi(q))*radial-sin(phi(q))*vertical",
+      "rhs": "0",
+      "source_quantity": "L_q_inverse(COM_body4-parent_origin_j)",
+      "source_expression_root": null,
+      "source_equality_witness": null,
+      "target_equality_proof": null
+    }
+  ],
+  "inactive_semantic_contract": {
+    "matrices": [
+      "Jv",
+      "Jw"
+    ],
+    "joint_indices": [
+      4,
+      5
+    ],
+    "spatial_axes": [
+      0,
+      1,
+      2
+    ],
+    "required_final_value": "zero",
+    "source_body_iteration": 4,
+    "allocation_line": 53,
+    "inner_loop_line": 54,
+    "inner_loop_human_range": [
+      1,
+      4
+    ],
+    "observation_phase": "after completed inner loop line 57 before line 58",
+    "fresh_allocation_witness": null,
+    "no_write_outside_active_prefix_witness": null,
+    "no_interfering_mutation_witness": null,
+    "zero_readout_transport_witness": null
+  },
+  "operational_contract": {
+    "same_q_and_source_state_witness": null,
+    "parent_axis_before_push_witness": null,
+    "com_and_parent_origin_readout_witness": null,
+    "active_cross_assignment_line": 55,
+    "active_axis_copy_line": 56,
+    "active_assignments_and_preservation_witness": null,
+    "oriented_coordinate_lift_witness": null
+  },
+  "coverage": {
+    "quantifier": "forall q in declared domain, not point samples",
+    "all_four_active_axes_required": true,
+    "all_eight_scalar_functions_required": true,
+    "both_inactive_columns_in_both_matrices_required": true,
+    "cell_to_domain_cover": null,
+    "domain_equals_all_real_Q6": null,
+    "scope_extension_from_finite_binary64_forbidden": true
+  },
+  "minimality": {
+    "claim": "two independent signed transverse linear measurements per active displacement, conditional on exact axis binding and operational semantics",
+    "axis_vector_equalities": 4,
+    "axis_scalar_equalities_in_native_coordinates": 12,
+    "transverse_scalar_equalities": 8,
+    "total_active_scalar_conditions": 20,
+    "inactive_scalar_outputs_discharged_by_control_flow": 12,
+    "not_claimed": "globally smallest proof or encoding across all source-specific dependencies"
+  },
+  "lean_adapter": {
+    "path": "examples/routeb_o1_body4_source_gram_proof_attempt/NEW_SOURCE_JACOBIAN_20260914_QUOTIENT_PORT.lean",
+    "interface": "QuotientWitness D iff JacobiansOn D",
+    "kernel_encoding": "cross(prefixZ,sourceDisp-displacement)=0; vector representation of transverse rank-two condition",
+    "eight_scalar_to_kernel_formal_adapter": "not_implemented; paper equivalence in review",
+    "elaboration_status": "NOT_RUN",
+    "source_witness_instantiated": false
+  },
+  "runtime": {
+    "runtime_export": null,
+    "rounding_enclosure": null,
+    "exact_zero_transfer_proven": false
+  },
+  "admission": {
+    "source_binding_proven": false,
+    "jacobian_targets_verified": false,
+    "registry_eligible": false,
+    "formal_certificate_allowed": false
+  }
+}

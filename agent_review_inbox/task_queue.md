@@ -4636,6 +4636,15 @@ mod-axis 条件和两个 inactive-column zero/no-write 语义；active joint 3 �
 transverse projections，但当前仍无真实 source export、coverage、runtime 或 Lean
 receipt。该结果减少了 O1 witness 面积，不关闭 P4、registry 或 formal gate。
 
+## 2026-09-14 — revision 893 harvest：OrbitFiber SPN bridge candidate
+
+T-P5-026 新回执在已有 OrbitFiber 上实现了 source-independent 的 `eighteen_spn_envelope`
+与可选 `envelope_iff_weighted_nonneg` 接口，明确最短主路径是 signed gap → 18-SPN
+consumer → component power；同时保留 z=0 的 36-label/18-orbit 因子和 weighted
+invariance 边界。其本地 Lean/checker exit=0，但 standalone import、Lake、缓存
+Mathlib authentication、physical hrep/source binding 和 admission receipt 均未验证，
+故仍为 compiled_candidate，不进入 registry。
+
 ## 2026-09-14 — revision 890 harvest：reference packet specification
 
 Sartre 提交 `P5-103-REFERENCE-BINDING-PACKET-SPEC`。该规范固定了同一 context/reference

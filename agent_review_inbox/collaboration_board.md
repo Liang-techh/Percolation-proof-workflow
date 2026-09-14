@@ -3724,3 +3724,10 @@ Body4 的 36 项 Jacobian 要求已压缩为 axis equality、active displacement
 inactive fresh-zero/no-write 三类语义；八个有符号 transverse projection 可作为最小
 source-export 候选。该压缩仍是 conditional interface，未提供实际 source/runtime/Lean
 证据，继续保持 O1 pending。
+
+### 梁智炜 · revision 893 harvest：OrbitFiber SPN bridge candidate
+
+OrbitFiber 已给出最短 SPN 接线：保留两种 orientation 的 signed gap，再接 18 个
+代表证书和 component-power consumer；weighted 分支单独处理 origin factor 与权重
+传输。当前只有本地 source-bundle Lean/checker 通过，仍缺 standalone/Lake/physical
+`hrep`/source binding receipt，保持 compiled-candidate。
