@@ -4590,3 +4590,13 @@ allocation 仍没有同源 packet。该结果是 exact same-configuration obstru
 该 inventory 不是 source export、runtime equality、cell/domain coverage 或 Lean receipt；
 不允许用正确形状数组或历史 olean 替代 source execution/assignment/preservation 证据。
 状态保持 pending，P4/O1、registry 与 formal gate 不变。
+
+## 2026-09-14 — revision 889 harvest：remote batch integration
+
+本轮整合 17 条有效 review/companion metadata，全部保持 pending/conditional，未提升
+registry。高价值结果包括：generic Schur allocation Lean sidecar 仍缺最终原生 CI/axiom
+receipt；K-path 只得到 source-independent toy capacity；P5-097 path-energy 与 P5-100
+base-storage collar 是 conditional math；P4 active-V、Joint6 actual residual、Schur
+actual source 与 P5-103 reference context 继续是 same-source binding obstructions。
+因此 `registry=0`、`formal_certificate_allowed=false` 不变。新增的 T-P5-026 OrbitFiber
+文件仍只是 compiled_candidate，不能作为 admission 或 registry 输入。

@@ -1,0 +1,14 @@
+{
+  "record_file": "agent_review_inbox/companion-GH-MATH-P5-CERTIFICATE-KPATH-NEXT-kuangmanmozun-20260908T2151Z.md",
+  "record_kind": "companion_log",
+  "review_sha256": "CF8B44FCE78C58D1F40CF70962908706E98C0A1F805FB58ABCDE1184F1A8AECB",
+  "task_id": "GH-MATH-P5-CERTIFICATE-KPATH-NEXT",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_certificate_indexed_kpath_next",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "integrated_at": "2026-09-14T21:18:26.040776+00:00"
+}

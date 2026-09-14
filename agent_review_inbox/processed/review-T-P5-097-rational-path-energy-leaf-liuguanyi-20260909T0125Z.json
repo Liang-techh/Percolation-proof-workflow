@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-097-rational-path-energy-leaf-liuguanyi-20260909T0125Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "99FF798E062E361D418C0D2BCE71E360130B720E575273802E62BFF69636D026",
+  "task_id": "T-P5-097-RATIONAL-PATH-ENERGY-LEAF",
+  "source_agent": "柳冠一",
+  "created_at": "2026-09-09T01:25:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_p5_rational_path_energy_leaf",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "c56b776bc27ae4facaa3a28e702b40d36b5ad0d4",
+  "review_file": "agent_review_inbox/review-T-P5-097-rational-path-energy-leaf-liuguanyi-20260909T0125Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-14T21:18:26.043205+00:00"
+}

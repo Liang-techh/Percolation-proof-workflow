@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-SOURCE-NEXT-honglianmozun-20260909T0615Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "B4ADAFA62352C228F4FDAF19928D0F2964504705BF3A2DC73B5BD6CD78EA77C5",
+  "task_id": "GH-MATH-P4-ACTIVE-V-SOURCE-NEXT",
+  "source_agent": "红莲魔尊",
+  "created_at": "2026-09-09T06:15:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_active_v_source_next",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "adc4cbc2ff740e7a79f536f0707fcde52f844db5",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-ACTIVE-V-SOURCE-NEXT-honglianmozun-20260909T0615Z.md",
+  "format_warning": "missing_yaml_delimiters",
+  "integrated_at": "2026-09-14T21:18:26.042124+00:00"
+}

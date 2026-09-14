@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P5-100-base-storage-collar-math-honglianmozun-20260908T2102Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "B794FF5E8F09526ECA698BAF49BFF63C7B955F4CE76BD3167E01D94B38AB1D32",
+  "task_id": "T-P5-100-BASE-STORAGE-COLLAR-MATH",
+  "source_agent": "红莲魔尊",
+  "created_at": "2026-09-08T21:02:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_p5_base_storage_collar_math",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "e9a858d734fd05171858942f38bd2263219e788f",
+  "review_file": "agent_review_inbox/review-T-P5-100-base-storage-collar-math-honglianmozun-20260908T2102Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-14T21:18:26.043504+00:00"
+}

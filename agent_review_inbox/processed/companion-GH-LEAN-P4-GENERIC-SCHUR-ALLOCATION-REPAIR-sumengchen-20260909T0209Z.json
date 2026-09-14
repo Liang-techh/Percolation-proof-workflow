@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/companion-GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION-REPAIR-sumengchen-20260909T0209Z.md",
+  "record_kind": "companion_log",
+  "review_sha256": "D89C47E4E5C2FE7FCC28BD7AFEDBCF3B5B9DD64E1F23F9D74BF197E74831051D",
+  "task_id": "GH-LEAN-P4-GENERIC-SCHUR-ALLOCATION-REPAIR",
+  "source_agent": "苏梦辰",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_generic_schur_allocation_repair_receipt",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "6426af1f007c6360bb90d11d8a53fb3a90d6ea38",
+  "format_warning": "missing_yaml_delimiters",
+  "integrated_at": "2026-09-14T21:18:26.039933+00:00"
+}

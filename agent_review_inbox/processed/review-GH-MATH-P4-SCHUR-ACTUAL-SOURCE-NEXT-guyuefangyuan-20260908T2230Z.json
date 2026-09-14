@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-ACTUAL-SOURCE-NEXT-guyuefangyuan-20260908T2230Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "BC27E0491F4E8772472637C6AAC678EC81C6D7EC709BCC6EE1FD8FDBF034E265",
+  "task_id": "GH-MATH-P4-SCHUR-ACTUAL-SOURCE-NEXT",
+  "source_agent": "古月方源",
+  "created_at": "2026-09-08T22:30:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_p4_schur_actual_source_next",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "b121ba94052242ac03e5453d634069f8fef9bef9",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-SCHUR-ACTUAL-SOURCE-NEXT-guyuefangyuan-20260908T2230Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-14T21:18:26.042557+00:00"
+}

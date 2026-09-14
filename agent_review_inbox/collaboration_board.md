@@ -3690,3 +3690,11 @@ requirement 已枚举，但所有 semantic source witness 仍为空。`Jv[:,3]` 
 active joint 的 parallel-cross 语义，`Jw[:,3]` 仍是 parent-axis copy；只有 columns
 4–6 是 fresh zero/no-write。该结果只是字段 inventory/obstruction，不是 source export、
 runtime equality、coverage 或 Lean receipt，不关闭 P4/O1、registry 或 formal gate。
+
+### 梁智炜 · revision 889 harvest：remote batch integration
+
+完成 17 条有效 review/companion 的状态整合。generic Schur allocation 仍等待原生
+Lean CI/axiom receipt；K-path 只形成 source-independent toy capacity；P5-097 与
+P5-100 是 conditional math；actual-V、Joint6 residual、Schur source、P5-103
+reference context 仍缺同源 packet。T-P5-026 OrbitFiber 仅为 compiled candidate，
+保持隔离。`registry=0`，`formal_certificate_allowed=false`。

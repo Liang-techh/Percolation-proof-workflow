@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-P5-103-actual-reference-context-binding-liuguanyi-20260908T2108Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "0101A8EB1B6FC442FEF5658B59F6C8C00477D83F5900D9D5EE8315EDF45DE2B3",
+  "task_id": "P5-103-ACTUAL-REFERENCE-CONTEXT-BINDING",
+  "source_agent": "柳冠一",
+  "created_at": "2026-09-08T21:08:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_p5_actual_reference_context_binding",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "febe9541e36e38f5070bcb4a0ef1ffc7b7a61d41",
+  "review_file": "agent_review_inbox/review-P5-103-actual-reference-context-binding-liuguanyi-20260908T2108Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-14T21:18:26.043029+00:00"
+}

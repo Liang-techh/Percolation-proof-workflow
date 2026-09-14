@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P4-JOINT6-ACTUAL-RESIDUAL-NEXT-liuguanyi-20260909.md",
+  "record_kind": "review_result",
+  "review_sha256": "F42C64E5409F0DB97EAA61DC359364726C5926B7D76D9CC573A91DB63039D0B1",
+  "task_id": "GH-MATH-P4-JOINT6-ACTUAL-RESIDUAL-NEXT",
+  "source_agent": "柳冠一",
+  "created_at": "2026-09-09T04:08:00Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_joint6_actual_residual_next",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "29a9323fdaa48b70a7ed313fe9460eaf4616e4d8",
+  "review_file": "agent_review_inbox/review-GH-MATH-P4-JOINT6-ACTUAL-RESIDUAL-NEXT-liuguanyi-20260909.md",
+  "integrated_at": "2026-09-14T21:18:26.042346+00:00"
+}

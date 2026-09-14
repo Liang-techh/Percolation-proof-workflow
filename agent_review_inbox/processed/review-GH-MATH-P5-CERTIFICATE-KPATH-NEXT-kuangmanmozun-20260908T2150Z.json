@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-GH-MATH-P5-CERTIFICATE-KPATH-NEXT-kuangmanmozun-20260908T2150Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "317B8309042D17072F46697C6A03D9C2A071C1CFFE66FFB0216B2EE6ED57EEA0",
+  "task_id": "GH-MATH-P5-CERTIFICATE-KPATH-NEXT",
+  "source_agent": "unknown",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_certificate_indexed_kpath_next",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "0a914cc5c9eaabed0ed7ee723bccf374a6af9b4f",
+  "review_file": "agent_review_inbox/review-GH-MATH-P5-CERTIFICATE-KPATH-NEXT-kuangmanmozun-20260908T2150Z.md",
+  "integrated_at": "2026-09-14T21:18:26.042838+00:00"
+}
