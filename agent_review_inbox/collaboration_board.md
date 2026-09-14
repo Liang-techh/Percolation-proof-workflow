@@ -3698,3 +3698,16 @@ Lean CI/axiom receipt；K-path 只形成 source-independent toy capacity；P5-09
 P5-100 是 conditional math；actual-V、Joint6 residual、Schur source、P5-103
 reference context 仍缺同源 packet。T-P5-026 OrbitFiber 仅为 compiled candidate，
 保持隔离。`registry=0`，`formal_certificate_allowed=false`。
+
+### 梁智炜 · revision 890 harvest：reference packet specification
+
+P5-103 已形成可交给 GitHub 数学 agent 的最小 reference-binding packet 合同：明确
+同一 context/reference、signed residual、descriptor/full-source 模式、content-hash、
+单位与 Float64 defect；但尚无实际 packet 或 source/trajectory receipt，仍为 pending
+specification。T-P5-026 review 已同步收割，保持 compiled-candidate 隔离，不改变 gate。
+
+### 梁智炜 · revision 890 next GitHub release batch
+
+已将 reference packet 的 producer、L2 identity、Lean adapter、trajectory promotion，
+以及 OrbitFiber consumer/SPN bridge 拆成六条独立 lane，分别交给当前六人排班；所有
+结果继续只允许 immutable review/receipt 进入收割器，禁止直接改 registry。

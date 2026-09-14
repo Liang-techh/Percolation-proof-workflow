@@ -4600,3 +4600,29 @@ base-storage collar 是 conditional math；P4 active-V、Joint6 actual residual�
 actual source 与 P5-103 reference context 继续是 same-source binding obstructions。
 因此 `registry=0`、`formal_certificate_allowed=false` 不变。新增的 T-P5-026 OrbitFiber
 文件仍只是 compiled_candidate，不能作为 admission 或 registry 输入。
+
+## 2026-09-14 — next GitHub release batch after revision 890
+
+以下任务围绕新 reference-binding 合同和 P5 前沿拆分；每项只回传 immutable
+`review_result`/receipt，不直接修改 shared state 或 registry。流川枫不再接收任务。
+
+| owner | task id | bounded deliverable |
+|---|---|---|
+| 柳冠一 | `GH-MATH-P5-103-REFERENCE-PACKET-PRODUCER` | 按 packet v1 规范寻找/实现同 context actual/reference exporter；缺实例则回传精确 missing/rejected fields |
+| 古月方源 | `GH-MATH-P5-103-REFERENCE-L2-IDENTITY` | 在 descriptor/full-source 两模式下核对 signed residual subtraction 与 Float64 defect identity，不声称 trajectory promotion |
+| 苏梦辰 | `GH-LEAN-P5-103-REFERENCE-PACKET-ADAPTER` | 为 packet schema、hash/no-cycle、L2 typed interface 做 pinned standalone Lean receipt；source binding 缺失时保持 pending |
+| 巨阳仙尊 | `GH-LEAN-P5-026-ORBIT-FIBER-CONSUMER` | 将 z=0 multiplicity guard 与 nonzero orientation-erasure lemma 接入 P5 consumer，回传原生 CI/axiom/comparator receipt |
+| 红莲魔尊 | `GH-MATH-P5-103-TRAJECTORY-PROMOTION-GATE` | 研究 q'=v、v'=a 的 reference/actual 同区间 promotion contract；离散 samples 不得升级为 ODE |
+| 狂蛮魔尊 | `GH-MATH-P5-026-ORBIT-FIBER-SPN-BRIDGE` | 研究 OrbitFiber cardinality lemma 与 18 representative SPN certificate 的最短接口，区分 origin guard 与 weighted invariance |
+
+所有任务都继承 fail-closed admission：compiled candidate、source-independent lemma、
+checker pass 或 toy capacity 均不能直接进入 verified registry。
+
+## 2026-09-14 — revision 890 harvest：reference packet specification
+
+Sartre 提交 `P5-103-REFERENCE-BINDING-PACKET-SPEC`。该规范固定了同一 context/reference
+下的 `qbarB,vbarB,abarB,lbar,signedResidual` 合同、descriptor/full-source 两种互斥
+reference 模式、无循环 content-hash、A/T/F 单位与 Float64 defect 方程，并给出 L1
+pointwise residual identity 与独立的 trajectory-promotion gate。当前没有实例化 packet、
+source binding 或 producer receipt，故仅作为 pending specification；同时 T-P5-026 的
+compiled-candidate review 已收割，仍不进入 registry。

@@ -651,6 +651,9 @@ TASK_TARGETS = {
     "P5-103-ACTUAL-REFERENCE-CONTEXT-BINDING": (
         "P5.componentwise_relative_decay.feasible_cone_spn",
         "pending_p5_actual_reference_context_binding"),
+    "P5-103-REFERENCE-BINDING-PACKET-SPEC": (
+        "P5.componentwise_relative_decay.feasible_cone_spn",
+        "pending_p5_reference_binding_packet_specification"),
     "P8-105-REACHABLE-SET-NEGATIVE-SEPARATOR": (
         "P8.independent_reachability",
         "pending_p8_reachable_set_negative_separator"),
@@ -670,7 +673,10 @@ RECORD_GLOBS = (
     "review-*.md", "handoff-*.md", "handoff-*.json",
     "companion-*.md", "companion-*.json",
 )
-RECORD_KINDS = {"review_result", "handoff", "companion_log"}
+RECORD_KINDS = {
+    "review_result", "handoff", "companion_log",
+    "mathematical_handoff_specification",
+}
 RETIRED_AGENT_TOKENS = ("流川", "flowchuan")
 
 
@@ -1107,6 +1113,8 @@ def main() -> int:
             "review_result": "agent_review_integrated",
             "handoff": "agent_handoff_integrated",
             "companion_log": "agent_companion_integrated",
+            "mathematical_handoff_specification":
+                "agent_mathematical_specification_integrated",
         }[kind]
         state.event(
             event_kind if target_name else f"external_reuse_{event_kind}",

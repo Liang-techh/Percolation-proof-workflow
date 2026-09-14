@@ -1,0 +1,14 @@
+{
+  "record_file": "agent_review_inbox/review-P5-103-REFERENCE-BINDING-PACKET-SPEC-20260914-Sartre.md",
+  "record_kind": "mathematical_handoff_specification",
+  "review_sha256": "5A5C76B8B7D471EF837B66A15F51F7F8B987B5E60BE5BFC17D76E97BFB81A004",
+  "task_id": "P5-103-REFERENCE-BINDING-PACKET-SPEC",
+  "source_agent": "Sartre",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_p5_reference_binding_packet_specification",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "integrated_at": "2026-09-14T21:26:02.722267+00:00"
+}

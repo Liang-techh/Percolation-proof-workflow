@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 889,
+  "revision": 890,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -42306,6 +42306,19 @@
             "source_commit": "febe9541e36e38f5070bcb4a0ef1ffc7b7a61d41",
             "review_file": "agent_review_inbox/review-P5-103-actual-reference-context-binding-liuguanyi-20260908T2108Z.md",
             "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-P5-103-REFERENCE-BINDING-PACKET-SPEC-20260914-Sartre.md",
+            "record_kind": "mathematical_handoff_specification",
+            "review_sha256": "5A5C76B8B7D471EF837B66A15F51F7F8B987B5E60BE5BFC17D76E97BFB81A004",
+            "task_id": "P5-103-REFERENCE-BINDING-PACKET-SPEC",
+            "source_agent": "Sartre",
+            "created_at": "unknown",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_p5_reference_binding_packet_specification",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "unknown"
           }
         ]
       }
@@ -42542,6 +42555,21 @@
             "source_commit": "unknown",
             "review_file": "agent_review_inbox/review-T-P5-026-CONE-INDEX-INVERSE-COVER-20260908-James.md",
             "format_warning": "missing_yaml_delimiters"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P5-026-CONE-INDEX-ORBIT-FIBER-20260914T211830Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "A8A4712374FBE8B39FEF6C0BD63A263C1F4BC338B50516ABD9338C0281162679",
+            "task_id": "T-P5-026",
+            "source_agent": "Codex",
+            "created_at": "2026-09-14T21:18:30Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "compiled_candidate_source_independent_feasible_cone_spn",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "53e497f9d09de120db0f16da87b7d6e07e0e6e00",
+            "review_file": "agent_review_inbox/review-T-P5-026-CONE-INDEX-ORBIT-FIBER-20260914T211830Z.md",
+            "admission_label": "pending"
           }
         ]
       }
@@ -83053,6 +83081,32 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-14T21:26:02.722267+00:00",
+      "kind": "agent_mathematical_specification_integrated",
+      "record_file": "agent_review_inbox/review-P5-103-REFERENCE-BINDING-PACKET-SPEC-20260914-Sartre.md",
+      "record_kind": "mathematical_handoff_specification",
+      "review_sha256": "5A5C76B8B7D471EF837B66A15F51F7F8B987B5E60BE5BFC17D76E97BFB81A004",
+      "task_id": "P5-103-REFERENCE-BINDING-PACKET-SPEC",
+      "classification": "pending_p5_reference_binding_packet_specification",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "1e3f28c782d9485bb94b0bb1e3ae0383"
+    },
+    {
+      "at": "2026-09-14T21:26:02.722419+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P5-026-CONE-INDEX-ORBIT-FIBER-20260914T211830Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "A8A4712374FBE8B39FEF6C0BD63A263C1F4BC338B50516ABD9338C0281162679",
+      "task_id": "T-P5-026",
+      "classification": "compiled_candidate_source_independent_feasible_cone_spn",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "4e7586a2f5b048f19443d4c406afb7aa"
     }
   ],
   "agent_requests": {},
@@ -86709,5 +86763,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "26833eb6c96858059cb0e22cfe8ff0677e1940b792ed054f0fefde7f9a210c32"
+  "state_checksum": "f25bb4f13fda715ab02da34ee6ca7f92daea89773082539f4c9d5954dc03a2fe"
 }
