@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-P4-SCHUR-THIRD-SOURCE-DIRECTION-JOINT-ALLOCATION-20260914T212428Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "6173D1AFFEA661E37552E88211E1B55CB1BB49640F5A458FC115D0617004C2BC",
+  "task_id": "GH-MATH-P4-SCHUR-ACTUAL-SOURCE-NEXT",
+  "source_agent": "codex-independent-mathematical-interface",
+  "created_at": "2026-09-14T21:24:28Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_p4_schur_actual_source_next",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "e5f3f7ec984511e5eec1fc17ff9cb17a652e00ec",
+  "review_file": "agent_review_inbox/review-P4-SCHUR-THIRD-SOURCE-DIRECTION-JOINT-ALLOCATION-20260914T212428Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-14T21:27:36.802054+00:00"
+}

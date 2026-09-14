@@ -4618,6 +4618,16 @@ actual source 与 P5-103 reference context 继续是 same-source binding obstruc
 所有任务都继承 fail-closed admission：compiled candidate、source-independent lemma、
 checker pass 或 toy capacity 均不能直接进入 verified registry。
 
+## 2026-09-14 — revision 891 harvest：Schur observation rank gate
+
+Poincare 的独立数学回执补上了 P4 第三源方向的判别接口：对 `d=A*y+b`、已有观测
+`o=R*y+c`，有限 defect 控制的必要充分条件是 `ker R ⊆ ker A`，等价于
+`rowspace(A) ⊆ rowspace(R)`，最少新增标量数为 `rank([R;A])-rank(R)`。因此不能
+先验假设“补一条 row6 就够”；若实际 `Cmat` 满秩，候选远端 map 可能需要三条方向。
+另给出 transformed `omega` 区间上的四个 root-free endpoint inequalities，直接联合
+控制 `2u` 与 `2s+D`，但这只是 source-facing mathematical interface，actual rank、
+source packet、coverage、Lean 和 admission 仍 pending。
+
 ## 2026-09-14 — revision 890 harvest：reference packet specification
 
 Sartre 提交 `P5-103-REFERENCE-BINDING-PACKET-SPEC`。该规范固定了同一 context/reference

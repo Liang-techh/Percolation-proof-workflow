@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 890,
+  "revision": 891,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -17585,6 +17585,21 @@
             "target_scope": "routeb_node",
             "source_commit": "315dc07e683cb11526d853fa012c0b0abcb90b80",
             "review_file": "agent_review_inbox/review_result_RVW-P4-SCHUR-ACTUAL-SOURCE-NEXT-GYFY-20260909T1123Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-P4-SCHUR-THIRD-SOURCE-DIRECTION-JOINT-ALLOCATION-20260914T212428Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "6173D1AFFEA661E37552E88211E1B55CB1BB49640F5A458FC115D0617004C2BC",
+            "task_id": "GH-MATH-P4-SCHUR-ACTUAL-SOURCE-NEXT",
+            "source_agent": "codex-independent-mathematical-interface",
+            "created_at": "2026-09-14T21:24:28Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_p4_schur_actual_source_next",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "e5f3f7ec984511e5eec1fc17ff9cb17a652e00ec",
+            "review_file": "agent_review_inbox/review-P4-SCHUR-THIRD-SOURCE-DIRECTION-JOINT-ALLOCATION-20260914T212428Z.md",
             "admission_label": "pending"
           }
         ]
@@ -83107,6 +83122,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "4e7586a2f5b048f19443d4c406afb7aa"
+    },
+    {
+      "at": "2026-09-14T21:27:36.802054+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-P4-SCHUR-THIRD-SOURCE-DIRECTION-JOINT-ALLOCATION-20260914T212428Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "6173D1AFFEA661E37552E88211E1B55CB1BB49640F5A458FC115D0617004C2BC",
+      "task_id": "GH-MATH-P4-SCHUR-ACTUAL-SOURCE-NEXT",
+      "classification": "pending_p4_schur_actual_source_next",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
     }
   ],
   "agent_requests": {},
@@ -86763,5 +86791,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "f25bb4f13fda715ab02da34ee6ca7f92daea89773082539f4c9d5954dc03a2fe"
+  "state_checksum": "4c68eecb9b8046447aefdf3a2a460e5e0476029c2928b7d33877c86d42129ab0"
 }
