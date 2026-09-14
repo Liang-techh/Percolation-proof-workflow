@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-BODY4-SOURCE-JACOBIAN-BRIDGE-20260914T2110Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "9F26DB03DB8BB753FD9452F2CFB4668F3C9A8D547EABED98B6A90CDA97C60D78",
+  "task_id": "T-P4-BODY4-SOURCE-JACOBIAN-BRIDGE",
+  "source_agent": "Codex-Body4-source-seam",
+  "created_at": "2026-09-14T21:10:37Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_body4_source_jacobian_field_obstruction",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "53e497f9d09de120db0f16da87b7d6e07e0e6e00",
+  "review_file": "agent_review_inbox/review-T-P4-BODY4-SOURCE-JACOBIAN-BRIDGE-20260914T2110Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-14T21:14:57.939996+00:00"
+}

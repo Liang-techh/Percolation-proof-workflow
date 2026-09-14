@@ -3674,3 +3674,19 @@ James 对历史 Schur/PMI lane 的新结果把零 port 原点 obstruction 推广
 原点方程只允许实际投影为零，所缺的是同源完整 acceleration/force graph 与 projection
 identity。结果仍是理想解析配置下的 source-bound obstruction，未提供 DH runtime、
 Lean、Float64 或 reachability 证据，因此不改变 gate/registry。
+
+### 梁智炜 · revision 887 harvest：actual Schur source obstruction
+
+独立 source audit 把 block456 远端行化为条件式 source-map：`N=M_DD`、`K=M_DC`、
+`K0=M0_DC`、`Cmat=M_CD`，并给出 `r0`、`d`、`Jd`、`b` 的依赖关系；同时定位
+corrected-DH 与旧 factorized controller 的精确阻尼差。该结果确认 H 的 source formula
+已定位，但实际 residual measurement/refinement、matching reference、signed caps 与
+可变 chart 仍缺，不能用旧 absolute port bound、synthetic helper 或只修 b/H 代替。
+状态保持 source-binding obstruction，不关闭 P4、registry 或 formal gate。
+### 梁智炜 · revision 888 harvest：Body4 Jacobian field obstruction
+
+Body4（Lean index 3 / Julia `ii=4`）的 27 个 frame scalar 与 36 个 Jacobian component
+requirement 已枚举，但所有 semantic source witness 仍为空。`Jv[:,3]` 的零值属于
+active joint 的 parallel-cross 语义，`Jw[:,3]` 仍是 parent-axis copy；只有 columns
+4–6 是 fresh zero/no-write。该结果只是字段 inventory/obstruction，不是 source export、
+runtime equality、coverage 或 Lean receipt，不关闭 P4/O1、registry 或 formal gate。

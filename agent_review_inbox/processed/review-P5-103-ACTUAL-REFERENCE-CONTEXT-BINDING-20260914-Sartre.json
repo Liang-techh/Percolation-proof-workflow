@@ -1,0 +1,15 @@
+{
+  "record_file": "agent_review_inbox/review-P5-103-ACTUAL-REFERENCE-CONTEXT-BINDING-20260914-Sartre.md",
+  "record_kind": "review_result",
+  "review_sha256": "DDBDD053D043DF8634737DFF95C9A6916498C313F15E20E8B35388556A74B72F",
+  "task_id": "P5-103-ACTUAL-REFERENCE-CONTEXT-BINDING",
+  "source_agent": "Sartre",
+  "created_at": "unknown",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_p5_actual_reference_context_binding",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "unknown",
+  "review_file": "agent_review_inbox/review-P5-103-ACTUAL-REFERENCE-CONTEXT-BINDING-20260914-Sartre.md",
+  "integrated_at": "2026-09-14T21:12:58.223275+00:00"
+}

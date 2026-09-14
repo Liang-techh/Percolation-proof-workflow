@@ -227,6 +227,9 @@ TASK_TARGETS = {
     "GH-MATH-P4-O1-BODY4-FRAME-HANDOFF": (
         "P4.O1.source_comparator.h_body_4.source_gram_targets",
         "pending_body4_frame_source_jacobian_handoff"),
+    "T-P4-BODY4-SOURCE-JACOBIAN-BRIDGE": (
+        "P4.O1.source_comparator.h_body_4.source_gram_targets",
+        "pending_body4_source_jacobian_field_obstruction"),
     "GH-MATH-P4-3D-TO-2D-RESTRICTION": (
         "P4.true_dh_port_source_binding",
         "pending_3d_to_2d_restriction_interface"),

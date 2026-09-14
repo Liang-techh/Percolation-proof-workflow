@@ -4553,3 +4553,40 @@ packet，或记录该 source-bound cap 的不可构造性。
 
 原始 artifact 路径与 SHA-256 保存在对应 intake review 中；wrapper 不是 GitHub receipt，
 不改变 `registry=0` 或 `formal_certificate_allowed=false`。
+
+## 2026-09-14 — revision 886 harvest：reference context obstruction
+
+`P5-103-ACTUAL-REFERENCE-CONTEXT-BINDING` 已收割。真实 source/outputs 中未找到同一
+context 的 `qbarB`、`vbarB`、`referenceKey`、`lbar` 四字段配对实例；已有 manifest
+哈希匹配，但只覆盖 actual trajectory，不含 nominal reference。`debug_12e.vbar2`
+是 remote-acceleration 差值的采样平方范数上界，不是 nominal velocity，`traj.l2`
+也丢失 residual 符号方向。
+
+同时确认 actual evaluator 的 `l=I*f-Mref*a` 与旧 MATLAB
+`ddq_exact-ddq_nominal` 的归一化/符号不同，Mref decimal CSV 不能直接当理想
+`350003/3000000`。禁止用 actual 重命名 nominal、伪造 referenceKey 或混接旧 MATLAB
+delta。该结果是字段级 pending obstruction，不否定 anchor-domain、P5 或 block45
+trajectory theorem；registry 与 formal gate 不变。
+
+## 2026-09-14 — revision 887 harvest：actual Schur source obstruction
+
+`GH-MATH-P4-SCHUR-ACTUAL-SOURCE-NEXT` 已收割独立 source audit。现有 block456 远端行
+可条件写成 `N=M_DD`、`K=M_DC`、`K0=M0_DC`、`Cmat=M_CD`，并得到 `r0`、`d`、`Jd`、
+`b` 的 source-map；H 的 source formula 已定位。与此同时，corrected-DH 与旧
+factorized controller 的阻尼差被明确算出，不能只修 b 或 H，也不能用旧 absolute
+port bounds 代替 signed residual。
+
+实际 residual refinement、matching reference、signed y/caps、可变 chart、u/s/D 与
+allocation 仍没有同源 packet。该结果是 exact same-configuration obstruction，未
+运行 Lean/Julia/runtime，不关闭 P4、registry 或 formal gate。
+## 2026-09-14 — revision 888 harvest：Body4 Jacobian field obstruction
+
+`T-P4-BODY4-SOURCE-JACOBIAN-BRIDGE` 已收割。Body4（Lean body index 3，对应 Julia
+`ii=4`）的 27 个 frame scalar 与 36 个 Jacobian component requirement 已完整列出，
+但所有 semantic witness 仍为 null/false。关键边界是 human joint 3 仍属 active：
+`Jv[:,3]` 的 parallel-cross 零值来自 source line 55，不是 inactive initialization；
+`Jw[:,3]` 仍是 parent-axis copy。inactive columns 4、5、6 才来自 fresh zero/no-write。
+
+该 inventory 不是 source export、runtime equality、cell/domain coverage 或 Lean receipt；
+不允许用正确形状数组或历史 olean 替代 source execution/assignment/preservation 证据。
+状态保持 pending，P4/O1、registry 与 formal gate 不变。

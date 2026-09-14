@@ -1,0 +1,945 @@
+{
+  "kind": "field_requirement_inventory_not_source_export",
+  "task_id": "T-P4-BODY4-SOURCE-JACOBIAN-BRIDGE",
+  "status": "pending",
+  "created_at": "2026-09-14T21:10:37Z",
+  "inspected_commit": "53e497f9d09de120db0f16da87b7d6e07e0e6e00",
+  "input_bindings": [
+    {
+      "path": "examples/routeb_b45_source_comparator_lean/RouteBO1Body4SourceGramTargets.lean",
+      "sha256": "2d0d2794edfe745d63a2970c36b53765f3b4bd747480107b1eab51cf2e2c3ca9"
+    },
+    {
+      "path": "examples/routeb_body_semantic_core_lean/BodySemanticCore.lean",
+      "sha256": "fe15f6ca9993f55fc56e6d2c9cca5fa8c7f6e9530b9b900a6f111ed96715149c"
+    },
+    {
+      "path": "examples/routeb_source_contract_index_adapter_lean/SourceContractIndexAdapter.lean",
+      "sha256": "2a18c7b6733af6245f3e5ba6dedd714a9ec7f28fd010122c0258611ce7aac452"
+    },
+    {
+      "path": "examples/routeb_source_contract_adapter_lean/SourceContractAdapter.lean",
+      "sha256": "58c0b15b6fceb1064f773acdb9f684dc55a021ac69a030c13e1c8b46f7b9a8dc"
+    },
+    {
+      "path": "examples/routeb_frame_slot_accessor_lean/FrameSlotAccessor.lean",
+      "sha256": "f497bd1f45fae4dd385f4d0f46df79252c92e5cd027b29d5dc55011f91525c31"
+    },
+    {
+      "path": "examples/routeb_real_dh_step_lean/RealDHStep.lean",
+      "sha256": "9c04da5b9627ee749c53009733006934f95b2d33265e46ca59d0725aa453786a"
+    },
+    {
+      "path": "examples/routeb_b45_fourier_normal_form/FourierNormalForm.lean",
+      "sha256": "56ec2f2d29a22942bcb83a3ba98197ae1ce4d607340072b81c013b8d358d3218"
+    },
+    {
+      "path": "examples/routeb_o1_body4_source_gram_proof_attempt/NEW_SOURCE_JACOBIAN_20260908_MINIMAL_ZO_BRIDGE.lean",
+      "sha256": "029f43cb7a24f8984c303ff8fec257c1c36c0495b669f0ea7d30e08da10f7ae0"
+    },
+    {
+      "path": "examples/routeb_o1_body4_source_gram_proof_attempt/NEW_SOURCE_JACOBIAN_20260908_BODY4_PORTS.lean",
+      "sha256": "95997701cd6ac1de61537121f91e629a9e030fa45b36f6fca5e85422deabbe42"
+    },
+    {
+      "path": "examples/routeb_o1_body4_source_gram_proof_attempt/NEW_SOURCE_JACOBIAN_20260908_FRAME_SOURCE_AUDIT_REVIEW.md",
+      "sha256": "71e3448b390f115be03c830dc8aaaba2ecfc759eae92b52d526f121d1ab27edb"
+    },
+    {
+      "path": "examples/routeb_o1_body4_source_gram_proof_attempt/NEW_FINITE_SUM_20260908_STEP3_TRANSLATION.lean",
+      "sha256": "a7144407f5aa2c5f8bc4f30d2327b39cb22f1a587a0f0a141b5e22605a344b8e"
+    },
+    {
+      "path": "artifacts/task_routeb_body_trace_sink_current/source_snapshot/dhport_lib.jl",
+      "sha256": "aebe6db09b2d943448c5d701631109dba8f5eeb070cc66593e5dbaca26485936"
+    },
+    {
+      "path": "artifacts/task_routeb_body_trace_sink_current/source_snapshot/routeB_fourier_rational_probe.py",
+      "sha256": "9460181770e47be0ecbde43a8a29ef285da1168c3121fab18d5378c671401a7b"
+    },
+    {
+      "path": "artifacts/task_routeb_body_trace_sink_current/outputs/manifest.json",
+      "sha256": "7d4625c6b3a10a949518ded5e19586321a158a546cf8ff0c7ca81e537812fa74"
+    }
+  ],
+  "scope": {
+    "model": "exact_real_imported_sourceContract",
+    "model_quantifier": "all q : Fin 6 -> Real",
+    "runtime": "uninstantiated distinct layer",
+    "jacobian_shape": [
+      3,
+      6
+    ],
+    "body_index": 3,
+    "source_readout_phase": "mass_matrix ii=4, after line 57, before line 58"
+  },
+  "field_requirements": [
+    {
+      "field": "parent_axis",
+      "frame_slot": 0,
+      "spatial_axis": 0,
+      "model_rhs": "prefixZ(q,0)[0]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_axis",
+      "frame_slot": 0,
+      "spatial_axis": 1,
+      "model_rhs": "prefixZ(q,0)[1]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_axis",
+      "frame_slot": 0,
+      "spatial_axis": 2,
+      "model_rhs": "prefixZ(q,0)[2]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_axis",
+      "frame_slot": 1,
+      "spatial_axis": 0,
+      "model_rhs": "prefixZ(q,1)[0]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_axis",
+      "frame_slot": 1,
+      "spatial_axis": 1,
+      "model_rhs": "prefixZ(q,1)[1]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_axis",
+      "frame_slot": 1,
+      "spatial_axis": 2,
+      "model_rhs": "prefixZ(q,1)[2]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_axis",
+      "frame_slot": 2,
+      "spatial_axis": 0,
+      "model_rhs": "prefixZ(q,2)[0]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_axis",
+      "frame_slot": 2,
+      "spatial_axis": 1,
+      "model_rhs": "prefixZ(q,2)[1]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_axis",
+      "frame_slot": 2,
+      "spatial_axis": 2,
+      "model_rhs": "prefixZ(q,2)[2]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_axis",
+      "frame_slot": 3,
+      "spatial_axis": 0,
+      "model_rhs": "prefixZ(q,3)[0]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_axis",
+      "frame_slot": 3,
+      "spatial_axis": 1,
+      "model_rhs": "prefixZ(q,3)[1]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_axis",
+      "frame_slot": 3,
+      "spatial_axis": 2,
+      "model_rhs": "prefixZ(q,3)[2]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_origin",
+      "frame_slot": 0,
+      "spatial_axis": 0,
+      "model_rhs": "prefixO(q,0)[0]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_origin",
+      "frame_slot": 0,
+      "spatial_axis": 1,
+      "model_rhs": "prefixO(q,0)[1]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_origin",
+      "frame_slot": 0,
+      "spatial_axis": 2,
+      "model_rhs": "prefixO(q,0)[2]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_origin",
+      "frame_slot": 1,
+      "spatial_axis": 0,
+      "model_rhs": "prefixO(q,1)[0]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_origin",
+      "frame_slot": 1,
+      "spatial_axis": 1,
+      "model_rhs": "prefixO(q,1)[1]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_origin",
+      "frame_slot": 1,
+      "spatial_axis": 2,
+      "model_rhs": "prefixO(q,1)[2]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_origin",
+      "frame_slot": 2,
+      "spatial_axis": 0,
+      "model_rhs": "prefixO(q,2)[0]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_origin",
+      "frame_slot": 2,
+      "spatial_axis": 1,
+      "model_rhs": "prefixO(q,2)[1]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_origin",
+      "frame_slot": 2,
+      "spatial_axis": 2,
+      "model_rhs": "prefixO(q,2)[2]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_origin",
+      "frame_slot": 3,
+      "spatial_axis": 0,
+      "model_rhs": "prefixO(q,3)[0]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_origin",
+      "frame_slot": 3,
+      "spatial_axis": 1,
+      "model_rhs": "prefixO(q,3)[1]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "parent_origin",
+      "frame_slot": 3,
+      "spatial_axis": 2,
+      "model_rhs": "prefixO(q,3)[2]",
+      "source_context_lines": [
+        32,
+        43
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "slot4_translation",
+      "spatial_axis": 0,
+      "equation": "origin(F4)=origin(F3)+(19/100)*zAxis(F3)",
+      "source_context_lines": [
+        37,
+        41
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "slot4_translation",
+      "spatial_axis": 1,
+      "equation": "origin(F4)=origin(F3)+(19/100)*zAxis(F3)",
+      "source_context_lines": [
+        37,
+        41
+      ],
+      "witness": null,
+      "verified": false
+    },
+    {
+      "field": "slot4_translation",
+      "spatial_axis": 2,
+      "equation": "origin(F4)=origin(F3)+(19/100)*zAxis(F3)",
+      "source_context_lines": [
+        37,
+        41
+      ],
+      "witness": null,
+      "verified": false
+    }
+  ],
+  "jacobian_requirements": [
+    {
+      "target": "Body4JvTarget",
+      "body_index": 3,
+      "joint_index": 0,
+      "spatial_axis": 0,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 1,
+      "active": true,
+      "source_assignment_line": 55,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "active_oriented_cross",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JvTarget",
+      "body_index": 3,
+      "joint_index": 0,
+      "spatial_axis": 1,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 1,
+      "active": true,
+      "source_assignment_line": 55,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "active_oriented_cross",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JvTarget",
+      "body_index": 3,
+      "joint_index": 0,
+      "spatial_axis": 2,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 1,
+      "active": true,
+      "source_assignment_line": 55,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "active_oriented_cross",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JvTarget",
+      "body_index": 3,
+      "joint_index": 1,
+      "spatial_axis": 0,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 2,
+      "active": true,
+      "source_assignment_line": 55,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "active_oriented_cross",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JvTarget",
+      "body_index": 3,
+      "joint_index": 1,
+      "spatial_axis": 1,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 2,
+      "active": true,
+      "source_assignment_line": 55,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "active_oriented_cross",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JvTarget",
+      "body_index": 3,
+      "joint_index": 1,
+      "spatial_axis": 2,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 2,
+      "active": true,
+      "source_assignment_line": 55,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "active_oriented_cross",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JvTarget",
+      "body_index": 3,
+      "joint_index": 2,
+      "spatial_axis": 0,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 3,
+      "active": true,
+      "source_assignment_line": 55,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "active_oriented_cross",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JvTarget",
+      "body_index": 3,
+      "joint_index": 2,
+      "spatial_axis": 1,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 3,
+      "active": true,
+      "source_assignment_line": 55,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "active_oriented_cross",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JvTarget",
+      "body_index": 3,
+      "joint_index": 2,
+      "spatial_axis": 2,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 3,
+      "active": true,
+      "source_assignment_line": 55,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "active_oriented_cross",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JvTarget",
+      "body_index": 3,
+      "joint_index": 3,
+      "spatial_axis": 0,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 4,
+      "active": true,
+      "source_assignment_line": 55,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "active_parallel_cross_not_inactive",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JvTarget",
+      "body_index": 3,
+      "joint_index": 3,
+      "spatial_axis": 1,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 4,
+      "active": true,
+      "source_assignment_line": 55,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "active_parallel_cross_not_inactive",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JvTarget",
+      "body_index": 3,
+      "joint_index": 3,
+      "spatial_axis": 2,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 4,
+      "active": true,
+      "source_assignment_line": 55,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "active_parallel_cross_not_inactive",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JvTarget",
+      "body_index": 3,
+      "joint_index": 4,
+      "spatial_axis": 0,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": null,
+      "active": false,
+      "source_assignment_line": 53,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "fresh_zero_and_no_assignment",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JvTarget",
+      "body_index": 3,
+      "joint_index": 4,
+      "spatial_axis": 1,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": null,
+      "active": false,
+      "source_assignment_line": 53,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "fresh_zero_and_no_assignment",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JvTarget",
+      "body_index": 3,
+      "joint_index": 4,
+      "spatial_axis": 2,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": null,
+      "active": false,
+      "source_assignment_line": 53,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "fresh_zero_and_no_assignment",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JvTarget",
+      "body_index": 3,
+      "joint_index": 5,
+      "spatial_axis": 0,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": null,
+      "active": false,
+      "source_assignment_line": 53,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "fresh_zero_and_no_assignment",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JvTarget",
+      "body_index": 3,
+      "joint_index": 5,
+      "spatial_axis": 1,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": null,
+      "active": false,
+      "source_assignment_line": 53,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "fresh_zero_and_no_assignment",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JvTarget",
+      "body_index": 3,
+      "joint_index": 5,
+      "spatial_axis": 2,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": null,
+      "active": false,
+      "source_assignment_line": 53,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "fresh_zero_and_no_assignment",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JwTarget",
+      "body_index": 3,
+      "joint_index": 0,
+      "spatial_axis": 0,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 1,
+      "active": true,
+      "source_assignment_line": 56,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "parent_axis_copy",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JwTarget",
+      "body_index": 3,
+      "joint_index": 0,
+      "spatial_axis": 1,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 1,
+      "active": true,
+      "source_assignment_line": 56,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "parent_axis_copy",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JwTarget",
+      "body_index": 3,
+      "joint_index": 0,
+      "spatial_axis": 2,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 1,
+      "active": true,
+      "source_assignment_line": 56,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "parent_axis_copy",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JwTarget",
+      "body_index": 3,
+      "joint_index": 1,
+      "spatial_axis": 0,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 2,
+      "active": true,
+      "source_assignment_line": 56,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "parent_axis_copy",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JwTarget",
+      "body_index": 3,
+      "joint_index": 1,
+      "spatial_axis": 1,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 2,
+      "active": true,
+      "source_assignment_line": 56,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "parent_axis_copy",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JwTarget",
+      "body_index": 3,
+      "joint_index": 1,
+      "spatial_axis": 2,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 2,
+      "active": true,
+      "source_assignment_line": 56,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "parent_axis_copy",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JwTarget",
+      "body_index": 3,
+      "joint_index": 2,
+      "spatial_axis": 0,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 3,
+      "active": true,
+      "source_assignment_line": 56,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "parent_axis_copy",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JwTarget",
+      "body_index": 3,
+      "joint_index": 2,
+      "spatial_axis": 1,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 3,
+      "active": true,
+      "source_assignment_line": 56,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "parent_axis_copy",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JwTarget",
+      "body_index": 3,
+      "joint_index": 2,
+      "spatial_axis": 2,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 3,
+      "active": true,
+      "source_assignment_line": 56,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "parent_axis_copy",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JwTarget",
+      "body_index": 3,
+      "joint_index": 3,
+      "spatial_axis": 0,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 4,
+      "active": true,
+      "source_assignment_line": 56,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "parent_axis_copy",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JwTarget",
+      "body_index": 3,
+      "joint_index": 3,
+      "spatial_axis": 1,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 4,
+      "active": true,
+      "source_assignment_line": 56,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "parent_axis_copy",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JwTarget",
+      "body_index": 3,
+      "joint_index": 3,
+      "spatial_axis": 2,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": 4,
+      "active": true,
+      "source_assignment_line": 56,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "parent_axis_copy",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JwTarget",
+      "body_index": 3,
+      "joint_index": 4,
+      "spatial_axis": 0,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": null,
+      "active": false,
+      "source_assignment_line": 53,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "fresh_zero_and_no_assignment",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JwTarget",
+      "body_index": 3,
+      "joint_index": 4,
+      "spatial_axis": 1,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": null,
+      "active": false,
+      "source_assignment_line": 53,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "fresh_zero_and_no_assignment",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JwTarget",
+      "body_index": 3,
+      "joint_index": 4,
+      "spatial_axis": 2,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": null,
+      "active": false,
+      "source_assignment_line": 53,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "fresh_zero_and_no_assignment",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JwTarget",
+      "body_index": 3,
+      "joint_index": 5,
+      "spatial_axis": 0,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": null,
+      "active": false,
+      "source_assignment_line": 53,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "fresh_zero_and_no_assignment",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JwTarget",
+      "body_index": 3,
+      "joint_index": 5,
+      "spatial_axis": 1,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": null,
+      "active": false,
+      "source_assignment_line": 53,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "fresh_zero_and_no_assignment",
+      "source_equality_witness": null,
+      "verified": false
+    },
+    {
+      "target": "Body4JwTarget",
+      "body_index": 3,
+      "joint_index": 5,
+      "spatial_axis": 2,
+      "julia_body_iteration": 4,
+      "julia_joint_iteration": null,
+      "active": false,
+      "source_assignment_line": 53,
+      "consumption_phase": "body_4_after_inner_loop_before_line_58",
+      "mechanism": "fresh_zero_and_no_assignment",
+      "source_equality_witness": null,
+      "verified": false
+    }
+  ],
+  "counts": {
+    "prefix_axis_scalars": 12,
+    "prefix_origin_scalars": 12,
+    "translation_scalars": 3,
+    "jv_entries": 18,
+    "jw_entries": 18,
+    "active_entries_per_jacobian": 12,
+    "inactive_entries_per_jacobian": 6,
+    "active_joint3_entries_per_jacobian": 3
+  },
+  "coverage": {
+    "requirement_coordinates_complete": true,
+    "source_witness_coverage": null,
+    "cell_cover_witness": null,
+    "all_real_domain_cover_witness": null,
+    "finite_binary64_observations_are_not_all_real_cover": true
+  },
+  "missing_witnesses": {
+    "verified_prefix_geometry": null,
+    "verified_translation": null,
+    "ideal_julia_to_lean_frame_readout": null,
+    "ideal_julia_assignment_and_preservation": null,
+    "loaded_input_and_globals": null,
+    "runtime_provenance": null,
+    "rounding_and_cross_residual_enclosure": null
+  },
+  "admission": {
+    "source_binding_proven": false,
+    "jacobian_targets_verified": false,
+    "runtime_equality_proven": false,
+    "registry_eligible": false,
+    "formal_certificate_allowed": false
+  },
+  "execution": {
+    "lean_lake": false,
+    "julia": false,
+    "source_generator": false,
+    "numerical_sampling": false
+  },
+  "generated_runtime_observations": null
+}
