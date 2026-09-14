@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "revision": 891,
+  "revision": 892,
   "project": "routeb-6dof-external",
   "root_id": "b85f1ee1ef03426eaa1197ff39c6c026",
   "nodes": {
@@ -41213,6 +41213,21 @@
             "target_scope": "routeb_node",
             "source_commit": "53e497f9d09de120db0f16da87b7d6e07e0e6e00",
             "review_file": "agent_review_inbox/review-T-P4-BODY4-SOURCE-JACOBIAN-BRIDGE-20260914T2110Z.md",
+            "admission_label": "pending"
+          },
+          {
+            "record_file": "agent_review_inbox/review-T-P4-BODY4-MINIMAL-TRANSVERSE-WITNESS-20260914T2122Z.md",
+            "record_kind": "review_result",
+            "review_sha256": "1562C335A17B3EB095AD5721BA76ABA67CE5B3D0BE590BCD0CDC4CBCB7535B17",
+            "task_id": "T-P4-BODY4-SOURCE-JACOBIAN-BRIDGE",
+            "source_agent": "Codex-Body4-minimal-witness",
+            "created_at": "2026-09-14T21:22:12Z",
+            "integration_status": "integrated_as_pending_metadata",
+            "classification": "pending_body4_source_jacobian_field_obstruction",
+            "admission_effect": "none",
+            "target_scope": "routeb_node",
+            "source_commit": "d2a2b8836700ef49883f3169c244447363c40d63",
+            "review_file": "agent_review_inbox/review-T-P4-BODY4-MINIMAL-TRANSVERSE-WITNESS-20260914T2122Z.md",
             "admission_label": "pending"
           }
         ]
@@ -83135,6 +83150,19 @@
       "registry_promoted": false,
       "formal_certificate_allowed": false,
       "node_id": "6cebb66987f449f3b5ad8d0548dfdf83"
+    },
+    {
+      "at": "2026-09-14T21:29:02.311266+00:00",
+      "kind": "agent_review_integrated",
+      "record_file": "agent_review_inbox/review-T-P4-BODY4-MINIMAL-TRANSVERSE-WITNESS-20260914T2122Z.md",
+      "record_kind": "review_result",
+      "review_sha256": "1562C335A17B3EB095AD5721BA76ABA67CE5B3D0BE590BCD0CDC4CBCB7535B17",
+      "task_id": "T-P4-BODY4-SOURCE-JACOBIAN-BRIDGE",
+      "classification": "pending_body4_source_jacobian_field_obstruction",
+      "admission_effect": "none",
+      "registry_promoted": false,
+      "formal_certificate_allowed": false,
+      "node_id": "ae18c1e30172442abb689b14be5bf225"
     }
   ],
   "agent_requests": {},
@@ -86791,5 +86819,5 @@
     }
   ],
   "global_closure": {},
-  "state_checksum": "4c68eecb9b8046447aefdf3a2a460e5e0476029c2928b7d33877c86d42129ab0"
+  "state_checksum": "8a888f244554c40395ff18d73e8fe0b5a0bcab0152acff12a87722d784ea038b"
 }

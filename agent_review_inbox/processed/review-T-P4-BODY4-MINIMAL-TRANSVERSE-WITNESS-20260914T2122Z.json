@@ -1,0 +1,16 @@
+{
+  "record_file": "agent_review_inbox/review-T-P4-BODY4-MINIMAL-TRANSVERSE-WITNESS-20260914T2122Z.md",
+  "record_kind": "review_result",
+  "review_sha256": "1562C335A17B3EB095AD5721BA76ABA67CE5B3D0BE590BCD0CDC4CBCB7535B17",
+  "task_id": "T-P4-BODY4-SOURCE-JACOBIAN-BRIDGE",
+  "source_agent": "Codex-Body4-minimal-witness",
+  "created_at": "2026-09-14T21:22:12Z",
+  "integration_status": "integrated_as_pending_metadata",
+  "classification": "pending_body4_source_jacobian_field_obstruction",
+  "admission_effect": "none",
+  "target_scope": "routeb_node",
+  "source_commit": "d2a2b8836700ef49883f3169c244447363c40d63",
+  "review_file": "agent_review_inbox/review-T-P4-BODY4-MINIMAL-TRANSVERSE-WITNESS-20260914T2122Z.md",
+  "admission_label": "pending",
+  "integrated_at": "2026-09-14T21:29:02.311266+00:00"
+}

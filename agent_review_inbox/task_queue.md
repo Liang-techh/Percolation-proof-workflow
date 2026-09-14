@@ -4628,6 +4628,14 @@ Poincare 的独立数学回执补上了 P4 第三源方向的判别接口：对 
 控制 `2u` 与 `2s+D`，但这只是 source-facing mathematical interface，actual rank、
 source packet、coverage、Lean 和 admission 仍 pending。
 
+## 2026-09-14 — revision 892 harvest：Body4 quotient witness
+
+Body4 新回执把 Jacobian 目标压缩为四个 active axis equality、四个 displacement
+mod-axis 条件和两个 inactive-column zero/no-write 语义；active joint 3 的零列必须
+按 parallel-cross 解释，不能当 inactive。等价的 source-facing scalar 需求是 8 个有符号
+transverse projections，但当前仍无真实 source export、coverage、runtime 或 Lean
+receipt。该结果减少了 O1 witness 面积，不关闭 P4、registry 或 formal gate。
+
 ## 2026-09-14 — revision 890 harvest：reference packet specification
 
 Sartre 提交 `P5-103-REFERENCE-BINDING-PACKET-SPEC`。该规范固定了同一 context/reference

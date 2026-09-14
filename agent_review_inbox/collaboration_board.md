@@ -3717,3 +3717,10 @@ specification。T-P5-026 review 已同步收割，保持 compiled-candidate 隔�
 Schur 瓶颈已从“缺第三行”细化为 `ker R ⊆ ker A` 的 source-observability gate，新增
 行数由 `rank([R;A])-rank(R)` 决定；同时得到保留 `s/D` 相关性的四端点联合 allocation。
 该结果没有声称 actual `Cmat` rank 或 source packet 已存在，继续保持 pending。
+
+### 梁智炜 · revision 892 harvest：Body4 quotient witness
+
+Body4 的 36 项 Jacobian 要求已压缩为 axis equality、active displacement quotient 和
+inactive fresh-zero/no-write 三类语义；八个有符号 transverse projection 可作为最小
+source-export 候选。该压缩仍是 conditional interface，未提供实际 source/runtime/Lean
+证据，继续保持 O1 pending。
