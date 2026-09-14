@@ -70,7 +70,8 @@ theorem outer_abs_of_inner_and_displacement
       ring
     _ ≤ |xt - x0| + |x0 - c| := abs_add_le _ _
     _ ≤ t * B + r := add_le_add hdisp hinner
-    _ ≤ h * B + r := add_le_add_right htb r
+    _ ≤ h * B + r := by
+      simpa [add_comm] using (add_le_add_right htb r)
     _ = r + h * B := by ring
     _ ≤ H := hmargin
 

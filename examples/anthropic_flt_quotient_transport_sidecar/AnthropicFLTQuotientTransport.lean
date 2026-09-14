@@ -56,14 +56,18 @@ def quotientPiContinuousLinearEquiv {R ι : Type*} [CommRing R]
       LinearMap.coe_proj, LinearEquiv.invFun_eq_symm,
       LinearEquiv.coe_symm_mk, Finset.sum_apply, Function.comp_apply,
       Function.eval]
-    refine continuous_finset_sum _ (fun i _ => ?_)
+    refine continuous_finsetSum _ (fun i _ => ?_)
     apply Continuous.comp ?_ (continuous_apply _)
     apply Continuous.quotient_lift
       (Continuous.comp continuous_quot_mk (continuous_single _))
 
-theorem quotient_transport_mk (g : G) :
-    quotientContinuousLinearEquiv G' H' e h (Submodule.Quotient.mk' g) =
-      Submodule.Quotient.mk' (e g) := by
+theorem quotient_transport_mk {R G H : Type*} [Ring R]
+    [AddCommGroup G] [Module R G] [AddCommGroup H] [Module R H]
+    [TopologicalSpace G] [TopologicalSpace H]
+    (G' : Submodule R G) (H' : Submodule R H) (e : G ≃L[R] H)
+    (h : Submodule.map e.toLinearMap G' = H') (g : G) :
+    quotientContinuousLinearEquiv G' H' e h (Submodule.Quotient.mk g) =
+      Submodule.Quotient.mk (e g) := by
   rfl
 
 #print axioms quotientContinuousLinearEquiv

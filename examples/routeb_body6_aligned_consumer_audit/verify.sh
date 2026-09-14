@@ -3,6 +3,7 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+REPO_ROOT="$(cd "$ROOT/../.." && pwd)"
 LAKE_ROOT="${LAKE_ROOT:-$ROOT/../local_fkg}"
 SRC_ROOT="$ROOT/../routeb_b45_source_comparator_lean"
 TARGET="$SRC_ROOT/NEW_BODY6_SLICE_ALIGNEDPATHCAPCONSUMER20260908.lean"
@@ -26,10 +27,11 @@ if grep -nE '\b(sorry|admit)\b' "$TARGET"; then
 fi
 echo "PLACEHOLDER_SCAN=PASS"
 
-# Lean 4.32 rejects -o compilation when the input source is outside the Lake
-# package root.  Stage the BODY6 local-import chain inside the pinned local_fkg
-# root, compile it into an isolated cache, and remove the staging directory on
-# exit.  No repository source file or Lake manifest is modified.
+# Lean imports resolve compiled modules, not arbitrary sibling .lean files. The
+# BODY6 consumer reaches several source modules owned by other example
+# sidecars (for example ActualStorage and ActualShift), so stage and compile
+# the repository-local import closure in one isolated module cache before the
+# consumer audit. Snapshot/output trees are evidence, not authoritative source.
 BUILD_DIR="$(mktemp -d "$LAKE_ROOT/.aligned-consumer-audit.XXXXXX")"
 OUT="$(mktemp)"
 trap 'rm -rf "$BUILD_DIR"; rm -f "$OUT"' EXIT
@@ -46,18 +48,98 @@ run_lean() {
   )
 }
 
-compile_local_module() {
-  local module="$1"
-  local source="$SRC_ROOT/$module.lean"
-  local staged="$BUILD_DIR/$module.lean"
-  [[ -f "$source" ]] || { echo "local import missing: $source" >&2; exit 2; }
-  cp "$source" "$staged"
-  run_lean -DwarningAsError=true -o="$BUILD_DIR/$module.olean" "$staged"
+declare -A COMPILED_MODULES=()
+declare -A VISITING_MODULES=()
+# Two independent sidecars currently publish a top-level ChristoffelPower.lean.
+# SignedGap imports RouteBChristoffelPower.christoffelTwoChannelBound, so its
+# dependency is specifically the routeb_christoffel_power source, not the P5
+# sidecar with namespace RouteBP5ChristoffelPower. Keep all other duplicate
+# module names hard failures instead of silently choosing one.
+declare -A REPO_MODULE_SOURCE_OVERRIDES=(
+  [ChristoffelPower]="$REPO_ROOT/examples/routeb_christoffel_power/ChristoffelPower.lean"
+)
+
+module_relpath() {
+  printf '%s' "${1//./\/}"
 }
 
-compile_local_module NEW_BODY6_SLICE_ACTUALSTORAGEALIGN20260907
-compile_local_module NEW_BODY6_SLICE_PATHDOMAINPROJECTION20260907
-compile_local_module NEW_BODY6_SLICE_INITIALPATHCAPS20260907
+find_repo_module_source() {
+  local module="$1"
+  local override="${REPO_MODULE_SOURCE_OVERRIDES[$module]:-}"
+  if [[ -n "$override" ]]; then
+    [[ -f "$override" ]] || {
+      echo "repository module override missing for $module: $override" >&2
+      return 2
+    }
+    printf '%s\n' "$override"
+    return 0
+  fi
+
+  local rel
+  rel="$(module_relpath "$module")"
+  local -a matches=()
+  mapfile -t matches < <(
+    find "$REPO_ROOT/examples" \
+      -path '*/output/*' -prune -o \
+      -path '*/snapshots/*' -prune -o \
+      -path '*/.lake/*' -prune -o \
+      -type f -path "*/$rel.lean" -print | sort
+  )
+
+  if ((${#matches[@]} == 0)); then
+    return 1
+  fi
+  if ((${#matches[@]} != 1)); then
+    echo "ambiguous repository module source for $module:" >&2
+    printf '  %s\n' "${matches[@]}" >&2
+    return 2
+  fi
+  printf '%s\n' "${matches[0]}"
+}
+
+compile_repo_module() {
+  local module="$1"
+  [[ -n "${COMPILED_MODULES[$module]:-}" ]] && return 0
+  if [[ -n "${VISITING_MODULES[$module]:-}" ]]; then
+    echo "repository module import cycle at $module" >&2
+    return 2
+  fi
+
+  local source rc=0
+  source="$(find_repo_module_source "$module")" || rc=$?
+  case "$rc" in
+    0) ;;
+    1)
+      # Mathlib/Std/Init and package-owned modules are supplied by the pinned
+      # Lake environment. Lean reports a real missing import if one is absent.
+      echo "EXTERNAL_IMPORT=$module"
+      return 0
+      ;;
+    *) return "$rc" ;;
+  esac
+
+  VISITING_MODULES[$module]=1
+  local dep
+  while read -r dep; do
+    [[ -z "$dep" ]] && continue
+    compile_repo_module "$dep"
+  done < <(awk '/^[[:space:]]*import[[:space:]]+/ { for (i = 2; i <= NF; ++i) print $i }' "$source")
+
+  local rel staged olean
+  rel="$(module_relpath "$module")"
+  staged="$BUILD_DIR/$rel.lean"
+  olean="$BUILD_DIR/$rel.olean"
+  mkdir -p "$(dirname "$staged")"
+  cp "$source" "$staged"
+  echo "COMPILE_REPO_MODULE=$module source=${source#$REPO_ROOT/}"
+  run_lean -DwarningAsError=true -o "$olean" "$staged"
+  COMPILED_MODULES[$module]=1
+  unset 'VISITING_MODULES[$module]'
+}
+
+compile_repo_module NEW_BODY6_SLICE_ACTUALSTORAGEALIGN20260907
+compile_repo_module NEW_BODY6_SLICE_PATHDOMAINPROJECTION20260907
+compile_repo_module NEW_BODY6_SLICE_INITIALPATHCAPS20260907
 echo "LOCAL_IMPORT_BOOTSTRAP=PASS"
 
 AUDIT="$BUILD_DIR/AlignedConsumerAudit.lean"

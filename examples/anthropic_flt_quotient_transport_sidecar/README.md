@@ -25,7 +25,29 @@ and kernel/admission gates remain separate.
 
 Provenance: Anthropic FLT repository commit
 `aa2d8b34692b16c70f699536de0d8e75b9a3e9ef`, source
-`Definitions/Def_Mathlib_Topology_Algebra_Module_Quotient.lean:5-37`, Lean
-`4.33.1`, Mathlib revision
-`db584cd6d46c92f209a44c0f1c829460d327499d`.  The upstream staging and Apache
-attribution boundaries are recorded in the repository's FLT intake reports.
+`Definitions/Def_Mathlib_Topology_Algebra_Module_Quotient.lean:5-37`, upstream
+Lean `4.33.1`, with Mathlib revision
+`db584cd6d46c92f209a44c0f1c829460d327499d` recorded in that repository's
+`lake-manifest.json`.
+
+The upstream FLT README explicitly states that its Lean `4.33.1` build has no
+matching prebuilt Mathlib cache and that Mathlib is compiled from source.  That
+full replay requires resources far beyond this repository's portable GitHub
+sidecar lane, so CI must not pretend that `lake exe cache get` at the FLT root
+is a valid bootstrap.
+
+Portable CI therefore separates **source provenance** from **compatibility
+compilation**.  It checks out the exact FLT commit and verifies its Lean
+`4.33.1` toolchain plus pinned Mathlib revision, then independently checks out
+that exact Mathlib revision and compiles this extracted API using the Mathlib
+revision's own Lean `4.33.0` toolchain and official cache.  `verify.sh` requires
+both `SOURCE_ROOT` (the pinned FLT checkout) and `LAKE_ROOT` (the pinned Mathlib
+checkout), preserves placeholder and `#print axioms` gates, and prints the two
+toolchains separately.
+
+A green portable compile is therefore only a **Mathlib-4.33.0 compatibility
+receipt for the extracted theorem statements**, not an exact replay of the
+upstream FLT Lean-4.33.1 source-built environment and not a registry admission.
+Any claim that specifically depends on the Lean-4.33.1 replay still requires a
+separate appropriately resourced source build or equivalent independent
+receipt.

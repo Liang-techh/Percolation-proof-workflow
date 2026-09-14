@@ -6,6 +6,7 @@ on:
       - "examples/**/*.lean"
       - "examples/**/verify.sh"
       - "examples/**/lean-toolchain"
+      - "examples/**/lake-manifest.json"
       - "examples/**/lakefile.lean"
       - "examples/**/lakefile.toml"
       - ".github/workflows/lean-agent-sidecars.yml"
@@ -14,6 +15,7 @@ on:
       - "examples/**/*.lean"
       - "examples/**/verify.sh"
       - "examples/**/lean-toolchain"
+      - "examples/**/lake-manifest.json"
       - "examples/**/lakefile.lean"
       - "examples/**/lakefile.toml"
       - ".github/workflows/lean-agent-sidecars.yml"
@@ -36,6 +38,8 @@ jobs:
     env:
       ELAN_VERSION: v4.2.3
       ELAN_SHA256: df0b2b3a439961ffcbb3985214365ffe40f49bc871df04dff268c7d8e21ca8b2
+      FLT_REPO_SHA: aa2d8b34692b16c70f699536de0d8e75b9a3e9ef
+      FLT_MATHLIB_SHA: db584cd6d46c92f209a44c0f1c829460d327499d
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -51,6 +55,29 @@ jobs:
           repository: anthropics/formal-math
           ref: 795efb86f191735c5481675763537cfb4ff37e55
           path: upstream/formal-math
+          persist-credentials: false
+
+      # Keep the exact FLT source checkout for provenance/source binding.  The
+      # upstream README explicitly states that Lean 4.33.1 has no matching
+      # prebuilt Mathlib cache and therefore requires a full source build.
+      - name: Check out pinned Anthropic FLT source
+        uses: actions/checkout@v4
+        with:
+          repository: anthropics/fermats-last-theorem
+          ref: aa2d8b34692b16c70f699536de0d8e75b9a3e9ef
+          path: upstream/anthropic-flt
+          persist-credentials: false
+
+      # Portable CI only performs a compatibility compile of the extracted
+      # quotient API against the exact Mathlib revision used by FLT, using that
+      # revision's own Lean 4.33.0 toolchain and official cache.  This is not an
+      # exact replay of FLT's Lean 4.33.1 source-built environment.
+      - name: Check out pinned Mathlib compatibility environment
+        uses: actions/checkout@v4
+        with:
+          repository: leanprover-community/mathlib4
+          ref: db584cd6d46c92f209a44c0f1c829460d327499d
+          path: upstream/mathlib-flt-quotient
           persist-credentials: false
 
       - name: Install checksum-verified Elan
@@ -74,16 +101,49 @@ jobs:
           lake update
           lake build
 
+      - name: Validate pinned Anthropic FLT provenance
+        run: |
+          set -euo pipefail
+          cd upstream/anthropic-flt
+          test "$(git rev-parse HEAD)" = "$FLT_REPO_SHA"
+          test "$(tr -d '\r\n' < lean-toolchain)" = "leanprover/lean4:v4.33.1"
+          grep -F "\"rev\": \"$FLT_MATHLIB_SHA\"" lake-manifest.json >/dev/null
+          echo "FLT_TOOLCHAIN=$(cat lean-toolchain)"
+          echo "FLT_MATHLIB_SHA=$FLT_MATHLIB_SHA"
+          echo "FLT_PORTABLE_REPLAY=source-provenance-only"
+
+      - name: Bootstrap pinned Mathlib compatibility environment
+        run: |
+          set -euo pipefail
+          cd upstream/mathlib-flt-quotient
+          test "$(git rev-parse HEAD)" = "$FLT_MATHLIB_SHA"
+          test "$(tr -d '\r\n' < lean-toolchain)" = "leanprover/lean4:v4.33.0"
+          echo "FLT_MATHLIB_COMPAT_TOOLCHAIN=$(cat lean-toolchain)"
+          lake --version
+          lake exe cache get
+
       - name: Run portable agent sidecars
         run: |
           set -euo pipefail
+          exec > >(tee "$RUNNER_TEMP/portable-sidecars.log") 2>&1
           mapfile -t scripts < <(find examples -type f -name verify.sh -print | sort)
           ran=0
           failed=0
           for script in "${scripts[@]}"; do
             if grep -q 'CI_PORTABLE=1' "$script"; then
               echo "::group::Running $script"
-              if bash "$script"; then
+              if [[ "$script" == "examples/anthropic_flt_quotient_transport_sidecar/verify.sh" ]]; then
+                if SOURCE_ROOT="$GITHUB_WORKSPACE/upstream/anthropic-flt" \
+                    LAKE_ROOT="$GITHUB_WORKSPACE/upstream/mathlib-flt-quotient" \
+                    bash "$script"; then
+                  echo "SIDECAR_RESULT=PASS path=$script"
+                else
+                  code=$?
+                  echo "SIDECAR_RESULT=FAIL path=$script exit_code=$code"
+                  echo "::error title=Portable sidecar failed::$script exited with $code"
+                  failed=1
+                fi
+              elif bash "$script"; then
                 echo "SIDECAR_RESULT=PASS path=$script"
               else
                 code=$?
@@ -110,9 +170,18 @@ jobs:
           {
             echo "elan: $(elan --version 2>&1 || true)"
             cd examples/local_fkg
-            echo "toolchain: $(cat lean-toolchain)"
-            echo "lake: $(lake --version 2>&1 || true)"
-            echo "lean: $(lean --version 2>&1 || true)"
+            echo "local_fkg toolchain: $(cat lean-toolchain)"
+            echo "local_fkg lake: $(lake --version 2>&1 || true)"
+            echo "local_fkg lean: $(lean --version 2>&1 || true)"
+            cd "$GITHUB_WORKSPACE/upstream/anthropic-flt"
+            echo "flt repo sha: $(git rev-parse HEAD 2>&1 || true)"
+            echo "flt upstream toolchain: $(cat lean-toolchain 2>&1 || true)"
+            echo "flt mathlib sha: $FLT_MATHLIB_SHA"
+            cd "$GITHUB_WORKSPACE/upstream/mathlib-flt-quotient"
+            echo "flt compatibility mathlib sha: $(git rev-parse HEAD 2>&1 || true)"
+            echo "flt compatibility toolchain: $(cat lean-toolchain 2>&1 || true)"
+            echo "flt compatibility lake: $(lake --version 2>&1 || true)"
+            echo "flt compatibility lean: $(lean --version 2>&1 || true)"
           } | tee "$RUNNER_TEMP/lean-agent-environment.txt"
 
       - name: Upload Lean environment log
@@ -120,6 +189,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: lean-agent-environment
-          path: ${{ runner.temp }}/lean-agent-environment.txt
+          path: |
+            ${{ runner.temp }}/lean-agent-environment.txt
+            ${{ runner.temp }}/portable-sidecars.log
           if-no-files-found: error
           retention-days: 14

@@ -47,10 +47,11 @@ for theorem in \
   witness_qv_weights_vanish \
   witness_lambda2_budget_iff \
   broad_target_universal_nonnegative_false; do
-  grep -F "'RouteBP5TargetDomainObstruction.$theorem' depends on axioms:" "$OUT" >/dev/null || {
+  if ! grep -F "'RouteBP5TargetDomainObstruction.$theorem' depends on axioms:" "$OUT" >/dev/null \
+      && ! grep -F "'RouteBP5TargetDomainObstruction.$theorem' does not depend on any axioms" "$OUT" >/dev/null; then
     echo "missing axiom report for $theorem" >&2
     exit 3
-  }
+  fi
 done
 
 if grep -F "sorryAx" "$OUT" >/dev/null; then
