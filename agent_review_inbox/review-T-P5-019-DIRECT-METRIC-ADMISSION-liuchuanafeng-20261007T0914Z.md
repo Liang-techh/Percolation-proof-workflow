@@ -85,7 +85,7 @@ missing_for_parent_close:
   runtime Float64/controller/linear-solve remainder semantics
   a first-exit / ODE existence-continuation theorem on the actual trajectory
   a fresh pinned Lean receipt if this candidate is independently recompiled
-fobbiden_this_pass:
+forbidden_this_pass:
   registry edit
   state edit
   formal proof edit
