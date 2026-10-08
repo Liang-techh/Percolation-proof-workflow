@@ -5,13 +5,13 @@ source_agent: 流川枫
 agent: 流川枫
 created_at: 2026-10-08T20:14:00Z
 inspected_commit: cf3c0463d424748bb04fcb638dc7a1ea7d826282
-claim_id: claim-T-P5-044-CORRELATED-RESIDUAL-ADMISSION-liuchuanafeng-20261008T2012Z
-claim_commit: b6886f1a781da64522344bc6fe96a1c305e08b87
+claim_id: claim-T-P5-044-CORRELATED-RESIDUAL-ADMISSION-liuchuanafeng-20261008T2010Z
 inspected_paths:
   - agent_review_inbox/task_queue.md
+  - agent_review_inbox/claim-T-P5-044-CORRELATED-RESIDUAL-ADMISSION-liuchuanafeng-20261008T2010Z.md
   - agent_review_inbox/claim-T-P5-044-honglianmozun-20260907T2048.md
   - agent_review_inbox/review-T-P5-044-honglianmozun-20260907T2050.md
-  - agent_review_inbox/review-T-P5-043-TWO-CHANNEL-FEASIBILITY-ADMISSION-liuchuanafeng-20261008T1912Z.md
+  - agent_review_inbox/review-T-P5-043-TWO-CHANNEL-FEASIBILITY-ADMISSION-liuchuanafeng-20261008T1916Z.md
 task_id: T-P5-044
 integration_status: pending
 admission_label: pending
@@ -21,84 +21,63 @@ registry_promoted: false
 checker_executed: false
 lean_executed: false
 proposed_integration_target: documentation
-requested_action: harvest_pending_admission_audit_do_not_promote_correlated_residual_completion
+requested_action: harvest_pending_admission_audit_do_not_promote_correlated_signed_residual_completion
 ---
 
-# T-P5-044 admission audit: correlated signed completion stays conditional
+# T-P5-044 admission audit: correlated signed-residual completion stays conditional
 
 ## Question
 
-At the inspected tree `cf3c0463d424748bb04fcb638dc7a1ea7d826282`, does the published T-P5-044 bridge already supply a deployed signed Jacobian or `K_path` row, same-domain `K`/`b` coefficients, Float64/solve/controller semantics, absolute cell-center coverage, ODE continuation, an independently re-executed pinned Lean receipt, or registry admission for the frozen block-(4,5) storage under the correlated residual model `l = K u + b`?
+At the inspected tree `cf3c0463d424748bb04fcb638dc7a1ea7d826282`, does the published T-P5-044 completion already supply a deployed `forceError` / FD / controller `2x2` block, a same-domain signed `K,b` packet, Float64/solve semantics, absolute cell-center coverage, ODE continuation, an independently re-executed pinned Lean receipt, or registry admission for the correlated residual Lyapunov gate?
 
-May the skew-cancellation identity, the adjugate/SOS completion, the polynomial gate (3.4), or the Section 5 zero-energy skew witness be promoted?
+May the skew-cancellation identity, the adjugate SOS certificate, the quarter-barrier polynomial gate, or the large-skew zero-energy witness be promoted?
 
 ## Decision
 
-**No admission upgrade. Keep `admission_label: pending`.** The published child is a source-independent pointwise interface for the model
+**No admission upgrade. Keep `admission_label: pending`.** The published child is a source-independent exact-real interface that sits after a genuine T-P5-043 scalar FAIL. It does not close a parent gate, and it does not replace T-P5-040 or T-P5-043.
 
-```text
-V' <= -c V - u^T A u - u^T l,
-l = K u + b,
-H = A + Sym(K),
-B_H(b) = b^T adj(H) b.
-```
+红莲魔尊 states that, given the frozen Pareto inequality `V' <= -c V - u^T A u - u^T l` and a pointwise split `l = K u + b`, only `Sym(K)` enters the energy. With `H = A + Sym(K)`, `p>0`, and `Delta = p*s-q^2>0`, the division-free certificate gives `-u^T H u - u^T b <= gamma` whenever `B_H(b) <= 4*gamma*Delta`. At `Vstar=1/4` this is the polynomial gate `200*B_H(b) < (109-r)*Delta`. An arbitrarily large skew block costs exactly zero energy, which an entrywise absolute scalarization cannot see.
 
-Under `p>0` and `Delta = p*s-q^2 > 0`, it gives the division-free completion
+This is not `rejected`: the ring identities and the skew witness match an independent rational replay. It is not `architecture_only`: the review states exact real implications under the named hypotheses. It is not `compiled_candidate`: no Lean file for this child was inspected as a receipt, and no kernel was run here.
 
-```text
-B_H(b) <= 4*gamma*Delta  ==>  -u^T H u - u^T b <= gamma,
-```
-
-and, at the inherited barrier `Vstar=1/4` with `c=(109-r)/200`, the polynomial gate
-
-```text
-200*B_H(b) < (109-r)*Delta.
-```
-
-It does not close a parent gate, and it does not replace the T-P5-043 independent scalar feasibility test or the T-P5-040 diagonal adverse completion.
-
-红莲魔尊 states that only `Sym(K)` enters the Lyapunov charge, that an arbitrarily large skew block costs exactly zero energy, and that `Delta<0` or a nonzero null component of `b` blocks this separated global completion. Those statements stay inside the stated hypotheses.
-
-This is not `rejected`: the ring identities (2.3) and (2.4) expand to zero, the skew pairing cancels, and the diagonal special case recovers the channelwise square completion. It is not `architecture_only`: the review states an exact real implication inside `p>0`, `Delta>0`, and the frozen Pareto family. It is not `compiled_candidate`: no T-P5-044 Lean receipt is in the inspected paths, and no kernel was run here.
-
-Prior authorship is preserved. This file does not overwrite 红莲魔尊.
+Prior authorship is preserved. This file does not overwrite 红莲魔尊. The same-agent claim at `2026-10-08T20:10:00Z` is consumed; no second claim is added.
 
 ## Evidence
 
 1. **Queue does not close the parent.** `task_queue.md` at this commit has no later owner or closure for `T-P5-044`. The 2026-09-14 release still says a source-independent lemma cannot enter the verified registry. The neighbouring T-P5-043 admission audit already left the independent scalar gate pending.
-2. **Published math review is conditional.** `review-T-P5-044-honglianmozun-20260907T2050.md` blob `332a0648da9e43138f126e48089283a8c5ce1942` states the symmetric reduction (1.1)-(1.4), the adjugate identities (2.3)-(2.5), the first-exit gate (3.4), the diagonal embedding (4.1)-(4.4), the skew witness (5.1)-(5.3), the incremental gate (6.7), and the `Delta<=0` obstruction in Section 7. Its status is pending. Claim blob `51048e5ce0a43bf57ca445982fb3df5c9254dc07` keeps source binding, Float64, coverage, Lean, and registry out of scope.
-3. **No re-executed sidecar.** The inspected inbox has no T-P5-044 Lean claim or review receipt. This pass did not run `verify.sh` and did not print axioms. Absence of a compile here is not a compile failure.
-4. **Local polynomial checks only.** Symbolic expansion confirms
+2. **Published math review is conditional.** `review-T-P5-044-honglianmozun-20260907T2050.md` blob `332a0648da9e43138f126e48089283a8c5ce1942` states the skew cancellation (1.2)-(1.4), the adjugate identities (2.3)-(2.6), the quarter-barrier gate (3.4), the diagonal reduction to T-P5-040 (4.1)-(4.4), the large-skew witness (5.1)-(5.6), the incremental tube gate (6.7), and the indefinite/singular obstruction (7.1)-(7.5). Section 9 leaves source binding, interval `K(z)`, domain/flowpipe/ODE, Float64, Lean, and admission explicit. Its `admission_label` is `pending`.
+3. **No re-executed sidecar.** This pass did not find a T-P5-044 Lean receipt in the inspected inbox paths, did not run `verify.sh`, and did not print axioms. Absence of a compile here is not a compile failure. The original claim blob is `51048e5ce0a43bf57ca445982fb3df5c9254dc07`. No companion file was present.
+4. **Local rational checks only.** Python `fractions` reproduced the published identities on one interior sample and the frozen constants:
 
 ```text
-z^T adj(H) z - 4*Delta*(u^T H u + u^T b) - B_H(b) = 0,
-p*(z^T adj(H) z) - ((p*z5-q*z4)^2 + Delta*z4^2) = 0,
-u4*(M*u5) + u5*(-M*u4) = 0,
-(t5*b4^2 + t4*b5^2)/(4*t4*t5) = b4^2/(4*t4) + b5^2/(4*t5).
+skew cancel: u4*(M*u5)+u5*(-M*u4)=0 for M=10^6.
+adjugate (2.3): z^T adj(H) z = 4*Delta*(u^T H u+u^T b)+B_H(b) = 1445/196.
+SOS (2.4) and division-free (2.5): exact match on the same sample.
+4*c*Vstar = c at Vstar=1/4; r=1/2 gives c=217/400.
+a4(0)=1/6, Delta(0)=1/36; a4(1)=101/500, Delta(1)=101/3000.
+m4=350003/3000000, m5=200739/4000000 as published.
 ```
 
-Clearing denominators also matches the published factors: `4*c*Vstar = (109-r)/200`, so `200*B_H(b) < (109-r)*Delta`; for `Kc=1/12`, `4*c*Kc = (109-r)/600`, so `600*G_H(g) < (109-r)*Delta`. These checks do not instantiate a source row. A state-independent anchor still cannot be hidden inside `b` without a separate budget.
+These checks do not instantiate a source block.
 
 ## Receipt
 
 ```text
-command: not run
-exit_code: not claimed by this pass
+command: local fractions replay only; repo checker not run
+exit_code: 0 for the local replay; not a workflow checker
 axiom_print: not executed
 placeholder_scan: not a kernel scan
 math_review_blob: 332a0648da9e43138f126e48089283a8c5ce1942
-claim_blob: 51048e5ce0a43bf57ca445982fb3df5c9254dc07
-lean_receipt_present: false
-identity_2_3: expands to 0
-identity_2_4: expands to 0
-skew_pairing: expands to 0
-diagonal_reduction: exact
-gate_factor: (109-r)/200
-incremental_factor: (109-r)/600
-deployed_jacobian_row: not exhibited
+original_claim_blob: 51048e5ce0a43bf57ca445982fb3df5c9254dc07
+companion_blob: absent
+id23_match: 1445/196
+id24_match: true
+id25_match: true
+skew_cancel_match: 0
+deployed_force_block: not exhibited
 same_domain_K_b: not exhibited
 float64_semantics: not exhibited
-interval_H_envelope: not exhibited
+interval_K_envelope: not exhibited
 cell_center_inclusion: not exhibited
 ode_continuation: not exhibited
 lean_receipt: not exhibited
@@ -107,19 +86,18 @@ lean_receipt: not exhibited
 ## Obstruction
 
 ```text
-identity_surface: skew cancellation and the adjugate/SOS completion are exact inside the stated 2x2 model
-coefficient_surface: A, c, r, K, and b are inherited hypotheses or abstract symbols, not source witnesses
-frontend_gap: a signed u->l block is requested after a T-P5-043 FAIL, but no deployed Jacobian or K_path row is exhibited
-anchor_gap: a state-independent bias must remain in b and still needs a uniform B_H budget; it is not cancelled by skew
-model_gap: Delta<0, or Delta=0 with n^T b != 0, obstructs only this separated global completion; it is not a physical impossibility theorem
-budget_gap: a pointwise PASS still requires a uniform envelope of H and B_H(b) on the same candidate domain
-consumer_gap: T-P5-040 and T-P5-043 remain pending; embedding their diagonal model here does not close them
+identity_surface: skew cancellation and the adjugate SOS certificate are exact under the stated real hypotheses
+coefficient_surface: A, c(r), Vstar, and the masses are frozen Pareto constants, not a source witness for K or b
+frontend_gap: the signed u->l block is a hypothesis; entrywise absolute scalarization is correctly separated but not replaced by a source row
+budget_gap: a uniform E with B_H(b(z))<=E is not certified on a candidate domain
+indefinite_gap: Delta<=0 or p<=0 blocks this global quadratic completion and is not a physical impossibility theorem
+consumer_gap: T-P5-040 and T-P5-043 remain pending; a PASS here does not close them
 coverage_gap: a positive abstract margin does not place an absolute cell center in a source box
-calculus_gap: FTOC, first-exit, and ODE continuation are named and not proved
-obstruction_scope: missing deployed Jacobian or K_path row, same-domain K/b table, Float64/solve/controller semantics, interval envelope, center trajectory, flowpipe, and an independent pinned receipt remain failure boundaries
+calculus_gap: FTOC, first-exit on the actual pair, and ODE continuation are not proved
+obstruction_scope: missing deployed forceError/FD/controller block, same-domain K,b packet, interval envelope, Float64 semantics, center trajectory, flowpipe, and an independent pinned receipt remain failure boundaries
 missing_for_parent_close:
-  one same-domain signed 2x2 u->l block in the V' force coordinates
-  a certified lower envelope of A+Sym(K) and an upper envelope of B_H(b)
+  one same-domain signed 2x2 K and transverse b in the V' force coordinates
+  a certified lower envelope for A+Sym(K) and an upper adjugate budget on the same domain
   an independently certified V<=Vstar sublevel and absolute source-domain inclusion
   a first-exit / ODE existence-continuation theorem on the actual pair
   an independent pinned Lean receipt for the selected algebraic leaf
@@ -129,7 +107,7 @@ forbidden_this_pass:
   formal proof edit
   recompile
   sidecar creation
-  promotion of the skew identity, adjugate completion, polynomial gate, or zero-energy witness
+  promotion of the correlated completion, the quarter-barrier gate, or the skew witness
 ```
 
 ## Admission
