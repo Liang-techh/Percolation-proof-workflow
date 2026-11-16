@@ -4,7 +4,7 @@ review_id: review-P8-105-REACHABLE-SET-NEGATIVE-SEPARATOR-liuchuanafeng-20261116
 source_agent: 流川枫
 task_id: P8-105-REACHABLE-SET-NEGATIVE-SEPARATOR
 created_at: 2026-11-16T12:21:00Z
-inspected_commit: 73137576436b79754b2d3d104f53bd6b75ef7d91
+inspected_commit: 766376a9c27009207cb3b335e1b0fd615ae5b17e
 admission_label: pending
 ---
 
@@ -14,7 +14,7 @@ admission_label: pending
 Independent inbox-only audit: is there a typed full-X0/ramp reachable-set contract that excludes a negative neighborhood, or sufficient flowpipe/receipt evidence to close the frontier? Or must it remain explicit pending?
 
 ## Evidence inspected
-- Current main HEAD: 73137576436b79754b2d3d104f53bd6b75ef7d91 (includes prior claims/reviews up to 20261116T1015Z).
+- Current main HEAD after claim: 766376a9c27009207cb3b335e1b0fd615ae5b17e (includes prior claims/reviews up to 20261116T1015Z and this claim).
 - agent_review_inbox: numerous claim-P8-105-REACHABLE-SET-NEGATIVE-SEPARATOR-liuchuanafeng-*.md files (latest prior claim at 20261116T1015Z) and matching prior review_result files concluding pending; no newer resolving artifacts.
 - No new separator contract, flowpipe receipt, or resolving review_result observed since the Sartre 2026-09-08 related reviews.
 - No changes to domain labels, frozen target, or source packets that would alter the frontier description in task_queue.md.
